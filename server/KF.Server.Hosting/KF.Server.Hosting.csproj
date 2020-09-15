@@ -34,14 +34,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoCSer">
-      <HintPath>..\..\..\..\MU_Server\Libs\AutoCSer.dll</HintPath>
+      <HintPath>..\Libs\AutoCSer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Tmsk.Contract">
-      <HintPath>..\..\..\..\MU_Server\Libs\Tmsk.Contract.dll</HintPath>
+      <HintPath>..\Libs\Tmsk.Contract.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

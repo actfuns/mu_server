@@ -37,13 +37,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySQLDriverCS">
-      <HintPath>D:\MU_Server\MU_Server\Server1\GameDBServer\MySQLDriverCS.dll</HintPath>
+      <HintPath>..\Libs\MySQLDriverCS.dll</HintPath>
     </Reference>
     <Reference Include="Nhiredis">
-      <HintPath>D:\MU_Server\MU_Server\Server1\GameDBServer\Nhiredis.dll</HintPath>
+      <HintPath>..\Libs\Nhiredis.dll</HintPath>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>D:\MU_Server\MU_Server\KF.CenterServer.Hosting\protobuf-net.dll</HintPath>
+      <HintPath>..\Libs\protobuf-net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="zlib.net">
-      <HintPath>D:\MU_Server\MU_Server\Server1\GameServer\zlib.net.dll</HintPath>
+      <HintPath>..\Libs\zlib.net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

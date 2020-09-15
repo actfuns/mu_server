@@ -37,14 +37,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoCSer">
-      <HintPath>D:\MU_Server\MU_Server\KF.CenterServer.Hosting\AutoCSer.dll</HintPath>
+      <HintPath>..\Libs\KF.CenterServer.Hosting\AutoCSer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Neo.Lua">
-      <HintPath>D:\MU_Server\MU_Server\Server1\GameServer\Neo.Lua.dll</HintPath>
+      <HintPath>..\Libs\Neo.Lua.dll</HintPath>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>D:\MU_Server\MU_Server\KF.CenterServer.Hosting\protobuf-net.dll</HintPath>
+      <HintPath>..\Libs\protobuf-net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -54,11 +54,11 @@
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Tmsk.Contract">
-      <HintPath>D:\MU_Server\MU_Server\Server1\GameServer\Tmsk.Contract.dll</HintPath>
+      <HintPath>..\Libs\Tmsk.Contract.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="zlib.net">
-      <HintPath>D:\MU_Server\MU_Server\Server1\GameServer\zlib.net.dll</HintPath>
+      <HintPath>..\Libs\zlib.net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

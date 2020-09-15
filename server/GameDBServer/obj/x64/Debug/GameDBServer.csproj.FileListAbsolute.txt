@@ -1,1 +1,3 @@
 C:\Users\admin\Desktop\MU_Server\GameDBServer\obj\x64\Debug\GameDBServer.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\GameDBServer\obj\x64\Debug\GameDBServer.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\GameDBServer\obj\x64\Debug\GameDBServer.csproj.CoreCompileInputs.cache

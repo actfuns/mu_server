@@ -31,17 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoCSer">
-      <HintPath>D:\MU_Server\MU_Server\KF.CenterServer.Hosting\AutoCSer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
-      <HintPath>D:\MU_Server\MU_Server\KF.CenterServer.Hosting\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+      <HintPath>..\Libs\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data">
-      <HintPath>D:\MU_Server\MU_Server\KF.CenterServer.Hosting\MySql.Data.dll</HintPath>
+      <HintPath>..\Libs\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="MySQLDriverCS">
-      <HintPath>D:\MU_Server\MU_Server\Server1\GameDBServer\MySQLDriverCS.dll</HintPath>
+      <HintPath>..\Libs\MySQLDriverCS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -55,7 +52,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Tmsk.Contract">
-      <HintPath>D:\MU_Server\MU_Server\Server1\GameServer\Tmsk.Contract.dll</HintPath>
+      <HintPath>..\Libs\Tmsk.Contract.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
