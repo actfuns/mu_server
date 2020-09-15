@@ -439,7 +439,7 @@ namespace GameDBServer.Logic
 					tcpOutPacket = TCPOutPacket.MakeTCPOutPacket(pool, "0", 30767);
 					return TCPProcessCmdResults.RESULT_DATA;
 				}
-				byte DelState = (ChargeMoney == 1) ? 2 : 1;
+				byte DelState = (byte)((ChargeMoney == 1) ? 2 : 1);
 				if (!DBWriter.DeleteChargeItemInfo(dbMgr, SerialID, DelState))
 				{
 					tcpOutPacket = TCPOutPacket.MakeTCPOutPacket(pool, "0", 30767);

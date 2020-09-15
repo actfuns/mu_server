@@ -31,4 +31,3 @@ C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Remoting.HuanYing
 C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Remoting.HuanYingSiYuan\obj\x64\Debug\KF.Remoting.HuanYingSiYuan.csproj.CopyComplete
 C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Remoting.HuanYingSiYuan\obj\x64\Debug\KF.Remoting.HuanYingSiYuan.dll
 C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Remoting.HuanYingSiYuan\obj\x64\Debug\KF.Remoting.HuanYingSiYuan.pdb
-C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Remoting.HuanYingSiYuan\obj\x64\Debug\KF.Remoting.HuanYingSiYuan.csprojAssemblyReference.cache

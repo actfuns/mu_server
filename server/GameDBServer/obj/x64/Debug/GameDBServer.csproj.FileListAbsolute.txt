@@ -1,3 +1,14 @@
 C:\Users\admin\Desktop\MU_Server\GameDBServer\obj\x64\Debug\GameDBServer.csproj.CoreCompileInputs.cache
-C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\GameDBServer\obj\x64\Debug\GameDBServer.csprojAssemblyReference.cache
 C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\GameDBServer\obj\x64\Debug\GameDBServer.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\GameDBServer\bin\Debug\AppConfig.xml
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\GameDBServer\bin\Debug\GameDBServer.exe
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\GameDBServer\bin\Debug\GameDBServer.pdb
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\GameDBServer\bin\Debug\MySQLDriverCS.dll
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\GameDBServer\bin\Debug\Nhiredis.dll
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\GameDBServer\bin\Debug\protobuf-net.dll
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\GameDBServer\bin\Debug\zlib.net.dll
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\GameDBServer\bin\Debug\MySQLDriverCS.pdb
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\GameDBServer\bin\Debug\Nhiredis.pdb
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\GameDBServer\obj\x64\Debug\GameDBServer.csproj.CopyComplete
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\GameDBServer\obj\x64\Debug\GameDBServer.exe
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\GameDBServer\obj\x64\Debug\GameDBServer.pdb

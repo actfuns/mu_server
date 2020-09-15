@@ -21,7 +21,7 @@ namespace DotNetDetour.DetourWays
 			}
 			fixed (byte* p = &this.jmp_inst[3])
 			{
-				*(long*)p = this.srcPtr + needSize;
+				*(long*)p = (long)(this.srcPtr + needSize);
 			}
 			int totalLength = src_instr.Length + this.jmp_inst.Length;
 			IntPtr ptr = Marshal.AllocHGlobal(totalLength);

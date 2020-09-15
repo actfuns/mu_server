@@ -340,7 +340,7 @@ namespace Server.TCP
 				BitConverter.GetBytes(1U).CopyTo(inOptionValues, 0);
 				BitConverter.GetBytes(120000U).CopyTo(inOptionValues, 4);
 				BitConverter.GetBytes(5000U).CopyTo(inOptionValues, 8);
-				s.IOControl((IOControlCode)((ulong)-1744830460), inOptionValues, null);
+				s.IOControl(IOControlCode.KeepAliveValues, inOptionValues, null);
 				this.AddSocket(s);
 				try
 				{

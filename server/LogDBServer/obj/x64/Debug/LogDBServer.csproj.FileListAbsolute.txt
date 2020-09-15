@@ -17,7 +17,6 @@ C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\bin\Debu
 C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\bin\Debug\protobuf-net.dll
 C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\bin\Debug\zlib.net.dll
 C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\bin\Debug\MySQLDriverCS.pdb
-C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\obj\x64\Debug\LogDBServer.csprojAssemblyReference.cache
 C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\obj\x64\Debug\LogDBServer.csproj.CoreCompileInputs.cache
 C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\obj\x64\Debug\LogDBServer.csproj.CopyComplete
 C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\obj\x64\Debug\LogDBServer.exe
