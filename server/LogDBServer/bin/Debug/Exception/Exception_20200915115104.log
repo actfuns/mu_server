@@ -1,9 +1,0 @@
-应用程序出现了异常[1]:
-MySQLDriverCS Exception: MySQLDriverCS Error: can't connect.Can't connect to MySQL server on '127.0.0.1' (10061)
-
- 额外信息: CurrentDomain_UnhandledException
-    在 LogDBServer.DB.DBConnections.BuidConnections(MySQLConnectionString connStr, Int32 maxCount) 位置 C:\Users\admin\Desktop\MU_Server\LogDBServer\DB\DBConnections.cs:行号 26
-   在 LogDBServer.DB.DBManager.LoadDatabase(MySQLConnectionString connstr, Int32 MaxConns, Int32 codePage) 位置 C:\Users\admin\Desktop\MU_Server\LogDBServer\DB\DBManager.cs:行号 40
-   在 LogDBServer.Program.InitServer() 位置 C:\Users\admin\Desktop\MU_Server\LogDBServer\Program.cs:行号 394
-   在 LogDBServer.Program.OnStartServer() 位置 C:\Users\admin\Desktop\MU_Server\LogDBServer\Program.cs:行号 183
-   在 LogDBServer.Program.Main(String[] args) 位置 C:\Users\admin\Desktop\MU_Server\LogDBServer\Program.cs:行号 126
