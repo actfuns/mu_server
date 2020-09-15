@@ -1,4 +1,4 @@
-server/*/.vs
+server/.vs
 server/*/*.user
 server/*/*.suo
 server/*/bin
