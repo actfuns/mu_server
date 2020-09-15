@@ -440,7 +440,7 @@ namespace KF.Hosting.HuanYingSiYuan
 		private static CmdHandlerDict CmdDict = new CmdHandlerDict();
 
 		// Token: 0x0400000C RID: 12
-		private static List<Server> AutoCserServices = new List<Server>();
+		private static List<AutoCSer.Net.TcpInternalServer.Server> AutoCserServices = new List<AutoCSer.Net.TcpInternalServer.Server>();
 
 		// Token: 0x0400000D RID: 13
 		private static List<ServiceHost> hostList = new List<ServiceHost>();

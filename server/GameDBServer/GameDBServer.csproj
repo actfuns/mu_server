@@ -48,6 +48,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="zlib.net">
       <HintPath>D:\MU_Server\MU_Server\Server1\GameServer\zlib.net.dll</HintPath>

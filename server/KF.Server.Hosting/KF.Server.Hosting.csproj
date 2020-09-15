@@ -34,14 +34,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoCSer">
-      <HintPath>D:\MU_Server\MU_Server\KF.CenterServer.Hosting\AutoCSer.dll</HintPath>
+      <HintPath>..\..\..\..\MU_Server\Libs\AutoCSer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Tmsk.Contract">
-      <HintPath>D:\MU_Server\MU_Server\Server1\GameServer\Tmsk.Contract.dll</HintPath>
+      <HintPath>..\..\..\..\MU_Server\Libs\Tmsk.Contract.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -54,14 +54,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\KF.Remoting.HuanYingSiYuan\KF.Remoting.HuanYingSiYuan.csproj">
       <Project>{992037df-3fca-471d-b834-ae043f0de561}</Project>
       <Name>KF.Remoting.HuanYingSiYuan</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="app.manifest" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

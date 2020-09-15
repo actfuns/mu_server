@@ -10,3 +10,15 @@ C:\Users\admin\Desktop\MU_Server\LogDBServer\obj\x64\Debug\LogDBServer.csproj.Co
 C:\Users\admin\Desktop\MU_Server\LogDBServer\obj\x64\Debug\LogDBServer.exe
 C:\Users\admin\Desktop\MU_Server\LogDBServer\obj\x64\Debug\LogDBServer.pdb
 C:\Users\admin\Desktop\MU_Server\LogDBServer\obj\x64\Debug\LogDBServer.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\bin\Debug\AppConfig.xml
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\bin\Debug\LogDBServer.exe
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\bin\Debug\LogDBServer.pdb
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\bin\Debug\MySQLDriverCS.dll
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\bin\Debug\protobuf-net.dll
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\bin\Debug\zlib.net.dll
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\bin\Debug\MySQLDriverCS.pdb
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\obj\x64\Debug\LogDBServer.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\obj\x64\Debug\LogDBServer.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\obj\x64\Debug\LogDBServer.csproj.CopyComplete
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\obj\x64\Debug\LogDBServer.exe
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\LogDBServer\obj\x64\Debug\LogDBServer.pdb

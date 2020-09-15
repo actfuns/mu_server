@@ -1,1 +1,21 @@
 C:\Users\admin\Desktop\MU_Server\KF.Server.Hosting\obj\x64\Debug\KF.Server.Hosting.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\obj\x64\Debug\KF.Server.Hosting.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\obj\x64\Debug\KF.Server.Hosting.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\bin\Debug\KF.Server.Hosting.exe.config
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\bin\Debug\KF.Server.Hosting.exe
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\bin\Debug\KF.Server.Hosting.pdb
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\bin\Debug\AutoCSer.dll
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\bin\Debug\KF.Remoting.HuanYingSiYuan.dll
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\bin\Debug\Tmsk.Contract.dll
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\bin\Debug\MySql.Data.dll
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\bin\Debug\MySQLDriverCS.dll
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\bin\Debug\protobuf-net.dll
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\bin\Debug\zlib.net.dll
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\bin\Debug\KF.Remoting.HuanYingSiYuan.pdb
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\bin\Debug\Tmsk.Contract.pdb
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\bin\Debug\MySQLDriverCS.pdb
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\obj\x64\Debug\KF.Server.Hosting.csproj.CopyComplete
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\obj\x64\Debug\KF.Server.Hosting.exe
+C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Server.Hosting\obj\x64\Debug\KF.Server.Hosting.pdb
