@@ -1326,7 +1326,6 @@ namespace GameServer.Logic.AoYunDaTi
 						data.QuestionState = new List<bool>();
 						foreach (int i in questionStateList)
 						{
-							int i;
 							data.QuestionState.Add(i == 1);
 						}
 						result = data;

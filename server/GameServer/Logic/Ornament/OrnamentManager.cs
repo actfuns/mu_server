@@ -545,8 +545,7 @@ namespace GameServer.Logic.Ornament
 			{
 				foreach (GoodsData goodsData in client.ClientData.OrnamentGoodsDataList)
 				{
-					GoodsData goodsData;
-					EquipPropItem item = GameManager.EquipPropsMgr.FindEquipPropItem(goodsData.GoodsID);
+                    EquipPropItem item = GameManager.EquipPropsMgr.FindEquipPropItem(goodsData.GoodsID);
 					if (null != item)
 					{
 						client.ClientData.PropsCacheManager.SetExtProps(new object[]
@@ -559,8 +558,7 @@ namespace GameServer.Logic.Ornament
 				}
 				foreach (GoodsData goodsData in client.ClientData.OrnamentGoodsDataList)
 				{
-					GoodsData goodsData;
-					EquipPropItem item = GameManager.EquipPropsMgr.FindEquipPropItem(goodsData.GoodsID);
+                    EquipPropItem item = GameManager.EquipPropsMgr.FindEquipPropItem(goodsData.GoodsID);
 					if (null != item)
 					{
 						double[] CalExtProps = new double[177];

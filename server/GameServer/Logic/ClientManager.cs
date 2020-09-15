@@ -631,7 +631,7 @@ namespace GameServer.Logic
 				{
 					for (int i = 0; i < objsList.Count; i++)
 					{
-						if (self == null || self != objsList[i])
+						if (self == null || self != (object)objsList[i])
 						{
 							GameClient c = objsList[i] as GameClient;
 							if (null != c)

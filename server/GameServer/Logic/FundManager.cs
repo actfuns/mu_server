@@ -422,13 +422,10 @@ namespace GameServer.Logic
 		// Token: 0x06000B27 RID: 2855 RVA: 0x000AF524 File Offset: 0x000AD724
 		private static FundItem initFundItem(GameClient client, EFund fundType)
 		{
-			bool flag = false;
-			FundItem result;
-			try
+            FundItem result;
+			lock(client.ClientData.LockFund)
 			{
-				object lockFund;
-				Monitor.Enter(lockFund = client.ClientData.LockFund, ref flag);
-				FundInfo fundInfo = (from info in FundManager._fundDic.Values
+                FundInfo fundInfo = (from info in FundManager._fundDic.Values
 				where info.FundType == (int)fundType
 				orderby info.FundID
 				select info).First<FundInfo>();
@@ -449,15 +446,7 @@ namespace GameServer.Logic
 				FundManager.checkFundItemValue(client, item);
 				result = item;
 			}
-			finally
-			{
-				if (flag)
-				{
-					object lockFund;
-					Monitor.Exit(lockFund);
-				}
-			}
-			return result;
+            return result;
 		}
 
 		// Token: 0x06000B28 RID: 2856 RVA: 0x000AF6A8 File Offset: 0x000AD8A8

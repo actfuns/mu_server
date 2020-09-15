@@ -10019,8 +10019,7 @@ namespace GameServer.Logic
 			this.UpdateHongBaoLogTicks = new long[3];
 			this.HongBaoLogLists = new List<HongBaoItemData>[3];
 			this.DeControlItemArray = new DeControlItemData[177];
-			base..ctor();
-		}
+        }
 
 		// Token: 0x04003FC2 RID: 16322
 		public int LastRoleCommonUseIntParamValueListTickCount = 0;

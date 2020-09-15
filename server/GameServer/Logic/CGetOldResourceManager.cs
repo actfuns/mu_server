@@ -792,8 +792,7 @@ namespace GameServer.Logic
 					foreach (int type in dictypes)
 					{
 						OldResourceInfo info = null;
-						int type;
-						CGetOldResourceManager.ComputeResourceByType(client, type, getRestDataDict, out info);
+                        CGetOldResourceManager.ComputeResourceByType(client, type, getRestDataDict, out info);
 						if (info != null)
 						{
 							ResourceInfoDict[type] = info;

@@ -378,8 +378,7 @@ namespace GameServer.Logic
 				List<GameClient> clientList = GameManager.ClientMgr.GetMapGameClients(mapCode);
 				foreach (GameClient client in clientList)
 				{
-					GameClient client;
-					client.sendCmd<int>(1907, leftCount, false);
+                    client.sendCmd<int>(1907, leftCount, false);
 				}
 				if (null != npc)
 				{

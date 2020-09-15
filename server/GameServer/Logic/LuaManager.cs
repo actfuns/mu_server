@@ -530,7 +530,7 @@ namespace GameServer.Logic
 			}
 			else
 			{
-				long goodsID = (long)((ulong)-1 & (ulong)(bufferData.BufferVal >> 32));
+				long goodsID = (long)(0xffff_ffffUL & (ulong)(bufferData.BufferVal >> 32));
 				result = Global.GetGoodsNameByID((int)goodsID);
 			}
 			return result;
@@ -589,7 +589,7 @@ namespace GameServer.Logic
 						dblExperience += 1.0;
 					}
 					dblExperience += Global.ProcessTeamZhuFuExperience(client);
-					double multiExpNum = (double)(bufferData.BufferVal & (long)((ulong)-1)) - 1.0;
+					double multiExpNum = (double)(bufferData.BufferVal & (long) 0xffff_ffffUL) - 1.0;
 					dblExperience += multiExpNum;
 					result = ((int)((double)experience * dblExperience)).ToString();
 				}

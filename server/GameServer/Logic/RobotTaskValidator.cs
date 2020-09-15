@@ -1013,8 +1013,7 @@ namespace GameServer.Logic
 								}
 								foreach (string s in this._specialAppList)
 								{
-									string s;
-									if (taskDic.ContainsKey(s) && taskDic[s] >= this._multiCount)
+                                    if (taskDic.ContainsKey(s) && taskDic[s] >= this._multiCount)
 									{
 										switch (this._banReasonDic[BanReasonType.SpecialApp])
 										{

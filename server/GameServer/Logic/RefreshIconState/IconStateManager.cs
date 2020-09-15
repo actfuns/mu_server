@@ -20,7 +20,7 @@ namespace GameServer.Logic.RefreshIconState
 		// Token: 0x0600316C RID: 12652 RVA: 0x002C5B48 File Offset: 0x002C3D48
 		public bool AddFlushIconState(ushort nIconOrder, bool bIconState)
 		{
-			ushort iState = bIconState ? 1 : 0;
+			ushort iState = (ushort)(bIconState ? 1 : 0);
 			return this.AddFlushIconState(nIconOrder, iState);
 		}
 

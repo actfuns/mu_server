@@ -243,28 +243,28 @@ namespace GameServer.Logic
 				SceneUIClasses sceneType = Global.GetMapSceneType(client.ClientData.MapCode);
 				if (sceneType != SceneUIClasses.Normal)
 				{
-					client.sendCmd(nID, -21.ToString(), false);
+					client.sendCmd(nID, "-21".ToString(), false);
 					return true;
 				}
 				if (!this.IsGongNengOpened(client, true))
 				{
-					client.sendCmd(nID, -2001.ToString(), false);
+					client.sendCmd(nID, "-2001".ToString(), false);
 					return true;
 				}
 				if (client.ClientData.SignUpGameType != 0)
 				{
-					client.sendCmd(nID, -2002.ToString(), false);
+					client.sendCmd(nID, "-2002".ToString(), false);
 					return true;
 				}
 				if (KuaFuManager.getInstance().IsInCannotJoinKuaFuCopyTime(client))
 				{
-					client.sendCmd(nID, -2004.ToString(), false);
+					client.sendCmd(nID, "-2004".ToString(), false);
 					return true;
 				}
 				SystemXmlItem systemFuBenItem = null;
 				if (!GameManager.systemFuBenMgr.SystemXmlItemDict.TryGetValue(this.RuntimeData.CopyID, out systemFuBenItem))
 				{
-					client.sendCmd(nID, -3.ToString(), false);
+					client.sendCmd(nID, "-3".ToString(), false);
 					return true;
 				}
 				int minLevel = systemFuBenItem.GetIntValue("MinLevel", -1);
@@ -272,13 +272,13 @@ namespace GameServer.Logic
 				int levelLimit = minZhuanSheng * 100 + minLevel;
 				if (client.ClientData.ChangeLifeCount * 100 + client.ClientData.Level < levelLimit)
 				{
-					client.sendCmd(nID, -19.ToString(), false);
+					client.sendCmd(nID, "-19".ToString(), false);
 					return true;
 				}
 				int oldCount = this.GetWanMoXiaGuCount(client);
 				if (oldCount >= systemFuBenItem.GetIntValue("FinishNumber", -1))
 				{
-					client.sendCmd(nID, -16.ToString(), false);
+					client.sendCmd(nID, "-16".ToString(), false);
 					return true;
 				}
 				int result = 0;

@@ -344,13 +344,13 @@ namespace GameServer.Logic
 				DateTime now = TimeUtil.NowDateTime();
 				long monthAndGetFlags = Global.GetRoleParamsInt64FromDB(client, "10221");
 				int month = (int)(monthAndGetFlags >> 32);
-				int getFlags = (int)(monthAndGetFlags & (long)((ulong)-1));
+				int getFlags = (int)(monthAndGetFlags & (long) 0xffff_ffffUL);
 				int[] ids = new int[2];
 				if (month == this.RuntimeData.SyncData.Month)
 				{
 					long zhanDuiIDs = Global.GetRoleParamsInt64FromDB(client, "10222");
 					ids[0] = (int)(zhanDuiIDs >> 32);
-					ids[1] = (int)(zhanDuiIDs & (long)((ulong)-1));
+					ids[1] = (int)(zhanDuiIDs & (long) 0xffff_ffffUL);
 				}
 				else
 				{
@@ -437,7 +437,7 @@ namespace GameServer.Logic
 				{
 					long zhanDuiIDs = Global.GetRoleParamsInt64FromDB(client, "10222");
 					ids[0] = (int)(zhanDuiIDs >> 32);
-					ids[1] = (int)(zhanDuiIDs & (long)((ulong)-1));
+					ids[1] = (int)(zhanDuiIDs & (long) 0xffff_ffffUL);
 					lock (this.RuntimeData.Mutex)
 					{
 						List<ZhanDuiZhengBaZhanDuiData> list = this.RuntimeData.SyncData.ZhanDuiList;
@@ -780,13 +780,13 @@ namespace GameServer.Logic
 				{
 					long monthAndGetFlags = Global.GetRoleParamsInt64FromDB(client, "10221");
 					int month = (int)(monthAndGetFlags >> 32);
-					int getFlags = (int)(monthAndGetFlags & (long)((ulong)-1));
+					int getFlags = (int)(monthAndGetFlags & (long) 0xffff_ffffUL);
 					int[] ids = new int[2];
 					if (getFlags == 0 && month == this.RuntimeData.SyncData.Month)
 					{
 						long zhanDuiIDs = Global.GetRoleParamsInt64FromDB(client, "10222");
 						ids[0] = (int)(zhanDuiIDs >> 32);
-						ids[1] = (int)(zhanDuiIDs & (long)((ulong)-1));
+						ids[1] = (int)(zhanDuiIDs & (long) 0xffff_ffffUL);
 						int totalLotteryMoney = 0;
 						lock (this.RuntimeData.Mutex)
 						{
@@ -833,7 +833,7 @@ namespace GameServer.Logic
 					ZhanDuiZhengBaAwardsConfig awardsData = null;
 					long monthAndGetFlags = Global.GetRoleParamsInt64FromDB(client, "10225");
 					int month = (int)(monthAndGetFlags >> 32);
-					int getFlags = (int)(monthAndGetFlags & (long)((ulong)-1));
+					int getFlags = (int)(monthAndGetFlags & (long) 0xffff_ffffUL);
 					int[] ids = new int[2];
 					int grade = 0;
 					if (getFlags == 0 && month == this.RuntimeData.SyncData.Month)

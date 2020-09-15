@@ -40,8 +40,7 @@ namespace GameServer.Core.Executor
 					}
 					foreach (ScheduleTask task in stack)
 					{
-						ScheduleTask task;
-						try
+                        try
 						{
 							task.run();
 						}

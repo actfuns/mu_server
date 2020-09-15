@@ -62,8 +62,7 @@ namespace GameServer.Logic
 			List<StoryBoardEx> list = new List<StoryBoardEx>();
 			foreach (StoryBoardEx sb in StoryBoardEx.StoryBoardDict.Values)
 			{
-				StoryBoardEx sb;
-				list.Add(sb);
+                list.Add(sb);
 			}
 			for (int i = 0; i < list.Count; i++)
 			{

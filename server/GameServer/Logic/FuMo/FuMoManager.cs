@@ -305,7 +305,7 @@ namespace GameServer.Logic.FuMo
 				}
 				catch (Exception ex)
 				{
-					client.sendCmd(nID, -1.ToString(), false);
+					client.sendCmd(nID, "-1".ToString(), false);
 					DataHelper.WriteFormatExceptionLog(ex, "CMD_SPR_UPDATA_FUMOMONEY_ACCEPTNUM", false, false);
 				}
 				break;
@@ -323,7 +323,7 @@ namespace GameServer.Logic.FuMo
 				}
 				catch (Exception ex)
 				{
-					client.sendCmd(nID, -1.ToString(), false);
+					client.sendCmd(nID, "-1".ToString(), false);
 					DataHelper.WriteFormatExceptionLog(ex, "CMD_SPR_GIVE_FUMOMONEY", false, false);
 				}
 				break;
@@ -341,7 +341,7 @@ namespace GameServer.Logic.FuMo
 				}
 				catch (Exception ex)
 				{
-					client.sendCmd(nID, -1.ToString(), false);
+					client.sendCmd(nID, "-1".ToString(), false);
 					DataHelper.WriteFormatExceptionLog(ex, "CMD_SPR_GET_FUMOMAIL_LIST", false, false);
 				}
 				break;
@@ -361,7 +361,7 @@ namespace GameServer.Logic.FuMo
 				}
 				catch (Exception ex)
 				{
-					client.sendCmd(nID, -1.ToString(), false);
+					client.sendCmd(nID, "-1".ToString(), false);
 					DataHelper.WriteFormatExceptionLog(ex, "CMD_SPR_FUMOATTR_APPEND", false, false);
 				}
 				break;
@@ -380,7 +380,7 @@ namespace GameServer.Logic.FuMo
 				}
 				catch (Exception ex)
 				{
-					client.sendCmd(nID, -1.ToString(), false);
+					client.sendCmd(nID, "-1".ToString(), false);
 					DataHelper.WriteFormatExceptionLog(ex, "CMD_SPR_FUMOATTR", false, false);
 				}
 				break;
@@ -398,7 +398,7 @@ namespace GameServer.Logic.FuMo
 				}
 				catch (Exception ex)
 				{
-					client.sendCmd(nID, -1.ToString(), false);
+					client.sendCmd(nID, "-1".ToString(), false);
 					DataHelper.WriteFormatExceptionLog(ex, "CMD_SPR_SAVE_FUMOATTR", false, false);
 				}
 				break;
@@ -416,7 +416,7 @@ namespace GameServer.Logic.FuMo
 				}
 				catch (Exception ex)
 				{
-					client.sendCmd(nID, -1.ToString(), false);
+					client.sendCmd(nID, "-1".ToString(), false);
 					DataHelper.WriteFormatExceptionLog(ex, "CMD_SPR_TODAY_USER_GIVE_LIST", false, false);
 				}
 				break;
@@ -434,7 +434,7 @@ namespace GameServer.Logic.FuMo
 				}
 				catch (Exception ex)
 				{
-					client.sendCmd(nID, -1.ToString(), false);
+					client.sendCmd(nID, "-1".ToString(), false);
 					DataHelper.WriteFormatExceptionLog(ex, "CMD_SPR_NOT_SAVE_FUMOATTR", false, false);
 				}
 				break;
@@ -452,7 +452,7 @@ namespace GameServer.Logic.FuMo
 				}
 				catch (Exception ex)
 				{
-					client.sendCmd(nID, -1.ToString(), false);
+					client.sendCmd(nID, "-1".ToString(), false);
 					DataHelper.WriteFormatExceptionLog(ex, "CMD_SPR_UPDATA_FUMOMAIL_ISREAD", false, false);
 				}
 				break;

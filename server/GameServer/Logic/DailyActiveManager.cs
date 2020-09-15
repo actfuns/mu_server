@@ -263,7 +263,7 @@ namespace GameServer.Logic
 					ushort realFlag = (ushort)((uValue & flag) >> subIndex);
 					ushort dailyactiveID = DailyActiveManager.GetDailyActiveIDByIndex(curIndex);
 					ushort preFix = (ushort)(dailyactiveID << 2);
-					ushort dailyactive = preFix | realFlag;
+					ushort dailyactive = (ushort)(preFix | realFlag);
 					lsUshort.Add(dailyactive);
 					curIndex += 2;
 				}

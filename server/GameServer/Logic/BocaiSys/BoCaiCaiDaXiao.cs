@@ -368,8 +368,7 @@ namespace GameServer.Logic.BocaiSys
 							this.ServerData.IsAward = true;
 							foreach (BuyBoCai2SDB buyItem in BuyList)
 							{
-								BuyBoCai2SDB buyItem;
-								if (!BoCaiManager.getInstance().SendWinItem(this.ServerOpenData, buyItem, Rate, false, winType))
+                                if (!BoCaiManager.getInstance().SendWinItem(this.ServerOpenData, buyItem, Rate, false, winType))
 								{
 									this.ServerOpenData.IsAward = false;
 								}

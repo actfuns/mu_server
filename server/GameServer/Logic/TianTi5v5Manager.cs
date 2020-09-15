@@ -700,8 +700,7 @@ namespace GameServer.Logic
 						}
 						foreach (TianTi5v5PiPeiRoleState rd in piPeiState.RoleList)
 						{
-							TianTi5v5PiPeiRoleState rd;
-							GameClient c = GameManager.ClientMgr.FindClient(rd.RoleID);
+                            GameClient c = GameManager.ClientMgr.FindClient(rd.RoleID);
 							if ((c != null && rd.State == 1) || rd.State == 0)
 							{
 								c.sendCmd<TianTi5v5PiPeiState>(3712, piPeiState, false);
@@ -3053,8 +3052,7 @@ namespace GameServer.Logic
 				}
 				foreach (Tuple<TianTi5v5ZhanDuiData, int> tp in scene.ZhanDuiDataDict)
 				{
-					Tuple<TianTi5v5ZhanDuiData, int> tp;
-					TianTi5v5ZhanDuiData data = tp.Item1;
+                    TianTi5v5ZhanDuiData data = tp.Item1;
 					data.ZhanDouLi = data.teamerList.Sum((TianTi5v5ZhanDuiRoleData x) => x.ZhanLi);
 					data.LastFightTime = TimeUtil.NowDateTime();
 					this.UpdateZhanDuiData2DB(data, tp.Item2, ZhanDuiDataModeTypes.TianTiFightData);

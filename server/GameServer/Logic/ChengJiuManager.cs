@@ -1018,7 +1018,7 @@ namespace GameServer.Logic
 					ushort realFlag = (ushort)((uValue & flag) >> subIndex);
 					ushort chengJiuID = ChengJiuManager.GetChengJiuIDByIndex(curIndex);
 					ushort preFix = (ushort)(chengJiuID << 2);
-					ushort chengJiu = preFix | realFlag;
+					ushort chengJiu = (ushort)(preFix | realFlag);
 					lsUshort.Add(chengJiu);
 					curIndex += 2;
 				}

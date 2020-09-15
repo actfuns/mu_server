@@ -117,13 +117,10 @@ namespace GameServer.Logic.UnionPalace
 		// Token: 0x060015F0 RID: 5616 RVA: 0x0015787C File Offset: 0x00155A7C
 		public static UnionPalaceData UnionPalaceGetData(GameClient client, bool isUpdataProps = false)
 		{
-			bool flag = false;
-			UnionPalaceData myUPData2;
-			try
+            UnionPalaceData myUPData2;
+			lock(client.ClientData.LockUnionPalace)
 			{
-				object lockUnionPalace;
-				Monitor.Enter(lockUnionPalace = client.ClientData.LockUnionPalace, ref flag);
-				UnionPalaceData myUPData = client.ClientData.MyUnionPalaceData;
+                UnionPalaceData myUPData = client.ClientData.MyUnionPalaceData;
 				UnionPalaceBasicInfo basicInfo = null;
 				if (!UnionPalaceManager.IsGongNengOpened(client))
 				{
@@ -222,15 +219,7 @@ namespace GameServer.Logic.UnionPalace
 					myUPData2 = myUPData;
 				}
 			}
-			finally
-			{
-				if (flag)
-				{
-					object lockUnionPalace;
-					Monitor.Exit(lockUnionPalace);
-				}
-			}
-			return myUPData2;
+            return myUPData2;
 		}
 
 		// Token: 0x060015F1 RID: 5617 RVA: 0x00157CDC File Offset: 0x00155EDC

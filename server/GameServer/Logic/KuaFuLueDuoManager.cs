@@ -1640,7 +1640,6 @@ namespace GameServer.Logic
 							List<int> removeList = new List<int>();
 							foreach (KuaFuLueDuoBangHuiJingJiaData data2 in this.RuntimeData.JingJiaDict.Values)
 							{
-								KuaFuLueDuoBangHuiJingJiaData data2;
 								if (data2.Age < this.SyncDataCache.StateAge)
 								{
 									if (data2.ServerId > 0 && data2.ZiJin > 0)
@@ -1677,7 +1676,6 @@ namespace GameServer.Logic
 							}
 							foreach (int bhid in removeList)
 							{
-								int bhid;
 								this.RuntimeData.JingJiaDict.Remove(bhid);
 							}
 						}

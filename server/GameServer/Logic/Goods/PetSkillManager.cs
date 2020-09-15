@@ -284,8 +284,7 @@ namespace GameServer.Logic.Goods
 						srcGoodsArgs.ElementhrtsProps = new List<int>();
 						foreach (PetSkillInfo info in srcSkillList)
 						{
-							PetSkillInfo info;
-							srcGoodsArgs.ElementhrtsProps.Add(info.PitIsOpen ? 1 : 0);
+                            srcGoodsArgs.ElementhrtsProps.Add(info.PitIsOpen ? 1 : 0);
 							srcGoodsArgs.ElementhrtsProps.Add(1);
 							srcGoodsArgs.ElementhrtsProps.Add(0);
 						}

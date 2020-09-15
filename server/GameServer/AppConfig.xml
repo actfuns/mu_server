@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <!--EventLevel事件日志级别为, -1:不记录, 0: 调试, 1: 提示, 2: 记录, 3: 重要-->
+  <!--LogType程序日志级别为, -1:不记录, 0: 提示, 1: 警告, 2: 错误, 3: SQL语句-->
+  <Server LineID="1" EventLevel="0" LogType="2" />
+  <Socket ip="" port="3001" capacity="900" />
+  <DBServer pool="50" ip="127.0.0.1" port="23001" />
+  <LogDBServer pool="10" ip="127.0.0.1" port="43001" />
+  <NameServer IP="127.0.0.1" Port="7878" PingTaiID="APPS" />
+  <Token count="10000" randseed="123456" sha1="12345" data="12345" webkey="uJ7FAhPOVQhplySuxQ8u" />
+  <!--GameManager游戏管理配置, UserNames GM管理员名称列表, 有多个使用半角的逗号分开, IPs允许操作的gm在线时的IP列表，多个使用半角的逗号分开-->
+  <GameManager SuperUserNames="" UserNames="" IPs="" />
+  <Map Code="6090" MainCode="1" />
+  <!--GoodsIDs不为空，则自动给予新角色一堆物品-->
+  <Goods GoodsIDs="92213,1,1,0,0,0,0" />
+  <!--Path GameRes资源所在的目录-->
+  <Resource Path="D:\MU_Server\GameRes" />
+  <!--DBLogEnable 是否启用记录日志功能1启用，0关闭-->
+  <DBLog DBLogEnable="0" Path="D:\mulog\GameServer\" />
+  <!--内存缓冲配置 size,num|size,num|size,num-->
+  <CacheMemoryParam CacheMemoryBlocks="40,20000|100,100|600,80|2014,40|4096,10|100000,2400" />
+  <!--发送操作睡眠时间配置SendDataIntervalTicks必须大于等于20小于等于500 单位毫秒,  MaxSingleSocketSendBufferSize单套接字延迟发
+	送缓冲区大小[必须大于等于18000 小于等于32000] 单位字节, SendDataTimeOutTicks 发送超时时间，单位毫秒,取值 3000 到 20000之间-->
+  <SendDataParam SendDataIntervalTicks="50" MaxSingleSocketSendBufferSize="100000" SendDataTimeOutTicks="5000" />
+  <!--Lua引擎的配置参数-->
+  <Lua InitNum="5" />
+</Config>

@@ -198,7 +198,6 @@ namespace GameServer.Logic
 					foreach (XElement node in nodes)
 					{
 						ShengBeiData item = new ShengBeiData();
-						XElement node;
 						item.ID = (int)Global.GetSafeAttributeLong(node, "ID");
 						item.MonsterID = (int)Global.GetSafeAttributeLong(node, "MonsterID");
 						item.Time = (int)Global.GetSafeAttributeLong(node, "Time");
@@ -226,8 +225,7 @@ namespace GameServer.Logic
 					foreach (XElement node in nodes)
 					{
 						HuanYingSiYuanBirthPoint item2 = new HuanYingSiYuanBirthPoint();
-						XElement node;
-						item2.ID = (int)Global.GetSafeAttributeLong(node, "ID");
+                        item2.ID = (int)Global.GetSafeAttributeLong(node, "ID");
 						item2.PosX = (int)Global.GetSafeAttributeLong(node, "PosX");
 						item2.PosY = (int)Global.GetSafeAttributeLong(node, "PosY");
 						item2.BirthRadius = (int)Global.GetSafeAttributeLong(node, "BirthRadius");
@@ -241,8 +239,7 @@ namespace GameServer.Logic
 					foreach (XElement node in nodes)
 					{
 						ContinuityKillAward item3 = new ContinuityKillAward();
-						XElement node;
-						item3.ID = (int)Global.GetSafeAttributeLong(node, "ID");
+                        item3.ID = (int)Global.GetSafeAttributeLong(node, "ID");
 						item3.Num = (int)Global.GetSafeAttributeLong(node, "Num");
 						item3.Score = (int)Global.GetSafeAttributeLong(node, "Score");
 						this.RuntimeData.ContinuityKillAwardDict[item3.Num] = item3;

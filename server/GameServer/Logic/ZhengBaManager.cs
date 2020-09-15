@@ -426,7 +426,7 @@ namespace GameServer.Logic
 					else if (now.AddDays(1.0).Month != now.Month)
 					{
 						ZhengBaMatchConfig _config = this._Config.MatchConfigList.Find((ZhengBaMatchConfig _m) => _m.Day == this.SyncData.RealActDay);
-						if (_config != null && now.TimeOfDay.Ticks > _config.DayEndTick + (long)((ulong)-1294967296) && !this.SyncData.TodayIsPking)
+						if (_config != null && now.TimeOfDay.Ticks > _config.DayEndTick + (long)(0xb2d0_5e00UL) && !this.SyncData.TodayIsPking)
 						{
 							bInAwardTime = true;
 						}

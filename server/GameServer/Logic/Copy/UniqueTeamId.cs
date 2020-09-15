@@ -32,7 +32,7 @@ namespace GameServer.Logic.Copy
 					this.AutoInc = 0;
 				}
 				ushort autoInc;
-				this.AutoInc = (autoInc = this.AutoInc) + 1;
+				this.AutoInc = (ushort)((autoInc = this.AutoInc) + 1);
 				_validAutoInc = autoInc;
 				_validCurSecond = (long)this.CurrSecond;
 			}

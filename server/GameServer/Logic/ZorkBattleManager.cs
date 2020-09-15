@@ -2243,11 +2243,8 @@ namespace GameServer.Logic
 		// Token: 0x06003BA7 RID: 15271 RVA: 0x0032DEEC File Offset: 0x0032C0EC
 		public void ResortZhanDuiRankByJiFen(ZorkBattleScene scene)
 		{
-			bool flag = false;
-			try
+            lock(this.RuntimeData.Mutex)
 			{
-				object mutex;
-				Monitor.Enter(mutex = this.RuntimeData.Mutex, ref flag);
 				List<ZorkBattleTeamInfo> ZorkBattleTeamListOld = new List<ZorkBattleTeamInfo>(scene.ScoreData.ZorkBattleTeamList);
 				List<ZorkBattleRoleInfo> clientContextDataList;
 				scene.ScoreData.ZorkBattleTeamList.Sort(delegate(ZorkBattleTeamInfo left, ZorkBattleTeamInfo right)
@@ -2310,15 +2307,7 @@ namespace GameServer.Logic
 					return result;
 				});
 			}
-			finally
-			{
-				if (flag)
-				{
-					object mutex;
-					Monitor.Exit(mutex);
-				}
-			}
-		}
+        }
 
 		// Token: 0x06003BA8 RID: 15272 RVA: 0x0032DFE8 File Offset: 0x0032C1E8
 		public void GiveAwards(ZorkBattleScene scene)

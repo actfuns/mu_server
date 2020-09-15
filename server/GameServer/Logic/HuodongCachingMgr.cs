@@ -4934,8 +4934,7 @@ namespace GameServer.Logic
 				IEnumerable<XElement> xmlItems = xml.Elements();
 				foreach (XElement xmlItem in xmlItems)
 				{
-					XElement xmlItem;
-					int activityid = Convert.ToInt32(Global.GetSafeAttributeStr(xmlItem, "Type"));
+                    int activityid = Convert.ToInt32(Global.GetSafeAttributeStr(xmlItem, "Type"));
 					int endData = Convert.ToInt32(Global.GetSafeAttributeStr(xmlItem, "EndData"));
 					string filename = Global.GetSafeAttributeStr(xmlItem, "PeiZhi");
 					config.ConfigDict[activityid] = filename;

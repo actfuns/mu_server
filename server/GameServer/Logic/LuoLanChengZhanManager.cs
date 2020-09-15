@@ -834,8 +834,7 @@ namespace GameServer.Logic
 				foreach (GameClient client in allClients)
 				{
 					bool valid = false;
-					GameClient client;
-					if (client.ClientData.CurrentLifeV > 0)
+                    if (client.ClientData.CurrentLifeV > 0)
 					{
 						if (!client.ClientData.WaitingNotifyChangeMap && !client.ClientData.WaitingForChangeMap)
 						{

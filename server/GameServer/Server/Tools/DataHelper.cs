@@ -128,7 +128,7 @@ namespace Server.Tools
 		public static void RandBytes(byte[] buffer, int offset, int count)
 		{
 			long tick = TimeUtil.NOW() * 10000L;
-			Random rnd = new Random((int)(tick & (long)((ulong)-1)) | (int)(tick >> 32));
+			Random rnd = new Random((int)(tick & (long) 0xffff_ffffUL) | (int)(tick >> 32));
 			for (int i = 0; i < count; i++)
 			{
 				buffer[offset + i] = (byte)rnd.Next(0, 255);

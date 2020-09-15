@@ -22,8 +22,7 @@ namespace GameServer.Server
 			this._cmdTime = 0L;
 			this._timeOutCount = 0;
 			this._decryptCount = 0;
-			base..ctor();
-			this._currentSocket = socket;
+            this._currentSocket = socket;
 		}
 
 		// Token: 0x06003FEA RID: 16362 RVA: 0x003B9E4C File Offset: 0x003B804C

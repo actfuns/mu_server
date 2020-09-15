@@ -1467,7 +1467,6 @@ namespace GameServer.Logic.ActivityNew
 				}
 				foreach (int key in removeList)
 				{
-					int key;
 					this.ActConditionInfoDict.Remove(key);
 				}
 				foreach (SpecPConditionConfig item in specpList)
