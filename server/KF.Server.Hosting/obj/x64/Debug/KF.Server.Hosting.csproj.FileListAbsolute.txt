@@ -1,0 +1,1 @@
+C:\Users\admin\Desktop\MU_Server\KF.Server.Hosting\obj\x64\Debug\KF.Server.Hosting.csproj.CoreCompileInputs.cache

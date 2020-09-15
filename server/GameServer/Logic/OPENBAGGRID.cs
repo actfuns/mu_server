@@ -1,0 +1,13 @@
+﻿using System;
+
+namespace GameServer.Logic
+{
+	// Token: 0x02000697 RID: 1687
+	public enum OPENBAGGRID
+	{
+		// Token: 0x0400356A RID: 13674
+		OPENBAGGRID_ONEGRIDNEEDTIME1 = 3000,
+		// Token: 0x0400356B RID: 13675
+		OPENBAGGRID_ONEGRIDNEEDTIME2 = 1500
+	}
+}

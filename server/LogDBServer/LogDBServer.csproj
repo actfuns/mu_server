@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{992037DF-3FCA-471D-B834-AE043F0DE565}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>LogDBServer</RootNamespace>
+    <AssemblyName>LogDBServer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>LogDBServer.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySQLDriverCS, Version=3.0.1735.36021, Culture=neutral, PublicKeyToken=172f94dfb0faf263, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\MySQLDriverCS.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.0.0.580, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="zlib.net, Version=1.0.3.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\zlib.net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Executor\PeriodicTaskHandle.cs" />
+    <Compile Include="Core\Executor\PeriodicTaskHandleImpl.cs" />
+    <Compile Include="Core\Executor\ScheduleExecutor.cs" />
+    <Compile Include="Core\Executor\ScheduleTask.cs" />
+    <Compile Include="Core\Executor\TaskWrapper.cs" />
+    <Compile Include="Core\Executor\TimeUtil.cs" />
+    <Compile Include="Core\Executor\Worker.cs" />
+    <Compile Include="Core\GameEvent\EventObject.cs" />
+    <Compile Include="Core\GameEvent\EventSource.cs" />
+    <Compile Include="Core\GameEvent\EventTypes.cs" />
+    <Compile Include="Core\GameEvent\GlobalEventSource.cs" />
+    <Compile Include="Core\GameEvent\IEventListener.cs" />
+    <Compile Include="DB\DBConnections.cs" />
+    <Compile Include="DB\DBItemLogWriter.cs" />
+    <Compile Include="DB\DBManager.cs" />
+    <Compile Include="DB\DBMappingAttribute.cs" />
+    <Compile Include="DB\DBWriter.cs" />
+    <Compile Include="Logic\EventLevels.cs" />
+    <Compile Include="Logic\GameDBManager.cs" />
+    <Compile Include="Logic\Global.cs" />
+    <Compile Include="Logic\GlobalServiceManager.cs" />
+    <Compile Include="Logic\IManager.cs" />
+    <Compile Include="Logic\ServerEvents.cs" />
+    <Compile Include="Logic\UnhandedException.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server\CmdProcessor\AddItemLogCmdProcessor.cs" />
+    <Compile Include="Server\CmdProcessor\CmdRegisterTriggerManager.cs" />
+    <Compile Include="Server\CmdProcessor\TradeMoneyFreqLogCmdProcessor.cs" />
+    <Compile Include="Server\CmdProcessor\TradeMoneyNumLogCmdProcessor.cs" />
+    <Compile Include="Server\GameServerClient.cs" />
+    <Compile Include="Server\ICmdProcessor.cs" />
+    <Compile Include="Server\Protocol\TCPCmdPacketEventHandler.cs" />
+    <Compile Include="Server\Protocol\TCPCmdPacketSize.cs" />
+    <Compile Include="Server\Protocol\TCPCmdProtocolVer.cs" />
+    <Compile Include="Server\Protocol\TCPInPacket.cs" />
+    <Compile Include="Server\Protocol\TCPInPacketPool.cs" />
+    <Compile Include="Server\Protocol\TCPOutPacket.cs" />
+    <Compile Include="Server\Protocol\TCPOutPacketPool.cs" />
+    <Compile Include="Server\TCPCmdDispatcher.cs" />
+    <Compile Include="Server\TCPCmdHandler.cs" />
+    <Compile Include="Server\TCPGameServerCmds.cs" />
+    <Compile Include="Server\TCPManager.cs" />
+    <Compile Include="Server\TCPProcessCmdResults.cs" />
+    <Compile Include="Server\TCP\AsyncUserToken.cs" />
+    <Compile Include="Server\TCP\BufferManager.cs" />
+    <Compile Include="Server\TCP\SocketAsyncEventArgsPool.cs" />
+    <Compile Include="Server\TCP\SocketClosedEventHandler.cs" />
+    <Compile Include="Server\TCP\SocketConnectedEventHandler.cs" />
+    <Compile Include="Server\TCP\SocketListener.cs" />
+    <Compile Include="Server\TCP\SocketReceivedEventHandler.cs" />
+    <Compile Include="Server\TCP\SocketSendedEventHandler.cs" />
+    <Compile Include="Server\Tools\AesHelper.cs" />
+    <Compile Include="Server\Tools\CRC32.cs" />
+    <Compile Include="Server\Tools\DataHelper.cs" />
+    <Compile Include="Server\Tools\LogManager.cs" />
+    <Compile Include="Server\Tools\LogTypes.cs" />
+    <Compile Include="Server\Tools\RC4Helper.cs" />
+    <Compile Include="Server\Tools\SHA1Helper.cs" />
+    <Compile Include="Server\Tools\StringEncrypt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

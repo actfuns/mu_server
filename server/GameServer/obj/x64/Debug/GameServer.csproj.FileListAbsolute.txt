@@ -1,0 +1,2 @@
+C:\Users\admin\Desktop\MU_Server\GameServer\obj\x64\Debug\GameServer.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\MU_Server\GameServer\obj\x64\Debug\GameServer.csproj.CoreCompileInputs.cache

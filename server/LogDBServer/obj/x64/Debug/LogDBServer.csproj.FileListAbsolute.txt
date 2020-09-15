@@ -1,0 +1,12 @@
+C:\Users\admin\Desktop\MU_Server\LogDBServer\obj\x64\Debug\LogDBServer.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\MU_Server\LogDBServer\bin\Debug\AppConfig.xml
+C:\Users\admin\Desktop\MU_Server\LogDBServer\bin\Debug\LogDBServer.exe
+C:\Users\admin\Desktop\MU_Server\LogDBServer\bin\Debug\LogDBServer.pdb
+C:\Users\admin\Desktop\MU_Server\LogDBServer\bin\Debug\MySQLDriverCS.dll
+C:\Users\admin\Desktop\MU_Server\LogDBServer\bin\Debug\protobuf-net.dll
+C:\Users\admin\Desktop\MU_Server\LogDBServer\bin\Debug\zlib.net.dll
+C:\Users\admin\Desktop\MU_Server\LogDBServer\bin\Debug\MySQLDriverCS.pdb
+C:\Users\admin\Desktop\MU_Server\LogDBServer\obj\x64\Debug\LogDBServer.csproj.CopyComplete
+C:\Users\admin\Desktop\MU_Server\LogDBServer\obj\x64\Debug\LogDBServer.exe
+C:\Users\admin\Desktop\MU_Server\LogDBServer\obj\x64\Debug\LogDBServer.pdb
+C:\Users\admin\Desktop\MU_Server\LogDBServer\obj\x64\Debug\LogDBServer.csprojAssemblyReference.cache

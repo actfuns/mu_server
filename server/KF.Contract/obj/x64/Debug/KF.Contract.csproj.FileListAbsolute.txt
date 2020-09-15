@@ -1,0 +1,8 @@
+C:\Users\admin\Desktop\MU_Server\KF.Contract\bin\Debug\KF.Contract.dll
+C:\Users\admin\Desktop\MU_Server\KF.Contract\bin\Debug\KF.Contract.pdb
+C:\Users\admin\Desktop\MU_Server\KF.Contract\bin\Debug\protobuf-net.dll
+C:\Users\admin\Desktop\MU_Server\KF.Contract\obj\x64\Debug\KF.Contract.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\MU_Server\KF.Contract\obj\x64\Debug\KF.Contract.csproj.CopyComplete
+C:\Users\admin\Desktop\MU_Server\KF.Contract\obj\x64\Debug\KF.Contract.dll
+C:\Users\admin\Desktop\MU_Server\KF.Contract\obj\x64\Debug\KF.Contract.pdb
+C:\Users\admin\Desktop\MU_Server\KF.Contract\obj\x64\Debug\KF.Contract.csprojAssemblyReference.cache

@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{992037DF-3FCA-471D-B834-AE043F0DE561}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KF.Remoting.HuanYingSiYuan</RootNamespace>
+    <AssemblyName>KF.Remoting.HuanYingSiYuan</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoCSer">
+      <HintPath>D:\MU_Server\MU_Server\KF.CenterServer.Hosting\AutoCSer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>D:\MU_Server\MU_Server\KF.CenterServer.Hosting\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>D:\MU_Server\MU_Server\KF.CenterServer.Hosting\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySQLDriverCS">
+      <HintPath>D:\MU_Server\MU_Server\Server1\GameDBServer\MySQLDriverCS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Tmsk.Contract">
+      <HintPath>D:\MU_Server\MU_Server\Server1\GameServer\Tmsk.Contract.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="KF\Remoting\AgentDataObj.cs" />
+    <Compile Include="KF\Remoting\AllyPersistence.cs" />
+    <Compile Include="KF\Remoting\AllyService.cs" />
+    <Compile Include="KF\Remoting\BangHuiMatchPersistence.cs" />
+    <Compile Include="KF\Remoting\BangHuiMatchService.cs" />
+    <Compile Include="KF\Remoting\BHMatchStateMachine.cs" />
+    <Compile Include="KF\Remoting\CityLevelInfo.cs" />
+    <Compile Include="KF\Remoting\ClientAgent.cs" />
+    <Compile Include="KF\Remoting\ClientAgentManager.cs" />
+    <Compile Include="KF\Remoting\CmdMonitor.cs" />
+    <Compile Include="KF\Remoting\CompPersistence.cs" />
+    <Compile Include="KF\Remoting\CompService.cs" />
+    <Compile Include="KF\Remoting\CoupleArenaDivorceRecord.cs" />
+    <Compile Include="KF\Remoting\CoupleArenaJoinDataUtil.cs" />
+    <Compile Include="KF\Remoting\CoupleArenaJoinMatcher.cs" />
+    <Compile Include="KF\Remoting\CoupleArenaMatchTimeLimiter.cs" />
+    <Compile Include="KF\Remoting\CoupleArenaPersistence.cs" />
+    <Compile Include="KF\Remoting\CoupleArenaService.cs" />
+    <Compile Include="KF\Remoting\CoupleWishPersistence.cs" />
+    <Compile Include="KF\Remoting\CoupleWishRecordManager.cs" />
+    <Compile Include="KF\Remoting\CoupleWishService.cs" />
+    <Compile Include="KF\Remoting\Data\AsyncTypes.cs" />
+    <Compile Include="KF\Remoting\Data\GameFuBenStateDbItem.cs" />
+    <Compile Include="KF\Remoting\Data\GameLogItem.cs" />
+    <Compile Include="KF\Remoting\Data\GameTypeStaticsData.cs" />
+    <Compile Include="KF\Remoting\Data\Global.cs" />
+    <Compile Include="KF\Remoting\Data\ServerLoadContext.cs" />
+    <Compile Include="KF\Remoting\Data\SystemParamsListKF.cs" />
+    <Compile Include="KF\Remoting\HongBaoManager_K.cs" />
+    <Compile Include="KF\Remoting\HuanYingSiYuanPersistence.cs" />
+    <Compile Include="KF\Remoting\HuanYingSiYuanService.cs" />
+    <Compile Include="KF\Remoting\HuanYingSiYuan\TcpStaticServer\KfCall.cs" />
+    <Compile Include="KF\Remoting\IPStatisticsService.cs" />
+    <Compile Include="KF\Remoting\IPStatistics\IPStatisticsPersistence.cs" />
+    <Compile Include="KF\Remoting\JunTuanEraService.cs" />
+    <Compile Include="KF\Remoting\JunTuanPersistence.cs" />
+    <Compile Include="KF\Remoting\JunTuanService.cs" />
+    <Compile Include="KF\Remoting\KFBoCai\BocaiBase.cs" />
+    <Compile Include="KF\Remoting\KFBoCai\KFBoCaiCaiDaXiao.cs" />
+    <Compile Include="KF\Remoting\KFBoCai\KFBoCaiCaiShuzi.cs" />
+    <Compile Include="KF\Remoting\KFBoCai\KFBoCaiConfigManager.cs" />
+    <Compile Include="KF\Remoting\KFBoCai\KFBoCaiDbManager.cs" />
+    <Compile Include="KF\Remoting\KFBoCai\KFBoCaiShopManager.cs" />
+    <Compile Include="KF\Remoting\KfCmds.cs" />
+    <Compile Include="KF\Remoting\KFCopyTeamAnalysis.cs" />
+    <Compile Include="KF\Remoting\KFCopyTeamManager.cs" />
+    <Compile Include="KF\Remoting\KFTeamCountControl.cs" />
+    <Compile Include="KF\Remoting\KuaFuCopyDbMgr.cs" />
+    <Compile Include="KF\Remoting\KuaFuCopyService.cs" />
+    <Compile Include="KF\Remoting\KuaFuLueDuoPersistence.cs" />
+    <Compile Include="KF\Remoting\KuaFuLueDuoService.cs" />
+    <Compile Include="KF\Remoting\KuaFuLueDuoStateMachine.cs" />
+    <Compile Include="KF\Remoting\KuaFuServerManager.cs" />
+    <Compile Include="KF\Remoting\KuaFuServerManagerData.cs" />
+    <Compile Include="KF\Remoting\KuaFuWorldManager.cs" />
+    <Compile Include="KF\Remoting\KuaFuWorldService.cs" />
+    <Compile Include="KF\Remoting\LingDiCaiJiService.cs" />
+    <Compile Include="KF\Remoting\MessageInspector.cs" />
+    <Compile Include="KF\Remoting\MyClientChannelSink.cs" />
+    <Compile Include="KF\Remoting\MyClientChannelSinkProvider.cs" />
+    <Compile Include="KF\Remoting\MyServerChannelSink.cs" />
+    <Compile Include="KF\Remoting\MyServerChannelSinkProvider.cs" />
+    <Compile Include="KF\Remoting\PlatChargeKingManager.cs" />
+    <Compile Include="KF\Remoting\PorcessCmdMoniter.cs" />
+    <Compile Include="KF\Remoting\RankPersistence.cs" />
+    <Compile Include="KF\Remoting\RankService.cs" />
+    <Compile Include="KF\Remoting\RebornPersistence.cs" />
+    <Compile Include="KF\Remoting\RebornService.cs" />
+    <Compile Include="KF\Remoting\RemoveServerGameConfigToDbProc.cs" />
+    <Compile Include="KF\Remoting\RemoveServerInfoToDbProc.cs" />
+    <Compile Include="KF\Remoting\Security.cs" />
+    <Compile Include="KF\Remoting\ServiceCompressBehavior.cs" />
+    <Compile Include="KF\Remoting\SpecPriorityActivityMgr.cs" />
+    <Compile Include="KF\Remoting\SpreadPersistence.cs" />
+    <Compile Include="KF\Remoting\SpreadService.cs" />
+    <Compile Include="KF\Remoting\SysConOut.cs" />
+    <Compile Include="KF\Remoting\TCPProcessCmdResults.cs" />
+    <Compile Include="KF\Remoting\TianTiPersistence.cs" />
+    <Compile Include="KF\Remoting\TianTiService.cs" />
+    <Compile Include="KF\Remoting\TimeOutEventBlock.cs" />
+    <Compile Include="KF\Remoting\TimeOutEventQueue.cs" />
+    <Compile Include="KF\Remoting\UpdateServerGameConfigToDbProc.cs" />
+    <Compile Include="KF\Remoting\UpdateServerInfoToDbProc.cs" />
+    <Compile Include="KF\Remoting\YaoSaiSearchParam.cs" />
+    <Compile Include="KF\Remoting\YaoSaiService.cs" />
+    <Compile Include="KF\Remoting\YongZheZhanChangPersistence.cs" />
+    <Compile Include="KF\Remoting\YongZheZhanChangService.cs" />
+    <Compile Include="KF\Remoting\ZhanDuiZhengBaPersistence.cs" />
+    <Compile Include="KF\Remoting\ZhengBaManagerK.cs" />
+    <Compile Include="KF\Remoting\ZhengBaPersistence.cs" />
+    <Compile Include="KF\Remoting\ZhengBaStateMachine.cs" />
+    <Compile Include="KF\Remoting\ZhengDuoPersistence.cs" />
+    <Compile Include="KF\Remoting\zhengDuoService.cs" />
+    <Compile Include="KF\Remoting\_CoupleArenaDuanWeiCfg.cs" />
+    <Compile Include="KF\Remoting\_CoupleArenaWarTimePoint.cs" />
+    <Compile Include="KF\TcpCall\CpuModel.cs" />
+    <Compile Include="KF\TcpCall\EscapeBattle_K.cs" />
+    <Compile Include="KF\TcpCall\KFBoCaiManager.cs" />
+    <Compile Include="KF\TcpCall\KFServiceBase.cs" />
+    <Compile Include="KF\TcpCall\TestS2KFCommunication.cs" />
+    <Compile Include="KF\TcpCall\ZhanDuiZhengBa_K.cs" />
+    <Compile Include="Maticsoft\DBUtility\CommandInfo.cs" />
+    <Compile Include="Maticsoft\DBUtility\DbHelperMySQL.cs" />
+    <Compile Include="Maticsoft\DBUtility\DbHelperMySQL2.cs" />
+    <Compile Include="Maticsoft\DBUtility\DbHelperMySQL3.cs" />
+    <Compile Include="Maticsoft\DBUtility\DbHelperSQL2.cs" />
+    <Compile Include="Maticsoft\DBUtility\DbHelperSQLP.cs" />
+    <Compile Include="Maticsoft\DBUtility\DESEncrypt.cs" />
+    <Compile Include="Maticsoft\DBUtility\EffentNextType.cs" />
+    <Compile Include="Maticsoft\DBUtility\OracleHelper.cs" />
+    <Compile Include="Maticsoft\DBUtility\PubConstant.cs" />
+    <Compile Include="Maticsoft\DBUtility\SqlHelper.cs" />
+    <Compile Include="MILogin\MUJson.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Remoting\TianTi5v5Service.cs" />
+    <Compile Include="Remoting\Zork5v5Service.cs" />
+    <Compile Include="Remoting\Zork5v5StateMachine.cs" />
+    <Compile Include="Tmsk\DbHelper\MyDataReader.cs" />
+    <Compile Include="Tmsk\DbHelper\MyDbConnection1.cs" />
+    <Compile Include="Tmsk\DbHelper\MyDbConnection2.cs" />
+    <Compile Include="Tmsk\DbHelper\MyDbConnectionPool.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,413 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Xml.Linq;
+using Server.Tools;
+
+namespace GameServer.Logic
+{
+	// Token: 0x0200075B RID: 1883
+	internal class MonsterContainer
+	{
+		// Token: 0x06002F6F RID: 12143 RVA: 0x002A6768 File Offset: 0x002A4968
+		public void initialize(IEnumerable<XElement> mapItems)
+		{
+			foreach (XElement mapItem in mapItems)
+			{
+				int mapCode = (int)Global.GetSafeAttributeLong(mapItem, "Code");
+				List<object> objList = new List<object>(100);
+				this._MapObjectDict.Add(mapCode, objList);
+				Dictionary<int, object> objDict = new Dictionary<int, object>(100);
+				this._ObjectDict.Add(mapCode, objDict);
+				if (mapCode == 6090)
+				{
+					for (int i = 0; i < 25; i++)
+					{
+						Dictionary<int, object> freshPlayerObjDict = new Dictionary<int, object>(2000);
+						this._FreshPlayerObjectDict.Add(i, freshPlayerObjDict);
+						List<object> freshPlayerObjList = new List<object>(100);
+						this._FreshPlayerMapObjectDict.Add(i, freshPlayerObjList);
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000353 RID: 851
+		// (get) Token: 0x06002F70 RID: 12144 RVA: 0x002A6860 File Offset: 0x002A4A60
+		public List<object> ObjectList
+		{
+			get
+			{
+				return this._ObjectList;
+			}
+		}
+
+		// Token: 0x17000354 RID: 852
+		// (get) Token: 0x06002F71 RID: 12145 RVA: 0x002A6878 File Offset: 0x002A4A78
+		public Dictionary<int, Dictionary<int, object>> ObjectDict
+		{
+			get
+			{
+				return this._ObjectDict;
+			}
+		}
+
+		// Token: 0x17000355 RID: 853
+		// (get) Token: 0x06002F72 RID: 12146 RVA: 0x002A6890 File Offset: 0x002A4A90
+		public Dictionary<int, List<object>> MapObjectDict
+		{
+			get
+			{
+				return this._MapObjectDict;
+			}
+		}
+
+		// Token: 0x17000356 RID: 854
+		// (get) Token: 0x06002F73 RID: 12147 RVA: 0x002A68A8 File Offset: 0x002A4AA8
+		public Dictionary<int, List<object>> CopyMapIDObjectDict
+		{
+			get
+			{
+				return this._CopyMapIDObjectDict;
+			}
+		}
+
+		// Token: 0x06002F74 RID: 12148 RVA: 0x002A68C0 File Offset: 0x002A4AC0
+		public void AddObject(int id, int mapCode, int copyMapID, Monster obj)
+		{
+			lock (this._ObjectList)
+			{
+				this._ObjectList.Add(obj);
+			}
+			Dictionary<int, object> objDict = null;
+			if (this._ObjectDict.TryGetValue(mapCode, out objDict))
+			{
+				lock (objDict)
+				{
+					objDict.Add(id, obj);
+				}
+			}
+			List<object> objList = null;
+			if (this._MapObjectDict.TryGetValue(mapCode, out objList))
+			{
+				lock (objList)
+				{
+					objList.Add(obj);
+				}
+			}
+			if (mapCode == 6090)
+			{
+				int subMapCode = Global.GetRandomNumber(0, 24);
+				obj.SubMapCode = subMapCode;
+				List<object> list = null;
+				if (this._FreshPlayerMapObjectDict.TryGetValue(subMapCode, out list))
+				{
+					lock (list)
+					{
+						list.Add(obj);
+					}
+				}
+				Dictionary<int, object> dict = null;
+				if (this._FreshPlayerObjectDict.TryGetValue(subMapCode, out dict))
+				{
+					lock (dict)
+					{
+						dict.Add(id, obj);
+					}
+				}
+			}
+			lock (this._CopyMapIDObjectDict)
+			{
+				List<object> _objList = null;
+				if (this._CopyMapIDObjectDict.TryGetValue(copyMapID, out _objList))
+				{
+					_objList.Add(obj);
+				}
+				else
+				{
+					_objList = new List<object>(100);
+					_objList.Add(obj);
+					this._CopyMapIDObjectDict.Add(copyMapID, _objList);
+				}
+			}
+		}
+
+		// Token: 0x06002F75 RID: 12149 RVA: 0x002A6B30 File Offset: 0x002A4D30
+		public void RemoveObject(int id, int mapCode, int copyMapID, Monster obj)
+		{
+			lock (this._ObjectList)
+			{
+				this._ObjectList.Remove(obj);
+			}
+			Dictionary<int, object> objDict = null;
+			if (this._ObjectDict.TryGetValue(mapCode, out objDict))
+			{
+				lock (objDict)
+				{
+					objDict.Remove(id);
+				}
+			}
+			List<object> objList = null;
+			if (this._MapObjectDict.TryGetValue(mapCode, out objList))
+			{
+				try
+				{
+					lock (objList)
+					{
+						objList.Remove(obj);
+					}
+				}
+				catch (Exception)
+				{
+				}
+			}
+			if (mapCode == 6090)
+			{
+				int subMapCode = obj.SubMapCode;
+				List<object> list = null;
+				if (this._FreshPlayerMapObjectDict.TryGetValue(subMapCode, out list))
+				{
+					try
+					{
+						lock (list)
+						{
+							list.Remove(obj);
+						}
+					}
+					catch (Exception ex)
+					{
+						LogManager.WriteException(ex.ToString());
+					}
+				}
+				Dictionary<int, object> dict = null;
+				if (this._FreshPlayerObjectDict.TryGetValue(subMapCode, out dict))
+				{
+					try
+					{
+						lock (dict)
+						{
+							dict.Remove(id);
+						}
+					}
+					catch (Exception ex)
+					{
+						LogManager.WriteException(ex.ToString());
+					}
+				}
+			}
+			List<object> _objList = null;
+			if (this._CopyMapIDObjectDict.TryGetValue(copyMapID, out _objList))
+			{
+				try
+				{
+					lock (_objList)
+					{
+						_objList.Remove(obj);
+					}
+				}
+				catch (Exception)
+				{
+				}
+			}
+		}
+
+		// Token: 0x06002F76 RID: 12150 RVA: 0x002A6DDC File Offset: 0x002A4FDC
+		public List<object> GetObjectsByMap(int mapCode, int subMapCode = -1)
+		{
+			List<object> newObjList = null;
+			List<object> objList = null;
+			if (mapCode == 6090 && subMapCode != -1)
+			{
+				if (this._FreshPlayerMapObjectDict.TryGetValue(subMapCode, out objList))
+				{
+					lock (objList)
+					{
+						newObjList = objList.GetRange(0, objList.Count);
+					}
+				}
+			}
+			else if (this._MapObjectDict.TryGetValue(mapCode, out objList))
+			{
+				lock (objList)
+				{
+					newObjList = objList.GetRange(0, objList.Count);
+				}
+			}
+			return newObjList;
+		}
+
+		// Token: 0x06002F77 RID: 12151 RVA: 0x002A6EC8 File Offset: 0x002A50C8
+		public int GetObjectsCountByMap(int mapCode)
+		{
+			int count = 0;
+			List<object> objList = null;
+			if (this._MapObjectDict.TryGetValue(mapCode, out objList))
+			{
+				lock (objList)
+				{
+					count = objList.Count;
+				}
+			}
+			return count;
+		}
+
+		// Token: 0x06002F78 RID: 12152 RVA: 0x002A6F38 File Offset: 0x002A5138
+		public List<object> GetObjectsByCopyMapID(int copyMapID)
+		{
+			List<object> newObjList = null;
+			List<object> objList = null;
+			if (this._CopyMapIDObjectDict.TryGetValue(copyMapID, out objList))
+			{
+				lock (objList)
+				{
+					newObjList = objList.GetRange(0, objList.Count);
+				}
+			}
+			return newObjList;
+		}
+
+		// Token: 0x06002F79 RID: 12153 RVA: 0x002A6FAC File Offset: 0x002A51AC
+		public int GetObjectsCountByCopyMapID(int copyMapID, int aliveType = -1)
+		{
+			int count = 0;
+			List<object> objList = null;
+			if (this._CopyMapIDObjectDict.TryGetValue(copyMapID, out objList))
+			{
+				if (null != objList)
+				{
+					if (-1 == aliveType)
+					{
+						lock (objList)
+						{
+							count = objList.Count;
+						}
+					}
+					else if (0 == aliveType)
+					{
+						lock (objList)
+						{
+							for (int i = 0; i < objList.Count; i++)
+							{
+								if ((objList[i] as Monster).VLife > 0.0 && (objList[i] as Monster).Alive && (objList[i] as Monster).MonsterType != 1001)
+								{
+									count++;
+								}
+							}
+						}
+					}
+					else
+					{
+						lock (objList)
+						{
+							for (int i = 0; i < objList.Count; i++)
+							{
+								if (!(objList[i] as Monster).Alive)
+								{
+									count++;
+								}
+							}
+						}
+					}
+				}
+			}
+			return count;
+		}
+
+		// Token: 0x06002F7A RID: 12154 RVA: 0x002A7168 File Offset: 0x002A5368
+		public bool IsAnyMonsterAliveByCopyMapID(int copyMapID)
+		{
+			List<object> objList = null;
+			if (this._CopyMapIDObjectDict.TryGetValue(copyMapID, out objList))
+			{
+				if (null != objList)
+				{
+					lock (objList)
+					{
+						for (int i = 0; i < objList.Count; i++)
+						{
+							if ((objList[i] as Monster).Alive && (objList[i] as Monster).MonsterType != 1001)
+							{
+								return true;
+							}
+						}
+					}
+				}
+			}
+			return false;
+		}
+
+		// Token: 0x06002F7B RID: 12155 RVA: 0x002A7230 File Offset: 0x002A5430
+		public object FindObject(int id, int mapCode)
+		{
+			object obj = null;
+			Dictionary<int, object> objDict = null;
+			if (this._ObjectDict.TryGetValue(mapCode, out objDict))
+			{
+				lock (objDict)
+				{
+					objDict.TryGetValue(id, out obj);
+				}
+			}
+			return obj;
+		}
+
+		// Token: 0x06002F7C RID: 12156 RVA: 0x002A72A0 File Offset: 0x002A54A0
+		public List<object> FindObjectAll(int mapCode)
+		{
+			List<object> ret = new List<object>();
+			Dictionary<int, object> objDict = null;
+			if (this._ObjectDict.TryGetValue(mapCode, out objDict))
+			{
+				lock (objDict)
+				{
+					foreach (KeyValuePair<int, object> intem in objDict)
+					{
+						ret.Add(intem.Value);
+					}
+				}
+			}
+			return ret;
+		}
+
+		// Token: 0x06002F7D RID: 12157 RVA: 0x002A735C File Offset: 0x002A555C
+		public List<object> FindObjectsByExtensionID(int extensionID, int copyMapID)
+		{
+			List<object> findObjsList = new List<object>();
+			List<object> objList = null;
+			if (this._CopyMapIDObjectDict.TryGetValue(copyMapID, out objList))
+			{
+				if (null != objList)
+				{
+					lock (objList)
+					{
+						for (int i = 0; i < objList.Count; i++)
+						{
+							if ((objList[i] as Monster).VLife > 0.0 && (objList[i] as Monster).Alive && (objList[i] as Monster).MonsterInfo.ExtensionID == extensionID)
+							{
+								findObjsList.Add(objList[i]);
+							}
+						}
+					}
+				}
+			}
+			return findObjsList;
+		}
+
+		// Token: 0x04003CD9 RID: 15577
+		public List<object> _ObjectList = new List<object>(20000);
+
+		// Token: 0x04003CDA RID: 15578
+		private Dictionary<int, Dictionary<int, object>> _ObjectDict = new Dictionary<int, Dictionary<int, object>>(10000);
+
+		// Token: 0x04003CDB RID: 15579
+		private Dictionary<int, Dictionary<int, object>> _FreshPlayerObjectDict = new Dictionary<int, Dictionary<int, object>>(50);
+
+		// Token: 0x04003CDC RID: 15580
+		private Dictionary<int, List<object>> _MapObjectDict = new Dictionary<int, List<object>>(10000);
+
+		// Token: 0x04003CDD RID: 15581
+		private Dictionary<int, List<object>> _FreshPlayerMapObjectDict = new Dictionary<int, List<object>>(50);
+
+		// Token: 0x04003CDE RID: 15582
+		private Dictionary<int, List<object>> _CopyMapIDObjectDict = new Dictionary<int, List<object>>(10000);
+	}
+}

@@ -1,0 +1,19 @@
+﻿using System;
+
+namespace GameServer.Logic
+{
+	// Token: 0x02000687 RID: 1671
+	public enum BloodCastleMapCode
+	{
+		// Token: 0x040034DE RID: 13534
+		BLOODCASTLEMAPCODE1 = 5000,
+		// Token: 0x040034DF RID: 13535
+		BLOODCASTLEMAPCODE2,
+		// Token: 0x040034E0 RID: 13536
+		BLOODCASTLEMAPCODE3,
+		// Token: 0x040034E1 RID: 13537
+		BLOODCASTLEMAPCODE4,
+		// Token: 0x040034E2 RID: 13538
+		BLOODCASTLEMAPCODE5
+	}
+}

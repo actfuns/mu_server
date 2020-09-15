@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{992037DF-3FCA-471D-B834-AE043F0DE560}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KF.Contract</RootNamespace>
+    <AssemblyName>KF.Contract</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="protobuf-net">
+      <HintPath>..\Libs\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthorizationContext.cs" />
+    <Compile Include="Data\AsyncDataItem.cs" />
+    <Compile Include="Data\Consts.cs" />
+    <Compile Include="Data\CopyCancelReason.cs" />
+    <Compile Include="Data\ElementWarFuBenData.cs" />
+    <Compile Include="Data\GameElementWarRoleCountChanged.cs" />
+    <Compile Include="Data\GameFuBenRoleCountChanged.cs" />
+    <Compile Include="Data\GameFuBenState.cs" />
+    <Compile Include="Data\GameTypes.cs" />
+    <Compile Include="Data\GetKuaFuServerListRequestData.cs" />
+    <Compile Include="Data\GetKuaFuServerListResponseData.cs" />
+    <Compile Include="Data\HuanYingSiYuanFuBenData.cs" />
+    <Compile Include="Data\HuanYingSiYuan\HuanYingSiYuanGameData.cs" />
+    <Compile Include="Data\KuaFuEventTypes.cs" />
+    <Compile Include="Data\KuaFuFuBenRoleData.cs" />
+    <Compile Include="Data\KuaFuRoleData.cs" />
+    <Compile Include="Data\KuaFuRoleExtendDataTypes.cs" />
+    <Compile Include="Data\KuaFuRoleId.cs" />
+    <Compile Include="Data\KuaFuRoleKey.cs" />
+    <Compile Include="Data\KuaFuRoleStates.cs" />
+    <Compile Include="Data\KuaFuServerGameConfig.cs" />
+    <Compile Include="Data\KuaFuServerGameConfigProtoData.cs" />
+    <Compile Include="Data\KuaFuServerInfo.cs" />
+    <Compile Include="Data\KuaFuServerInfoProtoData.cs" />
+    <Compile Include="Data\MoRiJudgeFuBenData.cs" />
+    <Compile Include="Data\MoRiJudgeGameData.cs" />
+    <Compile Include="Data\TianTiFuBenData.cs" />
+    <Compile Include="Data\TianTiGameData.cs" />
+    <Compile Include="Data\TianTiRankData.cs" />
+    <Compile Include="Data\TianTiRoleInfoData.cs" />
+    <Compile Include="Data\YongZheZhanChangFuBenData.cs" />
+    <Compile Include="Data\YongZheZhanChangGameData.cs" />
+    <Compile Include="Data\YongZheZhanChangGameFuBenPreAssignData.cs" />
+    <Compile Include="Data\YongZheZhanChangStatisticalData.cs" />
+    <Compile Include="Interface\IElementWarService.cs" />
+    <Compile Include="Interface\IExecCommand.cs" />
+    <Compile Include="Interface\IGameData.cs" />
+    <Compile Include="Interface\IKuaFuClient.cs" />
+    <Compile Include="Interface\IKuaFuFuBenData.cs" />
+    <Compile Include="Interface\IKuaFuService.cs" />
+    <Compile Include="Interface\IMoRiJudgeService.cs" />
+    <Compile Include="Interface\ITianTiService.cs" />
+    <Compile Include="Interface\IYongZheZhanChangService.cs" />
+    <Compile Include="KuaFuClientContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
