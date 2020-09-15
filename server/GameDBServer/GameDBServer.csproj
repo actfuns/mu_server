@@ -596,6 +596,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.manifest" />
+    <Content Include="qqwry.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppConfig.xml">
