@@ -8,16 +8,16 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200040D RID: 1037
+	
 	public class ShenQiManager : IManager, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x06001234 RID: 4660 RVA: 0x00120744 File Offset: 0x0011E944
+		
 		public static ShenQiManager getInstance()
 		{
 			return ShenQiManager.instance;
 		}
 
-		// Token: 0x06001235 RID: 4661 RVA: 0x0012075C File Offset: 0x0011E95C
+		
 		public bool initialize()
 		{
 			this.LoadArtifactXml();
@@ -26,7 +26,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001236 RID: 4662 RVA: 0x00120784 File Offset: 0x0011E984
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1816, 1, 1, ShenQiManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -34,25 +34,25 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001237 RID: 4663 RVA: 0x001207C8 File Offset: 0x0011E9C8
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06001238 RID: 4664 RVA: 0x001207DC File Offset: 0x0011E9DC
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06001239 RID: 4665 RVA: 0x001207F0 File Offset: 0x0011E9F0
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x0600123A RID: 4666 RVA: 0x00120804 File Offset: 0x0011EA04
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -78,7 +78,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600123B RID: 4667 RVA: 0x00120860 File Offset: 0x0011EA60
+		
 		public bool ProcessShenQiInfoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -99,7 +99,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600123C RID: 4668 RVA: 0x001208D8 File Offset: 0x0011EAD8
+		
 		public bool ProcessShenQiUpCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -121,7 +121,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600123D RID: 4669 RVA: 0x00120960 File Offset: 0x0011EB60
+		
 		public void LoadArtifactXml()
 		{
 			string fileName = "";
@@ -206,7 +206,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600123E RID: 4670 RVA: 0x00120D48 File Offset: 0x0011EF48
+		
 		public void LoadToughnessXml()
 		{
 			string fileName = "";
@@ -269,7 +269,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600123F RID: 4671 RVA: 0x00121068 File Offset: 0x0011F268
+		
 		public void LoadGodXml()
 		{
 			string fileName = "";
@@ -340,7 +340,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001240 RID: 4672 RVA: 0x00121334 File Offset: 0x0011F534
+		
 		public static ShenQiData GetShenQiData(GameClient client)
 		{
 			ShenQiData result;
@@ -389,7 +389,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001241 RID: 4673 RVA: 0x0012148C File Offset: 0x0011F68C
+		
 		public ShenQiData LevelUpShenQiData(GameClient client, int useBaoJi)
 		{
 			ShenQiData result;
@@ -558,7 +558,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001242 RID: 4674 RVA: 0x00121C08 File Offset: 0x0011FE08
+		
 		public void UpdateRoleShenQiProps(GameClient client)
 		{
 			try
@@ -620,7 +620,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001243 RID: 4675 RVA: 0x00121EA0 File Offset: 0x001200A0
+		
 		public void UpdateRoleTouhgnessProps(GameClient client)
 		{
 			try
@@ -716,7 +716,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001244 RID: 4676 RVA: 0x00122278 File Offset: 0x00120478
+		
 		public void UpdateRoleGodProps(GameClient client)
 		{
 			try
@@ -782,7 +782,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001245 RID: 4677 RVA: 0x00122674 File Offset: 0x00120874
+		
 		public static void InitRoleShenQiData(GameClient client)
 		{
 			client.ClientData.ShenLiJingHuaPoints = Global.GetRoleParamsInt32FromDB(client, "10157");
@@ -795,10 +795,10 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04001B97 RID: 7063
+		
 		public ShenQiRunData ShenQiRunTimeData = new ShenQiRunData();
 
-		// Token: 0x04001B98 RID: 7064
+		
 		private static ShenQiManager instance = new ShenQiManager();
 	}
 }

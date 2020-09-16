@@ -14,22 +14,22 @@ using Tmsk.Contract.KuaFuData;
 
 namespace GameServer.Logic
 {
-    // Token: 0x020002A2 RID: 674
+    
     public class EraManager : IManager, ICmdProcessorEx, ICmdProcessor
     {
-        // Token: 0x060009FA RID: 2554 RVA: 0x0009E980 File Offset: 0x0009CB80
+        
         public static EraManager getInstance()
         {
             return EraManager.instance;
         }
 
-        // Token: 0x060009FB RID: 2555 RVA: 0x0009E998 File Offset: 0x0009CB98
+        
         public bool initialize()
         {
             return this.InitConfig();
         }
 
-        // Token: 0x060009FC RID: 2556 RVA: 0x0009E9BC File Offset: 0x0009CBBC
+        
         public bool startup()
         {
             TCPCmdDispatcher.getInstance().registerProcessorEx(1090, 1, 1, EraManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -38,25 +38,25 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x060009FD RID: 2557 RVA: 0x0009EA18 File Offset: 0x0009CC18
+        
         public bool showdown()
         {
             return true;
         }
 
-        // Token: 0x060009FE RID: 2558 RVA: 0x0009EA2C File Offset: 0x0009CC2C
+        
         public bool destroy()
         {
             return true;
         }
 
-        // Token: 0x060009FF RID: 2559 RVA: 0x0009EA40 File Offset: 0x0009CC40
+        
         public bool processCmd(GameClient client, string[] cmdParams)
         {
             return false;
         }
 
-        // Token: 0x06000A00 RID: 2560 RVA: 0x0009EA54 File Offset: 0x0009CC54
+        
         public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             bool result;
@@ -86,7 +86,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000A01 RID: 2561 RVA: 0x0009EB10 File Offset: 0x0009CD10
+        
         public void OnLogin(GameClient client)
         {
             if (JunTuanClient.getInstance().GetCurrentEraID() <= 0)
@@ -115,13 +115,13 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000A02 RID: 2562 RVA: 0x0009EBD4 File Offset: 0x0009CDD4
+        
         public bool InitConfig()
         {
             return this.LoadEraUIConfigFile() && this.LoadEraTaskConfigFile() && this.LoadEraRewardConfigFile() && this.LoadEraDropConfigFile() && this.LoadEraContributionConfigFile();
         }
 
-        // Token: 0x06000A03 RID: 2563 RVA: 0x0009EC30 File Offset: 0x0009CE30
+        
         public bool LoadEraUIConfigFile()
         {
             try
@@ -156,7 +156,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x06000A04 RID: 2564 RVA: 0x0009EDE4 File Offset: 0x0009CFE4
+        
         public bool LoadEraTaskConfigFile()
         {
             try
@@ -216,7 +216,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x06000A05 RID: 2565 RVA: 0x0009F068 File Offset: 0x0009D268
+        
         public bool LoadEraRewardConfigFile()
         {
             try
@@ -267,7 +267,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x06000A06 RID: 2566 RVA: 0x0009F2F0 File Offset: 0x0009D4F0
+        
         public bool LoadEraDropConfigFile()
         {
             try
@@ -360,7 +360,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x06000A07 RID: 2567 RVA: 0x0009F688 File Offset: 0x0009D888
+        
         public bool LoadEraContributionConfigFile()
         {
             try
@@ -401,7 +401,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x06000A08 RID: 2568 RVA: 0x0009F900 File Offset: 0x0009DB00
+        
         public void EraTimer_Work()
         {
             if (!GameManager.IsKuaFuServer)
@@ -559,7 +559,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000A09 RID: 2569 RVA: 0x000A0174 File Offset: 0x0009E374
+        
         private bool InRankAwardTime()
         {
             int curEraID = JunTuanClient.getInstance().GetCurrentEraID();
@@ -591,7 +591,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000A0A RID: 2570 RVA: 0x000A0284 File Offset: 0x0009E484
+        
         private int CheckCanGetAward(GameClient client, EraAwardConfig awardConfig, KFEraData kfEraData)
         {
             int result;
@@ -672,7 +672,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000A0B RID: 2571 RVA: 0x000A04CC File Offset: 0x0009E6CC
+        
         public void OnChangeEraID(int CurrentJunTuanEraID)
         {
             foreach (GameClient client in GameManager.ClientMgr.GetAllClients(true))
@@ -693,7 +693,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000A0C RID: 2572 RVA: 0x000A05A8 File Offset: 0x0009E7A8
+        
         public void CheckAllJunTuanEraIcon(int juntuanID)
         {
             foreach (GameClient client in GameManager.ClientMgr.GetAllClients(true))
@@ -708,14 +708,14 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000A0D RID: 2573 RVA: 0x000A0634 File Offset: 0x0009E834
+        
         public void OnJunTuanZhiWuChanged(GameClient client)
         {
             int donateVal = GameManager.ClientMgr.GetEraDonateValue(client);
             GameManager.ClientMgr.NotifySelfParamsValueChange(client, RoleCommonUseIntParamsIndexs.EraDonate, donateVal);
         }
 
-        // Token: 0x06000A0E RID: 2574 RVA: 0x000A0660 File Offset: 0x0009E860
+        
         public bool CheckJunTuanEraIcon(GameClient client)
         {
             bool result2;
@@ -750,7 +750,7 @@ namespace GameServer.Logic
             return result2;
         }
 
-        // Token: 0x06000A0F RID: 2575 RVA: 0x000A077C File Offset: 0x0009E97C
+        
         public List<int> GetEraAwardStateData(GameClient client)
         {
             int curEraID = JunTuanClient.getInstance().GetCurrentEraID();
@@ -784,13 +784,13 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000A10 RID: 2576 RVA: 0x000A0834 File Offset: 0x0009EA34
+        
         private void SaveEraAwardStateData(GameClient client, List<int> countList)
         {
             Global.SaveRoleParamsIntListToDB(client, countList, "45", true);
         }
 
-        // Token: 0x06000A11 RID: 2577 RVA: 0x000A088C File Offset: 0x0009EA8C
+        
         public int GetEraFallGoodsMaxCount(IObject attacker, int goodsPackID)
         {
             int result;
@@ -838,7 +838,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000A12 RID: 2578 RVA: 0x000A09E8 File Offset: 0x0009EBE8
+        
         public List<FallGoodsItem> GetEraFallGoodsItem(GameClient client, int goodsPackID)
         {
             List<FallGoodsItem> result;
@@ -882,7 +882,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000A13 RID: 2579 RVA: 0x000A0AE0 File Offset: 0x0009ECE0
+        
         private EraData BuildEraData4Client(GameClient client)
         {
             KFEraData kfEraData = JunTuanClient.getInstance().GetJunTuanEraData(client.ClientData.JunTuanId, false);
@@ -937,7 +937,7 @@ namespace GameServer.Logic
             return eraData4Client;
         }
 
-        // Token: 0x06000A14 RID: 2580 RVA: 0x000A0D40 File Offset: 0x0009EF40
+        
         public bool ProcessGetEraDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -957,7 +957,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000A15 RID: 2581 RVA: 0x000A0E2C File Offset: 0x0009F02C
+        
         public bool ProcessEraDonateCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -1108,7 +1108,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000A16 RID: 2582 RVA: 0x000A1518 File Offset: 0x0009F718
+        
         public bool ProcessEraAwardCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -1183,43 +1183,43 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x04001094 RID: 4244
+        
         private const string EraUI_FileName = "Config/EraUI.xml";
 
-        // Token: 0x04001095 RID: 4245
+        
         private const string EraTask_FileName = "Config/EraTask.xml";
 
-        // Token: 0x04001096 RID: 4246
+        
         private const string EraReward_FileName = "Config/EraReward.xml";
 
-        // Token: 0x04001097 RID: 4247
+        
         private const string EraDrop_FileName = "Config/EraDrop.xml";
 
-        // Token: 0x04001098 RID: 4248
+        
         private const string EraContribution_FileName = "Config/EraContribution.xml";
 
-        // Token: 0x04001099 RID: 4249
+        
         private object ConfigMutex = new object();
 
-        // Token: 0x0400109A RID: 4250
+        
         public Dictionary<int, EraUIConfig> EraUIConfigDict = new Dictionary<int, EraUIConfig>();
 
-        // Token: 0x0400109B RID: 4251
+        
         public Dictionary<KeyValuePair<int, int>, List<EraTaskConfig>> EraTaskConfigDict = new Dictionary<KeyValuePair<int, int>, List<EraTaskConfig>>();
 
-        // Token: 0x0400109C RID: 4252
+        
         public Dictionary<int, EraAwardConfig> EraAwardConfigDict = new Dictionary<int, EraAwardConfig>();
 
-        // Token: 0x0400109D RID: 4253
+        
         public Dictionary<int, List<EraDropConfig>> EraDropConfigDict = new Dictionary<int, List<EraDropConfig>>();
 
-        // Token: 0x0400109E RID: 4254
+        
         public List<EraContributionConfig> EraContributionList = new List<EraContributionConfig>();
 
-        // Token: 0x0400109F RID: 4255
+        
         private int CheckRankAwardDayID;
 
-        // Token: 0x040010A0 RID: 4256
+        
         private static EraManager instance = new EraManager();
     }
 }

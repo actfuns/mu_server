@@ -14,23 +14,23 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000437 RID: 1079
+	
 	public class ThemeBoss : Activity, IManager, IEventListener, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x060013D4 RID: 5076 RVA: 0x00138DB8 File Offset: 0x00136FB8
+		
 		public static ThemeBoss getInstance()
 		{
 			return ThemeBoss.instance;
 		}
 
-		// Token: 0x060013D5 RID: 5077 RVA: 0x00138DD0 File Offset: 0x00136FD0
+		
 		public bool initialize()
 		{
 			this.InitConfig();
 			return true;
 		}
 
-		// Token: 0x060013D6 RID: 5078 RVA: 0x00138DEC File Offset: 0x00136FEC
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(910, 1, 1, ThemeBoss.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -39,7 +39,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060013D7 RID: 5079 RVA: 0x00138E3C File Offset: 0x0013703C
+		
 		public bool showdown()
 		{
 			GlobalEventSource.getInstance().removeListener(10, ThemeBoss.getInstance());
@@ -47,25 +47,25 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060013D8 RID: 5080 RVA: 0x00138E74 File Offset: 0x00137074
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060013D9 RID: 5081 RVA: 0x00138E88 File Offset: 0x00137088
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x060013DA RID: 5082 RVA: 0x00138E9C File Offset: 0x0013709C
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			return nID != 910 || this.ProcessThemeBossStateCmd(client, nID, bytes, cmdParams);
 		}
 
-		// Token: 0x060013DB RID: 5083 RVA: 0x00138ECC File Offset: 0x001370CC
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int eventType = eventObject.getEventType();
@@ -76,7 +76,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060013DC RID: 5084 RVA: 0x00138F24 File Offset: 0x00137124
+		
 		public bool InitConfig()
 		{
 			string fileName = "";
@@ -148,7 +148,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060013DD RID: 5085 RVA: 0x001392CC File Offset: 0x001374CC
+		
 		public bool ProcessThemeBossStateCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -186,7 +186,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060013DE RID: 5086 RVA: 0x001393AC File Offset: 0x001375AC
+		
 		public void OnProcessMonsterDead(GameClient client, Monster monster)
 		{
 			if (ThemeBoss.getInstance().IsThemeBoss(monster))
@@ -214,7 +214,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060013DF RID: 5087 RVA: 0x00139480 File Offset: 0x00137680
+		
 		private void GenerateThemeBossScene()
 		{
 			int curDayID = TimeUtil.GetOffsetDay(TimeUtil.NowDateTime());
@@ -271,7 +271,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060013E0 RID: 5088 RVA: 0x001396A0 File Offset: 0x001378A0
+		
 		private bool GetStartEndTime(int sceneId, out long StartTick, out long EndTick)
 		{
 			StartTick = 0L;
@@ -300,7 +300,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x060013E1 RID: 5089 RVA: 0x0013986C File Offset: 0x00137A6C
+		
 		public bool JudgeCanTriggerActivity(ThemeBossScene scene, DateTime now)
 		{
 			lock (ThemeBoss.Mutex)
@@ -316,7 +316,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x060013E2 RID: 5090 RVA: 0x0013993C File Offset: 0x00137B3C
+		
 		public bool IsThemeBossGoods(int goodsID)
 		{
 			bool result;
@@ -327,7 +327,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060013E3 RID: 5091 RVA: 0x00139990 File Offset: 0x00137B90
+		
 		public bool IsThemeBossScene(int mapCode)
 		{
 			bool result;
@@ -338,7 +338,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060013E4 RID: 5092 RVA: 0x001399E4 File Offset: 0x00137BE4
+		
 		public bool IsThemeBoss(Monster monster)
 		{
 			bool result;
@@ -354,7 +354,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060013E5 RID: 5093 RVA: 0x00139A4C File Offset: 0x00137C4C
+		
 		public void TimerProc()
 		{
 			if (!GameManager.IsKuaFuServer)
@@ -432,28 +432,28 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04001D24 RID: 7460
+		
 		public const int MaxActiveConditionDataNum = 100;
 
-		// Token: 0x04001D25 RID: 7461
+		
 		private static object Mutex = new object();
 
-		// Token: 0x04001D26 RID: 7462
+		
 		private static long LastHeartBeatTicks = 0L;
 
-		// Token: 0x04001D27 RID: 7463
+		
 		private Dictionary<int, ThemeBossConfig> ThemeBossConfigDict = new Dictionary<int, ThemeBossConfig>();
 
-		// Token: 0x04001D28 RID: 7464
+		
 		private List<int> BroadGoodsIDList = new List<int>();
 
-		// Token: 0x04001D29 RID: 7465
+		
 		public ConcurrentDictionary<int, ThemeBossScene> SceneDict = new ConcurrentDictionary<int, ThemeBossScene>();
 
-		// Token: 0x04001D2A RID: 7466
+		
 		public int SceneDayID;
 
-		// Token: 0x04001D2B RID: 7467
+		
 		private static ThemeBoss instance = new ThemeBoss();
 	}
 }

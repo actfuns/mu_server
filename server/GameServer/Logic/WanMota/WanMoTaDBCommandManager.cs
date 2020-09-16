@@ -5,10 +5,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.WanMota
 {
-	// Token: 0x020007B4 RID: 1972
+	
 	public class WanMoTaDBCommandManager
 	{
-		// Token: 0x060033E4 RID: 13284 RVA: 0x002DF088 File Offset: 0x002DD288
+		
 		public static int LayerChangeDBCommand(GameClient client, int nLayerCount)
 		{
 			long lFlushTime = TimeUtil.NOW();
@@ -39,7 +39,7 @@ namespace GameServer.Logic.WanMota
 			return result;
 		}
 
-		// Token: 0x060033E5 RID: 13285 RVA: 0x002DF14C File Offset: 0x002DD34C
+		
 		public static int SweepBeginDBCommand(GameClient client, int nLayerCount)
 		{
 			long lBeginTime = TimeUtil.NOW();
@@ -70,7 +70,7 @@ namespace GameServer.Logic.WanMota
 			return result;
 		}
 
-		// Token: 0x060033E6 RID: 13286 RVA: 0x002DF210 File Offset: 0x002DD410
+		
 		public static int UpdateSweepAwardDBCommand(GameClient client, int nSweepLayerCount)
 		{
 			int result;

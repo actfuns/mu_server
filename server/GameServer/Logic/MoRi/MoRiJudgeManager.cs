@@ -15,31 +15,31 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic.MoRi
 {
-    // Token: 0x0200037D RID: 893
+    
     public class MoRiJudgeManager : SingletonTemplate<MoRiJudgeManager>, IManager, ICmdProcessorEx, ICmdProcessor, IManager2, IEventListenerEx, IEventListener
     {
-        // Token: 0x06000F43 RID: 3907 RVA: 0x000EF971 File Offset: 0x000EDB71
+        
         private MoRiJudgeManager()
         {
         }
 
-        // Token: 0x17000032 RID: 50
-        // (get) Token: 0x06000F44 RID: 3908 RVA: 0x000EF9A4 File Offset: 0x000EDBA4
-        // (set) Token: 0x06000F45 RID: 3909 RVA: 0x000EF9BB File Offset: 0x000EDBBB
+        
+        
+        
         public double[] AwardFactor { get; set; }
 
-        // Token: 0x17000033 RID: 51
-        // (get) Token: 0x06000F46 RID: 3910 RVA: 0x000EF9C4 File Offset: 0x000EDBC4
-        // (set) Token: 0x06000F47 RID: 3911 RVA: 0x000EF9DB File Offset: 0x000EDBDB
+        
+        
+        
         public int MapCode { get; set; }
 
-        // Token: 0x06000F48 RID: 3912 RVA: 0x000EF9E4 File Offset: 0x000EDBE4
+        
         public bool initialize()
         {
             return this.InitConfig();
         }
 
-        // Token: 0x06000F49 RID: 3913 RVA: 0x000EFA50 File Offset: 0x000EDC50
+        
         private bool InitConfig()
         {
             try
@@ -123,13 +123,13 @@ namespace GameServer.Logic.MoRi
             return true;
         }
 
-        // Token: 0x06000F4A RID: 3914 RVA: 0x000EFDAC File Offset: 0x000EDFAC
+        
         public bool initialize(ICoreInterface coreInterface)
         {
             return true;
         }
 
-        // Token: 0x06000F4B RID: 3915 RVA: 0x000EFDC0 File Offset: 0x000EDFC0
+        
         public bool startup()
         {
             TCPCmdDispatcher.getInstance().registerProcessorEx(1301, 1, 1, SingletonTemplate<MoRiJudgeManager>.Instance(), TCPCmdFlags.IsStringArrayParams);
@@ -143,7 +143,7 @@ namespace GameServer.Logic.MoRi
             return true;
         }
 
-        // Token: 0x06000F4C RID: 3916 RVA: 0x000EFE8C File Offset: 0x000EE08C
+        
         public bool showdown()
         {
             GlobalEventSource4Scene.getInstance().removeListener(10000, 29, SingletonTemplate<MoRiJudgeManager>.Instance());
@@ -154,13 +154,13 @@ namespace GameServer.Logic.MoRi
             return true;
         }
 
-        // Token: 0x06000F4D RID: 3917 RVA: 0x000EFF10 File Offset: 0x000EE110
+        
         public bool destroy()
         {
             return true;
         }
 
-        // Token: 0x06000F4E RID: 3918 RVA: 0x000EFF24 File Offset: 0x000EE124
+        
         public void processEvent(EventObject eventObject)
         {
             if (eventObject.getEventType() == 11)
@@ -207,7 +207,7 @@ namespace GameServer.Logic.MoRi
             }
         }
 
-        // Token: 0x06000F4F RID: 3919 RVA: 0x000F01A8 File Offset: 0x000EE3A8
+        
         public void processEvent(EventObjectEx eventObject)
         {
             switch (eventObject.EventType)
@@ -287,13 +287,13 @@ namespace GameServer.Logic.MoRi
             }
         }
 
-        // Token: 0x06000F50 RID: 3920 RVA: 0x000F0428 File Offset: 0x000EE628
+        
         public bool processCmd(GameClient client, string[] cmdParams)
         {
             return false;
         }
 
-        // Token: 0x06000F51 RID: 3921 RVA: 0x000F043C File Offset: 0x000EE63C
+        
         public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             switch (nID)
@@ -308,7 +308,7 @@ namespace GameServer.Logic.MoRi
             return true;
         }
 
-        // Token: 0x06000F52 RID: 3922 RVA: 0x000F049C File Offset: 0x000EE69C
+        
         private bool ProcessMoRiJudgeJoin(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -376,7 +376,7 @@ namespace GameServer.Logic.MoRi
             return false;
         }
 
-        // Token: 0x06000F53 RID: 3923 RVA: 0x000F078C File Offset: 0x000EE98C
+        
         private bool ProcessMoRiJudgeQuit(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -402,7 +402,7 @@ namespace GameServer.Logic.MoRi
             return false;
         }
 
-        // Token: 0x06000F54 RID: 3924 RVA: 0x000F0820 File Offset: 0x000EEA20
+        
         private bool ProcessMoRiJudgeEnter(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -440,7 +440,7 @@ namespace GameServer.Logic.MoRi
             return false;
         }
 
-        // Token: 0x06000F55 RID: 3925 RVA: 0x000F090C File Offset: 0x000EEB0C
+        
         private double CalcAwardRate(MoRiJudgeCopy judgeCopy)
         {
             double result = 1.0;
@@ -459,13 +459,13 @@ namespace GameServer.Logic.MoRi
             return result;
         }
 
-        // Token: 0x06000F56 RID: 3926 RVA: 0x000F0A14 File Offset: 0x000EEC14
+        
         private bool IsGongNengOpened(GameClient client, bool bHint = true)
         {
             return GameManager.VersionSystemOpenMgr.IsVersionSystemOpen("MoRiShenPan") && GlobalNew.IsGongNengOpened(client, GongNengIDs.MoRiJudge, bHint);
         }
 
-        // Token: 0x06000F57 RID: 3927 RVA: 0x000F0A48 File Offset: 0x000EEC48
+        
         public bool OnInitGame(GameClient client)
         {
             int destX;
@@ -486,7 +486,7 @@ namespace GameServer.Logic.MoRi
             return result;
         }
 
-        // Token: 0x06000F58 RID: 3928 RVA: 0x000F0AB4 File Offset: 0x000EECB4
+        
         public void OnLogOut(GameClient client)
         {
             MoRiJudgeCopy judgeCopy = null;
@@ -507,7 +507,7 @@ namespace GameServer.Logic.MoRi
             }
         }
 
-        // Token: 0x06000F59 RID: 3929 RVA: 0x000F0B94 File Offset: 0x000EED94
+        
         public void AddCopyScene(GameClient client, CopyMap copyMap, SceneUIClasses sceneType)
         {
             if (copyMap.MapCode == this.MapCode)
@@ -542,7 +542,7 @@ namespace GameServer.Logic.MoRi
             }
         }
 
-        // Token: 0x06000F5A RID: 3930 RVA: 0x000F0D10 File Offset: 0x000EEF10
+        
         public void DelCopyScene(CopyMap copyMap)
         {
             if (copyMap != null && copyMap.MapCode == this.MapCode)
@@ -565,7 +565,7 @@ namespace GameServer.Logic.MoRi
             }
         }
 
-        // Token: 0x06000F5B RID: 3931 RVA: 0x000F0DE0 File Offset: 0x000EEFE0
+        
         public void TimerProc()
         {
             long nowMs = TimeUtil.NOW();
@@ -698,7 +698,7 @@ namespace GameServer.Logic.MoRi
             }
         }
 
-        // Token: 0x06000F5C RID: 3932 RVA: 0x000F13F0 File Offset: 0x000EF5F0
+        
         private void FlushMonster(MoRiJudgeCopy judgeCopy, int nextMonsterIdx)
         {
             MoRiMonsterTag tag = new MoRiMonsterTag();
@@ -740,7 +740,7 @@ namespace GameServer.Logic.MoRi
             judgeCopy.CurrMonsterIdx = nextMonsterIdx;
         }
 
-        // Token: 0x06000F5D RID: 3933 RVA: 0x000F163C File Offset: 0x000EF83C
+        
         public void OnLoadDynamicMonsters(Monster monster)
         {
             MoRiMonsterTag tag = null;
@@ -772,7 +772,7 @@ namespace GameServer.Logic.MoRi
             }
         }
 
-        // Token: 0x06000F5E RID: 3934 RVA: 0x000F17F0 File Offset: 0x000EF9F0
+        
         public bool ClientRelive(GameClient client)
         {
             bool result;
@@ -801,7 +801,7 @@ namespace GameServer.Logic.MoRi
             return result;
         }
 
-        // Token: 0x06000F5F RID: 3935 RVA: 0x000F18AC File Offset: 0x000EFAAC
+        
         private bool GetBirthPoint(out int toPosX, out int toPosY)
         {
             toPosX = -1;
@@ -825,7 +825,7 @@ namespace GameServer.Logic.MoRi
             return result;
         }
 
-        // Token: 0x06000F60 RID: 3936 RVA: 0x000F1964 File Offset: 0x000EFB64
+        
         public void OnGMCommand(GameClient client, string[] cmdFields)
         {
             if (cmdFields[1] == "join")
@@ -838,7 +838,7 @@ namespace GameServer.Logic.MoRi
             }
         }
 
-        // Token: 0x06000F61 RID: 3937 RVA: 0x000F19C0 File Offset: 0x000EFBC0
+        
         public double GetCopyAwardRate(int copySeqId)
         {
             MoRiJudgeCopy judgeCopy = null;
@@ -852,7 +852,7 @@ namespace GameServer.Logic.MoRi
             return this.CalcAwardRate(judgeCopy);
         }
 
-        // Token: 0x06000F62 RID: 3938 RVA: 0x000F1A38 File Offset: 0x000EFC38
+        
         public void NotifyTimeStateAndBossEvent(GameClient client)
         {
             MoRiJudgeCopy judgeCopy = null;
@@ -892,22 +892,22 @@ namespace GameServer.Logic.MoRi
             }
         }
 
-        // Token: 0x0400178C RID: 6028
+        
         private List<MoRiMonster> BossConfigList = new List<MoRiMonster>();
 
-        // Token: 0x0400178D RID: 6029
+        
         private Dictionary<int, MoRiJudgeCopy> copyDict = new Dictionary<int, MoRiJudgeCopy>();
 
-        // Token: 0x0400178E RID: 6030
+        
         private long NextHeartBeatMs = 0L;
 
-        // Token: 0x0400178F RID: 6031
+        
         private int copyMapGirdWidth;
 
-        // Token: 0x04001790 RID: 6032
+        
         private int copyMapGirdHeight;
 
-        // Token: 0x04001791 RID: 6033
+        
         private int CopyMaxAliveMinutes = 15;
     }
 }

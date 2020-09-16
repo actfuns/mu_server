@@ -12,16 +12,16 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic.Talent
 {
-	// Token: 0x02000498 RID: 1176
+	
 	public class TalentManager : ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x06001577 RID: 5495 RVA: 0x00152014 File Offset: 0x00150214
+		
 		public static TalentManager getInstance()
 		{
 			return TalentManager.instance;
 		}
 
-		// Token: 0x06001578 RID: 5496 RVA: 0x0015202C File Offset: 0x0015022C
+		
 		public bool initialize()
 		{
 			TalentManager.LoadTalentExpInfo();
@@ -30,7 +30,7 @@ namespace GameServer.Logic.Talent
 			return true;
 		}
 
-		// Token: 0x06001579 RID: 5497 RVA: 0x00152054 File Offset: 0x00150254
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(999, 1, 1, TalentManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -41,25 +41,25 @@ namespace GameServer.Logic.Talent
 			return true;
 		}
 
-		// Token: 0x0600157A RID: 5498 RVA: 0x001520E0 File Offset: 0x001502E0
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x0600157B RID: 5499 RVA: 0x001520F4 File Offset: 0x001502F4
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600157C RID: 5500 RVA: 0x00152108 File Offset: 0x00150308
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x0600157D RID: 5501 RVA: 0x0015211C File Offset: 0x0015031C
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -87,7 +87,7 @@ namespace GameServer.Logic.Talent
 			return result;
 		}
 
-		// Token: 0x0600157E RID: 5502 RVA: 0x0015219C File Offset: 0x0015039C
+		
 		public bool ProcessCmdTalentOther(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -113,7 +113,7 @@ namespace GameServer.Logic.Talent
 			return false;
 		}
 
-		// Token: 0x0600157F RID: 5503 RVA: 0x00152234 File Offset: 0x00150434
+		
 		public bool ProcessCmdTalentGetData(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -133,7 +133,7 @@ namespace GameServer.Logic.Talent
 			return false;
 		}
 
-		// Token: 0x06001580 RID: 5504 RVA: 0x001522A4 File Offset: 0x001504A4
+		
 		public bool ProcessCmdTalentAddExp(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -155,7 +155,7 @@ namespace GameServer.Logic.Talent
 			return false;
 		}
 
-		// Token: 0x06001581 RID: 5505 RVA: 0x00152324 File Offset: 0x00150524
+		
 		public bool ProcessCmdTalentWash(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -178,7 +178,7 @@ namespace GameServer.Logic.Talent
 			return false;
 		}
 
-		// Token: 0x06001582 RID: 5506 RVA: 0x001523B4 File Offset: 0x001505B4
+		
 		public bool ProcessCmdTalentAddEffect(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -202,7 +202,7 @@ namespace GameServer.Logic.Talent
 			return false;
 		}
 
-		// Token: 0x06001583 RID: 5507 RVA: 0x00152450 File Offset: 0x00150650
+		
 		private static TalentData GetTalentData(GameClient client)
 		{
 			TalentData result;
@@ -225,7 +225,7 @@ namespace GameServer.Logic.Talent
 			return result;
 		}
 
-		// Token: 0x06001584 RID: 5508 RVA: 0x00152500 File Offset: 0x00150700
+		
 		private static int TalentAddExp(GameClient client)
 		{
 			int result;
@@ -309,7 +309,7 @@ namespace GameServer.Logic.Talent
 			return result;
 		}
 
-		// Token: 0x06001585 RID: 5509 RVA: 0x0015272C File Offset: 0x0015092C
+		
 		private static int TalentWash(GameClient client, int washType)
 		{
 			int result;
@@ -376,7 +376,7 @@ namespace GameServer.Logic.Talent
 			return result;
 		}
 
-		// Token: 0x06001586 RID: 5510 RVA: 0x00152924 File Offset: 0x00150B24
+		
 		private static int TalentAddEffect(GameClient client, int effectID, int addCount)
 		{
 			int result;
@@ -457,7 +457,7 @@ namespace GameServer.Logic.Talent
 			return result;
 		}
 
-		// Token: 0x06001587 RID: 5511 RVA: 0x00152B60 File Offset: 0x00150D60
+		
 		public static void ModifyEffect(GameClient client, int effectID, int talentType, int newLevel)
 		{
 			try
@@ -488,7 +488,7 @@ namespace GameServer.Logic.Talent
 			}
 		}
 
-		// Token: 0x06001588 RID: 5512 RVA: 0x00152C68 File Offset: 0x00150E68
+		
 		private static bool IsEffectOpen(TalentData talentData, int effectID, int level)
 		{
 			bool result;
@@ -511,7 +511,7 @@ namespace GameServer.Logic.Talent
 			return result;
 		}
 
-		// Token: 0x06001589 RID: 5513 RVA: 0x00152CAC File Offset: 0x00150EAC
+		
 		private static TalentEffectItem GetOpenEffectItem(TalentData talentData, int effectID)
 		{
 			TalentEffectItem result;
@@ -533,7 +533,7 @@ namespace GameServer.Logic.Talent
 			return result;
 		}
 
-		// Token: 0x0600158A RID: 5514 RVA: 0x00152D28 File Offset: 0x00150F28
+		
 		private static int GetTalentUseCount(TalentData talentData)
 		{
 			int result;
@@ -548,7 +548,7 @@ namespace GameServer.Logic.Talent
 			return result;
 		}
 
-		// Token: 0x0600158B RID: 5515 RVA: 0x00152D84 File Offset: 0x00150F84
+		
 		public static void initTalentEffectProp(GameClient client)
 		{
 			TalentData myTalentData = TalentManager.GetTalentData(client);
@@ -599,7 +599,7 @@ namespace GameServer.Logic.Talent
 			}
 		}
 
-		// Token: 0x0600158C RID: 5516 RVA: 0x00153028 File Offset: 0x00151228
+		
 		private static void InitSpecialProp(GameClient client)
 		{
 			TalentData talentData = client.ClientData.MyTalentData;
@@ -621,7 +621,7 @@ namespace GameServer.Logic.Talent
 			}
 		}
 
-		// Token: 0x0600158D RID: 5517 RVA: 0x00153168 File Offset: 0x00151368
+		
 		private static void SetTalentProp(GameClient client, TalentEffectType type, EquipPropItem item)
 		{
 			switch (type)
@@ -645,7 +645,7 @@ namespace GameServer.Logic.Talent
 			}
 		}
 
-		// Token: 0x0600158E RID: 5518 RVA: 0x001531F8 File Offset: 0x001513F8
+		
 		public static void RefreshProp(GameClient client)
 		{
 			client.delayExecModule.SetDelayExecProc(new DelayExecProcIds[]
@@ -655,7 +655,7 @@ namespace GameServer.Logic.Talent
 			});
 		}
 
-		// Token: 0x0600158F RID: 5519 RVA: 0x00153220 File Offset: 0x00151420
+		
 		public static int GetSkillLevel(GameClient client, int skillID)
 		{
 			int level = 0;
@@ -691,7 +691,7 @@ namespace GameServer.Logic.Talent
 			return level;
 		}
 
-		// Token: 0x06001590 RID: 5520 RVA: 0x00153318 File Offset: 0x00151518
+		
 		private static void LoadTalentExpInfo()
 		{
 			string fileName = Global.GameResPath("Config/TianFuDian.xml");
@@ -725,14 +725,14 @@ namespace GameServer.Logic.Talent
 			}
 		}
 
-		// Token: 0x06001591 RID: 5521 RVA: 0x00153484 File Offset: 0x00151684
+		
 		private static int GetWashDiamond(int count)
 		{
 			int[] diamondList = GameManager.systemParamsList.GetParamValueIntArrayByName("ResettingTianFuCostZuanShi", ',');
 			return Math.Min(count * diamondList[0], diamondList[1]);
 		}
 
-		// Token: 0x06001592 RID: 5522 RVA: 0x001534B8 File Offset: 0x001516B8
+		
 		private static void GetWashGoods(out int goodsID, out int goodsCount)
 		{
 			int[] arr = GameManager.systemParamsList.GetParamValueIntArrayByName("ResettingTianFuCostGoods", ',');
@@ -740,7 +740,7 @@ namespace GameServer.Logic.Talent
 			goodsCount = arr[1];
 		}
 
-		// Token: 0x06001593 RID: 5523 RVA: 0x001534E4 File Offset: 0x001516E4
+		
 		public static void LoadTalentSpecialData()
 		{
 			string fileName = Global.GameResPath("Config/TianFuGroupProperty.xml");
@@ -783,7 +783,7 @@ namespace GameServer.Logic.Talent
 			}
 		}
 
-		// Token: 0x06001594 RID: 5524 RVA: 0x00153728 File Offset: 0x00151928
+		
 		private static void LoadTalentInfoData()
 		{
 			TalentManager._TalentInfoList.Clear();
@@ -838,7 +838,7 @@ namespace GameServer.Logic.Talent
 			}
 		}
 
-		// Token: 0x06001595 RID: 5525 RVA: 0x00153A04 File Offset: 0x00151C04
+		
 		private static void XmlGetTalentEffect(TalentInfo talentInfo, int level, string strEffect)
 		{
 			if (!string.IsNullOrEmpty(strEffect))
@@ -878,7 +878,7 @@ namespace GameServer.Logic.Talent
 			}
 		}
 
-		// Token: 0x06001596 RID: 5526 RVA: 0x00153B54 File Offset: 0x00151D54
+		
 		private static TalentInfo GetTalentInfoByID(int type, int id)
 		{
 			TalentInfo result;
@@ -901,7 +901,7 @@ namespace GameServer.Logic.Talent
 			return result;
 		}
 
-		// Token: 0x06001597 RID: 5527 RVA: 0x00153BA4 File Offset: 0x00151DA4
+		
 		private static bool DBTalentModify(int roleID, int totalCount, long exp, long expAdd, bool isUp, int zoneID, int serverID)
 		{
 			bool result = false;
@@ -923,7 +923,7 @@ namespace GameServer.Logic.Talent
 			return result;
 		}
 
-		// Token: 0x06001598 RID: 5528 RVA: 0x00153C50 File Offset: 0x00151E50
+		
 		public static bool DBTalentEffectModify(int roleID, int talentType, int effectID, int effectLevel, int zoneID, int serverID)
 		{
 			bool result = false;
@@ -943,7 +943,7 @@ namespace GameServer.Logic.Talent
 			return result;
 		}
 
-		// Token: 0x06001599 RID: 5529 RVA: 0x00153CE4 File Offset: 0x00151EE4
+		
 		public static bool DBTalentEffectClear(int roleID, int zoneID, int serverID)
 		{
 			bool result = false;
@@ -956,7 +956,7 @@ namespace GameServer.Logic.Talent
 			return result;
 		}
 
-		// Token: 0x0600159A RID: 5530 RVA: 0x00153D48 File Offset: 0x00151F48
+		
 		public static bool TalentAddCount(GameClient client, int count)
 		{
 			TalentData talentData = client.ClientData.MyTalentData;
@@ -978,16 +978,16 @@ namespace GameServer.Logic.Talent
 			return result;
 		}
 
-		// Token: 0x04001F26 RID: 7974
+		
 		private static TalentManager instance = new TalentManager();
 
-		// Token: 0x04001F27 RID: 7975
+		
 		private static Dictionary<int, TalentExpInfo> _TalentExpList = new Dictionary<int, TalentExpInfo>();
 
-		// Token: 0x04001F28 RID: 7976
+		
 		private static Dictionary<int, TalentSpecialInfo> _TalentSpecialList = new Dictionary<int, TalentSpecialInfo>();
 
-		// Token: 0x04001F29 RID: 7977
+		
 		private static Dictionary<int, Dictionary<int, TalentInfo>> _TalentInfoList = new Dictionary<int, Dictionary<int, TalentInfo>>();
 	}
 }

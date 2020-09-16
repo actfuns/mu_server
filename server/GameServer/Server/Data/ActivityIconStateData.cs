@@ -4,11 +4,11 @@ using Tmsk.Contract;
 
 namespace Server.Data
 {
-	// Token: 0x02000114 RID: 276
+	
 	[ProtoContract]
 	public class ActivityIconStateData : IProtoBuffData
 	{
-		// Token: 0x0600042F RID: 1071 RVA: 0x0003EB10 File Offset: 0x0003CD10
+		
 		public int fromBytes(byte[] data, int offset, int count)
 		{
 			int pos = offset;
@@ -49,7 +49,7 @@ namespace Server.Data
 			return pos;
 		}
 
-		// Token: 0x06000430 RID: 1072 RVA: 0x0003EBEC File Offset: 0x0003CDEC
+		
 		public byte[] toBytes()
 		{
 			int total = 0;
@@ -72,7 +72,7 @@ namespace Server.Data
 			return data;
 		}
 
-		// Token: 0x040005D7 RID: 1495
+		
 		[ProtoMember(1)]
 		public ushort[] arrIconState;
 	}

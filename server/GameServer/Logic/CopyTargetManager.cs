@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200028E RID: 654
+	
 	public class CopyTargetManager
 	{
-		// Token: 0x0600097C RID: 2428 RVA: 0x0009658C File Offset: 0x0009478C
+		
 		public static void LoadConfig()
 		{
 			lock (CopyTargetManager._Mutex)
@@ -88,7 +88,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600097D RID: 2429 RVA: 0x000968F8 File Offset: 0x00094AF8
+		
 		private static List<CopyTargetInfo> GetConfig(int fubenid, int targetIdx)
 		{
 			List<CopyTargetInfo> InfoData = null;
@@ -105,7 +105,7 @@ namespace GameServer.Logic
 			return InfoData;
 		}
 
-		// Token: 0x0600097E RID: 2430 RVA: 0x0009698C File Offset: 0x00094B8C
+		
 		private static int GetMonsterIdx(int monsterID, int fubenid)
 		{
 			lock (CopyTargetManager._Mutex)
@@ -124,7 +124,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x0600097F RID: 2431 RVA: 0x00096A54 File Offset: 0x00094C54
+		
 		public static void ProcessInitGame(GameClient client)
 		{
 			if (null != client)
@@ -172,7 +172,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000980 RID: 2432 RVA: 0x00096C18 File Offset: 0x00094E18
+		
 		public static void ProcessMonsterDead(GameClient client, Monster monster)
 		{
 			if (null != client)
@@ -240,13 +240,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0400103A RID: 4154
+		
 		private static object _Mutex = new object();
 
-		// Token: 0x0400103B RID: 4155
+		
 		private static Dictionary<int, Dictionary<int, List<CopyTargetInfo>>> CopyTargetInfoDict = new Dictionary<int, Dictionary<int, List<CopyTargetInfo>>>();
 
-		// Token: 0x0400103C RID: 4156
+		
 		private static Dictionary<int, List<CopyTargetKey>> CopyTargetKeyDict = new Dictionary<int, List<CopyTargetKey>>();
 	}
 }

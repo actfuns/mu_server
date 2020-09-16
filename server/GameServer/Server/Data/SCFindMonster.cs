@@ -4,16 +4,16 @@ using Tmsk.Contract;
 
 namespace Server.Data
 {
-	// Token: 0x02000182 RID: 386
+	
 	[ProtoContract]
 	public class SCFindMonster : IProtoBuffData
 	{
-		// Token: 0x060004B5 RID: 1205 RVA: 0x000416B6 File Offset: 0x0003F8B6
+		
 		public SCFindMonster()
 		{
 		}
 
-		// Token: 0x060004B6 RID: 1206 RVA: 0x000416E0 File Offset: 0x0003F8E0
+		
 		public SCFindMonster(int roleID, int x, int y, int num)
 		{
 			this.RoleID = roleID;
@@ -22,7 +22,7 @@ namespace Server.Data
 			this.Num = num;
 		}
 
-		// Token: 0x060004B7 RID: 1207 RVA: 0x00041730 File Offset: 0x0003F930
+		
 		public int fromBytes(byte[] data, int offset, int count)
 		{
 			int pos = offset;
@@ -53,7 +53,7 @@ namespace Server.Data
 			return pos;
 		}
 
-		// Token: 0x060004B8 RID: 1208 RVA: 0x000417E8 File Offset: 0x0003F9E8
+		
 		public byte[] toBytes()
 		{
 			int total = 0;
@@ -70,19 +70,19 @@ namespace Server.Data
 			return data;
 		}
 
-		// Token: 0x0400088D RID: 2189
+		
 		[ProtoMember(1)]
 		public int RoleID = 0;
 
-		// Token: 0x0400088E RID: 2190
+		
 		[ProtoMember(2)]
 		public int X = 0;
 
-		// Token: 0x0400088F RID: 2191
+		
 		[ProtoMember(3)]
 		public int Y = 0;
 
-		// Token: 0x04000890 RID: 2192
+		
 		[ProtoMember(4)]
 		public int Num = 0;
 	}

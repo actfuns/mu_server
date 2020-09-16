@@ -4,15 +4,15 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic.Goods
 {
-	// Token: 0x0200047F RID: 1151
+	
 	public class GoodsCanUseManager : SingletonTemplate<GoodsCanUseManager>
 	{
-		// Token: 0x060014FD RID: 5373 RVA: 0x00149028 File Offset: 0x00147228
+		
 		private GoodsCanUseManager()
 		{
 		}
 
-		// Token: 0x060014FE RID: 5374 RVA: 0x00149040 File Offset: 0x00147240
+		
 		public void Init()
 		{
 			this.canUseDict["WingSuit".ToLower()] = new CondJudger_WingSuit();
@@ -40,14 +40,14 @@ namespace GameServer.Logic.Goods
 			this.canUseDict["MerlinLess".ToLower()] = new CondJudger_MerlinLess();
 		}
 
-		// Token: 0x060014FF RID: 5375 RVA: 0x001492BC File Offset: 0x001474BC
+		
 		public bool CheckCanUse_ByToType(GameClient client, int goodsID)
 		{
 			string failedMsg = string.Empty;
 			return this.CheckCanUse_ByToType(client, goodsID, out failedMsg);
 		}
 
-		// Token: 0x06001500 RID: 5376 RVA: 0x001492E0 File Offset: 0x001474E0
+		
 		public bool CheckCanUse_ByToType(GameClient client, int goodsID, out string failedMsg)
 		{
 			failedMsg = "";
@@ -75,7 +75,7 @@ namespace GameServer.Logic.Goods
 			return result;
 		}
 
-		// Token: 0x04001E3F RID: 7743
+		
 		private Dictionary<string, ICondJudger> canUseDict = new Dictionary<string, ICondJudger>();
 	}
 }

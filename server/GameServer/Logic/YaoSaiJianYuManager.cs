@@ -15,22 +15,22 @@ using Tmsk.Contract.KuaFuData;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200080F RID: 2063
+	
 	public class YaoSaiJianYuManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener, IEventListenerEx
 	{
-		// Token: 0x06003A2C RID: 14892 RVA: 0x00314A3C File Offset: 0x00312C3C
+		
 		public static YaoSaiJianYuManager getInstance()
 		{
 			return YaoSaiJianYuManager.instance;
 		}
 
-		// Token: 0x06003A2D RID: 14893 RVA: 0x00314A54 File Offset: 0x00312C54
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x06003A2E RID: 14894 RVA: 0x00314A78 File Offset: 0x00312C78
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1520, 1, 1, YaoSaiJianYuManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -49,7 +49,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003A2F RID: 14895 RVA: 0x00314BA8 File Offset: 0x00312DA8
+		
 		public bool showdown()
 		{
 			GlobalEventSource.getInstance().removeListener(53, YaoSaiJianYuManager.getInstance());
@@ -60,19 +60,19 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003A30 RID: 14896 RVA: 0x00314C18 File Offset: 0x00312E18
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06003A31 RID: 14897 RVA: 0x00314C2C File Offset: 0x00312E2C
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06003A32 RID: 14898 RVA: 0x00314C40 File Offset: 0x00312E40
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -107,7 +107,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003A33 RID: 14899 RVA: 0x00314D48 File Offset: 0x00312F48
+		
 		public void processEvent(EventObject eventObject)
 		{
 			if (eventObject.getEventType() == 53)
@@ -138,7 +138,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003A34 RID: 14900 RVA: 0x00314E38 File Offset: 0x00313038
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 			if (eventObject.EventType == 29)
@@ -178,7 +178,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003A35 RID: 14901 RVA: 0x00314F9C File Offset: 0x0031319C
+		
 		public bool ProcessGetYaoSaiMainDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -195,7 +195,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003A36 RID: 14902 RVA: 0x00314FFC File Offset: 0x003131FC
+		
 		public bool ProcessGetYaoSaiHuDongDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -212,7 +212,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003A37 RID: 14903 RVA: 0x0031505C File Offset: 0x0031325C
+		
 		public bool ProcessYaoSaiRevoltCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -305,7 +305,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003A38 RID: 14904 RVA: 0x00315470 File Offset: 0x00313670
+		
 		public bool ProcessYaoSaiHuDongCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -452,7 +452,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003A39 RID: 14905 RVA: 0x00315B68 File Offset: 0x00313D68
+		
 		public bool ProcessYaoSaiFreeCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -495,7 +495,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003A3A RID: 14906 RVA: 0x00315D50 File Offset: 0x00313F50
+		
 		public bool ProcessYaoSaiOptCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -695,7 +695,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003A3B RID: 14907 RVA: 0x003164BC File Offset: 0x003146BC
+		
 		public bool ProcessBuyZhengFuCountCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -746,7 +746,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003A3C RID: 14908 RVA: 0x003166E8 File Offset: 0x003148E8
+		
 		public bool ProcessGetYaoSaiDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -798,7 +798,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003A3D RID: 14909 RVA: 0x003168C8 File Offset: 0x00314AC8
+		
 		private void GiveHuDongAward(GameClient client, PrisonAwardType awardType, int addNum)
 		{
 			if (addNum > 0)
@@ -826,7 +826,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003A3E RID: 14910 RVA: 0x00316994 File Offset: 0x00314B94
+		
 		private void processWin(GameClient player, Robot robot)
 		{
 			if (player.ClientData.YaoSaiPrisonOptType == YaoSaiOptType.jiejiu || player.ClientData.YaoSaiPrisonOptType == YaoSaiOptType.qiangduo)
@@ -849,7 +849,7 @@ namespace GameServer.Logic
 			player.sendCmd(1526, string.Format("{0}:{1}:{2}", (int)player.ClientData.YaoSaiPrisonOptType, 1, roleName), false);
 		}
 
-		// Token: 0x06003A3F RID: 14911 RVA: 0x00316A8C File Offset: 0x00314C8C
+		
 		private void processFailed(GameClient player, Robot robot)
 		{
 			if (player.ClientData.YaoSaiPrisonOptType == YaoSaiOptType.jiejiu || player.ClientData.YaoSaiPrisonOptType == YaoSaiOptType.qiangduo)
@@ -872,7 +872,7 @@ namespace GameServer.Logic
 			player.sendCmd(1526, string.Format("{0}:{1}:{2}", (int)player.ClientData.YaoSaiPrisonOptType, 0, roleName), false);
 		}
 
-		// Token: 0x06003A40 RID: 14912 RVA: 0x00316B84 File Offset: 0x00314D84
+		
 		public int GetYaoSaiJianYuState(int roleID, int unionLev = 0)
 		{
 			int result;
@@ -899,7 +899,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003A41 RID: 14913 RVA: 0x00316BE8 File Offset: 0x00314DE8
+		
 		public void UpdateYaoSaiPrisonRoleData(GameClient client)
 		{
 			KFUpdatePrisonRole data = new KFUpdatePrisonRole();
@@ -916,19 +916,19 @@ namespace GameServer.Logic
 			JunTuanClient.getInstance().UpdateYaoSaiPrisonRoleData(data);
 		}
 
-		// Token: 0x06003A42 RID: 14914 RVA: 0x00316CA5 File Offset: 0x00314EA5
+		
 		private void OnLogin(GameClient client)
 		{
 			this.UpdateYaoSaiLogData(client.ClientData.RoleID);
 		}
 
-		// Token: 0x06003A43 RID: 14915 RVA: 0x00316CBA File Offset: 0x00314EBA
+		
 		private void OnLogout(GameClient client)
 		{
 			JunTuanClient.getInstance().ClearYaoSaiPrisonData(client.ClientData.RoleID);
 		}
 
-		// Token: 0x06003A44 RID: 14916 RVA: 0x00316CD4 File Offset: 0x00314ED4
+		
 		public void UpdateYaoSaiLogData(int roleID)
 		{
 			lock (this.ConfigMutex)
@@ -956,19 +956,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003A45 RID: 14917 RVA: 0x00316DF8 File Offset: 0x00314FF8
+		
 		private long GetRevoltCD(GameClient client)
 		{
 			return Global.GetRoleParamsInt64FromDB(client, "10183");
 		}
 
-		// Token: 0x06003A46 RID: 14918 RVA: 0x00316E15 File Offset: 0x00315015
+		
 		private void SetRevoltCD(GameClient client, long time)
 		{
 			Global.SaveRoleParamsInt64ValueToDB(client, "10183", time, true);
 		}
 
-		// Token: 0x06003A47 RID: 14919 RVA: 0x00316E28 File Offset: 0x00315028
+		
 		public int GetYaoSaiLevelID(int unionlev)
 		{
 			Dictionary<int, YaoSaiJianYuManorLevelConfig> tempLevelConfigDict = null;
@@ -990,7 +990,7 @@ namespace GameServer.Logic
 			return levelID;
 		}
 
-		// Token: 0x06003A48 RID: 14920 RVA: 0x00316F64 File Offset: 0x00315164
+		
 		private void FilterHuDongData(GameClient client, List<PrisonHuDongData> hudongDataList, List<KFPrisonRoleData> myFuLuListData)
 		{
 			List<int> removeHuDongList = new List<int>();
@@ -1020,7 +1020,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003A49 RID: 14921 RVA: 0x00317088 File Offset: 0x00315288
+		
 		private List<PrisonHuDongData> GetHuDongData(GameClient client)
 		{
 			List<PrisonHuDongData> hudongDataList = new List<PrisonHuDongData>();
@@ -1037,7 +1037,7 @@ namespace GameServer.Logic
 			return hudongDataList;
 		}
 
-		// Token: 0x06003A4A RID: 14922 RVA: 0x003170FC File Offset: 0x003152FC
+		
 		private void SaveHuDongData(GameClient client, List<PrisonHuDongData> hudongDataList)
 		{
 			List<ulong> saveList = new List<ulong>();
@@ -1049,7 +1049,7 @@ namespace GameServer.Logic
 			Global.SaveRoleParamsUlongListToDB(client, saveList, "20021", true);
 		}
 
-		// Token: 0x06003A4B RID: 14923 RVA: 0x003171A4 File Offset: 0x003153A4
+		
 		private void HuDongStart(GameClient client, int fuluID)
 		{
 			long nowTimeTicks = TimeUtil.NOW();
@@ -1070,7 +1070,7 @@ namespace GameServer.Logic
 			this.SaveHuDongData(client, hudongDataList);
 		}
 
-		// Token: 0x06003A4C RID: 14924 RVA: 0x00317224 File Offset: 0x00315424
+		
 		private List<int> GetYaoSaiJianYuCount(GameClient client)
 		{
 			List<int> tempZhengFuCostList = null;
@@ -1100,13 +1100,13 @@ namespace GameServer.Logic
 			return countList;
 		}
 
-		// Token: 0x06003A4D RID: 14925 RVA: 0x00317320 File Offset: 0x00315520
+		
 		private void SaveYaoSaiJianYuCount(GameClient client, List<int> countList)
 		{
 			Global.SaveRoleParamsIntListToDB(client, countList, "20020", true);
 		}
 
-		// Token: 0x06003A4E RID: 14926 RVA: 0x00317334 File Offset: 0x00315534
+		
 		private List<PrisonLogData> BuildYaoSaiLogDataForClient(GameClient client)
 		{
 			List<PrisonLogData> resultList = new List<PrisonLogData>();
@@ -1135,7 +1135,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003A4F RID: 14927 RVA: 0x00317414 File Offset: 0x00315614
+		
 		private YaoSaiWorldData BuildYaoSaiWolrdDataForClient(GameClient client, YaoSaiWorldData worldData, KFPrisonRoleData kfpRoleData)
 		{
 			List<int> countList = this.GetYaoSaiJianYuCount(client);
@@ -1177,7 +1177,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003A50 RID: 14928 RVA: 0x003175A4 File Offset: 0x003157A4
+		
 		private void TransKFPrisonRoleDataToPrisonRoleData(KFPrisonRoleData kfpRoleData, PrisonRoleData prisonRoleData)
 		{
 			if (kfpRoleData != null && null != prisonRoleData)
@@ -1193,7 +1193,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003A51 RID: 14929 RVA: 0x003176AC File Offset: 0x003158AC
+		
 		private PrisonMainData BuildYaoSaiMainDataForClient(GameClient client)
 		{
 			PrisonMainData mainData = new PrisonMainData();
@@ -1277,13 +1277,13 @@ namespace GameServer.Logic
 			return mainData;
 		}
 
-		// Token: 0x06003A52 RID: 14930 RVA: 0x00317A04 File Offset: 0x00315C04
+		
 		public int GetManorFriendListOpenUnionLev()
 		{
 			return this.ManorFriendListOpenUnionLev;
 		}
 
-		// Token: 0x06003A53 RID: 14931 RVA: 0x00317A1C File Offset: 0x00315C1C
+		
 		public bool InitConfig()
 		{
 			string StringUnionLev = GameManager.systemParamsList.GetParamValueByName("ManorFriendListOpen");
@@ -1353,7 +1353,7 @@ namespace GameServer.Logic
 			return this.LoadYaoSaiJianYuManorLevelConfig() && this.LoadYaoSaiJianYuCommandConfigFile();
 		}
 
-		// Token: 0x06003A54 RID: 14932 RVA: 0x00317CEC File Offset: 0x00315EEC
+		
 		public void LoadFallGoodsItemList()
 		{
 			string StringFallGoodsItem = GameManager.systemParamsList.GetParamValueByName("ManorWorkAward");
@@ -1419,7 +1419,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003A55 RID: 14933 RVA: 0x00317F0C File Offset: 0x0031610C
+		
 		public bool LoadYaoSaiJianYuManorLevelConfig()
 		{
 			try
@@ -1471,7 +1471,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003A56 RID: 14934 RVA: 0x00318130 File Offset: 0x00316330
+		
 		public bool LoadYaoSaiJianYuCommandConfigFile()
 		{
 			try
@@ -1514,55 +1514,55 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x04004434 RID: 17460
+		
 		private const string YaoSaiJianYu_ManorCommandFileName = "Config/ManorCommand.xml";
 
-		// Token: 0x04004435 RID: 17461
+		
 		private const string YaoSaiJianYu_ManorLevelFileName = "Config/ManorLevel.xml";
 
-		// Token: 0x04004436 RID: 17462
+		
 		public const int YaoSaiPrisonFuLuMaxNum = 4;
 
-		// Token: 0x04004437 RID: 17463
+		
 		private object ConfigMutex = new object();
 
-		// Token: 0x04004438 RID: 17464
+		
 		private int ManorFriendListOpenUnionLev = 0;
 
-		// Token: 0x04004439 RID: 17465
+		
 		private List<int> ZhengFuCostList = new List<int>();
 
-		// Token: 0x0400443A RID: 17466
+		
 		private List<int> HelpCostList = new List<int>();
 
-		// Token: 0x0400443B RID: 17467
+		
 		private int FuLuHuDongCount = 20;
 
-		// Token: 0x0400443C RID: 17468
+		
 		private int FuLuAwardCount = 20;
 
-		// Token: 0x0400443D RID: 17469
+		
 		private int FuLuHuDongUseTime = 30;
 
-		// Token: 0x0400443E RID: 17470
+		
 		private int FightCDTime = 20;
 
-		// Token: 0x0400443F RID: 17471
+		
 		private int FightCDClearCost = 20;
 
-		// Token: 0x04004440 RID: 17472
+		
 		private int ManorSearchCost = 10000;
 
-		// Token: 0x04004441 RID: 17473
+		
 		private Dictionary<int, YaoSaiJianYuManorCommandConfig> CommandAwardConfigDict = new Dictionary<int, YaoSaiJianYuManorCommandConfig>();
 
-		// Token: 0x04004442 RID: 17474
+		
 		public Dictionary<int, YaoSaiJianYuManorLevelConfig> LevelConfigDict = new Dictionary<int, YaoSaiJianYuManorLevelConfig>();
 
-		// Token: 0x04004443 RID: 17475
+		
 		public List<FallGoodsItem> FallGoodsItemConfigList = new List<FallGoodsItem>();
 
-		// Token: 0x04004444 RID: 17476
+		
 		private static YaoSaiJianYuManager instance = new YaoSaiJianYuManager();
 	}
 }

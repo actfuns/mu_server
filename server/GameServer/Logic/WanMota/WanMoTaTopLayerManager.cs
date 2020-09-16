@@ -4,15 +4,15 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic.WanMota
 {
-	// Token: 0x020007B5 RID: 1973
+	
 	public class WanMoTaTopLayerManager : SingletonTemplate<WanMoTaTopLayerManager>
 	{
-		// Token: 0x060033E8 RID: 13288 RVA: 0x002DF384 File Offset: 0x002DD584
+		
 		private WanMoTaTopLayerManager()
 		{
 		}
 
-		// Token: 0x060033E9 RID: 13289 RVA: 0x002DF3A4 File Offset: 0x002DD5A4
+		
 		public void CheckNeedUpdate(int layer)
 		{
 			lock (this.TopLayerMutex)
@@ -24,7 +24,7 @@ namespace GameServer.Logic.WanMota
 			}
 		}
 
-		// Token: 0x060033EA RID: 13290 RVA: 0x002DF404 File Offset: 0x002DD604
+		
 		public void OnClientPass(GameClient client, int layer)
 		{
 			if (layer >= 30 && layer % 10 == 0)
@@ -58,10 +58,10 @@ namespace GameServer.Logic.WanMota
 			}
 		}
 
-		// Token: 0x04003F6A RID: 16234
+		
 		private int iTopLayer = 0;
 
-		// Token: 0x04003F6B RID: 16235
+		
 		private object TopLayerMutex = new object();
 	}
 }

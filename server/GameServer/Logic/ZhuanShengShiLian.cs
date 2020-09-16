@@ -11,10 +11,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000449 RID: 1097
+	
 	public static class ZhuanShengShiLian
 	{
-		// Token: 0x0600140D RID: 5133 RVA: 0x0013B3D0 File Offset: 0x001395D0
+		
 		public static void LoadZhuanShengShiLianXml()
 		{
 			string fileName = "";
@@ -135,7 +135,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600140E RID: 5134 RVA: 0x0013BA38 File Offset: 0x00139C38
+		
 		public static int GetZhuanShengShiLianMapCodeIDForRole(GameClient client)
 		{
 			int mapCodeID = -1;
@@ -156,7 +156,7 @@ namespace GameServer.Logic
 			return mapCodeID;
 		}
 
-		// Token: 0x0600140F RID: 5135 RVA: 0x0013BB28 File Offset: 0x00139D28
+		
 		public static bool EnterSceneCopyScene(GameClient client, out int nSeqID, int mapCode)
 		{
 			nSeqID = -1;
@@ -216,7 +216,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001410 RID: 5136 RVA: 0x0013BCFC File Offset: 0x00139EFC
+		
 		public static void AddCopyScenes(int nSequenceID, int nFubenID, int nMapCodeID, CopyMap mapInfo)
 		{
 			lock (ZhuanShengShiLian.ZhuanShengRunTimeData.Mutex)
@@ -229,7 +229,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001411 RID: 5137 RVA: 0x0013BD64 File Offset: 0x00139F64
+		
 		public static void RemoveCopyScenes(CopyMap cmInfo, int nSqeID, int nCopyID)
 		{
 			lock (ZhuanShengShiLian.ZhuanShengRunTimeData.Mutex)
@@ -239,13 +239,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001412 RID: 5138 RVA: 0x0013BDBC File Offset: 0x00139FBC
+		
 		public static void OnEnterScene(GameClient client)
 		{
 			ZhuanShengShiLian.SendTimeInfoToClient(client);
 		}
 
-		// Token: 0x06001413 RID: 5139 RVA: 0x0013BDC8 File Offset: 0x00139FC8
+		
 		public static void SendTimeInfoToAll(ZSSLScene scene, long ticks)
 		{
 			List<GameClient> objsList = scene.m_CopyMap.GetClientsList();
@@ -270,7 +270,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001414 RID: 5140 RVA: 0x0013BEB8 File Offset: 0x0013A0B8
+		
 		public static void SendTimeInfoToClient(GameClient client)
 		{
 			ZSSLScene zsslScene;
@@ -289,7 +289,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001415 RID: 5141 RVA: 0x0013BF6C File Offset: 0x0013A16C
+		
 		public static void GiveGoodsAward(GameClient client, string goods)
 		{
 			string[] goodList = goods.Split(new char[]
@@ -353,7 +353,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001416 RID: 5142 RVA: 0x0013C258 File Offset: 0x0013A458
+		
 		public static int KillerRid(GameClient client, Monster monster)
 		{
 			ZSSLScene mapInfo;
@@ -391,7 +391,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001417 RID: 5143 RVA: 0x0013C3A4 File Offset: 0x0013A5A4
+		
 		public static bool IsShiLianGoods(int goodsID)
 		{
 			bool result;
@@ -402,7 +402,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001418 RID: 5144 RVA: 0x0013C400 File Offset: 0x0013A600
+		
 		public static void BroadMsg(int mapCode, string broadMsg)
 		{
 			int minZhuanSheng = 0;
@@ -424,7 +424,7 @@ namespace GameServer.Logic
 			Global.BroadcastRoleActionMsg(null, RoleActionsMsgTypes.HintMsg, broadMsg, true, GameInfoTypeIndexes.Hot, ShowGameInfoTypes.HintAndBox, minZhuanSheng, minLevel, maxZhuangSheng, maxLevel);
 		}
 
-		// Token: 0x06001419 RID: 5145 RVA: 0x0013C4A4 File Offset: 0x0013A6A4
+		
 		public static void BroadBossLife(ZSSLScene mapInfo, GameClient client, bool Top5Chg)
 		{
 			if (null != mapInfo.AttackLog)
@@ -468,7 +468,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600141A RID: 5146 RVA: 0x0013C654 File Offset: 0x0013A854
+		
 		public static void ProcessAttack(GameClient client, Monster monster, int injure)
 		{
 			try
@@ -537,7 +537,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600141B RID: 5147 RVA: 0x0013C998 File Offset: 0x0013AB98
+		
 		private static bool TrySortAttackRank(BossAttackLog bossAttackLog, BHAttackLog myAttackLog)
 		{
 			bool result;
@@ -594,7 +594,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600141C RID: 5148 RVA: 0x0013CBB0 File Offset: 0x0013ADB0
+		
 		public static void ProcessBossDie(GameClient client, Monster monster)
 		{
 			try
@@ -615,7 +615,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600141D RID: 5149 RVA: 0x0013CC58 File Offset: 0x0013AE58
+		
 		public static long GetGUID(int teamID, int roleID)
 		{
 			long lKey = (long)((teamID > 0) ? teamID : 0);
@@ -623,7 +623,7 @@ namespace GameServer.Logic
 			return lKey << 32 | lKey2;
 		}
 
-		// Token: 0x0600141E RID: 5150 RVA: 0x0013CC88 File Offset: 0x0013AE88
+		
 		public static int CheckInviteOrApplyTeam(GameClient client, GameClient otherClient)
 		{
 			int result;
@@ -650,7 +650,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600141F RID: 5151 RVA: 0x0013CD50 File Offset: 0x0013AF50
+		
 		public static void OnCreateTeamCopyRoleLog(GameClient client)
 		{
 			try
@@ -687,7 +687,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001420 RID: 5152 RVA: 0x0013CEB8 File Offset: 0x0013B0B8
+		
 		public static void ProcessClearRoleLog(GameClient client)
 		{
 			try
@@ -746,7 +746,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001421 RID: 5153 RVA: 0x0013D0E8 File Offset: 0x0013B2E8
+		
 		public static void ProcessChangeTeamName(GameClient client, bool needBroad = false)
 		{
 			try
@@ -803,7 +803,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001422 RID: 5154 RVA: 0x0013D330 File Offset: 0x0013B530
+		
 		public static bool IsZhuanShengShiLianCopyScene(int mapCode)
 		{
 			bool result;
@@ -814,7 +814,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001423 RID: 5155 RVA: 0x0013D38C File Offset: 0x0013B58C
+		
 		public static bool JudgeCanEnterOnTime(ZhuanShengMapInfo mapInfo)
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -823,7 +823,7 @@ namespace GameServer.Logic
 			return now > startTime && now <= endTime;
 		}
 
-		// Token: 0x06001424 RID: 5156 RVA: 0x0013D3DC File Offset: 0x0013B5DC
+		
 		public static bool CanFight(GameClient client)
 		{
 			ZSSLScene mapInfo;
@@ -842,7 +842,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001425 RID: 5157 RVA: 0x0013D4D8 File Offset: 0x0013B6D8
+		
 		public static void TimerProc()
 		{
 			if (!GameManager.IsKuaFuServer)
@@ -996,13 +996,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04001D8D RID: 7565
+		
 		private static long LastHeartBeatTicks = 0L;
 
-		// Token: 0x04001D8E RID: 7566
+		
 		public static ZhuanShengRunData ZhuanShengRunTimeData = new ZhuanShengRunData();
 
-		// Token: 0x04001D8F RID: 7567
+		
 		public static ConcurrentDictionary<int, ZSSLScene> SceneDict = new ConcurrentDictionary<int, ZSSLScene>();
 	}
 }

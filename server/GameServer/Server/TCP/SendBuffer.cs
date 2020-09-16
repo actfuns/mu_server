@@ -9,12 +9,12 @@ using Server.Tools;
 
 namespace Server.TCP
 {
-	// Token: 0x020008C7 RID: 2247
+	
 	public class SendBuffer
 	{
-		// Token: 0x170005FA RID: 1530
-		// (get) Token: 0x0600400B RID: 16395 RVA: 0x003BA714 File Offset: 0x003B8914
-		// (set) Token: 0x0600400C RID: 16396 RVA: 0x003BA72B File Offset: 0x003B892B
+		
+		
+		
 		public static long SendDataIntervalTicks
 		{
 			get
@@ -27,9 +27,9 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x170005FB RID: 1531
-		// (get) Token: 0x0600400D RID: 16397 RVA: 0x003BA734 File Offset: 0x003B8934
-		// (set) Token: 0x0600400E RID: 16398 RVA: 0x003BA74B File Offset: 0x003B894B
+		
+		
+		
 		public static int MaxSingleSocketSendBufferSize
 		{
 			get
@@ -42,9 +42,9 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x170005FC RID: 1532
-		// (get) Token: 0x0600400F RID: 16399 RVA: 0x003BA754 File Offset: 0x003B8954
-		// (set) Token: 0x06004010 RID: 16400 RVA: 0x003BA76B File Offset: 0x003B896B
+		
+		
+		
 		public static long SendDataTimeOutTicks
 		{
 			get
@@ -57,9 +57,9 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x170005FD RID: 1533
-		// (get) Token: 0x06004011 RID: 16401 RVA: 0x003BA774 File Offset: 0x003B8974
-		// (set) Token: 0x06004012 RID: 16402 RVA: 0x003BA78C File Offset: 0x003B898C
+		
+		
+		
 		public long AddFirstPacketTicks
 		{
 			get
@@ -72,9 +72,9 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x170005FE RID: 1534
-		// (get) Token: 0x06004013 RID: 16403 RVA: 0x003BA798 File Offset: 0x003B8998
-		// (set) Token: 0x06004014 RID: 16404 RVA: 0x003BA7B0 File Offset: 0x003B89B0
+		
+		
+		
 		public long LastSendDataTicks
 		{
 			get
@@ -87,9 +87,9 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x170005FF RID: 1535
-		// (get) Token: 0x06004015 RID: 16405 RVA: 0x003BA7BC File Offset: 0x003B89BC
-		// (set) Token: 0x06004016 RID: 16406 RVA: 0x003BA7D4 File Offset: 0x003B89D4
+		
+		
+		
 		public byte[] Buffer
 		{
 			get
@@ -102,9 +102,9 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x17000600 RID: 1536
-		// (get) Token: 0x06004017 RID: 16407 RVA: 0x003BA7E0 File Offset: 0x003B89E0
-		// (set) Token: 0x06004018 RID: 16408 RVA: 0x003BA7F8 File Offset: 0x003B89F8
+		
+		
+		
 		public int MaxBufferSize
 		{
 			get
@@ -117,9 +117,9 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x17000601 RID: 1537
-		// (get) Token: 0x06004019 RID: 16409 RVA: 0x003BA804 File Offset: 0x003B8A04
-		// (set) Token: 0x0600401A RID: 16410 RVA: 0x003BA81C File Offset: 0x003B8A1C
+		
+		
+		
 		public int CurrentBufferSize
 		{
 			get
@@ -132,9 +132,9 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x17000602 RID: 1538
-		// (get) Token: 0x0600401B RID: 16411 RVA: 0x003BA828 File Offset: 0x003B8A28
-		// (set) Token: 0x0600401C RID: 16412 RVA: 0x003BA840 File Offset: 0x003B8A40
+		
+		
+		
 		public MemoryBlock MyMemoryBlock
 		{
 			get
@@ -147,7 +147,7 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x0600401D RID: 16413 RVA: 0x003BA84C File Offset: 0x003B8A4C
+		
 		public SendBuffer(int maxBufferSize = 0)
 		{
 			if (maxBufferSize <= 0)
@@ -161,7 +161,7 @@ namespace Server.TCP
 			this.Reset(true);
 		}
 
-		// Token: 0x0600401E RID: 16414 RVA: 0x003BA90C File Offset: 0x003B8B0C
+		
 		protected void Reset(bool init = false)
 		{
 			if (init)
@@ -193,7 +193,7 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x0600401F RID: 16415 RVA: 0x003BA9EC File Offset: 0x003B8BEC
+		
 		public void Reset2()
 		{
 			lock (this.BufferLock)
@@ -208,7 +208,7 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x06004020 RID: 16416 RVA: 0x003BAA74 File Offset: 0x003B8C74
+		
 		public bool AddBuffer(byte[] buffer, int offset, int count, TMSKSocket s)
 		{
 			bool result;
@@ -237,7 +237,7 @@ namespace Server.TCP
 			return result;
 		}
 
-		// Token: 0x06004021 RID: 16417 RVA: 0x003BAB50 File Offset: 0x003B8D50
+		
 		private bool TrySend(TMSKSocket s, bool force = false)
 		{
 			long ticks = TimeUtil.NOW();
@@ -257,7 +257,7 @@ namespace Server.TCP
 			return result;
 		}
 
-		// Token: 0x06004022 RID: 16418 RVA: 0x003BABF4 File Offset: 0x003B8DF4
+		
 		private bool TrySend2(TMSKSocket s, long ticks, bool force = false)
 		{
 			int sendSize = 0;
@@ -284,7 +284,7 @@ namespace Server.TCP
 			return result;
 		}
 
-		// Token: 0x06004023 RID: 16419 RVA: 0x003BACE4 File Offset: 0x003B8EE4
+		
 		public bool ExternalTrySend(TMSKSocket s, bool force = false, int milliseconds = 0)
 		{
 			long ticks = TimeUtil.NOW();
@@ -305,7 +305,7 @@ namespace Server.TCP
 			return false;
 		}
 
-		// Token: 0x06004024 RID: 16420 RVA: 0x003BAD68 File Offset: 0x003B8F68
+		
 		protected bool IsSendTimeOut()
 		{
 			bool result;
@@ -321,7 +321,7 @@ namespace Server.TCP
 			return result;
 		}
 
-		// Token: 0x06004025 RID: 16421 RVA: 0x003BADC0 File Offset: 0x003B8FC0
+		
 		protected bool CanDiscardCmd(int cmdID)
 		{
 			if (cmdID <= 127)
@@ -378,7 +378,7 @@ namespace Server.TCP
 			return true;
 		}
 
-		// Token: 0x06004026 RID: 16422 RVA: 0x003BAE58 File Offset: 0x003B9058
+		
 		public bool CanSend(int bytesCount, int cmdID, out int canNotSendReason, byte[] buffer, TMSKSocket s)
 		{
 			canNotSendReason = -1;
@@ -407,7 +407,7 @@ namespace Server.TCP
 			return result;
 		}
 
-		// Token: 0x06004027 RID: 16423 RVA: 0x003BAF20 File Offset: 0x003B9120
+		
 		public bool CanSend2(TMSKSocket s, TCPOutPacket tcpOutPacket, ref int canNotSendReason)
 		{
 			int cmdID = (int)tcpOutPacket.PacketCmdID;
@@ -468,7 +468,7 @@ namespace Server.TCP
 			return result;
 		}
 
-		// Token: 0x06004028 RID: 16424 RVA: 0x003BB0DC File Offset: 0x003B92DC
+		
 		public void OnSendOK()
 		{
 			Interlocked.Exchange(ref this._SendTimeoutTickCount, long.MaxValue);
@@ -479,7 +479,7 @@ namespace Server.TCP
 			this._IsSendding = false;
 		}
 
-		// Token: 0x06004029 RID: 16425 RVA: 0x003BB128 File Offset: 0x003B9328
+		
 		public bool CanLog(int canNotSendReason)
 		{
 			bool bCanLog = false;
@@ -510,64 +510,64 @@ namespace Server.TCP
 			return bCanLog;
 		}
 
-		// Token: 0x04004F1C RID: 20252
+		
 		public object BufferLock = new object();
 
-		// Token: 0x04004F1D RID: 20253
+		
 		private object SendLock = new object();
 
-		// Token: 0x04004F1E RID: 20254
+		
 		public static int ConstMinSendSize = 32768;
 
-		// Token: 0x04004F1F RID: 20255
+		
 		private static long _SendDataIntervalTicks = 80L;
 
-		// Token: 0x04004F20 RID: 20256
+		
 		private static int _MaxSingleSocketSendBufferSize = 0;
 
-		// Token: 0x04004F21 RID: 20257
+		
 		private static long _SendDataTimeOutTicks = 5000L;
 
-		// Token: 0x04004F22 RID: 20258
+		
 		private long _AddFirstPacketTicks = 0L;
 
-		// Token: 0x04004F23 RID: 20259
+		
 		private long _LastSendDataTicks = 0L;
 
-		// Token: 0x04004F24 RID: 20260
+		
 		private long _SendTimeoutTickCount = long.MaxValue;
 
-		// Token: 0x04004F25 RID: 20261
+		
 		private bool _IsSendding = false;
 
-		// Token: 0x04004F26 RID: 20262
+		
 		private byte[] _Buffer = null;
 
-		// Token: 0x04004F27 RID: 20263
+		
 		public Queue<MemoryBlock> QueueMemoryBlock = new Queue<MemoryBlock>();
 
-		// Token: 0x04004F28 RID: 20264
+		
 		private int _MaxBufferSize = 0;
 
-		// Token: 0x04004F29 RID: 20265
+		
 		private int _CurrentBufferSize = 0;
 
-		// Token: 0x04004F2A RID: 20266
+		
 		private int _UsedBufferSize = 0;
 
-		// Token: 0x04004F2B RID: 20267
+		
 		public static int MaxBufferSizeForLargePackge = 65536;
 
-		// Token: 0x04004F2C RID: 20268
+		
 		private MemoryBlock _MemoryBlock = null;
 
-		// Token: 0x04004F2D RID: 20269
+		
 		public bool HasLogTimeOutError = false;
 
-		// Token: 0x04004F2E RID: 20270
+		
 		public bool HasLogBufferFull = false;
 
-		// Token: 0x04004F2F RID: 20271
+		
 		public bool HasLogDiscardBigPacket = false;
 	}
 }

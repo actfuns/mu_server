@@ -12,15 +12,15 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic.Name
 {
-	// Token: 0x02000380 RID: 896
+	
 	public class NameManager : SingletonTemplate<NameManager>
 	{
-		// Token: 0x06000F64 RID: 3940 RVA: 0x000F1C4C File Offset: 0x000EFE4C
+		
 		private NameManager()
 		{
 		}
 
-		// Token: 0x06000F65 RID: 3941 RVA: 0x000F1C7C File Offset: 0x000EFE7C
+		
 		public void LoadConfig()
 		{
 			try
@@ -40,7 +40,7 @@ namespace GameServer.Logic.Name
 			}
 		}
 
-		// Token: 0x06000F66 RID: 3942 RVA: 0x000F1CF8 File Offset: 0x000EFEF8
+		
 		public TCPProcessCmdResults ProcessChangeName(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -99,7 +99,7 @@ namespace GameServer.Logic.Name
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000F67 RID: 3943 RVA: 0x000F1F04 File Offset: 0x000F0104
+		
 		private ChangeNameError HandleChangeName(string uid, int zoneId, int roleId, string newName)
 		{
 			ChangeNameError result;
@@ -171,7 +171,7 @@ namespace GameServer.Logic.Name
 			return result;
 		}
 
-		// Token: 0x06000F68 RID: 3944 RVA: 0x000F211C File Offset: 0x000F031C
+		
 		private void _OnChangeNameSuccess(int roleId, string oldName, string newName)
 		{
 			if (!string.IsNullOrEmpty(oldName) && !string.IsNullOrEmpty(newName))
@@ -205,24 +205,24 @@ namespace GameServer.Logic.Name
 			}
 		}
 
-		// Token: 0x06000F69 RID: 3945 RVA: 0x000F223C File Offset: 0x000F043C
+		
 		public bool IsNameLengthOK(string name)
 		{
 			return !string.IsNullOrEmpty(name) && name.Length >= this.NameMinLen && name.Length <= this.NameMaxLen;
 		}
 
-		// Token: 0x06000F6A RID: 3946 RVA: 0x000F2290 File Offset: 0x000F0490
+		
 		public ChangeNameInfo GetChangeNameInfo(string uid, int zoneId, int serverId)
 		{
 			return Global.sendToDB<ChangeNameInfo, string>(14002, string.Format("{0}:{1}", uid, zoneId), serverId);
 		}
 
-		// Token: 0x06000F6B RID: 3947 RVA: 0x000F22BE File Offset: 0x000F04BE
+		
 		public void GM_ChangeNameTest(GameClient client, string newName)
 		{
 		}
 
-		// Token: 0x06000F6C RID: 3948 RVA: 0x000F22C4 File Offset: 0x000F04C4
+		
 		public void GM_SetFreeModName(int roleid, int count)
 		{
 			GameClient client = GameManager.ClientMgr.FindClient(roleid);
@@ -238,7 +238,7 @@ namespace GameServer.Logic.Name
 			}
 		}
 
-		// Token: 0x06000F6D RID: 3949 RVA: 0x000F2320 File Offset: 0x000F0520
+		
 		public void GM_ChangeBangHuiName(GameClient client, string newName)
 		{
 			if (client != null)
@@ -247,7 +247,7 @@ namespace GameServer.Logic.Name
 			}
 		}
 
-		// Token: 0x06000F6E RID: 3950 RVA: 0x000F2344 File Offset: 0x000F0544
+		
 		public TCPProcessCmdResults ProcessChangeBangHuiName(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -303,7 +303,7 @@ namespace GameServer.Logic.Name
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000F6F RID: 3951 RVA: 0x000F2550 File Offset: 0x000F0750
+		
 		private EChangeGuildNameError HandleChangeBangHuiName(GameClient client, string newName)
 		{
 			EChangeGuildNameError ne;
@@ -344,16 +344,16 @@ namespace GameServer.Logic.Name
 			return ne;
 		}
 
-		// Token: 0x040017A9 RID: 6057
+		
 		private int NameMinLen = 2;
 
-		// Token: 0x040017AA RID: 6058
+		
 		private int NameMaxLen = 7;
 
-		// Token: 0x040017AB RID: 6059
+		
 		public int CostZuanShiBase = 300;
 
-		// Token: 0x040017AC RID: 6060
+		
 		public int CostZuanShiMax = 1500;
 	}
 }

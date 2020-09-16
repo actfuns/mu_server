@@ -17,21 +17,21 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic.JingJiChang
 {
-	// Token: 0x02000730 RID: 1840
+	
 	public class JingJiChangManager : JingJiChangConstants, IManager
 	{
-		// Token: 0x06002CAD RID: 11437 RVA: 0x0027DB7C File Offset: 0x0027BD7C
+		
 		private JingJiChangManager()
 		{
 		}
 
-		// Token: 0x06002CAE RID: 11438 RVA: 0x0027DBE4 File Offset: 0x0027BDE4
+		
 		public static JingJiChangManager getInstance()
 		{
 			return JingJiChangManager.instance;
 		}
 
-		// Token: 0x06002CAF RID: 11439 RVA: 0x0027DBFC File Offset: 0x0027BDFC
+		
 		public bool initialize()
 		{
 			this.loadStaticData();
@@ -40,7 +40,7 @@ namespace GameServer.Logic.JingJiChang
 			return true;
 		}
 
-		// Token: 0x06002CB0 RID: 11440 RVA: 0x0027DC24 File Offset: 0x0027BE24
+		
 		private void loadStaticData()
 		{
 			this.jingjiMainConfig.LoadFromXMlFile("Config/JingJi.xml", "", "ID", 0);
@@ -52,7 +52,7 @@ namespace GameServer.Logic.JingJiChang
 			this.jingjiFuBenMinZhuanSheng = this.jingjiFuBenItem.GetIntValue("MinZhuanSheng", -1);
 		}
 
-		// Token: 0x06002CB1 RID: 11441 RVA: 0x0027DCE4 File Offset: 0x0027BEE4
+		
 		private void initCmdProcessor()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(578, 2, JingJiDetailCmdProcessor.getInstance());
@@ -67,7 +67,7 @@ namespace GameServer.Logic.JingJiChang
 			TCPCmdDispatcher.getInstance().registerProcessor(634, 1, JingJiStartFightCmdProcessor.getInstance());
 		}
 
-		// Token: 0x06002CB2 RID: 11442 RVA: 0x0027DDD0 File Offset: 0x0027BFD0
+		
 		private void initListener()
 		{
 			GlobalEventSource.getInstance().registerListener(9, JingJiPlayerLevelupEventListener.getInstance());
@@ -77,19 +77,19 @@ namespace GameServer.Logic.JingJiChang
 			GlobalEventSource.getInstance().registerListener(13, JingJiPlayerLeaveFuBenEventListener.getInstance());
 		}
 
-		// Token: 0x06002CB3 RID: 11443 RVA: 0x0027DE38 File Offset: 0x0027C038
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x06002CB4 RID: 11444 RVA: 0x0027DE4C File Offset: 0x0027C04C
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06002CB5 RID: 11445 RVA: 0x0027DE60 File Offset: 0x0027C060
+		
 		public bool destroy()
 		{
 			this.removeListener();
@@ -103,7 +103,7 @@ namespace GameServer.Logic.JingJiChang
 			return true;
 		}
 
-		// Token: 0x06002CB6 RID: 11446 RVA: 0x0027DECC File Offset: 0x0027C0CC
+		
 		private void removeListener()
 		{
 			GlobalEventSource.getInstance().removeListener(9, JingJiPlayerLevelupEventListener.getInstance());
@@ -113,7 +113,7 @@ namespace GameServer.Logic.JingJiChang
 			GlobalEventSource.getInstance().removeListener(13, JingJiPlayerLeaveFuBenEventListener.getInstance());
 		}
 
-		// Token: 0x06002CB7 RID: 11447 RVA: 0x0027DF54 File Offset: 0x0027C154
+		
 		public JingJiDetailData getDetailData(GameClient player, int requestType = 0)
 		{
 			JingJiDetailData detailData = new JingJiDetailData();
@@ -234,13 +234,13 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x06002CB8 RID: 11448 RVA: 0x0027E458 File Offset: 0x0027C658
+		
 		public int getJingJiMapCode()
 		{
 			return (this.jingjiFuBenItem != null) ? this.jingjiFuBenItem.GetIntValue("MapCode", -1) : -1;
 		}
 
-		// Token: 0x06002CB9 RID: 11449 RVA: 0x0027E488 File Offset: 0x0027C688
+		
 		public bool CanGradeJunXian(GameClient player)
 		{
 			int junxian = this.getJunxian(player);
@@ -257,7 +257,7 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x06002CBA RID: 11450 RVA: 0x0027E50C File Offset: 0x0027C70C
+		
 		public int upGradeJunXian(GameClient player)
 		{
 			int result = this.check(player);
@@ -333,7 +333,7 @@ namespace GameServer.Logic.JingJiChang
 			return result2;
 		}
 
-		// Token: 0x06002CBB RID: 11451 RVA: 0x0027E784 File Offset: 0x0027C984
+		
 		public int activeJunXianBuff(GameClient player, bool replace)
 		{
 			int result = this.check(player);
@@ -382,7 +382,7 @@ namespace GameServer.Logic.JingJiChang
 			return result2;
 		}
 
-		// Token: 0x06002CBC RID: 11452 RVA: 0x0027E888 File Offset: 0x0027CA88
+		
 		private bool consumeShengWang(GameClient player, int consumeValue)
 		{
 			int shengwangValue = this.getShengWangValue(player);
@@ -399,7 +399,7 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x06002CBD RID: 11453 RVA: 0x0027E8C4 File Offset: 0x0027CAC4
+		
 		private int GetRobotMinAttack(int nOccu, EMagicSwordTowardType eType, PlayerJingJiData data)
 		{
 			int result;
@@ -421,7 +421,7 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x06002CBE RID: 11454 RVA: 0x0027E928 File Offset: 0x0027CB28
+		
 		private int GetRobotMaxAttack(int nOccu, EMagicSwordTowardType eType, PlayerJingJiData data)
 		{
 			int result;
@@ -443,7 +443,7 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x06002CBF RID: 11455 RVA: 0x0027E98C File Offset: 0x0027CB8C
+		
 		private int GetRobotAttackType(int nOccu, EMagicSwordTowardType eType)
 		{
 			int result;
@@ -465,14 +465,14 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x06002CC0 RID: 11456 RVA: 0x0027E9CC File Offset: 0x0027CBCC
+		
 		private bool isHasJunXianBuff(GameClient player)
 		{
 			BufferData bufferData = Global.GetBufferDataByID(player, 87);
 			return bufferData != null && !Global.IsBufferDataOver(bufferData, 0L);
 		}
 
-		// Token: 0x06002CC1 RID: 11457 RVA: 0x0027EA00 File Offset: 0x0027CC00
+		
 		private int getJunxianBuffId(GameClient player)
 		{
 			int[] buffIds = GameManager.systemParamsList.GetParamValueIntArrayByName("JunXianBufferGoodsIDs", ',');
@@ -480,7 +480,7 @@ namespace GameServer.Logic.JingJiChang
 			return buffIds[junxian];
 		}
 
-		// Token: 0x06002CC2 RID: 11458 RVA: 0x0027EA30 File Offset: 0x0027CC30
+		
 		private void installJunXianBuff(GameClient player)
 		{
 			int nNewBufferGoodsIndexID = this.getJunxian(player) - 1;
@@ -506,7 +506,7 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06002CC3 RID: 11459 RVA: 0x0027EB14 File Offset: 0x0027CD14
+		
 		public void GetNextRewardTime(GameClient player)
 		{
 			lock (player)
@@ -531,7 +531,7 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06002CC4 RID: 11460 RVA: 0x0027EBC8 File Offset: 0x0027CDC8
+		
 		public bool CanGetrankingReward(GameClient player)
 		{
 			if (-1L == player.ClientData.JingJiNextRewardTime)
@@ -541,7 +541,7 @@ namespace GameServer.Logic.JingJiChang
 			return TimeUtil.NOW() >= player.ClientData.JingJiNextRewardTime;
 		}
 
-		// Token: 0x06002CC5 RID: 11461 RVA: 0x0027EC1C File Offset: 0x0027CE1C
+		
 		public void rankingReward(GameClient player, out int result, out long nextRewardTime)
 		{
 			result = this.check(player);
@@ -586,7 +586,7 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06002CC6 RID: 11462 RVA: 0x0027EDB8 File Offset: 0x0027CFB8
+		
 		private void addGoods(GameClient player, string goodsInfos)
 		{
 			string[] _goodsInfos = goodsInfos.Split(new char[]
@@ -610,32 +610,32 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06002CC7 RID: 11463 RVA: 0x0027EE9D File Offset: 0x0027D09D
+		
 		private void changeShengWangValue(GameClient player, int value)
 		{
 			GameManager.ClientMgr.ModifyShengWangValue(player, value, "竞技场", true, true);
 		}
 
-		// Token: 0x06002CC8 RID: 11464 RVA: 0x0027EEB4 File Offset: 0x0027D0B4
+		
 		private int getShengWangValue(GameClient player)
 		{
 			return GameManager.ClientMgr.GetShengWangValue(player);
 		}
 
-		// Token: 0x06002CC9 RID: 11465 RVA: 0x0027EED1 File Offset: 0x0027D0D1
+		
 		private void modifyJunxian(GameClient player)
 		{
 			GameManager.ClientMgr.ModifyShengWangLevelValue(player, 1, "改变军衔", true, true);
 		}
 
-		// Token: 0x06002CCA RID: 11466 RVA: 0x0027EEE8 File Offset: 0x0027D0E8
+		
 		private int getJunxian(GameClient player)
 		{
 			int junxian = GameManager.ClientMgr.GetShengWangLevelValue(player);
 			return (junxian < 0) ? 0 : junxian;
 		}
 
-		// Token: 0x06002CCB RID: 11467 RVA: 0x0027EF10 File Offset: 0x0027D110
+		
 		private void getRankingRewardValue(GameClient player, int ranking, out int addShengWangValue, out int addExpValue, out string goodsInfos)
 		{
 			addShengWangValue = -1;
@@ -660,13 +660,13 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06002CCC RID: 11468 RVA: 0x0027F028 File Offset: 0x0027D228
+		
 		public bool isInJingJiFuBen(GameClient player)
 		{
 			return player.ClientData.MapCode == this.jingjiFuBenItem.GetIntValue("MapCode", -1);
 		}
 
-		// Token: 0x06002CCD RID: 11469 RVA: 0x0027F068 File Offset: 0x0027D268
+		
 		private int check(GameClient player)
 		{
 			int result = ResultCode.Success;
@@ -688,7 +688,7 @@ namespace GameServer.Logic.JingJiChang
 			return result2;
 		}
 
-		// Token: 0x06002CCE RID: 11470 RVA: 0x0027F12C File Offset: 0x0027D32C
+		
 		public int removeCD(GameClient player)
 		{
 			int result = this.check(player);
@@ -734,7 +734,7 @@ namespace GameServer.Logic.JingJiChang
 			return result2;
 		}
 
-		// Token: 0x06002CCF RID: 11471 RVA: 0x0027F288 File Offset: 0x0027D488
+		
 		public PlayerJingJiData createJingJiData(GameClient player)
 		{
 			PlayerJingJiData data = new PlayerJingJiData();
@@ -781,7 +781,7 @@ namespace GameServer.Logic.JingJiChang
 			return data;
 		}
 
-		// Token: 0x06002CD0 RID: 11472 RVA: 0x0027F4B8 File Offset: 0x0027D6B8
+		
 		public void onPlayerLevelup(GameClient player)
 		{
 			int nMinLevel;
@@ -813,7 +813,7 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06002CD1 RID: 11473 RVA: 0x0027F5E8 File Offset: 0x0027D7E8
+		
 		private List<PlayerJingJiSkillData> getSaveSkillData(GameClient client)
 		{
 			List<PlayerJingJiSkillData> skillDataList = new List<PlayerJingJiSkillData>();
@@ -850,7 +850,7 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x06002CD2 RID: 11474 RVA: 0x0027F76C File Offset: 0x0027D96C
+		
 		private double[] getBaseProps(GameClient player)
 		{
 			return new double[]
@@ -862,7 +862,7 @@ namespace GameServer.Logic.JingJiChang
 			};
 		}
 
-		// Token: 0x06002CD3 RID: 11475 RVA: 0x0027F7B0 File Offset: 0x0027D9B0
+		
 		private double[] getExtProps(GameClient player)
 		{
 			double[] extProps = new double[177];
@@ -936,7 +936,7 @@ namespace GameServer.Logic.JingJiChang
 			return extProps;
 		}
 
-		// Token: 0x06002CD4 RID: 11476 RVA: 0x0027FA88 File Offset: 0x0027DC88
+		
 		private List<PlayerJingJiEquipData> getSaveEquipData(GameClient client)
 		{
 			List<PlayerJingJiEquipData> equipDataList = new List<PlayerJingJiEquipData>();
@@ -998,7 +998,7 @@ namespace GameServer.Logic.JingJiChang
 			return equipDataList;
 		}
 
-		// Token: 0x06002CD5 RID: 11477 RVA: 0x0027FD6C File Offset: 0x0027DF6C
+		
 		private bool canSaveEquip(GoodsData equip)
 		{
 			bool result;
@@ -1018,13 +1018,13 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x06002CD6 RID: 11478 RVA: 0x0027FDEC File Offset: 0x0027DFEC
+		
 		public bool IsJingJiChangMap(int nMapCode)
 		{
 			return nMapCode == this.nJingJiChangMapCode;
 		}
 
-		// Token: 0x06002CD7 RID: 11479 RVA: 0x0027FE14 File Offset: 0x0027E014
+		
 		public int requestChallenge(GameClient player, int beChallengerId, int beChallengerRanking, int enterType)
 		{
 			int result = this.check(player);
@@ -1097,7 +1097,7 @@ namespace GameServer.Logic.JingJiChang
 			return result2;
 		}
 
-		// Token: 0x06002CD8 RID: 11480 RVA: 0x0027FF90 File Offset: 0x0027E190
+		
 		public bool checkAction(GameClient player)
 		{
 			bool result;
@@ -1133,7 +1133,7 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x06002CD9 RID: 11481 RVA: 0x0027FFF4 File Offset: 0x0027E1F4
+		
 		public int checkEnterNum(GameClient player, int enterType)
 		{
 			int result = ResultCode.Success;
@@ -1178,7 +1178,7 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x06002CDA RID: 11482 RVA: 0x00280160 File Offset: 0x0027E360
+		
 		public int JingJiChangStartFight(GameClient client)
 		{
 			int result;
@@ -1210,7 +1210,7 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x06002CDB RID: 11483 RVA: 0x00280214 File Offset: 0x0027E414
+		
 		public int enterJingJiChang(GameClient client, PlayerJingJiData beChallengerData, JingJiFuBenType type = JingJiFuBenType.NORMAL)
 		{
 			ProcessTask.ProcessAddTaskVal(client, TaskTypes.JingJiChang, -1, 1, new object[0]);
@@ -1255,7 +1255,7 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x06002CDC RID: 11484 RVA: 0x0028041C File Offset: 0x0027E61C
+		
 		public void createSkillIDs(List<PlayerJingJiSkillData> skillDatas, Robot robot)
 		{
 			if (skillDatas != null && skillDatas.Count != 0)
@@ -1274,7 +1274,7 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06002CDD RID: 11485 RVA: 0x002804F0 File Offset: 0x0027E6F0
+		
 		private double GetRobotExtProps(int nIndex, double[] extProps)
 		{
 			double result;
@@ -1289,7 +1289,7 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x06002CDE RID: 11486 RVA: 0x002805C4 File Offset: 0x0027E7C4
+		
 		public Robot createRobot(GameClient player, PlayerJingJiData beChallengerData, int mapCode)
 		{
 			int roleId = (int)GameManager.MonsterIDMgr.GetNewID(mapCode);
@@ -1435,7 +1435,7 @@ namespace GameServer.Logic.JingJiChang
 			return robot;
 		}
 
-		// Token: 0x06002CDF RID: 11487 RVA: 0x00280CC8 File Offset: 0x0027EEC8
+		
 		private RoleDataMini createRoleDataMini(int roleId, PlayerJingJiData data, int mapCode)
 		{
 			int armorMax = (int)this.GetRobotExtProps(119, data.extProps);
@@ -1477,7 +1477,7 @@ namespace GameServer.Logic.JingJiChang
 			return roleData;
 		}
 
-		// Token: 0x06002CE0 RID: 11488 RVA: 0x00280E94 File Offset: 0x0027F094
+		
 		public static List<GoodsData> GetUsingGoodsList(List<PlayerJingJiEquipData> equipDatas)
 		{
 			int WuQiNum = 0;
@@ -1544,7 +1544,7 @@ namespace GameServer.Logic.JingJiChang
 			return goodsDataList;
 		}
 
-		// Token: 0x06002CE1 RID: 11489 RVA: 0x002810CC File Offset: 0x0027F2CC
+		
 		private int FindEquipCode(List<PlayerJingJiEquipData> equipDatas, int category)
 		{
 			int result;
@@ -1573,7 +1573,7 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x06002CE2 RID: 11490 RVA: 0x0028119C File Offset: 0x0027F39C
+		
 		public bool IsHaveFuBen(int nFuBenSeqID)
 		{
 			bool bContainFuBenID = false;
@@ -1587,7 +1587,7 @@ namespace GameServer.Logic.JingJiChang
 			return bContainFuBenID;
 		}
 
-		// Token: 0x06002CE3 RID: 11491 RVA: 0x00281204 File Offset: 0x0027F404
+		
 		public void onChallengeEndForPlayerDead(GameClient player, Monster monster)
 		{
 			if (player.ClientData.CopyMapID > 0 && player.ClientData.FuBenSeqID > 0 && this.IsHaveFuBen(player.ClientData.FuBenSeqID) && player.ClientData.MapCode == this.jingjiFuBenItem.GetIntValue("MapCode", -1) && monster.CurrentMapCode == this.jingjiFuBenItem.GetIntValue("MapCode", -1))
@@ -1618,7 +1618,7 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06002CE4 RID: 11492 RVA: 0x002813A4 File Offset: 0x0027F5A4
+		
 		public void onChallengeEndForMonsterDead(GameClient player, Monster monster)
 		{
 			if (player.ClientData.CopyMapID > 0 && player.ClientData.FuBenSeqID > 0 && this.IsHaveFuBen(player.ClientData.FuBenSeqID) && player.ClientData.MapCode == this.jingjiFuBenItem.GetIntValue("MapCode", -1) && monster.CurrentMapCode == this.jingjiFuBenItem.GetIntValue("MapCode", -1))
@@ -1659,7 +1659,7 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06002CE5 RID: 11493 RVA: 0x0028158C File Offset: 0x0027F78C
+		
 		public void onChallengeEndForPlayerLeaveFuBen(GameClient player)
 		{
 			if (player.ClientData.CopyMapID > 0 && player.ClientData.FuBenSeqID > 0 && this.IsHaveFuBen(player.ClientData.FuBenSeqID) && player.ClientData.MapCode == this.jingjiFuBenItem.GetIntValue("MapCode", -1))
@@ -1694,7 +1694,7 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06002CE6 RID: 11494 RVA: 0x0028172C File Offset: 0x0027F92C
+		
 		public void onChallengeEndForPlayerLogout(GameClient player)
 		{
 			if (player.ClientData.CopyMapID > 0 && player.ClientData.FuBenSeqID > 0 && this.IsHaveFuBen(player.ClientData.FuBenSeqID) && player.ClientData.MapCode == this.jingjiFuBenItem.GetIntValue("MapCode", -1))
@@ -1729,7 +1729,7 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06002CE7 RID: 11495 RVA: 0x002818CC File Offset: 0x0027FACC
+		
 		private void processWin(GameClient player, Robot robot, JingJiChallengeResultData resultData, JingJiFuBenType type)
 		{
 			if (JingJiFuBenType.NORMAL != type)
@@ -1799,7 +1799,7 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06002CE8 RID: 11496 RVA: 0x00281BCC File Offset: 0x0027FDCC
+		
 		private void processFailed(GameClient player, Robot robot, JingJiChallengeResultData resultData, JingJiFuBenType type)
 		{
 			if (JingJiFuBenType.NORMAL != type)
@@ -1836,12 +1836,12 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06002CE9 RID: 11497 RVA: 0x00281D10 File Offset: 0x0027FF10
+		
 		private void LianShengGongGao(GameClient player, string robotName, bool isWin, int winCount)
 		{
 		}
 
-		// Token: 0x06002CEA RID: 11498 RVA: 0x00281D14 File Offset: 0x0027FF14
+		
 		private void getChallengeReward(GameClient player, int ranking, bool isWin, out int addShengWangValue, out int addExpValue, out int challengeCD)
 		{
 			addShengWangValue = -1;
@@ -1898,13 +1898,13 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06002CEB RID: 11499 RVA: 0x00281F24 File Offset: 0x00280124
+		
 		private int getChallengeEndRanking(JingJiChallengeResultData resultData, int serverId)
 		{
 			return Global.sendToDB<int, byte[]>(10144, DataHelper.ObjectToBytes<JingJiChallengeResultData>(resultData), serverId);
 		}
 
-		// Token: 0x06002CEC RID: 11500 RVA: 0x00281F48 File Offset: 0x00280148
+		
 		private void relive(GameClient player)
 		{
 			player.ClientData.CurrentLifeV = player.ClientData.LifeV;
@@ -1912,14 +1912,14 @@ namespace GameServer.Logic.JingJiChang
 			Global.ClientRealive(player, (int)player.CurrentPos.X, (int)player.CurrentPos.Y, player.ClientData.RoleDirection);
 		}
 
-		// Token: 0x06002CED RID: 11501 RVA: 0x00281FB4 File Offset: 0x002801B4
+		
 		public void onJingJiFuBenStartCD(JingJiChangInstance instance)
 		{
 			GameClient player = instance.getPlayer();
 			player.sendCmd(581, "", false);
 		}
 
-		// Token: 0x06002CEE RID: 11502 RVA: 0x00281FDC File Offset: 0x002801DC
+		
 		public void onJingJiFuBenStarted(JingJiChangInstance instance)
 		{
 			GameClient player = instance.getPlayer();
@@ -1930,7 +1930,7 @@ namespace GameServer.Logic.JingJiChang
 			GameManager.MonsterZoneMgr.AddDynamicRobot(player.CurrentMapCode, robot, player.ClientData.CopyMapID, 1, gridX, gridY, 1, 0, SceneUIClasses.NormalCopy, player.ClientData.RoleID);
 		}
 
-		// Token: 0x06002CEF RID: 11503 RVA: 0x00282074 File Offset: 0x00280274
+		
 		public void onRobotBron(Robot robot)
 		{
 			GameClient client = GameManager.ClientMgr.FindClient((int)robot.Tag);
@@ -1942,7 +1942,7 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06002CF0 RID: 11504 RVA: 0x002820DC File Offset: 0x002802DC
+		
 		public void SendMySelfJingJiFakeRoleItem(GameClient player, Robot robot)
 		{
 			RoleDataMini roleDataMini = robot.getRoleDataMini();
@@ -1951,7 +1951,7 @@ namespace GameServer.Logic.JingJiChang
 			player.sendCmd<RoleDataMini>(110, roleDataMini, false);
 		}
 
-		// Token: 0x06002CF1 RID: 11505 RVA: 0x00282128 File Offset: 0x00280328
+		
 		public void onJingJiFuBenStopForTimeOutCD(JingJiChangInstance instance)
 		{
 			if (null != instance)
@@ -1975,7 +1975,7 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06002CF2 RID: 11506 RVA: 0x00282204 File Offset: 0x00280404
+		
 		public void onJingJiFuBenStoped(JingJiChangInstance instance)
 		{
 			GameClient player = instance.getPlayer();
@@ -1999,7 +1999,7 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06002CF3 RID: 11507 RVA: 0x00282338 File Offset: 0x00280538
+		
 		public void onJingJiFuBenDestroy(JingJiChangInstance instance)
 		{
 			ScheduleExecutor2.Instance.scheduleCancle(instance);
@@ -2010,7 +2010,7 @@ namespace GameServer.Logic.JingJiChang
 			instance.release();
 		}
 
-		// Token: 0x06002CF4 RID: 11508 RVA: 0x002823A4 File Offset: 0x002805A4
+		
 		public void onLeaveFuBenForStopCD(GameClient player)
 		{
 			JingJiChangInstance instance = null;
@@ -2032,7 +2032,7 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06002CF5 RID: 11509 RVA: 0x0028246C File Offset: 0x0028066C
+		
 		public int GetLeftEnterCount(GameClient client)
 		{
 			int freeChallengeNum = this.jingjiFuBenItem.GetIntValue("EnterNumber", -1);
@@ -2047,37 +2047,37 @@ namespace GameServer.Logic.JingJiChang
 			return freeChallengeNum + vipChallengeNum - useFreeNum - useVipNum;
 		}
 
-		// Token: 0x04003B71 RID: 15217
+		
 		private static JingJiChangManager instance = new JingJiChangManager();
 
-		// Token: 0x04003B72 RID: 15218
+		
 		private SystemXmlItems rewardConfig = new SystemXmlItems();
 
-		// Token: 0x04003B73 RID: 15219
+		
 		private SystemXmlItems jingjiMainConfig = new SystemXmlItems();
 
-		// Token: 0x04003B74 RID: 15220
+		
 		private SystemXmlItems junxianConfig = new SystemXmlItems();
 
-		// Token: 0x04003B75 RID: 15221
+		
 		private SystemXmlItem jingjiFuBenItem = null;
 
-		// Token: 0x04003B76 RID: 15222
+		
 		public int nJingJiChangMapCode = 0;
 
-		// Token: 0x04003B77 RID: 15223
+		
 		private Dictionary<int, JingJiChangInstance> jingjichangInstances = new Dictionary<int, JingJiChangInstance>();
 
-		// Token: 0x04003B78 RID: 15224
+		
 		private int jingjiFuBenId = -1;
 
-		// Token: 0x04003B79 RID: 15225
+		
 		private int jingjiBuffId = -1;
 
-		// Token: 0x04003B7A RID: 15226
+		
 		private int jingjiFuBenMinZhuanSheng = -1;
 
-		// Token: 0x04003B7B RID: 15227
+		
 		private string[] junxianBuffTimeConfig;
 	}
 }

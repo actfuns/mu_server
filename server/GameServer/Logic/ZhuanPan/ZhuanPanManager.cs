@@ -9,23 +9,23 @@ using Server.Tools;
 
 namespace GameServer.Logic.ZhuanPan
 {
-	// Token: 0x02000833 RID: 2099
+	
 	public class ZhuanPanManager : IManager, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x06003B2D RID: 15149 RVA: 0x00323FE4 File Offset: 0x003221E4
+		
 		public static ZhuanPanManager getInstance()
 		{
 			return ZhuanPanManager.instance;
 		}
 
-		// Token: 0x06003B2E RID: 15150 RVA: 0x00323FFC File Offset: 0x003221FC
+		
 		public bool initialize()
 		{
 			this.LoadConfig();
 			return true;
 		}
 
-		// Token: 0x06003B2F RID: 15151 RVA: 0x00324018 File Offset: 0x00322218
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1810, 1, 1, ZhuanPanManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -34,19 +34,19 @@ namespace GameServer.Logic.ZhuanPan
 			return true;
 		}
 
-		// Token: 0x06003B30 RID: 15152 RVA: 0x00324074 File Offset: 0x00322274
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06003B31 RID: 15153 RVA: 0x00324088 File Offset: 0x00322288
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06003B32 RID: 15154 RVA: 0x0032409C File Offset: 0x0032229C
+		
 		public bool LoadConfig()
 		{
 			try
@@ -71,13 +71,13 @@ namespace GameServer.Logic.ZhuanPan
 			return true;
 		}
 
-		// Token: 0x06003B33 RID: 15155 RVA: 0x00324110 File Offset: 0x00322310
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06003B34 RID: 15156 RVA: 0x00324124 File Offset: 0x00322324
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -101,7 +101,7 @@ namespace GameServer.Logic.ZhuanPan
 			return result;
 		}
 
-		// Token: 0x06003B35 RID: 15157 RVA: 0x00324198 File Offset: 0x00322398
+		
 		public bool ProcessZhuanPanInfoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -191,7 +191,7 @@ namespace GameServer.Logic.ZhuanPan
 			return false;
 		}
 
-		// Token: 0x06003B36 RID: 15158 RVA: 0x00324514 File Offset: 0x00322714
+		
 		public bool ProcessZhuanPanChouJiangCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -398,7 +398,7 @@ namespace GameServer.Logic.ZhuanPan
 			return false;
 		}
 
-		// Token: 0x06003B37 RID: 15159 RVA: 0x00324D28 File Offset: 0x00322F28
+		
 		public bool ProcessZhuanPanLingJiangCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -512,7 +512,7 @@ namespace GameServer.Logic.ZhuanPan
 			return false;
 		}
 
-		// Token: 0x06003B38 RID: 15160 RVA: 0x003251E8 File Offset: 0x003233E8
+		
 		public bool LoadSystemParams()
 		{
 			bool result;
@@ -558,7 +558,7 @@ namespace GameServer.Logic.ZhuanPan
 			return result;
 		}
 
-		// Token: 0x06003B39 RID: 15161 RVA: 0x003253C8 File Offset: 0x003235C8
+		
 		public bool LoadZhuanPan()
 		{
 			bool result;
@@ -611,7 +611,7 @@ namespace GameServer.Logic.ZhuanPan
 			return result;
 		}
 
-		// Token: 0x06003B3A RID: 15162 RVA: 0x003255D8 File Offset: 0x003237D8
+		
 		public bool LoadZhuanPanAward()
 		{
 			bool result;
@@ -670,7 +670,7 @@ namespace GameServer.Logic.ZhuanPan
 			return result;
 		}
 
-		// Token: 0x06003B3B RID: 15163 RVA: 0x00325850 File Offset: 0x00323A50
+		
 		public void ZhuanPanTimer_Work()
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -702,7 +702,7 @@ namespace GameServer.Logic.ZhuanPan
 			}
 		}
 
-		// Token: 0x06003B3C RID: 15164 RVA: 0x00325A10 File Offset: 0x00323C10
+		
 		public void NotifyActivityState(GameClient client)
 		{
 			if (!client.ClientSocket.IsKuaFuLogin)
@@ -727,16 +727,16 @@ namespace GameServer.Logic.ZhuanPan
 			}
 		}
 
-		// Token: 0x06003B3D RID: 15165 RVA: 0x00325AE0 File Offset: 0x00323CE0
+		
 		public DateTime GetBeginTime()
 		{
 			return ZhuanPanManager.ZhuanPanRunTimeData.BeginTime;
 		}
 
-		// Token: 0x04004587 RID: 17799
+		
 		private static ZhuanPanData ZhuanPanRunTimeData = new ZhuanPanData();
 
-		// Token: 0x04004588 RID: 17800
+		
 		private static ZhuanPanManager instance = new ZhuanPanManager();
 	}
 }

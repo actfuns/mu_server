@@ -8,15 +8,15 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic.TuJian
 {
-	// Token: 0x02000497 RID: 1175
+	
 	public class TuJianManager : SingletonTemplate<TuJianManager>
 	{
-		// Token: 0x0600156F RID: 5487 RVA: 0x00150C48 File Offset: 0x0014EE48
+		
 		private TuJianManager()
 		{
 		}
 
-		// Token: 0x06001570 RID: 5488 RVA: 0x00150C6C File Offset: 0x0014EE6C
+		
 		public void LoadConfig()
 		{
 			bool bFailed = false;
@@ -58,7 +58,7 @@ namespace GameServer.Logic.TuJian
 			}
 		}
 
-		// Token: 0x06001571 RID: 5489 RVA: 0x00150DE4 File Offset: 0x0014EFE4
+		
 		private bool loadTuJianType()
 		{
 			try
@@ -100,7 +100,7 @@ namespace GameServer.Logic.TuJian
 			return true;
 		}
 
-		// Token: 0x06001572 RID: 5490 RVA: 0x00150FB0 File Offset: 0x0014F1B0
+		
 		private bool loadTuJianItem()
 		{
 			try
@@ -150,7 +150,7 @@ namespace GameServer.Logic.TuJian
 			return true;
 		}
 
-		// Token: 0x06001573 RID: 5491 RVA: 0x001511D4 File Offset: 0x0014F3D4
+		
 		private _AttrValue analyseToAttrValues(string strAttrs)
 		{
 			_AttrValue result2;
@@ -237,7 +237,7 @@ namespace GameServer.Logic.TuJian
 			return result2;
 		}
 
-		// Token: 0x06001574 RID: 5492 RVA: 0x00151484 File Offset: 0x0014F684
+		
 		public void UpdateTuJianProps(GameClient client)
 		{
 			if (client != null)
@@ -355,7 +355,7 @@ namespace GameServer.Logic.TuJian
 			}
 		}
 
-		// Token: 0x06001575 RID: 5493 RVA: 0x00151998 File Offset: 0x0014FB98
+		
 		public void HandleActiveTuJian(GameClient client, string[] itemArr)
 		{
 			if (itemArr != null && itemArr.Length != 0 && client != null)
@@ -429,7 +429,7 @@ namespace GameServer.Logic.TuJian
 			}
 		}
 
-		// Token: 0x06001576 RID: 5494 RVA: 0x00151CE8 File Offset: 0x0014FEE8
+		
 		public bool GM_OneKeyActiveTuJianType(GameClient client, int typeId, out string failedMsg)
 		{
 			failedMsg = string.Empty;
@@ -504,16 +504,16 @@ namespace GameServer.Logic.TuJian
 			return result;
 		}
 
-		// Token: 0x04001F22 RID: 7970
+		
 		private const string TuJianType_fileName = "Config/TuJianType.xml";
 
-		// Token: 0x04001F23 RID: 7971
+		
 		private const string TuJianItem_fileName = "Config/TuJianItems.xml";
 
-		// Token: 0x04001F24 RID: 7972
+		
 		private Dictionary<int, TuJianType> TuJianTypes = new Dictionary<int, TuJianType>();
 
-		// Token: 0x04001F25 RID: 7973
+		
 		private Dictionary<int, TuJianItem> TuJianItems = new Dictionary<int, TuJianItem>();
 	}
 }

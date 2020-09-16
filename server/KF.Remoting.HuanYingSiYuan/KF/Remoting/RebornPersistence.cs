@@ -12,15 +12,15 @@ using Tmsk.Contract.KuaFuData;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000070 RID: 112
+	
 	public class RebornPersistence
 	{
-		// Token: 0x06000586 RID: 1414 RVA: 0x0004A8AF File Offset: 0x00048AAF
+		
 		private RebornPersistence()
 		{
 		}
 
-		// Token: 0x06000587 RID: 1415 RVA: 0x0004A8E8 File Offset: 0x00048AE8
+		
 		public void AddDelayWriteSql(string sql)
 		{
 			lock (this.Mutex)
@@ -29,7 +29,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000588 RID: 1416 RVA: 0x0004A93C File Offset: 0x00048B3C
+		
 		private void WriteDataToDb(string sql)
 		{
 			try
@@ -43,7 +43,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000589 RID: 1417 RVA: 0x0004A98C File Offset: 0x00048B8C
+		
 		public void DelayWriteDataProc()
 		{
 			List<string> list = null;
@@ -62,7 +62,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600058A RID: 1418 RVA: 0x0004AA50 File Offset: 0x00048C50
+		
 		private int ExecuteSqlNoQuery(string sqlCmd)
 		{
 			int result;
@@ -79,7 +79,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600058B RID: 1419 RVA: 0x0004AA9C File Offset: 0x00048C9C
+		
 		public bool LoadDatabase()
 		{
 			bool result;
@@ -101,7 +101,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600058C RID: 1420 RVA: 0x0004AB00 File Offset: 0x00048D00
+		
 		private string FormatLoadRebornRankSql(int rankType)
 		{
 			int[] RankLimit = new int[]
@@ -132,20 +132,20 @@ namespace KF.Remoting
 			return strSql;
 		}
 
-		// Token: 0x0600058D RID: 1421 RVA: 0x0004ABA8 File Offset: 0x00048DA8
+		
 		public int GetRebornDayID()
 		{
 			object value = DbHelperMySQL.GetSingle("SELECT value FROM t_async WHERE id = " + 49);
 			return Convert.ToInt32(value);
 		}
 
-		// Token: 0x0600058E RID: 1422 RVA: 0x0004ABD7 File Offset: 0x00048DD7
+		
 		public void SaveRebornDayID(int dayId)
 		{
 			DbHelperMySQL.ExecuteSql(string.Format("REPLACE INTO t_async(`id`,`value`) VALUES({0},{1});", 49, dayId));
 		}
 
-		// Token: 0x0600058F RID: 1423 RVA: 0x0004ABF8 File Offset: 0x00048DF8
+		
 		public byte[] LoadRebornRoleData(int ptid, int rid)
 		{
 			byte[] result;
@@ -169,7 +169,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000590 RID: 1424 RVA: 0x0004AC60 File Offset: 0x00048E60
+		
 		public bool LoadRebornRankInfo(int rankType, KuaFuData<Dictionary<int, List<KFRebornRankInfo>>> RebornRankDict)
 		{
 			bool result;
@@ -237,7 +237,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000591 RID: 1425 RVA: 0x0004AE70 File Offset: 0x00049070
+		
 		private bool LoadRebornRoleData(Dictionary<KeyValuePair<int, int>, KuaFuData<KFRebornRoleData>> RebornRoleDataDict)
 		{
 			bool result;
@@ -301,21 +301,21 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000592 RID: 1426 RVA: 0x0004B1A0 File Offset: 0x000493A0
+		
 		public void UpdateRebornRoleDataBossAward(KFRebornRoleData roleData)
 		{
 			string sql = string.Format("UPDATE t_reborn_roles SET boss_award='{2}' WHERE ptid={0} AND rid={1};", roleData.PtID, roleData.RoleID, roleData.FormatBossAwardString(roleData.BossAwardList));
 			this.AddDelayWriteSql(sql);
 		}
 
-		// Token: 0x06000593 RID: 1427 RVA: 0x0004B1E4 File Offset: 0x000493E4
+		
 		public void UpdateRebornRoleDataRoleName(KFRebornRoleData roleData)
 		{
 			string sql = string.Format("UPDATE t_reborn_roles SET rname='{2}' WHERE ptid={0} AND rid={1};", roleData.PtID, roleData.RoleID, roleData.RoleName);
 			this.AddDelayWriteSql(sql);
 		}
 
-		// Token: 0x06000594 RID: 1428 RVA: 0x0004B224 File Offset: 0x00049424
+		
 		public void UpdateRebornRoleData4Selector(KFRebornRoleData roleData)
 		{
 			string sql = string.Format("UPDATE t_reborn_roles SET data1=@content WHERE ptid={0} AND rid={1};", roleData.PtID, roleData.RoleID);
@@ -325,7 +325,7 @@ namespace KF.Remoting
 			});
 		}
 
-		// Token: 0x06000595 RID: 1429 RVA: 0x0004B278 File Offset: 0x00049478
+		
 		public void UpdateRebornRoleData(KFRebornRoleData roleData, int chgMask, bool delay = true)
 		{
 			string sql = string.Format("UPDATE t_reborn_roles SET lev={2}, rarity={3}, rarity_last={4}, boss={5}, boss_last={6}, liansha={7}, liansha_last={8} WHERE ptid={0} AND rid={1};", new object[]
@@ -378,7 +378,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000596 RID: 1430 RVA: 0x0004B4B4 File Offset: 0x000496B4
+		
 		public void InsertRebornRoleData(KFRebornRoleData roleData)
 		{
 			string sql = string.Format("INSERT INTO t_reborn_roles(ptid, rid, rname, lev, rarity, rarity_last, boss, boss_last, liansha, liansha_last, boss_award) VALUES({0},{1},'{2}',{3},{4},{5},{6},{7},{8},{9},'{10}');", new object[]
@@ -398,19 +398,19 @@ namespace KF.Remoting
 			this.AddDelayWriteSql(sql);
 		}
 
-		// Token: 0x04000302 RID: 770
+		
 		public static readonly RebornPersistence Instance = new RebornPersistence();
 
-		// Token: 0x04000303 RID: 771
+		
 		public object Mutex = new object();
 
-		// Token: 0x04000304 RID: 772
+		
 		public Queue<string> DelayWriteSqlQueue = new Queue<string>();
 
-		// Token: 0x04000305 RID: 773
+		
 		public Dictionary<KeyValuePair<int, int>, KuaFuData<KFRebornRoleData>> RebornRoleDataDict = new Dictionary<KeyValuePair<int, int>, KuaFuData<KFRebornRoleData>>();
 
-		// Token: 0x04000306 RID: 774
+		
 		public KuaFuData<Dictionary<int, List<KFRebornRankInfo>>> RebornRankDict = new KuaFuData<Dictionary<int, List<KFRebornRankInfo>>>();
 	}
 }

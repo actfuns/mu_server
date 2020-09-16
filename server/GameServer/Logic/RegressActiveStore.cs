@@ -8,10 +8,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004AF RID: 1199
+	
 	public class RegressActiveStore : Activity
 	{
-		// Token: 0x06001647 RID: 5703 RVA: 0x0015CAE4 File Offset: 0x0015ACE4
+		
 		public bool Init()
 		{
 			this.ActivityType = 114;
@@ -64,7 +64,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001648 RID: 5704 RVA: 0x0015CD14 File Offset: 0x0015AF14
+		
 		public void OnRoleLogin(GameClient client)
 		{
 			if (!this.InActivityTime())
@@ -93,7 +93,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001649 RID: 5705 RVA: 0x0015CDD4 File Offset: 0x0015AFD4
+		
 		public bool RegressStoreGoodsBuyCheck(GameClient client, int ConfID, int Level, int Day, int GoodsID, int Count, string stage, out int needYuanBao, out int Sum, out GoodsData goodData)
 		{
 			needYuanBao = 0;
@@ -160,10 +160,10 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04001FD9 RID: 8153
+		
 		protected const string RegressActiveStoreXml = "Config\\HuiGuiStore.xml";
 
-		// Token: 0x04001FDA RID: 8154
+		
 		private Dictionary<int, RegressActiveStoreXML> regressActiveStoreXML = new Dictionary<int, RegressActiveStoreXML>();
 	}
 }

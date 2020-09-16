@@ -4,11 +4,11 @@ using Tmsk.Contract;
 
 namespace Server.Data
 {
-	// Token: 0x02000593 RID: 1427
+	
 	[ProtoContract]
 	public class SpriteAttackData : IProtoBuffData
 	{
-		// Token: 0x06001A1A RID: 6682 RVA: 0x00192C94 File Offset: 0x00190E94
+		
 		public int fromBytes(byte[] data, int offset, int count)
 		{
 			int pos = offset;
@@ -55,7 +55,7 @@ namespace Server.Data
 			return pos;
 		}
 
-		// Token: 0x06001A1B RID: 6683 RVA: 0x00192DD4 File Offset: 0x00190FD4
+		
 		public byte[] toBytes()
 		{
 			int total = 0;
@@ -84,43 +84,43 @@ namespace Server.Data
 			return data;
 		}
 
-		// Token: 0x0400282F RID: 10287
+		
 		[ProtoMember(1)]
 		public int roleID = 0;
 
-		// Token: 0x04002830 RID: 10288
+		
 		[ProtoMember(2)]
 		public int roleX = 0;
 
-		// Token: 0x04002831 RID: 10289
+		
 		[ProtoMember(3)]
 		public int roleY = 0;
 
-		// Token: 0x04002832 RID: 10290
+		
 		[ProtoMember(4)]
 		public int enemy = 0;
 
-		// Token: 0x04002833 RID: 10291
+		
 		[ProtoMember(5)]
 		public int enemyX = 0;
 
-		// Token: 0x04002834 RID: 10292
+		
 		[ProtoMember(6)]
 		public int enemyY = 0;
 
-		// Token: 0x04002835 RID: 10293
+		
 		[ProtoMember(7)]
 		public int realEnemyX = 0;
 
-		// Token: 0x04002836 RID: 10294
+		
 		[ProtoMember(8)]
 		public int realEnemyY = 0;
 
-		// Token: 0x04002837 RID: 10295
+		
 		[ProtoMember(9)]
 		public int magicCode = 0;
 
-		// Token: 0x04002838 RID: 10296
+		
 		[ProtoMember(10)]
 		public long clientTicks;
 	}

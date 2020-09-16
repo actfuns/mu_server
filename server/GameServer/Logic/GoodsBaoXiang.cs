@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006DC RID: 1756
+	
 	public class GoodsBaoXiang
 	{
-		// Token: 0x060029E2 RID: 10722 RVA: 0x00259540 File Offset: 0x00257740
+		
 		public static void ProcessFallBaoXiang_StepOne(GameClient client, SystemXmlItem systemGoodsItem, GoodsData goodsData, ref int UseNum)
 		{
 			List<MagicActionItem> magicActionItemList = null;
@@ -114,7 +114,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029E3 RID: 10723 RVA: 0x00259944 File Offset: 0x00257B44
+		
 		public static void ProcessFallBaoXiang_StepTwo(GameClient client, int fallID, int maxFallCount, int binding, int actionGoodsID)
 		{
 			List<GoodsData> goodsDataList = client.ClientData.FallBaoXiangGoodsList;
@@ -140,7 +140,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029E4 RID: 10724 RVA: 0x00259B0C File Offset: 0x00257D0C
+		
 		public static void ProcessFallBaoXiang(GameClient client, int fallID, int maxFallCount, int binding, int actionGoodsID)
 		{
 			if (fallID > 0)
@@ -169,7 +169,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029E5 RID: 10725 RVA: 0x00259CC0 File Offset: 0x00257EC0
+		
 		public static List<GoodsData> FetchGoodListBaseFallPacketID(GameClient client, int fallID, int maxFallCount, FallAlgorithm fallAlgorithm)
 		{
 			List<GoodsData> goodsDataList = null;
@@ -215,7 +215,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060029E6 RID: 10726 RVA: 0x00259DAC File Offset: 0x00257FAC
+		
 		public static int ProcessFallByYaoShiWaBao(GameClient client, int fallID, int idYaoShi, int idXiangZi, out GoodsData retGoodsData, int forceBinding, int subMoney)
 		{
 			retGoodsData = null;
@@ -286,7 +286,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060029E7 RID: 10727 RVA: 0x00259FF4 File Offset: 0x002581F4
+		
 		public static void CreateGoodsBaseFallID(GameClient client, int fallID, int nMaxCount)
 		{
 			if (fallID > 0)
@@ -342,7 +342,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029E8 RID: 10728 RVA: 0x0025A26C File Offset: 0x0025846C
+		
 		public static int ProcessActivityAward(GameClient client, int fallID, int maxFallCount, int binding, string sMsg, List<GoodsData> goodsDataList)
 		{
 			int result;

@@ -4,10 +4,10 @@ using GameServer.Core.Executor;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000520 RID: 1312
+	
 	public class MagicsManyTimeDmageQueue
 	{
-		// Token: 0x060018E1 RID: 6369 RVA: 0x00184B7C File Offset: 0x00182D7C
+		
 		public bool AddManyTimeDmageQueueItemEx(int enemy, int enemyX, int enemyY, int realEnemyX, int realEnemyY, int magicCode)
 		{
 			Lazy<long> startTicks = new Lazy<long>(() => TimeUtil.NOW());
@@ -63,7 +63,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060018E2 RID: 6370 RVA: 0x00184D78 File Offset: 0x00182F78
+		
 		public bool AddDelayMagicItemEx(int enemy, int enemyX, int enemyY, int realEnemyX, int realEnemyY, int magicCode)
 		{
 			Lazy<long> startTicks = new Lazy<long>(() => TimeUtil.NOW());
@@ -103,7 +103,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060018E3 RID: 6371 RVA: 0x00184EC8 File Offset: 0x001830C8
+		
 		public int GetManyTimeDmageQueueItemNumEx()
 		{
 			int count;
@@ -114,7 +114,7 @@ namespace GameServer.Logic
 			return count;
 		}
 
-		// Token: 0x060018E4 RID: 6372 RVA: 0x00184F1C File Offset: 0x0018311C
+		
 		public ManyTimeDmageMagicItem GetCanExecItemsEx(out ManyTimeDmageItem subItem)
 		{
 			ManyTimeDmageMagicItem magicItem = null;
@@ -151,7 +151,7 @@ namespace GameServer.Logic
 			return magicItem;
 		}
 
-		// Token: 0x060018E5 RID: 6373 RVA: 0x00185064 File Offset: 0x00183264
+		
 		public void AddManyTimeDmageQueueItem(ManyTimeDmageQueueItem manyTimeDmageQueueItem)
 		{
 			lock (this.ManyTimeDmageQueueItemList)
@@ -160,7 +160,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060018E6 RID: 6374 RVA: 0x001850B8 File Offset: 0x001832B8
+		
 		public int GetManyTimeDmageQueueItemNum()
 		{
 			int count;
@@ -171,7 +171,7 @@ namespace GameServer.Logic
 			return count;
 		}
 
-		// Token: 0x060018E7 RID: 6375 RVA: 0x0018510C File Offset: 0x0018330C
+		
 		public List<ManyTimeDmageQueueItem> GetCanExecItems()
 		{
 			long ticks = TimeUtil.NOW();
@@ -193,7 +193,7 @@ namespace GameServer.Logic
 			return canExecItemList;
 		}
 
-		// Token: 0x060018E8 RID: 6376 RVA: 0x001851E4 File Offset: 0x001833E4
+		
 		public void Clear()
 		{
 			lock (this.ManyTimeDmageQueueItemList)
@@ -207,19 +207,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x040022E6 RID: 8934
+		
 		private object mutex = new object();
 
-		// Token: 0x040022E7 RID: 8935
+		
 		private static Dictionary<int, ManyTimeDmageMagicItem> manyTimeDmageQueueItemStaticDict = new Dictionary<int, ManyTimeDmageMagicItem>();
 
-		// Token: 0x040022E8 RID: 8936
+		
 		private Dictionary<int, ManyTimeDmageMagicItem> manyTimeDmageQueueItemDict = new Dictionary<int, ManyTimeDmageMagicItem>();
 
-		// Token: 0x040022E9 RID: 8937
+		
 		private HashSet<ManyTimeDmageMagicItem> execItemDict = new HashSet<ManyTimeDmageMagicItem>();
 
-		// Token: 0x040022EA RID: 8938
+		
 		private List<ManyTimeDmageQueueItem> ManyTimeDmageQueueItemList = new List<ManyTimeDmageQueueItem>();
 	}
 }

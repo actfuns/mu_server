@@ -4,10 +4,10 @@ using GameServer.Core.Executor;
 
 namespace GameServer.Logic.JingJiChang.FSM
 {
-	// Token: 0x0200072A RID: 1834
+	
 	public class FinishStateMachine
 	{
-		// Token: 0x06002C95 RID: 11413 RVA: 0x0027C8DC File Offset: 0x0027AADC
+		
 		public FinishStateMachine(GameClient player, Robot owner)
 		{
 			this.owner = owner;
@@ -22,14 +22,14 @@ namespace GameServer.Logic.JingJiChang.FSM
 			this.currentState = normalState;
 		}
 
-		// Token: 0x06002C96 RID: 11414 RVA: 0x0027C974 File Offset: 0x0027AB74
+		
 		public void onUpdate()
 		{
 			long now = TimeUtil.NOW();
 			this.currentState.onUpdate(now);
 		}
 
-		// Token: 0x06002C97 RID: 11415 RVA: 0x0027C998 File Offset: 0x0027AB98
+		
 		public void switchState(AIState state)
 		{
 			IFSMState fsmState = null;
@@ -44,13 +44,13 @@ namespace GameServer.Logic.JingJiChang.FSM
 			}
 		}
 
-		// Token: 0x04003B21 RID: 15137
+		
 		private Dictionary<AIState, IFSMState> states = new Dictionary<AIState, IFSMState>();
 
-		// Token: 0x04003B22 RID: 15138
+		
 		private Robot owner = null;
 
-		// Token: 0x04003B23 RID: 15139
+		
 		private IFSMState currentState = null;
 	}
 }

@@ -9,10 +9,10 @@ using Tmsk.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020008F2 RID: 2290
+	
 	public class ServerMonitorManager
 	{
-		// Token: 0x06004214 RID: 16916 RVA: 0x003C6148 File Offset: 0x003C4348
+		
 		public ServerMonitorManager()
 		{
 			this._PrevCpuTime = Process.GetCurrentProcess().TotalProcessorTime;
@@ -20,7 +20,7 @@ namespace GameServer.Logic
 			this._LastReportMs = TimeUtil.NOW();
 		}
 
-		// Token: 0x06004215 RID: 16917 RVA: 0x003C61B0 File Offset: 0x003C43B0
+		
 		private bool GetCpuAndMem(out double cpuLoad, out double memMb)
 		{
 			cpuLoad = 0.0;
@@ -48,7 +48,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06004216 RID: 16918 RVA: 0x003C62A0 File Offset: 0x003C44A0
+		
 		private void RefreshReportConfig()
 		{
 			if (this._BNeedReLoad)
@@ -78,13 +78,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06004217 RID: 16919 RVA: 0x003C6347 File Offset: 0x003C4547
+		
 		public void SetNeedReload()
 		{
 			this._BNeedReLoad = true;
 		}
 
-		// Token: 0x06004218 RID: 16920 RVA: 0x003C6384 File Offset: 0x003C4584
+		
 		public void CheckReport()
 		{
 			try
@@ -129,28 +129,28 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0400500B RID: 20491
+		
 		public const string ReportUrlCfgKey = "server_monitor_report";
 
-		// Token: 0x0400500C RID: 20492
+		
 		private TimeSpan _PrevCpuTime = TimeSpan.Zero;
 
-		// Token: 0x0400500D RID: 20493
+		
 		private long _LastCalcCpuMs;
 
-		// Token: 0x0400500E RID: 20494
+		
 		private long _LastReportMs;
 
-		// Token: 0x0400500F RID: 20495
+		
 		private bool _BIsReporting = false;
 
-		// Token: 0x04005010 RID: 20496
+		
 		private bool _BNeedReLoad = true;
 
-		// Token: 0x04005011 RID: 20497
+		
 		private string _ReportToUrl = string.Empty;
 
-		// Token: 0x04005012 RID: 20498
+		
 		private int _ReportIntervalSec = 5;
 	}
 }

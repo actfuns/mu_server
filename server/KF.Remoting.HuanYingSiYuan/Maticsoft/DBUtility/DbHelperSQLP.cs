@@ -6,21 +6,21 @@ using System.Data.SqlClient;
 
 namespace Maticsoft.DBUtility
 {
-	// Token: 0x0200004D RID: 77
+	
 	public class DbHelperSQLP
 	{
-		// Token: 0x06000368 RID: 872 RVA: 0x0002E3B7 File Offset: 0x0002C5B7
+		
 		public DbHelperSQLP()
 		{
 		}
 
-		// Token: 0x06000369 RID: 873 RVA: 0x0002E3CD File Offset: 0x0002C5CD
+		
 		public DbHelperSQLP(string ConnectionString)
 		{
 			this.connectionString = ConnectionString;
 		}
 
-		// Token: 0x0600036A RID: 874 RVA: 0x0002E3EC File Offset: 0x0002C5EC
+		
 		public bool ColumnExists(string tableName, string columnName)
 		{
 			string sql = string.Concat(new string[]
@@ -35,7 +35,7 @@ namespace Maticsoft.DBUtility
 			return res != null && Convert.ToInt32(res) > 0;
 		}
 
-		// Token: 0x0600036B RID: 875 RVA: 0x0002E450 File Offset: 0x0002C650
+		
 		public int GetMaxID(string FieldName, string TableName)
 		{
 			string strsql = "select max(" + FieldName + ")+1 from " + TableName;
@@ -52,7 +52,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x0600036C RID: 876 RVA: 0x0002E498 File Offset: 0x0002C698
+		
 		public bool Exists(string strSql)
 		{
 			object obj = this.GetSingle(strSql);
@@ -68,7 +68,7 @@ namespace Maticsoft.DBUtility
 			return cmdresult != 0;
 		}
 
-		// Token: 0x0600036D RID: 877 RVA: 0x0002E4F8 File Offset: 0x0002C6F8
+		
 		public bool TabExists(string TableName)
 		{
 			string strsql = "select count(*) from sysobjects where id = object_id(N'[" + TableName + "]') and OBJECTPROPERTY(id, N'IsUserTable') = 1";
@@ -85,7 +85,7 @@ namespace Maticsoft.DBUtility
 			return cmdresult != 0;
 		}
 
-		// Token: 0x0600036E RID: 878 RVA: 0x0002E56C File Offset: 0x0002C76C
+		
 		public bool Exists(string strSql, params SqlParameter[] cmdParms)
 		{
 			object obj = this.GetSingle(strSql, cmdParms);
@@ -101,7 +101,7 @@ namespace Maticsoft.DBUtility
 			return cmdresult != 0;
 		}
 
-		// Token: 0x0600036F RID: 879 RVA: 0x0002E5CC File Offset: 0x0002C7CC
+		
 		public int ExecuteSql(string SQLString)
 		{
 			int result;
@@ -125,7 +125,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000370 RID: 880 RVA: 0x0002E660 File Offset: 0x0002C860
+		
 		public int ExecuteSqlByTime(string SQLString, int Times)
 		{
 			int result;
@@ -150,7 +150,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000371 RID: 881 RVA: 0x0002E6FC File Offset: 0x0002C8FC
+		
 		public int ExecuteSqlTran(List<CommandInfo> list, List<CommandInfo> oracleCmdSqlList)
 		{
 			int result;
@@ -242,7 +242,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000372 RID: 882 RVA: 0x0002EA74 File Offset: 0x0002CC74
+		
 		public int ExecuteSqlTran(List<string> SQLStringList)
 		{
 			int result;
@@ -277,7 +277,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000373 RID: 883 RVA: 0x0002EB54 File Offset: 0x0002CD54
+		
 		public int ExecuteSql(string SQLString, string content)
 		{
 			int result;
@@ -306,7 +306,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000374 RID: 884 RVA: 0x0002EC04 File Offset: 0x0002CE04
+		
 		public object ExecuteSqlGet(string SQLString, string content)
 		{
 			object result;
@@ -342,7 +342,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000375 RID: 885 RVA: 0x0002ECDC File Offset: 0x0002CEDC
+		
 		public int ExecuteSqlInsertImg(string strSQL, byte[] fs)
 		{
 			int result;
@@ -371,7 +371,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000376 RID: 886 RVA: 0x0002ED88 File Offset: 0x0002CF88
+		
 		public object GetSingle(string SQLString)
 		{
 			object result;
@@ -402,7 +402,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000377 RID: 887 RVA: 0x0002EE44 File Offset: 0x0002D044
+		
 		public object GetSingle(string SQLString, int Times)
 		{
 			object result;
@@ -434,7 +434,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000378 RID: 888 RVA: 0x0002EF08 File Offset: 0x0002D108
+		
 		public SqlDataReader ExecuteReader(string strSQL)
 		{
 			SqlConnection connection = new SqlConnection(this.connectionString);
@@ -453,7 +453,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000379 RID: 889 RVA: 0x0002EF58 File Offset: 0x0002D158
+		
 		public DataSet Query(string SQLString)
 		{
 			DataSet result;
@@ -475,7 +475,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x0600037A RID: 890 RVA: 0x0002EFE0 File Offset: 0x0002D1E0
+		
 		public DataSet Query(string SQLString, int Times)
 		{
 			DataSet result;
@@ -502,7 +502,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x0600037B RID: 891 RVA: 0x0002F074 File Offset: 0x0002D274
+		
 		public int ExecuteSql(string SQLString, params SqlParameter[] cmdParms)
 		{
 			int result;
@@ -526,7 +526,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x0600037C RID: 892 RVA: 0x0002F110 File Offset: 0x0002D310
+		
 		public void ExecuteSqlTran(Hashtable SQLStringList)
 		{
 			using (SqlConnection conn = new SqlConnection(this.connectionString))
@@ -557,7 +557,7 @@ namespace Maticsoft.DBUtility
 			}
 		}
 
-		// Token: 0x0600037D RID: 893 RVA: 0x0002F23C File Offset: 0x0002D43C
+		
 		public int ExecuteSqlTran(List<CommandInfo> cmdList)
 		{
 			int result;
@@ -623,7 +623,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x0600037E RID: 894 RVA: 0x0002F490 File Offset: 0x0002D690
+		
 		public void ExecuteSqlTranWithIndentity(List<CommandInfo> SQLStringList)
 		{
 			using (SqlConnection conn = new SqlConnection(this.connectionString))
@@ -668,7 +668,7 @@ namespace Maticsoft.DBUtility
 			}
 		}
 
-		// Token: 0x0600037F RID: 895 RVA: 0x0002F670 File Offset: 0x0002D870
+		
 		public void ExecuteSqlTranWithIndentity(Hashtable SQLStringList)
 		{
 			using (SqlConnection conn = new SqlConnection(this.connectionString))
@@ -714,7 +714,7 @@ namespace Maticsoft.DBUtility
 			}
 		}
 
-		// Token: 0x06000380 RID: 896 RVA: 0x0002F868 File Offset: 0x0002DA68
+		
 		public object GetSingle(string SQLString, params SqlParameter[] cmdParms)
 		{
 			object result;
@@ -745,7 +745,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000381 RID: 897 RVA: 0x0002F92C File Offset: 0x0002DB2C
+		
 		public SqlDataReader ExecuteReader(string SQLString, params SqlParameter[] cmdParms)
 		{
 			SqlConnection connection = new SqlConnection(this.connectionString);
@@ -765,7 +765,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000382 RID: 898 RVA: 0x0002F98C File Offset: 0x0002DB8C
+		
 		public DataSet Query(string SQLString, params SqlParameter[] cmdParms)
 		{
 			DataSet result;
@@ -791,7 +791,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000383 RID: 899 RVA: 0x0002FA48 File Offset: 0x0002DC48
+		
 		private static void PrepareCommand(SqlCommand cmd, SqlConnection conn, SqlTransaction trans, string cmdText, SqlParameter[] cmdParms)
 		{
 			if (conn.State != ConnectionState.Open)
@@ -818,7 +818,7 @@ namespace Maticsoft.DBUtility
 			}
 		}
 
-		// Token: 0x06000384 RID: 900 RVA: 0x0002FAFC File Offset: 0x0002DCFC
+		
 		public SqlDataReader RunProcedure(string storedProcName, IDataParameter[] parameters)
 		{
 			SqlDataReader result;
@@ -833,7 +833,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000385 RID: 901 RVA: 0x0002FB60 File Offset: 0x0002DD60
+		
 		public DataSet RunProcedure(string storedProcName, IDataParameter[] parameters, string tableName)
 		{
 			DataSet result;
@@ -851,7 +851,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000386 RID: 902 RVA: 0x0002FBD8 File Offset: 0x0002DDD8
+		
 		public DataSet RunProcedure(string storedProcName, IDataParameter[] parameters, string tableName, int Times)
 		{
 			DataSet result;
@@ -866,7 +866,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000387 RID: 903 RVA: 0x0002FC5C File Offset: 0x0002DE5C
+		
 		private static SqlCommand BuildQueryCommand(SqlConnection connection, string storedProcName, IDataParameter[] parameters)
 		{
 			SqlCommand command = new SqlCommand(storedProcName, connection);
@@ -885,7 +885,7 @@ namespace Maticsoft.DBUtility
 			return command;
 		}
 
-		// Token: 0x06000388 RID: 904 RVA: 0x0002FCF8 File Offset: 0x0002DEF8
+		
 		public int RunProcedure(string storedProcName, IDataParameter[] parameters, out int rowsAffected)
 		{
 			int result2;
@@ -900,7 +900,7 @@ namespace Maticsoft.DBUtility
 			return result2;
 		}
 
-		// Token: 0x06000389 RID: 905 RVA: 0x0002FD70 File Offset: 0x0002DF70
+		
 		private static SqlCommand BuildIntCommand(SqlConnection connection, string storedProcName, IDataParameter[] parameters)
 		{
 			SqlCommand command = DbHelperSQLP.BuildQueryCommand(connection, storedProcName, parameters);
@@ -908,7 +908,7 @@ namespace Maticsoft.DBUtility
 			return command;
 		}
 
-		// Token: 0x040001E0 RID: 480
+		
 		public string connectionString = PubConstant.ConnectionString;
 	}
 }

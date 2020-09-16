@@ -10,10 +10,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004D3 RID: 1235
+	
 	internal class ElementhrtsManager
 	{
-		// Token: 0x060016D8 RID: 5848 RVA: 0x00164DE0 File Offset: 0x00162FE0
+		
 		public static ElementhrtsManager.RefineType GetRefineType(int Grade)
 		{
 			ElementhrtsManager.RefineType config = null;
@@ -27,7 +27,7 @@ namespace GameServer.Logic
 			return config;
 		}
 
-		// Token: 0x060016D9 RID: 5849 RVA: 0x00164E50 File Offset: 0x00163050
+		
 		public static void LoadRefineType()
 		{
 			string fileName = "Config/RefineType.xml";
@@ -71,7 +71,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060016DA RID: 5850 RVA: 0x001650A8 File Offset: 0x001632A8
+		
 		public static List<ElementhrtsManager.ElementHrtsBase> GetElementHrtsBase(int Grade)
 		{
 			List<ElementhrtsManager.ElementHrtsBase> cfgList = null;
@@ -85,7 +85,7 @@ namespace GameServer.Logic
 			return cfgList;
 		}
 
-		// Token: 0x060016DB RID: 5851 RVA: 0x00165118 File Offset: 0x00163318
+		
 		public static void LoadElementHrtsBase()
 		{
 			string fileName = "Config/Refine.xml";
@@ -132,7 +132,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060016DC RID: 5852 RVA: 0x00165374 File Offset: 0x00163574
+		
 		public static ElementhrtsManager.ElementHrtsLevelInfo GetElementHrtsLevelInfo(int grade, int level)
 		{
 			string key = grade.ToString() + "|" + level.ToString();
@@ -147,7 +147,7 @@ namespace GameServer.Logic
 			return config;
 		}
 
-		// Token: 0x060016DD RID: 5853 RVA: 0x001653FC File Offset: 0x001635FC
+		
 		public static void LoadElementHrtsLevelInfo()
 		{
 			string fileName = "Config/ElementsHeart.xml";
@@ -200,7 +200,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060016DE RID: 5854 RVA: 0x0016568C File Offset: 0x0016388C
+		
 		public static int GetSpecialElementHrtsExp(int GoodsID)
 		{
 			int Exp = 0;
@@ -214,7 +214,7 @@ namespace GameServer.Logic
 			return Exp;
 		}
 
-		// Token: 0x060016DF RID: 5855 RVA: 0x001656FC File Offset: 0x001638FC
+		
 		public static void LoadSpecialElementHrtsExp()
 		{
 			lock (ElementhrtsManager.SpecialExpDict)
@@ -249,13 +249,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060016E0 RID: 5856 RVA: 0x00165804 File Offset: 0x00163A04
+		
 		public static bool IsElementHrt(int categoriy)
 		{
 			return categoriy >= 800 && categoriy < 816;
 		}
 
-		// Token: 0x060016E1 RID: 5857 RVA: 0x0016582C File Offset: 0x00163A2C
+		
 		public static GoodsData GetElementhrtsByDbID(GameClient client, int Site, int id)
 		{
 			List<GoodsData> goodsList = null;
@@ -286,7 +286,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060016E2 RID: 5858 RVA: 0x001658C8 File Offset: 0x00163AC8
+		
 		public static GoodsData GetElementhrtsByDbID(GameClient client, int id)
 		{
 			if (null != client.ClientData.ElementhrtsList)
@@ -312,7 +312,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x060016E3 RID: 5859 RVA: 0x001659B4 File Offset: 0x00163BB4
+		
 		public static void AddElementhrtsData(GameClient client, GoodsData goodsData)
 		{
 			if (goodsData.Site == 3000)
@@ -328,7 +328,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060016E4 RID: 5860 RVA: 0x00165A4C File Offset: 0x00163C4C
+		
 		public static void AddUsingElementhrtsData(GameClient client, GoodsData goodsData)
 		{
 			if (goodsData.Site == 3001)
@@ -344,7 +344,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060016E5 RID: 5861 RVA: 0x00165AE4 File Offset: 0x00163CE4
+		
 		public static GoodsData AddElementhrtsData(GameClient client, int id, int goodsID, int forgeLevel, int quality, int goodsNum, int binding, int site, string jewelList, int idelBagIndex, string endTime, int addPropIndex, int bornIndex, int lucky, int strong, int ExcellenceProperty, int nAppendPropLev, int nEquipChangeLife)
 		{
 			GoodsData gd = new GoodsData
@@ -381,7 +381,7 @@ namespace GameServer.Logic
 			return gd;
 		}
 
-		// Token: 0x060016E6 RID: 5862 RVA: 0x00165BDC File Offset: 0x00163DDC
+		
 		public static void RemoveElementhrtsData(GameClient client, GoodsData goodsData)
 		{
 			if (3000 == goodsData.Site)
@@ -406,7 +406,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060016E7 RID: 5863 RVA: 0x00165CD8 File Offset: 0x00163ED8
+		
 		public static int GetIdleSlotOfBag(GameClient client)
 		{
 			int idelPos = -1;
@@ -437,13 +437,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060016E8 RID: 5864 RVA: 0x00165DB4 File Offset: 0x00163FB4
+		
 		public static bool CanAddGoodsNum(GameClient client, int num)
 		{
 			return client != null && num > 0 && num + client.ClientData.ElementhrtsList.Count <= ElementhrtsManager.GetMaxElementhrtsCount();
 		}
 
-		// Token: 0x060016E9 RID: 5865 RVA: 0x00165E00 File Offset: 0x00164000
+		
 		public static int GetIdleSlotOfUsing(GameClient client)
 		{
 			int idelPos = -1;
@@ -474,7 +474,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060016EA RID: 5866 RVA: 0x00165EDC File Offset: 0x001640DC
+		
 		public static int GetElementhrtsListCount(GameClient client)
 		{
 			int result;
@@ -489,7 +489,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060016EB RID: 5867 RVA: 0x00165F18 File Offset: 0x00164118
+		
 		public static int GetUsingElementhrtsListCount(GameClient client)
 		{
 			int result;
@@ -504,20 +504,20 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060016EC RID: 5868 RVA: 0x00165F54 File Offset: 0x00164154
+		
 		public static int GetMaxElementhrtsCount()
 		{
 			return ElementhrtsManager.MaxElementhrtsGridNum;
 		}
 
-		// Token: 0x060016ED RID: 5869 RVA: 0x00165F6C File Offset: 0x0016416C
+		
 		public static int GetMaxUsingElementhrtsCount(GameClient client)
 		{
 			int slotCount = Global.GetRoleParamsInt32FromDB(client, "10160");
 			return Math.Max(ElementhrtsManager.MaxUsingElementhrtsGridNum, slotCount);
 		}
 
-		// Token: 0x060016EE RID: 5870 RVA: 0x0016601C File Offset: 0x0016421C
+		
 		public static void SortElementhrtsList(GameClient client)
 		{
 			if (null != client.ClientData.ElementhrtsList)
@@ -567,7 +567,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060016EF RID: 5871 RVA: 0x00166160 File Offset: 0x00164360
+		
 		private static void RequestElementHrtList(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, GameClient client, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -590,7 +590,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060016F0 RID: 5872 RVA: 0x0016624C File Offset: 0x0016444C
+		
 		public static TCPProcessCmdResults RequestElementExtend(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -685,7 +685,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_OK;
 		}
 
-		// Token: 0x060016F1 RID: 5873 RVA: 0x00166570 File Offset: 0x00164770
+		
 		public static TCPProcessCmdResults ProcessGetElementHrtList(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -737,7 +737,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060016F2 RID: 5874 RVA: 0x00166748 File Offset: 0x00164948
+		
 		public static TCPProcessCmdResults ProcessGetElementHrtsInfo(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -792,7 +792,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060016F3 RID: 5875 RVA: 0x00166928 File Offset: 0x00164B28
+		
 		public static TCPProcessCmdResults ProcessUseElementHrt(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1070,7 +1070,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060016F4 RID: 5876 RVA: 0x00167310 File Offset: 0x00165510
+		
 		public static ElementhrtsError CheckCanEquipElementHrt(GameClient client, int GoodsID)
 		{
 			SystemXmlItem systemGoods = null;
@@ -1112,7 +1112,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060016F5 RID: 5877 RVA: 0x00167430 File Offset: 0x00165630
+		
 		public static TCPProcessCmdResults ProcessGetSomeElementHrts(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1236,7 +1236,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060016F6 RID: 5878 RVA: 0x00167894 File Offset: 0x00165A94
+		
 		public static ElementhrtsError GetSomeElementHrts(GameClient client, bool bUseMoney, out int GoodsID, out int EhtLevel)
 		{
 			GoodsID = 0;
@@ -1359,7 +1359,7 @@ namespace GameServer.Logic
 			return ElementhrtsError.Success;
 		}
 
-		// Token: 0x060016F7 RID: 5879 RVA: 0x00167D24 File Offset: 0x00165F24
+		
 		public static TCPProcessCmdResults ProcessPowerElementHrt(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1668,7 +1668,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060016F8 RID: 5880 RVA: 0x00168884 File Offset: 0x00166A84
+		
 		public static TCPProcessCmdResults ProcessResetElementHrtBag(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1710,84 +1710,84 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x040020C4 RID: 8388
+		
 		public static int MaxElementhrtsGridNum = 100;
 
-		// Token: 0x040020C5 RID: 8389
+		
 		public static int MaxUsingElementhrtsGridNum = 8;
 
-		// Token: 0x040020C6 RID: 8390
+		
 		public static int ZhuanShiGrade = 6;
 
-		// Token: 0x040020C7 RID: 8391
+		
 		private static Dictionary<int, ElementhrtsManager.RefineType> RefineTypeDict = new Dictionary<int, ElementhrtsManager.RefineType>();
 
-		// Token: 0x040020C8 RID: 8392
+		
 		private static Dictionary<int, List<ElementhrtsManager.ElementHrtsBase>> ElementHrtsBaseDict = new Dictionary<int, List<ElementhrtsManager.ElementHrtsBase>>();
 
-		// Token: 0x040020C9 RID: 8393
+		
 		private static Dictionary<string, ElementhrtsManager.ElementHrtsLevelInfo> ElementHrtsLevelDict = new Dictionary<string, ElementhrtsManager.ElementHrtsLevelInfo>();
 
-		// Token: 0x040020CA RID: 8394
+		
 		private static Dictionary<int, int> SpecialExpDict = new Dictionary<int, int>();
 
-		// Token: 0x020004D4 RID: 1236
+		
 		public class RefineType
 		{
-			// Token: 0x040020CC RID: 8396
+			
 			public int Grade;
 
-			// Token: 0x040020CD RID: 8397
+			
 			public int MinZhuanSheng;
 
-			// Token: 0x040020CE RID: 8398
+			
 			public int MinLevel;
 
-			// Token: 0x040020CF RID: 8399
+			
 			public int MaxZhuanSheng;
 
-			// Token: 0x040020D0 RID: 8400
+			
 			public int MaxLevel;
 
-			// Token: 0x040020D1 RID: 8401
+			
 			public int RefineCost;
 
-			// Token: 0x040020D2 RID: 8402
+			
 			public int ZuanShiCost;
 
-			// Token: 0x040020D3 RID: 8403
+			
 			public double SuccessRate;
 
-			// Token: 0x040020D4 RID: 8404
+			
 			public int RefineLevel;
 		}
 
-		// Token: 0x020004D5 RID: 1237
+		
 		public class ElementHrtsBase
 		{
-			// Token: 0x040020D5 RID: 8405
+			
 			public int ID;
 
-			// Token: 0x040020D6 RID: 8406
+			
 			public int GoodsID;
 
-			// Token: 0x040020D7 RID: 8407
+			
 			public int StartValues;
 
-			// Token: 0x040020D8 RID: 8408
+			
 			public int EndValues;
 		}
 
-		// Token: 0x020004D6 RID: 1238
+		
 		public class ElementHrtsLevelInfo
 		{
-			// Token: 0x040020D9 RID: 8409
+			
 			public int Level;
 
-			// Token: 0x040020DA RID: 8410
+			
 			public int NeedExp;
 
-			// Token: 0x040020DB RID: 8411
+			
 			public int TotalExp;
 		}
 	}

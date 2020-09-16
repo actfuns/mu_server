@@ -10,22 +10,22 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Server.CmdProcesser
 {
-	// Token: 0x020008AE RID: 2222
+	
 	public class WingUpStarCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x06003DA7 RID: 15783 RVA: 0x0034ACA0 File Offset: 0x00348EA0
+		
 		private WingUpStarCmdProcessor()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(608, 2, this);
 		}
 
-		// Token: 0x06003DA8 RID: 15784 RVA: 0x0034ACC0 File Offset: 0x00348EC0
+		
 		public static WingUpStarCmdProcessor getInstance()
 		{
 			return WingUpStarCmdProcessor.instance;
 		}
 
-		// Token: 0x06003DA9 RID: 15785 RVA: 0x0034ACD8 File Offset: 0x00348ED8
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			int nRoleID = Global.SafeConvertToInt32(cmdParams[0]);
@@ -278,7 +278,7 @@ namespace GameServer.Server.CmdProcesser
 			return result;
 		}
 
-		// Token: 0x040047BF RID: 18367
+		
 		private static WingUpStarCmdProcessor instance = new WingUpStarCmdProcessor();
 	}
 }

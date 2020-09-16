@@ -5,22 +5,22 @@ using Server.Tools;
 
 namespace LogDBServer.Server.CmdProcessor
 {
-	// Token: 0x02000027 RID: 39
+	
 	public class AddItemLogCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x060000D9 RID: 217 RVA: 0x00006113 File Offset: 0x00004313
+		
 		private AddItemLogCmdProcessor()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(20000, this);
 		}
 
-		// Token: 0x060000DA RID: 218 RVA: 0x00006130 File Offset: 0x00004330
+		
 		public static AddItemLogCmdProcessor getInstance()
 		{
 			return AddItemLogCmdProcessor.instance;
 		}
 
-		// Token: 0x060000DB RID: 219 RVA: 0x00006148 File Offset: 0x00004348
+		
 		public void processCmd(GameServerClient client, byte[] cmdParams, int count)
 		{
 			string cmdData = null;
@@ -52,7 +52,7 @@ namespace LogDBServer.Server.CmdProcessor
 			}
 		}
 
-		// Token: 0x04000061 RID: 97
+		
 		private static AddItemLogCmdProcessor instance = new AddItemLogCmdProcessor();
 	}
 }

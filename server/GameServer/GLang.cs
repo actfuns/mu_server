@@ -9,10 +9,10 @@ using Server.Tools;
 
 namespace GameServer
 {
-	// Token: 0x02000003 RID: 3
+	
 	public class GLang
 	{
-		// Token: 0x06000002 RID: 2 RVA: 0x00002054 File Offset: 0x00000254
+		
 		public static bool LoadLangDict()
 		{
 			XElement LangXML = null;
@@ -68,7 +68,7 @@ namespace GameServer
 			return result;
 		}
 
-		// Token: 0x06000003 RID: 3 RVA: 0x000021F0 File Offset: 0x000003F0
+		
 		public static void OutputToFile()
 		{
 			IOrderedEnumerable<KeyValuePair<int, string>> list = from x in GLang.LanguageDict
@@ -82,7 +82,7 @@ namespace GameServer
 			File.WriteAllLines("language.txt", outList, Encoding.UTF8);
 		}
 
-		// Token: 0x06000004 RID: 4 RVA: 0x000022A8 File Offset: 0x000004A8
+		
 		public static string GetLang(int id, params object[] args)
 		{
 			string text;
@@ -116,7 +116,7 @@ namespace GameServer
 			return result;
 		}
 
-		// Token: 0x06000005 RID: 5 RVA: 0x0000232C File Offset: 0x0000052C
+		
 		public static string GetLang(string chineseText)
 		{
 			string otherLangText;
@@ -132,7 +132,7 @@ namespace GameServer
 			return result;
 		}
 
-		// Token: 0x06000006 RID: 6 RVA: 0x00002358 File Offset: 0x00000558
+		
 		public static string UseGiftCodeMsg(int retCode)
 		{
 			if (retCode < 0)
@@ -195,16 +195,16 @@ namespace GameServer
 			return GLang.GetLang("领取活动礼物时出错");
 		}
 
-		// Token: 0x04000001 RID: 1
+		
 		public const int EnterTimeHasFinish = 8012;
 
-		// Token: 0x04000002 RID: 2
+		
 		private static Dictionary<int, string> LangDict = new Dictionary<int, string>();
 
-		// Token: 0x04000003 RID: 3
+		
 		private static Dictionary<string, string> LangTextDict = new Dictionary<string, string>();
 
-		// Token: 0x04000004 RID: 4
+		
 		private static Dictionary<int, string> LanguageDict = new Dictionary<int, string>
 		{
 			{

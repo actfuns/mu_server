@@ -11,10 +11,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.MerlinMagicBook
 {
-	// Token: 0x02000493 RID: 1171
+	
 	public class MerlinMagicBookManager
 	{
-		// Token: 0x06001540 RID: 5440 RVA: 0x0014CB78 File Offset: 0x0014AD78
+		
 		private void LoadMerlinLevelUpConfigData()
 		{
 			try
@@ -62,7 +62,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x06001541 RID: 5441 RVA: 0x0014CD9C File Offset: 0x0014AF9C
+		
 		private void LoadMerlinStarUpConfigData()
 		{
 			try
@@ -145,7 +145,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x06001542 RID: 5442 RVA: 0x0014D170 File Offset: 0x0014B370
+		
 		private void LoadMerlinSecretConfigData()
 		{
 			try
@@ -192,20 +192,20 @@ namespace GameServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x06001543 RID: 5443 RVA: 0x0014D378 File Offset: 0x0014B578
+		
 		private int GetMerlinStarUpKey(int nLevel, int nStarNum)
 		{
 			return nLevel * 1000 + nStarNum;
 		}
 
-		// Token: 0x06001544 RID: 5444 RVA: 0x0014D394 File Offset: 0x0014B594
+		
 		private bool IsMerlinSecretTime(GameClient client)
 		{
 			long lNowTicks = TimeUtil.NOW();
 			return lNowTicks - client.ClientData.MerlinData._ToTicks < 0L;
 		}
 
-		// Token: 0x06001545 RID: 5445 RVA: 0x0014D3D0 File Offset: 0x0014B5D0
+		
 		private void RefreshMerlinSecondAttr(GameClient client, int nLevel, int nStarNum)
 		{
 			int nKey = this.GetMerlinStarUpKey(nLevel, nStarNum);
@@ -291,7 +291,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			});
 		}
 
-		// Token: 0x06001546 RID: 5446 RVA: 0x0014D744 File Offset: 0x0014B944
+		
 		private void RefreshMerlinSecretSecondAttr(GameClient client)
 		{
 			if (client.ClientData.MerlinData._ActiveAttr.ContainsKey(0))
@@ -332,7 +332,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x06001547 RID: 5447 RVA: 0x0014D91C File Offset: 0x0014BB1C
+		
 		private void ResetActiveSecretAttr(GameClient client)
 		{
 			for (int i = 0; i < client.ClientData.MerlinData._ActiveAttr.Count; i++)
@@ -341,7 +341,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x06001548 RID: 5448 RVA: 0x0014D970 File Offset: 0x0014BB70
+		
 		private void ResetUnActiveSecretAttr(GameClient client)
 		{
 			for (int i = 0; i < client.ClientData.MerlinData._UnActiveAttr.Count; i++)
@@ -350,7 +350,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x06001549 RID: 5449 RVA: 0x0014D9C4 File Offset: 0x0014BBC4
+		
 		private EMerlinStarUpErrorCode MerlinStarUp(GameClient client, bool bIsDiamond, out int nIsCrit, out int nOutAddExp)
 		{
 			nIsCrit = 0;
@@ -522,7 +522,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			return EMerlinStarUpErrorCode.Error;
 		}
 
-		// Token: 0x0600154A RID: 5450 RVA: 0x0014E0B8 File Offset: 0x0014C2B8
+		
 		private EMerlinLevelUpErrorCode MerlinLevelUp(GameClient client, bool bIsDiamond)
 		{
 			string strCostList = "";
@@ -709,7 +709,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			return EMerlinLevelUpErrorCode.Error;
 		}
 
-		// Token: 0x0600154B RID: 5451 RVA: 0x0014E934 File Offset: 0x0014CB34
+		
 		private EMerlinSecretAttrUpdateErrorCode MerlinSecretAttrUpdate(GameClient client)
 		{
 			int nRoleID = client.ClientData.RoleID;
@@ -796,7 +796,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			return EMerlinSecretAttrUpdateErrorCode.Error;
 		}
 
-		// Token: 0x0600154C RID: 5452 RVA: 0x0014ED0C File Offset: 0x0014CF0C
+		
 		private EMerlinSecretAttrReplaceErrorCode MerlinSecretAttrReplace(GameClient client)
 		{
 			bool bIsReplace = false;
@@ -851,7 +851,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			return EMerlinSecretAttrReplaceErrorCode.Error;
 		}
 
-		// Token: 0x0600154D RID: 5453 RVA: 0x0014F004 File Offset: 0x0014D204
+		
 		private void MerlinSecretAttrNotReplace(GameClient client)
 		{
 			try
@@ -883,7 +883,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x0600154E RID: 5454 RVA: 0x0014F150 File Offset: 0x0014D350
+		
 		private bool CreateMerlinMagicBookData2DB(GameClient client)
 		{
 			try
@@ -902,14 +902,14 @@ namespace GameServer.Logic.MerlinMagicBook
 			return false;
 		}
 
-		// Token: 0x0600154F RID: 5455 RVA: 0x0014F1EC File Offset: 0x0014D3EC
+		
 		private bool UpdateMerlinMagicBookData2DB(GameClient client, string strCmd)
 		{
 			byte[] bytesCmd = new UTF8Encoding().GetBytes(strCmd);
 			return Global.sendToDB<bool, byte[]>(10204, bytesCmd, client.ServerId);
 		}
 
-		// Token: 0x06001550 RID: 5456 RVA: 0x0014F21C File Offset: 0x0014D41C
+		
 		private static string FormatUpdateDBMerlinStr(params object[] args)
 		{
 			string result;
@@ -925,7 +925,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			return result;
 		}
 
-		// Token: 0x06001551 RID: 5457 RVA: 0x0014F264 File Offset: 0x0014D464
+		
 		public void RefreshMerlinExcellenceAttr(GameClient client, int nLevel, int nStarNum, bool bToAdd)
 		{
 			int nKey = this.GetMerlinStarUpKey(nLevel, nStarNum);
@@ -950,7 +950,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x06001552 RID: 5458 RVA: 0x0014F350 File Offset: 0x0014D550
+		
 		public void OnLoginInitMerlinMagicBook(GameClient client)
 		{
 			try
@@ -979,7 +979,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x06001553 RID: 5459 RVA: 0x0014F440 File Offset: 0x0014D640
+		
 		public void OnLoginAddAttr(GameClient client)
 		{
 			try
@@ -998,7 +998,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x06001554 RID: 5460 RVA: 0x0014F500 File Offset: 0x0014D700
+		
 		public void LoadMerlinConfigData()
 		{
 			this.LoadMerlinLevelUpConfigData();
@@ -1006,7 +1006,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			this.LoadMerlinSecretConfigData();
 		}
 
-		// Token: 0x06001555 RID: 5461 RVA: 0x0014F518 File Offset: 0x0014D718
+		
 		public void LoadMerlinSystemParamsConfigData()
 		{
 			try
@@ -1031,7 +1031,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x06001556 RID: 5462 RVA: 0x0014F5E8 File Offset: 0x0014D7E8
+		
 		public bool IsOpenMerlin(GameClient client)
 		{
 			bool result;
@@ -1055,7 +1055,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			return result;
 		}
 
-		// Token: 0x06001557 RID: 5463 RVA: 0x0014F66C File Offset: 0x0014D86C
+		
 		public void CheckMerlinSecretAttr(GameClient client)
 		{
 			if (this.IsOpenMerlin(client))
@@ -1071,7 +1071,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x06001558 RID: 5464 RVA: 0x0014F6BC File Offset: 0x0014D8BC
+		
 		public void DoMerlinSecretTime(GameClient client)
 		{
 			try
@@ -1122,7 +1122,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x06001559 RID: 5465 RVA: 0x0014F8F8 File Offset: 0x0014DAF8
+		
 		public void InitMerlinMagicBook(GameClient client)
 		{
 			try
@@ -1155,7 +1155,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x0600155A RID: 5466 RVA: 0x0014FA8C File Offset: 0x0014DC8C
+		
 		public TCPProcessCmdResults ProcQueryMerlinMagicBookData(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1205,7 +1205,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x0600155B RID: 5467 RVA: 0x0014FC70 File Offset: 0x0014DE70
+		
 		public TCPProcessCmdResults ProcMerlinMagicBookStarUp(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1264,7 +1264,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x0600155C RID: 5468 RVA: 0x0014FE88 File Offset: 0x0014E088
+		
 		public TCPProcessCmdResults ProcMerlinMagicBookLevelUp(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1321,7 +1321,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x0600155D RID: 5469 RVA: 0x001500B4 File Offset: 0x0014E2B4
+		
 		public TCPProcessCmdResults ProcMerlinSecretAttrUpdate(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1376,7 +1376,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x0600155E RID: 5470 RVA: 0x001502D8 File Offset: 0x0014E4D8
+		
 		public TCPProcessCmdResults ProcMerlinSecretAttrReplace(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1424,7 +1424,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x0600155F RID: 5471 RVA: 0x00150454 File Offset: 0x0014E654
+		
 		public TCPProcessCmdResults ProcMerlinSecretAttrNotReplace(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1472,7 +1472,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06001560 RID: 5472 RVA: 0x001505D0 File Offset: 0x0014E7D0
+		
 		public void GMMerlinStarUp1(GameClient client)
 		{
 			int nCrit = 0;
@@ -1480,7 +1480,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			this.MerlinStarUp(client, false, out nCrit, out nAddExp);
 		}
 
-		// Token: 0x06001561 RID: 5473 RVA: 0x001505F0 File Offset: 0x0014E7F0
+		
 		public void GMMerlinStarUp2(GameClient client)
 		{
 			int nCrit = 0;
@@ -1488,43 +1488,43 @@ namespace GameServer.Logic.MerlinMagicBook
 			this.MerlinStarUp(client, true, out nCrit, out nAddExp);
 		}
 
-		// Token: 0x06001562 RID: 5474 RVA: 0x0015060F File Offset: 0x0014E80F
+		
 		public void GMMerlinLevelUp1(GameClient client)
 		{
 			this.MerlinLevelUp(client, false);
 		}
 
-		// Token: 0x06001563 RID: 5475 RVA: 0x0015061B File Offset: 0x0014E81B
+		
 		public void GMMerlinLevelUp2(GameClient client)
 		{
 			this.MerlinLevelUp(client, true);
 		}
 
-		// Token: 0x06001564 RID: 5476 RVA: 0x00150627 File Offset: 0x0014E827
+		
 		public void GMMerlinSecretUpdate(GameClient client)
 		{
 			this.MerlinSecretAttrUpdate(client);
 		}
 
-		// Token: 0x06001565 RID: 5477 RVA: 0x00150632 File Offset: 0x0014E832
+		
 		public void GMMerlinSecretReplace(GameClient client)
 		{
 			this.MerlinSecretAttrReplace(client);
 		}
 
-		// Token: 0x06001566 RID: 5478 RVA: 0x0015063D File Offset: 0x0014E83D
+		
 		public void GMMerlinSecretNotReplace(GameClient client)
 		{
 			this.MerlinSecretAttrNotReplace(client);
 		}
 
-		// Token: 0x06001567 RID: 5479 RVA: 0x00150648 File Offset: 0x0014E848
+		
 		public void GMMerlinInit(GameClient client)
 		{
 			this.InitMerlinMagicBook(client);
 		}
 
-		// Token: 0x06001568 RID: 5480 RVA: 0x00150654 File Offset: 0x0014E854
+		
 		public string GMMerlinLevelUpToN(GameClient client, int nLevel)
 		{
 			string lang;
@@ -1577,7 +1577,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			return lang;
 		}
 
-		// Token: 0x06001569 RID: 5481 RVA: 0x00150874 File Offset: 0x0014EA74
+		
 		public string GMMerlinStarUpToN(GameClient client, int nStarNum)
 		{
 			string lang;
@@ -1630,16 +1630,16 @@ namespace GameServer.Logic.MerlinMagicBook
 			return lang;
 		}
 
-		// Token: 0x04001F06 RID: 7942
+		
 		private Dictionary<int, MerlinLevelUpConfigData> MerlinLevelUpConfigDict = new Dictionary<int, MerlinLevelUpConfigData>();
 
-		// Token: 0x04001F07 RID: 7943
+		
 		private Dictionary<int, MerlinStarUpConfigData> MerlinStarUpConfigDict = new Dictionary<int, MerlinStarUpConfigData>();
 
-		// Token: 0x04001F08 RID: 7944
+		
 		private Dictionary<int, MerlinSecretConfigData> MerlinSecretConfigDict = new Dictionary<int, MerlinSecretConfigData>();
 
-		// Token: 0x04001F09 RID: 7945
+		
 		private long nextCheckTime = 0L;
 	}
 }

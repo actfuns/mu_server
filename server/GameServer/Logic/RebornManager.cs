@@ -19,29 +19,29 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020003F2 RID: 1010
+	
 	public class RebornManager : IManager, ICmdProcessorEx, ICmdProcessor, IManager2, IEventListener
 	{
-		// Token: 0x060011B0 RID: 4528 RVA: 0x0011752C File Offset: 0x0011572C
+		
 		public static RebornManager getInstance()
 		{
 			return RebornManager.instance;
 		}
 
-		// Token: 0x060011B1 RID: 4529 RVA: 0x00117544 File Offset: 0x00115744
+		
 		public bool initialize()
 		{
 			return this.InitConfig(false);
 		}
 
-		// Token: 0x060011B2 RID: 4530 RVA: 0x00117568 File Offset: 0x00115768
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			ScheduleExecutor2.Instance.scheduleExecute(new NormalScheduleTask("RebornManager.TimerProc", new EventHandler(this.TimerProc)), 2000, 5000);
 			return true;
 		}
 
-		// Token: 0x060011B3 RID: 4531 RVA: 0x001175A8 File Offset: 0x001157A8
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1710, 1, 1, RebornManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -70,26 +70,26 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060011B4 RID: 4532 RVA: 0x001177E0 File Offset: 0x001159E0
+		
 		public bool showdown()
 		{
 			GlobalEventSource.getInstance().removeListener(14, RebornManager.getInstance());
 			return true;
 		}
 
-		// Token: 0x060011B5 RID: 4533 RVA: 0x00117808 File Offset: 0x00115A08
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060011B6 RID: 4534 RVA: 0x0011781C File Offset: 0x00115A1C
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x060011B7 RID: 4535 RVA: 0x00117830 File Offset: 0x00115A30
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool isOpen = GlobalNew.IsGongNengOpened(client, GongNengIDs.Reborn, false);
@@ -496,7 +496,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x060011B8 RID: 4536 RVA: 0x00118590 File Offset: 0x00116790
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int eventType = eventObject.getEventType();
@@ -510,7 +510,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060011B9 RID: 4537 RVA: 0x001185D4 File Offset: 0x001167D4
+		
 		public bool ProcessRebornUpgradeCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -619,7 +619,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x060011BA RID: 4538 RVA: 0x00118B98 File Offset: 0x00116D98
+		
 		public bool ProcessRebornAdmireDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -660,7 +660,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x060011BB RID: 4539 RVA: 0x00118D4C File Offset: 0x00116F4C
+		
 		public bool ProcessRebornAdmireCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -693,7 +693,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x060011BC RID: 4540 RVA: 0x00118E7C File Offset: 0x0011707C
+		
 		public bool ProcessRebornRankDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -732,7 +732,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x060011BD RID: 4541 RVA: 0x00119024 File Offset: 0x00117224
+		
 		public void AutoGiveRebornInitGoods(GameClient client)
 		{
 			if (null == client)
@@ -834,13 +834,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060011BE RID: 4542 RVA: 0x00119404 File Offset: 0x00117604
+		
 		public bool CheckRebornUpgradeIcon(GameClient client)
 		{
 			return this.CheckRebornUpgradeLimit(client) == 0;
 		}
 
-		// Token: 0x060011BF RID: 4543 RVA: 0x00119424 File Offset: 0x00117624
+		
 		public int CheckRebornUpgradeLimit(GameClient client)
 		{
 			int ret = 0;
@@ -909,7 +909,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060011C0 RID: 4544 RVA: 0x001196B8 File Offset: 0x001178B8
+		
 		public int GetRebornAdmireCount(GameClient client, int rankType)
 		{
 			List<int> countList = Global.GetRoleParamsIntListFromDB(client, "151");
@@ -933,7 +933,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060011C1 RID: 4545 RVA: 0x00119734 File Offset: 0x00117934
+		
 		public void ProcessIncreaseRebornAdmireCount(GameClient client, int rankType)
 		{
 			int nToday = TimeUtil.NowDateTime().DayOfYear;
@@ -963,7 +963,7 @@ namespace GameServer.Logic
 			Global.SaveRoleParamsIntListToDB(client, countList, "151", true);
 		}
 
-		// Token: 0x060011C2 RID: 4546 RVA: 0x00119804 File Offset: 0x00117A04
+		
 		public bool CheckRebornCountLevelValid(GameClient client, int count, int level)
 		{
 			Dictionary<int, RebornStageInfo> tempRebornStageInfoDict = this.RebornStageInfoDict;
@@ -972,7 +972,7 @@ namespace GameServer.Logic
 			return tempRebornStageInfoDict.TryGetValue(count, out rebornInfo) && (rebornInfo.MaxRebornLevel <= 0 || level <= rebornInfo.MaxRebornLevel);
 		}
 
-		// Token: 0x060011C3 RID: 4547 RVA: 0x0011985C File Offset: 0x00117A5C
+		
 		public void OnLogin(GameClient client, bool login = false)
 		{
 			if (login)
@@ -986,7 +986,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060011C4 RID: 4548 RVA: 0x001198B8 File Offset: 0x00117AB8
+		
 		public void InitPlayerRebornPorperty(GameClient client)
 		{
 			if (client.ClientData.RebornCount > 0)
@@ -1028,7 +1028,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060011C5 RID: 4549 RVA: 0x00119A18 File Offset: 0x00117C18
+		
 		public int CalcRebornInjure(IObject attacker, IObject defender, double injurePercnet, double baseRate, ref int burst)
 		{
 			int injure = 0;
@@ -1044,7 +1044,7 @@ namespace GameServer.Logic
 			return Math.Max(0, injure);
 		}
 
-		// Token: 0x060011C6 RID: 4550 RVA: 0x00119A94 File Offset: 0x00117C94
+		
 		public int CalculateCombatForce(GameClient client)
 		{
 			CombatForceInfo CombatForce = this.RebornCombatForceData;
@@ -1089,7 +1089,7 @@ namespace GameServer.Logic
 			return client.ClientData.RebornCombatForce;
 		}
 
-		// Token: 0x060011C7 RID: 4551 RVA: 0x00119D94 File Offset: 0x00117F94
+		
 		public void EarnExperience(GameClient sprite, long experience)
 		{
 			Dictionary<int, RebornStageInfo> tempRebornStageInfoDict = this.RebornStageInfoDict;
@@ -1126,7 +1126,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060011C8 RID: 4552 RVA: 0x00119F0C File Offset: 0x0011810C
+		
 		public void ProcessRoleExperience(GameClient client, long experience, MoneyTypes types, bool enableFilter = true, bool writeToDB = true, bool checkDead = false, string strFrom = "none")
 		{
 			if (types == MoneyTypes.RebornExpMonster || types == MoneyTypes.RebornExpSale || types == MoneyTypes.RebornExp)
@@ -1194,7 +1194,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060011C9 RID: 4553 RVA: 0x0011A23C File Offset: 0x0011843C
+		
 		public void NotifySelfExperience(GameClient client, long newExperience)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}", new object[]
@@ -1208,7 +1208,7 @@ namespace GameServer.Logic
 			client.sendCmd(1711, strcmd, false);
 		}
 
-		// Token: 0x060011CA RID: 4554 RVA: 0x0011A2C0 File Offset: 0x001184C0
+		
 		public long GetRebornExpMaxValue(GameClient client, MoneyTypes types)
 		{
 			long result;
@@ -1226,7 +1226,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060011CB RID: 4555 RVA: 0x0011A320 File Offset: 0x00118520
+		
 		public long GetRebornExpMaxValueLeft(GameClient client, MoneyTypes types)
 		{
 			long result;
@@ -1244,7 +1244,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060011CC RID: 4556 RVA: 0x0011A380 File Offset: 0x00118580
+		
 		private long GetRebornExpMaxValueFix(GameClient client, MoneyTypes types)
 		{
 			Dictionary<int, RebornLevelInfo> tempRebornLevelInfoDict = this.RebornLevelInfoDict;
@@ -1270,7 +1270,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060011CD RID: 4557 RVA: 0x0011A3F4 File Offset: 0x001185F4
+		
 		public int GetTodayLianZhanMax(GameClient client)
 		{
 			List<int> countList = Global.GetRoleParamsIntListFromDB(client, "152");
@@ -1294,7 +1294,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060011CE RID: 4558 RVA: 0x0011A46C File Offset: 0x0011866C
+		
 		public void SetTodayLianZhanMax(GameClient client, int max)
 		{
 			int nToday = TimeUtil.NowDateTime().DayOfYear;
@@ -1318,7 +1318,7 @@ namespace GameServer.Logic
 			Global.SaveRoleParamsIntListToDB(client, countList, "152", true);
 		}
 
-		// Token: 0x060011CF RID: 4559 RVA: 0x0011A508 File Offset: 0x00118708
+		
 		public void ProcessLianZhan(GameClient client)
 		{
 			SceneUIClasses sceneType = Global.GetMapSceneType(client.ClientData.MapCode);
@@ -1332,7 +1332,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060011D0 RID: 4560 RVA: 0x0011A598 File Offset: 0x00118798
+		
 		public void ProcessRebornMonsterFallGoods(GameClient client, Monster monster)
 		{
 			SceneUIClasses sceneType = Global.GetMapSceneType(monster.CurrentMapCode);
@@ -1349,7 +1349,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060011D1 RID: 4561 RVA: 0x0011A640 File Offset: 0x00118840
+		
 		public void OnChangeName(int roleId, string oldName, string newName)
 		{
 			if (!string.IsNullOrEmpty(oldName) && !string.IsNullOrEmpty(newName))
@@ -1363,7 +1363,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060011D2 RID: 4562 RVA: 0x0011A69C File Offset: 0x0011889C
+		
 		public void PlatFormChat(GameClient client, string text)
 		{
 			KFPlatFormChat chat = new KFPlatFormChat(client.ClientData.ZoneID, client.ClientData.RoleName, text, client.ClientData.UserPTID);
@@ -1374,7 +1374,7 @@ namespace GameServer.Logic
 			this.BroadcastPlatFormChatMsg(chat);
 		}
 
-		// Token: 0x060011D3 RID: 4563 RVA: 0x0011A720 File Offset: 0x00118920
+		
 		public void BroadcastPlatFormChatMsg(KFPlatFormChat kfChat)
 		{
 			foreach (GameClient client in GameManager.ClientMgr.GetAllClients(true))
@@ -1386,7 +1386,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060011D4 RID: 4564 RVA: 0x0011A7AC File Offset: 0x001189AC
+		
 		public void OnChatListData(byte[] data)
 		{
 			if (null != data)
@@ -1402,7 +1402,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060011D5 RID: 4565 RVA: 0x0011A824 File Offset: 0x00118A24
+		
 		public bool InitConfig(bool reload = false)
 		{
 			bool result;
@@ -1442,7 +1442,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060011D6 RID: 4566 RVA: 0x0011A8C0 File Offset: 0x00118AC0
+		
 		public bool LoadRebornStageConfigFile()
 		{
 			try
@@ -1502,7 +1502,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060011D7 RID: 4567 RVA: 0x0011AB6C File Offset: 0x00118D6C
+		
 		public bool LoadRebornLevelConfigFile()
 		{
 			try
@@ -1535,7 +1535,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060011D8 RID: 4568 RVA: 0x0011ACE4 File Offset: 0x00118EE4
+		
 		public bool LoadRebornCombatForceConfigFile()
 		{
 			try
@@ -1596,7 +1596,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060011D9 RID: 4569 RVA: 0x0011B064 File Offset: 0x00119264
+		
 		public bool IfSupportPKModeNotNormal(int mapCode)
 		{
 			SceneUIClasses sceneType = Global.GetMapSceneType(mapCode);
@@ -1621,7 +1621,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060011DA RID: 4570 RVA: 0x0011B108 File Offset: 0x00119308
+		
 		public void OnInitGame(GameClient client)
 		{
 			SceneUIClasses sceneType = Global.GetMapSceneType(client.ClientData.MapCode);
@@ -1641,7 +1641,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060011DB RID: 4571 RVA: 0x0011B184 File Offset: 0x00119384
+		
 		private void TimerProc(object sender, EventArgs e)
 		{
 			try
@@ -1710,31 +1710,31 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04001AED RID: 6893
+		
 		public object Mutex = new object();
 
-		// Token: 0x04001AEE RID: 6894
+		
 		private Dictionary<int, RebornStageInfo> RebornStageInfoDict = new Dictionary<int, RebornStageInfo>();
 
-		// Token: 0x04001AEF RID: 6895
+		
 		private Dictionary<int, RebornLevelInfo> RebornLevelInfoDict = new Dictionary<int, RebornLevelInfo>();
 
-		// Token: 0x04001AF0 RID: 6896
+		
 		private CombatForceInfo RebornCombatForceData = new CombatForceInfo();
 
-		// Token: 0x04001AF1 RID: 6897
+		
 		private int[] EveryDayMaxRebornExp;
 
-		// Token: 0x04001AF2 RID: 6898
+		
 		private int[] RebornMapPKMode;
 
-		// Token: 0x04001AF3 RID: 6899
+		
 		public RebornSyncData RebornSyncDataCache = new RebornSyncData();
 
-		// Token: 0x04001AF4 RID: 6900
+		
 		public List<KFPlatFormChat> PlatFormChatList = new List<KFPlatFormChat>();
 
-		// Token: 0x04001AF5 RID: 6901
+		
 		private static RebornManager instance = new RebornManager();
 	}
 }

@@ -4,15 +4,15 @@ using System.Xml.Linq;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000376 RID: 886
+	
 	public class MonsterStaticInfoMgr
 	{
-		// Token: 0x17000031 RID: 49
-		// (get) Token: 0x06000F38 RID: 3896 RVA: 0x000EF7FC File Offset: 0x000ED9FC
-		// (set) Token: 0x06000F39 RID: 3897 RVA: 0x000EF812 File Offset: 0x000EDA12
+		
+		
+		
 		public static XElement AllMonstersXml { get; private set; }
 
-		// Token: 0x06000F3A RID: 3898 RVA: 0x000EF81C File Offset: 0x000EDA1C
+		
 		public static void Initialize()
 		{
 			if (MonsterStaticInfoMgr.AllMonstersXml == null)
@@ -34,7 +34,7 @@ namespace GameServer.Logic
 			MonsterStaticInfoMgr.AllInfos.Clear();
 		}
 
-		// Token: 0x06000F3B RID: 3899 RVA: 0x000EF89C File Offset: 0x000EDA9C
+		
 		public static MonsterStaticInfo GetInfo(int MonsterID)
 		{
 			MonsterStaticInfo info = null;
@@ -50,13 +50,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000F3C RID: 3900 RVA: 0x000EF8C7 File Offset: 0x000EDAC7
+		
 		public static void SetInfo(int code, MonsterStaticInfo info)
 		{
 			MonsterStaticInfoMgr.AllInfos[code] = info;
 		}
 
-		// Token: 0x04001769 RID: 5993
+		
 		private static Dictionary<int, MonsterStaticInfo> AllInfos = new Dictionary<int, MonsterStaticInfo>();
 	}
 }

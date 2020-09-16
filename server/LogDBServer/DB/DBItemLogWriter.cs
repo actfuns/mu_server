@@ -7,16 +7,16 @@ using Server.Tools;
 
 namespace LogDBServer.DB
 {
-	// Token: 0x0200000F RID: 15
+	
 	public class DBItemLogWriter
 	{
-		// Token: 0x06000034 RID: 52 RVA: 0x00002C34 File Offset: 0x00000E34
+		
 		public static DBItemLogWriter getInstance()
 		{
 			return DBItemLogWriter.instance;
 		}
 
-		// Token: 0x06000035 RID: 53 RVA: 0x00002C4C File Offset: 0x00000E4C
+		
 		public int ConformTableColumns(MySQLConnection conn, string strTableName)
 		{
 			int ret = 0;
@@ -109,7 +109,7 @@ namespace LogDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000036 RID: 54 RVA: 0x00002F3C File Offset: 0x0000113C
+		
 		public void AddItemLogTable(DBManager dbMgr)
 		{
 			MySQLConnection conn = null;
@@ -142,7 +142,7 @@ namespace LogDBServer.DB
 			}
 		}
 
-		// Token: 0x06000037 RID: 55 RVA: 0x00003014 File Offset: 0x00001214
+		
 		public void DelItemLogTable(DBManager dbMgr)
 		{
 			MySQLConnection conn = null;
@@ -175,7 +175,7 @@ namespace LogDBServer.DB
 			}
 		}
 
-		// Token: 0x06000038 RID: 56 RVA: 0x000030F0 File Offset: 0x000012F0
+		
 		public int insertItemLog(DBManager dbMgr, string[] fields)
 		{
 			int ret = -1;
@@ -242,7 +242,7 @@ namespace LogDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000039 RID: 57 RVA: 0x000032B4 File Offset: 0x000014B4
+		
 		public int insertTradeFreqLog(DBManager dbMgr, string[] fields)
 		{
 			int ret = -1;
@@ -308,7 +308,7 @@ namespace LogDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600003A RID: 58 RVA: 0x000034DC File Offset: 0x000016DC
+		
 		public int insertTradeNumLog(DBManager dbMgr, string[] fields)
 		{
 			int ret = -1;
@@ -388,31 +388,31 @@ namespace LogDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0400001D RID: 29
+		
 		private const int cMaxAddDay = 3;
 
-		// Token: 0x0400001E RID: 30
+		
 		private const int cSaveTableNum = 16;
 
-		// Token: 0x0400001F RID: 31
+		
 		private static DBItemLogWriter instance = new DBItemLogWriter();
 
-		// Token: 0x04000020 RID: 32
+		
 		private object Mutex = new object();
 
-		// Token: 0x04000021 RID: 33
+		
 		private Dictionary<string, DBItemLogWriter.TableColumnInfo> TableColumnInfoDict = new Dictionary<string, DBItemLogWriter.TableColumnInfo>();
 
-		// Token: 0x02000010 RID: 16
+		
 		internal class TableColumnInfo
 		{
-			// Token: 0x04000022 RID: 34
+			
 			public bool HasColumnOptSurplus = false;
 
-			// Token: 0x04000023 RID: 35
+			
 			public bool HasColumnExtData = false;
 
-			// Token: 0x04000024 RID: 36
+			
 			public bool HasAlterColumnExtData = false;
 		}
 	}

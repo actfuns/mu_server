@@ -6,16 +6,16 @@ using System.Web.Security;
 
 namespace Maticsoft.DBUtility
 {
-	// Token: 0x0200004E RID: 78
+	
 	public class DESEncrypt
 	{
-		// Token: 0x0600038B RID: 907 RVA: 0x0002FDC0 File Offset: 0x0002DFC0
+		
 		public static string Encrypt(string Text)
 		{
 			return DESEncrypt.Encrypt(Text, "litianping");
 		}
 
-		// Token: 0x0600038C RID: 908 RVA: 0x0002FDE0 File Offset: 0x0002DFE0
+		
 		public static string Encrypt(string Text, string sKey)
 		{
 			DESCryptoServiceProvider des = new DESCryptoServiceProvider();
@@ -34,13 +34,13 @@ namespace Maticsoft.DBUtility
 			return ret.ToString();
 		}
 
-		// Token: 0x0600038D RID: 909 RVA: 0x0002FEC0 File Offset: 0x0002E0C0
+		
 		public static string Decrypt(string Text)
 		{
 			return DESEncrypt.Decrypt(Text, "litianping");
 		}
 
-		// Token: 0x0600038E RID: 910 RVA: 0x0002FEE0 File Offset: 0x0002E0E0
+		
 		public static string Decrypt(string Text, string sKey)
 		{
 			DESCryptoServiceProvider des = new DESCryptoServiceProvider();

@@ -10,10 +10,10 @@ using Server.Protocol;
 
 namespace Server.Tools
 {
-    // Token: 0x0200003A RID: 58
+    
     public class DataHelper
     {
-        // Token: 0x06000149 RID: 329 RVA: 0x00007F68 File Offset: 0x00006168
+        
         static DataHelper()
         {
             DataHelper.CurrentDirectory = Directory.GetCurrentDirectory() + "\\";
@@ -33,13 +33,13 @@ namespace Server.Tools
             DataHelper.SortKey64 |= _SortKey << 56;
         }
 
-        // Token: 0x0600014A RID: 330 RVA: 0x0000805A File Offset: 0x0000625A
+        
         public static void CopyBytes(byte[] copyTo, int offsetTo, byte[] copyFrom, int offsetFrom, int count)
         {
             Array.Copy(copyFrom, offsetFrom, copyTo, offsetTo, count);
         }
 
-        // Token: 0x0600014B RID: 331 RVA: 0x0000806C File Offset: 0x0000626C
+        
         public unsafe static void SortBytes(byte[] bytesData, int offsetTo, int count)
         {
             if (count <= 32)
@@ -71,7 +71,7 @@ namespace Server.Tools
             }
         }
 
-        // Token: 0x0600014C RID: 332 RVA: 0x00008134 File Offset: 0x00006334
+        
         public static bool CompBytes(byte[] left, byte[] right)
         {
             bool result;
@@ -95,7 +95,7 @@ namespace Server.Tools
             return result;
         }
 
-        // Token: 0x0600014D RID: 333 RVA: 0x00008180 File Offset: 0x00006380
+        
         public static void RandBytes(byte[] buffer, int offset, int count)
         {
             long ticks = DateTime.Now.Ticks;
@@ -106,7 +106,7 @@ namespace Server.Tools
             }
         }
 
-        // Token: 0x0600014E RID: 334 RVA: 0x000081D4 File Offset: 0x000063D4
+        
         public static string Bytes2HexString(byte[] b)
         {
             string ret = "";
@@ -117,7 +117,7 @@ namespace Server.Tools
             return ret;
         }
 
-        // Token: 0x0600014F RID: 335 RVA: 0x00008228 File Offset: 0x00006428
+        
         public static byte[] HexString2Bytes(string s)
         {
             byte[] result;
@@ -139,7 +139,7 @@ namespace Server.Tools
             return result;
         }
 
-        // Token: 0x06000150 RID: 336 RVA: 0x000082A8 File Offset: 0x000064A8
+        
         public static void WriteFormatExceptionLog(Exception e, string extMsg, bool showMsgBox, bool finalReport = false)
         {
             try
@@ -166,7 +166,7 @@ namespace Server.Tools
             }
         }
 
-        // Token: 0x06000151 RID: 337 RVA: 0x00008368 File Offset: 0x00006568
+        
         public static void WriteFormatStackLog(StackTrace stackTrace, string extMsg)
         {
             try
@@ -182,7 +182,7 @@ namespace Server.Tools
             }
         }
 
-        // Token: 0x06000152 RID: 338 RVA: 0x000083D4 File Offset: 0x000065D4
+        
         public static int ConvertToInt32(string str, int defVal)
         {
             try
@@ -199,7 +199,7 @@ namespace Server.Tools
             return defVal;
         }
 
-        // Token: 0x06000153 RID: 339 RVA: 0x00008420 File Offset: 0x00006620
+        
         public static long ConvertToInt64(string str, long defVal)
         {
             try
@@ -216,7 +216,7 @@ namespace Server.Tools
             return defVal;
         }
 
-        // Token: 0x06000154 RID: 340 RVA: 0x0000846C File Offset: 0x0000666C
+        
         public static string ConvertToStr(string str, string defVal)
         {
             string result;
@@ -231,7 +231,7 @@ namespace Server.Tools
             return result;
         }
 
-        // Token: 0x06000155 RID: 341 RVA: 0x00008498 File Offset: 0x00006698
+        
         public static long ConvertToTicks(string str, long defVal)
         {
             long result;
@@ -259,7 +259,7 @@ namespace Server.Tools
             return result;
         }
 
-        // Token: 0x06000156 RID: 342 RVA: 0x0000850C File Offset: 0x0000670C
+        
         public static long ConvertToTicks(string str)
         {
             try
@@ -277,41 +277,41 @@ namespace Server.Tools
             return 0L;
         }
 
-        // Token: 0x06000157 RID: 343 RVA: 0x0000855C File Offset: 0x0000675C
+        
         public static long UnixSecondsToTicks(int secs)
         {
             return DataHelper.UnixStartTicks + (long)secs * 1000L;
         }
 
-        // Token: 0x06000158 RID: 344 RVA: 0x00008580 File Offset: 0x00006780
+        
         public static long UnixSecondsToTicks(string secs)
         {
             int intSecs = Convert.ToInt32(secs);
             return DataHelper.UnixSecondsToTicks(intSecs);
         }
 
-        // Token: 0x06000159 RID: 345 RVA: 0x000085A0 File Offset: 0x000067A0
+        
         public static int UnixSecondsNow()
         {
             long ticks = DateTime.Now.Ticks / 10000L;
             return DataHelper.SysTicksToUnixSeconds(ticks);
         }
 
-        // Token: 0x0600015A RID: 346 RVA: 0x000085D0 File Offset: 0x000067D0
+        
         public static int SysTicksToUnixSeconds(long ticks)
         {
             long secs = (ticks - DataHelper.UnixStartTicks) / 1000L;
             return (int)secs;
         }
 
-        // Token: 0x0600015B RID: 347 RVA: 0x000085F4 File Offset: 0x000067F4
+        
         public static TCPOutPacket ObjectToTCPOutPacket<T>(T instance, TCPOutPacketPool pool, int cmdID)
         {
             byte[] bytesCmd = DataHelper.ObjectToBytes<T>(instance);
             return TCPOutPacket.MakeTCPOutPacket(pool, bytesCmd, 0, bytesCmd.Length, cmdID);
         }
 
-        // Token: 0x0600015C RID: 348 RVA: 0x0000861C File Offset: 0x0000681C
+        
         public static byte[] ObjectToBytes<T>(T instance)
         {
             try
@@ -350,7 +350,7 @@ namespace Server.Tools
             return new byte[0];
         }
 
-        // Token: 0x0600015D RID: 349 RVA: 0x000086F8 File Offset: 0x000068F8
+        
         public static T BytesToObject<T>(byte[] bytesData, int offset, int length)
         {
             T result;
@@ -380,7 +380,7 @@ namespace Server.Tools
             return result;
         }
 
-        // Token: 0x0600015E RID: 350 RVA: 0x00008790 File Offset: 0x00006990
+        
         public static byte[] Compress(byte[] bytes)
         {
             byte[] result;
@@ -396,7 +396,7 @@ namespace Server.Tools
             return result;
         }
 
-        // Token: 0x0600015F RID: 351 RVA: 0x0000880C File Offset: 0x00006A0C
+        
         public static byte[] Uncompress(byte[] bytes)
         {
             byte[] result;
@@ -427,7 +427,7 @@ namespace Server.Tools
             return result;
         }
 
-        // Token: 0x06000160 RID: 352 RVA: 0x000088D0 File Offset: 0x00006AD0
+        
         public static byte[] Utf8_2_Unicode(byte[] input)
         {
             List<byte> ret = new List<byte>();
@@ -458,7 +458,7 @@ namespace Server.Tools
             return ret.ToArray();
         }
 
-        // Token: 0x06000161 RID: 353 RVA: 0x000089B8 File Offset: 0x00006BB8
+        
         public static string ZipStringToBase64(string text)
         {
             try
@@ -480,7 +480,7 @@ namespace Server.Tools
             return "";
         }
 
-        // Token: 0x06000162 RID: 354 RVA: 0x00008A2C File Offset: 0x00006C2C
+        
         public static string UnZipStringToBase64(string base64)
         {
             try
@@ -499,19 +499,19 @@ namespace Server.Tools
             return "";
         }
 
-        // Token: 0x0400042A RID: 1066
+        
         private static byte SortKey = 0;
 
-        // Token: 0x0400042B RID: 1067
+        
         private static ulong SortKey64 = 0UL;
 
-        // Token: 0x0400042C RID: 1068
+        
         public static string CurrentDirectory;
 
-        // Token: 0x0400042D RID: 1069
+        
         private static long UnixStartTicks = DataHelper.ConvertToTicks("1970-01-01 08:00");
 
-        // Token: 0x0400042E RID: 1070
+        
         public static int MinZipBytesSize = 256;
     }
 }

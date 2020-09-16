@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-// Token: 0x020008F5 RID: 2293
+
 public class MUJson
 {
-	// Token: 0x06004240 RID: 16960 RVA: 0x003C7424 File Offset: 0x003C5624
+	
 	public static object jsonDecode(string json)
 	{
 		MUJson.lastDecode = json;
@@ -34,26 +34,26 @@ public class MUJson
 		return result;
 	}
 
-	// Token: 0x06004241 RID: 16961 RVA: 0x003C7480 File Offset: 0x003C5680
+	
 	public static string jsonEncode(object json)
 	{
 		StringBuilder builder = new StringBuilder(2000);
 		return MUJson.serializeValue(json, builder) ? builder.ToString() : null;
 	}
 
-	// Token: 0x06004242 RID: 16962 RVA: 0x003C74B4 File Offset: 0x003C56B4
+	
 	public static bool lastDecodeSuccessful()
 	{
 		return MUJson.lastErrorIndex == -1;
 	}
 
-	// Token: 0x06004243 RID: 16963 RVA: 0x003C74D0 File Offset: 0x003C56D0
+	
 	public static int getLastErrorIndex()
 	{
 		return MUJson.lastErrorIndex;
 	}
 
-	// Token: 0x06004244 RID: 16964 RVA: 0x003C74E8 File Offset: 0x003C56E8
+	
 	public static string getLastErrorSnippet()
 	{
 		string result;
@@ -78,7 +78,7 @@ public class MUJson
 		return result;
 	}
 
-	// Token: 0x06004245 RID: 16965 RVA: 0x003C7560 File Offset: 0x003C5760
+	
 	protected static Hashtable parseObject(char[] json, ref int index)
 	{
 		Hashtable table = new Hashtable();
@@ -125,7 +125,7 @@ public class MUJson
 		return table;
 	}
 
-	// Token: 0x06004246 RID: 16966 RVA: 0x003C7648 File Offset: 0x003C5848
+	
 	protected static ArrayList parseArray(char[] json, ref int index)
 	{
 		ArrayList array = new ArrayList();
@@ -162,7 +162,7 @@ public class MUJson
 		return array;
 	}
 
-	// Token: 0x06004247 RID: 16967 RVA: 0x003C76EC File Offset: 0x003C58EC
+	
 	protected static object parseValue(char[] json, ref int index, ref bool success)
 	{
 		switch (MUJson.lookAhead(json, index))
@@ -189,7 +189,7 @@ public class MUJson
 		return null;
 	}
 
-	// Token: 0x06004248 RID: 16968 RVA: 0x003C77B4 File Offset: 0x003C59B4
+	
 	protected static string parseString(char[] json, ref int index)
 	{
 		string s = "";
@@ -277,7 +277,7 @@ public class MUJson
 		return result;
 	}
 
-	// Token: 0x06004249 RID: 16969 RVA: 0x003C79F4 File Offset: 0x003C5BF4
+	
 	protected static double parseNumber(char[] json, ref int index)
 	{
 		MUJson.eatWhitespace(json, ref index);
@@ -289,7 +289,7 @@ public class MUJson
 		return double.Parse(new string(numberCharArray));
 	}
 
-	// Token: 0x0600424A RID: 16970 RVA: 0x003C7A44 File Offset: 0x003C5C44
+	
 	protected static int getLastIndexOfNumber(char[] json, int index)
 	{
 		int lastIndex;
@@ -303,7 +303,7 @@ public class MUJson
 		return lastIndex - 1;
 	}
 
-	// Token: 0x0600424B RID: 16971 RVA: 0x003C7A88 File Offset: 0x003C5C88
+	
 	protected static void eatWhitespace(char[] json, ref int index)
 	{
 		while (index < json.Length)
@@ -316,14 +316,14 @@ public class MUJson
 		}
 	}
 
-	// Token: 0x0600424C RID: 16972 RVA: 0x003C7AC4 File Offset: 0x003C5CC4
+	
 	protected static int lookAhead(char[] json, int index)
 	{
 		int saveIndex = index;
 		return MUJson.nextToken(json, ref saveIndex);
 	}
 
-	// Token: 0x0600424D RID: 16973 RVA: 0x003C7AE0 File Offset: 0x003C5CE0
+	
 	protected static int nextToken(char[] json, ref int index)
 	{
 		MUJson.eatWhitespace(json, ref index);
@@ -421,7 +421,7 @@ public class MUJson
 		return result;
 	}
 
-	// Token: 0x0600424E RID: 16974 RVA: 0x003C7CE4 File Offset: 0x003C5EE4
+	
 	protected static bool serializeObjectOrArray(object objectOrArray, StringBuilder builder)
 	{
 		bool result;
@@ -436,7 +436,7 @@ public class MUJson
 		return result;
 	}
 
-	// Token: 0x0600424F RID: 16975 RVA: 0x003C7D38 File Offset: 0x003C5F38
+	
 	protected static bool serializeObject(Hashtable anObject, StringBuilder builder)
 	{
 		builder.Append("{");
@@ -462,7 +462,7 @@ public class MUJson
 		return true;
 	}
 
-	// Token: 0x06004250 RID: 16976 RVA: 0x003C7DD0 File Offset: 0x003C5FD0
+	
 	protected static bool serializeDictionary(Dictionary<string, string> dict, StringBuilder builder)
 	{
 		builder.Append("{");
@@ -482,7 +482,7 @@ public class MUJson
 		return true;
 	}
 
-	// Token: 0x06004251 RID: 16977 RVA: 0x003C7E80 File Offset: 0x003C6080
+	
 	protected static bool serializeArray(ArrayList anArray, StringBuilder builder)
 	{
 		builder.Append("[");
@@ -504,7 +504,7 @@ public class MUJson
 		return true;
 	}
 
-	// Token: 0x06004252 RID: 16978 RVA: 0x003C7EF8 File Offset: 0x003C60F8
+	
 	protected static bool serializeValue(object value, StringBuilder builder)
 	{
 		if (value == null)
@@ -554,7 +554,7 @@ public class MUJson
 		return true;
 	}
 
-	// Token: 0x06004253 RID: 16979 RVA: 0x003C8084 File Offset: 0x003C6284
+	
 	protected static void serializeString(string aString, StringBuilder builder)
 	{
 		builder.Append("\"");
@@ -604,54 +604,54 @@ public class MUJson
 		builder.Append("\"");
 	}
 
-	// Token: 0x06004254 RID: 16980 RVA: 0x003C81FD File Offset: 0x003C63FD
+	
 	protected static void serializeNumber(double number, StringBuilder builder)
 	{
 		builder.Append(Convert.ToString(number));
 	}
 
-	// Token: 0x04005019 RID: 20505
+	
 	private const int TOKEN_NONE = 0;
 
-	// Token: 0x0400501A RID: 20506
+	
 	private const int TOKEN_CURLY_OPEN = 1;
 
-	// Token: 0x0400501B RID: 20507
+	
 	private const int TOKEN_CURLY_CLOSE = 2;
 
-	// Token: 0x0400501C RID: 20508
+	
 	private const int TOKEN_SQUARED_OPEN = 3;
 
-	// Token: 0x0400501D RID: 20509
+	
 	private const int TOKEN_SQUARED_CLOSE = 4;
 
-	// Token: 0x0400501E RID: 20510
+	
 	private const int TOKEN_COLON = 5;
 
-	// Token: 0x0400501F RID: 20511
+	
 	private const int TOKEN_COMMA = 6;
 
-	// Token: 0x04005020 RID: 20512
+	
 	private const int TOKEN_STRING = 7;
 
-	// Token: 0x04005021 RID: 20513
+	
 	private const int TOKEN_NUMBER = 8;
 
-	// Token: 0x04005022 RID: 20514
+	
 	private const int TOKEN_TRUE = 9;
 
-	// Token: 0x04005023 RID: 20515
+	
 	private const int TOKEN_FALSE = 10;
 
-	// Token: 0x04005024 RID: 20516
+	
 	private const int TOKEN_NULL = 11;
 
-	// Token: 0x04005025 RID: 20517
+	
 	private const int BUILDER_CAPACITY = 2000;
 
-	// Token: 0x04005026 RID: 20518
+	
 	protected static int lastErrorIndex = -1;
 
-	// Token: 0x04005027 RID: 20519
+	
 	protected static string lastDecode = "";
 }

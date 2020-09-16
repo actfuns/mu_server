@@ -10,23 +10,23 @@ using Server.Tools;
 
 namespace GameServer.Logic.Goods
 {
-	// Token: 0x020002E1 RID: 737
+	
 	public class PetSkillManager : ICmdProcessorEx, ICmdProcessor, IManager
 	{
-		// Token: 0x06000BA6 RID: 2982 RVA: 0x000B6430 File Offset: 0x000B4630
+		
 		public static PetSkillManager getInstance()
 		{
 			return PetSkillManager.instance;
 		}
 
-		// Token: 0x06000BA7 RID: 2983 RVA: 0x000B6448 File Offset: 0x000B4648
+		
 		public bool initialize()
 		{
 			PetSkillManager.InitConfig();
 			return true;
 		}
 
-		// Token: 0x06000BA8 RID: 2984 RVA: 0x000B6464 File Offset: 0x000B4664
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1037, 2, 2, PetSkillManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -36,25 +36,25 @@ namespace GameServer.Logic.Goods
 			return true;
 		}
 
-		// Token: 0x06000BA9 RID: 2985 RVA: 0x000B64D8 File Offset: 0x000B46D8
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000BAA RID: 2986 RVA: 0x000B64EC File Offset: 0x000B46EC
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000BAB RID: 2987 RVA: 0x000B6500 File Offset: 0x000B4700
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return true;
 		}
 
-		// Token: 0x06000BAC RID: 2988 RVA: 0x000B6514 File Offset: 0x000B4714
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -76,7 +76,7 @@ namespace GameServer.Logic.Goods
 			return result;
 		}
 
-		// Token: 0x06000BAD RID: 2989 RVA: 0x000B6584 File Offset: 0x000B4784
+		
 		private bool ProcessCmdPetSkillUp(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -98,7 +98,7 @@ namespace GameServer.Logic.Goods
 			return false;
 		}
 
-		// Token: 0x06000BAE RID: 2990 RVA: 0x000B6610 File Offset: 0x000B4810
+		
 		private bool ProcessCmdPetSkillAwake(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -131,7 +131,7 @@ namespace GameServer.Logic.Goods
 			return false;
 		}
 
-		// Token: 0x06000BAF RID: 2991 RVA: 0x000B66F8 File Offset: 0x000B48F8
+		
 		private bool ProcessCmdPetSkillAwakeCost(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -151,7 +151,7 @@ namespace GameServer.Logic.Goods
 			return false;
 		}
 
-		// Token: 0x06000BB0 RID: 2992 RVA: 0x000B676C File Offset: 0x000B496C
+		
 		private bool ProcessCmdPetSkillInherit(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -175,7 +175,7 @@ namespace GameServer.Logic.Goods
 			return false;
 		}
 
-		// Token: 0x06000BB1 RID: 2993 RVA: 0x000B6868 File Offset: 0x000B4A68
+		
 		private static EPetSkillState PetSkillInherit(GameClient client, int srcPetID, int tarPetID, int userMoney, out string outProps)
 		{
 			outProps = "";
@@ -302,7 +302,7 @@ namespace GameServer.Logic.Goods
 			return result;
 		}
 
-		// Token: 0x06000BB2 RID: 2994 RVA: 0x000B6D64 File Offset: 0x000B4F64
+		
 		private static EPetSkillState PetSkillUp(GameClient client, int petID, int pit)
 		{
 			EPetSkillState result;
@@ -390,7 +390,7 @@ namespace GameServer.Logic.Goods
 			return result;
 		}
 
-		// Token: 0x06000BB3 RID: 2995 RVA: 0x000B6FFC File Offset: 0x000B51FC
+		
 		public static List<PetSkillInfo> GetPetSkillInfo(GoodsData data)
 		{
 			List<PetSkillInfo> list = new List<PetSkillInfo>();
@@ -433,7 +433,7 @@ namespace GameServer.Logic.Goods
 			return list;
 		}
 
-		// Token: 0x06000BB4 RID: 2996 RVA: 0x000B725C File Offset: 0x000B545C
+		
 		private static EPetSkillState PetSkillAwake(GameClient client, int petID, List<int> lockPitList, out string result)
 		{
 			result = "";
@@ -587,7 +587,7 @@ namespace GameServer.Logic.Goods
 			return result2;
 		}
 
-		// Token: 0x06000BB5 RID: 2997 RVA: 0x000B77B4 File Offset: 0x000B59B4
+		
 		public static int GetUpCount(GameClient client)
 		{
 			int count = 0;
@@ -609,7 +609,7 @@ namespace GameServer.Logic.Goods
 			return count;
 		}
 
-		// Token: 0x06000BB6 RID: 2998 RVA: 0x000B7820 File Offset: 0x000B5A20
+		
 		public static void ModifyUpCount(GameClient client, int count)
 		{
 			List<int> dataList = new List<int>();
@@ -621,7 +621,7 @@ namespace GameServer.Logic.Goods
 			Global.SaveRoleParamsIntListToDB(client, dataList, "PetSkillUpCount", true);
 		}
 
-		// Token: 0x06000BB7 RID: 2999 RVA: 0x000B78D0 File Offset: 0x000B5AD0
+		
 		public static long DelGoodsReturnLingJing(GoodsData goodsData)
 		{
 			long sum = 0L;
@@ -651,7 +651,7 @@ namespace GameServer.Logic.Goods
 			return result;
 		}
 
-		// Token: 0x06000BB8 RID: 3000 RVA: 0x000B7A10 File Offset: 0x000B5C10
+		
 		public static void UpdateRolePetSkill(GameClient client)
 		{
 			List<PassiveSkillData> resultList = new List<PassiveSkillData>();
@@ -688,7 +688,7 @@ namespace GameServer.Logic.Goods
 			JingLingQiYuanManager.getInstance().RefreshProps(client, true);
 		}
 
-		// Token: 0x06000BB9 RID: 3001 RVA: 0x000B7BD4 File Offset: 0x000B5DD4
+		
 		public static void InitConfig()
 		{
 			string str = GameManager.systemParamsList.GetParamValueByName("JingLingChuanChengGoodsRate");
@@ -703,7 +703,7 @@ namespace GameServer.Logic.Goods
 			PetSkillManager.LoadPitLockCost();
 		}
 
-		// Token: 0x06000BBA RID: 3002 RVA: 0x000B7C4C File Offset: 0x000B5E4C
+		
 		private static void LoadPsInfo()
 		{
 			string fileName = Global.GameResPath("Config/PetSkill.xml");
@@ -734,7 +734,7 @@ namespace GameServer.Logic.Goods
 			}
 		}
 
-		// Token: 0x06000BBB RID: 3003 RVA: 0x000B7DA8 File Offset: 0x000B5FA8
+		
 		public static void LoadPsUpInfo()
 		{
 			string fileName = Global.GameResPath("Config/PetSkillLevelup.xml");
@@ -765,7 +765,7 @@ namespace GameServer.Logic.Goods
 			}
 		}
 
-		// Token: 0x06000BBC RID: 3004 RVA: 0x000B7EC4 File Offset: 0x000B60C4
+		
 		public static void LoadPitOpenLevel()
 		{
 			try
@@ -799,7 +799,7 @@ namespace GameServer.Logic.Goods
 			}
 		}
 
-		// Token: 0x06000BBD RID: 3005 RVA: 0x000B7FC4 File Offset: 0x000B61C4
+		
 		public static void LoadPitLockCost()
 		{
 			try
@@ -833,7 +833,7 @@ namespace GameServer.Logic.Goods
 			}
 		}
 
-		// Token: 0x06000BBE RID: 3006 RVA: 0x000B80C4 File Offset: 0x000B62C4
+		
 		public static PetSkillAwakeInfo GetPsInfo(int id)
 		{
 			PetSkillAwakeInfo result;
@@ -848,7 +848,7 @@ namespace GameServer.Logic.Goods
 			return result;
 		}
 
-		// Token: 0x06000BBF RID: 3007 RVA: 0x000B80F8 File Offset: 0x000B62F8
+		
 		public static int GetPsUpMaxLevel()
 		{
 			int result;
@@ -863,7 +863,7 @@ namespace GameServer.Logic.Goods
 			return result;
 		}
 
-		// Token: 0x06000BC0 RID: 3008 RVA: 0x000B813C File Offset: 0x000B633C
+		
 		public static long GetPsUpCost(int nextLevel)
 		{
 			long result;
@@ -878,7 +878,7 @@ namespace GameServer.Logic.Goods
 			return result;
 		}
 
-		// Token: 0x06000BC1 RID: 3009 RVA: 0x000B8170 File Offset: 0x000B6370
+		
 		public static int GetPitOpenLevel(int pit)
 		{
 			int result;
@@ -893,7 +893,7 @@ namespace GameServer.Logic.Goods
 			return result;
 		}
 
-		// Token: 0x06000BC2 RID: 3010 RVA: 0x000B81A4 File Offset: 0x000B63A4
+		
 		public static int GetPitLockCost(int count)
 		{
 			int result;
@@ -908,7 +908,7 @@ namespace GameServer.Logic.Goods
 			return result;
 		}
 
-		// Token: 0x06000BC3 RID: 3011 RVA: 0x000B81D8 File Offset: 0x000B63D8
+		
 		public static int GetSkillAwakeCost(int count)
 		{
 			int[] costList = GameManager.systemParamsList.GetParamValueIntArrayByName("PatSkillCostLingJing", ',');
@@ -919,52 +919,52 @@ namespace GameServer.Logic.Goods
 			return costList[count];
 		}
 
-		// Token: 0x06000BC4 RID: 3012 RVA: 0x000B8210 File Offset: 0x000B6410
+		
 		public static bool IsGongNengOpened(GameClient client)
 		{
 			return !GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System2Dot0) && GlobalNew.IsGongNengOpened(client, GongNengIDs.PetSkill, false) && GameManager.VersionSystemOpenMgr.IsVersionSystemOpen("PetSkill");
 		}
 
-		// Token: 0x040012F5 RID: 4853
+		
 		private const int PIT_MIN = 1;
 
-		// Token: 0x040012F6 RID: 4854
+		
 		private const int PIT_MAX = 4;
 
-		// Token: 0x040012F7 RID: 4855
+		
 		private const int UP_LEVEL_MAX = 5;
 
-		// Token: 0x040012F8 RID: 4856
+		
 		private const int STATUE_COUNT = 8;
 
-		// Token: 0x040012F9 RID: 4857
+		
 		private const int RANDOM_SEED_AWAKE = 100000;
 
-		// Token: 0x040012FA RID: 4858
+		
 		public static int _gmRate = 1;
 
-		// Token: 0x040012FB RID: 4859
+		
 		private static PetSkillManager instance = new PetSkillManager();
 
-		// Token: 0x040012FC RID: 4860
+		
 		private static Dictionary<int, PetSkillAwakeInfo> _psDic = new Dictionary<int, PetSkillAwakeInfo>();
 
-		// Token: 0x040012FD RID: 4861
+		
 		private static Dictionary<int, long> _psLevelUpDic = new Dictionary<int, long>();
 
-		// Token: 0x040012FE RID: 4862
+		
 		private static Dictionary<int, int> _pitOpenDic = new Dictionary<int, int>();
 
-		// Token: 0x040012FF RID: 4863
+		
 		private static Dictionary<int, int> _pitLockDic = new Dictionary<int, int>();
 
-		// Token: 0x04001300 RID: 4864
+		
 		private static int JingLingChuanChengGoodsRate;
 
-		// Token: 0x04001301 RID: 4865
+		
 		private static int JingLingChuanChengXiaoHaoJinBi;
 
-		// Token: 0x04001302 RID: 4866
+		
 		private static int JingLingChuanChengXiaoHaoZhuanShi;
 	}
 }

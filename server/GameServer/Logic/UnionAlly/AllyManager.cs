@@ -12,22 +12,22 @@ using Tmsk.Contract.KuaFuData;
 
 namespace GameServer.Logic.UnionAlly
 {
-	// Token: 0x0200049A RID: 1178
+	
 	public class AllyManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListenerEx
 	{
-		// Token: 0x060015C3 RID: 5571 RVA: 0x001560B8 File Offset: 0x001542B8
+		
 		public static AllyManager getInstance()
 		{
 			return AllyManager.instance;
 		}
 
-		// Token: 0x060015C4 RID: 5572 RVA: 0x001560D0 File Offset: 0x001542D0
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x060015C5 RID: 5573 RVA: 0x001560E4 File Offset: 0x001542E4
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1042, 2, 2, AllyManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -44,25 +44,25 @@ namespace GameServer.Logic.UnionAlly
 			return true;
 		}
 
-		// Token: 0x060015C6 RID: 5574 RVA: 0x00156208 File Offset: 0x00154408
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x060015C7 RID: 5575 RVA: 0x0015621C File Offset: 0x0015441C
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060015C8 RID: 5576 RVA: 0x00156230 File Offset: 0x00154430
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return true;
 		}
 
-		// Token: 0x060015C9 RID: 5577 RVA: 0x00156244 File Offset: 0x00154444
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -93,7 +93,7 @@ namespace GameServer.Logic.UnionAlly
 			return result;
 		}
 
-		// Token: 0x060015CA RID: 5578 RVA: 0x001562D4 File Offset: 0x001544D4
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 			switch (eventObject.EventType)
@@ -199,7 +199,7 @@ namespace GameServer.Logic.UnionAlly
 			}
 		}
 
-		// Token: 0x060015CB RID: 5579 RVA: 0x00156680 File Offset: 0x00154880
+		
 		public bool ProcessAllyDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -220,7 +220,7 @@ namespace GameServer.Logic.UnionAlly
 			return false;
 		}
 
-		// Token: 0x060015CC RID: 5580 RVA: 0x001566FC File Offset: 0x001548FC
+		
 		public bool ProcessAllyLogDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -240,7 +240,7 @@ namespace GameServer.Logic.UnionAlly
 			return false;
 		}
 
-		// Token: 0x060015CD RID: 5581 RVA: 0x00156768 File Offset: 0x00154968
+		
 		public bool ProcessAllyRequestCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -263,7 +263,7 @@ namespace GameServer.Logic.UnionAlly
 			return false;
 		}
 
-		// Token: 0x060015CE RID: 5582 RVA: 0x001567F4 File Offset: 0x001549F4
+		
 		public bool ProcessAllyCancelCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -285,7 +285,7 @@ namespace GameServer.Logic.UnionAlly
 			return false;
 		}
 
-		// Token: 0x060015CF RID: 5583 RVA: 0x00156878 File Offset: 0x00154A78
+		
 		public bool ProcessAllyRemoveCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -307,7 +307,7 @@ namespace GameServer.Logic.UnionAlly
 			return false;
 		}
 
-		// Token: 0x060015D0 RID: 5584 RVA: 0x001568FC File Offset: 0x00154AFC
+		
 		public bool ProcessAllyAgreeCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -330,7 +330,7 @@ namespace GameServer.Logic.UnionAlly
 			return false;
 		}
 
-		// Token: 0x060015D1 RID: 5585 RVA: 0x0015698C File Offset: 0x00154B8C
+		
 		private List<AllyData> GetAllyData(GameClient client, EAllyDataType dataType)
 		{
 			List<AllyData> resultList = new List<AllyData>();
@@ -388,7 +388,7 @@ namespace GameServer.Logic.UnionAlly
 			return result;
 		}
 
-		// Token: 0x060015D2 RID: 5586 RVA: 0x00156AEC File Offset: 0x00154CEC
+		
 		private EAlly AllyRequest(GameClient client, int zoneID, string unionName)
 		{
 			EAlly result2;
@@ -477,7 +477,7 @@ namespace GameServer.Logic.UnionAlly
 			return result2;
 		}
 
-		// Token: 0x060015D3 RID: 5587 RVA: 0x00156D18 File Offset: 0x00154F18
+		
 		private EAlly AllyOperate(GameClient client, int targetID, EAllyOperate operateType)
 		{
 			EAlly result2;
@@ -536,7 +536,7 @@ namespace GameServer.Logic.UnionAlly
 			return result2;
 		}
 
-		// Token: 0x060015D4 RID: 5588 RVA: 0x00156E64 File Offset: 0x00155064
+		
 		private List<AllyLogData> GetAllyLogData(GameClient client)
 		{
 			List<AllyLogData> resultList = new List<AllyLogData>();
@@ -568,7 +568,7 @@ namespace GameServer.Logic.UnionAlly
 			return result;
 		}
 
-		// Token: 0x060015D5 RID: 5589 RVA: 0x00156F1C File Offset: 0x0015511C
+		
 		public List<AllyLogData> DBAllyLogData(int unionID, int serverID)
 		{
 			List<AllyLogData> items = Global.sendToDB<List<AllyLogData>, int>(13122, unionID, serverID);
@@ -579,13 +579,13 @@ namespace GameServer.Logic.UnionAlly
 			return items;
 		}
 
-		// Token: 0x060015D6 RID: 5590 RVA: 0x00156F50 File Offset: 0x00155150
+		
 		public bool DBAllyLogAdd(AllyLogData logData, int serverID)
 		{
 			return Global.sendToDB<bool, AllyLogData>(13123, logData, serverID);
 		}
 
-		// Token: 0x060015D7 RID: 5591 RVA: 0x00156F70 File Offset: 0x00155170
+		
 		public void UnionAllyInit(GameClient client)
 		{
 			if (!KuaFuManager.KuaFuWorldKuaFuGameServer)
@@ -620,7 +620,7 @@ namespace GameServer.Logic.UnionAlly
 			}
 		}
 
-		// Token: 0x060015D8 RID: 5592 RVA: 0x001570D8 File Offset: 0x001552D8
+		
 		public bool UnionIsAlly(GameClient client, int targetID)
 		{
 			bool result;
@@ -647,7 +647,7 @@ namespace GameServer.Logic.UnionAlly
 			return result;
 		}
 
-		// Token: 0x060015D9 RID: 5593 RVA: 0x001571B8 File Offset: 0x001553B8
+		
 		public void UnionDataChange(int unionID, int serverID, bool isDel = false, int unionLevel = 0)
 		{
 			if (!KuaFuManager.KuaFuWorldKuaFuGameServer)
@@ -698,7 +698,7 @@ namespace GameServer.Logic.UnionAlly
 			}
 		}
 
-		// Token: 0x060015DA RID: 5594 RVA: 0x00157328 File Offset: 0x00155528
+		
 		public void UnionLeaderChangName(int roleId, string oldName, string newName)
 		{
 			if (!KuaFuManager.KuaFuWorldKuaFuGameServer)
@@ -718,7 +718,7 @@ namespace GameServer.Logic.UnionAlly
 			}
 		}
 
-		// Token: 0x060015DB RID: 5595 RVA: 0x001573B4 File Offset: 0x001555B4
+		
 		public bool IsAllyOpen(int unionLevel)
 		{
 			bool result;
@@ -734,15 +734,15 @@ namespace GameServer.Logic.UnionAlly
 			return result;
 		}
 
-		// Token: 0x060015DC RID: 5596 RVA: 0x001573F8 File Offset: 0x001555F8
+		
 		private bool IsAllyMax(int numNow)
 		{
 			int allyMaxNum = (int)GameManager.systemParamsList.GetParamValueIntByName("AlignNum", -1);
 			return numNow >= allyMaxNum;
 		}
 
-		// Token: 0x17000056 RID: 86
-		// (get) Token: 0x060015DD RID: 5597 RVA: 0x0015742C File Offset: 0x0015562C
+		
+		
 		private int AllyCostMoney
 		{
 			get
@@ -751,15 +751,15 @@ namespace GameServer.Logic.UnionAlly
 			}
 		}
 
-		// Token: 0x060015DE RID: 5598 RVA: 0x00157450 File Offset: 0x00155650
+		
 		private bool UnionMoneyIsMore(int myMoney)
 		{
 			int[] moneyArr = GameManager.systemParamsList.GetParamValueIntArrayByName("ZhanMengZiJin", ',');
 			return moneyArr != null && myMoney - this.AllyCostMoney > moneyArr[0];
 		}
 
-		// Token: 0x17000057 RID: 87
-		// (get) Token: 0x060015DF RID: 5599 RVA: 0x0015749C File Offset: 0x0015569C
+		
+		
 		private int[] AllyMapArr
 		{
 			get
@@ -768,22 +768,22 @@ namespace GameServer.Logic.UnionAlly
 			}
 		}
 
-		// Token: 0x060015E0 RID: 5600 RVA: 0x001574C0 File Offset: 0x001556C0
+		
 		public bool IsAllyMap(int mapID)
 		{
 			return this.AllyMapArr.Contains(mapID);
 		}
 
-		// Token: 0x04001F3C RID: 7996
+		
 		private const int ALLY_LOG_MAX = 20;
 
-		// Token: 0x04001F3D RID: 7997
+		
 		public const int _sceneType = 10004;
 
-		// Token: 0x04001F3E RID: 7998
+		
 		public object _mutex = new object();
 
-		// Token: 0x04001F3F RID: 7999
+		
 		private static AllyManager instance = new AllyManager();
 	}
 }

@@ -12,22 +12,22 @@ using Server.Tools;
 
 namespace GameServer.Logic.UserReturn
 {
-    // Token: 0x020007A5 RID: 1957
+    
     public class UserReturnManager : ICmdProcessorEx, ICmdProcessor
     {
-        // Token: 0x0600330E RID: 13070 RVA: 0x002D4588 File Offset: 0x002D2788
+        
         public static UserReturnManager getInstance()
         {
             return UserReturnManager.instance;
         }
 
-        // Token: 0x0600330F RID: 13071 RVA: 0x002D45A0 File Offset: 0x002D27A0
+        
         public bool initialize()
         {
             return this.initConfigInfo();
         }
 
-        // Token: 0x06003310 RID: 13072 RVA: 0x002D45C4 File Offset: 0x002D27C4
+        
         public bool startup()
         {
             TCPCmdDispatcher.getInstance().registerProcessorEx(900, 1, 1, UserReturnManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -37,25 +37,25 @@ namespace GameServer.Logic.UserReturn
             return true;
         }
 
-        // Token: 0x06003311 RID: 13073 RVA: 0x002D4638 File Offset: 0x002D2838
+        
         public bool showdown()
         {
             return true;
         }
 
-        // Token: 0x06003312 RID: 13074 RVA: 0x002D464C File Offset: 0x002D284C
+        
         public bool destroy()
         {
             return true;
         }
 
-        // Token: 0x06003313 RID: 13075 RVA: 0x002D4660 File Offset: 0x002D2860
+        
         public bool processCmd(GameClient client, string[] cmdParams)
         {
             return true;
         }
 
-        // Token: 0x06003314 RID: 13076 RVA: 0x002D4674 File Offset: 0x002D2874
+        
         public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -80,7 +80,7 @@ namespace GameServer.Logic.UserReturn
             return true;
         }
 
-        // Token: 0x06003315 RID: 13077 RVA: 0x002D4720 File Offset: 0x002D2920
+        
         public bool ProCmdReturnData(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -100,7 +100,7 @@ namespace GameServer.Logic.UserReturn
             return false;
         }
 
-        // Token: 0x06003316 RID: 13078 RVA: 0x002D478C File Offset: 0x002D298C
+        
         public bool ProCmdReturnCheck(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -119,7 +119,7 @@ namespace GameServer.Logic.UserReturn
             return false;
         }
 
-        // Token: 0x06003317 RID: 13079 RVA: 0x002D47EC File Offset: 0x002D29EC
+        
         public bool ProCmdReturnAward(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -153,7 +153,7 @@ namespace GameServer.Logic.UserReturn
             return false;
         }
 
-        // Token: 0x06003318 RID: 13080 RVA: 0x002D48F4 File Offset: 0x002D2AF4
+        
         public bool ProCmdReturnXml(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -172,7 +172,7 @@ namespace GameServer.Logic.UserReturn
             return false;
         }
 
-        // Token: 0x06003319 RID: 13081 RVA: 0x002D495C File Offset: 0x002D2B5C
+        
         private UserReturnData GetUserReturnData(GameClient client)
         {
             UserReturnData result;
@@ -189,7 +189,7 @@ namespace GameServer.Logic.UserReturn
             return result;
         }
 
-        // Token: 0x0600331A RID: 13082 RVA: 0x002D4A04 File Offset: 0x002D2C04
+        
         private EReturnAwardState ReturnAward(GameClient client, int awardType, int awardID, int awardCount)
         {
             EReturnAwardState result;
@@ -235,7 +235,7 @@ namespace GameServer.Logic.UserReturn
             return result;
         }
 
-        // Token: 0x0600331B RID: 13083 RVA: 0x002D4B50 File Offset: 0x002D2D50
+        
         private EReturnAwardState AwardReturn(GameClient client, UserReturnData myData, int awardID)
         {
             EReturnAwardState result2;
@@ -328,7 +328,7 @@ namespace GameServer.Logic.UserReturn
             return result2;
         }
 
-        // Token: 0x0600331C RID: 13084 RVA: 0x002D4F10 File Offset: 0x002D3110
+        
         private EReturnAwardState AwardCheck(GameClient client, UserReturnData myData, int awardID)
         {
             EReturnAwardState result2;
@@ -404,7 +404,7 @@ namespace GameServer.Logic.UserReturn
             return result2;
         }
 
-        // Token: 0x0600331D RID: 13085 RVA: 0x002D522C File Offset: 0x002D342C
+        
         private EReturnAwardState AwardShop(GameClient client, UserReturnData myData, int awardID, int awardCount)
         {
             EReturnAwardState result2;
@@ -505,7 +505,7 @@ namespace GameServer.Logic.UserReturn
             return result2;
         }
 
-        // Token: 0x0600331E RID: 13086 RVA: 0x002D55C4 File Offset: 0x002D37C4
+        
         private EReturnAwardState AwardChongZhi(GameClient client, UserReturnData myData, int awardID)
         {
             bool flag = false;
@@ -573,7 +573,7 @@ namespace GameServer.Logic.UserReturn
             return result2;
         }
 
-        // Token: 0x0600331F RID: 13087 RVA: 0x002D5880 File Offset: 0x002D3A80
+        
         public bool initConfigInfo()
         {
             lock (this.Mutex)
@@ -588,7 +588,7 @@ namespace GameServer.Logic.UserReturn
             return true;
         }
 
-        // Token: 0x06003320 RID: 13088 RVA: 0x002D58F4 File Offset: 0x002D3AF4
+        
         private void InitXmlData()
         {
             try
@@ -610,7 +610,7 @@ namespace GameServer.Logic.UserReturn
             }
         }
 
-        // Token: 0x06003321 RID: 13089 RVA: 0x002D599C File Offset: 0x002D3B9C
+        
         private void LoadReturnActivityInfo()
         {
             string fileName = Global.IsolateResPath("Config/PlayerRecall/HuoDongZhaoHui.xml");
@@ -658,13 +658,13 @@ namespace GameServer.Logic.UserReturn
             }
         }
 
-        // Token: 0x06003322 RID: 13090 RVA: 0x002D5C8C File Offset: 0x002D3E8C
+        
         public bool IsUserReturnOpen()
         {
             return this._returnActivityInfo.IsOpen;
         }
 
-        // Token: 0x06003323 RID: 13091 RVA: 0x002D5CAC File Offset: 0x002D3EAC
+        
         private void LoadReturnAwardInfo()
         {
             string fileName = Global.IsolateResPath("Config/PlayerRecall/OldLogin.xml");
@@ -716,7 +716,7 @@ namespace GameServer.Logic.UserReturn
             }
         }
 
-        // Token: 0x06003324 RID: 13092 RVA: 0x002D5EAC File Offset: 0x002D40AC
+        
         private void LoadReturnCheckAwardInfo()
         {
             string fileName = Global.IsolateResPath("Config/PlayerRecall/OldHuoDongLoginNumGift.xml");
@@ -786,7 +786,7 @@ namespace GameServer.Logic.UserReturn
             }
         }
 
-        // Token: 0x06003325 RID: 13093 RVA: 0x002D615C File Offset: 0x002D435C
+        
         private void LoadReturnShopAwardInfo()
         {
             string fileName = Global.IsolateResPath("Config/PlayerRecall/OldStore.xml");
@@ -821,7 +821,7 @@ namespace GameServer.Logic.UserReturn
             }
         }
 
-        // Token: 0x06003326 RID: 13094 RVA: 0x002D6314 File Offset: 0x002D4514
+        
         public ReturnShopAwardInfo GetReturnShopAwardInfo(int id)
         {
             ReturnShopAwardInfo result;
@@ -836,7 +836,7 @@ namespace GameServer.Logic.UserReturn
             return result;
         }
 
-        // Token: 0x06003327 RID: 13095 RVA: 0x002D634C File Offset: 0x002D454C
+        
         private void LoadReturnChongZhiGiftInfo()
         {
             string fileName = Global.IsolateResPath("Config/PlayerRecall/OldHuoDongchongzhiGift.xml");
@@ -893,7 +893,7 @@ namespace GameServer.Logic.UserReturn
             }
         }
 
-        // Token: 0x06003328 RID: 13096 RVA: 0x002D6564 File Offset: 0x002D4764
+        
         public void initUserReturnData(GameClient client)
         {
             lock (this.Mutex)
@@ -918,7 +918,7 @@ namespace GameServer.Logic.UserReturn
             }
         }
 
-        // Token: 0x06003329 RID: 13097 RVA: 0x002D66B8 File Offset: 0x002D48B8
+        
         private void initReturnData(GameClient client, UserReturnData newData, UserReturnData oldData)
         {
             lock (this.Mutex)
@@ -967,7 +967,7 @@ namespace GameServer.Logic.UserReturn
             }
         }
 
-        // Token: 0x0600332A RID: 13098 RVA: 0x002D68EC File Offset: 0x002D4AEC
+        
         private void ReturnDicAdd(List<ReturnData> list)
         {
             foreach (ReturnData data in list)
@@ -976,7 +976,7 @@ namespace GameServer.Logic.UserReturn
             }
         }
 
-        // Token: 0x0600332B RID: 13099 RVA: 0x002D694C File Offset: 0x002D4B4C
+        
         public void DBReturnIsOpen()
         {
             int vipLevel = Global.Clamp(this._returnActivityInfo.Vip, 0, Data.VIPLevAwardAndExpInfoList.Count - 1);
@@ -993,7 +993,7 @@ namespace GameServer.Logic.UserReturn
             Global.sendToDB<int, ReturnActivity>(13100, data, 0);
         }
 
-        // Token: 0x0600332C RID: 13100 RVA: 0x002D6A10 File Offset: 0x002D4C10
+        
         public ReturnData DBUserReturnDataGet(GameClient client)
         {
             string cmd2db = string.Format("{0}:{1}", client.strUserID, client.ClientData.ZoneID);
@@ -1005,7 +1005,7 @@ namespace GameServer.Logic.UserReturn
             return result;
         }
 
-        // Token: 0x0600332D RID: 13101 RVA: 0x002D6A6C File Offset: 0x002D4C6C
+        
         public List<ReturnData> DBUserReturnDataList(GameClient client)
         {
             string cmd2db = string.Format("{0}:{1}:{2}:{3}", new object[]
@@ -1020,26 +1020,26 @@ namespace GameServer.Logic.UserReturn
             return result;
         }
 
-        // Token: 0x0600332E RID: 13102 RVA: 0x002D6AF4 File Offset: 0x002D4CF4
+        
         public bool DBUserReturnDataUpdate(GameClient client, ReturnData data)
         {
             return Global.sendToDB<bool, ReturnData>(13102, data, client.ServerId);
         }
 
-        // Token: 0x0600332F RID: 13103 RVA: 0x002D6B18 File Offset: 0x002D4D18
+        
         public bool DBUserReturnDataDel(GameClient client, ReturnData data)
         {
             return Global.sendToDB<bool, ReturnData>(13103, data, client.ServerId);
         }
 
-        // Token: 0x06003330 RID: 13104 RVA: 0x002D6B3C File Offset: 0x002D4D3C
+        
         public Dictionary<int, int[]> DBUserReturnAwardList(GameClient client)
         {
             string cmd2db = string.Format("{0}:{1}:{2}", this._returnActivityInfo.ActivityDay, this._returnActivityInfo.ActivityID, client.strUserID);
             return Global.sendToDB<Dictionary<int, int[]>, string>(13105, cmd2db, client.ServerId);
         }
 
-        // Token: 0x06003331 RID: 13105 RVA: 0x002D6B90 File Offset: 0x002D4D90
+        
         public bool DBUserReturnAwardUpdate(GameClient client, int awardType, string award)
         {
             string cmd2db = string.Format("{0}:{1}:{2}:{3}:{4}:{5}", new object[]
@@ -1054,7 +1054,7 @@ namespace GameServer.Logic.UserReturn
             return Global.sendToDB<bool, string>(13106, cmd2db, client.ServerId);
         }
 
-        // Token: 0x06003332 RID: 13106 RVA: 0x002D6C10 File Offset: 0x002D4E10
+        
         public void CheckUserReturnOpenState(long ticks)
         {
             if (ticks - this._lastTicks >= 10000L)
@@ -1064,7 +1064,7 @@ namespace GameServer.Logic.UserReturn
             }
         }
 
-        // Token: 0x06003333 RID: 13107 RVA: 0x002D6C48 File Offset: 0x002D4E48
+        
         public void UpdateUserReturnState()
         {
             DateTime nowTime = TimeUtil.NowDateTime();
@@ -1088,7 +1088,7 @@ namespace GameServer.Logic.UserReturn
             }
         }
 
-        // Token: 0x06003334 RID: 13108 RVA: 0x002D6DF0 File Offset: 0x002D4FF0
+        
         private DateTime getUserReturnBeginTime()
         {
             string dayBeginStr = GameManager.GameConfigMgr.GetGameConfigItemStr("userbegintime", "");
@@ -1106,13 +1106,13 @@ namespace GameServer.Logic.UserReturn
             return result;
         }
 
-        // Token: 0x06003335 RID: 13109 RVA: 0x002D6E3B File Offset: 0x002D503B
+        
         public void VipChange(GameClient client)
         {
             this.CheckActivityTip(client);
         }
 
-        // Token: 0x06003336 RID: 13110 RVA: 0x002D6F38 File Offset: 0x002D5138
+        
         public void CheckActivityTip(GameClient client)
         {
             UserReturnData myData = client.ClientData.ReturnData;
@@ -1226,40 +1226,40 @@ namespace GameServer.Logic.UserReturn
             }
         }
 
-        // Token: 0x04003F05 RID: 16133
+        
         private const int AWARD_DAY_COUNT = 6;
 
-        // Token: 0x04003F06 RID: 16134
+        
         private const int CHECK_WAIT_HOUR = 1;
 
-        // Token: 0x04003F07 RID: 16135
+        
         private static UserReturnManager instance = new UserReturnManager();
 
-        // Token: 0x04003F08 RID: 16136
+        
         private object Mutex = new object();
 
-        // Token: 0x04003F09 RID: 16137
+        
         public UserReturnXmlData _xmlData = new UserReturnXmlData();
 
-        // Token: 0x04003F0A RID: 16138
+        
         public ReturnActivityInfo _returnActivityInfo = new ReturnActivityInfo();
 
-        // Token: 0x04003F0B RID: 16139
+        
         public Dictionary<int, ReturnAwardInfo> _returnAwardDic = new Dictionary<int, ReturnAwardInfo>();
 
-        // Token: 0x04003F0C RID: 16140
+        
         public Dictionary<int, ReturnCheckAwardInfo> _returnCheckAwardDic = new Dictionary<int, ReturnCheckAwardInfo>();
 
-        // Token: 0x04003F0D RID: 16141
+        
         public Dictionary<int, ReturnShopAwardInfo> _returnShopAwardDic = new Dictionary<int, ReturnShopAwardInfo>();
 
-        // Token: 0x04003F0E RID: 16142
+        
         public Dictionary<int, ReturnChonZhiAwardInfo> _recallChongZhiAwardDict = new Dictionary<int, ReturnChonZhiAwardInfo>();
 
-        // Token: 0x04003F0F RID: 16143
+        
         private Dictionary<int, ReturnData> _returnDic = new Dictionary<int, ReturnData>();
 
-        // Token: 0x04003F10 RID: 16144
+        
         private long _lastTicks = 0L;
     }
 }

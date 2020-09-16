@@ -6,11 +6,11 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-    // Token: 0x02000627 RID: 1575
+    
     public class DJRoomManager
     {
-        // Token: 0x17000214 RID: 532
-        // (get) Token: 0x0600202C RID: 8236 RVA: 0x001BC2D4 File Offset: 0x001BA4D4
+        
+        
         public object Mutex
         {
             get
@@ -19,7 +19,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600202D RID: 8237 RVA: 0x001BC2EC File Offset: 0x001BA4EC
+        
         public int GetNewRoomID()
         {
             int id = 1;
@@ -30,7 +30,7 @@ namespace GameServer.Logic
             return id;
         }
 
-        // Token: 0x0600202E RID: 8238 RVA: 0x001BC350 File Offset: 0x001BA550
+        
         public List<DJRoomData> CloneRoomDataList()
         {
             List<DJRoomData> roomDataList = null;
@@ -41,7 +41,7 @@ namespace GameServer.Logic
             return roomDataList;
         }
 
-        // Token: 0x0600202F RID: 8239 RVA: 0x001BC3B8 File Offset: 0x001BA5B8
+        
         public DJRoomData FindRoomData(int roomID)
         {
             DJRoomData djRoomData = null;
@@ -52,7 +52,7 @@ namespace GameServer.Logic
             return djRoomData;
         }
 
-        // Token: 0x06002030 RID: 8240 RVA: 0x001BC418 File Offset: 0x001BA618
+        
         public void AddRoomData(DJRoomData roomData)
         {
             lock (this.mutex)
@@ -62,7 +62,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002031 RID: 8241 RVA: 0x001BC480 File Offset: 0x001BA680
+        
         public void RemoveRoomData(int roomID)
         {
             lock (this.mutex)
@@ -76,7 +76,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002032 RID: 8242 RVA: 0x001BC4F8 File Offset: 0x001BA6F8
+        
         public DJRoomData GetNextDJRoomData(int index)
         {
             DJRoomData djRoomData = null;
@@ -90,7 +90,7 @@ namespace GameServer.Logic
             return djRoomData;
         }
 
-        // Token: 0x06002033 RID: 8243 RVA: 0x001BC56C File Offset: 0x001BA76C
+        
         public DJRoomRolesData FindRoomRolesData(int roomID)
         {
             DJRoomRolesData djRoomRolesData = null;
@@ -101,7 +101,7 @@ namespace GameServer.Logic
             return djRoomRolesData;
         }
 
-        // Token: 0x06002034 RID: 8244 RVA: 0x001BC5CC File Offset: 0x001BA7CC
+        
         public void AddRoomRolesData(DJRoomRolesData djRoomRolesData)
         {
             lock (this.mutex)
@@ -110,7 +110,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002035 RID: 8245 RVA: 0x001BC624 File Offset: 0x001BA824
+        
         public void RemoveRoomRolesData(int roomID)
         {
             lock (this.mutex)
@@ -122,7 +122,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002036 RID: 8246 RVA: 0x001BC68C File Offset: 0x001BA88C
+        
         public void SetRoomRolesDataRoleState(int roomID, int roleID, int state)
         {
             DJRoomRolesData djRoomRolesData = this.FindRoomRolesData(roomID);
@@ -140,7 +140,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002037 RID: 8247 RVA: 0x001BC714 File Offset: 0x001BA914
+        
         public void ProcessFighting()
         {
             int index = 0;
@@ -153,7 +153,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002038 RID: 8248 RVA: 0x001BC750 File Offset: 0x001BA950
+        
         private bool CanGameOver(DJRoomRolesData djRoomRolesData)
         {
             bool team1Over = true;
@@ -181,7 +181,7 @@ namespace GameServer.Logic
             return team1Over || team2Over;
         }
 
-        // Token: 0x06002039 RID: 8249 RVA: 0x001BC814 File Offset: 0x001BAA14
+        
         private int GetLoseTeam(DJRoomRolesData djRoomRolesData)
         {
             bool team1Over = true;
@@ -222,7 +222,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x0600203A RID: 8250 RVA: 0x001BC8F0 File Offset: 0x001BAAF0
+        
         private void ProcessRoomFighting(DJRoomData djRoomData)
         {
             int djFightState = 0;
@@ -300,7 +300,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600203B RID: 8251 RVA: 0x001BCCBC File Offset: 0x001BAEBC
+        
         private int GetTeamAvgDJPoint(List<DJRoomRoleData> team)
         {
             int result;
@@ -320,7 +320,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x0600203C RID: 8252 RVA: 0x001BCD10 File Offset: 0x001BAF10
+        
         private int GetDJPointClass(int djPoint)
         {
             int result;
@@ -343,7 +343,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x0600203D RID: 8253 RVA: 0x001BCD54 File Offset: 0x001BAF54
+        
         private int GetRetPoint(int pointClass, bool isWinner)
         {
             int retPoint;
@@ -391,7 +391,7 @@ namespace GameServer.Logic
             return retPoint;
         }
 
-        // Token: 0x0600203E RID: 8254 RVA: 0x001BCDE8 File Offset: 0x001BAFE8
+        
         private int GetTeamRolePoint(DJRoomRoleData djRoomRoleData, int otherTeamAvgDJPoint, bool isWinner)
         {
             int selfPointClass = this.GetDJPointClass(djRoomRoleData.DJPoint);
@@ -446,7 +446,7 @@ namespace GameServer.Logic
             return retPoint;
         }
 
-        // Token: 0x0600203F RID: 8255 RVA: 0x001BCF28 File Offset: 0x001BB128
+        
         private void ProcessDJFightAwards(DJRoomData djRoomData)
         {
             DJRoomRolesData djRoomRolesData = this.FindRoomRolesData(djRoomData.RoomID);
@@ -493,19 +493,19 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x04002CDB RID: 11483
+        
         private object mutex = new object();
 
-        // Token: 0x04002CDC RID: 11484
+        
         private int BaseRoomID = 1;
 
-        // Token: 0x04002CDD RID: 11485
+        
         private Dictionary<int, DJRoomData> DJRoomDict = new Dictionary<int, DJRoomData>(100);
 
-        // Token: 0x04002CDE RID: 11486
+        
         private List<DJRoomData> DJRoomDataList = new List<DJRoomData>(100);
 
-        // Token: 0x04002CDF RID: 11487
+        
         private Dictionary<int, DJRoomRolesData> DJRoomRolesDict = new Dictionary<int, DJRoomRolesData>(100);
     }
 }

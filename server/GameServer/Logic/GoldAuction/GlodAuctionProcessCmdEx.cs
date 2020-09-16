@@ -6,40 +6,40 @@ using Server.Tools;
 
 namespace GameServer.Logic.GoldAuction
 {
-	// Token: 0x020000A5 RID: 165
+	
 	internal class GlodAuctionProcessCmdEx : IManager, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x0600027F RID: 639 RVA: 0x0002AC48 File Offset: 0x00028E48
+		
 		public static GlodAuctionProcessCmdEx getInstance()
 		{
 			return GlodAuctionProcessCmdEx.instance;
 		}
 
-		// Token: 0x06000280 RID: 640 RVA: 0x0002AC60 File Offset: 0x00028E60
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x06000281 RID: 641 RVA: 0x0002AC74 File Offset: 0x00028E74
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000282 RID: 642 RVA: 0x0002AC88 File Offset: 0x00028E88
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000283 RID: 643 RVA: 0x0002AC9C File Offset: 0x00028E9C
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06000284 RID: 644 RVA: 0x0002ACB0 File Offset: 0x00028EB0
+		
 		public bool startup()
 		{
 			lock (this.AuctionMsgMutex)
@@ -51,7 +51,7 @@ namespace GameServer.Logic.GoldAuction
 			return true;
 		}
 
-		// Token: 0x06000285 RID: 645 RVA: 0x0002AD38 File Offset: 0x00028F38
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -79,7 +79,7 @@ namespace GameServer.Logic.GoldAuction
 			return true;
 		}
 
-		// Token: 0x06000286 RID: 646 RVA: 0x0002AE20 File Offset: 0x00029020
+		
 		private void GetGlodAuction(GameClient client, int nID, byte[] bytes, string[] cmdParams, ref GoldAuctionS2C msgData)
 		{
 			try
@@ -112,7 +112,7 @@ namespace GameServer.Logic.GoldAuction
 			}
 		}
 
-		// Token: 0x06000287 RID: 647 RVA: 0x0002AF1C File Offset: 0x0002911C
+		
 		private void SetGlodAuction(GameClient client, int nID, byte[] bytes, string[] cmdParams, ref int Info)
 		{
 			GoldAuctionItem item = null;
@@ -232,7 +232,7 @@ namespace GameServer.Logic.GoldAuction
 			}
 		}
 
-		// Token: 0x06000288 RID: 648 RVA: 0x0002B37C File Offset: 0x0002957C
+		
 		public void KillBossAddAuction(int KillBossRole, long BossLife, List<AuctionRoleData> PointInfoList, AuctionEnum AuctionSource)
 		{
 			try
@@ -325,13 +325,13 @@ namespace GameServer.Logic.GoldAuction
 			}
 		}
 
-		// Token: 0x040003E0 RID: 992
+		
 		private static GlodAuctionProcessCmdEx instance = new GlodAuctionProcessCmdEx();
 
-		// Token: 0x040003E1 RID: 993
+		
 		private object AuctionMsgMutex = new object();
 
-		// Token: 0x040003E2 RID: 994
+		
 		private GoldAuctionManager GoldAuctionMgr = new GoldAuctionManager();
 	}
 }

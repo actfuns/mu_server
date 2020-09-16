@@ -8,22 +8,22 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic.UserActivate
 {
-	// Token: 0x020004A1 RID: 1185
+	
 	public class UserActivateManager : ICmdProcessorEx, ICmdProcessor, IManager
 	{
-		// Token: 0x06001607 RID: 5639 RVA: 0x00158F48 File Offset: 0x00157148
+		
 		public static UserActivateManager getInstance()
 		{
 			return UserActivateManager.instance;
 		}
 
-		// Token: 0x06001608 RID: 5640 RVA: 0x00158F60 File Offset: 0x00157160
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x06001609 RID: 5641 RVA: 0x00158F74 File Offset: 0x00157174
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1040, 5, 5, UserActivateManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -31,25 +31,25 @@ namespace GameServer.Logic.UserActivate
 			return true;
 		}
 
-		// Token: 0x0600160A RID: 5642 RVA: 0x00158FB8 File Offset: 0x001571B8
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x0600160B RID: 5643 RVA: 0x00158FCC File Offset: 0x001571CC
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600160C RID: 5644 RVA: 0x00158FE0 File Offset: 0x001571E0
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return true;
 		}
 
-		// Token: 0x0600160D RID: 5645 RVA: 0x00158FF4 File Offset: 0x001571F4
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -68,7 +68,7 @@ namespace GameServer.Logic.UserActivate
 			return result;
 		}
 
-		// Token: 0x0600160E RID: 5646 RVA: 0x0015903C File Offset: 0x0015723C
+		
 		private bool ProcessCmdActivateInfo(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -115,7 +115,7 @@ namespace GameServer.Logic.UserActivate
 			return false;
 		}
 
-		// Token: 0x0600160F RID: 5647 RVA: 0x00159194 File Offset: 0x00157394
+		
 		private bool ProcessCmdActivateAward(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -140,7 +140,7 @@ namespace GameServer.Logic.UserActivate
 			return false;
 		}
 
-		// Token: 0x06001610 RID: 5648 RVA: 0x0015923C File Offset: 0x0015743C
+		
 		private UserActivateManager.EUserActivateState ActivateAward(GameClient client, int roleId, string userID, int activateType, string activateInfo, string error)
 		{
 			string checkInfo = this.GetCheckInfo(userID, error, activateType);
@@ -196,7 +196,7 @@ namespace GameServer.Logic.UserActivate
 			return result;
 		}
 
-		// Token: 0x06001611 RID: 5649 RVA: 0x001593FC File Offset: 0x001575FC
+		
 		private string GetCheckInfo(string userID, string error, int activateType)
 		{
 			userID = userID.ToLower().Replace("apps", "");
@@ -212,7 +212,7 @@ namespace GameServer.Logic.UserActivate
 			return result.ToLower();
 		}
 
-		// Token: 0x06001612 RID: 5650 RVA: 0x00159460 File Offset: 0x00157660
+		
 		private List<GoodsData> GetAwardList()
 		{
 			List<GoodsData> list = new List<GoodsData>();
@@ -237,7 +237,7 @@ namespace GameServer.Logic.UserActivate
 			return result;
 		}
 
-		// Token: 0x06001613 RID: 5651 RVA: 0x001594D0 File Offset: 0x001576D0
+		
 		private int DBActivateStateGet(GameClient client)
 		{
 			int result = 0;
@@ -250,7 +250,7 @@ namespace GameServer.Logic.UserActivate
 			return result;
 		}
 
-		// Token: 0x06001614 RID: 5652 RVA: 0x00159528 File Offset: 0x00157728
+		
 		private bool DBActivateStateSet(GameClient client)
 		{
 			bool result = false;
@@ -263,31 +263,31 @@ namespace GameServer.Logic.UserActivate
 			return result;
 		}
 
-		// Token: 0x04001F78 RID: 8056
+		
 		private static UserActivateManager instance = new UserActivateManager();
 
-		// Token: 0x020004A2 RID: 1186
+		
 		private enum EUserActivateState
 		{
-			// Token: 0x04001F7A RID: 8058
+			
 			NotOpen = -8,
-			// Token: 0x04001F7B RID: 8059
+			
 			EnoBind,
-			// Token: 0x04001F7C RID: 8060
+			
 			EBag,
-			// Token: 0x04001F7D RID: 8061
+			
 			ENoAward,
-			// Token: 0x04001F7E RID: 8062
+			
 			EFail,
-			// Token: 0x04001F7F RID: 8063
+			
 			EIsAward,
-			// Token: 0x04001F80 RID: 8064
+			
 			EPlatform,
-			// Token: 0x04001F81 RID: 8065
+			
 			ECheck,
-			// Token: 0x04001F82 RID: 8066
+			
 			Default,
-			// Token: 0x04001F83 RID: 8067
+			
 			Success
 		}
 	}

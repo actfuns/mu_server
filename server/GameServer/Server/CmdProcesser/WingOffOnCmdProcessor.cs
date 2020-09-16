@@ -4,10 +4,10 @@ using GameServer.Logic.MUWings;
 
 namespace GameServer.Server.CmdProcesser
 {
-	// Token: 0x020008AC RID: 2220
+	
 	public class WingOffOnCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x06003D9F RID: 15775 RVA: 0x00349DEF File Offset: 0x00347FEF
+		
 		private WingOffOnCmdProcessor()
 		{
 			WingStarCacheManager.LoadWingStarItems();
@@ -15,13 +15,13 @@ namespace GameServer.Server.CmdProcesser
 			TCPCmdDispatcher.getInstance().registerProcessor(610, 1, this);
 		}
 
-		// Token: 0x06003DA0 RID: 15776 RVA: 0x00349E18 File Offset: 0x00348018
+		
 		public static WingOffOnCmdProcessor getInstance()
 		{
 			return WingOffOnCmdProcessor.instance;
 		}
 
-		// Token: 0x06003DA1 RID: 15777 RVA: 0x00349E30 File Offset: 0x00348030
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			int nID = 610;
@@ -63,7 +63,7 @@ namespace GameServer.Server.CmdProcesser
 			return result;
 		}
 
-		// Token: 0x040047BD RID: 18365
+		
 		private static WingOffOnCmdProcessor instance = new WingOffOnCmdProcessor();
 	}
 }

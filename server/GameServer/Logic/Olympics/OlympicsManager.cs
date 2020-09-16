@@ -16,23 +16,23 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic.Olympics
 {
-	// Token: 0x02000397 RID: 919
+	
 	public class OlympicsManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListenerEx
 	{
-		// Token: 0x06000F85 RID: 3973 RVA: 0x000F3178 File Offset: 0x000F1378
+		
 		public static OlympicsManager getInstance()
 		{
 			return OlympicsManager.instance;
 		}
 
-		// Token: 0x06000F86 RID: 3974 RVA: 0x000F3190 File Offset: 0x000F1390
+		
 		public bool initialize()
 		{
 			this.InitOlympics();
 			return true;
 		}
 
-		// Token: 0x06000F87 RID: 3975 RVA: 0x000F31AC File Offset: 0x000F13AC
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1050, 1, 1, OlympicsManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -50,25 +50,25 @@ namespace GameServer.Logic.Olympics
 			return true;
 		}
 
-		// Token: 0x06000F88 RID: 3976 RVA: 0x000F32E0 File Offset: 0x000F14E0
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000F89 RID: 3977 RVA: 0x000F32F4 File Offset: 0x000F14F4
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000F8A RID: 3978 RVA: 0x000F3308 File Offset: 0x000F1508
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return true;
 		}
 
-		// Token: 0x06000F8B RID: 3979 RVA: 0x000F331C File Offset: 0x000F151C
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			switch (nID)
@@ -99,13 +99,13 @@ namespace GameServer.Logic.Olympics
 			return true;
 		}
 
-		// Token: 0x06000F8C RID: 3980 RVA: 0x000F3412 File Offset: 0x000F1612
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x06000F8D RID: 3981 RVA: 0x000F341C File Offset: 0x000F161C
+		
 		private bool ProcessOlympicsGradeCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -130,7 +130,7 @@ namespace GameServer.Logic.Olympics
 			return false;
 		}
 
-		// Token: 0x06000F8E RID: 3982 RVA: 0x000F34A8 File Offset: 0x000F16A8
+		
 		private bool ProcessOlympicsGameCountCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -185,7 +185,7 @@ namespace GameServer.Logic.Olympics
 			return false;
 		}
 
-		// Token: 0x06000F8F RID: 3983 RVA: 0x000F365C File Offset: 0x000F185C
+		
 		private bool ProcessOlympicsGameBeginCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -209,7 +209,7 @@ namespace GameServer.Logic.Olympics
 			return false;
 		}
 
-		// Token: 0x06000F90 RID: 3984 RVA: 0x000F3710 File Offset: 0x000F1910
+		
 		private string OlympicsGameBegin(GameClient client, EGameType gameType)
 		{
 			string result = "{0}:{1}:{2}:{3}:{4}";
@@ -298,7 +298,7 @@ namespace GameServer.Logic.Olympics
 			return result2;
 		}
 
-		// Token: 0x06000F91 RID: 3985 RVA: 0x000F39F4 File Offset: 0x000F1BF4
+		
 		private bool ProcessOlympicsGameOperateCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			string result = "{0}:{1}:{2}";
@@ -399,7 +399,7 @@ namespace GameServer.Logic.Olympics
 			return false;
 		}
 
-		// Token: 0x06000F92 RID: 3986 RVA: 0x000F3DB4 File Offset: 0x000F1FB4
+		
 		private bool ProcessOlympicsGuessSubCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -452,7 +452,7 @@ namespace GameServer.Logic.Olympics
 			return false;
 		}
 
-		// Token: 0x06000F93 RID: 3987 RVA: 0x000F3F38 File Offset: 0x000F2138
+		
 		private bool ProcessOlympicsGuessListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -494,7 +494,7 @@ namespace GameServer.Logic.Olympics
 			return false;
 		}
 
-		// Token: 0x06000F94 RID: 3988 RVA: 0x000F4074 File Offset: 0x000F2274
+		
 		private bool ProcessOlympicsRankCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -539,7 +539,7 @@ namespace GameServer.Logic.Olympics
 			return false;
 		}
 
-		// Token: 0x06000F95 RID: 3989 RVA: 0x000F41E8 File Offset: 0x000F23E8
+		
 		private bool ProcessOlympicsShopListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -566,7 +566,7 @@ namespace GameServer.Logic.Olympics
 			return false;
 		}
 
-		// Token: 0x06000F96 RID: 3990 RVA: 0x000F428C File Offset: 0x000F248C
+		
 		private bool ProcessOlympicsShopBuyCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result2;
@@ -720,7 +720,7 @@ namespace GameServer.Logic.Olympics
 			return result2;
 		}
 
-		// Token: 0x06000F97 RID: 3991 RVA: 0x000F4830 File Offset: 0x000F2A30
+		
 		private bool ProcessOlympicsAwardStateCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -785,7 +785,7 @@ namespace GameServer.Logic.Olympics
 			return false;
 		}
 
-		// Token: 0x06000F98 RID: 3992 RVA: 0x000F4A1C File Offset: 0x000F2C1C
+		
 		private bool ProcessOlympicsAwardCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -836,7 +836,7 @@ namespace GameServer.Logic.Olympics
 			return false;
 		}
 
-		// Token: 0x06000F99 RID: 3993 RVA: 0x000F4BB4 File Offset: 0x000F2DB4
+		
 		private List<OlympicsGuessData> GetOlympicsGuessList(OlympicsGuessDataDB answerData)
 		{
 			IOrderedEnumerable<OlympicsGuessData> temp = from info in this._guessDic.Values
@@ -871,7 +871,7 @@ namespace GameServer.Logic.Olympics
 			return result;
 		}
 
-		// Token: 0x06000F9A RID: 3994 RVA: 0x000F4D38 File Offset: 0x000F2F38
+		
 		private List<OlympicsShopData> GetOlympicsShopList(int day, Dictionary<int, int> myCountDic)
 		{
 			IOrderedEnumerable<OlympicsShopData> temp = from info in this._shopDic.Values
@@ -900,7 +900,7 @@ namespace GameServer.Logic.Olympics
 			return result;
 		}
 
-		// Token: 0x06000F9B RID: 3995 RVA: 0x000F4E54 File Offset: 0x000F3054
+		
 		private EOperateType OlympicAwardGuess(GameClient client, out int awardID)
 		{
 			awardID = 0;
@@ -953,7 +953,7 @@ namespace GameServer.Logic.Olympics
 			return EOperateType.Succ;
 		}
 
-		// Token: 0x06000F9C RID: 3996 RVA: 0x000F5158 File Offset: 0x000F3358
+		
 		private EOperateType OlympicAwardRank(GameClient client, out int awardID, out int rankOut)
 		{
 			awardID = 0;
@@ -1008,7 +1008,7 @@ namespace GameServer.Logic.Olympics
 			return result;
 		}
 
-		// Token: 0x06000F9D RID: 3997 RVA: 0x000F5394 File Offset: 0x000F3594
+		
 		private void JudgeClearOlympicsActivityData(GameClient client)
 		{
 			if (this._olympicsIsOpen)
@@ -1030,7 +1030,7 @@ namespace GameServer.Logic.Olympics
 			}
 		}
 
-		// Token: 0x06000F9E RID: 3998 RVA: 0x000F543C File Offset: 0x000F363C
+		
 		private string OlympicsGradeGet(GameClient client)
 		{
 			string grade = Global.GetRoleParamByName(client, "20010");
@@ -1047,7 +1047,7 @@ namespace GameServer.Logic.Olympics
 			return result;
 		}
 
-		// Token: 0x06000F9F RID: 3999 RVA: 0x000F5484 File Offset: 0x000F3684
+		
 		private void OlympicsGradeSet(GameClient client, int gradeAll, int gradeLeft)
 		{
 			string value = string.Format("{0},{1}", gradeAll, gradeLeft);
@@ -1055,7 +1055,7 @@ namespace GameServer.Logic.Olympics
 			client.sendCmd(1050, string.Format("{0}:{1}", gradeAll, gradeLeft), false);
 		}
 
-		// Token: 0x06000FA0 RID: 4000 RVA: 0x000F54DC File Offset: 0x000F36DC
+		
 		public void OlympicsGradeAdd(GameClient client, int addGrade)
 		{
 			if (this._olympicsIsOpen && !this.IsRankAwardTime())
@@ -1071,7 +1071,7 @@ namespace GameServer.Logic.Olympics
 			}
 		}
 
-		// Token: 0x06000FA1 RID: 4001 RVA: 0x000F5580 File Offset: 0x000F3780
+		
 		private int[] OlympicsGameCountGet(GameClient client, EGameType gameType)
 		{
 			string oldValue = "";
@@ -1100,7 +1100,7 @@ namespace GameServer.Logic.Olympics
 			return result;
 		}
 
-		// Token: 0x06000FA2 RID: 4002 RVA: 0x000F55FC File Offset: 0x000F37FC
+		
 		private void OlympicsGameCountSet(GameClient client, EGameType gameType, string value)
 		{
 			switch (gameType)
@@ -1114,7 +1114,7 @@ namespace GameServer.Logic.Olympics
 			}
 		}
 
-		// Token: 0x06000FA3 RID: 4003 RVA: 0x000F5640 File Offset: 0x000F3840
+		
 		private Dictionary<int, int> OlympicsShopCountGet(GameClient client, int dayID)
 		{
 			Dictionary<int, int> result = new Dictionary<int, int>();
@@ -1152,7 +1152,7 @@ namespace GameServer.Logic.Olympics
 			return result2;
 		}
 
-		// Token: 0x06000FA4 RID: 4004 RVA: 0x000F5710 File Offset: 0x000F3910
+		
 		private void OlympicsShopCountSet(GameClient client, int dayID, Dictionary<int, int> dic)
 		{
 			StringBuilder sb = new StringBuilder();
@@ -1170,39 +1170,39 @@ namespace GameServer.Logic.Olympics
 			Global.SaveRoleParamsStringToDB(client, "20013", string.Format("{0}*{1}", dayID, sb.ToString()), true);
 		}
 
-		// Token: 0x06000FA5 RID: 4005 RVA: 0x000F57D8 File Offset: 0x000F39D8
+		
 		private Dictionary<int, int> DBOlympicsShopList(int dayID)
 		{
 			return Global.sendToDB<Dictionary<int, int>, int>(13124, dayID, GameManager.ServerId);
 		}
 
-		// Token: 0x06000FA6 RID: 4006 RVA: 0x000F57FC File Offset: 0x000F39FC
+		
 		private bool DBOlympicsShopUpdate(int dayID, int shopID, int count)
 		{
 			string cmd2db = string.Format("{0}:{1}:{2}", dayID, shopID, count);
 			return Global.sendToDB<bool, string>(13125, cmd2db, GameManager.ServerId);
 		}
 
-		// Token: 0x06000FA7 RID: 4007 RVA: 0x000F583C File Offset: 0x000F3A3C
+		
 		private OlympicsGuessDataDB DBOlympicsGuess(GameClient client, int dayID)
 		{
 			string cmd2db = string.Format("{0}:{1}", client.ClientData.RoleID, dayID);
 			return Global.sendToDB<OlympicsGuessDataDB, string>(13126, cmd2db, GameManager.ServerId);
 		}
 
-		// Token: 0x06000FA8 RID: 4008 RVA: 0x000F5880 File Offset: 0x000F3A80
+		
 		private List<OlympicsGuessDataDB> DBOlympicsGuessList(GameClient client)
 		{
 			return Global.sendToDB<List<OlympicsGuessDataDB>, int>(13127, client.ClientData.RoleID, GameManager.ServerId);
 		}
 
-		// Token: 0x06000FA9 RID: 4009 RVA: 0x000F58AC File Offset: 0x000F3AAC
+		
 		private bool DBOlympicsGuessUpdate(GameClient client, OlympicsGuessDataDB data)
 		{
 			return Global.sendToDB<bool, OlympicsGuessDataDB>(13128, data, GameManager.ServerId);
 		}
 
-		// Token: 0x06000FAA RID: 4010 RVA: 0x000F58D0 File Offset: 0x000F3AD0
+		
 		public void CheckOlympicsOpenState(long ticks, bool changeDay = false)
 		{
 			if (changeDay || ticks - this._lastTicks >= 10000L)
@@ -1235,13 +1235,13 @@ namespace GameServer.Logic.Olympics
 			}
 		}
 
-		// Token: 0x06000FAB RID: 4011 RVA: 0x000F5A20 File Offset: 0x000F3C20
+		
 		private int TransformOffsetDayToFromBegin(int OffsetDay)
 		{
 			return OffsetDay - Global.GetOffsetDay(this.timeBegin);
 		}
 
-		// Token: 0x06000FAC RID: 4012 RVA: 0x000F5A40 File Offset: 0x000F3C40
+		
 		private int GetOlympicsDay()
 		{
 			int day = 0;
@@ -1252,7 +1252,7 @@ namespace GameServer.Logic.Olympics
 			return day;
 		}
 
-		// Token: 0x06000FAD RID: 4013 RVA: 0x000F5A88 File Offset: 0x000F3C88
+		
 		private int GetOlympicsDayFromBegin()
 		{
 			int day = 0;
@@ -1263,7 +1263,7 @@ namespace GameServer.Logic.Olympics
 			return day;
 		}
 
-		// Token: 0x06000FAE RID: 4014 RVA: 0x000F5ADC File Offset: 0x000F3CDC
+		
 		public void InitOlympics()
 		{
 			lock (this._mutex)
@@ -1306,19 +1306,19 @@ namespace GameServer.Logic.Olympics
 			}
 		}
 
-		// Token: 0x06000FAF RID: 4015 RVA: 0x000F5C60 File Offset: 0x000F3E60
+		
 		private bool IsRankAwardTime()
 		{
 			return TimeUtil.NowDateTime() >= this.timeAwardBegin && TimeUtil.NowDateTime() < this.timeAwardEnd;
 		}
 
-		// Token: 0x06000FB0 RID: 4016 RVA: 0x000F5CA4 File Offset: 0x000F3EA4
+		
 		private double GetFootballRate()
 		{
 			return GameManager.systemParamsList.GetParamValueDoubleByName("AoYunGoalOdds", 0.0);
 		}
 
-		// Token: 0x06000FB1 RID: 4017 RVA: 0x000F5CD0 File Offset: 0x000F3ED0
+		
 		private void InitOlympicsGame()
 		{
 			lock (this._mutex)
@@ -1366,7 +1366,7 @@ namespace GameServer.Logic.Olympics
 			}
 		}
 
-		// Token: 0x06000FB2 RID: 4018 RVA: 0x000F5F48 File Offset: 0x000F4148
+		
 		private void InitOlympicsGuess()
 		{
 			lock (this._mutex)
@@ -1406,7 +1406,7 @@ namespace GameServer.Logic.Olympics
 			}
 		}
 
-		// Token: 0x06000FB3 RID: 4019 RVA: 0x000F6198 File Offset: 0x000F4398
+		
 		private void InitOlympicsRankAward()
 		{
 			lock (this._mutex)
@@ -1456,7 +1456,7 @@ namespace GameServer.Logic.Olympics
 			}
 		}
 
-		// Token: 0x06000FB4 RID: 4020 RVA: 0x000F63C0 File Offset: 0x000F45C0
+		
 		private void InitOlympicsShop()
 		{
 			lock (this._mutex)
@@ -1497,7 +1497,7 @@ namespace GameServer.Logic.Olympics
 			}
 		}
 
-		// Token: 0x06000FB5 RID: 4021 RVA: 0x000F65E4 File Offset: 0x000F47E4
+		
 		private OlympicsShopData GetOlympicsShopData(int id)
 		{
 			OlympicsShopData result;
@@ -1512,7 +1512,7 @@ namespace GameServer.Logic.Olympics
 			return result;
 		}
 
-		// Token: 0x06000FB6 RID: 4022 RVA: 0x000F661C File Offset: 0x000F481C
+		
 		public void CheckTip(GameClient client)
 		{
 			if (!this._olympicsIsOpen || this.IsRankAwardTime())
@@ -1552,55 +1552,55 @@ namespace GameServer.Logic.Olympics
 			}
 		}
 
-		// Token: 0x0400182D RID: 6189
+		
 		private const int OLYMPICS_GUESS_COUNT = 3;
 
-		// Token: 0x0400182E RID: 6190
+		
 		private const int OLYMPICS_RANK_MAX = 50001;
 
-		// Token: 0x0400182F RID: 6191
+		
 		public const int _sceneType = 10006;
 
-		// Token: 0x04001830 RID: 6192
+		
 		public object _mutex = new object();
 
-		// Token: 0x04001831 RID: 6193
+		
 		private DateTime timeBegin = DateTime.MinValue;
 
-		// Token: 0x04001832 RID: 6194
+		
 		private DateTime timeEnd = DateTime.MinValue;
 
-		// Token: 0x04001833 RID: 6195
+		
 		private DateTime timeAwardBegin = DateTime.MinValue;
 
-		// Token: 0x04001834 RID: 6196
+		
 		private DateTime timeAwardEnd = DateTime.MinValue;
 
-		// Token: 0x04001835 RID: 6197
+		
 		private static OlympicsManager instance = new OlympicsManager();
 
-		// Token: 0x04001836 RID: 6198
+		
 		private long _lastTicks = 0L;
 
-		// Token: 0x04001837 RID: 6199
+		
 		private bool _olympicsIsOpen = false;
 
-		// Token: 0x04001838 RID: 6200
+		
 		private DateTime _olympicsOpenTime = DateTime.MinValue;
 
-		// Token: 0x04001839 RID: 6201
+		
 		private Dictionary<int, int> _shopCountDic = new Dictionary<int, int>();
 
-		// Token: 0x0400183A RID: 6202
+		
 		private Dictionary<int, OlympicsGameInfo> _gameDic = new Dictionary<int, OlympicsGameInfo>();
 
-		// Token: 0x0400183B RID: 6203
+		
 		private Dictionary<int, OlympicsGuessData> _guessDic = new Dictionary<int, OlympicsGuessData>();
 
-		// Token: 0x0400183C RID: 6204
+		
 		private List<OlympicsRankAwardInfo> _rankAwardList = new List<OlympicsRankAwardInfo>();
 
-		// Token: 0x0400183D RID: 6205
+		
 		private Dictionary<int, OlympicsShopData> _shopDic = new Dictionary<int, OlympicsShopData>();
 	}
 }

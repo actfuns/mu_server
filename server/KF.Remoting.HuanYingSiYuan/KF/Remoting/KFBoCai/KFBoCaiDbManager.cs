@@ -7,10 +7,10 @@ using Tmsk.Contract.KuaFuData;
 
 namespace KF.Remoting.KFBoCai
 {
-	// Token: 0x0200002D RID: 45
+	
 	public class KFBoCaiDbManager
 	{
-		// Token: 0x0600020F RID: 527 RVA: 0x0001F76C File Offset: 0x0001D96C
+		
 		public static bool InserOpenLottery(OpenLottery data)
 		{
 			try
@@ -34,7 +34,7 @@ namespace KF.Remoting.KFBoCai
 			return false;
 		}
 
-		// Token: 0x06000210 RID: 528 RVA: 0x0001F81C File Offset: 0x0001DA1C
+		
 		public static void SelectOpenLottery(long DataPeriods, int BocaiType, out OpenLottery data)
 		{
 			data = null;
@@ -68,7 +68,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x06000211 RID: 529 RVA: 0x0001F940 File Offset: 0x0001DB40
+		
 		public static void SelectOpenLottery(int BocaiType, string cmd, out List<OpenLottery> dList)
 		{
 			dList = null;
@@ -104,7 +104,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x06000212 RID: 530 RVA: 0x0001FA78 File Offset: 0x0001DC78
+		
 		public static long GetMaxPeriods(int BocaiType)
 		{
 			try
@@ -123,7 +123,7 @@ namespace KF.Remoting.KFBoCai
 			return -1L;
 		}
 
-		// Token: 0x06000213 RID: 531 RVA: 0x0001FAE0 File Offset: 0x0001DCE0
+		
 		public static bool InsertLotteryHistory(BoCaiTypeEnum BocaiType, KFBoCaoHistoryData History)
 		{
 			try
@@ -149,7 +149,7 @@ namespace KF.Remoting.KFBoCai
 			return false;
 		}
 
-		// Token: 0x06000214 RID: 532 RVA: 0x0001FBAC File Offset: 0x0001DDAC
+		
 		public static void LoadLotteryHistory(BoCaiTypeEnum BocaiType, out List<KFBoCaoHistoryData> HistoryList, string cmd = "")
 		{
 			MySqlDataReader sdr = null;
@@ -185,7 +185,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x06000215 RID: 533 RVA: 0x0001FD20 File Offset: 0x0001DF20
+		
 		public static bool InserBuyBocai(long DataPeriods, KFBuyBocaiData buyDaya)
 		{
 			try
@@ -210,7 +210,7 @@ namespace KF.Remoting.KFBoCai
 			return false;
 		}
 
-		// Token: 0x06000216 RID: 534 RVA: 0x0001FDD8 File Offset: 0x0001DFD8
+		
 		public static bool UpdateBuyBocai(long DataPeriods, KFBuyBocaiData buyDaya)
 		{
 			try
@@ -233,7 +233,7 @@ namespace KF.Remoting.KFBoCai
 			return false;
 		}
 
-		// Token: 0x06000217 RID: 535 RVA: 0x0001FE78 File Offset: 0x0001E078
+		
 		public static bool LoadBuyHistory(int BocaiType, long DataPeriods, out List<KFBuyBocaiData> HistoryList)
 		{
 			bool flag = false;
@@ -271,7 +271,7 @@ namespace KF.Remoting.KFBoCai
 			return flag;
 		}
 
-		// Token: 0x06000218 RID: 536 RVA: 0x0001FFC8 File Offset: 0x0001E1C8
+		
 		public static bool ReplaceBoCaiShop(KFBoCaiShopDB data)
 		{
 			try
@@ -292,7 +292,7 @@ namespace KF.Remoting.KFBoCai
 			return false;
 		}
 
-		// Token: 0x06000219 RID: 537 RVA: 0x00020054 File Offset: 0x0001E254
+		
 		public static void SelectBoCaiShop(string Periods, out List<KFBoCaiShopDB> dList)
 		{
 			dList = null;
@@ -325,7 +325,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x0600021A RID: 538 RVA: 0x00020144 File Offset: 0x0001E344
+		
 		public static bool DelTableData(string table, string Sql)
 		{
 			try
@@ -340,7 +340,7 @@ namespace KF.Remoting.KFBoCai
 			return false;
 		}
 
-		// Token: 0x0600021B RID: 539 RVA: 0x00020194 File Offset: 0x0001E394
+		
 		public static void StopServer(string str)
 		{
 			LogManager.WriteLog(LogTypes.Error, str, null, true);
@@ -349,7 +349,7 @@ namespace KF.Remoting.KFBoCai
 			Console.ReadKey();
 		}
 
-		// Token: 0x0600021C RID: 540 RVA: 0x000201CC File Offset: 0x0001E3CC
+		
 		public static string ListInt2String(List<int> iList)
 		{
 			string str = "";
@@ -374,7 +374,7 @@ namespace KF.Remoting.KFBoCai
 			return str;
 		}
 
-		// Token: 0x0600021D RID: 541 RVA: 0x00020284 File Offset: 0x0001E484
+		
 		public static void String2ListInt(string str, out List<int> iList)
 		{
 			iList = new List<int>();
@@ -395,7 +395,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x04000133 RID: 307
+		
 		private const int result = -1;
 	}
 }

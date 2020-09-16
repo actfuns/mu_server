@@ -3,17 +3,17 @@ using GameServer.Server;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000779 RID: 1913
+	
 	public class PorcessCmdMoniter
 	{
-		// Token: 0x06003110 RID: 12560 RVA: 0x002B7644 File Offset: 0x002B5844
+		
 		public PorcessCmdMoniter(int cmd, long processTime)
 		{
 			this.cmd = cmd;
 			this.processMaxTime = processTime;
 		}
 
-		// Token: 0x06003111 RID: 12561 RVA: 0x002B76A8 File Offset: 0x002B58A8
+		
 		public void Reset()
 		{
 			lock (this)
@@ -29,7 +29,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003112 RID: 12562 RVA: 0x002B7728 File Offset: 0x002B5928
+		
 		public void onProcess(long processTime, long waitTime)
 		{
 			lock (this)
@@ -42,13 +42,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003113 RID: 12563 RVA: 0x002B77C4 File Offset: 0x002B59C4
+		
 		public long avgWaitProcessTime()
 		{
 			return (this.processNum > 0) ? (this.waitProcessTotalTime / (long)this.processNum) : 0L;
 		}
 
-		// Token: 0x06003114 RID: 12564 RVA: 0x002B77F4 File Offset: 0x002B59F4
+		
 		public void onProcessNoWait(long processTime, long dataSize, TCPProcessCmdResults result)
 		{
 			lock (this)
@@ -75,7 +75,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003115 RID: 12565 RVA: 0x002B78C0 File Offset: 0x002B5AC0
+		
 		public void OnOutputData(long dataSize)
 		{
 			lock (this)
@@ -85,7 +85,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003116 RID: 12566 RVA: 0x002B7920 File Offset: 0x002B5B20
+		
 		public long avgProcessTime()
 		{
 			int num = this.processNum;
@@ -101,46 +101,46 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003117 RID: 12567 RVA: 0x002B7954 File Offset: 0x002B5B54
+		
 		public long GetTotalBytes()
 		{
 			return this.TotalBytes;
 		}
 
-		// Token: 0x04003D90 RID: 15760
+		
 		public int cmd;
 
-		// Token: 0x04003D91 RID: 15761
+		
 		public int processNum = 0;
 
-		// Token: 0x04003D92 RID: 15762
+		
 		public long processTotalTime = 0L;
 
-		// Token: 0x04003D93 RID: 15763
+		
 		public long processMaxTime = 0L;
 
-		// Token: 0x04003D94 RID: 15764
+		
 		public long waitProcessTotalTime = 0L;
 
-		// Token: 0x04003D95 RID: 15765
+		
 		public long maxWaitProcessTime = 0L;
 
-		// Token: 0x04003D96 RID: 15766
+		
 		public long TotalBytes = 0L;
 
-		// Token: 0x04003D97 RID: 15767
+		
 		public long SendNum = 0L;
 
-		// Token: 0x04003D98 RID: 15768
+		
 		public long OutPutBytes = 0L;
 
-		// Token: 0x04003D99 RID: 15769
+		
 		public long Num_Faild;
 
-		// Token: 0x04003D9A RID: 15770
+		
 		public long Num_OK;
 
-		// Token: 0x04003D9B RID: 15771
+		
 		public long Num_WithData;
 	}
 }

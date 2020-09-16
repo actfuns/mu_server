@@ -7,10 +7,10 @@ using System.Data.OracleClient;
 
 namespace Maticsoft.DBUtility
 {
-	// Token: 0x02000050 RID: 80
+	
 	public abstract class OracleHelper
 	{
-		// Token: 0x060003A6 RID: 934 RVA: 0x00030DD8 File Offset: 0x0002EFD8
+		
 		public static int ExecuteNonQuery(string connectionString, CommandType cmdType, string cmdText, params OracleParameter[] commandParameters)
 		{
 			OracleCommand cmd = new OracleCommand();
@@ -26,7 +26,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x060003A7 RID: 935 RVA: 0x00030E44 File Offset: 0x0002F044
+		
 		public static DataSet Query(string connectionString, string SQLString)
 		{
 			DataSet result;
@@ -55,7 +55,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x060003A8 RID: 936 RVA: 0x00030EF0 File Offset: 0x0002F0F0
+		
 		public static DataSet Query(string connectionString, string SQLString, params OracleParameter[] cmdParms)
 		{
 			DataSet result;
@@ -88,7 +88,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x060003A9 RID: 937 RVA: 0x00030FD4 File Offset: 0x0002F1D4
+		
 		private static void PrepareCommand(OracleCommand cmd, OracleConnection conn, OracleTransaction trans, string cmdText, OracleParameter[] cmdParms)
 		{
 			if (conn.State != ConnectionState.Open)
@@ -115,7 +115,7 @@ namespace Maticsoft.DBUtility
 			}
 		}
 
-		// Token: 0x060003AA RID: 938 RVA: 0x00031088 File Offset: 0x0002F288
+		
 		public static object GetSingle(string connectionString, string SQLString)
 		{
 			object result;
@@ -152,7 +152,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x060003AB RID: 939 RVA: 0x00031168 File Offset: 0x0002F368
+		
 		public static bool Exists(string connectionString, string strOracle)
 		{
 			object obj = OracleHelper.GetSingle(connectionString, strOracle);
@@ -168,7 +168,7 @@ namespace Maticsoft.DBUtility
 			return cmdresult != 0;
 		}
 
-		// Token: 0x060003AC RID: 940 RVA: 0x000311C8 File Offset: 0x0002F3C8
+		
 		public static int ExecuteNonQuery(OracleTransaction trans, CommandType cmdType, string cmdText, params OracleParameter[] commandParameters)
 		{
 			OracleCommand cmd = new OracleCommand();
@@ -178,7 +178,7 @@ namespace Maticsoft.DBUtility
 			return val;
 		}
 
-		// Token: 0x060003AD RID: 941 RVA: 0x00031208 File Offset: 0x0002F408
+		
 		public static int ExecuteNonQuery(OracleConnection connection, CommandType cmdType, string cmdText, params OracleParameter[] commandParameters)
 		{
 			OracleCommand cmd = new OracleCommand();
@@ -188,7 +188,7 @@ namespace Maticsoft.DBUtility
 			return val;
 		}
 
-		// Token: 0x060003AE RID: 942 RVA: 0x00031240 File Offset: 0x0002F440
+		
 		public static int ExecuteNonQuery(string connectionString, string cmdText)
 		{
 			OracleCommand cmd = new OracleCommand();
@@ -199,7 +199,7 @@ namespace Maticsoft.DBUtility
 			return val;
 		}
 
-		// Token: 0x060003AF RID: 943 RVA: 0x00031280 File Offset: 0x0002F480
+		
 		public static OracleDataReader ExecuteReader(string connectionString, CommandType cmdType, string cmdText, params OracleParameter[] commandParameters)
 		{
 			OracleCommand cmd = new OracleCommand();
@@ -220,7 +220,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x060003B0 RID: 944 RVA: 0x000312E0 File Offset: 0x0002F4E0
+		
 		public static object ExecuteScalar(string connectionString, CommandType cmdType, string cmdText, params OracleParameter[] commandParameters)
 		{
 			OracleCommand cmd = new OracleCommand();
@@ -235,7 +235,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x060003B1 RID: 945 RVA: 0x00031344 File Offset: 0x0002F544
+		
 		public static object ExecuteScalar(OracleTransaction transaction, CommandType commandType, string commandText, params OracleParameter[] commandParameters)
 		{
 			if (transaction == null)
@@ -253,7 +253,7 @@ namespace Maticsoft.DBUtility
 			return retval;
 		}
 
-		// Token: 0x060003B2 RID: 946 RVA: 0x000313C0 File Offset: 0x0002F5C0
+		
 		public static object ExecuteScalar(OracleConnection connectionString, CommandType cmdType, string cmdText, params OracleParameter[] commandParameters)
 		{
 			OracleCommand cmd = new OracleCommand();
@@ -263,13 +263,13 @@ namespace Maticsoft.DBUtility
 			return val;
 		}
 
-		// Token: 0x060003B3 RID: 947 RVA: 0x000313F8 File Offset: 0x0002F5F8
+		
 		public static void CacheParameters(string cacheKey, params OracleParameter[] commandParameters)
 		{
 			OracleHelper.parmCache[cacheKey] = commandParameters;
 		}
 
-		// Token: 0x060003B4 RID: 948 RVA: 0x00031408 File Offset: 0x0002F608
+		
 		public static OracleParameter[] GetCachedParameters(string cacheKey)
 		{
 			OracleParameter[] cachedParms = (OracleParameter[])OracleHelper.parmCache[cacheKey];
@@ -293,7 +293,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x060003B5 RID: 949 RVA: 0x00031470 File Offset: 0x0002F670
+		
 		private static void PrepareCommand(OracleCommand cmd, OracleConnection conn, OracleTransaction trans, CommandType cmdType, string cmdText, OracleParameter[] commandParameters)
 		{
 			if (conn.State != ConnectionState.Open)
@@ -316,7 +316,7 @@ namespace Maticsoft.DBUtility
 			}
 		}
 
-		// Token: 0x060003B6 RID: 950 RVA: 0x000314F0 File Offset: 0x0002F6F0
+		
 		public static string OraBit(bool value)
 		{
 			string result;
@@ -331,13 +331,13 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x060003B7 RID: 951 RVA: 0x00031518 File Offset: 0x0002F718
+		
 		public static bool OraBool(string value)
 		{
 			return value.Equals("Y");
 		}
 
-		// Token: 0x060003B8 RID: 952 RVA: 0x00031544 File Offset: 0x0002F744
+		
 		public static bool ExecuteSqlTran(string conStr, List<CommandInfo> cmdList)
 		{
 			bool result;
@@ -408,7 +408,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x060003B9 RID: 953 RVA: 0x000317F0 File Offset: 0x0002F9F0
+		
 		public static void ExecuteSqlTran(string conStr, List<string> SQLStringList)
 		{
 			using (OracleConnection conn = new OracleConnection(conStr))
@@ -445,22 +445,22 @@ namespace Maticsoft.DBUtility
 			}
 		}
 
-		// Token: 0x040001F0 RID: 496
+		
 		public static readonly string ConnectionStringLocalTransaction = ConfigurationManager.AppSettings["OraConnString1"];
 
-		// Token: 0x040001F1 RID: 497
+		
 		public static readonly string ConnectionStringInventoryDistributedTransaction = ConfigurationManager.AppSettings["OraConnString2"];
 
-		// Token: 0x040001F2 RID: 498
+		
 		public static readonly string ConnectionStringOrderDistributedTransaction = ConfigurationManager.AppSettings["OraConnString3"];
 
-		// Token: 0x040001F3 RID: 499
+		
 		public static readonly string ConnectionStringProfile = ConfigurationManager.AppSettings["OraProfileConnString"];
 
-		// Token: 0x040001F4 RID: 500
+		
 		public static readonly string ConnectionStringMembership = ConfigurationManager.AppSettings["OraMembershipConnString"];
 
-		// Token: 0x040001F5 RID: 501
+		
 		private static Hashtable parmCache = Hashtable.Synchronized(new Hashtable());
 	}
 }

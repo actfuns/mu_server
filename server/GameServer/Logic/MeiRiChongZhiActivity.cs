@@ -4,10 +4,10 @@ using GameServer.Logic.ActivityNew;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200071A RID: 1818
+	
 	public class MeiRiChongZhiActivity : Activity
 	{
-		// Token: 0x06002B6F RID: 11119 RVA: 0x002682E8 File Offset: 0x002664E8
+		
 		public override AwardItem GetAward(GameClient client, int _params)
 		{
 			AwardItem result;
@@ -22,7 +22,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002B70 RID: 11120 RVA: 0x00268320 File Offset: 0x00266520
+		
 		public override List<int> GetAwardMinConditionlist()
 		{
 			List<int> cons = new List<int>();
@@ -37,7 +37,7 @@ namespace GameServer.Logic
 			return cons;
 		}
 
-		// Token: 0x06002B71 RID: 11121 RVA: 0x0026838C File Offset: 0x0026658C
+		
 		public int GetIDByYuanBao(int NeedYuanbao)
 		{
 			foreach (KeyValuePair<int, AwardItem> kvp in this.AwardDict)
@@ -50,7 +50,7 @@ namespace GameServer.Logic
 			return -1;
 		}
 
-		// Token: 0x06002B72 RID: 11122 RVA: 0x00268408 File Offset: 0x00266608
+		
 		public override bool GiveAward(GameClient client, int _params)
 		{
 			AwardItem myAwardItem = null;
@@ -78,7 +78,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002B73 RID: 11123 RVA: 0x002684A8 File Offset: 0x002666A8
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client, int nBtnIndex)
 		{
 			int needSpace = 0;
@@ -91,7 +91,7 @@ namespace GameServer.Logic
 			return Global.CanAddGoodsNum(client, needSpace);
 		}
 
-		// Token: 0x04003A59 RID: 14937
+		
 		public Dictionary<int, AwardItem> AwardDict = new Dictionary<int, AwardItem>();
 	}
 }

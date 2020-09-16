@@ -8,11 +8,11 @@ using Server.Tools;
 
 namespace Server.TCP
 {
-	// Token: 0x02000037 RID: 55
+	
 	public sealed class SocketListener
 	{
-		// Token: 0x1700001C RID: 28
-		// (get) Token: 0x06000122 RID: 290 RVA: 0x00006FE4 File Offset: 0x000051E4
+		
+		
 		public int ConnectedSocketsCount
 		{
 			get
@@ -23,8 +23,8 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x1700001D RID: 29
-		// (get) Token: 0x06000123 RID: 291 RVA: 0x00007008 File Offset: 0x00005208
+		
+		
 		public int TotalBytesReadSize
 		{
 			get
@@ -35,8 +35,8 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x1700001E RID: 30
-		// (get) Token: 0x06000124 RID: 292 RVA: 0x0000702C File Offset: 0x0000522C
+		
+		
 		public int TotalBytesWriteSize
 		{
 			get
@@ -47,27 +47,27 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x14000002 RID: 2
+		
 		// (add) Token: 0x06000125 RID: 293 RVA: 0x00007050 File Offset: 0x00005250
 		// (remove) Token: 0x06000126 RID: 294 RVA: 0x0000708C File Offset: 0x0000528C
 		public event SocketConnectedEventHandler SocketConnected = null;
 
-		// Token: 0x14000003 RID: 3
+		
 		// (add) Token: 0x06000127 RID: 295 RVA: 0x000070C8 File Offset: 0x000052C8
 		// (remove) Token: 0x06000128 RID: 296 RVA: 0x00007104 File Offset: 0x00005304
 		public event SocketClosedEventHandler SocketClosed = null;
 
-		// Token: 0x14000004 RID: 4
+		
 		// (add) Token: 0x06000129 RID: 297 RVA: 0x00007140 File Offset: 0x00005340
 		// (remove) Token: 0x0600012A RID: 298 RVA: 0x0000717C File Offset: 0x0000537C
 		public event SocketReceivedEventHandler SocketReceived = null;
 
-		// Token: 0x14000005 RID: 5
+		
 		// (add) Token: 0x0600012B RID: 299 RVA: 0x000071B8 File Offset: 0x000053B8
 		// (remove) Token: 0x0600012C RID: 300 RVA: 0x000071F4 File Offset: 0x000053F4
 		public event SocketSendedEventHandler SocketSended = null;
 
-		// Token: 0x0600012D RID: 301 RVA: 0x00007230 File Offset: 0x00005430
+		
 		internal SocketListener(int numConnections, int receiveBufferSize)
 		{
 			this.totalBytesRead = 0;
@@ -82,7 +82,7 @@ namespace Server.TCP
 			this.semaphoreAcceptedClients = new Semaphore(numConnections, numConnections);
 		}
 
-		// Token: 0x0600012E RID: 302 RVA: 0x000072C8 File Offset: 0x000054C8
+		
 		private void AddSocket(Socket socket)
 		{
 			lock (this.ConnectedSocketsDict)
@@ -91,7 +91,7 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x0600012F RID: 303 RVA: 0x0000731C File Offset: 0x0000551C
+		
 		private void RemoveSocket(Socket socket)
 		{
 			lock (this.ConnectedSocketsDict)
@@ -100,7 +100,7 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x06000130 RID: 304 RVA: 0x00007370 File Offset: 0x00005570
+		
 		private bool FindSocket(Socket socket)
 		{
 			bool ret = false;
@@ -111,7 +111,7 @@ namespace Server.TCP
 			return ret;
 		}
 
-		// Token: 0x06000131 RID: 305 RVA: 0x000073CC File Offset: 0x000055CC
+		
 		private void CloseClientSocket(SocketAsyncEventArgs e)
 		{
 			AsyncUserToken aut = e.UserToken as AsyncUserToken;
@@ -166,7 +166,7 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x06000132 RID: 306 RVA: 0x0000752C File Offset: 0x0000572C
+		
 		internal void Init()
 		{
 			this.bufferManager.InitBuffer();
@@ -195,7 +195,7 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x06000133 RID: 307 RVA: 0x00007614 File Offset: 0x00005814
+		
 		private void OnAcceptCompleted(object sender, SocketAsyncEventArgs e)
 		{
 			try
@@ -212,7 +212,7 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x06000134 RID: 308 RVA: 0x0000767C File Offset: 0x0000587C
+		
 		private void OnIOCompleted(object sender, SocketAsyncEventArgs e)
 		{
 			try
@@ -238,7 +238,7 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x06000135 RID: 309 RVA: 0x000076FC File Offset: 0x000058FC
+		
 		private bool _ReceiveAsync(SocketAsyncEventArgs readEventArgs)
 		{
 			bool result;
@@ -256,7 +256,7 @@ namespace Server.TCP
 			return result;
 		}
 
-		// Token: 0x06000136 RID: 310 RVA: 0x00007760 File Offset: 0x00005960
+		
 		private bool _SendAsync(SocketAsyncEventArgs writeEventArgs, out bool exception)
 		{
 			exception = false;
@@ -275,7 +275,7 @@ namespace Server.TCP
 			return result;
 		}
 
-		// Token: 0x06000137 RID: 311 RVA: 0x000077C0 File Offset: 0x000059C0
+		
 		internal bool SendData(Socket s, TCPOutPacket tcpOutPacket)
 		{
 			SocketAsyncEventArgs writeEventArgs = this.writePool.Pop();
@@ -300,7 +300,7 @@ namespace Server.TCP
 			return !exception;
 		}
 
-		// Token: 0x06000138 RID: 312 RVA: 0x00007880 File Offset: 0x00005A80
+		
 		private void ProcessAccept(SocketAsyncEventArgs e)
 		{
 			SocketAsyncEventArgs readEventArgs = null;
@@ -361,7 +361,7 @@ namespace Server.TCP
 			}
         }
 
-		// Token: 0x06000139 RID: 313 RVA: 0x00007A30 File Offset: 0x00005C30
+		
 		private void ProcessReceive(SocketAsyncEventArgs e)
 		{
 			if (e.BytesTransferred > 0 && e.SocketError == SocketError.Success)
@@ -390,7 +390,7 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x0600013A RID: 314 RVA: 0x00007AC8 File Offset: 0x00005CC8
+		
 		private void ProcessSend(SocketAsyncEventArgs e)
 		{
 			if (null != this.SocketSended)
@@ -407,7 +407,7 @@ namespace Server.TCP
 			this.writePool.Push(e);
 		}
 
-		// Token: 0x0600013B RID: 315 RVA: 0x00007B58 File Offset: 0x00005D58
+		
 		internal void Start(string ip, int port)
 		{
 			if ("" == ip)
@@ -421,7 +421,7 @@ namespace Server.TCP
 			this.StartAccept(null);
 		}
 
-		// Token: 0x0600013C RID: 316 RVA: 0x00007BC0 File Offset: 0x00005DC0
+		
 		public void Stop()
 		{
 			Socket s = this.listenSocket;
@@ -429,7 +429,7 @@ namespace Server.TCP
 			s.Close();
 		}
 
-		// Token: 0x0600013D RID: 317 RVA: 0x00007BE4 File Offset: 0x00005DE4
+		
 		private void CloseSocket(Socket s)
 		{
 			try
@@ -441,7 +441,7 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x0600013E RID: 318 RVA: 0x00007C14 File Offset: 0x00005E14
+		
 		private void StartAccept(SocketAsyncEventArgs acceptEventArg)
 		{
 			if (acceptEventArg == null)
@@ -460,40 +460,40 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x04000418 RID: 1048
+		
 		private const int opsToPreAlloc = 1;
 
-		// Token: 0x04000419 RID: 1049
+		
 		private int ReceiveBufferSize;
 
-		// Token: 0x0400041A RID: 1050
+		
 		private BufferManager bufferManager;
 
-		// Token: 0x0400041B RID: 1051
+		
 		private Socket listenSocket;
 
-		// Token: 0x0400041C RID: 1052
+		
 		private int numConnectedSockets;
 
-		// Token: 0x0400041D RID: 1053
+		
 		private Dictionary<Socket, bool> ConnectedSocketsDict;
 
-		// Token: 0x0400041E RID: 1054
+		
 		private int numConnections;
 
-		// Token: 0x0400041F RID: 1055
+		
 		private SocketAsyncEventArgsPool readPool;
 
-		// Token: 0x04000420 RID: 1056
+		
 		private SocketAsyncEventArgsPool writePool;
 
-		// Token: 0x04000421 RID: 1057
+		
 		private Semaphore semaphoreAcceptedClients;
 
-		// Token: 0x04000422 RID: 1058
+		
 		private int totalBytesRead;
 
-		// Token: 0x04000423 RID: 1059
+		
 		private int totalBytesWrite;
 	}
 }

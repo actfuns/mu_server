@@ -8,7 +8,7 @@ namespace GameServer.Logic
 	public class BangHuiMatchData
 	{
 		// Token: 0x1700001C RID: 28
-		// (get) Token: 0x060006C8 RID: 1736 RVA: 0x00060784 File Offset: 0x0005E984
+		
 		public object Mutex
 		{
 			get

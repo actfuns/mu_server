@@ -10,15 +10,15 @@ using Tmsk.Contract.KuaFuData;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000069 RID: 105
+	
 	public class CompPersistence
 	{
-		// Token: 0x060004F3 RID: 1267 RVA: 0x00041320 File Offset: 0x0003F520
+		
 		private CompPersistence()
 		{
 		}
 
-		// Token: 0x060004F4 RID: 1268 RVA: 0x0004139C File Offset: 0x0003F59C
+		
 		public bool LoadDatabase()
 		{
 			bool result;
@@ -72,7 +72,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060004F5 RID: 1269 RVA: 0x000414AC File Offset: 0x0003F6AC
+		
 		public void AddDelayWriteSql(string sql)
 		{
 			lock (this.Mutex)
@@ -81,7 +81,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004F6 RID: 1270 RVA: 0x00041500 File Offset: 0x0003F700
+		
 		private void WriteDataToDb(string sql)
 		{
 			try
@@ -95,7 +95,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004F7 RID: 1271 RVA: 0x00041550 File Offset: 0x0003F750
+		
 		public void DelayWriteDataProc()
 		{
 			List<string> list = null;
@@ -114,7 +114,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004F8 RID: 1272 RVA: 0x00041614 File Offset: 0x0003F814
+		
 		private int ExecuteSqlNoQuery(string sqlCmd)
 		{
 			int result;
@@ -131,7 +131,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060004F9 RID: 1273 RVA: 0x00041670 File Offset: 0x0003F870
+		
 		private string FormatLoadCompRankSql(int rankType, int compType)
 		{
 			int[] RankLimit = new int[]
@@ -165,59 +165,59 @@ namespace KF.Remoting
 			return strSql;
 		}
 
-		// Token: 0x060004FA RID: 1274 RVA: 0x00041744 File Offset: 0x0003F944
+		
 		public int GetCompDayID()
 		{
 			object value = DbHelperMySQL.GetSingle("SELECT value FROM t_async WHERE id = " + 45);
 			return Convert.ToInt32(value);
 		}
 
-		// Token: 0x060004FB RID: 1275 RVA: 0x00041774 File Offset: 0x0003F974
+		
 		public int GetCompWeekDayID()
 		{
 			object value = DbHelperMySQL.GetSingle("SELECT value FROM t_async WHERE id = " + 46);
 			return Convert.ToInt32(value);
 		}
 
-		// Token: 0x060004FC RID: 1276 RVA: 0x000417A4 File Offset: 0x0003F9A4
+		
 		public int GetCompBattleWeekDayID()
 		{
 			object value = DbHelperMySQL.GetSingle("SELECT value FROM t_async WHERE id = " + 47);
 			return Convert.ToInt32(value);
 		}
 
-		// Token: 0x060004FD RID: 1277 RVA: 0x000417D4 File Offset: 0x0003F9D4
+		
 		public int GetCompMineWeekDayID()
 		{
 			object value = DbHelperMySQL.GetSingle("SELECT value FROM t_async WHERE id = " + 48);
 			return Convert.ToInt32(value);
 		}
 
-		// Token: 0x060004FE RID: 1278 RVA: 0x00041803 File Offset: 0x0003FA03
+		
 		public void SaveCompDayID(int dayId)
 		{
 			DbHelperMySQL.ExecuteSql(string.Format("REPLACE INTO t_async(`id`,`value`) VALUES({0},{1});", 45, dayId));
 		}
 
-		// Token: 0x060004FF RID: 1279 RVA: 0x00041823 File Offset: 0x0003FA23
+		
 		public void SaveCompWeekDayID(int weekDayId)
 		{
 			DbHelperMySQL.ExecuteSql(string.Format("REPLACE INTO t_async(`id`,`value`) VALUES({0},{1});", 46, weekDayId));
 		}
 
-		// Token: 0x06000500 RID: 1280 RVA: 0x00041843 File Offset: 0x0003FA43
+		
 		public void SaveCompBattleWeekDayID(int weekDayId)
 		{
 			DbHelperMySQL.ExecuteSql(string.Format("REPLACE INTO t_async(`id`,`value`) VALUES({0},{1});", 47, weekDayId));
 		}
 
-		// Token: 0x06000501 RID: 1281 RVA: 0x00041863 File Offset: 0x0003FA63
+		
 		public void SaveCompMineWeekDayID(int weekDayId)
 		{
 			DbHelperMySQL.ExecuteSql(string.Format("REPLACE INTO t_async(`id`,`value`) VALUES({0},{1});", 48, weekDayId));
 		}
 
-		// Token: 0x06000502 RID: 1282 RVA: 0x00041884 File Offset: 0x0003FA84
+		
 		public bool LoadCompRankInfo(int rankType, int compType, KuaFuData<Dictionary<int, List<KFCompRankInfo>>> CompRankDict, KuaFuData<List<KFCompRankInfo>> CompRankList)
 		{
 			bool result;
@@ -302,7 +302,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000503 RID: 1283 RVA: 0x00041AAC File Offset: 0x0003FCAC
+		
 		private bool LoadCompData(KuaFuData<Dictionary<int, KFCompData>> CompDataDict)
 		{
 			bool result;
@@ -356,7 +356,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000504 RID: 1284 RVA: 0x00041D24 File Offset: 0x0003FF24
+		
 		private bool LoadCompRoleData(Dictionary<int, KuaFuData<KFCompRoleData>> CompRoleDataDict)
 		{
 			bool result;
@@ -409,7 +409,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000505 RID: 1285 RVA: 0x00041F70 File Offset: 0x00040170
+		
 		public byte[] LoadCompRoleData4Selector(int rid)
 		{
 			byte[] result;
@@ -433,7 +433,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000506 RID: 1286 RVA: 0x00041FD4 File Offset: 0x000401D4
+		
 		public void SaveCompData(KFCompData compData, bool delay = true)
 		{
 			string sql = string.Format("INSERT INTO t_comp(`type`, boomval, enemytype, enemyset, `bulletin`, crystal, boss, crystal_yestd, boss_yestd, plunderres, plunderres_yestd, bosskilltype, bosskilltype_yestd, bossdamage, boomval_yestd, stronghold, mine, mine_rank) VALUES({0},{1},{2},{3},'{4}',{5},{6},{7},{8},'{9}','{10}',{11},{12},{13},{14},'{15}',{16},{17}) ON DUPLICATE KEY UPDATE boomval={1}, enemytype={2}, enemyset={3}, bulletin='{4}', crystal={5}, boss={6}, crystal_yestd={7}, boss_yestd={8},  plunderres='{9}', plunderres_yestd='{10}', bosskilltype={11}, bosskilltype_yestd={12}, bossdamage={13}, boomval_yestd={14}, stronghold='{15}', mine={16}, mine_rank={17};", new object[]
@@ -467,7 +467,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000507 RID: 1287 RVA: 0x00042118 File Offset: 0x00040318
+		
 		public void SaveCompRoleData(KFCompRoleData roleData, bool chgJX = false, bool chgJXL = false, bool chgJiFen = false, bool chgMine = false)
 		{
 			if (null != roleData.RoleData4Selector)
@@ -557,34 +557,34 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x040002AD RID: 685
+		
 		public static readonly CompPersistence Instance = new CompPersistence();
 
-		// Token: 0x040002AE RID: 686
+		
 		public object Mutex = new object();
 
-		// Token: 0x040002AF RID: 687
+		
 		public KuaFuData<Dictionary<int, KFCompData>> CompDataDict = new KuaFuData<Dictionary<int, KFCompData>>();
 
-		// Token: 0x040002B0 RID: 688
+		
 		public KuaFuData<Dictionary<int, List<KFCompRankInfo>>> CompRankJunXianDict = new KuaFuData<Dictionary<int, List<KFCompRankInfo>>>();
 
-		// Token: 0x040002B1 RID: 689
+		
 		public KuaFuData<Dictionary<int, List<KFCompRankInfo>>> CompRankJunXianLastDict = new KuaFuData<Dictionary<int, List<KFCompRankInfo>>>();
 
-		// Token: 0x040002B2 RID: 690
+		
 		public KuaFuData<List<KFCompRankInfo>> CompRankBossDamageList = new KuaFuData<List<KFCompRankInfo>>();
 
-		// Token: 0x040002B3 RID: 691
+		
 		public KuaFuData<Dictionary<int, List<KFCompRankInfo>>> CompRankBattleJiFenDict = new KuaFuData<Dictionary<int, List<KFCompRankInfo>>>();
 
-		// Token: 0x040002B4 RID: 692
+		
 		public KuaFuData<Dictionary<int, List<KFCompRankInfo>>> CompRankMineJiFenDict = new KuaFuData<Dictionary<int, List<KFCompRankInfo>>>();
 
-		// Token: 0x040002B5 RID: 693
+		
 		public Dictionary<int, KuaFuData<KFCompRoleData>> CompRoleDataDict = new Dictionary<int, KuaFuData<KFCompRoleData>>();
 
-		// Token: 0x040002B6 RID: 694
+		
 		public Queue<string> DelayWriteSqlQueue = new Queue<string>();
 	}
 }

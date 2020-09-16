@@ -14,10 +14,10 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004E7 RID: 1255
+	
 	public class FashionManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener
 	{
-		// Token: 0x0600173B RID: 5947 RVA: 0x0016BABC File Offset: 0x00169CBC
+		
 		public static FashionManager getInstance()
 		{
 			if (FashionManager.instance.State == 0)
@@ -27,7 +27,7 @@ namespace GameServer.Logic
 			return FashionManager.instance;
 		}
 
-		// Token: 0x0600173C RID: 5948 RVA: 0x0016BAF4 File Offset: 0x00169CF4
+		
 		public bool initialize()
 		{
 			bool result;
@@ -44,7 +44,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600173D RID: 5949 RVA: 0x0016BB24 File Offset: 0x00169D24
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(710, 4, 4, FashionManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -55,26 +55,26 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600173E RID: 5950 RVA: 0x0016BBAC File Offset: 0x00169DAC
+		
 		public bool showdown()
 		{
 			GlobalEventSource.getInstance().removeListener(41, FashionManager.getInstance());
 			return true;
 		}
 
-		// Token: 0x0600173F RID: 5951 RVA: 0x0016BBD4 File Offset: 0x00169DD4
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06001740 RID: 5952 RVA: 0x0016BBE8 File Offset: 0x00169DE8
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06001741 RID: 5953 RVA: 0x0016BBFC File Offset: 0x00169DFC
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -100,7 +100,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001742 RID: 5954 RVA: 0x0016BC70 File Offset: 0x00169E70
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int nID = eventObject.getEventType();
@@ -112,7 +112,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001743 RID: 5955 RVA: 0x0016BCC0 File Offset: 0x00169EC0
+		
 		public bool InitConfig()
 		{
 			string fileName = "";
@@ -282,7 +282,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001744 RID: 5956 RVA: 0x0016C470 File Offset: 0x0016A670
+		
 		public bool ProcessModifyFashionCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -302,7 +302,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001745 RID: 5957 RVA: 0x0016C508 File Offset: 0x0016A708
+		
 		public bool ProcessModifyBuffFashionCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -321,7 +321,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001746 RID: 5958 RVA: 0x0016C594 File Offset: 0x0016A794
+		
 		public void InitLuoLanChengZhuFashion(GameClient client)
 		{
 			if (client.ClientSocket.IsKuaFuLogin)
@@ -363,13 +363,13 @@ namespace GameServer.Logic
 			this.GetFashionByMagic(client, 1, true);
 		}
 
-		// Token: 0x06001747 RID: 5959 RVA: 0x0016C6B5 File Offset: 0x0016A8B5
+		
 		public void DelLuoLanZhiYi(GameClient gameclient)
 		{
 			this.DelFashionByMagic(gameclient, 1);
 		}
 
-		// Token: 0x06001748 RID: 5960 RVA: 0x0016C6C4 File Offset: 0x0016A8C4
+		
 		public void DelFashionByMagic(GameClient client, int nFashionID)
 		{
 			if (client != null)
@@ -402,7 +402,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001749 RID: 5961 RVA: 0x0016C7D8 File Offset: 0x0016A9D8
+		
 		public void GetFashionByMagic(GameClient client, int nFashionID, bool isAddTime = true)
 		{
 			FashionData fashionData = null;
@@ -475,7 +475,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600174A RID: 5962 RVA: 0x0016CA74 File Offset: 0x0016AC74
+		
 		public void GetFashionByMagic(GameClient client, int nFashionID, string endTime)
 		{
 			FashionData fashionData = null;
@@ -511,14 +511,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600174B RID: 5963 RVA: 0x0016CBBC File Offset: 0x0016ADBC
+		
 		public static void NotifyFashionList(GameClient client)
 		{
 			byte[] bytesData = DataHelper.ObjectToBytes<List<GoodsData>>(client.ClientData.FashionGoodsDataList);
 			GameManager.ClientMgr.SendToClient(client, bytesData, 946);
 		}
 
-		// Token: 0x0600174C RID: 5964 RVA: 0x0016CBF0 File Offset: 0x0016ADF0
+		
 		public bool FashionCanAdd(GameClient client, int nFashionID)
 		{
 			FashionData fashionData = null;
@@ -544,7 +544,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600174D RID: 5965 RVA: 0x0016CC6C File Offset: 0x0016AE6C
+		
 		public int ModifyFashion(GameClient client, int tabID, int fashionID, FashionModeTypes mode)
 		{
 			int result = 0;
@@ -581,7 +581,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600174E RID: 5966 RVA: 0x0016CD78 File Offset: 0x0016AF78
+		
 		public int ModifyBuffFashion(GameClient client, int buffID, FashionModeTypes mode)
 		{
 			int result = 0;
@@ -626,7 +626,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600174F RID: 5967 RVA: 0x0016CE9C File Offset: 0x0016B09C
+		
 		public int ValidateFashion(GameClient client, int fashionType, int GoodsID)
 		{
 			int result;
@@ -741,7 +741,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001750 RID: 5968 RVA: 0x0016D148 File Offset: 0x0016B348
+		
 		public void InitFashion(GameClient client)
 		{
 			this.InitLuoLanChengZhuFashion(client);
@@ -781,7 +781,7 @@ namespace GameServer.Logic
 			this.RefreshTitleFashionProps(client);
 		}
 
-		// Token: 0x06001751 RID: 5969 RVA: 0x0016D23C File Offset: 0x0016B43C
+		
 		private void RefreshTitleFashionProps(GameClient client)
 		{
 			bool propsChanged = false;
@@ -839,7 +839,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001752 RID: 5970 RVA: 0x0016D5A4 File Offset: 0x0016B7A4
+		
 		public void InitFashionBag(GameClient client)
 		{
 			GoodsData goodsData = client.UsingEquipMgr.GetGoodsDataByCategoriy(client, 24);
@@ -871,7 +871,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001753 RID: 5971 RVA: 0x0016D6DC File Offset: 0x0016B8DC
+		
 		public bool FashionBagCanActive(GameClient client, GoodsData goodsData)
 		{
 			int nCategories = Global.GetGoodsCatetoriy(goodsData.GoodsID);
@@ -903,7 +903,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001754 RID: 5972 RVA: 0x0016D7F4 File Offset: 0x0016B9F4
+		
 		private bool ProcessFashionBagActiveCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1013,7 +1013,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001755 RID: 5973 RVA: 0x0016DC94 File Offset: 0x0016BE94
+		
 		private bool ProcessFashionBagForgeLevUpCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1205,7 +1205,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001756 RID: 5974 RVA: 0x0016E38C File Offset: 0x0016C58C
+		
 		private int LoadFashion(GameClient client, FashionData fashionData)
 		{
 			EquipPropItem item = GameManager.EquipPropsMgr.FindEquipPropItem(fashionData.GoodsID);
@@ -1247,7 +1247,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001757 RID: 5975 RVA: 0x0016E4AC File Offset: 0x0016C6AC
+		
 		private int UnloadFashion(GameClient client, FashionData fashionData, bool bIsRemove)
 		{
 			int usingFashionID = 0;
@@ -1292,7 +1292,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001758 RID: 5976 RVA: 0x0016E5BC File Offset: 0x0016C7BC
+		
 		public bool FashionActiveByMagic(GameClient client, double[] cmdParams)
 		{
 			try
@@ -1377,19 +1377,19 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001759 RID: 5977 RVA: 0x0016E86C File Offset: 0x0016CA6C
+		
 		public int GetFashionWingsID(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "FashionWingsID", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x0600175A RID: 5978 RVA: 0x0016E890 File Offset: 0x0016CA90
+		
 		public int GetFashionTitleID(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "FashionTitleID", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x0600175B RID: 5979 RVA: 0x0016E8B4 File Offset: 0x0016CAB4
+		
 		public void ModifyFashionWingsID(GameClient client, int nID, bool writeToDB = false, bool notifyClient = true)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "FashionWingsID", nID, true, "2020-12-12 12:12:12");
@@ -1401,7 +1401,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600175C RID: 5980 RVA: 0x0016E924 File Offset: 0x0016CB24
+		
 		public void ModifyFashionTitleID(GameClient client, int nID, bool writeToDB = false, bool notifyClient = true)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "FashionTitleID", nID, true, "2020-12-12 12:12:12");
@@ -1413,7 +1413,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600175D RID: 5981 RVA: 0x0016E994 File Offset: 0x0016CB94
+		
 		public void ModifyBuffFashionTitleID(GameClient client, int nID, bool writeToDB = true, bool notifyClient = true)
 		{
 			Global.SaveRoleParamsInt32ValueToDB(client, "10163", nID, writeToDB);
@@ -1425,7 +1425,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600175E RID: 5982 RVA: 0x0016EA00 File Offset: 0x0016CC00
+		
 		public int GetBufferIDBySpecialTitleID(int titleID)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -1439,7 +1439,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x0600175F RID: 5983 RVA: 0x0016EA74 File Offset: 0x0016CC74
+		
 		public void UpdateLuoLanChengZhuFasion(int bhid)
 		{
 			int roleID = -1;
@@ -1512,7 +1512,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001760 RID: 5984 RVA: 0x0016ECFC File Offset: 0x0016CEFC
+		
 		public FashionBagData GetFashionBagData(GameClient client, GoodsData goodsData)
 		{
 			KeyValuePair<int, int> key = new KeyValuePair<int, int>(goodsData.GoodsID, goodsData.Forge_level);
@@ -1527,7 +1527,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06001761 RID: 5985 RVA: 0x0016ED88 File Offset: 0x0016CF88
+		
 		public static GoodsData GetFashionGoodsDataByDbID(GameClient client, int id)
 		{
 			GoodsData result;
@@ -1552,7 +1552,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001762 RID: 5986 RVA: 0x0016EE50 File Offset: 0x0016D050
+		
 		public static GoodsData GetFashionDataByGoodsID(GameClient client, int id)
 		{
 			GoodsData result;
@@ -1577,7 +1577,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001763 RID: 5987 RVA: 0x0016EF18 File Offset: 0x0016D118
+		
 		public void AddFashionGoodsData(GameClient client, GoodsData goodsData)
 		{
 			if (goodsData.Site == 6000)
@@ -1594,7 +1594,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001764 RID: 5988 RVA: 0x0016EFB8 File Offset: 0x0016D1B8
+		
 		public GoodsData AddFashionGoodsData(GameClient client, int id, int goodsID, int forgeLevel, int quality, int goodsNum, int binding, int site, string jewelList, string endTime, int addPropIndex, int bornIndex, int lucky, int strong, int ExcellenceProperty, int nAppendPropLev, int nEquipChangeLife)
 		{
 			GoodsData gd = new GoodsData
@@ -1624,7 +1624,7 @@ namespace GameServer.Logic
 			return gd;
 		}
 
-		// Token: 0x06001765 RID: 5989 RVA: 0x0016F080 File Offset: 0x0016D280
+		
 		public void RemoveFashionGoodsData(GameClient client, GoodsData goodsData)
 		{
 			if (null != client.ClientData.FashionGoodsDataList)
@@ -1681,7 +1681,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001766 RID: 5990 RVA: 0x0016F2D0 File Offset: 0x0016D4D0
+		
 		public static int GetFashionGoodsDataCount(GameClient client)
 		{
 			int result;
@@ -1696,7 +1696,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001767 RID: 5991 RVA: 0x0016F30C File Offset: 0x0016D50C
+		
 		public static TCPProcessCmdResults ProcessGetFashionList(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1755,7 +1755,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06001768 RID: 5992 RVA: 0x0016F524 File Offset: 0x0016D724
+		
 		public static TCPProcessCmdResults ProcessGetBuffFashionList(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1798,13 +1798,13 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x04002141 RID: 8513
+		
 		private int State = 0;
 
-		// Token: 0x04002142 RID: 8514
+		
 		private static FashionManager instance = new FashionManager();
 
-		// Token: 0x04002143 RID: 8515
+		
 		public FashionNamagerData RuntimeData = new FashionNamagerData();
 	}
 }

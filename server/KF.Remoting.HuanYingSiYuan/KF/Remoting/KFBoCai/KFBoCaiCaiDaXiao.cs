@@ -7,16 +7,16 @@ using Tmsk.Contract.KuaFuData;
 
 namespace KF.Remoting.KFBoCai
 {
-	// Token: 0x02000030 RID: 48
+	
 	internal class KFBoCaiCaiDaXiao : BocaiBase
 	{
-		// Token: 0x06000234 RID: 564 RVA: 0x000208D4 File Offset: 0x0001EAD4
+		
 		public static KFBoCaiCaiDaXiao GetInstance()
 		{
 			return KFBoCaiCaiDaXiao.instance;
 		}
 
-		// Token: 0x06000235 RID: 565 RVA: 0x000208EB File Offset: 0x0001EAEB
+		
 		private KFBoCaiCaiDaXiao()
 		{
 			this.StopBuyTime = 240;
@@ -24,7 +24,7 @@ namespace KF.Remoting.KFBoCai
 			this.SelectOpenHisttory10 = " ORDER BY `DataPeriods` DESC LIMIT 10";
 		}
 
-		// Token: 0x06000236 RID: 566 RVA: 0x0002091C File Offset: 0x0001EB1C
+		
 		private void InitConfig()
 		{
 			try
@@ -53,13 +53,13 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x06000237 RID: 567 RVA: 0x00020A0C File Offset: 0x0001EC0C
+		
 		private long GetNowPeriods(DateTime _time)
 		{
 			return Convert.ToInt64(string.Format("{0}001", TimeUtil.DataTimeToString(_time, "yyMMdd")));
 		}
 
-		// Token: 0x06000238 RID: 568 RVA: 0x00020A38 File Offset: 0x0001EC38
+		
 		private bool StartBuy(long Periods, DateTime time)
 		{
 			this.PeriodsStartTime = DateTime.Parse(TimeUtil.DataTimeToString(time, "yyyy-MM-dd HH:mm:ss"));
@@ -85,7 +85,7 @@ namespace KF.Remoting.KFBoCai
 			return result;
 		}
 
-		// Token: 0x06000239 RID: 569 RVA: 0x00020B04 File Offset: 0x0001ED04
+		
 		private string SetWinInfo(string value, int buyNum)
 		{
 			try
@@ -121,7 +121,7 @@ namespace KF.Remoting.KFBoCai
 			return "";
 		}
 
-		// Token: 0x0600023A RID: 570 RVA: 0x00020C80 File Offset: 0x0001EE80
+		
 		protected override void Init()
 		{
 			try
@@ -158,7 +158,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x0600023B RID: 571 RVA: 0x00020E20 File Offset: 0x0001F020
+		
 		public override void UpData(bool reload = false)
 		{
 			try
@@ -256,7 +256,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x0600023C RID: 572 RVA: 0x00021194 File Offset: 0x0001F394
+		
 		private static int SortHistory(KFBoCaoHistoryData d1, KFBoCaoHistoryData d2)
 		{
 			int result;
@@ -283,7 +283,7 @@ namespace KF.Remoting.KFBoCai
 			return result;
 		}
 
-		// Token: 0x0600023D RID: 573 RVA: 0x00021264 File Offset: 0x0001F464
+		
 		private void addHistory(List<KFBoCaoHistoryData> History)
 		{
 			try
@@ -327,7 +327,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x0600023E RID: 574 RVA: 0x0002149C File Offset: 0x0001F69C
+		
 		private KFBoCaoHistoryData InsertHistoryData()
 		{
 			KFBoCaoHistoryData HistoryData = new KFBoCaoHistoryData();
@@ -342,7 +342,7 @@ namespace KF.Remoting.KFBoCai
 			return HistoryData;
 		}
 
-		// Token: 0x0600023F RID: 575 RVA: 0x00021504 File Offset: 0x0001F704
+		
 		private void SetUpToDBOpenData()
 		{
 			try
@@ -364,7 +364,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x06000240 RID: 576 RVA: 0x00021618 File Offset: 0x0001F818
+		
 		public override void Thread()
 		{
 			try
@@ -474,7 +474,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x06000241 RID: 577 RVA: 0x00021B00 File Offset: 0x0001FD00
+		
 		public double CompensateRate(DiceValueEnum val)
 		{
 			try
@@ -498,7 +498,7 @@ namespace KF.Remoting.KFBoCai
 			return 1.0;
 		}
 
-		// Token: 0x06000242 RID: 578 RVA: 0x00021C00 File Offset: 0x0001FE00
+		
 		public override OpenLottery GetOpenLottery()
 		{
 			OpenLottery result;
@@ -519,7 +519,7 @@ namespace KF.Remoting.KFBoCai
 			return result;
 		}
 
-		// Token: 0x06000243 RID: 579 RVA: 0x00021CD0 File Offset: 0x0001FED0
+		
 		public override KFStageData GetKFStageData()
 		{
 			KFStageData result;
@@ -571,7 +571,7 @@ namespace KF.Remoting.KFBoCai
 			return result;
 		}
 
-		// Token: 0x06000244 RID: 580 RVA: 0x00021F54 File Offset: 0x00020154
+		
 		private long GetLastTime(BoCaiStageEnum stage)
 		{
 			try
@@ -601,7 +601,7 @@ namespace KF.Remoting.KFBoCai
 			return 0L;
 		}
 
-		// Token: 0x06000245 RID: 581 RVA: 0x00022038 File Offset: 0x00020238
+		
 		public List<KFBoCaoHistoryData> GetWinHistory()
 		{
 			List<KFBoCaoHistoryData> result;
@@ -626,7 +626,7 @@ namespace KF.Remoting.KFBoCai
 			return result;
 		}
 
-		// Token: 0x06000246 RID: 582 RVA: 0x00022148 File Offset: 0x00020348
+		
 		public bool IsCanBuy(string buyValue, int buyNum, long DataPeriods)
 		{
 			bool result;
@@ -646,7 +646,7 @@ namespace KF.Remoting.KFBoCai
 			return result;
 		}
 
-		// Token: 0x06000247 RID: 583 RVA: 0x000221E8 File Offset: 0x000203E8
+		
 		public bool BuyBoCai(KFBuyBocaiData data)
 		{
 			bool result;
@@ -707,25 +707,25 @@ namespace KF.Remoting.KFBoCai
 			return result;
 		}
 
-		// Token: 0x04000137 RID: 311
+		
 		private const int RankNum = 5;
 
-		// Token: 0x04000138 RID: 312
+		
 		private const int LastTime = 300;
 
-		// Token: 0x04000139 RID: 313
+		
 		private const int OpenTime = 270;
 
-		// Token: 0x0400013A RID: 314
+		
 		private const int UpCompensateRateTime = 10;
 
-		// Token: 0x0400013B RID: 315
+		
 		private DateTime CompensateRateTime;
 
-		// Token: 0x0400013C RID: 316
+		
 		private CaiDaXiaoConfig Config = null;
 
-		// Token: 0x0400013D RID: 317
+		
 		private static KFBoCaiCaiDaXiao instance = new KFBoCaiCaiDaXiao();
 	}
 }

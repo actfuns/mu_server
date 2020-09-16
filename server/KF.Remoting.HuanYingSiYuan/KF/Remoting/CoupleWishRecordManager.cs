@@ -10,16 +10,16 @@ using Server.Tools;
 
 namespace KF.Remoting
 {
-    // Token: 0x02000012 RID: 18
+    
     internal class CoupleWishRecordManager
     {
-        // Token: 0x06000095 RID: 149 RVA: 0x00008400 File Offset: 0x00006600
+        
         public CoupleWishRecordManager(int week)
         {
             this.UpdateWeek(week);
         }
 
-        // Token: 0x06000096 RID: 150 RVA: 0x00008454 File Offset: 0x00006654
+        
         public void AddWishRecord(KuaFuRoleMiniData from, int wishType, string wishTxt, int toDbCoupleId, KuaFuRoleMiniData toMan, KuaFuRoleMiniData toWife)
         {
             lock (this.Mutex)
@@ -33,7 +33,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x06000097 RID: 151 RVA: 0x000084E4 File Offset: 0x000066E4
+        
         public List<CoupleWishWishRecordData> GetWishRecord(int roleId)
         {
             List<CoupleWishWishRecordData> result = null;
@@ -98,7 +98,7 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x06000098 RID: 152 RVA: 0x00008848 File Offset: 0x00006A48
+        
         public void UpdateWeek(int week)
         {
             lock (this.Mutex)
@@ -112,7 +112,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x06000099 RID: 153 RVA: 0x00008910 File Offset: 0x00006B10
+        
         public void ClearUnActiveRecord()
         {
             lock (this.Mutex)
@@ -131,7 +131,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x0600009A RID: 154 RVA: 0x00008A08 File Offset: 0x00006C08
+        
         private void AddCachedWishOther(KuaFuRoleMiniData from, int wishType, string wishTxt, KuaFuRoleMiniData toMan, KuaFuRoleMiniData toWife)
         {
             lock (this.Mutex)
@@ -161,7 +161,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x0600009B RID: 155 RVA: 0x00008B04 File Offset: 0x00006D04
+        
         private void AddCachedBeWished(KuaFuRoleMiniData to, KuaFuRoleMiniData toSpouse, int wishType, string wishTxt, KuaFuRoleMiniData from)
         {
             lock (this.Mutex)
@@ -191,19 +191,19 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x0400005A RID: 90
+        
         private CoupleWishPersistence Persistence = CoupleWishPersistence.getInstance();
 
-        // Token: 0x0400005B RID: 91
+        
         private object Mutex = new object();
 
-        // Token: 0x0400005C RID: 92
+        
         private Dictionary<int, Queue<CoupleWishWishRecordData>> RoleWishRecords = new Dictionary<int, Queue<CoupleWishWishRecordData>>();
 
-        // Token: 0x0400005D RID: 93
+        
         private Dictionary<int, long> RoleLastReadMs = new Dictionary<int, long>();
 
-        // Token: 0x0400005E RID: 94
+        
         private int ThisWeek = 0;
     }
 }

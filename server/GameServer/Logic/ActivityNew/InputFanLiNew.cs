@@ -4,10 +4,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x02000029 RID: 41
+	
 	public class InputFanLiNew : Activity
 	{
-		// Token: 0x06000057 RID: 87 RVA: 0x00007348 File Offset: 0x00005548
+		
 		public bool Init()
 		{
 			try
@@ -52,7 +52,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x06000058 RID: 88 RVA: 0x0000756C File Offset: 0x0000576C
+		
 		public void OnRoleLogin(GameClient client)
 		{
 			if (!this.InActivityTime())
@@ -81,7 +81,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x06000059 RID: 89 RVA: 0x0000762C File Offset: 0x0000582C
+		
 		public int GetAwardIndex(GameClient client, int chargeMoney, int consumeMoney)
 		{
 			int awardIndex = 0;
@@ -96,13 +96,13 @@ namespace GameServer.Logic.ActivityNew
 			return awardIndex;
 		}
 
-		// Token: 0x0600005A RID: 90 RVA: 0x00007698 File Offset: 0x00005898
+		
 		public override bool CanGiveAward(GameClient client, int index, int totalMoney)
 		{
 			return this.InAwardTime() && 0 != this.OpenStateVavle && index > 0;
 		}
 
-		// Token: 0x0600005B RID: 91 RVA: 0x000076DC File Offset: 0x000058DC
+		
 		public override bool GiveAward(GameClient client, int index)
 		{
 			bool result;
@@ -124,13 +124,13 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x040000E7 RID: 231
+		
 		protected const string InputFanLiNewData_fileName = "Config/SanZhouNian_ChongZhiFanLi.xml";
 
-		// Token: 0x040000E8 RID: 232
+		
 		protected InputFanLiNewConfig InputFanLiNewData = new InputFanLiNewConfig();
 
-		// Token: 0x040000E9 RID: 233
+		
 		protected int OpenStateVavle = 0;
 	}
 }

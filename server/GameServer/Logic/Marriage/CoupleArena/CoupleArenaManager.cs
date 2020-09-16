@@ -19,10 +19,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic.Marriage.CoupleArena
 {
-    // Token: 0x0200035F RID: 863
+    
     public class CoupleArenaManager : SingletonTemplate<CoupleArenaManager>, IManager, ICmdProcessorEx, ICmdProcessor, IEventListenerEx, IEventListener
     {
-        // Token: 0x06000EB4 RID: 3764 RVA: 0x000E6D04 File Offset: 0x000E4F04
+        
         public void InitSystenParams()
         {
             try
@@ -38,7 +38,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EB5 RID: 3765 RVA: 0x000E6E28 File Offset: 0x000E5028
+        
         private bool LoadConfig()
         {
             bool result;
@@ -214,7 +214,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return result;
         }
 
-        // Token: 0x06000EB6 RID: 3766 RVA: 0x000E76B0 File Offset: 0x000E58B0
+        
         public bool initialize()
         {
             bool result;
@@ -230,7 +230,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return result;
         }
 
-        // Token: 0x06000EB7 RID: 3767 RVA: 0x000E76FC File Offset: 0x000E58FC
+        
         public bool startup()
         {
             TCPCmdDispatcher.getInstance().registerProcessorEx(1370, 1, 1, SingletonTemplate<CoupleArenaManager>.Instance(), TCPCmdFlags.IsStringArrayParams);
@@ -247,7 +247,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return true;
         }
 
-        // Token: 0x06000EB8 RID: 3768 RVA: 0x000E780C File Offset: 0x000E5A0C
+        
         public bool showdown()
         {
             GlobalEventSource4Scene.getInstance().removeListener(10025, 38, SingletonTemplate<CoupleArenaManager>.Instance());
@@ -256,13 +256,13 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return true;
         }
 
-        // Token: 0x06000EB9 RID: 3769 RVA: 0x000E785C File Offset: 0x000E5A5C
+        
         public bool destroy()
         {
             return true;
         }
 
-        // Token: 0x06000EBA RID: 3770 RVA: 0x000E7870 File Offset: 0x000E5A70
+        
         public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             bool result;
@@ -296,13 +296,13 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return result;
         }
 
-        // Token: 0x06000EBB RID: 3771 RVA: 0x000E7948 File Offset: 0x000E5B48
+        
         public bool processCmd(GameClient client, string[] cmdParams)
         {
             return false;
         }
 
-        // Token: 0x06000EBC RID: 3772 RVA: 0x000E795C File Offset: 0x000E5B5C
+        
         public void processEvent(EventObjectEx eventObject)
         {
             if (eventObject.EventType == 10025)
@@ -312,7 +312,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             eventObject.Handled = true;
         }
 
-        // Token: 0x06000EBD RID: 3773 RVA: 0x000E799C File Offset: 0x000E5B9C
+        
         private void HandleCanEnterEvent(CoupleArenaCanEnterData data)
         {
             string dbIp;
@@ -371,7 +371,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EBE RID: 3774 RVA: 0x000E7CC0 File Offset: 0x000E5EC0
+        
         public void processEvent(EventObject eventObject)
         {
             if (eventObject.getEventType() == 11)
@@ -406,7 +406,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EBF RID: 3775 RVA: 0x000E7EB8 File Offset: 0x000E60B8
+        
         private bool HandleRegStateWatcherCommand(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             int roleid = Convert.ToInt32(cmdParams[0]);
@@ -416,7 +416,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return true;
         }
 
-        // Token: 0x06000EC0 RID: 3776 RVA: 0x000E7F0C File Offset: 0x000E610C
+        
         private bool HandleEnterCommand(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             int roleid = Convert.ToInt32(cmdParams[0]);
@@ -434,7 +434,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return true;
         }
 
-        // Token: 0x06000EC1 RID: 3777 RVA: 0x000E7F7C File Offset: 0x000E617C
+        
         private bool HandleQuitCommand(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             bool result;
@@ -475,7 +475,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return result;
         }
 
-        // Token: 0x06000EC2 RID: 3778 RVA: 0x000E8150 File Offset: 0x000E6350
+        
         private bool HandleSingleJoinCommand(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             bool result;
@@ -526,7 +526,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return result;
         }
 
-        // Token: 0x06000EC3 RID: 3779 RVA: 0x000E8374 File Offset: 0x000E6574
+        
         private bool HandleSetReadyCommand(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             int roleid = Convert.ToInt32(cmdParams[0]);
@@ -589,7 +589,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return result;
         }
 
-        // Token: 0x06000EC4 RID: 3780 RVA: 0x000E8610 File Offset: 0x000E6810
+        
         private bool HandleGetZhanBaoCommand(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             List<CoupleArenaZhanBaoItemData> items = null;
@@ -601,7 +601,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return true;
         }
 
-        // Token: 0x06000EC5 RID: 3781 RVA: 0x000E867C File Offset: 0x000E687C
+        
         private bool HandleGetPaiHangCommand(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             CoupleArenaPaiHangData data = new CoupleArenaPaiHangData();
@@ -613,7 +613,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return true;
         }
 
-        // Token: 0x06000EC6 RID: 3782 RVA: 0x000E86FC File Offset: 0x000E68FC
+        
         private bool HandleGetMainDataCommand(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             DateTime now = TimeUtil.NowDateTime();
@@ -718,7 +718,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return true;
         }
 
-        // Token: 0x06000EC7 RID: 3783 RVA: 0x000E8CA8 File Offset: 0x000E6EA8
+        
         public void OnClientLogin(GameClient client)
         {
             if (client != null)
@@ -755,7 +755,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EC8 RID: 3784 RVA: 0x000E8ED8 File Offset: 0x000E70D8
+        
         public void OnClientLogout(GameClient client)
         {
             try
@@ -792,7 +792,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EC9 RID: 3785 RVA: 0x000E9090 File Offset: 0x000E7290
+        
         public void CheckGongNengOpen(GameClient client)
         {
             lock (this.Mutex)
@@ -816,7 +816,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000ECA RID: 3786 RVA: 0x000E9210 File Offset: 0x000E7410
+        
         public void OnMarry(GameClient client1, GameClient client2)
         {
             lock (this.Mutex)
@@ -828,7 +828,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000ECB RID: 3787 RVA: 0x000E92BC File Offset: 0x000E74BC
+        
         public void OnDivorce(int roleId1, int roleId2)
         {
             lock (this.Mutex)
@@ -865,13 +865,13 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000ECC RID: 3788 RVA: 0x000E944C File Offset: 0x000E764C
+        
         public bool PreClearDivorceData(int roleId1, int roleId2)
         {
             return TianTiClient.getInstance().CoupleArenaPreDivorce(roleId1, roleId2) >= 0;
         }
 
-        // Token: 0x06000ECD RID: 3789 RVA: 0x000E9478 File Offset: 0x000E7678
+        
         public void OnSpouseRequestDivorce(GameClient client, GameClient spouseClient)
         {
             if (client != null)
@@ -892,7 +892,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000ECE RID: 3790 RVA: 0x000E9558 File Offset: 0x000E7758
+        
         public double CalcBuffHurt(IObject obj, IObject objTarget)
         {
             double result;
@@ -933,7 +933,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return result;
         }
 
-        // Token: 0x06000ECF RID: 3791 RVA: 0x000E963C File Offset: 0x000E783C
+        
         public void SetFengHuoJiaRenCouple(int roleid1, int roleid2)
         {
             int min = Math.Min(roleid1, roleid2);
@@ -955,7 +955,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000ED0 RID: 3792 RVA: 0x000E9758 File Offset: 0x000E7958
+        
         public void CheckFengHuoJiaRenChengHao(GameClient client)
         {
             if (client != null)
@@ -998,7 +998,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000ED1 RID: 3793 RVA: 0x000E9944 File Offset: 0x000E7B44
+        
         public void CheckTipsIconState(GameClient client)
         {
             if (client != null)
@@ -1031,20 +1031,20 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000ED2 RID: 3794 RVA: 0x000E9A54 File Offset: 0x000E7C54
+        
         private bool IsGongNengOpened(GameClient client)
         {
             return client != null && GlobalNew.IsGongNengOpened(client, GongNengIDs.Marriage, false) && MarryLogic.IsMarried(client.ClientData.RoleID) && GlobalNew.IsGongNengOpened(client, GongNengIDs.CoupleArena, false);
         }
 
-        // Token: 0x06000ED3 RID: 3795 RVA: 0x000E9AB0 File Offset: 0x000E7CB0
+        
         private bool IsInFengHuoJiaRenChengHaoTime(DateTime now)
         {
             int week;
             return this.IsInWeekAwardTime(now, out week);
         }
 
-        // Token: 0x06000ED4 RID: 3796 RVA: 0x000E9AD8 File Offset: 0x000E7CD8
+        
         private bool IsInWeekOnceActTimes(DateTime time)
         {
             int wd = TimeUtil.GetWeekDay1To7(time);
@@ -1058,7 +1058,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return false;
         }
 
-        // Token: 0x06000ED5 RID: 3797 RVA: 0x000E9B88 File Offset: 0x000E7D88
+        
         public bool IsNowCanDivorce(DateTime time)
         {
             int wd = TimeUtil.GetWeekDay1To7(time);
@@ -1072,7 +1072,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return true;
         }
 
-        // Token: 0x06000ED6 RID: 3798 RVA: 0x000E9C48 File Offset: 0x000E7E48
+        
         private bool IsInWeekAwardTime(DateTime time, out int week)
         {
             week = 0;
@@ -1098,7 +1098,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return result;
         }
 
-        // Token: 0x06000ED7 RID: 3799 RVA: 0x000E9D34 File Offset: 0x000E7F34
+        
         private int CurrRankWeek(DateTime time)
         {
             int currWeekDay = TimeUtil.GetWeekDay1To7(time);
@@ -1115,7 +1115,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return result;
         }
 
-        // Token: 0x06000ED8 RID: 3800 RVA: 0x000E9DB8 File Offset: 0x000E7FB8
+        
         private bool IsStateWatcher(int roleId)
         {
             bool result;
@@ -1126,7 +1126,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return result;
         }
 
-        // Token: 0x06000ED9 RID: 3801 RVA: 0x000E9E0C File Offset: 0x000E800C
+        
         private void RegStateWatcher(int roleId, bool bWatch)
         {
             lock (this.Mutex)
@@ -1142,7 +1142,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EDA RID: 3802 RVA: 0x000E9E88 File Offset: 0x000E8088
+        
         private ECoupleArenaMatchState GetMatchState(int roleId)
         {
             ECoupleArenaMatchState result;
@@ -1158,7 +1158,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return result;
         }
 
-        // Token: 0x06000EDB RID: 3803 RVA: 0x000E9EE8 File Offset: 0x000E80E8
+        
         private void SetMatchState(int roleId, ECoupleArenaMatchState state)
         {
             lock (this.Mutex)
@@ -1182,7 +1182,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EDC RID: 3804 RVA: 0x000E9F84 File Offset: 0x000E8184
+        
         private void NtfCoupleMatchState(int roleId)
         {
             if (this.IsStateWatcher(roleId))
@@ -1221,7 +1221,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EDD RID: 3805 RVA: 0x000EA0B8 File Offset: 0x000E82B8
+        
         public CoupleArenaCoupleJingJiData GetCachedCoupleData(int roleId)
         {
             CoupleArenaCoupleJingJiData result;
@@ -1237,7 +1237,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return result;
         }
 
-        // Token: 0x06000EDE RID: 3806 RVA: 0x000EA11C File Offset: 0x000E831C
+        
         private CoupleArenaCoupleJingJiData ConvertToJiJiData(CoupleArenaCoupleDataK kData)
         {
             return new CoupleArenaCoupleJingJiData
@@ -1259,7 +1259,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             };
         }
 
-        // Token: 0x06000EDF RID: 3807 RVA: 0x000EA22C File Offset: 0x000E842C
+        
         private void TimerProc(object sender, EventArgs e)
         {
             CoupleArenaSyncData data = TianTiClient.getInstance().CoupleArenaSync(this.SyncDateTime);
@@ -1292,13 +1292,13 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EE0 RID: 3808 RVA: 0x000EA3FC File Offset: 0x000E85FC
+        
         public bool CanKuaFuLogin(KuaFuServerLoginData kuaFuServerLoginData)
         {
             return true;
         }
 
-        // Token: 0x06000EE1 RID: 3809 RVA: 0x000EA444 File Offset: 0x000E8644
+        
         public bool KuaFuInitGame(GameClient client)
         {
             long gameId = Global.GetClientKuaFuServerLoginData(client).GameId;
@@ -1356,7 +1356,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return true;
         }
 
-        // Token: 0x06000EE2 RID: 3810 RVA: 0x000EA6AC File Offset: 0x000E88AC
+        
         public bool ClientRelive(GameClient client)
         {
             bool result;
@@ -1385,7 +1385,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return result;
         }
 
-        // Token: 0x06000EE3 RID: 3811 RVA: 0x000EA784 File Offset: 0x000E8984
+        
         private bool GetBirthPoint(int mapCode, int side, out int toPosX, out int toPosY)
         {
             toPosX = -1;
@@ -1411,7 +1411,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             return result;
         }
 
-        // Token: 0x06000EE4 RID: 3812 RVA: 0x000EA848 File Offset: 0x000E8A48
+        
         public void NotifyTimeStateInfoAndScoreInfo(GameClient client)
         {
             lock (this.Mutex)
@@ -1424,7 +1424,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EE5 RID: 3813 RVA: 0x000EA930 File Offset: 0x000E8B30
+        
         public void OnLeaveFuBen(GameClient client)
         {
             lock (this.Mutex)
@@ -1454,7 +1454,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EE6 RID: 3814 RVA: 0x000EAB1C File Offset: 0x000E8D1C
+        
         public void AddCopyScenes(GameClient client, CopyMap copyMap, SceneUIClasses sceneType)
         {
             if (sceneType == SceneUIClasses.CoupleArena)
@@ -1481,7 +1481,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EE7 RID: 3815 RVA: 0x000EAC68 File Offset: 0x000E8E68
+        
         public void RemoveCopyScene(CopyMap copyMap, SceneUIClasses sceneType)
         {
             if (copyMap != null && sceneType == SceneUIClasses.CoupleArena)
@@ -1498,7 +1498,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EE8 RID: 3816 RVA: 0x000EAD04 File Offset: 0x000E8F04
+        
         public void UpdateCopyScene()
         {
             DateTime now = TimeUtil.NowDateTime();
@@ -1605,7 +1605,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EE9 RID: 3817 RVA: 0x000EB1C0 File Offset: 0x000E93C0
+        
         private void CheckFlushZhenAiMonster(CoupleArenaCopyScene scene)
         {
             if (!scene.IsZhenAiMonsterExist && !scene.EnterRoleSide.ContainsKey(scene.ZhenAiBuff_Role))
@@ -1628,7 +1628,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EEA RID: 3818 RVA: 0x000EB300 File Offset: 0x000E9500
+        
         private void CheckFlushYongQiMonster(CoupleArenaCopyScene scene)
         {
             CoupleArenaBuffCfg buffCfg = this.BuffCfgList.Find((CoupleArenaBuffCfg _b) => _b.Type == CoupleAreanConsts.YongQiBuffCfgType);
@@ -1660,7 +1660,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EEB RID: 3819 RVA: 0x000EB4B4 File Offset: 0x000E96B4
+        
         private void ProcessEnd(CoupleArenaCopyScene scene, DateTime now, long nowTicks)
         {
             GameManager.CopyMapMgr.KillAllMonster(scene.CopyMap);
@@ -1768,7 +1768,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EEC RID: 3820 RVA: 0x000EBA50 File Offset: 0x000E9C50
+        
         private void NtfAwardData(int roleid, CoupleArenaPkResultItem retItem)
         {
             GameClient client = GameManager.ClientMgr.FindClient(roleid);
@@ -1816,7 +1816,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EED RID: 3821 RVA: 0x000EBCBC File Offset: 0x000E9EBC
+        
         private void OnMonsterDead(CoupleArenaCopyScene scene, GameClient client, Monster monster)
         {
             lock (this.Mutex)
@@ -1843,7 +1843,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EEE RID: 3822 RVA: 0x000EBE7C File Offset: 0x000EA07C
+        
         private void OnPlayerDead(CoupleArenaCopyScene scene, GameClient deader, GameClient killer)
         {
             lock (this.Mutex)
@@ -1872,7 +1872,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EEF RID: 3823 RVA: 0x000EC00C File Offset: 0x000EA20C
+        
         private void ModifyBuff(CoupleArenaCopyScene scene, GameClient client, BufferItemTypes buffType, CoupleArenaBuffCfg buffCfg, bool bAdd)
         {
             if (scene != null && client != null && buffCfg != null)
@@ -1952,7 +1952,7 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x06000EF0 RID: 3824 RVA: 0x000EC33C File Offset: 0x000EA53C
+        
         private void NtfBuffHoldData(CoupleArenaCopyScene scene)
         {
             lock (this.Mutex)
@@ -1988,58 +1988,58 @@ namespace GameServer.Logic.Marriage.CoupleArena
             }
         }
 
-        // Token: 0x040016C7 RID: 5831
+        
         private object Mutex = new object();
 
-        // Token: 0x040016C8 RID: 5832
+        
         private DateTime SyncDateTime = DateTime.MinValue;
 
-        // Token: 0x040016C9 RID: 5833
+        
         private List<CoupleArenaCoupleJingJiData> SyncRankList = new List<CoupleArenaCoupleJingJiData>();
 
-        // Token: 0x040016CA RID: 5834
+        
         private Dictionary<int, CoupleArenaCoupleJingJiData> SyncRoleDict = new Dictionary<int, CoupleArenaCoupleJingJiData>();
 
-        // Token: 0x040016CB RID: 5835
+        
         private Dictionary<int, ECoupleArenaMatchState> RoleMatchStateDict = new Dictionary<int, ECoupleArenaMatchState>();
 
-        // Token: 0x040016CC RID: 5836
+        
         private Dictionary<int, long> RoleStartReadyMs = new Dictionary<int, long>();
 
-        // Token: 0x040016CD RID: 5837
+        
         private Dictionary<int, int> RoleMatchKeyDict = new Dictionary<int, int>();
 
-        // Token: 0x040016CE RID: 5838
+        
         private HashSet<int> coupleStateWatchers = new HashSet<int>();
 
-        // Token: 0x040016CF RID: 5839
+        
         private CoupleAreanWarCfg WarCfg = new CoupleAreanWarCfg();
 
-        // Token: 0x040016D0 RID: 5840
+        
         private List<CoupleAreanDuanWeiCfg> DuanWeiCfgList = new List<CoupleAreanDuanWeiCfg>();
 
-        // Token: 0x040016D1 RID: 5841
+        
         private List<CoupleAreanWeekRankAwardCfg> WeekAwardCfgList = new List<CoupleAreanWeekRankAwardCfg>();
 
-        // Token: 0x040016D2 RID: 5842
+        
         private List<CoupleArenaBuffCfg> BuffCfgList = new List<CoupleArenaBuffCfg>();
 
-        // Token: 0x040016D3 RID: 5843
+        
         private List<TianTiBirthPoint> BirthPointList = new List<TianTiBirthPoint>();
 
-        // Token: 0x040016D4 RID: 5844
+        
         private int ZhenAiBuffHoldWinSec = 60;
 
-        // Token: 0x040016D5 RID: 5845
+        
         private double YongQiBuff2ZhenAiBuffHurt = 0.2;
 
-        // Token: 0x040016D6 RID: 5846
+        
         private Dictionary<long, CoupleArenaFuBenData> GameId2FuBenData = new Dictionary<long, CoupleArenaFuBenData>();
 
-        // Token: 0x040016D7 RID: 5847
+        
         private Dictionary<int, CoupleArenaCopyScene> FuBenSeq2CopyScenes = new Dictionary<int, CoupleArenaCopyScene>();
 
-        // Token: 0x040016D8 RID: 5848
+        
         private static long NextHeartBeatTicks = 0L;
     }
 }

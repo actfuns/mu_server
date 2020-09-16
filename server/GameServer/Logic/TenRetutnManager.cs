@@ -9,40 +9,40 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000435 RID: 1077
+	
 	public class TenRetutnManager : IManager
 	{
-		// Token: 0x060013BA RID: 5050 RVA: 0x00137440 File Offset: 0x00135640
+		
 		public static TenRetutnManager getInstance()
 		{
 			return TenRetutnManager.instance;
 		}
 
-		// Token: 0x060013BB RID: 5051 RVA: 0x00137458 File Offset: 0x00135658
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x060013BC RID: 5052 RVA: 0x0013747C File Offset: 0x0013567C
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x060013BD RID: 5053 RVA: 0x00137490 File Offset: 0x00135690
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x060013BE RID: 5054 RVA: 0x001374A4 File Offset: 0x001356A4
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060013BF RID: 5055 RVA: 0x001374B8 File Offset: 0x001356B8
+		
 		public bool InitConfig()
 		{
 			lock (this.RuntimeData.Mutex)
@@ -108,7 +108,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060013C0 RID: 5056 RVA: 0x0013781C File Offset: 0x00135A1C
+		
 		public void GiveAwards(GameClient client)
 		{
 			if (this.RuntimeData.SystemOpen)
@@ -176,10 +176,10 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04001D1F RID: 7455
+		
 		private static TenRetutnManager instance = new TenRetutnManager();
 
-		// Token: 0x04001D20 RID: 7456
+		
 		public TenRetutnData RuntimeData = new TenRetutnData();
 	}
 }

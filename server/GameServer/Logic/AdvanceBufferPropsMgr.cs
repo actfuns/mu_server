@@ -5,10 +5,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020005B5 RID: 1461
+	
 	public class AdvanceBufferPropsMgr
 	{
-		// Token: 0x06001A74 RID: 6772 RVA: 0x00195138 File Offset: 0x00193338
+		
 		private static int[] GetCachingIDsByID(int id)
 		{
 			int[] ids = null;
@@ -27,7 +27,7 @@ namespace GameServer.Logic
 			return ids;
 		}
 
-		// Token: 0x06001A75 RID: 6773 RVA: 0x001951D8 File Offset: 0x001933D8
+		
 		public static void ResetCache()
 		{
 			lock (AdvanceBufferPropsMgr.CachingIDsDict)
@@ -43,7 +43,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001A76 RID: 6774 RVA: 0x0019529C File Offset: 0x0019349C
+		
 		public static int GetGoodsID(BufferItemTypes bufferItemType, int goodsIndex)
 		{
 			int[] goodsIds = AdvanceBufferPropsMgr.GetCachingIDsByID((int)bufferItemType);
@@ -64,7 +64,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001A77 RID: 6775 RVA: 0x001952E4 File Offset: 0x001934E4
+		
 		public static double GetExtProp(BufferItemTypes bufferItemType, ExtPropIndexes extPropIndexe, int goodsIndex)
 		{
 			int[] goodsIds = AdvanceBufferPropsMgr.GetCachingIDsByID((int)bufferItemType);
@@ -93,7 +93,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001A78 RID: 6776 RVA: 0x0019536C File Offset: 0x0019356C
+		
 		public static double GetExtPropByGoodsID(BufferItemTypes bufferItemType, ExtPropIndexes extPropIndexe, int goodsID)
 		{
 			EquipPropItem item = GameManager.EquipPropsMgr.FindEquipPropItem(goodsID);
@@ -109,7 +109,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001A79 RID: 6777 RVA: 0x001953AC File Offset: 0x001935AC
+		
 		public static void AddTempBufferProp(GameClient client, BufferItemTypes bufferID, int type)
 		{
 			EquipPropItem item = null;
@@ -175,7 +175,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001A7A RID: 6778 RVA: 0x00195534 File Offset: 0x00193734
+		
 		public static void DoSpriteBuffers(GameClient client)
 		{
 			int age = client.ClientData.PropsCacheManager.GetAge();
@@ -195,7 +195,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0400290F RID: 10511
+		
 		private static readonly Dictionary<BufferItemTypes, string> BufferId2ConfigParamsNameDict = new Dictionary<BufferItemTypes, string>
 		{
 			{
@@ -264,7 +264,7 @@ namespace GameServer.Logic
 			}
 		};
 
-		// Token: 0x04002910 RID: 10512
+		
 		private static readonly Dictionary<BufferItemTypes, int> BufferId2ConfigTypeDict = new Dictionary<BufferItemTypes, int>
 		{
 			{
@@ -321,7 +321,7 @@ namespace GameServer.Logic
 			}
 		};
 
-		// Token: 0x04002911 RID: 10513
+		
 		private static Dictionary<int, int[]> CachingIDsDict = new Dictionary<int, int[]>();
 	}
 }

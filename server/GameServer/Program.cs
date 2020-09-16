@@ -53,14 +53,14 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer
 {
-	// Token: 0x02000860 RID: 2144
+	
 	public class Program : IConnectInfoContainer
 	{
-		// Token: 0x06003C1F RID: 15391
+		
 		[DllImport("kernel32.dll")]
 		private static extern bool SetConsoleCtrlHandler(Program.ControlCtrlDelegate HandlerRoutine, bool Add);
 
-		// Token: 0x06003C20 RID: 15392 RVA: 0x003365D8 File Offset: 0x003347D8
+		
 		public static bool HandlerRoutine(int CtrlType)
 		{
 			switch (CtrlType)
@@ -69,19 +69,19 @@ namespace GameServer
 			return true;
 		}
 
-		// Token: 0x06003C21 RID: 15393
+		
 		[DllImport("user32.dll")]
 		private static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
 
-		// Token: 0x06003C22 RID: 15394
+		
 		[DllImport("user32.dll")]
 		private static extern IntPtr GetSystemMenu(IntPtr hWnd, IntPtr bRevert);
 
-		// Token: 0x06003C23 RID: 15395
+		
 		[DllImport("user32.dll")]
 		private static extern IntPtr RemoveMenu(IntPtr hMenu, uint uPosition, uint uFlags);
 
-		// Token: 0x06003C24 RID: 15396 RVA: 0x00336608 File Offset: 0x00334808
+		
 		private static void HideCloseBtn()
 		{
 			Console.Title = "Server_" + Global.GetRandomNumber(0, 100000);
@@ -91,7 +91,7 @@ namespace GameServer
 			Program.RemoveMenu(closeMenu, SC_CLOSE, 0U);
 		}
 
-		// Token: 0x06003C25 RID: 15397 RVA: 0x00336660 File Offset: 0x00334860
+		
 		private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
 		{
 			try
@@ -124,13 +124,13 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C26 RID: 15398 RVA: 0x00336760 File Offset: 0x00334960
+		
 		private static void ExceptionHook()
 		{
 			AppDomain.CurrentDomain.UnhandledException += Program.CurrentDomain_UnhandledException;
 		}
 
-		// Token: 0x06003C27 RID: 15399 RVA: 0x0033677C File Offset: 0x0033497C
+		
 		public static void DeleteFile(string strFileName)
 		{
 			string strFullFileName = Directory.GetCurrentDirectory() + "\\" + strFileName;
@@ -145,7 +145,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C28 RID: 15400 RVA: 0x003367E8 File Offset: 0x003349E8
+		
 		public static void WritePIDToFile(string strFile)
 		{
 			string strFileName = Directory.GetCurrentDirectory() + "\\" + strFile;
@@ -154,7 +154,7 @@ namespace GameServer
 			File.WriteAllText(strFileName, string.Concat(nPID));
 		}
 
-		// Token: 0x06003C29 RID: 15401 RVA: 0x00336828 File Offset: 0x00334A28
+		
 		public static int GetServerPIDFromFile()
 		{
 			string strFileName = Directory.GetCurrentDirectory() + "\\GameServerStop.txt";
@@ -171,7 +171,7 @@ namespace GameServer
 			return result;
 		}
 
-		// Token: 0x06003C2A RID: 15402 RVA: 0x0033686C File Offset: 0x00334A6C
+		
 		private static void Main(string[] args)
 		{
 			Program.DeleteFile("Start.txt");
@@ -233,7 +233,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C2B RID: 15403 RVA: 0x00336AD0 File Offset: 0x00334CD0
+		
 		public static void ConsoleInputThread(object obj)
 		{
 			while (!Program.NeedExitServer)
@@ -256,7 +256,7 @@ namespace GameServer
 			Program.OnExitServer();
 		}
 
-		// Token: 0x06003C2C RID: 15404 RVA: 0x00336B58 File Offset: 0x00334D58
+		
 		private static void ParseInputCmd(string cmd)
 		{
 			Program.CmdCallback cb = null;
@@ -276,26 +276,26 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C2D RID: 15405 RVA: 0x00336BCA File Offset: 0x00334DCA
+		
 		private static void OnStartServer()
 		{
 			Program.ServerConsole.InitServer();
 			Console.Title = string.Format("游戏服务器{0}线@{1}@{2}", GameManager.ServerLineID, Program.GetVersionDateTime(), Program.ProgramExtName);
 		}
 
-		// Token: 0x06003C2E RID: 15406 RVA: 0x00336BFC File Offset: 0x00334DFC
+		
 		private static void OnExitServer()
 		{
 			Program.ServerConsole.ExitServer();
 		}
 
-		// Token: 0x06003C2F RID: 15407 RVA: 0x00336C0A File Offset: 0x00334E0A
+		
 		public static void Exit()
 		{
 			Program.NeedExitServer = true;
 		}
 
-		// Token: 0x06003C30 RID: 15408 RVA: 0x00336C34 File Offset: 0x00334E34
+		
 		private static void InitCommonCmd()
 		{
 			Program.CmdDict.Add("help", new Program.CmdCallback(Program.ShowCmdHelpInfo));
@@ -330,7 +330,7 @@ namespace GameServer
 			});
 		}
 
-		// Token: 0x06003C31 RID: 15409 RVA: 0x00336EC8 File Offset: 0x003350C8
+		
 		public static void LoadIPList(string strCmd)
 		{
 			try
@@ -365,7 +365,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C32 RID: 15410 RVA: 0x00336FE4 File Offset: 0x003351E4
+		
 		public static void CalcGCInfo()
 		{
 			long ticks = TimeUtil.NOW();
@@ -402,7 +402,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C33 RID: 15411 RVA: 0x00337108 File Offset: 0x00335308
+		
 		private static void ShowGCInfo(string cmd = null)
 		{
 			try
@@ -419,7 +419,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C34 RID: 15412 RVA: 0x00337230 File Offset: 0x00335430
+		
 		private static void ShowCmdHelpInfo(string cmd = null)
 		{
 			SysConOut.WriteLine(string.Format("游戏服务器{0}:", GameManager.ServerLineID));
@@ -437,7 +437,7 @@ namespace GameServer
 			SysConOut.WriteLine("输入 testkf 0 关闭中心压力测试");
 		}
 
-		// Token: 0x06003C35 RID: 15413 RVA: 0x003372DC File Offset: 0x003354DC
+		
 		private static void GarbageCollect(string cmd = null)
 		{
 			try
@@ -450,7 +450,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C36 RID: 15414 RVA: 0x00337318 File Offset: 0x00335518
+		
 		private static string ReadPasswd()
 		{
 			StringBuilder sb = new StringBuilder();
@@ -471,7 +471,7 @@ namespace GameServer
 			return sb.ToString();
 		}
 
-		// Token: 0x06003C37 RID: 15415 RVA: 0x00337390 File Offset: 0x00335590
+		
 		private static void SetTestMode(string cmd = null)
 		{
 			if (!string.IsNullOrEmpty(cmd))
@@ -500,7 +500,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C38 RID: 15416 RVA: 0x00337444 File Offset: 0x00335644
+		
 		public static void RunPatchFromConsole(string cmd)
 		{
 			try
@@ -521,7 +521,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C39 RID: 15417 RVA: 0x003374C0 File Offset: 0x003356C0
+		
 		public static void RunPatch(string arg, bool console = true)
 		{
 			try
@@ -573,7 +573,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C3A RID: 15418 RVA: 0x00337660 File Offset: 0x00335860
+		
 		public static void ShowObjectInfo(string cmd)
 		{
 			try
@@ -591,7 +591,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C3B RID: 15419 RVA: 0x003376FC File Offset: 0x003358FC
+		
 		private static void ShowDBConnectInfo(string cmd = null)
 		{
 			try
@@ -611,7 +611,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C3C RID: 15420 RVA: 0x003377D8 File Offset: 0x003359D8
+		
 		private static void ShowServerBaseInfo(string cmd = null)
 		{
 			SysConOut.WriteLine(string.Format("在线数量 {0}/{1}", GameManager.ClientMgr.GetClientCount(), Global._TCPManager.MySocketListener.ConnectedSocketsCount));
@@ -639,7 +639,7 @@ namespace GameServer
 			SysConOut.WriteLine(info);
 		}
 
-		// Token: 0x06003C3D RID: 15421 RVA: 0x003379BC File Offset: 0x00335BBC
+		
 		private static void ShowServerTCPInfo(string cmd = null)
 		{
 			bool clear = cmd.Contains("/c");
@@ -759,21 +759,21 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C3E RID: 15422 RVA: 0x00338008 File Offset: 0x00336208
+		
 		private static void ShowCopyMapInfo(string cmd = null)
 		{
 			string info = GameManager.CopyMapMgr.GetCopyMapStrInfo();
 			SysConOut.WriteLine(info);
 		}
 
-		// Token: 0x06003C3F RID: 15423 RVA: 0x00338028 File Offset: 0x00336228
+		
 		private static void ListCopyMap(string cmd = null)
 		{
 			string info = GameManager.CopyMapMgr.ListCopyMapStrInfo();
 			SysConOut.WriteLine(info);
 		}
 
-		// Token: 0x06003C40 RID: 15424 RVA: 0x00338048 File Offset: 0x00336248
+		
 		private static void ShowRoleInfo(string cmd = null)
 		{
 			StringBuilder sb = new StringBuilder();
@@ -806,7 +806,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C41 RID: 15425 RVA: 0x00338170 File Offset: 0x00336370
+		
 		public void AddDBConnectInfo(int index, string info)
 		{
 			lock (this.DBServerConnectDict)
@@ -822,7 +822,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C42 RID: 15426 RVA: 0x003381EC File Offset: 0x003363EC
+		
 		public void AddLogDBConnectInfo(int index, string info)
 		{
 			lock (this.LogDBServerConnectDict)
@@ -838,13 +838,13 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C43 RID: 15427 RVA: 0x00338268 File Offset: 0x00336468
+		
 		private static void InitProgramExtName()
 		{
 			Program.ProgramExtName = DataHelper.CurrentDirectory;
 		}
 
-		// Token: 0x06003C44 RID: 15428 RVA: 0x003382B4 File Offset: 0x003364B4
+		
 		public void InitServer()
 		{
 			Program.InitProgramExtName();
@@ -1003,7 +1003,7 @@ namespace GameServer
 			GameManager.ServerStarting = false;
 		}
 
-		// Token: 0x06003C45 RID: 15429 RVA: 0x00338A04 File Offset: 0x00336C04
+		
 		public void ExitServer()
 		{
 			if (!Program.NeedExitServer)
@@ -1027,7 +1027,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C46 RID: 15430 RVA: 0x00338AA8 File Offset: 0x00336CA8
+		
 		private XElement InitGameResPath()
 		{
 			XElement xml = null;
@@ -1057,7 +1057,7 @@ namespace GameServer
 			return xml;
 		}
 
-		// Token: 0x06003C47 RID: 15431 RVA: 0x00338BCC File Offset: 0x00336DCC
+		
 		private void InitGameRes()
 		{
 			try
@@ -1138,7 +1138,7 @@ namespace GameServer
 			this.InitMapNameDictionary();
 		}
 
-		// Token: 0x06003C48 RID: 15432 RVA: 0x00339058 File Offset: 0x00337258
+		
 		private void LoadRoleSitExpList(int maxLevel)
 		{
 			Data.RoleSitExpList = new RoleSitExpItem[maxLevel];
@@ -1170,7 +1170,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C49 RID: 15433 RVA: 0x0033919C File Offset: 0x0033739C
+		
 		private void LoadRoleBasePropItems(int maxLevel)
 		{
 			int i = 0;
@@ -1252,7 +1252,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C4A RID: 15434 RVA: 0x0033957C File Offset: 0x0033777C
+		
 		private void LoadRoleZhuanZhiInfo()
 		{
 			try
@@ -1322,7 +1322,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C4B RID: 15435 RVA: 0x00339800 File Offset: 0x00337A00
+		
 		private void LoadRoleOccupationAddPointInfo()
 		{
 			try
@@ -1350,7 +1350,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C4C RID: 15436 RVA: 0x00339920 File Offset: 0x00337B20
+		
 		private void LoadRoleChangeLifeAddPointInfo()
 		{
 			try
@@ -1382,7 +1382,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C4D RID: 15437 RVA: 0x00339AAC File Offset: 0x00337CAC
+		
 		private void LoadMoBaiDataInfo()
 		{
 			try
@@ -1428,7 +1428,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C4E RID: 15438 RVA: 0x00339CDC File Offset: 0x00337EDC
+		
 		private void LoadBloodCastleDataInfo()
 		{
 			try
@@ -1515,7 +1515,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C4F RID: 15439 RVA: 0x0033A110 File Offset: 0x00338310
+		
 		private void LoadCopyScoreDataInfo()
 		{
 			try
@@ -1565,7 +1565,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C50 RID: 15440 RVA: 0x0033A380 File Offset: 0x00338580
+		
 		private void LoadFreshPlayerCopySceneInfo()
 		{
 			try
@@ -1606,7 +1606,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C51 RID: 15441 RVA: 0x0033A5A0 File Offset: 0x003387A0
+		
 		private void LoadTaskStarDataInfo()
 		{
 			try
@@ -1637,7 +1637,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C52 RID: 15442 RVA: 0x0033A714 File Offset: 0x00338914
+		
 		private void LoadDailyCircleTaskAwardInfo()
 		{
 			try
@@ -1679,7 +1679,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C53 RID: 15443 RVA: 0x0033A8F8 File Offset: 0x00338AF8
+		
 		private void LoadTaofaTaskAwardInfo()
 		{
 			try
@@ -1694,7 +1694,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C54 RID: 15444 RVA: 0x0033A974 File Offset: 0x00338B74
+		
 		private void LoadCombatForceInfoInfo()
 		{
 			try
@@ -1756,7 +1756,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C55 RID: 15445 RVA: 0x0033ACE8 File Offset: 0x00338EE8
+		
 		private void LoadDaimonSquareDataInfo()
 		{
 			try
@@ -1853,7 +1853,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C56 RID: 15446 RVA: 0x0033B108 File Offset: 0x00339308
+		
 		private void LoadSystemParamsDataForCache()
 		{
 			try
@@ -2117,7 +2117,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C57 RID: 15447 RVA: 0x0033BB74 File Offset: 0x00339D74
+		
 		public static void LoadTotalLoginDataInfo()
 		{
 			try
@@ -2231,7 +2231,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C58 RID: 15448 RVA: 0x0033C00C File Offset: 0x0033A20C
+		
 		private void LoadVIPDataInfo()
 		{
 			try
@@ -2319,7 +2319,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C59 RID: 15449 RVA: 0x0033C39C File Offset: 0x0033A59C
+		
 		private void LoadVIPLevAwardAndExpInfo()
 		{
 			try
@@ -2385,7 +2385,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C5A RID: 15450 RVA: 0x0033C634 File Offset: 0x0033A834
+		
 		private void LoadMeditateInfo()
 		{
 			try
@@ -2420,7 +2420,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C5B RID: 15451 RVA: 0x0033C7F8 File Offset: 0x0033A9F8
+		
 		private void LoadExperienceCopyMapDataInfo()
 		{
 			try
@@ -2508,7 +2508,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C5C RID: 15452 RVA: 0x0033CB68 File Offset: 0x0033AD68
+		
 		private void LoadBossHomeInfo()
 		{
 			try
@@ -2542,7 +2542,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C5D RID: 15453 RVA: 0x0033CD04 File Offset: 0x0033AF04
+		
 		private void LoadGoldTempleInfo()
 		{
 			try
@@ -2576,7 +2576,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C5E RID: 15454 RVA: 0x0033CEA0 File Offset: 0x0033B0A0
+		
 		private void LoadEquipUpgradeInfo()
 		{
 			try
@@ -2612,7 +2612,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C5F RID: 15455 RVA: 0x0033D070 File Offset: 0x0033B270
+		
 		private void LoadFuBenNeedInfo()
 		{
 			try
@@ -2638,7 +2638,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C60 RID: 15456 RVA: 0x0033D16C File Offset: 0x0033B36C
+		
 		private void LoadGoldCopySceneInfo()
 		{
 			try
@@ -2736,7 +2736,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C61 RID: 15457 RVA: 0x0033D4E4 File Offset: 0x0033B6E4
+		
 		private void LoadEquipJuHunInfo()
 		{
 			Dictionary<int, EquipJuHunXmlData> juHunDataDict = new Dictionary<int, EquipJuHunXmlData>();
@@ -2811,7 +2811,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C62 RID: 15458 RVA: 0x0033D804 File Offset: 0x0033BA04
+		
 		private void LoadBagType()
 		{
 			Dictionary<int, BagTypeXmlData> bagTypeDict = new Dictionary<int, BagTypeXmlData>();
@@ -2853,7 +2853,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C63 RID: 15459 RVA: 0x0033D9C8 File Offset: 0x0033BBC8
+		
 		private void InitMapStallPosList()
 		{
 			Data.MapStallList.Clear();
@@ -2893,7 +2893,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C64 RID: 15460 RVA: 0x0033DB30 File Offset: 0x0033BD30
+		
 		private void InitMapNameDictionary()
 		{
 			Data.MapNamesDict.Clear();
@@ -2923,7 +2923,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C65 RID: 15461 RVA: 0x0033DC38 File Offset: 0x0033BE38
+		
 		private void ExitOnError(string msg, Exception ex)
 		{
 			LogManager.WriteLog(LogTypes.Fatal, msg + ex.ToString(), null, true);
@@ -2931,7 +2931,7 @@ namespace GameServer
 			Process.GetCurrentProcess().Kill();
 		}
 
-		// Token: 0x06003C66 RID: 15462 RVA: 0x0033DC68 File Offset: 0x0033BE68
+		
 		private void InitGameMapsAndMonsters()
 		{
 			XElement xml = null;
@@ -2974,7 +2974,7 @@ namespace GameServer
 			}));
 		}
 
-		// Token: 0x06003C67 RID: 15463 RVA: 0x0033DE9C File Offset: 0x0033C09C
+		
 		private void InitCache(XElement xml)
 		{
 			Global._FullBufferManager = new FullBufferManager();
@@ -3016,7 +3016,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C68 RID: 15464 RVA: 0x0033E078 File Offset: 0x0033C278
+		
 		private void InitTCPManager(XElement xml, bool bConnectDB)
 		{
 			if (bConnectDB)
@@ -3096,12 +3096,12 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C69 RID: 15465 RVA: 0x0033E5C4 File Offset: 0x0033C7C4
+		
 		public static void DyLoadConfig()
 		{
 		}
 
-		// Token: 0x06003C6A RID: 15466 RVA: 0x0033E5C8 File Offset: 0x0033C7C8
+		
 		private void InitGameManager(XElement xml)
 		{
 			GameManager.AppMainWnd = this;
@@ -3340,7 +3340,7 @@ namespace GameServer
 			BoCaiConfigMgr.LoadConfig(false);
 		}
 
-		// Token: 0x06003C6B RID: 15467 RVA: 0x0033F3E0 File Offset: 0x0033D5E0
+		
 		private void InitGameConfigWithDB()
 		{
 			GameManager.ServerId = Global.sendToDB<int, string>(11002, "", 0);
@@ -3372,26 +3372,26 @@ namespace GameServer
 			GameManager.LoadGameConfigFlags();
 		}
 
-		// Token: 0x06003C6C RID: 15468 RVA: 0x0033F51F File Offset: 0x0033D71F
+		
 		private void InitMonsterManager()
 		{
 		}
 
-		// Token: 0x06003C6D RID: 15469 RVA: 0x0033F524 File Offset: 0x0033D724
+		
 		protected static void StartThreadPoolDriverTimer()
 		{
 			Program.ThreadPoolDriverTimer = new Timer(new TimerCallback(Program.ThreadPoolDriverTimer_Tick), null, 1000, 1000);
 			Program.LogThreadPoolDriverTimer = new Timer(new TimerCallback(Program.LogThreadPoolDriverTimer_Tick), null, 500, 500);
 		}
 
-		// Token: 0x06003C6E RID: 15470 RVA: 0x0033F574 File Offset: 0x0033D774
+		
 		protected static void StopThreadPoolDriverTimer()
 		{
 			Program.ThreadPoolDriverTimer.Change(-1, -1);
 			Program.LogThreadPoolDriverTimer.Change(-1, -1);
 		}
 
-		// Token: 0x06003C6F RID: 15471 RVA: 0x0033F594 File Offset: 0x0033D794
+		
 		protected static void ThreadPoolDriverTimer_Tick(object sender)
 		{
 			try
@@ -3404,7 +3404,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C70 RID: 15472 RVA: 0x0033F5E0 File Offset: 0x0033D7E0
+		
 		public static void LogThreadPoolDriverTimer_Tick(object sender)
 		{
 			try
@@ -3417,7 +3417,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C71 RID: 15473 RVA: 0x0033F628 File Offset: 0x0033D828
+		
 		private void ExecuteBackgroundLogWorkers(object sender, EventArgs e)
 		{
 			try
@@ -3433,7 +3433,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C72 RID: 15474 RVA: 0x0033F67C File Offset: 0x0033D87C
+		
 		private void ExecuteBackgroundWorkers(object sender, EventArgs e)
 		{
 			try
@@ -3615,7 +3615,7 @@ namespace GameServer
 			Program.CalcGCInfo();
 		}
 
-		// Token: 0x06003C73 RID: 15475 RVA: 0x0033FAAC File Offset: 0x0033DCAC
+		
 		private void closingTimer_Tick(object sender, EventArgs e)
 		{
 			try
@@ -3649,7 +3649,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C74 RID: 15476 RVA: 0x0033FBAC File Offset: 0x0033DDAC
+		
 		public void auxiliaryTimer_Tick(object sender, EventArgs e)
 		{
 			long ticksA = TimeUtil.NOW();
@@ -3684,7 +3684,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C75 RID: 15477 RVA: 0x0033FCE0 File Offset: 0x0033DEE0
+		
 		public void dynamicMonsterTimer_Tick(object sender, EventArgs e)
 		{
 			long ticksA = TimeUtil.NOW();
@@ -3740,13 +3740,13 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C76 RID: 15478 RVA: 0x0033FF10 File Offset: 0x0033E110
+		
 		private void DoLog(string warning)
 		{
 			LogManager.WriteLog(LogTypes.Error, warning, null, true);
 		}
 
-		// Token: 0x06003C77 RID: 15479 RVA: 0x0033FF20 File Offset: 0x0033E120
+		
 		private void MainDispatcherWorker_DoWork(object sender, EventArgs e)
 		{
 			long lastTicks = TimeUtil.NOW();
@@ -3808,7 +3808,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C78 RID: 15480 RVA: 0x00340100 File Offset: 0x0033E300
+		
 		private void TwLogWorker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			try
@@ -3821,7 +3821,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C79 RID: 15481 RVA: 0x0034013C File Offset: 0x0033E33C
+		
 		private void IPStatisticsWorker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			try
@@ -3836,7 +3836,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C7A RID: 15482 RVA: 0x00340194 File Offset: 0x0033E394
+		
 		private void LoadBanWorker_DoWork(object sender, EventArgs e)
 		{
 			long lastTicks = TimeUtil.NOW();
@@ -3865,7 +3865,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C7B RID: 15483 RVA: 0x00340230 File Offset: 0x0033E430
+		
 		private void DynamicMonstersWorker_DoWork(object sender, EventArgs e)
 		{
 			long lastTicks = TimeUtil.NOW();
@@ -3910,7 +3910,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C7C RID: 15484 RVA: 0x00340340 File Offset: 0x0033E540
+		
 		private void RoleStroyboardDispatcherWorker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			long startTicks = TimeUtil.NOW();
@@ -3957,7 +3957,7 @@ namespace GameServer
 			SysConOut.WriteLine("角色故事版驱动线程退出，回车退出系统");
 		}
 
-		// Token: 0x06003C7D RID: 15485 RVA: 0x00340464 File Offset: 0x0033E664
+		
 		private void eventWorker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			try
@@ -4099,7 +4099,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C7E RID: 15486 RVA: 0x003407B4 File Offset: 0x0033E9B4
+		
 		private void dbCommandWorker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			try
@@ -4113,7 +4113,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C7F RID: 15487 RVA: 0x00340810 File Offset: 0x0033EA10
+		
 		private void logDBCommandWorker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			try
@@ -4126,7 +4126,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C80 RID: 15488 RVA: 0x00340868 File Offset: 0x0033EA68
+		
 		private void clientsWorker_DoWork(object sender, EventArgs e)
 		{
 			DoWorkEventArgs de = e as DoWorkEventArgs;
@@ -4146,7 +4146,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C81 RID: 15489 RVA: 0x00340924 File Offset: 0x0033EB24
+		
 		private void buffersWorker_DoWork(object sender, EventArgs e)
 		{
 			try
@@ -4165,7 +4165,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C82 RID: 15490 RVA: 0x003409C0 File Offset: 0x0033EBC0
+		
 		private void spriteDBWorker_DoWork(object sender, EventArgs e)
 		{
 			try
@@ -4184,7 +4184,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C83 RID: 15491 RVA: 0x00340A5C File Offset: 0x0033EC5C
+		
 		private void othersWorker_DoWork(object sender, EventArgs e)
 		{
 			try
@@ -4241,7 +4241,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C84 RID: 15492 RVA: 0x00340C58 File Offset: 0x0033EE58
+		
 		private void FightingWorker_DoWork(object sender, EventArgs e)
 		{
 			try
@@ -4272,7 +4272,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C85 RID: 15493 RVA: 0x00340D60 File Offset: 0x0033EF60
+		
 		private void ShengXiaoGuessWorker_DoWork(object sender, EventArgs e)
 		{
 			try
@@ -4291,7 +4291,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C86 RID: 15494 RVA: 0x00340DDC File Offset: 0x0033EFDC
+		
 		private void chatMsgWorker_DoWork(object sender, EventArgs e)
 		{
 			try
@@ -4311,7 +4311,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C87 RID: 15495 RVA: 0x00340E5C File Offset: 0x0033F05C
+		
 		private void fuBenWorker_DoWork(object sender, EventArgs e)
 		{
 			try
@@ -4359,7 +4359,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C88 RID: 15496 RVA: 0x00341004 File Offset: 0x0033F204
+		
 		private void dbWriterWorker_DoWork(object sender, EventArgs e)
 		{
 			try
@@ -4377,7 +4377,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C89 RID: 15497 RVA: 0x00341074 File Offset: 0x0033F274
+		
 		private void SocketSendCacheDataWorker_DoWork(object sender, EventArgs e)
 		{
 			try
@@ -4396,7 +4396,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C8A RID: 15498 RVA: 0x003410F0 File Offset: 0x0033F2F0
+		
 		private void CmdPacketProcessWorker_DoWork(object sender, EventArgs e)
 		{
 			Queue<CmdPacket> ls = new Queue<CmdPacket>();
@@ -4414,7 +4414,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C8B RID: 15499 RVA: 0x00341150 File Offset: 0x0033F350
+		
 		private void Gird9UpdateWorker_DoWork(object sender, EventArgs e)
 		{
 			DoWorkEventArgs de = e as DoWorkEventArgs;
@@ -4456,7 +4456,7 @@ namespace GameServer
 			SysConOut.WriteLine(string.Format("9宫格更新驱动线程{0}退出...", (int)de.Argument));
 		}
 
-		// Token: 0x06003C8C RID: 15500 RVA: 0x003412BC File Offset: 0x0033F4BC
+		
 		private void RoleExtensionWorker_DoWork(object sender, EventArgs e)
 		{
 			long startTicks = TimeUtil.NOW();
@@ -4492,7 +4492,7 @@ namespace GameServer
 			SysConOut.WriteLine("角色拓展线程退出");
 		}
 
-		// Token: 0x06003C8D RID: 15501 RVA: 0x003413C8 File Offset: 0x0033F5C8
+		
 		private void SocketCheckWorker_DoWork(object sender, EventArgs e)
 		{
 			try
@@ -4524,7 +4524,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C8E RID: 15502 RVA: 0x003414E4 File Offset: 0x0033F6E4
+		
 		private void Window_Closing()
 		{
 			if (!this.MustCloseNow)
@@ -4539,7 +4539,7 @@ namespace GameServer
 			}
 		}
 
-		// Token: 0x06003C8F RID: 15503 RVA: 0x00341538 File Offset: 0x0033F738
+		
 		public static string GetVersionDateTime()
 		{
 			Assembly assembly = Assembly.GetExecutingAssembly();
@@ -4553,179 +4553,179 @@ namespace GameServer
 			return dtv.ToString("yyyy-MM-dd_HH") + string.Format("_{0}", version);
 		}
 
-		// Token: 0x06003C90 RID: 15504 RVA: 0x003415F4 File Offset: 0x0033F7F4
+		
 		public static string GetVersionStr()
 		{
 			Assembly assembly = Assembly.GetExecutingAssembly();
 			return ((AssemblyFileVersionAttribute)Attribute.GetCustomAttribute(assembly, typeof(AssemblyFileVersionAttribute))).Version;
 		}
 
-		// Token: 0x040046DF RID: 18143
+		
 		public static FileVersionInfo AssemblyFileVersion;
 
-		// Token: 0x040046E0 RID: 18144
+		
 		private static Program.ControlCtrlDelegate newDelegate = new Program.ControlCtrlDelegate(Program.HandlerRoutine);
 
-		// Token: 0x040046E1 RID: 18145
+		
 		public static Program ServerConsole = new Program();
 
-		// Token: 0x040046E2 RID: 18146
+		
 		private static Dictionary<string, Program.CmdCallback> CmdDict = new Dictionary<string, Program.CmdCallback>();
 
-		// Token: 0x040046E3 RID: 18147
+		
 		public static bool NeedExitServer = false;
 
-		// Token: 0x040046E4 RID: 18148
+		
 		private static string DumpBaseDir = "d:\\dumps\\";
 
-		// Token: 0x040046E5 RID: 18149
+		
 		private static bool bDumpAndExit_ServerRunOk = false;
 
-		// Token: 0x040046E6 RID: 18150
+		
 		public static int[] GCCollectionCounts = new int[3];
 
-		// Token: 0x040046E7 RID: 18151
+		
 		public static int[] GCCollectionCounts1 = new int[3];
 
-		// Token: 0x040046E8 RID: 18152
+		
 		public static int[] GCCollectionCounts5 = new int[3];
 
-		// Token: 0x040046E9 RID: 18153
+		
 		public static int[] GCCollectionCountsNow = new int[3];
 
-		// Token: 0x040046EA RID: 18154
+		
 		public static int[] MaxGCCollectionCounts1s = new int[3];
 
-		// Token: 0x040046EB RID: 18155
+		
 		public static int[] MaxGCCollectionCounts5s = new int[3];
 
-		// Token: 0x040046EC RID: 18156
+		
 		public static long[] MaxGCCollectionCounts1sTicks = new long[3];
 
-		// Token: 0x040046ED RID: 18157
+		
 		public static long[] MaxGCCollectionCounts5sTicks = new long[3];
 
-		// Token: 0x040046EE RID: 18158
+		
 		public Dictionary<int, string> DBServerConnectDict = new Dictionary<int, string>();
 
-		// Token: 0x040046EF RID: 18159
+		
 		public Dictionary<int, string> LogDBServerConnectDict = new Dictionary<int, string>();
 
-		// Token: 0x040046F0 RID: 18160
+		
 		private static string ProgramExtName = "";
 
-		// Token: 0x040046F1 RID: 18161
+		
 		private static Timer ThreadPoolDriverTimer = null;
 
-		// Token: 0x040046F2 RID: 18162
+		
 		private static Timer LogThreadPoolDriverTimer = null;
 
-		// Token: 0x040046F3 RID: 18163
+		
 		private BackgroundWorker eventWorker;
 
-		// Token: 0x040046F4 RID: 18164
+		
 		private BackgroundWorker dbCommandWorker;
 
-		// Token: 0x040046F5 RID: 18165
+		
 		private BackgroundWorker logDBCommandWorker;
 
-		// Token: 0x040046F6 RID: 18166
+		
 		private BackgroundWorker clientsWorker;
 
-		// Token: 0x040046F7 RID: 18167
+		
 		private BackgroundWorker buffersWorker;
 
-		// Token: 0x040046F8 RID: 18168
+		
 		private BackgroundWorker spriteDBWorker;
 
-		// Token: 0x040046F9 RID: 18169
+		
 		private BackgroundWorker othersWorker;
 
-		// Token: 0x040046FA RID: 18170
+		
 		private BackgroundWorker FightingWorker;
 
-		// Token: 0x040046FB RID: 18171
+		
 		private BackgroundWorker chatMsgWorker;
 
-		// Token: 0x040046FC RID: 18172
+		
 		private BackgroundWorker fuBenWorker;
 
-		// Token: 0x040046FD RID: 18173
+		
 		private BackgroundWorker dbWriterWorker;
 
-		// Token: 0x040046FE RID: 18174
+		
 		private BackgroundWorker SocketSendCacheDataWorker;
 
-		// Token: 0x040046FF RID: 18175
+		
 		private BackgroundWorker ShengXiaoGuessWorker;
 
-		// Token: 0x04004700 RID: 18176
+		
 		private BackgroundWorker MainDispatcherWorker;
 
-		// Token: 0x04004701 RID: 18177
+		
 		private BackgroundWorker socketCheckWorker;
 
-		// Token: 0x04004702 RID: 18178
+		
 		private BackgroundWorker dynamicMonstersWorker;
 
-		// Token: 0x04004703 RID: 18179
+		
 		private BackgroundWorker TwLogWorker;
 
-		// Token: 0x04004704 RID: 18180
+		
 		private BackgroundWorker BanWorker;
 
-		// Token: 0x04004705 RID: 18181
+		
 		private BackgroundWorker IPStatisticsWorker;
 
-		// Token: 0x04004706 RID: 18182
+		
 		private ScheduleExecutor monsterExecutor = null;
 
-		// Token: 0x04004707 RID: 18183
+		
 		private int MaxMonsterProcessWorkersNum = 5;
 
-		// Token: 0x04004708 RID: 18184
+		
 		private BackgroundWorker[] Gird9UpdateWorkers;
 
-		// Token: 0x04004709 RID: 18185
+		
 		public static int MaxGird9UpdateWorkersNum = 5;
 
-		// Token: 0x0400470A RID: 18186
+		
 		private BackgroundWorker RoleStroyboardDispatcherWorker;
 
-		// Token: 0x0400470B RID: 18187
+		
 		private bool MustCloseNow = false;
 
-		// Token: 0x0400470C RID: 18188
+		
 		private bool EnterClosingMode = false;
 
-		// Token: 0x0400470D RID: 18189
+		
 		private int ClosingCounter = 6000;
 
-		// Token: 0x0400470E RID: 18190
+		
 		private long LastWriteDBLogTicks = TimeUtil.NOW();
 
-		// Token: 0x0400470F RID: 18191
+		
 		private long LastAuxiliaryTicks = TimeUtil.NOW();
 
-		// Token: 0x04004710 RID: 18192
+		
 		private long LastDynamicMonsterTicks = TimeUtil.NOW();
 
-		// Token: 0x04004711 RID: 18193
+		
 		private long LastMonsterUniqueIdProcTicks = TimeUtil.NOW();
 
-		// Token: 0x04004712 RID: 18194
+		
 		private long LastSocketCheckTicks = TimeUtil.NOW();
 
-		// Token: 0x02000861 RID: 2145
-		// (Invoke) Token: 0x06003C99 RID: 15513
+		
+		
 		public delegate bool ControlCtrlDelegate(int CtrlType);
 
-		// Token: 0x02000862 RID: 2146
-		// (Invoke) Token: 0x06003C9D RID: 15517
+		
+		
 		public delegate void CmdCallback(string cmd);
 
-		// Token: 0x02000863 RID: 2147
-		// (Invoke) Token: 0x06003CA1 RID: 15521
+		
+		
 		private delegate string PatchDelegate(string[] args);
 	}
 }

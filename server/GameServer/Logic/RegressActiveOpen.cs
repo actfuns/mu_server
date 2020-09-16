@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004A7 RID: 1191
+	
 	public class RegressActiveOpen : Activity
 	{
-		// Token: 0x0600162C RID: 5676 RVA: 0x0015B000 File Offset: 0x00159200
+		
 		public bool Init()
 		{
 			RegressActiveOpen.OpenStateVavle = 0;
@@ -67,7 +67,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600162D RID: 5677 RVA: 0x0015B27C File Offset: 0x0015947C
+		
 		public void OnRoleLogin(GameClient client)
 		{
 			if (!this.InActivityTime())
@@ -96,7 +96,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600162E RID: 5678 RVA: 0x0015B33C File Offset: 0x0015953C
+		
 		public int GetUserActiveFile(string Regtime, out int ConfID)
 		{
 			ConfID = 0;
@@ -114,13 +114,13 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x04001FB8 RID: 8120
+		
 		protected const string RegressActiveOpenXml = "Config\\HuiGuiHuoDong.xml";
 
-		// Token: 0x04001FB9 RID: 8121
+		
 		private Dictionary<int, RegressActiveOpenXML> regressActiveOpenXML = new Dictionary<int, RegressActiveOpenXML>();
 
-		// Token: 0x04001FBA RID: 8122
+		
 		public static int OpenStateVavle = 0;
 	}
 }

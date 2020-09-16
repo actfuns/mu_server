@@ -10,11 +10,11 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000795 RID: 1941
+	
 	internal class ShareManager
 	{
-		// Token: 0x170003B1 RID: 945
-		// (get) Token: 0x06003289 RID: 12937 RVA: 0x002CDCD4 File Offset: 0x002CBED4
+		
+		
 		public static List<GoodsData> ShareGoodslist
 		{
 			get
@@ -40,7 +40,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600328A RID: 12938 RVA: 0x002CDD7C File Offset: 0x002CBF7C
+		
 		private static List<GoodsData> ParseGoodsDataList(string[] fields)
 		{
 			List<GoodsData> goodsDataList = new List<GoodsData>();
@@ -64,7 +64,7 @@ namespace GameServer.Logic
 			return goodsDataList;
 		}
 
-		// Token: 0x0600328B RID: 12939 RVA: 0x002CDE24 File Offset: 0x002CC024
+		
 		public static bool CanGetShareAward(GameClient client)
 		{
 			string oldstr = Global.GetRoleParamByName(client, "DailyShare");
@@ -85,7 +85,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600328C RID: 12940 RVA: 0x002CDEB0 File Offset: 0x002CC0B0
+		
 		public static bool HasDoneShare(GameClient client)
 		{
 			string oldstr = Global.GetRoleParamByName(client, "DailyShare");
@@ -106,7 +106,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600328D RID: 12941 RVA: 0x002CDF28 File Offset: 0x002CC128
+		
 		public static TCPProcessCmdResults ProcessShareCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -198,7 +198,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x0600328E RID: 12942 RVA: 0x002CE148 File Offset: 0x002CC348
+		
 		public static int UpdateRoleShareState(GameClient client)
 		{
 			int ret = 0;
@@ -224,7 +224,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600328F RID: 12943 RVA: 0x002CE1F0 File Offset: 0x002CC3F0
+		
 		public static int GiveRoleShareAward(GameClient client)
 		{
 			int ret = 0;
@@ -257,10 +257,10 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x04003EA8 RID: 16040
+		
 		private static List<GoodsData> _ShareGoodslist = null;
 
-		// Token: 0x04003EA9 RID: 16041
+		
 		private static object _ShareGoodsMutex = new object();
 	}
 }

@@ -9,10 +9,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000773 RID: 1907
+	
 	public class PerformanceTest
 	{
-		// Token: 0x060030FD RID: 12541 RVA: 0x002B69A4 File Offset: 0x002B4BA4
+		
 		public static List<object> GetClientsByMap(int mapCode)
 		{
 			List<object> objsList = new List<object>();
@@ -37,7 +37,7 @@ namespace GameServer.Logic
 			return objsList;
 		}
 
-		// Token: 0x060030FE RID: 12542 RVA: 0x002B6AA8 File Offset: 0x002B4CA8
+		
 		public static bool NotifyOthersToMovingForMonsterTest(SocketListener sl, TCPOutPacketPool pool, IObject obj, int mapCode, int copyMapID, int roleID, long startMoveTicks, int currentX, int currentY, int action, int toX, int toY, int cmd, double moveCost = 1.0, string pathString = "", List<object> objsList = null)
 		{
 			if (null == objsList)
@@ -87,7 +87,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060030FF RID: 12543 RVA: 0x002B6C90 File Offset: 0x002B4E90
+		
 		public static void InitForTestMode(GameClient client)
 		{
 			if (GameManager.TestGamePerformanceMode && (GameManager.TestGamePerformanceForAllUser || client.strUserID == null || client.strUserID.StartsWith("mu")))
@@ -149,16 +149,16 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04003D81 RID: 15745
+		
 		private static object testLock1 = new object();
 
-		// Token: 0x04003D82 RID: 15746
+		
 		private static object testLock2 = new object();
 
-		// Token: 0x04003D83 RID: 15747
+		
 		private static object testLock3 = new object();
 
-		// Token: 0x04003D84 RID: 15748
+		
 		private static byte[] _Buffer = new byte[4096];
 	}
 }

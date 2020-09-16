@@ -5,10 +5,10 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200079A RID: 1946
+	
 	public class SpecialEquipMgr
 	{
-		// Token: 0x060032C4 RID: 12996 RVA: 0x002CFEAC File Offset: 0x002CE0AC
+		
 		public static void DoEquipExtAttack(GameClient client, int categoriy, int enemy)
 		{
 			if (-1 != enemy)
@@ -55,7 +55,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032C5 RID: 12997 RVA: 0x002D0064 File Offset: 0x002CE264
+		
 		public static void DoEquipRestoreBlood(GameClient client, int categoriy)
 		{
 			if (client.ClientData.CurrentLifeV <= 0)
@@ -82,7 +82,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032C6 RID: 12998 RVA: 0x002D0198 File Offset: 0x002CE398
+		
 		public static int DoSubInJure(GameClient client, int categoriy, int injure)
 		{
 			GoodsData goodData = client.UsingEquipMgr.GetGoodsDataByCategoriy(client, categoriy);

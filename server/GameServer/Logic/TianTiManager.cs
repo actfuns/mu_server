@@ -17,29 +17,29 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200048B RID: 1163
+	
 	public class TianTiManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener, IEventListenerEx, IManager2
 	{
-		// Token: 0x0600150D RID: 5389 RVA: 0x001495C0 File Offset: 0x001477C0
+		
 		public static TianTiManager getInstance()
 		{
 			return TianTiManager.instance;
 		}
 
-		// Token: 0x0600150E RID: 5390 RVA: 0x001495D8 File Offset: 0x001477D8
+		
 		public bool initialize()
 		{
 			ScheduleExecutor2.Instance.scheduleExecute(new NormalScheduleTask("TianTiManager.TimerProc", new EventHandler(this.TimerProc)), 20000, 10000);
 			return this.InitConfig(false);
 		}
 
-		// Token: 0x0600150F RID: 5391 RVA: 0x00149628 File Offset: 0x00147828
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			return true;
 		}
 
-		// Token: 0x06001510 RID: 5392 RVA: 0x0014963C File Offset: 0x0014783C
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(950, 1, 1, TianTiManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -54,7 +54,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001511 RID: 5393 RVA: 0x00149720 File Offset: 0x00147920
+		
 		public bool showdown()
 		{
 			GlobalEventSource4Scene.getInstance().removeListener(10001, 26, TianTiManager.getInstance());
@@ -62,19 +62,19 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001512 RID: 5394 RVA: 0x0014975C File Offset: 0x0014795C
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06001513 RID: 5395 RVA: 0x00149770 File Offset: 0x00147970
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06001514 RID: 5396 RVA: 0x00149784 File Offset: 0x00147984
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			switch (nID)
@@ -103,7 +103,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001515 RID: 5397 RVA: 0x00149830 File Offset: 0x00147A30
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int eventType = eventObject.getEventType();
@@ -120,7 +120,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001516 RID: 5398 RVA: 0x0014988C File Offset: 0x00147A8C
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 			int eventType = eventObject.EventType;
@@ -156,7 +156,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001517 RID: 5399 RVA: 0x001499A0 File Offset: 0x00147BA0
+		
 		public bool InitConfig(bool reload = false)
 		{
 			bool success = true;
@@ -276,7 +276,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x06001518 RID: 5400 RVA: 0x0014A084 File Offset: 0x00148284
+		
 		public void GMStartHuoDongNow(int v)
 		{
 			try
@@ -298,7 +298,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001519 RID: 5401 RVA: 0x0014A134 File Offset: 0x00148334
+		
 		public void GMSetRoleData(GameClient client, int duanWeiId, int duanWeiJiFen, int rongYao, int monthDuanWeiRank, int lianSheng, int successCount, int fightCount)
 		{
 			RoleTianTiData roleTianTiData = client.ClientData.TianTiData;
@@ -343,7 +343,7 @@ namespace GameServer.Logic
 			GameManager.ClientMgr.ModifyTianTiRongYaoValue(client, rongYao, "GM添加", true);
 		}
 
-		// Token: 0x0600151A RID: 5402 RVA: 0x0014A32C File Offset: 0x0014852C
+		
 		public void TimerProc(object sender, EventArgs e)
 		{
 			bool modify = false;
@@ -429,7 +429,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600151B RID: 5403 RVA: 0x0014A680 File Offset: 0x00148880
+		
 		public bool ProcessTianTiJoinCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -489,7 +489,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600151C RID: 5404 RVA: 0x0014A94C File Offset: 0x00148B4C
+		
 		public bool ProcessGetTianTiDataAndDayPaiHangCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -526,7 +526,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600151D RID: 5405 RVA: 0x0014AAD0 File Offset: 0x00148CD0
+		
 		public bool ProcessGetTianTiMonthPaiHangDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -560,7 +560,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600151E RID: 5406 RVA: 0x0014AC18 File Offset: 0x00148E18
+		
 		public bool ProcessTianTiGetPaiHangAwardsCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -603,7 +603,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600151F RID: 5407 RVA: 0x0014ADE8 File Offset: 0x00148FE8
+		
 		public bool ProcessTianTiGeLogCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -620,7 +620,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001520 RID: 5408 RVA: 0x0014AE58 File Offset: 0x00149058
+		
 		public bool ProcessTianTiEnterCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -666,7 +666,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001521 RID: 5409 RVA: 0x0014AFC4 File Offset: 0x001491C4
+		
 		public bool ProcessTianTiQuitCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -692,7 +692,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001522 RID: 5410 RVA: 0x0014B05C File Offset: 0x0014925C
+		
 		public bool InitRoleTianTiData(GameClient client)
 		{
 			bool result;
@@ -769,7 +769,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001523 RID: 5411 RVA: 0x0014B3C8 File Offset: 0x001495C8
+		
 		public int GetBirthPoint(GameClient client, out int posX, out int posY)
 		{
 			int side = client.ClientData.BattleWhichSide;
@@ -797,7 +797,7 @@ namespace GameServer.Logic
 			return -1;
 		}
 
-		// Token: 0x06001524 RID: 5412 RVA: 0x0014B4AC File Offset: 0x001496AC
+		
 		public bool OnInitGame(GameClient client)
 		{
 			int posX;
@@ -832,13 +832,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001525 RID: 5413 RVA: 0x0014B5EC File Offset: 0x001497EC
+		
 		public bool IsGongNengOpened(GameClient client, bool hint = false)
 		{
 			return GameManager.VersionSystemOpenMgr.IsVersionSystemOpen("TianTi") && !GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot6) && GlobalNew.IsGongNengOpened(client, GongNengIDs.TianTi, hint);
 		}
 
-		// Token: 0x06001526 RID: 5414 RVA: 0x0014B634 File Offset: 0x00149834
+		
 		public bool CanGetMonthRankAwards(GameClient client, out DuanWeiRankAward duanWeiRankAward)
 		{
 			duanWeiRankAward = null;
@@ -863,7 +863,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001527 RID: 5415 RVA: 0x0014B770 File Offset: 0x00149970
+		
 		public bool AddTianTiCopyScenes(GameClient client, CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool result;
@@ -912,7 +912,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001528 RID: 5416 RVA: 0x0014B910 File Offset: 0x00149B10
+		
 		public bool RemoveTianTiCopyScene(CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool result;
@@ -935,7 +935,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001529 RID: 5417 RVA: 0x0014B9A8 File Offset: 0x00149BA8
+		
 		private void SaveClientBattleSide(TianTiScene tianTiScene, GameClient client)
 		{
 			TianTiRoleMiniData tianTiRoleMiniData;
@@ -951,7 +951,7 @@ namespace GameServer.Logic
 			tianTiRoleMiniData.DuanWeiId = client.ClientData.TianTiData.DuanWeiId;
 		}
 
-		// Token: 0x0600152A RID: 5418 RVA: 0x0014BA4C File Offset: 0x00149C4C
+		
 		private TianTiRoleMiniData GetEnemyBattleSide(TianTiScene tianTiScene, GameClient client)
 		{
 			foreach (KeyValuePair<int, TianTiRoleMiniData> kv in tianTiScene.RoleIdDuanWeiIdDict)
@@ -964,7 +964,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x0600152B RID: 5419 RVA: 0x0014BAEC File Offset: 0x00149CEC
+		
 		public void TimerProc()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -1066,7 +1066,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600152C RID: 5420 RVA: 0x0014BF38 File Offset: 0x0014A138
+		
 		public void NotifyTimeStateInfoAndScoreInfo(GameClient client)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -1079,14 +1079,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600152D RID: 5421 RVA: 0x0014BFB8 File Offset: 0x0014A1B8
+		
 		public void CompleteTianTiScene(TianTiScene tianTiScene, int successSide)
 		{
 			tianTiScene.m_eStatus = GameSceneStatuses.STATUS_END;
 			tianTiScene.SuccessSide = successSide;
 		}
 
-		// Token: 0x0600152E RID: 5422 RVA: 0x0014BFCC File Offset: 0x0014A1CC
+		
 		public void CancleTianTiScene(int gameId)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -1095,7 +1095,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600152F RID: 5423 RVA: 0x0014C028 File Offset: 0x0014A228
+		
 		public void OnKillRole(GameClient client, GameClient other)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -1121,7 +1121,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001530 RID: 5424 RVA: 0x0014C134 File Offset: 0x0014A334
+		
 		private void ProcessEnd(TianTiScene tianTiScene, DateTime now, long nowTicks)
 		{
 			tianTiScene.m_eStatus = GameSceneStatuses.STATUS_AWARD;
@@ -1142,7 +1142,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001531 RID: 5425 RVA: 0x0014C1F0 File Offset: 0x0014A3F0
+		
 		public void GiveAwards(TianTiScene tianTiScene)
 		{
 			try
@@ -1294,7 +1294,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001532 RID: 5426 RVA: 0x0014C890 File Offset: 0x0014AA90
+		
 		public void GameCanceled(TianTiScene tianTiScene)
 		{
 			try
@@ -1321,7 +1321,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001533 RID: 5427 RVA: 0x0014C954 File Offset: 0x0014AB54
+		
 		public void LeaveFuBen(GameClient client)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -1353,28 +1353,28 @@ namespace GameServer.Logic
 			TianTiClient.getInstance().GameFuBenRoleChangeState(client.ClientData.RoleID, 0, 0, 0);
 		}
 
-		// Token: 0x06001534 RID: 5428 RVA: 0x0014CA4C File Offset: 0x0014AC4C
+		
 		public void OnLogout(GameClient client)
 		{
 			this.LeaveFuBen(client);
 		}
 
-		// Token: 0x04001EC4 RID: 7876
+		
 		public const SceneUIClasses ManagerType = SceneUIClasses.TianTi;
 
-		// Token: 0x04001EC5 RID: 7877
+		
 		private static TianTiManager instance = new TianTiManager();
 
-		// Token: 0x04001EC6 RID: 7878
+		
 		public TianTiData RuntimeData = new TianTiData();
 
-		// Token: 0x04001EC7 RID: 7879
+		
 		public ConcurrentDictionary<int, TianTiScene> TianTiSceneDict = new ConcurrentDictionary<int, TianTiScene>();
 
-		// Token: 0x04001EC8 RID: 7880
+		
 		public HashSet<int> CancledGameIdDict = new HashSet<int>();
 
-		// Token: 0x04001EC9 RID: 7881
+		
 		private static long NextHeartBeatTicks = 0L;
 	}
 }

@@ -9,10 +9,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006D4 RID: 1748
+	
 	internal class GlodCopySceneManager
 	{
-		// Token: 0x060029A0 RID: 10656 RVA: 0x00239648 File Offset: 0x00237848
+		
 		public static void AddGlodCopySceneList(int nID, CopyMap mapInfo)
 		{
 			bool bInsert = false;
@@ -46,7 +46,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029A1 RID: 10657 RVA: 0x00239768 File Offset: 0x00237968
+		
 		public static void RemoveGlodCopySceneList(int nID)
 		{
 			lock (GlodCopySceneManager.m_GlodCopySceneLists)
@@ -59,7 +59,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029A2 RID: 10658 RVA: 0x002397F8 File Offset: 0x002379F8
+		
 		public static void HeartBeatGlodCopyScene()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -149,7 +149,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029A3 RID: 10659 RVA: 0x00239BF8 File Offset: 0x00237DF8
+		
 		public static void CreateMonsterForGoldCopyScene(GameClient client, GoldCopyScene goldcopyscene, int nWave)
 		{
 			GoldCopySceneMonster tmpInfo = Data.Goldcopyscenedata.GoldCopySceneMonsterData[nWave];
@@ -172,7 +172,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029A4 RID: 10660 RVA: 0x00239D2C File Offset: 0x00237F2C
+		
 		public static void MonsterMoveStepGoldCopySceneCopyMap(Monster monster)
 		{
 			long ticks = TimeUtil.NOW();
@@ -208,7 +208,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029A5 RID: 10661 RVA: 0x00239E58 File Offset: 0x00238058
+		
 		public static void SendMsgToClientForGlodCopyScenePrepare(GameClient client, GoldCopyScene goldcopyscene)
 		{
 			if (client != null)
@@ -224,7 +224,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029A6 RID: 10662 RVA: 0x00239EDC File Offset: 0x002380DC
+		
 		public static void SendMsgToClientForGlodCopySceneMonsterWave(GameClient client, int nWave)
 		{
 			if (client != null)
@@ -239,7 +239,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029A7 RID: 10663 RVA: 0x00239F68 File Offset: 0x00238168
+		
 		public static bool EnterGoldCopySceneWhenLogin(GameClient client, bool bContinue = true)
 		{
 			bool result;
@@ -273,19 +273,19 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04003950 RID: 14672
+		
 		public static int m_PrepareTime = 10000;
 
-		// Token: 0x04003951 RID: 14673
+		
 		public static int m_DelayTime = 2000;
 
-		// Token: 0x04003952 RID: 14674
+		
 		public static Dictionary<int, CopyMap> m_GlodCopySceneLists = new Dictionary<int, CopyMap>();
 
-		// Token: 0x04003953 RID: 14675
+		
 		public static Dictionary<int, GoldCopyScene> m_GlodCopySceneInfo = new Dictionary<int, GoldCopyScene>();
 
-		// Token: 0x04003954 RID: 14676
+		
 		private static long LastHeartBeatTicks = 0L;
 	}
 }

@@ -18,96 +18,96 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-    // Token: 0x02000764 RID: 1892
+    
     public class MonsterZone
     {
-        // Token: 0x17000383 RID: 899
-        // (get) Token: 0x06003042 RID: 12354 RVA: 0x002AF460 File Offset: 0x002AD660
-        // (set) Token: 0x06003043 RID: 12355 RVA: 0x002AF477 File Offset: 0x002AD677
+        
+        
+        
         public int MapCode { get; set; }
 
-        // Token: 0x17000384 RID: 900
-        // (get) Token: 0x06003044 RID: 12356 RVA: 0x002AF480 File Offset: 0x002AD680
-        // (set) Token: 0x06003045 RID: 12357 RVA: 0x002AF497 File Offset: 0x002AD697
+        
+        
+        
         public int ID { get; set; }
 
-        // Token: 0x17000385 RID: 901
-        // (get) Token: 0x06003046 RID: 12358 RVA: 0x002AF4A0 File Offset: 0x002AD6A0
-        // (set) Token: 0x06003047 RID: 12359 RVA: 0x002AF4B7 File Offset: 0x002AD6B7
+        
+        
+        
         public int Code { get; set; }
 
-        // Token: 0x17000386 RID: 902
-        // (get) Token: 0x06003048 RID: 12360 RVA: 0x002AF4C0 File Offset: 0x002AD6C0
-        // (set) Token: 0x06003049 RID: 12361 RVA: 0x002AF4D7 File Offset: 0x002AD6D7
+        
+        
+        
         public int ToX { get; set; }
 
-        // Token: 0x17000387 RID: 903
-        // (get) Token: 0x0600304A RID: 12362 RVA: 0x002AF4E0 File Offset: 0x002AD6E0
-        // (set) Token: 0x0600304B RID: 12363 RVA: 0x002AF4F7 File Offset: 0x002AD6F7
+        
+        
+        
         public int ToY { get; set; }
 
-        // Token: 0x17000388 RID: 904
-        // (get) Token: 0x0600304C RID: 12364 RVA: 0x002AF500 File Offset: 0x002AD700
-        // (set) Token: 0x0600304D RID: 12365 RVA: 0x002AF517 File Offset: 0x002AD717
+        
+        
+        
         public int Radius { get; set; }
 
-        // Token: 0x17000389 RID: 905
-        // (get) Token: 0x0600304E RID: 12366 RVA: 0x002AF520 File Offset: 0x002AD720
-        // (set) Token: 0x0600304F RID: 12367 RVA: 0x002AF537 File Offset: 0x002AD737
+        
+        
+        
         public int TotalNum { get; set; }
 
-        // Token: 0x1700038A RID: 906
-        // (get) Token: 0x06003050 RID: 12368 RVA: 0x002AF540 File Offset: 0x002AD740
-        // (set) Token: 0x06003051 RID: 12369 RVA: 0x002AF557 File Offset: 0x002AD757
+        
+        
+        
         public int Timeslot { get; set; }
 
-        // Token: 0x1700038B RID: 907
-        // (get) Token: 0x06003052 RID: 12370 RVA: 0x002AF560 File Offset: 0x002AD760
-        // (set) Token: 0x06003053 RID: 12371 RVA: 0x002AF577 File Offset: 0x002AD777
+        
+        
+        
         public int PursuitRadius { get; set; }
 
-        // Token: 0x1700038C RID: 908
-        // (get) Token: 0x06003054 RID: 12372 RVA: 0x002AF580 File Offset: 0x002AD780
-        // (set) Token: 0x06003055 RID: 12373 RVA: 0x002AF597 File Offset: 0x002AD797
+        
+        
+        
         public int BirthType { get; set; }
 
-        // Token: 0x1700038D RID: 909
-        // (get) Token: 0x06003056 RID: 12374 RVA: 0x002AF5A0 File Offset: 0x002AD7A0
-        // (set) Token: 0x06003057 RID: 12375 RVA: 0x002AF5B7 File Offset: 0x002AD7B7
+        
+        
+        
         public int ConfigBirthType { get; set; }
 
-        // Token: 0x1700038E RID: 910
-        // (get) Token: 0x06003058 RID: 12376 RVA: 0x002AF5C0 File Offset: 0x002AD7C0
-        // (set) Token: 0x06003059 RID: 12377 RVA: 0x002AF5D7 File Offset: 0x002AD7D7
+        
+        
+        
         public int SpawnMonstersAfterKaiFuDays { get; set; }
 
-        // Token: 0x1700038F RID: 911
-        // (get) Token: 0x0600305A RID: 12378 RVA: 0x002AF5E0 File Offset: 0x002AD7E0
-        // (set) Token: 0x0600305B RID: 12379 RVA: 0x002AF5F7 File Offset: 0x002AD7F7
+        
+        
+        
         public int SpawnMonstersDays { get; set; }
 
-        // Token: 0x17000390 RID: 912
-        // (get) Token: 0x0600305C RID: 12380 RVA: 0x002AF600 File Offset: 0x002AD800
-        // (set) Token: 0x0600305D RID: 12381 RVA: 0x002AF617 File Offset: 0x002AD817
+        
+        
+        
         public List<BirthTimeForDayOfWeek> SpawnMonstersDayOfWeek { get; set; }
 
-        // Token: 0x17000391 RID: 913
-        // (get) Token: 0x0600305E RID: 12382 RVA: 0x002AF620 File Offset: 0x002AD820
-        // (set) Token: 0x0600305F RID: 12383 RVA: 0x002AF637 File Offset: 0x002AD837
+        
+        
+        
         public List<BirthTimePoint> BirthTimePointList { get; set; }
 
-        // Token: 0x17000392 RID: 914
-        // (get) Token: 0x06003060 RID: 12384 RVA: 0x002AF640 File Offset: 0x002AD840
-        // (set) Token: 0x06003061 RID: 12385 RVA: 0x002AF657 File Offset: 0x002AD857
+        
+        
+        
         public int BirthRate { get; set; }
 
-        // Token: 0x06003062 RID: 12386 RVA: 0x002AF660 File Offset: 0x002AD860
+        
         public MonsterStaticInfo GetMonsterInfo()
         {
             return this.MonsterInfo;
         }
 
-        // Token: 0x06003063 RID: 12387 RVA: 0x002AF678 File Offset: 0x002AD878
+        
         private void LoadMonster(Monster monster, MonsterZone monsterZone, MonsterStaticInfo monsterInfo, int monsterType, int roleID, string name, double life, double mana, Point coordinate, double direction, double moveSpeed, int attackRange)
         {
             monster.Name = name;
@@ -130,7 +130,7 @@ namespace GameServer.Logic
             monster.NextSeekEnemyTicks = (long)(3000 + Global.GetRandomNumber(0, 2000));
         }
 
-        // Token: 0x06003064 RID: 12388 RVA: 0x002AF754 File Offset: 0x002AD954
+        
         private Monster CopyMonster(Monster oldMonster)
         {
             Monster monster = oldMonster.Clone();
@@ -139,7 +139,7 @@ namespace GameServer.Logic
             return monster;
         }
 
-        // Token: 0x06003065 RID: 12389 RVA: 0x002AF794 File Offset: 0x002AD994
+        
         private void DestroyMonster(Monster monster)
         {
             if (monster.OwnerClient != null)
@@ -164,7 +164,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06003066 RID: 12390 RVA: 0x002AF870 File Offset: 0x002ADA70
+        
         private Monster InitMonster(XElement monsterXml, double maxLifeV, double maxMagicV, XElement xmlFrameConfig, double moveSpeed, bool attachEvent = true)
         {
             GameMap gameMap = GameManager.MapMgr.DictMaps[this.MapCode];
@@ -179,7 +179,7 @@ namespace GameServer.Logic
             return monster;
         }
 
-        // Token: 0x06003067 RID: 12391 RVA: 0x002AF940 File Offset: 0x002ADB40
+        
         private bool CanRealiveByRate()
         {
             bool result;
@@ -195,7 +195,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06003068 RID: 12392 RVA: 0x002AF988 File Offset: 0x002ADB88
+        
         public void LoadStaticMonsterInfo_2()
         {
             MonsterStaticInfo monster = MonsterStaticInfoMgr.GetInfo(this.Code);
@@ -209,7 +209,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06003069 RID: 12393 RVA: 0x002AF9C4 File Offset: 0x002ADBC4
+        
         public void LoadStaticMonsterInfo()
         {
             string fileName = string.Format("Config/Monsters.xml", new object[0]);
@@ -269,7 +269,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600306A RID: 12394 RVA: 0x002AFBCC File Offset: 0x002ADDCC
+        
         public void LoadMonsters()
         {
             string fileName = string.Format("Config/Monsters.xml", new object[0]);
@@ -338,7 +338,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600306B RID: 12395 RVA: 0x002AFE64 File Offset: 0x002AE064
+        
         public Monster LoadDynamicMonsterSeed()
         {
             string fileName = string.Format("Config/Monsters.xml", new object[0]);
@@ -398,7 +398,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x0600306C RID: 12396 RVA: 0x002B0060 File Offset: 0x002AE260
+        
         private void MoveToComplete(object sender)
         {
             (sender as Monster).DestPoint = new Point(-1.0, -1.0);
@@ -406,7 +406,7 @@ namespace GameServer.Logic
             Global.RemoveStoryboard((sender as Monster).Name);
         }
 
-        // Token: 0x0600306D RID: 12397 RVA: 0x002B00B0 File Offset: 0x002AE2B0
+        
         private void UpdateMonsterEvent(Monster monster)
         {
             if (!monster.FirstStoryMove)
@@ -419,7 +419,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600306E RID: 12398 RVA: 0x002B0130 File Offset: 0x002AE330
+        
         public string GetNextBirthTimePoint()
         {
             string result;
@@ -485,7 +485,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x0600306F RID: 12399 RVA: 0x002B03C8 File Offset: 0x002AE5C8
+        
         private bool CanBirthOnTimePoint(DateTime now, BirthTimePoint birthTimePoint)
         {
             if (now.DayOfYear == this.LastBirthDayID)
@@ -518,7 +518,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06003070 RID: 12400 RVA: 0x002B04A0 File Offset: 0x002AE6A0
+        
         private bool CanBirthOnTimePointForWeekOfDay(DateTime now, BirthTimePoint birthTimePoint)
         {
             if (now.DayOfYear == this.LastBirthDayID)
@@ -545,7 +545,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06003071 RID: 12401 RVA: 0x002B0554 File Offset: 0x002AE754
+        
         public void ReloadMonsters(SocketListener sl, TCPOutPacketPool pool)
         {
             if (!this.IsFuBenMap)
@@ -643,7 +643,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06003072 RID: 12402 RVA: 0x002B0868 File Offset: 0x002AEA68
+        
         public bool CanTodayReloadMonsters()
         {
             bool result;
@@ -694,7 +694,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06003073 RID: 12403 RVA: 0x002B0998 File Offset: 0x002AEB98
+        
         public bool CanTodayReloadMonstersForDayOfWeek()
         {
             bool result;
@@ -722,7 +722,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06003074 RID: 12404 RVA: 0x002B0A2C File Offset: 0x002AEC2C
+        
         public void SystemKillAllMonstersOfThisZone()
         {
             for (int i = 0; i < this.MonsterList.Count; i++)
@@ -737,13 +737,13 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06003075 RID: 12405 RVA: 0x002B0A9B File Offset: 0x002AEC9B
+        
         private void RepositionMonster(Monster monster, int toX, int toY)
         {
             GameManager.MapGridMgr.DictGrids[this.MapCode].MoveObject(-1, -1, toX, toY, monster);
         }
 
-        // Token: 0x06003076 RID: 12406 RVA: 0x002B0AC0 File Offset: 0x002AECC0
+        
         private void MonsterRealive(SocketListener sl, TCPOutPacketPool pool, int copyMapID = -1, int birthCount = 65535)
         {
             SceneUIClasses sceneType = Global.GetMapSceneType(this.MapCode);
@@ -828,7 +828,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06003077 RID: 12407 RVA: 0x002B0F78 File Offset: 0x002AF178
+        
         public void LoadCopyMapMonsters(int copyMapID)
         {
             if (this.IsFuBenMap)
@@ -858,7 +858,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06003078 RID: 12408 RVA: 0x002B10C0 File Offset: 0x002AF2C0
+        
         public void ReloadCopyMapMonsters(SocketListener sl, TCPOutPacketPool pool, int copyMapID)
         {
             if (this.IsFuBenMap)
@@ -870,7 +870,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06003079 RID: 12409 RVA: 0x002B1114 File Offset: 0x002AF314
+        
         public void ClearCopyMapMonsters(int copyMapID)
         {
             if (this.IsFuBenMap)
@@ -899,7 +899,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600307A RID: 12410 RVA: 0x002B1214 File Offset: 0x002AF414
+        
         public void DestroyDeadMonsters(bool onlyFuBen = true)
         {
             if (this.IsFuBenMap || !onlyFuBen)
@@ -938,7 +938,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600307B RID: 12411 RVA: 0x002B1380 File Offset: 0x002AF580
+        
         public void DestroyDeadDynamicMonsters()
         {
             if (this.IsDynamicZone())
@@ -947,13 +947,13 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600307C RID: 12412 RVA: 0x002B13A8 File Offset: 0x002AF5A8
+        
         public bool IsDynamicZone()
         {
             return 3 == this.BirthType;
         }
 
-        // Token: 0x0600307D RID: 12413 RVA: 0x002B13C4 File Offset: 0x002AF5C4
+        
         public Monster LoadDynamicRobot(MonsterZoneQueueItem monsterZoneQueueItem)
         {
             Monster monster = monsterZoneQueueItem.seedMonster;
@@ -975,7 +975,7 @@ namespace GameServer.Logic
             return monster;
         }
 
-        // Token: 0x0600307E RID: 12414 RVA: 0x002B14B8 File Offset: 0x002AF6B8
+        
         public void LoadDynamicMonsters(MonsterZoneQueueItem monsterZoneQueueItem)
         {
             if (this.IsDynamicZone())
@@ -1091,7 +1091,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600307F RID: 12415 RVA: 0x002B1A58 File Offset: 0x002AFC58
+        
         public string GetMonstersInfoString()
         {
             int aliveCount = 0;
@@ -1129,7 +1129,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06003080 RID: 12416 RVA: 0x002B1B58 File Offset: 0x002AFD58
+        
         public void ReloadNormalMapMonsters(SocketListener sl, TCPOutPacketPool pool, int birthCount)
         {
             if (!this.IsFuBenMap)
@@ -1141,12 +1141,12 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06003081 RID: 12417 RVA: 0x002B1B91 File Offset: 0x002AFD91
+        
         public void OnReallyDied(Monster deadMonster)
         {
         }
 
-        // Token: 0x06003082 RID: 12418 RVA: 0x002B1B94 File Offset: 0x002AFD94
+        
         private void InitMonsterStaticInfo(XElement monsterXml, double maxLifeV, double maxMagicV, XElement xmlFrameConfig, double moveSpeed, int[] speedTickList)
         {
             double[] extProps = ConfigParser.ParserExtPropsFromAttrubite(monsterXml, MonsterZone.MonsterExtPropsConfigList);
@@ -1159,7 +1159,7 @@ namespace GameServer.Logic
             })), (int)Global.GetSafeAttributeLong(monsterXml, "AttackRange"), (int)Global.GetSafeAttributeLong(monsterXml, "SeedRange"), (int)Global.GetSafeAttributeLong(monsterXml, "Code"), -1, speedTickList, 0, 0, (int)Global.GetSafeAttributeLong(monsterXml, "MinAttackPercent"), (int)Global.GetSafeAttributeLong(monsterXml, "MaxAttackPercent"), (int)Global.GetSafeAttributeLong(monsterXml, "DefensePercent"), (int)Global.GetSafeAttributeLong(monsterXml, "MDefensePercent"), Global.GetSafeAttributeDouble(monsterXml, "HitV"), Global.GetSafeAttributeDouble(monsterXml, "Dodge"), Global.GetSafeAttributeDouble(monsterXml, "RecoverLifeV"), Global.GetSafeAttributeDouble(monsterXml, "RecoverMagicV"), Global.GetSafeAttributeDouble(monsterXml, "DamageThornPercent"), Global.GetSafeAttributeDouble(monsterXml, "DamageThorn"), Global.GetSafeAttributeDouble(monsterXml, "SubAttackInjurePercent"), Global.GetSafeAttributeDouble(monsterXml, "SubAttackInjure"), Global.GetSafeAttributeDouble(monsterXml, "IgnoreDefensePercent"), Global.GetSafeAttributeDouble(monsterXml, "IgnoreDefenseRate"), Global.GetSafeAttributeDouble(monsterXml, "Lucky"), Global.GetSafeAttributeDouble(monsterXml, "FatalAttack"), Global.GetSafeAttributeDouble(monsterXml, "DoubleAttack"), (int)Global.GetSafeAttributeLong(monsterXml, "FallID"), (int)Global.GetSafeAttributeLong(monsterXml, "MonsterType"), (int)Global.GetSafeAttributeLong(monsterXml, "PersonalJiFen"), (int)Global.GetSafeAttributeLong(monsterXml, "CampJiFen"), (int)Global.GetSafeAttributeLong(monsterXml, "EMoJiFen"), (int)Global.GetSafeAttributeLong(monsterXml, "XueSeJiFen"), (int)Global.GetSafeAttributeLong(monsterXml, "Belong"), Global.String2IntArray(Global.GetSafeAttributeStr(monsterXml, "SkillIDs"), ','), (int)Global.GetSafeAttributeLong(monsterXml, "AttackType"), (int)Global.GetSafeAttributeLong(monsterXml, "Camp"), (int)Global.GetSafeAttributeLong(monsterXml, "AIID"), (int)Global.GetSafeAttributeLong(monsterXml, "ZhuanSheng"), (int)Global.GetSafeAttributeLong(monsterXml, "LangHunJiFen"), (int)Global.GetSafeAttributeLong(monsterXml, "RebornExp"), extProps);
         }
 
-        // Token: 0x06003083 RID: 12419 RVA: 0x002B1DD4 File Offset: 0x002AFFD4
+        
         private void SetStaticInfo4Monster(string sname, int extensionID, double life, double mana, int level, int experience, int money, int[] frameRange, int[] effectiveFrame, int attackRange, int seekRange, int equipmentBody, int equipmentWeapon, int[] speedTickList, int toOccupation, int toRoleLevel, int minAttack, int maxAttack, int defense, int magicDefense, double hitV, double dodge, double recoverLifeV, double recoverMagicV, double DamageThornPercent, double DamageThorn, double SubAttackInjurePercent, double SubAttackInjure, double IgnoreDefensePercent, double IgnoreDefenseRate, double Lucky, double FatalAttack, double DoubleAttack, int fallGoodsPackID, int monsterType, int battlePersonalJiFen, int battleZhenYingJiFen, int nDaimonSquareJiFen, int nBloodCastJiFen, int fallBelongTo, int[] skillIDs, int attackType, int camp, int AIID, int nChangeLifeCount, int nWolfScore, int rebornExp, double[] extProps)
         {
             this.MonsterInfo.SpriteSpeedTickList = speedTickList;
@@ -1210,43 +1210,43 @@ namespace GameServer.Logic
             MonsterStaticInfoMgr.SetInfo(extensionID, this.MonsterInfo);
         }
 
-        // Token: 0x04003D21 RID: 15649
+        
         private bool HasSystemKilledAllOfThisZone = false;
 
-        // Token: 0x04003D22 RID: 15650
+        
         public bool IsFuBenMap = false;
 
-        // Token: 0x04003D23 RID: 15651
+        
         public MonsterTypes MonsterType = MonsterTypes.None;
 
-        // Token: 0x04003D24 RID: 15652
+        
         private long LastReloadTicks = 0L;
 
-        // Token: 0x04003D25 RID: 15653
+        
         private long LastDestroyTicks = 0L;
 
-        // Token: 0x04003D26 RID: 15654
+        
         private int LastBirthDayID = -1;
 
-        // Token: 0x04003D27 RID: 15655
+        
         private BirthTimePoint LastBirthTimePoint = null;
 
-        // Token: 0x04003D28 RID: 15656
+        
         private int LastBirthTimePointIndex = -1;
 
-        // Token: 0x04003D29 RID: 15657
+        
         private DateTime LastReloadMonstersDateTime = DateTime.MaxValue;
 
-        // Token: 0x04003D2A RID: 15658
+        
         private MonsterStaticInfo MonsterInfo = new MonsterStaticInfo();
 
-        // Token: 0x04003D2B RID: 15659
+        
         private List<Monster> MonsterList = new List<Monster>(100);
 
-        // Token: 0x04003D2C RID: 15660
+        
         private Monster SeedMonster = null;
 
-        // Token: 0x04003D2D RID: 15661
+        
         private static List<KeyValuePair<int, string>> MonsterExtPropsConfigList = new List<KeyValuePair<int, string>>
         {
             new KeyValuePair<int, string>(24, "SubAttackInjurePercent"),

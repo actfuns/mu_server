@@ -16,22 +16,22 @@ using Tmsk.Contract.KuaFuData;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020003DA RID: 986
+	
 	public class RebornBoss : IManager, IEventListener, IEventListenerEx, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x06001116 RID: 4374 RVA: 0x0010C250 File Offset: 0x0010A450
+		
 		public static RebornBoss getInstance()
 		{
 			return RebornBoss.instance;
 		}
 
-		// Token: 0x06001117 RID: 4375 RVA: 0x0010C268 File Offset: 0x0010A468
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x06001118 RID: 4376 RVA: 0x0010C28C File Offset: 0x0010A48C
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1715, 2, 2, RebornBoss.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -42,7 +42,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001119 RID: 4377 RVA: 0x0010C308 File Offset: 0x0010A508
+		
 		public bool showdown()
 		{
 			GlobalEventSource4Scene.getInstance().removeListener(30, 54, RebornBoss.getInstance());
@@ -51,19 +51,19 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600111A RID: 4378 RVA: 0x0010C354 File Offset: 0x0010A554
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600111B RID: 4379 RVA: 0x0010C368 File Offset: 0x0010A568
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x0600111C RID: 4380 RVA: 0x0010C37C File Offset: 0x0010A57C
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			switch (nID)
@@ -76,7 +76,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600111D RID: 4381 RVA: 0x0010C3C8 File Offset: 0x0010A5C8
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int eventType = eventObject.getEventType();
@@ -92,7 +92,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600111E RID: 4382 RVA: 0x0010C42C File Offset: 0x0010A62C
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 			int eventType = eventObject.EventType;
@@ -121,7 +121,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600111F RID: 4383 RVA: 0x0010C5C0 File Offset: 0x0010A7C0
+		
 		public bool ProcessRebornBossDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -195,7 +195,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001120 RID: 4384 RVA: 0x0010C8EC File Offset: 0x0010AAEC
+		
 		public RebornBossAwardConfig GetKillAwardConfig(int ExtensionID)
 		{
 			RebornBossAwardConfig awardConfig = null;
@@ -212,7 +212,7 @@ namespace GameServer.Logic
 			return awardConfig;
 		}
 
-		// Token: 0x06001121 RID: 4385 RVA: 0x0010C980 File Offset: 0x0010AB80
+		
 		public RebornBossAwardConfig GetRankAwardConfig(int ExtensionID, int RankNum)
 		{
 			RebornBossAwardConfig awardConfig = null;
@@ -248,7 +248,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001122 RID: 4386 RVA: 0x0010CB44 File Offset: 0x0010AD44
+		
 		public bool ProcessRebornBossGetAwardCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -377,7 +377,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001123 RID: 4387 RVA: 0x0010D088 File Offset: 0x0010B288
+		
 		public bool InitConfig()
 		{
 			bool result;
@@ -397,7 +397,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001124 RID: 4388 RVA: 0x0010D150 File Offset: 0x0010B350
+		
 		public bool LoadRebornBossConfigFile()
 		{
 			try
@@ -496,7 +496,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001125 RID: 4389 RVA: 0x0010D4B4 File Offset: 0x0010B6B4
+		
 		public bool LoadRebornBossAwardConfigFile()
 		{
 			try
@@ -540,7 +540,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001126 RID: 4390 RVA: 0x0010D6D0 File Offset: 0x0010B8D0
+		
 		private void OnStartPlayGame(GameClient client)
 		{
 			if (GameManager.IsKuaFuServer)
@@ -553,7 +553,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001127 RID: 4391 RVA: 0x0010D710 File Offset: 0x0010B910
+		
 		public void AddDelayCreateMonster(RebornBossScene scene, long ticks, object monster)
 		{
 			lock (RebornBoss.Mutex)
@@ -568,7 +568,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001128 RID: 4392 RVA: 0x0010D788 File Offset: 0x0010B988
+		
 		public void CheckCreateDynamicMonster(RebornBossScene scene, DateTime now)
 		{
 			long nowMs = now.Ticks / 10000L;
@@ -597,7 +597,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001129 RID: 4393 RVA: 0x0010D928 File Offset: 0x0010BB28
+		
 		public void ResortBossAttackRank(RebornBossScene scene)
 		{
 			scene.BossRankList.Sort(delegate(RebornBossAttackLog left, RebornBossAttackLog right)
@@ -640,7 +640,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600112A RID: 4394 RVA: 0x0010DA00 File Offset: 0x0010BC00
+		
 		public void OnInjureMonster(GameClient client, Monster monster, long injure)
 		{
 			if (401 == monster.MonsterType && monster.Tag is RebornBossConfig)
@@ -707,7 +707,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600112B RID: 4395 RVA: 0x0010DCA8 File Offset: 0x0010BEA8
+		
 		public void GiveBossAward(GameClient client, RebornBossAwardConfig awardConfig, string strFrom)
 		{
 			List<AwardsItemData> awardsItemDataListOne = awardConfig.AwardsItemListOne.Items;
@@ -745,7 +745,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600112C RID: 4396 RVA: 0x0010DF38 File Offset: 0x0010C138
+		
 		public void OnProcessMonsterDead(GameClient client, Monster monster)
 		{
 			if (401 == monster.MonsterType)
@@ -786,7 +786,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600112D RID: 4397 RVA: 0x0010E140 File Offset: 0x0010C340
+		
 		public RebornBossConfig GetBossConfigByExtensionID(RebornBossScene scene, bool peekNext = false)
 		{
 			RebornBossConfig config = null;
@@ -822,7 +822,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600112E RID: 4398 RVA: 0x0010E25C File Offset: 0x0010C45C
+		
 		public DateTime CalBossRefreshTime(RebornBossScene scene, RebornBossConfig config, DateTime now)
 		{
 			DateTime refreshTm = DateTime.MinValue;
@@ -842,7 +842,7 @@ namespace GameServer.Logic
 			return refreshTm;
 		}
 
-		// Token: 0x0600112F RID: 4399 RVA: 0x0010E3C4 File Offset: 0x0010C5C4
+		
 		public void CheckCreateBossState(RebornBossScene scene, DateTime now)
 		{
 			long nowTicks = now.Ticks / 10000L;
@@ -866,7 +866,7 @@ namespace GameServer.Logic
 			KuaFuWorldClient.getInstance().Reborn_RebornOpt(-1, -1, 6, scene.m_nMapCode, scene.m_nLineID, param3);
 		}
 
-		// Token: 0x06001130 RID: 4400 RVA: 0x0010E4D4 File Offset: 0x0010C6D4
+		
 		public void CheckCreateBoss(RebornBossScene scene, DateTime now)
 		{
 			long nowMs = now.Ticks / 10000L;
@@ -924,7 +924,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001131 RID: 4401 RVA: 0x0010E720 File Offset: 0x0010C920
+		
 		public void NotifyScoreInfo(GameClient client)
 		{
 			lock (RebornBoss.Mutex)
@@ -957,7 +957,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001132 RID: 4402 RVA: 0x0010E8E4 File Offset: 0x0010CAE4
+		
 		public void BroadCastScoreInfo(RebornBossScene scene)
 		{
 			List<object> objsList = GameManager.ClientMgr.GetMapClients(scene.m_nMapCode);
@@ -974,7 +974,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001133 RID: 4403 RVA: 0x0010E954 File Offset: 0x0010CB54
+		
 		public void BuildFakeBossInfoGM(GameClient client, int fakeNum)
 		{
 			lock (RebornBoss.Mutex)
@@ -1006,7 +1006,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001134 RID: 4404 RVA: 0x0010EAA8 File Offset: 0x0010CCA8
+		
 		public void PrintBossInfoGM(GameClient client, int logNum = 2147483647, Monster deadBoss = null)
 		{
 			RebornBossScene scene;
@@ -1044,7 +1044,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001135 RID: 4405 RVA: 0x0010EC78 File Offset: 0x0010CE78
+		
 		public List<KFRebornBossAwardData> GetRebornBossKillAwardList(GameClient client)
 		{
 			List<KFRebornBossAwardData> BossAwardList = new List<KFRebornBossAwardData>();
@@ -1081,7 +1081,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001136 RID: 4406 RVA: 0x0010ED5C File Offset: 0x0010CF5C
+		
 		public void SaveRebornBossKillAwardList(GameClient client, List<KFRebornBossAwardData> awardlist)
 		{
 			string strResult = "";
@@ -1096,7 +1096,7 @@ namespace GameServer.Logic
 			Global.UpdateRoleParamByName(client, "157", strResult, true);
 		}
 
-		// Token: 0x06001137 RID: 4407 RVA: 0x0010EE50 File Offset: 0x0010D050
+		
 		public void TimerProc_fuBenWorker()
 		{
 			if (GameManager.IsKuaFuServer)
@@ -1148,34 +1148,34 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04001A2C RID: 6700
+		
 		private static object Mutex = new object();
 
-		// Token: 0x04001A2D RID: 6701
+		
 		private static long LastHeartBeatTicks = 0L;
 
-		// Token: 0x04001A2E RID: 6702
+		
 		private static long LastHeartBeatTicks_Boss = 0L;
 
-		// Token: 0x04001A2F RID: 6703
+		
 		public ConcurrentDictionary<int, RebornBossScene> SceneDict = new ConcurrentDictionary<int, RebornBossScene>();
 
-		// Token: 0x04001A30 RID: 6704
+		
 		public Dictionary<int, List<RebornBossData>> BossDataDict = new Dictionary<int, List<RebornBossData>>();
 
-		// Token: 0x04001A31 RID: 6705
+		
 		public Dictionary<int, List<KuaFuLineData>> KuaFuLineDataDict = new Dictionary<int, List<KuaFuLineData>>();
 
-		// Token: 0x04001A32 RID: 6706
+		
 		public Dictionary<int, List<RebornBossConfig>> RebornBossConfigDict = new Dictionary<int, List<RebornBossConfig>>();
 
-		// Token: 0x04001A33 RID: 6707
+		
 		public Dictionary<int, List<RebornBossAwardConfig>> RebornBossAwardConfigDict = new Dictionary<int, List<RebornBossAwardConfig>>();
 
-		// Token: 0x04001A34 RID: 6708
+		
 		public int RebornBossRankClearSec = 120;
 
-		// Token: 0x04001A35 RID: 6709
+		
 		private static RebornBoss instance = new RebornBoss();
 	}
 }

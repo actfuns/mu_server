@@ -11,15 +11,15 @@ using Tmsk.Tools.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000087 RID: 135
+	
 	public class AllyPersistence
 	{
-		// Token: 0x060006EB RID: 1771 RVA: 0x0005BB11 File Offset: 0x00059D11
+		
 		private AllyPersistence()
 		{
 		}
 
-		// Token: 0x060006EC RID: 1772 RVA: 0x0005BB2C File Offset: 0x00059D2C
+		
 		public void InitConfig()
 		{
 			try
@@ -36,7 +36,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060006ED RID: 1773 RVA: 0x0005BBD0 File Offset: 0x00059DD0
+		
 		private int ExecuteSqlNoQuery(string sqlCmd)
 		{
 			int i = 0;
@@ -51,7 +51,7 @@ namespace KF.Remoting
 			return i;
 		}
 
-		// Token: 0x060006EE RID: 1774 RVA: 0x0005BC14 File Offset: 0x00059E14
+		
 		public List<AllyLogData> DBAllyLogList(int unionID)
 		{
 			List<AllyLogData> list = new List<AllyLogData>();
@@ -81,7 +81,7 @@ namespace KF.Remoting
 			return list;
 		}
 
-		// Token: 0x060006EF RID: 1775 RVA: 0x0005BD00 File Offset: 0x00059F00
+		
 		public bool DBAllyLogDel(int unionID)
 		{
 			string sql = string.Format("DELETE FROM t_ally_log WHERE myUnionID='{0}'", unionID);
@@ -89,7 +89,7 @@ namespace KF.Remoting
 			return i > 0;
 		}
 
-		// Token: 0x060006F0 RID: 1776 RVA: 0x0005BD30 File Offset: 0x00059F30
+		
 		public bool DBAllyLogAdd(AllyLogData logData)
 		{
 			string sql = string.Format("INSERT INTO t_ally_log(myUnionID, unionID, logTime,logState) VALUES('{0}','{1}','{2}','{3}')", new object[]
@@ -103,7 +103,7 @@ namespace KF.Remoting
 			return i > 0;
 		}
 
-		// Token: 0x060006F1 RID: 1777 RVA: 0x0005BD9C File Offset: 0x00059F9C
+		
 		public KFAllyData DBUnionDataGet(int unionID)
 		{
 			KFAllyData item = null;
@@ -137,7 +137,7 @@ namespace KF.Remoting
 			return item;
 		}
 
-		// Token: 0x060006F2 RID: 1778 RVA: 0x0005BF10 File Offset: 0x0005A110
+		
 		public KFAllyData DBUnionDataGet(int unionZoneID, string unionName)
 		{
 			KFAllyData item = null;
@@ -171,7 +171,7 @@ namespace KF.Remoting
 			return item;
 		}
 
-		// Token: 0x060006F3 RID: 1779 RVA: 0x0005C088 File Offset: 0x0005A288
+		
 		public bool DBUnionDataUpdate(KFAllyData data)
 		{
 			string sql = string.Format("REPLACE INTO t_ally_union(unionID,unionZoneID,unionName,unionLevel,unionNum,leaderID,leaderZoneID,leaderName,logTime,serverID) \r\n                                        VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", new object[]
@@ -191,7 +191,7 @@ namespace KF.Remoting
 			return i > 0;
 		}
 
-		// Token: 0x060006F4 RID: 1780 RVA: 0x0005C140 File Offset: 0x0005A340
+		
 		public bool DBUnionDataDel(int unionID)
 		{
 			string sql = string.Format("DELETE FROM t_ally_union WHERE unionID={0}", unionID);
@@ -199,7 +199,7 @@ namespace KF.Remoting
 			return i > 0;
 		}
 
-		// Token: 0x060006F5 RID: 1781 RVA: 0x0005C170 File Offset: 0x0005A370
+		
 		public List<int> DBAllyIDList(int unionID)
 		{
 			List<int> idList = new List<int>();
@@ -223,7 +223,7 @@ namespace KF.Remoting
 			return idList;
 		}
 
-		// Token: 0x060006F6 RID: 1782 RVA: 0x0005C20C File Offset: 0x0005A40C
+		
 		public bool DBAllyAdd(int myUnionID, int unionID, DateTime logTime)
 		{
 			string sql = string.Format("INSERT INTO t_ally(unionID1, unionID2, logTime) VALUES('{0}','{1}','{2}')", myUnionID, unionID, logTime);
@@ -231,7 +231,7 @@ namespace KF.Remoting
 			return i > 0;
 		}
 
-		// Token: 0x060006F7 RID: 1783 RVA: 0x0005C248 File Offset: 0x0005A448
+		
 		public bool DBAllyDel(int unionID, int targetID)
 		{
 			string sql = string.Format("DELETE FROM t_ally WHERE (unionID1='{0}' and unionID2='{1}') or(unionID1='{1}' and unionID2='{0}')", unionID, targetID);
@@ -239,7 +239,7 @@ namespace KF.Remoting
 			return i > 0;
 		}
 
-		// Token: 0x060006F8 RID: 1784 RVA: 0x0005C280 File Offset: 0x0005A480
+		
 		public List<KFAllyData> DBAllyRequestList(int unionID)
 		{
 			List<KFAllyData> list = new List<KFAllyData>();
@@ -268,7 +268,7 @@ namespace KF.Remoting
 			return list;
 		}
 
-		// Token: 0x060006F9 RID: 1785 RVA: 0x0005C358 File Offset: 0x0005A558
+		
 		public bool DBAllyRequestAdd(int myUnionID, int unionID, DateTime logTime, int logState)
 		{
 			string sql = string.Format("INSERT INTO t_ally_request(myUnionID, unionID, logTime,logState) VALUES('{0}','{1}','{2}','{3}')", new object[]
@@ -282,7 +282,7 @@ namespace KF.Remoting
 			return i > 0;
 		}
 
-		// Token: 0x060006FA RID: 1786 RVA: 0x0005C3B0 File Offset: 0x0005A5B0
+		
 		public bool DBAllyRequestDel(int myUnionID, int unionID)
 		{
 			string sql = string.Format("DELETE FROM t_ally_request WHERE myUnionID='{0}' and unionID='{1}'", myUnionID, unionID);
@@ -290,7 +290,7 @@ namespace KF.Remoting
 			return i > 0;
 		}
 
-		// Token: 0x060006FB RID: 1787 RVA: 0x0005C3E8 File Offset: 0x0005A5E8
+		
 		public List<KFAllyData> DBAllyAcceptList(int unionID)
 		{
 			List<KFAllyData> list = new List<KFAllyData>();
@@ -319,13 +319,13 @@ namespace KF.Remoting
 			return list;
 		}
 
-		// Token: 0x040003BF RID: 959
+		
 		public static readonly AllyPersistence Instance = new AllyPersistence();
 
-		// Token: 0x040003C0 RID: 960
+		
 		public long DataVersion = 0L;
 
-		// Token: 0x040003C1 RID: 961
+		
 		public bool Initialized = false;
 	}
 }

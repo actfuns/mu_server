@@ -11,10 +11,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000767 RID: 1895
+	
 	public class MonsterZoneManager
 	{
-		// Token: 0x0600308C RID: 12428 RVA: 0x002B2328 File Offset: 0x002B0528
+		
 		public MonsterZoneManager()
 		{
 			for (int i = 0; i < this.WaitingAddDynamicMonsterQueue.Length; i++)
@@ -26,14 +26,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x17000393 RID: 915
-		// (get) Token: 0x0600308D RID: 12429 RVA: 0x002B2418 File Offset: 0x002B0618
-		// (set) Token: 0x0600308E RID: 12430 RVA: 0x002B242F File Offset: 0x002B062F
+		
+		
+		
 		public Dictionary<int, Monster> DictDynamicMonsterSeed { get; set; }
 
-		// Token: 0x17000394 RID: 916
-		// (get) Token: 0x0600308F RID: 12431 RVA: 0x002B2438 File Offset: 0x002B0638
-		// (set) Token: 0x06003090 RID: 12432 RVA: 0x002B2484 File Offset: 0x002B0684
+		
+		
+		
 		public XElement AllMonstersXml
 		{
 			get
@@ -54,7 +54,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003091 RID: 12433 RVA: 0x002B24D0 File Offset: 0x002B06D0
+		
 		public void LoadAllMonsterXml()
 		{
 			XElement tmpXml = null;
@@ -71,7 +71,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003092 RID: 12434 RVA: 0x002B251C File Offset: 0x002B071C
+		
 		private void AddMap2MonsterZoneDict(MonsterZone monsterZone)
 		{
 			List<MonsterZone> monsterZoneList = null;
@@ -87,7 +87,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003093 RID: 12435 RVA: 0x002B2574 File Offset: 0x002B0774
+		
 		private List<BirthTimePoint> ParseBirthTimePoints(string s)
 		{
 			List<BirthTimePoint> result;
@@ -141,7 +141,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003094 RID: 12436 RVA: 0x002B26A0 File Offset: 0x002B08A0
+		
 		public void AddMapMonsters(int mapCode, GameMap gameMap)
 		{
 			this.AddDynamicMonsterZone(mapCode);
@@ -294,7 +294,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003095 RID: 12437 RVA: 0x002B2C08 File Offset: 0x002B0E08
+		
 		public void RunMapMonsters(SocketListener sl, TCPOutPacketPool pool)
 		{
 			for (int i = 0; i < this.MonsterZoneList.Count; i++)
@@ -312,7 +312,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003096 RID: 12438 RVA: 0x002B2CAC File Offset: 0x002B0EAC
+		
 		public void RunMapDynamicMonsters(SocketListener sl, TCPOutPacketPool pool)
 		{
 			for (int i = 0; i < MonsterZoneManager.MaxRunQueueNum; i++)
@@ -369,7 +369,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003097 RID: 12439 RVA: 0x002B2DB8 File Offset: 0x002B0FB8
+		
 		public int WaitingAddFuBenMonsterQueueCount()
 		{
 			int count;
@@ -380,7 +380,7 @@ namespace GameServer.Logic
 			return count;
 		}
 
-		// Token: 0x06003098 RID: 12440 RVA: 0x002B2E0C File Offset: 0x002B100C
+		
 		private bool RunAddCopyMapMonsters()
 		{
 			MonsterZoneQueueItem monsterZoneQueueItem = null;
@@ -404,7 +404,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003099 RID: 12441 RVA: 0x002B2EA0 File Offset: 0x002B10A0
+		
 		public int WaitingDestroyFuBenMonsterQueueCount()
 		{
 			int count;
@@ -415,7 +415,7 @@ namespace GameServer.Logic
 			return count;
 		}
 
-		// Token: 0x0600309A RID: 12442 RVA: 0x002B2EF4 File Offset: 0x002B10F4
+		
 		private bool RunDestroyCopyMapMonsters()
 		{
 			MonsterZoneQueueItem monsterZoneQueueItem = null;
@@ -439,7 +439,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600309B RID: 12443 RVA: 0x002B2F88 File Offset: 0x002B1188
+		
 		public int WaitingReloadFuBenMonsterQueueCount()
 		{
 			int count;
@@ -450,7 +450,7 @@ namespace GameServer.Logic
 			return count;
 		}
 
-		// Token: 0x0600309C RID: 12444 RVA: 0x002B2FDC File Offset: 0x002B11DC
+		
 		private bool RunReloadCopyMapMonsters()
 		{
 			MonsterZoneQueueItem monsterZoneQueueItem = null;
@@ -474,7 +474,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600309D RID: 12445 RVA: 0x002B3084 File Offset: 0x002B1284
+		
 		public void AddCopyMapMonsters(int mapCode, int copyMapID)
 		{
 			List<MonsterZone> monsterZoneList = null;
@@ -495,7 +495,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600309E RID: 12446 RVA: 0x002B3130 File Offset: 0x002B1330
+		
 		public void DestroyCopyMapMonsters(int mapCode, int copyMapID)
 		{
 			List<MonsterZone> monsterZoneList = null;
@@ -516,7 +516,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600309F RID: 12447 RVA: 0x002B31DC File Offset: 0x002B13DC
+		
 		public void ReloadCopyMapMonsters(int mapCode, int copyMapID)
 		{
 			List<MonsterZone> monsterZoneList = null;
@@ -537,7 +537,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060030A0 RID: 12448 RVA: 0x002B3288 File Offset: 0x002B1488
+		
 		public int GetMapTotalMonsterNum(int mapCode, MonsterTypes monsterType, bool excludePets = true)
 		{
 			List<MonsterZone> monsterZoneList = null;
@@ -576,7 +576,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060030A1 RID: 12449 RVA: 0x002B3324 File Offset: 0x002B1524
+		
 		public int GetMapMonsterNum(int mapCode, int nMonsterID)
 		{
 			List<MonsterZone> monsterZoneList = null;
@@ -604,7 +604,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060030A2 RID: 12450 RVA: 0x002B33B0 File Offset: 0x002B15B0
+		
 		public bool GetMonsterBirthPoint(int mapCode, int nMonsterID, out int posX, out int posY, out int radis)
 		{
 			posX = 0;
@@ -642,7 +642,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060030A3 RID: 12451 RVA: 0x002B3474 File Offset: 0x002B1674
+		
 		private bool RunReloadNormalMapMonsters()
 		{
 			MonsterZoneQueueItem monsterZoneQueueItem = null;
@@ -666,7 +666,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060030A4 RID: 12452 RVA: 0x002B351C File Offset: 0x002B171C
+		
 		public void ReloadNormalMapMonsters(int mapCode, int birthCount)
 		{
 			List<MonsterZone> monsterZoneList = null;
@@ -687,7 +687,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060030A5 RID: 12453 RVA: 0x002B35C8 File Offset: 0x002B17C8
+		
 		public MonsterZone GetDynamicMonsterZone(int mapCode)
 		{
 			MonsterZone zone = null;
@@ -703,7 +703,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060030A6 RID: 12454 RVA: 0x002B35F8 File Offset: 0x002B17F8
+		
 		public void AddDynamicMonsterZone(int mapCode)
 		{
 			bool isFuBenMap = FuBenManager.IsFuBenMap(mapCode);
@@ -736,7 +736,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060030A7 RID: 12455 RVA: 0x002B3714 File Offset: 0x002B1914
+		
 		private void InitDynamicMonsterSeedByMonserID(int monsterID)
 		{
 			MonsterZone monsterZone = new MonsterZone();
@@ -763,7 +763,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060030A8 RID: 12456 RVA: 0x002B381C File Offset: 0x002B1A1C
+		
 		public Monster GetDynamicMonsterSeed(int monsterID)
 		{
 			Monster monster = null;
@@ -789,13 +789,13 @@ namespace GameServer.Logic
 			return monster;
 		}
 
-		// Token: 0x060030A9 RID: 12457 RVA: 0x002B3900 File Offset: 0x002B1B00
+		
 		public Monster GetMonsterByMonsterID(int monsterID)
 		{
 			return this.GetDynamicMonsterSeed(monsterID);
 		}
 
-		// Token: 0x060030AA RID: 12458 RVA: 0x002B391C File Offset: 0x002B1B1C
+		
 		public void AddDynamicRobot(int mapCode, Robot robot, int copyMapID = -1, int addNum = 1, int gridX = 0, int gridY = 0, int radius = 3, int pursuitRadius = 0, SceneUIClasses managerType = SceneUIClasses.Normal, object tag = null)
 		{
 			this.TraceAllDynamicMonsters();
@@ -822,7 +822,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060030AB RID: 12459 RVA: 0x002B39EC File Offset: 0x002B1BEC
+		
 		public Monster AddDynamicMonsters(int mapCode, int monsterID, int copyMapID = -1, int addNum = 1, int gridX = 0, int gridY = 0, int radius = 3, int pursuitRadius = 0, SceneUIClasses managerType = SceneUIClasses.Normal, object tag = null, MonsterFlags flags = null)
 		{
 			this.TraceAllDynamicMonsters();
@@ -873,7 +873,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060030AC RID: 12460 RVA: 0x002B3B18 File Offset: 0x002B1D18
+		
 		public bool CallDynamicMonstersOwnedByRole(GameClient client, int monsterID, int magicLevel, int SurvivalTime, int callAsType = 1001, int callNum = 1, int pursuitRadius = 0)
 		{
 			this.TraceAllDynamicMonsters();
@@ -935,7 +935,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060030AD RID: 12461 RVA: 0x002B3CE0 File Offset: 0x002B1EE0
+		
 		public bool CallDynamicMonstersOwnedByMonster(Monster owner, int monsterID, int magicLevel, int SurvivalTime, int callAsType = 1001, int callNum = 1, int pursuitRadius = 0)
 		{
 			this.TraceAllDynamicMonsters();
@@ -997,7 +997,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060030AE RID: 12462 RVA: 0x002B3E90 File Offset: 0x002B2090
+		
 		private bool RunAddDynamicMonsters(int index)
 		{
 			bool result;
@@ -1028,7 +1028,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060030AF RID: 12463 RVA: 0x002B3F34 File Offset: 0x002B2134
+		
 		private bool RunAddRobots()
 		{
 			MonsterZoneQueueItem monsterZoneQueueItem = null;
@@ -1052,12 +1052,12 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060030B0 RID: 12464 RVA: 0x002B3FC4 File Offset: 0x002B21C4
+		
 		protected void TraceAllDynamicMonsters()
 		{
 		}
 
-		// Token: 0x060030B1 RID: 12465 RVA: 0x002B3FC8 File Offset: 0x002B21C8
+		
 		public List<MonsterZone> GetMonsterZoneListByMapCode(int mapCode)
 		{
 			List<MonsterZone> list = null;
@@ -1065,7 +1065,7 @@ namespace GameServer.Logic
 			return list;
 		}
 
-		// Token: 0x060030B2 RID: 12466 RVA: 0x002B3FEC File Offset: 0x002B21EC
+		
 		public List<MonsterZone> GetMonsterZoneByMapCodeAndMonsterID(int mapCode, int monsterID)
 		{
 			List<MonsterZone> list2 = new List<MonsterZone>();
@@ -1089,7 +1089,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060030B3 RID: 12467 RVA: 0x002B4060 File Offset: 0x002B2260
+		
 		public Point GetMonsterPointByMapCodeAndMonsterID(int mapCode, int monsterID)
 		{
 			Point pt = new Point(-1.0, -1.0);
@@ -1119,58 +1119,58 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04003D4D RID: 15693
+		
 		private const int Max_WaitingAddDynamicMonsterQueneCount = 10;
 
-		// Token: 0x04003D4E RID: 15694
+		
 		public static int MaxRunQueueNum = 100;
 
-		// Token: 0x04003D4F RID: 15695
+		
 		public static int MaxWaitingRunQueueNum = 200;
 
-		// Token: 0x04003D50 RID: 15696
+		
 		public static int MaxRunAddDynamicMonstersQueueNum = 30;
 
-		// Token: 0x04003D51 RID: 15697
+		
 		private Dictionary<int, MonsterZone> MonsterDynamicZoneDict = new Dictionary<int, MonsterZone>(100);
 
-		// Token: 0x04003D52 RID: 15698
+		
 		private List<MonsterZone> MonsterZoneList = new List<MonsterZone>(100);
 
-		// Token: 0x04003D53 RID: 15699
+		
 		private List<MonsterZone> FuBenMonsterZoneList = new List<MonsterZone>(100);
 
-		// Token: 0x04003D54 RID: 15700
+		
 		private Dictionary<int, List<MonsterZone>> Map2MonsterZoneDict = new Dictionary<int, List<MonsterZone>>(100);
 
-		// Token: 0x04003D55 RID: 15701
+		
 		private Queue<MonsterZoneQueueItem> WaitingAddFuBenMonsterQueue = new Queue<MonsterZoneQueueItem>();
 
-		// Token: 0x04003D56 RID: 15702
+		
 		private Queue<MonsterZoneQueueItem> WaitingDestroyFuBenMonsterQueue = new Queue<MonsterZoneQueueItem>();
 
-		// Token: 0x04003D57 RID: 15703
+		
 		private Queue<MonsterZoneQueueItem> WaitingReloadFuBenMonsterQueue = new Queue<MonsterZoneQueueItem>();
 
-		// Token: 0x04003D58 RID: 15704
+		
 		private Queue<MonsterZoneQueueItem> WaitingReloadNormalMapMonsterQueue = new Queue<MonsterZoneQueueItem>();
 
-		// Token: 0x04003D59 RID: 15705
+		
 		private Queue<MonsterZoneQueueItem>[] WaitingAddDynamicMonsterQueue = new Queue<MonsterZoneQueueItem>[10];
 
-		// Token: 0x04003D5A RID: 15706
+		
 		private Queue<MonsterZoneQueueItem> WaitingReloadRobotQueue = new Queue<MonsterZoneQueueItem>();
 
-		// Token: 0x04003D5B RID: 15707
+		
 		private Dictionary<int, Monster> _DictDynamicMonsterSeed = new Dictionary<int, Monster>();
 
-		// Token: 0x04003D5C RID: 15708
+		
 		private XElement _allMonstersXml = null;
 
-		// Token: 0x04003D5D RID: 15709
+		
 		private object _allMonsterXmlMutex = new object();
 
-		// Token: 0x04003D5E RID: 15710
+		
 		private object InitMonsterZoneMutex = new object();
 	}
 }

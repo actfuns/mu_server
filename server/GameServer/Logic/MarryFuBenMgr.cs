@@ -9,16 +9,16 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000523 RID: 1315
+	
 	internal class MarryFuBenMgr : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener
 	{
-		// Token: 0x060018EE RID: 6382 RVA: 0x00185300 File Offset: 0x00183500
+		
 		public static MarryFuBenMgr getInstance()
 		{
 			return MarryFuBenMgr.instance;
 		}
 
-		// Token: 0x060018EF RID: 6383 RVA: 0x00185318 File Offset: 0x00183518
+		
 		public bool initialize()
 		{
 			MarriageOtherLogic.getInstance().init();
@@ -29,19 +29,19 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060018F0 RID: 6384 RVA: 0x00185390 File Offset: 0x00183590
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x060018F1 RID: 6385 RVA: 0x001853A4 File Offset: 0x001835A4
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x060018F2 RID: 6386 RVA: 0x001853B8 File Offset: 0x001835B8
+		
 		public bool destroy()
 		{
 			GlobalEventSource.getInstance().removeListener(18, MarryFuBenMgr.getInstance());
@@ -57,7 +57,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060018F3 RID: 6387 RVA: 0x0018544C File Offset: 0x0018364C
+		
 		public void processEvent(EventObject eventObject)
 		{
 			if (eventObject.getEventType() == 18)
@@ -102,13 +102,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060018F4 RID: 6388 RVA: 0x00185650 File Offset: 0x00183850
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x060018F5 RID: 6389 RVA: 0x00185664 File Offset: 0x00183864
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			if (nID == 870)
@@ -174,7 +174,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060018F6 RID: 6390 RVA: 0x001857BC File Offset: 0x001839BC
+		
 		private MarriageInstance GetMarriageInstance(GameClient client)
 		{
 			MarriageInstance result;
@@ -198,7 +198,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060018F7 RID: 6391 RVA: 0x0018585C File Offset: 0x00183A5C
+		
 		private MarryFubenResult GetMarriageInstanceState(GameClient client, MarriageInstance FubenInstance = null)
 		{
 			MarryFubenResult result;
@@ -240,7 +240,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060018F8 RID: 6392 RVA: 0x0018592C File Offset: 0x00183B2C
+		
 		public MarryFubenResult ClientEnterRoom(GameClient client)
 		{
 			MarryFubenResult result;
@@ -312,7 +312,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060018F9 RID: 6393 RVA: 0x00185B9C File Offset: 0x00183D9C
+		
 		public MarryFubenResult ClientExitRoom(GameClient client)
 		{
 			MarryFubenResult result;
@@ -355,7 +355,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060018FA RID: 6394 RVA: 0x00185C8C File Offset: 0x00183E8C
+		
 		public MarryFubenResult ClientReady(GameClient client, int FuBenID)
 		{
 			MarryFubenResult result;
@@ -411,7 +411,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060018FB RID: 6395 RVA: 0x00185E10 File Offset: 0x00184010
+		
 		public MarryFubenResult ClientExitReady(GameClient client)
 		{
 			MarryFubenResult result;
@@ -454,13 +454,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060018FC RID: 6396 RVA: 0x00185EF4 File Offset: 0x001840F4
+		
 		public void StartInstance(GameClient client)
 		{
 			this.ClientExitRoom(client);
 		}
 
-		// Token: 0x060018FD RID: 6397 RVA: 0x00185F00 File Offset: 0x00184100
+		
 		private void RemoveMarriageInstance(MarriageInstance FubenInstance, bool bNeedsendtoclient = false)
 		{
 			lock (this.MarriageInstanceDic)
@@ -476,13 +476,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060018FE RID: 6398 RVA: 0x00185F9C File Offset: 0x0018419C
+		
 		public static bool UpdateMarriageData2DB(GameClient client)
 		{
 			return MarryFuBenMgr.UpdateMarriageData2DB(client.ClientData.RoleID, client.ClientData.MyMarriageData, client);
 		}
 
-		// Token: 0x060018FF RID: 6399 RVA: 0x00185FCC File Offset: 0x001841CC
+		
 		public static bool UpdateMarriageData2DB(int nRoleID, MarriageData updateMarriageData, GameClient self)
 		{
 			byte[] dataBytes = DataHelper.ObjectToBytes<MarriageData>(updateMarriageData);
@@ -493,7 +493,7 @@ namespace GameServer.Logic
 			return Global.sendToDB<bool, byte[]>(10185, sendBytes, self.ServerId);
 		}
 
-		// Token: 0x06001900 RID: 6400 RVA: 0x00186020 File Offset: 0x00184220
+		
 		public bool CanEnterSceneEX(GameClient client)
 		{
 			MarriageInstance FubenInstance = this.GetMarriageInstance(client);
@@ -523,22 +523,22 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001901 RID: 6401 RVA: 0x001860B0 File Offset: 0x001842B0
+		
 		public MarriageInstance GetMarriageInstanceEX(GameClient client)
 		{
 			return this.GetMarriageInstance(client);
 		}
 
-		// Token: 0x040022FE RID: 8958
+		
 		private static MarryFuBenMgr instance = new MarryFuBenMgr();
 
-		// Token: 0x040022FF RID: 8959
+		
 		private Dictionary<int, MarriageInstance> MarriageInstanceDic = new Dictionary<int, MarriageInstance>();
 
-		// Token: 0x04002300 RID: 8960
+		
 		private SystemXmlItem MarriageFubenXmlItem = null;
 
-		// Token: 0x04002301 RID: 8961
+		
 		private SystemXmlItems ManAndWifeBossXmlItems = new SystemXmlItems();
 	}
 }

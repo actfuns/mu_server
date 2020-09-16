@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace Tmsk.DbHelper
 {
-	// Token: 0x0200001B RID: 27
+	
 	public class MyDbConnection1
 	{
-		// Token: 0x060000CC RID: 204 RVA: 0x0000AB68 File Offset: 0x00008D68
+		
 		public MyDbConnection1(string connStr, string dbNames)
 		{
 			bool success = false;
@@ -62,7 +62,7 @@ namespace Tmsk.DbHelper
 			}
 		}
 
-		// Token: 0x060000CD RID: 205 RVA: 0x0000AD38 File Offset: 0x00008F38
+		
 		public bool IsConnected()
 		{
 			if (null != this.DbConn)
@@ -75,7 +75,7 @@ namespace Tmsk.DbHelper
 			return false;
 		}
 
-		// Token: 0x060000CE RID: 206 RVA: 0x0000AD88 File Offset: 0x00008F88
+		
 		public void Close()
 		{
 			if (null != this.DbConn)
@@ -90,7 +90,7 @@ namespace Tmsk.DbHelper
 			}
 		}
 
-		// Token: 0x060000CF RID: 207 RVA: 0x0000ADCC File Offset: 0x00008FCC
+		
 		public void UseDatabase(string databaseKey, string databaseName)
 		{
 			if (databaseKey != this.DatabaseKey)
@@ -109,16 +109,16 @@ namespace Tmsk.DbHelper
 			}
 		}
 
-		// Token: 0x040000A6 RID: 166
+		
 		private MySQLConnection DbConn = null;
 
-		// Token: 0x040000A7 RID: 167
+		
 		private MySQLConnectionString ConnStr = null;
 
-		// Token: 0x040000A8 RID: 168
+		
 		public string DatabaseKey = null;
 
-		// Token: 0x040000A9 RID: 169
+		
 		private string DatabaseName = null;
 	}
 }

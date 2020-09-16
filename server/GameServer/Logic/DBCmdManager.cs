@@ -7,16 +7,16 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200061B RID: 1563
+	
 	public class DBCmdManager
 	{
-		// Token: 0x06001FB6 RID: 8118 RVA: 0x001B7674 File Offset: 0x001B5874
+		
 		public void AddDBCmd(int cmdID, string cmdText, DBCommandEventHandler dbCommandEvent, int serverId)
 		{
 			Global.ExecuteDBCmd(cmdID, cmdText, serverId);
 		}
 
-		// Token: 0x06001FB7 RID: 8119 RVA: 0x001B7690 File Offset: 0x001B5890
+		
 		public int GetDBCmdCount()
 		{
 			int count;
@@ -27,7 +27,7 @@ namespace GameServer.Logic
 			return count;
 		}
 
-		// Token: 0x06001FB8 RID: 8120 RVA: 0x001B76E4 File Offset: 0x001B58E4
+		
 		private TCPProcessCmdResults DoDBCmd(TCPClientPool tcpClientPool, TCPOutPacketPool pool, DBCommand dbCmd, out byte[] bytesData)
 		{
 			bytesData = Global.SendAndRecvData<string>(dbCmd.DBCommandID, dbCmd.DBCommandText, dbCmd.ServerId, 0);
@@ -43,7 +43,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001FB9 RID: 8121 RVA: 0x001B772C File Offset: 0x001B592C
+		
 		public void ExecuteDBCmd(TCPClientPool tcpClientPool, TCPOutPacketPool pool)
 		{
 			lock (this._DBCmdQueue)
@@ -88,10 +88,10 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04002CBE RID: 11454
+		
 		private DBCmdPool _DBCmdPool = new DBCmdPool(1000);
 
-		// Token: 0x04002CBF RID: 11455
+		
 		private Queue<DBCommand> _DBCmdQueue = new Queue<DBCommand>(1000);
 	}
 }

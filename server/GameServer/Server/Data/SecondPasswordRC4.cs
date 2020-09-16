@@ -4,10 +4,10 @@ using Server.Tools;
 
 namespace Server.Data
 {
-	// Token: 0x0200017B RID: 379
+	
 	public static class SecondPasswordRC4
 	{
-		// Token: 0x060004A0 RID: 1184 RVA: 0x00040F1C File Offset: 0x0003F11C
+		
 		public static string Encrypt(string input)
 		{
 			string result;
@@ -24,7 +24,7 @@ namespace Server.Data
 			return result;
 		}
 
-		// Token: 0x060004A1 RID: 1185 RVA: 0x00040F60 File Offset: 0x0003F160
+		
 		public static string Decrypt(string input)
 		{
 			string result;
@@ -41,7 +41,7 @@ namespace Server.Data
 			return result;
 		}
 
-		// Token: 0x04000878 RID: 2168
+		
 		private static string _Key = "SecPwd";
 	}
 }

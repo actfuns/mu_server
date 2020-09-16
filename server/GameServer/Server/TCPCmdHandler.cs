@@ -57,10 +57,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Server
 {
-	// Token: 0x020008BE RID: 2238
+	
 	internal class TCPCmdHandler
 	{
-		// Token: 0x06003E01 RID: 15873 RVA: 0x0034DB44 File Offset: 0x0034BD44
+		
 		public static int GetHandlingCmdCount()
 		{
 			int count;
@@ -71,7 +71,7 @@ namespace GameServer.Server
 			return count;
 		}
 
-		// Token: 0x06003E02 RID: 15874 RVA: 0x0034DB94 File Offset: 0x0034BD94
+		
 		public static void ProcessCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count)
 		{
 			TCPOutPacket tcpOutPacket = null;
@@ -90,7 +90,7 @@ namespace GameServer.Server
 			}
 		}
 
-		// Token: 0x06003E03 RID: 15875 RVA: 0x0034DC2C File Offset: 0x0034BE2C
+		
 		public static TCPProcessCmdResults ProcessCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			long startTicks = TimeUtil.NOW();
@@ -2303,7 +2303,7 @@ namespace GameServer.Server
 			return result2;
 		}
 
-		// Token: 0x06003E04 RID: 15876 RVA: 0x003524CC File Offset: 0x003506CC
+		
 		private static TCPProcessCmdResults ProcessUserLogin2Cmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2433,7 +2433,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E05 RID: 15877 RVA: 0x003528D4 File Offset: 0x00350AD4
+		
 		private static TCPProcessCmdResults ProcessServerMonitor(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2480,7 +2480,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E06 RID: 15878 RVA: 0x00352A30 File Offset: 0x00350C30
+		
 		private static TCPProcessCmdResults ProcessUserLoginCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2834,7 +2834,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E07 RID: 15879 RVA: 0x00353740 File Offset: 0x00351940
+		
 		private static TCPProcessCmdResults ProcessGetRoleListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2895,7 +2895,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E08 RID: 15880 RVA: 0x003539B0 File Offset: 0x00351BB0
+		
 		private static TCPProcessCmdResults ProcessCreateRoleCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3102,7 +3102,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E09 RID: 15881 RVA: 0x003541C0 File Offset: 0x003523C0
+		
 		private static TCPProcessCmdResults ProcessUnRemoveRoleCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3153,7 +3153,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E0A RID: 15882 RVA: 0x00354380 File Offset: 0x00352580
+		
 		private static TCPProcessCmdResults ProcessPreRemoveRoleCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3240,7 +3240,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E0B RID: 15883 RVA: 0x0035464C File Offset: 0x0035284C
+		
 		private static TCPProcessCmdResults ProcessRemoveRoleCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3317,7 +3317,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E0C RID: 15884 RVA: 0x003548D8 File Offset: 0x00352AD8
+		
 		private static TCPProcessCmdResults ProcessInitGameCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4196,7 +4196,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E0D RID: 15885 RVA: 0x00356B68 File Offset: 0x00354D68
+		
 		private static TCPProcessCmdResults ProcessTimeSyncGameCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4235,7 +4235,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E0E RID: 15886 RVA: 0x00356CA4 File Offset: 0x00354EA4
+		
 		private static TCPProcessCmdResults ProcessTimeSyncGameByClientCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4274,7 +4274,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_OK;
 		}
 
-		// Token: 0x06003E0F RID: 15887 RVA: 0x00356DDC File Offset: 0x00354FDC
+		
 		private static TCPProcessCmdResults ProcessClientLogCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4290,7 +4290,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_OK;
 		}
 
-		// Token: 0x06003E10 RID: 15888 RVA: 0x00356E34 File Offset: 0x00355034
+		
 		private static TCPProcessCmdResults ProcessClientPushVersionCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4359,7 +4359,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E11 RID: 15889 RVA: 0x00357054 File Offset: 0x00355254
+		
 		private static TCPProcessCmdResults ProcessNotifyShowGonggaoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4401,7 +4401,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E12 RID: 15890 RVA: 0x00357194 File Offset: 0x00355394
+		
 		private static TCPProcessCmdResults ProcessStartPlayGameCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4696,7 +4696,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E13 RID: 15891 RVA: 0x00357D90 File Offset: 0x00355F90
+		
 		private static TCPProcessCmdResults ProcessSpriteMoveCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4829,7 +4829,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E14 RID: 15892 RVA: 0x0035827C File Offset: 0x0035647C
+		
 		private static TCPProcessCmdResults ProcessSpriteMoveEndCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4940,7 +4940,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E15 RID: 15893 RVA: 0x00358698 File Offset: 0x00356898
+		
 		private static TCPProcessCmdResults ProcessSpriteStopMoveCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4995,7 +4995,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E16 RID: 15894 RVA: 0x003588B8 File Offset: 0x00356AB8
+		
 		private static TCPProcessCmdResults ProcessSpriteMove2Cmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5083,7 +5083,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E17 RID: 15895 RVA: 0x00358C58 File Offset: 0x00356E58
+		
 		private static TCPProcessCmdResults ProcessSpritePosCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5202,7 +5202,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E18 RID: 15896 RVA: 0x00359158 File Offset: 0x00357358
+		
 		private static TCPProcessCmdResults ProcessSpritePetPosCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5287,7 +5287,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E19 RID: 15897 RVA: 0x00359478 File Offset: 0x00357678
+		
 		private static TCPProcessCmdResults ProcessSpriteActionCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5395,7 +5395,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E1A RID: 15898 RVA: 0x00359880 File Offset: 0x00357A80
+		
 		private static TCPProcessCmdResults ProcessSpriteChangeAngleCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5445,7 +5445,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E1B RID: 15899 RVA: 0x00359A44 File Offset: 0x00357C44
+		
 		private static TCPProcessCmdResults ProcessSpriteAction2Cmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5531,7 +5531,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E1C RID: 15900 RVA: 0x00359DC0 File Offset: 0x00357FC0
+		
 		private static TCPProcessCmdResults ProcessSpriteAttackCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5726,7 +5726,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E1D RID: 15901 RVA: 0x0035A650 File Offset: 0x00358850
+		
 		private static TCPProcessCmdResults ProcessSpriteMagicCodeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5819,7 +5819,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E1E RID: 15902 RVA: 0x0035AA4C File Offset: 0x00358C4C
+		
 		private static TCPProcessCmdResults ProcessSpriteRealiveCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6216,7 +6216,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E1F RID: 15903 RVA: 0x0035B8F8 File Offset: 0x00359AF8
+		
 		private static TCPProcessCmdResults ProcessSpriteClickOnCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6336,7 +6336,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E20 RID: 15904 RVA: 0x0035BD64 File Offset: 0x00359F64
+		
 		private static TCPProcessCmdResults ProcessSpriteNewTaskCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6387,7 +6387,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E21 RID: 15905 RVA: 0x0035BF18 File Offset: 0x0035A118
+		
 		private static TCPProcessCmdResults ProcessSpriteMapChangeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6655,7 +6655,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E22 RID: 15906 RVA: 0x0035CBB8 File Offset: 0x0035ADB8
+		
 		private static TCPProcessCmdResults ProcessSpriteGetAttrib2Cmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6697,7 +6697,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E23 RID: 15907 RVA: 0x0035CD10 File Offset: 0x0035AF10
+		
 		private static TCPProcessCmdResults ProcessSpriteGetAttribAllCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6741,7 +6741,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E24 RID: 15908 RVA: 0x0035CE74 File Offset: 0x0035B074
+		
 		private static TCPProcessCmdResults ProcessSpriteNPCBuyCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6910,7 +6910,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E25 RID: 15909 RVA: 0x0035D508 File Offset: 0x0035B708
+		
 		private static TCPProcessCmdResults ProcessSpriteNPCSaleOutCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7126,7 +7126,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E26 RID: 15910 RVA: 0x0035DD30 File Offset: 0x0035BF30
+		
 		private static TCPProcessCmdResults ProcessSpriteAddGoodsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7141,7 +7141,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E27 RID: 15911 RVA: 0x0035DD74 File Offset: 0x0035BF74
+		
 		private static TCPProcessCmdResults ProcessSpriteModGoodsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7182,7 +7182,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E28 RID: 15912 RVA: 0x0035DEC8 File Offset: 0x0035C0C8
+		
 		private static TCPProcessCmdResults ProcessSpriteMergeGoodsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7471,7 +7471,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E29 RID: 15913 RVA: 0x0035E998 File Offset: 0x0035CB98
+		
 		private static TCPProcessCmdResults ProcessSpriteSplitGoodsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7516,7 +7516,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E2A RID: 15914 RVA: 0x0035EB18 File Offset: 0x0035CD18
+		
 		private static TCPProcessCmdResults ProcessSpriteCompTaskCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7562,7 +7562,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E2B RID: 15915 RVA: 0x0035EC94 File Offset: 0x0035CE94
+		
 		private static TCPProcessCmdResults ProcessSpriteGetFriendsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7595,7 +7595,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E2C RID: 15916 RVA: 0x0035EDC4 File Offset: 0x0035CFC4
+		
 		private static TCPProcessCmdResults ProcessSpriteGetFriendsCmd2(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7643,7 +7643,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E2D RID: 15917 RVA: 0x0035EFF8 File Offset: 0x0035D1F8
+		
 		private static TCPProcessCmdResults ProcessSpriteAddFriendCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7699,7 +7699,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E2E RID: 15918 RVA: 0x0035F268 File Offset: 0x0035D468
+		
 		private static TCPProcessCmdResults ProcessSpriteRemoveFriendCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7742,7 +7742,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E2F RID: 15919 RVA: 0x0035F3CC File Offset: 0x0035D5CC
+		
 		private static TCPProcessCmdResults ProcessSpriteClickOnGoodsPackCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7785,7 +7785,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E30 RID: 15920 RVA: 0x0035F528 File Offset: 0x0035D728
+		
 		private static TCPProcessCmdResults ProcessSpriteGetThingCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7828,7 +7828,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E31 RID: 15921 RVA: 0x0035F684 File Offset: 0x0035D884
+		
 		private static TCPProcessCmdResults ProcessSpriteChangePKModeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7881,7 +7881,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E32 RID: 15922 RVA: 0x0035F874 File Offset: 0x0035DA74
+		
 		private static TCPProcessCmdResults ProcessSpriteGetNewTaskDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -8125,7 +8125,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E33 RID: 15923 RVA: 0x0036005C File Offset: 0x0035E25C
+		
 		private static TCPProcessCmdResults ProcessSpriteAbandonTaskCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -8191,7 +8191,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E34 RID: 15924 RVA: 0x0036027C File Offset: 0x0035E47C
+		
 		private static TCPProcessCmdResults ProcessSpriteModTaskCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -8304,7 +8304,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E35 RID: 15925 RVA: 0x003606A8 File Offset: 0x0035E8A8
+		
 		private static TCPProcessCmdResults ProcessSpriteModKeysCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -8351,7 +8351,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E36 RID: 15926 RVA: 0x00360838 File Offset: 0x0035EA38
+		
 		private static TCPProcessCmdResults ProcessSpriteChatCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -8577,7 +8577,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E37 RID: 15927 RVA: 0x00360FFC File Offset: 0x0035F1FC
+		
 		private static TCPProcessCmdResults ProcessSpriteUseGoodsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -8807,7 +8807,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E38 RID: 15928 RVA: 0x00361954 File Offset: 0x0035FB54
+		
 		private static TCPProcessCmdResults ProcessSpriteForgeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9273,7 +9273,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E39 RID: 15929 RVA: 0x00362B80 File Offset: 0x00360D80
+		
 		private static TCPProcessCmdResults ProcessEquipJuHunCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9626,7 +9626,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E3A RID: 15930 RVA: 0x003639A4 File Offset: 0x00361BA4
+		
 		private static TCPProcessCmdResults ProcessSpriteEquipBornIndexUpdateCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9930,7 +9930,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E3B RID: 15931 RVA: 0x003644DC File Offset: 0x003626DC
+		
 		private static TCPProcessCmdResults ProcessSprEquipFenJieCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10091,7 +10091,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E3C RID: 15932 RVA: 0x00364CC0 File Offset: 0x00362EC0
+		
 		private static TCPProcessCmdResults ProcessSpriteEquipInheritCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10421,7 +10421,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E3D RID: 15933 RVA: 0x003659DC File Offset: 0x00363BDC
+		
 		private static TCPProcessCmdResults ProcessSpriteEquipJuHunInheritCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10724,7 +10724,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E3E RID: 15934 RVA: 0x0036657C File Offset: 0x0036477C
+		
 		private static TCPProcessCmdResults ProcessSpriteSubForgeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10979,7 +10979,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E3F RID: 15935 RVA: 0x00366EB8 File Offset: 0x003650B8
+		
 		private static TCPProcessCmdResults ProcessSpriteEnchanceCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11284,7 +11284,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E40 RID: 15936 RVA: 0x00367A58 File Offset: 0x00365C58
+		
 		private static TCPProcessCmdResults ProcessSpriteGetOtherAttribCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11353,7 +11353,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E41 RID: 15937 RVA: 0x00367D10 File Offset: 0x00365F10
+		
 		private static TCPProcessCmdResults ProcessSpriteMallBuyCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11546,7 +11546,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E42 RID: 15938 RVA: 0x00368524 File Offset: 0x00366724
+		
 		private static TCPProcessCmdResults ProcessSpriteYinLiangBuyCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11570,7 +11570,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E43 RID: 15939 RVA: 0x003685B0 File Offset: 0x003667B0
+		
 		private static TCPProcessCmdResults ProcessSpriteGoodsExchangeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11991,7 +11991,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E44 RID: 15940 RVA: 0x00369734 File Offset: 0x00367934
+		
 		private static TCPProcessCmdResults ProcessSpriteGoodsStallCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -12180,7 +12180,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E45 RID: 15941 RVA: 0x00369F58 File Offset: 0x00368158
+		
 		private static TCPProcessCmdResults ProcessSpriteTeamCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -12716,7 +12716,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E46 RID: 15942 RVA: 0x0036BA28 File Offset: 0x00369C28
+		
 		private static TCPProcessCmdResults ProcessSpriteBattleCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -12763,7 +12763,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E47 RID: 15943 RVA: 0x0036BB98 File Offset: 0x00369D98
+		
 		private static TCPProcessCmdResults ProcessSpriteArenaBattleCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -12810,7 +12810,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E48 RID: 15944 RVA: 0x0036BD0C File Offset: 0x00369F0C
+		
 		private static TCPProcessCmdResults ProcessSpriteGetPKKingLooksCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -12859,7 +12859,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E49 RID: 15945 RVA: 0x0036BE9C File Offset: 0x0036A09C
+		
 		private static TCPProcessCmdResults ProcessSpriteNPCScriptCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -12909,7 +12909,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E4A RID: 15946 RVA: 0x0036C05C File Offset: 0x0036A25C
+		
 		private static TCPProcessCmdResults ProcessSpriteDeadCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -12999,7 +12999,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E4B RID: 15947 RVA: 0x0036C3C8 File Offset: 0x0036A5C8
+		
 		private static TCPProcessCmdResults ProcessSpriteAutoFightCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13134,7 +13134,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E4C RID: 15948 RVA: 0x0036C8BC File Offset: 0x0036AABC
+		
 		private static TCPProcessCmdResults ProcessSpriteHorseCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13249,7 +13249,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E4D RID: 15949 RVA: 0x0036CD60 File Offset: 0x0036AF60
+		
 		private static TCPProcessCmdResults ProcessSpritePetCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13358,7 +13358,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E4E RID: 15950 RVA: 0x0036D274 File Offset: 0x0036B474
+		
 		private static TCPProcessCmdResults ProcessSpriteChangePosCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13409,7 +13409,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E4F RID: 15951 RVA: 0x0036D44C File Offset: 0x0036B64C
+		
 		private static TCPProcessCmdResults ProcessSpriteDianJiangListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13459,7 +13459,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E50 RID: 15952 RVA: 0x0036D5D4 File Offset: 0x0036B7D4
+		
 		private static TCPProcessCmdResults ProcessSpriteDianJiangCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14073,7 +14073,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E51 RID: 15953 RVA: 0x0036F578 File Offset: 0x0036D778
+		
 		private static TCPProcessCmdResults ProcessSpriteGetDJPointsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14088,7 +14088,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E52 RID: 15954 RVA: 0x0036F5D4 File Offset: 0x0036D7D4
+		
 		private static TCPProcessCmdResults ProcessSpriteGoToMapCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14139,7 +14139,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E53 RID: 15955 RVA: 0x0036F788 File Offset: 0x0036D988
+		
 		private static TCPProcessCmdResults ProcessSpriteQueryNameByIDCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14154,7 +14154,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E54 RID: 15956 RVA: 0x0036F7E4 File Offset: 0x0036D9E4
+		
 		private static TCPProcessCmdResults ProcessSpriteGetHorseListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14169,7 +14169,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E55 RID: 15957 RVA: 0x0036F840 File Offset: 0x0036DA40
+		
 		private static TCPProcessCmdResults ProcessSpriteGetOtherHorseListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14184,7 +14184,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E56 RID: 15958 RVA: 0x0036F89C File Offset: 0x0036DA9C
+		
 		private static TCPProcessCmdResults ProcessSpriteGetPetListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14199,7 +14199,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E57 RID: 15959 RVA: 0x0036F8F8 File Offset: 0x0036DAF8
+		
 		private static TCPProcessCmdResults ProcessSpriteModeHorseCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14245,7 +14245,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E58 RID: 15960 RVA: 0x0036FA6C File Offset: 0x0036DC6C
+		
 		private static TCPProcessCmdResults ProcessSpriteModPetCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14390,7 +14390,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E59 RID: 15961 RVA: 0x0036FF58 File Offset: 0x0036E158
+		
 		private static TCPProcessCmdResults ProcessSpriteSelectHorseCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14433,7 +14433,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E5A RID: 15962 RVA: 0x003700B8 File Offset: 0x0036E2B8
+		
 		private static TCPProcessCmdResults ProcessSpriteUseHorseCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14476,7 +14476,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E5B RID: 15963 RVA: 0x00370218 File Offset: 0x0036E418
+		
 		private static TCPProcessCmdResults ProcessSpriteGetGoodsListBySiteCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14524,7 +14524,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E5C RID: 15964 RVA: 0x003703D4 File Offset: 0x0036E5D4
+		
 		private static TCPProcessCmdResults ProcessSpriteGetMeditateGoodsListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14576,7 +14576,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E5D RID: 15965 RVA: 0x003705C4 File Offset: 0x0036E7C4
+		
 		private static TCPProcessCmdResults ProcessSpriteGetJinDanGoodsListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14634,7 +14634,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E5E RID: 15966 RVA: 0x00370810 File Offset: 0x0036EA10
+		
 		private static TCPProcessCmdResults ProcessSpriteGetDamonGoodsListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14696,7 +14696,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E5F RID: 15967 RVA: 0x00370A98 File Offset: 0x0036EC98
+		
 		private static TCPProcessCmdResults ProcessSpriteGetPaiZhuDamonGoodsListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14760,7 +14760,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E60 RID: 15968 RVA: 0x00370D44 File Offset: 0x0036EF44
+		
 		private static TCPProcessCmdResults ProcessSpriteGetLineInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14811,7 +14811,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E61 RID: 15969 RVA: 0x00370F08 File Offset: 0x0036F108
+		
 		private static TCPProcessCmdResults ProcessSpriteGetMergeTypesCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14902,7 +14902,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E62 RID: 15970 RVA: 0x0037121C File Offset: 0x0036F41C
+		
 		private static TCPProcessCmdResults ProcessSpriteGetMergeItemsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14953,7 +14953,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E63 RID: 15971 RVA: 0x00371424 File Offset: 0x0036F624
+		
 		private static TCPProcessCmdResults ProcessSpriteMergeNewGoodsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15022,7 +15022,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E64 RID: 15972 RVA: 0x003716A0 File Offset: 0x0036F8A0
+		
 		private static TCPProcessCmdResults ProcessSpriteGetJingMaiListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15064,7 +15064,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E65 RID: 15973 RVA: 0x003717F8 File Offset: 0x0036F9F8
+		
 		private static TCPProcessCmdResults ProcessSpriteGetOtherJingMaiListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15107,7 +15107,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E66 RID: 15974 RVA: 0x00371960 File Offset: 0x0036FB60
+		
 		private static TCPProcessCmdResults ProcessSpriteUpJingMaiLevelCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15164,7 +15164,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E67 RID: 15975 RVA: 0x00371B68 File Offset: 0x0036FD68
+		
 		private static TCPProcessCmdResults ProcessSpriteLoadAlreadyCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15230,7 +15230,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E68 RID: 15976 RVA: 0x00371DFC File Offset: 0x0036FFFC
+		
 		private static TCPProcessCmdResults ProcessSpriteEquipUpgradeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15279,7 +15279,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E69 RID: 15977 RVA: 0x00371FBC File Offset: 0x003701BC
+		
 		private static TCPProcessCmdResults ProcessSpriteEnchaseJewelCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15335,7 +15335,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E6A RID: 15978 RVA: 0x003721AC File Offset: 0x003703AC
+		
 		private static TCPProcessCmdResults ProcessSpriteShowBigGuanCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15397,7 +15397,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E6B RID: 15979 RVA: 0x0037242C File Offset: 0x0037062C
+		
 		private static TCPProcessCmdResults ProcessSpriteGetBigGuanCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15484,7 +15484,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E6C RID: 15980 RVA: 0x003727C0 File Offset: 0x003709C0
+		
 		private static TCPProcessCmdResults ProcessSpriteUpSkillLevelCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15714,7 +15714,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E6D RID: 15981 RVA: 0x00373118 File Offset: 0x00371318
+		
 		private static TCPProcessCmdResults ProcessSpriteJingMaiInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15756,7 +15756,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E6E RID: 15982 RVA: 0x00373270 File Offset: 0x00371470
+		
 		private static TCPProcessCmdResults ProcessSpriteHorseEnchanceCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15809,7 +15809,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E6F RID: 15983 RVA: 0x00373450 File Offset: 0x00371650
+		
 		private static TCPProcessCmdResults ProcessSpriteHorseUpgradeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15855,7 +15855,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E70 RID: 15984 RVA: 0x00373604 File Offset: 0x00371804
+		
 		private static TCPProcessCmdResults ProcessSpriteGetLiXianBaiTanTicksCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15898,7 +15898,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E71 RID: 15985 RVA: 0x00373780 File Offset: 0x00371980
+		
 		private static TCPProcessCmdResults ProcessSpriteUpdateLiXianBaiTanTicksCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15971,7 +15971,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E72 RID: 15986 RVA: 0x00373AA0 File Offset: 0x00371CA0
+		
 		private static TCPProcessCmdResults ProcessSpriteOpenMarketCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16060,7 +16060,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E73 RID: 15987 RVA: 0x00373EE8 File Offset: 0x003720E8
+		
 		private static TCPProcessCmdResults ProcessSpriteMarketSaleMoneyCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16240,7 +16240,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E74 RID: 15988 RVA: 0x0037462C File Offset: 0x0037282C
+		
 		private static TCPProcessCmdResults ProcessSpriteSaleGoodsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16535,7 +16535,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E75 RID: 15989 RVA: 0x003751AC File Offset: 0x003733AC
+		
 		private static TCPProcessCmdResults ProcessSpriteSelfSaleGoodsListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16578,7 +16578,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E76 RID: 15990 RVA: 0x0037530C File Offset: 0x0037350C
+		
 		private static TCPProcessCmdResults ProcessSpriteOtherSaleGoodsListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16631,7 +16631,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E77 RID: 15991 RVA: 0x003754BC File Offset: 0x003736BC
+		
 		private static TCPProcessCmdResults ProcessSpriteMarketRoleListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16674,7 +16674,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E78 RID: 15992 RVA: 0x00375618 File Offset: 0x00373818
+		
 		private static TCPProcessCmdResults ProcessSpriteMarketGoodsListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16744,7 +16744,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E79 RID: 15993 RVA: 0x00375854 File Offset: 0x00373A54
+		
 		private static TCPProcessCmdResults ProcessSpriteMarketBuyGoodsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17035,7 +17035,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E7A RID: 15994 RVA: 0x00376A50 File Offset: 0x00374C50
+		
 		private static TCPProcessCmdResults ProcessSpriteModDefSkillIDCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17091,7 +17091,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E7B RID: 15995 RVA: 0x00376C74 File Offset: 0x00374E74
+		
 		private static TCPProcessCmdResults ProcessSpriteModAutoDrinkCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17142,7 +17142,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E7C RID: 15996 RVA: 0x00376EA0 File Offset: 0x003750A0
+		
 		private static TCPProcessCmdResults ProcessSpritePlayDecoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17194,7 +17194,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E7D RID: 15997 RVA: 0x00377090 File Offset: 0x00375290
+		
 		private static TCPProcessCmdResults ProcessSpriteRunToMapCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17255,7 +17255,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E7E RID: 15998 RVA: 0x003772B0 File Offset: 0x003754B0
+		
 		private static TCPProcessCmdResults ProcessSpriteSearchRolesCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17299,7 +17299,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E7F RID: 15999 RVA: 0x00377414 File Offset: 0x00375614
+		
 		private static TCPProcessCmdResults ProcessSpriteListRolesCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17342,7 +17342,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E80 RID: 16000 RVA: 0x00377574 File Offset: 0x00375774
+		
 		private static TCPProcessCmdResults ProcessSpriteListTeamsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17385,7 +17385,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E81 RID: 16001 RVA: 0x003776D4 File Offset: 0x003758D4
+		
 		private static TCPProcessCmdResults ProcessSpriteResetBagCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17433,7 +17433,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E82 RID: 16002 RVA: 0x003778C8 File Offset: 0x00375AC8
+		
 		private static TCPProcessCmdResults ProcessSpriteChgNumSkillIDCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17480,7 +17480,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E83 RID: 16003 RVA: 0x00377AA8 File Offset: 0x00375CA8
+		
 		private static TCPProcessCmdResults ProcessSpriteGetSkillUsedNumCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17533,7 +17533,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E84 RID: 16004 RVA: 0x00377C88 File Offset: 0x00375E88
+		
 		private static TCPProcessCmdResults ProcessSpriteChgHorseBodyCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17632,7 +17632,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E85 RID: 16005 RVA: 0x00377FBC File Offset: 0x003761BC
+		
 		private static TCPProcessCmdResults ProcessSpriteResetPortableBagCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17674,7 +17674,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E86 RID: 16006 RVA: 0x00378108 File Offset: 0x00376308
+		
 		private static TCPProcessCmdResults ProcessSpriteResetJinDanBagCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17716,7 +17716,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E87 RID: 16007 RVA: 0x00378254 File Offset: 0x00376454
+		
 		private static TCPProcessCmdResults ProcessSpriteExecWaBaoByYaoShiCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17761,7 +17761,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E88 RID: 16008 RVA: 0x003783D4 File Offset: 0x003765D4
+		
 		private static TCPProcessCmdResults ProcessSpriteExecWaBaoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17803,7 +17803,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E89 RID: 16009 RVA: 0x00378528 File Offset: 0x00376728
+		
 		private static TCPProcessCmdResults ProcessSpriteGetWaBaoDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17845,7 +17845,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E8A RID: 16010 RVA: 0x0037867C File Offset: 0x0037687C
+		
 		private static TCPProcessCmdResults ProcessSpriteZaJinDanCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17970,7 +17970,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E8B RID: 16011 RVA: 0x00378B98 File Offset: 0x00376D98
+		
 		private static TCPProcessCmdResults ProcessQueryZaJinDanHistoryCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18017,7 +18017,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E8C RID: 16012 RVA: 0x00378D58 File Offset: 0x00376F58
+		
 		private static TCPProcessCmdResults ProcessSpriteGetHuoDongDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18059,7 +18059,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E8D RID: 16013 RVA: 0x00378EA8 File Offset: 0x003770A8
+		
 		private static TCPProcessCmdResults ProcessSpriteGetWLoginGiftCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18104,7 +18104,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E8E RID: 16014 RVA: 0x00379028 File Offset: 0x00377228
+		
 		private static TCPProcessCmdResults ProcessSpriteGetLimitTimeLoginGiftCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18149,7 +18149,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E8F RID: 16015 RVA: 0x003791B0 File Offset: 0x003773B0
+		
 		private static TCPProcessCmdResults ProcessSpriteGetMTimeGiftCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18194,7 +18194,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E90 RID: 16016 RVA: 0x00379330 File Offset: 0x00377530
+		
 		private static TCPProcessCmdResults ProcessSpriteGetNewStepGiftCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18245,7 +18245,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E91 RID: 16017 RVA: 0x00379514 File Offset: 0x00377714
+		
 		private static TCPProcessCmdResults ProcessSpriteGetBigGiftCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18291,7 +18291,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E92 RID: 16018 RVA: 0x003796A0 File Offset: 0x003778A0
+		
 		private static TCPProcessCmdResults ProcessSpriteGetSongLiGiftCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18344,7 +18344,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E93 RID: 16019 RVA: 0x00379888 File Offset: 0x00377A88
+		
 		private static TCPProcessCmdResults ProcessSpriteEnterFuBenCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18842,7 +18842,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E94 RID: 16020 RVA: 0x0037AD74 File Offset: 0x00378F74
+		
 		private static TCPProcessCmdResults ProcessSpriteNotifyEnterFuBenCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18993,7 +18993,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E95 RID: 16021 RVA: 0x0037B2FC File Offset: 0x003794FC
+		
 		private static TCPProcessCmdResults ProcessSpriteClientHeartCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19043,7 +19043,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E96 RID: 16022 RVA: 0x0037B4F4 File Offset: 0x003796F4
+		
 		private static TCPProcessCmdResults ProcessGetRandomNameCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19086,7 +19086,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E97 RID: 16023 RVA: 0x0037B648 File Offset: 0x00379848
+		
 		private static TCPProcessCmdResults ProcessGetFuBenHistDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19128,7 +19128,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E98 RID: 16024 RVA: 0x0037B7B0 File Offset: 0x003799B0
+		
 		private static TCPProcessCmdResults ProcessGetFuBenBeginInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19170,7 +19170,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E99 RID: 16025 RVA: 0x0037B900 File Offset: 0x00379B00
+		
 		private static TCPProcessCmdResults ProcessGetFuBenMonstersNumCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19216,7 +19216,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E9A RID: 16026 RVA: 0x0037BA84 File Offset: 0x00379C84
+		
 		private static TCPProcessCmdResults ProcessFindMonsterCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19251,7 +19251,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E9B RID: 16027 RVA: 0x0037BBB0 File Offset: 0x00379DB0
+		
 		private static TCPProcessCmdResults ProcessBatchYinPiaoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19318,7 +19318,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E9C RID: 16028 RVA: 0x0037BE6C File Offset: 0x0037A06C
+		
 		private static TCPProcessCmdResults ProcessForceToLaoFangCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19368,7 +19368,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E9D RID: 16029 RVA: 0x0037C024 File Offset: 0x0037A224
+		
 		private static TCPProcessCmdResults ProcessGetRoleDailyDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19410,7 +19410,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E9E RID: 16030 RVA: 0x0037C174 File Offset: 0x0037A374
+		
 		private static TCPProcessCmdResults ProcessGetBossInfoDictCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19452,7 +19452,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003E9F RID: 16031 RVA: 0x0037C2C4 File Offset: 0x0037A4C4
+		
 		private static TCPProcessCmdResults ProcessGetPaiHangListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19467,7 +19467,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EA0 RID: 16032 RVA: 0x0037C320 File Offset: 0x0037A520
+		
 		private static TCPProcessCmdResults ProcessStartYaBiaoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19607,7 +19607,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EA1 RID: 16033 RVA: 0x0037C9D0 File Offset: 0x0037ABD0
+		
 		private static TCPProcessCmdResults ProcessEndYaBiaoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19808,7 +19808,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EA2 RID: 16034 RVA: 0x0037D1E8 File Offset: 0x0037B3E8
+		
 		private static TCPProcessCmdResults ProcessTouBaoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19922,7 +19922,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EA3 RID: 16035 RVA: 0x0037D724 File Offset: 0x0037B924
+		
 		private static TCPProcessCmdResults ProcessYaBiaoTakeGoodsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20014,7 +20014,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EA4 RID: 16036 RVA: 0x0037DB88 File Offset: 0x0037BD88
+		
 		private static TCPProcessCmdResults ProcessSpriteFindBiaoCheCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20073,7 +20073,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EA5 RID: 16037 RVA: 0x0037DD70 File Offset: 0x0037BF70
+		
 		private static TCPProcessCmdResults ProcessSpriteAddHorseLuckyCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20125,7 +20125,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EA6 RID: 16038 RVA: 0x0037DF3C File Offset: 0x0037C13C
+		
 		private static TCPProcessCmdResults ProcessSpriteGetChongZhiJiFenCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20140,7 +20140,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EA7 RID: 16039 RVA: 0x0037DF98 File Offset: 0x0037C198
+		
 		private static TCPProcessCmdResults ProcessSpriteGetInputPointsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20187,7 +20187,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EA8 RID: 16040 RVA: 0x0037E15C File Offset: 0x0037C35C
+		
 		private static TCPProcessCmdResults ProcessGetWeekEndIputDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20257,7 +20257,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EA9 RID: 16041 RVA: 0x0037E3C0 File Offset: 0x0037C5C0
+		
 		private static TCPProcessCmdResults ProcessGetFuBenHistListDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20298,7 +20298,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EAA RID: 16042 RVA: 0x0037E51C File Offset: 0x0037C71C
+		
 		private static TCPProcessCmdResults ProcessGetOtherHorseDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20313,7 +20313,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EAB RID: 16043 RVA: 0x0037E578 File Offset: 0x0037C778
+		
 		private static TCPProcessCmdResults ProcessSpriteGetOtherAttrib2Cmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20378,7 +20378,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EAC RID: 16044 RVA: 0x0037E784 File Offset: 0x0037C984
+		
 		private static TCPProcessCmdResults ProcessGetBangHuiListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20423,7 +20423,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EAD RID: 16045 RVA: 0x0037E8FC File Offset: 0x0037CAFC
+		
 		private static TCPProcessCmdResults ProcessCreateBangHuiCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20571,7 +20571,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EAE RID: 16046 RVA: 0x0037EFB4 File Offset: 0x0037D1B4
+		
 		private static TCPProcessCmdResults ProcessQueryBangHuiDetailCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20638,7 +20638,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EAF RID: 16047 RVA: 0x0037F23C File Offset: 0x0037D43C
+		
 		private static TCPProcessCmdResults ProcessUpdateBangHuiBulletinCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20679,7 +20679,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EB0 RID: 16048 RVA: 0x0037F398 File Offset: 0x0037D598
+		
 		private static TCPProcessCmdResults ProcessGetBHMemberDataListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20725,7 +20725,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EB1 RID: 16049 RVA: 0x0037F51C File Offset: 0x0037D71C
+		
 		private static TCPProcessCmdResults ProcessGetBHMemberDataListCmd2(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20786,7 +20786,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EB2 RID: 16050 RVA: 0x0037F7B4 File Offset: 0x0037D9B4
+		
 		private static TCPProcessCmdResults ProcessUpdateBHVerifyCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20827,7 +20827,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EB3 RID: 16051 RVA: 0x0037F910 File Offset: 0x0037DB10
+		
 		private static TCPProcessCmdResults ProcessApplyToBHMemberCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21000,7 +21000,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EB4 RID: 16052 RVA: 0x00380098 File Offset: 0x0037E298
+		
 		private static TCPProcessCmdResults ProcessRefuseApplyToBHMemberCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21074,7 +21074,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EB5 RID: 16053 RVA: 0x0038034C File Offset: 0x0037E54C
+		
 		private static TCPProcessCmdResults ProcessAddBHMemberCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21249,7 +21249,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EB6 RID: 16054 RVA: 0x00380AF4 File Offset: 0x0037ECF4
+		
 		private static TCPProcessCmdResults ProcessAgreeToBHMemberCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21406,7 +21406,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EB7 RID: 16055 RVA: 0x0038113C File Offset: 0x0037F33C
+		
 		private static TCPProcessCmdResults ProcessRemoveBHMemberCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21523,7 +21523,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EB8 RID: 16056 RVA: 0x003815E8 File Offset: 0x0037F7E8
+		
 		private static TCPProcessCmdResults ProcessQuitFromBangHuiCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21614,7 +21614,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EB9 RID: 16057 RVA: 0x00381A30 File Offset: 0x0037FC30
+		
 		private static TCPProcessCmdResults ProcessDestroyBangHuiCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21752,7 +21752,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EBA RID: 16058 RVA: 0x0038204C File Offset: 0x0038024C
+		
 		private static TCPProcessCmdResults ProcessBangHuiVerifyCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21796,7 +21796,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EBB RID: 16059 RVA: 0x003821D0 File Offset: 0x003803D0
+		
 		private static TCPProcessCmdResults ProcessChgBHMemberZhiWuCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21964,7 +21964,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EBC RID: 16060 RVA: 0x0038282C File Offset: 0x00380A2C
+		
 		private static TCPProcessCmdResults ProcessChgBHMemberChengHaoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22005,7 +22005,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EBD RID: 16061 RVA: 0x00382988 File Offset: 0x00380B88
+		
 		private static TCPProcessCmdResults ProcessSearchRolesFromDBCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22052,7 +22052,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EBE RID: 16062 RVA: 0x00382B8C File Offset: 0x00380D8C
+		
 		private static TCPProcessCmdResults ProcessGetBangGongHistCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22094,7 +22094,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EBF RID: 16063 RVA: 0x00382CF4 File Offset: 0x00380EF4
+		
 		private static TCPProcessCmdResults ProcessDonateBGMoneyCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22257,7 +22257,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EC0 RID: 16064 RVA: 0x00383380 File Offset: 0x00381580
+		
 		private static TCPProcessCmdResults ProcessDonateBGGoodsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22438,7 +22438,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EC1 RID: 16065 RVA: 0x00383A74 File Offset: 0x00381C74
+		
 		private static TCPProcessCmdResults ProcessGetBangQiInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22480,7 +22480,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EC2 RID: 16066 RVA: 0x00383BDC File Offset: 0x00381DDC
+		
 		private static TCPProcessCmdResults ProcessRenameBangQiCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22562,7 +22562,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EC3 RID: 16067 RVA: 0x00383EB4 File Offset: 0x003820B4
+		
 		private static TCPProcessCmdResults ProcessUpLevelBangQiCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22657,7 +22657,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EC4 RID: 16068 RVA: 0x00384290 File Offset: 0x00382490
+		
 		private static TCPProcessCmdResults ProcessGetBHLingDiInfoDictByBHIDCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22699,7 +22699,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EC5 RID: 16069 RVA: 0x003843F8 File Offset: 0x003825F8
+		
 		private static TCPProcessCmdResults ProcessSetLingDiTaxCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22780,7 +22780,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EC6 RID: 16070 RVA: 0x003846E0 File Offset: 0x003828E0
+		
 		private static TCPProcessCmdResults ProcessSpriteCityWarRequestCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22966,7 +22966,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EC7 RID: 16071 RVA: 0x00384DE4 File Offset: 0x00382FE4
+		
 		private static TCPProcessCmdResults ProcessTakeLingDiTaxMoneyCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23053,7 +23053,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EC8 RID: 16072 RVA: 0x00385108 File Offset: 0x00383308
+		
 		private static TCPProcessCmdResults ProcessTakeLingDiDailyAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23236,7 +23236,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EC9 RID: 16073 RVA: 0x00385850 File Offset: 0x00383A50
+		
 		private static TCPProcessCmdResults ProcessGetHuangDiBHInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23277,7 +23277,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003ECA RID: 16074 RVA: 0x003859AC File Offset: 0x00383BAC
+		
 		private static TCPProcessCmdResults ProcessOpenYangGongBKCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23384,7 +23384,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003ECB RID: 16075 RVA: 0x00385DC4 File Offset: 0x00383FC4
+		
 		private static TCPProcessCmdResults ProcessRefreshYangGongBKCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23463,7 +23463,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003ECC RID: 16076 RVA: 0x00386158 File Offset: 0x00384358
+		
 		private static TCPProcessCmdResults ProcessClickYangGongBKCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23627,7 +23627,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003ECD RID: 16077 RVA: 0x00386894 File Offset: 0x00384A94
+		
 		private static TCPProcessCmdResults ProcessRefreshQiZhenGeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23692,7 +23692,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003ECE RID: 16078 RVA: 0x00386B58 File Offset: 0x00384D58
+		
 		private static TCPProcessCmdResults ProcessQiZhenGeBuyCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23843,7 +23843,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003ECF RID: 16079 RVA: 0x00387218 File Offset: 0x00385418
+		
 		private static TCPProcessCmdResults ProcessQueryQiZhenGeBuyHistCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23884,7 +23884,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003ED0 RID: 16080 RVA: 0x00387374 File Offset: 0x00385574
+		
 		private static TCPProcessCmdResults ProcessQuickJingMaiCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23985,7 +23985,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003ED1 RID: 16081 RVA: 0x00387818 File Offset: 0x00385A18
+		
 		private static TCPProcessCmdResults ProcessQuickHorseEnchanceCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24030,7 +24030,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003ED2 RID: 16082 RVA: 0x0038799C File Offset: 0x00385B9C
+		
 		private static TCPProcessCmdResults ProcessSprMendEquipmentCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24131,7 +24131,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003ED3 RID: 16083 RVA: 0x00387E54 File Offset: 0x00386054
+		
 		private static TCPProcessCmdResults ProcessQuickEquipEnchanceCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24397,7 +24397,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003ED4 RID: 16084 RVA: 0x00388878 File Offset: 0x00386A78
+		
 		private static TCPProcessCmdResults ProcessQuickEquipForgeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24673,7 +24673,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003ED5 RID: 16085 RVA: 0x0038928C File Offset: 0x0038748C
+		
 		private static TCPProcessCmdResults ProcessGetHuangDiDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24725,7 +24725,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003ED6 RID: 16086 RVA: 0x00389460 File Offset: 0x00387660
+		
 		private static TCPProcessCmdResults ProcessAddHuangFeiCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24828,7 +24828,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003ED7 RID: 16087 RVA: 0x0038981C File Offset: 0x00387A1C
+		
 		private static TCPProcessCmdResults ProcessAgreeAddHuangFeiCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24958,7 +24958,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003ED8 RID: 16088 RVA: 0x00389D24 File Offset: 0x00387F24
+		
 		private static TCPProcessCmdResults ProcessRemoveHuangFeiCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25040,7 +25040,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003ED9 RID: 16089 RVA: 0x0038A040 File Offset: 0x00388240
+		
 		private static TCPProcessCmdResults ProcessGetHuangFeiDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25081,7 +25081,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EDA RID: 16090 RVA: 0x0038A19C File Offset: 0x0038839C
+		
 		private static TCPProcessCmdResults ProcessBanChatCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25146,7 +25146,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EDB RID: 16091 RVA: 0x0038A3F4 File Offset: 0x003885F4
+		
 		private static TCPProcessCmdResults ProcessSendToLaoFangCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25235,7 +25235,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EDC RID: 16092 RVA: 0x0038A730 File Offset: 0x00388930
+		
 		private static TCPProcessCmdResults ProcessTakeOutLaoFangCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25318,7 +25318,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EDD RID: 16093 RVA: 0x0038AA70 File Offset: 0x00388C70
+		
 		private static TCPProcessCmdResults ProcessGetLingDiMapInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25361,7 +25361,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EDE RID: 16094 RVA: 0x0038ABCC File Offset: 0x00388DCC
+		
 		private static TCPProcessCmdResults ProcessGetHuangChengMapInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25404,7 +25404,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EDF RID: 16095 RVA: 0x0038AD28 File Offset: 0x00388F28
+		
 		private static TCPProcessCmdResults ProcessTaskTransportCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25567,7 +25567,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EE0 RID: 16096 RVA: 0x0038B32C File Offset: 0x0038952C
+		
 		private static TCPProcessCmdResults ProcessTaskTransport2Cmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25614,7 +25614,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EE1 RID: 16097 RVA: 0x0038B4A0 File Offset: 0x003896A0
+		
 		private static TCPProcessCmdResults ProcessActivityTransportCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25730,7 +25730,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EE2 RID: 16098 RVA: 0x0038B91C File Offset: 0x00389B1C
+		
 		private static TCPProcessCmdResults ProcessLingLiGuanZhuCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25867,7 +25867,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EE3 RID: 16099 RVA: 0x0038BF58 File Offset: 0x0038A158
+		
 		private static TCPProcessCmdResults ProcessGetGoodsByDbIDCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25901,7 +25901,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EE4 RID: 16100 RVA: 0x0038C050 File Offset: 0x0038A250
+		
 		private static TCPProcessCmdResults ProcessQuickCompleteTaskCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25987,7 +25987,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EE5 RID: 16101 RVA: 0x0038C404 File Offset: 0x0038A604
+		
 		private static TCPProcessCmdResults ProcessQueryChongZhiMoneyCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -26031,7 +26031,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EE6 RID: 16102 RVA: 0x0038C580 File Offset: 0x0038A780
+		
 		private static TCPProcessCmdResults ProcessGetFirstChongZhiDaLiCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -26111,7 +26111,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EE7 RID: 16103 RVA: 0x0038C864 File Offset: 0x0038AA64
+		
 		private static TCPProcessCmdResults ProcessGetDayChongZhiDaLiCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -26317,7 +26317,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EE8 RID: 16104 RVA: 0x0038CFEC File Offset: 0x0038B1EC
+		
 		private static TCPProcessCmdResults ProcessCompleteTinyClientCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -26399,7 +26399,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EE9 RID: 16105 RVA: 0x0038D344 File Offset: 0x0038B544
+		
 		private static TCPProcessCmdResults ProcessFetchVipOnceAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -26465,7 +26465,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EEA RID: 16106 RVA: 0x0038D5A0 File Offset: 0x0038B7A0
+		
 		public static TCPProcessCmdResults ProcessSpriteSendUserMailCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -26744,7 +26744,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EEB RID: 16107 RVA: 0x0038E19C File Offset: 0x0038C39C
+		
 		public static TCPProcessCmdResults ProcessGetUserMailListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -26785,7 +26785,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EEC RID: 16108 RVA: 0x0038E2F8 File Offset: 0x0038C4F8
+		
 		public static TCPProcessCmdResults ProcessGetUserMailDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -26828,7 +26828,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EED RID: 16109 RVA: 0x0038E468 File Offset: 0x0038C668
+		
 		public static TCPProcessCmdResults ProcessFetchMailGoodsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -27135,7 +27135,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EEE RID: 16110 RVA: 0x0038F42C File Offset: 0x0038D62C
+		
 		public static TCPProcessCmdResults ProcessBatchFetchMailGoodsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -27451,7 +27451,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EEF RID: 16111 RVA: 0x0039042C File Offset: 0x0038E62C
+		
 		private static int getGoodsAppendMax(GoodsData goodsData)
 		{
 			int nExcellenceNum = Global.GetEquipExcellencePropNum(goodsData);
@@ -27479,7 +27479,7 @@ namespace GameServer.Server
 			return nMaxLevel;
 		}
 
-		// Token: 0x06003EF0 RID: 16112 RVA: 0x0039049C File Offset: 0x0038E69C
+		
 		public static TCPProcessCmdResults ProcessSpriteGetMailSendCodeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -27523,7 +27523,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EF1 RID: 16113 RVA: 0x00390654 File Offset: 0x0038E854
+		
 		public static TCPProcessCmdResults ProcessDeleteUserMailCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -27566,7 +27566,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EF2 RID: 16114 RVA: 0x003907C4 File Offset: 0x0038E9C4
+		
 		private static TCPProcessCmdResults ProcessSprQueryInputFanLiCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -27610,7 +27610,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003EF3 RID: 16115 RVA: 0x00390950 File Offset: 0x0038EB50
+		
 		private static TCPProcessCmdResults ProcessSprQueryInputJiaSongCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -27654,7 +27654,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003EF4 RID: 16116 RVA: 0x00390ADC File Offset: 0x0038ECDC
+		
 		private static TCPProcessCmdResults ProcessSprQueryInputKingCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -27698,7 +27698,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003EF5 RID: 16117 RVA: 0x00390C68 File Offset: 0x0038EE68
+		
 		private static TCPProcessCmdResults ProcessSprQueryLevelKingCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -27742,7 +27742,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003EF6 RID: 16118 RVA: 0x00390DF4 File Offset: 0x0038EFF4
+		
 		private static TCPProcessCmdResults ProcessSprQueryEquipKingCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -27786,7 +27786,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003EF7 RID: 16119 RVA: 0x00390F80 File Offset: 0x0038F180
+		
 		private static TCPProcessCmdResults ProcessSprQueryHorseKingCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -27830,7 +27830,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003EF8 RID: 16120 RVA: 0x0039110C File Offset: 0x0038F30C
+		
 		private static TCPProcessCmdResults ProcessSprQueryJingMaiKingCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -27874,7 +27874,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003EF9 RID: 16121 RVA: 0x00391298 File Offset: 0x0038F498
+		
 		private static TCPProcessCmdResults ProcessSprQueryAwardHistoryCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -27931,7 +27931,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003EFA RID: 16122 RVA: 0x003914B0 File Offset: 0x0038F6B0
+		
 		private static TCPProcessCmdResults ProcessSprFetchActivityAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -28104,7 +28104,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003EFB RID: 16123 RVA: 0x00391B64 File Offset: 0x0038FD64
+		
 		private static TCPProcessCmdResults ProcessSpriteMallZhenQiBuyCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -28268,7 +28268,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EFC RID: 16124 RVA: 0x00392224 File Offset: 0x00390424
+		
 		private static TCPProcessCmdResults ProcessSpriteMallMoBiBuyCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -28431,7 +28431,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EFD RID: 16125 RVA: 0x003928C4 File Offset: 0x00390AC4
+		
 		private static TCPProcessCmdResults ProcessSpriteUseVipDailyPriorityCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -28503,7 +28503,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EFE RID: 16126 RVA: 0x00392BA4 File Offset: 0x00390DA4
+		
 		private static TCPProcessCmdResults ProcessSpriteQueryVipDailyDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -28545,7 +28545,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003EFF RID: 16127 RVA: 0x00392CF4 File Offset: 0x00390EF4
+		
 		private static TCPProcessCmdResults ProcessSpriteQueryYangGongBKDailyDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -28595,7 +28595,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F00 RID: 16128 RVA: 0x00392EE8 File Offset: 0x003910E8
+		
 		private static TCPProcessCmdResults ProcessSpriteFetchYangGongBKJiFenAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -28667,7 +28667,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F01 RID: 16129 RVA: 0x003931C4 File Offset: 0x003913C4
+		
 		private static TCPProcessCmdResults ProcessSpriteQueryShiLianTaAwardDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -28709,7 +28709,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F02 RID: 16130 RVA: 0x00393324 File Offset: 0x00391524
+		
 		private static TCPProcessCmdResults ProcessSpriteFetchShiLianTaAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -28779,7 +28779,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F03 RID: 16131 RVA: 0x003935D8 File Offset: 0x003917D8
+		
 		private static TCPProcessCmdResults ProcessQueryShengXiaoGuessHistCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -28826,7 +28826,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F04 RID: 16132 RVA: 0x00393798 File Offset: 0x00391998
+		
 		private static TCPProcessCmdResults ProcessSpriteAddShengXiaoMortgageCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -28931,7 +28931,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F05 RID: 16133 RVA: 0x00393BA4 File Offset: 0x00391DA4
+		
 		private static TCPProcessCmdResults ProcessSpriteQuerySelfShengXiaoGuessListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -28973,7 +28973,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F06 RID: 16134 RVA: 0x00393D00 File Offset: 0x00391F00
+		
 		private static TCPProcessCmdResults ProcessQueryShengXiaoGuessRecentResultListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -29016,7 +29016,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F07 RID: 16135 RVA: 0x00393E70 File Offset: 0x00392070
+		
 		private static TCPProcessCmdResults ProcessUpdateTengXunFcmRateCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -29070,7 +29070,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F08 RID: 16136 RVA: 0x00394048 File Offset: 0x00392248
+		
 		private static TCPProcessCmdResults ProcessExtGridByYuanBaoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -29147,7 +29147,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F09 RID: 16137 RVA: 0x003943A4 File Offset: 0x003925A4
+		
 		private static TCPProcessCmdResults ProcessSpriteRequestSubMoneyCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -29220,7 +29220,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F0A RID: 16138 RVA: 0x0039461C File Offset: 0x0039281C
+		
 		private static TCPProcessCmdResults ProcessExtBagNumByYuanBaoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -29299,7 +29299,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F0B RID: 16139 RVA: 0x003949AC File Offset: 0x00392BAC
+		
 		private static TCPProcessCmdResults ProcessExcuteNpcLuaTalkCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -29344,7 +29344,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F0C RID: 16140 RVA: 0x00394B20 File Offset: 0x00392D20
+		
 		private static TCPProcessCmdResults ProcessExcuteNpcLuaFunctionCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -29414,7 +29414,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F0D RID: 16141 RVA: 0x00394D50 File Offset: 0x00392F50
+		
 		private static TCPProcessCmdResults ProcessQueryChengJiuDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -29456,7 +29456,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F0E RID: 16142 RVA: 0x00394E9C File Offset: 0x0039309C
+		
 		private static TCPProcessCmdResults ProcessFetchChengJiuAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -29505,7 +29505,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F0F RID: 16143 RVA: 0x00395070 File Offset: 0x00393270
+		
 		private static TCPProcessCmdResults ProcessSprJingYuanExchangeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -29687,7 +29687,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F10 RID: 16144 RVA: 0x00395744 File Offset: 0x00393944
+		
 		private static TCPProcessCmdResults ProcessSprHuiZhangExchangeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -29830,7 +29830,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F11 RID: 16145 RVA: 0x00395CA4 File Offset: 0x00393EA4
+		
 		private static TCPProcessCmdResults ProcessSprActivateNextLevelJingMaiCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -29996,7 +29996,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F12 RID: 16146 RVA: 0x003962D8 File Offset: 0x003944D8
+		
 		private static TCPProcessCmdResults ProcessSprActivateNextLevelWuXueCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -30129,7 +30129,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F13 RID: 16147 RVA: 0x003967CC File Offset: 0x003949CC
+		
 		private static TCPProcessCmdResults ProcessSprCaiJiStartCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -30197,7 +30197,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F14 RID: 16148 RVA: 0x00396A08 File Offset: 0x00394C08
+		
 		private static TCPProcessCmdResults ProcessSprCaiJiFinishCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -30242,7 +30242,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F15 RID: 16149 RVA: 0x00396B90 File Offset: 0x00394D90
+		
 		private static TCPProcessCmdResults ProcessSprCaiJiLastNumCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -30288,7 +30288,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F16 RID: 16150 RVA: 0x00396D1C File Offset: 0x00394F1C
+		
 		private static TCPProcessCmdResults ProcessSprRunTaskPlotLuaCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -30336,7 +30336,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F17 RID: 16151 RVA: 0x00396EA0 File Offset: 0x003950A0
+		
 		private static TCPProcessCmdResults ProcessSprChangePetAiTypeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -30394,7 +30394,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F18 RID: 16152 RVA: 0x00397090 File Offset: 0x00395290
+		
 		private static TCPProcessCmdResults ProcessSprTransferSomethingCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -30491,7 +30491,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F19 RID: 16153 RVA: 0x003973EC File Offset: 0x003955EC
+		
 		private static TCPProcessCmdResults ProcessSprFetchMallDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -30535,7 +30535,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F1A RID: 16154 RVA: 0x00397550 File Offset: 0x00395750
+		
 		private static TCPProcessCmdResults ProcessSpriteMallQiangGouBuyCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -30760,7 +30760,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F1B RID: 16155 RVA: 0x00397E34 File Offset: 0x00396034
+		
 		private static TCPProcessCmdResults ProcessSprFetchActivitiesDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -30804,7 +30804,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F1C RID: 16156 RVA: 0x00397F98 File Offset: 0x00396198
+		
 		private static TCPProcessCmdResults ProcessSpriteFetchZuanHuangAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -30864,7 +30864,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F1D RID: 16157 RVA: 0x003981AC File Offset: 0x003963AC
+		
 		private static TCPProcessCmdResults ProcessSpriteSystemOpenParamsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -30919,7 +30919,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F1E RID: 16158 RVA: 0x003983D0 File Offset: 0x003965D0
+		
 		private static TCPProcessCmdResults ProcessSpriteEnterTaskFuBenCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -31012,7 +31012,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F1F RID: 16159 RVA: 0x003986E0 File Offset: 0x003968E0
+		
 		private static TCPProcessCmdResults ProcessSpriteGetTaskAwardsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -31071,7 +31071,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F20 RID: 16160 RVA: 0x003988FC File Offset: 0x00396AFC
+		
 		private static TCPProcessCmdResults ProcessSpriteNotifyGetGoodsPackCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -31116,7 +31116,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F21 RID: 16161 RVA: 0x00398A7C File Offset: 0x00396C7C
+		
 		private static TCPProcessCmdResults ProcessGetTo60AwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -31162,7 +31162,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F22 RID: 16162 RVA: 0x00398C04 File Offset: 0x00396E04
+		
 		private static TCPProcessCmdResults ProcessGetKaiFuOnlineInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -31255,7 +31255,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F23 RID: 16163 RVA: 0x00398FA0 File Offset: 0x003971A0
+		
 		private static TCPProcessCmdResults ProcessGetEverydayActXmlDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -31310,7 +31310,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F24 RID: 16164 RVA: 0x00399180 File Offset: 0x00397380
+		
 		private static TCPProcessCmdResults ProcessGetEverydayActDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -31361,7 +31361,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F25 RID: 16165 RVA: 0x00399324 File Offset: 0x00397524
+		
 		private static TCPProcessCmdResults ProcessFetchEverydayActAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -31464,7 +31464,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F26 RID: 16166 RVA: 0x003996B0 File Offset: 0x003978B0
+		
 		private static TCPProcessCmdResults ProcessGetSpecialActXmlDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -31519,7 +31519,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F27 RID: 16167 RVA: 0x00399890 File Offset: 0x00397A90
+		
 		private static TCPProcessCmdResults ProcessGetSpecActDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -31570,7 +31570,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F28 RID: 16168 RVA: 0x00399A34 File Offset: 0x00397C34
+		
 		private static TCPProcessCmdResults ProcessFetchSpecActAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -31673,7 +31673,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F29 RID: 16169 RVA: 0x00399DC0 File Offset: 0x00397FC0
+		
 		private static TCPProcessCmdResults ProcessGetSpecPriorityActXmlDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -31728,7 +31728,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F2A RID: 16170 RVA: 0x00399FA0 File Offset: 0x003981A0
+		
 		private static TCPProcessCmdResults ProcessGetSpecPriorityActDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -31779,7 +31779,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F2B RID: 16171 RVA: 0x0039A144 File Offset: 0x00398344
+		
 		private static TCPProcessCmdResults ProcessFetchSpecPriorityActAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -31888,7 +31888,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F2C RID: 16172 RVA: 0x0039A520 File Offset: 0x00398720
+		
 		private static TCPProcessCmdResults ProcessSpecPriorityActDonateCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -31945,7 +31945,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F2D RID: 16173 RVA: 0x0039A740 File Offset: 0x00398940
+		
 		private static TCPProcessCmdResults ProcessQueryJieriVIPYouHuiCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -31997,7 +31997,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F2E RID: 16174 RVA: 0x0039A910 File Offset: 0x00398B10
+		
 		private static TCPProcessCmdResults ProcessFetchJieriVIPYouHuiAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -32103,7 +32103,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F2F RID: 16175 RVA: 0x0039ACF0 File Offset: 0x00398EF0
+		
 		private static TCPProcessCmdResults ProcessGetThemeXmlDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -32158,7 +32158,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F30 RID: 16176 RVA: 0x0039AED0 File Offset: 0x003990D0
+		
 		private static TCPProcessCmdResults ProcessGetJieriXmlDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -32213,7 +32213,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F31 RID: 16177 RVA: 0x0039B0B0 File Offset: 0x003992B0
+		
 		private static TCPProcessCmdResults ProcessQueryJieriGiveKingInfo(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -32272,7 +32272,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F32 RID: 16178 RVA: 0x0039B2A8 File Offset: 0x003994A8
+		
 		private static TCPProcessCmdResults ProcessGetJieriGiveKingAward(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -32324,7 +32324,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F33 RID: 16179 RVA: 0x0039B458 File Offset: 0x00399658
+		
 		private static TCPProcessCmdResults ProcessQueryJieriRecvKingInfo(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -32385,7 +32385,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F34 RID: 16180 RVA: 0x0039B678 File Offset: 0x00399878
+		
 		private static TCPProcessCmdResults ProcessGetJieriRecvKingAward(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -32437,7 +32437,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F35 RID: 16181 RVA: 0x0039B828 File Offset: 0x00399A28
+		
 		private static TCPProcessCmdResults ProcessQueryRoleJieriGiveInfo(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -32492,7 +32492,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F36 RID: 16182 RVA: 0x0039B9F4 File Offset: 0x00399BF4
+		
 		private static TCPProcessCmdResults ProcessRoleGetJieriGiveAward(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -32547,7 +32547,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F37 RID: 16183 RVA: 0x0039BBE4 File Offset: 0x00399DE4
+		
 		private static TCPProcessCmdResults ProcessRoleJieriGiveToOther(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -32610,7 +32610,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F38 RID: 16184 RVA: 0x0039BE10 File Offset: 0x0039A010
+		
 		private static TCPProcessCmdResults ProcessRoleGetJieriRecvAward(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -32665,7 +32665,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F39 RID: 16185 RVA: 0x0039C000 File Offset: 0x0039A200
+		
 		private static TCPProcessCmdResults ProcessQueryRoleJieriRecvInfo(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -32720,7 +32720,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F3A RID: 16186 RVA: 0x0039C1CC File Offset: 0x0039A3CC
+		
 		private static TCPProcessCmdResults ProcessSetFunctionOpen(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -32778,7 +32778,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F3B RID: 16187 RVA: 0x0039C418 File Offset: 0x0039A618
+		
 		private static TCPProcessCmdResults ProcessGetJieriLianXuChargeAward(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -32827,7 +32827,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F3C RID: 16188 RVA: 0x0039C600 File Offset: 0x0039A800
+		
 		private static TCPProcessCmdResults ProcessQueryJieriLianXuChargeInfo(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -32880,7 +32880,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F3D RID: 16189 RVA: 0x0039C7D8 File Offset: 0x0039A9D8
+		
 		private static TCPProcessCmdResults ProcessQueryThemeDaLiBaoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -32924,7 +32924,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F3E RID: 16190 RVA: 0x0039C968 File Offset: 0x0039AB68
+		
 		private static TCPProcessCmdResults ProcessQueryJieriDaLiBaoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -32968,7 +32968,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F3F RID: 16191 RVA: 0x0039CAF4 File Offset: 0x0039ACF4
+		
 		private static TCPProcessCmdResults ProcessQueryJieriDengLuCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -33012,7 +33012,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F40 RID: 16192 RVA: 0x0039CC80 File Offset: 0x0039AE80
+		
 		private static TCPProcessCmdResults ProcessQueryJieriVIPCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -33056,7 +33056,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F41 RID: 16193 RVA: 0x0039CE0C File Offset: 0x0039B00C
+		
 		private static TCPProcessCmdResults ProcessQueryJieriCZSongCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -33100,7 +33100,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F42 RID: 16194 RVA: 0x0039CF98 File Offset: 0x0039B198
+		
 		private static TCPProcessCmdResults ProcessQueryJieriCZLeiJiCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -33144,7 +33144,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F43 RID: 16195 RVA: 0x0039D124 File Offset: 0x0039B324
+		
 		private static TCPProcessCmdResults ProcessQueryJieriTotalConsumeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -33188,7 +33188,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F44 RID: 16196 RVA: 0x0039D2B0 File Offset: 0x0039B4B0
+		
 		private static TCPProcessCmdResults ProcessQueryJieRiMeiRiLeiChongCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -33233,7 +33233,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F45 RID: 16197 RVA: 0x0039D450 File Offset: 0x0039B650
+		
 		private static TCPProcessCmdResults ProcessQueryThemeDuiHuanCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -33301,7 +33301,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F46 RID: 16198 RVA: 0x0039D730 File Offset: 0x0039B930
+		
 		private static TCPProcessCmdResults ProcessQueryJieriCZZiKaCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -33370,7 +33370,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F47 RID: 16199 RVA: 0x0039DA1C File Offset: 0x0039BC1C
+		
 		private static TCPProcessCmdResults ProcessQueryOneDollarBuyCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -33423,7 +33423,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F48 RID: 16200 RVA: 0x0039DBF0 File Offset: 0x0039BDF0
+		
 		private static TCPProcessCmdResults ProcessQueryThemeZhiGouCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -33476,7 +33476,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F49 RID: 16201 RVA: 0x0039DDC4 File Offset: 0x0039BFC4
+		
 		private static TCPProcessCmdResults ProcessExcuteJieriSuperInputCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -33529,7 +33529,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F4A RID: 16202 RVA: 0x0039DF98 File Offset: 0x0039C198
+		
 		private static TCPProcessCmdResults ProcessQueryJieriSuperInputCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -33582,7 +33582,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F4B RID: 16203 RVA: 0x0039E16C File Offset: 0x0039C36C
+		
 		private static TCPProcessCmdResults ProcessQueryJieriCZQGCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -33635,7 +33635,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F4C RID: 16204 RVA: 0x0039E33C File Offset: 0x0039C53C
+		
 		private static TCPProcessCmdResults ProcessQueryJieriXiaoFeiKingCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -33679,7 +33679,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F4D RID: 16205 RVA: 0x0039E4C8 File Offset: 0x0039C6C8
+		
 		private static TCPProcessCmdResults ProcessQueryJieriCZKingCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -33723,7 +33723,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F4E RID: 16206 RVA: 0x0039E654 File Offset: 0x0039C854
+		
 		private static TCPProcessCmdResults ProcessQueryYuanBaoCompleteTaskCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -33852,49 +33852,49 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F4F RID: 16207 RVA: 0x0039EBF0 File Offset: 0x0039CDF0
+		
 		private static TCPProcessCmdResults ProcessQueryHeFuDaLiBaoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F50 RID: 16208 RVA: 0x0039EC0C File Offset: 0x0039CE0C
+		
 		private static TCPProcessCmdResults ProcessQueryHeFuVIPCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F51 RID: 16209 RVA: 0x0039EC28 File Offset: 0x0039CE28
+		
 		private static TCPProcessCmdResults ProcessQueryHeFuCZSongCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F52 RID: 16210 RVA: 0x0039EC44 File Offset: 0x0039CE44
+		
 		private static TCPProcessCmdResults ProcessQueryHeFuPKKingCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F53 RID: 16211 RVA: 0x0039EC60 File Offset: 0x0039CE60
+		
 		private static TCPProcessCmdResults ProcessQueryHeFuWCKingCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F54 RID: 16212 RVA: 0x0039EC7C File Offset: 0x0039CE7C
+		
 		private static TCPProcessCmdResults ProcessQueryHeFuCZFanLiCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F55 RID: 16213 RVA: 0x0039EC98 File Offset: 0x0039CE98
+		
 		private static TCPProcessCmdResults ProcessQueryXinCZFanLiCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -33938,7 +33938,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F56 RID: 16214 RVA: 0x0039EE24 File Offset: 0x0039D024
+		
 		private static TCPProcessCmdResults ProcessOneKeyQuickSaleOutCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -34223,7 +34223,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F57 RID: 16215 RVA: 0x0039F7E4 File Offset: 0x0039D9E4
+		
 		private static TCPProcessCmdResults ProcessSprActivateNextLevelZhanHunCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -34331,7 +34331,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F58 RID: 16216 RVA: 0x0039FBD4 File Offset: 0x0039DDD4
+		
 		private static TCPProcessCmdResults ProcessSprActivateNextLevelRongYuCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -34439,7 +34439,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F59 RID: 16217 RVA: 0x0039FFC4 File Offset: 0x0039E1C4
+		
 		private static TCPProcessCmdResults ProcessSprActivateRongYuBufferCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -34508,7 +34508,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F5A RID: 16218 RVA: 0x003A0270 File Offset: 0x0039E470
+		
 		private static TCPProcessCmdResults ProcessSprLianLuJingLianCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -34955,7 +34955,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F5B RID: 16219 RVA: 0x003A1318 File Offset: 0x0039F518
+		
 		private static TCPProcessCmdResults ProcessSprZJDJiFenCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -34997,7 +34997,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F5C RID: 16220 RVA: 0x003A1468 File Offset: 0x0039F668
+		
 		private static TCPProcessCmdResults ProcessSprFetchZJDJiFenAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -35068,7 +35068,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F5D RID: 16221 RVA: 0x003A1734 File Offset: 0x0039F934
+		
 		private static TCPProcessCmdResults ProcessSprQueryActivityInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -35154,7 +35154,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F5E RID: 16222 RVA: 0x003A1B08 File Offset: 0x0039FD08
+		
 		private static TCPProcessCmdResults ProcessSprXingYunChouJiangCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -35240,7 +35240,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F5F RID: 16223 RVA: 0x003A1E9C File Offset: 0x003A009C
+		
 		private static TCPProcessCmdResults ProcessSpriteExecuteCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -35335,7 +35335,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F60 RID: 16224 RVA: 0x003A22CC File Offset: 0x003A04CC
+		
 		private static TCPProcessCmdResults ProcessQueryYueDuChouJiangHistoryCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -35382,7 +35382,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F61 RID: 16225 RVA: 0x003A248C File Offset: 0x003A068C
+		
 		private static TCPProcessCmdResults ProcessQueryYueDuChouJiangInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -35436,7 +35436,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F62 RID: 16226 RVA: 0x003A26AC File Offset: 0x003A08AC
+		
 		private static TCPProcessCmdResults ProcessExecuteHunQiExchangeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -35579,7 +35579,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F63 RID: 16227 RVA: 0x003A2C0C File Offset: 0x003A0E0C
+		
 		private static TCPProcessCmdResults ProcessExecuteChangeOccupationCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -35780,7 +35780,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F64 RID: 16228 RVA: 0x003A345C File Offset: 0x003A165C
+		
 		private static TCPProcessCmdResults ProcessExecuteChangeLifeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -35988,7 +35988,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F65 RID: 16229 RVA: 0x003A3F1C File Offset: 0x003A211C
+		
 		private static TCPProcessCmdResults ProcessGetUsingGoodsDataListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -36003,7 +36003,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F66 RID: 16230 RVA: 0x003A3F78 File Offset: 0x003A2178
+		
 		private static TCPProcessCmdResults ProcessExecutePropAddPointCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -36098,7 +36098,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F67 RID: 16231 RVA: 0x003A43AC File Offset: 0x003A25AC
+		
 		private static TCPProcessCmdResults ProcessExecuteRecommendPropAddPointCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -36173,7 +36173,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F68 RID: 16232 RVA: 0x003A476C File Offset: 0x003A296C
+		
 		private static TCPProcessCmdResults ProcessExecuteCleanPropAddPointCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -36251,7 +36251,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F69 RID: 16233 RVA: 0x003A4B18 File Offset: 0x003A2D18
+		
 		private static TCPProcessCmdResults ProcessQueryCleanPropAddPointCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -36295,7 +36295,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F6A RID: 16234 RVA: 0x003A4CE8 File Offset: 0x003A2EE8
+		
 		private static TCPProcessCmdResults ProcessExecuteFuBenCleanOutCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -36528,7 +36528,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F6B RID: 16235 RVA: 0x003A5830 File Offset: 0x003A3A30
+		
 		private static TCPProcessCmdResults ProcessQueryFuBenInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -36620,7 +36620,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F6C RID: 16236 RVA: 0x003A5B0C File Offset: 0x003A3D0C
+		
 		private static TCPProcessCmdResults ProcessSpriteAttack2Cmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -36638,7 +36638,7 @@ namespace GameServer.Server
 			return result;
 		}
 
-		// Token: 0x06003F6D RID: 16237 RVA: 0x003A5B74 File Offset: 0x003A3D74
+		
 		private static TCPProcessCmdResults ProcessSpriteCompleteFlashSceneCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -36690,7 +36690,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F6E RID: 16238 RVA: 0x003A5D44 File Offset: 0x003A3F44
+		
 		private static TCPProcessCmdResults ProcessSpriteRefurbishTaskStarLevelCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -36830,7 +36830,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F6F RID: 16239 RVA: 0x003A6270 File Offset: 0x003A4470
+		
 		private static TCPProcessCmdResults ProcessSpriteCompleteDailyCircleTaskForOnceClickCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -37068,7 +37068,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F70 RID: 16240 RVA: 0x003A6C7C File Offset: 0x003A4E7C
+		
 		private static TCPProcessCmdResults ProcessSpriteAdmiredPlayerCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -37204,7 +37204,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F71 RID: 16241 RVA: 0x003A7188 File Offset: 0x003A5388
+		
 		private static TCPProcessCmdResults ProcessSpriteQueryBloodCastleInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -37267,7 +37267,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F72 RID: 16242 RVA: 0x003A73CC File Offset: 0x003A55CC
+		
 		private static TCPProcessCmdResults ProcessGetBloodCastleAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -37363,7 +37363,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F73 RID: 16243 RVA: 0x003A776C File Offset: 0x003A596C
+		
 		private static TCPProcessCmdResults ProcessSpriteEquipAppendPropCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -37731,7 +37731,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F74 RID: 16244 RVA: 0x003A8544 File Offset: 0x003A6744
+		
 		private static TCPProcessCmdResults ProcessSpriteEquipAppendPropInheritCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -38125,7 +38125,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F75 RID: 16245 RVA: 0x003A939C File Offset: 0x003A759C
+		
 		private static TCPProcessCmdResults ProcessSpriteQueryCopyTeamDamageInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -38182,7 +38182,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F76 RID: 16246 RVA: 0x003A95B8 File Offset: 0x003A77B8
+		
 		private static TCPProcessCmdResults ProcessSpriteQueryCampBattleInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -38239,7 +38239,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F77 RID: 16247 RVA: 0x003A97A4 File Offset: 0x003A79A4
+		
 		private static TCPProcessCmdResults ProcessSpriteQueryDaimoSquareInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -38300,7 +38300,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F78 RID: 16248 RVA: 0x003A99DC File Offset: 0x003A7BDC
+		
 		private static TCPProcessCmdResults ProcessGetDaimonsquareAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -38397,7 +38397,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F79 RID: 16249 RVA: 0x003A9D98 File Offset: 0x003A7F98
+		
 		private static TCPProcessCmdResults ProcessSpriteUpdateEverydayOnlineAwardGiftInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -38446,7 +38446,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F7A RID: 16250 RVA: 0x003A9F9C File Offset: 0x003A819C
+		
 		private static TCPProcessCmdResults ProcessSpriteGetEveryDayOnLineAwardGiftCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -38616,7 +38616,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F7B RID: 16251 RVA: 0x003AA6E4 File Offset: 0x003A88E4
+		
 		private static TCPProcessCmdResults ProcessSpriteUpdateEverydaySeriesLoginInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -38665,7 +38665,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F7C RID: 16252 RVA: 0x003AA8EC File Offset: 0x003A8AEC
+		
 		private static TCPProcessCmdResults ProcessSpriteGetSeriesLoginAwardGiftCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -38834,7 +38834,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F7D RID: 16253 RVA: 0x003AB0B8 File Offset: 0x003A92B8
+		
 		private static TCPProcessCmdResults ProcessSpriteUpdateGetThingsFlagCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -38878,7 +38878,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F7E RID: 16254 RVA: 0x003AB224 File Offset: 0x003A9424
+		
 		private static TCPProcessCmdResults ProcessSpriteEffectHideFlagsCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -38911,7 +38911,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F7F RID: 16255 RVA: 0x003AB2E4 File Offset: 0x003A94E4
+		
 		private static TCPProcessCmdResults PorcessMoJingExchangeInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -38954,7 +38954,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F80 RID: 16256 RVA: 0x003AB448 File Offset: 0x003A9648
+		
 		private static TCPProcessCmdResults ProcessSpriteExchangeMoJingAndQiFuCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -39413,7 +39413,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F81 RID: 16257 RVA: 0x003AC664 File Offset: 0x003AA864
+		
 		private static TCPProcessCmdResults ProcessSpriteStartMeditateCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -39464,7 +39464,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F82 RID: 16258 RVA: 0x003AC834 File Offset: 0x003AAA34
+		
 		private static TCPProcessCmdResults ProcessSpriteGetMeditateExpCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -39643,7 +39643,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F83 RID: 16259 RVA: 0x003ACF28 File Offset: 0x003AB128
+		
 		private static TCPProcessCmdResults ProcessSpriteGetMeditateTimeInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -39703,7 +39703,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F84 RID: 16260 RVA: 0x003AD124 File Offset: 0x003AB324
+		
 		private static TCPProcessCmdResults ProcessSpriteQueryTotalLoginInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -39748,7 +39748,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F85 RID: 16261 RVA: 0x003AD2DC File Offset: 0x003AB4DC
+		
 		private static TCPProcessCmdResults ProcessSpriteGetTotalLoginAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -39870,7 +39870,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F86 RID: 16262 RVA: 0x003AD874 File Offset: 0x003ABA74
+		
 		private static TCPProcessCmdResults ProcessChangeLifeForEquipCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -40163,7 +40163,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F87 RID: 16263 RVA: 0x003AE2DC File Offset: 0x003AC4DC
+		
 		private static TCPProcessCmdResults ProcessFlakeOffChangeLifeForEquipCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -40482,7 +40482,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F88 RID: 16264 RVA: 0x003AEE94 File Offset: 0x003AD094
+		
 		private static TCPProcessCmdResults ProcessOneKeyFindFriendCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -40581,7 +40581,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F89 RID: 16265 RVA: 0x003AF1AC File Offset: 0x003AD3AC
+		
 		private static TCPProcessCmdResults ProcessOneKeyAddFriendCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -40637,7 +40637,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F8A RID: 16266 RVA: 0x003AF3A4 File Offset: 0x003AD5A4
+		
 		private static TCPProcessCmdResults ProcessGetVIPAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -40738,7 +40738,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F8B RID: 16267 RVA: 0x003AF79C File Offset: 0x003AD99C
+		
 		private static TCPProcessCmdResults ProcessGetVIPInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -40783,7 +40783,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F8C RID: 16268 RVA: 0x003AF954 File Offset: 0x003ADB54
+		
 		private static TCPProcessCmdResults ProcessGetVIPLevelAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -40894,7 +40894,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F8D RID: 16269 RVA: 0x003AFE80 File Offset: 0x003AE080
+		
 		private static TCPProcessCmdResults ProcessDailyActiveDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -40936,7 +40936,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F8E RID: 16270 RVA: 0x003AFFD0 File Offset: 0x003AE1D0
+		
 		private static TCPProcessCmdResults ProcessFetchDailyActiveAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -40991,7 +40991,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F8F RID: 16271 RVA: 0x003B01C8 File Offset: 0x003AE3C8
+		
 		private static TCPProcessCmdResults ProcessSetAutoAssignPropertyPointCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -41053,7 +41053,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F90 RID: 16272 RVA: 0x003B0420 File Offset: 0x003AE620
+		
 		private static TCPProcessCmdResults ProcessGetCopyMapAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -41121,7 +41121,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F91 RID: 16273 RVA: 0x003B074C File Offset: 0x003AE94C
+		
 		public static TCPProcessCmdResults ProcessGetBangHuiFuBenCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -41187,7 +41187,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F92 RID: 16274 RVA: 0x003B09BC File Offset: 0x003AEBBC
+		
 		public static TCPProcessCmdResults ProcessGetBangHuiFuBenAwardCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -41335,7 +41335,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003F93 RID: 16275 RVA: 0x003B0FB0 File Offset: 0x003AF1B0
+		
 		private static TCPProcessCmdResults ProcessGetSkillInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -41393,7 +41393,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F94 RID: 16276 RVA: 0x003B11FC File Offset: 0x003AF3FC
+		
 		private static TCPProcessCmdResults ProcessGetKaiFuActivityInfoInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -41449,7 +41449,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F95 RID: 16277 RVA: 0x003B144C File Offset: 0x003AF64C
+		
 		private static TCPProcessCmdResults ProcessSpriteQueryTheKingOfPKInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -41496,7 +41496,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F96 RID: 16278 RVA: 0x003B1618 File Offset: 0x003AF818
+		
 		private static TCPProcessCmdResults ProcessQueryAdrationPKKingInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -41541,7 +41541,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F97 RID: 16279 RVA: 0x003B17D0 File Offset: 0x003AF9D0
+		
 		private static TCPProcessCmdResults ProcessAdrationPKKingCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -41683,7 +41683,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F98 RID: 16280 RVA: 0x003B1D2C File Offset: 0x003AFF2C
+		
 		private static TCPProcessCmdResults ProcessSpriteQueryLuoLanChengZhuInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -41726,7 +41726,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F99 RID: 16281 RVA: 0x003B1E8C File Offset: 0x003B008C
+		
 		private static TCPProcessCmdResults ProcessQueryAdrationLanChengZhuInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -41777,7 +41777,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F9A RID: 16282 RVA: 0x003B2078 File Offset: 0x003B0278
+		
 		private static TCPProcessCmdResults ProcessAdrationLanChengZhuCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -41926,7 +41926,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F9B RID: 16283 RVA: 0x003B2618 File Offset: 0x003B0818
+		
 		private static TCPProcessCmdResults ProcessAngelTempleSparkCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -42039,7 +42039,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F9C RID: 16284 RVA: 0x003B2A28 File Offset: 0x003B0C28
+		
 		private static TCPProcessCmdResults ProcessGetAngelTempleBaseInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -42082,7 +42082,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F9D RID: 16285 RVA: 0x003B2BB4 File Offset: 0x003B0DB4
+		
 		private static TCPProcessCmdResults ProcessQueryOpenGridCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -42125,7 +42125,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F9E RID: 16286 RVA: 0x003B2D38 File Offset: 0x003B0F38
+		
 		private static TCPProcessCmdResults ProcessQueryOpenPortableGridCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -42168,7 +42168,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003F9F RID: 16287 RVA: 0x003B2EB4 File Offset: 0x003B10B4
+		
 		private static TCPProcessCmdResults ProcessGetPushMessageInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -42214,7 +42214,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FA0 RID: 16288 RVA: 0x003B3024 File Offset: 0x003B1224
+		
 		private static TCPProcessCmdResults ProcessActivationPictureJudgeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -42257,7 +42257,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FA1 RID: 16289 RVA: 0x003B31B4 File Offset: 0x003B13B4
+		
 		private static TCPProcessCmdResults ProcessGetPictureJudgeInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -42299,7 +42299,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FA2 RID: 16290 RVA: 0x003B3330 File Offset: 0x003B1530
+		
 		private static TCPProcessCmdResults PorcessReferPictureJudgeInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -42356,7 +42356,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FA3 RID: 16291 RVA: 0x003B3550 File Offset: 0x003B1750
+		
 		private static TCPProcessCmdResults ProcessMuEquipUpgradeCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -42715,7 +42715,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FA4 RID: 16292 RVA: 0x003B4358 File Offset: 0x003B2558
+		
 		private static TCPProcessCmdResults PorcessMUCheck(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -42794,7 +42794,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FA5 RID: 16293 RVA: 0x003B467C File Offset: 0x003B287C
+		
 		private static TCPProcessCmdResults PorcessExperienceCopymapInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -42847,7 +42847,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FA6 RID: 16294 RVA: 0x003B48B4 File Offset: 0x003B2AB4
+		
 		private static TCPProcessCmdResults ProcessSpriteQueryActivitySomeInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -42917,7 +42917,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FA7 RID: 16295 RVA: 0x003B4BF0 File Offset: 0x003B2DF0
+		
 		private static TCPProcessCmdResults PorcessEndBossAnimationCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -42999,7 +42999,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FA8 RID: 16296 RVA: 0x003B4EFC File Offset: 0x003B30FC
+		
 		private static TCPProcessCmdResults ProcessQueryImpetrateInfoCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -43054,7 +43054,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FA9 RID: 16297 RVA: 0x003B510C File Offset: 0x003B330C
+		
 		private static TCPProcessCmdResults ProcessExcuteImpetrateCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -43486,7 +43486,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FAA RID: 16298 RVA: 0x003B626C File Offset: 0x003B446C
+		
 		private static TCPProcessCmdResults ProcessQueryStarConstellationCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -43528,7 +43528,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FAB RID: 16299 RVA: 0x003B63C8 File Offset: 0x003B45C8
+		
 		private static TCPProcessCmdResults ProcessExcuteActivationStarConstellationCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -43572,7 +43572,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FAC RID: 16300 RVA: 0x003B6540 File Offset: 0x003B4740
+		
 		private static TCPProcessCmdResults ProcessQuerySpecialMachineCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -43621,7 +43621,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FAD RID: 16301 RVA: 0x003B66BC File Offset: 0x003B48BC
+		
 		private static TCPProcessCmdResults ProcessExtraDataCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -43667,7 +43667,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FAE RID: 16302 RVA: 0x003B6828 File Offset: 0x003B4A28
+		
 		private static TCPProcessCmdResults ProcessGetSceneTimeStateInfoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -43773,7 +43773,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FAF RID: 16303 RVA: 0x003B6BA0 File Offset: 0x003B4DA0
+		
 		private static TCPProcessCmdResults ProcessRegionEventCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -43817,7 +43817,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FB0 RID: 16304 RVA: 0x003B6D10 File Offset: 0x003B4F10
+		
 		private static TCPProcessCmdResults ProcessGetStoreYinLiang(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -43906,7 +43906,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FB1 RID: 16305 RVA: 0x003B70E8 File Offset: 0x003B52E8
+		
 		private static TCPProcessCmdResults ProcessGetStoreMoney(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -43995,7 +43995,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FB2 RID: 16306 RVA: 0x003B74C0 File Offset: 0x003B56C0
+		
 		private static TCPProcessCmdResults ProcessGetJieRiFanBeiInfo(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -44132,7 +44132,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FB3 RID: 16307 RVA: 0x003B7A10 File Offset: 0x003B5C10
+		
 		private static TCPProcessCmdResults ProcessGetAchievementRuneInfo(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -44175,7 +44175,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FB4 RID: 16308 RVA: 0x003B7B6C File Offset: 0x003B5D6C
+		
 		private static TCPProcessCmdResults ProcessUpAchievementRune(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -44219,7 +44219,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003FB5 RID: 16309 RVA: 0x003B7CD8 File Offset: 0x003B5ED8
+		
 		private static TCPProcessCmdResults ProcessQueryJieriFanLiActivityCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -44277,7 +44277,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003FB6 RID: 16310 RVA: 0x003B7EFC File Offset: 0x003B60FC
+		
 		private static TCPProcessCmdResults ProcessQueryDanBiChongZhiActivityCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -44353,7 +44353,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003FB7 RID: 16311 RVA: 0x003B824C File Offset: 0x003B644C
+		
 		private static TCPProcessCmdResults ProcessGetDanBiChongZhiActivityCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -44475,7 +44475,7 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003FB8 RID: 16312 RVA: 0x003B86EC File Offset: 0x003B68EC
+		
 		private static TCPProcessCmdResults ProcessUpArtifact(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -44521,34 +44521,34 @@ namespace GameServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x04004ED7 RID: 20183
+		
 		public static bool isUpdateFuBenData = false;
 
-		// Token: 0x04004ED8 RID: 20184
+		
 		public static string KeySHA1 = "abcde";
 
-		// Token: 0x04004ED9 RID: 20185
+		
 		public static string KeyData = "12345";
 
-		// Token: 0x04004EDA RID: 20186
+		
 		public static string WebKey = "12345";
 
-		// Token: 0x04004EDB RID: 20187
+		
 		public static string WebKeyLocal = "12345";
 
-		// Token: 0x04004EDC RID: 20188
+		
 		public static long MaxTicks = 864000000000L;
 
-		// Token: 0x04004EDD RID: 20189
+		
 		public static long TotalHandledCmdsNum = 0L;
 
-		// Token: 0x04004EDE RID: 20190
+		
 		public static int MaxUsedTicksCmdID = 0;
 
-		// Token: 0x04004EDF RID: 20191
+		
 		public static long MaxUsedTicksByCmdID = 0L;
 
-		// Token: 0x04004EE0 RID: 20192
+		
 		private static Dictionary<TMSKSocket, int> HandlingCmdDict = new Dictionary<TMSKSocket, int>();
 	}
 }

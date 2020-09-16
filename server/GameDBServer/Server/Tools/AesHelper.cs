@@ -5,10 +5,10 @@ using System.Text;
 
 namespace Server.Tools
 {
-	// Token: 0x02000214 RID: 532
+	
 	internal class AesHelper
 	{
-		// Token: 0x06000C6B RID: 3179 RVA: 0x0009FDD8 File Offset: 0x0009DFD8
+		
 		public static byte[] AesEncryptBytes(byte[] data, string passwd, string saltValue)
 		{
 			byte[] saltBytes = Encoding.UTF8.GetBytes(saltValue);
@@ -26,7 +26,7 @@ namespace Server.Tools
 			return encryptStream.ToArray();
 		}
 
-		// Token: 0x06000C6C RID: 3180 RVA: 0x0009FE90 File Offset: 0x0009E090
+		
 		public static byte[] AesDecryptBytes(byte[] encryptData, string passwd, string saltValue)
 		{
 			byte[] saltBytes = Encoding.UTF8.GetBytes(saltValue);

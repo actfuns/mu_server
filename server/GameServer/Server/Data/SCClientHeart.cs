@@ -4,16 +4,16 @@ using Tmsk.Contract;
 
 namespace Server.Data
 {
-	// Token: 0x02000180 RID: 384
+	
 	[ProtoContract]
 	public class SCClientHeart : IProtoBuffData
 	{
-		// Token: 0x060004AD RID: 1197 RVA: 0x0004131A File Offset: 0x0003F51A
+		
 		public SCClientHeart()
 		{
 		}
 
-		// Token: 0x060004AE RID: 1198 RVA: 0x0004133A File Offset: 0x0003F53A
+		
 		public SCClientHeart(int roleID, int token, int allowTicks)
 		{
 			this.RoleID = roleID;
@@ -21,7 +21,7 @@ namespace Server.Data
 			this.Ticks = allowTicks;
 		}
 
-		// Token: 0x060004AF RID: 1199 RVA: 0x00041370 File Offset: 0x0003F570
+		
 		public int fromBytes(byte[] data, int offset, int count)
 		{
 			int pos = offset;
@@ -52,7 +52,7 @@ namespace Server.Data
 			return pos;
 		}
 
-		// Token: 0x060004B0 RID: 1200 RVA: 0x00041428 File Offset: 0x0003F628
+		
 		public byte[] toBytes()
 		{
 			int total = 0;
@@ -69,19 +69,19 @@ namespace Server.Data
 			return data;
 		}
 
-		// Token: 0x04000885 RID: 2181
+		
 		[ProtoMember(1)]
 		public int RoleID = 0;
 
-		// Token: 0x04000886 RID: 2182
+		
 		[ProtoMember(2)]
 		public int RandToken = 0;
 
-		// Token: 0x04000887 RID: 2183
+		
 		[ProtoMember(3)]
 		public int Ticks = 0;
 
-		// Token: 0x04000888 RID: 2184
+		
 		[ProtoMember(4)]
 		public long ReportCliRealTick;
 	}

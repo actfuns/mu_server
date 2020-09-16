@@ -13,15 +13,15 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic.TuJian
 {
-	// Token: 0x0200045B RID: 1115
+	
 	public class GuardStatueManager : SingletonTemplate<GuardStatueManager>
 	{
-		// Token: 0x0600147A RID: 5242 RVA: 0x00142248 File Offset: 0x00140448
+		
 		private GuardStatueManager()
 		{
 		}
 
-		// Token: 0x0600147B RID: 5243 RVA: 0x001422CC File Offset: 0x001404CC
+		
 		public void LoadConfig()
 		{
 			if (!this.loadGuardSoul() || !this.loadGuardPoint() || !this.loadGuardLevelUp() || !this.loadGuardSuitUp())
@@ -29,7 +29,7 @@ namespace GameServer.Logic.TuJian
 			}
 		}
 
-		// Token: 0x0600147C RID: 5244 RVA: 0x00142304 File Offset: 0x00140504
+		
 		private bool loadGuardSoul()
 		{
 			try
@@ -61,7 +61,7 @@ namespace GameServer.Logic.TuJian
 			return true;
 		}
 
-		// Token: 0x0600147D RID: 5245 RVA: 0x00142440 File Offset: 0x00140640
+		
 		private bool loadGuardPoint()
 		{
 			try
@@ -95,7 +95,7 @@ namespace GameServer.Logic.TuJian
 			return true;
 		}
 
-		// Token: 0x0600147E RID: 5246 RVA: 0x001425BC File Offset: 0x001407BC
+		
 		private bool loadGuardLevelUp()
 		{
 			try
@@ -127,7 +127,7 @@ namespace GameServer.Logic.TuJian
 			return true;
 		}
 
-		// Token: 0x0600147F RID: 5247 RVA: 0x001426FC File Offset: 0x001408FC
+		
 		private bool loadGuardSuitUp()
 		{
 			try
@@ -161,7 +161,7 @@ namespace GameServer.Logic.TuJian
 			return true;
 		}
 
-		// Token: 0x06001480 RID: 5248 RVA: 0x00142888 File Offset: 0x00140A88
+		
 		public void OnTaskComplete(GameClient client)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot6))
@@ -173,7 +173,7 @@ namespace GameServer.Logic.TuJian
 			}
 		}
 
-		// Token: 0x06001481 RID: 5249 RVA: 0x001428CC File Offset: 0x00140ACC
+		
 		public void OnLogin(GameClient client)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot6))
@@ -186,7 +186,7 @@ namespace GameServer.Logic.TuJian
 			}
 		}
 
-		// Token: 0x06001482 RID: 5250 RVA: 0x00142904 File Offset: 0x00140B04
+		
 		public void OnActiveTuJian(GameClient client)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot6))
@@ -198,7 +198,7 @@ namespace GameServer.Logic.TuJian
 			}
 		}
 
-		// Token: 0x06001483 RID: 5251 RVA: 0x0014295C File Offset: 0x00140B5C
+		
 		private void CheckGuardStatueOpenInfo(GameClient client)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot6))
@@ -260,7 +260,7 @@ namespace GameServer.Logic.TuJian
 			}
 		}
 
-		// Token: 0x06001484 RID: 5252 RVA: 0x00142C2C File Offset: 0x00140E2C
+		
 		private void UpdateGuardStatueProps(GameClient client)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot6))
@@ -297,7 +297,7 @@ namespace GameServer.Logic.TuJian
 			}
 		}
 
-		// Token: 0x06001485 RID: 5253 RVA: 0x00142DFC File Offset: 0x00140FFC
+		
 		private bool _UpdateGuardStatue2DB(GameClient client)
 		{
 			bool result;
@@ -351,7 +351,7 @@ namespace GameServer.Logic.TuJian
 			return result;
 		}
 
-		// Token: 0x06001486 RID: 5254 RVA: 0x00142FE0 File Offset: 0x001411E0
+		
 		private bool _UpdateGuardSoul2DB(int roleid, int soulType, int equipSlot, int serverId)
 		{
 			bool result;
@@ -376,7 +376,7 @@ namespace GameServer.Logic.TuJian
 			return result;
 		}
 
-		// Token: 0x06001487 RID: 5255 RVA: 0x00143068 File Offset: 0x00141268
+		
 		public TCPProcessCmdResults ProcRoleQueryGuardPointRecover(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -421,7 +421,7 @@ namespace GameServer.Logic.TuJian
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06001488 RID: 5256 RVA: 0x001431DC File Offset: 0x001413DC
+		
 		private GuardStatueErrorCode QueryGuardPointRecoverInfo(GameClient client, out int todayHasRecover, out int todayMaxRecover)
 		{
 			todayHasRecover = 0;
@@ -454,7 +454,7 @@ namespace GameServer.Logic.TuJian
 			return result;
 		}
 
-		// Token: 0x06001489 RID: 5257 RVA: 0x001432B8 File Offset: 0x001414B8
+		
 		public TCPProcessCmdResults ProcRoleGuardPointRecover(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -523,7 +523,7 @@ namespace GameServer.Logic.TuJian
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x0600148A RID: 5258 RVA: 0x001434FC File Offset: 0x001416FC
+		
 		private GuardStatueErrorCode RecoverGuardPoint(GameClient client, Dictionary<int, int> itemDict)
 		{
 			GuardStatueErrorCode result;
@@ -611,7 +611,7 @@ namespace GameServer.Logic.TuJian
 			return result;
 		}
 
-		// Token: 0x0600148B RID: 5259 RVA: 0x00143840 File Offset: 0x00141A40
+		
 		public TCPProcessCmdResults ProcRoleQueryGuardStatue(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -653,7 +653,7 @@ namespace GameServer.Logic.TuJian
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x0600148C RID: 5260 RVA: 0x00143994 File Offset: 0x00141B94
+		
 		public TCPProcessCmdResults ProcRoleGuardStatueLevelUp(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -698,7 +698,7 @@ namespace GameServer.Logic.TuJian
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x0600148D RID: 5261 RVA: 0x00143B48 File Offset: 0x00141D48
+		
 		public GuardStatueErrorCode HandleLevelUp(GameClient client)
 		{
 			GuardStatueErrorCode result;
@@ -761,7 +761,7 @@ namespace GameServer.Logic.TuJian
 			return result;
 		}
 
-		// Token: 0x0600148E RID: 5262 RVA: 0x00143D3C File Offset: 0x00141F3C
+		
 		public TCPProcessCmdResults ProcRoleGuardStatueSuitUp(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -806,7 +806,7 @@ namespace GameServer.Logic.TuJian
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x0600148F RID: 5263 RVA: 0x00143EF0 File Offset: 0x001420F0
+		
 		private GuardStatueErrorCode HandleSuitUp(GameClient client)
 		{
 			GuardStatueErrorCode result;
@@ -892,7 +892,7 @@ namespace GameServer.Logic.TuJian
 			return result;
 		}
 
-		// Token: 0x06001490 RID: 5264 RVA: 0x00144204 File Offset: 0x00142404
+		
 		public TCPProcessCmdResults ProcRoleModGuardSoulEquip(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -937,7 +937,7 @@ namespace GameServer.Logic.TuJian
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06001491 RID: 5265 RVA: 0x001443C0 File Offset: 0x001425C0
+		
 		private void HandleModGuardSoulEquip(GameClient client, int slot, int guardSoulType)
 		{
 			if (client != null && client.ClientData.MyGuardStatueDetail.IsActived)
@@ -975,7 +975,7 @@ namespace GameServer.Logic.TuJian
 			}
 		}
 
-		// Token: 0x06001492 RID: 5266 RVA: 0x001445C4 File Offset: 0x001427C4
+		
 		private int GetSlotCntBySoulCnt(int cnt)
 		{
 			int slot = 0;
@@ -989,7 +989,7 @@ namespace GameServer.Logic.TuJian
 			return slot;
 		}
 
-		// Token: 0x06001493 RID: 5267 RVA: 0x00144640 File Offset: 0x00142840
+		
 		private int GetDayMaxCanRecoverPointBySoulCnt(int cnt)
 		{
 			int maxPoint = 0;
@@ -1003,7 +1003,7 @@ namespace GameServer.Logic.TuJian
 			return maxPoint;
 		}
 
-		// Token: 0x06001494 RID: 5268 RVA: 0x001446BC File Offset: 0x001428BC
+		
 		public void InitRecoverPoint_BySysParam(string str)
 		{
 			if (!string.IsNullOrEmpty(str))
@@ -1029,7 +1029,7 @@ namespace GameServer.Logic.TuJian
 			}
 		}
 
-		// Token: 0x06001495 RID: 5269 RVA: 0x00144778 File Offset: 0x00142978
+		
 		public void InitSoulSlot_BySysParam(string str)
 		{
 			if (!string.IsNullOrEmpty(str))
@@ -1055,13 +1055,13 @@ namespace GameServer.Logic.TuJian
 			}
 		}
 
-		// Token: 0x06001496 RID: 5270 RVA: 0x00144831 File Offset: 0x00142A31
+		
 		public void GM_HandleModGuardSoulEquip(GameClient client, int slot, int guardSoulType)
 		{
 			this.HandleModGuardSoulEquip(client, slot, guardSoulType);
 		}
 
-		// Token: 0x06001497 RID: 5271 RVA: 0x00144840 File Offset: 0x00142A40
+		
 		public string GM_QueryGuardPoint(GameClient client)
 		{
 			int todayHasRecover = 0;
@@ -1071,25 +1071,25 @@ namespace GameServer.Logic.TuJian
 			return string.Format("今日已回收[{0}], 今日最大可回收[{1}]，总共有守护点[{2}]", todayHasRecover, todayCanRecover, totalHas);
 		}
 
-		// Token: 0x06001498 RID: 5272 RVA: 0x0014489B File Offset: 0x00142A9B
+		
 		public void GM_GuardPointRecover(GameClient client, Dictionary<int, int> itemDict)
 		{
 			this.RecoverGuardPoint(client, itemDict);
 		}
 
-		// Token: 0x06001499 RID: 5273 RVA: 0x001448A7 File Offset: 0x00142AA7
+		
 		public void GM_HandleLevelUp(GameClient client)
 		{
 			this.HandleLevelUp(client);
 		}
 
-		// Token: 0x0600149A RID: 5274 RVA: 0x001448B2 File Offset: 0x00142AB2
+		
 		public void GM_HandleSuitlUp(GameClient client)
 		{
 			this.HandleSuitUp(client);
 		}
 
-		// Token: 0x0600149B RID: 5275 RVA: 0x001448C0 File Offset: 0x00142AC0
+		
 		public string GM_QueryGuardStatue(GameClient client)
 		{
 			string result;
@@ -1116,7 +1116,7 @@ namespace GameServer.Logic.TuJian
 			return result;
 		}
 
-		// Token: 0x0600149C RID: 5276 RVA: 0x00144A24 File Offset: 0x00142C24
+		
 		public string GM_ModGuardPoint(GameClient client, int newVal)
 		{
 			string result;
@@ -1141,7 +1141,7 @@ namespace GameServer.Logic.TuJian
 			return result;
 		}
 
-		// Token: 0x0600149D RID: 5277 RVA: 0x00144AC4 File Offset: 0x00142CC4
+		
 		public void AddGuardPoint(GameClient client, int point, string strFrom)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot6))
@@ -1163,34 +1163,34 @@ namespace GameServer.Logic.TuJian
 			}
 		}
 
-		// Token: 0x04001E13 RID: 7699
+		
 		private Dictionary<int, GuardSoul> guardSoulDict = new Dictionary<int, GuardSoul>();
 
-		// Token: 0x04001E14 RID: 7700
+		
 		private Dictionary<int, GuardPoint> guardPointDict = new Dictionary<int, GuardPoint>();
 
-		// Token: 0x04001E15 RID: 7701
+		
 		private Dictionary<int, GuardLevelUp> guardLevelUpDict = new Dictionary<int, GuardLevelUp>();
 
-		// Token: 0x04001E16 RID: 7702
+		
 		private Dictionary<int, GuardSuitUp> guardSuitUpDict = new Dictionary<int, GuardSuitUp>();
 
-		// Token: 0x04001E17 RID: 7703
+		
 		private List<Tuple<int, int>> dayMaxCanRecoverPointList = new List<Tuple<int, int>>();
 
-		// Token: 0x04001E18 RID: 7704
+		
 		private List<Tuple<int, int>> maxActiveSlotCntList = new List<Tuple<int, int>>();
 
-		// Token: 0x04001E19 RID: 7705
+		
 		private int GuardStatueMaxLevel = 0;
 
-		// Token: 0x04001E1A RID: 7706
+		
 		private int GuardStatueMaxSuit = 0;
 
-		// Token: 0x04001E1B RID: 7707
+		
 		public double LevelFactor = 1.0;
 
-		// Token: 0x04001E1C RID: 7708
+		
 		public double SuitFactor = 1.0;
 	}
 }

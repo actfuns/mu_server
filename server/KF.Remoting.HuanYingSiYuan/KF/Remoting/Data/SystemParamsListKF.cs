@@ -5,10 +5,10 @@ using Tmsk.Tools.Tools;
 
 namespace KF.Remoting.Data
 {
-	// Token: 0x0200001A RID: 26
+	
 	public class SystemParamsListKF
 	{
-		// Token: 0x060000C4 RID: 196 RVA: 0x0000A898 File Offset: 0x00008A98
+		
 		public string GetParamValueByName(string name)
 		{
 			string result;
@@ -26,7 +26,7 @@ namespace KF.Remoting.Data
 			return result;
 		}
 
-		// Token: 0x060000C5 RID: 197 RVA: 0x0000A8D8 File Offset: 0x00008AD8
+		
 		public long GetParamValueIntByName(string name, int defvalue = -1)
 		{
 			string value = this.GetParamValueByName(name);
@@ -49,7 +49,7 @@ namespace KF.Remoting.Data
 			return result;
 		}
 
-		// Token: 0x060000C6 RID: 198 RVA: 0x0000A928 File Offset: 0x00008B28
+		
 		public long GetParamValueIntByName(string name, long defvalue)
 		{
 			string value = this.GetParamValueByName(name);
@@ -72,7 +72,7 @@ namespace KF.Remoting.Data
 			return result;
 		}
 
-		// Token: 0x060000C7 RID: 199 RVA: 0x0000A978 File Offset: 0x00008B78
+		
 		public int[] GetParamValueIntArrayByName(string name)
 		{
 			string value = this.GetParamValueByName(name);
@@ -95,7 +95,7 @@ namespace KF.Remoting.Data
 			return result;
 		}
 
-		// Token: 0x060000C8 RID: 200 RVA: 0x0000A9C8 File Offset: 0x00008BC8
+		
 		public double GetParamValueDoubleByName(string name)
 		{
 			string value = this.GetParamValueByName(name);
@@ -118,7 +118,7 @@ namespace KF.Remoting.Data
 			return result;
 		}
 
-		// Token: 0x060000C9 RID: 201 RVA: 0x0000AA28 File Offset: 0x00008C28
+		
 		public void LoadParamsList()
 		{
 			string fileName = string.Format("Config/SystemParams.xml", new object[0]);
@@ -141,7 +141,7 @@ namespace KF.Remoting.Data
 			}
 		}
 
-		// Token: 0x060000CA RID: 202 RVA: 0x0000AB20 File Offset: 0x00008D20
+		
 		public int ReloadLoadParamsList()
 		{
 			try
@@ -155,7 +155,7 @@ namespace KF.Remoting.Data
 			return 0;
 		}
 
-		// Token: 0x040000A5 RID: 165
+		
 		private Dictionary<string, string> _ParamsDict = null;
 	}
 }

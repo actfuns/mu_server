@@ -9,13 +9,13 @@ namespace GameDBServer.Logic
 	public class ServerEvents
 	{
 		// Token: 0x170000D9 RID: 217
-		// (get) Token: 0x060009E6 RID: 2534 RVA: 0x0005F0F4 File Offset: 0x0005D2F4
-		// (set) Token: 0x060009E7 RID: 2535 RVA: 0x0005F10B File Offset: 0x0005D30B
+		
+		
 		public EventLevels EventLevel { get; set; }
 
 		// Token: 0x170000DA RID: 218
-		// (get) Token: 0x060009E8 RID: 2536 RVA: 0x0005F114 File Offset: 0x0005D314
-		// (set) Token: 0x060009E9 RID: 2537 RVA: 0x0005F12C File Offset: 0x0005D32C
+		
+		
 		public string EventRootPath
 		{
 			get
@@ -29,8 +29,8 @@ namespace GameDBServer.Logic
 		}
 
 		// Token: 0x170000DB RID: 219
-		// (get) Token: 0x060009EA RID: 2538 RVA: 0x0005F138 File Offset: 0x0005D338
-		// (set) Token: 0x060009EB RID: 2539 RVA: 0x0005F150 File Offset: 0x0005D350
+		
+		
 		public string EventPreFileName
 		{
 			get
@@ -56,7 +56,7 @@ namespace GameDBServer.Logic
 		}
 
 		// Token: 0x170000DC RID: 220
-		// (get) Token: 0x060009ED RID: 2541 RVA: 0x0005F1C4 File Offset: 0x0005D3C4
+		
 		public string EventPath
 		{
 			get

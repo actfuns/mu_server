@@ -10,11 +10,11 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020002AF RID: 687
+	
 	public class EventLogManager
 	{
-		// Token: 0x17000020 RID: 32
-		// (get) Token: 0x06000A1F RID: 2591 RVA: 0x000A1B8C File Offset: 0x0009FD8C
+		
+		
 		private static long LogId
 		{
 			get
@@ -23,13 +23,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000A20 RID: 2592 RVA: 0x000A1BA8 File Offset: 0x0009FDA8
+		
 		static EventLogManager()
 		{
 			EventLogManager.Init();
 		}
 
-		// Token: 0x06000A21 RID: 2593 RVA: 0x000A1BC0 File Offset: 0x0009FDC0
+		
 		private static void Init()
 		{
 			for (int i = 0; i < 82; i++)
@@ -43,7 +43,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000A22 RID: 2594 RVA: 0x000A1C24 File Offset: 0x0009FE24
+		
 		public static void WriteAllEvents()
 		{
 			for (int i = 0; i < 82; i++)
@@ -54,7 +54,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000A23 RID: 2595 RVA: 0x000A1C58 File Offset: 0x0009FE58
+		
 		public static void AddMoneyEvent(GameClient client, OpTypes optType, OpTags optTag, MoneyTypes moneyType, long addValue, long curValue = -1L, string msg = "none")
 		{
 			try
@@ -122,7 +122,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000A24 RID: 2596 RVA: 0x000A1DB0 File Offset: 0x0009FFB0
+		
 		public static void AddMoneyEvent(int serverId, int zoneId, string userId, long roleId, OpTypes optType, OpTags optTag, MoneyTypes moneyType, long addValue, long curValue, string msg)
 		{
 			try
@@ -159,7 +159,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000A25 RID: 2597 RVA: 0x000A1EA4 File Offset: 0x000A00A4
+		
 		public static void AddGoodsEvent(GameClient client, OpTypes optType, OpTags optTag, int goodsId, long dbId, int addValue, int curValue, string msg)
 		{
 			try
@@ -200,7 +200,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000A26 RID: 2598 RVA: 0x000A1FDC File Offset: 0x000A01DC
+		
 		public static void AddGoodsEvent(RoleDataEx client, OpTypes optType, OpTags optTag, int goodsId, long dbId, int addValue, int curValue, string msg)
 		{
 			try
@@ -241,7 +241,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000A27 RID: 2599 RVA: 0x000A2108 File Offset: 0x000A0308
+		
 		public static void AddRoleLoginEvent(string userID, string isadult, string ip)
 		{
 			EventLogManager.SystemRoleEvents[0].AddImporEvent(new object[]
@@ -253,7 +253,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A28 RID: 2600 RVA: 0x000A2144 File Offset: 0x000A0344
+		
 		public static void AddRoleInitGameEvent(GameClient client, string hid)
 		{
 			string userID = GameManager.OnlineUserSession.FindUserID(client.ClientSocket);
@@ -273,7 +273,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A29 RID: 2601 RVA: 0x000A221C File Offset: 0x000A041C
+		
 		public static void AddRoleLogoutEvent(GameClient client)
 		{
 			string userID = GameManager.OnlineUserSession.FindUserID(client.ClientSocket);
@@ -294,7 +294,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A2A RID: 2602 RVA: 0x000A231C File Offset: 0x000A051C
+		
 		public static void AddCreateRoleEvent(string userID, int zoneID, string strCmdResult, string ip, string hid)
 		{
 			try
@@ -334,7 +334,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000A2B RID: 2603 RVA: 0x000A2430 File Offset: 0x000A0630
+		
 		public static void AddRemoveRoleEvent(string userID, int zoneID, int roleID, string ip)
 		{
 			EventLogManager.SystemRoleEvents[4].AddImporEvent(new object[]
@@ -347,7 +347,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A2C RID: 2604 RVA: 0x000A247C File Offset: 0x000A067C
+		
 		public static void AddRoleDeathEvent(GameClient client, int mapCode, ObjectTypes killerType, int killerId, string strDropList)
 		{
 			EventLogManager.SystemRoleEvents[6].AddImporEvent(new object[]
@@ -363,13 +363,13 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A2D RID: 2605 RVA: 0x000A24FB File Offset: 0x000A06FB
+		
 		public static void AddResourceEvent(GameClient client, MoneyTypes type, long surplus, long currValue, string reason)
 		{
 			EventLogManager.AddResourceEvent(client.strUserID, client.ClientData.ZoneID, client.ClientData.RoleID, type, surplus, currValue, reason);
 		}
 
-		// Token: 0x06000A2E RID: 2606 RVA: 0x000A2528 File Offset: 0x000A0728
+		
 		public static void AddResourceEvent(string userID, int zoneID, int roleID, MoneyTypes type, long surplus, long currValue, string reason)
 		{
 			if (MoneyTypes.YuanBao == type)
@@ -453,7 +453,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000A2F RID: 2607 RVA: 0x000A2788 File Offset: 0x000A0988
+		
 		public static void AddLangHunLingYuEvent(int GameId, int cityID, int oldZoneID, int oldBHID, int oldLev, int newZoneID, int newBHID, int newLev)
 		{
 			EventLogManager.SystemRoleEvents[45].AddImporEvent(new object[]
@@ -470,7 +470,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A30 RID: 2608 RVA: 0x000A2808 File Offset: 0x000A0A08
+		
 		public static void AddLuoLanChengZhanEvent(BangHuiDetailData oldBangHuiDetailData, BangHuiDetailData newBangHuiDetailData)
 		{
 			EventLogManager.SystemRoleEvents[39].AddImporEvent(new object[]
@@ -487,7 +487,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A31 RID: 2609 RVA: 0x000A28E4 File Offset: 0x000A0AE4
+		
 		public static void AddBangHuiBuildUpEvent(GameClient client, int bhid, int type, int tolevel, string resList)
 		{
 			EventLogManager.SystemRoleEvents[35].AddImporEvent(new object[]
@@ -503,7 +503,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A32 RID: 2610 RVA: 0x000A2964 File Offset: 0x000A0B64
+		
 		public static void AddBangHuiCreateEvent(GameClient client, int bhid)
 		{
 			EventLogManager.SystemRoleEvents[36].AddImporEvent(new object[]
@@ -516,7 +516,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A33 RID: 2611 RVA: 0x000A29D0 File Offset: 0x000A0BD0
+		
 		public static void AddBangHuiDestroyEvent(GameClient client, int bhid)
 		{
 			EventLogManager.SystemRoleEvents[37].AddImporEvent(new object[]
@@ -529,7 +529,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A34 RID: 2612 RVA: 0x000A2A3C File Offset: 0x000A0C3C
+		
 		public static void AddBangHuiQuitEvent(GameClient client, int bhid)
 		{
 			EventLogManager.SystemRoleEvents[38].AddImporEvent(new object[]
@@ -542,7 +542,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A35 RID: 2613 RVA: 0x000A2AA8 File Offset: 0x000A0CA8
+		
 		public static void AddJunTuanCreateEvent(GameClient client, int juntuanID, int bhid, string strCostList)
 		{
 			EventLogManager.SystemRoleEvents[40].AddImporEvent(new object[]
@@ -557,7 +557,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A36 RID: 2614 RVA: 0x000A2B20 File Offset: 0x000A0D20
+		
 		public static void AddJunTuanDestroyEvent(GameClient client, int juntuanID, int bhid)
 		{
 			EventLogManager.SystemRoleEvents[42].AddImporEvent(new object[]
@@ -571,7 +571,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A37 RID: 2615 RVA: 0x000A2B94 File Offset: 0x000A0D94
+		
 		public static void AddJunTuanZhiWuEvent(GameClient client, int optZhiWu, int otherRoleID, int zhiWu)
 		{
 			EventLogManager.SystemRoleEvents[41].AddImporEvent(new object[]
@@ -588,7 +588,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A38 RID: 2616 RVA: 0x000A2C38 File Offset: 0x000A0E38
+		
 		public static void AddKarenBattleEvent(int lingDiType, RoleData4Selector oldLeader, int newZoneID, int newJunTuanId, int newRoleID)
 		{
 			EventLogManager.SystemRoleEvents[43].AddImporEvent(new object[]
@@ -604,7 +604,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A39 RID: 2617 RVA: 0x000A2CD0 File Offset: 0x000A0ED0
+		
 		public static void AddKarenBattleEnterEvent(int lingDiType, GameClient client)
 		{
 			EventLogManager.SystemRoleEvents[44].AddImporEvent(new object[]
@@ -621,7 +621,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A3A RID: 2618 RVA: 0x000A2D84 File Offset: 0x000A0F84
+		
 		public static void AddRoleUpgradeEvent(GameClient client, long addExp, long oldExp, int oldLevel, string reason)
 		{
 			EventLogManager.SystemRoleEvents[5].AddImporEvent(new object[]
@@ -639,7 +639,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A3B RID: 2619 RVA: 0x000A2E28 File Offset: 0x000A1028
+		
 		public static void AddChangeLifeEvent(GameClient client, int oldNum, int newNum, string resList)
 		{
 			EventLogManager.SystemRoleEvents[19].AddImporEvent(new object[]
@@ -654,7 +654,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A3C RID: 2620 RVA: 0x000A2EA0 File Offset: 0x000A10A0
+		
 		public static void AddRoleRebornUpgradeEvent(GameClient client, long addExp, long oldExp, int oldLevel, string reason)
 		{
 			EventLogManager.SystemRoleEvents[7].AddImporEvent(new object[]
@@ -672,7 +672,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A3D RID: 2621 RVA: 0x000A2F58 File Offset: 0x000A1158
+		
 		public static void AddRebornEvent(GameClient client, int oldNum, int newNum, string resList)
 		{
 			EventLogManager.SystemRoleEvents[53].AddImporEvent(new object[]
@@ -687,7 +687,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A3E RID: 2622 RVA: 0x000A2FD0 File Offset: 0x000A11D0
+		
 		public static void AddMazingerStoreEvent(GameClient client, int oldNum, int newNum, int oldExp, int newExp, string resList)
 		{
 			EventLogManager.SystemRoleEvents[54].AddImporEvent(new object[]
@@ -704,7 +704,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A3F RID: 2623 RVA: 0x000A305C File Offset: 0x000A125C
+		
 		public static void AddPurchaseEvent(GameClient client, int strFrom, int purchaseID, string castResList, string strResList)
 		{
 			EventLogManager.SystemRoleEvents[17].AddImporEvent(new object[]
@@ -720,7 +720,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A40 RID: 2624 RVA: 0x000A30D8 File Offset: 0x000A12D8
+		
 		public static void AddTitleEvent(GameClient client, int operateType, int time, string resList)
 		{
 			EventLogManager.SystemRoleEvents[18].AddImporEvent(new object[]
@@ -735,7 +735,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A41 RID: 2625 RVA: 0x000A3150 File Offset: 0x000A1350
+		
 		public static void AddFallGoodsEvent(int MapCode, int OwnerRoleID, string KilledName, string resList)
 		{
 			EventLogManager.SystemRoleEvents[34].AddImporEvent(new object[]
@@ -748,7 +748,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A42 RID: 2626 RVA: 0x000A319C File Offset: 0x000A139C
+		
 		public static void AddRingStarSuitEvent(GameClient client, int RingID, int OldLev, int NewLev, int OldStar, int NewStar, string strCostList)
 		{
 			EventLogManager.SystemRoleEvents[30].AddImporEvent(new object[]
@@ -766,7 +766,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A43 RID: 2627 RVA: 0x000A3234 File Offset: 0x000A1434
+		
 		public static void AddRingBuyEvent(GameClient client, int UpMode, int RingID, int OldLev, int NewLev, int OldStar, int NewStar, string strCostList)
 		{
 			EventLogManager.SystemRoleEvents[31].AddImporEvent(new object[]
@@ -785,7 +785,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A44 RID: 2628 RVA: 0x000A32D8 File Offset: 0x000A14D8
+		
 		public static void AddGuardStatueSuitEvent(GameClient client, int OldSuit, int NewSuit, int OldLev, int NewLev, string strCostList)
 		{
 			EventLogManager.SystemRoleEvents[29].AddImporEvent(new object[]
@@ -802,7 +802,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A45 RID: 2629 RVA: 0x000A3364 File Offset: 0x000A1564
+		
 		public static void AddWingZhuLingEvent(GameClient client, int OldLev, int NewLev, string strCostList)
 		{
 			EventLogManager.SystemRoleEvents[26].AddImporEvent(new object[]
@@ -817,7 +817,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A46 RID: 2630 RVA: 0x000A33E0 File Offset: 0x000A15E0
+		
 		public static void AddWingZhuHunEvent(GameClient client, int OldLev, int NewLev, string strCostList)
 		{
 			EventLogManager.SystemRoleEvents[27].AddImporEvent(new object[]
@@ -832,7 +832,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A47 RID: 2631 RVA: 0x000A345C File Offset: 0x000A165C
+		
 		public static void AddMerlinBookStarEvent(GameClient client, int UpStarMode, int AddExp, int OldStar, int NewLev, int NewStar, int NewStarExp, string strCostList)
 		{
 			EventLogManager.SystemRoleEvents[32].AddImporEvent(new object[]
@@ -851,7 +851,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A48 RID: 2632 RVA: 0x000A3500 File Offset: 0x000A1700
+		
 		public static void AddMerlinBookLevEvent(GameClient client, int nUpMode, int OldFailedNum, int NewFailedNum, int OldLev, int NewLev, int OldStar, int NewStar, int OldStarExp, int NewStarExp, string strCostList)
 		{
 			EventLogManager.SystemRoleEvents[33].AddImporEvent(new object[]
@@ -873,7 +873,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A49 RID: 2633 RVA: 0x000A35C4 File Offset: 0x000A17C4
+		
 		public static void AddWingStarEvent(GameClient client, int UpStarMode, int AddExp, int OldStarLevel, int WingID, int NewStarLevel, int NewStarExp, string strCostList)
 		{
 			EventLogManager.SystemRoleEvents[14].AddImporEvent(new object[]
@@ -892,7 +892,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A4A RID: 2634 RVA: 0x000A3668 File Offset: 0x000A1868
+		
 		public static void AddWingUpgradeEvent(GameClient client, int nUpWingMode, int OldJinJieFailedNum, int NewJinJieFailedNum, int OldWingID, int NewWingID, int OldStarLevel, int NewStarLevel, int OldStarExp, int NewStarExp, string strCostList)
 		{
 			EventLogManager.SystemRoleEvents[15].AddImporEvent(new object[]
@@ -914,7 +914,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A4B RID: 2635 RVA: 0x000A372C File Offset: 0x000A192C
+		
 		public static void AddLingYuLevelEvent(GameClient client, int UpLevMode, int OldLevel, int CurrentSuit, int NewLevel, string strCostList)
 		{
 			EventLogManager.SystemRoleEvents[24].AddImporEvent(new object[]
@@ -931,7 +931,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A4C RID: 2636 RVA: 0x000A37B8 File Offset: 0x000A19B8
+		
 		public static void AddLingYuSuitEvent(GameClient client, int UpMode, int OldSuit, int NewSuit, int OldLev, int NewLev, string strCostList)
 		{
 			EventLogManager.SystemRoleEvents[25].AddImporEvent(new object[]
@@ -949,7 +949,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A4D RID: 2637 RVA: 0x000A3850 File Offset: 0x000A1A50
+		
 		public static void AddChengJiuAwardEvent(GameClient client, int chengJiuID, string strResList)
 		{
 			EventLogManager.SystemRoleEvents[28].AddImporEvent(new object[]
@@ -963,7 +963,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A4E RID: 2638 RVA: 0x000A38C0 File Offset: 0x000A1AC0
+		
 		public static void AddAchievementRuneEvent(GameClient client, int RuneID, string AddProps, string strCostList)
 		{
 			EventLogManager.SystemRoleEvents[46].AddImporEvent(new object[]
@@ -978,7 +978,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A4F RID: 2639 RVA: 0x000A3934 File Offset: 0x000A1B34
+		
 		public static void AddBossDiedEvent(GameClient client, int monsterID, int mapCode, long birthTick, long deathTick, string drop)
 		{
 			EventLogManager.SystemRoleEvents[16].AddImporEvent(new object[]
@@ -995,7 +995,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A50 RID: 2640 RVA: 0x000A39C0 File Offset: 0x000A1BC0
+		
 		public static void AddChangeOccupationEvent(GameClient client, int targetOccupation)
 		{
 			string stringOccList = "";
@@ -1019,7 +1019,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A51 RID: 2641 RVA: 0x000A3ACC File Offset: 0x000A1CCC
+		
 		public static void AddRankingEvent(PaiHangTypes type, int ranking, string strText)
 		{
 			EventLogManager.SystemRoleEvents[20].AddImporEvent(new object[]
@@ -1031,7 +1031,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A52 RID: 2642 RVA: 0x000A3B14 File Offset: 0x000A1D14
+		
 		public static void AddJieriCZSongEvent(GameClient client, int awardId, string goods)
 		{
 			EventLogManager.SystemRoleEvents[21].AddImporEvent(new object[]
@@ -1045,7 +1045,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A53 RID: 2643 RVA: 0x000A3B84 File Offset: 0x000A1D84
+		
 		public static void AddJieRiMeiRiLeiJiEvent(GameClient client, int awardId, string goods)
 		{
 			EventLogManager.SystemRoleEvents[22].AddImporEvent(new object[]
@@ -1059,7 +1059,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A54 RID: 2644 RVA: 0x000A3BF4 File Offset: 0x000A1DF4
+		
 		public static void AddJieriLeiJiCZEvent(GameClient client, int awardId, string goods)
 		{
 			EventLogManager.SystemRoleEvents[23].AddImporEvent(new object[]
@@ -1073,7 +1073,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A55 RID: 2645 RVA: 0x000A3C64 File Offset: 0x000A1E64
+		
 		public static void AddGameEvent(LogRecordType logRecordType, params object[] args)
 		{
 			try
@@ -1114,7 +1114,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000A56 RID: 2646 RVA: 0x000A3DB0 File Offset: 0x000A1FB0
+		
 		public static void AddRoleEvent(GameClient client, OpTypes optType, OpTags optTag, LogRecordType logRecordType, params object[] args)
 		{
 			try
@@ -1144,7 +1144,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000A57 RID: 2647 RVA: 0x000A3EB0 File Offset: 0x000A20B0
+		
 		public static void AddRoleSkillEvent(GameClient client, SkillLogTypes optType, LogRecordType logRecordType, params object[] args)
 		{
 			try
@@ -1172,7 +1172,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000A58 RID: 2648 RVA: 0x000A3F90 File Offset: 0x000A2190
+		
 		public static void AddPetSkillEvent(GameClient client, LogRecordType logRecordType, EPetSkillLog logType, params object[] args)
 		{
 			try
@@ -1201,7 +1201,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000A59 RID: 2649 RVA: 0x000A4084 File Offset: 0x000A2284
+		
 		public static void AddUnionPalaceEvent(GameClient client, LogRecordType logRecordType, params object[] args)
 		{
 			try
@@ -1228,7 +1228,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000A5A RID: 2650 RVA: 0x000A4158 File Offset: 0x000A2358
+		
 		public static string CreateAwardListStr(ResLogType type, long addData, long oldData, long clientData, ref bool isBegin)
 		{
 			string result;
@@ -1254,7 +1254,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000A5B RID: 2651 RVA: 0x000A41D0 File Offset: 0x000A23D0
+		
 		public static string NewResPropString(ResLogType type, params object[] list)
 		{
 			string strProp = string.Format("{0}", (int)type);
@@ -1265,26 +1265,26 @@ namespace GameServer.Logic
 			return strProp;
 		}
 
-		// Token: 0x06000A5C RID: 2652 RVA: 0x000A421C File Offset: 0x000A241C
+		
 		public static string AddResPropString(ResLogType type, params object[] list)
 		{
 			return "@" + EventLogManager.NewResPropString(type, list);
 		}
 
-		// Token: 0x06000A5D RID: 2653 RVA: 0x000A4240 File Offset: 0x000A2440
+		
 		public static string AddGoodsDataPropString(GoodsData goodsData)
 		{
 			return "@" + EventLogManager.NewGoodsDataPropString(goodsData);
 		}
 
-		// Token: 0x06000A5E RID: 2654 RVA: 0x000A4264 File Offset: 0x000A2464
+		
 		public static string AddGoodsDataPropString(List<GoodsData> goodsDataList)
 		{
 			string result = EventLogManager.MakeGoodsDataPropString(goodsDataList);
 			return string.IsNullOrEmpty(result) ? "" : ("@" + result);
 		}
 
-		// Token: 0x06000A5F RID: 2655 RVA: 0x000A4298 File Offset: 0x000A2498
+		
 		public static string NewGoodsDataPropString(GoodsData goodsData)
 		{
 			string result;
@@ -1308,7 +1308,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000A60 RID: 2656 RVA: 0x000A432C File Offset: 0x000A252C
+		
 		public static string MakeGoodsDataPropString(List<GoodsData> goodsDataList)
 		{
 			string strGoodsList = "";
@@ -1327,7 +1327,7 @@ namespace GameServer.Logic
 			return strGoodsList;
 		}
 
-		// Token: 0x06000A61 RID: 2657 RVA: 0x000A43CC File Offset: 0x000A25CC
+		
 		public static string AddResPropString(string res, ResLogType type, params object[] list)
 		{
 			string result;
@@ -1342,7 +1342,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000A62 RID: 2658 RVA: 0x000A4408 File Offset: 0x000A2608
+		
 		public static string AddGoodsDataPropString(string res, List<GoodsData> goodsDataList)
 		{
 			string result = EventLogManager.MakeGoodsDataPropString(goodsDataList);
@@ -1358,7 +1358,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x06000A63 RID: 2659 RVA: 0x000A4440 File Offset: 0x000A2640
+		
 		public static string AddGoodsDataPropString(string res, GoodsData goodsData)
 		{
 			string result;
@@ -1382,7 +1382,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000A64 RID: 2660 RVA: 0x000A44D8 File Offset: 0x000A26D8
+		
 		public static void AddHuiJiEvent(GameClient client, int type, int mode, int AddExp, int OldLevel, int OldStar, int NewLevel, int NewStar, int NewExp, string strCostList)
 		{
 			EventLogManager.SystemRoleEvents[48].AddImporEvent(new object[]
@@ -1403,7 +1403,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A65 RID: 2661 RVA: 0x000A4590 File Offset: 0x000A2790
+		
 		public static void AddRoleMeditateEvent(GameClient client, long meditateTime, int totalMeditateCnt, string goodStr)
 		{
 			EventLogManager.SystemRoleEvents[49].AddImporEvent(new object[]
@@ -1418,7 +1418,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A66 RID: 2662 RVA: 0x000A4608 File Offset: 0x000A2808
+		
 		public static void AddRoleQiFuEvent(GameClient client, string format, params object[] args)
 		{
 			try
@@ -1437,7 +1437,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000A67 RID: 2663 RVA: 0x000A4690 File Offset: 0x000A2890
+		
 		public static void AddArmorEvent(GameClient client, int type, int mode, int AddExp, int OldLevel, int OldStar, int NewLevel, int NewStar, int NewExp, string strCostList)
 		{
 			EventLogManager.SystemRoleEvents[51].AddImporEvent(new object[]
@@ -1458,7 +1458,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A68 RID: 2664 RVA: 0x000A4748 File Offset: 0x000A2948
+		
 		public static void AddBianShenEvent(GameClient client, int type, int mode, int AddExp, int OldLevel, int NewLevel, int NewExp, string strCostList)
 		{
 			EventLogManager.SystemRoleEvents[52].AddImporEvent(new object[]
@@ -1477,7 +1477,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A69 RID: 2665 RVA: 0x000A47EC File Offset: 0x000A29EC
+		
 		public static void AddCreateZhanDuiEvent(GameClient client, long teamID, string teamName, string costStr)
 		{
 			EventLogManager.SystemRoleEvents[55].AddImporEvent(new object[]
@@ -1493,7 +1493,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A6A RID: 2666 RVA: 0x000A486C File Offset: 0x000A2A6C
+		
 		public static void AddAttendZhanDuiEvent(GameClient client, long teamID, string teamName, int leaderRid, string teamRoles)
 		{
 			EventLogManager.SystemRoleEvents[56].AddImporEvent(new object[]
@@ -1510,7 +1510,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A6B RID: 2667 RVA: 0x000A48F8 File Offset: 0x000A2AF8
+		
 		public static void QuitZhanDuiEvent(GameClient client, long teamID, string teamName, int leaderRid, string teamRoles)
 		{
 			EventLogManager.SystemRoleEvents[57].AddImporEvent(new object[]
@@ -1527,7 +1527,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A6C RID: 2668 RVA: 0x000A4984 File Offset: 0x000A2B84
+		
 		public static void DeleteZhanDuiEvent(GameClient client, long teamID, string teamName, int leaderRid, string teamRoles)
 		{
 			EventLogManager.SystemRoleEvents[58].AddImporEvent(new object[]
@@ -1544,7 +1544,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A6D RID: 2669 RVA: 0x000A4A10 File Offset: 0x000A2C10
+		
 		public static void AddKF5V5FreeBattleEvent(int rid, int roleserverid, int winorfalse, long gameid, int side, int online, int oldTodayAttendCnt, int todayAttendCnt, int oldMonthAttendCnt, int monthAttendCnt, int oldKillCnt, int killCnt, int oldLinasheng, int liansheng, int oldjingji, int jingji, int oldwincnt, int wincnt, string awardStr)
 		{
 			EventLogManager.SystemRoleEvents[68].AddImporEvent(new object[]
@@ -1573,7 +1573,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A6E RID: 2670 RVA: 0x000A4B10 File Offset: 0x000A2D10
+		
 		public static void AddMonthChengJiuAwardEvent(int rid, int serverid, int type, int oldval, int newval, int oldawarID, int awardid, string awardStr)
 		{
 			EventLogManager.SystemRoleEvents[69].AddImporEvent(new object[]
@@ -1590,7 +1590,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A6F RID: 2671 RVA: 0x000A4B8C File Offset: 0x000A2D8C
+		
 		public static void ChangeZhanDuiLeaderEvent(GameClient client, long teamID, string teamName, int oldLeaderRid, int newLeaderRid, string teamRoles)
 		{
 			EventLogManager.SystemRoleEvents[59].AddImporEvent(new object[]
@@ -1608,7 +1608,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A70 RID: 2672 RVA: 0x000A4C20 File Offset: 0x000A2E20
+		
 		public static void AddKF5v5SendMailEvent(int NextRound, int myRound, int oldSendMailFlag, int mailFlag, string teamName, int n64QiangID, long teamID, string subject, string content, string roles, int oppsite64QiangID, long oppsiteTeamID, string oppsiteTeamName)
 		{
 			EventLogManager.SystemRoleEvents[70].AddImporEvent(new object[]
@@ -1629,7 +1629,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A71 RID: 2673 RVA: 0x000A4CB8 File Offset: 0x000A2EB8
+		
 		public static void AddRoleYaZhuEvent(GameClient client, long teamid, string teamName, int n64QiangID, int round, string costStr)
 		{
 			EventLogManager.SystemRoleEvents[60].AddImporEvent(new object[]
@@ -1647,7 +1647,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A72 RID: 2674 RVA: 0x000A4D4C File Offset: 0x000A2F4C
+		
 		public static void AddRoleYaZhuResultEvent(string userID, int zoneID, int rid, long teamid, string teamName, int n64QiangID, int yaZhuRound, int n64QiangRound, int awawrdFlag, string awardStr)
 		{
 			EventLogManager.SystemRoleEvents[61].AddImporEvent(new object[]
@@ -1667,7 +1667,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A73 RID: 2675 RVA: 0x000A4DE0 File Offset: 0x000A2FE0
+		
 		public static void Add5v5PiPeiSuccessEvent(GameClient client, int kfServerID, string toIP, int toPort, long gameID)
 		{
 			EventLogManager.SystemRoleEvents[62].AddImporEvent(new object[]
@@ -1684,7 +1684,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A74 RID: 2676 RVA: 0x000A4E70 File Offset: 0x000A3070
+		
 		public static void Add5v5Enter64QiangEvent(GameClient client, int kfServerID, string toIP, int toPort, long gameID, long teamid, int n64QiangID, int nRound, int ncurrentRound, int yazhuRound)
 		{
 			EventLogManager.SystemRoleEvents[63].AddImporEvent(new object[]
@@ -1706,7 +1706,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A75 RID: 2677 RVA: 0x000A4F38 File Offset: 0x000A3138
+		
 		public static void Add5v5DailyAwardEvent(GameClient client, int rank, int attendcnt, int killcnt, int wincnt, int oldFlag, int awardFlag, string awardStr)
 		{
 			EventLogManager.SystemRoleEvents[64].AddImporEvent(new object[]
@@ -1726,7 +1726,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A76 RID: 2678 RVA: 0x000A4FE8 File Offset: 0x000A31E8
+		
 		public static void Add5v5MonthAwardEvent(string usrID, int zoneid, int rid, int rank, int attendcnt, int killcnt, int wincnt, int awardFlag, string awardStr)
 		{
 			EventLogManager.SystemRoleEvents[65].AddImporEvent(new object[]
@@ -1744,7 +1744,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A77 RID: 2679 RVA: 0x000A506C File Offset: 0x000A326C
+		
 		public static void Add5v5Notify64QiangEvent(GameClient client, long teamid, int n64QinagID, int round, int nCurrentRoud, int nYaZhuRound)
 		{
 			EventLogManager.SystemRoleEvents[66].AddImporEvent(new object[]
@@ -1762,7 +1762,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A78 RID: 2680 RVA: 0x000A510C File Offset: 0x000A330C
+		
 		public static void Add5v5JinJi64QiangAwardEvent(string usrID, int zoneID, int rid, long teamid, int n64QinagID, int round, string awardStr)
 		{
 			EventLogManager.SystemRoleEvents[67].AddImporEvent(new object[]
@@ -1779,7 +1779,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A79 RID: 2681 RVA: 0x000A5184 File Offset: 0x000A3384
+		
 		public static void AddMakeOldPlayerEvent(GameClient client)
 		{
 			EventLogManager.SystemRoleEvents[71].AddImporEvent(new object[]
@@ -1794,7 +1794,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06000A7A RID: 2682 RVA: 0x000A5214 File Offset: 0x000A3414
+		
 		public static void AddGetOldPlayerAwardEvent(GameClient client, int type, int param, int oldLevel, string strCostList)
 		{
 			EventLogManager.SystemRoleEvents[72].AddImporEvent(new object[]
@@ -1811,13 +1811,13 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x04001187 RID: 4487
+		
 		private const string NA = "-1";
 
-		// Token: 0x04001188 RID: 4488
+		
 		private static long _LogId;
 
-		// Token: 0x04001189 RID: 4489
+		
 		public static ServerEvents[] SystemRoleEvents = new ServerEvents[82];
 	}
 }

@@ -13,41 +13,41 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020005E1 RID: 1505
+	
 	public class ChengJiuManager : IManager
 	{
-		// Token: 0x06001C1D RID: 7197 RVA: 0x001A6C6C File Offset: 0x001A4E6C
+		
 		public static ChengJiuManager GetInstance()
 		{
 			return ChengJiuManager.Instance;
 		}
 
-		// Token: 0x06001C1E RID: 7198 RVA: 0x001A6C84 File Offset: 0x001A4E84
+		
 		public bool initialize()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(670, 2, UpGradeChengLevelCmdProcessor.getInstance(TCPGameServerCmds.CMD_SPR_UPGRADE_CHENGJIU));
 			return true;
 		}
 
-		// Token: 0x06001C1F RID: 7199 RVA: 0x001A6CB4 File Offset: 0x001A4EB4
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x06001C20 RID: 7200 RVA: 0x001A6CC8 File Offset: 0x001A4EC8
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06001C21 RID: 7201 RVA: 0x001A6CDC File Offset: 0x001A4EDC
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06001C22 RID: 7202 RVA: 0x001A6CF0 File Offset: 0x001A4EF0
+		
 		public static void InitChengJiuConfig()
 		{
 			foreach (KeyValuePair<int, SystemXmlItem> kv in GameManager.systemChengJiu.SystemXmlItemDict)
@@ -83,7 +83,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C23 RID: 7203 RVA: 0x001A6E1C File Offset: 0x001A501C
+		
 		public static void SetAchievementLevel(GameClient client, int level)
 		{
 			Global.UpdateBufferData(client, BufferItemTypes.ChengJiu, new double[]
@@ -97,7 +97,7 @@ namespace GameServer.Logic
 			GameManager.ClientMgr.NotifySelfParamsValueChange(client, RoleCommonUseIntParamsIndexs.ChengJiuLevel, client.ClientData.ChengJiuLevel);
 		}
 
-		// Token: 0x06001C24 RID: 7204 RVA: 0x001A6ED4 File Offset: 0x001A50D4
+		
 		public static void SetAchievementRuneLevel(GameClient client, int level)
 		{
 			AchievementRuneData achievementRuneData = new AchievementRuneData();
@@ -113,26 +113,26 @@ namespace GameServer.Logic
 			ChengJiuManager.SetAchievementRuneProps(client, achievementRuneData);
 		}
 
-		// Token: 0x06001C25 RID: 7205 RVA: 0x001A6F49 File Offset: 0x001A5149
+		
 		public static void SetAchievementRuneCount(GameClient client, int count)
 		{
 			ChengJiuManager.ModifyAchievementRuneUpCount(client, count, true);
 		}
 
-		// Token: 0x06001C26 RID: 7206 RVA: 0x001A6F55 File Offset: 0x001A5155
+		
 		public static void SetAchievementRuneRate(GameClient client, int rate)
 		{
 			ChengJiuManager._runeRate = rate;
 		}
 
-		// Token: 0x06001C27 RID: 7207 RVA: 0x001A6F5E File Offset: 0x001A515E
+		
 		public static void initAchievementRune()
 		{
 			ChengJiuManager.LoadAchievementRuneBasicData();
 			ChengJiuManager.LoadAchievementRuneSpecialData();
 		}
 
-		// Token: 0x06001C28 RID: 7208 RVA: 0x001A6F70 File Offset: 0x001A5170
+		
 		public static void initSetAchievementRuneProps(GameClient client)
 		{
 			if (GlobalNew.IsGongNengOpened(client, GongNengIDs.AchievementRune, false))
@@ -142,7 +142,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C29 RID: 7209 RVA: 0x001A6F9C File Offset: 0x001A519C
+		
 		public static void LoadAchievementRuneBasicData()
 		{
 			string fileName = "Config/ChengJiuFuWen.xml";
@@ -206,7 +206,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C2A RID: 7210 RVA: 0x001A7290 File Offset: 0x001A5490
+		
 		public static void LoadAchievementRuneSpecialData()
 		{
 			string fileName = "Config/ChengJiuSpecialAttribute.xml";
@@ -242,7 +242,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C2B RID: 7211 RVA: 0x001A740C File Offset: 0x001A560C
+		
 		public static AchievementRuneBasicData GetAchievementRuneBasicDataByID(int id)
 		{
 			AchievementRuneBasicData result;
@@ -257,7 +257,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C2C RID: 7212 RVA: 0x001A7440 File Offset: 0x001A5640
+		
 		public static AchievementRuneSpecialData GetAchievementRuneSpecialDataByID(int id)
 		{
 			AchievementRuneSpecialData result;
@@ -272,7 +272,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C2D RID: 7213 RVA: 0x001A7474 File Offset: 0x001A5674
+		
 		public static int GetAchievementRuneUpCount(GameClient client)
 		{
 			int count = 0;
@@ -294,7 +294,7 @@ namespace GameServer.Logic
 			return count;
 		}
 
-		// Token: 0x06001C2E RID: 7214 RVA: 0x001A74EC File Offset: 0x001A56EC
+		
 		public static void ModifyAchievementRuneUpCount(GameClient client, int count, bool writeToDB = false)
 		{
 			List<int> dataList = new List<int>();
@@ -306,7 +306,7 @@ namespace GameServer.Logic
 			Global.SaveRoleParamsIntListToDB(client, dataList, "AchievementRuneUpCount", writeToDB);
 		}
 
-		// Token: 0x06001C2F RID: 7215 RVA: 0x001A7534 File Offset: 0x001A5734
+		
 		public static int GetAchievementRuneDiamond(GameClient client, int upCount)
 		{
 			int[] diamondList = GameManager.systemParamsList.GetParamValueIntArrayByName("ChengJiuFuWenZuanShi", ',');
@@ -317,7 +317,7 @@ namespace GameServer.Logic
 			return diamondList[upCount];
 		}
 
-		// Token: 0x06001C30 RID: 7216 RVA: 0x001A756C File Offset: 0x001A576C
+		
 		public static AchievementRuneData GetAchievementRuneData(GameClient client)
 		{
 			AchievementRuneData result;
@@ -372,7 +372,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C31 RID: 7217 RVA: 0x001A7708 File Offset: 0x001A5908
+		
 		public static void ModifyAchievementRuneData(GameClient client, AchievementRuneData data, bool writeToDB = false)
 		{
 			List<int> dataList = new List<int>();
@@ -387,7 +387,7 @@ namespace GameServer.Logic
 			Global.SaveRoleParamsIntListToDB(client, dataList, "AchievementRune", writeToDB);
 		}
 
-		// Token: 0x06001C32 RID: 7218 RVA: 0x001A7768 File Offset: 0x001A5968
+		
 		public static AchievementRuneData UpAchievementRune(GameClient client, int runeID)
 		{
 			AchievementRuneData achievementRuneData = client.ClientData.achievementRuneData;
@@ -520,7 +520,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C33 RID: 7219 RVA: 0x001A7C8C File Offset: 0x001A5E8C
+		
 		public static void SetAchievementRuneProps(GameClient client, AchievementRuneData achievementRuneData)
 		{
 			int life = achievementRuneData.LifeAdd;
@@ -583,7 +583,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06001C34 RID: 7220 RVA: 0x001A7EF8 File Offset: 0x001A60F8
+		
 		public static void InitRoleChengJiuData(GameClient client)
 		{
 			client.ClientData.ContinuousDayLoginNum = ChengJiuManager.GetChengJiuExtraDataByField(client, ChengJiuExtraDataField.ContinuousDayLogin);
@@ -602,12 +602,12 @@ namespace GameServer.Logic
 			client._IconStateMgr.CheckChengJiuUpLevelState(client);
 		}
 
-		// Token: 0x06001C35 RID: 7221 RVA: 0x001A7FB6 File Offset: 0x001A61B6
+		
 		public static void SaveRoleChengJiuData(GameClient client)
 		{
 		}
 
-		// Token: 0x06001C36 RID: 7222 RVA: 0x001A7FBC File Offset: 0x001A61BC
+		
 		public static void InitFlagIndex()
 		{
 			ChengJiuManager._DictFlagIndex.Clear();
@@ -704,7 +704,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C37 RID: 7223 RVA: 0x001A8310 File Offset: 0x001A6510
+		
 		protected static ushort GetChengJiuIDByIndex(int index)
 		{
 			for (int i = 0; i < ChengJiuManager._DictFlagIndex.Count; i++)
@@ -717,7 +717,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06001C38 RID: 7224 RVA: 0x001A8374 File Offset: 0x001A6574
+		
 		protected static int GetCompletedFlagIndex(int chengJiuID)
 		{
 			int index = -1;
@@ -733,7 +733,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C39 RID: 7225 RVA: 0x001A83A4 File Offset: 0x001A65A4
+		
 		protected static int GetAwardFlagIndex(int chengJiuID)
 		{
 			int index = -1;
@@ -749,19 +749,19 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C3A RID: 7226 RVA: 0x001A83D4 File Offset: 0x001A65D4
+		
 		public static void AddChengJiuPoints(GameClient client, string strFrom, int modifyValue = 1, bool forceUpdateBuffer = true, bool writeToDB = false)
 		{
 			GameManager.ClientMgr.ModifyChengJiuPointsValue(client, modifyValue, strFrom, writeToDB, true);
 		}
 
-		// Token: 0x06001C3B RID: 7227 RVA: 0x001A83E8 File Offset: 0x001A65E8
+		
 		public static void SaveKilledMonsterNumToDB(GameClient client, bool bWriteDB = false)
 		{
 			ChengJiuManager.ModifyChengJiuExtraData(client, client.ClientData.TotalKilledMonsterNum, ChengJiuExtraDataField.TotalKilledMonsterNum, bWriteDB);
 		}
 
-		// Token: 0x06001C3C RID: 7228 RVA: 0x001A8400 File Offset: 0x001A6600
+		
 		public static uint GetChengJiuExtraDataByField(GameClient client, ChengJiuExtraDataField field)
 		{
 			List<uint> lsUint = Global.GetRoleParamsUIntListFromDB(client, "ChengJiuData");
@@ -777,7 +777,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C3D RID: 7229 RVA: 0x001A843C File Offset: 0x001A663C
+		
 		public static void ModifyChengJiuExtraData(GameClient client, uint value, ChengJiuExtraDataField field, bool writeToDB = false)
 		{
 			List<uint> lsUint = Global.GetRoleParamsUIntListFromDB(client, "ChengJiuData");
@@ -789,13 +789,13 @@ namespace GameServer.Logic
 			Global.SaveRoleParamsUintListToDB(client, lsUint, "ChengJiuData", writeToDB);
 		}
 
-		// Token: 0x06001C3E RID: 7230 RVA: 0x001A848C File Offset: 0x001A668C
+		
 		public static int GetChengJiuLevel(GameClient client)
 		{
 			return Global.GetRoleParamsInt32FromDB(client, "ChengJiuLevel");
 		}
 
-		// Token: 0x06001C3F RID: 7231 RVA: 0x001A84AC File Offset: 0x001A66AC
+		
 		public static void SetChengJiuLevel(GameClient client, int value, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueToDB(client, "ChengJiuLevel", value, writeToDB);
@@ -807,19 +807,19 @@ namespace GameServer.Logic
 			GlobalEventSource.getInstance().fireEvent(SevenDayGoalEvPool.Alloc(client, ESevenDayGoalFuncType.ChengJiuLevel));
 		}
 
-		// Token: 0x06001C40 RID: 7232 RVA: 0x001A853C File Offset: 0x001A673C
+		
 		public int upGradeChengJiuBuffer(GameClient player)
 		{
 			return 1;
 		}
 
-		// Token: 0x06001C41 RID: 7233 RVA: 0x001A8550 File Offset: 0x001A6750
+		
 		public static bool CanActiveNextChengHao(GameClient client)
 		{
 			return GameManager.ClientMgr.GetChengJiuPointsValue(client) >= ChengJiuManager.GetUpLevelNeedChengJiuPoint(client);
 		}
 
-		// Token: 0x06001C42 RID: 7234 RVA: 0x001A8578 File Offset: 0x001A6778
+		
 		public static int TryToActiveNewChengJiuBuffer(GameClient client, bool notifyPropsChanged, int nChengJiuLevel = -1)
 		{
 			double dayXiaoHao = 0.0;
@@ -920,7 +920,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C43 RID: 7235 RVA: 0x001A88E4 File Offset: 0x001A6AE4
+		
 		public static int GetNewChengJiuBufferGoodsIndexIDAndDayXiaoHao(GameClient client, int chengJiuPoints, out double dayXiaoHao)
 		{
 			int nNewBufferGoodsIndexID = -1;
@@ -942,7 +942,7 @@ namespace GameServer.Logic
 			return nNewBufferGoodsIndexID;
 		}
 
-		// Token: 0x06001C44 RID: 7236 RVA: 0x001A8988 File Offset: 0x001A6B88
+		
 		public static int GetUpLevelNeedChengJiuPoint(GameClient client)
 		{
 			SystemXmlItem item;
@@ -958,19 +958,19 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C45 RID: 7237 RVA: 0x001A89D4 File Offset: 0x001A6BD4
+		
 		public static bool IsChengJiuCompleted(GameClient client, int chengJiuID)
 		{
 			return ChengJiuManager.IsFlagIsTrue(client, chengJiuID, false);
 		}
 
-		// Token: 0x06001C46 RID: 7238 RVA: 0x001A89F0 File Offset: 0x001A6BF0
+		
 		public static bool IsChengJiuAwardFetched(GameClient client, int chengJiuID)
 		{
 			return ChengJiuManager.IsFlagIsTrue(client, chengJiuID, true);
 		}
 
-		// Token: 0x06001C47 RID: 7239 RVA: 0x001A8A0C File Offset: 0x001A6C0C
+		
 		public static void OnChengJiuCompleted(GameClient client, int chengJiuID)
 		{
 			ChengJiuManager.UpdateChengJiuFlag(client, chengJiuID, false);
@@ -980,7 +980,7 @@ namespace GameServer.Logic
 			ProcessTask.Process(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, client, -1, -1, -1, TaskTypes.ChengJiuUpdate, null, chengJiuID, -1L, null);
 		}
 
-		// Token: 0x06001C48 RID: 7240 RVA: 0x001A8A80 File Offset: 0x001A6C80
+		
 		public static void NotifyClientChengJiuData(GameClient client, int justCompletedChengJiu = -1)
 		{
 			ChengJiuData chengJiuData = new ChengJiuData
@@ -1003,7 +1003,7 @@ namespace GameServer.Logic
 			GameManager.ClientMgr.SendToClient(client, bytesData, 420);
 		}
 
-		// Token: 0x06001C49 RID: 7241 RVA: 0x001A8B78 File Offset: 0x001A6D78
+		
 		protected static List<ushort> GetChengJiuInfoArray(GameClient client)
 		{
 			List<ulong> lsLong = Global.GetRoleParamsUlongListFromDB(client, "ChengJiuFlags");
@@ -1026,7 +1026,7 @@ namespace GameServer.Logic
 			return lsUshort;
 		}
 
-		// Token: 0x06001C4A RID: 7242 RVA: 0x001A8C18 File Offset: 0x001A6E18
+		
 		public static int GiveChengJiuAward(GameClient client, int chengJiuID, string strFrom)
 		{
 			int result;
@@ -1096,7 +1096,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C4B RID: 7243 RVA: 0x001A8E6C File Offset: 0x001A706C
+		
 		public static long getChengJiuValue(GameClient client, AchievementType type)
 		{
 			if (type > AchievementType.Boss)
@@ -1189,7 +1189,7 @@ namespace GameServer.Logic
 			return 0L;
 		}
 
-		// Token: 0x06001C4C RID: 7244 RVA: 0x001A900C File Offset: 0x001A720C
+		
 		public static bool IsFlagIsTrue(GameClient client, int chengJiuID, bool forAward = false)
 		{
 			int index = ChengJiuManager.GetCompletedFlagIndex(chengJiuID);
@@ -1229,7 +1229,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C4D RID: 7245 RVA: 0x001A90AC File Offset: 0x001A72AC
+		
 		public static bool UpdateChengJiuFlag(GameClient client, int chengJiuID, bool forAward = false)
 		{
 			int index = ChengJiuManager.GetCompletedFlagIndex(chengJiuID);
@@ -1260,7 +1260,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C4E RID: 7246 RVA: 0x001A914C File Offset: 0x001A734C
+		
 		public static void OnFirstKillMonster(GameClient client)
 		{
 			if (!ChengJiuManager.IsChengJiuCompleted(client, 100))
@@ -1269,7 +1269,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C4F RID: 7247 RVA: 0x001A9174 File Offset: 0x001A7374
+		
 		public static void OnFirstAddFriend(GameClient client)
 		{
 			if (!ChengJiuManager.IsChengJiuCompleted(client, 101))
@@ -1278,7 +1278,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C50 RID: 7248 RVA: 0x001A919C File Offset: 0x001A739C
+		
 		public static void OnFirstInFaction(GameClient client)
 		{
 			if (!ChengJiuManager.IsChengJiuCompleted(client, 103))
@@ -1287,7 +1287,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C51 RID: 7249 RVA: 0x001A91C4 File Offset: 0x001A73C4
+		
 		public static void OnFirstInTeam(GameClient client)
 		{
 			if (!ChengJiuManager.IsChengJiuCompleted(client, 102))
@@ -1296,7 +1296,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C52 RID: 7250 RVA: 0x001A91EC File Offset: 0x001A73EC
+		
 		public static void OnFirstHeCheng(GameClient client)
 		{
 			if (!ChengJiuManager.IsChengJiuCompleted(client, 104))
@@ -1305,7 +1305,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C53 RID: 7251 RVA: 0x001A9214 File Offset: 0x001A7414
+		
 		public static void OnFirstQiangHua(GameClient client)
 		{
 			if (!ChengJiuManager.IsChengJiuCompleted(client, 105))
@@ -1314,7 +1314,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C54 RID: 7252 RVA: 0x001A923C File Offset: 0x001A743C
+		
 		public static void OnFirstAppend(GameClient client)
 		{
 			if (!ChengJiuManager.IsChengJiuCompleted(client, 106))
@@ -1323,7 +1323,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C55 RID: 7253 RVA: 0x001A9264 File Offset: 0x001A7464
+		
 		public static void OnFirstJiCheng(GameClient client)
 		{
 			if (!ChengJiuManager.IsChengJiuCompleted(client, 107))
@@ -1332,7 +1332,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C56 RID: 7254 RVA: 0x001A928C File Offset: 0x001A748C
+		
 		public static void OnFirstBaiTan(GameClient client)
 		{
 			if (!ChengJiuManager.IsChengJiuCompleted(client, 108))
@@ -1341,7 +1341,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C57 RID: 7255 RVA: 0x001A92B4 File Offset: 0x001A74B4
+		
 		public static void OnMonsterKilled(GameClient killer, Monster victim)
 		{
 			if (0U == killer.ClientData.TotalKilledMonsterNum)
@@ -1390,7 +1390,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C58 RID: 7256 RVA: 0x001A942C File Offset: 0x001A762C
+		
 		public static void CheckMonsterChengJiu(GameClient client)
 		{
 			if (client.ClientData.TotalKilledMonsterNum >= client.ClientData.NextKilledMonsterChengJiuNum && 2147483647U != client.ClientData.NextKilledMonsterChengJiuNum)
@@ -1404,13 +1404,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C59 RID: 7257 RVA: 0x001A94C6 File Offset: 0x001A76C6
+		
 		public static void CheckBossChengJiu(GameClient client, int nNum)
 		{
 			ChengJiuManager.CheckSingleConditionChengJiu(client, 800, 803, (long)nNum, "KillBoss");
 		}
 
-		// Token: 0x06001C5A RID: 7258 RVA: 0x001A94E4 File Offset: 0x001A76E4
+		
 		public static void OnTongQianIncrease(GameClient client)
 		{
 			if (0 > client.ClientData.MaxTongQianNum)
@@ -1428,19 +1428,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C5B RID: 7259 RVA: 0x001A95CB File Offset: 0x001A77CB
+		
 		public static void OnRoleLevelUp(GameClient client)
 		{
 			ChengJiuManager.CheckSingleConditionChengJiu(client, 200, 204, (long)client.ClientData.Level, "LevelLimit");
 		}
 
-		// Token: 0x06001C5C RID: 7260 RVA: 0x001A95F0 File Offset: 0x001A77F0
+		
 		public static void OnRoleChangeLife(GameClient client)
 		{
 			ChengJiuManager.CheckSingleConditionChengJiu(client, 300, 304, (long)client.ClientData.ChangeLifeCount, "ZhuanShengLimit");
 		}
 
-		// Token: 0x06001C5D RID: 7261 RVA: 0x001A9618 File Offset: 0x001A7818
+		
 		public static void OnRoleLogin(GameClient client, int preLoginDay)
 		{
 			int dayID = TimeUtil.NowDateTime().DayOfYear;
@@ -1485,25 +1485,25 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C5E RID: 7262 RVA: 0x001A986C File Offset: 0x001A7A6C
+		
 		public static void OnRoleEquipmentQiangHua(GameClient client, int equipStarsNum)
 		{
 			int nCompletedID = ChengJiuManager.CheckEquipmentChengJiu(client, 1200, 1210, (long)equipStarsNum, "QiangHuaLimit");
 		}
 
-		// Token: 0x06001C5F RID: 7263 RVA: 0x001A9894 File Offset: 0x001A7A94
+		
 		public static void OnRoleGoodsAppend(GameClient client, int AppendLev)
 		{
 			int nCompletedID = ChengJiuManager.CheckEquipmentChengJiu(client, 1300, 1308, (long)AppendLev, "ZhuiJiaLimit");
 		}
 
-		// Token: 0x06001C60 RID: 7264 RVA: 0x001A98BC File Offset: 0x001A7ABC
+		
 		public static void OnRoleGoodsHeCheng(GameClient client, int goodsIDCreated)
 		{
 			int nCompletedID = ChengJiuManager.CheckEquipmentChengJiu(client, 1400, 1411, (long)goodsIDCreated, "HeChengLimit");
 		}
 
-		// Token: 0x06001C61 RID: 7265 RVA: 0x001A98E4 File Offset: 0x001A7AE4
+		
 		public static void ProcessCompleteCopyMapForChengJiu(GameClient client, int nCopyMapLev, int count = 1)
 		{
 			if (!ChengJiuManager.IsChengJiuCompleted(client, 905) || !ChengJiuManager.IsChengJiuCompleted(client, 1005) || !ChengJiuManager.IsChengJiuCompleted(client, 1105))
@@ -1544,7 +1544,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C62 RID: 7266 RVA: 0x001A99F8 File Offset: 0x001A7BF8
+		
 		public static void OnRoleSkillLevelUp(GameClient client)
 		{
 			if (!ChengJiuManager.IsChengJiuCompleted(client, 356))
@@ -1570,7 +1570,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C63 RID: 7267 RVA: 0x001A9ABC File Offset: 0x001A7CBC
+		
 		public static void OnRoleGuildChengJiu(GameClient client)
 		{
 			if (!ChengJiuManager.IsChengJiuCompleted(client, 2004))
@@ -1579,7 +1579,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C64 RID: 7268 RVA: 0x001A9B00 File Offset: 0x001A7D00
+		
 		public static void OnRoleJunXianChengJiu(GameClient client)
 		{
 			if (!ChengJiuManager.IsChengJiuCompleted(client, ChengJiuTypes.JunXianChengJiuEnd))
@@ -1588,7 +1588,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C65 RID: 7269 RVA: 0x001A9B44 File Offset: 0x001A7D44
+		
 		public static void ProcessCompleteMainTaskForChengJiu(GameClient client, int nTaskID)
 		{
 			if (!ChengJiuManager.IsChengJiuCompleted(client, ChengJiuTypes.MainLineTaskEnd))
@@ -1622,7 +1622,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C66 RID: 7270 RVA: 0x001A9BF0 File Offset: 0x001A7DF0
+		
 		protected static uint CheckSingleConditionChengJiu(GameClient client, int chengJiuMinID, int chengJiuMaxID, long roleCurrentValue, string strCheckField)
 		{
 			SystemXmlItem itemChengJiu = null;
@@ -1653,7 +1653,7 @@ namespace GameServer.Logic
 			return needMinValue;
 		}
 
-		// Token: 0x06001C67 RID: 7271 RVA: 0x001A9C80 File Offset: 0x001A7E80
+		
 		protected static int CheckEquipmentChengJiu(GameClient client, int chengJiuMinID, int chengJiuMaxID, long roleCurrentValue, string strCheckField)
 		{
 			SystemXmlItem itemChengJiu = null;
@@ -1695,42 +1695,42 @@ namespace GameServer.Logic
 			return maxCompletedID;
 		}
 
-		// Token: 0x04002A50 RID: 10832
+		
 		public const string EncodingLatin1 = "latin1";
 
-		// Token: 0x04002A51 RID: 10833
+		
 		private static Dictionary<int, int> _DictFlagIndex = new Dictionary<int, int>();
 
-		// Token: 0x04002A52 RID: 10834
+		
 		private static Dictionary<int, AchievementRuneBasicData> _achievementRuneBasicList = new Dictionary<int, AchievementRuneBasicData>();
 
-		// Token: 0x04002A53 RID: 10835
+		
 		private static Dictionary<int, AchievementRuneSpecialData> _achievementRuneSpecialList = new Dictionary<int, AchievementRuneSpecialData>();
 
-		// Token: 0x04002A54 RID: 10836
+		
 		private static int _runeRate = 1;
 
-		// Token: 0x04002A55 RID: 10837
+		
 		private static ChengJiuManager Instance = new ChengJiuManager();
 
-		// Token: 0x020005E2 RID: 1506
+		
 		private enum AchievementRuneResultType
 		{
-			// Token: 0x04002A57 RID: 10839
+			
 			End = 3,
-			// Token: 0x04002A58 RID: 10840
+			
 			Next = 2,
-			// Token: 0x04002A59 RID: 10841
+			
 			Success = 1,
-			// Token: 0x04002A5A RID: 10842
+			
 			Efail = 0,
-			// Token: 0x04002A5B RID: 10843
+			
 			EnoOpen = -1,
-			// Token: 0x04002A5C RID: 10844
+			
 			EnoAchievement = -2,
-			// Token: 0x04002A5D RID: 10845
+			
 			EnoDiamond = -3,
-			// Token: 0x04002A5E RID: 10846
+			
 			EOver = -4
 		}
 	}

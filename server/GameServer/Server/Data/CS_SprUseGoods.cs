@@ -4,11 +4,11 @@ using Tmsk.Contract;
 
 namespace Server.Data
 {
-	// Token: 0x02000174 RID: 372
+	
 	[ProtoContract]
 	public class CS_SprUseGoods : IProtoBuffData
 	{
-		// Token: 0x06000495 RID: 1173 RVA: 0x00040A50 File Offset: 0x0003EC50
+		
 		public int fromBytes(byte[] data, int offset, int count)
 		{
 			int pos = offset;
@@ -39,7 +39,7 @@ namespace Server.Data
 			return pos;
 		}
 
-		// Token: 0x06000496 RID: 1174 RVA: 0x00040B08 File Offset: 0x0003ED08
+		
 		public byte[] toBytes()
 		{
 			int total = 0;
@@ -56,19 +56,19 @@ namespace Server.Data
 			return data;
 		}
 
-		// Token: 0x04000847 RID: 2119
+		
 		[ProtoMember(1)]
 		public int RoleId = 0;
 
-		// Token: 0x04000848 RID: 2120
+		
 		[ProtoMember(2)]
 		public int DbId = 0;
 
-		// Token: 0x04000849 RID: 2121
+		
 		[ProtoMember(3)]
 		public int GoodsId = 0;
 
-		// Token: 0x0400084A RID: 2122
+		
 		[ProtoMember(4)]
 		public int UseNum = 0;
 	}

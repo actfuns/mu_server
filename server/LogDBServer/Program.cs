@@ -15,14 +15,14 @@ using Server.Tools;
 
 namespace LogDBServer
 {
-    // Token: 0x02000015 RID: 21
+    
     public class Program
     {
-        // Token: 0x06000050 RID: 80
+        
         [DllImport("kernel32.dll")]
         private static extern bool SetConsoleCtrlHandler(Program.ControlCtrlDelegate HandlerRoutine, bool Add);
 
-        // Token: 0x06000051 RID: 81 RVA: 0x000038F0 File Offset: 0x00001AF0
+        
         public static bool HandlerRoutine(int CtrlType)
         {
             switch (CtrlType)
@@ -31,19 +31,19 @@ namespace LogDBServer
             return true;
         }
 
-        // Token: 0x06000052 RID: 82
+        
         [DllImport("user32.dll")]
         private static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
 
-        // Token: 0x06000053 RID: 83
+        
         [DllImport("user32.dll")]
         private static extern IntPtr GetSystemMenu(IntPtr hWnd, IntPtr bRevert);
 
-        // Token: 0x06000054 RID: 84
+        
         [DllImport("user32.dll")]
         private static extern IntPtr RemoveMenu(IntPtr hMenu, uint uPosition, uint uFlags);
 
-        // Token: 0x06000055 RID: 85 RVA: 0x00003920 File Offset: 0x00001B20
+        
         private static void HideCloseBtn()
         {
             Console.Title = "游戏数据库服务器";
@@ -53,7 +53,7 @@ namespace LogDBServer
             Program.RemoveMenu(closeMenu, SC_CLOSE, 0U);
         }
 
-        // Token: 0x06000056 RID: 86 RVA: 0x00003960 File Offset: 0x00001B60
+        
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             try
@@ -66,13 +66,13 @@ namespace LogDBServer
             }
         }
 
-        // Token: 0x06000057 RID: 87 RVA: 0x000039A8 File Offset: 0x00001BA8
+        
         private static void ExceptionHook()
         {
             AppDomain.CurrentDomain.UnhandledException += Program.CurrentDomain_UnhandledException;
         }
 
-        // Token: 0x06000058 RID: 88 RVA: 0x000039C4 File Offset: 0x00001BC4
+        
         public static void DeleteFile(string strFileName)
         {
             string strFullFileName = Directory.GetCurrentDirectory() + "\\" + strFileName;
@@ -87,7 +87,7 @@ namespace LogDBServer
             }
         }
 
-        // Token: 0x06000059 RID: 89 RVA: 0x00003A30 File Offset: 0x00001C30
+        
         public static void WritePIDToFile(string strFile)
         {
             string strFileName = Directory.GetCurrentDirectory() + "\\" + strFile;
@@ -96,7 +96,7 @@ namespace LogDBServer
             File.WriteAllText(strFileName, string.Concat(nPID));
         }
 
-        // Token: 0x0600005A RID: 90 RVA: 0x00003A70 File Offset: 0x00001C70
+        
         public static int GetServerPIDFromFile()
         {
             string strFileName = Directory.GetCurrentDirectory() + "\\GameServerStop.txt";
@@ -113,7 +113,7 @@ namespace LogDBServer
             return result;
         }
 
-        // Token: 0x0600005B RID: 91 RVA: 0x00003AB4 File Offset: 0x00001CB4
+        
         private static void Main(string[] args)
         {
             Program.DeleteFile("Start.txt");
@@ -136,7 +136,7 @@ namespace LogDBServer
             thread.Abort();
         }
 
-        // Token: 0x0600005C RID: 92 RVA: 0x00003B7C File Offset: 0x00001D7C
+        
         public static void ConsoleInputThread(object obj)
         {
             string cmd = Console.ReadLine();
@@ -163,7 +163,7 @@ namespace LogDBServer
             Program.OnExitServer();
         }
 
-        // Token: 0x0600005D RID: 93 RVA: 0x00003C14 File Offset: 0x00001E14
+        
         private static void ParseInputCmd(string cmd)
         {
             Program.CmdCallback cb = null;
@@ -177,26 +177,26 @@ namespace LogDBServer
             }
         }
 
-        // Token: 0x0600005E RID: 94 RVA: 0x00003C58 File Offset: 0x00001E58
+        
         private static void OnStartServer()
         {
             Program.ServerConsole.InitServer();
             Console.Title = string.Format("日志数据库服务器{0}区@{1}@{2}", GameDBManager.ZoneID, Program.GetVersionDateTime(), Program.ProgramExtName);
         }
 
-        // Token: 0x0600005F RID: 95 RVA: 0x00003C8A File Offset: 0x00001E8A
+        
         private static void OnExitServer()
         {
             Program.ServerConsole.ExitServer();
         }
 
-        // Token: 0x06000060 RID: 96 RVA: 0x00003C98 File Offset: 0x00001E98
+        
         public static void Exit()
         {
             Program.NeedExitServer = true;
         }
 
-        // Token: 0x06000061 RID: 97 RVA: 0x00003CA4 File Offset: 0x00001EA4
+        
         private static void InitCommonCmd()
         {
             Program.CmdDict.Add("help", new Program.CmdCallback(Program.ShowCmdHelpInfo));
@@ -204,7 +204,7 @@ namespace LogDBServer
             Program.CmdDict.Add("show baseinfo", new Program.CmdCallback(Program.ShowServerBaseInfo));
         }
 
-        // Token: 0x06000062 RID: 98 RVA: 0x00003D08 File Offset: 0x00001F08
+        
         private static void ShowCmdHelpInfo(string cmd = null)
         {
             Console.WriteLine(string.Format("日志数据库服务器", new object[0]));
@@ -214,7 +214,7 @@ namespace LogDBServer
             Console.WriteLine("输入 show baseinfo， 查看基础运行信息");
         }
 
-        // Token: 0x06000063 RID: 99 RVA: 0x00003D58 File Offset: 0x00001F58
+        
         private static void GarbageCollect(string cmd = null)
         {
             try
@@ -227,7 +227,7 @@ namespace LogDBServer
             }
         }
 
-        // Token: 0x06000064 RID: 100 RVA: 0x00003D94 File Offset: 0x00001F94
+        
         private static void ShowServerBaseInfo(string cmd = null)
         {
             string info = string.Format("已经连接的登录服务器连接数:{0}", Program.ServerConsole.TotalConnections);
@@ -236,9 +236,9 @@ namespace LogDBServer
             Console.WriteLine(info);
         }
 
-        // Token: 0x17000008 RID: 8
-        // (get) Token: 0x06000066 RID: 102 RVA: 0x00003DF4 File Offset: 0x00001FF4
-        // (set) Token: 0x06000065 RID: 101 RVA: 0x00003DE9 File Offset: 0x00001FE9
+        
+        
+        
         public int TotalConnections
         {
             get
@@ -251,7 +251,7 @@ namespace LogDBServer
             }
         }
 
-        // Token: 0x06000067 RID: 103 RVA: 0x00003E0C File Offset: 0x0000200C
+        
         private void closingTimer_Tick(object sender, EventArgs e)
         {
             try
@@ -275,7 +275,7 @@ namespace LogDBServer
             }
         }
 
-        // Token: 0x06000068 RID: 104 RVA: 0x00003EA4 File Offset: 0x000020A4
+        
         private void ByDayCreateLogTableWorker_DoWork(object sender, EventArgs e)
         {
             int sleepMs = 3600000;
@@ -303,7 +303,7 @@ namespace LogDBServer
             Console.WriteLine("日志表处理线程退出，回车退出系统");
         }
 
-        // Token: 0x06000069 RID: 105 RVA: 0x00003F38 File Offset: 0x00002138
+        
         private void MainDispatcherWorker_DoWork(object sender, EventArgs e)
         {
             long startTicks = DateTime.Now.Ticks / 10000L;
@@ -344,7 +344,7 @@ namespace LogDBServer
             }
         }
 
-        // Token: 0x0600006A RID: 106 RVA: 0x0000407C File Offset: 0x0000227C
+        
         private void ShowInfoTicks(object sender, EventArgs e)
         {
             try
@@ -357,13 +357,13 @@ namespace LogDBServer
             }
         }
 
-        // Token: 0x0600006B RID: 107 RVA: 0x000040C0 File Offset: 0x000022C0
+        
         private static void InitProgramExtName()
         {
             Program.ProgramExtName = AppDomain.CurrentDomain.BaseDirectory;
         }
 
-        // Token: 0x0600006C RID: 108 RVA: 0x000040D4 File Offset: 0x000022D4
+        
         public void InitServer()
         {
             Program.InitProgramExtName();
@@ -423,7 +423,7 @@ namespace LogDBServer
             Console.WriteLine("系统启动完毕");
         }
 
-        // Token: 0x0600006D RID: 109 RVA: 0x00004468 File Offset: 0x00002668
+        
         public static void ValidateZoneID()
         {
             Console.WriteLine("即将配置数据库表自增长值,请输入区号进行验证:");
@@ -449,7 +449,7 @@ namespace LogDBServer
             }
         }
 
-        // Token: 0x0600006E RID: 110 RVA: 0x000044F8 File Offset: 0x000026F8
+        
         public void ExitServer()
         {
             if (!Program.NeedExitServer)
@@ -471,7 +471,7 @@ namespace LogDBServer
             }
         }
 
-        // Token: 0x0600006F RID: 111 RVA: 0x00004588 File Offset: 0x00002788
+        
         private void ExecuteBackgroundWorkers(object sender, EventArgs e)
         {
             if (!this.eventWorker.IsBusy)
@@ -480,7 +480,7 @@ namespace LogDBServer
             }
         }
 
-        // Token: 0x06000070 RID: 112 RVA: 0x000045B4 File Offset: 0x000027B4
+        
         private void eventWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             try
@@ -495,7 +495,7 @@ namespace LogDBServer
             }
         }
 
-        // Token: 0x06000071 RID: 113 RVA: 0x000045FC File Offset: 0x000027FC
+        
         public bool CanExit()
         {
             bool result;
@@ -511,7 +511,7 @@ namespace LogDBServer
             return result;
         }
 
-        // Token: 0x06000072 RID: 114 RVA: 0x00004644 File Offset: 0x00002844
+        
         private void Window_Closing()
         {
             if (!this.MustCloseNow)
@@ -525,7 +525,7 @@ namespace LogDBServer
             }
         }
 
-        // Token: 0x06000073 RID: 115 RVA: 0x00004688 File Offset: 0x00002888
+        
         public static string GetVersionDateTime()
         {
             int revsion = Assembly.GetExecutingAssembly().GetName().Version.Revision;
@@ -537,57 +537,57 @@ namespace LogDBServer
             return dtv.ToString("yyyy-MM-dd HH");
         }
 
-        // Token: 0x04000028 RID: 40
+        
         private static Program.ControlCtrlDelegate newDelegate = new Program.ControlCtrlDelegate(Program.HandlerRoutine);
 
-        // Token: 0x04000029 RID: 41
+        
         public static Program ServerConsole = new Program();
 
-        // Token: 0x0400002A RID: 42
+        
         private static Dictionary<string, Program.CmdCallback> CmdDict = new Dictionary<string, Program.CmdCallback>();
 
-        // Token: 0x0400002B RID: 43
+        
         private static bool NeedExitServer = false;
 
-        // Token: 0x0400002C RID: 44
+        
         private int _TotalConnections = 0;
 
-        // Token: 0x0400002D RID: 45
+        
         private DBManager _DBManger = DBManager.getInstance();
 
-        // Token: 0x0400002E RID: 46
+        
         private TCPManager _TCPManager = null;
 
-        // Token: 0x0400002F RID: 47
+        
         private bool MustCloseNow = false;
 
-        // Token: 0x04000030 RID: 48
+        
         private bool EnterClosingMode = false;
 
-        // Token: 0x04000031 RID: 49
+        
         private int ClosingCounter = 6000;
 
-        // Token: 0x04000032 RID: 50
+        
         private long LastWriteDBLogTicks = DateTime.Now.Ticks / 10000L;
 
-        // Token: 0x04000033 RID: 51
+        
         private static string ProgramExtName = "";
 
-        // Token: 0x04000034 RID: 52
+        
         private BackgroundWorker eventWorker;
 
-        // Token: 0x04000035 RID: 53
+        
         private BackgroundWorker MainDispatcherWorker;
 
-        // Token: 0x04000036 RID: 54
+        
         private BackgroundWorker ByDayCreateLogTableWorker;
 
-        // Token: 0x02000016 RID: 22
-        // (Invoke) Token: 0x06000077 RID: 119
+        
+        
         public delegate bool ControlCtrlDelegate(int CtrlType);
 
-        // Token: 0x02000017 RID: 23
-        // (Invoke) Token: 0x0600007B RID: 123
+        
+        
         public delegate void CmdCallback(string cmd);
     }
 }

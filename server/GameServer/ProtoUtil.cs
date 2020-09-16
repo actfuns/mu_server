@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using Tmsk.Contract;
 
-// Token: 0x020008F6 RID: 2294
+
 internal class ProtoUtil
 {
-	// Token: 0x06004257 RID: 16983 RVA: 0x003C8228 File Offset: 0x003C6428
+	
 	public static int CalcIntSize(int val)
 	{
 		int result;
@@ -27,7 +27,7 @@ internal class ProtoUtil
 		return result;
 	}
 
-	// Token: 0x06004258 RID: 16984 RVA: 0x003C8264 File Offset: 0x003C6464
+	
 	public static int GetIntSize(int val, bool calcMember = false, int protoMember = 0, bool useDef = true, int defval = 0)
 	{
 		int result;
@@ -67,7 +67,7 @@ internal class ProtoUtil
 		return result;
 	}
 
-	// Token: 0x06004259 RID: 16985 RVA: 0x003C82D8 File Offset: 0x003C64D8
+	
 	public static int IntToBytes(byte[] data, int offset, int val)
 	{
 		int count = 0;
@@ -96,7 +96,7 @@ internal class ProtoUtil
 		return count;
 	}
 
-	// Token: 0x0600425A RID: 16986 RVA: 0x003C83B4 File Offset: 0x003C65B4
+	
 	public static int IntFromBytes(byte[] data, ref int offset, ref int ncount)
 	{
 		int readPos = offset;
@@ -156,7 +156,7 @@ internal class ProtoUtil
 		return (int)value;
 	}
 
-	// Token: 0x0600425B RID: 16987 RVA: 0x003C8540 File Offset: 0x003C6740
+	
 	public static void GetTag(byte[] data, ref int offset, ref int fieldnumber, ref int wt, ref int ncount)
 	{
 		int tag = ProtoUtil.IntFromBytes(data, ref offset, ref ncount);
@@ -164,7 +164,7 @@ internal class ProtoUtil
 		wt = (tag & 7);
 	}
 
-	// Token: 0x0600425C RID: 16988 RVA: 0x003C8564 File Offset: 0x003C6764
+	
 	public static void IntMemberToBytes(byte[] data, int fieldnumber, ref int offset, int val, bool useDef = true, int defval = 0)
 	{
 		if (!useDef || val != defval)
@@ -175,7 +175,7 @@ internal class ProtoUtil
 		}
 	}
 
-	// Token: 0x0600425D RID: 16989 RVA: 0x003C85A8 File Offset: 0x003C67A8
+	
 	public static int IntMemberFromBytes(byte[] data, int wt, ref int offset, ref int ncount)
 	{
 		if (wt != 0)
@@ -185,7 +185,7 @@ internal class ProtoUtil
 		return ProtoUtil.IntFromBytes(data, ref offset, ref ncount);
 	}
 
-	// Token: 0x0600425E RID: 16990 RVA: 0x003C85D8 File Offset: 0x003C67D8
+	
 	public static int GetLongSize(long val, bool calcMember = false, int protoMember = 0, bool useDef = true, long defval = 0L)
 	{
 		int result;
@@ -225,7 +225,7 @@ internal class ProtoUtil
 		return result;
 	}
 
-	// Token: 0x0600425F RID: 16991 RVA: 0x003C864C File Offset: 0x003C684C
+	
 	private static int LongToBytes(byte[] data, int offset, long val)
 	{
 		int count = 0;
@@ -257,7 +257,7 @@ internal class ProtoUtil
 		return count;
 	}
 
-	// Token: 0x06004260 RID: 16992 RVA: 0x003C8754 File Offset: 0x003C6954
+	
 	private static long LongFromBytes(byte[] data, ref int offset, ref int ncount)
 	{
 		int readPos = offset;
@@ -359,7 +359,7 @@ internal class ProtoUtil
 		return (long)value;
 	}
 
-	// Token: 0x06004261 RID: 16993 RVA: 0x003C8988 File Offset: 0x003C6B88
+	
 	public static void LongMemberToBytes(byte[] data, int fieldnumber, ref int offset, long val, bool useDef = true, long defval = 0L)
 	{
 		if (!useDef || val != defval)
@@ -370,7 +370,7 @@ internal class ProtoUtil
 		}
 	}
 
-	// Token: 0x06004262 RID: 16994 RVA: 0x003C89CC File Offset: 0x003C6BCC
+	
 	public static long LongMemberFromBytes(byte[] data, int wt, ref int offset, ref int ncount)
 	{
 		if (wt != 0)
@@ -380,7 +380,7 @@ internal class ProtoUtil
 		return ProtoUtil.LongFromBytes(data, ref offset, ref ncount);
 	}
 
-	// Token: 0x06004263 RID: 16995 RVA: 0x003C89FC File Offset: 0x003C6BFC
+	
 	public static int GetDoubleSize(double val, bool calcMember = false, int protoMember = 0, bool useDef = true, double defval = 0.0)
 	{
 		int result;
@@ -407,7 +407,7 @@ internal class ProtoUtil
 		return result;
 	}
 
-	// Token: 0x06004264 RID: 16996 RVA: 0x003C8A44 File Offset: 0x003C6C44
+	
 	public static void DoubleMemberToBytes(byte[] data, int fieldnumber, ref int offset, double val, bool useDef = true, double valdef = 0.0)
 	{
 		if (!useDef || val != valdef)
@@ -426,7 +426,7 @@ internal class ProtoUtil
 		}
 	}
 
-	// Token: 0x06004265 RID: 16997 RVA: 0x003C8B08 File Offset: 0x003C6D08
+	
 	public static double DoubleMemberFromBytes(byte[] data, int wt, ref int offset, ref int ncount)
 	{
 		if (wt != 1)
@@ -445,7 +445,7 @@ internal class ProtoUtil
 		return BitConverter.ToDouble(BitConverter.GetBytes(value), 0);
 	}
 
-	// Token: 0x06004266 RID: 16998 RVA: 0x003C8BCC File Offset: 0x003C6DCC
+	
 	public static int GetStringSize(string val, bool calcMember = false, int protoMember = 0)
 	{
 		int result;
@@ -481,7 +481,7 @@ internal class ProtoUtil
 		return result;
 	}
 
-	// Token: 0x06004267 RID: 16999 RVA: 0x003C8C40 File Offset: 0x003C6E40
+	
 	public static void StringMemberToBytes(byte[] data, int fieldnumber, ref int offset, string val)
 	{
 		if (val != null)
@@ -503,7 +503,7 @@ internal class ProtoUtil
 		}
 	}
 
-	// Token: 0x06004268 RID: 17000 RVA: 0x003C8CCC File Offset: 0x003C6ECC
+	
 	public static string StringMemberFromBytes(byte[] data, int wt, ref int offset, ref int ncount)
 	{
 		if (wt != 2)
@@ -526,7 +526,7 @@ internal class ProtoUtil
 		return result;
 	}
 
-	// Token: 0x06004269 RID: 17001 RVA: 0x003C8D2C File Offset: 0x003C6F2C
+	
 	public static int GetListBytesSize<T>(List<T> lst, bool calcMember = false, int protoMember = 0) where T : IProtoBuffDataEx
 	{
 		int result;
@@ -563,7 +563,7 @@ internal class ProtoUtil
 		return result;
 	}
 
-	// Token: 0x0600426A RID: 17002 RVA: 0x003C8DD0 File Offset: 0x003C6FD0
+	
 	public static byte[] ListToBytes<T>(List<T> lst, int member, ref int offset, byte[] data) where T : IProtoBuffData
 	{
 		byte[] result;
@@ -603,7 +603,7 @@ internal class ProtoUtil
 		return result;
 	}
 
-	// Token: 0x0600426B RID: 17003 RVA: 0x003C8EF0 File Offset: 0x003C70F0
+	
 	public static void ListMemberFromBytes<T>(List<T> lst, byte[] data, int wt, ref int offset, ref int ncount) where T : class, IProtoBuffData, new()
 	{
 		if (lst != null && data != null)
@@ -632,7 +632,7 @@ internal class ProtoUtil
 		}
 	}
 
-	// Token: 0x0600426C RID: 17004 RVA: 0x003C8F9C File Offset: 0x003C719C
+	
 	public static int GetListIntBytesSize(List<int> lst, bool calcMember = false, int protoMember = 0)
 	{
 		int result;
@@ -666,7 +666,7 @@ internal class ProtoUtil
 		return result;
 	}
 
-	// Token: 0x0600426D RID: 17005 RVA: 0x003C9028 File Offset: 0x003C7228
+	
 	public static void ListIntToBytes(byte[] data, int member, ref int offset, List<int> lst)
 	{
 		if (lst != null && lst.Count > 0)
@@ -681,7 +681,7 @@ internal class ProtoUtil
 		}
 	}
 
-	// Token: 0x0600426E RID: 17006 RVA: 0x003C90A0 File Offset: 0x003C72A0
+	
 	public static List<int> ListIntFromBytes(byte[] data, int wt, ref int offset, ref int ncount, List<int> lst)
 	{
 		List<int> result;
@@ -717,12 +717,12 @@ internal class ProtoUtil
 		return result;
 	}
 
-	// Token: 0x0600426F RID: 17007 RVA: 0x003C9134 File Offset: 0x003C7334
+	
 	public static int GetDictionaryMemberHeader(int fieldnumber)
 	{
 		return fieldnumber << 3 | 2;
 	}
 
-	// Token: 0x04005028 RID: 20520
+	
 	private static bool CheckInvalidUnpack = true;
 }

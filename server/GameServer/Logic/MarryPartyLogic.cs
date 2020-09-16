@@ -11,16 +11,16 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000531 RID: 1329
+	
 	public class MarryPartyLogic
 	{
-		// Token: 0x06001945 RID: 6469 RVA: 0x00189FB4 File Offset: 0x001881B4
+		
 		public static MarryPartyLogic getInstance()
 		{
 			return MarryPartyLogic.Instance;
 		}
 
-		// Token: 0x06001946 RID: 6470 RVA: 0x00189FCC File Offset: 0x001881CC
+		
 		public void LoadMarryPartyConfig()
 		{
 			lock (this.MarryPartyConfigList)
@@ -89,7 +89,7 @@ namespace GameServer.Logic
 			this.MarryPartyQueryList();
 		}
 
-		// Token: 0x06001947 RID: 6471 RVA: 0x0018A344 File Offset: 0x00188544
+		
 		private MarryPartyConfigData GetMarryPartyConfigData(int type)
 		{
 			MarryPartyConfigData data = null;
@@ -100,7 +100,7 @@ namespace GameServer.Logic
 			return data;
 		}
 
-		// Token: 0x06001948 RID: 6472 RVA: 0x0018A3A4 File Offset: 0x001885A4
+		
 		public bool MarryPartyQueryList()
 		{
 			byte[] byteData = null;
@@ -124,7 +124,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001949 RID: 6473 RVA: 0x0018A454 File Offset: 0x00188654
+		
 		public bool MarryPartyJoinListClear(GameClient client, bool clearAll)
 		{
 			bool result;
@@ -166,7 +166,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600194A RID: 6474 RVA: 0x0018A554 File Offset: 0x00188754
+		
 		public MarryPartyResult MarryPartyCreate(GameClient client, int partyType, long startTime)
 		{
 			MarryPartyResult result2;
@@ -275,7 +275,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x0600194B RID: 6475 RVA: 0x0018A844 File Offset: 0x00188A44
+		
 		public MarryPartyResult MarryPartyCancel(GameClient client)
 		{
 			MarryPartyResult result;
@@ -298,7 +298,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600194C RID: 6476 RVA: 0x0018A8A0 File Offset: 0x00188AA0
+		
 		public MarryPartyResult MarryPartyRemove(int roleID, bool forceRemove, GameClient client)
 		{
 			MarryPartyData partyData = this.m_MarryPartyDataCache.GetParty(roleID);
@@ -344,7 +344,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600194D RID: 6477 RVA: 0x0018A9F8 File Offset: 0x00188BF8
+		
 		private bool MarryPartyRemoveInternal(int roleID, bool forceRemove, GameClient self, MarryPartyData partyData = null)
 		{
 			bool result;
@@ -369,7 +369,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600194E RID: 6478 RVA: 0x0018AA80 File Offset: 0x00188C80
+		
 		public MarryPartyResult MarryPartyJoin(GameClient client, int roleID)
 		{
 			MarryPartyResult result;
@@ -474,7 +474,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600194F RID: 6479 RVA: 0x0018AE74 File Offset: 0x00189074
+		
 		public void MarryPartyPeriodicUpdate(long ticks)
 		{
 			if (ticks >= this.NextUpdateTime)
@@ -509,7 +509,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001950 RID: 6480 RVA: 0x0018AFC0 File Offset: 0x001891C0
+		
 		public void SendMarryPartyList(GameClient client, MarryPartyData partyData, int roleID = -1)
 		{
 			if (partyData != null || roleID > 0)
@@ -541,7 +541,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001951 RID: 6481 RVA: 0x0018B074 File Offset: 0x00189274
+		
 		public void SendMarryPartyJoinList(GameClient client)
 		{
 			if (null != client.ClientData.MyMarryPartyJoinList)
@@ -550,7 +550,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001952 RID: 6482 RVA: 0x0018B0B4 File Offset: 0x001892B4
+		
 		public TCPProcessCmdResults ProcessMarryPartyQuery(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -602,7 +602,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06001953 RID: 6483 RVA: 0x0018B24C File Offset: 0x0018944C
+		
 		public TCPProcessCmdResults ProcessMarryPartyCreate(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -653,7 +653,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06001954 RID: 6484 RVA: 0x0018B430 File Offset: 0x00189630
+		
 		public TCPProcessCmdResults ProcessMarryPartyCancel(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -702,7 +702,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06001955 RID: 6485 RVA: 0x0018B5FC File Offset: 0x001897FC
+		
 		public TCPProcessCmdResults ProcessMarryPartyJoin(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -747,37 +747,37 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06001956 RID: 6486 RVA: 0x0018B77C File Offset: 0x0018997C
+		
 		public void OnChangeName(int roleId, string oldName, string newName)
 		{
 			this.m_MarryPartyDataCache.OnChangeName(roleId, oldName, newName);
 		}
 
-		// Token: 0x04002365 RID: 9061
+		
 		private MarryPartyDataCache m_MarryPartyDataCache = new MarryPartyDataCache();
 
-		// Token: 0x04002366 RID: 9062
+		
 		private Dictionary<int, MarryPartyConfigData> MarryPartyConfigList = new Dictionary<int, MarryPartyConfigData>();
 
-		// Token: 0x04002367 RID: 9063
+		
 		private MarryPartyNPCData MarryPartyNPCConfig = new MarryPartyNPCData();
 
-		// Token: 0x04002368 RID: 9064
+		
 		private int MarryPartyPlayerMaxJoinCount;
 
-		// Token: 0x04002369 RID: 9065
+		
 		private int MarryPartyJoinListResetTime = 0;
 
-		// Token: 0x0400236A RID: 9066
+		
 		private bool MarryPartyNPCShow = false;
 
-		// Token: 0x0400236B RID: 9067
+		
 		private NPC MarryPartyNpc = null;
 
-		// Token: 0x0400236C RID: 9068
+		
 		private static MarryPartyLogic Instance = new MarryPartyLogic();
 
-		// Token: 0x0400236D RID: 9069
+		
 		private long NextUpdateTime = 0L;
 	}
 }

@@ -6,10 +6,10 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000744 RID: 1860
+	
 	public class MagicCoolDownMgr
 	{
-		// Token: 0x06002ED2 RID: 11986 RVA: 0x0029F250 File Offset: 0x0029D450
+		
 		public bool SkillCoolDown(int skillID)
 		{
 			CoolDownItem coolDownItem = null;
@@ -26,7 +26,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002ED3 RID: 11987 RVA: 0x0029F2A0 File Offset: 0x0029D4A0
+		
 		public void AddSkillCoolDown(IObject attacker, int skillID)
 		{
 			if (attacker is GameClient)
@@ -39,7 +39,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002ED4 RID: 11988 RVA: 0x0029F2F0 File Offset: 0x0029D4F0
+		
 		public void AddSkillCoolDownForClient(GameClient client, int skillID)
 		{
 			SystemXmlItem systemMagic = null;
@@ -103,7 +103,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002ED5 RID: 11989 RVA: 0x0029F56C File Offset: 0x0029D76C
+		
 		public void AddSkillCoolDownForMonster(Monster monster, int skillID)
 		{
 			SystemXmlItem systemMagic = null;
@@ -129,7 +129,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04003C77 RID: 15479
+		
 		private Dictionary<int, CoolDownItem> SkillCoolDownDict = new Dictionary<int, CoolDownItem>();
 	}
 }

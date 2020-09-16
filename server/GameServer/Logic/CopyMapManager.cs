@@ -16,10 +16,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000612 RID: 1554
+	
 	public class CopyMapManager
 	{
-		// Token: 0x06001F22 RID: 7970 RVA: 0x001AE120 File Offset: 0x001AC320
+		
 		public int GetNewCopyMapID()
 		{
 			int id = 1;
@@ -30,7 +30,7 @@ namespace GameServer.Logic
 			return id;
 		}
 
-		// Token: 0x06001F23 RID: 7971 RVA: 0x001AE180 File Offset: 0x001AC380
+		
 		private void AddCopyID(int fuBenSeqID, int mapCode, int copyMapID)
 		{
 			string key = string.Format("{0}_{1}", fuBenSeqID, mapCode);
@@ -40,7 +40,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F24 RID: 7972 RVA: 0x001AE1EC File Offset: 0x001AC3EC
+		
 		public void RemoveCopyID(int fuBenSeqID, int mapCode)
 		{
 			string key = string.Format("{0}_{1}", fuBenSeqID, mapCode);
@@ -50,7 +50,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F25 RID: 7973 RVA: 0x001AE258 File Offset: 0x001AC458
+		
 		public int FindCopyID(int fuBenSeqID, int mapCode)
 		{
 			int copyMapID = -1;
@@ -65,7 +65,7 @@ namespace GameServer.Logic
 			return copyMapID;
 		}
 
-		// Token: 0x06001F26 RID: 7974 RVA: 0x001AE2D8 File Offset: 0x001AC4D8
+		
 		private void AddMonsterState(int fuBenSeqID, int mapCode, int monsterState)
 		{
 			string key = string.Format("{0}_{1}", fuBenSeqID, mapCode);
@@ -75,7 +75,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F27 RID: 7975 RVA: 0x001AE344 File Offset: 0x001AC544
+		
 		private int FindMonsterState(int fuBenSeqID, int mapCode)
 		{
 			int monsterState = 0;
@@ -90,7 +90,7 @@ namespace GameServer.Logic
 			return monsterState;
 		}
 
-		// Token: 0x06001F28 RID: 7976 RVA: 0x001AE3C4 File Offset: 0x001AC5C4
+		
 		public void AddAwardState(int roleID, int fuBenSeqID, int mapCode, int awardState)
 		{
 			string key = string.Format("{0}_{1}_{2}", roleID, fuBenSeqID, mapCode);
@@ -100,7 +100,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F29 RID: 7977 RVA: 0x001AE438 File Offset: 0x001AC638
+		
 		public int FindAwardState(int roleID, int fuBenSeqID, int mapCode)
 		{
 			int awardState = 0;
@@ -115,7 +115,7 @@ namespace GameServer.Logic
 			return awardState;
 		}
 
-		// Token: 0x06001F2A RID: 7978 RVA: 0x001AE4C0 File Offset: 0x001AC6C0
+		
 		public CopyMap FindCopyMap(int mapCode, int fuBenSeqID)
 		{
 			CopyMap copyMap = null;
@@ -127,7 +127,7 @@ namespace GameServer.Logic
 			return copyMap;
 		}
 
-		// Token: 0x06001F2B RID: 7979 RVA: 0x001AE4F8 File Offset: 0x001AC6F8
+		
 		public CopyMap GetCopyMap(GameClient client, MapTypes mapType)
 		{
 			CopyMap copyMap = null;
@@ -290,7 +290,7 @@ namespace GameServer.Logic
 			return copyMap;
 		}
 
-		// Token: 0x06001F2C RID: 7980 RVA: 0x001AEC00 File Offset: 0x001ACE00
+		
 		private void AddCopyMap(CopyMap copyMap)
 		{
 			lock (this._ListCopyMaps)
@@ -303,7 +303,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F2D RID: 7981 RVA: 0x001AEC9C File Offset: 0x001ACE9C
+		
 		public void RemoveCopyMap(CopyMap copyMap)
 		{
 			lock (this._ListCopyMaps)
@@ -316,7 +316,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F2E RID: 7982 RVA: 0x001AED38 File Offset: 0x001ACF38
+		
 		public CopyMap FindCopyMap(int copyMapID)
 		{
 			CopyMap copyMap = null;
@@ -327,7 +327,7 @@ namespace GameServer.Logic
 			return copyMap;
 		}
 
-		// Token: 0x06001F2F RID: 7983 RVA: 0x001AED98 File Offset: 0x001ACF98
+		
 		public CopyMap GetNextCopyMap(int index)
 		{
 			CopyMap copyMap = null;
@@ -341,7 +341,7 @@ namespace GameServer.Logic
 			return copyMap;
 		}
 
-		// Token: 0x06001F30 RID: 7984 RVA: 0x001AEE0C File Offset: 0x001AD00C
+		
 		public int GetCopyMapCount()
 		{
 			int count = 0;
@@ -352,7 +352,7 @@ namespace GameServer.Logic
 			return count;
 		}
 
-		// Token: 0x06001F31 RID: 7985 RVA: 0x001AEE68 File Offset: 0x001AD068
+		
 		private bool CopyMapOverTime(CopyMap copyMap, long nowTicks, List<GameClient> clientsList)
 		{
 			int fuBenID = FuBenManager.FindFuBenIDByMapCode(copyMap.MapCode);
@@ -417,7 +417,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001F32 RID: 7986 RVA: 0x001AF084 File Offset: 0x001AD284
+		
 		private bool CanRemoveCopyMap(CopyMap copyMap, long nowTicks)
 		{
 			bool result;
@@ -454,7 +454,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001F33 RID: 7987 RVA: 0x001AF154 File Offset: 0x001AD354
+		
 		public void ProcessRemoveCopyMap(CopyMap copyMap)
 		{
 			int monsterCount = Global.GetLeftMonsterByCopyMapID(copyMap.CopyMapID);
@@ -562,7 +562,7 @@ namespace GameServer.Logic
 			copyMap.bNeedRemove = false;
 		}
 
-		// Token: 0x06001F34 RID: 7988 RVA: 0x001AF530 File Offset: 0x001AD730
+		
 		public void ProcessRemoveCopyMaps(List<CopyMap> listCopyMap, int FuBenSeqID, int FubenMapID)
 		{
 			foreach (CopyMap copyMap in listCopyMap)
@@ -587,7 +587,7 @@ namespace GameServer.Logic
 			FuBenManager.RemoveFuBenInfoBySeqID(FuBenSeqID);
 		}
 
-		// Token: 0x06001F35 RID: 7989 RVA: 0x001AF630 File Offset: 0x001AD830
+		
 		public void ProcessEndCopyMap()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -659,7 +659,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F36 RID: 7990 RVA: 0x001AF814 File Offset: 0x001ADA14
+		
 		public void ProcessEndGuildCopyMapFlag()
 		{
 			if (GameManager.GuildCopyMapMgr.IsPrepareResetTime())
@@ -668,7 +668,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F37 RID: 7991 RVA: 0x001AF840 File Offset: 0x001ADA40
+		
 		public void ProcessEndGuildCopyMap(long ticks)
 		{
 			if (ticks - GameManager.GuildCopyMapMgr.lastProcessEndTicks >= 1000L)
@@ -693,7 +693,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F38 RID: 7992 RVA: 0x001AF8E8 File Offset: 0x001ADAE8
+		
 		public void CloseGuildCopyMap(int fuBenSeqID, int mapCode)
 		{
 			int copyMapID = this.FindCopyID(fuBenSeqID, mapCode);
@@ -711,7 +711,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F39 RID: 7993 RVA: 0x001AF944 File Offset: 0x001ADB44
+		
 		public void RemoveCopyMapAllPlayer(CopyMap copyMap)
 		{
 			List<GameClient> objsList = copyMap.GetClientsList();
@@ -748,7 +748,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F3A RID: 7994 RVA: 0x001AFAA0 File Offset: 0x001ADCA0
+		
 		public void AddTeamCopyMap(CopyMap copyMap)
 		{
 			if (SingletonTemplate<CopyTeamManager>.Instance().NeedRecordDamageInfoFuBenID(copyMap.FubenMapID))
@@ -764,7 +764,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F3B RID: 7995 RVA: 0x001AFB34 File Offset: 0x001ADD34
+		
 		public void RemoveTeamCopyMap(CopyMap copyMap)
 		{
 			if (SingletonTemplate<CopyTeamManager>.Instance().NeedRecordDamageInfoFuBenID(copyMap.FubenMapID))
@@ -777,7 +777,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F3C RID: 7996 RVA: 0x001AFBB4 File Offset: 0x001ADDB4
+		
 		public List<RoleDamage> GetCopyMapAllRoleDamages(int copyMapID)
 		{
 			List<RoleDamage> roleDamages = null;
@@ -796,7 +796,7 @@ namespace GameServer.Logic
 			return roleDamages;
 		}
 
-		// Token: 0x06001F3D RID: 7997 RVA: 0x001AFC74 File Offset: 0x001ADE74
+		
 		public void BroadcastCopyMapDamageInfo(CopyMap copyMap, int sendtoRoleId = -1)
 		{
 			lock (this._RoleDamageDict_TeamCopyMapDict_Mutex)
@@ -831,7 +831,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F3E RID: 7998 RVA: 0x001AFE54 File Offset: 0x001AE054
+		
 		public void SendCopyMapMaxDamageInfo(GameClient client, CopyMap copyMap, int MaxCount)
 		{
 			if (MaxCount > 0)
@@ -878,7 +878,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F3F RID: 7999 RVA: 0x001B0088 File Offset: 0x001AE288
+		
 		public void CheckCopyTeamDamage(long ticks, bool force = false)
 		{
 			if (ticks - this.LastNotifyTeamDamageTicks >= 2000L)
@@ -943,7 +943,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F40 RID: 8000 RVA: 0x001B03B8 File Offset: 0x001AE5B8
+		
 		private bool IsHeroMapCode(int mapCode)
 		{
 			if (null == CopyMapManager.HeroMapCodeFileds)
@@ -977,7 +977,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001F41 RID: 8001 RVA: 0x001B0474 File Offset: 0x001AE674
+		
 		public void CopyMapPassAward(GameClient client, CopyMap copyMap, bool anyAlive)
 		{
 			int fuBenSeqID = FuBenManager.FindFuBenSeqIDByRoleID(client.ClientData.RoleID);
@@ -1041,7 +1041,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F42 RID: 8002 RVA: 0x001B0710 File Offset: 0x001AE910
+		
 		public void CopyMapPassAwardForAll(GameClient client, CopyMap copyMap, bool anyAlive)
 		{
 			if (copyMap.CopyMapPassAwardFlag)
@@ -1161,7 +1161,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F43 RID: 8003 RVA: 0x001B0B90 File Offset: 0x001AED90
+		
 		public void CopyMapFaildForAll(List<GameClient> objsList, CopyMap copyMap)
 		{
 			if (copyMap.CopyMapPassAwardFlag)
@@ -1207,7 +1207,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F44 RID: 8004 RVA: 0x001B0D1C File Offset: 0x001AEF1C
+		
 		public void ProcessKilledMonster(GameClient client, Monster monster)
 		{
 			if (monster.CopyMapID > 0)
@@ -1307,7 +1307,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F45 RID: 8005 RVA: 0x001B107C File Offset: 0x001AF27C
+		
 		public void KillAllMonster(CopyMap copyMap)
 		{
 			List<object> objList = GameManager.MonsterMgr.GetCopyMapIDMonsterList(copyMap.CopyMapID);
@@ -1333,7 +1333,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F46 RID: 8006 RVA: 0x001B1108 File Offset: 0x001AF308
+		
 		public string GetCopyMapStrInfo()
 		{
 			Dictionary<int, int> copyMapInfoDict = new Dictionary<int, int>();
@@ -1371,7 +1371,7 @@ namespace GameServer.Logic
 			return infoTxt.ToString();
 		}
 
-		// Token: 0x06001F47 RID: 8007 RVA: 0x001B12E8 File Offset: 0x001AF4E8
+		
 		public string ListCopyMapStrInfo()
 		{
 			Dictionary<int, int> copyMapInfoDict = new Dictionary<int, int>();
@@ -1410,44 +1410,44 @@ namespace GameServer.Logic
 			return infoTxt.ToString();
 		}
 
-		// Token: 0x06001F48 RID: 8008 RVA: 0x001B1510 File Offset: 0x001AF710
+		
 		public void AddGuangMuEvent(CopyMap copyMap, int guangMuId, int show)
 		{
 			copyMap.AddGuangMuEvent(guangMuId, show);
 			GameManager.ClientMgr.BroadSpecialMapAIEvent(copyMap.MapCode, copyMap.CopyMapID, guangMuId, show);
 		}
 
-		// Token: 0x04002C00 RID: 11264
+		
 		private int BaseCopyMapID = 1;
 
-		// Token: 0x04002C01 RID: 11265
+		
 		private Dictionary<string, int> FuBenSeqID2CopyIDDict = new Dictionary<string, int>();
 
-		// Token: 0x04002C02 RID: 11266
+		
 		private Dictionary<string, int> FuBenSeqID2MonsterStateDict = new Dictionary<string, int>();
 
-		// Token: 0x04002C03 RID: 11267
+		
 		private Dictionary<string, int> RoleIDFuBenSeqID2AwardStateDict = new Dictionary<string, int>();
 
-		// Token: 0x04002C04 RID: 11268
+		
 		private List<CopyMap> _ListCopyMaps = new List<CopyMap>(300);
 
-		// Token: 0x04002C05 RID: 11269
+		
 		private Dictionary<int, CopyMap> _DictCopyMaps = new Dictionary<int, CopyMap>(300);
 
-		// Token: 0x04002C06 RID: 11270
+		
 		private object _RoleDamageDict_TeamCopyMapDict_Mutex = new object();
 
-		// Token: 0x04002C07 RID: 11271
+		
 		private Dictionary<int, Dictionary<int, RoleDamage>> RoleDamageDict = new Dictionary<int, Dictionary<int, RoleDamage>>();
 
-		// Token: 0x04002C08 RID: 11272
+		
 		private List<CopyMap> TeamCopyMapDict = new List<CopyMap>();
 
-		// Token: 0x04002C09 RID: 11273
+		
 		private long LastNotifyTeamDamageTicks = 0L;
 
-		// Token: 0x04002C0A RID: 11274
+		
 		private static string[] HeroMapCodeFileds = null;
 	}
 }

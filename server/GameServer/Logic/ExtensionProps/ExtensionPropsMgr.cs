@@ -4,10 +4,10 @@ using GameServer.Interface;
 
 namespace GameServer.Logic.ExtensionProps
 {
-	// Token: 0x020006BD RID: 1725
+	
 	public class ExtensionPropsMgr
 	{
-		// Token: 0x0600206E RID: 8302 RVA: 0x001BEEE8 File Offset: 0x001BD0E8
+		
 		public static ExtensionPropItem FindCachingItem(int id)
 		{
 			ExtensionPropItem extensionPropItem = null;
@@ -23,7 +23,7 @@ namespace GameServer.Logic.ExtensionProps
 			return result;
 		}
 
-		// Token: 0x0600206F RID: 8303 RVA: 0x001BEF14 File Offset: 0x001BD114
+		
 		private static Dictionary<int, byte> ParseDict(string str)
 		{
 			Dictionary<int, byte> dict = new Dictionary<int, byte>();
@@ -38,7 +38,7 @@ namespace GameServer.Logic.ExtensionProps
 			return dict;
 		}
 
-		// Token: 0x06002070 RID: 8304 RVA: 0x001BEF6C File Offset: 0x001BD16C
+		
 		private static ExtensionPropItem ParseCachingItem(SystemXmlItem systemXmlItem)
 		{
 			return new ExtensionPropItem
@@ -55,7 +55,7 @@ namespace GameServer.Logic.ExtensionProps
 			};
 		}
 
-		// Token: 0x06002071 RID: 8305 RVA: 0x001BF03C File Offset: 0x001BD23C
+		
 		public static void LoadCachingItems(SystemXmlItems systemExtensionProps)
 		{
 			Dictionary<int, ExtensionPropItem> cachingDict = new Dictionary<int, ExtensionPropItem>();
@@ -71,7 +71,7 @@ namespace GameServer.Logic.ExtensionProps
 			ExtensionPropsMgr._ExtensionPropsCachingDict = cachingDict;
 		}
 
-		// Token: 0x06002072 RID: 8306 RVA: 0x001BF0D8 File Offset: 0x001BD2D8
+		
 		public static List<int> ProcessExtensionProps(List<int> extensionPropsIDList, int skillID, int actionType)
 		{
 			List<int> list = new List<int>();
@@ -132,7 +132,7 @@ namespace GameServer.Logic.ExtensionProps
 			return result;
 		}
 
-		// Token: 0x06002073 RID: 8307 RVA: 0x001BF290 File Offset: 0x001BD490
+		
 		public static void ExecuteExtensionPropsActions(List<int> list, IObject self, IObject obj)
 		{
 			if (list != null && list.Count > 0)
@@ -174,7 +174,7 @@ namespace GameServer.Logic.ExtensionProps
 			}
 		}
 
-		// Token: 0x04003676 RID: 13942
+		
 		private static Dictionary<int, ExtensionPropItem> _ExtensionPropsCachingDict = new Dictionary<int, ExtensionPropItem>();
 	}
 }

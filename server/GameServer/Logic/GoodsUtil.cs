@@ -8,10 +8,10 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020002DB RID: 731
+	
 	public class GoodsUtil
 	{
-		// Token: 0x06000B80 RID: 2944 RVA: 0x000B49A4 File Offset: 0x000B2BA4
+		
 		public static void LoadConfig()
 		{
 			GoodsUtil.LoadGetGoodsXml();
@@ -150,7 +150,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000B81 RID: 2945 RVA: 0x000B4E64 File Offset: 0x000B3064
+		
 		public static void LoadGetGoodsXml()
 		{
 			string xmlFileName = Global.GameResPath("Config/GetGoods.xml");
@@ -179,7 +179,7 @@ namespace GameServer.Logic
 			GoodsUtil.GetGoodsIdDict = dict;
 		}
 
-		// Token: 0x06000B82 RID: 2946 RVA: 0x000B4F58 File Offset: 0x000B3158
+		
 		public static bool CanEquip(int type, int site)
 		{
 			lock (GoodsUtil.GoodsTypeInfoDict)
@@ -193,7 +193,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000B83 RID: 2947 RVA: 0x000B4FD4 File Offset: 0x000B31D4
+		
 		public static bool IsEquip(int goodsId)
 		{
 			int type = Global.GetGoodsCatetoriy(goodsId);
@@ -208,7 +208,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000B84 RID: 2948 RVA: 0x000B504C File Offset: 0x000B324C
+		
 		public static GoodsTypeInfo GetGoodsTypeInfo(int type)
 		{
 			lock (GoodsUtil.GoodsTypeInfoDict)
@@ -222,14 +222,14 @@ namespace GameServer.Logic
 			return GoodsTypeInfo.Empty;
 		}
 
-		// Token: 0x06000B85 RID: 2949 RVA: 0x000B50B8 File Offset: 0x000B32B8
+		
 		public static GoodsTypeInfo GetGoodsTypeInfoByGoodsId(int goodsId)
 		{
 			int type = Global.GetGoodsCatetoriy(goodsId);
 			return GoodsUtil.GetGoodsTypeInfo(type);
 		}
 
-		// Token: 0x06000B86 RID: 2950 RVA: 0x000B50D8 File Offset: 0x000B32D8
+		
 		public static bool CanUpgrade(int type, int op)
 		{
 			lock (GoodsUtil.GoodsTypeInfoDict)
@@ -243,7 +243,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000B87 RID: 2951 RVA: 0x000B5148 File Offset: 0x000B3348
+		
 		public static int CanUpgradeInhert(int type1, int type2, int op)
 		{
 			int ret = -200;
@@ -266,7 +266,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06000B88 RID: 2952 RVA: 0x000B5220 File Offset: 0x000B3420
+		
 		public static bool IsZuoQiEquip(int goodsId)
 		{
 			int type = Global.GetGoodsCatetoriy(goodsId);
@@ -281,7 +281,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000B89 RID: 2953 RVA: 0x000B5298 File Offset: 0x000B3498
+		
 		public static bool IsVisiableEquip(int goodsId)
 		{
 			int type = Global.GetGoodsCatetoriy(goodsId);
@@ -296,7 +296,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000B8A RID: 2954 RVA: 0x000B5310 File Offset: 0x000B3510
+		
 		public static int GetResGoodsID(MoneyTypes type)
 		{
 			Dictionary<int, int> dict = GoodsUtil.GetGoodsIdDict;
@@ -314,7 +314,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06000B8B RID: 2955 RVA: 0x000B5384 File Offset: 0x000B3584
+		
 		public static string FormatUpdateDBGoodsStr(params object[] args)
 		{
 			string result;
@@ -330,9 +330,9 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x1700002D RID: 45
-		// (get) Token: 0x06000B8C RID: 2956 RVA: 0x000B53CC File Offset: 0x000B35CC
-		// (set) Token: 0x06000B8D RID: 2957 RVA: 0x000B5418 File Offset: 0x000B3618
+		
+		
+		
 		private static Dictionary<int, int> logItemDict
 		{
 			get
@@ -353,7 +353,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000B8E RID: 2958 RVA: 0x000B5464 File Offset: 0x000B3664
+		
 		public static void LoadItemLogMark()
 		{
 			int[] arrMark = GameManager.systemParamsList.GetParamValueIntArrayByName("LogGoods", ',');
@@ -368,13 +368,13 @@ namespace GameServer.Logic
 			GoodsUtil.logItemDict = tmpDict;
 		}
 
-		// Token: 0x06000B8F RID: 2959 RVA: 0x000B54C8 File Offset: 0x000B36C8
+		
 		public static string ModifyGoodsLogName(GoodsData goodsData)
 		{
 			return Global.ModifyGoodsLogName(goodsData);
 		}
 
-		// Token: 0x06000B90 RID: 2960 RVA: 0x000B54E0 File Offset: 0x000B36E0
+		
 		public static bool CheckHasGoodsList(GameClient client, List<List<int>> needGoods, bool notBind)
 		{
 			for (int i = 0; i < needGoods.Count; i++)
@@ -393,7 +393,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000B91 RID: 2961 RVA: 0x000B556C File Offset: 0x000B376C
+		
 		public static bool CostGoodsList(GameClient client, List<List<int>> needGoods, bool notBind, ref string strCostList, string logMsg)
 		{
 			bool result = true;
@@ -435,7 +435,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000B92 RID: 2962 RVA: 0x000B5718 File Offset: 0x000B3918
+		
 		public static GoodsData GetGoodsDataBySite(GameClient client, int id, int site)
 		{
 			if (site == 1)
@@ -452,7 +452,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06000B93 RID: 2963 RVA: 0x000B57C4 File Offset: 0x000B39C4
+		
 		public static bool RemoveGoodsDataBySite(GameClient client, GoodsData goodsData, int site)
 		{
 			if (site != 1)
@@ -480,7 +480,7 @@ namespace GameServer.Logic
 			return ZuoQiManager.RemoveEquipGoodsData(client, goodsData);
 		}
 
-		// Token: 0x06000B94 RID: 2964 RVA: 0x000B586C File Offset: 0x000B3A6C
+		
 		public static bool DestoryGoodsBySystem(GameClient client, GoodsData goodsData)
 		{
 			string cmdData;
@@ -516,7 +516,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000B95 RID: 2965 RVA: 0x000B59C4 File Offset: 0x000B3BC4
+		
 		public static int AddGoodsDBCommand(GameClient client, GoodsData goodsData, bool useOldGrid, int newHint, string goodsFromWhere, bool onLine = true)
 		{
 			int dbRet = 0;
@@ -550,7 +550,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000B96 RID: 2966 RVA: 0x000B5AF4 File Offset: 0x000B3CF4
+		
 		public static GoodsData AddGoodsDataToBag(GameClient client, int id, int goodsID, int forgeLevel, int quality, int goodsNum, int binding, int site, string jewelList, string startTime, string endTime, int addPropIndex, int bornIndex, int lucky, int strong, int ExcellenceProperty, int nAppendPropLev, int nEquipChangeLife, int bagIndex = 0, List<int> washProps = null)
 		{
 			GoodsData gd = new GoodsData
@@ -591,7 +591,7 @@ namespace GameServer.Logic
 			return gd;
 		}
 
-		// Token: 0x06000B97 RID: 2967 RVA: 0x000B5C44 File Offset: 0x000B3E44
+		
 		public static int GetIdleSlotOfBag(GameClient client, int site)
 		{
 			int idelPos = 0;
@@ -629,19 +629,19 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000B98 RID: 2968 RVA: 0x000B5D18 File Offset: 0x000B3F18
+		
 		public static bool CanAddGoodsNum(GameClient client, int num, int site)
 		{
 			return client != null && num > 0;
 		}
 
-		// Token: 0x06000B99 RID: 2969 RVA: 0x000B5D44 File Offset: 0x000B3F44
+		
 		public static int GetMaxBagCount(int site)
 		{
 			return 1000;
 		}
 
-		// Token: 0x06000B9A RID: 2970 RVA: 0x000B5D5C File Offset: 0x000B3F5C
+		
 		public static GoodsData GetResGoodsData(MoneyTypes type, int gcount)
 		{
 			GoodsData result;
@@ -669,7 +669,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000B9B RID: 2971 RVA: 0x000B5DD4 File Offset: 0x000B3FD4
+		
 		public static List<GoodsData> GetGoodsListBySiteFromDB(GameClient client, int site)
 		{
 			List<GoodsData> result;
@@ -693,7 +693,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000B9C RID: 2972 RVA: 0x000B5E7C File Offset: 0x000B407C
+		
 		public static int GetMeditateBagGoodsCnt(GameClient client)
 		{
 			if (null == client.ClientData.MeditateGoodsDataList)
@@ -707,7 +707,7 @@ namespace GameServer.Logic
 			return client.ClientData.MeditateGoodsDataList.Count;
 		}
 
-		// Token: 0x06000B9D RID: 2973 RVA: 0x000B5EF0 File Offset: 0x000B40F0
+		
 		public static void ProcessMeditateGoods(GameClient client)
 		{
 			int GetRewardTime = Global.GetMingXiangGoodsInterval(client);
@@ -741,13 +741,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000B9E RID: 2974 RVA: 0x000B600C File Offset: 0x000B420C
+		
 		public static long GetLastGiveMeditateTime(GameClient client)
 		{
 			return (long)(GoodsUtil.GetMeditateBagGoodsCnt(client) * Global.GetMingXiangGoodsInterval(client));
 		}
 
-		// Token: 0x06000B9F RID: 2975 RVA: 0x000B602C File Offset: 0x000B422C
+		
 		public static GoodsData GiveOneMeditateGood(GameClient client)
 		{
 			int packageID = Global.GetMingXiangPackageID(client);
@@ -777,13 +777,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000BA0 RID: 2976 RVA: 0x000B60D4 File Offset: 0x000B42D4
+		
 		public static bool MoveGoodsSite(GameClient client, GoodsData goodsData, int newSite)
 		{
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x040012D1 RID: 4817
+		
 		private static Dictionary<int, GoodsTypeInfo> GoodsTypeInfoDict = new Dictionary<int, GoodsTypeInfo>
 		{
 			{
@@ -965,13 +965,13 @@ namespace GameServer.Logic
 			}
 		};
 
-		// Token: 0x040012D2 RID: 4818
+		
 		public static Dictionary<int, int> GetGoodsIdDict = new Dictionary<int, int>();
 
-		// Token: 0x040012D3 RID: 4819
+		
 		private static object _logItemLock = new object();
 
-		// Token: 0x040012D4 RID: 4820
+		
 		private static Dictionary<int, int> _logItemDict_storage = null;
 	}
 }

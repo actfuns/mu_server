@@ -2,10 +2,10 @@
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007A4 RID: 1956
+	
 	internal class UseFruitVerify
 	{
-		// Token: 0x0600330B RID: 13067 RVA: 0x002D44A8 File Offset: 0x002D26A8
+		
 		public static int GetFruitAddPropLimit(GameClient client, string strPropName)
 		{
 			ChangeLifeAddPointInfo tmpChangeAddPointInfo = Data.ChangeLifeAddPointInfoList[client.ClientData.ChangeLifeCount];
@@ -33,7 +33,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600330C RID: 13068 RVA: 0x002D4544 File Offset: 0x002D2744
+		
 		public static int AddValueVerify(GameClient client, int nOld, int nPropLimit, int nAddValue)
 		{
 			if (nOld < nPropLimit)

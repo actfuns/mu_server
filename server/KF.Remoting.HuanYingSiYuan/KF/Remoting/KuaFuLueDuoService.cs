@@ -10,18 +10,18 @@ using Server.Tools;
 
 namespace KF.Remoting
 {
-    // Token: 0x0200006F RID: 111
+    
     public class KuaFuLueDuoService
     {
-        // Token: 0x06000563 RID: 1379 RVA: 0x00047968 File Offset: 0x00045B68
+        
         public static KuaFuLueDuoService Instance()
         {
             return KuaFuLueDuoService._instance;
         }
 
-        // Token: 0x1700002E RID: 46
-        // (get) Token: 0x06000564 RID: 1380 RVA: 0x00047980 File Offset: 0x00045B80
-        // (set) Token: 0x06000565 RID: 1381 RVA: 0x0004799D File Offset: 0x00045B9D
+        
+        
+        
         private Dictionary<int, KuaFuLueDuoServerInfo> ServerInfoDict
         {
             get
@@ -34,9 +34,9 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x1700002F RID: 47
-        // (get) Token: 0x06000566 RID: 1382 RVA: 0x000479AC File Offset: 0x00045BAC
-        // (set) Token: 0x06000567 RID: 1383 RVA: 0x000479C9 File Offset: 0x00045BC9
+        
+        
+        
         private Dictionary<int, KuaFuData<KuaFuLueDuoBHData>> KuaFuLueDuoBHDataDict
         {
             get
@@ -49,9 +49,9 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x17000030 RID: 48
-        // (get) Token: 0x06000568 RID: 1384 RVA: 0x000479D8 File Offset: 0x00045BD8
-        // (set) Token: 0x06000569 RID: 1385 RVA: 0x000479F5 File Offset: 0x00045BF5
+        
+        
+        
         private Dictionary<int, KuaFuLueDuoRankListData> KuaFuLueDuoRankInfoDict
         {
             get
@@ -64,9 +64,9 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x17000031 RID: 49
-        // (get) Token: 0x0600056A RID: 1386 RVA: 0x00047A04 File Offset: 0x00045C04
-        // (set) Token: 0x0600056B RID: 1387 RVA: 0x00047A21 File Offset: 0x00045C21
+        
+        
+        
         private int SeasonCount
         {
             get
@@ -79,7 +79,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x0600056C RID: 1388 RVA: 0x00047A30 File Offset: 0x00045C30
+        
         public bool InitConfig()
         {
             bool result;
@@ -116,13 +116,13 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x0600056D RID: 1389 RVA: 0x00047B98 File Offset: 0x00045D98
+        
         private int ComputeCurrentSeasonID(DateTime now)
         {
             return TimeUtil.GetOffsetDay2(TimeUtil.NowDateTime());
         }
 
-        // Token: 0x0600056E RID: 1390 RVA: 0x00047BB4 File Offset: 0x00045DB4
+        
         public bool LoadDatabase(DateTime now, bool hist)
         {
             try
@@ -193,13 +193,13 @@ namespace KF.Remoting
             return false;
         }
 
-        // Token: 0x0600056F RID: 1391 RVA: 0x00047F40 File Offset: 0x00046140
+        
         public void OnStopServer()
         {
             this.Persistence.DelayWriteDataProc();
         }
 
-        // Token: 0x06000570 RID: 1392 RVA: 0x00047F50 File Offset: 0x00046150
+        
         public void Update(DateTime now)
         {
             try
@@ -224,7 +224,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x06000571 RID: 1393 RVA: 0x00047FFC File Offset: 0x000461FC
+        
         private void InitFuBenManagerData(DateTime now)
         {
             if (this.StateMachine.GetCurrState() == KuaFuLueDuoStateMachine.StateType.None)
@@ -241,7 +241,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x06000572 RID: 1394 RVA: 0x0004810C File Offset: 0x0004630C
+        
         private int GetServerIdByZoneId(int zoneId)
         {
             KuaFuLueDuoGroupItem g;
@@ -258,7 +258,7 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x06000573 RID: 1395 RVA: 0x00048198 File Offset: 0x00046398
+        
         private void InitGroupServerList()
         {
             DateTime now = TimeUtil.NowDateTime();
@@ -357,7 +357,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x06000574 RID: 1396 RVA: 0x000485C4 File Offset: 0x000467C4
+        
         private void MS_Init_Update(DateTime now, int param)
         {
             this.SeasonID = this.ComputeCurrentSeasonID(now);
@@ -417,7 +417,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x06000575 RID: 1397 RVA: 0x000487B4 File Offset: 0x000469B4
+        
         private void MS_SignUp_Update(DateTime now, int param)
         {
             TimeSpan nowTs = TimeUtil.GetTimeOfWeekNow2();
@@ -496,7 +496,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x06000576 RID: 1398 RVA: 0x00048B18 File Offset: 0x00046D18
+        
         private void UpdateSignUpRound()
         {
             if (this.SignUpRound > 0)
@@ -527,7 +527,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x06000577 RID: 1399 RVA: 0x00048C68 File Offset: 0x00046E68
+        
         private void MS_PrepareGame_Update(DateTime now, int param)
         {
             TimeSpan nowTs = TimeUtil.GetTimeOfWeekNow2();
@@ -630,7 +630,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x06000578 RID: 1400 RVA: 0x0004912C File Offset: 0x0004732C
+        
         private void MS_NotifyEnter_Update(DateTime now, int param)
         {
             KuaFuLueDuoStateMachine.StateType nextGameState = KuaFuLueDuoStateMachine.StateType.GameStart;
@@ -657,7 +657,7 @@ namespace KF.Remoting
             }), null, true);
         }
 
-        // Token: 0x06000579 RID: 1401 RVA: 0x00049254 File Offset: 0x00047454
+        
         private void MS_GameStart_Update(DateTime now, int param)
         {
             TimeSpan nowTs = TimeUtil.GetTimeOfWeekNow2();
@@ -691,7 +691,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x0600057A RID: 1402 RVA: 0x000493B8 File Offset: 0x000475B8
+        
         private void HandleUnCompleteFuBenData()
         {
             foreach (KeyValuePair<long, KuaFuLueDuoFuBenData> fubenItem in this.FuBenMgr.FuBenDataDict)
@@ -732,7 +732,7 @@ namespace KF.Remoting
             this.FuBenMgr.Clear();
         }
 
-        // Token: 0x0600057B RID: 1403 RVA: 0x00049598 File Offset: 0x00047798
+        
         private void MS_RankAnalyse_Enter(DateTime now, int param)
         {
             this.GameState = 4;
@@ -766,7 +766,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x0600057C RID: 1404 RVA: 0x000496DC File Offset: 0x000478DC
+        
         public KuaFuLueDuoSyncData SyncData_KuaFuLueDuo(byte[] bytes)
         {
             try
@@ -881,7 +881,7 @@ namespace KF.Remoting
             };
         }
 
-        // Token: 0x0600057D RID: 1405 RVA: 0x00049B8C File Offset: 0x00047D8C
+        
         public KuaFuLueDuoJingJiaResult JingJia_KuaFuLueDuo(int bhid, int zoneid_bh, string bhname, int ziJin, int serverId, int oldZiJin)
         {
             KuaFuLueDuoJingJiaResult result = new KuaFuLueDuoJingJiaResult(0, 0, 0);
@@ -1012,7 +1012,7 @@ namespace KF.Remoting
             return -11003;
         }
 
-        // Token: 0x0600057E RID: 1406 RVA: 0x0004A13C File Offset: 0x0004833C
+        
         public KuaFuLueDuoFuBenData GetFuBenDataByServerId_KuaFuLueDuo(int serverId)
         {
             KuaFuLueDuoFuBenData fuBenData = null;
@@ -1037,7 +1037,7 @@ namespace KF.Remoting
             return fuBenData;
         }
 
-        // Token: 0x0600057F RID: 1407 RVA: 0x0004A220 File Offset: 0x00048420
+        
         public KuaFuLueDuoFuBenData GetFuBenDataByGameId_KuaFuLueDuo(long gameid)
         {
             KuaFuLueDuoFuBenData fuBenData = null;
@@ -1055,7 +1055,7 @@ namespace KF.Remoting
             return fuBenData;
         }
 
-        // Token: 0x06000580 RID: 1408 RVA: 0x0004A2A8 File Offset: 0x000484A8
+        
         public byte[] GetRoleData_KuaFuLueDuo(long rid)
         {
             byte[] result = null;
@@ -1071,7 +1071,7 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x06000581 RID: 1409 RVA: 0x0004A300 File Offset: 0x00048500
+        
         public KuaFuCmdData GetBHDataByBhid_KuaFuLueDuo(int bhid, long age)
         {
             try
@@ -1105,7 +1105,7 @@ namespace KF.Remoting
             return null;
         }
 
-        // Token: 0x06000582 RID: 1410 RVA: 0x0004A3E4 File Offset: 0x000485E4
+        
         public int GameFuBenComplete_KuaFuLueDuo(KuaFuLueDuoStatisticalData data)
         {
             int result = 0;
@@ -1202,58 +1202,58 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x040002EF RID: 751
+        
         public const GameTypes GameType = GameTypes.KuaFuLueDuo;
 
-        // Token: 0x040002F0 RID: 752
+        
         public const GameTypes NotifyGameType = GameTypes.HuanYingSiYuan;
 
-        // Token: 0x040002F1 RID: 753
+        
         private static KuaFuLueDuoService _instance = new KuaFuLueDuoService();
 
-        // Token: 0x040002F2 RID: 754
+        
         private object Mutex = new object();
 
-        // Token: 0x040002F3 RID: 755
+        
         private bool Initialized = false;
 
-        // Token: 0x040002F4 RID: 756
+        
         private KuaFuLueDuoCommonData RuntimeData = new KuaFuLueDuoCommonData();
 
-        // Token: 0x040002F5 RID: 757
+        
         public KuaFuLueDuoPersistence Persistence = KuaFuLueDuoPersistence.Instance;
 
-        // Token: 0x040002F6 RID: 758
+        
         private int GameState;
 
-        // Token: 0x040002F7 RID: 759
+        
         private DateTime LastDate;
 
-        // Token: 0x040002F8 RID: 760
+        
         private Dictionary<int, KuaFuLueDuoSyncData> SyncDataDict = new Dictionary<int, KuaFuLueDuoSyncData>();
 
-        // Token: 0x040002F9 RID: 761
+        
         private int SeasonID;
 
-        // Token: 0x040002FA RID: 762
+        
         private int LastSeasonID;
 
-        // Token: 0x040002FB RID: 763
+        
         private int MinSeasonID;
 
-        // Token: 0x040002FC RID: 764
+        
         private int SignUpRound;
 
-        // Token: 0x040002FD RID: 765
+        
         private KuaFuLueDuoFuBenMgrData FuBenMgr = new KuaFuLueDuoFuBenMgrData();
 
-        // Token: 0x040002FE RID: 766
+        
         private KuaFuLueDuoStateMachine StateMachine = new KuaFuLueDuoStateMachine();
 
-        // Token: 0x040002FF RID: 767
+        
         private uint UpdateFrameCount = 0U;
 
-        // Token: 0x04000300 RID: 768
+        
         private DateTime LastUpdateTime = DateTime.MinValue;
     }
 }

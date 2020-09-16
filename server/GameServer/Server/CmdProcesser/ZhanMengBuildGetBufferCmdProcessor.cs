@@ -5,22 +5,22 @@ using Server.Tools;
 
 namespace GameServer.Server.CmdProcesser
 {
-	// Token: 0x020008AF RID: 2223
+	
 	public class ZhanMengBuildGetBufferCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x06003DAB RID: 15787 RVA: 0x0034B684 File Offset: 0x00349884
+		
 		private ZhanMengBuildGetBufferCmdProcessor()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(602, 4, this);
 		}
 
-		// Token: 0x06003DAC RID: 15788 RVA: 0x0034B6A4 File Offset: 0x003498A4
+		
 		public static ZhanMengBuildGetBufferCmdProcessor getInstance()
 		{
 			return ZhanMengBuildGetBufferCmdProcessor.instance;
 		}
 
-		// Token: 0x06003DAD RID: 15789 RVA: 0x0034B6BC File Offset: 0x003498BC
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			int roleID = Global.SafeConvertToInt32(cmdParams[0]);
@@ -128,7 +128,7 @@ namespace GameServer.Server.CmdProcesser
 			return result;
 		}
 
-		// Token: 0x06003DAE RID: 15790 RVA: 0x0034BA0C File Offset: 0x00349C0C
+		
 		private void installBuff(GameClient client, int nNewBufferGoodsIndexID, int buildType, int secs)
 		{
 			BufferData bufferData = Global.GetBufferDataByID(client, 88 + buildType - 1);
@@ -143,7 +143,7 @@ namespace GameServer.Server.CmdProcesser
 			GameManager.ClientMgr.NotifyOthersLifeChanged(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, client, true, false, 7);
 		}
 
-		// Token: 0x040047C0 RID: 18368
+		
 		private static ZhanMengBuildGetBufferCmdProcessor instance = new ZhanMengBuildGetBufferCmdProcessor();
 	}
 }

@@ -11,10 +11,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.FluorescentGem
 {
-    // Token: 0x020002B0 RID: 688
+    
     public class FluorescentGemManager
     {
-        // Token: 0x06000A7C RID: 2684 RVA: 0x000A52AC File Offset: 0x000A34AC
+        
         private void LoadFluorescentGemLevelTypeConfigData()
         {
             try
@@ -49,7 +49,7 @@ namespace GameServer.Logic.FluorescentGem
             }
         }
 
-        // Token: 0x06000A7D RID: 2685 RVA: 0x000A5438 File Offset: 0x000A3638
+        
         private void LoadFluorescentGemDigConfigData()
         {
             try
@@ -92,7 +92,7 @@ namespace GameServer.Logic.FluorescentGem
             }
         }
 
-        // Token: 0x06000A7E RID: 2686 RVA: 0x000A564C File Offset: 0x000A384C
+        
         private void LoadFluorescentGemUpConfigData()
         {
             try
@@ -133,25 +133,25 @@ namespace GameServer.Logic.FluorescentGem
             }
         }
 
-        // Token: 0x06000A7F RID: 2687 RVA: 0x000A5850 File Offset: 0x000A3A50
+        
         private bool IsSameGem(FluorescentGemUpConfigData data1, FluorescentGemUpConfigData data2)
         {
             return data1 != null && null != data2 && (data1._ElementsType == data2._ElementsType && data1._GemType == data2._GemType);
         }
 
-        // Token: 0x06000A80 RID: 2688 RVA: 0x000A58A4 File Offset: 0x000A3AA4
+        
         private bool CheckEquipPositionIndex(int nIndex)
         {
             return nIndex > 0 && nIndex < 11;
         }
 
-        // Token: 0x06000A81 RID: 2689 RVA: 0x000A58D0 File Offset: 0x000A3AD0
+        
         private bool CheckGemTypeIndex(int nIndex)
         {
             return nIndex > 0 && nIndex < 4;
         }
 
-        // Token: 0x06000A82 RID: 2690 RVA: 0x000A58FC File Offset: 0x000A3AFC
+        
         private int GetFluorescentPointByGoodsID(int nGoodsID)
         {
             SystemXmlItem systemGoods = null;
@@ -167,7 +167,7 @@ namespace GameServer.Logic.FluorescentGem
             return result;
         }
 
-        // Token: 0x06000A83 RID: 2691 RVA: 0x000A5938 File Offset: 0x000A3B38
+        
         private int GetFluorescentGemBagSpace(GameClient client)
         {
             int result;
@@ -182,7 +182,7 @@ namespace GameServer.Logic.FluorescentGem
             return result;
         }
 
-        // Token: 0x06000A84 RID: 2692 RVA: 0x000A59BC File Offset: 0x000A3BBC
+        
         private void ResetBagAllGoods(GameClient client)
         {
             lock (client.ClientData.FluorescentGemData)
@@ -270,7 +270,7 @@ namespace GameServer.Logic.FluorescentGem
             }
         }
 
-        // Token: 0x06000A85 RID: 2693 RVA: 0x000A5CB8 File Offset: 0x000A3EB8
+        
         public Dictionary<int, GoodsData> GetBagDict(GameClient client)
         {
             Dictionary<int, GoodsData> dict = new Dictionary<int, GoodsData>();
@@ -284,7 +284,7 @@ namespace GameServer.Logic.FluorescentGem
             return dict;
         }
 
-        // Token: 0x06000A86 RID: 2694 RVA: 0x000A5D4C File Offset: 0x000A3F4C
+        
         public Dictionary<int, Dictionary<int, GoodsData>> GetEquipDict(GameClient client)
         {
             Dictionary<int, Dictionary<int, GoodsData>> result = new Dictionary<int, Dictionary<int, GoodsData>>();
@@ -304,7 +304,7 @@ namespace GameServer.Logic.FluorescentGem
             return result;
         }
 
-        // Token: 0x06000A87 RID: 2695 RVA: 0x000A5DFC File Offset: 0x000A3FFC
+        
         private EFluorescentGemDigErrorCode FluorescentGemDig(GameClient client, int nLevelType, int nDigType, out List<int> gemList)
         {
             gemList = new List<int>();
@@ -418,7 +418,7 @@ namespace GameServer.Logic.FluorescentGem
             return EFluorescentGemDigErrorCode.Error;
         }
 
-        // Token: 0x06000A88 RID: 2696 RVA: 0x000A6270 File Offset: 0x000A4470
+        
         private EFluorescentGemDigErrorCode FluorescentGemDig_BigNum(GameClient client, int nLevelType, int nDigType, out Dictionary<int, int> gemDict)
         {
             gemDict = new Dictionary<int, int>();
@@ -532,7 +532,7 @@ namespace GameServer.Logic.FluorescentGem
             return EFluorescentGemDigErrorCode.Error;
         }
 
-        // Token: 0x06000A89 RID: 2697 RVA: 0x000A676C File Offset: 0x000A496C
+        
         private EFluorescentGemResolveErrorCode FluorescentGemResolve(GameClient client, int nBagIndex, int nResolveCount)
         {
             try
@@ -572,20 +572,20 @@ namespace GameServer.Logic.FluorescentGem
             return EFluorescentGemResolveErrorCode.Error;
         }
 
-        // Token: 0x06000A8A RID: 2698 RVA: 0x000A6904 File Offset: 0x000A4B04
+        
         public int GenerateBagIndex(int pos, int type)
         {
             return pos * 100 + type;
         }
 
-        // Token: 0x06000A8B RID: 2699 RVA: 0x000A691C File Offset: 0x000A4B1C
+        
         public void ParsePosAndType(int bagIndex, out int pos, out int type)
         {
             pos = bagIndex / 100;
             type = bagIndex % 100;
         }
 
-        // Token: 0x06000A8C RID: 2700 RVA: 0x000A69F4 File Offset: 0x000A4BF4
+        
         private EFluorescentGemUpErrorCode FluorescentGemUp(GameClient client, FluorescentGemUpTransferData upData, out int nNewGoodsDBID)
         {
             nNewGoodsDBID = -1;
@@ -780,7 +780,7 @@ namespace GameServer.Logic.FluorescentGem
             return EFluorescentGemUpErrorCode.Error;
         }
 
-        // Token: 0x06000A8D RID: 2701 RVA: 0x000A7208 File Offset: 0x000A5408
+        
         private EFluorescentGemEquipErrorCode FluorescentGemEquip(GameClient client, int nBagIndex, int nPositionIndex, int nGemType)
         {
             try
@@ -856,7 +856,7 @@ namespace GameServer.Logic.FluorescentGem
             return EFluorescentGemEquipErrorCode.Error;
         }
 
-        // Token: 0x06000A8E RID: 2702 RVA: 0x000A7528 File Offset: 0x000A5728
+        
         private EFluorescentGemUnEquipErrorCode FluorescentGemUnEquip(GameClient client, int nUnEquipType, int nPositionIndex, int nGemType)
         {
             try
@@ -961,7 +961,7 @@ namespace GameServer.Logic.FluorescentGem
             return EFluorescentGemUnEquipErrorCode.Error;
         }
 
-        // Token: 0x06000A8F RID: 2703 RVA: 0x000A7960 File Offset: 0x000A5B60
+        
         private bool NotifyEquipGem(GameClient client, FluorescentGemSaveDBData data)
         {
             bool result;
@@ -1006,7 +1006,7 @@ namespace GameServer.Logic.FluorescentGem
             return result;
         }
 
-        // Token: 0x06000A90 RID: 2704 RVA: 0x000A7B94 File Offset: 0x000A5D94
+        
         private bool NotifyUnEquipGem(GameClient client, FluorescentGemSaveDBData data, int nOP)
         {
             bool result;
@@ -1056,7 +1056,7 @@ namespace GameServer.Logic.FluorescentGem
             return result;
         }
 
-        // Token: 0x06000A91 RID: 2705 RVA: 0x000A7DB4 File Offset: 0x000A5FB4
+        
         public void LoadFluorescentGemConfigData()
         {
             this.LoadFluorescentGemDigConfigData();
@@ -1064,7 +1064,7 @@ namespace GameServer.Logic.FluorescentGem
             this.LoadFluorescentGemUpConfigData();
         }
 
-        // Token: 0x06000A92 RID: 2706 RVA: 0x000A7DCC File Offset: 0x000A5FCC
+        
         public bool IsOpenFluorescentGem(GameClient client)
         {
             bool result;
@@ -1084,14 +1084,14 @@ namespace GameServer.Logic.FluorescentGem
             return result;
         }
 
-        // Token: 0x06000A93 RID: 2707 RVA: 0x000A7E3C File Offset: 0x000A603C
+        
         public bool CheckIsFluorescentGemByGoodsID(int nGoodsID)
         {
             SystemXmlItem systemGoods = null;
             return GameManager.SystemGoods.SystemXmlItemDict.TryGetValue(nGoodsID, out systemGoods) && systemGoods.GetIntValue("Categoriy", -1) == 901;
         }
 
-        // Token: 0x06000A94 RID: 2708 RVA: 0x000A7E80 File Offset: 0x000A6080
+        
         public void OnLogin(GameClient client)
         {
             if (client != null)
@@ -1122,7 +1122,7 @@ namespace GameServer.Logic.FluorescentGem
             }
         }
 
-        // Token: 0x06000A95 RID: 2709 RVA: 0x000A7FAC File Offset: 0x000A61AC
+        
         private void UpdateProps(GameClient client)
         {
             if (client != null)
@@ -1153,7 +1153,7 @@ namespace GameServer.Logic.FluorescentGem
             }
         }
 
-        // Token: 0x06000A96 RID: 2710 RVA: 0x000A80E4 File Offset: 0x000A62E4
+        
         public bool AddFluorescentPoint(GameClient client, int nAddPoint, string reasonStr, bool notifyClient = true)
         {
             bool result;
@@ -1187,7 +1187,7 @@ namespace GameServer.Logic.FluorescentGem
             return result;
         }
 
-        // Token: 0x06000A97 RID: 2711 RVA: 0x000A81B0 File Offset: 0x000A63B0
+        
         public bool DecFluorescentPoint(GameClient client, int nDecPoint, string reasonStr, bool isGM = false)
         {
             bool result;
@@ -1231,7 +1231,7 @@ namespace GameServer.Logic.FluorescentGem
             return result;
         }
 
-        // Token: 0x06000A98 RID: 2712 RVA: 0x000A82C0 File Offset: 0x000A64C0
+        
         public bool UpdateFluorescentPoint2DB(GameClient client, int nTotalPoint)
         {
             bool result;
@@ -1248,7 +1248,7 @@ namespace GameServer.Logic.FluorescentGem
             return result;
         }
 
-        // Token: 0x06000A99 RID: 2713 RVA: 0x000A8320 File Offset: 0x000A6520
+        
         public bool ModifyFluorescentPoint2DB(int rid, int nPointChg)
         {
             string dbStrCmd = string.Format("{0}:{1}", rid, nPointChg);
@@ -1256,7 +1256,7 @@ namespace GameServer.Logic.FluorescentGem
             return Global.sendToDB<bool, byte[]>(10211, dbBytesCmd, 0);
         }
 
-        // Token: 0x06000A9A RID: 2714 RVA: 0x000A8364 File Offset: 0x000A6564
+        
         public GoodsData AddFluorescentGemData(GameClient client, int id, int goodsID, int forgeLevel, int quality, int goodsNum, int binding, int site, string jewelList, string startTime, string endTime, int addPropIndex, int bornIndex, int lucky, int strong, int ExcellenceProperty, int nAppendPropLev, int nEquipChangeLife, int bagIndex = 0, List<int> washProps = null)
         {
             GoodsData gd = new GoodsData
@@ -1287,7 +1287,7 @@ namespace GameServer.Logic.FluorescentGem
             return gd;
         }
 
-        // Token: 0x06000A9B RID: 2715 RVA: 0x000A8430 File Offset: 0x000A6630
+        
         public void AddFluorescentGemData(GameClient client, GoodsData gd)
         {
             if (null != gd)
@@ -1303,7 +1303,7 @@ namespace GameServer.Logic.FluorescentGem
             }
         }
 
-        // Token: 0x06000A9C RID: 2716 RVA: 0x000A84F0 File Offset: 0x000A66F0
+        
         public void RemoveFluorescentGemData(GameClient client, GoodsData goodsData)
         {
             if (7000 == goodsData.Site)
@@ -1315,7 +1315,7 @@ namespace GameServer.Logic.FluorescentGem
             }
         }
 
-        // Token: 0x06000A9D RID: 2717 RVA: 0x000A85AC File Offset: 0x000A67AC
+        
         public int GetIdleSlotOfFluorescentGemBag(GameClient client)
         {
             int idelPos = -1;
@@ -1348,13 +1348,13 @@ namespace GameServer.Logic.FluorescentGem
             return result;
         }
 
-        // Token: 0x06000A9E RID: 2718 RVA: 0x000A8674 File Offset: 0x000A6874
+        
         public bool CanAddGoodsNum(GameClient client, int num)
         {
             return client != null && num > 0 && num + client.ClientData.FluorescentGemData.GemBagList.Count <= 220;
         }
 
-        // Token: 0x06000A9F RID: 2719 RVA: 0x000A86E4 File Offset: 0x000A68E4
+        
         public GoodsData GetGoodsByID(GameClient client, int goodsID, int bingding, string startTime, string endTime, ref int startIndex)
         {
             GoodsData result;
@@ -1395,7 +1395,7 @@ namespace GameServer.Logic.FluorescentGem
             return result;
         }
 
-        // Token: 0x06000AA0 RID: 2720 RVA: 0x000A8880 File Offset: 0x000A6A80
+        
         public TCPProcessCmdResults ProcessResetBagCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
         {
             tcpOutPacket = null;
@@ -1442,7 +1442,7 @@ namespace GameServer.Logic.FluorescentGem
             return TCPProcessCmdResults.RESULT_FAILED;
         }
 
-        // Token: 0x06000AA1 RID: 2721 RVA: 0x000A89F0 File Offset: 0x000A6BF0
+        
         public TCPProcessCmdResults ProcessFluorescentGemDig(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
         {
             tcpOutPacket = null;
@@ -1510,7 +1510,7 @@ namespace GameServer.Logic.FluorescentGem
             return TCPProcessCmdResults.RESULT_FAILED;
         }
 
-        // Token: 0x06000AA2 RID: 2722 RVA: 0x000A8BFC File Offset: 0x000A6DFC
+        
         public TCPProcessCmdResults ProcessFluorescentGemResolve(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
         {
             tcpOutPacket = null;
@@ -1561,7 +1561,7 @@ namespace GameServer.Logic.FluorescentGem
             return TCPProcessCmdResults.RESULT_FAILED;
         }
 
-        // Token: 0x06000AA3 RID: 2723 RVA: 0x000A8DCC File Offset: 0x000A6FCC
+        
         public TCPProcessCmdResults ProcessFluorescentGemUp(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
         {
             tcpOutPacket = null;
@@ -1606,7 +1606,7 @@ namespace GameServer.Logic.FluorescentGem
             return TCPProcessCmdResults.RESULT_FAILED;
         }
 
-        // Token: 0x06000AA4 RID: 2724 RVA: 0x000A8F6C File Offset: 0x000A716C
+        
         public TCPProcessCmdResults ProcessFluorescentGemEquip(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
         {
             tcpOutPacket = null;
@@ -1658,7 +1658,7 @@ namespace GameServer.Logic.FluorescentGem
             return TCPProcessCmdResults.RESULT_FAILED;
         }
 
-        // Token: 0x06000AA5 RID: 2725 RVA: 0x000A9144 File Offset: 0x000A7344
+        
         public TCPProcessCmdResults ProcessFluorescentGemUnEquip(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
         {
             tcpOutPacket = null;
@@ -1714,7 +1714,7 @@ namespace GameServer.Logic.FluorescentGem
             return TCPProcessCmdResults.RESULT_FAILED;
         }
 
-        // Token: 0x06000AA6 RID: 2726 RVA: 0x000A933C File Offset: 0x000A753C
+        
         public void GMClearGemBag(GameClient client)
         {
             if (null != client)
@@ -1731,7 +1731,7 @@ namespace GameServer.Logic.FluorescentGem
             }
         }
 
-        // Token: 0x06000AA7 RID: 2727 RVA: 0x000A93E8 File Offset: 0x000A75E8
+        
         public void GMAddFluorescentPoint(GameClient client, int nPoint)
         {
             if (null != client)
@@ -1740,7 +1740,7 @@ namespace GameServer.Logic.FluorescentGem
             }
         }
 
-        // Token: 0x06000AA8 RID: 2728 RVA: 0x000A9414 File Offset: 0x000A7614
+        
         public void GMDecFluorescentPoint(GameClient client, int nPoint)
         {
             if (null != client)
@@ -1749,13 +1749,13 @@ namespace GameServer.Logic.FluorescentGem
             }
         }
 
-        // Token: 0x0400118A RID: 4490
+        
         private Dictionary<int, FluorescentGemLevelTypeConfigData> FluorescentGemLevelTypeConfigDict = new Dictionary<int, FluorescentGemLevelTypeConfigData>();
 
-        // Token: 0x0400118B RID: 4491
+        
         private Dictionary<int, List<FluorescentGemDigConfigData>> FluorescentGemDigConfigDict = new Dictionary<int, List<FluorescentGemDigConfigData>>();
 
-        // Token: 0x0400118C RID: 4492
+        
         private Dictionary<int, FluorescentGemUpConfigData> FluorescentGemUpConfigDict = new Dictionary<int, FluorescentGemUpConfigData>();
     }
 }

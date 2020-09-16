@@ -12,10 +12,10 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004F3 RID: 1267
+	
 	public static class WashPropsManager
 	{
-		// Token: 0x06001786 RID: 6022 RVA: 0x0017012C File Offset: 0x0016E32C
+		
 		public static bool initialize()
 		{
 			WashPropsManager.InitConfig();
@@ -24,25 +24,25 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001787 RID: 6023 RVA: 0x0017017C File Offset: 0x0016E37C
+		
 		public static bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x06001788 RID: 6024 RVA: 0x00170190 File Offset: 0x0016E390
+		
 		public static bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06001789 RID: 6025 RVA: 0x001701A4 File Offset: 0x0016E3A4
+		
 		public static bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600178A RID: 6026 RVA: 0x001701B8 File Offset: 0x0016E3B8
+		
 		public static void InitConfig()
 		{
 			WashPropsManager.XiLianTypeDict.Clear();
@@ -113,7 +113,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600178B RID: 6027 RVA: 0x001704F8 File Offset: 0x0016E6F8
+		
 		public static void ParseXiLianShuXing(XElement node)
 		{
 			XiLianShuXing xiLianShuXing = new XiLianShuXing();
@@ -147,7 +147,7 @@ namespace GameServer.Logic
 			WashPropsManager.XiLianShuXingDict.Add(xiLianShuXing.ID, xiLianShuXing);
 		}
 
-		// Token: 0x0600178C RID: 6028 RVA: 0x001706A8 File Offset: 0x0016E8A8
+		
 		public static bool WashProps(GameClient client, int dbid, int washIndex, bool firstUseBinding, int moneyType)
 		{
 			int nID = 645;
@@ -620,7 +620,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x0600178D RID: 6029 RVA: 0x00171948 File Offset: 0x0016FB48
+		
 		public static bool WashPropsInherit(GameClient client, int leftGoodsDbID, int rightGoodsDbID, int nSubMoneyType)
 		{
 			int roleID = client.ClientData.RoleID;
@@ -906,7 +906,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x0600178E RID: 6030 RVA: 0x0017243C File Offset: 0x0017063C
+		
 		public static List<int> WashPropsMax(params List<int>[] args)
 		{
 			List<int> washProps = null;
@@ -939,43 +939,43 @@ namespace GameServer.Logic
 			return washProps;
 		}
 
-		// Token: 0x04002194 RID: 8596
+		
 		private static int[] XiLianChuanChengGoodsRates = new int[5];
 
-		// Token: 0x04002195 RID: 8597
+		
 		private static int[] XiLianChuanChengXiaoHaoJinBi = new int[16];
 
-		// Token: 0x04002196 RID: 8598
+		
 		private static int[] XiLianChuanChengXiaoHaoZhuanShi = new int[16];
 
-		// Token: 0x04002197 RID: 8599
+		
 		private static List<int> PropsIds = new List<int>();
 
-		// Token: 0x04002198 RID: 8600
+		
 		private static Dictionary<int, XiLianType> XiLianTypeDict = new Dictionary<int, XiLianType>();
 
-		// Token: 0x04002199 RID: 8601
+		
 		private static Dictionary<int, XiLianShuXing> XiLianShuXingDict = new Dictionary<int, XiLianShuXing>();
 
-		// Token: 0x020004F4 RID: 1268
+		
 		public static class WashOperations
 		{
-			// Token: 0x0400219A RID: 8602
+			
 			public const int WashProps = 0;
 
-			// Token: 0x0400219B RID: 8603
+			
 			public const int WashPropsActive = -1;
 
-			// Token: 0x0400219C RID: 8604
+			
 			public const int WashPropsQuantity = -2;
 
-			// Token: 0x0400219D RID: 8605
+			
 			public const int WashPropsCommit = -3;
 
-			// Token: 0x0400219E RID: 8606
+			
 			public const int WashPropsCancle = -4;
 
-			// Token: 0x0400219F RID: 8607
+			
 			public const int WashPropsQuery = -5;
 		}
 	}

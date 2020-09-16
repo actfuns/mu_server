@@ -9,10 +9,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004D7 RID: 1239
+	
 	internal class EMoLaiXiCopySceneManager
 	{
-		// Token: 0x060016FF RID: 5887 RVA: 0x00168A34 File Offset: 0x00166C34
+		
 		public static void LoadEMoLaiXiCopySceneInfo()
 		{
 			try
@@ -119,7 +119,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001700 RID: 5888 RVA: 0x00168E8C File Offset: 0x0016708C
+		
 		public static void AddEMoLaiXiCopySceneList(int nID, CopyMap mapInfo)
 		{
 			bool bInsert = false;
@@ -153,7 +153,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001701 RID: 5889 RVA: 0x00168FAC File Offset: 0x001671AC
+		
 		public static void RemoveEMoLaiXiCopySceneList(int nID, int copyMapID)
 		{
 			lock (EMoLaiXiCopySceneManager.m_EMoLaiXiCopySceneLists)
@@ -170,7 +170,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001702 RID: 5890 RVA: 0x00169084 File Offset: 0x00167284
+		
 		public static void HeartBeatEMoLaiXiCopyScene()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -228,7 +228,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001703 RID: 5891 RVA: 0x0016930C File Offset: 0x0016750C
+		
 		public static void OnSceneTimer(EMoLaiXiCopySence scene, List<GameClient> clientList, CopyMap copyMap, long nowTicks)
 		{
 			int nWave = scene.m_CreateMonsterWave;
@@ -344,7 +344,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001704 RID: 5892 RVA: 0x00169778 File Offset: 0x00167978
+		
 		public static void InitNextWaveMonsterList(EMoLaiXiCopySence scene)
 		{
 			if (scene.m_CreateMonsterWave >= 0 && scene.m_CreateMonsterWave < EMoLaiXiCopySceneManager.EMoLaiXiCopySencedata.TotalWave)
@@ -371,7 +371,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001705 RID: 5893 RVA: 0x001698AC File Offset: 0x00167AAC
+		
 		public static void IncreaceEscapeCount(int copyMapID)
 		{
 			lock (EMoLaiXiCopySceneManager.m_EMoLaiXiEscapeMonsterNumDict)
@@ -388,7 +388,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001706 RID: 5894 RVA: 0x00169928 File Offset: 0x00167B28
+		
 		public static int GetEscapeCount(int copyMapID)
 		{
 			int count;
@@ -406,7 +406,7 @@ namespace GameServer.Logic
 			return count;
 		}
 
-		// Token: 0x06001707 RID: 5895 RVA: 0x001699A0 File Offset: 0x00167BA0
+		
 		public static void MonsterMoveStepEMoLaiXiCopySenceCopyMap(Monster monster)
 		{
 			long ticks = TimeUtil.NOW();
@@ -445,7 +445,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001708 RID: 5896 RVA: 0x00169BA4 File Offset: 0x00167DA4
+		
 		public static void SendMsgToClientForEMoLaiXiCopySceneMonsterWave(List<GameClient> clientList, int escapeNum, int nWave, int totalWave, int faildEscapeNum)
 		{
 			if (clientList != null && clientList.Count > 0)
@@ -461,7 +461,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001709 RID: 5897 RVA: 0x00169C20 File Offset: 0x00167E20
+		
 		public static bool EnterEMoLaiXiCopySenceWhenLogin(GameClient client, bool bContinue = true)
 		{
 			bool result;
@@ -502,28 +502,28 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x040020DC RID: 8412
+		
 		public static EMoLaiXiCopySenceData EMoLaiXiCopySencedata = new EMoLaiXiCopySenceData();
 
-		// Token: 0x040020DD RID: 8413
+		
 		public static int m_PrepareTime = 9000;
 
-		// Token: 0x040020DE RID: 8414
+		
 		public static int m_DelayTime = 5000;
 
-		// Token: 0x040020DF RID: 8415
+		
 		public static Dictionary<int, CopyMap> m_EMoLaiXiCopySceneLists = new Dictionary<int, CopyMap>();
 
-		// Token: 0x040020E0 RID: 8416
+		
 		public static Dictionary<int, EMoLaiXiCopySence> m_EMoLaiXiCopySceneInfo = new Dictionary<int, EMoLaiXiCopySence>();
 
-		// Token: 0x040020E1 RID: 8417
+		
 		public static Dictionary<int, int> m_EMoLaiXiEscapeMonsterNumDict = new Dictionary<int, int>();
 
-		// Token: 0x040020E2 RID: 8418
+		
 		public static int EMoLaiXiCopySceneMapCode = 4100;
 
-		// Token: 0x040020E3 RID: 8419
+		
 		private static long LastHeartBeatTicks = 0L;
 	}
 }

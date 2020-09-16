@@ -4,17 +4,17 @@ using ProtoBuf;
 
 namespace GameDBServer.Data.Tarot
 {
-	// Token: 0x020000B8 RID: 184
+	
 	[ProtoContract]
 	public class TarotKingData
 	{
-		// Token: 0x0600019C RID: 412 RVA: 0x00008C24 File Offset: 0x00006E24
+		
 		public TarotKingData()
 		{
 			this.AddtionDict = new Dictionary<int, int>();
 		}
 
-		// Token: 0x0600019D RID: 413 RVA: 0x00008C4C File Offset: 0x00006E4C
+		
 		public TarotKingData(string data)
 		{
 			string[] info = data.Split(new char[]
@@ -44,7 +44,7 @@ namespace GameDBServer.Data.Tarot
 			}
 		}
 
-		// Token: 0x0600019E RID: 414 RVA: 0x00008D48 File Offset: 0x00006F48
+		
 		public string GetDataStrInfo()
 		{
 			string addStr = string.Empty;
@@ -66,15 +66,15 @@ namespace GameDBServer.Data.Tarot
 			return string.Format("{0}_{1}_{2}", this.StartTime, this.BufferSecs, addStr);
 		}
 
-		// Token: 0x040004D8 RID: 1240
+		
 		[ProtoMember(1)]
 		public long StartTime = 0L;
 
-		// Token: 0x040004D9 RID: 1241
+		
 		[ProtoMember(2)]
 		public long BufferSecs = 0L;
 
-		// Token: 0x040004DA RID: 1242
+		
 		[ProtoMember(3)]
 		public Dictionary<int, int> AddtionDict;
 	}

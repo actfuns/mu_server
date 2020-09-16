@@ -6,21 +6,21 @@ using Server.Tools;
 
 namespace GameServer.Server.CmdProcesser
 {
-	// Token: 0x020008B1 RID: 2225
+	
 	public class ZhanMengShiJianDetailCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x06003DB4 RID: 15796 RVA: 0x0034BEC5 File Offset: 0x0034A0C5
+		
 		private ZhanMengShiJianDetailCmdProcessor()
 		{
 		}
 
-		// Token: 0x06003DB5 RID: 15797 RVA: 0x0034BED0 File Offset: 0x0034A0D0
+		
 		public static ZhanMengShiJianDetailCmdProcessor getInstance()
 		{
 			return ZhanMengShiJianDetailCmdProcessor.instance;
 		}
 
-		// Token: 0x06003DB6 RID: 15798 RVA: 0x0034BEE8 File Offset: 0x0034A0E8
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			int bhId = client.ClientData.Faction;
@@ -35,7 +35,7 @@ namespace GameServer.Server.CmdProcesser
 			return true;
 		}
 
-		// Token: 0x040047C2 RID: 18370
+		
 		private static ZhanMengShiJianDetailCmdProcessor instance = new ZhanMengShiJianDetailCmdProcessor();
 	}
 }

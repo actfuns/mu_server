@@ -5,11 +5,11 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200076F RID: 1903
+	
 	public class NPCSaleList
 	{
-		// Token: 0x1700039E RID: 926
-		// (get) Token: 0x060030EE RID: 12526 RVA: 0x002B633C File Offset: 0x002B453C
+		
+		
 		public Dictionary<int, NPCSaleItem> SaleIDSDict
 		{
 			get
@@ -18,7 +18,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060030EF RID: 12527 RVA: 0x002B6354 File Offset: 0x002B4554
+		
 		public bool LoadSaleList()
 		{
 			string fileName = string.Format("Config/NPCSaleList.xml", new object[0]);
@@ -96,7 +96,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060030F0 RID: 12528 RVA: 0x002B6658 File Offset: 0x002B4858
+		
 		public bool ReloadSaleList()
 		{
 			try
@@ -109,7 +109,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x04003D7B RID: 15739
+		
 		private Dictionary<int, NPCSaleItem> _SaleIDSDict = null;
 	}
 }

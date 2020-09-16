@@ -16,23 +16,23 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic.Spread
 {
-	// Token: 0x02000454 RID: 1108
+	
 	public class SpreadManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListenerEx
 	{
-		// Token: 0x06001449 RID: 5193 RVA: 0x0013FB50 File Offset: 0x0013DD50
+		
 		public static SpreadManager getInstance()
 		{
 			return SpreadManager.instance;
 		}
 
-		// Token: 0x0600144A RID: 5194 RVA: 0x0013FB68 File Offset: 0x0013DD68
+		
 		public bool initialize()
 		{
 			SpreadManager.InitConfig();
 			return true;
 		}
 
-		// Token: 0x0600144B RID: 5195 RVA: 0x0013FB84 File Offset: 0x0013DD84
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1017, 1, 1, SpreadManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -45,26 +45,26 @@ namespace GameServer.Logic.Spread
 			return true;
 		}
 
-		// Token: 0x0600144C RID: 5196 RVA: 0x0013FC44 File Offset: 0x0013DE44
+		
 		public bool showdown()
 		{
 			GlobalEventSource4Scene.getInstance().removeListener(10014, 10002, SpreadManager.getInstance());
 			return true;
 		}
 
-		// Token: 0x0600144D RID: 5197 RVA: 0x0013FC74 File Offset: 0x0013DE74
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600144E RID: 5198 RVA: 0x0013FC88 File Offset: 0x0013DE88
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return true;
 		}
 
-		// Token: 0x0600144F RID: 5199 RVA: 0x0013FC9C File Offset: 0x0013DE9C
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -95,7 +95,7 @@ namespace GameServer.Logic.Spread
 			return result;
 		}
 
-		// Token: 0x06001450 RID: 5200 RVA: 0x0013FD2C File Offset: 0x0013DF2C
+		
 		public bool ProcessSpreadInfoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -115,7 +115,7 @@ namespace GameServer.Logic.Spread
 			return false;
 		}
 
-		// Token: 0x06001451 RID: 5201 RVA: 0x0013FD98 File Offset: 0x0013DF98
+		
 		public bool ProcessSpreadSignCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -135,7 +135,7 @@ namespace GameServer.Logic.Spread
 			return false;
 		}
 
-		// Token: 0x06001452 RID: 5202 RVA: 0x0013FE04 File Offset: 0x0013E004
+		
 		public bool ProcessSpreadAwardCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -156,7 +156,7 @@ namespace GameServer.Logic.Spread
 			return false;
 		}
 
-		// Token: 0x06001453 RID: 5203 RVA: 0x0013FE80 File Offset: 0x0013E080
+		
 		public bool ProcessSpreadVerifyCodeCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -176,7 +176,7 @@ namespace GameServer.Logic.Spread
 			return false;
 		}
 
-		// Token: 0x06001454 RID: 5204 RVA: 0x0013FEFC File Offset: 0x0013E0FC
+		
 		public bool ProcessSpreadTelCodeGetCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -196,7 +196,7 @@ namespace GameServer.Logic.Spread
 			return false;
 		}
 
-		// Token: 0x06001455 RID: 5205 RVA: 0x0013FF78 File Offset: 0x0013E178
+		
 		public bool ProcessSpreadTelCodeVerifyCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -216,7 +216,7 @@ namespace GameServer.Logic.Spread
 			return false;
 		}
 
-		// Token: 0x06001456 RID: 5206 RVA: 0x0013FFF4 File Offset: 0x0013E1F4
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 			int eventType = eventObject.EventType;
@@ -236,7 +236,7 @@ namespace GameServer.Logic.Spread
 			}
 		}
 
-		// Token: 0x06001457 RID: 5207 RVA: 0x00140058 File Offset: 0x0013E258
+		
 		private SpreadData GetSpreadInfo(GameClient client)
 		{
 			SpreadData mySpreadData;
@@ -256,7 +256,7 @@ namespace GameServer.Logic.Spread
 			return mySpreadData;
 		}
 
-		// Token: 0x06001458 RID: 5208 RVA: 0x001400E8 File Offset: 0x0013E2E8
+		
 		private string SpreadSign(GameClient client)
 		{
 			string result2;
@@ -290,7 +290,7 @@ namespace GameServer.Logic.Spread
 			return result2;
 		}
 
-		// Token: 0x06001459 RID: 5209 RVA: 0x001401E8 File Offset: 0x0013E3E8
+		
 		private SpreadData SpreadAward(GameClient client, int awardType)
 		{
 			SpreadData result;
@@ -330,7 +330,7 @@ namespace GameServer.Logic.Spread
 			return result;
 		}
 
-		// Token: 0x0600145A RID: 5210 RVA: 0x001402E4 File Offset: 0x0013E4E4
+		
 		private ESpreadState SpreadVerifyCode(GameClient client, string verifyCode)
 		{
 			ESpreadState result;
@@ -404,7 +404,7 @@ namespace GameServer.Logic.Spread
 			return result;
 		}
 
-		// Token: 0x0600145B RID: 5211 RVA: 0x001404C0 File Offset: 0x0013E6C0
+		
 		private ESpreadState SpreadTelCodeGet(GameClient client, string tel)
 		{
 			ESpreadState result2;
@@ -457,7 +457,7 @@ namespace GameServer.Logic.Spread
 			return result2;
 		}
 
-		// Token: 0x0600145C RID: 5212 RVA: 0x00140614 File Offset: 0x0013E814
+		
 		private ESpreadState SpreadTelCodeVerify(GameClient client, string telCode)
 		{
 			ESpreadState result2;
@@ -518,7 +518,7 @@ namespace GameServer.Logic.Spread
 			return result2;
 		}
 
-		// Token: 0x0600145D RID: 5213 RVA: 0x001407F0 File Offset: 0x0013E9F0
+		
 		private ESpreadState AwardOne(GameClient client, SpreadData data, int awardType, SpreadAwardInfo awardInfo, int countSum)
 		{
 			ESpreadState result2;
@@ -611,7 +611,7 @@ namespace GameServer.Logic.Spread
 			return result2;
 		}
 
-		// Token: 0x0600145E RID: 5214 RVA: 0x00140B70 File Offset: 0x0013ED70
+		
 		private ESpreadState AwardCount(GameClient client, SpreadData data)
 		{
 			ESpreadState result2;
@@ -706,7 +706,7 @@ namespace GameServer.Logic.Spread
 			return result2;
 		}
 
-		// Token: 0x0600145F RID: 5215 RVA: 0x00140F90 File Offset: 0x0013F190
+		
 		public static void initRoleSpreadData(GameClient client)
 		{
 			lock (client.ClientData.LockSpread)
@@ -745,7 +745,7 @@ namespace GameServer.Logic.Spread
 			}
 		}
 
-		// Token: 0x06001460 RID: 5216 RVA: 0x0014111C File Offset: 0x0013F31C
+		
 		private static Dictionary<int, int> initAwardCountDic(string awardStr)
 		{
 			Dictionary<int, int> dic = new Dictionary<int, int>();
@@ -770,7 +770,7 @@ namespace GameServer.Logic.Spread
 			return dic;
 		}
 
-		// Token: 0x06001461 RID: 5217 RVA: 0x001411EC File Offset: 0x0013F3EC
+		
 		private static string AwardCountToStr(Dictionary<int, int> dic)
 		{
 			StringBuilder sb = new StringBuilder();
@@ -782,7 +782,7 @@ namespace GameServer.Logic.Spread
 			return str.Substring(0, str.Length - 1);
 		}
 
-		// Token: 0x06001462 RID: 5218 RVA: 0x00141334 File Offset: 0x0013F534
+		
 		private static void CheckActivityTip(GameClient client)
 		{
 			SpreadData data = client.ClientData.MySpreadData;
@@ -853,7 +853,7 @@ namespace GameServer.Logic.Spread
 			client._IconStateMgr.SendIconStateToClient(client);
 		}
 
-		// Token: 0x06001463 RID: 5219 RVA: 0x0014154C File Offset: 0x0013F74C
+		
 		private string GetSpreadCode(GameClient client)
 		{
 			int zoneID = client.ClientData.ZoneID;
@@ -861,7 +861,7 @@ namespace GameServer.Logic.Spread
 			return string.Format("{0}#{1}", StringUtil.SpreadIDToCode(zoneID), StringUtil.SpreadIDToCode(roleID));
 		}
 
-		// Token: 0x06001464 RID: 5220 RVA: 0x0014158C File Offset: 0x0013F78C
+		
 		public static bool IsSpreadOpen()
 		{
 			bool result;
@@ -889,7 +889,7 @@ namespace GameServer.Logic.Spread
 			return result;
 		}
 
-		// Token: 0x06001465 RID: 5221 RVA: 0x00141618 File Offset: 0x0013F818
+		
 		public void SpreadIsLevel(GameClient client)
 		{
 			SpreadData spreadData = this.GetSpreadInfo(client);
@@ -917,7 +917,7 @@ namespace GameServer.Logic.Spread
 			}
 		}
 
-		// Token: 0x06001466 RID: 5222 RVA: 0x0014171C File Offset: 0x0013F91C
+		
 		public void SpreadIsVip(GameClient client)
 		{
 			SpreadData spreadData = this.GetSpreadInfo(client);
@@ -945,7 +945,7 @@ namespace GameServer.Logic.Spread
 			}
 		}
 
-		// Token: 0x06001467 RID: 5223 RVA: 0x00141814 File Offset: 0x0013FA14
+		
 		public static Dictionary<int, string> DBAwardGet(int zoneID, int roleID, int serverID)
 		{
 			Dictionary<int, string> result = new Dictionary<int, string>();
@@ -974,7 +974,7 @@ namespace GameServer.Logic.Spread
 			return result;
 		}
 
-		// Token: 0x06001468 RID: 5224 RVA: 0x001418F0 File Offset: 0x0013FAF0
+		
 		public static bool DBAwardUpdate(int zoneID, int roleID, int awardType, string award, int serverID)
 		{
 			bool result = false;
@@ -993,20 +993,20 @@ namespace GameServer.Logic.Spread
 			return result;
 		}
 
-		// Token: 0x06001469 RID: 5225 RVA: 0x00141970 File Offset: 0x0013FB70
+		
 		public static bool HSpreadSign(GameClient client)
 		{
 			int result = SpreadClient.getInstance().SpreadSign(client.ClientData.ZoneID, client.ClientData.RoleID);
 			return result > 0;
 		}
 
-		// Token: 0x0600146A RID: 5226 RVA: 0x001419A8 File Offset: 0x0013FBA8
+		
 		public static int[] HSpreadCount(GameClient client)
 		{
 			return SpreadClient.getInstance().SpreadCount(client.ClientData.ZoneID, client.ClientData.RoleID);
 		}
 
-		// Token: 0x0600146B RID: 5227 RVA: 0x001419DC File Offset: 0x0013FBDC
+		
 		private ESpreadState HCheckVerifyCode(GameClient client, int pzoneID, int proleID)
 		{
 			int isVip = (client.ClientData.VipLevel >= SpreadManager._vipLimit) ? 1 : 0;
@@ -1014,31 +1014,31 @@ namespace GameServer.Logic.Spread
 			return (ESpreadState)SpreadClient.getInstance().CheckVerifyCode(client.strUserID, client.ClientData.ZoneID, client.ClientData.RoleID, pzoneID, proleID, isVip, isLevel);
 		}
 
-		// Token: 0x0600146C RID: 5228 RVA: 0x00141A5C File Offset: 0x0013FC5C
+		
 		private ESpreadState HTelCodeGet(GameClient client, string tel)
 		{
 			return (ESpreadState)SpreadClient.getInstance().TelCodeGet(client.ClientData.ZoneID, client.ClientData.RoleID, tel);
 		}
 
-		// Token: 0x0600146D RID: 5229 RVA: 0x00141A94 File Offset: 0x0013FC94
+		
 		private ESpreadState HTelCodeVerify(GameClient client, int telCode)
 		{
 			return (ESpreadState)SpreadClient.getInstance().TelCodeVerify(client.ClientData.ZoneID, client.ClientData.RoleID, telCode);
 		}
 
-		// Token: 0x0600146E RID: 5230 RVA: 0x00141ACC File Offset: 0x0013FCCC
+		
 		private bool IsTel(string tel)
 		{
 			return Regex.IsMatch(tel.ToString(), "^(0|86|17951)?(1[0-9])[0-9]{9}$");
 		}
 
-		// Token: 0x0600146F RID: 5231 RVA: 0x00141AF0 File Offset: 0x0013FCF0
+		
 		private bool IsTelCode(string tel)
 		{
 			return Regex.IsMatch(tel.ToString(), "^\\d{6}$");
 		}
 
-		// Token: 0x06001470 RID: 5232 RVA: 0x00141B14 File Offset: 0x0013FD14
+		
 		private static bool InitConfig()
 		{
 			string fileName = "";
@@ -1228,7 +1228,7 @@ namespace GameServer.Logic.Spread
 			return true;
 		}
 
-		// Token: 0x06001471 RID: 5233 RVA: 0x0014214C File Offset: 0x0014034C
+		
 		public void SpreadSetCount(GameClient client, int[] counts)
 		{
 			SpreadData data = this.GetSpreadInfo(client);
@@ -1238,46 +1238,46 @@ namespace GameServer.Logic.Spread
 			client.ClientData.MySpreadData = data;
 		}
 
-		// Token: 0x04001DE2 RID: 7650
+		
 		public const int _sceneType = 10002;
 
-		// Token: 0x04001DE3 RID: 7651
+		
 		private static int TEL_CODE_VERIFY_SECOND = 70;
 
-		// Token: 0x04001DE4 RID: 7652
+		
 		private static int AWARD_COUNT_MAX = 10;
 
-		// Token: 0x04001DE5 RID: 7653
+		
 		private static SpreadManager instance = new SpreadManager();
 
-		// Token: 0x04001DE6 RID: 7654
+		
 		private static Dictionary<int, SpreadCountAwardInfo> _awardCountDic = new Dictionary<int, SpreadCountAwardInfo>();
 
-		// Token: 0x04001DE7 RID: 7655
+		
 		private static int _levelLimit = 0;
 
-		// Token: 0x04001DE8 RID: 7656
+		
 		private static SpreadAwardInfo _awardLevelInfo = new SpreadAwardInfo();
 
-		// Token: 0x04001DE9 RID: 7657
+		
 		private static int _vipLimit = 0;
 
-		// Token: 0x04001DEA RID: 7658
+		
 		private static SpreadAwardInfo _awardVipInfo = new SpreadAwardInfo();
 
-		// Token: 0x04001DEB RID: 7659
+		
 		private static SpreadAwardInfo _awardVerifyInfo = new SpreadAwardInfo();
 
-		// Token: 0x04001DEC RID: 7660
+		
 		private static DateTime _createDate = DateTime.MinValue;
 
-		// Token: 0x04001DED RID: 7661
+		
 		private static int _vipCountMax = 0;
 
-		// Token: 0x04001DEE RID: 7662
+		
 		private static int _levelCountMax = 0;
 
-		// Token: 0x04001DEF RID: 7663
+		
 		private static int VIP_LEVEL_COUNT_MAX_DEFAULT = 50;
 	}
 }

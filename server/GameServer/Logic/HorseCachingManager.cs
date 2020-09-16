@@ -4,10 +4,10 @@ using System.Xml.Linq;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006EA RID: 1770
+	
 	public class HorseCachingManager
 	{
-		// Token: 0x06002ABF RID: 10943 RVA: 0x00263348 File Offset: 0x00261548
+		
 		public static SystemXmlItem GetHorseEnchanceItem(int level, HorseExtIndexes extIndex)
 		{
 			string key = string.Format("{0}_{1}", level, HorseCachingManager.XmlItemNames[(int)extIndex]);
@@ -24,7 +24,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002AC0 RID: 10944 RVA: 0x0026338C File Offset: 0x0026158C
+		
 		public static void LoadHorseEnchanceItems()
 		{
 			string fileName = "";
@@ -58,7 +58,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x040039D4 RID: 14804
+		
 		private static string[] XmlItemNames = new string[]
 		{
 			"WuGong",
@@ -73,7 +73,7 @@ namespace GameServer.Logic
 			"KangBao"
 		};
 
-		// Token: 0x040039D5 RID: 14805
+		
 		private static Dictionary<string, SystemXmlItem> HorseItemsDict = new Dictionary<string, SystemXmlItem>();
 	}
 }

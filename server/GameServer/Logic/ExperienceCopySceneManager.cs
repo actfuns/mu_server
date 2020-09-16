@@ -9,10 +9,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006BB RID: 1723
+	
 	internal class ExperienceCopySceneManager
 	{
-		// Token: 0x06002064 RID: 8292 RVA: 0x001BE380 File Offset: 0x001BC580
+		
 		public static void AddExperienceListCopyMap(int nID, CopyMap mapInfo)
 		{
 			bool bInsert = false;
@@ -46,7 +46,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002065 RID: 8293 RVA: 0x001BE4A0 File Offset: 0x001BC6A0
+		
 		public static void RemoveExperienceListCopyMap(int nID)
 		{
 			bool bRemve = false;
@@ -72,7 +72,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002066 RID: 8294 RVA: 0x001BE57C File Offset: 0x001BC77C
+		
 		public static void HeartBeatExperienceCopyMap()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -126,7 +126,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002067 RID: 8295 RVA: 0x001BE7C4 File Offset: 0x001BC9C4
+		
 		public static void ExperienceCopyMapCreateMonster(GameClient client, ExperienceCopyScene ExperienceMapInfo, ExperienceCopyMapDataInfo exMap, int nWave)
 		{
 			ExperienceMapInfo.m_ExperienceCopyMapCreateMonsterFlag = 1;
@@ -161,7 +161,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002068 RID: 8296 RVA: 0x001BE930 File Offset: 0x001BCB30
+		
 		public static void ExperienceCopyMapKillMonster(GameClient client, Monster monster)
 		{
 			ExperienceCopyMapDataInfo TmpExInfo = null;
@@ -207,7 +207,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002069 RID: 8297 RVA: 0x001BEAE8 File Offset: 0x001BCCE8
+		
 		public static void SendMsgToClientForExperienceCopyMapInfo(GameClient client, int nWave)
 		{
 			ExperienceCopyScene tmpExSceneInfo = null;
@@ -229,7 +229,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600206A RID: 8298 RVA: 0x001BEBE8 File Offset: 0x001BCDE8
+		
 		public static void SendMsgToClientForExperienceCopyMapAward(GameClient client)
 		{
 			CopyMap tmpCopyMap = ExperienceCopySceneManager.m_ExperienceListCopyMaps[client.ClientData.FuBenSeqID];
@@ -291,13 +291,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0400366A RID: 13930
+		
 		public static Dictionary<int, CopyMap> m_ExperienceListCopyMaps = new Dictionary<int, CopyMap>();
 
-		// Token: 0x0400366B RID: 13931
+		
 		public static Dictionary<int, ExperienceCopyScene> m_ExperienceListCopyMapsInfo = new Dictionary<int, ExperienceCopyScene>();
 
-		// Token: 0x0400366C RID: 13932
+		
 		private static long LastHeartBeatTicks = 0L;
 	}
 }

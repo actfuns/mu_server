@@ -15,15 +15,15 @@ using Tmsk.Tools.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x0200008A RID: 138
+	
 	public class YongZheZhanChangPersistence
 	{
-		// Token: 0x06000729 RID: 1833 RVA: 0x0005EF2C File Offset: 0x0005D12C
+		
 		private YongZheZhanChangPersistence()
 		{
 		}
 
-		// Token: 0x0600072A RID: 1834 RVA: 0x0005EFD8 File Offset: 0x0005D1D8
+		
 		public void InitConfig()
 		{
 			try
@@ -53,7 +53,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600072B RID: 1835 RVA: 0x0005F14C File Offset: 0x0005D34C
+		
 		private void InitLangHunLingYuConfig()
 		{
 			string fileName = "";
@@ -110,7 +110,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600072C RID: 1836 RVA: 0x0005F480 File Offset: 0x0005D680
+		
 		public void SaveCostTime(int ms)
 		{
 			try
@@ -125,7 +125,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600072D RID: 1837 RVA: 0x0005F4D4 File Offset: 0x0005D6D4
+		
 		public void UpdateRoleInfoData(object data)
 		{
 			if (this.YongZheZhanChangRoleInfoDataQueue.Count > 100000)
@@ -136,7 +136,7 @@ namespace KF.Remoting
 			this.YongZheZhanChangRoleInfoDataQueue.Enqueue(data);
 		}
 
-		// Token: 0x0600072E RID: 1838 RVA: 0x0005F518 File Offset: 0x0005D718
+		
 		public void WriteRoleInfoDataToDb(object obj)
 		{
 			try
@@ -204,7 +204,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600072F RID: 1839 RVA: 0x0005F7EC File Offset: 0x0005D9EC
+		
 		public void WriteRoleInfoDataProc()
 		{
 			for (int i = 0; i < 1000; i++)
@@ -218,7 +218,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000730 RID: 1840 RVA: 0x0005F82C File Offset: 0x0005DA2C
+		
 		private bool ExecuteSqlNoQuery(string sqlCmd)
 		{
 			bool result;
@@ -235,13 +235,13 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000731 RID: 1841 RVA: 0x0005F86C File Offset: 0x0005DA6C
+		
 		public int GetNextGameId()
 		{
 			return Interlocked.Add(ref this.CurrGameId, 1);
 		}
 
-		// Token: 0x06000732 RID: 1842 RVA: 0x0005F88C File Offset: 0x0005DA8C
+		
 		public void LogCreateYongZheFuBen(int kfSrvId, int gameId, int fubenSeq, int roleNum)
 		{
 			string sql = string.Format("INSERT INTO t_yongzhezhanchang_game_fuben(`id`,`serverid`,`fubensid`,`createtime`,`rolenum`) VALUES({0},{1},{2},'{3}',{4});", new object[]
@@ -255,7 +255,7 @@ namespace KF.Remoting
 			this.ExecuteSqlNoQuery(sql);
 		}
 
-		// Token: 0x06000733 RID: 1843 RVA: 0x0005F8F0 File Offset: 0x0005DAF0
+		
 		public void SaveCityData(LangHunLingYuCityDataEx cityDataEx)
 		{
 			this.ExecuteSqlNoQuery(string.Format("INSERT INTO t_lhly_city(cityid,citylevel,owner,attacker1,attacker2,attacker3) VALUES({0},{1},{2},{3},{4},{5}) ON DUPLICATE KEY UPDATE citylevel={1},owner={2},attacker1={3},attacker2={4},attacker3={5};", new object[]
@@ -269,7 +269,7 @@ namespace KF.Remoting
 			}));
 		}
 
-		// Token: 0x06000734 RID: 1844 RVA: 0x0005F974 File Offset: 0x0005DB74
+		
 		public void SaveBangHuiData(LangHunLingYuBangHuiDataEx bangHuiDataEx)
 		{
 			this.ExecuteSqlNoQuery(string.Format("INSERT INTO t_lhly_banghui(bhid,bhname,zoneid,level) VALUES({0},'{1}',{2},{3}) ON DUPLICATE KEY UPDATE bhname='{1}',zoneid={2},level={3};", new object[]
@@ -281,7 +281,7 @@ namespace KF.Remoting
 			}));
 		}
 
-		// Token: 0x06000735 RID: 1845 RVA: 0x0005F9D0 File Offset: 0x0005DBD0
+		
 		public bool LoadCityOwnerHistory(List<LangHunLingYuKingHist> LHLYCityOwnerList)
 		{
 			MySqlDataReader sdr = null;
@@ -319,7 +319,7 @@ namespace KF.Remoting
 			return false;
 		}
 
-		// Token: 0x06000736 RID: 1846 RVA: 0x0005FAF0 File Offset: 0x0005DCF0
+		
 		public void InsertCityOwnerHistory(LangHunLingYuKingHist CityOwnerData)
 		{
 			try
@@ -336,7 +336,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000737 RID: 1847 RVA: 0x0005FB7C File Offset: 0x0005DD7C
+		
 		public void AdmireCityOwner(int rid)
 		{
 			try
@@ -350,7 +350,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000738 RID: 1848 RVA: 0x0005FBC8 File Offset: 0x0005DDC8
+		
 		public bool LoadBangHuiDataExList(List<LangHunLingYuBangHuiDataEx> list)
 		{
 			MySqlDataReader sdr = null;
@@ -385,7 +385,7 @@ namespace KF.Remoting
 			return false;
 		}
 
-		// Token: 0x06000739 RID: 1849 RVA: 0x0005FCB0 File Offset: 0x0005DEB0
+		
 		public bool LoadCityDataExList(List<LangHunLingYuCityDataEx> list)
 		{
 			MySqlDataReader sdr = null;
@@ -422,7 +422,7 @@ namespace KF.Remoting
 			return false;
 		}
 
-		// Token: 0x0600073A RID: 1850 RVA: 0x0005FE18 File Offset: 0x0005E018
+		
 		public int GetKuaFoWorldMaxTempRoleID(out int limit)
 		{
 			int asyncID = 50;
@@ -442,7 +442,7 @@ namespace KF.Remoting
 			return maxTempRoleID;
 		}
 
-		// Token: 0x0600073B RID: 1851 RVA: 0x0005FEB4 File Offset: 0x0005E0B4
+		
 		public KuaFuWorldRoleData QueryKuaFuWorldRoleData(int roleID, int ptid)
 		{
 			KuaFuWorldRoleData data = null;
@@ -477,7 +477,7 @@ namespace KF.Remoting
 			return data;
 		}
 
-		// Token: 0x0600073C RID: 1852 RVA: 0x00060018 File Offset: 0x0005E218
+		
 		public KuaFuWorldRoleData InsertKuaFuWorldRoleData(KuaFuWorldRoleData data, int tempRoleID)
 		{
 			try
@@ -529,7 +529,7 @@ namespace KF.Remoting
 			return null;
 		}
 
-		// Token: 0x0600073D RID: 1853 RVA: 0x000601B0 File Offset: 0x0005E3B0
+		
 		public int WriteKuaFuWorldRoleData(KuaFuWorldRoleData data)
 		{
 			int result = -15;
@@ -548,67 +548,67 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x040003D7 RID: 983
+		
 		public static readonly YongZheZhanChangPersistence Instance = new YongZheZhanChangPersistence();
 
-		// Token: 0x040003D8 RID: 984
+		
 		public object Mutex = new object();
 
-		// Token: 0x040003D9 RID: 985
+		
 		private int CurrGameId = Global.UninitGameId;
 
-		// Token: 0x040003DA RID: 986
+		
 		public bool Initialized = false;
 
-		// Token: 0x040003DB RID: 987
+		
 		private int MaxPaiMingRank = 100;
 
-		// Token: 0x040003DC RID: 988
+		
 		public int KuaFuBossRoleCount = 50;
 
-		// Token: 0x040003DD RID: 989
+		
 		public int YongZheZhanChangRoleCount = 100;
 
-		// Token: 0x040003DE RID: 990
+		
 		public int KingOfBattleRoleCount = 40;
 
-		// Token: 0x040003DF RID: 991
+		
 		public int MinEnterCount = 100;
 
-		// Token: 0x040003E0 RID: 992
+		
 		public int MaxServerCapcity = 30;
 
-		// Token: 0x040003E1 RID: 993
+		
 		public int ServerCapacityRate = 1;
 
-		// Token: 0x040003E2 RID: 994
+		
 		public int LangHunLingYuServerCapacityRate = 5;
 
-		// Token: 0x040003E3 RID: 995
+		
 		private Queue<GameFuBenStateDbItem> GameFuBenStateDbItemQueue = new Queue<GameFuBenStateDbItem>();
 
-		// Token: 0x040003E4 RID: 996
+		
 		public ConcurrentQueue<object> YongZheZhanChangRoleInfoDataQueue = new ConcurrentQueue<object>();
 
-		// Token: 0x040003E5 RID: 997
+		
 		public bool LangHunLingYuInitialized = false;
 
-		// Token: 0x040003E6 RID: 998
+		
 		public TimeSpan LangHunLingYuResetCityTime;
 
-		// Token: 0x040003E7 RID: 999
+		
 		public DateTime LastLangHunLingYuResetCityTime;
 
-		// Token: 0x040003E8 RID: 1000
+		
 		public int OtherListUpdateOffsetDay = 0;
 
-		// Token: 0x040003E9 RID: 1001
+		
 		public Dictionary<int, CityLevelInfo> CityLevelInfoDict = new Dictionary<int, CityLevelInfo>();
 
-		// Token: 0x040003EA RID: 1002
+		
 		public DateTime LastLangHunLingYuBroadcastTime;
 
-		// Token: 0x040003EB RID: 1003
+		
 		public Dictionary<int, int> LangHunLingYuBroadcastServerIdHashSet = new Dictionary<int, int>();
 	}
 }

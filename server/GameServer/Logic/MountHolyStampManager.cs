@@ -9,16 +9,16 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020000B7 RID: 183
+	
 	internal class MountHolyStampManager : IManager, ICmdProcessorEx, ICmdProcessor, IManager2
 	{
-		// Token: 0x060002CD RID: 717 RVA: 0x0002F7A8 File Offset: 0x0002D9A8
+		
 		public static MountHolyStampManager getInstance()
 		{
 			return MountHolyStampManager.instance;
 		}
 
-		// Token: 0x060002CE RID: 718 RVA: 0x0002F7C0 File Offset: 0x0002D9C0
+		
 		public bool InitConfig()
 		{
 			string fileName = Global.GameResPath(MountHolyStampConst.ShengYinShengJi);
@@ -293,19 +293,19 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002CF RID: 719 RVA: 0x000302DC File Offset: 0x0002E4DC
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x060002D0 RID: 720 RVA: 0x00030300 File Offset: 0x0002E500
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			return true;
 		}
 
-		// Token: 0x060002D1 RID: 721 RVA: 0x00030314 File Offset: 0x0002E514
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(2090, 2, 2, MountHolyStampManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -315,25 +315,25 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060002D2 RID: 722 RVA: 0x00030388 File Offset: 0x0002E588
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x060002D3 RID: 723 RVA: 0x0003039C File Offset: 0x0002E59C
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060002D4 RID: 724 RVA: 0x000303B0 File Offset: 0x0002E5B0
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x060002D5 RID: 725 RVA: 0x000303C4 File Offset: 0x0002E5C4
+		
 		public int GetGolaNum(GameClient client)
 		{
 			int result;
@@ -364,7 +364,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002D6 RID: 726 RVA: 0x000304BC File Offset: 0x0002E6BC
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			switch (nID)
@@ -441,7 +441,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060002D7 RID: 727 RVA: 0x000306F8 File Offset: 0x0002E8F8
+		
 		public static int GetIdleSlotOfGoods(GameClient client)
 		{
 			int idelPos = 0;
@@ -476,7 +476,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002D8 RID: 728 RVA: 0x00030840 File Offset: 0x0002EA40
+		
 		public GoodsData GetGoodsByDbID(GameClient client, int dbID)
 		{
 			GoodsData result;
@@ -494,14 +494,14 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002D9 RID: 729 RVA: 0x000308DC File Offset: 0x0002EADC
+		
 		public static bool CheckIsMountBagByGoodsID(int goodsID)
 		{
 			SystemXmlItem systemGoods = null;
 			return GameManager.SystemGoods.SystemXmlItemDict.TryGetValue(goodsID, out systemGoods) && (systemGoods.GetIntValue("Categoriy", -1) == 980 || systemGoods.GetIntValue("Categoriy", -1) == 981);
 		}
 
-		// Token: 0x060002DA RID: 730 RVA: 0x00030938 File Offset: 0x0002EB38
+		
 		public static GoodsData AddGoodsData(GameClient client, int id, int goodsID, int forgeLevel, int quality, int goodsNum, int binding, int site, string jewelList, string startTime, string endTime, int addPropIndex, int bornIndex, int lucky, int strong, int ExcellenceProperty, int nAppendPropLev, int nEquipChangeLife, int bagIndex = 0, List<int> washProps = null)
 		{
 			GoodsData gd = new GoodsData
@@ -539,7 +539,7 @@ namespace GameServer.Logic
 			return gd;
 		}
 
-		// Token: 0x060002DB RID: 731 RVA: 0x00030A74 File Offset: 0x0002EC74
+		
 		public HolyStampUpLeve GetHolyUpGradeInfo(GoodsData goodData)
 		{
 			HolyStampUpLeve result;
@@ -576,7 +576,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002DC RID: 732 RVA: 0x00030BF4 File Offset: 0x0002EDF4
+		
 		public HolyStampUpLeve GetLevelUpCount(GoodsData goodData, HolyStampUpLeve CurrInfo, int TunExp, out int TotleExp)
 		{
 			TotleExp = 0;
@@ -627,7 +627,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002DD RID: 733 RVA: 0x00030D84 File Offset: 0x0002EF84
+		
 		public HolyStampAttr GetAttrByQuality(HolyStampUpLeve StampInfo, GoodsData goodsData, List<int> newList = null)
 		{
 			if (this.holyStampAttr.ContainsKey(StampInfo.Type))
@@ -708,7 +708,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x060002DE RID: 734 RVA: 0x00031084 File Offset: 0x0002F284
+		
 		public void UpdateProps(GameClient client)
 		{
 			double[] _ExtProps = new double[177];
@@ -834,7 +834,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060002DF RID: 735 RVA: 0x000316D8 File Offset: 0x0002F8D8
+		
 		public GoodsData GetUsingGoodDataByBagindex(GameClient client, int HolySite)
 		{
 			GoodsData result;
@@ -856,7 +856,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002E0 RID: 736 RVA: 0x00031774 File Offset: 0x0002F974
+		
 		public static bool RemoveGoodsData(GameClient client, GoodsData gd)
 		{
 			bool result;
@@ -880,7 +880,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002E1 RID: 737 RVA: 0x00031804 File Offset: 0x0002FA04
+		
 		public static int GetGoodsGridNumByID(int goodsID)
 		{
 			SystemXmlItem systemGoods = null;
@@ -896,7 +896,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002E2 RID: 738 RVA: 0x00031840 File Offset: 0x0002FA40
+		
 		private static int CalGoodsGridNum(GameClient client, int goodsID, int newGoodsNum, int binding, string endTime = "1900-01-01 12:00:00", bool canUseOld = true)
 		{
 			int gridNum = MountHolyStampManager.GetGoodsGridNumByID(goodsID);
@@ -941,7 +941,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002E3 RID: 739 RVA: 0x00031A04 File Offset: 0x0002FC04
+		
 		public static int GetGoodsUsedGrid(GameClient client)
 		{
 			int ret = 0;
@@ -967,7 +967,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002E4 RID: 740 RVA: 0x00031AC0 File Offset: 0x0002FCC0
+		
 		public static bool CanAddGoods(GameClient client, int goodsID, int newGoodsNum, int binding, string endTime = "1900-01-01 12:00:00", bool canUseOld = true)
 		{
 			bool result;
@@ -984,7 +984,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002E5 RID: 741 RVA: 0x00031B10 File Offset: 0x0002FD10
+		
 		public static bool CanAddGoodsNum(GameClient client, int newGoodsCount)
 		{
 			bool result;
@@ -1000,7 +1000,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002E6 RID: 742 RVA: 0x00031B44 File Offset: 0x0002FD44
+		
 		public List<int> SetHolyStampAttr(GoodsData goodsData)
 		{
 			List<int> result;
@@ -1099,7 +1099,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002E7 RID: 743 RVA: 0x00032064 File Offset: 0x00030264
+		
 		public int GetCurrHolyMaxLevelExp(HolyStampUpLeve data, int currLevel)
 		{
 			int result;
@@ -1133,7 +1133,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002E8 RID: 744 RVA: 0x00032184 File Offset: 0x00030384
+		
 		public MountHolyOpcode ProcessHolyStampUpGrade(GameClient client, int Dbid, string PhagocytosisDBids)
 		{
 			int result = 1;
@@ -1458,7 +1458,7 @@ namespace GameServer.Logic
 			return MountHolyOpcode.Succ;
 		}
 
-		// Token: 0x060002E9 RID: 745 RVA: 0x00032C6C File Offset: 0x00030E6C
+		
 		public bool ModifyHolyStampState(GameClient client, int DBid, int IsUsing, int Site, int Bagindex)
 		{
 			string[] dbFields = null;
@@ -1492,7 +1492,7 @@ namespace GameServer.Logic
 			return dbRequestResult != TCPProcessCmdResults.RESULT_FAILED && dbFields.Length > 0 && Convert.ToInt32(dbFields[1]) >= 0;
 		}
 
-		// Token: 0x060002EA RID: 746 RVA: 0x00032DE0 File Offset: 0x00030FE0
+		
 		public MountHolyOpcode ProcessHolyStampUsing(GameClient client, int Dbid)
 		{
 			GoodsData goodData = this.GetGoodsByDbID(client, Dbid);
@@ -1587,7 +1587,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002EB RID: 747 RVA: 0x00033134 File Offset: 0x00031334
+		
 		public MountHolyOpcode ProcessHolyStampDisUsing(GameClient client, int Dbid)
 		{
 			GoodsData goodData = this.GetGoodsByDbID(client, Dbid);
@@ -1642,7 +1642,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002EC RID: 748 RVA: 0x000332DC File Offset: 0x000314DC
+		
 		public static GoodsData GetMountHolyGoodsByDbID(GameClient client, int dbID)
 		{
 			GoodsData result;
@@ -1667,7 +1667,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002ED RID: 749 RVA: 0x00033490 File Offset: 0x00031690
+		
 		private void ResetHolyStampBag(GameClient client, bool notifyClient = true)
 		{
 			byte[] bytesCmd = null;
@@ -1822,7 +1822,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060002EE RID: 750 RVA: 0x00033A04 File Offset: 0x00031C04
+		
 		public void InitRoleHolyStampGoodsData(GameClient client)
 		{
 			if (null == client.ClientData.HolyGoodsDataList)
@@ -1849,41 +1849,41 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x060002EF RID: 751 RVA: 0x00033B30 File Offset: 0x00031D30
+		
 		public static bool IsHolyStamp(int goodID)
 		{
 			int type = Global.GetGoodsCatetoriy(goodID);
 			return type == 980;
 		}
 
-		// Token: 0x04000451 RID: 1105
+		
 		public const int DefaultLevel = 1;
 
-		// Token: 0x04000452 RID: 1106
+		
 		public Dictionary<int, HolyStampSuit> holyStampSuit = new Dictionary<int, HolyStampSuit>();
 
-		// Token: 0x04000453 RID: 1107
+		
 		public Dictionary<int, Dictionary<int, List<HolyStampAttr>>> holyStampAttr = new Dictionary<int, Dictionary<int, List<HolyStampAttr>>>();
 
-		// Token: 0x04000454 RID: 1108
+		
 		public Dictionary<int, List<HolyStampUpLeve>> holyStampUpLeveL = new Dictionary<int, List<HolyStampUpLeve>>();
 
-		// Token: 0x04000455 RID: 1109
+		
 		public Dictionary<int, int> holyStampDesbloquear = new Dictionary<int, int>();
 
-		// Token: 0x04000456 RID: 1110
+		
 		public Dictionary<int, int> GoodsLvDict = new Dictionary<int, int>();
 
-		// Token: 0x04000457 RID: 1111
+		
 		public Dictionary<int, Dictionary<int, int>> GoodsLvAttrCount = new Dictionary<int, Dictionary<int, int>>();
 
-		// Token: 0x04000458 RID: 1112
+		
 		protected object Mutex = new object();
 
-		// Token: 0x04000459 RID: 1113
+		
 		public static int HolyBagNum = 200;
 
-		// Token: 0x0400045A RID: 1114
+		
 		private static MountHolyStampManager instance = new MountHolyStampManager();
 	}
 }

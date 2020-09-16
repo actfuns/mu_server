@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace GameServer.Logic.Goods
 {
-	// Token: 0x02000471 RID: 1137
+	
 	internal class CondJudger_WingSuitLess : ICondJudger
 	{
-		// Token: 0x060014C7 RID: 5319 RVA: 0x00145878 File Offset: 0x00143A78
+		
 		public bool Judge(GameClient client, string arg, out string failedMsg)
 		{
 			failedMsg = "";

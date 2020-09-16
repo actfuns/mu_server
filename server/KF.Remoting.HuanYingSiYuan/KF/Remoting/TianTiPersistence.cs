@@ -16,15 +16,15 @@ using Tmsk.Tools.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000082 RID: 130
+	
 	public class TianTiPersistence
 	{
-		// Token: 0x06000654 RID: 1620 RVA: 0x00056E9C File Offset: 0x0005509C
+		
 		private TianTiPersistence()
 		{
 		}
 
-		// Token: 0x06000655 RID: 1621 RVA: 0x00056F34 File Offset: 0x00055134
+		
 		public void InitConfig()
 		{
 			try
@@ -47,7 +47,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000656 RID: 1622 RVA: 0x00057064 File Offset: 0x00055264
+		
 		public bool AddDelayWriteSql(string sql, List<Tuple<string, byte[]>> imgList = null, Action<object, int> callback = null)
 		{
 			bool result;
@@ -66,7 +66,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000657 RID: 1623 RVA: 0x000570D4 File Offset: 0x000552D4
+		
 		public void DelayWriteDataProc()
 		{
 			List<Tuple<string, List<Tuple<string, byte[]>>, Action<object, int>>> list = null;
@@ -105,14 +105,14 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000658 RID: 1624 RVA: 0x00057230 File Offset: 0x00055430
+		
 		public void OnStopServer()
 		{
 			this.ServerStopping = true;
 			this.DelayWriteDataProc();
 		}
 
-		// Token: 0x06000659 RID: 1625 RVA: 0x00057244 File Offset: 0x00055444
+		
 		public void SaveCostTime(int ms)
 		{
 			try
@@ -127,7 +127,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600065A RID: 1626 RVA: 0x00057298 File Offset: 0x00055498
+		
 		public TianTiRankData GetTianTiRankData(DateTime modifyTime)
 		{
 			TianTiRankData tianTiRankData = new TianTiRankData();
@@ -147,7 +147,7 @@ namespace KF.Remoting
 			return tianTiRankData;
 		}
 
-		// Token: 0x0600065B RID: 1627 RVA: 0x00057394 File Offset: 0x00055594
+		
 		private bool ReloadTianTiRankDayList(List<TianTiRoleInfoData> tianTiRoleInfoDataList)
 		{
 			MySqlDataReader sdr = null;
@@ -192,7 +192,7 @@ namespace KF.Remoting
 			return false;
 		}
 
-		// Token: 0x0600065C RID: 1628 RVA: 0x0005752C File Offset: 0x0005572C
+		
 		private bool LoadTianTiRankDayList(List<TianTiRoleInfoData> tianTiRoleInfoDataList)
 		{
 			bool result = false;
@@ -238,7 +238,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600065D RID: 1629 RVA: 0x000576D0 File Offset: 0x000558D0
+		
 		public void LoadTianTiRankData(DateTime now)
 		{
 			try
@@ -307,7 +307,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600065E RID: 1630 RVA: 0x00057998 File Offset: 0x00055B98
+		
 		public void UpdateTianTiRankData(DateTime now, bool monthRank = false, bool force = false)
 		{
 			if (Monitor.TryEnter(this.MutexPaiHang))
@@ -432,7 +432,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600065F RID: 1631 RVA: 0x00057D94 File Offset: 0x00055F94
+		
 		public void UpdateRoleInfoData(TianTiRoleInfoData data)
 		{
 			if (this.TianTiRoleInfoDataQueue.Count > 100000)
@@ -443,7 +443,7 @@ namespace KF.Remoting
 			this.TianTiRoleInfoDataQueue.Enqueue(data);
 		}
 
-		// Token: 0x06000660 RID: 1632 RVA: 0x00057DD8 File Offset: 0x00055FD8
+		
 		public void WriteRoleInfoDataToDb(TianTiRoleInfoData data)
 		{
 			try
@@ -468,7 +468,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000661 RID: 1633 RVA: 0x00057EE4 File Offset: 0x000560E4
+		
 		public void WriteRoleInfoDataProc()
 		{
 			TianTiRoleInfoData data;
@@ -494,7 +494,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000662 RID: 1634 RVA: 0x0005800C File Offset: 0x0005620C
+		
 		public int ExecuteSqlNoQuery(string sqlCmd)
 		{
 			int result;
@@ -510,13 +510,13 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000663 RID: 1635 RVA: 0x0005804C File Offset: 0x0005624C
+		
 		public int GetNextGameId()
 		{
 			return Interlocked.Add(ref this.CurrGameId, 1);
 		}
 
-		// Token: 0x06000664 RID: 1636 RVA: 0x0005806C File Offset: 0x0005626C
+		
 		public void LogCreateTianTiFuBen(int gameId, int serverId, int fubenSeqId, int roleCount)
 		{
 			string sql = string.Format("INSERT INTO t_tianti_game_fuben(`id`,`serverid`,`fubensid`,`createtime`,`rolenum`) VALUES({0},{1},{2},'{3}',{4});", new object[]
@@ -530,7 +530,7 @@ namespace KF.Remoting
 			this.ExecuteSqlNoQuery(sql);
 		}
 
-		// Token: 0x06000665 RID: 1637 RVA: 0x000580D0 File Offset: 0x000562D0
+		
 		public bool LoadZhanDuiData(Dictionary<int, TianTi5v5ZhanDuiData> dict)
 		{
 			bool result = false;
@@ -575,7 +575,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000666 RID: 1638 RVA: 0x000583A0 File Offset: 0x000565A0
+		
 		public int LoadZhanDuiRankList(List<TianTi5v5ZhanDuiData> list, int dayID)
 		{
 			int result = 0;
@@ -616,7 +616,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000667 RID: 1639 RVA: 0x0005860C File Offset: 0x0005680C
+		
 		public void UpdateZhanDuiDayRank(List<TianTi5v5ZhanDuiData> list, int dayId, int maxRankCount, bool updateMonthRank)
 		{
 			try
@@ -659,7 +659,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000668 RID: 1640 RVA: 0x000587D0 File Offset: 0x000569D0
+		
 		public void UpdateZhanDuiRankData(List<TianTi5v5ZhanDuiData> list, int dayId, int maxRankCount, bool updateMonthRank)
 		{
 			try
@@ -695,7 +695,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000669 RID: 1641 RVA: 0x00058918 File Offset: 0x00056B18
+		
 		public int InitZhanDui(TianTi5v5ZhanDuiData data)
 		{
 			string sql = string.Format("INSERT INTO t_kf_5v5_zhandui(`leaderid`,`xuanyan`,`zhanduiname`,`duanweiid`,`zhanli`,`data1`,`leaderrolename`,zoneid) VALUES('{1}','{2}','{3}','{4}','{5}',@content,'{6}',{7});", new object[]
@@ -715,7 +715,7 @@ namespace KF.Remoting
 			return (int)DbHelperMySQL.ExecuteSqlGetIncrement(sql, imgList);
 		}
 
-		// Token: 0x0600066A RID: 1642 RVA: 0x000589E0 File Offset: 0x00056BE0
+		
 		public int UpdateZhanDui(TianTi5v5ZhanDuiData data)
 		{
 			string sql = string.Format("update t_kf_5v5_zhandui set `leaderid`={1},`xuanyan`='{2}',`zhanduiname`='{3}',`duanweiid`='{4}',`zhanli`='{5}',`data1`=@data1,leaderrolename='{6}',`liansheng`='{7}',`fightcount`='{8}',`successcount`='{9}',lastfighttime='{10}',`duanweijifen`='{11}',`duanweirank`='{12}',`monthduanweirank`='{13}' where `zhanduiid`={0};", new object[]
@@ -750,14 +750,14 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600066B RID: 1643 RVA: 0x00058AFC File Offset: 0x00056CFC
+		
 		public void UpdateZhanDuiXuanYan(long teamId, string xuanyan)
 		{
 			string sql = string.Format("UPDATE t_kf_5v5_zhandui SET xuanyan='{1}' WHERE zhanduiid={0};", teamId, xuanyan);
 			this.AddDelayWriteSql(sql, null, null);
 		}
 
-		// Token: 0x0600066C RID: 1644 RVA: 0x00058B28 File Offset: 0x00056D28
+		
 		public int DeleteZhanDui(long teamid)
 		{
 			string sql = string.Format("DELETE FROM t_kf_5v5_zhandui WHERE zhanduiid={0};", teamid);
@@ -765,14 +765,14 @@ namespace KF.Remoting
 			return this.ExecuteSqlNoQuery(sql);
 		}
 
-		// Token: 0x0600066D RID: 1645 RVA: 0x00058B5C File Offset: 0x00056D5C
+		
 		public int ClearZorkBattleRoleData()
 		{
 			string sql = string.Format("UPDATE `t_kf_5v5_zhandui_roles` SET `zorkkill`=0;", new object[0]);
 			return this.ExecuteSqlNoQuery(sql);
 		}
 
-		// Token: 0x0600066E RID: 1646 RVA: 0x00058B88 File Offset: 0x00056D88
+		
 		public void UpdateZorkBattleRoleData(ZorkBattleRoleInfo roleData, bool chgKill = true)
 		{
 			string sql = string.Format("INSERT INTO `t_kf_5v5_zhandui_roles`(`rid`, rname, zoneid, reborncount, rebornlev, `zorkkill`) VALUES({0},'{1}',{2},{3},{4},{5}) ON DUPLICATE KEY UPDATE reborncount={3}, rebornlev={4}, `zorkkill`=`zorkkill`+{5};", new object[]
@@ -792,7 +792,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600066F RID: 1647 RVA: 0x00058C2C File Offset: 0x00056E2C
+		
 		public int UpdateZorkZhanDui(TianTi5v5ZhanDuiData data)
 		{
 			string sql = string.Format("update t_kf_5v5_zhandui set zorkjifen={1}, zorklastfighttime='{2}' where `zhanduiid`={0};", data.ZhanDuiID, data.ZorkJiFen, data.ZorkLastFightTime.ToString("yyyy-MM-dd HH:mm:ss"));
@@ -808,7 +808,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000670 RID: 1648 RVA: 0x00058C88 File Offset: 0x00056E88
+		
 		public int LoadZorkSeasonID()
 		{
 			DbHelperMySQL.ExecuteSql(string.Format("INSERT IGNORE INTO t_async(`id`,`value`) VALUES({0},{1});", 52, 0));
@@ -816,13 +816,13 @@ namespace KF.Remoting
 			return Convert.ToInt32(value);
 		}
 
-		// Token: 0x06000671 RID: 1649 RVA: 0x00058CD4 File Offset: 0x00056ED4
+		
 		public void SaveZorkSeasonID(int seasonID)
 		{
 			DbHelperMySQL.ExecuteSql(string.Format("REPLACE INTO t_async(`id`,`value`) VALUES({0},{1});", 52, seasonID));
 		}
 
-		// Token: 0x06000672 RID: 1650 RVA: 0x00058CF4 File Offset: 0x00056EF4
+		
 		public int LoadZorkTopZhanDui()
 		{
 			DbHelperMySQL.ExecuteSql(string.Format("INSERT IGNORE INTO t_async(`id`,`value`) VALUES({0},{1});", 52, 0));
@@ -830,13 +830,13 @@ namespace KF.Remoting
 			return Convert.ToInt32(value);
 		}
 
-		// Token: 0x06000673 RID: 1651 RVA: 0x00058D40 File Offset: 0x00056F40
+		
 		public void SaveZorkTopZhanDui(int zhanduiID)
 		{
 			DbHelperMySQL.ExecuteSql(string.Format("REPLACE INTO t_async(`id`,`value`) VALUES({0},{1});", 53, zhanduiID));
 		}
 
-		// Token: 0x06000674 RID: 1652 RVA: 0x00058D60 File Offset: 0x00056F60
+		
 		public int LoadZorkTopKiller()
 		{
 			DbHelperMySQL.ExecuteSql(string.Format("INSERT IGNORE INTO t_async(`id`,`value`) VALUES({0},{1});", 52, 0));
@@ -844,13 +844,13 @@ namespace KF.Remoting
 			return Convert.ToInt32(value);
 		}
 
-		// Token: 0x06000675 RID: 1653 RVA: 0x00058DAC File Offset: 0x00056FAC
+		
 		public void SaveZorkTopKiller(int roleID)
 		{
 			DbHelperMySQL.ExecuteSql(string.Format("REPLACE INTO t_async(`id`,`value`) VALUES({0},{1});", 54, roleID));
 		}
 
-		// Token: 0x06000676 RID: 1654 RVA: 0x00058DCC File Offset: 0x00056FCC
+		
 		private string FormatLoadZorkBattleRankSql(int rankType)
 		{
 			string strSql = "";
@@ -861,7 +861,7 @@ namespace KF.Remoting
 			return strSql;
 		}
 
-		// Token: 0x06000677 RID: 1655 RVA: 0x00058E04 File Offset: 0x00057004
+		
 		public bool LoadZorkBattleRankInfo(int rankType, List<KFZorkRankInfo> rankList)
 		{
 			try
@@ -902,7 +902,7 @@ namespace KF.Remoting
 			return true;
 		}
 
-		// Token: 0x06000678 RID: 1656 RVA: 0x00058F38 File Offset: 0x00057138
+		
 		public int UpdateEscapeZhanDui(TianTi5v5ZhanDuiData data)
 		{
 			string sql = string.Format("update t_kf_5v5_zhandui set escapejifen={1}, escapelastfighttime='{2}' where `zhanduiid`={0};", data.ZhanDuiID, data.EscapeJiFen, data.EscapeLastFightTime.ToString("yyyy-MM-dd HH:mm:ss"));
@@ -918,7 +918,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000679 RID: 1657 RVA: 0x00058F94 File Offset: 0x00057194
+		
 		public static int CompareKFEscapeRankInfo(KFEscapeRankInfo x, KFEscapeRankInfo y)
 		{
 			int ret;
@@ -941,7 +941,7 @@ namespace KF.Remoting
 			return ret;
 		}
 
-		// Token: 0x0600067A RID: 1658 RVA: 0x00058FFC File Offset: 0x000571FC
+		
 		public List<KFEscapeRankInfo> LoadEscapeRankData(int season)
 		{
 			List<KFEscapeRankInfo> list = new List<KFEscapeRankInfo>();
@@ -971,7 +971,7 @@ namespace KF.Remoting
 			return list;
 		}
 
-		// Token: 0x0600067B RID: 1659 RVA: 0x00059128 File Offset: 0x00057328
+		
 		public int GetAsyncInt(int id, int value)
 		{
 			try
@@ -986,7 +986,7 @@ namespace KF.Remoting
 			return -1;
 		}
 
-		// Token: 0x0600067C RID: 1660 RVA: 0x0005919C File Offset: 0x0005739C
+		
 		public bool SetAsyncInt(int id, int value)
 		{
 			try
@@ -1001,7 +1001,7 @@ namespace KF.Remoting
 			return false;
 		}
 
-		// Token: 0x0600067D RID: 1661 RVA: 0x000591FC File Offset: 0x000573FC
+		
 		public bool BuildEscapeRankList(int offsetDay, DateTime minFightTime)
 		{
 			try
@@ -1016,7 +1016,7 @@ namespace KF.Remoting
 			return false;
 		}
 
-		// Token: 0x0600067E RID: 1662 RVA: 0x00059260 File Offset: 0x00057460
+		
 		private List<EscapeBattleZhanDuiData> LoadZhanDuiData()
 		{
 			List<EscapeBattleZhanDuiData> list = new List<EscapeBattleZhanDuiData>();
@@ -1048,52 +1048,52 @@ namespace KF.Remoting
 			return list;
 		}
 
-		// Token: 0x0400038E RID: 910
+		
 		public static readonly TianTiPersistence Instance = new TianTiPersistence();
 
-		// Token: 0x0400038F RID: 911
+		
 		public object Mutex = new object();
 
-		// Token: 0x04000390 RID: 912
+		
 		public object MutexPaiHang = new object();
 
-		// Token: 0x04000391 RID: 913
+		
 		public bool Initialized = false;
 
-		// Token: 0x04000392 RID: 914
+		
 		public int SignUpWaitSecs1 = 5;
 
-		// Token: 0x04000393 RID: 915
+		
 		public int SignUpWaitSecs3 = 10;
 
-		// Token: 0x04000394 RID: 916
+		
 		public int SignUpWaitSecsAll = 15;
 
-		// Token: 0x04000395 RID: 917
+		
 		public int WaitForJoinMaxSecs = 60;
 
-		// Token: 0x04000396 RID: 918
+		
 		private int MaxSendDetailDataCount = 100;
 
-		// Token: 0x04000397 RID: 919
+		
 		public int MaxRolePairFightCount = 3;
 
-		// Token: 0x04000398 RID: 920
+		
 		private Queue<GameFuBenStateDbItem> GameFuBenStateDbItemQueue = new Queue<GameFuBenStateDbItem>();
 
-		// Token: 0x04000399 RID: 921
+		
 		public TianTiRankData RankData = new TianTiRankData();
 
-		// Token: 0x0400039A RID: 922
+		
 		public ConcurrentQueue<TianTiRoleInfoData> TianTiRoleInfoDataQueue = new ConcurrentQueue<TianTiRoleInfoData>();
 
-		// Token: 0x0400039B RID: 923
+		
 		public Queue<Tuple<string, List<Tuple<string, byte[]>>, Action<object, int>>> DelayWriteSqlQueue = new Queue<Tuple<string, List<Tuple<string, byte[]>>, Action<object, int>>>();
 
-		// Token: 0x0400039C RID: 924
+		
 		public bool ServerStopping;
 
-		// Token: 0x0400039D RID: 925
+		
 		private int CurrGameId = Global.UninitGameId;
 	}
 }

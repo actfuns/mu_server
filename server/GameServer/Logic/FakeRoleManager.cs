@@ -10,10 +10,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006C1 RID: 1729
+	
 	public static class FakeRoleManager
 	{
-		// Token: 0x060020AD RID: 8365 RVA: 0x001C0418 File Offset: 0x001BE618
+		
 		private static FakeRoleItem AddFakeRole(SafeClientData clientData, FakeRoleTypes fakeRoleType)
 		{
 			FakeRoleItem fakeRoleItem = new FakeRoleItem
@@ -34,7 +34,7 @@ namespace GameServer.Logic
 			return fakeRoleItem;
 		}
 
-		// Token: 0x060020AE RID: 8366 RVA: 0x001C0514 File Offset: 0x001BE714
+		
 		private static FakeRoleItem AddFakeRole(RoleData4Selector clientData, FakeRoleTypes fakeRoleType)
 		{
 			FakeRoleItem result;
@@ -64,7 +64,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060020AF RID: 8367 RVA: 0x001C0628 File Offset: 0x001BE828
+		
 		public static FakeRoleItem FindFakeRoleByID(int FakeRoleID)
 		{
 			FakeRoleItem FakeRoleItem = null;
@@ -75,7 +75,7 @@ namespace GameServer.Logic
 			return FakeRoleItem;
 		}
 
-		// Token: 0x060020B0 RID: 8368 RVA: 0x001C0684 File Offset: 0x001BE884
+		
 		public static FakeRoleItem FindFakeRoleByRoleIDType(int roleID, FakeRoleTypes fakeRoleType)
 		{
 			FakeRoleItem fakeRoleItem = null;
@@ -87,7 +87,7 @@ namespace GameServer.Logic
 			return fakeRoleItem;
 		}
 
-		// Token: 0x060020B1 RID: 8369 RVA: 0x001C06F8 File Offset: 0x001BE8F8
+		
 		private static void RemoveFakeRole(int FakeRoleID)
 		{
 			FakeRoleItem fakeRoleItem = null;
@@ -109,7 +109,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020B2 RID: 8370 RVA: 0x001C07E4 File Offset: 0x001BE9E4
+		
 		private static void RemoveFakeRoleByRoleIDType(int roleID, FakeRoleTypes fakeRoleType)
 		{
 			FakeRoleItem fakeRoleItem = null;
@@ -131,7 +131,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020B3 RID: 8371 RVA: 0x001C08C0 File Offset: 0x001BEAC0
+		
 		private static List<FakeRoleItem> RemoveFakeRoleByType(FakeRoleTypes fakeRoleType)
 		{
 			List<FakeRoleItem> fakeRoleItemList = new List<FakeRoleItem>();
@@ -160,7 +160,7 @@ namespace GameServer.Logic
 			return fakeRoleItemList;
 		}
 
-		// Token: 0x060020B4 RID: 8372 RVA: 0x001C0A78 File Offset: 0x001BEC78
+		
 		private static List<FakeRoleItem> GetFakeRoleListByType(FakeRoleTypes fakeRoleType)
 		{
 			List<FakeRoleItem> fakeRoleItemList = new List<FakeRoleItem>();
@@ -177,7 +177,7 @@ namespace GameServer.Logic
 			return fakeRoleItemList;
 		}
 
-		// Token: 0x060020B5 RID: 8373 RVA: 0x001C0B30 File Offset: 0x001BED30
+		
 		public static int ProcessNewFakeRole(SafeClientData clientData, int mapCode, FakeRoleTypes fakeRoleType, int direction = -1, int toPosX = -1, int toPosY = -1, int ToExtensionID = -1)
 		{
 			int result;
@@ -279,7 +279,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060020B6 RID: 8374 RVA: 0x001C0F84 File Offset: 0x001BF184
+		
 		public static int ProcessNewFakeRole(RoleData4Selector clientData, int mapCode, FakeRoleTypes fakeRoleType, int direction = -1, int toPosX = -1, int toPosY = -1, int ToExtensionID = -1)
 		{
 			int result;
@@ -320,7 +320,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060020B7 RID: 8375 RVA: 0x001C10D0 File Offset: 0x001BF2D0
+		
 		public static void ProcessDelFakeRoleByType(FakeRoleTypes fakeRoleType, bool bBroadcastDelMsg = false)
 		{
 			List<FakeRoleItem> fakeRoleItemList = FakeRoleManager.GetFakeRoleListByType(fakeRoleType);
@@ -330,7 +330,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020B8 RID: 8376 RVA: 0x001C1134 File Offset: 0x001BF334
+		
 		public static void ProcessDelFakeRole(int FakeRoleID, bool bBroadcastDelMsg = false)
 		{
 			FakeRoleItem FakeRoleItem = FakeRoleManager.FindFakeRoleByID(FakeRoleID);
@@ -345,7 +345,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020B9 RID: 8377 RVA: 0x001C11AC File Offset: 0x001BF3AC
+		
 		public static void ProcessFakeRoleGoBack(int FakeRoleID)
 		{
 			FakeRoleItem fakeRoleItem = FakeRoleManager.FindFakeRoleByID(FakeRoleID);
@@ -372,7 +372,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020BA RID: 8378 RVA: 0x001C12C0 File Offset: 0x001BF4C0
+		
 		public static void ProcessDelFakeRole(int roleID, FakeRoleTypes fakeRoleType)
 		{
 			FakeRoleItem FakeRoleItem = FakeRoleManager.FindFakeRoleByRoleIDType(roleID, fakeRoleType);
@@ -383,7 +383,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020BB RID: 8379 RVA: 0x001C1314 File Offset: 0x001BF514
+		
 		public static void NotifyOthersShowFakeRole(SocketListener sl, TCPOutPacketPool pool, FakeRoleItem FakeRoleItem)
 		{
 			if (null != FakeRoleItem)
@@ -392,7 +392,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020BC RID: 8380 RVA: 0x001C1368 File Offset: 0x001BF568
+		
 		public static void NotifyOthersHideFakeRole(SocketListener sl, TCPOutPacketPool pool, FakeRoleItem FakeRoleItem)
 		{
 			if (null != FakeRoleItem)
@@ -401,7 +401,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020BD RID: 8381 RVA: 0x001C13A4 File Offset: 0x001BF5A4
+		
 		private static bool ProcessFakeRoleDead(SocketListener sl, TCPOutPacketPool pool, long nowTicks, FakeRoleItem fakeRoleItem)
 		{
 			bool result;
@@ -425,7 +425,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060020BE RID: 8382 RVA: 0x001C13F8 File Offset: 0x001BF5F8
+		
 		public static void ProcessAllFakeRoleItems(SocketListener sl, TCPOutPacketPool pool)
 		{
 			List<FakeRoleItem> FakeRoleItemList = new List<FakeRoleItem>();
@@ -446,7 +446,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020BF RID: 8383 RVA: 0x001C14DC File Offset: 0x001BF6DC
+		
 		public static void SendMySelfFakeRoleItems(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList, int totalRoleAndMonsterNum)
 		{
 			if (null != objsList)
@@ -476,7 +476,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020C0 RID: 8384 RVA: 0x001C15A0 File Offset: 0x001BF7A0
+		
 		public static void DelMySelfFakeRoleItems(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList)
 		{
 			if (null != objsList)
@@ -495,7 +495,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020C1 RID: 8385 RVA: 0x001C1630 File Offset: 0x001BF830
+		
 		public static void LookupEnemiesInCircle(GameClient client, int mapCode, int toX, int toY, int radius, List<object> enemiesList)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -523,7 +523,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020C2 RID: 8386 RVA: 0x001C1768 File Offset: 0x001BF968
+		
 		public static void LookupEnemiesInCircleByAngle(GameClient client, int direction, int mapCode, int toX, int toY, int radius, List<int> enemiesList, double angle, bool near180)
 		{
 			List<object> objList = new List<object>();
@@ -534,7 +534,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020C3 RID: 8387 RVA: 0x001C17C0 File Offset: 0x001BF9C0
+		
 		public static void LookupEnemiesInCircleByAngle(GameClient client, int direction, int mapCode, int toX, int toY, int radius, List<object> enemiesList, double angle, bool near180)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -565,7 +565,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020C4 RID: 8388 RVA: 0x001C1924 File Offset: 0x001BFB24
+		
 		public static void LookupRolesInSquare(GameClient client, int mapCode, int radius, int nWidth, List<object> rolesList)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -605,7 +605,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020C5 RID: 8389 RVA: 0x001C1B38 File Offset: 0x001BFD38
+		
 		public static void LookupEnemiesAtGridXY(IObject attacker, int gridX, int gridY, List<object> enemiesList)
 		{
 			int mapCode = attacker.CurrentMapCode;
@@ -626,7 +626,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020C6 RID: 8390 RVA: 0x001C1BE0 File Offset: 0x001BFDE0
+		
 		public static void LookupAttackEnemies(IObject attacker, int direction, List<object> enemiesList)
 		{
 			int mapCode = attacker.CurrentMapCode;
@@ -638,7 +638,7 @@ namespace GameServer.Logic
 			FakeRoleManager.LookupEnemiesAtGridXY(attacker, (int)p.X, (int)p.Y, enemiesList);
 		}
 
-		// Token: 0x060020C7 RID: 8391 RVA: 0x001C1C44 File Offset: 0x001BFE44
+		
 		public static void LookupAttackEnemyIDs(IObject attacker, int direction, List<int> enemiesList)
 		{
 			List<object> objList = new List<object>();
@@ -649,7 +649,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020C8 RID: 8392 RVA: 0x001C1C90 File Offset: 0x001BFE90
+		
 		public static void LookupRangeAttackEnemies(IObject obj, int toX, int toY, int direction, string rangeMode, List<object> enemiesList)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[obj.CurrentMapCode];
@@ -665,13 +665,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020C9 RID: 8393 RVA: 0x001C1D30 File Offset: 0x001BFF30
+		
 		public static bool CanAttack(FakeRoleItem enemy)
 		{
 			return !GameManager.TestGameShowFakeRoleForUser && null != enemy && enemy.GetFakeRoleData().FakeRoleType == 2;
 		}
 
-		// Token: 0x060020CA RID: 8394 RVA: 0x001C1D7C File Offset: 0x001BFF7C
+		
 		public static int NotifyInjured(SocketListener sl, TCPOutPacketPool pool, GameClient client, FakeRoleItem enemy, int burst, int injure, double injurePercent, int attackType, bool forceBurst, int addInjure, double attackPercent, int addAttackMin, int addAttackMax, double baseRate = 1.0, int addVlue = 0, int nHitFlyDistance = 0)
 		{
 			int ret = 0;
@@ -721,7 +721,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x060020CB RID: 8395 RVA: 0x001C2074 File Offset: 0x001C0274
+		
 		public static void NotifyInjured(SocketListener sl, TCPOutPacketPool pool, GameClient client, int roleID, int enemy, int enemyX, int enemyY, int burst, int injure, double attackPercent, int addAttack, double baseRate = 1.0, int addVlue = 0, int nHitFlyDistance = 0)
 		{
 			object obj = FakeRoleManager.FindFakeRoleByID(enemy);
@@ -761,7 +761,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020CC RID: 8396 RVA: 0x001C22FC File Offset: 0x001C04FC
+		
 		private static void ProcessFakeRoleDead(SocketListener sl, TCPOutPacketPool pool, GameClient client, FakeRoleItem fakeRoleItem)
 		{
 			if (!fakeRoleItem.HandledDead)
@@ -780,10 +780,10 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0400368C RID: 13964
+		
 		private static Dictionary<int, FakeRoleItem> _ID2FakeRoleDict = new Dictionary<int, FakeRoleItem>();
 
-		// Token: 0x0400368D RID: 13965
+		
 		private static Dictionary<string, FakeRoleItem> _RoleIDType2FakeRoleDict = new Dictionary<string, FakeRoleItem>();
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace GameServer.Logic.Goods
 {
-	// Token: 0x0200045F RID: 1119
+	
 	internal class CondJudger_JunXianLvl : ICondJudger
 	{
-		// Token: 0x060014A3 RID: 5283 RVA: 0x00144DB4 File Offset: 0x00142FB4
+		
 		public bool Judge(GameClient client, string arg, out string failedMsg)
 		{
 			failedMsg = "";

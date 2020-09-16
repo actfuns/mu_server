@@ -8,10 +8,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020000B0 RID: 176
+	
 	public class MazingerStoreManager : IManager, ICmdProcessorEx, ICmdProcessor, IManager2
 	{
-		// Token: 0x060002B9 RID: 697 RVA: 0x0002DE58 File Offset: 0x0002C058
+		
 		public bool InitConfig()
 		{
 			Dictionary<int, Dictionary<int, MazingerUpGrade>> MazingerGradeHot = new Dictionary<int, Dictionary<int, MazingerUpGrade>>();
@@ -191,50 +191,50 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002BA RID: 698 RVA: 0x0002E614 File Offset: 0x0002C814
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x060002BB RID: 699 RVA: 0x0002E638 File Offset: 0x0002C838
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			return true;
 		}
 
-		// Token: 0x060002BC RID: 700 RVA: 0x0002E64C File Offset: 0x0002C84C
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(2097, 2, 2, MazingerStoreManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
 			return true;
 		}
 
-		// Token: 0x060002BD RID: 701 RVA: 0x0002E678 File Offset: 0x0002C878
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x060002BE RID: 702 RVA: 0x0002E68C File Offset: 0x0002C88C
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060002BF RID: 703 RVA: 0x0002E6A0 File Offset: 0x0002C8A0
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x060002C0 RID: 704 RVA: 0x0002E6B4 File Offset: 0x0002C8B4
+		
 		public static MazingerStoreManager getInstance()
 		{
 			return MazingerStoreManager.instance;
 		}
 
-		// Token: 0x060002C1 RID: 705 RVA: 0x0002E6CC File Offset: 0x0002C8CC
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			if (nID == 2097)
@@ -259,7 +259,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060002C2 RID: 706 RVA: 0x0002E76C File Offset: 0x0002C96C
+		
 		public void UpdateProps(GameClient client)
 		{
 			double[] _ExtProps = new double[177];
@@ -295,7 +295,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060002C3 RID: 707 RVA: 0x0002E968 File Offset: 0x0002CB68
+		
 		public List<double> GetSystemParamMibao()
 		{
 			List<string> param = GameManager.systemParamsList.GetParamValueStringListByName("MibaoBaoji", ',');
@@ -317,7 +317,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060002C4 RID: 708 RVA: 0x0002EA08 File Offset: 0x0002CC08
+		
 		public MazingerStoreData CopyMazingerStoreMemData(GameClient client, int key)
 		{
 			return new MazingerStoreData
@@ -330,7 +330,7 @@ namespace GameServer.Logic
 			};
 		}
 
-		// Token: 0x060002C5 RID: 709 RVA: 0x0002EAA4 File Offset: 0x0002CCA4
+		
 		public bool UseXmlGoods(GameClient client, Dictionary<int, Dictionary<int, GoodsData>> TotleGoods)
 		{
 			foreach (Dictionary<int, GoodsData> goodDict in TotleGoods.Values)
@@ -351,7 +351,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060002C6 RID: 710 RVA: 0x0002EB6C File Offset: 0x0002CD6C
+		
 		public MazingerStore ProcessMazingerStoreUpGrade(GameClient client, int ClientType, int ClientOpt)
 		{
 			MazingerStore res = new MazingerStore();
@@ -582,22 +582,22 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04000419 RID: 1049
+		
 		public Dictionary<int, Dictionary<int, MazingerUpGrade>> MazingerGrade = new Dictionary<int, Dictionary<int, MazingerUpGrade>>();
 
-		// Token: 0x0400041A RID: 1050
+		
 		public Dictionary<int, int> MazingerGradeLevelMax = new Dictionary<int, int>();
 
-		// Token: 0x0400041B RID: 1051
+		
 		public Dictionary<int, Dictionary<int, Dictionary<int, MazingerUpStar>>> MazingerStar = new Dictionary<int, Dictionary<int, Dictionary<int, MazingerUpStar>>>();
 
-		// Token: 0x0400041C RID: 1052
+		
 		public Dictionary<int, Dictionary<int, int>> MazingerStarLevelMax = new Dictionary<int, Dictionary<int, int>>();
 
-		// Token: 0x0400041D RID: 1053
+		
 		public List<double> MazingerRate = new List<double>();
 
-		// Token: 0x0400041E RID: 1054
+		
 		private static MazingerStoreManager instance = new MazingerStoreManager();
 	}
 }

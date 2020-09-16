@@ -10,16 +10,16 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004AD RID: 1197
+	
 	public class RegressActiveDayBuy : Activity, IEventListener
 	{
-		// Token: 0x0600163E RID: 5694 RVA: 0x0015BDDC File Offset: 0x00159FDC
+		
 		public void Dispose()
 		{
 			GlobalEventSource.getInstance().removeListener(36, this);
 		}
 
-		// Token: 0x0600163F RID: 5695 RVA: 0x0015BDF0 File Offset: 0x00159FF0
+		
 		public bool Init()
 		{
 			GeneralCachingXmlMgr.RemoveCachingXml(Global.GameResPath("Config\\HuiGuiDayZhiGou.xml"));
@@ -81,7 +81,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001640 RID: 5696 RVA: 0x0015C0A0 File Offset: 0x0015A2A0
+		
 		public void OnRoleLogin(GameClient client)
 		{
 			if (!this.InActivityTime())
@@ -110,7 +110,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001641 RID: 5697 RVA: 0x0015C160 File Offset: 0x0015A360
+		
 		public bool CheckValidChargeItem(GameClient client, int zhigouID)
 		{
 			bool result;
@@ -202,7 +202,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001642 RID: 5698 RVA: 0x0015C478 File Offset: 0x0015A678
+		
 		public Dictionary<int, int> BuildRegressZhiGouInfoForClient(GameClient client)
 		{
 			RegressActiveOpen iflAct = HuodongCachingMgr.GetRegressActiveOpen();
@@ -269,7 +269,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001643 RID: 5699 RVA: 0x0015C744 File Offset: 0x0015A944
+		
 		public void processEvent(EventObject eventObject)
 		{
 			if (eventObject.getEventType() == 36)
@@ -287,7 +287,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001644 RID: 5700 RVA: 0x0015C7E0 File Offset: 0x0015A9E0
+		
 		public bool CheckClientCanBuy(GameClient client)
 		{
 			RegressActiveOpen iflAct = HuodongCachingMgr.GetRegressActiveOpen();
@@ -357,13 +357,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04001FCF RID: 8143
+		
 		protected const string RegressActiveDayBuyXml = "Config\\HuiGuiDayZhiGou.xml";
 
-		// Token: 0x04001FD0 RID: 8144
+		
 		private Dictionary<int, RegressActiveDayBuyXML> regressActiveDayBuyXML = new Dictionary<int, RegressActiveDayBuyXML>();
 
-		// Token: 0x04001FD1 RID: 8145
+		
 		public HashSet<int> ActZhiGouIDSet = new HashSet<int>();
 	}
 }

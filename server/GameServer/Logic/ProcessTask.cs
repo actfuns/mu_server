@@ -15,10 +15,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200077F RID: 1919
+	
 	public class ProcessTask
 	{
-		// Token: 0x06003128 RID: 12584 RVA: 0x002B8ED8 File Offset: 0x002B70D8
+		
 		public static void InitBranchTasks(Dictionary<int, SystemXmlItem> taskXmlDic)
 		{
 			if (taskXmlDic != null)
@@ -79,14 +79,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003129 RID: 12585 RVA: 0x002B9110 File Offset: 0x002B7310
+		
 		public bool IsBranchTask(int taskID)
 		{
 			SystemXmlItem systemTaskItem = null;
 			return GameManager.SystemTasksMgr.SystemXmlItemDict.TryGetValue(taskID, out systemTaskItem) && systemTaskItem.GetIntValue("TaskClass", -1) == 1;
 		}
 
-		// Token: 0x0600312A RID: 12586 RVA: 0x002B9154 File Offset: 0x002B7354
+		
 		public static List<BranchTaskInfo> GetBranchTaskTriggerType(int taskID)
 		{
 			List<BranchTaskInfo> branchTaskInfoList = null;
@@ -94,7 +94,7 @@ namespace GameServer.Logic
 			return branchTaskInfoList;
 		}
 
-		// Token: 0x0600312B RID: 12587 RVA: 0x002B9178 File Offset: 0x002B7378
+		
 		public static List<int> GetActiveBranchTaskInfo(long taskID)
 		{
 			List<int> list = null;
@@ -102,7 +102,7 @@ namespace GameServer.Logic
 			return list;
 		}
 
-		// Token: 0x0600312C RID: 12588 RVA: 0x002B919C File Offset: 0x002B739C
+		
 		public static void ProcessTakeBranchTasks(GameClient client, BranchTaskTriggerType type, long param)
 		{
 			if (type == BranchTaskTriggerType.CompleteTask)
@@ -174,7 +174,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600312D RID: 12589 RVA: 0x002B9434 File Offset: 0x002B7634
+		
 		private static void UpdateTaskDataToDB(GameClient client, TaskData taskData)
 		{
 			GameManager.DBCmdMgr.AddDBCmd(10007, string.Format("{0}:{1}:{2}:{3}:{4}:{5}", new object[]
@@ -188,7 +188,7 @@ namespace GameServer.Logic
 			}), null, client.ServerId);
 		}
 
-		// Token: 0x0600312E RID: 12590 RVA: 0x002B94C4 File Offset: 0x002B76C4
+		
 		public static void ProcessAddTaskVal(GameClient client, TaskTypes taskType, int targetId, int val, params object[] args)
 		{
 			if (null != client.ClientData.TaskDataList)
@@ -244,7 +244,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600312F RID: 12591 RVA: 0x002B9874 File Offset: 0x002B7A74
+		
 		public static int GetRoleTaskVal(GameClient client, TaskTypes taskType)
 		{
 			if (taskType <= TaskTypes.FreindNum)
@@ -294,7 +294,7 @@ namespace GameServer.Logic
 			return -1;
 		}
 
-		// Token: 0x06003130 RID: 12592 RVA: 0x002B9A34 File Offset: 0x002B7C34
+		
 		public static void ProcessRoleTaskVal(GameClient client, TaskTypes taskType, int val = -1)
 		{
 			if (null != client.ClientData.TaskDataList)
@@ -354,7 +354,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003131 RID: 12593 RVA: 0x002B9D74 File Offset: 0x002B7F74
+		
 		public static void InitRoleTaskVal(GameClient client, TaskData taskData, SystemXmlItem systemTask)
 		{
 			for (int index = 1; index <= 2; index++)
@@ -372,7 +372,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003132 RID: 12594 RVA: 0x002B9DE0 File Offset: 0x002B7FE0
+		
 		public static void Process(SocketListener sl, TCPOutPacketPool pool, GameClient client, int npcID, int extensionID, int goodsID, TaskTypes taskType, Monster monster = null, int chengjiuID = 0, long chengjiuValue = -1L, GameClient otherClient = null)
 		{
 			switch (taskType)
@@ -423,7 +423,7 @@ namespace GameServer.Logic
 			ProcessTask.CheckAutoCompleteTask(client);
 		}
 
-		// Token: 0x06003133 RID: 12595 RVA: 0x002B9F70 File Offset: 0x002B8170
+		
 		public static void CheckAutoCompleteTask(GameClient client)
 		{
 			if (client != null)
@@ -463,7 +463,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003134 RID: 12596 RVA: 0x002BA0E4 File Offset: 0x002B82E4
+		
 		public static void _ProcessSpriteCompTaskCmd(GameClient client, int npcID, int taskID, int dbID, int useYuanBao)
 		{
 			int nID = 140;
@@ -641,7 +641,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003135 RID: 12597 RVA: 0x002BA84C File Offset: 0x002B8A4C
+		
 		private static string GetPropNameGoodsName(string propName)
 		{
 			string result;
@@ -667,7 +667,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003136 RID: 12598 RVA: 0x002BA898 File Offset: 0x002B8A98
+		
 		private static int GetPropNameGoodsLevel(string propName)
 		{
 			int result;
@@ -693,7 +693,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003137 RID: 12599 RVA: 0x002BA8EC File Offset: 0x002B8AEC
+		
 		private static int GetPropNameGoodsQuality(string propName)
 		{
 			int result;
@@ -719,7 +719,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003138 RID: 12600 RVA: 0x002BA940 File Offset: 0x002B8B40
+		
 		private static bool IsTaskValid(GameClient client, SystemXmlItem systemTask, TaskData taskData, long nowTicks)
 		{
 			int taskMaxOverTime = systemTask.GetIntValue("Taketime", -1);
@@ -748,7 +748,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003139 RID: 12601 RVA: 0x002BAA34 File Offset: 0x002B8C34
+		
 		private static void ProcessTalk(SocketListener sl, TCPOutPacketPool pool, GameClient client, int npcID, int extensionID, int goodsID, TaskTypes taskType)
 		{
 			if (null != client.ClientData.TaskDataList)
@@ -1026,7 +1026,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600313A RID: 12602 RVA: 0x002BB984 File Offset: 0x002B9B84
+		
 		private static void ProcessTransferSomething(SocketListener sl, TCPOutPacketPool pool, GameClient client, int npcID, int extensionID, int goodsID, TaskTypes taskType)
 		{
 			if (null != client.ClientData.TaskDataList)
@@ -1168,7 +1168,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600313B RID: 12603 RVA: 0x002BC16C File Offset: 0x002BA36C
+		
 		private static void ProcessGatherMonster(SocketListener sl, TCPOutPacketPool pool, GameClient client, int npcID, int extensionID, int goodsID, TaskTypes taskType)
 		{
 			if (null != client.ClientData.TaskDataList)
@@ -1214,7 +1214,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600313C RID: 12604 RVA: 0x002BC4AC File Offset: 0x002BA6AC
+		
 		public static bool TaskOKForSystemKillMoster(GameClient client, int extentionID, int taskid)
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -1270,7 +1270,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600313D RID: 12605 RVA: 0x002BC63C File Offset: 0x002BA83C
+		
 		private static void ProcessKillRole(SocketListener sl, TCPOutPacketPool pool, GameClient client, TaskTypes taskType, GameClient otherClient)
 		{
 			if (null != otherClient)
@@ -1354,7 +1354,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600313E RID: 12606 RVA: 0x002BCAE8 File Offset: 0x002BACE8
+		
 		private static void ProcessChengJiuUpdate(SocketListener sl, TCPOutPacketPool pool, GameClient client, int chengjiuID, long roleCurrentValue)
 		{
 			if (chengjiuID > 0)
@@ -1407,7 +1407,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600313F RID: 12607 RVA: 0x002BCDDC File Offset: 0x002BAFDC
+		
 		private static void ProcessKillMonster(SocketListener sl, TCPOutPacketPool pool, GameClient client, int npcID, int extensionID, int goodsID, TaskTypes taskType, Monster monster = null)
 		{
 			if (null != client.ClientData.TaskDataList)
@@ -1636,7 +1636,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003140 RID: 12608 RVA: 0x002BDB50 File Offset: 0x002BBD50
+		
 		private static void ProcessBuy(SocketListener sl, TCPOutPacketPool pool, GameClient client, int npcID, int extensionID, int goodsID, TaskTypes taskType)
 		{
 			if (null != client.ClientData.TaskDataList)
@@ -1748,7 +1748,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003141 RID: 12609 RVA: 0x002BE23C File Offset: 0x002BC43C
+		
 		private static void ProcessUsingSomething(SocketListener sl, TCPOutPacketPool pool, GameClient client, int npcID, int extensionID, int goodsID, TaskTypes taskType)
 		{
 			if (null != client.ClientData.TaskDataList)
@@ -1869,7 +1869,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003142 RID: 12610 RVA: 0x002BEAA4 File Offset: 0x002BCCA4
+		
 		private static void ProcessLuaHandle(SocketListener sl, TCPOutPacketPool pool, GameClient client, int npcID, int extensionID, int goodsID, TaskTypes taskType)
 		{
 			if (null != client.ClientData.TaskDataList)
@@ -1964,7 +1964,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003143 RID: 12611 RVA: 0x002BF16C File Offset: 0x002BD36C
+		
 		public static bool IfActivateTask(GameClient client, int taskid)
 		{
 			SystemXmlItem systemTask = null;
@@ -1988,7 +1988,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003144 RID: 12612 RVA: 0x002BF2A4 File Offset: 0x002BD4A4
+		
 		public static void GMSetMainTaskID(GameClient client, int taskID = 2000)
 		{
 			int roleID = client.ClientData.RoleID;
@@ -2033,7 +2033,7 @@ namespace GameServer.Logic
 			Global.ForceCloseClient(client, "", true);
 		}
 
-		// Token: 0x06003145 RID: 12613 RVA: 0x002BF4AC File Offset: 0x002BD6AC
+		
 		public static void ProcessTaskValue(SocketListener sl, TCPOutPacketPool pool, GameClient client, string taskName, int valType, int taskVal)
 		{
 			if (null != client.ClientData.TaskDataList)
@@ -2118,7 +2118,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003146 RID: 12614 RVA: 0x002BFA94 File Offset: 0x002BDC94
+		
 		public static void ClearTaskGoods(SocketListener sl, TCPOutPacketPool pool, GameClient client, int taskID)
 		{
 			if (null != client.ClientData.TaskDataList)
@@ -2208,7 +2208,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003147 RID: 12615 RVA: 0x002BFDD4 File Offset: 0x002BDFD4
+		
 		public static bool Complete(SocketListener sl, TCPOutPacketPool pool, GameClient client, int npcID, int extensionID, int taskID, int dbID, bool useYuanBao, double expBeiShu = 1.0, bool bIsOneClickComlete = false)
 		{
 			bool result;
@@ -2639,7 +2639,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003148 RID: 12616 RVA: 0x002C1040 File Offset: 0x002BF240
+		
 		public static void SendMailWhenPacketFull(GameClient client, List<GoodsData> awardsItemList, string strSubject, string strContent)
 		{
 			int nTotalGroup = awardsItemList.Count / 5;
@@ -2670,10 +2670,10 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04003DA8 RID: 15784
+		
 		public static Dictionary<int, List<BranchTaskInfo>> BranchTaskInfoDic = new Dictionary<int, List<BranchTaskInfo>>();
 
-		// Token: 0x04003DA9 RID: 15785
+		
 		public static Dictionary<long, List<int>> ActiveBranchTaskInfoDic = new Dictionary<long, List<int>>();
 	}
 }

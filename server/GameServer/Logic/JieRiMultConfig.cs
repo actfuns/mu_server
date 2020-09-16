@@ -3,10 +3,10 @@ using GameServer.Core.Executor;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000709 RID: 1801
+	
 	public class JieRiMultConfig
 	{
-		// Token: 0x06002B44 RID: 11076 RVA: 0x002679FC File Offset: 0x00265BFC
+		
 		public double GetMult()
 		{
 			double result;
@@ -41,7 +41,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002B45 RID: 11077 RVA: 0x00267AA0 File Offset: 0x00265CA0
+		
 		public bool InActivityTime()
 		{
 			JieriActivityConfig config = HuodongCachingMgr.GetJieriActivityConfig();
@@ -75,22 +75,22 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04003A35 RID: 14901
+		
 		public int index;
 
-		// Token: 0x04003A36 RID: 14902
+		
 		public int type;
 
-		// Token: 0x04003A37 RID: 14903
+		
 		public double Multiplying;
 
-		// Token: 0x04003A38 RID: 14904
+		
 		public int Effective;
 
-		// Token: 0x04003A39 RID: 14905
+		
 		public string StartDate;
 
-		// Token: 0x04003A3A RID: 14906
+		
 		public string EndDate;
 	}
 }

@@ -7,10 +7,10 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004C0 RID: 1216
+	
 	public static class ConfigParser
 	{
-		// Token: 0x06001671 RID: 5745 RVA: 0x0015F430 File Offset: 0x0015D630
+		
 		static ConfigParser()
 		{
 			for (ExtPropIndexes i = ExtPropIndexes.Strong; i < ExtPropIndexes.Max; i++)
@@ -19,7 +19,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001672 RID: 5746 RVA: 0x0015F47C File Offset: 0x0015D67C
+		
 		public static ExtPropIndexes GetPropIndexByPropName(string propName)
 		{
 			ExtPropIndexes propIndex;
@@ -35,7 +35,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001673 RID: 5747 RVA: 0x0015F4B4 File Offset: 0x0015D6B4
+		
 		public static void ParseExtprops(double[] extProps, string str, string splitChars = "|,")
 		{
 			try
@@ -67,7 +67,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001674 RID: 5748 RVA: 0x0015F57C File Offset: 0x0015D77C
+		
 		public static bool ParseStrInt2(string str, ref int v1, ref int v2, char splitChar = ',')
 		{
 			bool result;
@@ -97,7 +97,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001675 RID: 5749 RVA: 0x0015F5EC File Offset: 0x0015D7EC
+		
 		public static bool ParseStrInt3(string str, ref int v1, ref int v2, ref int v3, char splitChar = ',')
 		{
 			bool result;
@@ -129,7 +129,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001676 RID: 5750 RVA: 0x0015F670 File Offset: 0x0015D870
+		
 		public static bool ParserTimeRangeList(List<TimeSpan> list, string str, bool clear = true, char splitChar1 = '|', char splitChar2 = '-')
 		{
 			bool result;
@@ -171,7 +171,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001677 RID: 5751 RVA: 0x0015F754 File Offset: 0x0015D954
+		
 		public static bool ParserTimeRangeListWithDay(List<TimeSpan> list, string str, bool clear = true, char splitChar1 = '|', char splitChar2 = '-', char splitChar3 = ',')
 		{
 			bool result;
@@ -229,7 +229,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001678 RID: 5752 RVA: 0x0015F8B0 File Offset: 0x0015DAB0
+		
 		public static List<List<int>> ParserIntArrayList(string str, bool verifyColumn = true, char splitChar1 = '|', char splitChar2 = ',')
 		{
 			List<List<int>> list = new List<List<int>>();
@@ -286,7 +286,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001679 RID: 5753 RVA: 0x0015F9F0 File Offset: 0x0015DBF0
+		
 		public static EquipPropItem ParseEquipPropItem(string str, bool verifyColumn = true, char splitChar1 = '|', char splitChar2 = ',', char splitChar3 = '-')
 		{
 			EquipPropItem equipPropItem = new EquipPropItem();
@@ -370,20 +370,20 @@ namespace GameServer.Logic
 			return equipPropItem;
 		}
 
-		// Token: 0x0600167A RID: 5754 RVA: 0x0015FBAD File Offset: 0x0015DDAD
+		
 		public static void ParseAwardsItemList(string str, ref AwardsItemList awardsItemList, char splitChar1 = '|', char splitChar2 = ',')
 		{
 			awardsItemList.Add(str);
 		}
 
-		// Token: 0x0600167B RID: 5755 RVA: 0x0015FBBC File Offset: 0x0015DDBC
+		
 		public static void ParseAwardsGoodsList(string str, List<GoodsData> goodsDataList, char splitChar1 = '|', char splitChar2 = ',')
 		{
 			AwardsItemList awardsItemList = new AwardsItemList();
 			awardsItemList.Add(str);
 		}
 
-		// Token: 0x0600167C RID: 5756 RVA: 0x0015FBD8 File Offset: 0x0015DDD8
+		
 		public static double[] ParserExtPropsFromAttrubite(XElement xml, List<KeyValuePair<int, string>> list)
 		{
 			double[] extProps = new double[177];
@@ -394,7 +394,7 @@ namespace GameServer.Logic
 			return extProps;
 		}
 
-		// Token: 0x04002046 RID: 8262
+		
 		private static Dictionary<string, ExtPropIndexes> ExtPropName2ExtPropIndexDict = new Dictionary<string, ExtPropIndexes>(StringComparer.OrdinalIgnoreCase);
 	}
 }

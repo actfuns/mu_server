@@ -6,10 +6,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006C2 RID: 1730
+	
 	internal class FreshPlayerCopySceneManager
 	{
-		// Token: 0x060020CE RID: 8398 RVA: 0x001C2380 File Offset: 0x001C0580
+		
 		public static void AddFreshPlayerListCopyMap(int nID, CopyMap mapInfo)
 		{
 			lock (FreshPlayerCopySceneManager.m_FreshPlayerListCopyMaps)
@@ -18,7 +18,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020CF RID: 8399 RVA: 0x001C23D4 File Offset: 0x001C05D4
+		
 		public static void RemoveFreshPlayerListCopyMap(int nID, CopyMap mapInfo)
 		{
 			lock (FreshPlayerCopySceneManager.m_FreshPlayerListCopyMaps)
@@ -27,7 +27,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020D0 RID: 8400 RVA: 0x001C2424 File Offset: 0x001C0624
+		
 		public static void HeartBeatFreshPlayerCopyMap()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -63,7 +63,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020D1 RID: 8401 RVA: 0x001C257C File Offset: 0x001C077C
+		
 		public static void KillMonsterInFreshPlayerScene(GameClient client, Monster monster)
 		{
 			CopyMap copyMapInfo;
@@ -138,7 +138,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020D2 RID: 8402 RVA: 0x001C28B4 File Offset: 0x001C0AB4
+		
 		public static void AddShuiJingGuanCaiMonsters(GameClient client)
 		{
 			CopyMap copyMapInfo = null;
@@ -176,7 +176,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020D3 RID: 8403 RVA: 0x001C2A28 File Offset: 0x001C0C28
+		
 		public static void CreateMonsterBFreshPlayerScene(CopyMap copyMapInfo)
 		{
 			int monsterID = Data.FreshPlayerSceneInfo.NeedKillMonster2ID;
@@ -199,7 +199,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020D4 RID: 8404 RVA: 0x001C2B20 File Offset: 0x001C0D20
+		
 		public static void CreateGateMonster(CopyMap copyMapInfo)
 		{
 			int monsterID = Data.FreshPlayerSceneInfo.GateID;
@@ -219,10 +219,10 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0400368E RID: 13966
+		
 		public static Dictionary<int, CopyMap> m_FreshPlayerListCopyMaps = new Dictionary<int, CopyMap>();
 
-		// Token: 0x0400368F RID: 13967
+		
 		private static long LastHeartBeatTicks = 0L;
 	}
 }

@@ -5,10 +5,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006FC RID: 1788
+	
 	public class FirstChongZhiGift : Activity
 	{
-		// Token: 0x06002B07 RID: 11015 RVA: 0x00265C4C File Offset: 0x00263E4C
+		
 		public override bool GiveAward(GameClient client)
 		{
 			bool result;
@@ -34,7 +34,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002B08 RID: 11016 RVA: 0x00265CD8 File Offset: 0x00263ED8
+		
 		protected bool GiveAwardByOccupation(GameClient client, AwardItem myAwardItem, int occupation)
 		{
 			bool result;
@@ -72,7 +72,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002B09 RID: 11017 RVA: 0x00265F34 File Offset: 0x00264134
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client, int nOcc)
 		{
 			bool result;
@@ -106,10 +106,10 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04003A18 RID: 14872
+		
 		public AwardItem AwardDict = new AwardItem();
 
-		// Token: 0x04003A19 RID: 14873
+		
 		public AwardItem AwardDict2 = new AwardItem();
 	}
 }

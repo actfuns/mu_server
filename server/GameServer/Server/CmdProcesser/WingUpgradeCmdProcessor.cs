@@ -10,22 +10,22 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Server.CmdProcesser
 {
-	// Token: 0x020008AD RID: 2221
+	
 	public class WingUpgradeCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x06003DA3 RID: 15779 RVA: 0x0034A030 File Offset: 0x00348230
+		
 		private WingUpgradeCmdProcessor()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(609, 2, this);
 		}
 
-		// Token: 0x06003DA4 RID: 15780 RVA: 0x0034A050 File Offset: 0x00348250
+		
 		public static WingUpgradeCmdProcessor getInstance()
 		{
 			return WingUpgradeCmdProcessor.instance;
 		}
 
-		// Token: 0x06003DA5 RID: 15781 RVA: 0x0034A068 File Offset: 0x00348268
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			int nID = 609;
@@ -338,7 +338,7 @@ namespace GameServer.Server.CmdProcesser
 			return result;
 		}
 
-		// Token: 0x040047BE RID: 18366
+		
 		private static WingUpgradeCmdProcessor instance = new WingUpgradeCmdProcessor();
 	}
 }

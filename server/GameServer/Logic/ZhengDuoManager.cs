@@ -14,16 +14,16 @@ using Tmsk.Contract.KuaFuData;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200042C RID: 1068
+	
 	public class ZhengDuoManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListenerEx, IEventListener, ICopySceneManager
 	{
-		// Token: 0x0600136A RID: 4970 RVA: 0x0013267C File Offset: 0x0013087C
+		
 		public static ZhengDuoManager getInstance()
 		{
 			return ZhengDuoManager.instance;
 		}
 
-		// Token: 0x0600136B RID: 4971 RVA: 0x00132694 File Offset: 0x00130894
+		
 		public bool initialize()
 		{
 			bool result;
@@ -40,7 +40,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600136C RID: 4972 RVA: 0x00132718 File Offset: 0x00130918
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1070, 1, 1, ZhengDuoManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -55,7 +55,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600136D RID: 4973 RVA: 0x001327F0 File Offset: 0x001309F0
+		
 		public bool showdown()
 		{
 			GlobalEventSource.getInstance().removeListener(10, ZhengDuoManager.getInstance());
@@ -66,19 +66,19 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600136E RID: 4974 RVA: 0x00132868 File Offset: 0x00130A68
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600136F RID: 4975 RVA: 0x0013287C File Offset: 0x00130A7C
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06001370 RID: 4976 RVA: 0x00132890 File Offset: 0x00130A90
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -104,7 +104,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001371 RID: 4977 RVA: 0x00132918 File Offset: 0x00130B18
+		
 		private bool HandleZhengDuoData(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			ZhengDuoData zhengDuoData = new ZhengDuoData();
@@ -181,7 +181,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001372 RID: 4978 RVA: 0x00132C6C File Offset: 0x00130E6C
+		
 		private bool HandleZhengDuoSign(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			int result = -4007;
@@ -235,7 +235,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001373 RID: 4979 RVA: 0x00132E40 File Offset: 0x00131040
+		
 		private bool HandleZhengDuoEnter(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			int result = 1;
@@ -335,7 +335,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001374 RID: 4980 RVA: 0x001331A4 File Offset: 0x001313A4
+		
 		private bool HandleZhengDuoRankList(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			ZhengDuoRankList rankList = new ZhengDuoRankList();
@@ -363,7 +363,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001375 RID: 4981 RVA: 0x001332C0 File Offset: 0x001314C0
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 			switch (eventObject.EventType)
@@ -389,7 +389,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001376 RID: 4982 RVA: 0x00133334 File Offset: 0x00131534
+		
 		public bool OnPreBangHuiAddMember(PreBangHuiAddMemberEventObject e)
 		{
 			bool result;
@@ -406,7 +406,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001377 RID: 4983 RVA: 0x0013338C File Offset: 0x0013158C
+		
 		public bool OnPreBangHuiRemoveMember(PreBangHuiRemoveMemberEventObject e)
 		{
 			bool result;
@@ -423,7 +423,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001378 RID: 4984 RVA: 0x001333E4 File Offset: 0x001315E4
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int eventType = eventObject.getEventType();
@@ -440,7 +440,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001379 RID: 4985 RVA: 0x00133450 File Offset: 0x00131650
+		
 		private void HandleMonsterDead(GameClient player, Monster monster)
 		{
 			ZhengDuoScene scene = player.SceneObject as ZhengDuoScene;
@@ -455,7 +455,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600137A RID: 4986 RVA: 0x001334BC File Offset: 0x001316BC
+		
 		private void HandleMonsterInjured(GameClient client, Monster monster, int injure)
 		{
 			ZhengDuoScene scene = client.SceneObject as ZhengDuoScene;
@@ -509,7 +509,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600137B RID: 4987 RVA: 0x001336D0 File Offset: 0x001318D0
+		
 		private bool IsActivityState(int bhid)
 		{
 			bool state = false;
@@ -539,7 +539,7 @@ namespace GameServer.Logic
 			return state;
 		}
 
-		// Token: 0x0600137C RID: 4988 RVA: 0x001337F4 File Offset: 0x001319F4
+		
 		public void CheckTipsIconState(GameClient client)
 		{
 			bool state = this.IsActivityState(client.ClientData.Faction);
@@ -549,7 +549,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600137D RID: 4989 RVA: 0x0013383C File Offset: 0x00131A3C
+		
 		public bool AddCopyScenes(GameClient client, CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool result;
@@ -680,7 +680,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600137E RID: 4990 RVA: 0x00133DD0 File Offset: 0x00131FD0
+		
 		public bool RemoveCopyScene(CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool result;
@@ -700,7 +700,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600137F RID: 4991 RVA: 0x00133E4C File Offset: 0x0013204C
+		
 		private DateTime GetStartTime(int sceneId)
 		{
 			ZhengDuoSceneInfo sceneItem = null;
@@ -719,7 +719,7 @@ namespace GameServer.Logic
 			return now.Add(startTime);
 		}
 
-		// Token: 0x06001380 RID: 4992 RVA: 0x00133F10 File Offset: 0x00132110
+		
 		private void SyncData()
 		{
 			long zhengDuoAge = 0L;
@@ -772,7 +772,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001381 RID: 4993 RVA: 0x001341C0 File Offset: 0x001323C0
+		
 		public void TimerProc()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -939,7 +939,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001382 RID: 4994 RVA: 0x00134924 File Offset: 0x00132B24
+		
 		public void CompleteScene(ZhengDuoScene scene)
 		{
 			int successSide = 0;
@@ -968,13 +968,13 @@ namespace GameServer.Logic
 			scene.SuccessSide = successSide;
 		}
 
-		// Token: 0x06001383 RID: 4995 RVA: 0x00134A18 File Offset: 0x00132C18
+		
 		public void CreateMonster(ZhengDuoScene scene, ZhengDuoMonsterInfo monsterInfo)
 		{
 			GameManager.MonsterZoneMgr.AddDynamicMonsters(scene.m_nMapCode, monsterInfo.MonsterID, scene.CopyMapId, 1, monsterInfo.PosX / scene.MapGridWidth, monsterInfo.PosY / scene.MapGridHeight, 0, 0, SceneUIClasses.ZhengDuo, monsterInfo, null);
 		}
 
-		// Token: 0x06001384 RID: 4996 RVA: 0x00134A64 File Offset: 0x00132C64
+		
 		private void AddDelayCreateMonster(ZhengDuoScene scene, long ticks, object monster)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -989,7 +989,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001385 RID: 4997 RVA: 0x00134AE0 File Offset: 0x00132CE0
+		
 		private void InitCreateDynamicMonster(ZhengDuoScene scene)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -999,7 +999,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001386 RID: 4998 RVA: 0x00134B60 File Offset: 0x00132D60
+		
 		public void CheckCreateDynamicMonster(ZhengDuoScene scene, long nowMs)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -1030,7 +1030,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001387 RID: 4999 RVA: 0x00134CDC File Offset: 0x00132EDC
+		
 		public void GiveAwards(ZhengDuoScene scene)
 		{
 			try
@@ -1121,7 +1121,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001388 RID: 5000 RVA: 0x0013515C File Offset: 0x0013335C
+		
 		public void NotifyTimeStateInfoAndScoreInfo(GameClient client, bool timeState, bool scoreInfo = true)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -1141,7 +1141,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001389 RID: 5001 RVA: 0x00135208 File Offset: 0x00133408
+		
 		private ZhengDuoScoreInfo MakeZhengDuoScoreInfo(ZhengDuoScene scene)
 		{
 			ZhengDuoScoreInfo scoreInfo = new ZhengDuoScoreInfo
@@ -1161,7 +1161,7 @@ namespace GameServer.Logic
 			return scoreInfo;
 		}
 
-		// Token: 0x0600138A RID: 5002 RVA: 0x0013528C File Offset: 0x0013348C
+		
 		public int GetBirthPoint(GameClient client, out int posX, out int posY)
 		{
 			int side = client.ClientData.BattleWhichSide;
@@ -1180,7 +1180,7 @@ namespace GameServer.Logic
 			return -1;
 		}
 
-		// Token: 0x0600138B RID: 5003 RVA: 0x00135324 File Offset: 0x00133524
+		
 		private ZhengDuoFuBenData GetKuaFuFuBenDataByBhid(int bhid, int weekDay)
 		{
 			ZhengDuoFuBenData fuBenData;
@@ -1215,7 +1215,7 @@ namespace GameServer.Logic
 			return fuBenData;
 		}
 
-		// Token: 0x0600138C RID: 5004 RVA: 0x001354A4 File Offset: 0x001336A4
+		
 		private ZhengDuoFuBenData GetKuaFuFuBenData(long gameId, int weekDay)
 		{
 			ZhengDuoFuBenData fuBenData;
@@ -1250,7 +1250,7 @@ namespace GameServer.Logic
 			return fuBenData;
 		}
 
-		// Token: 0x0600138D RID: 5005 RVA: 0x00135620 File Offset: 0x00133820
+		
 		public bool OnInitGame(GameClient client)
 		{
 			int side = 0;
@@ -1305,7 +1305,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x0600138E RID: 5006 RVA: 0x001357CC File Offset: 0x001339CC
+		
 		public bool ClientRelive(GameClient client)
 		{
 			int toPosX;
@@ -1328,19 +1328,19 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04001CC2 RID: 7362
+		
 		public const SceneUIClasses _sceneType = SceneUIClasses.ZhengDuo;
 
-		// Token: 0x04001CC3 RID: 7363
+		
 		public const GameTypes _gameType = GameTypes.ZhengDuo;
 
-		// Token: 0x04001CC4 RID: 7364
+		
 		private static ZhengDuoManager instance = new ZhengDuoManager();
 
-		// Token: 0x04001CC5 RID: 7365
+		
 		private KFZhengDuoConfig ConfigData = new KFZhengDuoConfig();
 
-		// Token: 0x04001CC6 RID: 7366
+		
 		private ZhengDuoRuntimeData RuntimeData = new ZhengDuoRuntimeData();
 	}
 }

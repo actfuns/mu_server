@@ -4,10 +4,10 @@ using System.Xml.Linq;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000798 RID: 1944
+	
 	public class SingleEquipProps
 	{
-		// Token: 0x060032B4 RID: 12980 RVA: 0x002CF8A8 File Offset: 0x002CDAA8
+		
 		public List<double[]> GetSingleEquipPropsList(int occupation, int categoriy, int suitID)
 		{
 			List<double[]> result;
@@ -31,7 +31,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060032B5 RID: 12981 RVA: 0x002CF908 File Offset: 0x002CDB08
+		
 		private List<double[]> ParseSystemXmlItem(SystemXmlItem xmlItem)
 		{
 			string equipProps = xmlItem.GetStringValue("EquipProps");
@@ -63,7 +63,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060032B6 RID: 12982 RVA: 0x002CF99C File Offset: 0x002CDB9C
+		
 		private double[] ParseStringProps(string props)
 		{
 			double[] result;
@@ -90,7 +90,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060032B7 RID: 12983 RVA: 0x002CFA0C File Offset: 0x002CDC0C
+		
 		private void LoadEquipPropItemsByOccupation(string pathName, int occupation)
 		{
 			XElement xml = null;
@@ -124,7 +124,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032B8 RID: 12984 RVA: 0x002CFB9C File Offset: 0x002CDD9C
+		
 		public void LoadEquipPropItems(string pathName)
 		{
 			this.LoadEquipPropItemsByOccupation(pathName, 0);
@@ -132,7 +132,7 @@ namespace GameServer.Logic
 			this.LoadEquipPropItemsByOccupation(pathName, 2);
 		}
 
-		// Token: 0x04003EBD RID: 16061
+		
 		private Dictionary<string, List<double[]>> _SingleEquipItemsDict = new Dictionary<string, List<double[]>>();
 	}
 }

@@ -6,21 +6,21 @@ using Server.Tools;
 
 namespace GameServer.Server.CmdProcesser
 {
-	// Token: 0x020008A0 RID: 2208
+	
 	internal class JingJiGetRoleLooksCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x06003D62 RID: 15714 RVA: 0x00345226 File Offset: 0x00343426
+		
 		private JingJiGetRoleLooksCmdProcessor()
 		{
 		}
 
-		// Token: 0x06003D63 RID: 15715 RVA: 0x00345234 File Offset: 0x00343434
+		
 		public static JingJiGetRoleLooksCmdProcessor getInstance()
 		{
 			return JingJiGetRoleLooksCmdProcessor.instance;
 		}
 
-		// Token: 0x06003D64 RID: 15716 RVA: 0x0034524C File Offset: 0x0034344C
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			int lookWho = Convert.ToInt32(cmdParams[1]);
@@ -52,7 +52,7 @@ namespace GameServer.Server.CmdProcesser
 			return true;
 		}
 
-		// Token: 0x040047B0 RID: 18352
+		
 		private static JingJiGetRoleLooksCmdProcessor instance = new JingJiGetRoleLooksCmdProcessor();
 	}
 }

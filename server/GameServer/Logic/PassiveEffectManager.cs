@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020001E3 RID: 483
+	
 	public class PassiveEffectManager
 	{
-		// Token: 0x06000612 RID: 1554 RVA: 0x0005571C File Offset: 0x0005391C
+		
 		public static double GetPassiveEffectAddPercent(IObject attacker, int triggerType, int effectType)
 		{
 			double ret = 0.0;
@@ -126,13 +126,13 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x04000A91 RID: 2705
+		
 		private object mutex = new object();
 
-		// Token: 0x04000A92 RID: 2706
+		
 		private Dictionary<int, List<MagicActionItem>> _MagicActionsDict = null;
 
-		// Token: 0x04000A93 RID: 2707
+		
 		public static Dictionary<int, PassiveEffectData> passiveExtDict = new Dictionary<int, PassiveEffectData>();
 	}
 }

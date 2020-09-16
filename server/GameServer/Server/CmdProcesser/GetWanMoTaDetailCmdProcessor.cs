@@ -7,22 +7,22 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Server.CmdProcesser
 {
-	// Token: 0x0200089B RID: 2203
+	
 	public class GetWanMoTaDetailCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x06003D4E RID: 15694 RVA: 0x00344DC8 File Offset: 0x00342FC8
+		
 		private GetWanMoTaDetailCmdProcessor()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(618, 1, this);
 		}
 
-		// Token: 0x06003D4F RID: 15695 RVA: 0x00344DE8 File Offset: 0x00342FE8
+		
 		public static GetWanMoTaDetailCmdProcessor getInstance()
 		{
 			return GetWanMoTaDetailCmdProcessor.instance;
 		}
 
-		// Token: 0x06003D50 RID: 15696 RVA: 0x00344E00 File Offset: 0x00343000
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			int nID = 618;
@@ -69,7 +69,7 @@ namespace GameServer.Server.CmdProcesser
 			return result;
 		}
 
-		// Token: 0x040047AB RID: 18347
+		
 		private static GetWanMoTaDetailCmdProcessor instance = new GetWanMoTaDetailCmdProcessor();
 	}
 }

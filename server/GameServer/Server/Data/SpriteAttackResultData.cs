@@ -4,11 +4,11 @@ using Tmsk.Contract;
 
 namespace Server.Data
 {
-	// Token: 0x02000594 RID: 1428
+	
 	[ProtoContract]
 	public class SpriteAttackResultData : IProtoBuffData
 	{
-		// Token: 0x06001A1D RID: 6685 RVA: 0x00192FB4 File Offset: 0x001911B4
+		
 		public int fromBytes(byte[] data, int offset, int count)
 		{
 			int pos = offset;
@@ -57,7 +57,7 @@ namespace Server.Data
 			return pos;
 		}
 
-		// Token: 0x06001A1E RID: 6686 RVA: 0x00193100 File Offset: 0x00191300
+		
 		public byte[] toBytes()
 		{
 			int total = 0;
@@ -86,43 +86,43 @@ namespace Server.Data
 			return data;
 		}
 
-		// Token: 0x04002839 RID: 10297
+		
 		[ProtoMember(1)]
 		public int enemy = 0;
 
-		// Token: 0x0400283A RID: 10298
+		
 		[ProtoMember(2)]
 		public int burst = 0;
 
-		// Token: 0x0400283B RID: 10299
+		
 		[ProtoMember(3)]
 		public int injure = 0;
 
-		// Token: 0x0400283C RID: 10300
+		
 		[ProtoMember(4)]
 		public double enemyLife = 0.0;
 
-		// Token: 0x0400283D RID: 10301
+		
 		[ProtoMember(5)]
 		public long newExperience = 0L;
 
-		// Token: 0x0400283E RID: 10302
+		
 		[ProtoMember(6)]
 		public long currentExperience = 0L;
 
-		// Token: 0x0400283F RID: 10303
+		
 		[ProtoMember(7)]
 		public int newLevel = 0;
 
-		// Token: 0x04002840 RID: 10304
+		
 		[ProtoMember(8)]
 		public int MerlinInjuer = 0;
 
-		// Token: 0x04002841 RID: 10305
+		
 		[ProtoMember(9)]
 		public int MerlinType = 0;
 
-		// Token: 0x04002842 RID: 10306
+		
 		[ProtoMember(10)]
 		public int armorV_p1;
 	}

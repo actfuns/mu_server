@@ -9,15 +9,15 @@ using Tmsk.Contract.KuaFuData;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000045 RID: 69
+	
 	public class RankPersistence
 	{
-		// Token: 0x060002F2 RID: 754 RVA: 0x00029C0B File Offset: 0x00027E0B
+		
 		private RankPersistence()
 		{
 		}
 
-		// Token: 0x060002F3 RID: 755 RVA: 0x00029C20 File Offset: 0x00027E20
+		
 		public void InitConfig()
 		{
 			try
@@ -30,7 +30,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060002F4 RID: 756 RVA: 0x00029C68 File Offset: 0x00027E68
+		
 		public List<KFRankData> DBRankLoad(int rankType, int max)
 		{
 			MySqlDataReader sdr = null;
@@ -72,7 +72,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060002F5 RID: 757 RVA: 0x00029E20 File Offset: 0x00028020
+		
 		public bool DBRankDataUpdate(KFRankData data)
 		{
 			string sql = string.Format("REPLACE INTO t_rank(rankType,rank,zoneID,roleID,roleName,grade,rankTime,serverID,rankData) \r\n                                        VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}',@roleData)", new object[]
@@ -93,7 +93,7 @@ namespace KF.Remoting
 			return true;
 		}
 
-		// Token: 0x060002F6 RID: 758 RVA: 0x00029ED8 File Offset: 0x000280D8
+		
 		public void DBRankUpdate(List<KFRankData> list)
 		{
 			int index = 0;
@@ -125,7 +125,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060002F7 RID: 759 RVA: 0x00029FF8 File Offset: 0x000281F8
+		
 		public bool DBRankDelMore(int rankType, int rankMax)
 		{
 			string sql = string.Format("delete from t_rank where rankType={0} and rank>{1}", rankType, rankMax);
@@ -133,7 +133,7 @@ namespace KF.Remoting
 			return i > 0;
 		}
 
-		// Token: 0x060002F8 RID: 760 RVA: 0x0002A030 File Offset: 0x00028230
+		
 		public bool DBRankDelByType(int rankType)
 		{
 			string sql = string.Format("delete from t_rank where rankType={0}", rankType);
@@ -141,7 +141,7 @@ namespace KF.Remoting
 			return i > 0;
 		}
 
-		// Token: 0x060002F9 RID: 761 RVA: 0x0002A060 File Offset: 0x00028260
+		
 		private int ExecuteSqlNoQuery(string sqlCmd)
 		{
 			int i = 0;
@@ -156,10 +156,10 @@ namespace KF.Remoting
 			return i;
 		}
 
-		// Token: 0x040001B4 RID: 436
+		
 		public long DataVersion = 0L;
 
-		// Token: 0x040001B5 RID: 437
+		
 		public static readonly RankPersistence Instance = new RankPersistence();
 	}
 }

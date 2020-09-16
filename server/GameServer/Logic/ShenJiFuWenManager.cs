@@ -8,22 +8,22 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000403 RID: 1027
+	
 	public class ShenJiFuWenManager : IManager, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x06001216 RID: 4630 RVA: 0x0011F470 File Offset: 0x0011D670
+		
 		public static ShenJiFuWenManager getInstance()
 		{
 			return ShenJiFuWenManager.instance;
 		}
 
-		// Token: 0x06001217 RID: 4631 RVA: 0x0011F488 File Offset: 0x0011D688
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x06001218 RID: 4632 RVA: 0x0011F4AC File Offset: 0x0011D6AC
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1080, 2, 2, ShenJiFuWenManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -32,25 +32,25 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001219 RID: 4633 RVA: 0x0011F508 File Offset: 0x0011D708
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x0600121A RID: 4634 RVA: 0x0011F51C File Offset: 0x0011D71C
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600121B RID: 4635 RVA: 0x0011F530 File Offset: 0x0011D730
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x0600121C RID: 4636 RVA: 0x0011F544 File Offset: 0x0011D744
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -80,13 +80,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600121D RID: 4637 RVA: 0x0011F5EB File Offset: 0x0011D7EB
+		
 		public void OnLogin(GameClient client)
 		{
 			this.RefreshShenJiFuWenProps(client);
 		}
 
-		// Token: 0x0600121E RID: 4638 RVA: 0x0011F5F8 File Offset: 0x0011D7F8
+		
 		private void RefreshShenJiFuWenProps(GameClient client)
 		{
 			Dictionary<int, ShenJiFuWenConfigData> tempShenJiConfig = null;
@@ -119,7 +119,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x0600121F RID: 4639 RVA: 0x0011F74C File Offset: 0x0011D94C
+		
 		private ShenJiPointConfigData GetShenJiPointConfigInfo(GameClient client)
 		{
 			int CostPoints = this.GetCostShenJiPointNum(client);
@@ -141,7 +141,7 @@ namespace GameServer.Logic
 			return data;
 		}
 
-		// Token: 0x06001220 RID: 4640 RVA: 0x0011F7E4 File Offset: 0x0011D9E4
+		
 		private int GetCostShenJiPointNum(GameClient client)
 		{
 			Dictionary<int, ShenJiFuWenConfigData> tempShenJiConfig = null;
@@ -161,13 +161,13 @@ namespace GameServer.Logic
 			return TotalCostNum;
 		}
 
-		// Token: 0x06001221 RID: 4641 RVA: 0x0011F8B8 File Offset: 0x0011DAB8
+		
 		public int GetAllShenJiPointNum(GameClient client)
 		{
 			return this.GetCostShenJiPointNum(client) + GameManager.ClientMgr.GetShenJiPointValue(client);
 		}
 
-		// Token: 0x06001222 RID: 4642 RVA: 0x0011F8E0 File Offset: 0x0011DAE0
+		
 		private ShenJiFuWenData GetShenJiFuWenData(GameClient client, int shenjiID)
 		{
 			ShenJiFuWenData result;
@@ -190,19 +190,19 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001223 RID: 4643 RVA: 0x0011F92C File Offset: 0x0011DB2C
+		
 		private bool UpdateShenJiFuWenDataDB(GameClient client, int shenjiID, int lev)
 		{
 			return Global.sendToDB<bool, string>(13095, string.Format("{0}:{1}:{2}", client.ClientData.RoleID, shenjiID, lev), client.ServerId);
 		}
 
-		// Token: 0x06001224 RID: 4644 RVA: 0x0011F974 File Offset: 0x0011DB74
+		
 		private bool ClearShenJiFuWenDataDB(GameClient client)
 		{
 			return Global.sendToDB<bool, string>(13096, string.Format("{0}", client.ClientData.RoleID), client.ServerId);
 		}
 
-		// Token: 0x06001225 RID: 4645 RVA: 0x0011F9B0 File Offset: 0x0011DBB0
+		
 		public bool ProcessShenJiAddEffectCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -298,7 +298,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001226 RID: 4646 RVA: 0x0011FD14 File Offset: 0x0011DF14
+		
 		public bool ProcessShenJiAddExpCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -348,7 +348,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001227 RID: 4647 RVA: 0x0011FF04 File Offset: 0x0011E104
+		
 		public bool ProcessShenJiWashCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -403,7 +403,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001228 RID: 4648 RVA: 0x00120134 File Offset: 0x0011E334
+		
 		public bool InitConfig()
 		{
 			string StringShenJiFuWen = GameManager.systemParamsList.GetParamValueByName("ResettingShenJiFuWen");
@@ -423,7 +423,7 @@ namespace GameServer.Logic
 			return this.LoadShenJiFuWenConfigFile() && this.LoadShenJiPointConfigFile();
 		}
 
-		// Token: 0x06001229 RID: 4649 RVA: 0x001201D0 File Offset: 0x0011E3D0
+		
 		private ShenJiFuWenEffectData ParseShenJiFuWenEffectData(XElement xmlItem, string Key)
 		{
 			string TempValueString = Global.GetSafeAttributeStr(xmlItem, string.Format("Effect{0}", Key));
@@ -459,7 +459,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600122A RID: 4650 RVA: 0x001202A8 File Offset: 0x0011E4A8
+		
 		public bool LoadShenJiFuWenConfigFile()
 		{
 			try
@@ -504,7 +504,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600122B RID: 4651 RVA: 0x001204B0 File Offset: 0x0011E6B0
+		
 		public bool LoadShenJiPointConfigFile()
 		{
 			try
@@ -548,31 +548,31 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x04001B52 RID: 6994
+		
 		private const string ShenJi_FuWenFileName = "Config/ShenJiFuWen.xml";
 
-		// Token: 0x04001B53 RID: 6995
+		
 		private const string ShenJi_PointFileName = "Config/ShenJiDian.xml";
 
-		// Token: 0x04001B54 RID: 6996
+		
 		private object ConfigMutex = new object();
 
-		// Token: 0x04001B55 RID: 6997
+		
 		protected Dictionary<int, ShenJiFuWenConfigData> ShenJiConfig = null;
 
-		// Token: 0x04001B56 RID: 6998
+		
 		protected List<ShenJiPointConfigData> ShenJiPointConfig = null;
 
-		// Token: 0x04001B57 RID: 6999
+		
 		protected int WashGoodsID = 0;
 
-		// Token: 0x04001B58 RID: 7000
+		
 		protected int WashCostPerOne = 0;
 
-		// Token: 0x04001B59 RID: 7001
+		
 		protected int MaxWashCost = 0;
 
-		// Token: 0x04001B5A RID: 7002
+		
 		private static ShenJiFuWenManager instance = new ShenJiFuWenManager();
 	}
 }

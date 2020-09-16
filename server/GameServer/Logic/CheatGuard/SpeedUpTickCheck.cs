@@ -6,15 +6,15 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic.CheatGuard
 {
-	// Token: 0x0200024E RID: 590
+	
 	internal class SpeedUpTickCheck : SingletonTemplate<SpeedUpTickCheck>
 	{
-		// Token: 0x06000843 RID: 2115 RVA: 0x0007EF0C File Offset: 0x0007D10C
+		
 		private SpeedUpTickCheck()
 		{
 		}
 
-		// Token: 0x06000844 RID: 2116 RVA: 0x0007EF94 File Offset: 0x0007D194
+		
 		private void ForceRemove(int roleId)
 		{
 			lock (this.Mutex)
@@ -25,7 +25,7 @@ namespace GameServer.Logic.CheatGuard
 			}
 		}
 
-		// Token: 0x06000845 RID: 2117 RVA: 0x0007F000 File Offset: 0x0007D200
+		
 		public void LoadConfig()
 		{
 			try
@@ -45,7 +45,7 @@ namespace GameServer.Logic.CheatGuard
 			}
 		}
 
-		// Token: 0x06000846 RID: 2118 RVA: 0x0007F094 File Offset: 0x0007D294
+		
 		public void OnLogin(GameClient client)
 		{
 			if (client != null)
@@ -54,7 +54,7 @@ namespace GameServer.Logic.CheatGuard
 			}
 		}
 
-		// Token: 0x06000847 RID: 2119 RVA: 0x0007F0C4 File Offset: 0x0007D2C4
+		
 		public void OnLogout(GameClient client)
 		{
 			if (client != null)
@@ -63,7 +63,7 @@ namespace GameServer.Logic.CheatGuard
 			}
 		}
 
-		// Token: 0x06000848 RID: 2120 RVA: 0x0007F0F4 File Offset: 0x0007D2F4
+		
 		public void OnClientHeart(GameClient client, long reportRealClientTick)
 		{
 			if (client != null)
@@ -171,67 +171,67 @@ namespace GameServer.Logic.CheatGuard
 			}
 		}
 
-		// Token: 0x04000E27 RID: 3623
+		
 		private object Mutex = new object();
 
-		// Token: 0x04000E28 RID: 3624
+		
 		private Dictionary<int, SpeedUpTickCheck.CheckRoleItem> checkRoleDict = new Dictionary<int, SpeedUpTickCheck.CheckRoleItem>();
 
-		// Token: 0x04000E29 RID: 3625
+		
 		private Dictionary<int, long> roleLastLog1Ticks = new Dictionary<int, long>();
 
-		// Token: 0x04000E2A RID: 3626
+		
 		private Dictionary<int, long> roleLastLog2Ticks = new Dictionary<int, long>();
 
-		// Token: 0x04000E2B RID: 3627
+		
 		private double totalDiffRate = 0.0;
 
-		// Token: 0x04000E2C RID: 3628
+		
 		private double totalDiffCnt = 0.0;
 
-		// Token: 0x04000E2D RID: 3629
+		
 		private double currUseDiffRate = 1.0;
 
-		// Token: 0x04000E2E RID: 3630
+		
 		private int TotalElapsedTimes = 10;
 
-		// Token: 0x04000E2F RID: 3631
+		
 		private double TotalElapsedDiffRate = 0.2;
 
-		// Token: 0x0200024F RID: 591
+		
 		private class CheckRoleItem
 		{
-			// Token: 0x04000E30 RID: 3632
+			
 			public string UserId;
 
-			// Token: 0x04000E31 RID: 3633
+			
 			public int RoleId;
 
-			// Token: 0x04000E32 RID: 3634
+			
 			public string RoleName;
 
-			// Token: 0x04000E33 RID: 3635
+			
 			public string IpAndPort;
 
-			// Token: 0x04000E34 RID: 3636
+			
 			public long LastReportClientTick;
 
-			// Token: 0x04000E35 RID: 3637
+			
 			public uint LastReceiveServerMs;
 
-			// Token: 0x04000E36 RID: 3638
+			
 			public int MaybeTroubleTimes;
 
-			// Token: 0x04000E37 RID: 3639
+			
 			public List<double> MaybeTroubleDiffRates = new List<double>();
 
-			// Token: 0x04000E38 RID: 3640
+			
 			public long CliTotalElapsedTicks;
 
-			// Token: 0x04000E39 RID: 3641
+			
 			public long SrvTotalElapsedTicks;
 
-			// Token: 0x04000E3A RID: 3642
+			
 			public int TotalElapsedTimes;
 		}
 	}

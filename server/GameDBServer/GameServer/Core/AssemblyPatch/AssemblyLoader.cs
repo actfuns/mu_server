@@ -22,7 +22,7 @@ namespace GameServer.Core.AssemblyPatch
 		}
 
 		// Token: 0x17000001 RID: 1
-		// (get) Token: 0x06000005 RID: 5 RVA: 0x0000209C File Offset: 0x0000029C
+		
 		public string FullName
 		{
 			get

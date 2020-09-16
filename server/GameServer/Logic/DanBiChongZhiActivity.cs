@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006FB RID: 1787
+	
 	public class DanBiChongZhiActivity : Activity
 	{
-		// Token: 0x06002AFC RID: 11004 RVA: 0x00264E64 File Offset: 0x00263064
+		
 		public override bool CheckCondition(GameClient client, int danBiID)
 		{
 			bool result;
@@ -32,7 +32,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002AFD RID: 11005 RVA: 0x00264EDC File Offset: 0x002630DC
+		
 		public string DBQueryInfoCmd()
 		{
 			string dbCmd = "";
@@ -58,7 +58,7 @@ namespace GameServer.Logic
 			return dbCmd;
 		}
 
-		// Token: 0x06002AFE RID: 11006 RVA: 0x00264FE8 File Offset: 0x002631E8
+		
 		public bool CheckDanBiChongZhiCountOK(GameClient client, int danBiId)
 		{
 			DanBiChongZhiAwardDetail danBiChongZhiAwardDetail = this.GetDanBiChongZhiAwardDetail(client, danBiId);
@@ -120,7 +120,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002AFF RID: 11007 RVA: 0x00265178 File Offset: 0x00263378
+		
 		public DanBiChongZhiAwardDetail GetDanBiChongZhiAwardDetail(GameClient client, int danBiID)
 		{
 			DanBiChongZhiAwardDetail danBiChongZhiAwardDetail = null;
@@ -131,7 +131,7 @@ namespace GameServer.Logic
 			return danBiChongZhiAwardDetail;
 		}
 
-		// Token: 0x06002B00 RID: 11008 RVA: 0x002651D8 File Offset: 0x002633D8
+		
 		public override int GetParamsValidateCode()
 		{
 			int result;
@@ -157,7 +157,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002B01 RID: 11009 RVA: 0x0026530C File Offset: 0x0026350C
+		
 		public override bool GiveAward(GameClient client, int danBiID)
 		{
 			DanBiChongZhiAwardDetail danBiChongZhiAwardDetail = null;
@@ -197,7 +197,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002B02 RID: 11010 RVA: 0x002653F4 File Offset: 0x002635F4
+		
 		protected bool GiveAwardByOccupation(GameClient client, AwardItem myAwardItem, int occupation)
 		{
 			bool result;
@@ -233,7 +233,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002B03 RID: 11011 RVA: 0x00265614 File Offset: 0x00263814
+		
 		public bool init()
 		{
 			this.DanBiChongZhiAwardDic.Clear();
@@ -335,7 +335,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06002B04 RID: 11012 RVA: 0x002659B4 File Offset: 0x00263BB4
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client, int danBIID)
 		{
 			DanBiChongZhiAwardDetail danBiChongZhiAwardDetail = null;
@@ -350,7 +350,7 @@ namespace GameServer.Logic
 			return Global.CanAddGoodsNum(client, totalCnt);
 		}
 
-		// Token: 0x06002B05 RID: 11013 RVA: 0x00265A2C File Offset: 0x00263C2C
+		
 		public bool CanGetAnyAward(GameClient client)
 		{
 			DanBiChongZhiActivity instance = HuodongCachingMgr.GetDanBiChongZhiActivity();
@@ -397,7 +397,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x04003A17 RID: 14871
+		
 		public Dictionary<int, DanBiChongZhiAwardDetail> DanBiChongZhiAwardDic = new Dictionary<int, DanBiChongZhiAwardDetail>();
 	}
 }

@@ -3,10 +3,10 @@ using GameServer.Logic.WanMota;
 
 namespace GameServer.Logic.Copy
 {
-	// Token: 0x02000291 RID: 657
+	
 	public static class FuBenChecker
 	{
-		// Token: 0x060009C8 RID: 2504 RVA: 0x0009C014 File Offset: 0x0009A214
+		
 		public static bool HasFinishedPreTask(GameClient client, SystemXmlItem fubenItem)
 		{
 			bool result;
@@ -23,7 +23,7 @@ namespace GameServer.Logic.Copy
 			return result;
 		}
 
-		// Token: 0x060009C9 RID: 2505 RVA: 0x0009C06C File Offset: 0x0009A26C
+		
 		public static bool HasPassedPreCopy(GameClient client, SystemXmlItem fubenItem)
 		{
 			bool result;
@@ -47,7 +47,7 @@ namespace GameServer.Logic.Copy
 			return result;
 		}
 
-		// Token: 0x060009CA RID: 2506 RVA: 0x0009C0D4 File Offset: 0x0009A2D4
+		
 		public static bool IsInCopyLevelLimit(GameClient client, SystemXmlItem fubenItem)
 		{
 			bool result;
@@ -71,7 +71,7 @@ namespace GameServer.Logic.Copy
 			return result;
 		}
 
-		// Token: 0x060009CB RID: 2507 RVA: 0x0009C1A4 File Offset: 0x0009A3A4
+		
 		public static bool IsInCopyTimesLimit(GameClient client, SystemXmlItem fubenItem)
 		{
 			bool result;

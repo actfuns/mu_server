@@ -6,10 +6,10 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-    // Token: 0x02000620 RID: 1568
+    
     public class DBMonsterBuffer
     {
-        // Token: 0x06001FCC RID: 8140 RVA: 0x001B7B4C File Offset: 0x001B5D4C
+        
         public static void ProcessDSTimeAddLifeNoShow(Monster monster)
         {
             if (monster.VLife > 0.0)
@@ -44,7 +44,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FCD RID: 8141 RVA: 0x001B7CD8 File Offset: 0x001B5ED8
+        
         public static int ProcessHuZhaoSubLifeV(Monster monster, int subLifeV)
         {
             if (monster.VLife > 0.0)
@@ -80,7 +80,7 @@ namespace GameServer.Logic
             return subLifeV;
         }
 
-        // Token: 0x06001FCE RID: 8142 RVA: 0x001B7E0C File Offset: 0x001B600C
+        
         public static double ProcessHuZhaoRecoverPercent(Monster monster)
         {
             double percent = 0.0;
@@ -110,7 +110,7 @@ namespace GameServer.Logic
             return percent;
         }
 
-        // Token: 0x06001FCF RID: 8143 RVA: 0x001B7ED0 File Offset: 0x001B60D0
+        
         public static int ProcessWuDiHuZhaoNoInjured(Monster monster, int subLifeV)
         {
             if (monster.VLife > 0.0)
@@ -135,7 +135,7 @@ namespace GameServer.Logic
             return subLifeV;
         }
 
-        // Token: 0x06001FD0 RID: 8144 RVA: 0x001B7F60 File Offset: 0x001B6160
+        
         public static int ProcessMarriageFubenInjured(Monster monster, int subLifeV)
         {
             if (monster.VLife > 0.0 && subLifeV > 0)
@@ -152,7 +152,7 @@ namespace GameServer.Logic
             return subLifeV;
         }
 
-        // Token: 0x06001FD1 RID: 8145 RVA: 0x001B7FE0 File Offset: 0x001B61E0
+        
         public static void ProcessDSTimeSubLifeNoShow(Monster monster)
         {
             if (monster.VLife > 0.0)
@@ -193,7 +193,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FD2 RID: 8146 RVA: 0x001B8170 File Offset: 0x001B6370
+        
         private static void ProcessTimeSubLifeNoShow(Monster monster, int id)
         {
             if (monster.VLife > 0.0)
@@ -244,7 +244,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FD3 RID: 8147 RVA: 0x001B8348 File Offset: 0x001B6548
+        
         public static void ProcessAllTimeSubLifeNoShow(Monster monster)
         {
             for (int id = 93; id <= 96; id++)

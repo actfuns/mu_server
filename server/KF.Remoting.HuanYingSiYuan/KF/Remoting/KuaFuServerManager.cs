@@ -25,10 +25,10 @@ using Tmsk.Tools.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x0200003F RID: 63
+	
 	public static class KuaFuServerManager
 	{
-		// Token: 0x060002B5 RID: 693 RVA: 0x000269A4 File Offset: 0x00024BA4
+		
 		public static bool CheckConfig()
 		{
 			KuaFuServerManager.ResourcePath = ConfigurationManager.AppSettings.Get("ResourcePath");
@@ -70,7 +70,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060002B6 RID: 694 RVA: 0x00026B78 File Offset: 0x00024D78
+		
 		public static bool LoadConfig()
 		{
 			lock (KuaFuServerManager.Mutex)
@@ -365,7 +365,7 @@ namespace KF.Remoting
 			return KuaFuServerManager.LoadConfigSuccess;
 		}
 
-		// Token: 0x060002B7 RID: 695 RVA: 0x000277A8 File Offset: 0x000259A8
+		
 		public static void InitServer()
 		{
 			DateTime lastRunTime = TimeUtil.NowDateTime();
@@ -388,7 +388,7 @@ namespace KF.Remoting
 			Zork5v5Service.Instance().LoadDatabase(lastRunTime);
 		}
 
-		// Token: 0x060002B8 RID: 696 RVA: 0x00027AB0 File Offset: 0x00025CB0
+		
 		public static void StartServerConfigThread()
 		{
 			if (KuaFuServerManager.UpdateServerConfigThread == null)
@@ -498,7 +498,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060002B9 RID: 697 RVA: 0x00027C04 File Offset: 0x00025E04
+		
 		private static void UpdateServerLoad()
 		{
 			foreach (KuaFuServerInfo srv in KuaFuServerManager._ServerIdServerInfoDict.Values)
@@ -551,7 +551,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060002BA RID: 698 RVA: 0x00027E40 File Offset: 0x00026040
+		
 		private static void AsyncFromDataBase()
 		{
 			try
@@ -622,7 +622,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060002BB RID: 699 RVA: 0x00028180 File Offset: 0x00026380
+		
 		public static string GetResourcePath(string fileName, KuaFuServerManager.ResourcePathTypes resType)
 		{
 			if (KuaFuServerManager.ConfigPathStructType == 1)
@@ -676,7 +676,7 @@ namespace KF.Remoting
 			return KuaFuServerManager.ResourcePath + "\\" + fileName;
 		}
 
-		// Token: 0x060002BC RID: 700 RVA: 0x000283BC File Offset: 0x000265BC
+		
 		public static int GetSpecialLineId(GameTypes gameType)
 		{
 			lock (KuaFuServerManager.Mutex)
@@ -690,7 +690,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x060002BD RID: 701 RVA: 0x00028424 File Offset: 0x00026624
+		
 		public static bool IsGongNengOpened(int gongNengID)
 		{
 			int versionGongNengId = gongNengID;
@@ -708,7 +708,7 @@ namespace KF.Remoting
 			return true;
 		}
 
-		// Token: 0x060002BE RID: 702 RVA: 0x000284AC File Offset: 0x000266AC
+		
 		public static List<KuaFuServerInfo> GetKuaFuServerInfoData(int age)
 		{
 			List<KuaFuServerInfo> result = null;
@@ -733,7 +733,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060002BF RID: 703 RVA: 0x000285C0 File Offset: 0x000267C0
+		
 		private static BuffServerListData RequestServerListData(string serverListUrl)
 		{
 			BuffServerListData result;
@@ -769,7 +769,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060002C0 RID: 704 RVA: 0x000286A8 File Offset: 0x000268A8
+		
 		public static bool UpdateDataFromServer()
 		{
 			int nextServerListAge = DataHelper2.UnixSecondsNow();
@@ -897,7 +897,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060002C1 RID: 705 RVA: 0x00028B64 File Offset: 0x00026D64
+		
 		public static void UpdateServerListAge()
 		{
 			lock (KuaFuServerManager.MutexServerList)
@@ -911,7 +911,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060002C2 RID: 706 RVA: 0x00028BE8 File Offset: 0x00026DE8
+		
 		public static bool UpdateServerInfo(BuffServerInfo item, int ServerListAge, int serverFlags, out KuaFuServerInfo data, ConcurrentDictionary<int, KuaFuServerInfo> ServerIdServerInfoDict, BuffServerListData list)
 		{
 			bool serverInfoChanged = false;
@@ -974,7 +974,7 @@ namespace KF.Remoting
 			return serverInfoChanged;
 		}
 
-		// Token: 0x060002C3 RID: 707 RVA: 0x00028E64 File Offset: 0x00027064
+		
 		public static void RemoveServerInfo(int serverId, ConcurrentDictionary<int, KuaFuServerInfo> ServerIdServerInfoDict)
 		{
 			KuaFuServerInfo data;
@@ -989,7 +989,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060002C4 RID: 708 RVA: 0x00028EB8 File Offset: 0x000270B8
+		
 		public static KuaFuServerInfo GetKuaFuServerInfo(int serverId)
 		{
 			lock (KuaFuServerManager.MutexServerList)
@@ -1003,7 +1003,7 @@ namespace KF.Remoting
 			return null;
 		}
 
-		// Token: 0x060002C5 RID: 709 RVA: 0x00028F20 File Offset: 0x00027120
+		
 		public static KuaFuLoginInfo GetKuaFuLoginInfo(int serverId, int kfServerID)
 		{
 			KuaFuLoginInfo info = new KuaFuLoginInfo
@@ -1036,7 +1036,7 @@ namespace KF.Remoting
 			return info;
 		}
 
-		// Token: 0x060002C6 RID: 710 RVA: 0x00029018 File Offset: 0x00027218
+		
 		public static bool UpdateServerGameConfig(int serverId, int gameType, int capacity, ConcurrentDictionary<int, KuaFuServerGameConfig> KuaFuServerIdGameConfigDict)
 		{
 			bool serverGameConfigChanged = false;
@@ -1059,7 +1059,7 @@ namespace KF.Remoting
 			return serverGameConfigChanged;
 		}
 
-		// Token: 0x060002C7 RID: 711 RVA: 0x0002907C File Offset: 0x0002727C
+		
 		public static int GetUniqueClientId()
 		{
 			int uniqueClientId = DataHelper2.UnixSecondsNow();
@@ -1075,7 +1075,7 @@ namespace KF.Remoting
 			return uniqueClientId;
 		}
 
-		// Token: 0x060002C8 RID: 712 RVA: 0x000290F8 File Offset: 0x000272F8
+		
 		public static int GetServerIDFromZoneID(int zoneID)
 		{
 			KuaFuServerInfo serverInfo;
@@ -1090,13 +1090,13 @@ namespace KF.Remoting
 			return zoneID;
 		}
 
-		// Token: 0x060002C9 RID: 713 RVA: 0x00029158 File Offset: 0x00027358
+		
 		public static string FormatName(int serverID, string name)
 		{
 			return KuaFuServerManager.FormatName(name, serverID);
 		}
 
-		// Token: 0x060002CA RID: 714 RVA: 0x00029174 File Offset: 0x00027374
+		
 		public static string FormatName(string name, int serverID)
 		{
 			string result;
@@ -1135,7 +1135,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060002CB RID: 715 RVA: 0x00029298 File Offset: 0x00027498
+		
 		public static int EnterKuaFuMapLine(int line, int mapCode)
 		{
 			lock (KuaFuServerManager.Mutex)
@@ -1153,7 +1153,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x060002CC RID: 716 RVA: 0x00029334 File Offset: 0x00027534
+		
 		public static void UpdateKuaFuLineData(int serverId, Dictionary<int, int> mapClientCountDict)
 		{
 			if (null != mapClientCountDict)
@@ -1173,7 +1173,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060002CD RID: 717 RVA: 0x000293FC File Offset: 0x000275FC
+		
 		public static void UpdateKuaFuMapLineState(int serverId, int state)
 		{
 			List<KuaFuLineData> list = null;
@@ -1189,7 +1189,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060002CE RID: 718 RVA: 0x000294A4 File Offset: 0x000276A4
+		
 		public static List<KuaFuLineData> GetKuaFuLineDataList(int mapCode)
 		{
 			lock (KuaFuServerManager.Mutex)
@@ -1203,13 +1203,13 @@ namespace KF.Remoting
 			return null;
 		}
 
-		// Token: 0x060002CF RID: 719 RVA: 0x0002950C File Offset: 0x0002770C
+		
 		public static bool WaitStop(int millisecondsTimeout = 0)
 		{
 			return KuaFuServerManager.StopEvent.Wait(millisecondsTimeout);
 		}
 
-		// Token: 0x060002D0 RID: 720 RVA: 0x0002952C File Offset: 0x0002772C
+		
 		public static void OnStartServer()
 		{
 			try
@@ -1228,7 +1228,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060002D1 RID: 721 RVA: 0x000295C8 File Offset: 0x000277C8
+		
 		public static void OnStopServer()
 		{
 			try
@@ -1259,7 +1259,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060002D2 RID: 722 RVA: 0x000296A0 File Offset: 0x000278A0
+		
 		private static void OnFileChanged(object sender, FileSystemEventArgs e)
 		{
 			lock (KuaFuServerManager.Mutex)
@@ -1282,7 +1282,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060002D3 RID: 723 RVA: 0x00029758 File Offset: 0x00027958
+		
 		public static void TimerThreadProc()
 		{
 			for (;;)
@@ -1304,127 +1304,127 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x04000173 RID: 371
+		
 		private const int ThreadInterval = 500;
 
-		// Token: 0x04000174 RID: 372
+		
 		public static object Mutex = new object();
 
-		// Token: 0x04000175 RID: 373
+		
 		private static object MutexServerList = new object();
 
-		// Token: 0x04000176 RID: 374
+		
 		public static bool LoadConfigFromServer = false;
 
-		// Token: 0x04000177 RID: 375
+		
 		public static int WritePerformanceLogMs = 1;
 
-		// Token: 0x04000178 RID: 376
+		
 		public static int MapMaxOnlineCount = 500;
 
-		// Token: 0x04000179 RID: 377
+		
 		public static int MaxGetAsyncItemDataCount = 10000;
 
-		// Token: 0x0400017A RID: 378
+		
 		private static string ServerListUrl;
 
-		// Token: 0x0400017B RID: 379
+		
 		private static string KuaFuServerListUrl;
 
-		// Token: 0x0400017C RID: 380
+		
 		public static string[] GetPlatChargeKingUrl;
 
-		// Token: 0x0400017D RID: 381
+		
 		public static string[] GetPlatChargeKingUrl_EveryDay;
 
-		// Token: 0x0400017E RID: 382
+		
 		private static int _ServerListAge;
 
-		// Token: 0x0400017F RID: 383
+		
 		private static Thread UpdateServerConfigThread;
 
-		// Token: 0x04000180 RID: 384
+		
 		private static Thread CheckServerLoadThread;
 
-		// Token: 0x04000181 RID: 385
+		
 		private static Thread WorkThread;
 
-		// Token: 0x04000182 RID: 386
+		
 		private static Thread FastWorkThread;
 
-		// Token: 0x04000183 RID: 387
+		
 		private static object UniqueClientIdMutex = new object();
 
-		// Token: 0x04000184 RID: 388
+		
 		private static int UniqueClientId = 0;
 
-		// Token: 0x04000185 RID: 389
+		
 		public static string ResourcePath;
 
-		// Token: 0x04000186 RID: 390
+		
 		public static Dictionary<int, int> KuaFuMapLineDict = new Dictionary<int, int>();
 
-		// Token: 0x04000187 RID: 391
+		
 		public static Dictionary<int, int> SpecialLineDict = new Dictionary<int, int>();
 
-		// Token: 0x04000188 RID: 392
+		
 		public static Dictionary<int, int> PingTaiKuaFuServerLineDict = new Dictionary<int, int>();
 
-		// Token: 0x04000189 RID: 393
+		
 		public static PlatformTypes platformType = PlatformTypes.Max;
 
-		// Token: 0x0400018A RID: 394
+		
 		public static bool LoadConfigSuccess = true;
 
-		// Token: 0x0400018B RID: 395
+		
 		public static bool LimitIP = true;
 
-		// Token: 0x0400018C RID: 396
+		
 		public static bool UseLanIp = false;
 
-		// Token: 0x0400018D RID: 397
+		
 		public static bool EnableGMSetAllServerTime;
 
-		// Token: 0x0400018E RID: 398
+		
 		public static int ThemeActivityState;
 
-		// Token: 0x0400018F RID: 399
+		
 		public static bool PingTaiKuaFu = false;
 
-		// Token: 0x04000190 RID: 400
+		
 		public static bool PingTaiKuaFuTestMode = false;
 
-		// Token: 0x04000191 RID: 401
+		
 		public static int PTID;
 
-		// Token: 0x04000192 RID: 402
+		
 		public static int ServicePort;
 
-		// Token: 0x04000193 RID: 403
+		
 		public static List<Tuple<int, string, string, string>> KuaFuWorldPlatformServerListUrls = new List<Tuple<int, string, string, string>>();
 
-		// Token: 0x04000194 RID: 404
+		
 		public static ConcurrentDictionary<IntPairKey, KuaFuLineData> LineMap2KuaFuLineDataDict = new ConcurrentDictionary<IntPairKey, KuaFuLineData>();
 
-		// Token: 0x04000195 RID: 405
+		
 		public static ConcurrentDictionary<IntPairKey, KuaFuLineData> ServerMap2KuaFuLineDataDict = new ConcurrentDictionary<IntPairKey, KuaFuLineData>();
 
-		// Token: 0x04000196 RID: 406
+		
 		public static ConcurrentDictionary<int, List<KuaFuLineData>> KuaFuMapServerIdDict = new ConcurrentDictionary<int, List<KuaFuLineData>>();
 
-		// Token: 0x04000197 RID: 407
+		
 		public static ConcurrentDictionary<int, List<KuaFuLineData>> MapCode2KuaFuLineDataDict = new ConcurrentDictionary<int, List<KuaFuLineData>>();
 
-		// Token: 0x04000198 RID: 408
+		
 		public static VersionSystemOpenManager VersionSystemOpenMgr = new VersionSystemOpenManager();
 
-		// Token: 0x04000199 RID: 409
+		
 		public static SystemParamsListKF systemParamsList = new SystemParamsListKF();
 
-		// Token: 0x0400019A RID: 410
+		
 		private static int ConfigPathStructType = 1;
 
-		// Token: 0x0400019B RID: 411
+		
 		public static char[] SpliteChars = new char[]
 		{
 			'-',
@@ -1433,42 +1433,42 @@ namespace KF.Remoting
 			';'
 		};
 
-		// Token: 0x0400019C RID: 412
+		
 		private static GetKuaFuServerListRequestData KuaFuServerListRequestData = new GetKuaFuServerListRequestData();
 
-		// Token: 0x0400019D RID: 413
+		
 		private static ConcurrentDictionary<int, KuaFuServerInfo> _ServerIdServerInfoDict = new ConcurrentDictionary<int, KuaFuServerInfo>();
 
-		// Token: 0x0400019E RID: 414
+		
 		public static bool OptimizationServerList = false;
 
-		// Token: 0x0400019F RID: 415
+		
 		private static Dictionary<int, string> ZoneID2ZoneNameDict = new Dictionary<int, string>();
 
-		// Token: 0x040001A0 RID: 416
+		
 		private static FileSystemWatcher FileWatcher = new FileSystemWatcher();
 
-		// Token: 0x040001A1 RID: 417
+		
 		private static bool ServerStop;
 
-		// Token: 0x040001A2 RID: 418
+		
 		private static CountdownEvent StopEvent = new CountdownEvent(1);
 
-		// Token: 0x040001A3 RID: 419
+		
 		private static Thread WorkerThread = new Thread(new ThreadStart(KuaFuServerManager.TimerThreadProc));
 
-		// Token: 0x02000040 RID: 64
+		
 		public enum ResourcePathTypes
 		{
-			// Token: 0x040001AB RID: 427
+			
 			Application,
-			// Token: 0x040001AC RID: 428
+			
 			GameRes,
-			// Token: 0x040001AD RID: 429
+			
 			Isolate,
-			// Token: 0x040001AE RID: 430
+			
 			Map,
-			// Token: 0x040001AF RID: 431
+			
 			MapConfig
 		}
 	}

@@ -12,18 +12,18 @@ using Tmsk.Tools.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000071 RID: 113
+	
 	public class RebornService
 	{
-		// Token: 0x06000598 RID: 1432 RVA: 0x0004B584 File Offset: 0x00049784
+		
 		public static RebornService Instance()
 		{
 			return RebornService._instance;
 		}
 
-		// Token: 0x17000032 RID: 50
-		// (get) Token: 0x06000599 RID: 1433 RVA: 0x0004B59C File Offset: 0x0004979C
-		// (set) Token: 0x0600059A RID: 1434 RVA: 0x0004B5B9 File Offset: 0x000497B9
+		
+		
+		
 		private Dictionary<KeyValuePair<int, int>, KuaFuData<KFRebornRoleData>> RebornRoleDataDict
 		{
 			get
@@ -36,9 +36,9 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x17000033 RID: 51
-		// (get) Token: 0x0600059B RID: 1435 RVA: 0x0004B5C8 File Offset: 0x000497C8
-		// (set) Token: 0x0600059C RID: 1436 RVA: 0x0004B5E5 File Offset: 0x000497E5
+		
+		
+		
 		public KuaFuData<Dictionary<int, List<KFRebornRankInfo>>> RebornRankDict
 		{
 			get
@@ -51,7 +51,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600059D RID: 1437 RVA: 0x0004B63C File Offset: 0x0004983C
+		
 		public void InitConfig()
 		{
 			try
@@ -106,7 +106,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600059E RID: 1438 RVA: 0x0004B860 File Offset: 0x00049A60
+		
 		public void LoadDatabase(DateTime now)
 		{
 			try
@@ -122,13 +122,13 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600059F RID: 1439 RVA: 0x0004B8CC File Offset: 0x00049ACC
+		
 		public void OnStopServer()
 		{
 			this.Persistence.DelayWriteDataProc();
 		}
 
-		// Token: 0x060005A0 RID: 1440 RVA: 0x0004B8DC File Offset: 0x00049ADC
+		
 		public void Update(DateTime now)
 		{
 			try
@@ -153,7 +153,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060005A1 RID: 1441 RVA: 0x0004B96C File Offset: 0x00049B6C
+		
 		private void HandleChangeHour(DateTime now)
 		{
 			lock (this.Mutex)
@@ -162,7 +162,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060005A2 RID: 1442 RVA: 0x0004B9C4 File Offset: 0x00049BC4
+		
 		private void HandleChangeDay(DateTime now)
 		{
 			int curDayId = TimeUtil.GetOffsetDay(now);
@@ -201,7 +201,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060005A3 RID: 1443 RVA: 0x0004BB90 File Offset: 0x00049D90
+		
 		public void SetRoleData4Selector(int ptId, int roleId, byte[] bytes)
 		{
 			lock (this.Mutex)
@@ -216,7 +216,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060005A4 RID: 1444 RVA: 0x0004BC1C File Offset: 0x00049E1C
+		
 		public RebornSyncData Reborn_SyncData(long ageRank, long ageBoss)
 		{
 			try
@@ -244,7 +244,7 @@ namespace KF.Remoting
 			return null;
 		}
 
-		// Token: 0x060005A5 RID: 1445 RVA: 0x0004BD10 File Offset: 0x00049F10
+		
 		public KuaFuCmdData GetRebornRoleData(int ptId, int roleId, long dataAge)
 		{
 			try
@@ -277,7 +277,7 @@ namespace KF.Remoting
 			return null;
 		}
 
-		// Token: 0x060005A6 RID: 1446 RVA: 0x0004BDF0 File Offset: 0x00049FF0
+		
 		public int RoleReborn(int ptId, int roleId, string roleName, int level)
 		{
 			int ret = 0;
@@ -304,7 +304,7 @@ namespace KF.Remoting
 			return ret;
 		}
 
-		// Token: 0x060005A7 RID: 1447 RVA: 0x0004BEF0 File Offset: 0x0004A0F0
+		
 		public void ChangeName(int ptId, int roleId, string roleName)
 		{
 			try
@@ -346,7 +346,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060005A8 RID: 1448 RVA: 0x0004C194 File Offset: 0x0004A394
+		
 		public void RebornOpt(int ptid, int rid, int optType, int param1, int param2, string param3)
 		{
 			try
@@ -479,7 +479,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060005A9 RID: 1449 RVA: 0x0004C698 File Offset: 0x0004A898
+		
 		public void PlatFormChat(int serverId, byte[] bytes)
 		{
 			try
@@ -517,31 +517,31 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x04000307 RID: 775
+		
 		private static RebornService _instance = new RebornService();
 
-		// Token: 0x04000308 RID: 776
+		
 		public readonly GameTypes EvItemGameType = GameTypes.KuaFuWorld;
 
-		// Token: 0x04000309 RID: 777
+		
 		private object Mutex = new object();
 
-		// Token: 0x0400030A RID: 778
+		
 		private int LastUpdateDayID;
 
-		// Token: 0x0400030B RID: 779
+		
 		private int LastUpdateHour;
 
-		// Token: 0x0400030C RID: 780
+		
 		private int RebornDataDayID;
 
-		// Token: 0x0400030D RID: 781
+		
 		public RebornPersistence Persistence = RebornPersistence.Instance;
 
-		// Token: 0x0400030E RID: 782
+		
 		public KuaFuData<Dictionary<KeyValuePair<int, int>, KFRebornBossRefreshData>> BossRefreshDict = new KuaFuData<Dictionary<KeyValuePair<int, int>, KFRebornBossRefreshData>>();
 
-		// Token: 0x0400030F RID: 783
+		
 		public Dictionary<int, List<RebornBossConfig>> RebornBossConfigDict = new Dictionary<int, List<RebornBossConfig>>();
 	}
 }

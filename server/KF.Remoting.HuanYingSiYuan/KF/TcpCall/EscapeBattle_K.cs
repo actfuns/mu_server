@@ -16,11 +16,11 @@ using Server.Tools;
 
 namespace KF.TcpCall
 {
-	// Token: 0x02000054 RID: 84
+	
 	[AutoCSer.Net.TcpStaticServer.Server(Name = "KfCall", IsServer = true, IsAttribute = true, IsClientAwaiter = false, MemberFilters = MemberFilters.Static, IsSegmentation = true, ClientSegmentationCopyPath = "GameServer\\Remoting\\")]
 	public static class EscapeBattle_K
 	{
-		// Token: 0x060003CD RID: 973 RVA: 0x00031DFC File Offset: 0x0002FFFC
+		
 		public static bool InitConfig()
 		{
 			lock (EscapeBattle_K.Mutex)
@@ -41,7 +41,7 @@ namespace KF.TcpCall
 			return true;
 		}
 
-		// Token: 0x060003CE RID: 974 RVA: 0x00031ED0 File Offset: 0x000300D0
+		
 		public static void Update()
 		{
 			if (EscapeBattle_K.Initialize)
@@ -99,7 +99,7 @@ namespace KF.TcpCall
 			}
 		}
 
-		// Token: 0x060003CF RID: 975 RVA: 0x00032174 File Offset: 0x00030374
+		
 		private static bool PrepareMatchList()
 		{
 			EscapeBattle_K.JoinList.Clear();
@@ -181,7 +181,7 @@ namespace KF.TcpCall
 			return true;
 		}
 
-		// Token: 0x060003D0 RID: 976 RVA: 0x00032538 File Offset: 0x00030738
+		
 		private static void PrepareGameFuBen(DateTime now)
 		{
 			for (int i = 0; i < EscapeBattle_K.JoinList.Count - (EscapeBattleConsts.MinZhanDuiNumPerGame - 1); i += EscapeBattleConsts.MinZhanDuiNumPerGame)
@@ -213,7 +213,7 @@ namespace KF.TcpCall
 			}
 		}
 
-		// Token: 0x060003D1 RID: 977 RVA: 0x00032634 File Offset: 0x00030834
+		
 		private static bool CreateGameFuBen(DateTime now, params EscapeBattle_K.JoinPkData[] joinArr)
 		{
 			for (int side = 1; side <= joinArr.Length; side++)
@@ -279,7 +279,7 @@ namespace KF.TcpCall
 			return false;
 		}
 
-		// Token: 0x060003D2 RID: 978 RVA: 0x00032918 File Offset: 0x00030B18
+		
 		private static void ClearTimeOverGameFuBen(DateTime now)
 		{
 			List<int> PkLogsRemoveList = new List<int>();
@@ -319,7 +319,7 @@ namespace KF.TcpCall
 			}
 		}
 
-		// Token: 0x060003D3 RID: 979 RVA: 0x00032AE4 File Offset: 0x00030CE4
+		
 		public static void LoadSyncData(DateTime now, bool rebuild = false)
 		{
 			lock (EscapeBattle_K.Mutex)
@@ -351,7 +351,7 @@ namespace KF.TcpCall
 			}
 		}
 
-		// Token: 0x060003D4 RID: 980 RVA: 0x00032C2C File Offset: 0x00030E2C
+		
 		private static void ZhanDuiChangeState(EscapeBattle_K.JoinPkData pkData, int state)
 		{
 			int zhanDuiState = 0;
@@ -370,7 +370,7 @@ namespace KF.TcpCall
 			}));
 		}
 
-		// Token: 0x060003D5 RID: 981 RVA: 0x00032C98 File Offset: 0x00030E98
+		
 		[AutoCSer.Net.TcpStaticServer.Method(ParameterFlags = ParameterFlags.SerializeBox, ServerTask = ServerTaskType.Queue, IsClientAwaiter = false)]
 		public static EscapeBattleSyncData SyncZhengBaData(EscapeBattleSyncData lastSyncData)
 		{
@@ -391,7 +391,7 @@ namespace KF.TcpCall
 			return result;
 		}
 
-		// Token: 0x060003D6 RID: 982 RVA: 0x00032D8C File Offset: 0x00030F8C
+		
 		[AutoCSer.Net.TcpStaticServer.Method(ParameterFlags = ParameterFlags.SerializeBox, ServerTask = ServerTaskType.Queue, IsClientAwaiter = false)]
 		public static int GetZhanDuiState(int zhanDuiID)
 		{
@@ -411,7 +411,7 @@ namespace KF.TcpCall
 			return state;
 		}
 
-		// Token: 0x060003D7 RID: 983 RVA: 0x00032E1C File Offset: 0x0003101C
+		
 		[AutoCSer.Net.TcpStaticServer.Method(ParameterFlags = ParameterFlags.SerializeBox, ServerTask = ServerTaskType.Queue, IsClientAwaiter = false)]
 		public static int ZhanDuiJoin(int zhanDuiID, int jiFen, int readyNum)
 		{
@@ -461,7 +461,7 @@ namespace KF.TcpCall
 			return result;
 		}
 
-		// Token: 0x060003D8 RID: 984 RVA: 0x00032F40 File Offset: 0x00031140
+		
 		[AutoCSer.Net.TcpStaticServer.Method(ParameterFlags = ParameterFlags.SerializeBox, ServerTask = ServerTaskType.Queue, IsClientAwaiter = false)]
 		public static int ZhengBaKuaFuLogin(AutoCSer.Net.TcpInternalServer.ServerSocketSender socket, int zhanDuiID, int gameId, int srcServerID, out EscapeBattleFuBenData copyData)
 		{
@@ -503,7 +503,7 @@ namespace KF.TcpCall
 			return result;
 		}
 
-		// Token: 0x060003D9 RID: 985 RVA: 0x00033060 File Offset: 0x00031260
+		
 		[AutoCSer.Net.TcpStaticServer.Method(ParameterFlags = ParameterFlags.SerializeBox, ServerTask = ServerTaskType.Queue, IsClientAwaiter = false)]
 		public static int ZhengBaRequestEnter(int zhanDuiID, out int gameId, out int kuaFuServerID, out string[] ips, out int[] ports)
 		{
@@ -551,7 +551,7 @@ namespace KF.TcpCall
 			return result;
 		}
 
-		// Token: 0x060003DA RID: 986 RVA: 0x0003318C File Offset: 0x0003138C
+		
 		[AutoCSer.Net.TcpStaticServer.Method(ParameterFlags = ParameterFlags.SerializeBox, ServerTask = ServerTaskType.Queue, IsClientAwaiter = false)]
 		public static int GameState(int gameId, int state)
 		{
@@ -580,7 +580,7 @@ namespace KF.TcpCall
 			return result;
 		}
 
-		// Token: 0x060003DB RID: 987 RVA: 0x00033264 File Offset: 0x00031464
+		
 		[AutoCSer.Net.TcpStaticServer.Method(ParameterFlags = ParameterFlags.SerializeBox, ServerTask = ServerTaskType.Queue, IsClientAwaiter = false)]
 		public static int GameResult(int gameId, List<int> zhanDuiScoreList)
 		{
@@ -636,140 +636,140 @@ namespace KF.TcpCall
 			return result;
 		}
 
-		// Token: 0x040001FE RID: 510
+		
 		private static object Mutex = new object();
 
-		// Token: 0x040001FF RID: 511
+		
 		private static bool Initialize = false;
 
-		// Token: 0x04000200 RID: 512
+		
 		private static GameTypes GameType = GameTypes.EscapeBattle;
 
-		// Token: 0x04000201 RID: 513
+		
 		private static EscapeBattleSyncData SyncData = new EscapeBattleSyncData();
 
-		// Token: 0x04000202 RID: 514
+		
 		private static DateTime lastUpdateTime = TimeUtil.NowDateTime();
 
-		// Token: 0x04000203 RID: 515
+		
 		private static Queue<KFCallMsg> AsyncEvQ = new Queue<KFCallMsg>();
 
-		// Token: 0x04000204 RID: 516
+		
 		private static EscapeBattleConfig _Config = new EscapeBattleConfig();
 
-		// Token: 0x04000205 RID: 517
+		
 		private static Dictionary<int, EscapeBattleZhanDuiData> ZhanDuiDataDict = new Dictionary<int, EscapeBattleZhanDuiData>();
 
-		// Token: 0x04000206 RID: 518
+		
 		private static Dictionary<int, EscapeBattlePkLogData> ThisLoopPkLogs = new Dictionary<int, EscapeBattlePkLogData>();
 
-		// Token: 0x04000207 RID: 519
+		
 		private static Dictionary<int, EscapeBattle_K.JoinPkData> JoinDict = new Dictionary<int, EscapeBattle_K.JoinPkData>();
 
-		// Token: 0x04000208 RID: 520
+		
 		private static List<EscapeBattle_K.JoinPkData> JoinList = new List<EscapeBattle_K.JoinPkData>();
 
-		// Token: 0x04000209 RID: 521
+		
 		private static List<int> LastMatchList = new List<int>();
 
-		// Token: 0x0400020A RID: 522
+		
 		private static List<int> NotMatchList = new List<int>();
 
-		// Token: 0x0400020B RID: 523
+		
 		private static int LastMatchMinute;
 
-		// Token: 0x0400020C RID: 524
+		
 		private static bool NeedUpdateRank = false;
 
-		// Token: 0x0400020D RID: 525
+		
 		private static TianTiPersistence Persistence = TianTiPersistence.Instance;
 
-		// Token: 0x02000055 RID: 85
+		
 		private class JoinPkData
 		{
-			// Token: 0x04000210 RID: 528
+			
 			public int ZhanDuiID;
 
-			// Token: 0x04000211 RID: 529
+			
 			public int ZoneId;
 
-			// Token: 0x04000212 RID: 530
+			
 			public string ZhanDuiName;
 
-			// Token: 0x04000213 RID: 531
+			
 			public int ReadyNum;
 
-			// Token: 0x04000214 RID: 532
+			
 			public int DuanWeiJiFen;
 
-			// Token: 0x04000215 RID: 533
+			
 			public int ToServerID;
 
-			// Token: 0x04000216 RID: 534
+			
 			public int CurrGameID;
 
-			// Token: 0x04000217 RID: 535
+			
 			public EscapeBattleFuBenData CopyData;
 
-			// Token: 0x04000218 RID: 536
+			
 			public int Side;
 
-			// Token: 0x04000219 RID: 537
+			
 			public bool InGame;
 
-			// Token: 0x0400021A RID: 538
+			
 			public bool ReadyState;
 
-			// Token: 0x0400021B RID: 539
+			
 			public int State;
 		}
 
-		// Token: 0x02000056 RID: 86
+		
 		internal static class TcpStaticServer
 		{
-			// Token: 0x060003E0 RID: 992 RVA: 0x00033528 File Offset: 0x00031728
+			
 			[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public static int _M3(int gameId, List<int> zhanDuiScoreList)
 			{
 				return EscapeBattle_K.GameResult(gameId, zhanDuiScoreList);
 			}
 
-			// Token: 0x060003E1 RID: 993 RVA: 0x00033544 File Offset: 0x00031744
+			
 			[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public static int _M21(int gameId, int state)
 			{
 				return EscapeBattle_K.GameState(gameId, state);
 			}
 
-			// Token: 0x060003E2 RID: 994 RVA: 0x00033560 File Offset: 0x00031760
+			
 			[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public static int _M22(int zhanDuiID)
 			{
 				return EscapeBattle_K.GetZhanDuiState(zhanDuiID);
 			}
 
-			// Token: 0x060003E3 RID: 995 RVA: 0x00033578 File Offset: 0x00031778
+			
 			[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public static EscapeBattleSyncData _M1(EscapeBattleSyncData lastSyncData)
 			{
 				return EscapeBattle_K.SyncZhengBaData(lastSyncData);
 			}
 
-			// Token: 0x060003E4 RID: 996 RVA: 0x00033590 File Offset: 0x00031790
+			
 			[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public static int _M20(int zhanDuiID, int jiFen, int readyNum)
 			{
 				return EscapeBattle_K.ZhanDuiJoin(zhanDuiID, jiFen, readyNum);
 			}
 
-			// Token: 0x060003E5 RID: 997 RVA: 0x000335AC File Offset: 0x000317AC
+			
 			[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public static int _M2(AutoCSer.Net.TcpInternalServer.ServerSocketSender _sender_, int zhanDuiID, int gameId, int srcServerID, out EscapeBattleFuBenData copyData)
 			{
 				return EscapeBattle_K.ZhengBaKuaFuLogin(_sender_, zhanDuiID, gameId, srcServerID, out copyData);
 			}
 
-			// Token: 0x060003E6 RID: 998 RVA: 0x000335CC File Offset: 0x000317CC
+			
 			[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public static int _M4(int zhanDuiID, out int gameId, out int kuaFuServerID, out string[] ips, out int[] ports)
 			{

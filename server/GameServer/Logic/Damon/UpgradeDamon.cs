@@ -6,10 +6,10 @@ using Server.Protocol;
 
 namespace GameServer.Logic.Damon
 {
-	// Token: 0x020004CD RID: 1229
+	
 	public class UpgradeDamon
 	{
-		// Token: 0x060016C0 RID: 5824 RVA: 0x00162BD4 File Offset: 0x00160DD4
+		
 		public static void LoadUpgradeAttr()
 		{
 			string strAttrList = GameManager.systemParamsList.GetParamValueByName("PetQiangHuaProps");
@@ -33,7 +33,7 @@ namespace GameServer.Logic.Damon
 			}
 		}
 
-		// Token: 0x060016C1 RID: 5825 RVA: 0x00162C74 File Offset: 0x00160E74
+		
 		public static double GetPetQiangPer(int nPropIndex)
 		{
 			double PetQiang = 0.0;
@@ -41,7 +41,7 @@ namespace GameServer.Logic.Damon
 			return PetQiang;
 		}
 
-		// Token: 0x060016C2 RID: 5826 RVA: 0x00162CA0 File Offset: 0x00160EA0
+		
 		public static TCPProcessCmdResults UpgradeDamonProcess(TCPOutPacketPool pool, GameClient client, GoodsData goodsData, out TCPOutPacket tcpOutPacket, int nID, TCPClientPool tcpClientPool, TCPManager tcpMgr)
 		{
 			tcpOutPacket = null;
@@ -221,7 +221,7 @@ namespace GameServer.Logic.Damon
 			return result;
 		}
 
-		// Token: 0x04002072 RID: 8306
+		
 		private static Dictionary<int, double> UpgradeAttrDict = new Dictionary<int, double>();
 	}
 }

@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameServer.Tools
 {
-    // Token: 0x020008FB RID: 2299
+    
     public class TMSKThreadStaticClass
     {
-        // Token: 0x0600428D RID: 17037 RVA: 0x003C9C74 File Offset: 0x003C7E74
+        
         public static TMSKThreadStaticClass GetInstance()
         {
             if (null == TMSKThreadStaticClass.ThreadStaticClass)
@@ -20,7 +20,7 @@ namespace GameServer.Tools
             return TMSKThreadStaticClass.ThreadStaticClass;
         }
 
-        // Token: 0x0600428E RID: 17038 RVA: 0x003C9CA8 File Offset: 0x003C7EA8
+        
         public TMSKThreadStaticClass()
         {
             foreach (KeyValuePair<int, int> kv in GameManager.MemoryPoolConfigDict)
@@ -62,7 +62,7 @@ namespace GameServer.Tools
             }
         }
 
-        // Token: 0x0600428F RID: 17039 RVA: 0x003C9E54 File Offset: 0x003C8054
+        
         ~TMSKThreadStaticClass()
         {
             for (int i = 0; i < this.QueueMemoryStream.Count; i++)
@@ -79,7 +79,7 @@ namespace GameServer.Tools
             }
         }
 
-        // Token: 0x06004290 RID: 17040 RVA: 0x003C9EF8 File Offset: 0x003C80F8
+        
         public void PushMemoryStream(MemoryStream ms)
         {
             try
@@ -95,7 +95,7 @@ namespace GameServer.Tools
             }
         }
 
-        // Token: 0x06004291 RID: 17041 RVA: 0x003C9F50 File Offset: 0x003C8150
+        
         public MemoryStream PopMemoryStream()
         {
             try
@@ -115,13 +115,13 @@ namespace GameServer.Tools
             return new MemoryStream();
         }
 
-        // Token: 0x06004292 RID: 17042 RVA: 0x003C9FC8 File Offset: 0x003C81C8
+        
         public static int Log2(int size)
         {
             return (int)Math.Ceiling(Math.Log((double)size, 2.0));
         }
 
-        // Token: 0x06004293 RID: 17043 RVA: 0x003C9FF0 File Offset: 0x003C81F0
+        
         public void PushMemoryBlock(MemoryBlock item)
         {
             try
@@ -158,7 +158,7 @@ namespace GameServer.Tools
             }
         }
 
-        // Token: 0x06004294 RID: 17044 RVA: 0x003CA0D8 File Offset: 0x003C82D8
+        
         public MemoryBlock PopMemoryBlock(int needSize)
         {
             try
@@ -193,23 +193,23 @@ namespace GameServer.Tools
             return null;
         }
 
-        // Token: 0x0400503D RID: 20541
+        
         private const int QueueMemoryStreamMaxSize = 30;
 
-        // Token: 0x0400503E RID: 20542
+        
         [ThreadStatic]
         private static TMSKThreadStaticClass ThreadStaticClass = null;
 
-        // Token: 0x0400503F RID: 20543
+        
         private Queue<MemoryStream> QueueMemoryStream = new Queue<MemoryStream>();
 
-        // Token: 0x04005040 RID: 20544
+        
         private Stack<MemoryBlock>[] MemoryBlockStackArray = new Stack<MemoryBlock>[20];
 
-        // Token: 0x04005041 RID: 20545
+        
         private int[] MemoryBlockNumArray = new int[20];
 
-        // Token: 0x04005042 RID: 20546
+        
         private int[] MemoryBlockSizeArray = new int[20];
     }
 }

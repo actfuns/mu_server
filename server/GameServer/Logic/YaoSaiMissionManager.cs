@@ -12,23 +12,23 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007FC RID: 2044
+	
 	public class YaoSaiMissionManager : IManager, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x060039FF RID: 14847 RVA: 0x00311FBC File Offset: 0x003101BC
+		
 		public static YaoSaiMissionManager getInstance()
 		{
 			return YaoSaiMissionManager.instance;
 		}
 
-		// Token: 0x06003A00 RID: 14848 RVA: 0x00311FD4 File Offset: 0x003101D4
+		
 		public bool initialize()
 		{
 			this.LoadConfig();
 			return true;
 		}
 
-		// Token: 0x06003A01 RID: 14849 RVA: 0x00311FF0 File Offset: 0x003101F0
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1859, 2, 2, YaoSaiMissionManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -39,25 +39,25 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003A02 RID: 14850 RVA: 0x0031207C File Offset: 0x0031027C
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06003A03 RID: 14851 RVA: 0x00312090 File Offset: 0x00310290
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06003A04 RID: 14852 RVA: 0x003120A4 File Offset: 0x003102A4
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06003A05 RID: 14853 RVA: 0x003120B8 File Offset: 0x003102B8
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -92,7 +92,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003A06 RID: 14854 RVA: 0x0031214C File Offset: 0x0031034C
+		
 		public bool ProcessGetMissionInfoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -120,7 +120,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003A07 RID: 14855 RVA: 0x00312230 File Offset: 0x00310430
+		
 		public bool ProcessRefreshMissionCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -187,7 +187,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003A08 RID: 14856 RVA: 0x00312454 File Offset: 0x00310654
+		
 		public bool ProcessExcuteMissionCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -272,7 +272,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003A09 RID: 14857 RVA: 0x003127D8 File Offset: 0x003109D8
+		
 		public bool ProcessQuitMissionCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -345,7 +345,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003A0A RID: 14858 RVA: 0x00312AB8 File Offset: 0x00310CB8
+		
 		public bool ProcessGetMissionAwardCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -435,7 +435,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003A0B RID: 14859 RVA: 0x00312DB4 File Offset: 0x00310FB4
+		
 		public List<YaoSaiMissionData> GetRoleMissionDataList(int rid)
 		{
 			List<YaoSaiMissionData> missionDataList = null;
@@ -483,7 +483,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003A0C RID: 14860 RVA: 0x00312FD0 File Offset: 0x003111D0
+		
 		public List<YaoSaiMissionData> GetRoleMissionWaitList(int rid)
 		{
 			List<YaoSaiMissionData> missionWaitList = new List<YaoSaiMissionData>();
@@ -522,7 +522,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003A0D RID: 14861 RVA: 0x003130E4 File Offset: 0x003112E4
+		
 		public void OnLogin(GameClient client, bool isNewDay)
 		{
 			if (isNewDay)
@@ -531,7 +531,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003A0E RID: 14862 RVA: 0x00313110 File Offset: 0x00311310
+		
 		public bool RandomYaoSaiMission(GameClient client, YaoSaiMissionData missionData)
 		{
 			bool result;
@@ -574,7 +574,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003A0F RID: 14863 RVA: 0x00313304 File Offset: 0x00311504
+		
 		public int UpdateYaoSaiMissionDataDB(GameClient client, List<YaoSaiMissionData> missionList)
 		{
 			int result;
@@ -620,7 +620,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003A10 RID: 14864 RVA: 0x00313464 File Offset: 0x00311664
+		
 		public int DeleteYaoSaiMissionDataDB(GameClient client, List<YaoSaiMissionData> missionList)
 		{
 			int result;
@@ -658,7 +658,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003A11 RID: 14865 RVA: 0x003135A8 File Offset: 0x003117A8
+		
 		public int UpdateYaoSaiMissionSortList(int rid, YaoSaiMissionData mission)
 		{
 			int result;
@@ -713,7 +713,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003A12 RID: 14866 RVA: 0x003137D4 File Offset: 0x003119D4
+		
 		public bool CanZhiPai(GameClient client, string jingLing)
 		{
 			bool result;
@@ -754,7 +754,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003A13 RID: 14867 RVA: 0x003138FC File Offset: 0x00311AFC
+		
 		public int GetMissionRate(GameClient client, YaoSaiMissionData missionData)
 		{
 			int ret = 0;
@@ -826,7 +826,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003A14 RID: 14868 RVA: 0x00313B28 File Offset: 0x00311D28
+		
 		public void RefReshMission(GameClient client)
 		{
 			int roleID = client.ClientData.RoleID;
@@ -865,7 +865,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003A15 RID: 14869 RVA: 0x00313C34 File Offset: 0x00311E34
+		
 		public void YaoSaiMissionTimer_Work()
 		{
 			long nowMs = TimeUtil.NOW();
@@ -951,14 +951,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003A16 RID: 14870 RVA: 0x00314040 File Offset: 0x00312240
+		
 		public void LoadConfig()
 		{
 			this.LoadPetMissionXml();
 			this.LoadSystemParams();
 		}
 
-		// Token: 0x06003A17 RID: 14871 RVA: 0x00314054 File Offset: 0x00312254
+		
 		public void LoadSystemParams()
 		{
 			try
@@ -985,7 +985,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003A18 RID: 14872 RVA: 0x00314138 File Offset: 0x00312338
+		
 		public void LoadRunTimeDataFromDB()
 		{
 			int loop = 0;
@@ -1044,7 +1044,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003A19 RID: 14873 RVA: 0x003143C0 File Offset: 0x003125C0
+		
 		public void LoadPetMissionXml()
 		{
 			string fileName = "";
@@ -1122,31 +1122,31 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x040043BD RID: 17341
+		
 		public YaoSaiMissionRunTimeData RunTimeData = new YaoSaiMissionRunTimeData();
 
-		// Token: 0x040043BE RID: 17342
+		
 		public Dictionary<int, ShenJiLevelItem> ShenJiLevelDict = new Dictionary<int, ShenJiLevelItem>();
 
-		// Token: 0x040043BF RID: 17343
+		
 		public Dictionary<int, List<PetMissionItem>> PetMissionXmlDict = new Dictionary<int, List<PetMissionItem>>();
 
-		// Token: 0x040043C0 RID: 17344
+		
 		public Dictionary<int, PetMissionItem> PetMissionIDXmlDIct = new Dictionary<int, PetMissionItem>();
 
-		// Token: 0x040043C1 RID: 17345
+		
 		public static int MissionCountLimit = 0;
 
-		// Token: 0x040043C2 RID: 17346
+		
 		public static int MissionRefreshSeconds = 0;
 
-		// Token: 0x040043C3 RID: 17347
+		
 		public static int RefreshMissionCost = 0;
 
-		// Token: 0x040043C4 RID: 17348
+		
 		public static int FailAwardRate = 0;
 
-		// Token: 0x040043C5 RID: 17349
+		
 		private static YaoSaiMissionManager instance = new YaoSaiMissionManager();
 	}
 }

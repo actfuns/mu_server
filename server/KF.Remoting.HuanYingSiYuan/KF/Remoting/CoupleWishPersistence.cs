@@ -10,21 +10,21 @@ using Server.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000011 RID: 17
+	
 	internal class CoupleWishPersistence
 	{
-		// Token: 0x06000088 RID: 136 RVA: 0x000078D4 File Offset: 0x00005AD4
+		
 		private CoupleWishPersistence()
 		{
 		}
 
-		// Token: 0x06000089 RID: 137 RVA: 0x000078F8 File Offset: 0x00005AF8
+		
 		public static CoupleWishPersistence getInstance()
 		{
 			return CoupleWishPersistence._Instance;
 		}
 
-		// Token: 0x0600008A RID: 138 RVA: 0x00007910 File Offset: 0x00005B10
+		
 		public int GetNextDbCoupleId()
 		{
 			if (this.CurrDbCoupleId == Global.UninitGameId)
@@ -36,7 +36,7 @@ namespace KF.Remoting
 			return this.CurrDbCoupleId;
 		}
 
-		// Token: 0x0600008B RID: 139 RVA: 0x00007964 File Offset: 0x00005B64
+		
 		public void UpdateRand2Db(List<CoupleWishCoupleDataK> list)
 		{
 			StringBuilder sb = new StringBuilder();
@@ -60,7 +60,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600008C RID: 140 RVA: 0x00007A4C File Offset: 0x00005C4C
+		
 		public List<CoupleWishCoupleDataK> LoadRankFromDb(int week)
 		{
 			MySqlDataReader sdr = null;
@@ -108,7 +108,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600008D RID: 141 RVA: 0x00007C68 File Offset: 0x00005E68
+		
 		public bool ClearCoupleData(int db_coupleid)
 		{
 			bool result;
@@ -126,7 +126,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600008E RID: 142 RVA: 0x00007CB8 File Offset: 0x00005EB8
+		
 		public bool SaveWishRecord(int wishWeek, KuaFuRoleMiniData from, int wishType, string wishTxt, int toDbCoupleId, KuaFuRoleMiniData toMan, KuaFuRoleMiniData toWife)
 		{
 			bool result;
@@ -160,7 +160,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600008F RID: 143 RVA: 0x00007DBC File Offset: 0x00005FBC
+		
 		public bool WriteCoupleData(int week, CoupleWishCoupleDataK coupleData)
 		{
 			bool result;
@@ -194,7 +194,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000090 RID: 144 RVA: 0x00007F20 File Offset: 0x00006120
+		
 		public void AddAdmireLog(int fromRole, int fromZone, int admireType, int toCoupleId, int week)
 		{
 			try
@@ -216,7 +216,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000091 RID: 145 RVA: 0x00007FB4 File Offset: 0x000061B4
+		
 		public CoupleWishSyncStatueData LoadCoupleStatue(int week)
 		{
 			CoupleWishSyncStatueData data = new CoupleWishSyncStatueData();
@@ -265,7 +265,7 @@ namespace KF.Remoting
 			return data;
 		}
 
-		// Token: 0x06000092 RID: 146 RVA: 0x000081E8 File Offset: 0x000063E8
+		
 		public bool WriteStatueData(CoupleWishSyncStatueData statue)
 		{
 			bool result;
@@ -300,7 +300,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000093 RID: 147 RVA: 0x0000836C File Offset: 0x0000656C
+		
 		public void AddYanHuiJoinLog(int fromRole, int fromZone, int toCoupleId, int week)
 		{
 			try
@@ -321,13 +321,13 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x04000057 RID: 87
+		
 		private static CoupleWishPersistence _Instance = new CoupleWishPersistence();
 
-		// Token: 0x04000058 RID: 88
+		
 		private int CurrDbCoupleId = Global.UninitGameId;
 
-		// Token: 0x04000059 RID: 89
+		
 		private long CurrGameId = (long)Global.UninitGameId;
 	}
 }

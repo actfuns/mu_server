@@ -2,10 +2,10 @@
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200077A RID: 1914
+	
 	public class ProcessAreaScripts
 	{
-		// Token: 0x06003118 RID: 12568 RVA: 0x002B796C File Offset: 0x002B5B6C
+		
 		public static void ProcessScripts(GameClient client, string LuaScriptFileName, string functionName, int areaLuaID)
 		{
 			LuaScriptFileName = LuaScriptFileName.ToLower();

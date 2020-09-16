@@ -4,10 +4,10 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000628 RID: 1576
+	
 	public class EnchaseJewelMgr
 	{
-		// Token: 0x06002041 RID: 8257 RVA: 0x001BD218 File Offset: 0x001BB418
+		
 		public static int ProcessEnchaseJewel(GameClient client, int actionType, int equipGoodsDbID, int jewelGoodsIDorDbID, out string jewellist, out int binding)
 		{
 			jewellist = "";

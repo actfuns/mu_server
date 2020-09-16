@@ -6,21 +6,21 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200024A RID: 586
+	
 	internal class RobotTaskSender
 	{
-		// Token: 0x06000814 RID: 2068 RVA: 0x0007AAB6 File Offset: 0x00078CB6
+		
 		private RobotTaskSender()
 		{
 		}
 
-		// Token: 0x06000815 RID: 2069 RVA: 0x0007AACC File Offset: 0x00078CCC
+		
 		public static RobotTaskSender getInstance()
 		{
 			return RobotTaskSender.instance;
 		}
 
-		// Token: 0x06000816 RID: 2070 RVA: 0x0007AAE4 File Offset: 0x00078CE4
+		
 		public bool Initialize(int seed, int randomCount, string pubKey)
 		{
 			lock (this)
@@ -41,7 +41,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000817 RID: 2071 RVA: 0x0007AB78 File Offset: 0x00078D78
+		
 		public byte[] EncryptTaskList(string taskList, bool jailbreak, bool autoStart, string info)
 		{
 			List<byte> encryptedData = new List<byte>();
@@ -92,7 +92,7 @@ namespace GameServer.Logic
 			return encryptedData.ToArray();
 		}
 
-		// Token: 0x06000818 RID: 2072 RVA: 0x0007AD8C File Offset: 0x00078F8C
+		
 		public byte[] EncryptGeniusList(string taskList, bool jailbreak, bool autoStart, string info)
 		{
 			List<byte> encryptedData = new List<byte>();
@@ -136,7 +136,7 @@ namespace GameServer.Logic
 			return encryptedData.ToArray();
 		}
 
-		// Token: 0x06000819 RID: 2073 RVA: 0x0007AF4C File Offset: 0x0007914C
+		
 		private void AddMagicBytes(List<byte> data, int c)
 		{
 			Random random = new Random(this.m_TaskListVerifySeed);
@@ -148,7 +148,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600081A RID: 2074 RVA: 0x0007AF94 File Offset: 0x00079194
+		
 		private uint GenMagicRandom(uint seed, int loop)
 		{
 			uint w = seed;
@@ -161,16 +161,16 @@ namespace GameServer.Logic
 			return (z << 16) + w;
 		}
 
-		// Token: 0x04000DED RID: 3565
+		
 		private static RobotTaskSender instance = new RobotTaskSender();
 
-		// Token: 0x04000DEE RID: 3566
+		
 		private int m_TaskListVerifySeed;
 
-		// Token: 0x04000DEF RID: 3567
+		
 		private int m_TaskListVerifyRandomCount = 50;
 
-		// Token: 0x04000DF0 RID: 3568
+		
 		private RSACryptoServiceProvider m_TaskListRSA;
 	}
 }

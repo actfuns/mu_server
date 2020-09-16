@@ -9,10 +9,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200076B RID: 1899
+	
 	public class NewZoneActiveManager
 	{
-		// Token: 0x060030CA RID: 12490 RVA: 0x002B4DB8 File Offset: 0x002B2FB8
+		
 		public static TCPProcessCmdResults ProcessQueryLevelUpMadmanCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -56,7 +56,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x060030CB RID: 12491 RVA: 0x002B4F14 File Offset: 0x002B3114
+		
 		public static bool QueryLevelUpMadman(GameClient client, TCPOutPacketPool pool, int nID, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -84,7 +84,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x060030CC RID: 12492 RVA: 0x002B4FEC File Offset: 0x002B31EC
+		
 		public static TCPProcessCmdResults ProcessGetActiveInfo(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -128,7 +128,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x060030CD RID: 12493 RVA: 0x002B5174 File Offset: 0x002B3374
+		
 		private static TCPProcessCmdResults GetNewLevelUpMadmanAward(GameClient client, TCPOutPacketPool pool, int nID, int nRoleID, int nActivityType, int nBtnIndex, out TCPOutPacket tcpOutPacket)
 		{
 			Activity instActivity = Global.GetActivity((ActivityTypes)nActivityType);
@@ -205,7 +205,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060030CE RID: 12494 RVA: 0x002B5414 File Offset: 0x002B3614
+		
 		public static TCPProcessCmdResults ProcessGetActiveAwards(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -260,7 +260,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060030CF RID: 12495 RVA: 0x002B55FC File Offset: 0x002B37FC
+		
 		private static TCPProcessCmdResults GetActiveAwards(GameClient client, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, int roleID, int activityType, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;

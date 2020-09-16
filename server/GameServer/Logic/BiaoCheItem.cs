@@ -17,8 +17,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000092 RID: 146
-		// (get) Token: 0x06001B1E RID: 6942 RVA: 0x0019BAE0 File Offset: 0x00199CE0
-		// (set) Token: 0x06001B1F RID: 6943 RVA: 0x0019BB34 File Offset: 0x00199D34
+		
+		
 		public int OwnerRoleID
 		{
 			get
@@ -40,8 +40,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000093 RID: 147
-		// (get) Token: 0x06001B20 RID: 6944 RVA: 0x0019BB88 File Offset: 0x00199D88
-		// (set) Token: 0x06001B21 RID: 6945 RVA: 0x0019BBDC File Offset: 0x00199DDC
+		
+		
 		public int BiaoCheID
 		{
 			get
@@ -63,8 +63,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000094 RID: 148
-		// (get) Token: 0x06001B22 RID: 6946 RVA: 0x0019BC30 File Offset: 0x00199E30
-		// (set) Token: 0x06001B23 RID: 6947 RVA: 0x0019BC84 File Offset: 0x00199E84
+		
+		
 		public string BiaoCheName
 		{
 			get
@@ -86,8 +86,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000095 RID: 149
-		// (get) Token: 0x06001B24 RID: 6948 RVA: 0x0019BCD8 File Offset: 0x00199ED8
-		// (set) Token: 0x06001B25 RID: 6949 RVA: 0x0019BD2C File Offset: 0x00199F2C
+		
+		
 		public int YaBiaoID
 		{
 			get
@@ -109,8 +109,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000096 RID: 150
-		// (get) Token: 0x06001B26 RID: 6950 RVA: 0x0019BD80 File Offset: 0x00199F80
-		// (set) Token: 0x06001B27 RID: 6951 RVA: 0x0019BDD4 File Offset: 0x00199FD4
+		
+		
 		public int MapCode
 		{
 			get
@@ -132,8 +132,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000097 RID: 151
-		// (get) Token: 0x06001B28 RID: 6952 RVA: 0x0019BE28 File Offset: 0x0019A028
-		// (set) Token: 0x06001B29 RID: 6953 RVA: 0x0019BE7C File Offset: 0x0019A07C
+		
+		
 		public int PosX
 		{
 			get
@@ -155,8 +155,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000098 RID: 152
-		// (get) Token: 0x06001B2A RID: 6954 RVA: 0x0019BED0 File Offset: 0x0019A0D0
-		// (set) Token: 0x06001B2B RID: 6955 RVA: 0x0019BF24 File Offset: 0x0019A124
+		
+		
 		public int PosY
 		{
 			get
@@ -178,8 +178,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000099 RID: 153
-		// (get) Token: 0x06001B2C RID: 6956 RVA: 0x0019BF78 File Offset: 0x0019A178
-		// (set) Token: 0x06001B2D RID: 6957 RVA: 0x0019BFCC File Offset: 0x0019A1CC
+		
+		
 		public int Direction
 		{
 			get
@@ -201,8 +201,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x1700009A RID: 154
-		// (get) Token: 0x06001B2E RID: 6958 RVA: 0x0019C020 File Offset: 0x0019A220
-		// (set) Token: 0x06001B2F RID: 6959 RVA: 0x0019C070 File Offset: 0x0019A270
+		
+		
 		public int LifeV
 		{
 			get
@@ -224,8 +224,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x1700009B RID: 155
-		// (get) Token: 0x06001B30 RID: 6960 RVA: 0x0019C0C0 File Offset: 0x0019A2C0
-		// (set) Token: 0x06001B31 RID: 6961 RVA: 0x0019C110 File Offset: 0x0019A310
+		
+		
 		public int CutLifeV
 		{
 			get
@@ -247,8 +247,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x1700009C RID: 156
-		// (get) Token: 0x06001B32 RID: 6962 RVA: 0x0019C160 File Offset: 0x0019A360
-		// (set) Token: 0x06001B33 RID: 6963 RVA: 0x0019C1B0 File Offset: 0x0019A3B0
+		
+		
 		public long StartTime
 		{
 			get
@@ -270,8 +270,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x1700009D RID: 157
-		// (get) Token: 0x06001B34 RID: 6964 RVA: 0x0019C200 File Offset: 0x0019A400
-		// (set) Token: 0x06001B35 RID: 6965 RVA: 0x0019C250 File Offset: 0x0019A450
+		
+		
 		public int BodyCode
 		{
 			get
@@ -293,8 +293,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x1700009E RID: 158
-		// (get) Token: 0x06001B36 RID: 6966 RVA: 0x0019C2A0 File Offset: 0x0019A4A0
-		// (set) Token: 0x06001B37 RID: 6967 RVA: 0x0019C2F0 File Offset: 0x0019A4F0
+		
+		
 		public int PicCode
 		{
 			get
@@ -316,8 +316,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x1700009F RID: 159
-		// (get) Token: 0x06001B38 RID: 6968 RVA: 0x0019C340 File Offset: 0x0019A540
-		// (set) Token: 0x06001B39 RID: 6969 RVA: 0x0019C394 File Offset: 0x0019A594
+		
+		
 		public string OwnerRoleName
 		{
 			get
@@ -339,8 +339,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000A0 RID: 160
-		// (get) Token: 0x06001B3A RID: 6970 RVA: 0x0019C3E8 File Offset: 0x0019A5E8
-		// (set) Token: 0x06001B3B RID: 6971 RVA: 0x0019C434 File Offset: 0x0019A634
+		
+		
 		public long ReportPosTicks
 		{
 			get
@@ -362,8 +362,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000A1 RID: 161
-		// (get) Token: 0x06001B3C RID: 6972 RVA: 0x0019C480 File Offset: 0x0019A680
-		// (set) Token: 0x06001B3D RID: 6973 RVA: 0x0019C4CC File Offset: 0x0019A6CC
+		
+		
 		public int CurrentAction
 		{
 			get
@@ -388,8 +388,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000A2 RID: 162
-		// (get) Token: 0x06001B3E RID: 6974 RVA: 0x0019C528 File Offset: 0x0019A728
-		// (set) Token: 0x06001B3F RID: 6975 RVA: 0x0019C570 File Offset: 0x0019A770
+		
+		
 		public int CopyMapID
 		{
 			get
@@ -411,8 +411,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000A3 RID: 163
-		// (get) Token: 0x06001B40 RID: 6976 RVA: 0x0019C5B8 File Offset: 0x0019A7B8
-		// (set) Token: 0x06001B41 RID: 6977 RVA: 0x0019C604 File Offset: 0x0019A804
+		
+		
 		public int CurrentLifeV
 		{
 			get
@@ -434,8 +434,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000A4 RID: 164
-		// (get) Token: 0x06001B42 RID: 6978 RVA: 0x0019C650 File Offset: 0x0019A850
-		// (set) Token: 0x06001B43 RID: 6979 RVA: 0x0019C698 File Offset: 0x0019A898
+		
+		
 		public int AttackedRoleID
 		{
 			get
@@ -466,8 +466,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000A5 RID: 165
-		// (get) Token: 0x06001B44 RID: 6980 RVA: 0x0019C720 File Offset: 0x0019A920
-		// (set) Token: 0x06001B45 RID: 6981 RVA: 0x0019C768 File Offset: 0x0019A968
+		
+		
 		public int CurrentGridX
 		{
 			get
@@ -489,8 +489,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000A6 RID: 166
-		// (get) Token: 0x06001B46 RID: 6982 RVA: 0x0019C7B0 File Offset: 0x0019A9B0
-		// (set) Token: 0x06001B47 RID: 6983 RVA: 0x0019C7F8 File Offset: 0x0019A9F8
+		
+		
 		public int CurrentGridY
 		{
 			get
@@ -512,8 +512,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000A7 RID: 167
-		// (get) Token: 0x06001B48 RID: 6984 RVA: 0x0019C840 File Offset: 0x0019AA40
-		// (set) Token: 0x06001B49 RID: 6985 RVA: 0x0019C888 File Offset: 0x0019AA88
+		
+		
 		public Dictionary<string, bool> CurrentObjsDict
 		{
 			get
@@ -535,8 +535,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000A8 RID: 168
-		// (get) Token: 0x06001B4A RID: 6986 RVA: 0x0019C8D0 File Offset: 0x0019AAD0
-		// (set) Token: 0x06001B4B RID: 6987 RVA: 0x0019C918 File Offset: 0x0019AB18
+		
+		
 		public Dictionary<string, bool> CurrentGridsDict
 		{
 			get
@@ -558,8 +558,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000A9 RID: 169
-		// (get) Token: 0x06001B4C RID: 6988 RVA: 0x0019C960 File Offset: 0x0019AB60
-		// (set) Token: 0x06001B4D RID: 6989 RVA: 0x0019C9A8 File Offset: 0x0019ABA8
+		
+		
 		public bool HandledDead
 		{
 			get
@@ -581,8 +581,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000AA RID: 170
-		// (get) Token: 0x06001B4E RID: 6990 RVA: 0x0019C9F0 File Offset: 0x0019ABF0
-		// (set) Token: 0x06001B4F RID: 6991 RVA: 0x0019CA3C File Offset: 0x0019AC3C
+		
+		
 		public long BiaoCheDeadTicks
 		{
 			get
@@ -604,8 +604,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000AB RID: 171
-		// (get) Token: 0x06001B50 RID: 6992 RVA: 0x0019CA88 File Offset: 0x0019AC88
-		// (set) Token: 0x06001B51 RID: 6993 RVA: 0x0019CAD4 File Offset: 0x0019ACD4
+		
+		
 		public int DestNPC
 		{
 			get
@@ -627,8 +627,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000AC RID: 172
-		// (get) Token: 0x06001B52 RID: 6994 RVA: 0x0019CB20 File Offset: 0x0019AD20
-		// (set) Token: 0x06001B53 RID: 6995 RVA: 0x0019CB6C File Offset: 0x0019AD6C
+		
+		
 		public int MinLevel
 		{
 			get
@@ -650,8 +650,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000AD RID: 173
-		// (get) Token: 0x06001B54 RID: 6996 RVA: 0x0019CBB8 File Offset: 0x0019ADB8
-		// (set) Token: 0x06001B55 RID: 6997 RVA: 0x0019CC04 File Offset: 0x0019AE04
+		
+		
 		public int MaxLevel
 		{
 			get
@@ -673,7 +673,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000AE RID: 174
-		// (get) Token: 0x06001B56 RID: 6998 RVA: 0x0019CC50 File Offset: 0x0019AE50
+		
 		public ObjectTypes ObjectType
 		{
 			get
@@ -689,8 +689,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000AF RID: 175
-		// (get) Token: 0x06001B58 RID: 7000 RVA: 0x0019CC7C File Offset: 0x0019AE7C
-		// (set) Token: 0x06001B59 RID: 7001 RVA: 0x0019CC94 File Offset: 0x0019AE94
+		
+		
 		public long LastLifeMagicTick
 		{
 			get
@@ -704,8 +704,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000B0 RID: 176
-		// (get) Token: 0x06001B5A RID: 7002 RVA: 0x0019CCA0 File Offset: 0x0019AEA0
-		// (set) Token: 0x06001B5B RID: 7003 RVA: 0x0019CCEC File Offset: 0x0019AEEC
+		
+		
 		public Point CurrentGrid
 		{
 			get
@@ -722,8 +722,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000B1 RID: 177
-		// (get) Token: 0x06001B5C RID: 7004 RVA: 0x0019CD54 File Offset: 0x0019AF54
-		// (set) Token: 0x06001B5D RID: 7005 RVA: 0x0019CD79 File Offset: 0x0019AF79
+		
+		
 		public Point CurrentPos
 		{
 			get
@@ -738,7 +738,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000B2 RID: 178
-		// (get) Token: 0x06001B5E RID: 7006 RVA: 0x0019CD9C File Offset: 0x0019AF9C
+		
 		public int CurrentMapCode
 		{
 			get
@@ -748,7 +748,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000B3 RID: 179
-		// (get) Token: 0x06001B5F RID: 7007 RVA: 0x0019CDB4 File Offset: 0x0019AFB4
+		
 		public int CurrentCopyMapID
 		{
 			get
@@ -758,8 +758,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000B4 RID: 180
-		// (get) Token: 0x06001B60 RID: 7008 RVA: 0x0019CDCC File Offset: 0x0019AFCC
-		// (set) Token: 0x06001B61 RID: 7009 RVA: 0x0019CDE4 File Offset: 0x0019AFE4
+		
+		
 		public Dircetions CurrentDir
 		{
 			get
@@ -773,8 +773,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000B5 RID: 181
-		// (get) Token: 0x06001B62 RID: 7010 RVA: 0x0019CDF0 File Offset: 0x0019AFF0
-		// (set) Token: 0x06001B63 RID: 7011 RVA: 0x0019CE07 File Offset: 0x0019B007
+		
+		
 		public List<int> PassiveEffectList { get; set; }
 
 		// Token: 0x06001B64 RID: 7012 RVA: 0x0019CE10 File Offset: 0x0019B010

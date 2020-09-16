@@ -8,10 +8,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.Summoner
 {
-	// Token: 0x02000355 RID: 853
+	
 	public class SummonerManager
 	{
-		// Token: 0x06000EA2 RID: 3746 RVA: 0x000E6008 File Offset: 0x000E4208
+		
 		public void LoadSummonerData()
 		{
 			try
@@ -87,7 +87,7 @@ namespace GameServer.Logic.Summoner
 			}
 		}
 
-		// Token: 0x06000EA3 RID: 3747 RVA: 0x000E6260 File Offset: 0x000E4460
+		
 		public bool InitSummonerInfo(GameClient client)
 		{
 			bool result;
@@ -115,19 +115,19 @@ namespace GameServer.Logic.Summoner
 			return result;
 		}
 
-		// Token: 0x06000EA4 RID: 3748 RVA: 0x000E62F0 File Offset: 0x000E44F0
+		
 		public bool IsSummoner(int nOccu)
 		{
 			return Global.CalcOriginalOccupationID(nOccu) == 5;
 		}
 
-		// Token: 0x06000EA5 RID: 3749 RVA: 0x000E6318 File Offset: 0x000E4518
+		
 		public bool IsFirstLoginSummoner(GameClient client, int nDestChangeLifeCount)
 		{
 			return this.IsVersionSystemOpenOfSummoner() && client != null && this.IsSummoner(client.ClientData.Occupation) && client.ClientData.ChangeLifeCount < nDestChangeLifeCount;
 		}
 
-		// Token: 0x06000EA6 RID: 3750 RVA: 0x000E637C File Offset: 0x000E457C
+		
 		public bool IsSummonerWeapon(GameClient client, int nGoodsID)
 		{
 			bool result;
@@ -154,13 +154,13 @@ namespace GameServer.Logic.Summoner
 			return result;
 		}
 
-		// Token: 0x06000EA7 RID: 3751 RVA: 0x000E63E8 File Offset: 0x000E45E8
+		
 		public bool IsVersionSystemOpenOfSummoner()
 		{
 			return GameManager.VersionSystemOpenMgr.IsVersionSystemOpen("Summoner") && !GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System2Dot3);
 		}
 
-		// Token: 0x06000EA8 RID: 3752 RVA: 0x000E6428 File Offset: 0x000E4628
+		
 		public void AutoGiveSummonerGoods(GameClient client)
 		{
 			if (null == client)
@@ -266,7 +266,7 @@ namespace GameServer.Logic.Summoner
 			}
 		}
 
-		// Token: 0x06000EA9 RID: 3753 RVA: 0x000E6828 File Offset: 0x000E4A28
+		
 		public void AutoGiveSummonerDefaultSkillHotKey(GameClient client)
 		{
 			if (null != client)
@@ -284,7 +284,7 @@ namespace GameServer.Logic.Summoner
 			}
 		}
 
-		// Token: 0x06000EAA RID: 3754 RVA: 0x000E68D4 File Offset: 0x000E4AD4
+		
 		public void AutoSummonerFirstAddPoint(GameClient client)
 		{
 			if (null == client)

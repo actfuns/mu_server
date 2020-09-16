@@ -92,8 +92,8 @@ namespace KF.Remoting.HuanYingSiYuan.TcpStaticClient
 		internal struct _p2 : IReturnParameter<EscapeBattleSyncData>
 		{
 			// Token: 0x170005CB RID: 1483
-			// (get) Token: 0x06003D12 RID: 15634 RVA: 0x0034422C File Offset: 0x0034242C
-			// (set) Token: 0x06003D13 RID: 15635 RVA: 0x00344244 File Offset: 0x00342444
+			
+			
 			[Preserve(Conditional = true)]
 			public EscapeBattleSyncData Return
 			{
@@ -138,8 +138,8 @@ namespace KF.Remoting.HuanYingSiYuan.TcpStaticClient
 		internal struct _p4 : IReturnParameter<int>
 		{
 			// Token: 0x170005CC RID: 1484
-			// (get) Token: 0x06003D14 RID: 15636 RVA: 0x00344250 File Offset: 0x00342450
-			// (set) Token: 0x06003D15 RID: 15637 RVA: 0x00344268 File Offset: 0x00342468
+			
+			
 			[Preserve(Conditional = true)]
 			public int Return
 			{
@@ -181,8 +181,8 @@ namespace KF.Remoting.HuanYingSiYuan.TcpStaticClient
 		internal struct _p6 : IReturnParameter<int>
 		{
 			// Token: 0x170005CD RID: 1485
-			// (get) Token: 0x06003D16 RID: 15638 RVA: 0x00344274 File Offset: 0x00342474
-			// (set) Token: 0x06003D17 RID: 15639 RVA: 0x0034428C File Offset: 0x0034248C
+			
+			
 			[Preserve(Conditional = true)]
 			public int Return
 			{
@@ -230,8 +230,8 @@ namespace KF.Remoting.HuanYingSiYuan.TcpStaticClient
 		internal struct _p8 : IReturnParameter<int>
 		{
 			// Token: 0x170005CE RID: 1486
-			// (get) Token: 0x06003D18 RID: 15640 RVA: 0x00344298 File Offset: 0x00342498
-			// (set) Token: 0x06003D19 RID: 15641 RVA: 0x003442B0 File Offset: 0x003424B0
+			
+			
 			[Preserve(Conditional = true)]
 			public int Return
 			{
@@ -282,8 +282,8 @@ namespace KF.Remoting.HuanYingSiYuan.TcpStaticClient
 		internal struct _p10 : IReturnParameter<bool>
 		{
 			// Token: 0x170005CF RID: 1487
-			// (get) Token: 0x06003D1A RID: 15642 RVA: 0x003442BC File Offset: 0x003424BC
-			// (set) Token: 0x06003D1B RID: 15643 RVA: 0x003442D4 File Offset: 0x003424D4
+			
+			
 			[Preserve(Conditional = true)]
 			public bool Return
 			{
@@ -329,8 +329,8 @@ namespace KF.Remoting.HuanYingSiYuan.TcpStaticClient
 		internal struct _p13 : IReturnParameter<KFStageData>
 		{
 			// Token: 0x170005D0 RID: 1488
-			// (get) Token: 0x06003D1C RID: 15644 RVA: 0x003442E0 File Offset: 0x003424E0
-			// (set) Token: 0x06003D1D RID: 15645 RVA: 0x003442F8 File Offset: 0x003424F8
+			
+			
 			[Preserve(Conditional = true)]
 			public KFStageData Return
 			{
@@ -356,8 +356,8 @@ namespace KF.Remoting.HuanYingSiYuan.TcpStaticClient
 		internal struct _p14 : IReturnParameter<OpenLottery>
 		{
 			// Token: 0x170005D1 RID: 1489
-			// (get) Token: 0x06003D1E RID: 15646 RVA: 0x00344304 File Offset: 0x00342504
-			// (set) Token: 0x06003D1F RID: 15647 RVA: 0x0034431C File Offset: 0x0034251C
+			
+			
 			[Preserve(Conditional = true)]
 			public OpenLottery Return
 			{
@@ -399,8 +399,8 @@ namespace KF.Remoting.HuanYingSiYuan.TcpStaticClient
 		internal struct _p16 : IReturnParameter<List<OpenLottery>>
 		{
 			// Token: 0x170005D2 RID: 1490
-			// (get) Token: 0x06003D20 RID: 15648 RVA: 0x00344328 File Offset: 0x00342528
-			// (set) Token: 0x06003D21 RID: 15649 RVA: 0x00344340 File Offset: 0x00342540
+			
+			
 			[Preserve(Conditional = true)]
 			public List<OpenLottery> Return
 			{
@@ -426,8 +426,8 @@ namespace KF.Remoting.HuanYingSiYuan.TcpStaticClient
 		internal struct _p17 : IReturnParameter<List<KFBoCaoHistoryData>>
 		{
 			// Token: 0x170005D3 RID: 1491
-			// (get) Token: 0x06003D22 RID: 15650 RVA: 0x0034434C File Offset: 0x0034254C
-			// (set) Token: 0x06003D23 RID: 15651 RVA: 0x00344364 File Offset: 0x00342564
+			
+			
 			[Preserve(Conditional = true)]
 			public List<KFBoCaoHistoryData> Return
 			{
@@ -492,8 +492,8 @@ namespace KF.Remoting.HuanYingSiYuan.TcpStaticClient
 		internal struct _p21 : IReturnParameter<KFCallMsg>
 		{
 			// Token: 0x170005D4 RID: 1492
-			// (get) Token: 0x06003D24 RID: 15652 RVA: 0x00344370 File Offset: 0x00342570
-			// (set) Token: 0x06003D25 RID: 15653 RVA: 0x00344388 File Offset: 0x00342588
+			
+			
 			[Preserve(Conditional = true)]
 			public KFCallMsg Return
 			{
@@ -542,8 +542,8 @@ namespace KF.Remoting.HuanYingSiYuan.TcpStaticClient
 		internal struct _p24 : IReturnParameter<ZhanDuiZhengBaSyncData>
 		{
 			// Token: 0x170005D5 RID: 1493
-			// (get) Token: 0x06003D26 RID: 15654 RVA: 0x00344394 File Offset: 0x00342594
-			// (set) Token: 0x06003D27 RID: 15655 RVA: 0x003443AC File Offset: 0x003425AC
+			
+			
 			[Preserve(Conditional = true)]
 			public ZhanDuiZhengBaSyncData Return
 			{
@@ -588,8 +588,8 @@ namespace KF.Remoting.HuanYingSiYuan.TcpStaticClient
 		internal struct _p26 : IReturnParameter<int>
 		{
 			// Token: 0x170005D6 RID: 1494
-			// (get) Token: 0x06003D28 RID: 15656 RVA: 0x003443B8 File Offset: 0x003425B8
-			// (set) Token: 0x06003D29 RID: 15657 RVA: 0x003443D0 File Offset: 0x003425D0
+			
+			
 			[Preserve(Conditional = true)]
 			public int Return
 			{
@@ -631,8 +631,8 @@ namespace KF.Remoting.HuanYingSiYuan.TcpStaticClient
 		internal struct _p28 : IReturnParameter<List<ZhanDuiZhengBaNtfPkResultData>>
 		{
 			// Token: 0x170005D7 RID: 1495
-			// (get) Token: 0x06003D2A RID: 15658 RVA: 0x003443DC File Offset: 0x003425DC
-			// (set) Token: 0x06003D2B RID: 15659 RVA: 0x003443F4 File Offset: 0x003425F4
+			
+			
 			[Preserve(Conditional = true)]
 			public List<ZhanDuiZhengBaNtfPkResultData> Return
 			{
@@ -687,8 +687,8 @@ namespace KF.Remoting.HuanYingSiYuan.TcpStaticClient
 		internal struct _p31 : IReturnParameter<string>
 		{
 			// Token: 0x170005D8 RID: 1496
-			// (get) Token: 0x06003D2C RID: 15660 RVA: 0x00344400 File Offset: 0x00342600
-			// (set) Token: 0x06003D2D RID: 15661 RVA: 0x00344418 File Offset: 0x00342618
+			
+			
 			[Preserve(Conditional = true)]
 			public string Return
 			{

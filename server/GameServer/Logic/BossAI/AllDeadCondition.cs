@@ -8,8 +8,8 @@ namespace GameServer.Logic.BossAI
 	public class AllDeadCondition : ITriggerCondition
 	{
 		// Token: 0x170000BD RID: 189
-		// (get) Token: 0x06001BB6 RID: 7094 RVA: 0x001A1694 File Offset: 0x0019F894
-		// (set) Token: 0x06001BB7 RID: 7095 RVA: 0x001A16AB File Offset: 0x0019F8AB
+		
+		
 		public BossAITriggerTypes TriggerType { get; set; }
 
 		// Token: 0x04002A04 RID: 10756

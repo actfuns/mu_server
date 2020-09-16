@@ -6,40 +6,40 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020001DD RID: 477
+	
 	public class DeControl : IManager
 	{
-		// Token: 0x06000603 RID: 1539 RVA: 0x00054BA0 File Offset: 0x00052DA0
+		
 		public static DeControl getInstance()
 		{
 			return DeControl.instance;
 		}
 
-		// Token: 0x06000604 RID: 1540 RVA: 0x00054BB8 File Offset: 0x00052DB8
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x06000605 RID: 1541 RVA: 0x00054BDC File Offset: 0x00052DDC
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x06000606 RID: 1542 RVA: 0x00054BF0 File Offset: 0x00052DF0
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000607 RID: 1543 RVA: 0x00054C04 File Offset: 0x00052E04
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000608 RID: 1544 RVA: 0x00054C18 File Offset: 0x00052E18
+		
 		public bool InitConfig()
 		{
 			bool success = true;
@@ -128,7 +128,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x06000609 RID: 1545 RVA: 0x00055038 File Offset: 0x00053238
+		
 		private void OnReload()
 		{
 			foreach (GameClient client in GameManager.ClientMgr.GetAllClients(true))
@@ -137,7 +137,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600060A RID: 1546 RVA: 0x00055098 File Offset: 0x00053298
+		
 		public void OnInitGame(GameClient client)
 		{
 			for (int i = 0; i < client.ClientData.DeControlItemArray.Length; i++)
@@ -157,7 +157,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600060B RID: 1547 RVA: 0x00055140 File Offset: 0x00053340
+		
 		public double OnControl(GameClient client, int propIndex)
 		{
 			double result;
@@ -227,10 +227,10 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04000A81 RID: 2689
+		
 		private DeControlRuntimeData RuntimeData = new DeControlRuntimeData();
 
-		// Token: 0x04000A82 RID: 2690
+		
 		private static DeControl instance = new DeControl();
 	}
 }

@@ -7,15 +7,15 @@ using Server.Tools;
 
 namespace Maticsoft.DBUtility
 {
-	// Token: 0x0200004A RID: 74
+	
 	public abstract class DbHelperMySQL
 	{
-		// Token: 0x06000313 RID: 787 RVA: 0x0002B302 File Offset: 0x00029502
+		
 		public DbHelperMySQL()
 		{
 		}
 
-		// Token: 0x06000314 RID: 788 RVA: 0x0002B310 File Offset: 0x00029510
+		
 		public static int GetMaxID(string FieldName, string TableName)
 		{
 			string strsql = "select max(" + FieldName + ")+1 from " + TableName;
@@ -32,7 +32,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000315 RID: 789 RVA: 0x0002B358 File Offset: 0x00029558
+		
 		public static bool Exists(string strSql)
 		{
 			object obj = DbHelperMySQL.GetSingle(strSql);
@@ -48,7 +48,7 @@ namespace Maticsoft.DBUtility
 			return cmdresult != 0;
 		}
 
-		// Token: 0x06000316 RID: 790 RVA: 0x0002B3B8 File Offset: 0x000295B8
+		
 		public static bool Exists(string strSql, params MySqlParameter[] cmdParms)
 		{
 			object obj = DbHelperMySQL.GetSingle(strSql, cmdParms);
@@ -64,7 +64,7 @@ namespace Maticsoft.DBUtility
 			return cmdresult != 0;
 		}
 
-		// Token: 0x06000317 RID: 791 RVA: 0x0002B418 File Offset: 0x00029618
+		
 		public static int ExecuteSql(string SQLString)
 		{
 			int result;
@@ -98,7 +98,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000318 RID: 792 RVA: 0x0002B4D8 File Offset: 0x000296D8
+		
 		public static int ExecuteSqlByTime(string SQLString, int Times)
 		{
 			int result;
@@ -133,7 +133,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000319 RID: 793 RVA: 0x0002B5A0 File Offset: 0x000297A0
+		
 		public static int ExecuteSqlTran(List<CommandInfo> list, List<CommandInfo> oracleCmdSqlList)
 		{
 			int result;
@@ -231,7 +231,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x0600031A RID: 794 RVA: 0x0002B930 File Offset: 0x00029B30
+		
 		public static int ExecuteSqlTran(List<string> SQLStringList)
 		{
 			int result;
@@ -277,7 +277,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x0600031B RID: 795 RVA: 0x0002BA44 File Offset: 0x00029C44
+		
 		public static int ExecuteSql(string SQLString, string content)
 		{
 			int result;
@@ -312,7 +312,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x0600031C RID: 796 RVA: 0x0002BB0C File Offset: 0x00029D0C
+		
 		public static object ExecuteSqlGet(string SQLString, string content)
 		{
 			object result;
@@ -354,7 +354,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x0600031D RID: 797 RVA: 0x0002BC00 File Offset: 0x00029E00
+		
 		public static int ExecuteSqlInsertImg(string strSQL, List<Tuple<string, byte[]>> imgList)
 		{
 			int result = 0;
@@ -394,7 +394,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x0600031E RID: 798 RVA: 0x0002BD3C File Offset: 0x00029F3C
+		
 		public static long ExecuteSqlGetIncrement(string SQLString, List<Tuple<string, byte[]>> imgList = null)
 		{
 			long result;
@@ -449,7 +449,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x0600031F RID: 799 RVA: 0x0002BF00 File Offset: 0x0002A100
+		
 		public static object GetSingle(string SQLString)
 		{
 			object result;
@@ -490,7 +490,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000320 RID: 800 RVA: 0x0002BFE8 File Offset: 0x0002A1E8
+		
 		public static long GetSingleLong(string sql)
 		{
 			long longValue = 0L;
@@ -507,7 +507,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000321 RID: 801 RVA: 0x0002C028 File Offset: 0x0002A228
+		
 		public static int GetSingleValues(string SQLString, out object[] values)
 		{
 			int result;
@@ -548,7 +548,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000322 RID: 802 RVA: 0x0002C118 File Offset: 0x0002A318
+		
 		public static object GetSingle(string SQLString, int Times)
 		{
 			object result;
@@ -590,7 +590,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000323 RID: 803 RVA: 0x0002C208 File Offset: 0x0002A408
+		
 		public static MySqlDataReader ExecuteReader(string strSQL, bool islog = false)
 		{
 			MySqlConnection connection;
@@ -624,7 +624,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000324 RID: 804 RVA: 0x0002C298 File Offset: 0x0002A498
+		
 		public static DataSet Query(string SQLString)
 		{
 			DataSet result;
@@ -658,7 +658,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000325 RID: 805 RVA: 0x0002C358 File Offset: 0x0002A558
+		
 		public static DataSet Query(string SQLString, int Times)
 		{
 			DataSet result;
@@ -693,7 +693,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000326 RID: 806 RVA: 0x0002C424 File Offset: 0x0002A624
+		
 		public static int ExecuteSql(string SQLString, params MySqlParameter[] cmdParms)
 		{
 			int result;
@@ -728,7 +728,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000327 RID: 807 RVA: 0x0002C4F4 File Offset: 0x0002A6F4
+		
 		public static void ExecuteSqlTran(Hashtable SQLStringList)
 		{
 			using (MySqlConnection conn = new MySqlConnection(DbHelperMySQL.connectionString))
@@ -770,7 +770,7 @@ namespace Maticsoft.DBUtility
 			}
 		}
 
-		// Token: 0x06000328 RID: 808 RVA: 0x0002C658 File Offset: 0x0002A858
+		
 		public static int ExecuteSqlTran(List<CommandInfo> cmdList)
 		{
 			int result;
@@ -847,7 +847,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x06000329 RID: 809 RVA: 0x0002C8F0 File Offset: 0x0002AAF0
+		
 		public static void ExecuteSqlTranWithIndentity(List<CommandInfo> SQLStringList)
 		{
 			using (MySqlConnection conn = new MySqlConnection(DbHelperMySQL.connectionString))
@@ -903,7 +903,7 @@ namespace Maticsoft.DBUtility
 			}
 		}
 
-		// Token: 0x0600032A RID: 810 RVA: 0x0002CB14 File Offset: 0x0002AD14
+		
 		public static void ExecuteSqlTranWithIndentity(Hashtable SQLStringList)
 		{
 			using (MySqlConnection conn = new MySqlConnection(DbHelperMySQL.connectionString))
@@ -960,7 +960,7 @@ namespace Maticsoft.DBUtility
 			}
 		}
 
-		// Token: 0x0600032B RID: 811 RVA: 0x0002CD50 File Offset: 0x0002AF50
+		
 		public static object GetSingle(string SQLString, params MySqlParameter[] cmdParms)
 		{
 			object result;
@@ -1002,7 +1002,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x0600032C RID: 812 RVA: 0x0002CE48 File Offset: 0x0002B048
+		
 		public static MySqlDataReader ExecuteReader(string SQLString, params MySqlParameter[] cmdParms)
 		{
 			MySqlConnection connection = new MySqlConnection(DbHelperMySQL.connectionString);
@@ -1022,7 +1022,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x0600032D RID: 813 RVA: 0x0002CEA4 File Offset: 0x0002B0A4
+		
 		public static DataSet Query(string SQLString, params MySqlParameter[] cmdParms)
 		{
 			DataSet result;
@@ -1059,7 +1059,7 @@ namespace Maticsoft.DBUtility
 			return result;
 		}
 
-		// Token: 0x0600032E RID: 814 RVA: 0x0002CF98 File Offset: 0x0002B198
+		
 		private static void PrepareCommand(MySqlCommand cmd, MySqlConnection conn, MySqlTransaction trans, string cmdText, MySqlParameter[] cmdParms)
 		{
 			if (conn.State != ConnectionState.Open)
@@ -1086,10 +1086,10 @@ namespace Maticsoft.DBUtility
 			}
 		}
 
-		// Token: 0x040001D2 RID: 466
+		
 		public static string connectionString = PubConstant.ConnectionString;
 
-		// Token: 0x040001D3 RID: 467
+		
 		public static string connectionLogString = PubConstant.ConnectionLogString;
 	}
 }

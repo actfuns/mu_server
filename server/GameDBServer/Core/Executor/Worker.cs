@@ -14,7 +14,7 @@ namespace GameDBServer.Core.Executor
 		}
 
 		// Token: 0x17000009 RID: 9
-		// (set) Token: 0x06000068 RID: 104 RVA: 0x000044E5 File Offset: 0x000026E5
+		
 		public Thread CurrentThread
 		{
 			set

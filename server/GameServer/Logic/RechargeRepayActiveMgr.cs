@@ -11,10 +11,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000782 RID: 1922
+	
 	public class RechargeRepayActiveMgr
 	{
-		// Token: 0x0600315E RID: 12638 RVA: 0x002C2EAC File Offset: 0x002C10AC
+		
 		private static int GetBtnIndexState(int money, int minMoney, bool recode)
 		{
 			int ret = 0;
@@ -29,7 +29,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x0600315F RID: 12639 RVA: 0x002C2EE8 File Offset: 0x002C10E8
+		
 		private static string GetBtnIndexStateListStr(GameClient client, int money, ActivityTypes type, string[] records)
 		{
 			Activity instActivity = Global.GetActivity(type);
@@ -61,7 +61,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003160 RID: 12640 RVA: 0x002C2FC4 File Offset: 0x002C11C4
+		
 		public static TCPProcessCmdResults QueryAllRechargeRepayActiveInfo(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -119,7 +119,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003161 RID: 12641 RVA: 0x002C3170 File Offset: 0x002C1370
+		
 		public static TCPProcessCmdResults QueryRechargeRepayActive(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -356,7 +356,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003162 RID: 12642 RVA: 0x002C3948 File Offset: 0x002C1B48
+		
 		public static bool CheckRechargeReplay(GameClient client, ActivityTypes type, out bool hasGet)
 		{
 			hasGet = false;
@@ -452,7 +452,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003163 RID: 12643 RVA: 0x002C3C2C File Offset: 0x002C1E2C
+		
 		private static string GetFirstChargeInfo(GameClient client)
 		{
 			int totalChongZhiMoney = GameManager.ClientMgr.QueryTotaoChongZhiMoney(client);
@@ -466,7 +466,7 @@ namespace GameServer.Logic
 			return string.Format("{0}", resoult);
 		}
 
-		// Token: 0x06003164 RID: 12644 RVA: 0x002C3C9C File Offset: 0x002C1E9C
+		
 		private static string GetDailyChargeActiveInfo(GameClient client)
 		{
 			string strcmd = "";
@@ -474,7 +474,7 @@ namespace GameServer.Logic
 			return strcmd;
 		}
 
-		// Token: 0x06003165 RID: 12645 RVA: 0x002C3CC4 File Offset: 0x002C1EC4
+		
 		private static bool GetCmdDataField(TMSKSocket socket, int nID, byte[] data, int count, out string[] fields)
 		{
 			string cmdData = null;
@@ -495,7 +495,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003166 RID: 12646 RVA: 0x002C3D40 File Offset: 0x002C1F40
+		
 		private static TCPProcessCmdResults GetFirstChargeAward(TMSKSocket socket, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -572,7 +572,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003167 RID: 12647 RVA: 0x002C3FF8 File Offset: 0x002C21F8
+		
 		public static string BuildWriteActiveRecordStr(string record, int nBtnIndex)
 		{
 			string activeRecord = "";
@@ -609,7 +609,7 @@ namespace GameServer.Logic
 			return activeRecord;
 		}
 
-		// Token: 0x06003168 RID: 12648 RVA: 0x002C40E4 File Offset: 0x002C22E4
+		
 		public static TCPProcessCmdResults ProcessGetRepayAwardCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1284,7 +1284,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x06003169 RID: 12649 RVA: 0x002C5AA0 File Offset: 0x002C3CA0
+		
 		public static void BroadcastActiveHint(GameClient client, ActivityTypes activeType)
 		{
 			string activeStr = "";

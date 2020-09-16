@@ -14,28 +14,28 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-    // Token: 0x020002B3 RID: 691
+    
     public class ElementWarManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListenerEx, IManager2, IEventListener
     {
-        // Token: 0x06000AB0 RID: 2736 RVA: 0x000A9590 File Offset: 0x000A7790
+        
         public static ElementWarManager getInstance()
         {
             return ElementWarManager.instance;
         }
 
-        // Token: 0x06000AB1 RID: 2737 RVA: 0x000A95A8 File Offset: 0x000A77A8
+        
         public bool initialize()
         {
             return this.InitConfig();
         }
 
-        // Token: 0x06000AB2 RID: 2738 RVA: 0x000A95CC File Offset: 0x000A77CC
+        
         public bool initialize(ICoreInterface coreInterface)
         {
             return true;
         }
 
-        // Token: 0x06000AB3 RID: 2739 RVA: 0x000A95E0 File Offset: 0x000A77E0
+        
         public bool startup()
         {
             TCPCmdDispatcher.getInstance().registerProcessorEx(1010, 1, 1, ElementWarManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -48,7 +48,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x06000AB4 RID: 2740 RVA: 0x000A9698 File Offset: 0x000A7898
+        
         public bool showdown()
         {
             GlobalEventSource4Scene.getInstance().removeListener(10001, 28, ElementWarManager.getInstance());
@@ -58,19 +58,19 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x06000AB5 RID: 2741 RVA: 0x000A9708 File Offset: 0x000A7908
+        
         public bool destroy()
         {
             return true;
         }
 
-        // Token: 0x06000AB6 RID: 2742 RVA: 0x000A971C File Offset: 0x000A791C
+        
         public bool processCmd(GameClient client, string[] cmdParams)
         {
             return false;
         }
 
-        // Token: 0x06000AB7 RID: 2743 RVA: 0x000A9730 File Offset: 0x000A7930
+        
         public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             bool result;
@@ -92,12 +92,12 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000AB8 RID: 2744 RVA: 0x000A9789 File Offset: 0x000A7989
+        
         public void processEvent(EventObject eventObject)
         {
         }
 
-        // Token: 0x06000AB9 RID: 2745 RVA: 0x000A978C File Offset: 0x000A798C
+        
         public void processEvent(EventObjectEx eventObject)
         {
             switch (eventObject.EventType)
@@ -177,7 +177,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000ABA RID: 2746 RVA: 0x000A9A08 File Offset: 0x000A7C08
+        
         public bool InitConfig()
         {
             bool success = true;
@@ -232,7 +232,7 @@ namespace GameServer.Logic
             return success;
         }
 
-        // Token: 0x06000ABB RID: 2747 RVA: 0x000A9D2C File Offset: 0x000A7F2C
+        
         public bool ProcessJoinCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -294,7 +294,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000ABC RID: 2748 RVA: 0x000A9F84 File Offset: 0x000A8184
+        
         public bool ProcessQuitCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -316,7 +316,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000ABD RID: 2749 RVA: 0x000AA004 File Offset: 0x000A8204
+        
         public bool ProcessEnterCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -354,7 +354,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000ABE RID: 2750 RVA: 0x000AA0E8 File Offset: 0x000A82E8
+        
         public bool OnInitGame(GameClient client)
         {
             GameMap gameMap = null;
@@ -378,7 +378,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000ABF RID: 2751 RVA: 0x000AA1FC File Offset: 0x000A83FC
+        
         public bool ClientRelive(GameClient client)
         {
             GameMap gameMap = null;
@@ -403,13 +403,13 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000AC0 RID: 2752 RVA: 0x000AA348 File Offset: 0x000A8548
+        
         public bool IsGongNengOpened(GameClient client, bool hint = false)
         {
             return GameManager.VersionSystemOpenMgr.IsVersionSystemOpen("ElementWar") && GlobalNew.IsGongNengOpened(client, GongNengIDs.ElementWar, hint);
         }
 
-        // Token: 0x06000AC1 RID: 2753 RVA: 0x000AA37C File Offset: 0x000A857C
+        
         public int GetElementWarCount(GameClient client)
         {
             int day = Global.GetRoleParamsInt32FromDB(client, "ElementWarDayId");
@@ -429,14 +429,14 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000AC2 RID: 2754 RVA: 0x000AA3DC File Offset: 0x000A85DC
+        
         public void AddElementWarCount(GameClient client)
         {
             int count = this.GetElementWarCount(client);
             Global.SaveRoleParamsInt32ValueToDB(client, "ElementWarCount", count + 1, true);
         }
 
-        // Token: 0x06000AC3 RID: 2755 RVA: 0x000AA404 File Offset: 0x000A8604
+        
         public bool AddCopyScene(GameClient client, CopyMap copyMap)
         {
             bool result;
@@ -477,7 +477,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000AC4 RID: 2756 RVA: 0x000AA574 File Offset: 0x000A8774
+        
         public bool RemoveCopyScene(CopyMap copyMap)
         {
             bool result;
@@ -497,7 +497,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000AC5 RID: 2757 RVA: 0x000AA5F4 File Offset: 0x000A87F4
+        
         public void TimerProc()
         {
             long nowTicks = TimeUtil.NOW();
@@ -646,7 +646,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000AC6 RID: 2758 RVA: 0x000AABD0 File Offset: 0x000A8DD0
+        
         public void CreateMonster(ElementWarScene scene, int upWave)
         {
             CopyMap copyMap = scene.CopyMapInfo;
@@ -701,13 +701,13 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000AC7 RID: 2759 RVA: 0x000AAE44 File Offset: 0x000A9044
+        
         public bool IsElementWarCopy(int FubenID)
         {
             return FubenID == this._runtimeData.CopyID;
         }
 
-        // Token: 0x06000AC8 RID: 2760 RVA: 0x000AAE64 File Offset: 0x000A9064
+        
         public void KillMonster(GameClient client, Monster monster)
         {
             if (client.ClientData.FuBenSeqID >= 0 && client.ClientData.CopyMapID >= 0 && this.IsElementWarCopy(client.ClientData.FuBenID))
@@ -746,7 +746,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000AC9 RID: 2761 RVA: 0x000AB008 File Offset: 0x000A9208
+        
         public void GiveAwards(ElementWarScene scene)
         {
             try
@@ -813,7 +813,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000ACA RID: 2762 RVA: 0x000AB2D4 File Offset: 0x000A94D4
+        
         public void NotifyTimeStateInfoAndScoreInfo(GameClient client, bool timeState = true, bool scoreInfo = true)
         {
             lock (ElementWarManager._mutex)
@@ -833,7 +833,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000ACB RID: 2763 RVA: 0x000AB374 File Offset: 0x000A9574
+        
         public void LeaveFuBen(GameClient client)
         {
             ElementWarScene scene = null;
@@ -854,31 +854,31 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000ACC RID: 2764 RVA: 0x000AB454 File Offset: 0x000A9654
+        
         public void OnLogout(GameClient client)
         {
             this.LeaveFuBen(client);
         }
 
-        // Token: 0x040011A4 RID: 4516
+        
         public const SceneUIClasses _sceneType = SceneUIClasses.ElementWar;
 
-        // Token: 0x040011A5 RID: 4517
+        
         public const GameTypes _gameType = GameTypes.ElementWar;
 
-        // Token: 0x040011A6 RID: 4518
+        
         public ElementWarData _runtimeData = new ElementWarData();
 
-        // Token: 0x040011A7 RID: 4519
+        
         private static ElementWarManager instance = new ElementWarManager();
 
-        // Token: 0x040011A8 RID: 4520
+        
         public static object _mutex = new object();
 
-        // Token: 0x040011A9 RID: 4521
+        
         public ConcurrentDictionary<int, ElementWarScene> _sceneDict = new ConcurrentDictionary<int, ElementWarScene>();
 
-        // Token: 0x040011AA RID: 4522
+        
         private static long _nextHeartBeatTicks = 0L;
     }
 }

@@ -11,15 +11,15 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic.CheatGuard
 {
-	// Token: 0x02000253 RID: 595
+	
 	public class TradeBlackManager : SingletonTemplate<TradeBlackManager>
 	{
-		// Token: 0x0600084E RID: 2126 RVA: 0x0007F6C4 File Offset: 0x0007D8C4
+		
 		private TradeBlackManager()
 		{
 		}
 
-		// Token: 0x0600084F RID: 2127 RVA: 0x0007F720 File Offset: 0x0007D920
+		
 		public bool LoadConfig()
 		{
 			bool bResult = true;
@@ -95,7 +95,7 @@ namespace GameServer.Logic.CheatGuard
 			return bResult;
 		}
 
-		// Token: 0x06000850 RID: 2128 RVA: 0x0007FA68 File Offset: 0x0007DC68
+		
 		public bool IsBanTrade(int roleId)
 		{
 			bool bBan = false;
@@ -107,7 +107,7 @@ namespace GameServer.Logic.CheatGuard
 			return bBan;
 		}
 
-		// Token: 0x06000851 RID: 2129 RVA: 0x0007FAB8 File Offset: 0x0007DCB8
+		
 		public void UpdateObjectExtData(GameClient client)
 		{
 			if (client != null)
@@ -127,7 +127,7 @@ namespace GameServer.Logic.CheatGuard
 			}
 		}
 
-		// Token: 0x06000852 RID: 2130 RVA: 0x0007FB80 File Offset: 0x0007DD80
+		
 		public void SetBanTradeToTicks(int roleid, long toTicks)
 		{
 			toTicks = Math.Max(0L, toTicks);
@@ -162,7 +162,7 @@ namespace GameServer.Logic.CheatGuard
 			}
 		}
 
-		// Token: 0x06000853 RID: 2131 RVA: 0x0007FD90 File Offset: 0x0007DF90
+		
 		private void CheckBanTrade(int roleId)
 		{
 			TradeBlackObject obj = this.LoadTradeBlackObject(roleId, true);
@@ -241,7 +241,7 @@ namespace GameServer.Logic.CheatGuard
 			}
 		}
 
-		// Token: 0x06000854 RID: 2132 RVA: 0x00080098 File Offset: 0x0007E298
+		
 		private void CheckUnBanTrade(int roleId)
 		{
 			TradeBlackObject obj = this.LoadTradeBlackObject(roleId, true);
@@ -257,7 +257,7 @@ namespace GameServer.Logic.CheatGuard
 			}
 		}
 
-		// Token: 0x06000855 RID: 2133 RVA: 0x00080184 File Offset: 0x0007E384
+		
 		public void Update()
 		{
 			if ((TimeUtil.NowDateTime() - this.lastCheckUnBanTime).TotalSeconds > 60.0)
@@ -311,7 +311,7 @@ namespace GameServer.Logic.CheatGuard
 			}
 		}
 
-		// Token: 0x06000856 RID: 2134 RVA: 0x00080434 File Offset: 0x0007E634
+		
 		public void OnExchange(int roleid1, int roleid2, List<GoodsData> gdList1, List<GoodsData> gdList2, int zuanshi1, int zuanshi2)
 		{
 			long price = (long)((zuanshi1 > 0) ? zuanshi1 : 0);
@@ -371,7 +371,7 @@ namespace GameServer.Logic.CheatGuard
 			this.CheckBanTrade(roleid2);
 		}
 
-		// Token: 0x06000857 RID: 2135 RVA: 0x00080650 File Offset: 0x0007E850
+		
 		public void OnMarketBuy(int whoBuy, int whoSale, GoodsData saleGoods)
 		{
 			if (saleGoods != null)
@@ -421,7 +421,7 @@ namespace GameServer.Logic.CheatGuard
 			}
 		}
 
-		// Token: 0x06000858 RID: 2136 RVA: 0x00080868 File Offset: 0x0007EA68
+		
 		private TradeBlackObject LoadTradeBlackObject(int roleid, bool loadDbIfNotExist = true)
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -489,7 +489,7 @@ namespace GameServer.Logic.CheatGuard
 			return obj;
 		}
 
-		// Token: 0x06000859 RID: 2137 RVA: 0x00080B40 File Offset: 0x0007ED40
+		
 		private TradeBlackHourItem GetBlackHourItem(TradeBlackObject obj, DateTime date)
 		{
 			TradeBlackHourItem item = obj.HourItems[date.Hour];
@@ -505,7 +505,7 @@ namespace GameServer.Logic.CheatGuard
 			return item;
 		}
 
-		// Token: 0x0600085A RID: 2138 RVA: 0x00080BD4 File Offset: 0x0007EDD4
+		
 		private void SaveTradeBlackObject(TradeBlackHourItem obj)
 		{
 			if (obj != null)
@@ -517,7 +517,7 @@ namespace GameServer.Logic.CheatGuard
 			}
 		}
 
-		// Token: 0x0600085B RID: 2139 RVA: 0x00080C20 File Offset: 0x0007EE20
+		
 		public bool CheckTrade(GameClient client, MoneyTypes moneyType, bool notify = true)
 		{
 			if (moneyType == MoneyTypes.YuanBao)
@@ -559,34 +559,34 @@ namespace GameServer.Logic.CheatGuard
 			return true;
 		}
 
-		// Token: 0x04000E56 RID: 3670
+		
 		private const string GoodsPriceCfgFile = "Config\\Blacklist.xml";
 
-		// Token: 0x04000E57 RID: 3671
+		
 		private const string TradeBlackCfgFile = "Config\\TradeConfig.xml";
 
-		// Token: 0x04000E58 RID: 3672
+		
 		private Dictionary<int, TradeBlackObject> TradeBlackObjs = new Dictionary<int, TradeBlackObject>();
 
-		// Token: 0x04000E59 RID: 3673
+		
 		private DateTime lastCheckUnBanTime = TimeUtil.NowDateTime();
 
-		// Token: 0x04000E5A RID: 3674
+		
 		private DateTime lastFreeUnusedTime = TimeUtil.NowDateTime();
 
-		// Token: 0x04000E5B RID: 3675
+		
 		private Dictionary<int, int> GoodsPriceDict = null;
 
-		// Token: 0x04000E5C RID: 3676
+		
 		private List<TradeConfigItem> TradeCfgItems = null;
 
-		// Token: 0x04000E5D RID: 3677
+		
 		private int BanTradeSec = -1;
 
-		// Token: 0x04000E5E RID: 3678
+		
 		private int BanTradeLog = 0;
 
-		// Token: 0x04000E5F RID: 3679
+		
 		private int BanTradeLogin = -1;
 	}
 }

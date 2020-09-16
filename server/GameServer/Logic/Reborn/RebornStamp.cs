@@ -7,16 +7,16 @@ using Server.Tools;
 
 namespace GameServer.Logic.Reborn
 {
-	// Token: 0x020003F8 RID: 1016
+	
 	internal class RebornStamp
 	{
-		// Token: 0x060011E2 RID: 4578 RVA: 0x0011B524 File Offset: 0x00119724
+		
 		public static RebornStamp getInstance()
 		{
 			return RebornStamp.instance;
 		}
 
-		// Token: 0x060011E3 RID: 4579 RVA: 0x0011B53C File Offset: 0x0011973C
+		
 		public static bool ParseYinJiConfig()
 		{
 			string fileName = Global.GameResPath(RebornStampConsts.RebornStampZhu);
@@ -189,7 +189,7 @@ namespace GameServer.Logic.Reborn
 			return RebornStamp.YinJiReset != null;
 		}
 
-		// Token: 0x060011E4 RID: 4580 RVA: 0x0011BC68 File Offset: 0x00119E68
+		
 		public static bool CheckTypeMatch(RebornStampData curr, int StampID, int StampType, out int Index, out int MainAttr)
 		{
 			Index = 0;
@@ -291,7 +291,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x060011E5 RID: 4581 RVA: 0x0011BFC4 File Offset: 0x0011A1C4
+		
 		public static int GetCurrMinorLevelItemID(RebornStampData dbInfo, int Index)
 		{
 			int result;
@@ -306,7 +306,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x060011E6 RID: 4582 RVA: 0x0011C01C File Offset: 0x0011A21C
+		
 		public static int GetCurrMainLevelItemID(RebornStampData dbInfo, int Index)
 		{
 			int result;
@@ -321,7 +321,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x060011E7 RID: 4583 RVA: 0x0011C074 File Offset: 0x0011A274
+		
 		public static int GetMainYinJiLevelUpNum(RebornStampData dbInfo, int Index)
 		{
 			int MainUpNum = 0;
@@ -372,7 +372,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x060011E8 RID: 4584 RVA: 0x0011C30C File Offset: 0x0011A50C
+		
 		public static bool IsMainLevelUp(RebornStampData data, int MainAttr, out int ZhuID)
 		{
 			bool result;
@@ -432,7 +432,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x060011E9 RID: 4585 RVA: 0x0011C4EC File Offset: 0x0011A6EC
+		
 		public void RefreshProps(GameClient client)
 		{
 			double[] _ExtProps = new double[177];
@@ -510,7 +510,7 @@ namespace GameServer.Logic.Reborn
 			}
 		}
 
-		// Token: 0x060011EA RID: 4586 RVA: 0x0011C880 File Offset: 0x0011AA80
+		
 		private static bool InsertRebornYinJi(GameClient client, string YinJiInfo)
 		{
 			string sCmd = string.Format("{0}:{1}:{2}:{3}", new object[]
@@ -525,7 +525,7 @@ namespace GameServer.Logic.Reborn
 			return retcmd != TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x060011EB RID: 4587 RVA: 0x0011C910 File Offset: 0x0011AB10
+		
 		private static List<int> YinJiUpdateInfo(int StampType1, int StampType2)
 		{
 			List<int> list = new List<int>();
@@ -555,7 +555,7 @@ namespace GameServer.Logic.Reborn
 			return list;
 		}
 
-		// Token: 0x060011EC RID: 4588 RVA: 0x0011CA60 File Offset: 0x0011AC60
+		
 		private static string MakeYinJiUpdateInfo(List<int> UpdateInfo)
 		{
 			string result;
@@ -585,13 +585,13 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x060011ED RID: 4589 RVA: 0x0011CB2C File Offset: 0x0011AD2C
+		
 		private static string MakeYinJiUpdateInfoByType(int StampType1, int StampType2)
 		{
 			return RebornStamp.MakeYinJiUpdateInfo(RebornStamp.YinJiUpdateInfo(StampType1, StampType2));
 		}
 
-		// Token: 0x060011EE RID: 4590 RVA: 0x0011CB4C File Offset: 0x0011AD4C
+		
 		private static bool UpdateRebornYinJiInfo(GameClient client, string UpdateInfo, int UsePoint, int ResetNum)
 		{
 			string sCmd = string.Format("{0}:{1}:{2}:{3}", new object[]
@@ -606,7 +606,7 @@ namespace GameServer.Logic.Reborn
 			return retcmd != TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x060011EF RID: 4591 RVA: 0x0011CBDC File Offset: 0x0011ADDC
+		
 		private static bool GetRebornYinJiInfo(GameClient client, out RebornStampData data)
 		{
 			string sCmd = string.Format("{0}", client.ClientData.RoleID);
@@ -614,7 +614,7 @@ namespace GameServer.Logic.Reborn
 			return data.RoleID == client.ClientData.RoleID && data != null;
 		}
 
-		// Token: 0x060011F0 RID: 4592 RVA: 0x0011CC4C File Offset: 0x0011AE4C
+		
 		public static ResOpcode ProcessRebornYinJiLevelUp(GameClient client, int RoldID, int StampID, int StampType, int UpNum, out int IDZhu, out int OutMainYinJiID1, out int OutUsePoint)
 		{
 			IDZhu = -1;
@@ -698,7 +698,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x060011F1 RID: 4593 RVA: 0x0011CF1C File Offset: 0x0011B11C
+		
 		public static ResOpcode ProcessRebornYinJiGetInfo(GameClient client, int RoldID, out RebornStampData dbInfo)
 		{
 			dbInfo = null;
@@ -714,7 +714,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x060011F2 RID: 4594 RVA: 0x0011CF44 File Offset: 0x0011B144
+		
 		public static ResOpcode ProcessRebornYinJiReset(GameClient client, int RoldID)
 		{
 			RebornStampData db;
@@ -758,7 +758,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x060011F3 RID: 4595 RVA: 0x0011D08C File Offset: 0x0011B28C
+		
 		public static ResOpcode ProcessRebornYinJiChoose(GameClient client, int RoldID, int StampType1, int StampType2)
 		{
 			ResOpcode result;
@@ -818,31 +818,31 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x04001B1C RID: 6940
+		
 		public static Dictionary<int, ChongShengYinJiZhu> MainYinJi = new Dictionary<int, ChongShengYinJiZhu>();
 
-		// Token: 0x04001B1D RID: 6941
+		
 		public static Dictionary<MainAttrType, List<int>> TypeMap = new Dictionary<MainAttrType, List<int>>();
 
-		// Token: 0x04001B1E RID: 6942
+		
 		public static Dictionary<MainAttrType, Dictionary<int, int>> CurrMainYinJi = new Dictionary<MainAttrType, Dictionary<int, int>>();
 
-		// Token: 0x04001B1F RID: 6943
+		
 		public static Dictionary<MainAttrType, Dictionary<int, int>> MainYinJiLevelUp = new Dictionary<MainAttrType, Dictionary<int, int>>();
 
-		// Token: 0x04001B20 RID: 6944
+		
 		public static Dictionary<int, ChongShengYinJiZi> MinorYinJi = new Dictionary<int, ChongShengYinJiZi>();
 
-		// Token: 0x04001B21 RID: 6945
+		
 		public static Dictionary<int, Dictionary<int, int>> MinorYinJiLevelUp = new Dictionary<int, Dictionary<int, int>>();
 
-		// Token: 0x04001B22 RID: 6946
+		
 		public static Dictionary<int, int> MinorLevelLimit = new Dictionary<int, int>();
 
-		// Token: 0x04001B23 RID: 6947
+		
 		public static List<int> YinJiReset = new List<int>();
 
-		// Token: 0x04001B24 RID: 6948
+		
 		private static RebornStamp instance = new RebornStamp();
 	}
 }

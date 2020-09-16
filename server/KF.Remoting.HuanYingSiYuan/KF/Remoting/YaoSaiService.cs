@@ -12,16 +12,16 @@ using Tmsk.Tools.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000029 RID: 41
+	
 	public class YaoSaiService
 	{
-		// Token: 0x060001C7 RID: 455 RVA: 0x0001966C File Offset: 0x0001786C
+		
 		public static YaoSaiService Instance()
 		{
 			return YaoSaiService._instance;
 		}
 
-		// Token: 0x060001C8 RID: 456 RVA: 0x00019684 File Offset: 0x00017884
+		
 		public void InitConfig()
 		{
 			try
@@ -77,7 +77,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060001C9 RID: 457 RVA: 0x00019900 File Offset: 0x00017B00
+		
 		public KuaFuCmdData SearchYaoSaiFuLu(int rid, int unionlev, int faction, HashSet<int> frindSet)
 		{
 			KuaFuCmdData result;
@@ -157,7 +157,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060001CA RID: 458 RVA: 0x00019B6C File Offset: 0x00017D6C
+		
 		public KuaFuCmdData GetYaoSaiPrisonRoleData(int rid, long dataAge)
 		{
 			KuaFuCmdData result;
@@ -187,7 +187,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060001CB RID: 459 RVA: 0x00019C34 File Offset: 0x00017E34
+		
 		public KuaFuCmdData GetYaoSaiFuLuListData(int rid, long dataAge)
 		{
 			KuaFuCmdData result;
@@ -224,7 +224,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060001CC RID: 460 RVA: 0x00019D14 File Offset: 0x00017F14
+		
 		public KuaFuCmdData GetYaoSaiPrisonLogData(int rid, long dataAge)
 		{
 			KuaFuCmdData result;
@@ -269,7 +269,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060001CD RID: 461 RVA: 0x00019E68 File Offset: 0x00018068
+		
 		public KuaFuCmdData GetYaoSaiPrisonJingJiData(int rid, long dataAge)
 		{
 			KuaFuCmdData result;
@@ -314,7 +314,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060001CE RID: 462 RVA: 0x0001A044 File Offset: 0x00018244
+		
 		public int YaoSaiPrisonOpt(int srcrid, int targetid, int type, bool success)
 		{
 			int result;
@@ -566,7 +566,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060001CF RID: 463 RVA: 0x0001AA00 File Offset: 0x00018C00
+		
 		private void UpdateYaoSaiPrisonSearchData(KFPrisonRoleAllData allData, int oldLevID)
 		{
 			int newLevID = this.GetYaoSaiLevelID(allData.kfRoleData.V.UnionLevel);
@@ -607,7 +607,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060001D0 RID: 464 RVA: 0x0001AB90 File Offset: 0x00018D90
+		
 		public int UpdateYaoSaiPrisonRoleData(KFUpdatePrisonRole updateData)
 		{
 			lock (this.Mutex)
@@ -668,7 +668,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x060001D1 RID: 465 RVA: 0x0001AE3C File Offset: 0x0001903C
+		
 		public int YaoSaiPrisonHuDong(int ownerid, int fuluid, int type, int param0, int param1, int param2)
 		{
 			int result;
@@ -745,7 +745,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060001D2 RID: 466 RVA: 0x0001B0A8 File Offset: 0x000192A8
+		
 		public int UpdateYaoSaiPrisonLogData(int rid, long id, int state)
 		{
 			lock (this.Mutex)
@@ -767,7 +767,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x060001D3 RID: 467 RVA: 0x0001B1C0 File Offset: 0x000193C0
+		
 		private KFPrisonRoleAllData GetYaoSaiPrisonRoleAllData(int roleID, bool loadFromDB = true)
 		{
 			KFPrisonRoleAllData result;
@@ -822,7 +822,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060001D4 RID: 468 RVA: 0x0001B3A0 File Offset: 0x000195A0
+		
 		private KFPrisonFuLuAllData GetYaoSaiPrisonFuLuAllData(int roleID, bool loadFromDB = true)
 		{
 			KFPrisonFuLuAllData result;
@@ -876,7 +876,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060001D5 RID: 469 RVA: 0x0001B604 File Offset: 0x00019804
+		
 		public void CheckYaoSaiPrisonTimerProc(DateTime now)
 		{
 			if (this.YaoSaiPrisonJingJiDataDict.Count != 0 || this.YaoSaiPrisonLogDataDict.Count != 0 || this.YaoSaiSearchDataDict.Count != 0)
@@ -981,13 +981,13 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060001D6 RID: 470 RVA: 0x0001BC20 File Offset: 0x00019E20
+		
 		private bool YaoSaiSearchItemCheck(KFPrisonRoleData srcData, KFPrisonRoleData searchItem, HashSet<int> frindSet)
 		{
 			return srcData.RoleID != searchItem.RoleID && srcData.RoleID != searchItem.OwnerID && srcData.OwnerID != searchItem.RoleID && (srcData.Faction == 0 || srcData.Faction != searchItem.Faction) && (frindSet == null || !frindSet.Contains(searchItem.RoleID));
 		}
 
-		// Token: 0x060001D7 RID: 471 RVA: 0x0001BCB0 File Offset: 0x00019EB0
+		
 		private void AddYaoSaiPrisonLogData(KFPrisonLogData data, bool broadCast = false)
 		{
 			lock (this.Mutex)
@@ -1019,7 +1019,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060001D8 RID: 472 RVA: 0x0001BE04 File Offset: 0x0001A004
+		
 		public int GetYaoSaiLevelID(int unionlev)
 		{
 			int levelID = -1;
@@ -1039,7 +1039,7 @@ namespace KF.Remoting
 			return levelID;
 		}
 
-		// Token: 0x060001D9 RID: 473 RVA: 0x0001BEEC File Offset: 0x0001A0EC
+		
 		public int TransOptTypeToLogType(int type, int src_tar_thr, bool success)
 		{
 			int LogType = 0;
@@ -1169,7 +1169,7 @@ namespace KF.Remoting
 			return LogType;
 		}
 
-		// Token: 0x060001DA RID: 474 RVA: 0x0001C06C File Offset: 0x0001A26C
+		
 		public int TransHuDongTypeToLogType(int type, bool owner, bool success)
 		{
 			int LogType;
@@ -1233,7 +1233,7 @@ namespace KF.Remoting
 			return LogType;
 		}
 
-		// Token: 0x060001DB RID: 475 RVA: 0x0001C100 File Offset: 0x0001A300
+		
 		public void LoadYaoSaiData()
 		{
 			long lastTicks = TimeUtil.NOW();
@@ -1267,7 +1267,7 @@ namespace KF.Remoting
 			LogManager.WriteLog(LogTypes.Info, string.Format("要塞监狱数据加载 TakeTime={0}ms", TimeUtil.NOW() - lastTicks), null, true);
 		}
 
-		// Token: 0x060001DC RID: 476 RVA: 0x0001C30C File Offset: 0x0001A50C
+		
 		private bool LoadYaoSaiPrisonJingJiData(int roleID, KFPrisonJingJiData data)
 		{
 			try
@@ -1288,7 +1288,7 @@ namespace KF.Remoting
 			return false;
 		}
 
-		// Token: 0x060001DD RID: 477 RVA: 0x0001C37C File Offset: 0x0001A57C
+		
 		private List<KFPrisonRoleData> LoadYaoSaiPrisonRoleList(YaoSaiSearchParam loadParam)
 		{
 			List<KFPrisonRoleData> list = new List<KFPrisonRoleData>();
@@ -1351,7 +1351,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060001DE RID: 478 RVA: 0x0001C608 File Offset: 0x0001A808
+		
 		private bool LoadYaoSaiPrisonLogList(int RoleID, List<KFPrisonLogData> LogListData)
 		{
 			MySqlDataReader sdr = null;
@@ -1394,7 +1394,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060001DF RID: 479 RVA: 0x0001C780 File Offset: 0x0001A980
+		
 		private void SaveYaoSaiPrisonRoleDataDB(KFPrisonRoleData data, byte[] PlayerJingJiMirrorData = null)
 		{
 			DateTime fuluDataTime = new DateTime(data.FuLuTime);
@@ -1444,7 +1444,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060001E0 RID: 480 RVA: 0x0001C99C File Offset: 0x0001AB9C
+		
 		private void InsertYaoSaiPrisonLogData(KFPrisonLogData data)
 		{
 			string sql = string.Format("INSERT INTO `t_yaosai_prison_log` (`roleid`,`introid`,`param1`,`param2`,`name1`,`name2`,`state`) VALUES ({0},{1},{2},{3},'{4}','{5}',{6});", new object[]
@@ -1460,14 +1460,14 @@ namespace KF.Remoting
 			data.ID = this.ExecuteSqlGetIncrement(sql);
 		}
 
-		// Token: 0x060001E1 RID: 481 RVA: 0x0001CA24 File Offset: 0x0001AC24
+		
 		private void DeleteYaoSaiPrisonLogData(KFPrisonLogData data)
 		{
 			string sql = string.Format("DELETE FROM `t_yaosai_prison_log` WHERE `id`={0};", data.ID);
 			this.ExecuteSqlNoQuery(sql);
 		}
 
-		// Token: 0x060001E2 RID: 482 RVA: 0x0001CA50 File Offset: 0x0001AC50
+		
 		private int ExecuteSqlNoQuery(string sqlCmd)
 		{
 			int result;
@@ -1484,7 +1484,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060001E3 RID: 483 RVA: 0x0001CA9C File Offset: 0x0001AC9C
+		
 		private long ExecuteSqlGetIncrement(string sqlCmd)
 		{
 			long result;
@@ -1501,28 +1501,28 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x04000114 RID: 276
+		
 		private static YaoSaiService _instance = new YaoSaiService();
 
-		// Token: 0x04000115 RID: 277
+		
 		private object Mutex = new object();
 
-		// Token: 0x04000116 RID: 278
+		
 		private YaoSaiRuntimeData RuntimeData = new YaoSaiRuntimeData();
 
-		// Token: 0x04000117 RID: 279
+		
 		private Dictionary<int, List<KFPrisonRoleAllData>> YaoSaiSearchDataDict = new Dictionary<int, List<KFPrisonRoleAllData>>();
 
-		// Token: 0x04000118 RID: 280
+		
 		private Dictionary<int, KFPrisonRoleAllData> YaoSaiPrisonRoleDataDict = new Dictionary<int, KFPrisonRoleAllData>();
 
-		// Token: 0x04000119 RID: 281
+		
 		private Dictionary<int, KFPrisonFuLuAllData> YaoSaiOwnerIDVsFuLuDict = new Dictionary<int, KFPrisonFuLuAllData>();
 
-		// Token: 0x0400011A RID: 282
+		
 		private Dictionary<int, KFPrisonJingJiAllData> YaoSaiPrisonJingJiDataDict = new Dictionary<int, KFPrisonJingJiAllData>();
 
-		// Token: 0x0400011B RID: 283
+		
 		private Dictionary<int, KFPrisonLogAllData> YaoSaiPrisonLogDataDict = new Dictionary<int, KFPrisonLogAllData>();
 	}
 }

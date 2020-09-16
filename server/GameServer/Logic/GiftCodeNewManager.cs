@@ -8,46 +8,46 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020002D6 RID: 726
+	
 	public class GiftCodeNewManager : IManager
 	{
-		// Token: 0x06000B6F RID: 2927 RVA: 0x000B3EF8 File Offset: 0x000B20F8
+		
 		public static GiftCodeNewManager getInstance()
 		{
 			return GiftCodeNewManager.instance;
 		}
 
-		// Token: 0x06000B70 RID: 2928 RVA: 0x000B3F10 File Offset: 0x000B2110
+		
 		public bool initialize()
 		{
 			return this.initGiftCode();
 		}
 
-		// Token: 0x06000B71 RID: 2929 RVA: 0x000B3F34 File Offset: 0x000B2134
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x06000B72 RID: 2930 RVA: 0x000B3F48 File Offset: 0x000B2148
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000B73 RID: 2931 RVA: 0x000B3F5C File Offset: 0x000B215C
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000B74 RID: 2932 RVA: 0x000B3F70 File Offset: 0x000B2170
+		
 		public static bool IsFuncOpen()
 		{
 			return true;
 		}
 
-		// Token: 0x06000B75 RID: 2933 RVA: 0x000B3F84 File Offset: 0x000B2184
+		
 		public bool initGiftCode()
 		{
 			bool success = true;
@@ -159,7 +159,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x06000B76 RID: 2934 RVA: 0x000B43F0 File Offset: 0x000B25F0
+		
 		private GiftCodeInfo GetGiftCodeInfo(string giftid)
 		{
 			GiftCodeInfo result;
@@ -172,7 +172,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000B77 RID: 2935 RVA: 0x000B444C File Offset: 0x000B264C
+		
 		public void ProcessGiftCodeList(string strcmd)
 		{
 			if (null != strcmd)
@@ -229,7 +229,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000B78 RID: 2936 RVA: 0x000B45B0 File Offset: 0x000B27B0
+		
 		public void ProcessGiftCodeCmd(GameClient client, string userId, int roleId, string giftId, string codeNo)
 		{
 			try
@@ -249,7 +249,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000B79 RID: 2937 RVA: 0x000B462C File Offset: 0x000B282C
+		
 		private void SendAward(GameClient client, GiftCodeAwardData ItemData)
 		{
 			if (null != ItemData)
@@ -295,7 +295,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000B7A RID: 2938 RVA: 0x000B47C8 File Offset: 0x000B29C8
+		
 		private void SendMailForGiftCode(List<GoodsData> GoodList, GiftCodeAwardData ItemData, string subject, string content)
 		{
 			if (GoodList != null && null != ItemData)
@@ -320,7 +320,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000B7B RID: 2939 RVA: 0x000B48B8 File Offset: 0x000B2AB8
+		
 		private void AddLogEvent(GiftCodeAwardData ItemData, int result)
 		{
 			if (null != ItemData)
@@ -338,13 +338,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x040012AD RID: 4781
+		
 		private static GiftCodeNewManager instance = new GiftCodeNewManager();
 
-		// Token: 0x040012AE RID: 4782
+		
 		private object _lockConfig = new object();
 
-		// Token: 0x040012AF RID: 4783
+		
 		private static Dictionary<string, GiftCodeInfo> _GiftCodeCfgAwards = new Dictionary<string, GiftCodeInfo>();
 	}
 }

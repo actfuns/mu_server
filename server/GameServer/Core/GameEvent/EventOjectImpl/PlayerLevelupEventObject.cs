@@ -13,7 +13,7 @@ namespace GameServer.Core.GameEvent.EventOjectImpl
 		}
 
 		// Token: 0x1700000B RID: 11
-		// (get) Token: 0x060003DB RID: 987 RVA: 0x0003D628 File Offset: 0x0003B828
+		
 		public GameClient Player
 		{
 			get

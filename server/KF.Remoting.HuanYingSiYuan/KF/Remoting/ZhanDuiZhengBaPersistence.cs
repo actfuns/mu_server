@@ -8,15 +8,15 @@ using Server.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x0200005F RID: 95
+	
 	public class ZhanDuiZhengBaPersistence
 	{
-		// Token: 0x06000439 RID: 1081 RVA: 0x0003694C File Offset: 0x00034B4C
+		
 		private ZhanDuiZhengBaPersistence()
 		{
 		}
 
-		// Token: 0x0600043A RID: 1082 RVA: 0x00036958 File Offset: 0x00034B58
+		
 		public ZhanDuiZhengBaSyncData LoadZhengBaSyncData(DateTime now, int selectRoleIfNewCreate)
 		{
 			ZhanDuiZhengBaSyncData syncData = new ZhanDuiZhengBaSyncData();
@@ -95,7 +95,7 @@ namespace KF.Remoting
 			return syncData;
 		}
 
-		// Token: 0x0600043B RID: 1083 RVA: 0x00036C60 File Offset: 0x00034E60
+		
 		public int GetLastTopZhanDui(int month)
 		{
 			try
@@ -109,7 +109,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x0600043C RID: 1084 RVA: 0x00036CAC File Offset: 0x00034EAC
+		
 		private List<ZhanDuiZhengBaZhanDuiData> LoadZhengBaRankData(int nowMonth)
 		{
 			List<ZhanDuiZhengBaZhanDuiData> roleList = new List<ZhanDuiZhengBaZhanDuiData>();
@@ -146,7 +146,7 @@ namespace KF.Remoting
 			return roleList;
 		}
 
-		// Token: 0x0600043D RID: 1085 RVA: 0x00036E74 File Offset: 0x00035074
+		
 		private List<ZhanDuiZhengBaPkLogData> LoadPkLogList(int nowMonth)
 		{
 			List<ZhanDuiZhengBaPkLogData> roleList = new List<ZhanDuiZhengBaPkLogData>();
@@ -182,7 +182,7 @@ namespace KF.Remoting
 			return roleList;
 		}
 
-		// Token: 0x0600043E RID: 1086 RVA: 0x00037058 File Offset: 0x00035258
+		
 		public bool SavePkLog(ZhanDuiZhengBaPkLogData log)
 		{
 			bool result;
@@ -221,7 +221,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600043F RID: 1087 RVA: 0x0003718C File Offset: 0x0003538C
+		
 		public bool UpdateRole(int month, int zhanDuiID, int grade, int state)
 		{
 			try
@@ -243,7 +243,7 @@ namespace KF.Remoting
 			return true;
 		}
 
-		// Token: 0x06000440 RID: 1088 RVA: 0x00037210 File Offset: 0x00035410
+		
 		private bool CheckZhengBaRank(int selectRoleIfNewCreate, int nowMonth)
 		{
 			try
@@ -259,7 +259,7 @@ namespace KF.Remoting
 			return false;
 		}
 
-		// Token: 0x06000441 RID: 1089 RVA: 0x0003728C File Offset: 0x0003548C
+		
 		private bool BuildZhengBaRank(int nowMonth, List<ZhanDuiZhengBaZhanDuiData> rankList)
 		{
 			bool bMonthFirst = false;
@@ -296,7 +296,7 @@ namespace KF.Remoting
 			return bMonthFirst;
 		}
 
-		// Token: 0x0400024A RID: 586
+		
 		public static readonly ZhanDuiZhengBaPersistence Instance = new ZhanDuiZhengBaPersistence();
 	}
 }

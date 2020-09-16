@@ -15,28 +15,28 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000323 RID: 803
+	
 	public class KarenBattleManager_MapEast : IManager, IEventListener, IEventListenerEx, IManager2
 	{
-		// Token: 0x06000D2F RID: 3375 RVA: 0x000CD11C File Offset: 0x000CB31C
+		
 		public static KarenBattleManager_MapEast getInstance()
 		{
 			return KarenBattleManager_MapEast.instance;
 		}
 
-		// Token: 0x06000D30 RID: 3376 RVA: 0x000CD134 File Offset: 0x000CB334
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x06000D31 RID: 3377 RVA: 0x000CD158 File Offset: 0x000CB358
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			return true;
 		}
 
-		// Token: 0x06000D32 RID: 3378 RVA: 0x000CD16C File Offset: 0x000CB36C
+		
 		public bool startup()
 		{
 			GlobalEventSource4Scene.getInstance().registerListener(10002, 42, KarenBattleManager_MapEast.getInstance());
@@ -45,7 +45,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000D33 RID: 3379 RVA: 0x000CD1BC File Offset: 0x000CB3BC
+		
 		public bool showdown()
 		{
 			GlobalEventSource4Scene.getInstance().removeListener(10002, 42, KarenBattleManager_MapEast.getInstance());
@@ -54,13 +54,13 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000D34 RID: 3380 RVA: 0x000CD20C File Offset: 0x000CB40C
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000D35 RID: 3381 RVA: 0x000CD220 File Offset: 0x000CB420
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int eventType = eventObject.getEventType();
@@ -93,7 +93,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D36 RID: 3382 RVA: 0x000CD2F0 File Offset: 0x000CB4F0
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 			int eventType = eventObject.EventType;
@@ -112,7 +112,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D37 RID: 3383 RVA: 0x000CD35C File Offset: 0x000CB55C
+		
 		public bool InitConfig()
 		{
 			bool success = true;
@@ -199,13 +199,13 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x06000D38 RID: 3384 RVA: 0x000CD818 File Offset: 0x000CBA18
+		
 		public void OnLogout(GameClient client)
 		{
 			this.LeaveFuBen(client);
 		}
 
-		// Token: 0x06000D39 RID: 3385 RVA: 0x000CD824 File Offset: 0x000CBA24
+		
 		private void LeaveFuBen(GameClient client)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -220,7 +220,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D3A RID: 3386 RVA: 0x000CD8D8 File Offset: 0x000CBAD8
+		
 		private void InitScene(KarenBattleScene scene, GameClient client)
 		{
 			foreach (KarenCenterConfig item in this.RuntimeData.KarenCenterConfigDict.Values)
@@ -241,7 +241,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D3B RID: 3387 RVA: 0x000CD9C8 File Offset: 0x000CBBC8
+		
 		public bool RemoveCopyScene(CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool result;
@@ -262,7 +262,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000D3C RID: 3388 RVA: 0x000CDA58 File Offset: 0x000CBC58
+		
 		public bool AddCopyScenes(GameClient client, CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool result;
@@ -343,7 +343,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000D3D RID: 3389 RVA: 0x000CDD48 File Offset: 0x000CBF48
+		
 		public void BroadcastSceneScoreInfo(KarenBattleScene scene)
 		{
 			List<GameClient> objsList = scene.CopyMap.GetClientsList();
@@ -360,7 +360,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D3E RID: 3390 RVA: 0x000CDDCC File Offset: 0x000CBFCC
+		
 		public void NotifyTimeStateInfoAndScoreInfo(GameClient client, bool timeState = true, bool sideScore = true)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -380,13 +380,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D3F RID: 3391 RVA: 0x000CDE74 File Offset: 0x000CC074
+		
 		public void CompleteScene(KarenBattleScene scene, int successSide)
 		{
 			scene.SuccessSide = successSide;
 		}
 
-		// Token: 0x06000D40 RID: 3392 RVA: 0x000CDE80 File Offset: 0x000CC080
+		
 		private void ProcessEnd(KarenBattleScene scene, int successSide, long nowTicks)
 		{
 			this.CompleteScene(scene, successSide);
@@ -398,7 +398,7 @@ namespace GameServer.Logic
 			GameManager.ClientMgr.BroadSpecialCopyMapMessage<GameSceneStateTimeData>(827, scene.StateTimeData, scene.CopyMap);
 		}
 
-		// Token: 0x06000D41 RID: 3393 RVA: 0x000CDF00 File Offset: 0x000CC100
+		
 		public void TimerProc()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -527,7 +527,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D42 RID: 3394 RVA: 0x000CE45C File Offset: 0x000CC65C
+		
 		public void AddDelayCreateMonster(KarenBattleScene scene, long ticks, object monster)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -542,7 +542,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D43 RID: 3395 RVA: 0x000CE4D8 File Offset: 0x000CC6D8
+		
 		public void CheckCreateDynamicMonster(KarenBattleScene scene, long nowMs)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -573,7 +573,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D44 RID: 3396 RVA: 0x000CE650 File Offset: 0x000CC850
+		
 		private bool CheckSceneCenterState(KarenBattleScene karenBattleScene, KarenCenterConfig center, long nowTicks)
 		{
 			List<object> enemiesObjList = new List<object>();
@@ -632,7 +632,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000D45 RID: 3397 RVA: 0x000CE88C File Offset: 0x000CCA8C
+		
 		private void CheckSceneGameClients(KarenBattleScene karenBattleScene, long nowTicks)
 		{
 			List<GameClient> objsList = karenBattleScene.CopyMap.GetClientsList();
@@ -659,7 +659,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D46 RID: 3398 RVA: 0x000CE94C File Offset: 0x000CCB4C
+		
 		private void CheckSceneScoreTime(KarenBattleScene karenBattleScene, long nowTicks)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -690,7 +690,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D47 RID: 3399 RVA: 0x000CEB00 File Offset: 0x000CCD00
+		
 		public bool OnInitGame(GameClient client)
 		{
 			KuaFuServerLoginData kuaFuServerLoginData = Global.GetClientKuaFuServerLoginData(client);
@@ -783,7 +783,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000D48 RID: 3400 RVA: 0x000CEEC4 File Offset: 0x000CD0C4
+		
 		public bool ClientRelive(GameClient client)
 		{
 			int toPosX;
@@ -806,7 +806,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000D49 RID: 3401 RVA: 0x000CEF64 File Offset: 0x000CD164
+		
 		public int GetBirthPoint(GameClient client, out int posX, out int posY)
 		{
 			posX = 0;
@@ -826,7 +826,7 @@ namespace GameServer.Logic
 			return side;
 		}
 
-		// Token: 0x06000D4A RID: 3402 RVA: 0x000CF034 File Offset: 0x000CD234
+		
 		public int GetCaiJiMonsterTime(GameClient client, Monster monster)
 		{
 			KarenBattleQiZhiConfig_East tag = (monster != null) ? (monster.Tag as KarenBattleQiZhiConfig_East) : null;
@@ -842,7 +842,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000D4B RID: 3403 RVA: 0x000CF074 File Offset: 0x000CD274
+		
 		public void RemoveBattleSceneBuffForRole(KarenBattleScene scene, GameClient client)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -876,13 +876,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D4C RID: 3404 RVA: 0x000CF230 File Offset: 0x000CD430
+		
 		private string BuildSceneBuffKey(GameClient client, int bufferGoodsID)
 		{
 			return string.Format("{0}_{1}", client.ClientData.RoleID, bufferGoodsID);
 		}
 
-		// Token: 0x06000D4D RID: 3405 RVA: 0x000CF264 File Offset: 0x000CD464
+		
 		private void UpdateBuff4GameClient(GameClient client, int bufferGoodsID, object tagInfo, bool add)
 		{
 			try
@@ -960,7 +960,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D4E RID: 3406 RVA: 0x000CF4B0 File Offset: 0x000CD6B0
+		
 		public void OnCaiJiFinish(GameClient client, Monster monster)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -985,7 +985,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D4F RID: 3407 RVA: 0x000CF598 File Offset: 0x000CD798
+		
 		public void SubmitCrystalBuff(GameClient client, int areaLuaID)
 		{
 			KarenBattleQiZhiConfig_East crystalItem = client.SceneContextData as KarenBattleQiZhiConfig_East;
@@ -1028,7 +1028,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D50 RID: 3408 RVA: 0x000CF78C File Offset: 0x000CD98C
+		
 		private void InitCreateDynamicMonster(KarenBattleScene scene)
 		{
 			foreach (KarenBattleQiZhiConfig_East junqi in this.RuntimeData.NPCID2QiZhiConfigDict.Values)
@@ -1037,7 +1037,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D51 RID: 3409 RVA: 0x000CF808 File Offset: 0x000CDA08
+		
 		private void CheckSceneBufferTime(KarenBattleScene karenBattleScene, long nowTicks)
 		{
 			List<KarenBattleSceneBuff> sceneBuffDeleteList = new List<KarenBattleSceneBuff>();
@@ -1078,19 +1078,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x040014C3 RID: 5315
+		
 		public const SceneUIClasses ManagerType = SceneUIClasses.KarenEast;
 
-		// Token: 0x040014C4 RID: 5316
+		
 		public ConcurrentDictionary<int, KarenBattleScene> SceneDict = new ConcurrentDictionary<int, KarenBattleScene>();
 
-		// Token: 0x040014C5 RID: 5317
+		
 		private static long NextHeartBeatTicks = 0L;
 
-		// Token: 0x040014C6 RID: 5318
+		
 		private static KarenBattleManager_MapEast instance = new KarenBattleManager_MapEast();
 
-		// Token: 0x040014C7 RID: 5319
+		
 		public KarenBattleDataEast RuntimeData = new KarenBattleDataEast();
 	}
 }

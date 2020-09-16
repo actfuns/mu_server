@@ -16,23 +16,23 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200085D RID: 2141
+	
 	public class ZuoQiManager : IManager, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x06003BCF RID: 15311 RVA: 0x0032F574 File Offset: 0x0032D774
+		
 		public static ZuoQiManager getInstance()
 		{
 			return ZuoQiManager.instance;
 		}
 
-		// Token: 0x06003BD0 RID: 15312 RVA: 0x0032F58C File Offset: 0x0032D78C
+		
 		public bool initialize()
 		{
 			this.ReLoadConfig(true);
 			return true;
 		}
 
-		// Token: 0x06003BD1 RID: 15313 RVA: 0x0032F5A8 File Offset: 0x0032D7A8
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1896, 1, 1, ZuoQiManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -47,25 +47,25 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003BD2 RID: 15314 RVA: 0x0032F694 File Offset: 0x0032D894
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06003BD3 RID: 15315 RVA: 0x0032F6A8 File Offset: 0x0032D8A8
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06003BD4 RID: 15316 RVA: 0x0032F6BC File Offset: 0x0032D8BC
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06003BD5 RID: 15317 RVA: 0x0032F6D0 File Offset: 0x0032D8D0
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -110,7 +110,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003BD6 RID: 15318 RVA: 0x0032F7E8 File Offset: 0x0032D9E8
+		
 		public bool ProcessZuoQiMainInfoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -135,7 +135,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003BD7 RID: 15319 RVA: 0x0032F8A0 File Offset: 0x0032DAA0
+		
 		public bool ProcessZuoQiLieQuCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -298,7 +298,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003BD8 RID: 15320 RVA: 0x0032FE40 File Offset: 0x0032E040
+		
 		public bool ProcessZuoQiRideCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -336,7 +336,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003BD9 RID: 15321 RVA: 0x0032FFD8 File Offset: 0x0032E1D8
+		
 		public void RoleRideMount(GameClient client)
 		{
 			if (ZuoQiManager.CanRide(client) == 1)
@@ -359,7 +359,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BDA RID: 15322 RVA: 0x003300EC File Offset: 0x0032E2EC
+		
 		public bool ProcessZuoQiCheckCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -386,7 +386,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003BDB RID: 15323 RVA: 0x003301F8 File Offset: 0x0032E3F8
+		
 		public bool ProcessZuoQiSkillModCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -439,7 +439,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003BDC RID: 15324 RVA: 0x003303C4 File Offset: 0x0032E5C4
+		
 		public bool ProcessZuoQiUpGradeCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -598,7 +598,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003BDD RID: 15325 RVA: 0x00330990 File Offset: 0x0032EB90
+		
 		public bool ProcessZuoQiUpLevelCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -657,7 +657,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003BDE RID: 15326 RVA: 0x00330BA0 File Offset: 0x0032EDA0
+		
 		public bool ProcessResetMountBagCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -736,7 +736,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003BDF RID: 15327 RVA: 0x00330FA0 File Offset: 0x0032F1A0
+		
 		public bool ProcessResetMountGradeCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -865,7 +865,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003BE0 RID: 15328 RVA: 0x00331480 File Offset: 0x0032F680
+		
 		public static GoodsData AddZuoQiGoodsData(GameClient client, int id, int goodsID, int forgeLevel, int quality, int goodsNum, int binding, int site, string jewelList, string startTime, string endTime, int addPropIndex, int bornIndex, int lucky, int strong, int ExcellenceProperty, int nAppendPropLev, int nEquipChangeLife, int bagIndex = 0, List<int> washProps = null)
 		{
 			GoodsData gd = new GoodsData
@@ -934,7 +934,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003BE1 RID: 15329 RVA: 0x00331718 File Offset: 0x0032F918
+		
 		public static void ProcessZuoQiTuJian(GameClient client, int goodsId)
 		{
 			if (ZuoQiManager.CheckIsZuoQiByGoodsID(goodsId))
@@ -955,7 +955,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BE2 RID: 15330 RVA: 0x003317C8 File Offset: 0x0032F9C8
+		
 		public static GoodsData GetMountFromEquipListByID(GameClient client, int goodsDbID)
 		{
 			GoodsData result;
@@ -977,7 +977,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003BE3 RID: 15331 RVA: 0x00331854 File Offset: 0x0032FA54
+		
 		public static int GetIdleSlotOfZuoQiStoreGoods(GameClient client)
 		{
 			int idelPos = 0;
@@ -1009,7 +1009,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003BE4 RID: 15332 RVA: 0x0033192C File Offset: 0x0032FB2C
+		
 		public static int GetIdleSlotOfZuoQiEquipGoods(GameClient client)
 		{
 			int idelPos = 0;
@@ -1041,7 +1041,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003BE5 RID: 15333 RVA: 0x00331A04 File Offset: 0x0032FC04
+		
 		public static bool RemoveStoreGoodsData(GameClient client, GoodsData gd)
 		{
 			bool result;
@@ -1065,7 +1065,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003BE6 RID: 15334 RVA: 0x00331A94 File Offset: 0x0032FC94
+		
 		public static bool RemoveEquipGoodsData(GameClient client, GoodsData gd)
 		{
 			bool result;
@@ -1095,7 +1095,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003BE7 RID: 15335 RVA: 0x00331B50 File Offset: 0x0032FD50
+		
 		public List<int> GetZuoQiSkillList(GameClient client)
 		{
 			List<int> ret = new List<int>();
@@ -1121,7 +1121,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06003BE8 RID: 15336 RVA: 0x00331C60 File Offset: 0x0032FE60
+		
 		public static void AddMountEquipGoodsData(GameClient client, GoodsData goodsData)
 		{
 			if (goodsData.Site == 0 || goodsData.Site == 12000)
@@ -1143,7 +1143,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BE9 RID: 15337 RVA: 0x00331D44 File Offset: 0x0032FF44
+		
 		public void RefreshProps(GameClient client)
 		{
 			try
@@ -1312,7 +1312,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BEA RID: 15338 RVA: 0x00332668 File Offset: 0x00330868
+		
 		public double GetExtpropsAddPercent(GameClient client, GoodsData goods)
 		{
 			double ret = 0.0;
@@ -1334,7 +1334,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06003BEB RID: 15339 RVA: 0x00332700 File Offset: 0x00330900
+		
 		public void AddMountSkill(GameClient client, GoodsData goodsData, bool isEquip = false)
 		{
 			if (null != goodsData)
@@ -1358,7 +1358,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BEC RID: 15340 RVA: 0x003327D0 File Offset: 0x003309D0
+		
 		public int DelMountSkill(GameClient client, GoodsData goodsData, bool notifyClient = true)
 		{
 			int result;
@@ -1395,7 +1395,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003BED RID: 15341 RVA: 0x003328C0 File Offset: 0x00330AC0
+		
 		public double GetSpeedAdd(GameClient client)
 		{
 			double result;
@@ -1426,7 +1426,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003BEE RID: 15342 RVA: 0x003329B4 File Offset: 0x00330BB4
+		
 		public static int CanRide(GameClient client)
 		{
 			int result;
@@ -1456,25 +1456,25 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003BEF RID: 15343 RVA: 0x00332A74 File Offset: 0x00330C74
+		
 		public static bool CanAddGoodsNum(GameClient client, int num)
 		{
 			return client != null && num > 0 && num + client.ClientData.MountStoreList.Count <= ZuoQiManager.GetMaxMountCount();
 		}
 
-		// Token: 0x06003BF0 RID: 15344 RVA: 0x00332AC0 File Offset: 0x00330CC0
+		
 		public static int GetMaxMountCount()
 		{
 			return 240;
 		}
 
-		// Token: 0x06003BF1 RID: 15345 RVA: 0x00332AD8 File Offset: 0x00330CD8
+		
 		public static int GetMaxMountEquipCount()
 		{
 			return 4;
 		}
 
-		// Token: 0x06003BF2 RID: 15346 RVA: 0x00332AEC File Offset: 0x00330CEC
+		
 		public static GoodsData GetMountStoreGoodsDataByDbID(GameClient client, int id)
 		{
 			GoodsData result;
@@ -1499,7 +1499,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003BF3 RID: 15347 RVA: 0x00332BB4 File Offset: 0x00330DB4
+		
 		public static GoodsData GetMountEquipGoodsDataByDbID(GameClient client, int id)
 		{
 			GoodsData result;
@@ -1524,7 +1524,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003BF4 RID: 15348 RVA: 0x00332C7C File Offset: 0x00330E7C
+		
 		public static bool CanAddGoodsToMountEquip(GameClient client, int goodsID, int newGoodsNum, int binding, string endTime = "1900-01-01 12:00:00", bool canUseOld = true)
 		{
 			bool result;
@@ -1542,7 +1542,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003BF5 RID: 15349 RVA: 0x00332CF8 File Offset: 0x00330EF8
+		
 		public TCPProcessCmdResults SaleMountProcess(GameClient client, int nRoleID, string strGoodsID)
 		{
 			TCPProcessCmdResults result;
@@ -1674,7 +1674,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003BF6 RID: 15350 RVA: 0x003330FC File Offset: 0x003312FC
+		
 		public TCPProcessCmdResults SaleStoreMountProcess(GameClient client, int nRoleID, string strGoodsID)
 		{
 			TCPProcessCmdResults result;
@@ -1806,7 +1806,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003BF7 RID: 15351 RVA: 0x003334F8 File Offset: 0x003316F8
+		
 		public List<int> CalZhuoYueByID(int code)
 		{
 			List<int> ret = new List<int>();
@@ -1847,7 +1847,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06003BF8 RID: 15352 RVA: 0x00333690 File Offset: 0x00331890
+		
 		public ZuoQiMini GetRandomMount(List<MountRandomItem> mountList)
 		{
 			ZuoQiMini goods = null;
@@ -1872,7 +1872,7 @@ namespace GameServer.Logic
 			return goods;
 		}
 
-		// Token: 0x06003BF9 RID: 15353 RVA: 0x00333794 File Offset: 0x00331994
+		
 		public List<int> GetSuperior(List<int> bankListSource, int num)
 		{
 			List<int> ret = new List<int>();
@@ -1917,14 +1917,14 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003BFA RID: 15354 RVA: 0x00333908 File Offset: 0x00331B08
+		
 		public static bool CheckIsZuoQiByGoodsID(int goodsID)
 		{
 			SystemXmlItem systemGoods = null;
 			return GameManager.SystemGoods.SystemXmlItemDict.TryGetValue(goodsID, out systemGoods) && systemGoods.GetIntValue("Categoriy", -1) == 340;
 		}
 
-		// Token: 0x06003BFB RID: 15355 RVA: 0x0033394C File Offset: 0x00331B4C
+		
 		public static bool CheckIsZuoQiEquipByGoodsID(int goodsID)
 		{
 			SystemXmlItem systemGoods = null;
@@ -1941,7 +1941,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003BFC RID: 15356 RVA: 0x0033399C File Offset: 0x00331B9C
+		
 		public void RoleDisMount(GameClient client, bool needLog = true)
 		{
 			if (null != client)
@@ -1968,19 +1968,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BFD RID: 15357 RVA: 0x00333AB8 File Offset: 0x00331CB8
+		
 		public bool IsGongNengOpen(GameClient client, bool hint = false)
 		{
 			return GlobalNew.IsGongNengOpened(client, GongNengIDs.ZuoQi, hint);
 		}
 
-		// Token: 0x06003BFE RID: 15358 RVA: 0x00333AD4 File Offset: 0x00331CD4
+		
 		public double GetZuoQiResetRate()
 		{
 			return Math.Min(GameManager.systemParamsList.GetParamValueDoubleByName("HorseReturnNum", 0.0), 1.0);
 		}
 
-		// Token: 0x06003BFF RID: 15359 RVA: 0x00333B0C File Offset: 0x00331D0C
+		
 		public Dictionary<int, int> GetZuoQiNeedGoodsNumForCurrLevel(int goodid, int level)
 		{
 			AdvancedItem advanced = null;
@@ -2029,7 +2029,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003C00 RID: 15360 RVA: 0x00333CA0 File Offset: 0x00331EA0
+		
 		public void InitRoleZuoQiData(GameClient client)
 		{
 			if (this.IsGongNengOpen(client, false))
@@ -2075,7 +2075,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003C01 RID: 15361 RVA: 0x00333ED4 File Offset: 0x003320D4
+		
 		public void OnLogin(GameClient client)
 		{
 			if (this.IsGongNengOpen(client, false))
@@ -2095,7 +2095,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003C02 RID: 15362 RVA: 0x00333F90 File Offset: 0x00332190
+		
 		public int ReLoadConfig(bool init = false)
 		{
 			try
@@ -2214,7 +2214,7 @@ namespace GameServer.Logic
 			return 1;
 		}
 
-		// Token: 0x06003C03 RID: 15363 RVA: 0x003342BC File Offset: 0x003324BC
+		
 		private bool LoadHorseFreeRandom(out List<MountRandomItem> mountFreeRandomList)
 		{
 			mountFreeRandomList = new List<MountRandomItem>();
@@ -2251,7 +2251,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003C04 RID: 15364 RVA: 0x0033448C File Offset: 0x0033268C
+		
 		private bool LoadHorseRandom(out List<MountRandomItem> mountRandomList)
 		{
 			mountRandomList = new List<MountRandomItem>();
@@ -2289,7 +2289,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003C05 RID: 15365 RVA: 0x00334678 File Offset: 0x00332878
+		
 		private bool LoadHorsePayRandom(out List<MountRandomItem> mountPayRandomList)
 		{
 			mountPayRandomList = new List<MountRandomItem>();
@@ -2326,7 +2326,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003C06 RID: 15366 RVA: 0x00334848 File Offset: 0x00332A48
+		
 		private bool LoadMountFreeRandomListTeQuan(out List<MountRandomItem> MountFreeRandomListTeQuan)
 		{
 			MountFreeRandomListTeQuan = new List<MountRandomItem>();
@@ -2363,7 +2363,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003C07 RID: 15367 RVA: 0x00334A18 File Offset: 0x00332C18
+		
 		private bool LoadTeQuanHorseRandom(out List<MountRandomItem> MountRandomListTeQuan)
 		{
 			MountRandomListTeQuan = new List<MountRandomItem>();
@@ -2401,7 +2401,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003C08 RID: 15368 RVA: 0x00334C04 File Offset: 0x00332E04
+		
 		private bool LoadTeQuanHorsePayRandom(out List<MountRandomItem> MountPayRandomListTeQuan)
 		{
 			MountPayRandomListTeQuan = new List<MountRandomItem>();
@@ -2438,7 +2438,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003C09 RID: 15369 RVA: 0x00334E04 File Offset: 0x00333004
+		
 		private bool LoadSuperiorDropXml(out Dictionary<int, SuperiorDropItem> superiorDropDict)
 		{
 			string fileName = "";
@@ -2523,7 +2523,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003C0A RID: 15370 RVA: 0x00335154 File Offset: 0x00333354
+		
 		private bool LoadSuperiorTypeXml(out Dictionary<int, SuperiorTypeItem> superiorTypeDict)
 		{
 			string fileName = "";
@@ -2577,7 +2577,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003C0B RID: 15371 RVA: 0x0033534C File Offset: 0x0033354C
+		
 		private bool LoadPokedexXml(out Dictionary<int, PokedexItem> pokedexDict)
 		{
 			string fileName = "";
@@ -2634,7 +2634,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003C0C RID: 15372 RVA: 0x00335570 File Offset: 0x00333770
+		
 		private bool LoadHorseEquipAdditionXml(out List<HorseEquipAdditionItem> list)
 		{
 			string fileName = "";
@@ -2695,7 +2695,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003C0D RID: 15373 RVA: 0x003357E8 File Offset: 0x003339E8
+		
 		private bool LoadAdvancedXml(out Dictionary<int, Dictionary<int, AdvancedItem>> advanceDict)
 		{
 			string fileName = "";
@@ -2739,7 +2739,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003C0E RID: 15374 RVA: 0x003359C8 File Offset: 0x00333BC8
+		
 		private bool LoadLevelUpXml(out Dictionary<int, LevelUpItem> levelUpDict)
 		{
 			string fileName = "";
@@ -2772,7 +2772,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003C0F RID: 15375 RVA: 0x00335B98 File Offset: 0x00333D98
+		
 		private bool LoadArrayAdditionXml(out Dictionary<int, List<ArrayAdditionItem>> arrayAdditionDict)
 		{
 			string fileName = "";
@@ -2857,7 +2857,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003C10 RID: 15376 RVA: 0x00335E9C File Offset: 0x0033409C
+		
 		private bool LoadSuitXml(out List<SuitItem> suitList)
 		{
 			string fileName = "";
@@ -2915,7 +2915,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003C11 RID: 15377 RVA: 0x003360C8 File Offset: 0x003342C8
+		
 		private bool LoadDefaultXml(out Dictionary<string, object> DefaultDict, out List<KeyValuePair<int, int>> Level2UpLevelXml)
 		{
 			Level2UpLevelXml = new List<KeyValuePair<int, int>>();
@@ -2963,25 +2963,25 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x040046CF RID: 18127
+		
 		public ZuoQiRunData ZuoQiRunTimeData = new ZuoQiRunData();
 
-		// Token: 0x040046D0 RID: 18128
+		
 		public int ZuoQiFreeTime = 0;
 
-		// Token: 0x040046D1 RID: 18129
+		
 		public int ZuoQiChouQuCost = 0;
 
-		// Token: 0x040046D2 RID: 18130
+		
 		public int ZuoQiChouQuCost_10 = 0;
 
-		// Token: 0x040046D3 RID: 18131
+		
 		public double ConsumeHuntHorseJiFen = 0.0;
 
-		// Token: 0x040046D4 RID: 18132
+		
 		public List<KeyValuePair<int, int>> Level2UpLevel = new List<KeyValuePair<int, int>>();
 
-		// Token: 0x040046D5 RID: 18133
+		
 		private static ZuoQiManager instance = new ZuoQiManager();
 	}
 }

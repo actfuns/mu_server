@@ -8,11 +8,11 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic.WanMota
 {
-	// Token: 0x020007B3 RID: 1971
+	
 	public class WanMotaCopySceneManager
 	{
-		// Token: 0x170003C7 RID: 967
-		// (get) Token: 0x060033D6 RID: 13270 RVA: 0x002DE534 File Offset: 0x002DC734
+		
+		
 		public static int nWanMoTaFirstFuBenOrder
 		{
 			get
@@ -21,8 +21,8 @@ namespace GameServer.Logic.WanMota
 			}
 		}
 
-		// Token: 0x170003C8 RID: 968
-		// (get) Token: 0x060033D7 RID: 13271 RVA: 0x002DE54C File Offset: 0x002DC74C
+		
+		
 		public static int nWanMoTaLastFuBenOrder
 		{
 			get
@@ -31,13 +31,13 @@ namespace GameServer.Logic.WanMota
 			}
 		}
 
-		// Token: 0x060033D8 RID: 13272 RVA: 0x002DE564 File Offset: 0x002DC764
+		
 		public static bool IsWanMoTaMapCode(int mapCode)
 		{
 			return mapCode >= WanMotaCopySceneManager.nWanMoTaFirstFuBenOrder && mapCode <= WanMotaCopySceneManager.nWanMoTaLastFuBenOrder;
 		}
 
-		// Token: 0x060033D9 RID: 13273 RVA: 0x002DE594 File Offset: 0x002DC794
+		
 		public static int WanmotaIsSweeping(GameClient client)
 		{
 			int result;
@@ -52,7 +52,7 @@ namespace GameServer.Logic.WanMota
 			return result;
 		}
 
-		// Token: 0x060033DA RID: 13274 RVA: 0x002DE5F4 File Offset: 0x002DC7F4
+		
 		public static WanMotaInfo GetWanMoTaDetail(GameClient client, bool bIsLogin)
 		{
 			WanMotaInfo dataWanMoTa = null;
@@ -99,7 +99,7 @@ namespace GameServer.Logic.WanMota
 			return dataWanMoTa;
 		}
 
-		// Token: 0x060033DB RID: 13275 RVA: 0x002DE7DC File Offset: 0x002DC9DC
+		
 		public static void GetBossReward(GameClient client, int nFubenID, List<GoodsData> goodNormal, List<int> GoodsIDList)
 		{
 			SystemXmlItem systemFuBenItem = null;
@@ -126,7 +126,7 @@ namespace GameServer.Logic.WanMota
 			}
 		}
 
-		// Token: 0x060033DC RID: 13276 RVA: 0x002DE8BC File Offset: 0x002DCABC
+		
 		public static void AddRewardToClient(GameClient client, List<GoodsData> goodNormal, int nExp, int nMoney, int nXinHun, string strTitle)
 		{
 			if (null != goodNormal)
@@ -149,7 +149,7 @@ namespace GameServer.Logic.WanMota
 			GameManager.ClientMgr.AddMoney1(Global._TCPManager.MySocketListener, Global._TCPManager.tcpClientPool, Global._TCPManager.TcpOutPacketPool, client, nMoney, "万魔塔", false);
 		}
 
-		// Token: 0x060033DD RID: 13277 RVA: 0x002DEA30 File Offset: 0x002DCC30
+		
 		public static void GetFubenItemReward(GameClient client, FuBenMapItem fuBenMapItem, bool bFirstPass, List<GoodsData> goodNormal, List<int> GoodsIDList)
 		{
 			if (bFirstPass)
@@ -177,7 +177,7 @@ namespace GameServer.Logic.WanMota
 			}
 		}
 
-		// Token: 0x060033DE RID: 13278 RVA: 0x002DEB10 File Offset: 0x002DCD10
+		
 		public static FuBenTongGuanData GiveCopyMapGiftNoScore(GameClient client, FuBenMapItem fuBenMapItem, bool bFirstPass)
 		{
 			FuBenTongGuanData result;
@@ -241,7 +241,7 @@ namespace GameServer.Logic.WanMota
 			return result;
 		}
 
-		// Token: 0x060033DF RID: 13279 RVA: 0x002DED18 File Offset: 0x002DCF18
+		
 		public static SingleLayerRewardData AddSingleSweepReward(GameClient client, List<GoodsData> goodNormal, int nParamLayerOrder, int nParamExp, int nParamMoney, int nParamXinHun, out List<SingleLayerRewardData> listRewardData)
 		{
 			SingleLayerRewardData layerReward = new SingleLayerRewardData
@@ -257,7 +257,7 @@ namespace GameServer.Logic.WanMota
 			return layerReward;
 		}
 
-		// Token: 0x060033E0 RID: 13280 RVA: 0x002DED6C File Offset: 0x002DCF6C
+		
 		public static void GetWanmotaSweepReward(GameClient client, int nFubenID)
 		{
 			FuBenMapItem fuBenMapItem = FuBenManager.FindMapCodeByFuBenID(nFubenID, nFubenID);
@@ -283,7 +283,7 @@ namespace GameServer.Logic.WanMota
 			}
 		}
 
-		// Token: 0x060033E1 RID: 13281 RVA: 0x002DEE70 File Offset: 0x002DD070
+		
 		public static void SendMsgToClientForWanMoTaCopyMapAward(GameClient client, CopyMap copyMap, bool anyAlive)
 		{
 			if (copyMap != null)
@@ -337,10 +337,10 @@ namespace GameServer.Logic.WanMota
 			}
 		}
 
-		// Token: 0x04003F68 RID: 16232
+		
 		private static int _firstFuBenOrder_Impl = 20000;
 
-		// Token: 0x04003F69 RID: 16233
+		
 		private static int _lastFuBenOrderImpl = 20149;
 	}
 }

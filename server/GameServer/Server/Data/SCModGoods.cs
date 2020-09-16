@@ -4,16 +4,16 @@ using Tmsk.Contract;
 
 namespace Server.Data
 {
-	// Token: 0x02000184 RID: 388
+	
 	[ProtoContract]
 	public class SCModGoods : IProtoBuffData
 	{
-		// Token: 0x060004BD RID: 1213 RVA: 0x00041B6C File Offset: 0x0003FD6C
+		
 		public SCModGoods()
 		{
 		}
 
-		// Token: 0x060004BE RID: 1214 RVA: 0x00041BBC File Offset: 0x0003FDBC
+		
 		public SCModGoods(int state, int modType, int id, int isusing, int site, int gcount, int bagIndex, int newHint)
 		{
 			this.State = state;
@@ -26,7 +26,7 @@ namespace Server.Data
 			this.NewHint = newHint;
 		}
 
-		// Token: 0x060004BF RID: 1215 RVA: 0x00041C48 File Offset: 0x0003FE48
+		
 		public int fromBytes(byte[] data, int offset, int count)
 		{
 			int pos = offset;
@@ -69,7 +69,7 @@ namespace Server.Data
 			return pos;
 		}
 
-		// Token: 0x060004C0 RID: 1216 RVA: 0x00041D60 File Offset: 0x0003FF60
+		
 		public byte[] toBytes()
 		{
 			int total = 0;
@@ -94,35 +94,35 @@ namespace Server.Data
 			return data;
 		}
 
-		// Token: 0x04000898 RID: 2200
+		
 		[ProtoMember(1)]
 		public int State = 0;
 
-		// Token: 0x04000899 RID: 2201
+		
 		[ProtoMember(2)]
 		public int ModType = 0;
 
-		// Token: 0x0400089A RID: 2202
+		
 		[ProtoMember(3)]
 		public int ID = 0;
 
-		// Token: 0x0400089B RID: 2203
+		
 		[ProtoMember(4)]
 		public int IsUsing = 0;
 
-		// Token: 0x0400089C RID: 2204
+		
 		[ProtoMember(5)]
 		public int Site = 0;
 
-		// Token: 0x0400089D RID: 2205
+		
 		[ProtoMember(6)]
 		public int Count = 0;
 
-		// Token: 0x0400089E RID: 2206
+		
 		[ProtoMember(7)]
 		public int BagIndex = 0;
 
-		// Token: 0x0400089F RID: 2207
+		
 		[ProtoMember(8)]
 		public int NewHint = 0;
 	}

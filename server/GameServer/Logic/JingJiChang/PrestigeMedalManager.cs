@@ -10,22 +10,22 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic.JingJiChang
 {
-	// Token: 0x0200050A RID: 1290
+	
 	public class PrestigeMedalManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener, IEventListenerEx
 	{
-		// Token: 0x060017ED RID: 6125 RVA: 0x00176D5C File Offset: 0x00174F5C
+		
 		public static PrestigeMedalManager getInstance()
 		{
 			return PrestigeMedalManager.instance;
 		}
 
-		// Token: 0x060017EE RID: 6126 RVA: 0x00176D74 File Offset: 0x00174F74
+		
 		public bool initialize()
 		{
 			return PrestigeMedalManager.initPrestigeMedal();
 		}
 
-		// Token: 0x060017EF RID: 6127 RVA: 0x00176D94 File Offset: 0x00174F94
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(782, 1, 1, PrestigeMedalManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -33,35 +33,35 @@ namespace GameServer.Logic.JingJiChang
 			return true;
 		}
 
-		// Token: 0x060017F0 RID: 6128 RVA: 0x00176DD8 File Offset: 0x00174FD8
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x060017F1 RID: 6129 RVA: 0x00176DEC File Offset: 0x00174FEC
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060017F2 RID: 6130 RVA: 0x00176DFF File Offset: 0x00174FFF
+		
 		public void processEvent(EventObject eventObject)
 		{
 		}
 
-		// Token: 0x060017F3 RID: 6131 RVA: 0x00176E02 File Offset: 0x00175002
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 		}
 
-		// Token: 0x060017F4 RID: 6132 RVA: 0x00176E08 File Offset: 0x00175008
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x060017F5 RID: 6133 RVA: 0x00176E1C File Offset: 0x0017501C
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -80,7 +80,7 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x060017F6 RID: 6134 RVA: 0x00176E64 File Offset: 0x00175064
+		
 		public bool ProcessCmdPrestigeMedalInfo(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -107,7 +107,7 @@ namespace GameServer.Logic.JingJiChang
 			return false;
 		}
 
-		// Token: 0x060017F7 RID: 6135 RVA: 0x00176F50 File Offset: 0x00175150
+		
 		public bool ProcessCmdPrestigeMedalUp(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -140,7 +140,7 @@ namespace GameServer.Logic.JingJiChang
 			return false;
 		}
 
-		// Token: 0x060017F8 RID: 6136 RVA: 0x0017708C File Offset: 0x0017528C
+		
 		public static bool initPrestigeMedal()
 		{
 			bool result = PrestigeMedalManager.LoadPrestigeMedalBasicData();
@@ -148,7 +148,7 @@ namespace GameServer.Logic.JingJiChang
 			return result && result2;
 		}
 
-		// Token: 0x060017F9 RID: 6137 RVA: 0x001770B4 File Offset: 0x001752B4
+		
 		public static bool LoadPrestigeMedalBasicData()
 		{
 			string fileName = "Config/ShengWangXunZhang.xml";
@@ -217,7 +217,7 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x060017FA RID: 6138 RVA: 0x001773B8 File Offset: 0x001755B8
+		
 		public static bool LoadPrestigeMedalSpecialData()
 		{
 			string fileName = "Config/ShengWangSpecialAttribute.xml";
@@ -258,7 +258,7 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x060017FB RID: 6139 RVA: 0x00177540 File Offset: 0x00175740
+		
 		public static PrestigeMedalBasicData GetPrestigeMedalBasicDataByID(int id)
 		{
 			PrestigeMedalBasicData result;
@@ -273,7 +273,7 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x060017FC RID: 6140 RVA: 0x00177574 File Offset: 0x00175774
+		
 		public static PrestigeMedalSpecialData GetPrestigeMedalSpecialDataByID(int id)
 		{
 			PrestigeMedalSpecialData result;
@@ -288,7 +288,7 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x060017FD RID: 6141 RVA: 0x001775A8 File Offset: 0x001757A8
+		
 		public static int GetPrestigeMedalUpCount(GameClient client)
 		{
 			int count = 0;
@@ -310,7 +310,7 @@ namespace GameServer.Logic.JingJiChang
 			return count;
 		}
 
-		// Token: 0x060017FE RID: 6142 RVA: 0x00177620 File Offset: 0x00175820
+		
 		public static void ModifyPrestigeMedalUpCount(GameClient client, int count, bool writeToDB = false)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot4Dot1))
@@ -325,7 +325,7 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x060017FF RID: 6143 RVA: 0x00177678 File Offset: 0x00175878
+		
 		public static int GetPrestigeMedalDiamond(GameClient client, int upCount)
 		{
 			int[] diamondList = GameManager.systemParamsList.GetParamValueIntArrayByName("ShengWangXunZhangZuanShi", ',');
@@ -336,7 +336,7 @@ namespace GameServer.Logic.JingJiChang
 			return diamondList[upCount];
 		}
 
-		// Token: 0x06001800 RID: 6144 RVA: 0x001776B0 File Offset: 0x001758B0
+		
 		public static PrestigeMedalData GetPrestigeMedalData(GameClient client)
 		{
 			PrestigeMedalData result;
@@ -391,7 +391,7 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x06001801 RID: 6145 RVA: 0x00177844 File Offset: 0x00175A44
+		
 		public static void ModifyPrestigeMedalData(GameClient client, PrestigeMedalData data, bool writeToDB = false)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot4Dot1))
@@ -409,7 +409,7 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06001802 RID: 6146 RVA: 0x001778B4 File Offset: 0x00175AB4
+		
 		public static PrestigeMedalData UpPrestigeMedal(GameClient client, int MedalID)
 		{
 			PrestigeMedalData prestigeMedalData = client.ClientData.prestigeMedalData;
@@ -520,7 +520,7 @@ namespace GameServer.Logic.JingJiChang
 			return result;
 		}
 
-		// Token: 0x06001803 RID: 6147 RVA: 0x00177CD8 File Offset: 0x00175ED8
+		
 		public static void initSetPrestigeMedalProps(GameClient client)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot4Dot1))
@@ -533,7 +533,7 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06001804 RID: 6148 RVA: 0x00177D14 File Offset: 0x00175F14
+		
 		public static void SetPrestigeMedalProps(GameClient client, PrestigeMedalData PrestigeMedalData)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot4Dot1))
@@ -599,7 +599,7 @@ namespace GameServer.Logic.JingJiChang
 			}
 		}
 
-		// Token: 0x06001805 RID: 6149 RVA: 0x00177F98 File Offset: 0x00176198
+		
 		public static void SetPrestigeLevel(GameClient client, int level)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "ShengWangLevel", level, true, "2020-12-12 12:12:12");
@@ -628,7 +628,7 @@ namespace GameServer.Logic.JingJiChang
 			client._IconStateMgr.SendIconStateToClient(client);
 		}
 
-		// Token: 0x06001806 RID: 6150 RVA: 0x001780F4 File Offset: 0x001762F4
+		
 		public static void SetPrestigeMedalLevel(GameClient client, int level)
 		{
 			level = ((level <= 0) ? 1 : level);
@@ -645,7 +645,7 @@ namespace GameServer.Logic.JingJiChang
 			PrestigeMedalManager.SetPrestigeMedalProps(client, prestigeMedalData);
 		}
 
-		// Token: 0x06001807 RID: 6151 RVA: 0x00178174 File Offset: 0x00176374
+		
 		public static void SetPrestigeMedalCount(GameClient client, int count)
 		{
 			count = ((count < 0) ? 0 : count);
@@ -655,48 +655,48 @@ namespace GameServer.Logic.JingJiChang
 			client.ClientData.prestigeMedalData = prestigeMedalData;
 		}
 
-		// Token: 0x06001808 RID: 6152 RVA: 0x001781C0 File Offset: 0x001763C0
+		
 		public static void SetPrestigeMedalRate(GameClient client, int rate)
 		{
 			PrestigeMedalManager._medalRate = rate;
 		}
 
-		// Token: 0x0400223A RID: 8762
+		
 		private static int _medalRate = 1;
 
-		// Token: 0x0400223B RID: 8763
+		
 		private static int _defaultMedalID = 1;
 
-		// Token: 0x0400223C RID: 8764
+		
 		private static Dictionary<int, PrestigeMedalBasicData> _prestigeMedalBasicList = new Dictionary<int, PrestigeMedalBasicData>();
 
-		// Token: 0x0400223D RID: 8765
+		
 		private static Dictionary<int, PrestigeMedalSpecialData> _prestigeMedalSpecialList = new Dictionary<int, PrestigeMedalSpecialData>();
 
-		// Token: 0x0400223E RID: 8766
+		
 		private int _State = 0;
 
-		// Token: 0x0400223F RID: 8767
+		
 		private static PrestigeMedalManager instance = new PrestigeMedalManager();
 
-		// Token: 0x0200050B RID: 1291
+		
 		private enum PrestigeMedalResultType
 		{
-			// Token: 0x04002241 RID: 8769
+			
 			End = 3,
-			// Token: 0x04002242 RID: 8770
+			
 			Next = 2,
-			// Token: 0x04002243 RID: 8771
+			
 			Success = 1,
-			// Token: 0x04002244 RID: 8772
+			
 			Fail = 0,
-			// Token: 0x04002245 RID: 8773
+			
 			EnoOpen = -1,
-			// Token: 0x04002246 RID: 8774
+			
 			EnoPrestige = -2,
-			// Token: 0x04002247 RID: 8775
+			
 			EnoDiamond = -3,
-			// Token: 0x04002248 RID: 8776
+			
 			EOver = -4
 		}
 	}

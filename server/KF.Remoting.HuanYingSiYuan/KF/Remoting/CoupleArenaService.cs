@@ -9,21 +9,21 @@ using Server.Tools;
 
 namespace KF.Remoting
 {
-    // Token: 0x02000010 RID: 16
+    
     public class CoupleArenaService
     {
-        // Token: 0x0600006F RID: 111 RVA: 0x0000572C File Offset: 0x0000392C
+        
         private CoupleArenaService()
         {
         }
 
-        // Token: 0x06000070 RID: 112 RVA: 0x000057D4 File Offset: 0x000039D4
+        
         public static CoupleArenaService getInstance()
         {
             return CoupleArenaService._Instance;
         }
 
-        // Token: 0x06000071 RID: 113 RVA: 0x00005838 File Offset: 0x00003A38
+        
         public void StartUp()
         {
             try
@@ -125,7 +125,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x06000072 RID: 114 RVA: 0x00005C8C File Offset: 0x00003E8C
+        
         public int CoupleArenaJoin(int roleId1, int roleId2, int serverId)
         {
             int result;
@@ -164,7 +164,7 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x06000073 RID: 115 RVA: 0x00005DC0 File Offset: 0x00003FC0
+        
         public int CoupleArenaQuit(int roleId1, int roleId2)
         {
             int result;
@@ -180,7 +180,7 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x06000074 RID: 116 RVA: 0x00005E48 File Offset: 0x00004048
+        
         public CoupleArenaSyncData CoupleArenaSync(DateTime lastSyncTime)
         {
             CoupleArenaSyncData result;
@@ -207,7 +207,7 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x06000075 RID: 117 RVA: 0x00005F30 File Offset: 0x00004130
+        
         public int CoupleArenaPreDivorce(int roleId1, int roleId2)
         {
             int result;
@@ -289,7 +289,7 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x06000076 RID: 118 RVA: 0x00006230 File Offset: 0x00004430
+        
         public CoupleArenaFuBenData GetCoupleFuBenData(long gameId)
         {
             CoupleArenaFuBenData result;
@@ -305,7 +305,7 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x06000077 RID: 119 RVA: 0x00006290 File Offset: 0x00004490
+        
         public CoupleArenaPkResultRsp CoupleArenaPkResult(CoupleArenaPkResultReq req)
         {
             CoupleArenaPkResultRsp result;
@@ -370,7 +370,7 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x06000078 RID: 120 RVA: 0x0000668C File Offset: 0x0000488C
+        
         private void HandlePkResult(int man, int manzone, byte[] mandata, int wife, int wifezone, byte[] wifedata, int pkDuanWeiType, int pkDuanWeiLevel, CoupleArenaPkResultItem retData)
         {
             CoupleArenaCoupleDataK coupleData = null;
@@ -451,7 +451,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x06000079 RID: 121 RVA: 0x00006A78 File Offset: 0x00004C78
+        
         private void ParseDuanweiByJiFen(int jifen, out int duanweiType, out int duanweiLevel)
         {
             duanweiLevel = this._DuanWeiCfgList[0].DuanWeiLevel;
@@ -469,7 +469,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x0600007A RID: 122 RVA: 0x00006B40 File Offset: 0x00004D40
+        
         public void Update()
         {
             try
@@ -521,7 +521,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x0600007B RID: 123 RVA: 0x00006D98 File Offset: 0x00004F98
+        
         private void CheckRoleMatch(DateTime now)
         {
             lock (this.Mutex)
@@ -632,7 +632,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x0600007C RID: 124 RVA: 0x000072D0 File Offset: 0x000054D0
+        
         private void CheckTimeOutFuBen(DateTime now)
         {
             lock (this.Mutex)
@@ -647,7 +647,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x0600007D RID: 125 RVA: 0x0000739C File Offset: 0x0000559C
+        
         private void RemoveFuBen(long gameId)
         {
             lock (this.Mutex)
@@ -661,7 +661,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x0600007E RID: 126 RVA: 0x00007428 File Offset: 0x00005628
+        
         private void CheckRebuildRank(DateTime now)
         {
             lock (this.Mutex)
@@ -681,7 +681,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x0600007F RID: 127 RVA: 0x000074F0 File Offset: 0x000056F0
+        
         private void CheckFlushRank2Db()
         {
             lock (this.Mutex)
@@ -696,7 +696,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x06000080 RID: 128 RVA: 0x0000757C File Offset: 0x0000577C
+        
         private int CurrRankWeek(DateTime time)
         {
             int currWeekDay = TimeUtil.GetWeekDay1To7(time);
@@ -713,7 +713,7 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x06000081 RID: 129 RVA: 0x000075FC File Offset: 0x000057FC
+        
         private bool IsInWeekOnceActTimes(DateTime time)
         {
             int wd = TimeUtil.GetWeekDay1To7(time);
@@ -727,7 +727,7 @@ namespace KF.Remoting
             return false;
         }
 
-        // Token: 0x06000082 RID: 130 RVA: 0x000076A8 File Offset: 0x000058A8
+        
         private bool IsInWeekRangeActTimes(DateTime time)
         {
             _CoupleArenaWarTimePoint first = this._WarTimePointList.First<_CoupleArenaWarTimePoint>();
@@ -736,7 +736,7 @@ namespace KF.Remoting
             return ((wd == first.Weekday && time.TimeOfDay.Ticks > first.DayStartTicks) || wd > first.Weekday) && (wd < last.Weekday || (wd == last.Weekday && time.TimeOfDay.Ticks < last.DayEndTicks));
         }
 
-        // Token: 0x06000083 RID: 131 RVA: 0x00007748 File Offset: 0x00005948
+        
         private bool IsValidCoupleIfExist(int roleId1, int roleId2)
         {
             bool result;
@@ -770,7 +770,7 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x06000084 RID: 132 RVA: 0x00007838 File Offset: 0x00005A38
+        
         public void OnStopServer()
         {
             try
@@ -789,52 +789,52 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x04000045 RID: 69
+        
         private static CoupleArenaService _Instance = new CoupleArenaService();
 
-        // Token: 0x04000046 RID: 70
+        
         private List<_CoupleArenaDuanWeiCfg> _DuanWeiCfgList = new List<_CoupleArenaDuanWeiCfg>();
 
-        // Token: 0x04000047 RID: 71
+        
         private List<_CoupleArenaWarTimePoint> _WarTimePointList = new List<_CoupleArenaWarTimePoint>();
 
-        // Token: 0x04000048 RID: 72
+        
         public readonly GameTypes GameType = GameTypes.CoupleArena;
 
-        // Token: 0x04000049 RID: 73
+        
         public readonly GameTypes EvItemGameType = GameTypes.TianTi;
 
-        // Token: 0x0400004A RID: 74
+        
         private object Mutex = new object();
 
-        // Token: 0x0400004B RID: 75
+        
         private DateTime LastUpdateTime = DateTime.MinValue;
 
-        // Token: 0x0400004C RID: 76
+        
         private uint UpdateFrameCount = 0U;
 
-        // Token: 0x0400004D RID: 77
+        
         private CoupleArenaSyncData SyncData = new CoupleArenaSyncData();
 
-        // Token: 0x0400004E RID: 78
+        
         private bool IsNeedSort = false;
 
-        // Token: 0x0400004F RID: 79
+        
         private bool IsRankChanged = false;
 
-        // Token: 0x04000050 RID: 80
+        
         private Dictionary<long, CoupleArenaFuBenData> GameFuBenDict = new Dictionary<long, CoupleArenaFuBenData>();
 
-        // Token: 0x04000051 RID: 81
+        
         private CoupleArenaMatchTimeLimiter MatchTimeLimiter = new CoupleArenaMatchTimeLimiter();
 
-        // Token: 0x04000052 RID: 82
+        
         private CoupleArenaJoinDataUtil JoinDataUtil = new CoupleArenaJoinDataUtil();
 
-        // Token: 0x04000053 RID: 83
+        
         private CoupleArenaDivorceRecord DivorceRecord = new CoupleArenaDivorceRecord();
 
-        // Token: 0x04000054 RID: 84
+        
         private CoupleArenaPersistence Persistence = CoupleArenaPersistence.getInstance();
     }
 }

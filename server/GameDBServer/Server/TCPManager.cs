@@ -10,21 +10,21 @@ using Server.Tools;
 
 namespace GameDBServer.Server
 {
-	// Token: 0x0200020B RID: 523
+	
 	public class TCPManager
 	{
-		// Token: 0x06000C1F RID: 3103 RVA: 0x0009E830 File Offset: 0x0009CA30
+		
 		private TCPManager()
 		{
 		}
 
-		// Token: 0x06000C20 RID: 3104 RVA: 0x0009E860 File Offset: 0x0009CA60
+		
 		public static TCPManager getInstance()
 		{
 			return TCPManager.instance;
 		}
 
-		// Token: 0x06000C21 RID: 3105 RVA: 0x0009E878 File Offset: 0x0009CA78
+		
 		public void initialize(int capacity)
 		{
 			capacity = Math.Max(capacity, 250);
@@ -41,7 +41,7 @@ namespace GameDBServer.Server
 			this.gameServerClients = new Dictionary<Socket, GameServerClient>();
 		}
 
-		// Token: 0x06000C22 RID: 3106 RVA: 0x0009E94C File Offset: 0x0009CB4C
+		
 		public GameServerClient getClient(Socket socket)
 		{
 			GameServerClient client = null;
@@ -49,8 +49,8 @@ namespace GameDBServer.Server
 			return client;
 		}
 
-		// Token: 0x170000E8 RID: 232
-		// (get) Token: 0x06000C23 RID: 3107 RVA: 0x0009E970 File Offset: 0x0009CB70
+		
+		
 		public SocketListener MySocketListener
 		{
 			get
@@ -59,30 +59,30 @@ namespace GameDBServer.Server
 			}
 		}
 
-		// Token: 0x170000E9 RID: 233
-		// (get) Token: 0x06000C24 RID: 3108 RVA: 0x0009E988 File Offset: 0x0009CB88
-		// (set) Token: 0x06000C25 RID: 3109 RVA: 0x0009E99F File Offset: 0x0009CB9F
+		
+		
+		
 		public Program RootWindow { get; set; }
 
-		// Token: 0x170000EA RID: 234
-		// (get) Token: 0x06000C26 RID: 3110 RVA: 0x0009E9A8 File Offset: 0x0009CBA8
-		// (set) Token: 0x06000C27 RID: 3111 RVA: 0x0009E9BF File Offset: 0x0009CBBF
+		
+		
+		
 		public DBManager DBMgr { get; set; }
 
-		// Token: 0x06000C28 RID: 3112 RVA: 0x0009E9C8 File Offset: 0x0009CBC8
+		
 		public void Start(string ip, int port)
 		{
 			this.socketListener.Init();
 			this.socketListener.Start(ip, port);
 		}
 
-		// Token: 0x06000C29 RID: 3113 RVA: 0x0009E9E5 File Offset: 0x0009CBE5
+		
 		public void Stop()
 		{
 			this.socketListener.Stop();
 		}
 
-		// Token: 0x06000C2A RID: 3114 RVA: 0x0009E9F4 File Offset: 0x0009CBF4
+		
 		private bool TCPCmdPacketEvent(object sender)
 		{
 			TCPInPacket tcpInPacket = sender as TCPInPacket;
@@ -126,7 +126,7 @@ namespace GameDBServer.Server
 			return result2;
 		}
 
-		// Token: 0x06000C2B RID: 3115 RVA: 0x0009EB8C File Offset: 0x0009CD8C
+		
 		private void SocketConnected(object sender, SocketAsyncEventArgs e)
 		{
 			SocketListener sl = sender as SocketListener;
@@ -143,7 +143,7 @@ namespace GameDBServer.Server
 			}
 		}
 
-		// Token: 0x06000C2C RID: 3116 RVA: 0x0009EC2C File Offset: 0x0009CE2C
+		
 		private void SocketClosed(object sender, SocketAsyncEventArgs e)
 		{
 			SocketListener sl = sender as SocketListener;
@@ -169,7 +169,7 @@ namespace GameDBServer.Server
 			this.RootWindow.TotalConnections = sl.ConnectedSocketsCount;
 		}
 
-		// Token: 0x06000C2D RID: 3117 RVA: 0x0009ED48 File Offset: 0x0009CF48
+		
 		private bool SocketReceived(object sender, SocketAsyncEventArgs e)
 		{
 			SocketListener sl = sender as SocketListener;
@@ -186,42 +186,42 @@ namespace GameDBServer.Server
 			return tcpInPacket.WriteData(e.Buffer, e.Offset, e.BytesTransferred);
 		}
 
-		// Token: 0x06000C2E RID: 3118 RVA: 0x0009EE14 File Offset: 0x0009D014
+		
 		private void SocketSended(object sender, SocketAsyncEventArgs e)
 		{
 			TCPOutPacket tcpOutPacket = (e.UserToken as AsyncUserToken).Tag as TCPOutPacket;
 			this.tcpOutPacketPool.Push(tcpOutPacket);
 		}
 
-		// Token: 0x04001204 RID: 4612
+		
 		private static TCPManager instance = new TCPManager();
 
-		// Token: 0x04001205 RID: 4613
+		
 		public static long processCmdNum = 0L;
 
-		// Token: 0x04001206 RID: 4614
+		
 		public static long processTotalTime = 0L;
 
-		// Token: 0x04001207 RID: 4615
+		
 		public static Dictionary<int, PorcessCmdMoniter> cmdMoniter = new Dictionary<int, PorcessCmdMoniter>();
 
-		// Token: 0x04001208 RID: 4616
+		
 		private SocketListener socketListener = null;
 
-		// Token: 0x04001209 RID: 4617
+		
 		private TCPInPacketPool tcpInPacketPool = null;
 
-		// Token: 0x0400120A RID: 4618
+		
 		private TCPOutPacketPool tcpOutPacketPool = null;
 
-		// Token: 0x0400120B RID: 4619
+		
 		[ThreadStatic]
 		public static GameServerClient CurrentClient;
 
-		// Token: 0x0400120C RID: 4620
+		
 		private Dictionary<Socket, TCPInPacket> dictInPackets = null;
 
-		// Token: 0x0400120D RID: 4621
+		
 		private Dictionary<Socket, GameServerClient> gameServerClients = null;
 	}
 }

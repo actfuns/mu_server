@@ -18,28 +18,28 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000836 RID: 2102
+	
 	public class WanMoXiaGuManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener, IEventListenerEx, IManager2, ICopySceneManager
 	{
-		// Token: 0x06003B43 RID: 15171 RVA: 0x00325BC4 File Offset: 0x00323DC4
+		
 		public static WanMoXiaGuManager getInstance()
 		{
 			return WanMoXiaGuManager.instance;
 		}
 
-		// Token: 0x06003B44 RID: 15172 RVA: 0x00325BDC File Offset: 0x00323DDC
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x06003B45 RID: 15173 RVA: 0x00325C00 File Offset: 0x00323E00
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			return true;
 		}
 
-		// Token: 0x06003B46 RID: 15174 RVA: 0x00325C14 File Offset: 0x00323E14
+		
 		public bool startup()
 		{
 			GlobalEventSource4Scene.getInstance().registerListener(10001, 49, WanMoXiaGuManager.getInstance());
@@ -50,7 +50,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003B47 RID: 15175 RVA: 0x00325C98 File Offset: 0x00323E98
+		
 		public bool showdown()
 		{
 			GlobalEventSource4Scene.getInstance().removeListener(10001, 49, WanMoXiaGuManager.getInstance());
@@ -61,25 +61,25 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003B48 RID: 15176 RVA: 0x00325D1C File Offset: 0x00323F1C
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06003B49 RID: 15177 RVA: 0x00325D30 File Offset: 0x00323F30
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06003B4A RID: 15178 RVA: 0x00325D44 File Offset: 0x00323F44
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			return true;
 		}
 
-		// Token: 0x06003B4B RID: 15179 RVA: 0x00325D5C File Offset: 0x00323F5C
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int eventType = eventObject.getEventType();
@@ -95,7 +95,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B4C RID: 15180 RVA: 0x00325DB0 File Offset: 0x00323FB0
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 			switch (eventObject.EventType)
@@ -175,7 +175,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B4D RID: 15181 RVA: 0x0032602C File Offset: 0x0032422C
+		
 		public bool InitConfig()
 		{
 			bool success = true;
@@ -235,7 +235,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x06003B4E RID: 15182 RVA: 0x003263B0 File Offset: 0x003245B0
+		
 		public bool ProcessJoinCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -297,7 +297,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003B4F RID: 15183 RVA: 0x00326608 File Offset: 0x00324808
+		
 		public bool ProcessQuitCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -319,7 +319,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003B50 RID: 15184 RVA: 0x00326688 File Offset: 0x00324888
+		
 		public bool ProcessEnterCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -357,7 +357,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003B51 RID: 15185 RVA: 0x0032676C File Offset: 0x0032496C
+		
 		public bool OnInitGame(GameClient client)
 		{
 			GameMap gameMap = null;
@@ -381,7 +381,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B52 RID: 15186 RVA: 0x00326880 File Offset: 0x00324A80
+		
 		public bool ClientRelive(GameClient client)
 		{
 			GameMap gameMap = null;
@@ -406,13 +406,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B53 RID: 15187 RVA: 0x003269CC File Offset: 0x00324BCC
+		
 		public bool IsGongNengOpened(GameClient client, bool hint = false)
 		{
 			return GlobalNew.IsGongNengOpened(client, GongNengIDs.WanMoXiaGu, hint);
 		}
 
-		// Token: 0x06003B54 RID: 15188 RVA: 0x003269E8 File Offset: 0x00324BE8
+		
 		public int GetWanMoXiaGuCount(GameClient client)
 		{
 			int count = 0;
@@ -426,7 +426,7 @@ namespace GameServer.Logic
 			return count;
 		}
 
-		// Token: 0x06003B55 RID: 15189 RVA: 0x00326A44 File Offset: 0x00324C44
+		
 		public bool AddCopyScenes(GameClient client, CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool result;
@@ -470,13 +470,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B56 RID: 15190 RVA: 0x00326BC4 File Offset: 0x00324DC4
+		
 		public bool RemoveCopyScene(CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			return true;
 		}
 
-		// Token: 0x06003B57 RID: 15191 RVA: 0x00326BD8 File Offset: 0x00324DD8
+		
 		public void TimerProc()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -652,7 +652,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B58 RID: 15192 RVA: 0x003274E0 File Offset: 0x003256E0
+		
 		public void OnInjureMonster(GameClient client, Monster monster, long injure)
 		{
 			if (monster.VLife <= 0.0)
@@ -691,7 +691,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B59 RID: 15193 RVA: 0x003276D8 File Offset: 0x003258D8
+		
 		public void CreateMonster(WanMoXiaGuScene scene, object tag)
 		{
 			CopyMap copyMap = scene.CopyMapInfo;
@@ -714,7 +714,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B5A RID: 15194 RVA: 0x003277D4 File Offset: 0x003259D4
+		
 		public void GiveAwards(WanMoXiaGuScene scene)
 		{
 			try
@@ -803,7 +803,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B5B RID: 15195 RVA: 0x00327BA4 File Offset: 0x00325DA4
+		
 		public void NotifyTimeStateInfoAndScoreInfo(GameClient client, bool timeState = true, bool scoreInfo = true)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -823,7 +823,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B5C RID: 15196 RVA: 0x00327C4C File Offset: 0x00325E4C
+		
 		public void LeaveFuBen(GameClient client)
 		{
 			WanMoXiaGuScene scene = null;
@@ -844,28 +844,28 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B5D RID: 15197 RVA: 0x00327D3C File Offset: 0x00325F3C
+		
 		public void OnLogout(GameClient client)
 		{
 			this.LeaveFuBen(client);
 		}
 
-		// Token: 0x040045A2 RID: 17826
+		
 		public const SceneUIClasses _sceneType = SceneUIClasses.WanMoXiaGu;
 
-		// Token: 0x040045A3 RID: 17827
+		
 		public const GameTypes GameType = GameTypes.KuaFuCopy;
 
-		// Token: 0x040045A4 RID: 17828
+		
 		public ConcurrentDictionary<int, WanMoXiaGuScene> SceneDict = new ConcurrentDictionary<int, WanMoXiaGuScene>();
 
-		// Token: 0x040045A5 RID: 17829
+		
 		private static long _nextHeartBeatTicks = 0L;
 
-		// Token: 0x040045A6 RID: 17830
+		
 		public WanMoXiaGuData RuntimeData = new WanMoXiaGuData();
 
-		// Token: 0x040045A7 RID: 17831
+		
 		private static WanMoXiaGuManager instance = new WanMoXiaGuManager();
 	}
 }

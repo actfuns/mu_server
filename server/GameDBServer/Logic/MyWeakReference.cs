@@ -12,7 +12,7 @@ namespace GameDBServer.Logic
 		}
 
 		// Token: 0x170000D7 RID: 215
-		// (get) Token: 0x060009D0 RID: 2512 RVA: 0x0005E814 File Offset: 0x0005CA14
+		
 		public bool IsAlive
 		{
 			get
@@ -27,8 +27,8 @@ namespace GameDBServer.Logic
 		}
 
 		// Token: 0x170000D8 RID: 216
-		// (get) Token: 0x060009D1 RID: 2513 RVA: 0x0005E868 File Offset: 0x0005CA68
-		// (set) Token: 0x060009D2 RID: 2514 RVA: 0x0005E8B4 File Offset: 0x0005CAB4
+		
+		
 		public object Target
 		{
 			get

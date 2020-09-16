@@ -15,11 +15,11 @@ using Server.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000081 RID: 129
+	
 	[ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, ConcurrencyMode = ConcurrencyMode.Multiple)]
 	public class HuanYingSiYuanService : MarshalByRefObject, IKuaFuService
 	{
-		// Token: 0x06000631 RID: 1585 RVA: 0x000552FC File Offset: 0x000534FC
+		
 		public override object InitializeLifetimeService()
 		{
 			HuanYingSiYuanService.Instance = this;
@@ -31,7 +31,7 @@ namespace KF.Remoting
 			return lease;
 		}
 
-		// Token: 0x06000632 RID: 1586 RVA: 0x00055348 File Offset: 0x00053548
+		
 		public HuanYingSiYuanService()
 		{
 			HuanYingSiYuanService.Instance = this;
@@ -40,13 +40,13 @@ namespace KF.Remoting
 			this.BackgroundThread.Start();
 		}
 
-		// Token: 0x06000633 RID: 1587 RVA: 0x00055440 File Offset: 0x00053640
+		
 		~HuanYingSiYuanService()
 		{
 			this.BackgroundThread.Abort();
 		}
 
-		// Token: 0x06000634 RID: 1588 RVA: 0x00055478 File Offset: 0x00053678
+		
 		public void ThreadProc(object state)
 		{
 			do
@@ -90,7 +90,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000635 RID: 1589 RVA: 0x000555B8 File Offset: 0x000537B8
+		
 		private void CheckRoleTimerProc(DateTime now, out int signUpCount, out int startCount)
 		{
 			signUpCount = 0;
@@ -151,7 +151,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000636 RID: 1590 RVA: 0x0005584C File Offset: 0x00053A4C
+		
 		private void CheckGameFuBenTimerProc(DateTime now)
 		{
 			if (this.HuanYingSiYuanFuBenDataDict.Count > 0)
@@ -174,13 +174,13 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000637 RID: 1591 RVA: 0x0005593C File Offset: 0x00053B3C
+		
 		public AsyncDataItem[] GetClientCacheItems(int serverId)
 		{
 			return ClientAgentManager.Instance().PickAsyncEvent(serverId, this.GameType);
 		}
 
-		// Token: 0x06000638 RID: 1592 RVA: 0x00055960 File Offset: 0x00053B60
+		
 		public AsyncData GetClientCacheItems2(int serverId, long requestTicks)
 		{
 			return new AsyncData
@@ -191,7 +191,7 @@ namespace KF.Remoting
 			};
 		}
 
-		// Token: 0x06000639 RID: 1593 RVA: 0x000559A4 File Offset: 0x00053BA4
+		
 		public int InitializeClient(KuaFuClientContext clientInfo)
 		{
 			int result;
@@ -215,7 +215,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600063A RID: 1594 RVA: 0x00055AB8 File Offset: 0x00053CB8
+		
 		public int RoleSignUp(int serverId, string userId, int zoneId, int roleId, int gameType, int groupIndex, IGameData gameData)
 		{
 			int result = 1;
@@ -263,7 +263,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600063B RID: 1595 RVA: 0x00055C90 File Offset: 0x00053E90
+		
 		public int RoleChangeState(int serverId, int roleId, int state)
 		{
 			KuaFuRoleKey key = KuaFuRoleKey.Get(serverId, roleId);
@@ -295,7 +295,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600063C RID: 1596 RVA: 0x00055D50 File Offset: 0x00053F50
+		
 		public int GameFuBenRoleChangeState(int serverId, int roleId, int gameId, int state)
 		{
 			HuanYingSiYuanFuBenData huanYingSiYuanFuBenData;
@@ -330,7 +330,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600063D RID: 1597 RVA: 0x00055E30 File Offset: 0x00054030
+		
 		public KuaFuRoleData GetKuaFuRoleData(int serverId, int roleId)
 		{
 			KuaFuRoleData kuaFuRoleData = null;
@@ -346,7 +346,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600063E RID: 1598 RVA: 0x00055E74 File Offset: 0x00054074
+		
 		public int GetRoleExtendData(int serverId, int roleId, int dataType)
 		{
 			KuaFuRoleData kuaFuRoleData = null;
@@ -388,13 +388,13 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600063F RID: 1599 RVA: 0x00055F44 File Offset: 0x00054144
+		
 		public List<KuaFuServerInfo> GetKuaFuServerInfoData(int age)
 		{
 			return KuaFuServerManager.GetKuaFuServerInfoData(age);
 		}
 
-		// Token: 0x06000640 RID: 1600 RVA: 0x00055F5C File Offset: 0x0005415C
+		
 		public HuanYingSiYuanFuBenData GetFuBenData(int gameId)
 		{
 			HuanYingSiYuanFuBenData kuaFuFuBenData = null;
@@ -410,7 +410,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000641 RID: 1601 RVA: 0x00055F9C File Offset: 0x0005419C
+		
 		public int GameFuBenChangeState(int gameId, GameFuBenState state, DateTime time)
 		{
 			int result = -11;
@@ -435,7 +435,7 @@ namespace KF.Remoting
 			return result2;
 		}
 
-		// Token: 0x06000642 RID: 1602 RVA: 0x00056030 File Offset: 0x00054230
+		
 		private int ChangeRoleState(KuaFuRoleData kuaFuRoleData, KuaFuRoleStates state)
 		{
 			int result = -1;
@@ -473,7 +473,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000643 RID: 1603 RVA: 0x00056130 File Offset: 0x00054330
+		
 		private void NotifyFuBenRoleCount(HuanYingSiYuanFuBenData fuBenData)
 		{
 			try
@@ -501,7 +501,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000644 RID: 1604 RVA: 0x00056250 File Offset: 0x00054450
+		
 		private void NotifyFuBenRoleEnterGame(HuanYingSiYuanFuBenData fuBenData)
 		{
 			try
@@ -527,7 +527,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000645 RID: 1605 RVA: 0x0005635C File Offset: 0x0005455C
+		
 		private bool AssignGameFuben(KuaFuRoleData kuaFuRoleData, long waitSecs1, long waitSecs2, DateTime now)
 		{
 			int roleCount = 0;
@@ -621,7 +621,7 @@ namespace KF.Remoting
 			return false;
 		}
 
-		// Token: 0x06000646 RID: 1606 RVA: 0x000566EC File Offset: 0x000548EC
+		
 		private void GameFuBenRoleCountChangedHandler(HuanYingSiYuanFuBenData huanYingSiYuanFuBenData, int roleCount)
 		{
 			if (roleCount == Consts.HuanYingSiYuanRoleCountTotal)
@@ -635,13 +635,13 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000647 RID: 1607 RVA: 0x00056740 File Offset: 0x00054940
+		
 		private void AddGameFuBen(HuanYingSiYuanFuBenData huanYingSiYuanFuBenData)
 		{
 			this.HuanYingSiYuanFuBenDataDict[huanYingSiYuanFuBenData.GameId] = huanYingSiYuanFuBenData;
 		}
 
-		// Token: 0x06000648 RID: 1608 RVA: 0x00056758 File Offset: 0x00054958
+		
 		private void RemoveGameFuBen(HuanYingSiYuanFuBenData fubenData)
 		{
 			int gameId = fubenData.GameId;
@@ -668,7 +668,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000649 RID: 1609 RVA: 0x00056884 File Offset: 0x00054A84
+		
 		private void RemoveRoleFromFuBen(int gameId, int roleId)
 		{
 			if (gameId > 0)
@@ -692,7 +692,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600064A RID: 1610 RVA: 0x00056938 File Offset: 0x00054B38
+		
 		public int UseGiftCode(string ptid, string uid, string rid, string channel, string codeno, string appid, int zoneid, ref string giftid)
 		{
 			MySqlDataReader myTable = null;
@@ -814,7 +814,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600064B RID: 1611 RVA: 0x00056D0C File Offset: 0x00054F0C
+		
 		public void BroadcastGMCmdData(GMCmdData data, int serverFlag)
 		{
 			lock (this.Mutex)
@@ -836,112 +836,112 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600064C RID: 1612 RVA: 0x00056DA8 File Offset: 0x00054FA8
+		
 		public KuaFuLueDuoJingJiaResult JingJia_KuaFuLueDuo(int bhid, int zoneid_bh, string bhname, int ziJin, int serverId, int oldZiJin)
 		{
 			return KuaFuLueDuoService.Instance().JingJia_KuaFuLueDuo(bhid, zoneid_bh, bhname, ziJin, serverId, oldZiJin);
 		}
 
-		// Token: 0x0600064D RID: 1613 RVA: 0x00056DD0 File Offset: 0x00054FD0
+		
 		public KuaFuLueDuoFuBenData GetFuBenDataByServerId_KuaFuLueDuo(int serverId)
 		{
 			return KuaFuLueDuoService.Instance().GetFuBenDataByServerId_KuaFuLueDuo(serverId);
 		}
 
-		// Token: 0x0600064E RID: 1614 RVA: 0x00056DF0 File Offset: 0x00054FF0
+		
 		public KuaFuLueDuoFuBenData GetFuBenDataByGameId_KuaFuLueDuo(long gameId)
 		{
 			return KuaFuLueDuoService.Instance().GetFuBenDataByGameId_KuaFuLueDuo(gameId);
 		}
 
-		// Token: 0x0600064F RID: 1615 RVA: 0x00056E10 File Offset: 0x00055010
+		
 		public byte[] GetRoleData_KuaFuLueDuo(long rid)
 		{
 			return KuaFuLueDuoService.Instance().GetRoleData_KuaFuLueDuo(rid);
 		}
 
-		// Token: 0x06000650 RID: 1616 RVA: 0x00056E30 File Offset: 0x00055030
+		
 		public byte[] SyncData_KuaFuLueDuo(byte[] bytes)
 		{
 			return DataHelper2.ObjectToBytes<KuaFuLueDuoSyncData>(KuaFuLueDuoService.Instance().SyncData_KuaFuLueDuo(bytes));
 		}
 
-		// Token: 0x06000651 RID: 1617 RVA: 0x00056E54 File Offset: 0x00055054
+		
 		public KuaFuCmdData GetBHDataByBhid_KuaFuLueDuo(int bhid, long age)
 		{
 			return KuaFuLueDuoService.Instance().GetBHDataByBhid_KuaFuLueDuo(bhid, age);
 		}
 
-		// Token: 0x06000652 RID: 1618 RVA: 0x00056E74 File Offset: 0x00055074
+		
 		public int GameFuBenComplete_KuaFuLueDuo(KuaFuLueDuoStatisticalData data)
 		{
 			return KuaFuLueDuoService.Instance().GameFuBenComplete_KuaFuLueDuo(data);
 		}
 
-		// Token: 0x04000378 RID: 888
+		
 		private const double CheckGameFuBenInterval = 1000.0;
 
-		// Token: 0x04000379 RID: 889
+		
 		private const double CheckRoleTimerProcInterval = 1.428;
 
-		// Token: 0x0400037A RID: 890
+		
 		public static HuanYingSiYuanService Instance = null;
 
-		// Token: 0x0400037B RID: 891
+		
 		private object Mutex = new object();
 
-		// Token: 0x0400037C RID: 892
+		
 		public readonly GameTypes GameType = GameTypes.HuanYingSiYuan;
 
-		// Token: 0x0400037D RID: 893
+		
 		private DateTime CheckGameFuBenTime;
 
-		// Token: 0x0400037E RID: 894
+		
 		private DateTime CheckRoleTimerProcTime;
 
-		// Token: 0x0400037F RID: 895
+		
 		public HuanYingSiYuanPersistence Persistence = HuanYingSiYuanPersistence.Instance;
 
-		// Token: 0x04000380 RID: 896
+		
 		public int ExistKuaFuFuBenCount = 0;
 
-		// Token: 0x04000381 RID: 897
+		
 		private int EnterGameSecs = 20;
 
-		// Token: 0x04000382 RID: 898
+		
 		public int DisconnectionProtectSecs = 15;
 
-		// Token: 0x04000383 RID: 899
+		
 		public int GameEndProtectSecs = 15;
 
-		// Token: 0x04000384 RID: 900
+		
 		private int MaxServerLoad = 400;
 
-		// Token: 0x04000385 RID: 901
+		
 		private int MaxHuanYingSiYuanDayCount = 1000;
 
-		// Token: 0x04000386 RID: 902
+		
 		private int HuanYingSiYuanDayCount = 0;
 
-		// Token: 0x04000387 RID: 903
+		
 		private int HuanYingSiYuanDayId = 0;
 
-		// Token: 0x04000388 RID: 904
+		
 		public ConcurrentDictionary<int, HuanYingSiYuanFuBenData> HuanYingSiYuanFuBenDataDict = new ConcurrentDictionary<int, HuanYingSiYuanFuBenData>(1, 4096);
 
-		// Token: 0x04000389 RID: 905
+		
 		private ConcurrentDictionary<KuaFuRoleKey, KuaFuRoleData> RoleIdKuaFuRoleDataDict = new ConcurrentDictionary<KuaFuRoleKey, KuaFuRoleData>();
 
-		// Token: 0x0400038A RID: 906
+		
 		public ConcurrentDictionary<string, int> UserId2RoleIdActiveDict = new ConcurrentDictionary<string, int>(1, 16384);
 
-		// Token: 0x0400038B RID: 907
+		
 		private ConcurrentDictionary<KuaFuRoleKey, KuaFuRoleData> WaitingKuaFuRoleDataDict = new ConcurrentDictionary<KuaFuRoleKey, KuaFuRoleData>();
 
-		// Token: 0x0400038C RID: 908
+		
 		public ConcurrentDictionary<int, HuanYingSiYuanFuBenData> ShotOfRolesFuBenDataDict = new ConcurrentDictionary<int, HuanYingSiYuanFuBenData>(1, 4096);
 
-		// Token: 0x0400038D RID: 909
+		
 		public Thread BackgroundThread;
 	}
 }

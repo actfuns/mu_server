@@ -14,29 +14,29 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200034F RID: 847
+	
 	public class KuaFuMapManager : IManager, ICmdProcessorEx, ICmdProcessor, IManager2
 	{
-		// Token: 0x06000E54 RID: 3668 RVA: 0x000E2CFC File Offset: 0x000E0EFC
+		
 		public static KuaFuMapManager getInstance()
 		{
 			return KuaFuMapManager.instance;
 		}
 
-		// Token: 0x06000E55 RID: 3669 RVA: 0x000E2D14 File Offset: 0x000E0F14
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x06000E56 RID: 3670 RVA: 0x000E2D38 File Offset: 0x000E0F38
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			ScheduleExecutor2.Instance.scheduleExecute(new NormalScheduleTask("KuaFuBossManager.TimerProc", new EventHandler(this.TimerProc)), 15000, 5000);
 			return true;
 		}
 
-		// Token: 0x06000E57 RID: 3671 RVA: 0x000E2D78 File Offset: 0x000E0F78
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1141, 2, 4, KuaFuMapManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -44,25 +44,25 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000E58 RID: 3672 RVA: 0x000E2DBC File Offset: 0x000E0FBC
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000E59 RID: 3673 RVA: 0x000E2DD0 File Offset: 0x000E0FD0
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000E5A RID: 3674 RVA: 0x000E2DE4 File Offset: 0x000E0FE4
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06000E5B RID: 3675 RVA: 0x000E2DF8 File Offset: 0x000E0FF8
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -81,7 +81,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000E5C RID: 3676 RVA: 0x000E2E40 File Offset: 0x000E1040
+		
 		public bool InitConfig()
 		{
 			bool success = true;
@@ -157,20 +157,20 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x06000E5D RID: 3677 RVA: 0x000E31A8 File Offset: 0x000E13A8
+		
 		public bool IsKuaFuMap(int mapCode)
 		{
 			return this.RuntimeData.MapCode2KuaFuLineDataDict.ContainsKey(mapCode);
 		}
 
-		// Token: 0x06000E5E RID: 3678 RVA: 0x000E31D8 File Offset: 0x000E13D8
+		
 		private bool CheckMap(GameClient client)
 		{
 			SceneUIClasses sceneType = Global.GetMapSceneType(client.ClientData.MapCode);
 			return sceneType == SceneUIClasses.Normal || SceneUIClasses.Comp == sceneType || SceneUIClasses.ChongShengMap == sceneType;
 		}
 
-		// Token: 0x06000E5F RID: 3679 RVA: 0x000E3218 File Offset: 0x000E1418
+		
 		public bool ProcessGetKuaFuLineDataListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -195,7 +195,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000E60 RID: 3680 RVA: 0x000E32D4 File Offset: 0x000E14D4
+		
 		public bool ProcessKuaFuMapEnterCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -382,7 +382,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000E61 RID: 3681 RVA: 0x000E39B0 File Offset: 0x000E1BB0
+		
 		public bool OnInitGame(GameClient client)
 		{
 			KuaFuServerLoginData kuaFuServerLoginData = Global.GetClientKuaFuServerLoginData(client);
@@ -431,7 +431,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000E62 RID: 3682 RVA: 0x000E3BD0 File Offset: 0x000E1DD0
+		
 		public void OnStartPlayGame(GameClient client)
 		{
 			bool bUserTeleport = false;
@@ -464,7 +464,7 @@ namespace GameServer.Logic
 			}), "EnterKuaFuMapFlag", true);
 		}
 
-		// Token: 0x06000E63 RID: 3683 RVA: 0x000E3CD4 File Offset: 0x000E1ED4
+		
 		public void TimerProc(object sender, EventArgs e)
 		{
 			Dictionary<int, int> dict = new Dictionary<int, int>();
@@ -493,19 +493,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000E64 RID: 3684 RVA: 0x000E3E28 File Offset: 0x000E2028
+		
 		public bool IsGongNengOpened(GameClient client, bool hint = false)
 		{
 			return !GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot8) && GameManager.VersionSystemOpenMgr.IsVersionSystemOpen("KuaFuMap");
 		}
 
-		// Token: 0x04001659 RID: 5721
+		
 		public const SceneUIClasses ManagerType = SceneUIClasses.KuaFuMap;
 
-		// Token: 0x0400165A RID: 5722
+		
 		private static KuaFuMapManager instance = new KuaFuMapManager();
 
-		// Token: 0x0400165B RID: 5723
+		
 		public KuaFuMapData RuntimeData = new KuaFuMapData();
 	}
 }

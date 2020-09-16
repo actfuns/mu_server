@@ -9,10 +9,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic.ProtoCheck
 {
-	// Token: 0x020003B9 RID: 953
+	
 	public class ProtoChecker : SingletonTemplate<ProtoChecker>
 	{
-		// Token: 0x06001079 RID: 4217 RVA: 0x000FF4F8 File Offset: 0x000FD6F8
+		
 		private ProtoChecker()
 		{
 			this.RegisterCheck<SpriteActionData>(new ICheckerWrapper<SpriteActionData>.CheckerCallback(CheckConcrete.Checker_SpriteActionData));
@@ -30,14 +30,14 @@ namespace GameServer.Logic.ProtoCheck
 			this.RegisterCheck<SCMapChange>(new ICheckerWrapper<SCMapChange>.CheckerCallback(CheckConcrete.Checker_SCMapChange));
 		}
 
-		// Token: 0x0600107A RID: 4218 RVA: 0x000FF617 File Offset: 0x000FD817
+		
 		private void RegisterCheck<T>(ICheckerWrapper<T>.CheckerCallback cb) where T : class
 		{
 			this.checkerDic[typeof(T).FullName] = new ICheckerWrapper<T>(cb);
 		}
 
-		// Token: 0x1700004B RID: 75
-		// (get) Token: 0x0600107B RID: 4219 RVA: 0x000FF63C File Offset: 0x000FD83C
+		
+		
 		public bool EnableCheck
 		{
 			get
@@ -46,13 +46,13 @@ namespace GameServer.Logic.ProtoCheck
 			}
 		}
 
-		// Token: 0x0600107C RID: 4220 RVA: 0x000FF654 File Offset: 0x000FD854
+		
 		public void SetEnableCheck(bool bOpen)
 		{
 			this._enableCheck = bOpen;
 		}
 
-		// Token: 0x0600107D RID: 4221 RVA: 0x000FF660 File Offset: 0x000FD860
+		
 		public bool Check<T>(byte[] data, int start, int count, Socket socket) where T : class, IProtoBuffData, new()
 		{
 			bool bRet = this.CheckImpl<T>(data, start, count, socket);
@@ -85,7 +85,7 @@ namespace GameServer.Logic.ProtoCheck
 			return bRet;
 		}
 
-		// Token: 0x0600107E RID: 4222 RVA: 0x000FF790 File Offset: 0x000FD990
+		
 		private bool CheckImpl<T>(byte[] data, int start, int count, Socket socket) where T : class, IProtoBuffData, new()
 		{
 			bool result;
@@ -147,10 +147,10 @@ namespace GameServer.Logic.ProtoCheck
 			return result;
 		}
 
-		// Token: 0x04001902 RID: 6402
+		
 		private Dictionary<string, ICheckerBase> checkerDic = new Dictionary<string, ICheckerBase>();
 
-		// Token: 0x04001903 RID: 6403
+		
 		private bool _enableCheck = false;
 	}
 }

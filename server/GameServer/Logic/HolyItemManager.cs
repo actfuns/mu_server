@@ -6,16 +6,16 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200047D RID: 1149
+	
 	internal class HolyItemManager : ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x060014DD RID: 5341 RVA: 0x00146360 File Offset: 0x00144560
+		
 		public static HolyItemManager getInstance()
 		{
 			return HolyItemManager.instance;
 		}
 
-		// Token: 0x060014DE RID: 5342 RVA: 0x00146378 File Offset: 0x00144578
+		
 		public void Initialize()
 		{
 			SystemXmlItems xml = new SystemXmlItems();
@@ -77,13 +77,13 @@ namespace GameServer.Logic
 			TCPCmdDispatcher.getInstance().registerProcessorEx(10206, 2, 2, HolyItemManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
 		}
 
-		// Token: 0x060014DF RID: 5343 RVA: 0x001466E8 File Offset: 0x001448E8
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x060014E0 RID: 5344 RVA: 0x001466FC File Offset: 0x001448FC
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			if (nID == 10206)
@@ -107,7 +107,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060014E1 RID: 5345 RVA: 0x001467A0 File Offset: 0x001449A0
+		
 		private EHolyResult HolyItem_Suit_Up(GameClient client, sbyte sShengWu_slot, sbyte sBuJian_slot)
 		{
 			EHolyResult result;
@@ -276,7 +276,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060014E2 RID: 5346 RVA: 0x00146DFC File Offset: 0x00144FFC
+		
 		public void GetHolyItemPart(GameClient client, sbyte sShengWu_slot, sbyte sBuJian_slot, int nNum)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot7))
@@ -303,7 +303,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060014E3 RID: 5347 RVA: 0x00146F30 File Offset: 0x00145130
+		
 		public void PlayGameAfterSend(GameClient client)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot7))
@@ -343,7 +343,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060014E4 RID: 5348 RVA: 0x00147054 File Offset: 0x00145254
+		
 		public void HolyItemSendToClient(GameClient client, sbyte sShenWu_slot, sbyte sBuJian_slot)
 		{
 			Dictionary<sbyte, HolyItemData> holyitemdata = client.ClientData.MyHolyItemDataDic;
@@ -368,7 +368,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060014E5 RID: 5349 RVA: 0x00147100 File Offset: 0x00145300
+		
 		public void UpdateAllHolyItemAttr(GameClient client)
 		{
 			for (sbyte i = 1; i <= HolyItemManager.MAX_HOLY_NUM; i += 1)
@@ -381,7 +381,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060014E6 RID: 5350 RVA: 0x00147158 File Offset: 0x00145358
+		
 		public void UpdateHolyItemBuJianAttr(GameClient client, sbyte sShenWu_slot, sbyte sBuJian_slot)
 		{
 			Dictionary<sbyte, HolyItemData> holyitemdata = client.ClientData.MyHolyItemDataDic;
@@ -407,7 +407,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060014E7 RID: 5351 RVA: 0x00147234 File Offset: 0x00145434
+		
 		public void UpdataHolyItemExAttr(GameClient client, sbyte sShenWu_slot)
 		{
 			Dictionary<sbyte, HolyItemData> holyitemdata = client.ClientData.MyHolyItemDataDic;
@@ -447,7 +447,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060014E8 RID: 5352 RVA: 0x0014735C File Offset: 0x0014555C
+		
 		private void UpdateHolyItemData2DB(GameClient client, sbyte sShengWu_slot, sbyte sBuJian_slot, HolyItemPartData partdata = null)
 		{
 			Dictionary<sbyte, HolyItemData> holyitemdata = client.ClientData.MyHolyItemDataDic;
@@ -477,7 +477,7 @@ namespace GameServer.Logic
 			TCPProcessCmdResults retcmd = Global.RequestToDBServer(Global._TCPManager.tcpClientPool, Global._TCPManager.TcpOutPacketPool, 10206, sCmd, out dbFields, client.ServerId);
 		}
 
-		// Token: 0x060014E9 RID: 5353 RVA: 0x00147458 File Offset: 0x00145658
+		
 		private void ProcessAction(GameClient client, MagicActionIDs id, double[] actionParams, int nPropsSystemTypes, sbyte sShengWu_slot, sbyte sBuJian_slot)
 		{
 			switch (id)
@@ -632,7 +632,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060014EA RID: 5354 RVA: 0x00147788 File Offset: 0x00145988
+		
 		public void GMSetHolyItemLvup(GameClient client, sbyte sShengWu_slot, sbyte sBuJian_slot, sbyte sLv)
 		{
 			Dictionary<sbyte, HolyItemData> holyitemdata = client.ClientData.MyHolyItemDataDic;
@@ -657,7 +657,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060014EC RID: 5356 RVA: 0x00147868 File Offset: 0x00145A68
+		
 		// Note: this type is marked as 'beforefieldinit'.
 		static HolyItemManager()
 		{
@@ -701,25 +701,25 @@ namespace GameServer.Logic
 			HolyItemManager.instance = new HolyItemManager();
 		}
 
-		// Token: 0x04001E38 RID: 7736
+		
 		public static sbyte MAX_HOLY_PART_LEVEL = 9;
 
-		// Token: 0x04001E39 RID: 7737
+		
 		public static readonly sbyte MAX_HOLY_PART_NUM = 6;
 
-		// Token: 0x04001E3A RID: 7738
+		
 		public static readonly sbyte MAX_HOLY_NUM = 4;
 
-		// Token: 0x04001E3B RID: 7739
+		
 		private Dictionary<int, HolyPartInfo> _partDataDic = new Dictionary<int, HolyPartInfo>();
 
-		// Token: 0x04001E3C RID: 7740
+		
 		private Dictionary<int, HolyInfo> _holyDataDic = new Dictionary<int, HolyInfo>();
 
-		// Token: 0x04001E3D RID: 7741
+		
 		public static readonly string[,] SliceNameSet;
 
-		// Token: 0x04001E3E RID: 7742
+		
 		private static HolyItemManager instance;
 	}
 }

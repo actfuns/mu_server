@@ -12,10 +12,10 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000517 RID: 1303
+	
 	internal class LingYuManager
 	{
-		// Token: 0x06001859 RID: 6233 RVA: 0x0017B704 File Offset: 0x00179904
+		
 		public static void LoadConfig()
 		{
 			GeneralCachingXmlMgr.RemoveCachingXml(Global.GameResPath(LingYuManager.LingYuTypeFile));
@@ -234,7 +234,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600185A RID: 6234 RVA: 0x0017C1F4 File Offset: 0x0017A3F4
+		
 		public static string Error2Str(LingYuError lyError)
 		{
 			string result;
@@ -301,7 +301,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600185B RID: 6235 RVA: 0x0017C3D4 File Offset: 0x0017A5D4
+		
 		public static void UpdateLingYuProps(GameClient client)
 		{
 			if (null != client.ClientData.MyWingData)
@@ -460,7 +460,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600185C RID: 6236 RVA: 0x0017CA5C File Offset: 0x0017AC5C
+		
 		public static List<LingYuData> GetLingYuList(GameClient client)
 		{
 			List<LingYuData> dataList = new List<LingYuData>();
@@ -483,7 +483,7 @@ namespace GameServer.Logic
 			return dataList;
 		}
 
-		// Token: 0x0600185D RID: 6237 RVA: 0x0017CB48 File Offset: 0x0017AD48
+		
 		public static TCPProcessCmdResults ProcessGetLingYuList(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -527,7 +527,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x0600185E RID: 6238 RVA: 0x0017CCB0 File Offset: 0x0017AEB0
+		
 		public static LingYuError AdvanceLingYuLevel(GameClient client, int roleID, int type, int useZuanshiIfNoMaterial)
 		{
 			LingYuError result;
@@ -680,7 +680,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600185F RID: 6239 RVA: 0x0017D1E8 File Offset: 0x0017B3E8
+		
 		public static TCPProcessCmdResults ProcessAdvanceLingYuLevel(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -742,7 +742,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06001860 RID: 6240 RVA: 0x0017D448 File Offset: 0x0017B648
+		
 		public static LingYuError AdvanceLingYuSuit(GameClient client, int roleID, int type, int useZuanshiIfNoMaterial)
 		{
 			LingYuError result;
@@ -921,7 +921,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001861 RID: 6241 RVA: 0x0017DADC File Offset: 0x0017BCDC
+		
 		public static TCPProcessCmdResults ProcessAdvanceLingYuSuit(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -983,7 +983,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06001862 RID: 6242 RVA: 0x0017DD3C File Offset: 0x0017BF3C
+		
 		private static int UpdateLingYu2DB(int roleID, int type, int level, int suit, int serverId)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}", new object[]
@@ -1006,7 +1006,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001863 RID: 6243 RVA: 0x0017DDB4 File Offset: 0x0017BFB4
+		
 		public static void InitAsOpened(GameClient client)
 		{
 			Dictionary<int, LingYuType>.KeyCollection keys = LingYuManager.LingYuTypeDict.Keys;
@@ -1030,7 +1030,7 @@ namespace GameServer.Logic
 			LingYuManager.UpdateLingYuProps(client);
 		}
 
-		// Token: 0x06001864 RID: 6244 RVA: 0x0017DEC0 File Offset: 0x0017C0C0
+		
 		public static int GetTotalLevel(GameClient client)
 		{
 			int totalLev = 0;
@@ -1044,7 +1044,7 @@ namespace GameServer.Logic
 			return totalLev;
 		}
 
-		// Token: 0x06001865 RID: 6245 RVA: 0x0017DF78 File Offset: 0x0017C178
+		
 		public static bool IfLingYuPerfect(GameClient client)
 		{
 			bool result;
@@ -1074,7 +1074,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001866 RID: 6246 RVA: 0x0017E044 File Offset: 0x0017C244
+		
 		public static void SetLingYuMax_GM(GameClient client)
 		{
 			LingYuManager.InitAsOpened(client);
@@ -1116,34 +1116,34 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x040022A6 RID: 8870
+		
 		private const int DEFAULT_LINGYU_LEVEL = 1;
 
-		// Token: 0x040022A7 RID: 8871
+		
 		private static string LingYuTypeFile = "Config/LingyuType.xml";
 
-		// Token: 0x040022A8 RID: 8872
+		
 		private static string LingYuLevelUpFile = "Config/LingYuLevelUp.xml";
 
-		// Token: 0x040022A9 RID: 8873
+		
 		private static string LingYuSuitUpFile = "Config/LingYuSuitUp.xml";
 
-		// Token: 0x040022AA RID: 8874
+		
 		private static string LingYuCollectFile = "Config/LingYucollect.xml";
 
-		// Token: 0x040022AB RID: 8875
+		
 		private static int LingYuLevelLimit = 0;
 
-		// Token: 0x040022AC RID: 8876
+		
 		private static int LingYuSuitLimit = 0;
 
-		// Token: 0x040022AD RID: 8877
+		
 		private static Dictionary<int, LingYuType> LingYuTypeDict = new Dictionary<int, LingYuType>();
 
-		// Token: 0x040022AE RID: 8878
+		
 		private static List<LingYuCollect> LingYuCollectList = new List<LingYuCollect>();
 
-		// Token: 0x040022AF RID: 8879
+		
 		private static int[] SuitOfNotifyList = new int[]
 		{
 			3,

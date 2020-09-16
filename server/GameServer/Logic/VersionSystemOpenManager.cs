@@ -5,10 +5,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004BF RID: 1215
+	
 	public class VersionSystemOpenManager
 	{
-		// Token: 0x0600166D RID: 5741 RVA: 0x0015F16C File Offset: 0x0015D36C
+		
 		public void LoadVersionSystemOpenData()
 		{
 			lock (this._VersionSystemOpenMutex)
@@ -47,7 +47,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600166E RID: 5742 RVA: 0x0015F31C File Offset: 0x0015D51C
+		
 		public bool IsVersionSystemOpen(string key)
 		{
 			int nValue = 0;
@@ -62,7 +62,7 @@ namespace GameServer.Logic
 			return bRes;
 		}
 
-		// Token: 0x0600166F RID: 5743 RVA: 0x0015F39C File Offset: 0x0015D59C
+		
 		public bool IsVersionSystemOpen(int id)
 		{
 			bool bRes = false;
@@ -76,13 +76,13 @@ namespace GameServer.Logic
 			return bRes;
 		}
 
-		// Token: 0x04002043 RID: 8259
+		
 		private object _VersionSystemOpenMutex = new object();
 
-		// Token: 0x04002044 RID: 8260
+		
 		private Dictionary<string, int> VersionSystemOpenDict = new Dictionary<string, int>();
 
-		// Token: 0x04002045 RID: 8261
+		
 		private Dictionary<int, bool> SystemOpenDict = new Dictionary<int, bool>();
 	}
 }

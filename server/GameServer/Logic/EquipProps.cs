@@ -4,10 +4,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006B7 RID: 1719
+	
 	public class EquipProps
 	{
-		// Token: 0x06002054 RID: 8276 RVA: 0x001BD808 File Offset: 0x001BBA08
+		
 		public void ParseEquipProps(SystemXmlItem systemGoods, out EquipPropItem equipPropItem)
 		{
 			equipPropItem = null;
@@ -39,7 +39,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002055 RID: 8277 RVA: 0x001BD904 File Offset: 0x001BBB04
+		
 		public void ParseEquipProps(string props, out EquipPropItem equipPropItem)
 		{
 			equipPropItem = null;
@@ -71,7 +71,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002056 RID: 8278 RVA: 0x001BD9BC File Offset: 0x001BBBBC
+		
 		public string EquipPropsToString(double[] ExtProps)
 		{
 			string strProps = "";
@@ -99,7 +99,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002057 RID: 8279 RVA: 0x001BDA34 File Offset: 0x001BBC34
+		
 		public EquipPropItem FindEquipPropItem(int equipID)
 		{
 			EquipPropItem equipPropItem = null;
@@ -131,7 +131,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002058 RID: 8280 RVA: 0x001BDB24 File Offset: 0x001BBD24
+		
 		public void ClearCachedEquipPropItem()
 		{
 			lock (this._EquipPropsDict)
@@ -140,7 +140,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0400365D RID: 13917
+		
 		private Dictionary<int, EquipPropItem> _EquipPropsDict = new Dictionary<int, EquipPropItem>();
 	}
 }

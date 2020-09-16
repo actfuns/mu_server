@@ -4,10 +4,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000747 RID: 1863
+	
 	public class MallGoodsMgr
 	{
-		// Token: 0x06002EDD RID: 11997 RVA: 0x0029F890 File Offset: 0x0029DA90
+		
 		public static void InitMallGoodsPriceDict()
 		{
 			foreach (SystemXmlItem systemXmlItem in GameManager.systemMallMgr.SystemXmlItemDict.Values)
@@ -78,7 +78,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002EDE RID: 11998 RVA: 0x0029FB8C File Offset: 0x0029DD8C
+		
 		public static MallGoodsCacheItem GetMallGoodsCacheItem(int goodsID)
 		{
 			MallGoodsCacheItem mallGoodsCacheItem = null;
@@ -94,7 +94,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04003C7E RID: 15486
+		
 		private static Dictionary<int, MallGoodsCacheItem> MallGoodsCacheDict = new Dictionary<int, MallGoodsCacheItem>();
 	}
 }

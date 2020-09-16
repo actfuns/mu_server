@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007A6 RID: 1958
+	
 	public class UsingEquipManager
 	{
-		// Token: 0x0600333E RID: 13118 RVA: 0x002D746C File Offset: 0x002D566C
+		
 		public bool CanUsingEquip(GameClient client, GoodsData goodsData, int toBagIndex, bool hintClient = false)
 		{
 			bool result;
@@ -120,7 +120,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600333F RID: 13119 RVA: 0x002D793C File Offset: 0x002D5B3C
+		
 		public int _CanUsingChongWu(int nCategoriy)
 		{
 			List<GoodsData> listSpecial = null;
@@ -164,7 +164,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003340 RID: 13120 RVA: 0x002D7A28 File Offset: 0x002D5C28
+		
 		public int _CanUsingEquip(GameClient client, GoodsData goodsData, int toBagIndex, SystemXmlItem systemGoods = null)
 		{
 			if (null == systemGoods)
@@ -286,7 +286,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003341 RID: 13121 RVA: 0x002D7D9C File Offset: 0x002D5F9C
+		
 		public int EquipFirstPropCondition(GameClient client, SystemXmlItem systemGoods = null)
 		{
 			int nNeedStrength = systemGoods.GetIntValue("Strength", -1);
@@ -317,7 +317,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003342 RID: 13122 RVA: 0x002D7E74 File Offset: 0x002D6074
+		
 		public void RefreshEquip(GoodsData goodsData)
 		{
 			if (null != goodsData)
@@ -398,7 +398,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003343 RID: 13123 RVA: 0x002D81C8 File Offset: 0x002D63C8
+		
 		public void RefreshEquips(GameClient client)
 		{
 			if (client.ClientData.GoodsDataList != null && client.ClientData.GoodsDataList.Count > 0)
@@ -527,7 +527,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003344 RID: 13124 RVA: 0x002D88A0 File Offset: 0x002D6AA0
+		
 		public void AttackSomebody(GameClient client)
 		{
 			if (this.WeaponStrongList.Count > 0)
@@ -541,7 +541,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003345 RID: 13125 RVA: 0x002D8928 File Offset: 0x002D6B28
+		
 		public void InjuredSomebody(GameClient client)
 		{
 			if (this.EquipList.Count > 0)
@@ -555,7 +555,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003346 RID: 13126 RVA: 0x002D89B0 File Offset: 0x002D6BB0
+		
 		public void GMAddEquipStrong(GameClient client, int val)
 		{
 			if (this.EquipList.Count > 0)
@@ -576,7 +576,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003347 RID: 13127 RVA: 0x002D8AC0 File Offset: 0x002D6CC0
+		
 		public GoodsData GetGoodsDataByCategoriy(GameClient client, int categoriy)
 		{
 			List<GoodsData> list = null;
@@ -596,7 +596,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003348 RID: 13128 RVA: 0x002D8B0C File Offset: 0x002D6D0C
+		
 		public List<GoodsData> GetGoodsByCategoriyList(List<int> categoriyList)
 		{
 			List<GoodsData> result;
@@ -623,7 +623,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003349 RID: 13129 RVA: 0x002D8D48 File Offset: 0x002D6F48
+		
 		public List<GoodsData> GetGoodsByIDRange(List<Tuple<int, int>> idRange)
 		{
 			List<GoodsData> result;
@@ -659,19 +659,19 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600334A RID: 13130 RVA: 0x002D8E64 File Offset: 0x002D7064
+		
 		public List<GoodsData> GetWeaponStrongList()
 		{
 			return this.WeaponStrongList;
 		}
 
-		// Token: 0x0600334B RID: 13131 RVA: 0x002D8E7C File Offset: 0x002D707C
+		
 		public List<GoodsData> GetWeaponEquipList()
 		{
 			return this.WeaponEquipList;
 		}
 
-		// Token: 0x0600334C RID: 13132 RVA: 0x002D8E94 File Offset: 0x002D7094
+		
 		public int GetUsingEquipAllAppendPropLeva()
 		{
 			int nAllAppendPropLeva = 0;
@@ -696,7 +696,7 @@ namespace GameServer.Logic
 			return nAllAppendPropLeva;
 		}
 
-		// Token: 0x0600334D RID: 13133 RVA: 0x002D8FB0 File Offset: 0x002D71B0
+		
 		public int GetUsingEquipAllForge()
 		{
 			int nForgeLevel = 0;
@@ -721,7 +721,7 @@ namespace GameServer.Logic
 			return nForgeLevel;
 		}
 
-		// Token: 0x0600334E RID: 13134 RVA: 0x002D90CC File Offset: 0x002D72CC
+		
 		public List<int> GetUsingEquipForge()
 		{
 			List<int> result = new List<int>();
@@ -752,7 +752,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600334F RID: 13135 RVA: 0x002D9268 File Offset: 0x002D7468
+		
 		public List<int> GetUsingEquipAppend()
 		{
 			List<int> result = new List<int>();
@@ -783,7 +783,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003350 RID: 13136 RVA: 0x002D9404 File Offset: 0x002D7604
+		
 		public List<int> GetUsingEquipExcellencePropNum()
 		{
 			List<int> result = new List<int>();
@@ -814,7 +814,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003351 RID: 13137 RVA: 0x002D958C File Offset: 0x002D778C
+		
 		public List<int> GetUsingEquipSuit()
 		{
 			List<int> result = new List<int>();
@@ -845,7 +845,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003352 RID: 13138 RVA: 0x002D9720 File Offset: 0x002D7920
+		
 		public void RightEquipIndex(ref int index)
 		{
 			List<GoodsData> listGood = null;
@@ -890,7 +890,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003353 RID: 13139 RVA: 0x002D9858 File Offset: 0x002D7A58
+		
 		public void RightAnelIndex(ref int index, int Categoriy)
 		{
 			if (Categoriy == 6)
@@ -927,7 +927,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003354 RID: 13140 RVA: 0x002D9970 File Offset: 0x002D7B70
+		
 		public void RebornRightAnelIndex(ref int index, int Categoriy)
 		{
 			List<GoodsData> listGood = null;
@@ -961,7 +961,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003355 RID: 13141 RVA: 0x002D9A78 File Offset: 0x002D7C78
+		
 		public int GetUsingEquipArchangelWeaponSuit()
 		{
 			int nMaxSuitID = 0;
@@ -986,19 +986,19 @@ namespace GameServer.Logic
 			return nMaxSuitID;
 		}
 
-		// Token: 0x04003F16 RID: 16150
+		
 		private Dictionary<int, List<GoodsData>> EquipDict = new Dictionary<int, List<GoodsData>>();
 
-		// Token: 0x04003F17 RID: 16151
+		
 		private GoodsData WeaponEquip = null;
 
-		// Token: 0x04003F18 RID: 16152
+		
 		private List<GoodsData> WeaponStrongList = new List<GoodsData>();
 
-		// Token: 0x04003F19 RID: 16153
+		
 		private List<GoodsData> WeaponEquipList = new List<GoodsData>();
 
-		// Token: 0x04003F1A RID: 16154
+		
 		private List<GoodsData> EquipList = new List<GoodsData>();
 	}
 }

@@ -8,15 +8,15 @@ using Server.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000072 RID: 114
+	
 	public class ZhengBaPersistence
 	{
-		// Token: 0x060005AD RID: 1453 RVA: 0x0004C8B9 File Offset: 0x0004AAB9
+		
 		private ZhengBaPersistence()
 		{
 		}
 
-		// Token: 0x060005AE RID: 1454 RVA: 0x0004C8CC File Offset: 0x0004AACC
+		
 		public ZhengBaSyncData LoadZhengBaSyncData(DateTime now, int selectRoleIfNewCreate, long dayBeginTicks)
 		{
 			ZhengBaSyncData syncData = new ZhengBaSyncData();
@@ -45,7 +45,7 @@ namespace KF.Remoting
 			return syncData;
 		}
 
-		// Token: 0x060005AF RID: 1455 RVA: 0x0004C9A4 File Offset: 0x0004ABA4
+		
 		public bool SaveSupportLog(ZhengBaSupportLogData data)
 		{
 			bool result;
@@ -85,7 +85,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060005B0 RID: 1456 RVA: 0x0004CAB8 File Offset: 0x0004ACB8
+		
 		public bool SavePkLog(ZhengBaPkLogData log)
 		{
 			bool result;
@@ -129,7 +129,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060005B1 RID: 1457 RVA: 0x0004CC28 File Offset: 0x0004AE28
+		
 		public bool UpdateRole(int month, int rid, int grade, int state, int group)
 		{
 			try
@@ -155,7 +155,7 @@ namespace KF.Remoting
 			return true;
 		}
 
-		// Token: 0x060005B2 RID: 1458 RVA: 0x0004CCBC File Offset: 0x0004AEBC
+		
 		private bool CheckThisMonthInActivity(DateTime now, long dayBeginTicks)
 		{
 			bool result;
@@ -198,7 +198,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060005B3 RID: 1459 RVA: 0x0004CDA0 File Offset: 0x0004AFA0
+		
 		private bool CheckBuildZhengBaRank(int selectRoleIfNewCreate, int nowMonth)
 		{
 			bool bMonthFirst = false;
@@ -272,7 +272,7 @@ namespace KF.Remoting
 			return bMonthFirst;
 		}
 
-		// Token: 0x060005B4 RID: 1460 RVA: 0x0004D130 File Offset: 0x0004B330
+		
 		private List<ZhengBaRoleInfoData> LoadZhengBaRankData(int nowMonth)
 		{
 			List<ZhengBaRoleInfoData> roleList = new List<ZhengBaRoleInfoData>();
@@ -315,7 +315,7 @@ namespace KF.Remoting
 			return roleList;
 		}
 
-		// Token: 0x060005B5 RID: 1461 RVA: 0x0004D30C File Offset: 0x0004B50C
+		
 		private ZhengBaRoleInfoData LoadZhengBaKingData(ref int month)
 		{
 			try
@@ -360,7 +360,7 @@ namespace KF.Remoting
 			return null;
 		}
 
-		// Token: 0x060005B6 RID: 1462 RVA: 0x0004D530 File Offset: 0x0004B730
+		
 		private List<ZhengBaSupportAnalysisData> LoadZhengBaSupportData(int nowMonth)
 		{
 			List<ZhengBaSupportAnalysisData> supportList = new List<ZhengBaSupportAnalysisData>();
@@ -410,14 +410,14 @@ namespace KF.Remoting
 			return supportList;
 		}
 
-		// Token: 0x04000311 RID: 785
+		
 		public static readonly ZhengBaPersistence Instance = new ZhengBaPersistence();
 
-		// Token: 0x04000312 RID: 786
+		
 		public ZhengBaPersistence.FirstCreateDbRank MonthRankFirstCreate = null;
 
-		// Token: 0x02000073 RID: 115
-		// (Invoke) Token: 0x060005B9 RID: 1465
+		
+		
 		public delegate void FirstCreateDbRank(int selectRoleIfNewCreate);
 	}
 }

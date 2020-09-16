@@ -11,15 +11,15 @@ using Tmsk.Tools.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000020 RID: 32
+	
 	public class HuanYingSiYuanPersistence
 	{
-		// Token: 0x060000F2 RID: 242 RVA: 0x0000C6A0 File Offset: 0x0000A8A0
+		
 		private HuanYingSiYuanPersistence()
 		{
 		}
 
-		// Token: 0x060000F3 RID: 243 RVA: 0x0000C6F0 File Offset: 0x0000A8F0
+		
 		public void InitConfig()
 		{
 			try
@@ -41,7 +41,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060000F4 RID: 244 RVA: 0x0000C7F0 File Offset: 0x0000A9F0
+		
 		public void SaveCostTime(int ms)
 		{
 			try
@@ -56,7 +56,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060000F5 RID: 245 RVA: 0x0000C844 File Offset: 0x0000AA44
+		
 		private void ExecuteSqlNoQuery(string sqlCmd)
 		{
 			try
@@ -69,13 +69,13 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060000F6 RID: 246 RVA: 0x0000C880 File Offset: 0x0000AA80
+		
 		public int GetNextGameId()
 		{
 			return Interlocked.Add(ref this.CurrGameId, 1);
 		}
 
-		// Token: 0x060000F7 RID: 247 RVA: 0x0000C8A0 File Offset: 0x0000AAA0
+		
 		public void LogCreateHysyFuben(int gameId, int kfSrvId, int fubenSeqId, int roleNum)
 		{
 			string sql = string.Format("INSERT INTO t_hysy_0(`id`,`serverid`,`fubensid`,`createtime`,`rolenum`) VALUES({0},{1},{2},'{3}',{4});", new object[]
@@ -89,25 +89,25 @@ namespace KF.Remoting
 			this.ExecuteSqlNoQuery(sql);
 		}
 
-		// Token: 0x040000BB RID: 187
+		
 		public static readonly HuanYingSiYuanPersistence Instance = new HuanYingSiYuanPersistence();
 
-		// Token: 0x040000BC RID: 188
+		
 		public object Mutex = new object();
 
-		// Token: 0x040000BD RID: 189
+		
 		private int CurrGameId = Global.UninitGameId;
 
-		// Token: 0x040000BE RID: 190
+		
 		public bool Initialized = false;
 
-		// Token: 0x040000BF RID: 191
+		
 		public int SignUpWaitSecs1 = 30;
 
-		// Token: 0x040000C0 RID: 192
+		
 		public int SignUpWaitSecs2 = 60;
 
-		// Token: 0x040000C1 RID: 193
+		
 		private Queue<GameFuBenStateDbItem> GameFuBenStateDbItemQueue = new Queue<GameFuBenStateDbItem>();
 	}
 }

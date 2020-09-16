@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000778 RID: 1912
+	
 	public class PopupWinMgr
 	{
-		// Token: 0x06003108 RID: 12552 RVA: 0x002B70F4 File Offset: 0x002B52F4
+		
 		public static void LoadPopupWinItemList()
 		{
 			XElement xml = null;
@@ -39,7 +39,7 @@ namespace GameServer.Logic
 			PopupWinMgr.PopupWinItemList = popupWinItemList;
 		}
 
-		// Token: 0x06003109 RID: 12553 RVA: 0x002B71D8 File Offset: 0x002B53D8
+		
 		private static void ParseXmlItem(SystemXmlItem systemXmlItem, List<PopupWinItem> popupWinItemList)
 		{
 			int id = systemXmlItem.GetIntValue("ID", -1);
@@ -65,7 +65,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600310A RID: 12554 RVA: 0x002B727C File Offset: 0x002B547C
+		
 		private static PopupWinTimeItem[] ParsePopupWinTimeItems(string times)
 		{
 			string[] fields = times.Split(new char[]
@@ -106,7 +106,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600310B RID: 12555 RVA: 0x002B7360 File Offset: 0x002B5560
+		
 		private static bool CanPopupWin(PopupWinItem popupWinItem, PopupWinTimeItem lastPopupWinTimeItem, int hour, int minute)
 		{
 			bool result;
@@ -134,7 +134,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600310C RID: 12556 RVA: 0x002B73FC File Offset: 0x002B55FC
+		
 		public static void ProcessPopupWins()
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -173,7 +173,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600310D RID: 12557 RVA: 0x002B7564 File Offset: 0x002B5764
+		
 		public static void ProcessClientPopupWins(GameClient client)
 		{
 			List<PopupWinItem> popupWinItemList = PopupWinMgr.PopupWinItemList;
@@ -187,13 +187,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04003D8D RID: 15757
+		
 		private static List<PopupWinItem> PopupWinItemList = null;
 
-		// Token: 0x04003D8E RID: 15758
+		
 		private static int LastPopupWinDay = TimeUtil.NowDateTime().DayOfYear;
 
-		// Token: 0x04003D8F RID: 15759
+		
 		private static PopupWinTimeItem LastPopupWinTimeItem = new PopupWinTimeItem
 		{
 			Hour = TimeUtil.NowDateTime().Hour,

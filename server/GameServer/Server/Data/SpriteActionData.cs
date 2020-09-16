@@ -4,11 +4,11 @@ using Tmsk.Contract;
 
 namespace Server.Data
 {
-	// Token: 0x02000592 RID: 1426
+	
 	[ProtoContract]
 	public class SpriteActionData : IProtoBuffData
 	{
-		// Token: 0x06001A17 RID: 6679 RVA: 0x001928E4 File Offset: 0x00190AE4
+		
 		public int fromBytes(byte[] data, int offset, int count)
 		{
 			int pos = offset;
@@ -61,7 +61,7 @@ namespace Server.Data
 			return pos;
 		}
 
-		// Token: 0x06001A18 RID: 6680 RVA: 0x00192A58 File Offset: 0x00190C58
+		
 		public byte[] toBytes()
 		{
 			int total = 0;
@@ -94,51 +94,51 @@ namespace Server.Data
 			return data;
 		}
 
-		// Token: 0x04002823 RID: 10275
+		
 		[ProtoMember(1)]
 		public int roleID = 0;
 
-		// Token: 0x04002824 RID: 10276
+		
 		[ProtoMember(2)]
 		public int mapCode = 0;
 
-		// Token: 0x04002825 RID: 10277
+		
 		[ProtoMember(3)]
 		public int direction = 0;
 
-		// Token: 0x04002826 RID: 10278
+		
 		[ProtoMember(4)]
 		public int action = 0;
 
-		// Token: 0x04002827 RID: 10279
+		
 		[ProtoMember(5)]
 		public int toX = 0;
 
-		// Token: 0x04002828 RID: 10280
+		
 		[ProtoMember(6)]
 		public int toY = 0;
 
-		// Token: 0x04002829 RID: 10281
+		
 		[ProtoMember(7)]
 		public int targetX = 0;
 
-		// Token: 0x0400282A RID: 10282
+		
 		[ProtoMember(8)]
 		public int targetY = 0;
 
-		// Token: 0x0400282B RID: 10283
+		
 		[ProtoMember(9)]
 		public int yAngle = 0;
 
-		// Token: 0x0400282C RID: 10284
+		
 		[ProtoMember(10)]
 		public int moveToX = 0;
 
-		// Token: 0x0400282D RID: 10285
+		
 		[ProtoMember(11)]
 		public int moveToY = 0;
 
-		// Token: 0x0400282E RID: 10286
+		
 		[ProtoMember(12)]
 		public long clientTicks;
 	}

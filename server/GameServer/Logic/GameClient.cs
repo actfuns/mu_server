@@ -16,10 +16,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-    // Token: 0x020006C6 RID: 1734
+    
     public class GameClient : IObject
     {
-        // Token: 0x060020F8 RID: 8440 RVA: 0x001C3EF0 File Offset: 0x001C20F0
+        
         public GameClient()
         {
             int[] allyTip = new int[2];
@@ -61,24 +61,24 @@ namespace GameServer.Logic
             this.MyBufferExtManager = new BufferExtManager();
         }
 
-        // Token: 0x1700022F RID: 559
-        // (get) Token: 0x060020F9 RID: 8441 RVA: 0x001C40B0 File Offset: 0x001C22B0
-        // (set) Token: 0x060020FA RID: 8442 RVA: 0x001C40C7 File Offset: 0x001C22C7
+        
+        
+        
         public TMSKSocket ClientSocket { get; set; }
 
-        // Token: 0x17000230 RID: 560
-        // (get) Token: 0x060020FB RID: 8443 RVA: 0x001C40D0 File Offset: 0x001C22D0
-        // (set) Token: 0x060020FC RID: 8444 RVA: 0x001C40E7 File Offset: 0x001C22E7
+        
+        
+        
         public string strUserID { get; set; }
 
-        // Token: 0x17000231 RID: 561
-        // (get) Token: 0x060020FD RID: 8445 RVA: 0x001C40F0 File Offset: 0x001C22F0
-        // (set) Token: 0x060020FE RID: 8446 RVA: 0x001C4107 File Offset: 0x001C2307
+        
+        
+        
         public string deviceID { get; set; }
 
-        // Token: 0x17000232 RID: 562
-        // (get) Token: 0x060020FF RID: 8447 RVA: 0x001C4110 File Offset: 0x001C2310
-        // (set) Token: 0x06002100 RID: 8448 RVA: 0x001C4128 File Offset: 0x001C2328
+        
+        
+        
         public SafeClientData ClientData
         {
             get
@@ -99,8 +99,8 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x17000233 RID: 563
-        // (get) Token: 0x06002101 RID: 8449 RVA: 0x001C41B0 File Offset: 0x001C23B0
+        
+        
         public UsingEquipManager UsingEquipMgr
         {
             get
@@ -109,7 +109,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002102 RID: 8450 RVA: 0x001C41C8 File Offset: 0x001C23C8
+        
         public bool ClientLogOutOnce()
         {
             bool result;
@@ -128,8 +128,8 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x17000234 RID: 564
-        // (get) Token: 0x06002103 RID: 8451 RVA: 0x001C4220 File Offset: 0x001C2420
+        
+        
         public int ServerId
         {
             get
@@ -138,8 +138,8 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x17000235 RID: 565
-        // (get) Token: 0x06002104 RID: 8452 RVA: 0x001C4240 File Offset: 0x001C2440
+        
+        
         public ObjectTypes ObjectType
         {
             get
@@ -148,9 +148,9 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x17000236 RID: 566
-        // (get) Token: 0x06002105 RID: 8453 RVA: 0x001C4254 File Offset: 0x001C2454
-        // (set) Token: 0x06002106 RID: 8454 RVA: 0x001C426C File Offset: 0x001C246C
+        
+        
+        
         public SpriteBuffer RoleBuffer
         {
             get
@@ -163,9 +163,9 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x17000237 RID: 567
-        // (get) Token: 0x06002107 RID: 8455 RVA: 0x001C4278 File Offset: 0x001C2478
-        // (set) Token: 0x06002108 RID: 8456 RVA: 0x001C4290 File Offset: 0x001C2490
+        
+        
+        
         public SpriteOnceBuffer RoleOnceBuffer
         {
             get
@@ -178,9 +178,9 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x17000238 RID: 568
-        // (get) Token: 0x06002109 RID: 8457 RVA: 0x001C429C File Offset: 0x001C249C
-        // (set) Token: 0x0600210A RID: 8458 RVA: 0x001C42B4 File Offset: 0x001C24B4
+        
+        
+        
         public SpriteMagicHelper RoleMagicHelper
         {
             get
@@ -193,9 +193,9 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x17000239 RID: 569
-        // (get) Token: 0x0600210B RID: 8459 RVA: 0x001C42C0 File Offset: 0x001C24C0
-        // (set) Token: 0x0600210C RID: 8460 RVA: 0x001C42D8 File Offset: 0x001C24D8
+        
+        
+        
         public SpriteMultipliedBuffer RoleMultipliedBuffer
         {
             get
@@ -208,9 +208,9 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x1700023A RID: 570
-        // (get) Token: 0x0600210D RID: 8461 RVA: 0x001C42E4 File Offset: 0x001C24E4
-        // (set) Token: 0x0600210E RID: 8462 RVA: 0x001C42FC File Offset: 0x001C24FC
+        
+        
+        
         public SpriteMultipliedBuffer AllThingsMultipliedBuffer
         {
             get
@@ -223,15 +223,15 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600210F RID: 8463 RVA: 0x001C4308 File Offset: 0x001C2508
+        
         public int GetObjectID()
         {
             return this.ClientData.RoleID;
         }
 
-        // Token: 0x1700023B RID: 571
-        // (get) Token: 0x06002110 RID: 8464 RVA: 0x001C4328 File Offset: 0x001C2528
-        // (set) Token: 0x06002111 RID: 8465 RVA: 0x001C4340 File Offset: 0x001C2540
+        
+        
+        
         public long LastLifeMagicTick
         {
             get
@@ -244,9 +244,9 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x1700023C RID: 572
-        // (get) Token: 0x06002112 RID: 8466 RVA: 0x001C434C File Offset: 0x001C254C
-        // (set) Token: 0x06002113 RID: 8467 RVA: 0x001C4364 File Offset: 0x001C2564
+        
+        
+        
         public long LastCheckGMailTick
         {
             get
@@ -259,9 +259,9 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x1700023D RID: 573
-        // (get) Token: 0x06002114 RID: 8468 RVA: 0x001C4370 File Offset: 0x001C2570
-        // (set) Token: 0x06002115 RID: 8469 RVA: 0x001C4410 File Offset: 0x001C2610
+        
+        
+        
         public Point CurrentGrid
         {
             get
@@ -287,9 +287,9 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x1700023E RID: 574
-        // (get) Token: 0x06002116 RID: 8470 RVA: 0x001C4488 File Offset: 0x001C2688
-        // (set) Token: 0x06002117 RID: 8471 RVA: 0x001C44B7 File Offset: 0x001C26B7
+        
+        
+        
         public Point CurrentPos
         {
             get
@@ -303,8 +303,8 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x1700023F RID: 575
-        // (get) Token: 0x06002118 RID: 8472 RVA: 0x001C44E4 File Offset: 0x001C26E4
+        
+        
         public int CurrentMapCode
         {
             get
@@ -313,8 +313,8 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x17000240 RID: 576
-        // (get) Token: 0x06002119 RID: 8473 RVA: 0x001C4504 File Offset: 0x001C2704
+        
+        
         public int CurrentCopyMapID
         {
             get
@@ -323,9 +323,9 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x17000241 RID: 577
-        // (get) Token: 0x0600211A RID: 8474 RVA: 0x001C4524 File Offset: 0x001C2724
-        // (set) Token: 0x0600211B RID: 8475 RVA: 0x001C4541 File Offset: 0x001C2741
+        
+        
+        
         public Dircetions CurrentDir
         {
             get
@@ -338,9 +338,9 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x17000242 RID: 578
-        // (get) Token: 0x0600211C RID: 8476 RVA: 0x001C4554 File Offset: 0x001C2754
-        // (set) Token: 0x0600211D RID: 8477 RVA: 0x001C4571 File Offset: 0x001C2771
+        
+        
+        
         public List<int> PassiveEffectList
         {
             get
@@ -353,7 +353,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600211E RID: 8478 RVA: 0x001C4580 File Offset: 0x001C2780
+        
         public void ClearChangeGrid()
         {
             if (this._OldAreaLuaIDList != null)
@@ -362,7 +362,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600211F RID: 8479 RVA: 0x001C45A8 File Offset: 0x001C27A8
+        
         public void ChangeGrid()
         {
             if (this._ClientData.MapCode >= 0)
@@ -390,7 +390,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002120 RID: 8480 RVA: 0x001C4698 File Offset: 0x001C2898
+        
         public void AutoGetThingsOnAutoFight(long ticks)
         {
             if (ticks - this.lastAutoGetthingsTicks >= 20000L)
@@ -407,7 +407,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002121 RID: 8481 RVA: 0x001C4728 File Offset: 0x001C2928
+        
         private void ProcessAreaLua(GameMap gameMap, Point p)
         {
             if (gameMap != null)
@@ -461,7 +461,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002122 RID: 8482 RVA: 0x001C48CC File Offset: 0x001C2ACC
+        
         public void RunAreaLuaFile(GameMap gameMap, int areaLuaID, string functionName)
         {
             GAreaLua areaLua = gameMap.GetAreaLuaByID(areaLuaID);
@@ -475,7 +475,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002123 RID: 8483 RVA: 0x001C4988 File Offset: 0x001C2B88
+        
         public void RunAreaLuaFile(GameMap gameMap, RunAreaLuaType runAreaLuaType, List<int> areaLuaIDList, string functionName, int taskId = 0)
         {
             List<GAreaLua> GAreaLuaList = null;
@@ -644,7 +644,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002124 RID: 8484 RVA: 0x001C5174 File Offset: 0x001C3374
+        
         public void ClearVisibleObjects(bool recalcMonsterVisibleNum)
         {
             lock (this.ClientData.VisibleGrid9Objects)
@@ -669,7 +669,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002125 RID: 8485 RVA: 0x001C5274 File Offset: 0x001C3474
+        
         public void SendCmdAfterStartPlayGame<T>(int cmdId, T cmdData)
         {
             lock (this.DelayStartPlayGameMsgQueue)
@@ -679,7 +679,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002126 RID: 8486 RVA: 0x001C52D4 File Offset: 0x001C34D4
+        
         public void SendCmdAfterStartPlayGame(int cmdId, string cmdData)
         {
             lock (this.DelayStartPlayGameMsgQueue)
@@ -689,7 +689,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002127 RID: 8487 RVA: 0x001C5338 File Offset: 0x001C3538
+        
         public void SendCmdAfterStartPlayGame(int cmdId, byte[] cmdData)
         {
             lock (this.DelayStartPlayGameMsgQueue)
@@ -699,7 +699,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002128 RID: 8488 RVA: 0x001C539C File Offset: 0x001C359C
+        
         public void SendCmdOnStartPlayGame()
         {
             lock (this.DelayStartPlayGameMsgQueue)
@@ -712,7 +712,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002129 RID: 8489 RVA: 0x001C541C File Offset: 0x001C361C
+        
         public void sendCmd(int cmdId, string cmdData, bool waitEnterScene = false)
         {
             if (waitEnterScene && this.ClientData.FirstPlayStart)
@@ -725,7 +725,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600212A RID: 8490 RVA: 0x001C5478 File Offset: 0x001C3678
+        
         public void sendCmd(int cmdId, byte[] cmdData, bool waitEnterScene = false)
         {
             if (waitEnterScene && this.ClientData.FirstPlayStart)
@@ -738,7 +738,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600212B RID: 8491 RVA: 0x001C54D4 File Offset: 0x001C36D4
+        
         public void sendOthersCmd(int cmdId, string cmdData)
         {
             List<object> objsList = Global.GetAll9Clients(this);
@@ -748,7 +748,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600212C RID: 8492 RVA: 0x001C551C File Offset: 0x001C371C
+        
         public void sendOthersCmd(int cmdId, byte[] cmdData)
         {
             List<object> objsList = Global.GetAll9Clients(this);
@@ -758,7 +758,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600212D RID: 8493 RVA: 0x001C5564 File Offset: 0x001C3764
+        
         public void sendCmd<T>(int cmdId, T cmdData, bool waitEnterScene = false)
         {
             if (waitEnterScene && this.ClientData.FirstPlayStart)
@@ -771,19 +771,19 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600212E RID: 8494 RVA: 0x001C55BD File Offset: 0x001C37BD
+        
         public void sendCmd(TCPOutPacket cmdData, bool pushBack = true)
         {
             TCPManager.getInstance().MySocketListener.SendData(this.ClientSocket, cmdData, pushBack);
         }
 
-        // Token: 0x0600212F RID: 8495 RVA: 0x001C55D8 File Offset: 0x001C37D8
+        
         public void PushVersion(string MainExeVer = "", string ResVer = "")
         {
             this.sendCmd(673, string.Format("{0}:{1}:{2}", this.CodeRevision, MainExeVer, ResVer), false);
         }
 
-        // Token: 0x06002130 RID: 8496 RVA: 0x001C5600 File Offset: 0x001C3800
+        
         public void ExecuteEnterMap(int mapCode)
         {
             if (this._ClientData.MapCode >= 0 && this._ClientData.CopyMapID >= 0)
@@ -817,7 +817,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002131 RID: 8497 RVA: 0x001C579C File Offset: 0x001C399C
+        
         public T GetExtComponent<T>(ExtComponentTypes type) where T : class
         {
             T result;
@@ -832,166 +832,166 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x040036AD RID: 13997
+        
         public string deviceModel;
 
-        // Token: 0x040036AE RID: 13998
+        
         public string deviceOSVersion;
 
-        // Token: 0x040036AF RID: 13999
+        
         public string IsReconnect;
 
-        // Token: 0x040036B0 RID: 14000
+        
         public string deviceIdfa;
 
-        // Token: 0x040036B1 RID: 14001
+        
         public bool IsYueYu = false;
 
-        // Token: 0x040036B2 RID: 14002
+        
         public string strUserName;
 
-        // Token: 0x040036B3 RID: 14003
+        
         private SafeClientData _ClientData = null;
 
-        // Token: 0x040036B4 RID: 14004
+        
         private UsingEquipManager _UsingEquipMgr = new UsingEquipManager();
 
-        // Token: 0x040036B5 RID: 14005
+        
         public IconStateManager _IconStateMgr = new IconStateManager();
 
-        // Token: 0x040036B6 RID: 14006
+        
         public bool LogoutState = false;
 
-        // Token: 0x040036B7 RID: 14007
+        
         private bool _ClientLogOut = false;
 
-        // Token: 0x040036B8 RID: 14008
+        
         public long KuaFuSwitchServerTicks;
 
-        // Token: 0x040036B9 RID: 14009
+        
         public int[] AllyTip;
 
-        // Token: 0x040036BA RID: 14010
+        
         public int CodeRevision;
 
-        // Token: 0x040036BB RID: 14011
+        
         public int MainExeVer;
 
-        // Token: 0x040036BC RID: 14012
+        
         public int ResVer;
 
-        // Token: 0x040036BD RID: 14013
+        
         public object KuaFuContextData;
 
-        // Token: 0x040036BE RID: 14014
+        
         public object SceneContextData;
 
-        // Token: 0x040036BF RID: 14015
+        
         public object SceneContextData2;
 
-        // Token: 0x040036C0 RID: 14016
+        
         public int SceneType;
 
-        // Token: 0x040036C1 RID: 14017
+        
         public object SceneObject;
 
-        // Token: 0x040036C2 RID: 14018
+        
         public object SceneInfoObject;
 
-        // Token: 0x040036C3 RID: 14019
+        
         public long SceneGameId;
 
-        // Token: 0x040036C4 RID: 14020
+        
         public long SceneAge;
 
-        // Token: 0x040036C5 RID: 14021
+        
         public CheckCheat CheckCheatData;
 
-        // Token: 0x040036C6 RID: 14022
+        
         public InterestingData InterestingData;
 
-        // Token: 0x040036C7 RID: 14023
+        
         private SpriteBuffer _RoleBuffer;
 
-        // Token: 0x040036C8 RID: 14024
+        
         private SpriteOnceBuffer _RoleOnceBuffer;
 
-        // Token: 0x040036C9 RID: 14025
+        
         private SpriteMagicHelper _RoleMagicHelper;
 
-        // Token: 0x040036CA RID: 14026
+        
         private SpriteMultipliedBuffer _RoleMultipliedBuffer;
 
-        // Token: 0x040036CB RID: 14027
+        
         private SpriteMultipliedBuffer _AllThingsMultipliedBuffer;
 
-        // Token: 0x040036CC RID: 14028
+        
         private long _LastLifeMagicTick;
 
-        // Token: 0x040036CD RID: 14029
+        
         private long _LastCheckGMailTick;
 
-        // Token: 0x040036CE RID: 14030
+        
         private Point _OldGridPoint;
 
-        // Token: 0x040036CF RID: 14031
+        
         private List<int> _OldAreaLuaIDList;
 
-        // Token: 0x040036D0 RID: 14032
+        
         public bool InSafeRegion;
 
-        // Token: 0x040036D1 RID: 14033
+        
         private long lastAutoGetthingsTicks;
 
-        // Token: 0x040036D2 RID: 14034
+        
         public int BackgroundHandling;
 
-        // Token: 0x040036D3 RID: 14035
+        
         public object Current9GridMutex;
 
-        // Token: 0x040036D4 RID: 14036
+        
         public long[] LastRefresh9GridObjectsTicks;
 
-        // Token: 0x040036D5 RID: 14037
+        
         public long CurrentSlotTicks;
 
-        // Token: 0x040036D6 RID: 14038
+        
         public int ClientEffectHideFlag1;
 
-        // Token: 0x040036D7 RID: 14039
+        
         private Queue<TCPOutPacket> DelayStartPlayGameMsgQueue;
 
-        // Token: 0x040036D8 RID: 14040
+        
         public long SumDamageForCopyTeam;
 
-        // Token: 0x040036D9 RID: 14041
+        
         public BufferPropsModule bufferPropsManager;
 
-        // Token: 0x040036DA RID: 14042
+        
         public PassiveSkillModule passiveSkillModule;
 
-        // Token: 0x040036DB RID: 14043
+        
         public MagicsManyTimeDmageQueue MyMagicsManyTimeDmageQueue;
 
-        // Token: 0x040036DC RID: 14044
+        
         public PropsCacheModule propsCacheModule;
 
-        // Token: 0x040036DD RID: 14045
+        
         public DelayExecModule delayExecModule;
 
-        // Token: 0x040036DE RID: 14046
+        
         public BuffManager buffManager;
 
-        // Token: 0x040036DF RID: 14047
+        
         public TimedActionManager TimedActionMgr;
 
-        // Token: 0x040036E0 RID: 14048
+        
         public ExtData extData;
 
-        // Token: 0x040036E1 RID: 14049
+        
         public TimerEventObject OneSecsTimerEventObject;
 
-        // Token: 0x040036E2 RID: 14050
+        
         public BufferExtManager MyBufferExtManager;
     }
 }

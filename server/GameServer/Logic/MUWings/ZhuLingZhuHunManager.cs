@@ -11,15 +11,15 @@ using Server.Tools;
 
 namespace GameServer.Logic.MUWings
 {
-	// Token: 0x02000535 RID: 1333
+	
 	public class ZhuLingZhuHunManager
 	{
-		// Token: 0x0600195B RID: 6491 RVA: 0x0018B7FE File Offset: 0x001899FE
+		
 		private ZhuLingZhuHunManager()
 		{
 		}
 
-		// Token: 0x0600195C RID: 6492 RVA: 0x0018B80C File Offset: 0x00189A0C
+		
 		public static void LoadConfig()
 		{
 			string fileName = "Config/ZhuLingType.xml";
@@ -135,7 +135,7 @@ namespace GameServer.Logic.MUWings
 			}
 		}
 
-		// Token: 0x0600195D RID: 6493 RVA: 0x0018BD50 File Offset: 0x00189F50
+		
 		public static double GetZhuLingPct(GameClient client)
 		{
 			double pct = 0.0;
@@ -160,7 +160,7 @@ namespace GameServer.Logic.MUWings
 			return result;
 		}
 
-		// Token: 0x0600195E RID: 6494 RVA: 0x0018BDC0 File Offset: 0x00189FC0
+		
 		public static bool IfZhuLingPerfect(GameClient client)
 		{
 			bool result;
@@ -176,7 +176,7 @@ namespace GameServer.Logic.MUWings
 			return result;
 		}
 
-		// Token: 0x0600195F RID: 6495 RVA: 0x0018BE2C File Offset: 0x0018A02C
+		
 		public static void SetZhuLingMax_GM(GameClient client)
 		{
 			ZhuLingZhuHunLimit i = ZhuLingZhuHunManager.GetLimit(client.ClientData.MyWingData.WingID);
@@ -194,7 +194,7 @@ namespace GameServer.Logic.MUWings
 			}
 		}
 
-		// Token: 0x06001960 RID: 6496 RVA: 0x0018BF58 File Offset: 0x0018A158
+		
 		public static ZhuLingZhuHunError ReqZhuLing(GameClient client)
 		{
 			int oldLevel = client.ClientData.MyWingData.ZhuLingNum;
@@ -276,7 +276,7 @@ namespace GameServer.Logic.MUWings
 			return result;
 		}
 
-		// Token: 0x06001961 RID: 6497 RVA: 0x0018C274 File Offset: 0x0018A474
+		
 		public static TCPProcessCmdResults ProcessReqZhuLing(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -319,7 +319,7 @@ namespace GameServer.Logic.MUWings
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06001962 RID: 6498 RVA: 0x0018C3FC File Offset: 0x0018A5FC
+		
 		public static double GetZhuHunPct(GameClient client)
 		{
 			double pct = 0.0;
@@ -344,7 +344,7 @@ namespace GameServer.Logic.MUWings
 			return result;
 		}
 
-		// Token: 0x06001963 RID: 6499 RVA: 0x0018C46C File Offset: 0x0018A66C
+		
 		public static bool IfZhuHunPerfect(GameClient client)
 		{
 			bool result;
@@ -360,7 +360,7 @@ namespace GameServer.Logic.MUWings
 			return result;
 		}
 
-		// Token: 0x06001964 RID: 6500 RVA: 0x0018C4D8 File Offset: 0x0018A6D8
+		
 		public static void SetZhuHunMax_GM(GameClient client)
 		{
 			ZhuLingZhuHunLimit i = ZhuLingZhuHunManager.GetLimit(client.ClientData.MyWingData.WingID);
@@ -378,7 +378,7 @@ namespace GameServer.Logic.MUWings
 			}
 		}
 
-		// Token: 0x06001965 RID: 6501 RVA: 0x0018C604 File Offset: 0x0018A804
+		
 		public static ZhuLingZhuHunError ReqZhuHun(GameClient client)
 		{
 			int oldLevel = client.ClientData.MyWingData.ZhuHunNum;
@@ -460,7 +460,7 @@ namespace GameServer.Logic.MUWings
 			return result;
 		}
 
-		// Token: 0x06001966 RID: 6502 RVA: 0x0018C920 File Offset: 0x0018AB20
+		
 		public static TCPProcessCmdResults ProcessReqZhuHun(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -503,7 +503,7 @@ namespace GameServer.Logic.MUWings
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06001967 RID: 6503 RVA: 0x0018CAA8 File Offset: 0x0018ACA8
+		
 		public static void UpdateZhuLingZhuHunProps(GameClient client)
 		{
 			if (null != client.ClientData.MyWingData)
@@ -627,7 +627,7 @@ namespace GameServer.Logic.MUWings
 			}
 		}
 
-		// Token: 0x06001968 RID: 6504 RVA: 0x0018D18C File Offset: 0x0018B38C
+		
 		private static ZhuLingZhuHunEffect GetEffect(int Occupation)
 		{
 			foreach (ZhuLingZhuHunEffect e in ZhuLingZhuHunManager.Effect)
@@ -640,7 +640,7 @@ namespace GameServer.Logic.MUWings
 			return null;
 		}
 
-		// Token: 0x06001969 RID: 6505 RVA: 0x0018D1FC File Offset: 0x0018B3FC
+		
 		private static ZhuLingZhuHunLimit GetLimit(int suit)
 		{
 			foreach (ZhuLingZhuHunLimit i in ZhuLingZhuHunManager.Limit)
@@ -653,28 +653,28 @@ namespace GameServer.Logic.MUWings
 			return null;
 		}
 
-		// Token: 0x04002388 RID: 9096
+		
 		private static int ZhuLingCostGoodsID = 0;
 
-		// Token: 0x04002389 RID: 9097
+		
 		private static int ZhuLingCostGoodsNum = 0;
 
-		// Token: 0x0400238A RID: 9098
+		
 		private static int ZhuLingCostJinBi = 0;
 
-		// Token: 0x0400238B RID: 9099
+		
 		private static int ZhuHunCostGoodsID = 0;
 
-		// Token: 0x0400238C RID: 9100
+		
 		private static int ZhuHunCostGoodsNum = 0;
 
-		// Token: 0x0400238D RID: 9101
+		
 		private static int ZhuHunCostJinBi = 0;
 
-		// Token: 0x0400238E RID: 9102
+		
 		private static List<ZhuLingZhuHunLimit> Limit = new List<ZhuLingZhuHunLimit>();
 
-		// Token: 0x0400238F RID: 9103
+		
 		private static List<ZhuLingZhuHunEffect> Effect = new List<ZhuLingZhuHunEffect>();
 	}
 }

@@ -5,10 +5,10 @@ using Server.Tools;
 
 namespace GameDBServer.Tools
 {
-	// Token: 0x02000215 RID: 533
+	
 	public class CheckHelper
 	{
-		// Token: 0x06000C6E RID: 3182 RVA: 0x0009FF6C File Offset: 0x0009E16C
+		
 		public static bool CheckTCPCmdFields(int nID, byte[] data, int count, out string[] fields, int length)
 		{
 			string cmdData = null;
@@ -39,7 +39,7 @@ namespace GameDBServer.Tools
 			return result;
 		}
 
-		// Token: 0x06000C6F RID: 3183 RVA: 0x000A0010 File Offset: 0x0009E210
+		
 		public static bool CheckTCPCmdFields2(int nID, byte[] data, int count, out string[] fields, int length, char span = '|')
 		{
 			string cmdData = null;

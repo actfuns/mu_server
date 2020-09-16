@@ -293,7 +293,7 @@ namespace GameServer.Logic.ActivityNew
 		private static SpecPlatFuLiManager instance = new SpecPlatFuLiManager();
 
 		// Token: 0x02000052 RID: 82
-		// (Invoke) Token: 0x06000101 RID: 257
+		
 		public delegate string SpecHandler(GameClient client, string param);
 	}
 }

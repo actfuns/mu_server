@@ -15,7 +15,7 @@ namespace GameServer.Core.Executor
 		}
 
 		// Token: 0x17000013 RID: 19
-		// (get) Token: 0x0600040A RID: 1034 RVA: 0x0003E074 File Offset: 0x0003C274
+		
 		public ScheduleTask CurrentTask
 		{
 			get
@@ -25,7 +25,7 @@ namespace GameServer.Core.Executor
 		}
 
 		// Token: 0x17000014 RID: 20
-		// (get) Token: 0x0600040B RID: 1035 RVA: 0x0003E08C File Offset: 0x0003C28C
+		
 		public long StartTime
 		{
 			get
@@ -41,7 +41,7 @@ namespace GameServer.Core.Executor
 		}
 
 		// Token: 0x17000015 RID: 21
-		// (get) Token: 0x0600040D RID: 1037 RVA: 0x0003E0BC File Offset: 0x0003C2BC
+		
 		public long Periodic
 		{
 			get
@@ -63,7 +63,7 @@ namespace GameServer.Core.Executor
 		}
 
 		// Token: 0x17000016 RID: 22
-		// (get) Token: 0x06000410 RID: 1040 RVA: 0x0003E0F0 File Offset: 0x0003C2F0
+		
 		public int ExecuteCount
 		{
 			get

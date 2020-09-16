@@ -4,18 +4,18 @@ using Server.Tools;
 
 namespace Server.Protocol
 {
-	// Token: 0x02000023 RID: 35
+	
 	public class TCPOutPacket : IDisposable
 	{
-		// Token: 0x060000BD RID: 189 RVA: 0x00005CE8 File Offset: 0x00003EE8
+		
 		public byte[] GetPacketBytes()
 		{
 			return this.PacketBytes;
 		}
 
-		// Token: 0x17000011 RID: 17
-		// (get) Token: 0x060000BE RID: 190 RVA: 0x00005D00 File Offset: 0x00003F00
-		// (set) Token: 0x060000BF RID: 191 RVA: 0x00005D18 File Offset: 0x00003F18
+		
+		
+		
 		public ushort PacketCmdID
 		{
 			get
@@ -28,8 +28,8 @@ namespace Server.Protocol
 			}
 		}
 
-		// Token: 0x17000012 RID: 18
-		// (get) Token: 0x060000C0 RID: 192 RVA: 0x00005D24 File Offset: 0x00003F24
+		
+		
 		public int PacketDataSize
 		{
 			get
@@ -38,12 +38,12 @@ namespace Server.Protocol
 			}
 		}
 
-		// Token: 0x17000013 RID: 19
-		// (get) Token: 0x060000C1 RID: 193 RVA: 0x00005D40 File Offset: 0x00003F40
-		// (set) Token: 0x060000C2 RID: 194 RVA: 0x00005D57 File Offset: 0x00003F57
+		
+		
+		
 		public object Tag { get; set; }
 
-		// Token: 0x060000C3 RID: 195 RVA: 0x00005D60 File Offset: 0x00003F60
+		
 		public bool FinalWriteData(byte[] buffer, int offset, int count)
 		{
 			bool result;
@@ -69,7 +69,7 @@ namespace Server.Protocol
 			return result;
 		}
 
-		// Token: 0x060000C4 RID: 196 RVA: 0x00005E10 File Offset: 0x00004010
+		
 		private void Final()
 		{
 			int length = this._PacketDataSize + 2;
@@ -77,7 +77,7 @@ namespace Server.Protocol
 			DataHelper.CopyBytes(this.PacketBytes, 4, BitConverter.GetBytes(this._PacketCmdID), 0, 2);
 		}
 
-		// Token: 0x060000C5 RID: 197 RVA: 0x00005E56 File Offset: 0x00004056
+		
 		public void Reset()
 		{
 			this.PacketBytes = null;
@@ -85,13 +85,13 @@ namespace Server.Protocol
 			this._PacketDataSize = 0;
 		}
 
-		// Token: 0x060000C6 RID: 198 RVA: 0x00005E6F File Offset: 0x0000406F
+		
 		public void Dispose()
 		{
 			this.Tag = null;
 		}
 
-		// Token: 0x060000C7 RID: 199 RVA: 0x00005E7C File Offset: 0x0000407C
+		
 		public static TCPOutPacket MakeTCPOutPacket(TCPOutPacketPool pool, string data, int cmd)
 		{
 			TCPOutPacket tcpOutPacket = pool.Pop();
@@ -101,7 +101,7 @@ namespace Server.Protocol
 			return tcpOutPacket;
 		}
 
-		// Token: 0x060000C8 RID: 200 RVA: 0x00005EB8 File Offset: 0x000040B8
+		
 		public static TCPOutPacket MakeTCPOutPacket(TCPOutPacketPool pool, byte[] data, int offset, int length, int cmd)
 		{
 			TCPOutPacket tcpOutPacket = pool.Pop();
@@ -110,13 +110,13 @@ namespace Server.Protocol
 			return tcpOutPacket;
 		}
 
-		// Token: 0x04000059 RID: 89
+		
 		private byte[] PacketBytes = null;
 
-		// Token: 0x0400005A RID: 90
+		
 		private ushort _PacketCmdID = 0;
 
-		// Token: 0x0400005B RID: 91
+		
 		private int _PacketDataSize = 0;
 	}
 }

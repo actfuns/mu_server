@@ -4,10 +4,10 @@ using GameServer.Core.Executor;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007E6 RID: 2022
+	
 	public class UnregisterUserIDMgr
 	{
-		// Token: 0x06003936 RID: 14646 RVA: 0x00309BF4 File Offset: 0x00307DF4
+		
 		public static void AddUnRegisterUserID(string userID, int serverId)
 		{
 			lock (UnregisterUserIDMgr.UnRegisterUserIDsList)
@@ -21,7 +21,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003937 RID: 14647 RVA: 0x00309C68 File Offset: 0x00307E68
+		
 		public static void ProcessUnRegisterUserIDsQueue()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -43,7 +43,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04004328 RID: 17192
+		
 		private static List<DelayUnRegisterUserIDItem> UnRegisterUserIDsList = new List<DelayUnRegisterUserIDItem>();
 	}
 }

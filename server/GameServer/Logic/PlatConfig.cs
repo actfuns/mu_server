@@ -10,10 +10,10 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020003B1 RID: 945
+	
 	public class PlatConfig
 	{
-		// Token: 0x06001030 RID: 4144 RVA: 0x000FD7E4 File Offset: 0x000FB9E4
+		
 		public void LoadPlatConfig()
 		{
 			string filePath = Global.GameResPath(this.fileName);
@@ -36,7 +36,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001031 RID: 4145 RVA: 0x000FD8B4 File Offset: 0x000FBAB4
+		
 		public int ReloadPlatConfig()
 		{
 			Dictionary<string, string> normalDict = new Dictionary<string, string>();
@@ -78,7 +78,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06001032 RID: 4146 RVA: 0x000FDA74 File Offset: 0x000FBC74
+		
 		private void LoadNormalConfig(XElement xml, Dictionary<string, string> normalDict)
 		{
 			lock (normalDict)
@@ -158,7 +158,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001033 RID: 4147 RVA: 0x000FDFC0 File Offset: 0x000FC1C0
+		
 		public string GetGameConfigItemStr(string paramName, string defVal)
 		{
 			string retStr = GameManager.GameConfigMgr.GetGameConifgItem(paramName);
@@ -184,7 +184,7 @@ namespace GameServer.Logic
 			return (!string.IsNullOrEmpty(retStr)) ? retStr : defVal;
 		}
 
-		// Token: 0x06001034 RID: 4148 RVA: 0x000FE0B8 File Offset: 0x000FC2B8
+		
 		public int GetGameConfigItemInt(string paramName, int defVal)
 		{
 			string retStr = GameManager.GameConfigMgr.GetGameConifgItem(paramName);
@@ -223,7 +223,7 @@ namespace GameServer.Logic
 			return retInt;
 		}
 
-		// Token: 0x06001035 RID: 4149 RVA: 0x000FE1E8 File Offset: 0x000FC3E8
+		
 		private string GetNormalConfig(string paramName)
 		{
 			string paramValue = null;
@@ -237,7 +237,7 @@ namespace GameServer.Logic
 			return paramValue;
 		}
 
-		// Token: 0x06001036 RID: 4150 RVA: 0x000FE250 File Offset: 0x000FC450
+		
 		private string GetWaitingConfig(string paramName)
 		{
 			WaitingConfig waitingConfig = null;
@@ -266,7 +266,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06001037 RID: 4151 RVA: 0x000FE350 File Offset: 0x000FC550
+		
 		private string GetPlatTradeLevelLimitConfig(string paramName)
 		{
 			string str = null;
@@ -291,7 +291,7 @@ namespace GameServer.Logic
 			return str;
 		}
 
-		// Token: 0x06001038 RID: 4152 RVA: 0x000FE450 File Offset: 0x000FC650
+		
 		public TradeLimitConfig GetTradeLimitConfig()
 		{
 			if (null != this._PlatConfigTradeLimitConfigDict)
@@ -309,7 +309,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06001039 RID: 4153 RVA: 0x000FE4E8 File Offset: 0x000FC6E8
+		
 		public bool CanTrade(DateTime now, int realMoney, int level)
 		{
 			bool result;
@@ -348,7 +348,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600103A RID: 4154 RVA: 0x000FE5FC File Offset: 0x000FC7FC
+		
 		private string GetPlatChatLevelLimitConfig(string paramName)
 		{
 			string str = null;
@@ -398,7 +398,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600103B RID: 4155 RVA: 0x000FE77C File Offset: 0x000FC97C
+		
 		private void LoadWaitingConfig(XElement xml, Dictionary<int, WaitingConfig> waitingDict)
 		{
 			lock (waitingDict)
@@ -445,7 +445,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600103C RID: 4156 RVA: 0x000FE9D0 File Offset: 0x000FCBD0
+		
 		private void LoadTradeLevelLimitConfig(XElement xml, List<TradeLevelLimitConfig> tradeLevelLimitList)
 		{
 			lock (tradeLevelLimitList)
@@ -473,7 +473,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600103D RID: 4157 RVA: 0x000FEB00 File Offset: 0x000FCD00
+		
 		private Dictionary<string, TradeLimitConfig> LoadTradeLimitsConfig(XElement xml)
 		{
 			Dictionary<string, TradeLimitConfig> dict = new Dictionary<string, TradeLimitConfig>();
@@ -508,7 +508,7 @@ namespace GameServer.Logic
 			return dict;
 		}
 
-		// Token: 0x0600103E RID: 4158 RVA: 0x000FECB0 File Offset: 0x000FCEB0
+		
 		private ChatTypeIndexes GetChatKeyName(string name)
 		{
 			ChatTypeIndexes keyName = ChatTypeIndexes.Max;
@@ -535,7 +535,7 @@ namespace GameServer.Logic
 			return keyName;
 		}
 
-		// Token: 0x0600103F RID: 4159 RVA: 0x000FED94 File Offset: 0x000FCF94
+		
 		private void LoadChatLevelLimitConfig(XElement xml, Dictionary<ChatTypeIndexes, List<ChatLevelLimitConfig>> chatLevelLimitDic)
 		{
 			lock (chatLevelLimitDic)
@@ -573,25 +573,25 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x040018DD RID: 6365
+		
 		private Dictionary<string, string> _PlatConfigNormalDict = null;
 
-		// Token: 0x040018DE RID: 6366
+		
 		private Dictionary<int, WaitingConfig> _PlatConfigWaitingDict = null;
 
-		// Token: 0x040018DF RID: 6367
+		
 		private List<TradeLevelLimitConfig> _PlatConfigTradeLevelLimitList = null;
 
-		// Token: 0x040018E0 RID: 6368
+		
 		private Dictionary<string, TradeLimitConfig> _PlatConfigTradeLimitConfigDict = new Dictionary<string, TradeLimitConfig>();
 
-		// Token: 0x040018E1 RID: 6369
+		
 		private Dictionary<ChatTypeIndexes, List<ChatLevelLimitConfig>> _PlatConfigChatLevelLimitDic = null;
 
-		// Token: 0x040018E2 RID: 6370
+		
 		private string fileName = string.Format("Config/PlatConfig.xml", new object[0]);
 
-		// Token: 0x040018E3 RID: 6371
+		
 		private HashSet<string> SyncDBConfigNames = new HashSet<string>
 		{
 			"lipinma_v1"

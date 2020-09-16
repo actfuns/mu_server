@@ -15,12 +15,12 @@ using Tmsk.Contract.KuaFuData;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000025 RID: 37
+	
 	[ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, ConcurrencyMode = ConcurrencyMode.Multiple, IncludeExceptionDetailInFaults = true, UseSynchronizationContext = true)]
 	public class JunTuanService : MarshalByRefObject, IJunTuanService, IExecCommand
 	{
-		// Token: 0x1700000B RID: 11
-		// (get) Token: 0x06000157 RID: 343 RVA: 0x00012724 File Offset: 0x00010924
+		
+		
 		private object Mutex
 		{
 			get
@@ -29,9 +29,9 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x1700000C RID: 12
-		// (get) Token: 0x06000158 RID: 344 RVA: 0x00012744 File Offset: 0x00010944
-		// (set) Token: 0x06000159 RID: 345 RVA: 0x00012761 File Offset: 0x00010961
+		
+		
+		
 		private KuaFuCmdData JunTuanBaseDataListCmdData
 		{
 			get
@@ -44,9 +44,9 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x1700000D RID: 13
-		// (get) Token: 0x0600015A RID: 346 RVA: 0x00012770 File Offset: 0x00010970
-		// (set) Token: 0x0600015B RID: 347 RVA: 0x0001278D File Offset: 0x0001098D
+		
+		
+		
 		private KuaFuCmdData JunTuanMiniDataListCmdData
 		{
 			get
@@ -59,9 +59,9 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x1700000E RID: 14
-		// (get) Token: 0x0600015C RID: 348 RVA: 0x0001279C File Offset: 0x0001099C
-		// (set) Token: 0x0600015D RID: 349 RVA: 0x000127B9 File Offset: 0x000109B9
+		
+		
+		
 		private KuaFuCmdData JunTuanRankDataListCmdData
 		{
 			get
@@ -74,9 +74,9 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x1700000F RID: 15
-		// (get) Token: 0x0600015E RID: 350 RVA: 0x000127C8 File Offset: 0x000109C8
-		// (set) Token: 0x0600015F RID: 351 RVA: 0x000127E5 File Offset: 0x000109E5
+		
+		
+		
 		private Dictionary<int, JunTuanDetailData> JunTuanAllDataDict
 		{
 			get
@@ -89,9 +89,9 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x17000010 RID: 16
-		// (get) Token: 0x06000160 RID: 352 RVA: 0x000127F4 File Offset: 0x000109F4
-		// (set) Token: 0x06000161 RID: 353 RVA: 0x00012811 File Offset: 0x00010A11
+		
+		
+		
 		private Dictionary<int, int> BangHuiJunTuanIdDict
 		{
 			get
@@ -104,9 +104,9 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x17000011 RID: 17
-		// (get) Token: 0x06000162 RID: 354 RVA: 0x00012820 File Offset: 0x00010A20
-		// (set) Token: 0x06000163 RID: 355 RVA: 0x0001283D File Offset: 0x00010A3D
+		
+		
+		
 		private Dictionary<int, JunTuanBangHuiData> JunTuanBangHuiDataDict
 		{
 			get
@@ -119,13 +119,13 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000164 RID: 356 RVA: 0x0001284C File Offset: 0x00010A4C
+		
 		public override object InitializeLifetimeService()
 		{
 			return null;
 		}
 
-		// Token: 0x06000165 RID: 357 RVA: 0x00012860 File Offset: 0x00010A60
+		
 		public JunTuanService()
 		{
 			JunTuanService.Instance = this;
@@ -134,13 +134,13 @@ namespace KF.Remoting
 			this.BackgroundThread.Start();
 		}
 
-		// Token: 0x06000166 RID: 358 RVA: 0x000128E4 File Offset: 0x00010AE4
+		
 		~JunTuanService()
 		{
 			this.BackgroundThread.Abort();
 		}
 
-		// Token: 0x06000167 RID: 359 RVA: 0x0001291C File Offset: 0x00010B1C
+		
 		public void ThreadProc(object state)
 		{
 			do
@@ -223,7 +223,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000168 RID: 360 RVA: 0x00012C68 File Offset: 0x00010E68
+		
 		public AsyncDataItem[] GetClientCacheItems(int serverId, long dataAge)
 		{
 			AsyncDataItem[] array = ClientAgentManager.Instance().PickAsyncEvent(serverId, this.GameType);
@@ -253,7 +253,7 @@ namespace KF.Remoting
 			return result2;
 		}
 
-		// Token: 0x06000169 RID: 361 RVA: 0x00012CE0 File Offset: 0x00010EE0
+		
 		public int InitializeClient(KuaFuClientContext clientInfo)
 		{
 			int result;
@@ -277,7 +277,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600016A RID: 362 RVA: 0x00012D90 File Offset: 0x00010F90
+		
 		public int CreateJunTuan(byte[] cmdBytes)
 		{
 			try
@@ -365,7 +365,7 @@ namespace KF.Remoting
 			return -11003;
 		}
 
-		// Token: 0x0600016B RID: 363 RVA: 0x000130F4 File Offset: 0x000112F4
+		
 		public int ChangeJunTuanBulltin(int bhid, int junTuanId, string bulltin)
 		{
 			lock (this.Mutex)
@@ -396,7 +396,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x0600016C RID: 364 RVA: 0x00013234 File Offset: 0x00011434
+		
 		public int ChangeJunTuanGVoicePrioritys(int bhid, string prioritys)
 		{
 			lock (this.Mutex)
@@ -453,7 +453,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x0600016D RID: 365 RVA: 0x00013448 File Offset: 0x00011648
+		
 		public string GetJunTuanGVoicePrioritys(int bhid)
 		{
 			string result;
@@ -489,7 +489,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600016E RID: 366 RVA: 0x0001351C File Offset: 0x0001171C
+		
 		public void BroadcastGMCmdData(GMCmdData data, int serverFlag)
 		{
 			lock (this.Mutex)
@@ -511,7 +511,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600016F RID: 367 RVA: 0x000135BC File Offset: 0x000117BC
+		
 		public int UpdateJunTuanLingDi(int junTuanId, int lingdi)
 		{
 			lock (this.Mutex)
@@ -541,7 +541,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x06000170 RID: 368 RVA: 0x000137B0 File Offset: 0x000119B0
+		
 		public int QuitJunTuan(int bhid, int junTuanId, int otherBhid)
 		{
 			try
@@ -608,7 +608,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x06000171 RID: 369 RVA: 0x00013AE0 File Offset: 0x00011CE0
+		
 		private void JunTuanAddBangHui(JunTuanDetailData detailData, JunTuanBangHuiData data)
 		{
 			this.BangHuiJunTuanIdDict[data.BhId] = detailData.JunTuanId;
@@ -625,7 +625,7 @@ namespace KF.Remoting
 			this.Persistence.JunTuanUpdateBhList(detailData, true, false);
 		}
 
-		// Token: 0x06000172 RID: 370 RVA: 0x00013BBC File Offset: 0x00011DBC
+		
 		public int DestroyJunTuan(int bhid, int junTuanId)
 		{
 			try
@@ -672,7 +672,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x06000173 RID: 371 RVA: 0x00013D5C File Offset: 0x00011F5C
+		
 		public void JunTuanChat(int serverId, byte[] bytes)
 		{
 			try
@@ -688,7 +688,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000174 RID: 372 RVA: 0x00013DE4 File Offset: 0x00011FE4
+		
 		public int JoinJunTuan(byte[] cmdBytes)
 		{
 			try
@@ -761,7 +761,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x06000175 RID: 373 RVA: 0x0001414C File Offset: 0x0001234C
+		
 		public KuaFuCmdData GetJunTuanList(int bhid, long dataAge)
 		{
 			KuaFuCmdData result;
@@ -786,7 +786,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000176 RID: 374 RVA: 0x000141F0 File Offset: 0x000123F0
+		
 		public KuaFuCmdData GetJunTuanData(int bhid, long dataAge)
 		{
 			KuaFuCmdData result;
@@ -821,13 +821,13 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000177 RID: 375 RVA: 0x000142D8 File Offset: 0x000124D8
+		
 		public KuaFuCmdData GetJunTuanBaseData(int bhid, long dataAge)
 		{
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x06000178 RID: 376 RVA: 0x000142E0 File Offset: 0x000124E0
+		
 		public KuaFuCmdData GetJunTuanBaseDataList(long dataAge)
 		{
 			KuaFuCmdData result;
@@ -852,7 +852,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000179 RID: 377 RVA: 0x00014384 File Offset: 0x00012584
+		
 		public KuaFuCmdData GetJunTuanRequestList(int bhid, long dataAge)
 		{
 			KuaFuCmdData result;
@@ -890,7 +890,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600017A RID: 378 RVA: 0x000144F4 File Offset: 0x000126F4
+		
 		public int JoinJunTuanResponse(int bhid, int junTuanId, int otherBhid, bool accept)
 		{
 			try
@@ -991,7 +991,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x0600017B RID: 379 RVA: 0x00014978 File Offset: 0x00012B78
+		
 		public int RemoveBangHui(int otherBhid)
 		{
 			try
@@ -1066,7 +1066,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x0600017C RID: 380 RVA: 0x00014D10 File Offset: 0x00012F10
+		
 		public int ChangeBangHuiName(int bhid, string bhName)
 		{
 			try
@@ -1107,7 +1107,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x0600017D RID: 381 RVA: 0x00014E90 File Offset: 0x00013090
+		
 		public KuaFuCmdData GetJunTuanBangHuiList(int bhid, int junTuanId, long dataAge)
 		{
 			KuaFuCmdData result;
@@ -1145,7 +1145,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600017E RID: 382 RVA: 0x00014FD0 File Offset: 0x000131D0
+		
 		public int JunTuanChangeBangHuiZhiWu(int bhid, int junTuanId, int otherBhid, int zhiWu)
 		{
 			try
@@ -1227,7 +1227,7 @@ namespace KF.Remoting
 			return -11003;
 		}
 
-		// Token: 0x0600017F RID: 383 RVA: 0x000152DC File Offset: 0x000134DC
+		
 		public KuaFuCmdData GetJunTuanRoleList(int bhid, long dataAge)
 		{
 			KuaFuCmdData result;
@@ -1265,7 +1265,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000180 RID: 384 RVA: 0x00015414 File Offset: 0x00013614
+		
 		public int UpdateRoleDataList(int bhid, KuaFuCmdData listCmdData)
 		{
 			try
@@ -1368,7 +1368,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x06000181 RID: 385 RVA: 0x00015944 File Offset: 0x00013B44
+		
 		public KuaFuCmdData GetJunTuanTaskAllData(int bhid, int junTuanId, long dataAge)
 		{
 			KuaFuCmdData result;
@@ -1423,7 +1423,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000182 RID: 386 RVA: 0x00015B30 File Offset: 0x00013D30
+		
 		public int JunTuanChangeTaskValue(int bhid, int junTuanId, int taskId, int addValue, long ticks)
 		{
 			DateTime taskTime = new DateTime(ticks);
@@ -1501,7 +1501,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000183 RID: 387 RVA: 0x00015DC0 File Offset: 0x00013FC0
+		
 		public KuaFuCmdData GetJunTuanRankingData(long dataAge)
 		{
 			KuaFuCmdData result;
@@ -1526,7 +1526,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000184 RID: 388 RVA: 0x00015E8C File Offset: 0x0001408C
+		
 		public KuaFuCmdData GetJunTuanLogList(int bhid, long dataAge)
 		{
 			KuaFuCmdData result;
@@ -1573,7 +1573,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000185 RID: 389 RVA: 0x00015FB8 File Offset: 0x000141B8
+		
 		private void CheckRoleTimerProc(DateTime now)
 		{
 			if (this.KarenFuBenDataDict.Count != 0)
@@ -1613,7 +1613,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000186 RID: 390 RVA: 0x0001622C File Offset: 0x0001442C
+		
 		private void CheckGameFuBenTimerProc(DateTime now)
 		{
 			if (this.KarenFuBenDataDict.Count != 0)
@@ -1638,7 +1638,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000187 RID: 391 RVA: 0x00016420 File Offset: 0x00014620
+		
 		public void UpdateKuaFuMapClientCount(int serverId, int gameId, List<int> mapClientCountList)
 		{
 			lock (this.Mutex)
@@ -1659,7 +1659,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000188 RID: 392 RVA: 0x000164F8 File Offset: 0x000146F8
+		
 		public KuaFuCmdData GetKarenKuaFuFuBenData(int gameType, int mapCode, long dataAge)
 		{
 			KuaFuCmdData result;
@@ -1711,7 +1711,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000189 RID: 393 RVA: 0x00016734 File Offset: 0x00014934
+		
 		public KarenFuBenRoleData GetKarenFuBenRoleData(int gameId, int roleId)
 		{
 			KarenFuBenRoleData result;
@@ -1738,7 +1738,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600018A RID: 394 RVA: 0x000167EC File Offset: 0x000149EC
+		
 		public int GameFuBenRoleChangeState(int serverId, int roleId, int gameId, int side, int state)
 		{
 			lock (this.Mutex)
@@ -1809,7 +1809,7 @@ namespace KF.Remoting
 			return state;
 		}
 
-		// Token: 0x0600018B RID: 395 RVA: 0x00016AE4 File Offset: 0x00014CE4
+		
 		private JunTuanDetailData JuntuanAdd(JunTuanData data, JunTuanBangHuiData bhData)
 		{
 			JunTuanDetailData result;
@@ -1832,7 +1832,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600018C RID: 396 RVA: 0x00016BD0 File Offset: 0x00014DD0
+		
 		private void JunTuanChangeBangHui(JunTuanDetailData detailData, int bhid1, int bhid2)
 		{
 			int index = detailData.JunTuanBangHuiList.V.FindIndex((JunTuanBangHuiData x) => x.BhId == bhid1);
@@ -1879,7 +1879,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600018D RID: 397 RVA: 0x00016E78 File Offset: 0x00015078
+		
 		private void JunTuanRemoveBangHui(JunTuanDetailData detailData, int bhid)
 		{
 			this.BangHuiJunTuanIdDict[bhid] = 0;
@@ -1900,7 +1900,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600018E RID: 398 RVA: 0x00016F9C File Offset: 0x0001519C
+		
 		public int GetJunTuanPoint(int bhid, int junTuanId)
 		{
 			int result;
@@ -1936,7 +1936,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600018F RID: 399 RVA: 0x00017084 File Offset: 0x00015284
+		
 		public int ExecCommand(string[] args)
 		{
 			int result = -1;
@@ -1957,85 +1957,85 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000190 RID: 400 RVA: 0x00017110 File Offset: 0x00015310
+		
 		public KuaFuCmdData GetYaoSaiPrisonRoleData(int rid, long dataAge)
 		{
 			return YaoSaiService.Instance().GetYaoSaiPrisonRoleData(rid, dataAge);
 		}
 
-		// Token: 0x06000191 RID: 401 RVA: 0x00017130 File Offset: 0x00015330
+		
 		public KuaFuCmdData GetYaoSaiFuLuListData(int rid, long dataAge)
 		{
 			return YaoSaiService.Instance().GetYaoSaiFuLuListData(rid, dataAge);
 		}
 
-		// Token: 0x06000192 RID: 402 RVA: 0x00017150 File Offset: 0x00015350
+		
 		public KuaFuCmdData GetYaoSaiPrisonLogData(int rid, long dataAge)
 		{
 			return YaoSaiService.Instance().GetYaoSaiPrisonLogData(rid, dataAge);
 		}
 
-		// Token: 0x06000193 RID: 403 RVA: 0x00017170 File Offset: 0x00015370
+		
 		public KuaFuCmdData GetYaoSaiPrisonJingJiData(int rid, long dataAge)
 		{
 			return YaoSaiService.Instance().GetYaoSaiPrisonJingJiData(rid, dataAge);
 		}
 
-		// Token: 0x06000194 RID: 404 RVA: 0x00017190 File Offset: 0x00015390
+		
 		public KuaFuCmdData SearchYaoSaiFuLu(int rid, int unionlev, int faction, HashSet<int> frindSet)
 		{
 			return YaoSaiService.Instance().SearchYaoSaiFuLu(rid, unionlev, faction, frindSet);
 		}
 
-		// Token: 0x06000195 RID: 405 RVA: 0x000171B4 File Offset: 0x000153B4
+		
 		public int YaoSaiPrisonOpt(int srcrid, int otherrid, int type, bool success)
 		{
 			return YaoSaiService.Instance().YaoSaiPrisonOpt(srcrid, otherrid, type, success);
 		}
 
-		// Token: 0x06000196 RID: 406 RVA: 0x000171D8 File Offset: 0x000153D8
+		
 		public int UpdateYaoSaiPrisonRoleData(KFUpdatePrisonRole data)
 		{
 			return YaoSaiService.Instance().UpdateYaoSaiPrisonRoleData(data);
 		}
 
-		// Token: 0x06000197 RID: 407 RVA: 0x000171F8 File Offset: 0x000153F8
+		
 		public int YaoSaiPrisonHuDong(int ownerid, int fuluid, int type, int param0, int param1, int param2)
 		{
 			return YaoSaiService.Instance().YaoSaiPrisonHuDong(ownerid, fuluid, type, param0, param1, param2);
 		}
 
-		// Token: 0x06000198 RID: 408 RVA: 0x00017220 File Offset: 0x00015420
+		
 		public int UpdateYaoSaiPrisonLogData(int rid, long id, int state)
 		{
 			return YaoSaiService.Instance().UpdateYaoSaiPrisonLogData(rid, id, state);
 		}
 
-		// Token: 0x06000199 RID: 409 RVA: 0x00017240 File Offset: 0x00015440
+		
 		public KuaFuCmdData GetEraRankData(long dataAge)
 		{
 			return JunTuanEraService.Instance().GetEraRankData(dataAge);
 		}
 
-		// Token: 0x0600019A RID: 410 RVA: 0x00017260 File Offset: 0x00015460
+		
 		public KuaFuCmdData GetEraData(int juntuanid, long dataAge)
 		{
 			return JunTuanEraService.Instance().GetEraData(juntuanid, dataAge);
 		}
 
-		// Token: 0x0600019B RID: 411 RVA: 0x00017280 File Offset: 0x00015480
+		
 		public bool EraDonate(int juntuanid, int taskid, int var1, int var2, int var3)
 		{
 			return JunTuanEraService.Instance().EraDonate(juntuanid, taskid, var1, var2, var3);
 		}
 
-		// Token: 0x0600019C RID: 412 RVA: 0x000172A4 File Offset: 0x000154A4
+		
 		public int SetDoubleOpenTime(int roleId, int lingDiType, DateTime openTime, int openSeconds)
 		{
 			return LingDiCaiJiService.Instance().SetDoubleOpenTime(roleId, lingDiType, openTime, openSeconds);
 		}
 
-		// Token: 0x0600019D RID: 413 RVA: 0x000172F0 File Offset: 0x000154F0
+		
 		public int SetShouWeiTime(int roleId, int bhid, int lingDiType, DateTime openTime, int index, int junTuanPointCost)
 		{
 			int selfJunTuanId;
@@ -2065,100 +2065,100 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600019E RID: 414 RVA: 0x000173C4 File Offset: 0x000155C4
+		
 		public int CanEnterKuaFuMap(int roleId, int lingDiType)
 		{
 			return LingDiCaiJiService.Instance().CanEnterKuaFuMap(roleId, lingDiType);
 		}
 
-		// Token: 0x0600019F RID: 415 RVA: 0x000173E4 File Offset: 0x000155E4
+		
 		public List<LingDiData> GetLingDiData()
 		{
 			return LingDiCaiJiService.Instance().GetLingDiData();
 		}
 
-		// Token: 0x060001A0 RID: 416 RVA: 0x00017400 File Offset: 0x00015600
+		
 		public int SetLingZhu(int roleId, int lingDiType, int junTuanId, string junTuanName, int zhiWu, byte[] roledata)
 		{
 			return LingDiCaiJiService.Instance().SetLingZhu(roleId, lingDiType, junTuanId, junTuanName, zhiWu, roledata);
 		}
 
-		// Token: 0x060001A1 RID: 417 RVA: 0x00017428 File Offset: 0x00015628
+		
 		public int SetShouWei(int lingDiType, List<LingDiShouWei> shouWeiList)
 		{
 			return LingDiCaiJiService.Instance().SetShouWei(lingDiType, shouWeiList);
 		}
 
-		// Token: 0x060001A2 RID: 418 RVA: 0x00017448 File Offset: 0x00015648
+		
 		public int UpdateMapRoleNum(int lingDiType, int roleNum, int serverId)
 		{
 			return LingDiCaiJiService.Instance().UpdateMapRoleNum(lingDiType, roleNum, serverId);
 		}
 
-		// Token: 0x060001A3 RID: 419 RVA: 0x00017468 File Offset: 0x00015668
+		
 		public int GetLingDiRoleNum(int lingDiType)
 		{
 			return LingDiCaiJiService.Instance().GetLingDiRoleNum(lingDiType);
 		}
 
-		// Token: 0x060001A4 RID: 420 RVA: 0x00017488 File Offset: 0x00015688
+		
 		public bool GetClientCacheItems(int serverId)
 		{
 			return LingDiCaiJiService.Instance().GetClientCacheItems(serverId);
 		}
 
-		// Token: 0x060001A5 RID: 421 RVA: 0x000174A8 File Offset: 0x000156A8
+		
 		public AsyncDataItem GetHongBaoDataList(long dataAge)
 		{
 			return HongBaoManager_K.getInstance().GetHongBaoDataList(dataAge);
 		}
 
-		// Token: 0x060001A6 RID: 422 RVA: 0x000174C8 File Offset: 0x000156C8
+		
 		public int OpenHongBao(int hongBaoId, int rid, int zoneid, string userid, string rname)
 		{
 			return HongBaoManager_K.getInstance().OpenHongBao(hongBaoId, rid, zoneid, userid, rname);
 		}
 
-		// Token: 0x060001A7 RID: 423 RVA: 0x000174EB File Offset: 0x000156EB
+		
 		public void AddServerTotalCharge(string keyStr, long addCharge)
 		{
 			HongBaoManager_K.getInstance().AddServerTotalCharge(keyStr, addCharge);
 		}
 
-		// Token: 0x040000E0 RID: 224
+		
 		private const double SaveServerStateProcInterval = 30.0;
 
-		// Token: 0x040000E1 RID: 225
+		
 		public static JunTuanService Instance = null;
 
-		// Token: 0x040000E2 RID: 226
+		
 		public readonly GameTypes GameType = GameTypes.JunTuan;
 
-		// Token: 0x040000E3 RID: 227
+		
 		private DateTime CheckTime20;
 
-		// Token: 0x040000E4 RID: 228
+		
 		private DateTime CheckTimer120;
 
-		// Token: 0x040000E5 RID: 229
+		
 		private DateTime CheckTimer3600;
 
-		// Token: 0x040000E6 RID: 230
+		
 		private bool ExecPaiHang = false;
 
-		// Token: 0x040000E7 RID: 231
+		
 		private int LastUpdateRankHour = -1;
 
-		// Token: 0x040000E8 RID: 232
+		
 		public JunTuanPersistence Persistence = JunTuanPersistence.Instance;
 
-		// Token: 0x040000E9 RID: 233
+		
 		private Dictionary<int, int> BangHuiId2RoleDataUpdateDayIdDict = new Dictionary<int, int>();
 
-		// Token: 0x040000EA RID: 234
+		
 		private Dictionary<int, KuaFuData<KarenFuBenData>> KarenFuBenDataDict = new Dictionary<int, KuaFuData<KarenFuBenData>>();
 
-		// Token: 0x040000EB RID: 235
+		
 		public Thread BackgroundThread;
 	}
 }

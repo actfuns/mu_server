@@ -8,10 +8,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020001EF RID: 495
+	
 	public class WeaponMaster
 	{
-		// Token: 0x0600063C RID: 1596 RVA: 0x000576CC File Offset: 0x000558CC
+		
 		public static void UpdateRoleAttr(GameClient client, int weaponType, bool needBrocast = false)
 		{
 			try
@@ -69,7 +69,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600063D RID: 1597 RVA: 0x00057950 File Offset: 0x00055B50
+		
 		public static bool WeaponIsMatch(List<int> leftList, List<int> rightList, List<int> equipList)
 		{
 			int checkIndex = 1;
@@ -97,7 +97,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600063E RID: 1598 RVA: 0x00057A38 File Offset: 0x00055C38
+		
 		public static void LoadWeaponMaster()
 		{
 			string fileName = "Config\\WeaponMaster.xml";
@@ -184,22 +184,22 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04000AEA RID: 2794
+		
 		public static Dictionary<int, List<WeaponMaster.WeaponMasterItem>> WeaponMasterXml = new Dictionary<int, List<WeaponMaster.WeaponMasterItem>>();
 
-		// Token: 0x020001F0 RID: 496
+		
 		public class WeaponMasterItem
 		{
-			// Token: 0x04000AED RID: 2797
+			
 			public int Type;
 
-			// Token: 0x04000AEE RID: 2798
+			
 			public List<int> WeaponType1;
 
-			// Token: 0x04000AEF RID: 2799
+			
 			public List<int> WeaponType2;
 
-			// Token: 0x04000AF0 RID: 2800
+			
 			public double[] ExtProps = new double[177];
 		}
 	}

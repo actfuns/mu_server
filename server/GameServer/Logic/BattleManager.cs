@@ -317,7 +317,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x1700007E RID: 126
-		// (get) Token: 0x06001ADD RID: 6877 RVA: 0x0019992C File Offset: 0x00197B2C
+		
 		public object ExternalMutex
 		{
 			get
@@ -327,7 +327,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x1700007F RID: 127
-		// (get) Token: 0x06001ADE RID: 6878 RVA: 0x00199944 File Offset: 0x00197B44
+		
 		public int BattleMapCode
 		{
 			get
@@ -337,7 +337,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000080 RID: 128
-		// (get) Token: 0x06001ADF RID: 6879 RVA: 0x0019995C File Offset: 0x00197B5C
+		
 		public int BattleServerLineID
 		{
 			get
@@ -347,7 +347,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000081 RID: 129
-		// (get) Token: 0x06001AE0 RID: 6880 RVA: 0x00199974 File Offset: 0x00197B74
+		
 		public bool AllowEnterMap
 		{
 			get
@@ -357,8 +357,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000082 RID: 130
-		// (get) Token: 0x06001AE1 RID: 6881 RVA: 0x0019999C File Offset: 0x00197B9C
-		// (set) Token: 0x06001AE2 RID: 6882 RVA: 0x001999E8 File Offset: 0x00197BE8
+		
+		
 		public bool AllowAttack
 		{
 			get
@@ -380,7 +380,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000083 RID: 131
-		// (get) Token: 0x06001AE3 RID: 6883 RVA: 0x00199A34 File Offset: 0x00197C34
+		
 		public int AllowMinLevel
 		{
 			get
@@ -390,8 +390,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000084 RID: 132
-		// (get) Token: 0x06001AE4 RID: 6884 RVA: 0x00199A4C File Offset: 0x00197C4C
-		// (set) Token: 0x06001AE5 RID: 6885 RVA: 0x00199A98 File Offset: 0x00197C98
+		
+		
 		public int TotalClientCount
 		{
 			get
@@ -413,7 +413,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000085 RID: 133
-		// (get) Token: 0x06001AE6 RID: 6886 RVA: 0x00199AE4 File Offset: 0x00197CE4
+		
 		public int NeedMinChangeLev
 		{
 			get
@@ -423,8 +423,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000086 RID: 134
-		// (get) Token: 0x06001AE7 RID: 6887 RVA: 0x00199AFC File Offset: 0x00197CFC
-		// (set) Token: 0x06001AE8 RID: 6888 RVA: 0x00199B13 File Offset: 0x00197D13
+		
+		
 		public static int BattleMaxPoint
 		{
 			get
@@ -438,8 +438,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000087 RID: 135
-		// (get) Token: 0x06001AE9 RID: 6889 RVA: 0x00199B1C File Offset: 0x00197D1C
-		// (set) Token: 0x06001AEA RID: 6890 RVA: 0x00199B33 File Offset: 0x00197D33
+		
+		
 		public static string BattleMaxPointName
 		{
 			get
@@ -453,8 +453,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000088 RID: 136
-		// (get) Token: 0x06001AEB RID: 6891 RVA: 0x00199B3C File Offset: 0x00197D3C
-		// (set) Token: 0x06001AEC RID: 6892 RVA: 0x00199B53 File Offset: 0x00197D53
+		
+		
 		public static int BattleMaxPointNow
 		{
 			get
@@ -468,8 +468,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000089 RID: 137
-		// (get) Token: 0x06001AED RID: 6893 RVA: 0x00199B5C File Offset: 0x00197D5C
-		// (set) Token: 0x06001AEE RID: 6894 RVA: 0x00199B73 File Offset: 0x00197D73
+		
+		
 		public static int PushMsgDayID
 		{
 			get
@@ -616,7 +616,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x1700008A RID: 138
-		// (get) Token: 0x06001AF5 RID: 6901 RVA: 0x0019A058 File Offset: 0x00198258
+		
 		public string BattleDisableGoodsIDs
 		{
 			get
@@ -626,8 +626,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x1700008B RID: 139
-		// (get) Token: 0x06001AF6 RID: 6902 RVA: 0x0019A070 File Offset: 0x00198270
-		// (set) Token: 0x06001AF7 RID: 6903 RVA: 0x0019A0BC File Offset: 0x001982BC
+		
+		
 		public int StartRoleNum
 		{
 			get
@@ -649,8 +649,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x1700008C RID: 140
-		// (get) Token: 0x06001AF8 RID: 6904 RVA: 0x0019A108 File Offset: 0x00198308
-		// (set) Token: 0x06001AF9 RID: 6905 RVA: 0x0019A154 File Offset: 0x00198354
+		
+		
 		public int AllKilledRoleNum
 		{
 			get
@@ -672,8 +672,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x1700008D RID: 141
-		// (get) Token: 0x06001AFA RID: 6906 RVA: 0x0019A1A0 File Offset: 0x001983A0
-		// (set) Token: 0x06001AFB RID: 6907 RVA: 0x0019A1EC File Offset: 0x001983EC
+		
+		
 		public int SuiKilledNum
 		{
 			get
@@ -696,8 +696,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x1700008E RID: 142
-		// (get) Token: 0x06001AFC RID: 6908 RVA: 0x0019A24C File Offset: 0x0019844C
-		// (set) Token: 0x06001AFD RID: 6909 RVA: 0x0019A298 File Offset: 0x00198498
+		
+		
 		public int TangKilledNum
 		{
 			get
@@ -720,8 +720,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x1700008F RID: 143
-		// (get) Token: 0x06001AFE RID: 6910 RVA: 0x0019A2F8 File Offset: 0x001984F8
-		// (set) Token: 0x06001AFF RID: 6911 RVA: 0x0019A344 File Offset: 0x00198544
+		
+		
 		public int SuiClientCount
 		{
 			get
@@ -743,8 +743,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000090 RID: 144
-		// (get) Token: 0x06001B00 RID: 6912 RVA: 0x0019A390 File Offset: 0x00198590
-		// (set) Token: 0x06001B01 RID: 6913 RVA: 0x0019A3DC File Offset: 0x001985DC
+		
+		
 		public int TangClientCount
 		{
 			get
@@ -812,8 +812,8 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000091 RID: 145
-		// (get) Token: 0x06001B05 RID: 6917 RVA: 0x0019A53C File Offset: 0x0019873C
-		// (set) Token: 0x06001B04 RID: 6916 RVA: 0x0019A52F File Offset: 0x0019872F
+		
+		
 		private List<BattleManager.Award> BattleAwardByScore
 		{
 			get

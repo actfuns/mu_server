@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007C2 RID: 1986
+	
 	public class WuXingMapMgr
 	{
-		// Token: 0x0600340D RID: 13325 RVA: 0x002E098C File Offset: 0x002DEB8C
+		
 		private static List<int> RandomIntList(List<int> list)
 		{
 			List<int> result;
@@ -31,7 +31,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600340E RID: 13326 RVA: 0x002E0A10 File Offset: 0x002DEC10
+		
 		public static int GetNextMapCodeByNPCID(int mapCode, int npcID)
 		{
 			WuXingNPCItem wuXingNPCItem = null;
@@ -67,7 +67,7 @@ namespace GameServer.Logic
 			return -1;
 		}
 
-		// Token: 0x0600340F RID: 13327 RVA: 0x002E0BAC File Offset: 0x002DEDAC
+		
 		public static int GetNeedGoodsIDByNPCID(int mapCode, int npcID)
 		{
 			WuXingNPCItem wuXingNPCItem = null;
@@ -87,7 +87,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003410 RID: 13328 RVA: 0x002E0C2C File Offset: 0x002DEE2C
+		
 		private static List<int> Str2IntArray(string str)
 		{
 			List<int> result;
@@ -117,7 +117,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003411 RID: 13329 RVA: 0x002E0CB0 File Offset: 0x002DEEB0
+		
 		private static WuXingMapItem ParseGlobalConfigItem(int globalID, string otherNPCIDs, string goToMaps)
 		{
 			WuXingMapItem wuXingMapItem = null;
@@ -144,7 +144,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003412 RID: 13330 RVA: 0x002E0D5C File Offset: 0x002DEF5C
+		
 		private static void ParseWuXingXmlItem(SystemXmlItem systemXmlItem)
 		{
 			int npcID = systemXmlItem.GetIntValue("NPCID", -1);
@@ -165,7 +165,7 @@ namespace GameServer.Logic
 			WuXingMapMgr.WuXingNPCDict[key] = wuXingNPCItem;
 		}
 
-		// Token: 0x06003413 RID: 13331 RVA: 0x002E0E18 File Offset: 0x002DF018
+		
 		public static void LoadXuXingConfig()
 		{
 			XElement xml = null;
@@ -193,7 +193,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003414 RID: 13332 RVA: 0x002E0EEC File Offset: 0x002DF0EC
+		
 		private static List<GoodsData> ParseGoodsDataList(string[] fields)
 		{
 			List<GoodsData> goodsDataList = new List<GoodsData>();
@@ -217,7 +217,7 @@ namespace GameServer.Logic
 			return goodsDataList;
 		}
 
-		// Token: 0x06003415 RID: 13333 RVA: 0x002E0F90 File Offset: 0x002DF190
+		
 		public static void ParseWuXingAwardItem(SystemXmlItem systemXmlItem)
 		{
 			List<GoodsData> goodsDataList = null;
@@ -252,7 +252,7 @@ namespace GameServer.Logic
 			};
 		}
 
-		// Token: 0x06003416 RID: 13334 RVA: 0x002E10A8 File Offset: 0x002DF2A8
+		
 		public static void LoadWuXingAward()
 		{
 			XElement xml = null;
@@ -288,7 +288,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003417 RID: 13335 RVA: 0x002E11A4 File Offset: 0x002DF3A4
+		
 		public static bool CanGetWuXingAward(GameClient client)
 		{
 			int currentDayID = TimeUtil.NowDateTime().DayOfYear;
@@ -302,7 +302,7 @@ namespace GameServer.Logic
 			return currentDayID != wuXingDayID || wuXingNum <= 0;
 		}
 
-		// Token: 0x06003418 RID: 13336 RVA: 0x002E1218 File Offset: 0x002DF418
+		
 		public static void ProcessWuXingAward(GameClient client)
 		{
 			if (WuXingMapMgr.CanGetWuXingAward(client))
@@ -375,16 +375,16 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04003FB0 RID: 16304
+		
 		private static Dictionary<int, WuXingMapItem> WuXingMapDict = new Dictionary<int, WuXingMapItem>();
 
-		// Token: 0x04003FB1 RID: 16305
+		
 		private static Dictionary<string, WuXingNPCItem> WuXingNPCDict = new Dictionary<string, WuXingNPCItem>();
 
-		// Token: 0x04003FB2 RID: 16306
+		
 		private static Dictionary<int, int> ClientsAwardsDict = new Dictionary<int, int>();
 
-		// Token: 0x04003FB3 RID: 16307
+		
 		private static WuXingMapAwardItem TheWuXingMapAwardItem = null;
 	}
 }

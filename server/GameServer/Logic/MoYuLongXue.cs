@@ -9,10 +9,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000436 RID: 1078
+	
 	public class MoYuLongXue
 	{
-		// Token: 0x060013C3 RID: 5059 RVA: 0x00137C14 File Offset: 0x00135E14
+		
 		public static void LoadMoYuXml()
 		{
 			string fileName = "";
@@ -75,7 +75,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060013C4 RID: 5060 RVA: 0x00137F54 File Offset: 0x00136154
+		
 		public static bool InActivityTime()
 		{
 			bool result;
@@ -93,7 +93,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060013C5 RID: 5061 RVA: 0x00137FC8 File Offset: 0x001361C8
+		
 		public static bool InMoYuMap(int mapCode)
 		{
 			bool result;
@@ -104,7 +104,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060013C6 RID: 5062 RVA: 0x00138024 File Offset: 0x00136224
+		
 		public static bool IsBHGoods(int goodsID)
 		{
 			bool result;
@@ -115,7 +115,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060013C7 RID: 5063 RVA: 0x00138080 File Offset: 0x00136280
+		
 		public static void OnBangHuiDestroy(int faction)
 		{
 			lock (MoYuLongXue.MoYuRunTimeData.Mutex)
@@ -134,7 +134,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060013C8 RID: 5064 RVA: 0x00138154 File Offset: 0x00136354
+		
 		public static void OnClientLeaveBangHui(int faction, int rid)
 		{
 			lock (MoYuLongXue.MoYuRunTimeData.Mutex)
@@ -153,7 +153,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060013C9 RID: 5065 RVA: 0x00138228 File Offset: 0x00136428
+		
 		public static int KillerRid(Monster monster)
 		{
 			int roleID = 0;
@@ -186,7 +186,7 @@ namespace GameServer.Logic
 			return roleID;
 		}
 
-		// Token: 0x060013CA RID: 5066 RVA: 0x00138364 File Offset: 0x00136564
+		
 		public static int GetBossLeftCount()
 		{
 			int result;
@@ -204,7 +204,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060013CB RID: 5067 RVA: 0x001383D8 File Offset: 0x001365D8
+		
 		public static void ProcessAddMonster(Monster monster)
 		{
 			try
@@ -253,7 +253,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060013CC RID: 5068 RVA: 0x0013866C File Offset: 0x0013686C
+		
 		public static void ProcessAttack(GameClient client, Monster monster, int injure)
 		{
 			try
@@ -326,7 +326,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060013CD RID: 5069 RVA: 0x001388D8 File Offset: 0x00136AD8
+		
 		public static bool ProcessMonsterDie(Monster monster)
 		{
 			try
@@ -394,7 +394,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x060013CE RID: 5070 RVA: 0x00138BE0 File Offset: 0x00136DE0
+		
 		public static BossLifeLog GetBossAttackLog(int factionID, int monsterID)
 		{
 			try
@@ -424,7 +424,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x060013CF RID: 5071 RVA: 0x00138CD8 File Offset: 0x00136ED8
+		
 		public static void NotifyBossLogBy9Grid(Monster monster)
 		{
 			lock (MoYuLongXue.MoYuRunTimeData.Mutex)
@@ -445,7 +445,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04001D21 RID: 7457
+		
 		public static MoYuRunData MoYuRunTimeData = new MoYuRunData();
 	}
 }

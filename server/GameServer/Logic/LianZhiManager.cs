@@ -10,16 +10,16 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000511 RID: 1297
+	
 	public class LianZhiManager : IManager
 	{
-		// Token: 0x0600184B RID: 6219 RVA: 0x0017AB64 File Offset: 0x00178D64
+		
 		public static LianZhiManager GetInstance()
 		{
 			return LianZhiManager.Instance;
 		}
 
-		// Token: 0x0600184C RID: 6220 RVA: 0x0017AB7C File Offset: 0x00178D7C
+		
 		public bool initialize()
 		{
 			this.InitConfig();
@@ -28,25 +28,25 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600184D RID: 6221 RVA: 0x0017ABCC File Offset: 0x00178DCC
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x0600184E RID: 6222 RVA: 0x0017ABE0 File Offset: 0x00178DE0
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x0600184F RID: 6223 RVA: 0x0017ABF4 File Offset: 0x00178DF4
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06001850 RID: 6224 RVA: 0x0017AC08 File Offset: 0x00178E08
+		
 		public void InitConfig()
 		{
 			try
@@ -65,7 +65,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001851 RID: 6225 RVA: 0x0017ACD4 File Offset: 0x00178ED4
+		
 		public bool QueryLianZhiCount(GameClient client)
 		{
 			List<int> result = new List<int>();
@@ -116,7 +116,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x06001852 RID: 6226 RVA: 0x0017AE7C File Offset: 0x0017907C
+		
 		public bool ExecLianZhi(GameClient client, int type, int count)
 		{
 			int roleID = client.ClientData.RoleID;
@@ -340,28 +340,28 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x04002266 RID: 8806
+		
 		private static LianZhiManager Instance = new LianZhiManager();
 
-		// Token: 0x04002267 RID: 8807
+		
 		private int[] JinBiLianZhi = null;
 
-		// Token: 0x04002268 RID: 8808
+		
 		private int[] VIPJinBiLianZhi = null;
 
-		// Token: 0x04002269 RID: 8809
+		
 		private int[] BangZuanLianZhi = null;
 
-		// Token: 0x0400226A RID: 8810
+		
 		private int[] VIPBangZuanLianZhi = null;
 
-		// Token: 0x0400226B RID: 8811
+		
 		private int[] ZuanShiLianZhi = null;
 
-		// Token: 0x0400226C RID: 8812
+		
 		private int[] VIPZuanShiLianZhi = null;
 
-		// Token: 0x0400226D RID: 8813
+		
 		private bool ConfigLoadSuccess = false;
 	}
 }

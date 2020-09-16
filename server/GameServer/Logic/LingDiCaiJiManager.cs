@@ -15,23 +15,23 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200032D RID: 813
+	
 	public class LingDiCaiJiManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener, IEventListenerEx
 	{
-		// Token: 0x06000D77 RID: 3447 RVA: 0x000D1C34 File Offset: 0x000CFE34
+		
 		public static LingDiCaiJiManager getInstance()
 		{
 			return LingDiCaiJiManager.instance;
 		}
 
-		// Token: 0x06000D78 RID: 3448 RVA: 0x000D1C4C File Offset: 0x000CFE4C
+		
 		public bool initialize()
 		{
 			this.LoadConfig();
 			return true;
 		}
 
-		// Token: 0x06000D79 RID: 3449 RVA: 0x000D1C68 File Offset: 0x000CFE68
+		
 		public bool LoadConfig()
 		{
 			this.LoadCollectXml();
@@ -47,7 +47,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000D7A RID: 3450 RVA: 0x000D1D08 File Offset: 0x000CFF08
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1826, 1, 1, LingDiCaiJiManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -62,25 +62,25 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000D7B RID: 3451 RVA: 0x000D1DF4 File Offset: 0x000CFFF4
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000D7C RID: 3452 RVA: 0x000D1E08 File Offset: 0x000D0008
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000D7D RID: 3453 RVA: 0x000D1E1C File Offset: 0x000D001C
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06000D7E RID: 3454 RVA: 0x000D1E30 File Offset: 0x000D0030
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -116,17 +116,17 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000D7F RID: 3455 RVA: 0x000D1F0F File Offset: 0x000D010F
+		
 		public void processEvent(EventObject eventObject)
 		{
 		}
 
-		// Token: 0x06000D80 RID: 3456 RVA: 0x000D1F14 File Offset: 0x000D0114
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 		}
 
-		// Token: 0x06000D81 RID: 3457 RVA: 0x000D1F1C File Offset: 0x000D011C
+		
 		public void NotifyJunTuanRequest(LingDiData lingDi, int eventType)
 		{
 			switch (eventType)
@@ -146,7 +146,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D82 RID: 3458 RVA: 0x000D1FB0 File Offset: 0x000D01B0
+		
 		public bool ProcesDoubleOpenCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -168,7 +168,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000D83 RID: 3459 RVA: 0x000D2044 File Offset: 0x000D0244
+		
 		public bool ProcessMainDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -220,7 +220,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000D84 RID: 3460 RVA: 0x000D223C File Offset: 0x000D043C
+		
 		public bool ProcessLingDiEnterCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -288,7 +288,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000D85 RID: 3461 RVA: 0x000D2528 File Offset: 0x000D0728
+		
 		public bool ProcessLingZhuGetDoubleOpenCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -317,7 +317,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000D86 RID: 3462 RVA: 0x000D260C File Offset: 0x000D080C
+		
 		public bool ProcessLingZhuSetDoubleOpenCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -331,7 +331,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000D87 RID: 3463 RVA: 0x000D266C File Offset: 0x000D086C
+		
 		public bool ProcessLingDiGetShouWeiCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -351,7 +351,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000D88 RID: 3464 RVA: 0x000D26EC File Offset: 0x000D08EC
+		
 		public bool ProcessLingDiSetShouWeiCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -423,7 +423,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000D89 RID: 3465 RVA: 0x000D2AA8 File Offset: 0x000D0CA8
+		
 		public bool ProcessLingDiGetAdmireDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -464,7 +464,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000D8A RID: 3466 RVA: 0x000D2C18 File Offset: 0x000D0E18
+		
 		public bool ProcessLingDiAdmireCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -590,7 +590,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000D8B RID: 3467 RVA: 0x000D3160 File Offset: 0x000D1360
+		
 		public void LoadCollectXml()
 		{
 			string fileName = "";
@@ -627,7 +627,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D8C RID: 3468 RVA: 0x000D337C File Offset: 0x000D157C
+		
 		public int GetCaiJiMonsterTime(GameClient client, Monster monster)
 		{
 			LingDiCrystalMonsterItem tag = (monster != null) ? (monster.Tag as LingDiCrystalMonsterItem) : null;
@@ -658,7 +658,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000D8D RID: 3469 RVA: 0x000D3428 File Offset: 0x000D1628
+		
 		public void OnCaiJiFinish(GameClient client, Monster monster)
 		{
 			LingDiCrystalMonsterItem item = (monster != null) ? (monster.Tag as LingDiCrystalMonsterItem) : null;
@@ -751,7 +751,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D8E RID: 3470 RVA: 0x000D3860 File Offset: 0x000D1A60
+		
 		public bool IsOpposition(GameClient me, int monsterType)
 		{
 			bool result;
@@ -777,7 +777,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000D8F RID: 3471 RVA: 0x000D3918 File Offset: 0x000D1B18
+		
 		public void OnInjureMonster(GameClient client, Monster monster, long injure)
 		{
 			if (monster.MonsterType == 2101 || monster.MonsterType == 2102)
@@ -802,7 +802,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D90 RID: 3472 RVA: 0x000D3AD4 File Offset: 0x000D1CD4
+		
 		public DateTime GetDoubleOpenTime()
 		{
 			DateTime data = DateTime.MinValue;
@@ -839,7 +839,7 @@ namespace GameServer.Logic
 			return data;
 		}
 
-		// Token: 0x06000D91 RID: 3473 RVA: 0x000D3D30 File Offset: 0x000D1F30
+		
 		public LingZhuShouWeiData GetShouWeiData(GameClient client)
 		{
 			LingZhuShouWeiData ret = new LingZhuShouWeiData
@@ -912,7 +912,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000D92 RID: 3474 RVA: 0x000D3FAC File Offset: 0x000D21AC
+		
 		public void UpdateDoubleOpenTime(LingDiData openItem)
 		{
 			string strHint = "";
@@ -955,7 +955,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D93 RID: 3475 RVA: 0x000D4188 File Offset: 0x000D2388
+		
 		public void OnLoadDynamicMonsters(int mapCode, Monster monster)
 		{
 			LingDiShouWeiMonsterItem tag = null;
@@ -968,7 +968,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D94 RID: 3476 RVA: 0x000D4214 File Offset: 0x000D2414
+		
 		public int SetLingZhu(int lingDiType, int rid, int junTuanId, string junTuanName, RoleData4Selector client)
 		{
 			int result;
@@ -1009,7 +1009,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000D95 RID: 3477 RVA: 0x000D42E8 File Offset: 0x000D24E8
+		
 		public void InitRoleLingDiCaiJiData(GameClient client, bool isNewDay)
 		{
 			client.ClientData.LingDiCaiJiNum = Global.GetRoleParamsInt32FromDB(client, "10158");
@@ -1062,7 +1062,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D96 RID: 3478 RVA: 0x000D44D0 File Offset: 0x000D26D0
+		
 		public void CleanKuaFuData()
 		{
 			lock (this.CaiJiRunTimeData.Mutex)
@@ -1072,7 +1072,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D97 RID: 3479 RVA: 0x000D4538 File Offset: 0x000D2738
+		
 		public bool SyncKuaFuData()
 		{
 			try
@@ -1111,7 +1111,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000D98 RID: 3480 RVA: 0x000D46F0 File Offset: 0x000D28F0
+		
 		public bool SyncLingDi(LingDiData lingDi)
 		{
 			try
@@ -1296,13 +1296,13 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000D99 RID: 3481 RVA: 0x000D5054 File Offset: 0x000D3254
+		
 		private bool IsGongNengOpened()
 		{
 			return !GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System2Dot4);
 		}
 
-		// Token: 0x06000D9A RID: 3482 RVA: 0x000D507C File Offset: 0x000D327C
+		
 		public void TimerProc()
 		{
 			if (this.IsGongNengOpened())
@@ -1484,7 +1484,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000D9B RID: 3483 RVA: 0x000D5A80 File Offset: 0x000D3C80
+		
 		public int GetLingDiType(int mapCode)
 		{
 			for (int i = 0; i < LingDiCaiJiManager.MapCode.Length; i++)
@@ -1497,7 +1497,7 @@ namespace GameServer.Logic
 			return 2;
 		}
 
-		// Token: 0x06000D9C RID: 3484 RVA: 0x000D5AC0 File Offset: 0x000D3CC0
+		
 		public int CanOpenDouble(GameClient client, out LingDiData lingDi)
 		{
 			lingDi = new LingDiData
@@ -1557,7 +1557,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000D9D RID: 3485 RVA: 0x000D5C48 File Offset: 0x000D3E48
+		
 		public int CanSetShouWei(GameClient client, int index, DateTime now, int useZhuanShi)
 		{
 			int lingDiType = this.GetLingDiType(client.ClientData.MapCode);
@@ -1644,7 +1644,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000D9E RID: 3486 RVA: 0x000D5EF8 File Offset: 0x000D40F8
+		
 		public bool isLingZhu(int rid)
 		{
 			bool result;
@@ -1669,13 +1669,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000D9F RID: 3487 RVA: 0x000D5FC4 File Offset: 0x000D41C4
+		
 		public void OnLogin(GameClient client)
 		{
 			this.UpdateChengHaoBuff(client);
 		}
 
-		// Token: 0x06000DA0 RID: 3488 RVA: 0x000D5FD0 File Offset: 0x000D41D0
+		
 		public void UpdateChengHaoBuff(GameClient client)
 		{
 			lock (this.CaiJiRunTimeData.Mutex)
@@ -1739,7 +1739,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000DA1 RID: 3489 RVA: 0x000D61F4 File Offset: 0x000D43F4
+		
 		private int ConvertCaiJiLingDiTypeToMapCode(int lingDiType)
 		{
 			int result;
@@ -1758,13 +1758,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000DA2 RID: 3490 RVA: 0x000D6230 File Offset: 0x000D4430
+		
 		public int GetLingDiRoleNum(int lingDiType)
 		{
 			return JunTuanClient.getInstance().GetLingDiRoleNum(lingDiType);
 		}
 
-		// Token: 0x06000DA3 RID: 3491 RVA: 0x000D6254 File Offset: 0x000D4454
+		
 		public void SetSync()
 		{
 			lock (this.CaiJiRunTimeData.Mutex)
@@ -1773,7 +1773,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000DA4 RID: 3492 RVA: 0x000D62AC File Offset: 0x000D44AC
+		
 		public bool KuaFuInitGame(GameClient client)
 		{
 			KuaFuServerLoginData kuaFuServerLoginData = Global.GetClientKuaFuServerLoginData(client);
@@ -1795,7 +1795,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000DA5 RID: 3493 RVA: 0x000D6358 File Offset: 0x000D4558
+		
 		public void InitDefaultXml()
 		{
 			LingDiCaiJiManager.MapCode = new int[2];
@@ -1865,7 +1865,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000DA6 RID: 3494 RVA: 0x000D6670 File Offset: 0x000D4870
+		
 		public void InitMap()
 		{
 			try
@@ -1926,7 +1926,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000DA7 RID: 3495 RVA: 0x000D698C File Offset: 0x000D4B8C
+		
 		public void InitShouWei()
 		{
 			try
@@ -1975,7 +1975,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000DA8 RID: 3496 RVA: 0x000D6BEC File Offset: 0x000D4DEC
+		
 		private bool GetBirthPoint(int mapCode, out int toPosX, out int toPosY)
 		{
 			toPosX = -1;
@@ -1997,7 +1997,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000DA9 RID: 3497 RVA: 0x000D6C6C File Offset: 0x000D4E6C
+		
 		public void NotifyPlayGame(GameClient client)
 		{
 			int lingDiType = this.GetLingDiType(client.ClientData.MapCode);
@@ -2031,79 +2031,79 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000DAA RID: 3498 RVA: 0x000D6E28 File Offset: 0x000D5028
+		
 		public void OnLeaveFuBen(GameClient client)
 		{
 			Global.RemoveBufferData(client, 115);
 		}
 
-		// Token: 0x0400150A RID: 5386
+		
 		public LingDiCaiJiRunData CaiJiRunTimeData = new LingDiCaiJiRunData();
 
-		// Token: 0x0400150B RID: 5387
+		
 		public Dictionary<int, ManorCollectMonster> CollectMonsterXml = new Dictionary<int, ManorCollectMonster>();
 
-		// Token: 0x0400150C RID: 5388
+		
 		private static LingDiCaiJiManager instance = new LingDiCaiJiManager();
 
-		// Token: 0x0400150D RID: 5389
+		
 		private object DataMutex = new object();
 
-		// Token: 0x0400150E RID: 5390
+		
 		private long NextHeartBeatTicks = 0L;
 
-		// Token: 0x0400150F RID: 5391
+		
 		private long NextSyncTicks = 0L;
 
-		// Token: 0x04001510 RID: 5392
+		
 		private long NextCheckNumTicks = 0L;
 
-		// Token: 0x04001511 RID: 5393
+		
 		private long NextSyncRoleNumTicks = 0L;
 
-		// Token: 0x04001512 RID: 5394
+		
 		public static int[] MapCode;
 
-		// Token: 0x04001513 RID: 5395
+		
 		public static int WeeklyNum = 0;
 
-		// Token: 0x04001514 RID: 5396
+		
 		public static int OpenSeconds = 0;
 
-		// Token: 0x04001515 RID: 5397
+		
 		public static int BeiLv = 1;
 
-		// Token: 0x04001516 RID: 5398
+		
 		public static int ZhanLingBeiLv = 1;
 
-		// Token: 0x04001517 RID: 5399
+		
 		public static int OpenCountWeekly = 0;
 
-		// Token: 0x04001518 RID: 5400
+		
 		public static TimeSpan OpenTime = DateTime.MaxValue.TimeOfDay;
 
-		// Token: 0x04001519 RID: 5401
+		
 		public static TimeSpan CloseTime = DateTime.MinValue.TimeOfDay;
 
-		// Token: 0x0400151A RID: 5402
+		
 		public List<DoubleOpenItem> DoubleOpenTimeDefaultList = new List<DoubleOpenItem>();
 
-		// Token: 0x0400151B RID: 5403
+		
 		public int FanRongCost = int.MaxValue;
 
-		// Token: 0x0400151C RID: 5404
+		
 		public int ZuanShiCost = int.MaxValue;
 
-		// Token: 0x0400151D RID: 5405
+		
 		public int FuHuoSeconds = int.MaxValue;
 
-		// Token: 0x0400151E RID: 5406
+		
 		public int ChangeLifeLimit = int.MaxValue;
 
-		// Token: 0x0400151F RID: 5407
+		
 		public int LevelLimit = int.MaxValue;
 
-		// Token: 0x04001520 RID: 5408
+		
 		public double[] BuffParam = new double[2];
 	}
 }

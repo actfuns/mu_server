@@ -8,10 +8,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000059 RID: 89
+	
 	public class WebOldPlayerManager
 	{
-		// Token: 0x06000141 RID: 321 RVA: 0x000159DC File Offset: 0x00013BDC
+		
 		public static WebOldPlayerManager getInstance()
 		{
 			lock (WebOldPlayerManager.Mutex)
@@ -26,13 +26,13 @@ namespace GameServer.Logic
 			return WebOldPlayerManager.instance;
 		}
 
-		// Token: 0x06000142 RID: 322 RVA: 0x00015A50 File Offset: 0x00013C50
+		
 		public static void ReloadXml()
 		{
 			WebOldPlayerManager.LoadWebZhaoHuiXml();
 		}
 
-		// Token: 0x06000143 RID: 323 RVA: 0x00015A5C File Offset: 0x00013C5C
+		
 		public static void LoadWebZhaoHuiXml()
 		{
 			try
@@ -143,7 +143,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000144 RID: 324 RVA: 0x00015EB8 File Offset: 0x000140B8
+		
 		public bool ChouJiangAddCheck(int roleID, int chouJiangType)
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -169,7 +169,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000145 RID: 325 RVA: 0x00015FDC File Offset: 0x000141DC
+		
 		public void WebOldPlayerCheck(int roleID, int awardID)
 		{
 			try
@@ -235,34 +235,34 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x040001EB RID: 491
+		
 		public static Dictionary<int, WebOldPlayerManager.WebZhaoHuiData> RunTimeZhaoHuiData = new Dictionary<int, WebOldPlayerManager.WebZhaoHuiData>();
 
-		// Token: 0x040001EC RID: 492
+		
 		private static object Mutex = new object();
 
-		// Token: 0x040001ED RID: 493
+		
 		private static WebOldPlayerManager instance = null;
 
-		// Token: 0x0200005A RID: 90
+		
 		public class WebZhaoHuiData
 		{
-			// Token: 0x040001EE RID: 494
+			
 			public DateTime BegionTime;
 
-			// Token: 0x040001EF RID: 495
+			
 			public DateTime EndTime;
 
-			// Token: 0x040001F0 RID: 496
+			
 			public List<GoodsData> GoodsOne;
 
-			// Token: 0x040001F1 RID: 497
+			
 			public List<GoodsData> GoodsTwo;
 
-			// Token: 0x040001F2 RID: 498
+			
 			public string MailTitle;
 
-			// Token: 0x040001F3 RID: 499
+			
 			public string MailContent;
 		}
 	}

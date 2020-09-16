@@ -51,10 +51,10 @@ using Tmsk.Contract.KuaFuData;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006D7 RID: 1751
+	
 	public class GMCommands
 	{
-		// Token: 0x060029AB RID: 10667 RVA: 0x0023A0C4 File Offset: 0x002382C4
+		
 		public void InitGMCommands(XElement xml)
 		{
 			if (null == xml)
@@ -119,7 +119,7 @@ namespace GameServer.Logic
 			this.GMCmdsDict = dict2;
 		}
 
-		// Token: 0x060029AC RID: 10668 RVA: 0x0023A310 File Offset: 0x00238510
+		
 		public int ReloadGMCommands()
 		{
 			XElement xml = null;
@@ -135,14 +135,14 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x060029AD RID: 10669 RVA: 0x0023A358 File Offset: 0x00238558
+		
 		public bool IsSuperGMUser(TMSKSocket socket)
 		{
 			string userName = GameManager.OnlineUserSession.FindUserName(socket);
 			return this.IsSuperGMUser(userName);
 		}
 
-		// Token: 0x060029AE RID: 10670 RVA: 0x0023A380 File Offset: 0x00238580
+		
 		public bool IsSuperGMUser(string userName)
 		{
 			bool result;
@@ -172,14 +172,14 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060029AF RID: 10671 RVA: 0x0023A3EC File Offset: 0x002385EC
+		
 		public bool IsGMUser(TMSKSocket socket)
 		{
 			string userName = GameManager.OnlineUserSession.FindUserName(socket);
 			return this.IsGMUser(userName);
 		}
 
-		// Token: 0x060029B0 RID: 10672 RVA: 0x0023A414 File Offset: 0x00238614
+		
 		public bool IsGMUser(string userName)
 		{
 			bool result;
@@ -213,14 +213,14 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060029B1 RID: 10673 RVA: 0x0023A498 File Offset: 0x00238698
+		
 		public int IsPriorityUser(TMSKSocket socket)
 		{
 			string userName = GameManager.OnlineUserSession.FindUserName(socket);
 			return this.IsPriorityUser(userName);
 		}
 
-		// Token: 0x060029B2 RID: 10674 RVA: 0x0023A4C0 File Offset: 0x002386C0
+		
 		public int IsPriorityUser(string userName)
 		{
 			int result;
@@ -248,7 +248,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060029B3 RID: 10675 RVA: 0x0023A518 File Offset: 0x00238718
+		
 		private bool CanExecCmd(int priority, string cmd)
 		{
 			bool result;
@@ -294,7 +294,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060029B4 RID: 10676 RVA: 0x0023A5D4 File Offset: 0x002387D4
+		
 		public bool IsValidIP(TMSKSocket socket)
 		{
 			string ip = Global.GetSocketRemoteEndPoint(socket, true);
@@ -340,7 +340,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060029B5 RID: 10677 RVA: 0x0023A69C File Offset: 0x0023889C
+		
 		public bool RegisterGmCmdHandler(string gmCmd, GmCmdHandler handler)
 		{
 			bool result;
@@ -370,7 +370,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060029B6 RID: 10678 RVA: 0x0023A728 File Offset: 0x00238928
+		
 		public bool RemoveGmCmdHandler(GmCmdHandler handler)
 		{
 			bool result;
@@ -401,7 +401,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060029B7 RID: 10679 RVA: 0x0023A7D0 File Offset: 0x002389D0
+		
 		public GmCmdHandler GetHandler(string gmCmd)
 		{
 			GmCmdHandler result;
@@ -424,7 +424,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060029B8 RID: 10680 RVA: 0x0023A848 File Offset: 0x00238A48
+		
 		public void OnClientLogin(GameClient client)
 		{
 			if (this.IsPriorityUser(client.strUserName) == 2)
@@ -443,7 +443,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029B9 RID: 10681 RVA: 0x0023A908 File Offset: 0x00238B08
+		
 		public void OnClientLogout(GameClient client)
 		{
 			if (this.IsPriorityUser(client.strUserName) == 2)
@@ -455,7 +455,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029BA RID: 10682 RVA: 0x0023A970 File Offset: 0x00238B70
+		
 		public void BroadcastChatMsg(SocketListener sl, TCPOutPacketPool pool, GameClient client, string cmdText)
 		{
 			List<GameClient> objsList;
@@ -494,7 +494,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029BB RID: 10683 RVA: 0x0023AA84 File Offset: 0x00238C84
+		
 		public bool ProcessChatMessage(TMSKSocket socket, GameClient client, string text, bool transmit)
 		{
 			bool result;
@@ -563,13 +563,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060029BC RID: 10684 RVA: 0x0023ABB0 File Offset: 0x00238DB0
+		
 		public bool NormalGMMsg(TMSKSocket socket, GameClient client, string text, bool transmit)
 		{
 			return text == "-guanzhan";
 		}
 
-		// Token: 0x060029BD RID: 10685 RVA: 0x0023ABDC File Offset: 0x00238DDC
+		
 		private int SafeConvertToInt32(string str)
 		{
 			int ret = -1;
@@ -585,7 +585,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x060029BE RID: 10686 RVA: 0x0023AC20 File Offset: 0x00238E20
+		
 		private string GetServerBaseInfo(string cmd = null)
 		{
 			string strinfo = string.Format("在线数量 {0}/{1}", GameManager.ClientMgr.GetClientCount(), Global._TCPManager.MySocketListener.ConnectedSocketsCount);
@@ -621,7 +621,7 @@ namespace GameServer.Logic
 			return strinfo + info;
 		}
 
-		// Token: 0x060029BF RID: 10687 RVA: 0x0023AE58 File Offset: 0x00239058
+		
 		private string GetServerTCPInfo(string cmd = null)
 		{
 			bool clear = cmd.Contains("/c");
@@ -728,14 +728,14 @@ namespace GameServer.Logic
 			return strinfo;
 		}
 
-		// Token: 0x060029C0 RID: 10688 RVA: 0x0023B410 File Offset: 0x00239610
+		
 		private string GetCopyMapInfo(string cmd = null)
 		{
 			string info = GameManager.CopyMapMgr.GetCopyMapStrInfo();
 			return info.Substring(0, info.Length - 2);
 		}
 
-		// Token: 0x060029C1 RID: 10689 RVA: 0x0023B440 File Offset: 0x00239640
+		
 		private static string GetGCInfo(string cmd = null)
 		{
 			Program.CalcGCInfo();
@@ -759,7 +759,7 @@ namespace GameServer.Logic
 			return info;
 		}
 
-		// Token: 0x060029C2 RID: 10690 RVA: 0x0023B738 File Offset: 0x00239938
+		
 		private bool ProcessGMCommands(GameClient client, string msgText, string[] cmdFields, bool transmit, bool isSuperGMUser)
 		{
 			if (!transmit)
@@ -10514,7 +10514,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060029C3 RID: 10691 RVA: 0x00257BC4 File Offset: 0x00255DC4
+		
 		public static void GMSetTime(GameClient client, string[] cmdFields, bool allServer = false)
 		{
 			TimeSpan timeSpan = TimeSpan.Zero;
@@ -10577,7 +10577,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029C4 RID: 10692 RVA: 0x00257E30 File Offset: 0x00256030
+		
 		public bool GMSetRebornLevel(GameClient client, string[] cmdFields)
 		{
 			string otherRoleName = cmdFields[1];
@@ -10642,7 +10642,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060029C5 RID: 10693 RVA: 0x00258124 File Offset: 0x00256324
+		
 		public void GMSetGoodsForgeLevel(GameClient client, GoodsData goods, int forgelev, int bind, bool ntfprops = false)
 		{
 			if (client != null && null != goods)
@@ -10710,7 +10710,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029C6 RID: 10694 RVA: 0x00258428 File Offset: 0x00256628
+		
 		public void GMSetWingSuitStar(GameClient client, string[] cmdFields)
 		{
 			if (cmdFields.Length == 3)
@@ -10761,7 +10761,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029C7 RID: 10695 RVA: 0x00258668 File Offset: 0x00256868
+		
 		public bool GMSetLevel(GameClient client, string[] cmdFields)
 		{
 			string otherRoleName = cmdFields[1];
@@ -10866,28 +10866,28 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0400395D RID: 14685
+		
 		private string[] SuperGMUserNames = null;
 
-		// Token: 0x0400395E RID: 14686
+		
 		private string[] GMUserNames = null;
 
-		// Token: 0x0400395F RID: 14687
+		
 		private string[] GMIPs = null;
 
-		// Token: 0x04003960 RID: 14688
+		
 		private Dictionary<string, int> OtherUserNamesDict = new Dictionary<string, int>();
 
-		// Token: 0x04003961 RID: 14689
+		
 		private Dictionary<int, string[]> GMCmdsDict = new Dictionary<int, string[]>();
 
-		// Token: 0x04003962 RID: 14690
+		
 		private Dictionary<string, GmCmdHandler> GmCmdsHandlerDict = new Dictionary<string, GmCmdHandler>();
 
-		// Token: 0x04003963 RID: 14691
+		
 		private List<GameClient> GMClientList = new List<GameClient>();
 
-		// Token: 0x04003964 RID: 14692
+		
 		public static bool EnableGMSetAllServerTime = false;
 	}
 }

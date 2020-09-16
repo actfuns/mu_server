@@ -5,10 +5,10 @@ using Server.Data;
 
 namespace GameServer.Logic.WanMota
 {
-	// Token: 0x020007B2 RID: 1970
+	
 	internal class SweepWanMotaManager
 	{
-		// Token: 0x060033CE RID: 13262 RVA: 0x002DE0E0 File Offset: 0x002DC2E0
+		
 		public static int GetSweepCount(GameClient client)
 		{
 			FuBenData fuBenData = Global.GetFuBenData(client, SweepWanMotaManager.nWanMoTaSweepFuBenOrder);
@@ -24,7 +24,7 @@ namespace GameServer.Logic.WanMota
 			return result;
 		}
 
-		// Token: 0x060033CF RID: 13263 RVA: 0x002DE114 File Offset: 0x002DC314
+		
 		public static void SweepBegin(GameClient client)
 		{
 			if (client.ClientData.WanMoTaProp.nPassLayerCount >= SweepWanMotaManager.nSweepReqMinLayerOrder)
@@ -44,7 +44,7 @@ namespace GameServer.Logic.WanMota
 			}
 		}
 
-		// Token: 0x060033D0 RID: 13264 RVA: 0x002DE1E4 File Offset: 0x002DC3E4
+		
 		public static void SweepContinue(GameClient client)
 		{
 			if (client.ClientData.WanMoTaProp.nPassLayerCount >= SweepWanMotaManager.nSweepReqMinLayerOrder)
@@ -59,13 +59,13 @@ namespace GameServer.Logic.WanMota
 			}
 		}
 
-		// Token: 0x060033D1 RID: 13265 RVA: 0x002DE28D File Offset: 0x002DC48D
+		
 		public static void UpdataSweepInfo(GameClient client, List<SingleLayerRewardData> listRewardData)
 		{
 			client.sendCmd<List<SingleLayerRewardData>>(617, listRewardData, false);
 		}
 
-		// Token: 0x060033D2 RID: 13266 RVA: 0x002DE2A0 File Offset: 0x002DC4A0
+		
 		public static List<SingleLayerRewardData> SummarySweepRewardInfo(GameClient client)
 		{
 			List<SingleLayerRewardData> listRewardData = null;
@@ -102,7 +102,7 @@ namespace GameServer.Logic.WanMota
 			return result;
 		}
 
-		// Token: 0x060033D3 RID: 13267 RVA: 0x002DE478 File Offset: 0x002DC678
+		
 		public static void CombineGoodList(List<GoodsData> goodList, GoodsData goodData)
 		{
 			int gridNum = Global.GetGoodsGridNumByID(goodData.GoodsID);
@@ -123,13 +123,13 @@ namespace GameServer.Logic.WanMota
 			goodList.Add(goodData);
 		}
 
-		// Token: 0x04003F65 RID: 16229
+		
 		public static readonly int nSweepReqMinLayerOrder = 1;
 
-		// Token: 0x04003F66 RID: 16230
+		
 		public static readonly int nWanMoTaSweepFuBenOrder = 19999;
 
-		// Token: 0x04003F67 RID: 16231
+		
 		public static readonly int nWanMoTaMaxSweepNum = 1;
 	}
 }

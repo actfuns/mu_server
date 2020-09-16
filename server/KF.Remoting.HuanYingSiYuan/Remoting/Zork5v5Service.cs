@@ -11,16 +11,16 @@ using Tmsk.Tools.Tools;
 
 namespace Remoting
 {
-	// Token: 0x0200007E RID: 126
+	
 	public class Zork5v5Service
 	{
-		// Token: 0x06000610 RID: 1552 RVA: 0x00052800 File Offset: 0x00050A00
+		
 		public static Zork5v5Service Instance()
 		{
 			return Zork5v5Service._instance;
 		}
 
-		// Token: 0x06000611 RID: 1553 RVA: 0x00052868 File Offset: 0x00050A68
+		
 		public void InitConfig()
 		{
 			try
@@ -112,7 +112,7 @@ namespace Remoting
 			}
 		}
 
-		// Token: 0x06000612 RID: 1554 RVA: 0x00052D78 File Offset: 0x00050F78
+		
 		public void LoadDatabase(DateTime now)
 		{
 			try
@@ -141,13 +141,13 @@ namespace Remoting
 			}
 		}
 
-		// Token: 0x06000613 RID: 1555 RVA: 0x00052E94 File Offset: 0x00051094
+		
 		public bool CheckOpenState(DateTime now)
 		{
 			return !(now < this.ZorkStartTime);
 		}
 
-		// Token: 0x06000614 RID: 1556 RVA: 0x00052EC0 File Offset: 0x000510C0
+		
 		private void UpdateTopZhanDuiInfo()
 		{
 			this.TopZhanDuiName = "";
@@ -161,7 +161,7 @@ namespace Remoting
 			}
 		}
 
-		// Token: 0x06000615 RID: 1557 RVA: 0x00052F18 File Offset: 0x00051118
+		
 		private int GetCurrentRoundByTime(DateTime now, int CurrentSeasonID)
 		{
 			int result;
@@ -219,7 +219,7 @@ namespace Remoting
 			return result;
 		}
 
-		// Token: 0x06000616 RID: 1558 RVA: 0x000530DC File Offset: 0x000512DC
+		
 		private int ComputeCurrentSeasonID(DateTime now, int CurrentSeasonID)
 		{
 			int result;
@@ -279,7 +279,7 @@ namespace Remoting
 			return result;
 		}
 
-		// Token: 0x06000617 RID: 1559 RVA: 0x0005333C File Offset: 0x0005153C
+		
 		public bool ReloadRankInfo(int rankType, KuaFuData<Dictionary<int, List<KFZorkRankInfo>>> ZorkBattleRankInfoDict)
 		{
 			bool ret = true;
@@ -312,7 +312,7 @@ namespace Remoting
 			return ret;
 		}
 
-		// Token: 0x06000618 RID: 1560 RVA: 0x000533E8 File Offset: 0x000515E8
+		
 		private void InitFuBenManagerData(DateTime now)
 		{
 			this.LastUpdateTime = now;
@@ -330,7 +330,7 @@ namespace Remoting
 			this.StateMachine.Tick(now, 0);
 		}
 
-		// Token: 0x06000619 RID: 1561 RVA: 0x00053518 File Offset: 0x00051718
+		
 		private void MS_Init_Update(DateTime now, int param)
 		{
 			if (this.CheckOpenState(now))
@@ -383,7 +383,7 @@ namespace Remoting
 			}
 		}
 
-		// Token: 0x0600061A RID: 1562 RVA: 0x0005376C File Offset: 0x0005196C
+		
 		private void MS_SignUp_Update(DateTime now, int param)
 		{
 			ZorkBattleSceneInfo matchConfig = this.SceneDataDict.Values.FirstOrDefault<ZorkBattleSceneInfo>();
@@ -413,7 +413,7 @@ namespace Remoting
 			}
 		}
 
-		// Token: 0x0600061B RID: 1563 RVA: 0x000538E8 File Offset: 0x00051AE8
+		
 		private void MS_PrepareGame_Update(DateTime now, int param)
 		{
 			ZorkBattleSceneInfo matchConfig = this.SceneDataDict.Values.FirstOrDefault<ZorkBattleSceneInfo>();
@@ -516,7 +516,7 @@ namespace Remoting
 			}
 		}
 
-		// Token: 0x0600061C RID: 1564 RVA: 0x00053D98 File Offset: 0x00051F98
+		
 		private void AssginKfFuben(KuaFu5v5FuBenData fubenData)
 		{
 			int toServerId = 0;
@@ -561,7 +561,7 @@ namespace Remoting
 			}
 		}
 
-		// Token: 0x0600061D RID: 1565 RVA: 0x00053F74 File Offset: 0x00052174
+		
 		private void MS_NotifyEnter_Update(DateTime now, int param)
 		{
 			ZorkBattleSceneInfo matchConfig = this.SceneDataDict.Values.FirstOrDefault<ZorkBattleSceneInfo>();
@@ -599,7 +599,7 @@ namespace Remoting
 			}
 		}
 
-		// Token: 0x0600061E RID: 1566 RVA: 0x00054170 File Offset: 0x00052370
+		
 		private void MS_GameStart_Update(DateTime now, int param)
 		{
 			ZorkBattleSceneInfo matchConfig = this.SceneDataDict.Values.FirstOrDefault<ZorkBattleSceneInfo>();
@@ -629,14 +629,14 @@ namespace Remoting
 			}
 		}
 
-		// Token: 0x0600061F RID: 1567 RVA: 0x000542EA File Offset: 0x000524EA
+		
 		private void MS_RankAnalyse_Enter(DateTime now, int param)
 		{
 			this.PiPeiDict.Clear();
 			this.BybZhanDuiIDSet.Clear();
 		}
 
-		// Token: 0x06000620 RID: 1568 RVA: 0x00054308 File Offset: 0x00052508
+		
 		private void MS_RankAnalyse_Update(DateTime now, int param)
 		{
 			ZorkBattleSceneInfo matchConfig = this.SceneDataDict.Values.FirstOrDefault<ZorkBattleSceneInfo>();
@@ -718,7 +718,7 @@ namespace Remoting
 			}
 		}
 
-		// Token: 0x06000621 RID: 1569 RVA: 0x00054668 File Offset: 0x00052868
+		
 		private void HandleUnCompleteFuBenData()
 		{
 			foreach (KeyValuePair<int, KuaFu5v5FuBenData> fubenItem in this.FuBenDataDict)
@@ -730,7 +730,7 @@ namespace Remoting
 			this.ZhanDuiIDVsGameIDDict.Clear();
 		}
 
-		// Token: 0x06000622 RID: 1570 RVA: 0x000546FC File Offset: 0x000528FC
+		
 		public KuaFu5v5FuBenData GetFuBenDataByGameId_ZorkBattle(int gameid)
 		{
 			KuaFu5v5FuBenData fuBenData = null;
@@ -748,7 +748,7 @@ namespace Remoting
 			return fuBenData;
 		}
 
-		// Token: 0x06000623 RID: 1571 RVA: 0x00054780 File Offset: 0x00052980
+		
 		public KuaFu5v5FuBenData GetFuBenDataByZhanDuiId_ZorkBattle(int ZhanDuiId)
 		{
 			KuaFu5v5FuBenData fuBenData = null;
@@ -768,7 +768,7 @@ namespace Remoting
 			return fuBenData;
 		}
 
-		// Token: 0x06000624 RID: 1572 RVA: 0x00054818 File Offset: 0x00052A18
+		
 		public ZorkBattleSyncData SyncData_ZorkBattle(long gsTicks, long ageRank)
 		{
 			ZorkBattleSyncData SyncData = new ZorkBattleSyncData();
@@ -796,7 +796,7 @@ namespace Remoting
 			return SyncData;
 		}
 
-		// Token: 0x06000625 RID: 1573 RVA: 0x00054918 File Offset: 0x00052B18
+		
 		public string GetKuaFuGameState_ZorkBattle(int zhanduiID)
 		{
 			string result = "";
@@ -830,7 +830,7 @@ namespace Remoting
 			return result;
 		}
 
-		// Token: 0x06000626 RID: 1574 RVA: 0x00054A2C File Offset: 0x00052C2C
+		
 		public int SignUp_ZorkBattle(int zhanduiID, int serverID)
 		{
 			int result = 0;
@@ -882,7 +882,7 @@ namespace Remoting
 			return result;
 		}
 
-		// Token: 0x06000627 RID: 1575 RVA: 0x00054BF8 File Offset: 0x00052DF8
+		
 		public int GameFuBenComplete_ZorkBattle(ZorkBattleStatisticalData data)
 		{
 			int result = 0;
@@ -937,7 +937,7 @@ namespace Remoting
 			return result;
 		}
 
-		// Token: 0x06000628 RID: 1576 RVA: 0x00054F10 File Offset: 0x00053110
+		
 		public int CalDuanWeiByJiFen(int jifen)
 		{
 			int DuanWei = 0;
@@ -954,7 +954,7 @@ namespace Remoting
 			return DuanWei;
 		}
 
-		// Token: 0x06000629 RID: 1577 RVA: 0x00054FD4 File Offset: 0x000531D4
+		
 		public void Update(DateTime now)
 		{
 			try
@@ -975,76 +975,76 @@ namespace Remoting
 			}
 		}
 
-		// Token: 0x0400035B RID: 859
+		
 		public const int RankShowNum = 30;
 
-		// Token: 0x0400035C RID: 860
+		
 		private static Zork5v5Service _instance = new Zork5v5Service();
 
-		// Token: 0x0400035D RID: 861
+		
 		public readonly GameTypes GameType = GameTypes.Zork5v5;
 
-		// Token: 0x0400035E RID: 862
+		
 		public readonly GameTypes EvItemGameType = GameTypes.TianTi;
 
-		// Token: 0x0400035F RID: 863
+		
 		private object Mutex = new object();
 
-		// Token: 0x04000360 RID: 864
+		
 		private object MutexConfig = new object();
 
-		// Token: 0x04000361 RID: 865
+		
 		public Dictionary<int, ZorkBattleSceneInfo> SceneDataDict = new Dictionary<int, ZorkBattleSceneInfo>();
 
-		// Token: 0x04000362 RID: 866
+		
 		public List<ZorkBattleAwardConfig> ZorkLevelRangeList = new List<ZorkBattleAwardConfig>();
 
-		// Token: 0x04000363 RID: 867
+		
 		public DateTime ZorkStartTime;
 
-		// Token: 0x04000364 RID: 868
+		
 		public TianTiPersistence Persistence = TianTiPersistence.Instance;
 
-		// Token: 0x04000365 RID: 869
+		
 		private Zork5v5StateMachine StateMachine = new Zork5v5StateMachine();
 
-		// Token: 0x04000366 RID: 870
+		
 		public Dictionary<int, KF5v5PiPeiTeam> PiPeiDict = new Dictionary<int, KF5v5PiPeiTeam>();
 
-		// Token: 0x04000367 RID: 871
+		
 		private Dictionary<int, KuaFu5v5FuBenData> FuBenDataDict = new Dictionary<int, KuaFu5v5FuBenData>();
 
-		// Token: 0x04000368 RID: 872
+		
 		private Dictionary<int, int> ZhanDuiIDVsGameIDDict = new Dictionary<int, int>();
 
-		// Token: 0x04000369 RID: 873
+		
 		private HashSet<int> BybZhanDuiIDSet = new HashSet<int>();
 
-		// Token: 0x0400036A RID: 874
+		
 		private KuaFuData<Dictionary<int, List<KFZorkRankInfo>>> ZorkBattleRankInfoDict = new KuaFuData<Dictionary<int, List<KFZorkRankInfo>>>();
 
-		// Token: 0x0400036B RID: 875
+		
 		private int CurrentSeasonID = 0;
 
-		// Token: 0x0400036C RID: 876
+		
 		private int CurrentRound = 0;
 
-		// Token: 0x0400036D RID: 877
+		
 		private int TopZhanDui = 0;
 
-		// Token: 0x0400036E RID: 878
+		
 		private string TopZhanDuiName;
 
-		// Token: 0x0400036F RID: 879
+		
 		private int TopKiller = 0;
 
-		// Token: 0x04000370 RID: 880
+		
 		private int SeasonWeeks = 1;
 
-		// Token: 0x04000371 RID: 881
+		
 		private uint UpdateFrameCount = 0U;
 
-		// Token: 0x04000372 RID: 882
+		
 		private DateTime LastUpdateTime = DateTime.MinValue;
 	}
 }

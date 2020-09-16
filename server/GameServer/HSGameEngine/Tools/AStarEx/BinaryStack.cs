@@ -4,17 +4,17 @@ using System.Linq;
 
 namespace HSGameEngine.Tools.AStarEx
 {
-	// Token: 0x020008D7 RID: 2263
+	
 	public class BinaryStack
 	{
-		// Token: 0x06004141 RID: 16705 RVA: 0x003BFCFC File Offset: 0x003BDEFC
+		
 		public BinaryStack(string compareValue = "f")
 		{
 			this._data = new List<long>(1000);
 			this._dict = new Dictionary<long, int>(1000);
 		}
 
-		// Token: 0x06004142 RID: 16706 RVA: 0x003BFD3C File Offset: 0x003BDF3C
+		
 		public void push(long guid)
 		{
 			this._data.Add(guid);
@@ -41,7 +41,7 @@ namespace HSGameEngine.Tools.AStarEx
 			}
 		}
 
-		// Token: 0x06004143 RID: 16707 RVA: 0x003BFE18 File Offset: 0x003BE018
+		
 		public long shift()
 		{
 			long result = this._data.ElementAt(0);
@@ -85,7 +85,7 @@ namespace HSGameEngine.Tools.AStarEx
 			return result;
 		}
 
-		// Token: 0x06004144 RID: 16708 RVA: 0x003BFFB8 File Offset: 0x003BE1B8
+		
 		public void updateNode(long node)
 		{
 			int indexObj = this.indexOf(node);
@@ -113,7 +113,7 @@ namespace HSGameEngine.Tools.AStarEx
 			}
 		}
 
-		// Token: 0x06004145 RID: 16709 RVA: 0x003C0080 File Offset: 0x003BE280
+		
 		public int indexOf(long node)
 		{
 			int findIndex = -1;
@@ -129,13 +129,13 @@ namespace HSGameEngine.Tools.AStarEx
 			return result;
 		}
 
-		// Token: 0x06004146 RID: 16710 RVA: 0x003C00B0 File Offset: 0x003BE2B0
+		
 		public int getLength()
 		{
 			return this._data.Count;
 		}
 
-		// Token: 0x06004147 RID: 16711 RVA: 0x003C00D0 File Offset: 0x003BE2D0
+		
 		private bool compareTwoNodes(long node1, long node2)
 		{
 			double f = this._nodeGrid.Nodes[ANode.GetGUID_X(node1), ANode.GetGUID_Y(node1)].f;
@@ -143,7 +143,7 @@ namespace HSGameEngine.Tools.AStarEx
 			return f < f2;
 		}
 
-		// Token: 0x06004148 RID: 16712 RVA: 0x003C012C File Offset: 0x003BE32C
+		
 		public string toString()
 		{
 			string result = "";
@@ -160,20 +160,20 @@ namespace HSGameEngine.Tools.AStarEx
 			return result;
 		}
 
-		// Token: 0x06004149 RID: 16713 RVA: 0x003C01C7 File Offset: 0x003BE3C7
+		
 		public void ClearAll()
 		{
 			this._data.Clear();
 			this._dict.Clear();
 		}
 
-		// Token: 0x04004F8B RID: 20363
+		
 		public NodeGrid _nodeGrid = null;
 
-		// Token: 0x04004F8C RID: 20364
+		
 		public List<long> _data = null;
 
-		// Token: 0x04004F8D RID: 20365
+		
 		private Dictionary<long, int> _dict = null;
 	}
 }

@@ -5,17 +5,17 @@ using Server.Tools;
 
 namespace Tmsk.Tools
 {
-	// Token: 0x02000224 RID: 548
+	
 	public static class WebHelper
 	{
-		// Token: 0x06000CED RID: 3309 RVA: 0x000A38EC File Offset: 0x000A1AEC
+		
 		public static byte[] RequestByPost(string uri, byte[] bytes, int timeOut = 5000, int readWriteTimeout = 100000)
 		{
 			int httpStatusCode;
 			return WebHelper.RequestByPost(uri, bytes, out httpStatusCode, timeOut, readWriteTimeout);
 		}
 
-		// Token: 0x06000CEE RID: 3310 RVA: 0x000A390C File Offset: 0x000A1B0C
+		
 		public static byte[] RequestByPost(string uri, byte[] bytes, out int httpStatusCode, int timeOut = 5000, int readWriteTimeout = 100000)
 		{
 			httpStatusCode = 404;
@@ -58,7 +58,7 @@ namespace Tmsk.Tools
 			return bytes2;
 		}
 
-		// Token: 0x06000CEF RID: 3311 RVA: 0x000A3A40 File Offset: 0x000A1C40
+		
 		private static byte[] GetBytes(HttpWebResponse res)
 		{
 			byte[] buffer = null;

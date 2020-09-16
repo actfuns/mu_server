@@ -18,22 +18,22 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020003F9 RID: 1017
+	
 	public class RoleManager : IManager, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x060011F6 RID: 4598 RVA: 0x0011D2B0 File Offset: 0x0011B4B0
+		
 		public static RoleManager getInstance()
 		{
 			return RoleManager.instance;
 		}
 
-		// Token: 0x060011F7 RID: 4599 RVA: 0x0011D2C8 File Offset: 0x0011B4C8
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x060011F8 RID: 4600 RVA: 0x0011D2EC File Offset: 0x0011B4EC
+		
 		public bool InitConfig()
 		{
 			bool success = true;
@@ -89,7 +89,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x060011F9 RID: 4601 RVA: 0x0011D5A0 File Offset: 0x0011B7A0
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1410, 2, 2, RoleManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -98,25 +98,25 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060011FA RID: 4602 RVA: 0x0011D5FC File Offset: 0x0011B7FC
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x060011FB RID: 4603 RVA: 0x0011D610 File Offset: 0x0011B810
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060011FC RID: 4604 RVA: 0x0011D624 File Offset: 0x0011B824
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x060011FD RID: 4605 RVA: 0x0011D638 File Offset: 0x0011B838
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -145,13 +145,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060011FE RID: 4606 RVA: 0x0011D6A8 File Offset: 0x0011B8A8
+		
 		private bool IsGongNengOpened(GameClient client)
 		{
 			return !GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System2Dot3) && GlobalNew.IsGongNengOpened(client, GongNengIDs.ZhuanZhi, false);
 		}
 
-		// Token: 0x060011FF RID: 4607 RVA: 0x0011D6E0 File Offset: 0x0011B8E0
+		
 		private bool PurchaseOccupation(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			int result = 0;
@@ -224,7 +224,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x06001200 RID: 4608 RVA: 0x0011D938 File Offset: 0x0011BB38
+		
 		private bool ChangeOccupation(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			int result = 0;
@@ -298,7 +298,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001201 RID: 4609 RVA: 0x0011DB98 File Offset: 0x0011BD98
+		
 		private bool CreateOccupationSummoner(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			int PurchaseOccupationGoods = 0;
@@ -477,7 +477,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x06001202 RID: 4610 RVA: 0x0011E184 File Offset: 0x0011C384
+		
 		public bool StoreRoleOccGoodsList(GameClient client)
 		{
 			bool result = true;
@@ -509,7 +509,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001203 RID: 4611 RVA: 0x0011E2E4 File Offset: 0x0011C4E4
+		
 		public void RestoreRoleOccGoodsList(GameClient client)
 		{
 			int site = 1000 + client.ClientData.Occupation;
@@ -529,7 +529,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001204 RID: 4612 RVA: 0x0011E430 File Offset: 0x0011C630
+		
 		private void RestoreRoleCustomData(GameClient client, RoleCustomData customData)
 		{
 			RoleCustomDataItem roleCustomData = null;
@@ -586,7 +586,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001205 RID: 4613 RVA: 0x0011E938 File Offset: 0x0011CB38
+		
 		private void SaveRoleCustomData(GameClient client, RoleCustomData customData)
 		{
 			int oldIndex = -1;
@@ -733,7 +733,7 @@ namespace GameServer.Logic
 			Global.sendToDB<int, RoleCustomData>(10233, customData, client.ServerId);
 		}
 
-		// Token: 0x06001206 RID: 4614 RVA: 0x0011EFC4 File Offset: 0x0011D1C4
+		
 		public RoleData4Selector GetMainOccupationRoleDataForSelector(int roleId, int serverId)
 		{
 			RoleData4Selector roleData4Selector = Global.sendToDB<RoleData4Selector, int>(10232, roleId, serverId);
@@ -749,7 +749,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001207 RID: 4615 RVA: 0x0011F000 File Offset: 0x0011D200
+		
 		public RoleDataMini GetRoleDataMiniFromRoleData4Selector(RoleData4Selector roleData4Selector)
 		{
 			RoleDataMini MyRoleDataMini = null;
@@ -788,7 +788,7 @@ namespace GameServer.Logic
 			return MyRoleDataMini;
 		}
 
-		// Token: 0x06001208 RID: 4616 RVA: 0x0011F1A0 File Offset: 0x0011D3A0
+		
 		public void CheckSkillDataValid(GameClient client)
 		{
 			if (client.ClientData.SkillDataList != null)
@@ -812,7 +812,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001209 RID: 4617 RVA: 0x0011F2F8 File Offset: 0x0011D4F8
+		
 		public int GetRoleIDByRoleName(string roleName, int serverID)
 		{
 			int roleid = RoleName2IDs.FindRoleIDByName(roleName, false);
@@ -828,16 +828,16 @@ namespace GameServer.Logic
 			return roleid;
 		}
 
-		// Token: 0x04001B25 RID: 6949
+		
 		public const SceneUIClasses _sceneType = SceneUIClasses.ZhengDuo;
 
-		// Token: 0x04001B26 RID: 6950
+		
 		public const GameTypes _gameType = GameTypes.ZhengDuo;
 
-		// Token: 0x04001B27 RID: 6951
+		
 		private static RoleManager instance = new RoleManager();
 
-		// Token: 0x04001B28 RID: 6952
+		
 		private RoleManagerData RuntimeData = new RoleManagerData();
 	}
 }

@@ -12,10 +12,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007CF RID: 1999
+	
 	internal class SpriteAttack
 	{
-		// Token: 0x0600384A RID: 14410 RVA: 0x002FB630 File Offset: 0x002F9830
+		
 		private static int VerifyEnemyID(IObject attacker, int mapCode, int enemyID, int enemyX, int enemyY)
 		{
 			int ret = enemyID;
@@ -115,7 +115,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600384B RID: 14411 RVA: 0x002FB888 File Offset: 0x002F9A88
+		
 		private static bool IsOpposition(IObject me, int mapCode, int enemyID)
 		{
 			bool ret = true;
@@ -227,7 +227,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600384C RID: 14412 RVA: 0x002FBB34 File Offset: 0x002F9D34
+		
 		public static bool JugeMagicDistance(SystemXmlItem systemMagic, IObject attacker, int enemy, int enemyX, int enemyY, int magicCode, bool forceNotAttack = false)
 		{
 			int attackDistance = systemMagic.GetIntValue("AttackDistance", -1);
@@ -297,7 +297,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600384D RID: 14413 RVA: 0x002FBD78 File Offset: 0x002F9F78
+		
 		public static bool CanUseMaigc(GameClient client, int magicCode)
 		{
 			lock (client.ClientData.SkillIdHashSet)
@@ -324,7 +324,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600384E RID: 14414 RVA: 0x002FBE58 File Offset: 0x002FA058
+		
 		private static bool CheckEnemyClientPostion(GameClient client, ref int enemyID, int realEnemyX, int realEnemyY)
 		{
 			bool result;
@@ -374,7 +374,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600384F RID: 14415 RVA: 0x002FBF94 File Offset: 0x002FA194
+		
 		private static bool CheckMonsterPostion(GameClient client, int enemyID, int realEnemyX, int realEnemyY)
 		{
 			bool result;
@@ -425,13 +425,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003850 RID: 14416 RVA: 0x002FC128 File Offset: 0x002FA328
+		
 		public static bool CheckLastAttackTicks(GameClient client, bool recAttackTicks, int magicCode)
 		{
 			return recAttackTicks || true;
 		}
 
-		// Token: 0x06003851 RID: 14417 RVA: 0x002FC148 File Offset: 0x002FA348
+		
 		private static bool CanAutoUseZSSkill(GameClient client, int magicCode)
 		{
 			int nOcc = Global.CalcOriginalOccupationID(client);
@@ -464,28 +464,28 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003852 RID: 14418 RVA: 0x002FC1D4 File Offset: 0x002FA3D4
+		
 		private static bool CanRecordAttackTicks(GameClient client, int magicCode)
 		{
 			SystemXmlItem systemMagic = null;
 			return !GameManager.SystemMagicsMgr.SystemXmlItemDict.TryGetValue(magicCode, out systemMagic) || 1 != systemMagic.GetIntValue("SkillType", -1);
 		}
 
-		// Token: 0x06003853 RID: 14419 RVA: 0x002FC218 File Offset: 0x002FA418
+		
 		public static bool AddManyAttackMagic(IObject obj, int enemy, int enemyX, int enemyY, int realEnemyX, int realEnemyY, int magicCode)
 		{
 			MagicsManyTimeDmageQueue queue = obj.GetExtComponent<MagicsManyTimeDmageQueue>(ExtComponentTypes.ManyTimeDamageQueue);
 			return null != queue && queue.AddManyTimeDmageQueueItemEx(enemy, enemyX, enemyY, realEnemyX, realEnemyY, magicCode);
 		}
 
-		// Token: 0x06003854 RID: 14420 RVA: 0x002FC250 File Offset: 0x002FA450
+		
 		public static bool AddDelayMagic(IObject obj, int enemy, int enemyX, int enemyY, int realEnemyX, int realEnemyY, int magicCode)
 		{
 			MagicsManyTimeDmageQueue queue = obj.GetExtComponent<MagicsManyTimeDmageQueue>(ExtComponentTypes.ManyTimeDamageQueue);
 			return null != queue && queue.AddDelayMagicItemEx(enemy, enemyX, enemyY, realEnemyX, realEnemyY, magicCode);
 		}
 
-		// Token: 0x06003855 RID: 14421 RVA: 0x002FC288 File Offset: 0x002FA488
+		
 		private static void ParseManyTimes(IObject obj, List<ManyTimeDmageItem> manyTimeDmageItemList, int enemy, int enemyX, int enemyY, int realEnemyX, int realEnemyY, int magicCode)
 		{
 			long ticks = TimeUtil.NOW();
@@ -554,7 +554,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003856 RID: 14422 RVA: 0x002FC4F8 File Offset: 0x002FA6F8
+		
 		public static void ExecMagicsManyTimeDmageQueue(IObject obj)
 		{
 			if (obj is GameClient)
@@ -595,7 +595,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003857 RID: 14423 RVA: 0x002FC738 File Offset: 0x002FA938
+		
 		public static void ExecMagicsManyTimeDmageQueueEx(IObject obj)
 		{
 			MagicsManyTimeDmageQueue queue = obj.GetExtComponent<MagicsManyTimeDmageQueue>(ExtComponentTypes.ManyTimeDamageQueue);
@@ -664,7 +664,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003858 RID: 14424 RVA: 0x002FC96C File Offset: 0x002FAB6C
+		
 		public static void ProcessAttack(GameClient client, int enemy, int enemyX, int enemyY, int realEnemyX, int realEnemyY, int magicCode, int manyRangeIndex = -1, double manyRangeInjuredPercent = 1.0)
 		{
 			if (-1 == manyRangeIndex)
@@ -706,7 +706,7 @@ namespace GameServer.Logic
 			SpriteAttack._ProcessAttack(client, enemy, enemyX, enemyY, realEnemyX, realEnemyY, magicCode, recAttackTicks, manyRangeIndex, manyRangeInjuredPercent);
 		}
 
-		// Token: 0x06003859 RID: 14425 RVA: 0x002FCAF4 File Offset: 0x002FACF4
+		
 		public static bool IsParentActionDone(GameClient client, int magicCode)
 		{
 			int parentMagicCode = 0;
@@ -720,7 +720,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600385A RID: 14426 RVA: 0x002FCB3C File Offset: 0x002FAD3C
+		
 		public static bool IsMagicEnough(GameClient client, int magicCode)
 		{
 			SkillData skillData = Global.GetSkillDataByID(client, magicCode);
@@ -746,7 +746,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600385B RID: 14427 RVA: 0x002FCBE4 File Offset: 0x002FADE4
+		
 		public static int CheckMagicScripts(GameClient client, int magicCode)
 		{
 			int result;
@@ -769,7 +769,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600385C RID: 14428 RVA: 0x002FCC58 File Offset: 0x002FAE58
+		
 		public static int CheckMagicScripts2(GameClient client, int magicCode)
 		{
 			int result;
@@ -792,7 +792,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600385D RID: 14429 RVA: 0x002FCCA4 File Offset: 0x002FAEA4
+		
 		private static void _ProcessAttack(GameClient client, int enemy, int enemyX, int enemyY, int realEnemyX, int realEnemyY, int magicCode, bool recAttackTicks, int manyRangeIndex, double manyRangeInjuredPercent)
 		{
 			if (!SpriteAttack.CheckEnemyClientPostion(client, ref enemy, realEnemyX, realEnemyY))
@@ -834,7 +834,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600385E RID: 14430 RVA: 0x002FCE18 File Offset: 0x002FB018
+		
 		private static bool IsFriend(GameClient me, int mapCode, int enemyID)
 		{
 			bool ret = false;
@@ -886,7 +886,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600385F RID: 14431 RVA: 0x002FCF3C File Offset: 0x002FB13C
+		
 		private static bool IsFriend(GameClient me, GameClient enemy)
 		{
 			bool ret = false;
@@ -924,7 +924,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003860 RID: 14432 RVA: 0x002FD098 File Offset: 0x002FB298
+		
 		private static bool GetEnemyPos(int mapCode, int enemyID, out Point pos)
 		{
 			bool ret = false;
@@ -981,7 +981,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06003861 RID: 14433 RVA: 0x002FD264 File Offset: 0x002FB464
+		
 		private static object GetEnemyObject(int mapCode, int enemyID)
 		{
 			object obj = null;
@@ -1032,7 +1032,7 @@ namespace GameServer.Logic
 			return obj;
 		}
 
-		// Token: 0x06003862 RID: 14434 RVA: 0x002FD368 File Offset: 0x002FB568
+		
 		private static void ProcessPhyAttack(GameClient client, int enemy, int enemyX, int enemyY, int magicCode, int manyRangeIndex, double manyRangeInjuredPercent)
 		{
 			enemy = SpriteAttack.VerifyEnemyID(client, client.ClientData.MapCode, enemy, enemyX, enemyY);
@@ -1121,7 +1121,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003863 RID: 14435 RVA: 0x002FD828 File Offset: 0x002FBA28
+		
 		private static void ProcessMagicAttack(GameClient client, int enemy, int enemyX, int enemyY, int magicCode, int manyRangeIndex, double manyRangeInjuredPercent)
 		{
 			if (-1 != magicCode)
@@ -1707,7 +1707,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003864 RID: 14436 RVA: 0x002FF720 File Offset: 0x002FD920
+		
 		public static void ProcessAttackByMonster(Monster attacker, int enemy, int enemyX, int enemyY, int realEnemyX, int realEnemyY, int magicCode, int manyRangeIndex = -1, double manyRangeInjuredPercent = 1.0)
 		{
 			if (-1 == manyRangeIndex && attacker.MagicFinish <= -1)
@@ -1722,7 +1722,7 @@ namespace GameServer.Logic
 			SpriteAttack._ProcessAttackByMonster(attacker, enemy, enemyX, enemyY, realEnemyX, realEnemyY, magicCode, recAttackTicks, manyRangeIndex, manyRangeInjuredPercent);
 		}
 
-		// Token: 0x06003865 RID: 14437 RVA: 0x002FF788 File Offset: 0x002FD988
+		
 		public static void ProcessAttackByJingJiRobot(Robot attacker, IObject target, int magicCode, int manyRangeIndex = -1, double manyRangeInjuredPercent = 1.0)
 		{
 			if (-1 == magicCode)
@@ -1735,7 +1735,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003866 RID: 14438 RVA: 0x002FF7E4 File Offset: 0x002FD9E4
+		
 		private static void ProcessMagicAttackByJingJiRobot(Robot attacker, int enemy, int magicCode, int manyRangeIndex, double manyRangeInjuredPercent)
 		{
 			if (-1 != enemy)
@@ -1757,7 +1757,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003867 RID: 14439 RVA: 0x002FF860 File Offset: 0x002FDA60
+		
 		private static void ProcessMagicAttackByJingJiRobot(Robot attacker, IObject target, int magicCode, int manyRangeIndex, double manyRangeInjuredPercent)
 		{
 			if (-1 != magicCode)
@@ -2227,7 +2227,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003868 RID: 14440 RVA: 0x0030113C File Offset: 0x002FF33C
+		
 		private static void _ProcessAttackByMonster(Monster attacker, int enemy, int enemyX, int enemyY, int realEnemyX, int realEnemyY, int magicCode, bool recAttackTicks, int manyRangeIndex, double manyRangeInjuredPercent)
 		{
 			if (-1 == magicCode)
@@ -2248,7 +2248,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003869 RID: 14441 RVA: 0x003011A0 File Offset: 0x002FF3A0
+		
 		private static void ProcessPhyAttackByMonster(Monster attacker, int enemy, int enemyX, int enemyY, int magicCode, int manyRangeIndex, double manyRangeInjuredPercent)
 		{
 			enemy = SpriteAttack.VerifyEnemyID(attacker, attacker.MonsterZoneNode.MapCode, enemy, enemyX, enemyY);
@@ -2324,7 +2324,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600386A RID: 14442 RVA: 0x00301514 File Offset: 0x002FF714
+		
 		private static bool ProcessMagicAttackByMonster(Monster attacker, int enemy, int enemyX, int enemyY, int magicCode, int manyRangeIndex, double manyRangeInjuredPercent)
 		{
 			bool result;
@@ -2782,7 +2782,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600386B RID: 14443 RVA: 0x00302C44 File Offset: 0x00300E44
+		
 		public static void ProcessManyAttackMagicFinish(bool bFindTarget, Monster attacker)
 		{
 			if (!bFindTarget || attacker.MyMagicsManyTimeDmageQueue.GetManyTimeDmageQueueItemNumEx() < 1)

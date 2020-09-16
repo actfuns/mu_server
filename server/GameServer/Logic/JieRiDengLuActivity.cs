@@ -4,10 +4,10 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000703 RID: 1795
+	
 	public class JieRiDengLuActivity : Activity
 	{
-		// Token: 0x06002B25 RID: 11045 RVA: 0x00266ED4 File Offset: 0x002650D4
+		
 		public override AwardItem GetAward(GameClient client, int day)
 		{
 			AwardItem myAward = null;
@@ -18,7 +18,7 @@ namespace GameServer.Logic
 			return myAward;
 		}
 
-		// Token: 0x06002B26 RID: 11046 RVA: 0x00266F0C File Offset: 0x0026510C
+		
 		public AwardItem GetOccAward(GameClient client, int day)
 		{
 			AwardItem result;
@@ -39,7 +39,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002B27 RID: 11047 RVA: 0x00266F64 File Offset: 0x00265164
+		
 		public AwardItem GetOccAward(int key)
 		{
 			AwardItem myOccAward = null;
@@ -50,7 +50,7 @@ namespace GameServer.Logic
 			return myOccAward;
 		}
 
-		// Token: 0x06002B28 RID: 11048 RVA: 0x00266F9C File Offset: 0x0026519C
+		
 		public override bool GiveAward(GameClient client, int _params)
 		{
 			bool result2;
@@ -80,7 +80,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x06002B29 RID: 11049 RVA: 0x00267020 File Offset: 0x00265220
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client, int _params)
 		{
 			bool result;
@@ -106,10 +106,10 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04003A2A RID: 14890
+		
 		public Dictionary<int, AwardItem> AwardItemDict = new Dictionary<int, AwardItem>();
 
-		// Token: 0x04003A2B RID: 14891
+		
 		public Dictionary<int, AwardItem> OccAwardItemDict = new Dictionary<int, AwardItem>();
 	}
 }

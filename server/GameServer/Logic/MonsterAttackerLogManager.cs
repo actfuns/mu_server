@@ -8,16 +8,16 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000375 RID: 885
+	
 	public class MonsterAttackerLogManager : SingletonTemplate<MonsterAttackerLogManager>, IEventListener
 	{
-		// Token: 0x06000F32 RID: 3890 RVA: 0x000EF45B File Offset: 0x000ED65B
+		
 		private MonsterAttackerLogManager()
 		{
 			GlobalEventSource.getInstance().registerListener(11, this);
 		}
 
-		// Token: 0x06000F33 RID: 3891 RVA: 0x000EF498 File Offset: 0x000ED698
+		
 		public void LoadRecordMonsters()
 		{
 			lock (this.Mutex)
@@ -36,7 +36,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000F34 RID: 3892 RVA: 0x000EF540 File Offset: 0x000ED740
+		
 		public bool IsNeedRecordAttackLog(int monsterId)
 		{
 			bool result;
@@ -47,7 +47,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000F35 RID: 3893 RVA: 0x000EF594 File Offset: 0x000ED794
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int eventType = eventObject.getEventType();
@@ -69,7 +69,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000F36 RID: 3894 RVA: 0x000EF60C File Offset: 0x000ED80C
+		
 		public void AddRoleRelifeLog(RoleRelifeLog log)
 		{
 			if (log != null)
@@ -105,7 +105,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000F37 RID: 3895 RVA: 0x000EF77C File Offset: 0x000ED97C
+		
 		public void SetLogRoleRelife(int roleId, bool bLog = true)
 		{
 			lock (this.Mutex)
@@ -121,13 +121,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04001766 RID: 5990
+		
 		private object Mutex = new object();
 
-		// Token: 0x04001767 RID: 5991
+		
 		private HashSet<int> NeedRecordLogMonsters = new HashSet<int>();
 
-		// Token: 0x04001768 RID: 5992
+		
 		private HashSet<int> NeedRecordRelifeRoles = new HashSet<int>();
 	}
 }

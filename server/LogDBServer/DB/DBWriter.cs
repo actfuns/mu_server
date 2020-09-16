@@ -5,10 +5,10 @@ using Server.Tools;
 
 namespace LogDBServer.DB
 {
-	// Token: 0x02000018 RID: 24
+	
 	public class DBWriter
 	{
-		// Token: 0x0600007E RID: 126 RVA: 0x000047B0 File Offset: 0x000029B0
+		
 		public static bool RemoveRole(DBManager dbMgr, int roleID)
 		{
 			bool ret = false;

@@ -8,16 +8,16 @@ using Tmsk.Tools.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000036 RID: 54
+	
 	public class SpecPriorityActivityMgr
 	{
-		// Token: 0x06000266 RID: 614 RVA: 0x00024760 File Offset: 0x00022960
+		
 		public static SpecPriorityActivityMgr Instance()
 		{
 			return SpecPriorityActivityMgr._instance;
 		}
 
-		// Token: 0x06000267 RID: 615 RVA: 0x00024778 File Offset: 0x00022978
+		
 		public void InitConfig()
 		{
 			try
@@ -62,7 +62,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000268 RID: 616 RVA: 0x00024950 File Offset: 0x00022B50
+		
 		public void LoadDatabase(DateTime now)
 		{
 			try
@@ -79,7 +79,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000269 RID: 617 RVA: 0x000249D0 File Offset: 0x00022BD0
+		
 		public int SpecPriority_ModifyActivityConditionNum(int key, int add)
 		{
 			try
@@ -106,7 +106,7 @@ namespace KF.Remoting
 			return -11000;
 		}
 
-		// Token: 0x0600026A RID: 618 RVA: 0x00024A88 File Offset: 0x00022C88
+		
 		public SpecPrioritySyncData SpecPriority_GetActivityConditionInfo()
 		{
 			SpecPrioritySyncData result;
@@ -120,7 +120,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600026B RID: 619 RVA: 0x00024B18 File Offset: 0x00022D18
+		
 		private void SaveActivityConditionInfo()
 		{
 			lock (this.Mutex)
@@ -150,7 +150,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600026C RID: 620 RVA: 0x00024CA4 File Offset: 0x00022EA4
+		
 		private void InitActivityConditionInfo(DateTime now, bool launch = false)
 		{
 			lock (this.Mutex)
@@ -214,7 +214,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600026D RID: 621 RVA: 0x00024FD0 File Offset: 0x000231D0
+		
 		private List<SpecPConditionConfig> CalSpecPConditionListByNow(DateTime now)
 		{
 			List<SpecPConditionConfig> result;
@@ -225,7 +225,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600026E RID: 622 RVA: 0x00025048 File Offset: 0x00023248
+		
 		public void Update(DateTime now)
 		{
 			try
@@ -242,7 +242,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600026F RID: 623 RVA: 0x000250A0 File Offset: 0x000232A0
+		
 		private long QueryHuodongAwardUserHist(int actType, string huoDongKeyStr, string userid)
 		{
 			long hasgettimes = 0L;
@@ -254,7 +254,7 @@ namespace KF.Remoting
 			return hasgettimes;
 		}
 
-		// Token: 0x06000270 RID: 624 RVA: 0x0002510C File Offset: 0x0002330C
+		
 		private int UpdateHuodongAwardUserHist(int actType, string huoDongKeyStr, string userid, int extTag)
 		{
 			long hasgettimes = 0L;
@@ -277,22 +277,22 @@ namespace KF.Remoting
 			return ret;
 		}
 
-		// Token: 0x04000155 RID: 341
+		
 		private static SpecPriorityActivityMgr _instance = new SpecPriorityActivityMgr();
 
-		// Token: 0x04000156 RID: 342
+		
 		public object Mutex = new object();
 
-		// Token: 0x04000157 RID: 343
+		
 		public List<SpecPConditionConfig> SpecPConditionList = new List<SpecPConditionConfig>();
 
-		// Token: 0x04000158 RID: 344
+		
 		public Dictionary<int, int> ActConditionInfoDict = new Dictionary<int, int>();
 
-		// Token: 0x04000159 RID: 345
+		
 		public int SpecPriorityActivityType = 49;
 
-		// Token: 0x0400015A RID: 346
+		
 		private int LastUpdateDayID;
 	}
 }

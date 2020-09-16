@@ -5,10 +5,10 @@ using GameServer.Core.Executor;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000625 RID: 1573
+	
 	internal class DelayActionManager
 	{
-		// Token: 0x06002020 RID: 8224 RVA: 0x001BBCC0 File Offset: 0x001B9EC0
+		
 		public static void AddDelayAction(DelayAction action)
 		{
 			lock (DelayActionManager.m_Actions)
@@ -17,7 +17,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002021 RID: 8225 RVA: 0x001BBD10 File Offset: 0x001B9F10
+		
 		public static void RemoveDelayAction(DelayAction action)
 		{
 			lock (DelayActionManager.m_Actions)
@@ -26,7 +26,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002022 RID: 8226 RVA: 0x001BBD60 File Offset: 0x001B9F60
+		
 		public static void StartAction(DelayAction action)
 		{
 			DelayActionType nActionID = action.m_DelayActionType;
@@ -75,7 +75,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002023 RID: 8227 RVA: 0x001BC044 File Offset: 0x001BA244
+		
 		public static void HeartBeatDelayAction()
 		{
 			for (int i = 0; i < DelayActionManager.m_Actions.Count; i++)
@@ -91,7 +91,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04002CD9 RID: 11481
+		
 		private static List<DelayAction> m_Actions = new List<DelayAction>();
 	}
 }

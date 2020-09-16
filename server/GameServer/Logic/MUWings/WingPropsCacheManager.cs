@@ -4,10 +4,10 @@ using System.Xml.Linq;
 
 namespace GameServer.Logic.MUWings
 {
-	// Token: 0x02000769 RID: 1897
+	
 	public class WingPropsCacheManager
 	{
-		// Token: 0x060030C0 RID: 12480 RVA: 0x002B49E8 File Offset: 0x002B2BE8
+		
 		public static SystemXmlItem GetWingPropsCacheItem(int occupation, int level)
 		{
 			string key = string.Format("{0}_{1}", occupation, level);
@@ -24,7 +24,7 @@ namespace GameServer.Logic.MUWings
 			return result;
 		}
 
-		// Token: 0x060030C1 RID: 12481 RVA: 0x002B4A2C File Offset: 0x002B2C2C
+		
 		public static void LoadWingPropsItemsByOccupation(int occupation)
 		{
 			if (occupation != 4)
@@ -57,7 +57,7 @@ namespace GameServer.Logic.MUWings
 			}
 		}
 
-		// Token: 0x060030C2 RID: 12482 RVA: 0x002B4B58 File Offset: 0x002B2D58
+		
 		public static void LoadWingPropsItems()
 		{
 			for (int i = 0; i < 6; i++)
@@ -66,7 +66,7 @@ namespace GameServer.Logic.MUWings
 			}
 		}
 
-		// Token: 0x04003D61 RID: 15713
+		
 		private static Dictionary<string, SystemXmlItem> WingPropsItemsDict = new Dictionary<string, SystemXmlItem>();
 	}
 }

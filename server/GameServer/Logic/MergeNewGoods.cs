@@ -9,10 +9,10 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000755 RID: 1877
+	
 	public class MergeNewGoods
 	{
-		// Token: 0x06002F4C RID: 12108 RVA: 0x002A4D70 File Offset: 0x002A2F70
+		
 		private static CacheMergeItem GetCacheMergeItem(int mergeItemID)
 		{
 			CacheMergeItem cacheMergeItem = null;
@@ -122,7 +122,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002F4D RID: 12109 RVA: 0x002A5108 File Offset: 0x002A3308
+		
 		public static int ReloadCacheMergeItems()
 		{
 			int ret = GameManager.systemGoodsMergeItems.ReloadLoadFromXMlFile();
@@ -133,7 +133,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002F4E RID: 12110 RVA: 0x002A516C File Offset: 0x002A336C
+		
 		private static int CanMergeNewGoods(GameClient client, CacheMergeItem cacheMergeItem, int nMergeTargetItemID, bool bLeftGrid = false)
 		{
 			if (!string.IsNullOrEmpty(cacheMergeItem.PubStartTime) && !string.IsNullOrEmpty(cacheMergeItem.PubEndTime))
@@ -188,7 +188,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002F4F RID: 12111 RVA: 0x002A5310 File Offset: 0x002A3510
+		
 		private static bool JugeSucess(int mergeItemID, CacheMergeItem cacheMergeItem, int addSuccessPercent)
 		{
 			int randNum = Global.GetRandomNumber(0, 101);
@@ -215,7 +215,7 @@ namespace GameServer.Logic
 			return randNum <= successRate + addSuccessPercent;
 		}
 
-		// Token: 0x06002F50 RID: 12112 RVA: 0x002A53C8 File Offset: 0x002A35C8
+		
 		private static int GetUsingGoodsNum(bool sucesss, CacheMergeItem cacheMergeItem, int goodsID, int goodsNum)
 		{
 			int result;
@@ -235,7 +235,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002F51 RID: 12113 RVA: 0x002A5418 File Offset: 0x002A3618
+		
 		private static int ProcessMergeNewGoods(GameClient client, int mergeItemID, CacheMergeItem cacheMergeItem, int luckyGoodsID, int nUseBindItemFirst)
 		{
 			int newGoodsBinding = 0;
@@ -403,7 +403,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002F52 RID: 12114 RVA: 0x002A597C File Offset: 0x002A3B7C
+		
 		public static int Process(GameClient client, int mergeItemID, int luckyGoodsID, int WingDBID, int CrystalDBID, int nUseBindItemFirst)
 		{
 			CacheMergeItem cacheMergeItem = MergeNewGoods.GetCacheMergeItem(mergeItemID);
@@ -442,7 +442,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002F53 RID: 12115 RVA: 0x002A5A3C File Offset: 0x002A3C3C
+		
 		public static int ProcessWingMerge(GameClient client, int mergeItemID, int luckyGoodsID, int WingDBID, int CrystalDBID, CacheMergeItem cacheMergeItem)
 		{
 			GoodsData goodData = null;
@@ -546,7 +546,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002F54 RID: 12116 RVA: 0x002A5D84 File Offset: 0x002A3F84
+		
 		public static List<int> GetWingIDForWingMerge(GameClient client, int mergeItemID)
 		{
 			List<int> lRet = null;
@@ -610,7 +610,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002F55 RID: 12117 RVA: 0x002A5EE8 File Offset: 0x002A40E8
+		
 		public static int RollWingGoodsExcellenceProperty(int MergeID)
 		{
 			int nRet = 0;
@@ -695,7 +695,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002F56 RID: 12118 RVA: 0x002A611C File Offset: 0x002A431C
+		
 		public static bool RollWingMergeSuccess(GameClient client, CacheMergeItem cacheMergeItem, int luckyGoodsID)
 		{
 			int newGoodsBinding = 0;
@@ -721,7 +721,7 @@ namespace GameServer.Logic
 			return randNum <= cacheMergeItem.SuccessRate + addSuccessPercent;
 		}
 
-		// Token: 0x06002F57 RID: 12119 RVA: 0x002A61D4 File Offset: 0x002A43D4
+		
 		public static List<int> GetCrystalIDForWingMerge(GameClient client, int mergeItemID)
 		{
 			string nStrCrystal = GameManager.systemParamsList.GetParamValueByName("ZhiYeHeChengJingShi");
@@ -788,7 +788,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002F58 RID: 12120 RVA: 0x002A634C File Offset: 0x002A454C
+		
 		public static List<int> GetWingMergeCreateGoodsID(GameClient client, int mergeItemID)
 		{
 			string StrWing = GameManager.systemParamsList.GetParamValueByName("WingMergeCreatedID");
@@ -855,7 +855,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002F59 RID: 12121 RVA: 0x002A64C4 File Offset: 0x002A46C4
+		
 		public static int GetFianlWingGoodsID(GameClient client, int mergeItemID, int nGoodsID, List<int> nNeedCrystalID)
 		{
 			List<int> nGoods = MergeNewGoods.GetWingMergeCreateGoodsID(client, mergeItemID);
@@ -896,7 +896,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04003CD6 RID: 15574
+		
 		private static Dictionary<int, CacheMergeItem> MergeItemsDict = new Dictionary<int, CacheMergeItem>();
 	}
 }

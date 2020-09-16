@@ -5,10 +5,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200075C RID: 1884
+	
 	public class MonsterIDManager
 	{
-		// Token: 0x06002F7E RID: 12158 RVA: 0x002A7458 File Offset: 0x002A5658
+		
 		public long GetNewID(int mapCode)
 		{
 			long id = 2130771968L;
@@ -27,7 +27,7 @@ namespace GameServer.Logic
 			return id;
 		}
 
-		// Token: 0x06002F7F RID: 12159 RVA: 0x002A74F8 File Offset: 0x002A56F8
+		
 		public void PushBack(long id)
 		{
 			lock (this.IdleIDList)
@@ -43,10 +43,10 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04003CDF RID: 15583
+		
 		private List<long> IdleIDList = new List<long>();
 
-		// Token: 0x04003CE0 RID: 15584
+		
 		private long _MaxID = 2130771968L;
 	}
 }

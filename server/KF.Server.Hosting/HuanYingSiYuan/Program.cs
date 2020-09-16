@@ -24,26 +24,26 @@ using Server.Tools;
 
 namespace KF.Hosting.HuanYingSiYuan
 {
-	// Token: 0x02000003 RID: 3
+	
 	internal class Program
 	{
-		// Token: 0x06000003 RID: 3
+		
 		[DllImport("User32.dll")]
 		private static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
 
-		// Token: 0x06000004 RID: 4
+		
 		[DllImport("user32.dll")]
 		private static extern IntPtr FindWindowEx(IntPtr hwndParent, IntPtr hwndChildAfter, string lpszClass, string lpszWindow);
 
-		// Token: 0x06000005 RID: 5
+		
 		[DllImport("User32.dll")]
 		private static extern int SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, string lParam);
 
-		// Token: 0x06000006 RID: 6
+		
 		[DllImport("User32.dll")]
 		private static extern bool ShowWindow(IntPtr hWnd, int type);
 
-		// Token: 0x06000007 RID: 7 RVA: 0x000021F8 File Offset: 0x000003F8
+		
 		public static void SetWindowMin()
 		{
 			Console.Title = "KF.Server.Hosting";
@@ -53,11 +53,11 @@ namespace KF.Hosting.HuanYingSiYuan
 			Program.ShowWindow(ParenthWnd, 2);
 		}
 
-		// Token: 0x06000008 RID: 8
+		
 		[DllImport("kernel32.dll")]
 		private static extern bool SetConsoleCtrlHandler(Program.ControlCtrlDelegate HandlerRoutine, bool Add);
 
-		// Token: 0x06000009 RID: 9 RVA: 0x00002238 File Offset: 0x00000438
+		
 		public static bool HandlerRoutine(int CtrlType)
 		{
 			switch (CtrlType)
@@ -66,15 +66,15 @@ namespace KF.Hosting.HuanYingSiYuan
 			return true;
 		}
 
-		// Token: 0x0600000A RID: 10
+		
 		[DllImport("user32.dll")]
 		private static extern IntPtr GetSystemMenu(IntPtr hWnd, IntPtr bRevert);
 
-		// Token: 0x0600000B RID: 11
+		
 		[DllImport("user32.dll")]
 		private static extern IntPtr RemoveMenu(IntPtr hMenu, uint uPosition, uint uFlags);
 
-		// Token: 0x0600000C RID: 12 RVA: 0x00002268 File Offset: 0x00000468
+		
 		private static void HideCloseBtn()
 		{
 			IntPtr windowHandle = Program.FindWindow(null, Console.Title);
@@ -83,7 +83,7 @@ namespace KF.Hosting.HuanYingSiYuan
 			Program.RemoveMenu(closeMenu, SC_CLOSE, 0U);
 		}
 
-		// Token: 0x0600000D RID: 13 RVA: 0x000022A0 File Offset: 0x000004A0
+		
 		public static string GetVersionDateTime()
 		{
 			Assembly assembly = Assembly.GetAssembly(typeof(KuaFuServerManager));
@@ -97,7 +97,7 @@ namespace KF.Hosting.HuanYingSiYuan
 			return dtv.ToString("yyyy-MM-dd_HH") + string.Format("_{0}", version);
 		}
 
-		// Token: 0x0600000E RID: 14 RVA: 0x00002368 File Offset: 0x00000568
+		
 		private static void Main(string[] args)
 		{
 			try
@@ -173,7 +173,7 @@ namespace KF.Hosting.HuanYingSiYuan
 			}
 		}
 
-		// Token: 0x0600000F RID: 15 RVA: 0x00002578 File Offset: 0x00000778
+		
 		public static void ConsoleInputThread(object obj)
 		{
 			for (;;)
@@ -199,7 +199,7 @@ namespace KF.Hosting.HuanYingSiYuan
 			}
 		}
 
-		// Token: 0x06000010 RID: 16 RVA: 0x0000286C File Offset: 0x00000A6C
+		
 		private static void InitCmdDict()
 		{
 			Program.CmdDict.AddCmdHandler("exit", new ParameterizedThreadStart(Program.ExitCmdHandler));
@@ -319,7 +319,7 @@ namespace KF.Hosting.HuanYingSiYuan
 			});
 		}
 
-		// Token: 0x06000011 RID: 17 RVA: 0x00002B28 File Offset: 0x00000D28
+		
 		private static void OptCmdProc(object obj)
 		{
 			string[] args = obj as string[];
@@ -340,7 +340,7 @@ namespace KF.Hosting.HuanYingSiYuan
 			}
 		}
 
-		// Token: 0x06000012 RID: 18 RVA: 0x00002BB0 File Offset: 0x00000DB0
+		
 		private static void ShowCmdHelp()
 		{
 			Console.WriteLine("\n命令列表:");
@@ -353,7 +353,7 @@ namespace KF.Hosting.HuanYingSiYuan
 			Console.WriteLine("clear : 清空控制台输出");
 		}
 
-		// Token: 0x06000013 RID: 19 RVA: 0x00002C18 File Offset: 0x00000E18
+		
 		public static void ExitCmdHandler(object obj)
 		{
 			Console.WriteLine("确定要退出?请输入'y'");
@@ -364,7 +364,7 @@ namespace KF.Hosting.HuanYingSiYuan
 			}
 		}
 
-		// Token: 0x06000014 RID: 20 RVA: 0x00002C5C File Offset: 0x00000E5C
+		
 		public static void ReloadCmdHandler(object obj)
 		{
 			try
@@ -387,7 +387,7 @@ namespace KF.Hosting.HuanYingSiYuan
 			Console.WriteLine("重新加载配置成功!");
 		}
 
-		// Token: 0x06000015 RID: 21 RVA: 0x00002CE0 File Offset: 0x00000EE0
+		
 		public static void ReloadPaiHangCmdHandler(object obj)
 		{
 			try
@@ -404,13 +404,13 @@ namespace KF.Hosting.HuanYingSiYuan
 			Console.WriteLine("重新加载配置成功!");
 		}
 
-		// Token: 0x06000016 RID: 22 RVA: 0x00002D38 File Offset: 0x00000F38
+		
 		public static void ClearCmdHandler(object obj)
 		{
 			Console.Clear();
 		}
 
-		// Token: 0x06000017 RID: 23 RVA: 0x00002D44 File Offset: 0x00000F44
+		
 		public static void StartServices()
 		{
 			AsyncDataItem.InitKnownTypes();
@@ -427,26 +427,26 @@ namespace KF.Hosting.HuanYingSiYuan
 			Program.AutoCserServices.Add(new KfCall(attribute, null, null, null));
 		}
 
-		// Token: 0x04000008 RID: 8
+		
 		private static Program.ControlCtrlDelegate newDelegate = new Program.ControlCtrlDelegate(Program.HandlerRoutine);
 
-		// Token: 0x04000009 RID: 9
+		
 		private static bool NeedExitServer = false;
 
-		// Token: 0x0400000A RID: 10
+		
 		private static bool TestMode = false;
 
-		// Token: 0x0400000B RID: 11
+		
 		private static CmdHandlerDict CmdDict = new CmdHandlerDict();
 
-		// Token: 0x0400000C RID: 12
+		
 		private static List<AutoCSer.Net.TcpInternalServer.Server> AutoCserServices = new List<AutoCSer.Net.TcpInternalServer.Server>();
 
-		// Token: 0x0400000D RID: 13
+		
 		private static List<ServiceHost> hostList = new List<ServiceHost>();
 
-		// Token: 0x02000004 RID: 4
-		// (Invoke) Token: 0x06000023 RID: 35
+		
+		
 		public delegate bool ControlCtrlDelegate(int CtrlType);
 	}
 }

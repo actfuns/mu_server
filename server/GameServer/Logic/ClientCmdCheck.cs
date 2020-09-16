@@ -8,10 +8,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004D1 RID: 1233
+	
 	public static class ClientCmdCheck
 	{
-		// Token: 0x060016C7 RID: 5831 RVA: 0x0016343C File Offset: 0x0016163C
+		
 		public static long GetClientTicks(GameClient client, long ccTicks = 0L)
 		{
 			long clientTicks = (long)client.ClientSocket.ClientCmdSecs * 1000L + TimeUtil.Before1970Ticks;
@@ -27,7 +27,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060016C8 RID: 5832 RVA: 0x00163498 File Offset: 0x00161698
+		
 		public static bool ClientCheck(GameClient client)
 		{
 			ClientExtData clientExtData = client.ClientData.ClientExtData;
@@ -74,7 +74,7 @@ namespace GameServer.Logic
 			return clientExtData.KeepAlive;
 		}
 
-		// Token: 0x060016C9 RID: 5833 RVA: 0x001636A4 File Offset: 0x001618A4
+		
 		public static void RecordClientPosition(GameClient client)
 		{
 			ClientExtData clientExtData = client.ClientData.ClientExtData;
@@ -91,7 +91,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060016CA RID: 5834 RVA: 0x0016375C File Offset: 0x0016195C
+		
 		public static void StopClientStoryboard(GameClient client)
 		{
 			ClientExtData clientExtData = client.ClientData.ClientExtData;
@@ -101,13 +101,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060016CB RID: 5835 RVA: 0x001637B0 File Offset: 0x001619B0
+		
 		public static void ResetClientPosition(GameClient client, int posX, int posY)
 		{
 			GameManager.ClientMgr.ChangePosition(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, client, posX, posY, client.ClientData.RoleDirection, 159, 0);
 		}
 
-		// Token: 0x060016CC RID: 5836 RVA: 0x001637F4 File Offset: 0x001619F4
+		
 		public static void ClientAction(GameClient client, long nowTicks, long reserveTicks)
 		{
 			ClientExtData clientExtData = client.ClientData.ClientExtData;
@@ -120,7 +120,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060016CD RID: 5837 RVA: 0x0016386C File Offset: 0x00161A6C
+		
 		public static void ClientStopMove(GameClient client, int x, int y, long startMoveTicks = 0L)
 		{
 			if (Data.CheckPositionCheat)
@@ -134,7 +134,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060016CE RID: 5838 RVA: 0x001638C4 File Offset: 0x00161AC4
+		
 		public static void MoveSpeedChange(GameClient client, double newMoveSpeed)
 		{
 			if (Data.CheckPositionCheatSpeed)
@@ -196,7 +196,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060016CF RID: 5839 RVA: 0x00163B64 File Offset: 0x00161D64
+		
 		public static bool ClientPosition(GameClient client, int x, int y, long startMoveTicks = 0L)
 		{
 			bool result;
@@ -253,7 +253,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060016D0 RID: 5840 RVA: 0x00163D30 File Offset: 0x00161F30
+		
 		private static bool MoveTo(GameClient client, int x, int y, long startMoveTicks, bool stop)
 		{
 			bool resetPos = false;
@@ -342,7 +342,7 @@ namespace GameServer.Logic
 			return resetPos;
 		}
 
-		// Token: 0x060016D1 RID: 5841 RVA: 0x001640D0 File Offset: 0x001622D0
+		
 		public static void SpritePreMove(GameClient client, int fromX, int fromY, int toX, int toY, long startMoveTicks)
 		{
 			if (!Data.IgnoreClientPos)
@@ -356,7 +356,7 @@ namespace GameServer.Logic
 			client.ClientData.DestPoint = new Point((double)toX, (double)toY);
 		}
 
-		// Token: 0x060016D2 RID: 5842 RVA: 0x00164150 File Offset: 0x00162350
+		
 		public static bool ValidateClientMoveStartTicks(GameClient client, long startMoveTicks = 0L)
 		{
 			double sStartMoveCoe = GameManager.systemParamsList.GetParamValueDoubleByName("CHEAT_STARTMOVE", 0.0);
@@ -427,7 +427,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060016D3 RID: 5843 RVA: 0x001643A4 File Offset: 0x001625A4
+		
 		public static bool SpriteMoveCmd(GameClient client, int fromX, int fromY, int toX, int toY, long startMoveTicks, double moveSpeed, List<Point> path, out bool stepMove)
 		{
 			stepMove = false;
@@ -524,7 +524,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060016D4 RID: 5844 RVA: 0x00164914 File Offset: 0x00162B14
+		
 		public static string GetLifeLogString(int mapCode, int current, int max, int add)
 		{
 			string result;
@@ -565,7 +565,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060016D5 RID: 5845 RVA: 0x00164A10 File Offset: 0x00162C10
+		
 		public static void WriteZhanLiLogs(GameClient client)
 		{
 			try
@@ -616,7 +616,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060016D6 RID: 5846 RVA: 0x00164BEC File Offset: 0x00162DEC
+		
 		public static void WriteLifeLogs(GameClient client)
 		{
 			try
@@ -652,28 +652,28 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x040020AA RID: 8362
+		
 		public static long MaxCheckTicks = 3000L;
 
-		// Token: 0x040020AB RID: 8363
+		
 		public static double MoveSpeedPerMS = 0.5;
 
-		// Token: 0x040020AC RID: 8364
+		
 		public static long MaxReserveMs = 200L;
 
-		// Token: 0x040020AD RID: 8365
+		
 		public static double MaxDistanceFactor = 1.05;
 
-		// Token: 0x040020AE RID: 8366
+		
 		public static double MinDistanceFactor = 0.95;
 
-		// Token: 0x040020AF RID: 8367
+		
 		public static long MinLogAddLifeV = 1000L;
 
-		// Token: 0x040020B0 RID: 8368
+		
 		public static long MinLogAddLifePercent = 15L;
 
-		// Token: 0x040020B1 RID: 8369
+		
 		public static HashSet<int> MapCodes = new HashSet<int>();
 	}
 }

@@ -16,7 +16,7 @@ namespace GameServer.Logic
 	public class CGetOldResourceManager
 	{
 		// Token: 0x170000C6 RID: 198
-		// (get) Token: 0x06001C00 RID: 7168 RVA: 0x001A42A4 File Offset: 0x001A24A4
+		
 		public static XElement xmlData
 		{
 			get
@@ -48,7 +48,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000C7 RID: 199
-		// (get) Token: 0x06001C01 RID: 7169 RVA: 0x001A4388 File Offset: 0x001A2588
+		
 		public static double[] ExpGold
 		{
 			get
@@ -72,7 +72,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000C8 RID: 200
-		// (get) Token: 0x06001C02 RID: 7170 RVA: 0x001A4404 File Offset: 0x001A2604
+		
 		public static double[] BondGold
 		{
 			get
@@ -96,7 +96,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000C9 RID: 201
-		// (get) Token: 0x06001C03 RID: 7171 RVA: 0x001A4480 File Offset: 0x001A2680
+		
 		public static double[] MoJing
 		{
 			get
@@ -120,7 +120,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000CA RID: 202
-		// (get) Token: 0x06001C04 RID: 7172 RVA: 0x001A44FC File Offset: 0x001A26FC
+		
 		public static double[] ShengWang
 		{
 			get
@@ -144,7 +144,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000CB RID: 203
-		// (get) Token: 0x06001C05 RID: 7173 RVA: 0x001A4578 File Offset: 0x001A2778
+		
 		public static double[] ChengJiu
 		{
 			get
@@ -168,7 +168,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000CC RID: 204
-		// (get) Token: 0x06001C06 RID: 7174 RVA: 0x001A45F4 File Offset: 0x001A27F4
+		
 		public static double[] ZhanGong
 		{
 			get
@@ -192,7 +192,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000CD RID: 205
-		// (get) Token: 0x06001C07 RID: 7175 RVA: 0x001A4670 File Offset: 0x001A2870
+		
 		public static double[] BangZuan
 		{
 			get
@@ -216,7 +216,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000CE RID: 206
-		// (get) Token: 0x06001C08 RID: 7176 RVA: 0x001A46EC File Offset: 0x001A28EC
+		
 		public static double[] XingHun
 		{
 			get
@@ -240,7 +240,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x170000CF RID: 207
-		// (get) Token: 0x06001C09 RID: 7177 RVA: 0x001A4768 File Offset: 0x001A2968
+		
 		public static double[] YuanSuFenMo
 		{
 			get

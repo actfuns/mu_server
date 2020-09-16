@@ -17,403 +17,403 @@ namespace GameDBServer.DB
 	public class DBRoleInfo
 	{
 		// Token: 0x1700002F RID: 47
-		// (get) Token: 0x060002BE RID: 702 RVA: 0x00016C90 File Offset: 0x00014E90
-		// (set) Token: 0x060002BF RID: 703 RVA: 0x00016CA7 File Offset: 0x00014EA7
+		
+		
 		public int RoleID { get; set; }
 
 		// Token: 0x17000030 RID: 48
-		// (get) Token: 0x060002C0 RID: 704 RVA: 0x00016CB0 File Offset: 0x00014EB0
-		// (set) Token: 0x060002C1 RID: 705 RVA: 0x00016CC7 File Offset: 0x00014EC7
+		
+		
 		public string UserID { get; set; }
 
 		// Token: 0x17000031 RID: 49
-		// (get) Token: 0x060002C2 RID: 706 RVA: 0x00016CD0 File Offset: 0x00014ED0
-		// (set) Token: 0x060002C3 RID: 707 RVA: 0x00016CE7 File Offset: 0x00014EE7
+		
+		
 		public string RoleName { get; set; }
 
 		// Token: 0x17000032 RID: 50
-		// (get) Token: 0x060002C4 RID: 708 RVA: 0x00016CF0 File Offset: 0x00014EF0
-		// (set) Token: 0x060002C5 RID: 709 RVA: 0x00016D07 File Offset: 0x00014F07
+		
+		
 		public int RoleSex { get; set; }
 
 		// Token: 0x17000033 RID: 51
-		// (get) Token: 0x060002C6 RID: 710 RVA: 0x00016D10 File Offset: 0x00014F10
-		// (set) Token: 0x060002C7 RID: 711 RVA: 0x00016D27 File Offset: 0x00014F27
+		
+		
 		public int Occupation { get; set; }
 
 		// Token: 0x17000034 RID: 52
-		// (get) Token: 0x060002C8 RID: 712 RVA: 0x00016D30 File Offset: 0x00014F30
-		// (set) Token: 0x060002C9 RID: 713 RVA: 0x00016D47 File Offset: 0x00014F47
+		
+		
 		public int Level { get; set; }
 
 		// Token: 0x17000035 RID: 53
-		// (get) Token: 0x060002CA RID: 714 RVA: 0x00016D50 File Offset: 0x00014F50
-		// (set) Token: 0x060002CB RID: 715 RVA: 0x00016D67 File Offset: 0x00014F67
+		
+		
 		public int RolePic { get; set; }
 
 		// Token: 0x17000036 RID: 54
-		// (get) Token: 0x060002CC RID: 716 RVA: 0x00016D70 File Offset: 0x00014F70
-		// (set) Token: 0x060002CD RID: 717 RVA: 0x00016D87 File Offset: 0x00014F87
+		
+		
 		public int Faction { get; set; }
 
 		// Token: 0x17000037 RID: 55
-		// (get) Token: 0x060002CE RID: 718 RVA: 0x00016D90 File Offset: 0x00014F90
-		// (set) Token: 0x060002CF RID: 719 RVA: 0x00016DA7 File Offset: 0x00014FA7
+		
+		
 		public int Money1 { get; set; }
 
 		// Token: 0x17000038 RID: 56
-		// (get) Token: 0x060002D0 RID: 720 RVA: 0x00016DB0 File Offset: 0x00014FB0
-		// (set) Token: 0x060002D1 RID: 721 RVA: 0x00016DC7 File Offset: 0x00014FC7
+		
+		
 		public int Money2 { get; set; }
 
 		// Token: 0x17000039 RID: 57
-		// (get) Token: 0x060002D2 RID: 722 RVA: 0x00016DD0 File Offset: 0x00014FD0
-		// (set) Token: 0x060002D3 RID: 723 RVA: 0x00016DE7 File Offset: 0x00014FE7
+		
+		
 		public long Experience { get; set; }
 
 		// Token: 0x1700003A RID: 58
-		// (get) Token: 0x060002D4 RID: 724 RVA: 0x00016DF0 File Offset: 0x00014FF0
-		// (set) Token: 0x060002D5 RID: 725 RVA: 0x00016E07 File Offset: 0x00015007
+		
+		
 		public int PKMode { get; set; }
 
 		// Token: 0x1700003B RID: 59
-		// (get) Token: 0x060002D6 RID: 726 RVA: 0x00016E10 File Offset: 0x00015010
-		// (set) Token: 0x060002D7 RID: 727 RVA: 0x00016E27 File Offset: 0x00015027
+		
+		
 		public int PKValue { get; set; }
 
 		// Token: 0x1700003C RID: 60
-		// (get) Token: 0x060002D8 RID: 728 RVA: 0x00016E30 File Offset: 0x00015030
-		// (set) Token: 0x060002D9 RID: 729 RVA: 0x00016E47 File Offset: 0x00015047
+		
+		
 		public string Position { get; set; }
 
 		// Token: 0x1700003D RID: 61
-		// (get) Token: 0x060002DA RID: 730 RVA: 0x00016E50 File Offset: 0x00015050
-		// (set) Token: 0x060002DB RID: 731 RVA: 0x00016E67 File Offset: 0x00015067
+		
+		
 		public string RegTime { get; set; }
 
 		// Token: 0x1700003E RID: 62
-		// (get) Token: 0x060002DC RID: 732 RVA: 0x00016E70 File Offset: 0x00015070
-		// (set) Token: 0x060002DD RID: 733 RVA: 0x00016E87 File Offset: 0x00015087
+		
+		
 		public long LastTime { get; set; }
 
 		// Token: 0x1700003F RID: 63
-		// (get) Token: 0x060002DE RID: 734 RVA: 0x00016E90 File Offset: 0x00015090
-		// (set) Token: 0x060002DF RID: 735 RVA: 0x00016EA7 File Offset: 0x000150A7
+		
+		
 		public int BagNum { get; set; }
 
 		// Token: 0x17000040 RID: 64
-		// (get) Token: 0x060002E0 RID: 736 RVA: 0x00016EB0 File Offset: 0x000150B0
-		// (set) Token: 0x060002E1 RID: 737 RVA: 0x00016EC7 File Offset: 0x000150C7
+		
+		
 		public int RebornBagNum { get; set; }
 
 		// Token: 0x17000041 RID: 65
-		// (get) Token: 0x060002E2 RID: 738 RVA: 0x00016ED0 File Offset: 0x000150D0
-		// (set) Token: 0x060002E3 RID: 739 RVA: 0x00016EE7 File Offset: 0x000150E7
+		
+		
 		public string OtherName { get; set; }
 
 		// Token: 0x17000042 RID: 66
-		// (get) Token: 0x060002E4 RID: 740 RVA: 0x00016EF0 File Offset: 0x000150F0
-		// (set) Token: 0x060002E5 RID: 741 RVA: 0x00016F07 File Offset: 0x00015107
+		
+		
 		public string MainQuickBarKeys { get; set; }
 
 		// Token: 0x17000043 RID: 67
-		// (get) Token: 0x060002E6 RID: 742 RVA: 0x00016F10 File Offset: 0x00015110
-		// (set) Token: 0x060002E7 RID: 743 RVA: 0x00016F27 File Offset: 0x00015127
+		
+		
 		public string OtherQuickBarKeys { get; set; }
 
 		// Token: 0x17000044 RID: 68
-		// (get) Token: 0x060002E8 RID: 744 RVA: 0x00016F30 File Offset: 0x00015130
-		// (set) Token: 0x060002E9 RID: 745 RVA: 0x00016F47 File Offset: 0x00015147
+		
+		
 		public int LoginNum { get; set; }
 
 		// Token: 0x17000045 RID: 69
-		// (get) Token: 0x060002EA RID: 746 RVA: 0x00016F50 File Offset: 0x00015150
-		// (set) Token: 0x060002EB RID: 747 RVA: 0x00016F67 File Offset: 0x00015167
+		
+		
 		public int LeftFightSeconds { get; set; }
 
 		// Token: 0x17000046 RID: 70
-		// (get) Token: 0x060002EC RID: 748 RVA: 0x00016F70 File Offset: 0x00015170
-		// (set) Token: 0x060002ED RID: 749 RVA: 0x00016F87 File Offset: 0x00015187
+		
+		
 		public int ServerLineID { get; set; }
 
 		// Token: 0x17000047 RID: 71
-		// (get) Token: 0x060002EE RID: 750 RVA: 0x00016F90 File Offset: 0x00015190
-		// (set) Token: 0x060002EF RID: 751 RVA: 0x00016FA7 File Offset: 0x000151A7
+		
+		
 		public int HorseDbID { get; set; }
 
 		// Token: 0x17000048 RID: 72
-		// (get) Token: 0x060002F0 RID: 752 RVA: 0x00016FB0 File Offset: 0x000151B0
-		// (set) Token: 0x060002F1 RID: 753 RVA: 0x00016FC7 File Offset: 0x000151C7
+		
+		
 		public int PetDbID { get; set; }
 
 		// Token: 0x17000049 RID: 73
-		// (get) Token: 0x060002F2 RID: 754 RVA: 0x00016FD0 File Offset: 0x000151D0
-		// (set) Token: 0x060002F3 RID: 755 RVA: 0x00016FE7 File Offset: 0x000151E7
+		
+		
 		public int InterPower { get; set; }
 
 		// Token: 0x1700004A RID: 74
-		// (get) Token: 0x060002F4 RID: 756 RVA: 0x00016FF0 File Offset: 0x000151F0
-		// (set) Token: 0x060002F5 RID: 757 RVA: 0x00017007 File Offset: 0x00015207
+		
+		
 		public int TotalOnlineSecs { get; set; }
 
 		// Token: 0x1700004B RID: 75
-		// (get) Token: 0x060002F6 RID: 758 RVA: 0x00017010 File Offset: 0x00015210
-		// (set) Token: 0x060002F7 RID: 759 RVA: 0x00017027 File Offset: 0x00015227
+		
+		
 		public int AntiAddictionSecs { get; set; }
 
 		// Token: 0x1700004C RID: 76
-		// (get) Token: 0x060002F8 RID: 760 RVA: 0x00017030 File Offset: 0x00015230
-		// (set) Token: 0x060002F9 RID: 761 RVA: 0x00017047 File Offset: 0x00015247
+		
+		
 		public long LogOffTime { get; set; }
 
 		// Token: 0x1700004D RID: 77
-		// (get) Token: 0x060002FA RID: 762 RVA: 0x00017050 File Offset: 0x00015250
-		// (set) Token: 0x060002FB RID: 763 RVA: 0x00017067 File Offset: 0x00015267
+		
+		
 		public long BiGuanTime { get; set; }
 
 		// Token: 0x1700004E RID: 78
-		// (get) Token: 0x060002FC RID: 764 RVA: 0x00017070 File Offset: 0x00015270
-		// (set) Token: 0x060002FD RID: 765 RVA: 0x00017087 File Offset: 0x00015287
+		
+		
 		public int YinLiang { get; set; }
 
 		// Token: 0x1700004F RID: 79
-		// (get) Token: 0x060002FE RID: 766 RVA: 0x00017090 File Offset: 0x00015290
-		// (set) Token: 0x060002FF RID: 767 RVA: 0x000170A7 File Offset: 0x000152A7
+		
+		
 		public int TotalJingMaiExp { get; set; }
 
 		// Token: 0x17000050 RID: 80
-		// (get) Token: 0x06000300 RID: 768 RVA: 0x000170B0 File Offset: 0x000152B0
-		// (set) Token: 0x06000301 RID: 769 RVA: 0x000170C7 File Offset: 0x000152C7
+		
+		
 		public int JingMaiExpNum { get; set; }
 
 		// Token: 0x17000051 RID: 81
-		// (get) Token: 0x06000302 RID: 770 RVA: 0x000170D0 File Offset: 0x000152D0
-		// (set) Token: 0x06000303 RID: 771 RVA: 0x000170E7 File Offset: 0x000152E7
+		
+		
 		public int LastHorseID { get; set; }
 
 		// Token: 0x17000052 RID: 82
-		// (get) Token: 0x06000304 RID: 772 RVA: 0x000170F0 File Offset: 0x000152F0
-		// (set) Token: 0x06000305 RID: 773 RVA: 0x00017107 File Offset: 0x00015307
+		
+		
 		public int DefaultSkillID { get; set; }
 
 		// Token: 0x17000053 RID: 83
-		// (get) Token: 0x06000306 RID: 774 RVA: 0x00017110 File Offset: 0x00015310
-		// (set) Token: 0x06000307 RID: 775 RVA: 0x00017127 File Offset: 0x00015327
+		
+		
 		public int AutoLifeV { get; set; }
 
 		// Token: 0x17000054 RID: 84
-		// (get) Token: 0x06000308 RID: 776 RVA: 0x00017130 File Offset: 0x00015330
-		// (set) Token: 0x06000309 RID: 777 RVA: 0x00017147 File Offset: 0x00015347
+		
+		
 		public int AutoMagicV { get; set; }
 
 		// Token: 0x17000055 RID: 85
-		// (get) Token: 0x0600030A RID: 778 RVA: 0x00017150 File Offset: 0x00015350
-		// (set) Token: 0x0600030B RID: 779 RVA: 0x00017167 File Offset: 0x00015367
+		
+		
 		public int NumSkillID { get; set; }
 
 		// Token: 0x17000056 RID: 86
-		// (get) Token: 0x0600030C RID: 780 RVA: 0x00017170 File Offset: 0x00015370
-		// (set) Token: 0x0600030D RID: 781 RVA: 0x00017187 File Offset: 0x00015387
+		
+		
 		public int MainTaskID { get; set; }
 
 		// Token: 0x17000057 RID: 87
-		// (get) Token: 0x0600030E RID: 782 RVA: 0x00017190 File Offset: 0x00015390
-		// (set) Token: 0x0600030F RID: 783 RVA: 0x000171A7 File Offset: 0x000153A7
+		
+		
 		public int PKPoint { get; set; }
 
 		// Token: 0x17000058 RID: 88
-		// (get) Token: 0x06000310 RID: 784 RVA: 0x000171B0 File Offset: 0x000153B0
-		// (set) Token: 0x06000311 RID: 785 RVA: 0x000171C7 File Offset: 0x000153C7
+		
+		
 		public int LianZhan { get; set; }
 
 		// Token: 0x17000059 RID: 89
-		// (get) Token: 0x06000312 RID: 786 RVA: 0x000171D0 File Offset: 0x000153D0
-		// (set) Token: 0x06000313 RID: 787 RVA: 0x000171E7 File Offset: 0x000153E7
+		
+		
 		public int KillBoss { get; set; }
 
 		// Token: 0x1700005A RID: 90
-		// (get) Token: 0x06000314 RID: 788 RVA: 0x000171F0 File Offset: 0x000153F0
-		// (set) Token: 0x06000315 RID: 789 RVA: 0x00017207 File Offset: 0x00015407
+		
+		
 		public long BattleNameStart { get; set; }
 
 		// Token: 0x1700005B RID: 91
-		// (get) Token: 0x06000316 RID: 790 RVA: 0x00017210 File Offset: 0x00015410
-		// (set) Token: 0x06000317 RID: 791 RVA: 0x00017227 File Offset: 0x00015427
+		
+		
 		public int BattleNameIndex { get; set; }
 
 		// Token: 0x1700005C RID: 92
-		// (get) Token: 0x06000318 RID: 792 RVA: 0x00017230 File Offset: 0x00015430
-		// (set) Token: 0x06000319 RID: 793 RVA: 0x00017247 File Offset: 0x00015447
+		
+		
 		public int CZTaskID { get; set; }
 
 		// Token: 0x1700005D RID: 93
-		// (get) Token: 0x0600031A RID: 794 RVA: 0x00017250 File Offset: 0x00015450
-		// (set) Token: 0x0600031B RID: 795 RVA: 0x00017267 File Offset: 0x00015467
+		
+		
 		public int BattleNum { get; set; }
 
 		// Token: 0x1700005E RID: 94
-		// (get) Token: 0x0600031C RID: 796 RVA: 0x00017270 File Offset: 0x00015470
-		// (set) Token: 0x0600031D RID: 797 RVA: 0x00017287 File Offset: 0x00015487
+		
+		
 		public int HeroIndex { get; set; }
 
 		// Token: 0x1700005F RID: 95
-		// (get) Token: 0x0600031E RID: 798 RVA: 0x00017290 File Offset: 0x00015490
-		// (set) Token: 0x0600031F RID: 799 RVA: 0x000172A7 File Offset: 0x000154A7
+		
+		
 		public int LoginDayID { get; set; }
 
 		// Token: 0x17000060 RID: 96
-		// (get) Token: 0x06000320 RID: 800 RVA: 0x000172B0 File Offset: 0x000154B0
-		// (set) Token: 0x06000321 RID: 801 RVA: 0x000172C7 File Offset: 0x000154C7
+		
+		
 		public int LoginDayNum { get; set; }
 
 		// Token: 0x17000061 RID: 97
-		// (get) Token: 0x06000322 RID: 802 RVA: 0x000172D0 File Offset: 0x000154D0
-		// (set) Token: 0x06000323 RID: 803 RVA: 0x000172E7 File Offset: 0x000154E7
+		
+		
 		public int ZoneID { get; set; }
 
 		// Token: 0x17000062 RID: 98
-		// (get) Token: 0x06000324 RID: 804 RVA: 0x000172F0 File Offset: 0x000154F0
-		// (set) Token: 0x06000325 RID: 805 RVA: 0x00017307 File Offset: 0x00015507
+		
+		
 		public string BHName { get; set; }
 
 		// Token: 0x17000063 RID: 99
-		// (get) Token: 0x06000326 RID: 806 RVA: 0x00017310 File Offset: 0x00015510
-		// (set) Token: 0x06000327 RID: 807 RVA: 0x00017327 File Offset: 0x00015527
+		
+		
 		public int BHVerify { get; set; }
 
 		// Token: 0x17000064 RID: 100
-		// (get) Token: 0x06000328 RID: 808 RVA: 0x00017330 File Offset: 0x00015530
-		// (set) Token: 0x06000329 RID: 809 RVA: 0x00017347 File Offset: 0x00015547
+		
+		
 		public int BHZhiWu { get; set; }
 
 		// Token: 0x17000065 RID: 101
-		// (get) Token: 0x0600032A RID: 810 RVA: 0x00017350 File Offset: 0x00015550
-		// (set) Token: 0x0600032B RID: 811 RVA: 0x00017367 File Offset: 0x00015567
+		
+		
 		public int BGDayID1 { get; set; }
 
 		// Token: 0x17000066 RID: 102
-		// (get) Token: 0x0600032C RID: 812 RVA: 0x00017370 File Offset: 0x00015570
-		// (set) Token: 0x0600032D RID: 813 RVA: 0x00017387 File Offset: 0x00015587
+		
+		
 		public int BGMoney { get; set; }
 
 		// Token: 0x17000067 RID: 103
-		// (get) Token: 0x0600032E RID: 814 RVA: 0x00017390 File Offset: 0x00015590
-		// (set) Token: 0x0600032F RID: 815 RVA: 0x000173A7 File Offset: 0x000155A7
+		
+		
 		public int BGDayID2 { get; set; }
 
 		// Token: 0x17000068 RID: 104
-		// (get) Token: 0x06000330 RID: 816 RVA: 0x000173B0 File Offset: 0x000155B0
-		// (set) Token: 0x06000331 RID: 817 RVA: 0x000173C7 File Offset: 0x000155C7
+		
+		
 		public int BGGoods { get; set; }
 
 		// Token: 0x17000069 RID: 105
-		// (get) Token: 0x06000332 RID: 818 RVA: 0x000173D0 File Offset: 0x000155D0
-		// (set) Token: 0x06000333 RID: 819 RVA: 0x000173E7 File Offset: 0x000155E7
+		
+		
 		public int BangGong { get; set; }
 
 		// Token: 0x1700006A RID: 106
-		// (get) Token: 0x06000334 RID: 820 RVA: 0x000173F0 File Offset: 0x000155F0
-		// (set) Token: 0x06000335 RID: 821 RVA: 0x00017407 File Offset: 0x00015607
+		
+		
 		public int HuangHou { get; set; }
 
 		// Token: 0x1700006B RID: 107
-		// (get) Token: 0x06000336 RID: 822 RVA: 0x00017410 File Offset: 0x00015610
-		// (set) Token: 0x06000337 RID: 823 RVA: 0x00017427 File Offset: 0x00015627
+		
+		
 		public int JieBiaoDayID { get; set; }
 
 		// Token: 0x1700006C RID: 108
-		// (get) Token: 0x06000338 RID: 824 RVA: 0x00017430 File Offset: 0x00015630
-		// (set) Token: 0x06000339 RID: 825 RVA: 0x00017447 File Offset: 0x00015647
+		
+		
 		public int JieBiaoDayNum { get; set; }
 
 		// Token: 0x1700006D RID: 109
-		// (get) Token: 0x0600033A RID: 826 RVA: 0x00017450 File Offset: 0x00015650
-		// (set) Token: 0x0600033B RID: 827 RVA: 0x00017467 File Offset: 0x00015667
+		
+		
 		public string UserName { get; set; }
 
 		// Token: 0x1700006E RID: 110
-		// (get) Token: 0x0600033C RID: 828 RVA: 0x00017470 File Offset: 0x00015670
-		// (set) Token: 0x0600033D RID: 829 RVA: 0x00017487 File Offset: 0x00015687
+		
+		
 		public int LastMailID { get; set; }
 
 		// Token: 0x1700006F RID: 111
-		// (get) Token: 0x0600033E RID: 830 RVA: 0x00017490 File Offset: 0x00015690
-		// (set) Token: 0x0600033F RID: 831 RVA: 0x000174A7 File Offset: 0x000156A7
+		
+		
 		public long OnceAwardFlag { get; set; }
 
 		// Token: 0x17000070 RID: 112
-		// (get) Token: 0x06000340 RID: 832 RVA: 0x000174B0 File Offset: 0x000156B0
-		// (set) Token: 0x06000341 RID: 833 RVA: 0x000174C7 File Offset: 0x000156C7
+		
+		
 		public int Gold { get; set; }
 
 		// Token: 0x17000071 RID: 113
-		// (get) Token: 0x06000342 RID: 834 RVA: 0x000174D0 File Offset: 0x000156D0
-		// (set) Token: 0x06000343 RID: 835 RVA: 0x000174E7 File Offset: 0x000156E7
+		
+		
 		public int BanChat { get; set; }
 
 		// Token: 0x17000072 RID: 114
-		// (get) Token: 0x06000344 RID: 836 RVA: 0x000174F0 File Offset: 0x000156F0
-		// (set) Token: 0x06000345 RID: 837 RVA: 0x00017507 File Offset: 0x00015707
+		
+		
 		public int BanLogin { get; set; }
 
 		// Token: 0x17000073 RID: 115
-		// (get) Token: 0x06000346 RID: 838 RVA: 0x00017510 File Offset: 0x00015710
-		// (set) Token: 0x06000347 RID: 839 RVA: 0x00017527 File Offset: 0x00015727
+		
+		
 		public int IsFlashPlayer { get; set; }
 
 		// Token: 0x17000074 RID: 116
-		// (get) Token: 0x06000348 RID: 840 RVA: 0x00017530 File Offset: 0x00015730
-		// (set) Token: 0x06000349 RID: 841 RVA: 0x00017547 File Offset: 0x00015747
+		
+		
 		public int ChangeLifeCount { get; set; }
 
 		// Token: 0x17000075 RID: 117
-		// (get) Token: 0x0600034A RID: 842 RVA: 0x00017550 File Offset: 0x00015750
-		// (set) Token: 0x0600034B RID: 843 RVA: 0x00017567 File Offset: 0x00015767
+		
+		
 		public int AdmiredCount { get; set; }
 
 		// Token: 0x17000076 RID: 118
-		// (get) Token: 0x0600034C RID: 844 RVA: 0x00017570 File Offset: 0x00015770
-		// (set) Token: 0x0600034D RID: 845 RVA: 0x00017587 File Offset: 0x00015787
+		
+		
 		public int CombatForce { get; set; }
 
 		// Token: 0x17000077 RID: 119
-		// (get) Token: 0x0600034E RID: 846 RVA: 0x00017590 File Offset: 0x00015790
-		// (set) Token: 0x0600034F RID: 847 RVA: 0x000175A7 File Offset: 0x000157A7
+		
+		
 		public int AutoAssignPropertyPoint { get; set; }
 
 		// Token: 0x17000078 RID: 120
-		// (get) Token: 0x06000350 RID: 848 RVA: 0x000175B0 File Offset: 0x000157B0
-		// (set) Token: 0x06000351 RID: 849 RVA: 0x000175C7 File Offset: 0x000157C7
+		
+		
 		public string PushMsgID { get; set; }
 
 		// Token: 0x17000079 RID: 121
-		// (get) Token: 0x06000352 RID: 850 RVA: 0x000175D0 File Offset: 0x000157D0
-		// (set) Token: 0x06000353 RID: 851 RVA: 0x000175E7 File Offset: 0x000157E7
+		
+		
 		public int VipAwardFlag { get; set; }
 
 		// Token: 0x1700007A RID: 122
-		// (get) Token: 0x06000354 RID: 852 RVA: 0x000175F0 File Offset: 0x000157F0
-		// (set) Token: 0x06000355 RID: 853 RVA: 0x00017607 File Offset: 0x00015807
+		
+		
 		public int VIPLevel { get; set; }
 
 		// Token: 0x1700007B RID: 123
-		// (get) Token: 0x06000356 RID: 854 RVA: 0x00017610 File Offset: 0x00015810
-		// (set) Token: 0x06000357 RID: 855 RVA: 0x00017627 File Offset: 0x00015827
+		
+		
 		public long store_yinliang { get; set; }
 
 		// Token: 0x1700007C RID: 124
-		// (get) Token: 0x06000358 RID: 856 RVA: 0x00017630 File Offset: 0x00015830
-		// (set) Token: 0x06000359 RID: 857 RVA: 0x00017647 File Offset: 0x00015847
+		
+		
 		public long store_money { get; set; }
 
 		// Token: 0x1700007D RID: 125
-		// (get) Token: 0x0600035A RID: 858 RVA: 0x00017650 File Offset: 0x00015850
-		// (set) Token: 0x0600035B RID: 859 RVA: 0x00017667 File Offset: 0x00015867
+		
+		
 		public int MagicSwordParam { get; set; }
 
 		// Token: 0x1700007E RID: 126
-		// (get) Token: 0x0600035C RID: 860 RVA: 0x00017670 File Offset: 0x00015870
-		// (set) Token: 0x0600035D RID: 861 RVA: 0x00017688 File Offset: 0x00015888
+		
+		
 		public UserRankValueCache RankValue
 		{
 			get
@@ -427,158 +427,158 @@ namespace GameDBServer.DB
 		}
 
 		// Token: 0x1700007F RID: 127
-		// (get) Token: 0x0600035E RID: 862 RVA: 0x00017694 File Offset: 0x00015894
-		// (set) Token: 0x0600035F RID: 863 RVA: 0x000176AB File Offset: 0x000158AB
+		
+		
 		public long UpdateDBPositionTicks { get; set; }
 
 		// Token: 0x17000080 RID: 128
-		// (get) Token: 0x06000360 RID: 864 RVA: 0x000176B4 File Offset: 0x000158B4
-		// (set) Token: 0x06000361 RID: 865 RVA: 0x000176CB File Offset: 0x000158CB
+		
+		
 		public long UpdateDBTimeTicks { get; set; }
 
 		// Token: 0x17000081 RID: 129
-		// (get) Token: 0x06000362 RID: 866 RVA: 0x000176D4 File Offset: 0x000158D4
-		// (set) Token: 0x06000363 RID: 867 RVA: 0x000176EB File Offset: 0x000158EB
+		
+		
 		public long UpdateDBInterPowerTimeTicks { get; set; }
 
 		// Token: 0x17000082 RID: 130
-		// (get) Token: 0x06000364 RID: 868 RVA: 0x000176F4 File Offset: 0x000158F4
-		// (set) Token: 0x06000365 RID: 869 RVA: 0x0001770B File Offset: 0x0001590B
+		
+		
 		public List<OldTaskData> OldTasks { get; set; }
 
 		// Token: 0x17000083 RID: 131
-		// (get) Token: 0x06000366 RID: 870 RVA: 0x00017714 File Offset: 0x00015914
-		// (set) Token: 0x06000367 RID: 871 RVA: 0x0001772B File Offset: 0x0001592B
+		
+		
 		public List<TaskData> DoingTaskList { get; set; }
 
 		// Token: 0x17000084 RID: 132
-		// (get) Token: 0x06000368 RID: 872 RVA: 0x00017734 File Offset: 0x00015934
-		// (set) Token: 0x06000369 RID: 873 RVA: 0x0001774B File Offset: 0x0001594B
+		
+		
 		public List<GoodsData> GoodsDataList { get; set; }
 
 		// Token: 0x17000085 RID: 133
-		// (get) Token: 0x0600036A RID: 874 RVA: 0x00017754 File Offset: 0x00015954
-		// (set) Token: 0x0600036B RID: 875 RVA: 0x0001776B File Offset: 0x0001596B
+		
+		
 		public List<GoodsData> RebornGoodsDataList { get; set; }
 
 		// Token: 0x17000086 RID: 134
-		// (get) Token: 0x0600036C RID: 876 RVA: 0x00017774 File Offset: 0x00015974
-		// (set) Token: 0x0600036D RID: 877 RVA: 0x0001778B File Offset: 0x0001598B
+		
+		
 		public List<GoodsLimitData> GoodsLimitDataList { get; set; }
 
 		// Token: 0x17000087 RID: 135
-		// (get) Token: 0x0600036E RID: 878 RVA: 0x00017794 File Offset: 0x00015994
-		// (set) Token: 0x0600036F RID: 879 RVA: 0x000177AB File Offset: 0x000159AB
+		
+		
 		public List<FriendData> FriendDataList { get; set; }
 
 		// Token: 0x17000088 RID: 136
-		// (get) Token: 0x06000370 RID: 880 RVA: 0x000177B4 File Offset: 0x000159B4
-		// (set) Token: 0x06000371 RID: 881 RVA: 0x000177CB File Offset: 0x000159CB
+		
+		
 		public List<HorseData> HorsesDataList { get; set; }
 
 		// Token: 0x17000089 RID: 137
-		// (get) Token: 0x06000372 RID: 882 RVA: 0x000177D4 File Offset: 0x000159D4
-		// (set) Token: 0x06000373 RID: 883 RVA: 0x000177EB File Offset: 0x000159EB
+		
+		
 		public List<PetData> PetsDataList { get; set; }
 
 		// Token: 0x1700008A RID: 138
-		// (get) Token: 0x06000374 RID: 884 RVA: 0x000177F4 File Offset: 0x000159F4
-		// (set) Token: 0x06000375 RID: 885 RVA: 0x0001780B File Offset: 0x00015A0B
+		
+		
 		public long LastDJPointDataTikcs { get; set; }
 
 		// Token: 0x1700008B RID: 139
-		// (get) Token: 0x06000376 RID: 886 RVA: 0x00017814 File Offset: 0x00015A14
-		// (set) Token: 0x06000377 RID: 887 RVA: 0x0001782B File Offset: 0x00015A2B
+		
+		
 		public DJPointData RoleDJPointData { get; set; }
 
 		// Token: 0x1700008C RID: 140
-		// (get) Token: 0x06000378 RID: 888 RVA: 0x00017834 File Offset: 0x00015A34
-		// (set) Token: 0x06000379 RID: 889 RVA: 0x0001784B File Offset: 0x00015A4B
+		
+		
 		public List<JingMaiData> JingMaiDataList { get; set; }
 
 		// Token: 0x1700008D RID: 141
-		// (get) Token: 0x0600037A RID: 890 RVA: 0x00017854 File Offset: 0x00015A54
-		// (set) Token: 0x0600037B RID: 891 RVA: 0x0001786B File Offset: 0x00015A6B
+		
+		
 		public List<SkillData> SkillDataList { get; set; }
 
 		// Token: 0x1700008E RID: 142
-		// (get) Token: 0x0600037C RID: 892 RVA: 0x00017874 File Offset: 0x00015A74
-		// (set) Token: 0x0600037D RID: 893 RVA: 0x0001788B File Offset: 0x00015A8B
+		
+		
 		public List<BufferData> BufferDataList { get; set; }
 
 		// Token: 0x1700008F RID: 143
-		// (get) Token: 0x0600037E RID: 894 RVA: 0x00017894 File Offset: 0x00015A94
-		// (set) Token: 0x0600037F RID: 895 RVA: 0x000178AB File Offset: 0x00015AAB
+		
+		
 		public List<DailyTaskData> MyDailyTaskDataList { get; set; }
 
 		// Token: 0x17000090 RID: 144
-		// (get) Token: 0x06000380 RID: 896 RVA: 0x000178B4 File Offset: 0x00015AB4
-		// (set) Token: 0x06000381 RID: 897 RVA: 0x000178CB File Offset: 0x00015ACB
+		
+		
 		public DailyJingMaiData MyDailyJingMaiData { get; set; }
 
 		// Token: 0x17000091 RID: 145
-		// (get) Token: 0x06000382 RID: 898 RVA: 0x000178D4 File Offset: 0x00015AD4
-		// (set) Token: 0x06000383 RID: 899 RVA: 0x000178EB File Offset: 0x00015AEB
+		
+		
 		public PortableBagData MyPortableBagData { get; set; }
 
 		// Token: 0x17000092 RID: 146
-		// (get) Token: 0x06000384 RID: 900 RVA: 0x000178F4 File Offset: 0x00015AF4
-		// (set) Token: 0x06000385 RID: 901 RVA: 0x0001790B File Offset: 0x00015B0B
+		
+		
 		public RebornPortableBagData RebornGirdData { get; set; }
 
 		// Token: 0x17000093 RID: 147
-		// (get) Token: 0x06000386 RID: 902 RVA: 0x00017914 File Offset: 0x00015B14
-		// (set) Token: 0x06000387 RID: 903 RVA: 0x0001792B File Offset: 0x00015B2B
+		
+		
 		public int RebornShowEquip { get; set; }
 
 		// Token: 0x17000094 RID: 148
-		// (get) Token: 0x06000388 RID: 904 RVA: 0x00017934 File Offset: 0x00015B34
-		// (set) Token: 0x06000389 RID: 905 RVA: 0x0001794B File Offset: 0x00015B4B
+		
+		
 		public int RebornShowModel { get; set; }
 
 		// Token: 0x17000095 RID: 149
-		// (get) Token: 0x0600038A RID: 906 RVA: 0x00017954 File Offset: 0x00015B54
-		// (set) Token: 0x0600038B RID: 907 RVA: 0x0001796B File Offset: 0x00015B6B
+		
+		
 		public bool ExistsMyHuodongData { get; set; }
 
 		// Token: 0x17000096 RID: 150
-		// (get) Token: 0x0600038C RID: 908 RVA: 0x00017974 File Offset: 0x00015B74
-		// (set) Token: 0x0600038D RID: 909 RVA: 0x0001798B File Offset: 0x00015B8B
+		
+		
 		public HuodongData MyHuodongData { get; set; }
 
 		// Token: 0x17000097 RID: 151
-		// (get) Token: 0x0600038E RID: 910 RVA: 0x00017994 File Offset: 0x00015B94
-		// (set) Token: 0x0600038F RID: 911 RVA: 0x000179AB File Offset: 0x00015BAB
+		
+		
 		public List<FuBenData> FuBenDataList { get; set; }
 
 		// Token: 0x17000098 RID: 152
-		// (get) Token: 0x06000390 RID: 912 RVA: 0x000179B4 File Offset: 0x00015BB4
-		// (set) Token: 0x06000391 RID: 913 RVA: 0x000179CB File Offset: 0x00015BCB
+		
+		
 		public MarriageData MyMarriageData { get; set; }
 
 		// Token: 0x17000099 RID: 153
-		// (get) Token: 0x06000392 RID: 914 RVA: 0x000179D4 File Offset: 0x00015BD4
-		// (set) Token: 0x06000393 RID: 915 RVA: 0x000179EB File Offset: 0x00015BEB
+		
+		
 		public Dictionary<int, int> MyMarryPartyJoinList { get; set; }
 
 		// Token: 0x1700009A RID: 154
-		// (get) Token: 0x06000394 RID: 916 RVA: 0x000179F4 File Offset: 0x00015BF4
-		// (set) Token: 0x06000395 RID: 917 RVA: 0x00017A0B File Offset: 0x00015C0B
+		
+		
 		public Dictionary<sbyte, HolyItemData> MyHolyItemDataDic { get; set; }
 
 		// Token: 0x1700009B RID: 155
-		// (get) Token: 0x06000396 RID: 918 RVA: 0x00017A14 File Offset: 0x00015C14
-		// (set) Token: 0x06000397 RID: 919 RVA: 0x00017A2B File Offset: 0x00015C2B
+		
+		
 		public RoleDailyData MyRoleDailyData { get; set; }
 
 		// Token: 0x1700009C RID: 156
-		// (get) Token: 0x06000398 RID: 920 RVA: 0x00017A34 File Offset: 0x00015C34
-		// (set) Token: 0x06000399 RID: 921 RVA: 0x00017A4B File Offset: 0x00015C4B
+		
+		
 		public YaBiaoData MyYaBiaoData { get; set; }
 
 		// Token: 0x1700009D RID: 157
-		// (get) Token: 0x0600039A RID: 922 RVA: 0x00017A54 File Offset: 0x00015C54
-		// (set) Token: 0x0600039B RID: 923 RVA: 0x00017A6C File Offset: 0x00015C6C
+		
+		
 		public long LastReferenceTicks
 		{
 			get
@@ -592,143 +592,143 @@ namespace GameDBServer.DB
 		}
 
 		// Token: 0x1700009E RID: 158
-		// (get) Token: 0x0600039C RID: 924 RVA: 0x00017A78 File Offset: 0x00015C78
-		// (set) Token: 0x0600039D RID: 925 RVA: 0x00017A8F File Offset: 0x00015C8F
+		
+		
 		public Dictionary<int, int> PaiHangPosDict { get; set; }
 
 		// Token: 0x1700009F RID: 159
-		// (get) Token: 0x0600039E RID: 926 RVA: 0x00017A98 File Offset: 0x00015C98
-		// (set) Token: 0x0600039F RID: 927 RVA: 0x00017AAF File Offset: 0x00015CAF
+		
+		
 		public List<VipDailyData> VipDailyDataList { get; set; }
 
 		// Token: 0x170000A0 RID: 160
-		// (get) Token: 0x060003A0 RID: 928 RVA: 0x00017AB8 File Offset: 0x00015CB8
-		// (set) Token: 0x060003A1 RID: 929 RVA: 0x00017ACF File Offset: 0x00015CCF
+		
+		
 		public YangGongBKDailyJiFenData YangGongBKDailyJiFen { get; set; }
 
 		// Token: 0x170000A1 RID: 161
-		// (get) Token: 0x060003A2 RID: 930 RVA: 0x00017AD8 File Offset: 0x00015CD8
-		// (set) Token: 0x060003A3 RID: 931 RVA: 0x00017AEF File Offset: 0x00015CEF
+		
+		
 		public WingData MyWingData { get; set; }
 
 		// Token: 0x170000A2 RID: 162
-		// (get) Token: 0x060003A4 RID: 932 RVA: 0x00017AF8 File Offset: 0x00015CF8
-		// (set) Token: 0x060003A5 RID: 933 RVA: 0x00017B0F File Offset: 0x00015D0F
+		
+		
 		public Dictionary<int, int> PictureJudgeReferInfo { get; set; }
 
 		// Token: 0x170000A3 RID: 163
-		// (get) Token: 0x060003A6 RID: 934 RVA: 0x00017B18 File Offset: 0x00015D18
-		// (set) Token: 0x060003A7 RID: 935 RVA: 0x00017B2F File Offset: 0x00015D2F
+		
+		
 		public Dictionary<int, int> StarConstellationInfo { get; set; }
 
 		// Token: 0x170000A4 RID: 164
-		// (get) Token: 0x060003A8 RID: 936 RVA: 0x00017B38 File Offset: 0x00015D38
-		// (set) Token: 0x060003A9 RID: 937 RVA: 0x00017B4F File Offset: 0x00015D4F
+		
+		
 		public Dictionary<int, LingYuData> LingYuDict { get; set; }
 
 		// Token: 0x170000A5 RID: 165
-		// (get) Token: 0x060003AA RID: 938 RVA: 0x00017B58 File Offset: 0x00015D58
-		// (set) Token: 0x060003AB RID: 939 RVA: 0x00017B6F File Offset: 0x00015D6F
+		
+		
 		public GuardStatueDetail MyGuardStatueDetail { get; set; }
 
 		// Token: 0x170000A6 RID: 166
-		// (get) Token: 0x060003AC RID: 940 RVA: 0x00017B78 File Offset: 0x00015D78
-		// (set) Token: 0x060003AD RID: 941 RVA: 0x00017B8F File Offset: 0x00015D8F
+		
+		
 		public TalentData MyTalentData { get; set; }
 
 		// Token: 0x170000A7 RID: 167
-		// (get) Token: 0x060003AE RID: 942 RVA: 0x00017B98 File Offset: 0x00015D98
-		// (set) Token: 0x060003AF RID: 943 RVA: 0x00017BAF File Offset: 0x00015DAF
+		
+		
 		public string LastIP { get; set; }
 
 		// Token: 0x170000A8 RID: 168
-		// (get) Token: 0x060003B0 RID: 944 RVA: 0x00017BB8 File Offset: 0x00015DB8
-		// (set) Token: 0x060003B1 RID: 945 RVA: 0x00017BCF File Offset: 0x00015DCF
+		
+		
 		public List<int> GroupMailRecordList { get; set; }
 
 		// Token: 0x170000A9 RID: 169
-		// (get) Token: 0x060003B2 RID: 946 RVA: 0x00017BD8 File Offset: 0x00015DD8
-		// (set) Token: 0x060003B3 RID: 947 RVA: 0x00017BEF File Offset: 0x00015DEF
+		
+		
 		public MerlinGrowthSaveDBData MerlinData { get; set; }
 
 		// Token: 0x170000AA RID: 170
-		// (get) Token: 0x060003B4 RID: 948 RVA: 0x00017BF8 File Offset: 0x00015DF8
-		// (set) Token: 0x060003B5 RID: 949 RVA: 0x00017C0F File Offset: 0x00015E0F
+		
+		
 		public FluorescentGemData FluorescentGemData { get; set; }
 
 		// Token: 0x170000AB RID: 171
-		// (get) Token: 0x060003B6 RID: 950 RVA: 0x00017C18 File Offset: 0x00015E18
-		// (set) Token: 0x060003B7 RID: 951 RVA: 0x00017C2F File Offset: 0x00015E2F
+		
+		
 		public int FluorescentPoint { get; set; }
 
 		// Token: 0x170000AC RID: 172
-		// (get) Token: 0x060003B8 RID: 952 RVA: 0x00017C38 File Offset: 0x00015E38
-		// (set) Token: 0x060003B9 RID: 953 RVA: 0x00017C4F File Offset: 0x00015E4F
+		
+		
 		public List<BuildingData> BuildingDataList { get; set; }
 
 		// Token: 0x170000AD RID: 173
-		// (get) Token: 0x060003BA RID: 954 RVA: 0x00017C58 File Offset: 0x00015E58
-		// (set) Token: 0x060003BB RID: 955 RVA: 0x00017C6F File Offset: 0x00015E6F
+		
+		
 		public Dictionary<int, OrnamentData> OrnamentDataDict { get; set; }
 
 		// Token: 0x170000AE RID: 174
-		// (get) Token: 0x060003BC RID: 956 RVA: 0x00017C78 File Offset: 0x00015E78
-		// (set) Token: 0x060003BD RID: 957 RVA: 0x00017C8F File Offset: 0x00015E8F
+		
+		
 		public Dictionary<int, Dictionary<int, SevenDayItemData>> SevenDayActDict { get; set; }
 
 		// Token: 0x170000AF RID: 175
-		// (get) Token: 0x060003BE RID: 958 RVA: 0x00017C98 File Offset: 0x00015E98
-		// (set) Token: 0x060003BF RID: 959 RVA: 0x00017CAF File Offset: 0x00015EAF
+		
+		
 		public long BanTradeToTicks { get; set; }
 
 		// Token: 0x170000B0 RID: 176
-		// (get) Token: 0x060003C0 RID: 960 RVA: 0x00017CB8 File Offset: 0x00015EB8
-		// (set) Token: 0x060003C1 RID: 961 RVA: 0x00017CCF File Offset: 0x00015ECF
+		
+		
 		public Dictionary<int, SpecActInfoDB> SpecActInfoDict { get; set; }
 
 		// Token: 0x170000B1 RID: 177
-		// (get) Token: 0x060003C2 RID: 962 RVA: 0x00017CD8 File Offset: 0x00015ED8
-		// (set) Token: 0x060003C3 RID: 963 RVA: 0x00017CEF File Offset: 0x00015EEF
+		
+		
 		public Dictionary<int, EverydayActInfoDB> EverydayActInfoDict { get; set; }
 
 		// Token: 0x170000B2 RID: 178
-		// (get) Token: 0x060003C4 RID: 964 RVA: 0x00017CF8 File Offset: 0x00015EF8
-		// (set) Token: 0x060003C5 RID: 965 RVA: 0x00017D0F File Offset: 0x00015F0F
+		
+		
 		public Dictionary<KeyValuePair<int, int>, SpecPriorityActInfoDB> SpecPriorityActInfoDict { get; set; }
 
 		// Token: 0x170000B3 RID: 179
-		// (get) Token: 0x060003C6 RID: 966 RVA: 0x00017D18 File Offset: 0x00015F18
-		// (set) Token: 0x060003C7 RID: 967 RVA: 0x00017D2F File Offset: 0x00015F2F
+		
+		
 		public AlchemyDataDB AlchemyInfo { get; set; }
 
 		// Token: 0x170000B4 RID: 180
-		// (get) Token: 0x060003C8 RID: 968 RVA: 0x00017D38 File Offset: 0x00015F38
-		// (set) Token: 0x060003C9 RID: 969 RVA: 0x00017D4F File Offset: 0x00015F4F
+		
+		
 		public Dictionary<int, ShenJiFuWenData> ShenJiDict { get; set; }
 
 		// Token: 0x170000B5 RID: 181
-		// (get) Token: 0x060003CA RID: 970 RVA: 0x00017D58 File Offset: 0x00015F58
-		// (set) Token: 0x060003CB RID: 971 RVA: 0x00017D6F File Offset: 0x00015F6F
+		
+		
 		public TarotSystemData TarotData { get; set; }
 
 		// Token: 0x170000B6 RID: 182
-		// (get) Token: 0x060003CC RID: 972 RVA: 0x00017D78 File Offset: 0x00015F78
-		// (set) Token: 0x060003CD RID: 973 RVA: 0x00017D8F File Offset: 0x00015F8F
+		
+		
 		public List<FuWenTabData> FuWenTabList { get; set; }
 
 		// Token: 0x170000B7 RID: 183
-		// (get) Token: 0x060003CE RID: 974 RVA: 0x00017D98 File Offset: 0x00015F98
-		// (set) Token: 0x060003CF RID: 975 RVA: 0x00017DAF File Offset: 0x00015FAF
+		
+		
 		public List<TaoZhuangData> JueXingTaoZhuangList { get; set; }
 
 		// Token: 0x170000B8 RID: 184
-		// (get) Token: 0x060003D0 RID: 976 RVA: 0x00017DB8 File Offset: 0x00015FB8
-		// (set) Token: 0x060003D1 RID: 977 RVA: 0x00017DCF File Offset: 0x00015FCF
+		
+		
 		public List<MountData> MountList { get; set; }
 
 		// Token: 0x170000B9 RID: 185
-		// (get) Token: 0x060003D2 RID: 978 RVA: 0x00017DD8 File Offset: 0x00015FD8
-		// (set) Token: 0x060003D3 RID: 979 RVA: 0x00017DEF File Offset: 0x00015FEF
+		
+		
 		public RebornStampData RebornYinJi { get; set; }
 
 		// Token: 0x060003D4 RID: 980 RVA: 0x00017DF8 File Offset: 0x00015FF8

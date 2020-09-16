@@ -4,10 +4,10 @@ using System.Threading;
 
 namespace KF.Hosting.HuanYingSiYuan
 {
-	// Token: 0x02000005 RID: 5
+	
 	public class CmdHandlerDict
 	{
-		// Token: 0x06000026 RID: 38 RVA: 0x00002E38 File Offset: 0x00001038
+		
 		public void AddCmdHelp(string msg, params string[] cmds)
 		{
 			lock (this.CmdDict)
@@ -16,7 +16,7 @@ namespace KF.Hosting.HuanYingSiYuan
 			}
 		}
 
-		// Token: 0x06000027 RID: 39 RVA: 0x00002E90 File Offset: 0x00001090
+		
 		public void ShowHelp(params string[] cmds)
 		{
 			lock (this.CmdDict)
@@ -41,13 +41,13 @@ namespace KF.Hosting.HuanYingSiYuan
 			}
 		}
 
-		// Token: 0x06000028 RID: 40 RVA: 0x00002F9C File Offset: 0x0000119C
+		
 		public void AddCmdHandler(string cmd, ParameterizedThreadStart handler)
 		{
 			this.CmdDict.Add(cmd, handler);
 		}
 
-		// Token: 0x06000029 RID: 41 RVA: 0x00002FB0 File Offset: 0x000011B0
+		
 		public string[] ParseConsoleCmd(string cmd)
 		{
 			List<string> argsList = new List<string>();
@@ -111,7 +111,7 @@ namespace KF.Hosting.HuanYingSiYuan
 			return argsList.ToArray();
 		}
 
-		// Token: 0x0600002A RID: 42 RVA: 0x00003118 File Offset: 0x00001318
+		
 		public void ExcuteCmd(string cmd)
 		{
 			if (!string.IsNullOrEmpty(cmd))
@@ -128,10 +128,10 @@ namespace KF.Hosting.HuanYingSiYuan
 			}
 		}
 
-		// Token: 0x04000016 RID: 22
+		
 		private Dictionary<string, ParameterizedThreadStart> CmdDict = new Dictionary<string, ParameterizedThreadStart>();
 
-		// Token: 0x04000017 RID: 23
+		
 		private List<KeyValuePair<string[], string>> HelpDict = new List<KeyValuePair<string[], string>>();
 	}
 }

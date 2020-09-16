@@ -16,29 +16,29 @@ using Tmsk.Contract.KuaFuData;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000260 RID: 608
+	
 	public class CompBattleManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener, IEventListenerEx, IManager2
 	{
-		// Token: 0x0600086D RID: 2157 RVA: 0x00081110 File Offset: 0x0007F310
+		
 		public static CompBattleManager getInstance()
 		{
 			return CompBattleManager.instance;
 		}
 
-		// Token: 0x0600086E RID: 2158 RVA: 0x00081128 File Offset: 0x0007F328
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x0600086F RID: 2159 RVA: 0x0008114C File Offset: 0x0007F34C
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			ScheduleExecutor2.Instance.scheduleExecute(new NormalScheduleTask("CompBattleManager.TimerProc", new EventHandler(this.TimerProc)), 15000, 2000);
 			return true;
 		}
 
-		// Token: 0x06000870 RID: 2160 RVA: 0x0008118C File Offset: 0x0007F38C
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(2000, 1, 1, CompBattleManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -58,7 +58,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000871 RID: 2161 RVA: 0x000812CC File Offset: 0x0007F4CC
+		
 		public bool showdown()
 		{
 			GlobalEventSource4Scene.getInstance().removeListener(33, 52, CompBattleManager.getInstance());
@@ -71,25 +71,25 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000872 RID: 2162 RVA: 0x00081364 File Offset: 0x0007F564
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000873 RID: 2163 RVA: 0x00081378 File Offset: 0x0007F578
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06000874 RID: 2164 RVA: 0x0008138C File Offset: 0x0007F58C
+		
 		public bool IsGongNengOpened(GameClient client, bool hint = false)
 		{
 			return GlobalNew.IsGongNengOpened(client, GongNengIDs.Comp, hint) && GameManager.VersionSystemOpenMgr.IsVersionSystemOpen(120402);
 		}
 
-		// Token: 0x06000875 RID: 2165 RVA: 0x000813C0 File Offset: 0x0007F5C0
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -122,7 +122,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000876 RID: 2166 RVA: 0x000814BC File Offset: 0x0007F6BC
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int eventType = eventObject.getEventType();
@@ -154,7 +154,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000877 RID: 2167 RVA: 0x000815A0 File Offset: 0x0007F7A0
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 			int eventType = eventObject.EventType;
@@ -229,7 +229,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000878 RID: 2168 RVA: 0x0008178C File Offset: 0x0007F98C
+		
 		public bool InitConfig()
 		{
 			bool success = true;
@@ -340,7 +340,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x06000879 RID: 2169 RVA: 0x00081EB4 File Offset: 0x000800B4
+		
 		private void TimerProc(object sender, EventArgs e)
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -456,7 +456,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600087A RID: 2170 RVA: 0x000823EC File Offset: 0x000805EC
+		
 		public CompBattleBaseData GetCompBattleBaseData(int compType)
 		{
 			CompBattleBaseData cbBaseData = null;
@@ -467,7 +467,7 @@ namespace GameServer.Logic
 			return cbBaseData;
 		}
 
-		// Token: 0x0600087B RID: 2171 RVA: 0x00082458 File Offset: 0x00080658
+		
 		public void UpdateCompBattleBaseData(Dictionary<int, KFCompData> tempCompDataDict)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -492,7 +492,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600087C RID: 2172 RVA: 0x00082594 File Offset: 0x00080794
+		
 		public bool ProcessGetCompBattleBaseDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -512,7 +512,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600087D RID: 2173 RVA: 0x00082638 File Offset: 0x00080838
+		
 		public bool ProcessGetCompBattleCityDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -602,7 +602,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600087E RID: 2174 RVA: 0x00082AB4 File Offset: 0x00080CB4
+		
 		public bool ProcessCompBattleEnterCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -698,7 +698,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600087F RID: 2175 RVA: 0x00082E70 File Offset: 0x00081070
+		
 		public bool ProcessGetCompBattleAwardInfoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -732,7 +732,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000880 RID: 2176 RVA: 0x00082FC0 File Offset: 0x000811C0
+		
 		public bool ProcessGetCompBattleStateCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -764,7 +764,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000881 RID: 2177 RVA: 0x000830A8 File Offset: 0x000812A8
+		
 		public bool ProcessGetCompBattleSelfScoreCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -801,7 +801,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000882 RID: 2178 RVA: 0x0008322C File Offset: 0x0008142C
+		
 		public bool ProcessGetCompBattleAwardCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -847,7 +847,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000883 RID: 2179 RVA: 0x00083330 File Offset: 0x00081530
+		
 		public int GetWaitingCount(int cityId, int comptype)
 		{
 			int result;
@@ -867,7 +867,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000884 RID: 2180 RVA: 0x000833B0 File Offset: 0x000815B0
+		
 		public bool IsInWait(int rid)
 		{
 			try
@@ -892,7 +892,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000885 RID: 2181 RVA: 0x00083458 File Offset: 0x00081658
+		
 		public bool AddToWait(int cityId, int comptype, int rid)
 		{
 			try
@@ -924,7 +924,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000886 RID: 2182 RVA: 0x00083558 File Offset: 0x00081758
+		
 		public void RemoveWait(int rid)
 		{
 			try
@@ -950,7 +950,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000887 RID: 2183 RVA: 0x00083674 File Offset: 0x00081874
+		
 		public void OnCompBattleReset()
 		{
 			foreach (GameClient client in GameManager.ClientMgr.GetAllClients(true))
@@ -966,14 +966,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000888 RID: 2184 RVA: 0x00083714 File Offset: 0x00081914
+		
 		private bool CheckMap(GameClient client)
 		{
 			SceneUIClasses sceneType = Global.GetMapSceneType(client.ClientData.MapCode);
 			return sceneType == SceneUIClasses.Normal || sceneType == SceneUIClasses.Comp;
 		}
 
-		// Token: 0x06000889 RID: 2185 RVA: 0x00083750 File Offset: 0x00081950
+		
 		public int CheckCondition(GameClient client, ref CompBattleGameStates state)
 		{
 			int result = 0;
@@ -1023,7 +1023,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600088A RID: 2186 RVA: 0x00083964 File Offset: 0x00081B64
+		
 		private TimeSpan GetStartTime(int sceneId)
 		{
 			CompBattleConfig sceneItem = null;
@@ -1055,7 +1055,7 @@ namespace GameServer.Logic
 			return startTime;
 		}
 
-		// Token: 0x0600088B RID: 2187 RVA: 0x00083B00 File Offset: 0x00081D00
+		
 		public bool KuaFuLogin(KuaFuServerLoginData kuaFuServerLoginData)
 		{
 			CompFuBenData kfubenData = TianTiClient.getInstance().Comp_GetKuaFuFuBenData(30, (int)kuaFuServerLoginData.GameId);
@@ -1081,7 +1081,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600088C RID: 2188 RVA: 0x00083C14 File Offset: 0x00081E14
+		
 		public bool OnInitGameKuaFu(GameClient client)
 		{
 			KuaFuServerLoginData kuaFuServerLoginData = Global.GetClientKuaFuServerLoginData(client);
@@ -1146,14 +1146,14 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600088D RID: 2189 RVA: 0x00083EC0 File Offset: 0x000820C0
+		
 		private void OnLogout(GameClient client)
 		{
 			this.LeaveFuBen(client);
 			this.RemoveWait(client.ClientData.RoleID);
 		}
 
-		// Token: 0x0600088E RID: 2190 RVA: 0x00083EE0 File Offset: 0x000820E0
+		
 		public bool ClientRelive(GameClient client)
 		{
 			int toPosX;
@@ -1176,7 +1176,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600088F RID: 2191 RVA: 0x00083F8C File Offset: 0x0008218C
+		
 		public int GetBirthPoint(int mapCode, GameClient client, out int posX, out int posY)
 		{
 			int side = client.ClientData.BattleWhichSide;
@@ -1196,7 +1196,7 @@ namespace GameServer.Logic
 			return -1;
 		}
 
-		// Token: 0x06000890 RID: 2192 RVA: 0x000840E0 File Offset: 0x000822E0
+		
 		public void UpdateBattleSideScoreRank(CompBattleScene scene, bool update = true)
 		{
 			try
@@ -1275,7 +1275,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000891 RID: 2193 RVA: 0x00084334 File Offset: 0x00082534
+		
 		public int CalTopOwnCityCompType()
 		{
 			int compType = 0;
@@ -1303,7 +1303,7 @@ namespace GameServer.Logic
 			return compType;
 		}
 
-		// Token: 0x06000892 RID: 2194 RVA: 0x00084428 File Offset: 0x00082628
+		
 		public bool CheckCompShopDuiHuanType(GameClient client, int nDuiHuanType)
 		{
 			try
@@ -1351,7 +1351,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000893 RID: 2195 RVA: 0x00084618 File Offset: 0x00082818
+		
 		public void InstallJunQi(CompBattleScene scene, int comptype, CompStrongholdConfig item, bool updateScoreRank = true)
 		{
 			CopyMap copyMap = scene.CopyMap;
@@ -1374,7 +1374,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000894 RID: 2196 RVA: 0x00084710 File Offset: 0x00082910
+		
 		public bool OnSpriteClickOnNpc(GameClient client, int npcID, int npcExtentionID)
 		{
 			CompStrongholdConfig item = null;
@@ -1456,7 +1456,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000895 RID: 2197 RVA: 0x00084A80 File Offset: 0x00082C80
+		
 		private void InitScene(CompBattleScene scene, GameClient client, Dictionary<int, KFCompData> compDataDict)
 		{
 			foreach (CompStrongholdConfig item in this.RuntimeData.CompStrongholdConfigDict.Values)
@@ -1494,7 +1494,7 @@ namespace GameServer.Logic
 			this.UpdateBattleSideScoreRank(scene, false);
 		}
 
-		// Token: 0x06000896 RID: 2198 RVA: 0x00084C40 File Offset: 0x00082E40
+		
 		public bool AddCopyScenes(GameClient client, CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool result;
@@ -1584,7 +1584,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000897 RID: 2199 RVA: 0x00084FF8 File Offset: 0x000831F8
+		
 		public bool RemoveCopyScene(CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool result;
@@ -1605,7 +1605,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000898 RID: 2200 RVA: 0x00085088 File Offset: 0x00083288
+		
 		public void TimerProc()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -1709,7 +1709,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000899 RID: 2201 RVA: 0x0008550C File Offset: 0x0008370C
+		
 		public void NotifyTimeStateInfoAndScoreInfo(GameClient client, bool timeState = true, bool sideScore = true)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -1729,7 +1729,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600089A RID: 2202 RVA: 0x000855B4 File Offset: 0x000837B4
+		
 		private CompBattleRewardConfig CalBattleRewardConfig(GameClient client, KFCompRoleData compRoleData)
 		{
 			CompBattleRewardConfig awardConfig = null;
@@ -1761,7 +1761,7 @@ namespace GameServer.Logic
 			return awardConfig;
 		}
 
-		// Token: 0x0600089B RID: 2203 RVA: 0x00085778 File Offset: 0x00083978
+		
 		private int GiveRoleAwards(GameClient client, long LastStartTimeTicks)
 		{
 			KFCompRoleData compRoleData = TianTiClient.getInstance().Comp_GetCompRoleData(client.ClientData.RoleID);
@@ -1849,7 +1849,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600089C RID: 2204 RVA: 0x00085C60 File Offset: 0x00083E60
+		
 		private void UpdateMapBuffer(CompBattleScene scene, GameClient client, bool login)
 		{
 			if (client.ClientData.CompType > 0)
@@ -1911,7 +1911,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600089D RID: 2205 RVA: 0x00085F90 File Offset: 0x00084190
+		
 		public void OnStartPlayGame(GameClient client)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -1944,7 +1944,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600089E RID: 2206 RVA: 0x000861A0 File Offset: 0x000843A0
+		
 		public void LeaveFuBen(GameClient client)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -1978,7 +1978,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600089F RID: 2207 RVA: 0x000863CC File Offset: 0x000845CC
+		
 		public void OnKillRole(GameClient client, GameClient other)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -2047,7 +2047,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060008A0 RID: 2208 RVA: 0x000866F4 File Offset: 0x000848F4
+		
 		public void OnProcessMonsterDead(GameClient client, Monster monster)
 		{
 			CompBattleScene scene = client.SceneObject as CompBattleScene;
@@ -2070,7 +2070,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060008A1 RID: 2209 RVA: 0x00086820 File Offset: 0x00084A20
+		
 		public void OnInjureMonster(GameClient client, Monster monster, long injure)
 		{
 			CompStrongholdConfig tagInfo = monster.Tag as CompStrongholdConfig;
@@ -2093,13 +2093,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060008A2 RID: 2210 RVA: 0x00086920 File Offset: 0x00084B20
+		
 		public void CompleteScene(CompBattleScene scene, int successSide)
 		{
 			scene.SuccessSide = successSide;
 		}
 
-		// Token: 0x060008A3 RID: 2211 RVA: 0x0008692C File Offset: 0x00084B2C
+		
 		private void ProcessEnd(CompBattleScene scene, long nowTicks)
 		{
 			int successSide = (scene.ScoreData[0].Rate > 0.0) ? scene.ScoreData[0].CompType : 0;
@@ -2112,7 +2112,7 @@ namespace GameServer.Logic
 			GameManager.ClientMgr.BroadSpecialCopyMapMessage<GameSceneStateTimeData>(827, scene.StateTimeData, scene.CopyMap);
 		}
 
-		// Token: 0x060008A4 RID: 2212 RVA: 0x000869DC File Offset: 0x00084BDC
+		
 		public void GiveAwards(CompBattleScene scene)
 		{
 			try
@@ -2140,19 +2140,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04000EFF RID: 3839
+		
 		public const SceneUIClasses ManagerType = SceneUIClasses.CompBattle;
 
-		// Token: 0x04000F00 RID: 3840
+		
 		private static CompBattleManager instance = new CompBattleManager();
 
-		// Token: 0x04000F01 RID: 3841
+		
 		public CompBattleRuntimeData RuntimeData = new CompBattleRuntimeData();
 
-		// Token: 0x04000F02 RID: 3842
+		
 		public ConcurrentDictionary<int, CompBattleScene> SceneDict = new ConcurrentDictionary<int, CompBattleScene>();
 
-		// Token: 0x04000F03 RID: 3843
+		
 		private static long NextHeartBeatTicks = 0L;
 	}
 }

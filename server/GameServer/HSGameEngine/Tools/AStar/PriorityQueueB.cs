@@ -3,29 +3,29 @@ using System.Collections.Generic;
 
 namespace HSGameEngine.Tools.AStar
 {
-    // Token: 0x020008E7 RID: 2279
+    
     public class PriorityQueueB<T> : IPriorityQueue<T>
     {
-        // Token: 0x060041CB RID: 16843 RVA: 0x003C2912 File Offset: 0x003C0B12
+        
         public PriorityQueueB()
         {
             this.mComparer = Comparer<T>.Default;
         }
 
-        // Token: 0x060041CC RID: 16844 RVA: 0x003C2933 File Offset: 0x003C0B33
+        
         public PriorityQueueB(IComparer<T> comparer)
         {
             this.mComparer = comparer;
         }
 
-        // Token: 0x060041CD RID: 16845 RVA: 0x003C2950 File Offset: 0x003C0B50
+        
         public PriorityQueueB(IComparer<T> comparer, int capacity)
         {
             this.mComparer = comparer;
             this.InnerList.Capacity = capacity;
         }
 
-        // Token: 0x060041CE RID: 16846 RVA: 0x003C297C File Offset: 0x003C0B7C
+        
         protected void SwitchElements(int i, int j)
         {
             T h = this.InnerList[i];
@@ -33,13 +33,13 @@ namespace HSGameEngine.Tools.AStar
             this.InnerList[j] = h;
         }
 
-        // Token: 0x060041CF RID: 16847 RVA: 0x003C29C0 File Offset: 0x003C0BC0
+        
         protected virtual int OnCompare(int i, int j)
         {
             return this.mComparer.Compare(this.InnerList[i], this.InnerList[j]);
         }
 
-        // Token: 0x060041D0 RID: 16848 RVA: 0x003C29F8 File Offset: 0x003C0BF8
+        
         public int Push(T item)
         {
             int p = this.InnerList.Count;
@@ -57,7 +57,7 @@ namespace HSGameEngine.Tools.AStar
             return p;
         }
 
-        // Token: 0x060041D1 RID: 16849 RVA: 0x003C2A60 File Offset: 0x003C0C60
+        
         public T Pop()
         {
             T result = this.InnerList[0];
@@ -86,7 +86,7 @@ namespace HSGameEngine.Tools.AStar
             return result;
         }
 
-        // Token: 0x060041D2 RID: 16850 RVA: 0x003C2B44 File Offset: 0x003C0D44
+        
         public void Update(int i)
         {
             int num = i;
@@ -132,7 +132,7 @@ namespace HSGameEngine.Tools.AStar
             }
         }
 
-        // Token: 0x060041D3 RID: 16851 RVA: 0x003C2C24 File Offset: 0x003C0E24
+        
         public T Peek()
         {
             T result;
@@ -147,14 +147,14 @@ namespace HSGameEngine.Tools.AStar
             return result;
         }
 
-        // Token: 0x060041D4 RID: 16852 RVA: 0x003C2C63 File Offset: 0x003C0E63
+        
         public void Clear()
         {
             this.InnerList.Clear();
         }
 
-        // Token: 0x1700065E RID: 1630
-        // (get) Token: 0x060041D5 RID: 16853 RVA: 0x003C2C74 File Offset: 0x003C0E74
+        
+        
         public int Count
         {
             get
@@ -163,7 +163,7 @@ namespace HSGameEngine.Tools.AStar
             }
         }
 
-        // Token: 0x060041D6 RID: 16854 RVA: 0x003C2C94 File Offset: 0x003C0E94
+        
         public void RemoveLocation(T item)
         {
             int index = -1;
@@ -180,7 +180,7 @@ namespace HSGameEngine.Tools.AStar
             }
         }
 
-        // Token: 0x1700065F RID: 1631
+        
         public T this[int index]
         {
             get
@@ -194,10 +194,10 @@ namespace HSGameEngine.Tools.AStar
             }
         }
 
-        // Token: 0x04004FF5 RID: 20469
+        
         protected List<T> InnerList = new List<T>();
 
-        // Token: 0x04004FF6 RID: 20470
+        
         protected IComparer<T> mComparer;
     }
 }

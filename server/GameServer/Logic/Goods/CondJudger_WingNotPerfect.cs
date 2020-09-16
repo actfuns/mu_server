@@ -3,10 +3,10 @@ using GameServer.Logic.MUWings;
 
 namespace GameServer.Logic.Goods
 {
-	// Token: 0x02000472 RID: 1138
+	
 	public class CondJudger_WingNotPerfect : ICondJudger
 	{
-		// Token: 0x060014C9 RID: 5321 RVA: 0x0014599C File Offset: 0x00143B9C
+		
 		public bool Judge(GameClient client, string arg, out string failedMsg)
 		{
 			failedMsg = "";

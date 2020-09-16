@@ -6,45 +6,45 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000083 RID: 131
+	
 	public class HuanLeDaiBiManager : IManager, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x060001F8 RID: 504 RVA: 0x000210A8 File Offset: 0x0001F2A8
+		
 		private HuanLeDaiBiManager()
 		{
 		}
 
-		// Token: 0x060001F9 RID: 505 RVA: 0x000210B4 File Offset: 0x0001F2B4
+		
 		public static HuanLeDaiBiManager GetInstance()
 		{
 			return HuanLeDaiBiManager.instance;
 		}
 
-		// Token: 0x060001FA RID: 506 RVA: 0x000210CC File Offset: 0x0001F2CC
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x060001FB RID: 507 RVA: 0x000210E0 File Offset: 0x0001F2E0
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x060001FC RID: 508 RVA: 0x000210F4 File Offset: 0x0001F2F4
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060001FD RID: 509 RVA: 0x00021108 File Offset: 0x0001F308
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x060001FE RID: 510 RVA: 0x0002111C File Offset: 0x0001F31C
+		
 		public bool startup()
 		{
 			this.GetHuanLeDaiBi(0);
@@ -52,7 +52,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060001FF RID: 511 RVA: 0x00021150 File Offset: 0x0001F350
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -88,7 +88,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000200 RID: 512 RVA: 0x00021224 File Offset: 0x0001F424
+		
 		private void ExchangeLuckStar(GameClient client, int ExchangeNum, ref int mgsData)
 		{
 			try
@@ -113,7 +113,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000201 RID: 513 RVA: 0x000212FC File Offset: 0x0001F4FC
+		
 		private void ExchangeHuanlebi(GameClient client, int ExchangeNum, ref int mgsData)
 		{
 			try
@@ -158,7 +158,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000202 RID: 514 RVA: 0x00021494 File Offset: 0x0001F694
+		
 		public GoodsData GetHuanLeDaiBi(int GCount = 0)
 		{
 			try
@@ -176,7 +176,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06000203 RID: 515 RVA: 0x00021510 File Offset: 0x0001F710
+		
 		public bool UseHuanledaibi(GameClient client, int UseNum)
 		{
 			try
@@ -195,7 +195,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000204 RID: 516 RVA: 0x000215AC File Offset: 0x0001F7AC
+		
 		public bool HuanledaibiEnough(GameClient client, int UseNum)
 		{
 			try
@@ -210,7 +210,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000205 RID: 517 RVA: 0x00021610 File Offset: 0x0001F810
+		
 		public bool HuanledaibiReplaceEnough(GameClient client, int UseNum, DaiBiSySType type)
 		{
 			try
@@ -228,7 +228,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000206 RID: 518 RVA: 0x00021670 File Offset: 0x0001F870
+		
 		public bool UseReplaceMoney(GameClient client, int UseNum, DaiBiSySType type, string info, bool isLuckStar = false)
 		{
 			try
@@ -263,7 +263,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x04000305 RID: 773
+		
 		private static HuanLeDaiBiManager instance = new HuanLeDaiBiManager();
 	}
 }

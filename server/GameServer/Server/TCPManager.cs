@@ -10,21 +10,21 @@ using Server.Tools;
 
 namespace GameServer.Server
 {
-	// Token: 0x020008C2 RID: 2242
+	
 	public class TCPManager
 	{
-		// Token: 0x06003FC6 RID: 16326 RVA: 0x003B8CDC File Offset: 0x003B6EDC
+		
 		private TCPManager()
 		{
 		}
 
-		// Token: 0x06003FC7 RID: 16327 RVA: 0x003B8D44 File Offset: 0x003B6F44
+		
 		public static TCPManager getInstance()
 		{
 			return TCPManager.instance;
 		}
 
-		// Token: 0x06003FC8 RID: 16328 RVA: 0x003B8D5C File Offset: 0x003B6F5C
+		
 		public void initialize(int capacity)
 		{
 			this.MaxConnectedClientLimit = capacity;
@@ -47,8 +47,8 @@ namespace GameServer.Server
 			this.taskExecutor.start();
 		}
 
-		// Token: 0x170005EA RID: 1514
-		// (get) Token: 0x06003FC9 RID: 16329 RVA: 0x003B8E74 File Offset: 0x003B7074
+		
+		
 		public SocketListener MySocketListener
 		{
 			get
@@ -57,8 +57,8 @@ namespace GameServer.Server
 			}
 		}
 
-		// Token: 0x170005EB RID: 1515
-		// (get) Token: 0x06003FCA RID: 16330 RVA: 0x003B8E8C File Offset: 0x003B708C
+		
+		
 		public TCPInPacketPool TcpInPacketPool
 		{
 			get
@@ -67,8 +67,8 @@ namespace GameServer.Server
 			}
 		}
 
-		// Token: 0x170005EC RID: 1516
-		// (get) Token: 0x06003FCB RID: 16331 RVA: 0x003B8EA4 File Offset: 0x003B70A4
+		
+		
 		public TCPOutPacketPool TcpOutPacketPool
 		{
 			get
@@ -77,13 +77,13 @@ namespace GameServer.Server
 			}
 		}
 
-		// Token: 0x170005ED RID: 1517
-		// (get) Token: 0x06003FCC RID: 16332 RVA: 0x003B8EBC File Offset: 0x003B70BC
-		// (set) Token: 0x06003FCD RID: 16333 RVA: 0x003B8ED3 File Offset: 0x003B70D3
+		
+		
+		
 		public Program RootWindow { get; set; }
 
-		// Token: 0x170005EE RID: 1518
-		// (get) Token: 0x06003FCE RID: 16334 RVA: 0x003B8EDC File Offset: 0x003B70DC
+		
+		
 		public TCPClientPool tcpClientPool
 		{
 			get
@@ -92,8 +92,8 @@ namespace GameServer.Server
 			}
 		}
 
-		// Token: 0x170005EF RID: 1519
-		// (get) Token: 0x06003FCF RID: 16335 RVA: 0x003B8EF4 File Offset: 0x003B70F4
+		
+		
 		public TCPClientPool tcpLogClientPool
 		{
 			get
@@ -102,8 +102,8 @@ namespace GameServer.Server
 			}
 		}
 
-		// Token: 0x170005F0 RID: 1520
-		// (get) Token: 0x06003FD0 RID: 16336 RVA: 0x003B8F0C File Offset: 0x003B710C
+		
+		
 		public TCPRandKey tcpRandKey
 		{
 			get
@@ -112,7 +112,7 @@ namespace GameServer.Server
 			}
 		}
 
-		// Token: 0x06003FD1 RID: 16337 RVA: 0x003B8F24 File Offset: 0x003B7124
+		
 		public void Start(string ip, int port)
 		{
 			TCPManager.ServerPort = port;
@@ -120,14 +120,14 @@ namespace GameServer.Server
 			this.socketListener.Start(ip, port);
 		}
 
-		// Token: 0x06003FD2 RID: 16338 RVA: 0x003B8F47 File Offset: 0x003B7147
+		
 		public void Stop()
 		{
 			this.socketListener.Stop();
 			this.taskExecutor.stop();
 		}
 
-		// Token: 0x06003FD3 RID: 16339 RVA: 0x003B8F64 File Offset: 0x003B7164
+		
 		public void ForceCloseSocket(TMSKSocket s)
 		{
 			DelayForceClosingMgr.RemoveDelaySocket(s);
@@ -163,7 +163,7 @@ namespace GameServer.Server
 			Global._SendBufferManager.Remove(s);
 		}
 
-		// Token: 0x06003FD4 RID: 16340 RVA: 0x003B90B4 File Offset: 0x003B72B4
+		
 		public string GetAllCacheCmdPacketInfo()
 		{
 			int nTotal = 0;
@@ -183,7 +183,7 @@ namespace GameServer.Server
 			return string.Format("总共缓存命令包{0}个,单个连接最大缓存{1}个", nTotal, nMaxNum);
 		}
 
-		// Token: 0x06003FD5 RID: 16341 RVA: 0x003B9178 File Offset: 0x003B7378
+		
 		private TCPInPacket GetNextTcpInPacket(int index)
 		{
 			lock (this.dictInPackets)
@@ -196,7 +196,7 @@ namespace GameServer.Server
 			return null;
 		}
 
-		// Token: 0x06003FD6 RID: 16342 RVA: 0x003B91F8 File Offset: 0x003B73F8
+		
 		public void ProcessCmdPackets(Queue<CmdPacket> ls)
 		{
 			int maxCount = this.dictInPackets.Values.Count + 20;
@@ -248,7 +248,7 @@ namespace GameServer.Server
 			}
 		}
 
-		// Token: 0x06003FD7 RID: 16343 RVA: 0x003B93C4 File Offset: 0x003B75C4
+		
 		public static void RecordCmdDetail(int cmdId, long processTime, long dataSize, TCPProcessCmdResults result)
 		{
 			PorcessCmdMoniter moniter = null;
@@ -260,7 +260,7 @@ namespace GameServer.Server
 			moniter.onProcessNoWait(processTime, dataSize, result);
 		}
 
-		// Token: 0x06003FD8 RID: 16344 RVA: 0x003B9408 File Offset: 0x003B7608
+		
 		public static void RecordCmdDetail2(int cmdId, long processTime, long waitTime)
 		{
 			PorcessCmdMoniter moniter = null;
@@ -272,7 +272,7 @@ namespace GameServer.Server
 			moniter.onProcess(processTime, waitTime);
 		}
 
-		// Token: 0x06003FD9 RID: 16345 RVA: 0x003B944C File Offset: 0x003B764C
+		
 		public static void RecordCmdOutputDataSize(int cmdId, long dataSize)
 		{
 			PorcessCmdMoniter moniter = null;
@@ -284,7 +284,7 @@ namespace GameServer.Server
 			moniter.OnOutputData(dataSize);
 		}
 
-		// Token: 0x06003FDA RID: 16346 RVA: 0x003B9490 File Offset: 0x003B7690
+		
 		private byte[] CheckClientDataValid(int packetCmdID, byte[] bytesData, int dataSize, int lastClientCheckTicks, out int clientCheckTicks, out int errorCode)
 		{
 			errorCode = 0;
@@ -327,7 +327,7 @@ namespace GameServer.Server
 			return result;
 		}
 
-		// Token: 0x06003FDB RID: 16347 RVA: 0x003B9550 File Offset: 0x003B7750
+		
 		private bool TCPCmdPacketEvent(object sender, int doType)
 		{
 			TCPInPacket tcpInPacket = sender as TCPInPacket;
@@ -426,7 +426,7 @@ namespace GameServer.Server
 			return true;
 		}
 
-		// Token: 0x06003FDC RID: 16348 RVA: 0x003B9988 File Offset: 0x003B7B88
+		
 		public ushort LastPacketCmdID(TMSKSocket s)
 		{
 			ushort cmd = 0;
@@ -444,13 +444,13 @@ namespace GameServer.Server
 			return cmd;
 		}
 
-		// Token: 0x06003FDD RID: 16349 RVA: 0x003B9A14 File Offset: 0x003B7C14
+		
 		public Dictionary<TMSKSocket, TCPSession> GetTCPSessions()
 		{
 			throw new NotSupportedException("因为未被用到,优化tcpSessions的锁后,这个函数未兼容实现");
 		}
 
-		// Token: 0x06003FDE RID: 16350 RVA: 0x003B9A24 File Offset: 0x003B7C24
+		
 		private void SocketConnected(object sender, SocketAsyncEventArgs e)
 		{
 			SocketListener sl = sender as SocketListener;
@@ -462,14 +462,14 @@ namespace GameServer.Server
 			s.SortKey64 = DataHelper.SortKey64;
 		}
 
-		// Token: 0x06003FDF RID: 16351 RVA: 0x003B9A7C File Offset: 0x003B7C7C
+		
 		private void SocketClosed(object sender, TMSKSocket s)
 		{
 			SocketListener sl = sender as SocketListener;
 			this.ExternalClearSocket(s);
 		}
 
-		// Token: 0x06003FE0 RID: 16352 RVA: 0x003B9A9C File Offset: 0x003B7C9C
+		
 		public void ExternalClearSocket(TMSKSocket s)
 		{
 			this.ForceCloseSocket(s);
@@ -480,7 +480,7 @@ namespace GameServer.Server
 			s.MyDispose();
 		}
 
-		// Token: 0x06003FE1 RID: 16353 RVA: 0x003B9AE0 File Offset: 0x003B7CE0
+		
 		private bool SocketReceived(object sender, SocketAsyncEventArgs e)
 		{
 			SocketListener sl = sender as SocketListener;
@@ -503,7 +503,7 @@ namespace GameServer.Server
 			return tcpInPacket.WriteData(e.Buffer, e.Offset, e.BytesTransferred);
 		}
 
-		// Token: 0x06003FE2 RID: 16354 RVA: 0x003B9BD4 File Offset: 0x003B7DD4
+		
 		private void SocketSended(object sender, SocketAsyncEventArgs e)
 		{
 			AsyncUserToken userToken = e.UserToken as AsyncUserToken;
@@ -516,7 +516,7 @@ namespace GameServer.Server
 			Global._SendBufferManager.OnSendBufferOK(s);
 		}
 
-		// Token: 0x06003FE3 RID: 16355 RVA: 0x003B9C28 File Offset: 0x003B7E28
+		
 		private void DirectSendPolicyFileData(TCPInPacket tcpInPacket)
 		{
 			TMSKSocket s = tcpInPacket.CurrentSocket;
@@ -531,43 +531,43 @@ namespace GameServer.Server
 			}
 		}
 
-		// Token: 0x04004EEA RID: 20202
+		
 		public const bool UseWorkerPool = false;
 
-		// Token: 0x04004EEB RID: 20203
+		
 		private static TCPManager instance = new TCPManager();
 
-		// Token: 0x04004EEC RID: 20204
+		
 		public static int ServerPort = 0;
 
-		// Token: 0x04004EED RID: 20205
+		
 		public ScheduleExecutor taskExecutor = null;
 
-		// Token: 0x04004EEE RID: 20206
+		
 		public int MaxConnectedClientLimit = 0;
 
-		// Token: 0x04004EEF RID: 20207
+		
 		private SocketListener socketListener = null;
 
-		// Token: 0x04004EF0 RID: 20208
+		
 		private TCPInPacketPool tcpInPacketPool = null;
 
-		// Token: 0x04004EF1 RID: 20209
+		
 		private TCPOutPacketPool tcpOutPacketPool = null;
 
-		// Token: 0x04004EF2 RID: 20210
+		
 		private TCPClientPool _tcpClientPool = null;
 
-		// Token: 0x04004EF3 RID: 20211
+		
 		private TCPClientPool _tcpLogClientPool = null;
 
-		// Token: 0x04004EF4 RID: 20212
+		
 		private TCPRandKey _tcpRandKey = new TCPRandKey(10000);
 
-		// Token: 0x04004EF5 RID: 20213
+		
 		private Dictionary<TMSKSocket, TCPInPacket> dictInPackets = null;
 
-		// Token: 0x04004EF6 RID: 20214
+		
 		private Dictionary<TMSKSocket, TCPSession> tcpSessions = null;
 	}
 }

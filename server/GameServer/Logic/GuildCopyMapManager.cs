@@ -7,11 +7,11 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004F6 RID: 1270
+	
 	public class GuildCopyMapManager
 	{
-		// Token: 0x1700005D RID: 93
-		// (get) Token: 0x06001791 RID: 6033 RVA: 0x00172590 File Offset: 0x00170790
+		
+		
 		public int FirstGuildCopyMapOrder
 		{
 			get
@@ -20,8 +20,8 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x1700005E RID: 94
-		// (get) Token: 0x06001792 RID: 6034 RVA: 0x001725A8 File Offset: 0x001707A8
+		
+		
 		public List<int> GuildCopyMapOrderList
 		{
 			get
@@ -30,7 +30,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001793 RID: 6035 RVA: 0x001725C0 File Offset: 0x001707C0
+		
 		public void LoadGuildCopyMapOrder()
 		{
 			this.GuildCopyMapOrderList.Clear();
@@ -60,9 +60,9 @@ namespace GameServer.Logic
 			this.LastGuildCopyMapOrder = beginOrder;
 		}
 
-		// Token: 0x1700005F RID: 95
-		// (get) Token: 0x06001794 RID: 6036 RVA: 0x00172654 File Offset: 0x00170854
-		// (set) Token: 0x06001795 RID: 6037 RVA: 0x0017266C File Offset: 0x0017086C
+		
+		
+		
 		public int LastGuildCopyMapOrder
 		{
 			get
@@ -75,8 +75,8 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x17000060 RID: 96
-		// (get) Token: 0x06001796 RID: 6038 RVA: 0x00172678 File Offset: 0x00170878
+		
+		
 		public int MaxDamageSendCount
 		{
 			get
@@ -85,7 +85,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001797 RID: 6039 RVA: 0x00172690 File Offset: 0x00170890
+		
 		public bool IsPrepareResetTime()
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -104,7 +104,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001798 RID: 6040 RVA: 0x0017271C File Offset: 0x0017091C
+		
 		public bool IsRefuseTime()
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -123,19 +123,19 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001799 RID: 6041 RVA: 0x001727A8 File Offset: 0x001709A8
+		
 		public bool IsGuildCopyMap(int fubenID)
 		{
 			return this.GuildCopyMapOrderList.IndexOf(fubenID) >= 0;
 		}
 
-		// Token: 0x0600179A RID: 6042 RVA: 0x001727CC File Offset: 0x001709CC
+		
 		public int GetGuildCopyMapIndex(int fubenID)
 		{
 			return this.GuildCopyMapOrderList.IndexOf(fubenID);
 		}
 
-		// Token: 0x0600179B RID: 6043 RVA: 0x001727EC File Offset: 0x001709EC
+		
 		public int GetNextGuildCopyMapIndex(int fubenID)
 		{
 			int result;
@@ -158,7 +158,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600179C RID: 6044 RVA: 0x00172834 File Offset: 0x00170A34
+		
 		public int GetGuildCopyMapOrderByIndex(int index)
 		{
 			int result;
@@ -173,19 +173,19 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600179D RID: 6045 RVA: 0x00172870 File Offset: 0x00170A70
+		
 		public bool GetGuildCopyMapAwardDayFlag(int Flag, int day, int index)
 		{
 			return (Flag >> day * 2 & index) == index;
 		}
 
-		// Token: 0x0600179E RID: 6046 RVA: 0x00172894 File Offset: 0x00170A94
+		
 		public int SetGuildCopyMapAwardDayFlag(int Flag, int day, int index)
 		{
 			return Flag | index << day * 2;
 		}
 
-		// Token: 0x0600179F RID: 6047 RVA: 0x001728B0 File Offset: 0x00170AB0
+		
 		public void UpdateGuildCopyMap(int guildid, int fubenid, int seqid, int mapcode)
 		{
 			GuildCopyMap CopyMap = new GuildCopyMap
@@ -198,7 +198,7 @@ namespace GameServer.Logic
 			this.UpdateGuildCopyMap(guildid, CopyMap);
 		}
 
-		// Token: 0x060017A0 RID: 6048 RVA: 0x001728EC File Offset: 0x00170AEC
+		
 		public void UpdateGuildCopyMap(int guildid, GuildCopyMap CopyMap)
 		{
 			lock (this.GuildCopyMapDict)
@@ -207,7 +207,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060017A1 RID: 6049 RVA: 0x00172940 File Offset: 0x00170B40
+		
 		public GuildCopyMap FindGuildCopyMap(int guildid)
 		{
 			GuildCopyMap CopyMap = null;
@@ -221,7 +221,7 @@ namespace GameServer.Logic
 			return CopyMap;
 		}
 
-		// Token: 0x060017A2 RID: 6050 RVA: 0x001729B4 File Offset: 0x00170BB4
+		
 		public GuildCopyMap FindActiveGuildCopyMap()
 		{
 			GuildCopyMap CopyMap = null;
@@ -239,7 +239,7 @@ namespace GameServer.Logic
 			return CopyMap;
 		}
 
-		// Token: 0x060017A3 RID: 6051 RVA: 0x00172A54 File Offset: 0x00170C54
+		
 		public GuildCopyMap FindGuildCopyMapBySeqID(int seqid)
 		{
 			lock (this.GuildCopyMapDict)
@@ -255,13 +255,13 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x060017A4 RID: 6052 RVA: 0x00172B0C File Offset: 0x00170D0C
+		
 		public void RemoveGuildCopyMap(int guildid)
 		{
 			this.GuildCopyMapDict.Remove(guildid);
 		}
 
-		// Token: 0x060017A5 RID: 6053 RVA: 0x00172B1C File Offset: 0x00170D1C
+		
 		public void CheckCurrGuildCopyMap(GameClient client, out int fubenid, out int seqid, int mapcode)
 		{
 			fubenid = -1;
@@ -303,7 +303,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060017A6 RID: 6054 RVA: 0x00172C6C File Offset: 0x00170E6C
+		
 		public void EnterGuildCopyMap(GameClient client, out int fubenid, out int seqid, int mapcode)
 		{
 			fubenid = -1;
@@ -327,7 +327,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060017A7 RID: 6055 RVA: 0x00172D4C File Offset: 0x00170F4C
+		
 		public void ProcessMonsterDead(GameClient client, Monster monster)
 		{
 			if (this.IsGuildCopyMap(monster.CurrentMapCode))
@@ -408,7 +408,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060017A8 RID: 6056 RVA: 0x00173030 File Offset: 0x00171230
+		
 		public int GetZhanGongAward(GameClient client, int fubenid, int awardZhanGong)
 		{
 			int result;
@@ -441,25 +441,25 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x040021A4 RID: 8612
+		
 		private const int firstGuildCopyMapOrder = 40000;
 
-		// Token: 0x040021A5 RID: 8613
+		
 		private Dictionary<int, GuildCopyMap> GuildCopyMapDict = new Dictionary<int, GuildCopyMap>();
 
-		// Token: 0x040021A6 RID: 8614
+		
 		private List<int> guildCopyMapOrderList = new List<int>();
 
-		// Token: 0x040021A7 RID: 8615
+		
 		private int lastGuildCopyMapOrder = 40006;
 
-		// Token: 0x040021A8 RID: 8616
+		
 		private int maxDamageSendCount = 5;
 
-		// Token: 0x040021A9 RID: 8617
+		
 		public long lastProcessEndTicks = 0L;
 
-		// Token: 0x040021AA RID: 8618
+		
 		public bool ProcessEndFlag = false;
 	}
 }

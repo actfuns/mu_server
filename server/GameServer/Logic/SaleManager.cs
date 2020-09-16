@@ -8,23 +8,23 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-    // Token: 0x02000790 RID: 1936
+    
     public class SaleManager : IManager
     {
-        // Token: 0x06003256 RID: 12886 RVA: 0x002CBCDC File Offset: 0x002C9EDC
+        
         public static SaleManager getInstance()
         {
             return SaleManager.instance;
         }
 
-        // Token: 0x06003257 RID: 12887 RVA: 0x002CBCF4 File Offset: 0x002C9EF4
+        
         public bool initialize()
         {
             SaleManager.InitConfig();
             return true;
         }
 
-        // Token: 0x06003258 RID: 12888 RVA: 0x002CBD10 File Offset: 0x002C9F10
+        
         public bool startup()
         {
             TCPCmdDispatcher.getInstance().registerProcessor(652, 3, SaleCmdsProcessor.getInstance(TCPGameServerCmds.CMD_SPR_OPENMARKET2));
@@ -38,39 +38,39 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x06003259 RID: 12889 RVA: 0x002CBDFC File Offset: 0x002C9FFC
+        
         public bool showdown()
         {
             return true;
         }
 
-        // Token: 0x0600325A RID: 12890 RVA: 0x002CBE10 File Offset: 0x002CA010
+        
         public bool destroy()
         {
             return true;
         }
 
-        // Token: 0x170003AC RID: 940
-        // (get) Token: 0x0600325B RID: 12891 RVA: 0x002CBE24 File Offset: 0x002CA024
-        // (set) Token: 0x0600325C RID: 12892 RVA: 0x002CBE3A File Offset: 0x002CA03A
+        
+        
+        
         public static double JiaoYiShuiJinBi { get; private set; }
 
-        // Token: 0x170003AD RID: 941
-        // (get) Token: 0x0600325D RID: 12893 RVA: 0x002CBE44 File Offset: 0x002CA044
-        // (set) Token: 0x0600325E RID: 12894 RVA: 0x002CBE5A File Offset: 0x002CA05A
+        
+        
+        
         public static double JiaoYiShuiZuanShi { get; private set; }
 
-        // Token: 0x170003AE RID: 942
-        // (get) Token: 0x0600325F RID: 12895 RVA: 0x002CBE64 File Offset: 0x002CA064
-        // (set) Token: 0x06003260 RID: 12896 RVA: 0x002CBE7A File Offset: 0x002CA07A
+        
+        
+        
         public static double JiaoYiShuiMoBi { get; private set; }
 
-        // Token: 0x170003AF RID: 943
-        // (get) Token: 0x06003261 RID: 12897 RVA: 0x002CBE84 File Offset: 0x002CA084
-        // (set) Token: 0x06003262 RID: 12898 RVA: 0x002CBE9A File Offset: 0x002CA09A
+        
+        
+        
         public static int MaxSaleNum { get; private set; }
 
-        // Token: 0x06003263 RID: 12899 RVA: 0x002CBEA4 File Offset: 0x002CA0A4
+        
         public static void InitConfig()
         {
             SaleManager.MaxSaleNum = (int)GameManager.systemParamsList.GetParamValueIntByName("ShangJiaNumber", -1);
@@ -153,7 +153,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06003264 RID: 12900 RVA: 0x002CC174 File Offset: 0x002CA374
+        
         public static int[] GetTypeAndID(int goodsID)
         {
             int[] typeAndID = null;
@@ -182,13 +182,13 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06003265 RID: 12901 RVA: 0x002CC234 File Offset: 0x002CA434
+        
         public static bool IsValidType(int type, int id)
         {
             return SaleManager._TypeHashSet.Contains(type) && (id <= 0 || SaleManager._IDHashSet.Contains(id));
         }
 
-        // Token: 0x06003266 RID: 12902 RVA: 0x002CC26C File Offset: 0x002CA46C
+        
         public static void AddSaleGoodsData(SaleGoodsData saleGoodsData)
         {
             int goodsID = saleGoodsData.SalingGoodsData.GoodsID;
@@ -205,7 +205,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06003267 RID: 12903 RVA: 0x002CC314 File Offset: 0x002CA514
+        
         public static void AddSaleGoodsItem(SaleGoodsItem saleGoodsItem)
         {
             SaleGoodsData saleGoodsData = new SaleGoodsData
@@ -219,7 +219,7 @@ namespace GameServer.Logic
             SaleManager.AddSaleGoodsData(saleGoodsData);
         }
 
-        // Token: 0x06003268 RID: 12904 RVA: 0x002CC398 File Offset: 0x002CA598
+        
         public static void AddLiXianSaleGoodsItem(LiXianSaleGoodsItem liXianSaleGoodsItem)
         {
             SaleGoodsData saleGoodsData = new SaleGoodsData
@@ -233,7 +233,7 @@ namespace GameServer.Logic
             SaleManager.AddSaleGoodsData(saleGoodsData);
         }
 
-        // Token: 0x06003269 RID: 12905 RVA: 0x002CC3F4 File Offset: 0x002CA5F4
+        
         public static void RemoveSaleGoodsItem(int goodsDbID)
         {
             lock (SaleManager.Mutex_SaleGoodsDict)
@@ -254,7 +254,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600326A RID: 12906 RVA: 0x002CC4B0 File Offset: 0x002CA6B0
+        
         public static List<SaleGoodsData> GetSaleGoodsDataList(int type, int id = 0)
         {
             List<SaleGoodsData> saleGoodsDataList = null;
@@ -303,7 +303,7 @@ namespace GameServer.Logic
             return saleGoodsDataList;
         }
 
-        // Token: 0x0600326B RID: 12907 RVA: 0x002CC7E4 File Offset: 0x002CA9E4
+        
         private static List<SaleGoodsData> GetCachedSaleGoodsList(SearchArgs searchArgs)
         {
             Predicate<SaleGoodsData> match = null;
@@ -404,7 +404,7 @@ namespace GameServer.Logic
             return saleGoodsDataList;
         }
 
-        // Token: 0x0600326C RID: 12908 RVA: 0x002CCB28 File Offset: 0x002CAD28
+        
         public static int GetSaleMoneyType(GoodsData goodsData)
         {
             int result;
@@ -423,7 +423,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x0600326D RID: 12909 RVA: 0x002CCB64 File Offset: 0x002CAD64
+        
         public static void UpdateCachedListForSaleGoodsData(SaleGoodsData saleGoodsData, int[] typeAndID, bool add)
         {
             lock (SaleManager.Mutex_SaleGoodsDict)
@@ -454,7 +454,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600326E RID: 12910 RVA: 0x002CCD00 File Offset: 0x002CAF00
+        
         private static IComparer<SaleGoodsData> GetComparerFor(bool desc, bool add, SearchOrderTypes searchOrderType)
         {
             IComparer<SaleGoodsData> compare;
@@ -511,7 +511,7 @@ namespace GameServer.Logic
             return compare;
         }
 
-        // Token: 0x0600326F RID: 12911 RVA: 0x002CCDC8 File Offset: 0x002CAFC8
+        
         private static void UpdateOrderdList(List<SaleGoodsData> list, SaleGoodsData saleGoodsData, bool desc, bool add, SearchOrderTypes searchOrderType)
         {
             if (add)
@@ -561,7 +561,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06003270 RID: 12912 RVA: 0x002CCEF4 File Offset: 0x002CB0F4
+        
         private static void FixSearchArgs(SearchArgs searchArgs)
         {
             if (!SaleManager.IsValidType(searchArgs.Type, searchArgs.ID))
@@ -584,7 +584,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06003271 RID: 12913 RVA: 0x002CCFA8 File Offset: 0x002CB1A8
+        
         public static List<SaleGoodsData> GetSaleGoodsDataList(SearchArgs searchArgs, List<int> GoodsIds)
         {
             SaleManager.FixSearchArgs(searchArgs);
@@ -596,49 +596,49 @@ namespace GameServer.Logic
             return saleGoodsDataList;
         }
 
-        // Token: 0x04003E81 RID: 16001
+        
         public const int ConstAllColorFlags = 63;
 
-        // Token: 0x04003E82 RID: 16002
+        
         public const int ConstAllMoneyFlags = 7;
 
-        // Token: 0x04003E83 RID: 16003
+        
         private static SaleManager instance = new SaleManager();
 
-        // Token: 0x04003E84 RID: 16004
+        
         private static object Mutex_SaleGoodsDict = new object();
 
-        // Token: 0x04003E85 RID: 16005
+        
         private static Dictionary<int, SaleGoodsData> _SaleGoodsDict = new Dictionary<int, SaleGoodsData>();
 
-        // Token: 0x04003E86 RID: 16006
+        
         private static Dictionary<int, Dictionary<int, List<SaleGoodsData>>> _SaleGoodsDict2 = new Dictionary<int, Dictionary<int, List<SaleGoodsData>>>();
 
-        // Token: 0x04003E87 RID: 16007
+        
         private static Dictionary<SearchArgs, List<SaleGoodsData>> _OrderdSaleGoodsListDict = new Dictionary<SearchArgs, List<SaleGoodsData>>(SearchArgs.Compare);
 
-        // Token: 0x04003E88 RID: 16008
+        
         private static Dictionary<int, int[]> _GoodsID2TabIDDict = new Dictionary<int, int[]>();
 
-        // Token: 0x04003E89 RID: 16009
+        
         private static Dictionary<long, int[]> _Categoriy2TabIDDict = new Dictionary<long, int[]>();
 
-        // Token: 0x04003E8A RID: 16010
+        
         private static HashSet<int> _TypeHashSet = new HashSet<int>();
 
-        // Token: 0x04003E8B RID: 16011
+        
         private static HashSet<int> _IDHashSet = new HashSet<int>();
 
-        // Token: 0x04003E8C RID: 16012
+        
         private static int[] OthersGoodsTypeAndID = null;
 
-        // Token: 0x04003E8D RID: 16013
+        
         public static long MaxSaleGoodsTime = 43200000L;
 
-        // Token: 0x04003E8E RID: 16014
+        
         private static Dictionary<string, Dictionary<int, int>> _SearchText2GoodsIDDict = new Dictionary<string, Dictionary<int, int>>();
 
-        // Token: 0x04003E8F RID: 16015
+        
         private static Dictionary<string, List<int>> _SearchText2GoodsIDDict2 = new Dictionary<string, List<int>>();
     }
 }

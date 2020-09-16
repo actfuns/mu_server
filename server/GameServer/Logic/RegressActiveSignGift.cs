@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004A9 RID: 1193
+	
 	public class RegressActiveSignGift : Activity
 	{
-		// Token: 0x06001632 RID: 5682 RVA: 0x0015B410 File Offset: 0x00159610
+		
 		public bool Init()
 		{
 			this.ActivityType = 111;
@@ -72,7 +72,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001633 RID: 5683 RVA: 0x0015B650 File Offset: 0x00159850
+		
 		public void OnRoleLogin(GameClient client)
 		{
 			if (!this.InActivityTime())
@@ -101,7 +101,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001634 RID: 5684 RVA: 0x0015B710 File Offset: 0x00159910
+		
 		public bool GetAwardGoodsList(GameClient client, int Level, int Day, out List<GoodsData> OutGoodsData, out int DBDay)
 		{
 			DBDay = 0;
@@ -121,7 +121,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001635 RID: 5685 RVA: 0x0015B7C4 File Offset: 0x001599C4
+		
 		public bool GiveAward(GameClient client, List<GoodsData> goodsData)
 		{
 			bool result;
@@ -147,10 +147,10 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04001FC0 RID: 8128
+		
 		protected const string RegressActiveSignGiftXml = "Config\\HuiGuiLoginNumGift.xml";
 
-		// Token: 0x04001FC1 RID: 8129
+		
 		private Dictionary<int, RegressActiveSignGiftXML> regressActiveSignGiftXML = new Dictionary<int, RegressActiveSignGiftXML>();
 	}
 }

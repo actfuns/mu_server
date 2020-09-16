@@ -3,10 +3,10 @@ using System.Text;
 
 namespace Server.Tools
 {
-	// Token: 0x02000221 RID: 545
+	
 	public class StringEncrypt
 	{
-		// Token: 0x06000CDB RID: 3291 RVA: 0x000A2DD4 File Offset: 0x000A0FD4
+		
 		public static string Encrypt(string plainText, string passwd, string saltValue)
 		{
 			string result;
@@ -39,7 +39,7 @@ namespace Server.Tools
 			return result;
 		}
 
-		// Token: 0x06000CDC RID: 3292 RVA: 0x000A2E4C File Offset: 0x000A104C
+		
 		public static string Decrypt(string encryptText, string passwd, string saltValue)
 		{
 			string result;

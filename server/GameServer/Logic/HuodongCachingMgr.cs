@@ -15,10 +15,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000720 RID: 1824
+	
 	public class HuodongCachingMgr
 	{
-		// Token: 0x06002B95 RID: 11157 RVA: 0x00268B54 File Offset: 0x00266D54
+		
 		public static List<GoodsData> ParseGoodsDataList(string[] fields, string fileName)
 		{
 			List<GoodsData> goodsDataList = new List<GoodsData>();
@@ -42,7 +42,7 @@ namespace GameServer.Logic
 			return goodsDataList;
 		}
 
-		// Token: 0x06002B96 RID: 11158 RVA: 0x00268BF4 File Offset: 0x00266DF4
+		
 		public static List<AwardEffectTimeItem.TimeDetail> ParseGoodsTimeList(string[] fields, string fileName)
 		{
 			List<AwardEffectTimeItem.TimeDetail> result2;
@@ -94,7 +94,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x06002B97 RID: 11159 RVA: 0x00268D20 File Offset: 0x00266F20
+		
 		public static List<GoodsData> ParseGoodsDataList2(string[] fields, string fileName)
 		{
 			List<GoodsData> goodsDataList = new List<GoodsData>();
@@ -118,7 +118,7 @@ namespace GameServer.Logic
 			return goodsDataList;
 		}
 
-		// Token: 0x06002B98 RID: 11160 RVA: 0x00268DB4 File Offset: 0x00266FB4
+		
 		private static string ParseDateTime(string str)
 		{
 			int yue = str.IndexOf('月');
@@ -199,20 +199,20 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002B99 RID: 11161 RVA: 0x00268F54 File Offset: 0x00267154
+		
 		public static long GetHuoDongDateTime(string str)
 		{
 			string strDateTime = HuodongCachingMgr.ParseDateTime(str);
 			return Global.SafeConvertToTicks(strDateTime);
 		}
 
-		// Token: 0x06002B9A RID: 11162 RVA: 0x00268F74 File Offset: 0x00267174
+		
 		public static long GetHuoDongDateTimeForCommonTimeString(string str)
 		{
 			return Global.SafeConvertToTicks(str);
 		}
 
-		// Token: 0x06002B9B RID: 11163 RVA: 0x00268F8C File Offset: 0x0026718C
+		
 		private static int GetBitValue(int whichOne)
 		{
 			int bitVal = 0;
@@ -247,7 +247,7 @@ namespace GameServer.Logic
 			return bitVal;
 		}
 
-		// Token: 0x06002B9C RID: 11164 RVA: 0x0026901C File Offset: 0x0026721C
+		
 		public static bool GiveAward(GameClient client, AwardItem myAwardItem, string goodsFromWere)
 		{
 			bool result;
@@ -283,7 +283,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002B9D RID: 11165 RVA: 0x00269288 File Offset: 0x00267488
+		
 		protected static bool GiveEffectiveTimeAward(GameClient client, AwardItem myAwardItem, string goodsFromWhere)
 		{
 			bool result;
@@ -318,7 +318,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002B9E RID: 11166 RVA: 0x002694F8 File Offset: 0x002676F8
+		
 		private static WLoginItem GetWLoginItem(int whichOne)
 		{
 			WLoginItem wLoginItem = null;
@@ -376,7 +376,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002B9F RID: 11167 RVA: 0x002696AC File Offset: 0x002678AC
+		
 		public static int ResetWLoginItem()
 		{
 			int ret = GameManager.systemWeekLoginGiftMgr.ReloadLoadFromXMlFile();
@@ -387,7 +387,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002BA0 RID: 11168 RVA: 0x00269710 File Offset: 0x00267910
+		
 		public static int ProcessGetWLoginGift(GameClient client, int whichOne)
 		{
 			WLoginItem wLoginItem = HuodongCachingMgr.GetWLoginItem(whichOne);
@@ -430,7 +430,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BA1 RID: 11169 RVA: 0x0026990C File Offset: 0x00267B0C
+		
 		private static MOnlineTimeItem GetMOnlineTimeItem(int whichOne)
 		{
 			MOnlineTimeItem mOnlineTimeItem = null;
@@ -466,7 +466,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BA2 RID: 11170 RVA: 0x00269A48 File Offset: 0x00267C48
+		
 		public static int ResetMOnlineTimeItem()
 		{
 			int ret = GameManager.systemMOnlineTimeGiftMgr.ReloadLoadFromXMlFile();
@@ -477,7 +477,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002BA3 RID: 11171 RVA: 0x00269AAC File Offset: 0x00267CAC
+		
 		public static int ProcessGetMOnlineTimeGift(GameClient client, int whichOne)
 		{
 			MOnlineTimeItem mOnlineTimeItem = HuodongCachingMgr.GetMOnlineTimeItem(whichOne);
@@ -509,7 +509,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BA4 RID: 11172 RVA: 0x00269BA0 File Offset: 0x00267DA0
+		
 		private static NewStepItem GetNewStepItem(int step)
 		{
 			NewStepItem newStepItem = null;
@@ -569,7 +569,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BA5 RID: 11173 RVA: 0x00269D84 File Offset: 0x00267F84
+		
 		public static int ResetNewStepItem()
 		{
 			int ret = GameManager.systemNewRoleGiftMgr.ReloadLoadFromXMlFile();
@@ -580,7 +580,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002BA6 RID: 11174 RVA: 0x00269DE8 File Offset: 0x00267FE8
+		
 		public static int ProcessGetNewStepGift(GameClient client, int step)
 		{
 			NewStepItem newStepItem = HuodongCachingMgr.GetNewStepItem(step + 1);
@@ -650,8 +650,8 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x170002B0 RID: 688
-		// (get) Token: 0x06002BA7 RID: 11175 RVA: 0x0026A188 File Offset: 0x00268388
+		
+		
 		public static int CombatGiftMaxVal
 		{
 			get
@@ -660,7 +660,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002BA8 RID: 11176 RVA: 0x0026A1A4 File Offset: 0x002683A4
+		
 		private static void InitCombatAwardDict()
 		{
 			lock (HuodongCachingMgr._CombatAwardlDict)
@@ -708,7 +708,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002BA9 RID: 11177 RVA: 0x0026A3C0 File Offset: 0x002685C0
+		
 		public static int GetNextCombatGiftNeedVal(GameClient client)
 		{
 			HuodongCachingMgr.InitCombatAwardDict();
@@ -727,7 +727,7 @@ namespace GameServer.Logic
 			return -1;
 		}
 
-		// Token: 0x06002BAA RID: 11178 RVA: 0x0026A434 File Offset: 0x00268634
+		
 		public static int GiveCombatGift(GameClient client, CombatAwardItem combatAwardItem)
 		{
 			int result;
@@ -769,7 +769,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BAB RID: 11179 RVA: 0x0026A594 File Offset: 0x00268794
+		
 		public static TCPProcessCmdResults ProcessQueryCombatGiftFlagList(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -839,7 +839,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06002BAC RID: 11180 RVA: 0x0026A7B8 File Offset: 0x002689B8
+		
 		public static TCPProcessCmdResults ProcessGetCombatGiftAward(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -890,7 +890,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06002BAD RID: 11181 RVA: 0x0026A978 File Offset: 0x00268B78
+		
 		public static CombatAwardItem GetCombatAwardItem(GameClient client, int awardIndex)
 		{
 			HuodongCachingMgr.InitCombatAwardDict();
@@ -902,7 +902,7 @@ namespace GameServer.Logic
 			return combatAwardItem;
 		}
 
-		// Token: 0x06002BAE RID: 11182 RVA: 0x0026A9DC File Offset: 0x00268BDC
+		
 		public static int ResetCombatAwardItem()
 		{
 			int ret = GameManager.systemCombatAwardMgr.ReloadLoadFromXMlFile();
@@ -914,7 +914,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002BAF RID: 11183 RVA: 0x0026AAA0 File Offset: 0x00268CA0
+		
 		public static int ProcessCombatGift(GameClient client, bool give = false)
 		{
 			int result;
@@ -955,7 +955,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BB0 RID: 11184 RVA: 0x0026AC48 File Offset: 0x00268E48
+		
 		private static void InitUpLevelDict()
 		{
 			lock (HuodongCachingMgr._UpLevelDict)
@@ -999,7 +999,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002BB1 RID: 11185 RVA: 0x0026AE44 File Offset: 0x00269044
+		
 		private static UpLevelItem GetUpLevelItem(int occu, int unionlevel)
 		{
 			HuodongCachingMgr.InitUpLevelDict();
@@ -1020,7 +1020,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BB2 RID: 11186 RVA: 0x0026AEC8 File Offset: 0x002690C8
+		
 		private static UpLevelItem GetUpLevelItemByID(int occu, int id)
 		{
 			HuodongCachingMgr.InitUpLevelDict();
@@ -1041,7 +1041,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BB3 RID: 11187 RVA: 0x0026AF98 File Offset: 0x00269198
+		
 		public static int ResetUpLevelItem()
 		{
 			int ret = GameManager.systemUpLevelGiftMgr.ReloadLoadFromXMlFile();
@@ -1052,7 +1052,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002BB4 RID: 11188 RVA: 0x0026AFFC File Offset: 0x002691FC
+		
 		public static int GiveUpLevelGift(GameClient client, UpLevelItem newStepItem)
 		{
 			int unionLevel = Global.GetUnionLevel(client, false);
@@ -1140,7 +1140,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BB5 RID: 11189 RVA: 0x0026B4C0 File Offset: 0x002696C0
+		
 		public static int ProcessGetUpLevelGift(GameClient client, bool give = false)
 		{
 			int result;
@@ -1184,7 +1184,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BB6 RID: 11190 RVA: 0x0026B5D8 File Offset: 0x002697D8
+		
 		public static TCPProcessCmdResults ProcessQueryUpLevelGiftFlagList(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1227,7 +1227,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06002BB7 RID: 11191 RVA: 0x0026B734 File Offset: 0x00269934
+		
 		public static TCPProcessCmdResults ProcessGetUpLevelGiftAward(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1278,7 +1278,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06002BB8 RID: 11192 RVA: 0x0026B8F8 File Offset: 0x00269AF8
+		
 		private static BigAwardItem GetBigAwardItem()
 		{
 			lock (HuodongCachingMgr._BigAwardItemMutex)
@@ -1356,7 +1356,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BB9 RID: 11193 RVA: 0x0026BC14 File Offset: 0x00269E14
+		
 		public static int ResetBigAwardItem()
 		{
 			string fileName = "Config/Gifts/BigGift.xml";
@@ -1368,7 +1368,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002BBA RID: 11194 RVA: 0x0026BC78 File Offset: 0x00269E78
+		
 		public static int ProcessGetBigAwardGift(GameClient client, int bigAwardID, int whichOne)
 		{
 			BigAwardItem bigAwardItem = HuodongCachingMgr.GetBigAwardItem();
@@ -1436,7 +1436,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BBB RID: 11195 RVA: 0x0026BF18 File Offset: 0x0026A118
+		
 		private static SongLiItem GetSongLiItem()
 		{
 			lock (HuodongCachingMgr._SongLiItemMutex)
@@ -1521,7 +1521,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BBC RID: 11196 RVA: 0x0026C248 File Offset: 0x0026A448
+		
 		public static int ResetSongLiItem()
 		{
 			string fileName = Global.GetGiftExchangeFileName();
@@ -1533,7 +1533,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002BBD RID: 11197 RVA: 0x0026C2AC File Offset: 0x0026A4AC
+		
 		public static int ProcessGetSongLiGift(GameClient client, int songLiID, string liPinMa)
 		{
 			string[] args = liPinMa.Split(new char[]
@@ -1677,7 +1677,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x06002BBE RID: 11198 RVA: 0x0026C784 File Offset: 0x0026A984
+		
 		private static string praseKalendsGiftCode(string liPinMa, int used = 0)
 		{
 			string result2;
@@ -1799,7 +1799,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x06002BBF RID: 11199 RVA: 0x0026CADC File Offset: 0x0026ACDC
+		
 		private static void InitLimitTimeLoginTimes()
 		{
 			lock (HuodongCachingMgr._LimitTimeLoginDict)
@@ -1848,13 +1848,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002BC0 RID: 11200 RVA: 0x0026CC84 File Offset: 0x0026AE84
+		
 		public static bool JugeInLimitTimeLoginPeriod()
 		{
 			return HuodongCachingMgr.GetLimitTimeLoginHuoDongID() > 0;
 		}
 
-		// Token: 0x06002BC1 RID: 11201 RVA: 0x0026CCA0 File Offset: 0x0026AEA0
+		
 		public static int GetLimitTimeLoginHuoDongID()
 		{
 			HuodongCachingMgr.InitLimitTimeLoginTimes();
@@ -1882,7 +1882,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BC2 RID: 11202 RVA: 0x0026CD8C File Offset: 0x0026AF8C
+		
 		private static LimitTimeLoginItem GetLimitTimeLoginItem(int whichOne)
 		{
 			LimitTimeLoginItem limitTimeLoginItem = null;
@@ -1940,7 +1940,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BC3 RID: 11203 RVA: 0x0026CF40 File Offset: 0x0026B140
+		
 		public static int ResetLimitTimeLoginItem()
 		{
 			int ret = GameManager.SystemDengLuDali.ReloadLoadFromXMlFile();
@@ -1953,7 +1953,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002BC4 RID: 11204 RVA: 0x0026CFC4 File Offset: 0x0026B1C4
+		
 		public static int ProcessGetLimitTimeLoginGift(GameClient client, int whichOne)
 		{
 			int result;
@@ -2003,13 +2003,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BC5 RID: 11205 RVA: 0x0026D1D4 File Offset: 0x0026B3D4
+		
 		public static int GetEveryDayOnLineItemCount()
 		{
 			return GameManager.systemEveryDayOnLineAwardMgr.SystemXmlItemDict.Count;
 		}
 
-		// Token: 0x06002BC6 RID: 11206 RVA: 0x0026D1F8 File Offset: 0x0026B3F8
+		
 		public static EveryDayOnLineAward GetEveryDayOnLineItem(int step)
 		{
 			EveryDayOnLineAward EveryDayOnLineAwardItem = null;
@@ -2054,7 +2054,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BC7 RID: 11207 RVA: 0x0026D360 File Offset: 0x0026B560
+		
 		public static int ResetEveryDayOnLineAwardItem()
 		{
 			int ret = GameManager.systemEveryDayOnLineAwardMgr.ReloadLoadFromXMlFile();
@@ -2065,7 +2065,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002BC8 RID: 11208 RVA: 0x0026D3C4 File Offset: 0x0026B5C4
+		
 		public static int ProcessGetEveryDayOnLineAwardGift(GameClient client, List<GoodsData> goodsDataList, int nType = 0)
 		{
 			int nDate = TimeUtil.NowDateTime().DayOfYear;
@@ -2121,7 +2121,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BC9 RID: 11209 RVA: 0x0026D564 File Offset: 0x0026B764
+		
 		public static int ProcessGetEveryDayOnLineAwardGift2(GameClient client, List<GoodsData> goodsDataList, out int nRet)
 		{
 			int nDate = TimeUtil.NowDateTime().DayOfYear;
@@ -2174,13 +2174,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BCA RID: 11210 RVA: 0x0026D6E8 File Offset: 0x0026B8E8
+		
 		public static int GetSeriesLoginCount()
 		{
 			return GameManager.systemSeriesLoginAwardMgr.SystemXmlItemDict.Count;
 		}
 
-		// Token: 0x06002BCB RID: 11211 RVA: 0x0026D70C File Offset: 0x0026B90C
+		
 		private static SeriesLoginAward GetSeriesLoginAward(int whichOne)
 		{
 			SeriesLoginAward SeriesLoginItem = null;
@@ -2225,7 +2225,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BCC RID: 11212 RVA: 0x0026D86C File Offset: 0x0026BA6C
+		
 		public static int ResetSeriesLoginItem()
 		{
 			int ret = GameManager.systemSeriesLoginAwardMgr.ReloadLoadFromXMlFile();
@@ -2236,7 +2236,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002BCD RID: 11213 RVA: 0x0026D8D0 File Offset: 0x0026BAD0
+		
 		public static int ProcessGetSeriesLoginGift(GameClient client, List<GoodsData> goodsDataList, int nIndex = 0)
 		{
 			int nDay = TimeUtil.NowDateTime().DayOfYear;
@@ -2279,7 +2279,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BCE RID: 11214 RVA: 0x0026DA34 File Offset: 0x0026BC34
+		
 		public static int ProcessGetSeriesLoginGift2(GameClient client, List<GoodsData> goodsDataList)
 		{
 			int nStep = client.ClientData.MyHuodongData.SeriesLoginGetAwardStep;
@@ -2319,7 +2319,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BCF RID: 11215 RVA: 0x0026DB70 File Offset: 0x0026BD70
+		
 		public static bool LoadActivitiesConfig()
 		{
 			string strError = "";
@@ -2461,7 +2461,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BD0 RID: 11216 RVA: 0x0026DE3C File Offset: 0x0026C03C
+		
 		public static DanBiChongZhiActivity GetDanBiChongZhiActivity()
 		{
 			lock (HuodongCachingMgr._DanBiChongZhiMutex)
@@ -2483,7 +2483,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BD1 RID: 11217 RVA: 0x0026DEF8 File Offset: 0x0026C0F8
+		
 		public static int ResetDanBiChongZhiActivity()
 		{
 			string fileName = "Config/JieRiGifts/JieRiDanBiChongZhi.xml";
@@ -2495,7 +2495,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002BD2 RID: 11218 RVA: 0x0026DF5C File Offset: 0x0026C15C
+		
 		public static FirstChongZhiGift GetFirstChongZhiActivity()
 		{
 			lock (HuodongCachingMgr._FirstChongZhiActivityMutex)
@@ -2592,7 +2592,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BD3 RID: 11219 RVA: 0x0026E2D8 File Offset: 0x0026C4D8
+		
 		public static int ResetFirstChongZhiGift()
 		{
 			string fileName = "Config/Gifts/FirstCharge.xml";
@@ -2604,7 +2604,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002BD4 RID: 11220 RVA: 0x0026E33C File Offset: 0x0026C53C
+		
 		public static InputFanLiActivity GetInputFanLiActivity()
 		{
 			lock (HuodongCachingMgr._InputFanLiActivityMutex)
@@ -2658,7 +2658,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BD5 RID: 11221 RVA: 0x0026E550 File Offset: 0x0026C750
+		
 		public static int ResetInputFanLiActivity()
 		{
 			string fileName = "Config/Gifts/FanLi.xml";
@@ -2670,7 +2670,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002BD6 RID: 11222 RVA: 0x0026E5B4 File Offset: 0x0026C7B4
+		
 		public static InputSongActivity GetInputSongActivity()
 		{
 			lock (HuodongCachingMgr._InputSongActivityMutex)
@@ -2743,7 +2743,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BD7 RID: 11223 RVA: 0x0026E878 File Offset: 0x0026CA78
+		
 		public static int ResetInputSongActivity()
 		{
 			string fileName = "Config/Gifts/ChongZhiSong.xml";
@@ -2755,7 +2755,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002BD8 RID: 11224 RVA: 0x0026E8DC File Offset: 0x0026CADC
+		
 		public static KingActivity GetInputKingActivity()
 		{
 			lock (HuodongCachingMgr._InputKingActivityMutex)
@@ -2870,7 +2870,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BD9 RID: 11225 RVA: 0x0026ED04 File Offset: 0x0026CF04
+		
 		public static int ResetInputKingActivity()
 		{
 			string fileName = "Config/Gifts/MuChongZhi.xml";
@@ -2886,7 +2886,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002BDA RID: 11226 RVA: 0x0026ED7C File Offset: 0x0026CF7C
+		
 		public static KingActivity GetLevelKingActivity()
 		{
 			lock (HuodongCachingMgr._LevelKingActivityMutex)
@@ -2976,7 +2976,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BDB RID: 11227 RVA: 0x0026F0FC File Offset: 0x0026D2FC
+		
 		public static int ResetLevelKingActivity()
 		{
 			string fileName = "Config/Gifts/LevelKing.xml";
@@ -2988,7 +2988,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002BDC RID: 11228 RVA: 0x0026F160 File Offset: 0x0026D360
+		
 		public static KingActivity GetEquipKingActivity()
 		{
 			lock (HuodongCachingMgr._EquipKingActivityMutex)
@@ -3103,7 +3103,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BDD RID: 11229 RVA: 0x0026F590 File Offset: 0x0026D790
+		
 		public static int ResetEquipKingActivity()
 		{
 			string fileName = "Config/Gifts/MuBoss.xml";
@@ -3119,7 +3119,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002BDE RID: 11230 RVA: 0x0026F608 File Offset: 0x0026D808
+		
 		public static KingActivity GetHorseKingActivity()
 		{
 			lock (HuodongCachingMgr._HorseKingActivityMutex)
@@ -3209,7 +3209,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BDF RID: 11231 RVA: 0x0026F988 File Offset: 0x0026DB88
+		
 		public static int ResetHorseKingActivity()
 		{
 			string fileName = "Config/Gifts/WuXueKing.xml";
@@ -3221,7 +3221,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002BE0 RID: 11232 RVA: 0x0026F9EC File Offset: 0x0026DBEC
+		
 		public static KingActivity GetJingMaiKingActivity()
 		{
 			lock (HuodongCachingMgr._JingMaiKingActivityMutex)
@@ -3311,7 +3311,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BE1 RID: 11233 RVA: 0x0026FD6C File Offset: 0x0026DF6C
+		
 		public static int ResetJingMaiKingActivity()
 		{
 			string fileName = "Config/Gifts/JingMaiKing.xml";
@@ -3323,7 +3323,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002BE2 RID: 11234 RVA: 0x0026FDD0 File Offset: 0x0026DFD0
+		
 		public static KingActivity GetXinXiaoFeiKingActivity()
 		{
 			lock (HuodongCachingMgr._XinXiaofeiKingMutex)
@@ -3439,7 +3439,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BE3 RID: 11235 RVA: 0x00270200 File Offset: 0x0026E400
+		
 		public static int ResetXinXiaoFeiKingActivity()
 		{
 			string fileName = "Config/JieRiGifts/MuXiaoFei.xml";
@@ -3455,7 +3455,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002BE4 RID: 11236 RVA: 0x00270278 File Offset: 0x0026E478
+		
 		public static void ReadAwardConfig(XElement args, out Dictionary<int, AwardItem> AwardDict, out Dictionary<int, AwardItem> AwardDict2)
 		{
 			AwardDict = new Dictionary<int, AwardItem>();
@@ -3524,7 +3524,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002BE5 RID: 11237 RVA: 0x002704B0 File Offset: 0x0026E6B0
+		
 		public static void ReadAwardConfig(XElement args, out Dictionary<int, AwardItem> AwardDict, out Dictionary<int, AwardItem> AwardDict2, out Dictionary<int, AwardEffectTimeItem> AwardDict3)
 		{
 			AwardDict = new Dictionary<int, AwardItem>();
@@ -3608,7 +3608,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002BE6 RID: 11238 RVA: 0x00270764 File Offset: 0x0026E964
+		
 		public static HuodongCachingMgr.TotalChargeActivity GetTotalChargeActivity()
 		{
 			lock (HuodongCachingMgr._TotalChargeActivityMutex)
@@ -3648,7 +3648,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BE7 RID: 11239 RVA: 0x002708B8 File Offset: 0x0026EAB8
+		
 		public static int ResetTotalChargeActivity()
 		{
 			string fileName = "Config/Gifts/LeiJiChongZhi.xml";
@@ -3660,7 +3660,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002BE8 RID: 11240 RVA: 0x0027091C File Offset: 0x0026EB1C
+		
 		public static HuodongCachingMgr.TotalConsumeActivity GetTotalConsumeActivity()
 		{
 			lock (HuodongCachingMgr._TotalConsumeActivityMutex)
@@ -3700,7 +3700,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BE9 RID: 11241 RVA: 0x00270A70 File Offset: 0x0026EC70
+		
 		public static int ResetTotalConsumeActivity()
 		{
 			string fileName = "Config/Gifts/LeiJiXiaoFei.xml";
@@ -3712,7 +3712,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002BEA RID: 11242 RVA: 0x00270AD4 File Offset: 0x0026ECD4
+		
 		public static JieriFanLiActivity GetJieriFanLiActivity(ActivityTypes nActType)
 		{
 			int nArrayIdx = 0;
@@ -3878,7 +3878,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BEB RID: 11243 RVA: 0x00270F6C File Offset: 0x0026F16C
+		
 		public static JieriLianXuChargeActivity GetJieriLianXuChargeActivity()
 		{
 			lock (HuodongCachingMgr._JieriLianXuChargeMutex)
@@ -3900,7 +3900,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BEC RID: 11244 RVA: 0x00271028 File Offset: 0x0026F228
+		
 		public static int ResetJieriLianXuChargeActivity()
 		{
 			lock (HuodongCachingMgr._JieriLianXuChargeMutex)
@@ -3910,7 +3910,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002BED RID: 11245 RVA: 0x00271078 File Offset: 0x0026F278
+		
 		public static JieriPlatChargeKingEveryDay GetJieriPCKingEveryDayActivity()
 		{
 			lock (HuodongCachingMgr._JieriPCKingEveryDayMutex)
@@ -3932,7 +3932,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BEE RID: 11246 RVA: 0x00271134 File Offset: 0x0026F334
+		
 		public static int ResetJieriPCKingActivityEveryDay()
 		{
 			lock (HuodongCachingMgr._JieriPCKingEveryDayMutex)
@@ -3942,7 +3942,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002BEF RID: 11247 RVA: 0x00271184 File Offset: 0x0026F384
+		
 		public static JieriPlatChargeKing GetJieriPlatChargeKingActivity()
 		{
 			lock (HuodongCachingMgr._JieriPlatChargeKingMutex)
@@ -3964,7 +3964,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002BF0 RID: 11248 RVA: 0x00271240 File Offset: 0x0026F440
+		
 		public static int ResetJieriPlatChargeKingActivity()
 		{
 			lock (HuodongCachingMgr._JieriPlatChargeKingMutex)
@@ -3974,7 +3974,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002BF1 RID: 11249 RVA: 0x00271290 File Offset: 0x0026F490
+		
 		private static void InitUpLevelAwardItemDict()
 		{
 			if (null == HuodongCachingMgr.UpLevelAwardItemDict)
@@ -4011,7 +4011,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002BF2 RID: 11250 RVA: 0x00271404 File Offset: 0x0026F604
+		
 		public static void ProcessUpLevelAward4_60Level_100Level(GameClient client, int oldLevel, int newLevel)
 		{
 			HuodongCachingMgr.InitUpLevelAwardItemDict();
@@ -4051,7 +4051,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002BF3 RID: 11251 RVA: 0x00271538 File Offset: 0x0026F738
+		
 		public static void ProcessGetUpLevelAward4_60Level_100Level(GameClient client, int awardID)
 		{
 			HuodongCachingMgr.InitUpLevelAwardItemDict();
@@ -4098,7 +4098,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002BF4 RID: 11252 RVA: 0x00271730 File Offset: 0x0026F930
+		
 		private static void InitKaiFuGiftItemDict()
 		{
 			if (null == HuodongCachingMgr.KaiFuGiftItemDict)
@@ -4135,7 +4135,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002BF5 RID: 11253 RVA: 0x002718A4 File Offset: 0x0026FAA4
+		
 		public static void ProcessKaiFuGiftAward(GameClient client)
 		{
 			int level = client.ClientData.Level;
@@ -4172,7 +4172,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002BF6 RID: 11254 RVA: 0x002719CC File Offset: 0x0026FBCC
+		
 		public static void ProcessDayOnlineSecs(GameClient client, int preLoginDay)
 		{
 			int dayID = TimeUtil.NowDateTime().DayOfYear;
@@ -4191,7 +4191,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002BF7 RID: 11255 RVA: 0x00271A54 File Offset: 0x0026FC54
+		
 		public static bool GetCurrentDayKaiFuOnlineSecs(GameClient client, out int totalOnlineSecs, out int dayID)
 		{
 			totalOnlineSecs = 0;
@@ -4212,14 +4212,14 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BF8 RID: 11256 RVA: 0x00271A9F File Offset: 0x0026FC9F
+		
 		public static void ProcessKaiFuGiftAwardActions()
 		{
 			HuodongCachingMgr.ProcessGetKaiFuGiftAward();
 			HuodongCachingMgr.ProcessAutoAddKaiFuGiftRoleNum();
 		}
 
-		// Token: 0x06002BF9 RID: 11257 RVA: 0x00271AB0 File Offset: 0x0026FCB0
+		
 		public static void ProcessGetKaiFuGiftAward()
 		{
 			int elapsedDays = Global.GetDaysSpanNum(TimeUtil.NowDateTime(), Global.GetKaiFuTime(), true);
@@ -4290,12 +4290,12 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002BFA RID: 11258 RVA: 0x00271D98 File Offset: 0x0026FF98
+		
 		public static void ProcessAutoAddKaiFuGiftRoleNum()
 		{
 		}
 
-		// Token: 0x06002BFB RID: 11259 RVA: 0x00271DA0 File Offset: 0x0026FFA0
+		
 		public static void FixKaiFuOnlineAwardDataList(List<KaiFuOnlineAwardData> kaiFuOnlineAwardDataList, int dayID, int serverId)
 		{
 			if (null != kaiFuOnlineAwardDataList)
@@ -4324,7 +4324,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002BFC RID: 11260 RVA: 0x00271E58 File Offset: 0x00270058
+		
 		public static void OnJieriRoleLogin(GameClient client, int preLoginDay, bool isLogin = false)
 		{
 			int currDayID = Global.GetOffsetDayNow();
@@ -4408,7 +4408,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002BFD RID: 11261 RVA: 0x0027209C File Offset: 0x0027029C
+		
 		public static int GetZiKaTodayLeftMergeNum(GameClient client, int index)
 		{
 			JieRiZiKaLiaBaoActivity instance = HuodongCachingMgr.GetJieRiZiKaLiaBaoActivity();
@@ -4456,7 +4456,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002BFE RID: 11262 RVA: 0x00272184 File Offset: 0x00270384
+		
 		public static int ModifyZiKaTodayLeftMergeNum(GameClient client, int index, int addNum = 1)
 		{
 			int currday = Global.GetOffsetDay(TimeUtil.NowDateTime());
@@ -4491,7 +4491,7 @@ namespace GameServer.Logic
 			return count;
 		}
 
-		// Token: 0x06002BFF RID: 11263 RVA: 0x00272250 File Offset: 0x00270450
+		
 		public static string MergeZiKa(GameClient client, int index)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}", 0, client.ClientData.RoleID, 14);
@@ -4622,7 +4622,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002C00 RID: 11264 RVA: 0x00272850 File Offset: 0x00270A50
+		
 		public static bool LoadJieriActivitiesConfig()
 		{
 			JieriActivityConfig config = HuodongCachingMgr.GetJieriActivityConfig();
@@ -4896,7 +4896,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002C01 RID: 11265 RVA: 0x00272D0C File Offset: 0x00270F0C
+		
 		public static int GetThemeActivityState()
 		{
 			ThemeActivityConfig config = HuodongCachingMgr.GetThemeActivityConfig();
@@ -4912,7 +4912,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002C02 RID: 11266 RVA: 0x00272D38 File Offset: 0x00270F38
+		
 		public static ThemeActivityConfig GetThemeActivityConfig()
 		{
 			lock (HuodongCachingMgr._ThemeActivityConfigMutex)
@@ -4966,7 +4966,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C03 RID: 11267 RVA: 0x00272F94 File Offset: 0x00271194
+		
 		public static int ResetThemeActivityConfig()
 		{
 			string fileName = "Config/ThemeActivityType.xml";
@@ -4980,7 +4980,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C04 RID: 11268 RVA: 0x0027300C File Offset: 0x0027120C
+		
 		public static JieriActivityConfig GetJieriActivityConfig()
 		{
 			lock (HuodongCachingMgr._JieriActivityConfigMutex)
@@ -5022,7 +5022,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C05 RID: 11269 RVA: 0x002731EC File Offset: 0x002713EC
+		
 		public static int ResetJieriActivityConfig()
 		{
 			string fileName = "Config/JieRiGifts/MuJieRiType.xml";
@@ -5034,7 +5034,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C06 RID: 11270 RVA: 0x00273250 File Offset: 0x00271450
+		
 		public static JieriDaLiBaoActivity GetJieriDaLiBaoActivity()
 		{
 			lock (HuodongCachingMgr._JieriDaLiBaoActivityMutex)
@@ -5146,7 +5146,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C07 RID: 11271 RVA: 0x00273660 File Offset: 0x00271860
+		
 		public static int ResetJieriDaLiBaoActivity()
 		{
 			string fileName = "Config/JieRiGifts/JieRiLiBao.xml";
@@ -5158,7 +5158,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C08 RID: 11272 RVA: 0x002736C4 File Offset: 0x002718C4
+		
 		public static JieRiDengLuActivity GetJieRiDengLuActivity()
 		{
 			lock (HuodongCachingMgr._JieriDengLuActivityMutex)
@@ -5276,7 +5276,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C09 RID: 11273 RVA: 0x00273B40 File Offset: 0x00271D40
+		
 		public static int ResetJieRiDengLuActivity()
 		{
 			string fileName = "Config/JieRiGifts/JieRiDengLu.xml";
@@ -5288,7 +5288,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C0A RID: 11274 RVA: 0x00273BA4 File Offset: 0x00271DA4
+		
 		public static JieriVIPActivity GetJieriVIPActivity()
 		{
 			lock (HuodongCachingMgr._JieriVIPActivityMutex)
@@ -5361,7 +5361,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C0B RID: 11275 RVA: 0x00273E44 File Offset: 0x00272044
+		
 		public static int ResetJieriVIPActivity()
 		{
 			string fileName = "Config/JieRiGifts/JieRiVip.xml";
@@ -5373,7 +5373,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C0C RID: 11276 RVA: 0x00273EA8 File Offset: 0x002720A8
+		
 		public static JieriGiveActivity GetJieriGiveActivity()
 		{
 			lock (HuodongCachingMgr._JieriGiveMutex)
@@ -5395,7 +5395,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C0D RID: 11277 RVA: 0x00273F60 File Offset: 0x00272160
+		
 		public static int ResetJieriGiveActivity()
 		{
 			lock (HuodongCachingMgr._JieriGiveMutex)
@@ -5405,7 +5405,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C0E RID: 11278 RVA: 0x00273FB0 File Offset: 0x002721B0
+		
 		public static JieriRecvActivity GetJieriRecvActivity()
 		{
 			lock (HuodongCachingMgr._JieriRecvMutex)
@@ -5427,7 +5427,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C0F RID: 11279 RVA: 0x00274068 File Offset: 0x00272268
+		
 		public static int ResetJieriRecvActivity()
 		{
 			lock (HuodongCachingMgr._JieriRecvMutex)
@@ -5437,7 +5437,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C10 RID: 11280 RVA: 0x002740B8 File Offset: 0x002722B8
+		
 		public static JieRiGiveKingActivity GetJieriGiveKingActivity()
 		{
 			lock (HuodongCachingMgr._JieriGiveKingMutex)
@@ -5460,7 +5460,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C11 RID: 11281 RVA: 0x00274178 File Offset: 0x00272378
+		
 		public static int ResetJieRiGiveKingActivity()
 		{
 			lock (HuodongCachingMgr._JieriGiveKingMutex)
@@ -5470,7 +5470,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C12 RID: 11282 RVA: 0x002741C8 File Offset: 0x002723C8
+		
 		public static JieRiRecvKingActivity GetJieriRecvKingActivity()
 		{
 			lock (HuodongCachingMgr._JieriRecvKingMutex)
@@ -5493,7 +5493,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C13 RID: 11283 RVA: 0x00274288 File Offset: 0x00272488
+		
 		public static int ResetJieriRecvKingActivity()
 		{
 			lock (HuodongCachingMgr._JieriRecvKingMutex)
@@ -5503,7 +5503,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C14 RID: 11284 RVA: 0x002742D8 File Offset: 0x002724D8
+		
 		public static JieRiFuLiActivity GetJieriFuLiActivity()
 		{
 			lock (HuodongCachingMgr._JieriFuLiMutex)
@@ -5525,7 +5525,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C15 RID: 11285 RVA: 0x00274390 File Offset: 0x00272590
+		
 		public static int ResetJieriFuLiActivity()
 		{
 			lock (HuodongCachingMgr._JieriFuLiMutex)
@@ -5535,7 +5535,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C16 RID: 11286 RVA: 0x002743E0 File Offset: 0x002725E0
+		
 		public static int ResetOneDollarChongZhiActivity()
 		{
 			lock (HuodongCachingMgr._OneDollarChongZhiMutex)
@@ -5546,7 +5546,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C17 RID: 11287 RVA: 0x0027443C File Offset: 0x0027263C
+		
 		public static OneDollarChongZhi GetOneDollarChongZhiActivity()
 		{
 			lock (HuodongCachingMgr._OneDollarChongZhiMutex)
@@ -5565,7 +5565,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C18 RID: 11288 RVA: 0x002744C4 File Offset: 0x002726C4
+		
 		public static int ResetInputFanLiNewActivity()
 		{
 			lock (HuodongCachingMgr._InputFanLiNewMutex)
@@ -5576,7 +5576,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C19 RID: 11289 RVA: 0x00274520 File Offset: 0x00272720
+		
 		public static InputFanLiNew GetInputFanLiNewActivity()
 		{
 			lock (HuodongCachingMgr._InputFanLiNewMutex)
@@ -5595,7 +5595,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C1A RID: 11290 RVA: 0x002745A8 File Offset: 0x002727A8
+		
 		public static int ResetRegressActiveOpen()
 		{
 			lock (HuodongCachingMgr._RegressActiveOpenMutex)
@@ -5606,7 +5606,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C1B RID: 11291 RVA: 0x00274604 File Offset: 0x00272804
+		
 		public static RegressActiveOpen GetRegressActiveOpen()
 		{
 			lock (HuodongCachingMgr._RegressActiveOpenMutex)
@@ -5625,7 +5625,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C1C RID: 11292 RVA: 0x0027468C File Offset: 0x0027288C
+		
 		public static int ResetRegressActiveSignGift()
 		{
 			lock (HuodongCachingMgr._RegressActiveSignGiftMutex)
@@ -5636,7 +5636,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C1D RID: 11293 RVA: 0x002746E8 File Offset: 0x002728E8
+		
 		public static RegressActiveSignGift GetRegressActiveSignGift()
 		{
 			lock (HuodongCachingMgr._RegressActiveSignGiftMutex)
@@ -5655,7 +5655,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C1E RID: 11294 RVA: 0x00274770 File Offset: 0x00272970
+		
 		public static int ResetRegressActiveTotalRecharge()
 		{
 			lock (HuodongCachingMgr._RegressActiveTotalRechargeMutex)
@@ -5666,7 +5666,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C1F RID: 11295 RVA: 0x002747CC File Offset: 0x002729CC
+		
 		public static RegressActiveTotalRecharge GetRegressActiveTotalRecharge()
 		{
 			lock (HuodongCachingMgr._RegressActiveTotalRechargeMutex)
@@ -5685,7 +5685,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C20 RID: 11296 RVA: 0x00274854 File Offset: 0x00272A54
+		
 		public static int ResetRegressActiveDayBuy()
 		{
 			lock (HuodongCachingMgr._RegressActiveDayBuyMutex)
@@ -5696,7 +5696,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C21 RID: 11297 RVA: 0x002748B0 File Offset: 0x00272AB0
+		
 		public static RegressActiveDayBuy GetRegressActiveDayBuy()
 		{
 			lock (HuodongCachingMgr._RegressActiveDayBuyMutex)
@@ -5715,7 +5715,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C22 RID: 11298 RVA: 0x00274938 File Offset: 0x00272B38
+		
 		public static int ResetRegressActiveStore()
 		{
 			lock (HuodongCachingMgr._RegressActiveStoreMutex)
@@ -5726,7 +5726,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C23 RID: 11299 RVA: 0x00274994 File Offset: 0x00272B94
+		
 		public static RegressActiveStore GetRegressActiveStore()
 		{
 			lock (HuodongCachingMgr._RegressActiveStoreMutex)
@@ -5745,7 +5745,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C24 RID: 11300 RVA: 0x00274A1C File Offset: 0x00272C1C
+		
 		public static int ResetJieRiSuperInputFanLiActivity()
 		{
 			lock (HuodongCachingMgr._JieriSuperInputMutex)
@@ -5756,7 +5756,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C25 RID: 11301 RVA: 0x00274A74 File Offset: 0x00272C74
+		
 		public static JieriSuperInputActivity GetJieRiSuperInputActivity()
 		{
 			lock (HuodongCachingMgr._JieriSuperInputMutex)
@@ -5775,7 +5775,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C26 RID: 11302 RVA: 0x00274AFC File Offset: 0x00272CFC
+		
 		public static int ResetOneDollarBuyActivity()
 		{
 			lock (HuodongCachingMgr._OneDollarBuyActivityMutex)
@@ -5790,7 +5790,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C27 RID: 11303 RVA: 0x00274B68 File Offset: 0x00272D68
+		
 		public static OneDollarBuyActivity GetOneDollarBuyActivity()
 		{
 			lock (HuodongCachingMgr._OneDollarBuyActivityMutex)
@@ -5812,7 +5812,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C28 RID: 11304 RVA: 0x00274C24 File Offset: 0x00272E24
+		
 		public static int ResetJieRiCZQGActivity()
 		{
 			lock (HuodongCachingMgr._JieRiCZQGActivityMutex)
@@ -5826,7 +5826,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C29 RID: 11305 RVA: 0x00274C8C File Offset: 0x00272E8C
+		
 		public static JieRiCZQGActivity GetJieRiCZQGActivity()
 		{
 			lock (HuodongCachingMgr._JieRiCZQGActivityMutex)
@@ -5848,7 +5848,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C2A RID: 11306 RVA: 0x00274D48 File Offset: 0x00272F48
+		
 		public static int ResetJieriVIPYouHuiAct()
 		{
 			lock (HuodongCachingMgr._JieriVIPYouHuiActMutex)
@@ -5858,7 +5858,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C2B RID: 11307 RVA: 0x00274D98 File Offset: 0x00272F98
+		
 		public static JieriVIPYouHuiActivity GetJieriVIPYouHuiAct()
 		{
 			lock (HuodongCachingMgr._JieriVIPYouHuiActMutex)
@@ -5880,7 +5880,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C2C RID: 11308 RVA: 0x00274E54 File Offset: 0x00273054
+		
 		public static int ResetSpecialActivity()
 		{
 			lock (HuodongCachingMgr._SpecialActivityMutex)
@@ -5895,7 +5895,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C2D RID: 11309 RVA: 0x00274EC8 File Offset: 0x002730C8
+		
 		public static SpecialActivity GetSpecialActivity()
 		{
 			lock (HuodongCachingMgr._SpecialActivityMutex)
@@ -5917,7 +5917,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C2E RID: 11310 RVA: 0x00274F84 File Offset: 0x00273184
+		
 		public static int ResetSpecPriorityActivity()
 		{
 			lock (HuodongCachingMgr._SpecPriorityActivityMutex)
@@ -5932,7 +5932,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C2F RID: 11311 RVA: 0x00274FF8 File Offset: 0x002731F8
+		
 		public static SpecPriorityActivity GetSpecPriorityActivity()
 		{
 			lock (HuodongCachingMgr._SpecPriorityActivityMutex)
@@ -5951,7 +5951,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C30 RID: 11312 RVA: 0x00275080 File Offset: 0x00273280
+		
 		public static int ResetThemeDaLiBaoActivity()
 		{
 			lock (HuodongCachingMgr._ThemeDaLiBaoActivityMutex)
@@ -5961,7 +5961,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C31 RID: 11313 RVA: 0x002750D0 File Offset: 0x002732D0
+		
 		public static ThemeDaLiBaoActivity GetThemeDaLiBaoActivity()
 		{
 			lock (HuodongCachingMgr._ThemeDaLiBaoActivityMutex)
@@ -5980,7 +5980,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C32 RID: 11314 RVA: 0x00275158 File Offset: 0x00273358
+		
 		public static int ResetThemeDuiHuanActivity()
 		{
 			lock (HuodongCachingMgr._ThemeDuiHuanActivityMutex)
@@ -5990,7 +5990,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C33 RID: 11315 RVA: 0x002751A8 File Offset: 0x002733A8
+		
 		public static ThemeDuiHuanActivity GetThemeDuiHuanActivity()
 		{
 			lock (HuodongCachingMgr._ThemeDuiHuanActivityMutex)
@@ -6009,7 +6009,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C34 RID: 11316 RVA: 0x00275230 File Offset: 0x00273430
+		
 		public static int ResetThemeZhiGouActivity()
 		{
 			lock (HuodongCachingMgr._ThemeZhiGouActivityMutex)
@@ -6023,7 +6023,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C35 RID: 11317 RVA: 0x00275298 File Offset: 0x00273498
+		
 		public static ThemeZhiGouActivity GetThemeZhiGouActivity()
 		{
 			lock (HuodongCachingMgr._ThemeZhiGouActivityMutex)
@@ -6042,7 +6042,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C36 RID: 11318 RVA: 0x00275320 File Offset: 0x00273520
+		
 		public static int ResetEverydayActivity()
 		{
 			lock (HuodongCachingMgr._EverydayActivityMutex)
@@ -6057,7 +6057,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C37 RID: 11319 RVA: 0x00275394 File Offset: 0x00273594
+		
 		public static EverydayActivity GetEverydayActivity()
 		{
 			lock (HuodongCachingMgr._EverydayActivityMutex)
@@ -6076,7 +6076,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C38 RID: 11320 RVA: 0x0027541C File Offset: 0x0027361C
+		
 		public static int ResetWeedEndInputActivity()
 		{
 			string fileName = "Config/Gifts/ZhouMoChongZhiType.xml";
@@ -6090,7 +6090,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C39 RID: 11321 RVA: 0x00275494 File Offset: 0x00273694
+		
 		public static WeedEndInputActivity GetWeekEndInputActivity()
 		{
 			lock (HuodongCachingMgr._WeedEndInputActivityMutex)
@@ -6112,7 +6112,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C3A RID: 11322 RVA: 0x00275550 File Offset: 0x00273750
+		
 		public static int ResetJieriIPointsExchangeActivity()
 		{
 			string fileName = "Config/JieRiGifts/ChongZhiDuiHuan.xml";
@@ -6124,7 +6124,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C3B RID: 11323 RVA: 0x002755B4 File Offset: 0x002737B4
+		
 		public static JieriIPointsExchgActivity GetJieriIPointsExchgActivity()
 		{
 			lock (HuodongCachingMgr._JieriIPointsExchgActivityMutex)
@@ -6146,7 +6146,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C3C RID: 11324 RVA: 0x00275670 File Offset: 0x00273870
+		
 		public static JieriCZSongActivity GetJieriCZSongActivity()
 		{
 			lock (HuodongCachingMgr._JieriCZSongActivityMutex)
@@ -6263,7 +6263,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C3D RID: 11325 RVA: 0x00275AEC File Offset: 0x00273CEC
+		
 		public static int ResetJieriCZSongActivity()
 		{
 			string fileName = "Config/JieRiGifts/JieRiDayChongZhi.xml";
@@ -6275,7 +6275,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C3E RID: 11326 RVA: 0x00275B50 File Offset: 0x00273D50
+		
 		public static JieRiLeiJiCZActivity GetJieRiLeiJiCZActivity()
 		{
 			lock (HuodongCachingMgr._JieRiLeiJiCZActivityMutex)
@@ -6389,7 +6389,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C3F RID: 11327 RVA: 0x00275FC8 File Offset: 0x002741C8
+		
 		public static int ResetJieRiLeiJiCZActivity()
 		{
 			string fileName = "Config/JieRiGifts/JieRiLeiJi.xml";
@@ -6401,7 +6401,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C40 RID: 11328 RVA: 0x0027602C File Offset: 0x0027422C
+		
 		public static JieRiMeiRiLeiJiActivity GetJieriMeiRiLeiJiActivity()
 		{
 			lock (HuodongCachingMgr._JieRiMeiRiLeiJiActivityMutex)
@@ -6527,7 +6527,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C41 RID: 11329 RVA: 0x00276518 File Offset: 0x00274718
+		
 		public static int ResetJieRiMeiRiLeiJiActivity()
 		{
 			string fileName = "Config/JieRiGifts/JieRiMeiRiLeiJi.xml";
@@ -6539,7 +6539,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C42 RID: 11330 RVA: 0x0027657C File Offset: 0x0027477C
+		
 		public static JieRiTotalConsumeActivity GetJieRiTotalConsumeActivity()
 		{
 			lock (HuodongCachingMgr._JieRiTotalConsumeActivityMutex)
@@ -6653,7 +6653,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C43 RID: 11331 RVA: 0x002769F4 File Offset: 0x00274BF4
+		
 		public static int ResetJieRiTotalConsumeActivity()
 		{
 			string fileName = "Config/JieRiGifts/JieRiLeiJiXiaoFei.xml";
@@ -6665,7 +6665,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C44 RID: 11332 RVA: 0x00276A58 File Offset: 0x00274C58
+		
 		public static JieRiMultAwardActivity GetJieRiMultAwardActivity()
 		{
 			lock (HuodongCachingMgr._JieRiMultAwardActivityMutex)
@@ -6725,7 +6725,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C45 RID: 11333 RVA: 0x00276D18 File Offset: 0x00274F18
+		
 		public static int ResetJieRiMultAwardActivity()
 		{
 			string fileName = "Config/JieRiGifts/JieRiDuoBei.xml";
@@ -6737,7 +6737,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C46 RID: 11334 RVA: 0x00276D7C File Offset: 0x00274F7C
+		
 		public static int ResetJieRiFanLiAwardActivity()
 		{
 			string fileName = "Config/JieRiGifts/WingFanLi.xml";
@@ -6772,7 +6772,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C47 RID: 11335 RVA: 0x00276EB0 File Offset: 0x002750B0
+		
 		public static JieRiZiKaLiaBaoActivity GetJieRiZiKaLiaBaoActivity()
 		{
 			lock (HuodongCachingMgr._JieRiZiKaLiaBaoActivityMutex)
@@ -6868,7 +6868,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C48 RID: 11336 RVA: 0x0027727C File Offset: 0x0027547C
+		
 		public static int ResetJieRiZiKaLiaBaoActivity()
 		{
 			string fileName = "Config/JieRiGifts/JieRiBaoXiang.xml";
@@ -6880,7 +6880,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C49 RID: 11337 RVA: 0x002772E0 File Offset: 0x002754E0
+		
 		public static KingActivity GetJieriXiaoFeiKingActivity()
 		{
 			lock (HuodongCachingMgr._JieRiXiaoFeiKingActivityMutex)
@@ -6988,7 +6988,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C4A RID: 11338 RVA: 0x002776E4 File Offset: 0x002758E4
+		
 		public static int ResetJieRiXiaoFeiKingActivity()
 		{
 			string fileName = "Config/JieRiGifts/JieRiXiaoFeiKing.xml";
@@ -7000,7 +7000,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C4B RID: 11339 RVA: 0x00277748 File Offset: 0x00275948
+		
 		public static KingActivity GetJieRiCZKingActivity()
 		{
 			lock (HuodongCachingMgr._JieRiCZKingActivityMutex)
@@ -7102,7 +7102,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C4C RID: 11340 RVA: 0x00277B2C File Offset: 0x00275D2C
+		
 		public static int ResetJieRiCZKingActivity()
 		{
 			string fileName = "Config/JieRiGifts/JieRiChongZhiKing.xml";
@@ -7114,7 +7114,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C4D RID: 11341 RVA: 0x00277B90 File Offset: 0x00275D90
+		
 		public static bool LoadHeFuActivitiesConfig()
 		{
 			string strError = "";
@@ -7184,7 +7184,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002C4E RID: 11342 RVA: 0x00277CDC File Offset: 0x00275EDC
+		
 		public static HeFuActivityConfig GetHeFuActivityConfing()
 		{
 			lock (HuodongCachingMgr._HeFuActivityConfigMutex)
@@ -7222,7 +7222,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C4F RID: 11343 RVA: 0x00277E50 File Offset: 0x00276050
+		
 		public static int ResetHeFuActivityConfig()
 		{
 			string fileName = "Config/HeFuGifts/HeFuType.xml";
@@ -7234,7 +7234,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C50 RID: 11344 RVA: 0x00277EB4 File Offset: 0x002760B4
+		
 		public static HeFuLoginActivity GetHeFuLoginActivity()
 		{
 			lock (HuodongCachingMgr._HeFuLoginActivityMutex)
@@ -7335,7 +7335,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C51 RID: 11345 RVA: 0x00278244 File Offset: 0x00276444
+		
 		public static int ResetHeFuLoginActivity()
 		{
 			string fileName = "Config/HeFuGifts/HeFuLiBao.xml";
@@ -7347,7 +7347,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C52 RID: 11346 RVA: 0x002782A8 File Offset: 0x002764A8
+		
 		public static HeFuTotalLoginActivity GetHeFuTotalLoginActivity()
 		{
 			lock (HuodongCachingMgr._HeFuTotalLoginActivityMutex)
@@ -7427,7 +7427,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C53 RID: 11347 RVA: 0x002785DC File Offset: 0x002767DC
+		
 		public static int ResetHeFuTotalLoginActivity()
 		{
 			string fileName = "Config/HeFuGifts/HeFuDengLu.xml";
@@ -7439,7 +7439,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C54 RID: 11348 RVA: 0x00278640 File Offset: 0x00276840
+		
 		public static int GetHeFuPKKingRoleID()
 		{
 			HeFuPKKingActivity activity = HuodongCachingMgr.GetHeFuPKKingActivity();
@@ -7461,7 +7461,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002C55 RID: 11349 RVA: 0x002786B8 File Offset: 0x002768B8
+		
 		public static void UpdateHeFuPKKingRoleID(int roleID)
 		{
 			HeFuPKKingActivity activity = HuodongCachingMgr.GetHeFuPKKingActivity();
@@ -7492,7 +7492,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002C56 RID: 11350 RVA: 0x00278798 File Offset: 0x00276998
+		
 		public static HeFuPKKingActivity GetHeFuPKKingActivity()
 		{
 			lock (HuodongCachingMgr._HeFuPKKingActivityMutex)
@@ -7570,7 +7570,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C57 RID: 11351 RVA: 0x00278A88 File Offset: 0x00276C88
+		
 		public static int ResetHeFuPKKingActivity()
 		{
 			string fileName = "Config/HeFuGifts/PKJiangLi.xml";
@@ -7582,7 +7582,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C58 RID: 11352 RVA: 0x00278AEC File Offset: 0x00276CEC
+		
 		public static HeFuLuoLanActivity GetHeFuLuoLanActivity()
 		{
 			lock (HuodongCachingMgr._HeFuLuoLanActivityMutex)
@@ -7667,7 +7667,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C59 RID: 11353 RVA: 0x00278E6C File Offset: 0x0027706C
+		
 		public static int ResetHeFuLuoLanActivity()
 		{
 			string fileName = "Config/HeFuGifts/HeFuLuoLan.xml";
@@ -7679,7 +7679,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C5A RID: 11354 RVA: 0x00278ED0 File Offset: 0x002770D0
+		
 		public static HeFuAwardTimesActivity GetHeFuAwardTimesActivity()
 		{
 			lock (HuodongCachingMgr._HeFuAwardTimeActivityMutex)
@@ -7761,7 +7761,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C5B RID: 11355 RVA: 0x002791F0 File Offset: 0x002773F0
+		
 		public static int ResetHeFuAwardTimeActivity()
 		{
 			string fileName = "Config/HeFuGifts/HeFuZhangChang.xml";
@@ -7773,7 +7773,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C5C RID: 11356 RVA: 0x00279254 File Offset: 0x00277454
+		
 		public static int GetHeFuWCKingBHID()
 		{
 			HeFuWCKingActivity activity = HuodongCachingMgr.GetHeFuWCKingActivity();
@@ -7800,7 +7800,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002C5D RID: 11357 RVA: 0x002792E8 File Offset: 0x002774E8
+		
 		public static void UpdateHeFuWCKingBHID(int bhid)
 		{
 			HeFuWCKingActivity activity = HuodongCachingMgr.GetHeFuWCKingActivity();
@@ -7847,7 +7847,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002C5E RID: 11358 RVA: 0x0027945C File Offset: 0x0027765C
+		
 		public static HeFuWCKingActivity GetHeFuWCKingActivity()
 		{
 			lock (HuodongCachingMgr._HeFuWCKingActivityMutex)
@@ -7920,7 +7920,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C5F RID: 11359 RVA: 0x002796FC File Offset: 0x002778FC
+		
 		public static int ResetHeFuWCKingActivity()
 		{
 			string fileName = "Config/HeFuGifts/WangChengJiangLi.xml";
@@ -7932,7 +7932,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C60 RID: 11360 RVA: 0x00279760 File Offset: 0x00277960
+		
 		public static HeFuRechargeActivity GetHeFuRechargeActivity()
 		{
 			lock (HuodongCachingMgr._HeFuRechargeActivityMutex)
@@ -8006,7 +8006,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C61 RID: 11361 RVA: 0x00279AAC File Offset: 0x00277CAC
+		
 		public static int ResetHeFuRechargeActivity()
 		{
 			string fileName = "Config/HeFuGifts/HeFuFanLi.xml";
@@ -8018,7 +8018,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C62 RID: 11362 RVA: 0x00279B10 File Offset: 0x00277D10
+		
 		public static XinFanLiActivity GetXinFanLiActivity()
 		{
 			lock (HuodongCachingMgr._XinFanLiActivityMutex)
@@ -8089,7 +8089,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C63 RID: 11363 RVA: 0x00279E00 File Offset: 0x00278000
+		
 		public static int ResetXinFanLiActivity()
 		{
 			string fileName = "Config/Gifts/XinFanLi.xml";
@@ -8101,7 +8101,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C64 RID: 11364 RVA: 0x00279E64 File Offset: 0x00278064
+		
 		public static MeiRiChongZhiActivity GetMeiRiChongZhiActivity()
 		{
 			lock (HuodongCachingMgr._MeiRiChongZhiHaoLiActivityMutex)
@@ -8175,7 +8175,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C65 RID: 11365 RVA: 0x0027A12C File Offset: 0x0027832C
+		
 		public static int ResetMeiRiChongZhiActivity()
 		{
 			string fileName = "Config/Gifts/DayChongZhi.xml";
@@ -8187,7 +8187,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C66 RID: 11366 RVA: 0x0027A190 File Offset: 0x00278390
+		
 		public static KingActivity GetChongJiHaoLiActivity()
 		{
 			lock (HuodongCachingMgr._ChongJiHaoLiActivityMutex)
@@ -8306,7 +8306,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C67 RID: 11367 RVA: 0x0027A628 File Offset: 0x00278828
+		
 		public static int ResetChongJiHaoLiActivity()
 		{
 			string fileName = "Config/XinFuGifts/MuLevel.xml";
@@ -8322,7 +8322,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C68 RID: 11368 RVA: 0x0027A6A0 File Offset: 0x002788A0
+		
 		public static ShenZhuangHuiKuiHaoLiActivity GetShenZhuangJiQiHuiKuiHaoLiActivity()
 		{
 			lock (HuodongCachingMgr._ShenZhuangJiQingHuiKuiHaoLiActivityMutex)
@@ -8393,7 +8393,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C69 RID: 11369 RVA: 0x0027A950 File Offset: 0x00278B50
+		
 		public static int ResetShenZhuangJiQiHuiKuiHaoLiActivity()
 		{
 			string fileName = "Config/RiChangGifts/ShenZhuangAward.xml";
@@ -8405,7 +8405,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C6A RID: 11370 RVA: 0x0027A9B4 File Offset: 0x00278BB4
+		
 		public static YueDuZhuanPanActivity GetYueDuZhuanPanActivity()
 		{
 			lock (HuodongCachingMgr._YueDuZhuanPanActivityMutex)
@@ -8443,7 +8443,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002C6B RID: 11371 RVA: 0x0027AAF8 File Offset: 0x00278CF8
+		
 		public static int ResetYueDuZhuanPanActivity()
 		{
 			string fileName = "Config/RiChangGifts/NewDig2.xml";
@@ -8455,7 +8455,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06002C6C RID: 11372 RVA: 0x0027AB5C File Offset: 0x00278D5C
+		
 		public static void CheckJieRiActivityState(long ticks)
 		{
 			if (ticks - HuodongCachingMgr.lastJieRiProcessTicks >= 10000L)
@@ -8505,485 +8505,485 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04003A63 RID: 14947
+		
 		private static long lastJieRiProcessTicks = 0L;
 
-		// Token: 0x04003A64 RID: 14948
+		
 		private static int JieRiState = 0;
 
-		// Token: 0x04003A65 RID: 14949
+		
 		private static int HefuState = 1;
 
-		// Token: 0x04003A66 RID: 14950
+		
 		private static int ThemeState = 0;
 
-		// Token: 0x04003A67 RID: 14951
+		
 		private static Dictionary<int, WLoginItem> _WLoginDict = new Dictionary<int, WLoginItem>();
 
-		// Token: 0x04003A68 RID: 14952
+		
 		private static Dictionary<int, MOnlineTimeItem> _MonthTimeDict = new Dictionary<int, MOnlineTimeItem>();
 
-		// Token: 0x04003A69 RID: 14953
+		
 		private static Dictionary<int, NewStepItem> _NewStepDict = new Dictionary<int, NewStepItem>();
 
-		// Token: 0x04003A6A RID: 14954
+		
 		private static Dictionary<int, CombatAwardItem> _CombatAwardlDict = new Dictionary<int, CombatAwardItem>();
 
-		// Token: 0x04003A6B RID: 14955
+		
 		private static Dictionary<int, Dictionary<int, UpLevelItem>> _UpLevelDict = new Dictionary<int, Dictionary<int, UpLevelItem>>();
 
-		// Token: 0x04003A6C RID: 14956
+		
 		private static object _BigAwardItemMutex = new object();
 
-		// Token: 0x04003A6D RID: 14957
+		
 		private static BigAwardItem _BigAwardItem = null;
 
-		// Token: 0x04003A6E RID: 14958
+		
 		private static object _SongLiItemMutex = new object();
 
-		// Token: 0x04003A6F RID: 14959
+		
 		private static SongLiItem _SongLiItem = null;
 
-		// Token: 0x04003A70 RID: 14960
+		
 		private static DateTime _LimitTimeLoginStartTime = new DateTime(1971, 1, 1);
 
-		// Token: 0x04003A71 RID: 14961
+		
 		private static DateTime _LimitTimeLoginEndTime = new DateTime(1971, 1, 1);
 
-		// Token: 0x04003A72 RID: 14962
+		
 		private static Dictionary<int, LimitTimeLoginItem> _LimitTimeLoginDict = new Dictionary<int, LimitTimeLoginItem>();
 
-		// Token: 0x04003A73 RID: 14963
+		
 		private static Dictionary<int, EveryDayOnLineAward> _EveryDayOnLineAwardDict = new Dictionary<int, EveryDayOnLineAward>();
 
-		// Token: 0x04003A74 RID: 14964
+		
 		private static Dictionary<int, SeriesLoginAward> _SeriesLoginAward = new Dictionary<int, SeriesLoginAward>();
 
-		// Token: 0x04003A75 RID: 14965
+		
 		private static FirstChongZhiGift _FirstChongZhiActivity = null;
 
-		// Token: 0x04003A76 RID: 14966
+		
 		private static object _FirstChongZhiActivityMutex = new object();
 
-		// Token: 0x04003A77 RID: 14967
+		
 		private static InputFanLiActivity _InputFanLiActivity = null;
 
-		// Token: 0x04003A78 RID: 14968
+		
 		private static object _InputFanLiActivityMutex = new object();
 
-		// Token: 0x04003A79 RID: 14969
+		
 		private static InputSongActivity _InputSongActivity = null;
 
-		// Token: 0x04003A7A RID: 14970
+		
 		private static object _InputSongActivityMutex = new object();
 
-		// Token: 0x04003A7B RID: 14971
+		
 		private static KingActivity _InputKingActivity = null;
 
-		// Token: 0x04003A7C RID: 14972
+		
 		private static object _InputKingActivityMutex = new object();
 
-		// Token: 0x04003A7D RID: 14973
+		
 		private static KingActivity _LevelKingActivity = null;
 
-		// Token: 0x04003A7E RID: 14974
+		
 		private static object _LevelKingActivityMutex = new object();
 
-		// Token: 0x04003A7F RID: 14975
+		
 		private static KingActivity _EquipKingActivity = null;
 
-		// Token: 0x04003A80 RID: 14976
+		
 		private static object _EquipKingActivityMutex = new object();
 
-		// Token: 0x04003A81 RID: 14977
+		
 		private static KingActivity _HorseKingActivity = null;
 
-		// Token: 0x04003A82 RID: 14978
+		
 		private static object _HorseKingActivityMutex = new object();
 
-		// Token: 0x04003A83 RID: 14979
+		
 		private static KingActivity _JingMaiKingActivity = null;
 
-		// Token: 0x04003A84 RID: 14980
+		
 		private static object _JingMaiKingActivityMutex = new object();
 
-		// Token: 0x04003A85 RID: 14981
+		
 		private static KingActivity _XinXiaofeiKingActivity = null;
 
-		// Token: 0x04003A86 RID: 14982
+		
 		private static object _XinXiaofeiKingMutex = new object();
 
-		// Token: 0x04003A87 RID: 14983
+		
 		public static Dictionary<int, UpLevelAwardItem> UpLevelAwardItemDict = null;
 
-		// Token: 0x04003A88 RID: 14984
+		
 		public static Dictionary<int, KaiFuGiftItem> KaiFuGiftItemDict = null;
 
-		// Token: 0x04003A89 RID: 14985
+		
 		private static int LastProcessGetKaiFuGiftAwardDayID = 0;
 
-		// Token: 0x04003A8A RID: 14986
+		
 		public static int ProcessKaiFuGiftAwardHour = 12;
 
-		// Token: 0x04003A8B RID: 14987
+		
 		private static int LastAutoAddKaiFuGiftRoleNumDayID = TimeUtil.NowDateTime().DayOfYear;
 
-		// Token: 0x04003A8C RID: 14988
+		
 		private static JieriActivityConfig _JieriActivityConfig = null;
 
-		// Token: 0x04003A8D RID: 14989
+		
 		private static object _JieriActivityConfigMutex = new object();
 
-		// Token: 0x04003A8E RID: 14990
+		
 		private static ThemeActivityConfig _ThemeActivityConfig = null;
 
-		// Token: 0x04003A8F RID: 14991
+		
 		private static object _ThemeActivityConfigMutex = new object();
 
-		// Token: 0x04003A90 RID: 14992
+		
 		private static ThemeDaLiBaoActivity _ThemeDaLiBaoActivity = null;
 
-		// Token: 0x04003A91 RID: 14993
+		
 		private static object _ThemeDaLiBaoActivityMutex = new object();
 
-		// Token: 0x04003A92 RID: 14994
+		
 		private static ThemeDuiHuanActivity _ThemeDuiHuanActivity = null;
 
-		// Token: 0x04003A93 RID: 14995
+		
 		private static object _ThemeDuiHuanActivityMutex = new object();
 
-		// Token: 0x04003A94 RID: 14996
+		
 		private static ThemeZhiGouActivity _ThemeZhiGouActivity = null;
 
-		// Token: 0x04003A95 RID: 14997
+		
 		private static object _ThemeZhiGouActivityMutex = new object();
 
-		// Token: 0x04003A96 RID: 14998
+		
 		private static JieriDaLiBaoActivity _JieriDaLiBaoActivity = null;
 
-		// Token: 0x04003A97 RID: 14999
+		
 		private static object _JieriDaLiBaoActivityMutex = new object();
 
-		// Token: 0x04003A98 RID: 15000
+		
 		private static JieRiDengLuActivity _JieRiDengLuActivity = null;
 
-		// Token: 0x04003A99 RID: 15001
+		
 		private static object _JieriDengLuActivityMutex = new object();
 
-		// Token: 0x04003A9A RID: 15002
+		
 		private static JieriVIPActivity _JieriVIPActivity = null;
 
-		// Token: 0x04003A9B RID: 15003
+		
 		private static object _JieriVIPActivityMutex = new object();
 
-		// Token: 0x04003A9C RID: 15004
+		
 		private static JieriGiveActivity _JieriGiveActivity = null;
 
-		// Token: 0x04003A9D RID: 15005
+		
 		private static object _JieriGiveMutex = new object();
 
-		// Token: 0x04003A9E RID: 15006
+		
 		private static JieriRecvActivity _JieriRecvActivity = null;
 
-		// Token: 0x04003A9F RID: 15007
+		
 		private static object _JieriRecvMutex = new object();
 
-		// Token: 0x04003AA0 RID: 15008
+		
 		private static JieRiGiveKingActivity _JieriGiveKingActivity = null;
 
-		// Token: 0x04003AA1 RID: 15009
+		
 		private static object _JieriGiveKingMutex = new object();
 
-		// Token: 0x04003AA2 RID: 15010
+		
 		private static JieRiRecvKingActivity _JieriRecvKingActivity = null;
 
-		// Token: 0x04003AA3 RID: 15011
+		
 		private static object _JieriRecvKingMutex = new object();
 
-		// Token: 0x04003AA4 RID: 15012
+		
 		private static JieRiFuLiActivity _JieriFuLiActivity = null;
 
-		// Token: 0x04003AA5 RID: 15013
+		
 		private static object _JieriFuLiMutex = new object();
 
-		// Token: 0x04003AA6 RID: 15014
+		
 		private static JieriCZSongActivity _JieriCZSongActivity = null;
 
-		// Token: 0x04003AA7 RID: 15015
+		
 		private static object _JieriCZSongActivityMutex = new object();
 
-		// Token: 0x04003AA8 RID: 15016
+		
 		private static JieRiCZQGActivity _JieRiCZQGActivity = null;
 
-		// Token: 0x04003AA9 RID: 15017
+		
 		private static object _JieRiCZQGActivityMutex = new object();
 
-		// Token: 0x04003AAA RID: 15018
+		
 		private static OneDollarBuyActivity _OneDollarBuyActivity = null;
 
-		// Token: 0x04003AAB RID: 15019
+		
 		private static object _OneDollarBuyActivityMutex = new object();
 
-		// Token: 0x04003AAC RID: 15020
+		
 		private static OneDollarChongZhi _OneDollarChongZhi = null;
 
-		// Token: 0x04003AAD RID: 15021
+		
 		private static object _OneDollarChongZhiMutex = new object();
 
-		// Token: 0x04003AAE RID: 15022
+		
 		private static InputFanLiNew _InputFanLiNew = null;
 
-		// Token: 0x04003AAF RID: 15023
+		
 		private static object _InputFanLiNewMutex = new object();
 
-		// Token: 0x04003AB0 RID: 15024
+		
 		private static RegressActiveOpen _RegressActiveOpen = null;
 
-		// Token: 0x04003AB1 RID: 15025
+		
 		private static object _RegressActiveOpenMutex = new object();
 
-		// Token: 0x04003AB2 RID: 15026
+		
 		private static RegressActiveSignGift _RegressActiveSignGift = null;
 
-		// Token: 0x04003AB3 RID: 15027
+		
 		private static object _RegressActiveSignGiftMutex = new object();
 
-		// Token: 0x04003AB4 RID: 15028
+		
 		private static RegressActiveTotalRecharge _RegressActiveTotalRecharge = null;
 
-		// Token: 0x04003AB5 RID: 15029
+		
 		private static object _RegressActiveTotalRechargeMutex = new object();
 
-		// Token: 0x04003AB6 RID: 15030
+		
 		private static RegressActiveDayBuy _RegressActiveDayBuy = null;
 
-		// Token: 0x04003AB7 RID: 15031
+		
 		private static object _RegressActiveDayBuyMutex = new object();
 
-		// Token: 0x04003AB8 RID: 15032
+		
 		private static RegressActiveStore _RegressActiveStore = null;
 
-		// Token: 0x04003AB9 RID: 15033
+		
 		private static object _RegressActiveStoreMutex = new object();
 
-		// Token: 0x04003ABA RID: 15034
+		
 		private static JieriSuperInputActivity _JieriSuperInput = null;
 
-		// Token: 0x04003ABB RID: 15035
+		
 		private static object _JieriSuperInputMutex = new object();
 
-		// Token: 0x04003ABC RID: 15036
+		
 		private static JieriVIPYouHuiActivity _JieriVIPYouHuiActivity = null;
 
-		// Token: 0x04003ABD RID: 15037
+		
 		private static object _JieriVIPYouHuiActMutex = new object();
 
-		// Token: 0x04003ABE RID: 15038
+		
 		private static SpecialActivity _SpecialActivity = null;
 
-		// Token: 0x04003ABF RID: 15039
+		
 		private static object _SpecialActivityMutex = new object();
 
-		// Token: 0x04003AC0 RID: 15040
+		
 		private static SpecPriorityActivity _SpecPriorityActivity = null;
 
-		// Token: 0x04003AC1 RID: 15041
+		
 		private static object _SpecPriorityActivityMutex = new object();
 
-		// Token: 0x04003AC2 RID: 15042
+		
 		private static EverydayActivity _EverydayActivity = null;
 
-		// Token: 0x04003AC3 RID: 15043
+		
 		private static object _EverydayActivityMutex = new object();
 
-		// Token: 0x04003AC4 RID: 15044
+		
 		private static JieriIPointsExchgActivity _JieriIPointsExchgActivity = null;
 
-		// Token: 0x04003AC5 RID: 15045
+		
 		private static object _JieriIPointsExchgActivityMutex = new object();
 
-		// Token: 0x04003AC6 RID: 15046
+		
 		private static WeedEndInputActivity _WeedEndInputActivity = null;
 
-		// Token: 0x04003AC7 RID: 15047
+		
 		private static object _WeedEndInputActivityMutex = new object();
 
-		// Token: 0x04003AC8 RID: 15048
+		
 		private static JieRiLeiJiCZActivity _JieRiLeiJiCZActivity = null;
 
-		// Token: 0x04003AC9 RID: 15049
+		
 		private static object _JieRiLeiJiCZActivityMutex = new object();
 
-		// Token: 0x04003ACA RID: 15050
+		
 		private static JieRiTotalConsumeActivity _JieRiTotalConsumeActivity = null;
 
-		// Token: 0x04003ACB RID: 15051
+		
 		private static object _JieRiTotalConsumeActivityMutex = new object();
 
-		// Token: 0x04003ACC RID: 15052
+		
 		private static JieRiMeiRiLeiJiActivity _JieRiMeiRiLeiJiActivity = null;
 
-		// Token: 0x04003ACD RID: 15053
+		
 		private static object _JieRiMeiRiLeiJiActivityMutex = new object();
 
-		// Token: 0x04003ACE RID: 15054
+		
 		private static JieRiMultAwardActivity _JieRiMultAwardActivity = null;
 
-		// Token: 0x04003ACF RID: 15055
+		
 		private static object _JieRiMultAwardActivityMutex = new object();
 
-		// Token: 0x04003AD0 RID: 15056
+		
 		private static JieRiZiKaLiaBaoActivity _JieRiZiKaLiaBaoActivity = null;
 
-		// Token: 0x04003AD1 RID: 15057
+		
 		private static object _JieRiZiKaLiaBaoActivityMutex = new object();
 
-		// Token: 0x04003AD2 RID: 15058
+		
 		private static KingActivity _JieRiXiaoFeiKingActivity = null;
 
-		// Token: 0x04003AD3 RID: 15059
+		
 		private static object _JieRiXiaoFeiKingActivityMutex = new object();
 
-		// Token: 0x04003AD4 RID: 15060
+		
 		private static KingActivity _JieRiCZKingActivity = null;
 
-		// Token: 0x04003AD5 RID: 15061
+		
 		private static object _JieRiCZKingActivityMutex = new object();
 
-		// Token: 0x04003AD6 RID: 15062
+		
 		private static HuodongCachingMgr.TotalChargeActivity _TotalChargeActivity = null;
 
-		// Token: 0x04003AD7 RID: 15063
+		
 		private static object _TotalChargeActivityMutex = new object();
 
-		// Token: 0x04003AD8 RID: 15064
+		
 		private static HuodongCachingMgr.TotalConsumeActivity _TotalConsumeActivity = null;
 
-		// Token: 0x04003AD9 RID: 15065
+		
 		private static object _TotalConsumeActivityMutex = new object();
 
-		// Token: 0x04003ADA RID: 15066
+		
 		private static JieriFanLiActivity[] _JieriWingFanliAct = new JieriFanLiActivity[11];
 
-		// Token: 0x04003ADB RID: 15067
+		
 		private static object _JieriWingFanliActMutex = new object();
 
-		// Token: 0x04003ADC RID: 15068
+		
 		private static object _JieriLianXuChargeMutex = new object();
 
-		// Token: 0x04003ADD RID: 15069
+		
 		private static JieriLianXuChargeActivity _JieriLianXuChargeAct = null;
 
-		// Token: 0x04003ADE RID: 15070
+		
 		private static object _JieriPlatChargeKingMutex = new object();
 
-		// Token: 0x04003ADF RID: 15071
+		
 		private static JieriPlatChargeKing _JieriPlatChargeKingAct = null;
 
-		// Token: 0x04003AE0 RID: 15072
+		
 		private static object _JieriPCKingEveryDayMutex = new object();
 
-		// Token: 0x04003AE1 RID: 15073
+		
 		private static JieriPlatChargeKingEveryDay _JieriPCKingEveryDayAct = null;
 
-		// Token: 0x04003AE2 RID: 15074
+		
 		private static object _DanBiChongZhiMutex = new object();
 
-		// Token: 0x04003AE3 RID: 15075
+		
 		private static DanBiChongZhiActivity _DanBiChongZhiAct = null;
 
-		// Token: 0x04003AE4 RID: 15076
+		
 		private static HeFuActivityConfig _HeFuActivityConfig = null;
 
-		// Token: 0x04003AE5 RID: 15077
+		
 		private static object _HeFuActivityConfigMutex = new object();
 
-		// Token: 0x04003AE6 RID: 15078
+		
 		private static HeFuLoginActivity _HeFuLoginActivity = null;
 
-		// Token: 0x04003AE7 RID: 15079
+		
 		private static object _HeFuLoginActivityMutex = new object();
 
-		// Token: 0x04003AE8 RID: 15080
+		
 		private static HeFuRechargeActivity _HeFuRechargeActivity = null;
 
-		// Token: 0x04003AE9 RID: 15081
+		
 		private static object _HeFuRechargeActivityMutex = new object();
 
-		// Token: 0x04003AEA RID: 15082
+		
 		private static HeFuTotalLoginActivity _HeFuTotalLoginActivity = null;
 
-		// Token: 0x04003AEB RID: 15083
+		
 		private static object _HeFuTotalLoginActivityMutex = new object();
 
-		// Token: 0x04003AEC RID: 15084
+		
 		private static HeFuPKKingActivity _HeFuPKKingActivity = null;
 
-		// Token: 0x04003AED RID: 15085
+		
 		private static object _HeFuAwardTimeActivityMutex = new object();
 
-		// Token: 0x04003AEE RID: 15086
+		
 		private static HeFuAwardTimesActivity _HeFuAwardTimeActivity = null;
 
-		// Token: 0x04003AEF RID: 15087
+		
 		private static HeFuLuoLanActivity _HeFuLuoLanActivity = null;
 
-		// Token: 0x04003AF0 RID: 15088
+		
 		private static object _HeFuLuoLanActivityMutex = new object();
 
-		// Token: 0x04003AF1 RID: 15089
+		
 		private static object _HeFuPKKingActivityMutex = new object();
 
-		// Token: 0x04003AF2 RID: 15090
+		
 		private static HeFuWCKingActivity _HeFuWCKingActivity = null;
 
-		// Token: 0x04003AF3 RID: 15091
+		
 		private static object _HeFuWCKingActivityMutex = new object();
 
-		// Token: 0x04003AF4 RID: 15092
+		
 		private static XinFanLiActivity _XinFanLiActivity = null;
 
-		// Token: 0x04003AF5 RID: 15093
+		
 		private static object _XinFanLiActivityMutex = new object();
 
-		// Token: 0x04003AF6 RID: 15094
+		
 		private static object _MeiRiChongZhiHaoLiActivityMutex = new object();
 
-		// Token: 0x04003AF7 RID: 15095
+		
 		private static MeiRiChongZhiActivity _MeiRiChongZhiHaoLiActivity = null;
 
-		// Token: 0x04003AF8 RID: 15096
+		
 		private static object _ChongJiHaoLiActivityMutex = new object();
 
-		// Token: 0x04003AF9 RID: 15097
+		
 		private static ChongJiHaoLiActivity _ChongJiHaoLiActivity = null;
 
-		// Token: 0x04003AFA RID: 15098
+		
 		private static object _ShenZhuangJiQingHuiKuiHaoLiActivityMutex = new object();
 
-		// Token: 0x04003AFB RID: 15099
+		
 		private static ShenZhuangHuiKuiHaoLiActivity _ShenZhuangJiQingHuiKuiHaoLiActivity = null;
 
-		// Token: 0x04003AFC RID: 15100
+		
 		private static object _YueDuZhuanPanActivityMutex = new object();
 
-		// Token: 0x04003AFD RID: 15101
+		
 		private static YueDuZhuanPanActivity _YueDuZhuanPanActivity = null;
 
-		// Token: 0x02000721 RID: 1825
+		
 		private static class GiftCodeFlags
 		{
-			// Token: 0x04003AFF RID: 15103
+			
 			public const int Local = 1;
 
-			// Token: 0x04003B00 RID: 15104
+			
 			public const int Center = 2;
 		}
 
-		// Token: 0x02000722 RID: 1826
+		
 		public class TotalConsumeActivity : KingActivity
 		{
-			// Token: 0x06002C70 RID: 11376 RVA: 0x0027B23C File Offset: 0x0027943C
+			
 			public override bool CanGiveAward(GameClient client, int index, int totalMoney)
 			{
 				bool hasGet = false;
@@ -9002,10 +9002,10 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x02000723 RID: 1827
+		
 		public class TotalChargeActivity : KingActivity
 		{
-			// Token: 0x06002C72 RID: 11378 RVA: 0x0027B2D4 File Offset: 0x002794D4
+			
 			public override bool CanGiveAward(GameClient client, int index, int totalMoney)
 			{
 				bool hasGet = false;

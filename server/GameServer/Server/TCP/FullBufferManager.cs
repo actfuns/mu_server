@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace Server.TCP
 {
-	// Token: 0x020008C6 RID: 2246
+	
 	public class FullBufferManager
 	{
-		// Token: 0x06004006 RID: 16390 RVA: 0x003BA478 File Offset: 0x003B8678
+		
 		public static string GetErrorStr(int errorCode)
 		{
 			string failedReason = "未知";
@@ -25,7 +25,7 @@ namespace Server.TCP
 			return failedReason;
 		}
 
-		// Token: 0x06004008 RID: 16392 RVA: 0x003BA4E4 File Offset: 0x003B86E4
+		
 		public void Remove(TMSKSocket s)
 		{
 			if (this.ErrorDict.Count > 0)
@@ -37,7 +37,7 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x06004009 RID: 16393 RVA: 0x003BA550 File Offset: 0x003B8750
+		
 		public void Add(TMSKSocket s, int iError)
 		{
 			lock (this.ErrorDict)
@@ -53,7 +53,7 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x0600400A RID: 16394 RVA: 0x003BA5C8 File Offset: 0x003B87C8
+		
 		public string GetFullBufferInfoStr()
 		{
 			int numTimerOut = 0;
@@ -98,19 +98,19 @@ namespace Server.TCP
 			});
 		}
 
-		// Token: 0x04004F17 RID: 20247
+		
 		public const int Error_SendTimeOut = 0;
 
-		// Token: 0x04004F18 RID: 20248
+		
 		public const int Error_BufferFull = 1;
 
-		// Token: 0x04004F19 RID: 20249
+		
 		public const int Error_DiscardBigPacket = 2;
 
-		// Token: 0x04004F1A RID: 20250
+		
 		private Dictionary<TMSKSocket, int> ErrorDict = new Dictionary<TMSKSocket, int>();
 
-		// Token: 0x04004F1B RID: 20251
+		
 		private List<int> ListError = new List<int>();
 	}
 }

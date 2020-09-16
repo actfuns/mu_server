@@ -9,40 +9,40 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000298 RID: 664
+	
 	public class JingLingQiYuanManager : IManager
 	{
-		// Token: 0x060009D4 RID: 2516 RVA: 0x0009C474 File Offset: 0x0009A674
+		
 		public static JingLingQiYuanManager getInstance()
 		{
 			return JingLingQiYuanManager.instance;
 		}
 
-		// Token: 0x060009D5 RID: 2517 RVA: 0x0009C48C File Offset: 0x0009A68C
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x060009D6 RID: 2518 RVA: 0x0009C4B0 File Offset: 0x0009A6B0
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x060009D7 RID: 2519 RVA: 0x0009C4C4 File Offset: 0x0009A6C4
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x060009D8 RID: 2520 RVA: 0x0009C4D8 File Offset: 0x0009A6D8
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060009D9 RID: 2521 RVA: 0x0009C54C File Offset: 0x0009A74C
+		
 		public bool InitConfig()
 		{
 			string fileName = "";
@@ -182,7 +182,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060009DA RID: 2522 RVA: 0x0009CCD0 File Offset: 0x0009AED0
+		
 		private EquipPropItem GetGroupProp(string strEffect)
 		{
 			EquipPropItem result;
@@ -212,7 +212,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060009DB RID: 2523 RVA: 0x0009CDD0 File Offset: 0x0009AFD0
+		
 		public void RefreshProps(GameClient client, bool notifyPorpsChangeInfo = true)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot5))
@@ -360,28 +360,28 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04001064 RID: 4196
+		
 		private static JingLingQiYuanManager instance = new JingLingQiYuanManager();
 
-		// Token: 0x04001065 RID: 4197
+		
 		public JingLingQiYuanData RuntimeData = new JingLingQiYuanData();
 
-		// Token: 0x02000299 RID: 665
+		
 		private static class SubPropsTypes
 		{
-			// Token: 0x04001069 RID: 4201
+			
 			public const int Level = 0;
 
-			// Token: 0x0400106A RID: 4202
+			
 			public const int TianFuNum = 1;
 
-			// Token: 0x0400106B RID: 4203
+			
 			public const int PetGroup = 2;
 
-			// Token: 0x0400106C RID: 4204
+			
 			public const int PetSkill = 3;
 
-			// Token: 0x0400106D RID: 4205
+			
 			public const int PetSkillLev = 4;
 		}
 	}

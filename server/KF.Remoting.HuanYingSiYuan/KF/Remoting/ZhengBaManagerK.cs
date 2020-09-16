@@ -10,10 +10,10 @@ using Tmsk.Contract;
 
 namespace KF.Remoting
 {
-    // Token: 0x02000074 RID: 116
+    
     internal class ZhengBaManagerK
     {
-        // Token: 0x060005BC RID: 1468 RVA: 0x0004D798 File Offset: 0x0004B998
+        
         private ZhengBaManagerK()
         {
             this.StateMachine.Install(new ZhengBaStateMachine.StateHandler(ZhengBaStateMachine.StateType.Idle, null, new Action<DateTime>(this.MS_Idle_Update), null));
@@ -47,13 +47,13 @@ namespace KF.Remoting
             };
         }
 
-        // Token: 0x060005BD RID: 1469 RVA: 0x0004D950 File Offset: 0x0004BB50
+        
         public static ZhengBaManagerK Instance()
         {
             return ZhengBaManagerK._instance;
         }
 
-        // Token: 0x060005BE RID: 1470 RVA: 0x0004D968 File Offset: 0x0004BB68
+        
         public AsyncDataItem[] Update()
         {
             DateTime now = TimeUtil.NowDateTime();
@@ -82,7 +82,7 @@ namespace KF.Remoting
             return asyncEvArray;
         }
 
-        // Token: 0x060005BF RID: 1471 RVA: 0x0004DA98 File Offset: 0x0004BC98
+        
         private void MS_Idle_Update(DateTime now)
         {
             if (this.SyncData.RealActDay >= 1 && this.SyncData.RealActDay <= 7)
@@ -99,7 +99,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x060005C0 RID: 1472 RVA: 0x0004DB88 File Offset: 0x0004BD88
+        
         private void MS_TodayPkStart_Enter(DateTime now)
         {
             this.SyncData.TodayIsPking = true;
@@ -138,7 +138,7 @@ namespace KF.Remoting
             this.StateMachine.SetCurrState(ZhengBaStateMachine.StateType.InitPkLoop, now);
         }
 
-        // Token: 0x060005C1 RID: 1473 RVA: 0x0004DDC0 File Offset: 0x0004BFC0
+        
         private void MS_InitPkLoop_Enter(DateTime now)
         {
             this.ThisLoopPkLogs.Clear();
@@ -245,7 +245,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x060005C2 RID: 1474 RVA: 0x0004E2C4 File Offset: 0x0004C4C4
+        
         private void MS_NotifyEnter_Update(DateTime now)
         {
             ZhengBaMatchConfig matchConfig = this._Config.MatchConfigList.Find((ZhengBaMatchConfig _m) => _m.Day == this.SyncData.RealActDay);
@@ -301,7 +301,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x060005C3 RID: 1475 RVA: 0x0004E4DC File Offset: 0x0004C6DC
+        
         private void MS_PkLoopStart_Update(DateTime now)
         {
             ZhengBaMatchConfig matchConfig = this._Config.MatchConfigList.Find((ZhengBaMatchConfig _m) => _m.Day == this.SyncData.RealActDay);
@@ -311,7 +311,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x060005C4 RID: 1476 RVA: 0x0004E568 File Offset: 0x0004C768
+        
         private void MS_PkLoopEnd_Update(DateTime now)
         {
             ZhengBaMatchConfig matchConfig = this._Config.MatchConfigList.Find((ZhengBaMatchConfig _m) => _m.Day == this.SyncData.RealActDay);
@@ -349,7 +349,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x060005C5 RID: 1477 RVA: 0x0004E740 File Offset: 0x0004C940
+        
         private void MS_TodayPkEnd_Enter(DateTime now)
         {
             this.SyncData.TodayIsPking = false;
@@ -365,7 +365,7 @@ namespace KF.Remoting
             }));
         }
 
-        // Token: 0x060005C6 RID: 1478 RVA: 0x0004E7B0 File Offset: 0x0004C9B0
+        
         public void InitConfig()
         {
             if (!this._Config.Load(KuaFuServerManager.GetResourcePath("Config\\Match.xml", KuaFuServerManager.ResourcePathTypes.GameRes), KuaFuServerManager.GetResourcePath("Config\\Sustain.xml", KuaFuServerManager.ResourcePathTypes.GameRes), KuaFuServerManager.GetResourcePath("Config\\MatchBirthPoint.xml", KuaFuServerManager.ResourcePathTypes.GameRes)))
@@ -374,7 +374,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x060005C7 RID: 1479 RVA: 0x0004E81C File Offset: 0x0004CA1C
+        
         public void ReloadSyncData(DateTime now)
         {
             int selectRoleIfNewCreate = 100;
@@ -392,7 +392,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x060005C8 RID: 1480 RVA: 0x0004EAA4 File Offset: 0x0004CCA4
+        
         private bool FixSyncData_State(DateTime now)
         {
             bool bForceModify = false;
@@ -543,7 +543,7 @@ namespace KF.Remoting
             return bForceModify;
         }
 
-        // Token: 0x060005C9 RID: 1481 RVA: 0x0004F264 File Offset: 0x0004D464
+        
         private bool FixSyncData_Group(DateTime now)
         {
             bool bForceModify = false;
@@ -589,7 +589,7 @@ namespace KF.Remoting
             return bForceModify;
         }
 
-        // Token: 0x060005CA RID: 1482 RVA: 0x0004F4DC File Offset: 0x0004D6DC
+        
         private void FixSyncData(DateTime now)
         {
             lock (this.Mutex)
@@ -609,7 +609,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x060005CB RID: 1483 RVA: 0x0004F5D8 File Offset: 0x0004D7D8
+        
         public ZhengBaSyncData SyncZhengBaData(ZhengBaSyncData lastSyncData)
         {
             ZhengBaSyncData result = new ZhengBaSyncData();
@@ -640,7 +640,7 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x060005CC RID: 1484 RVA: 0x0004F7C0 File Offset: 0x0004D9C0
+        
         public int ZhengBaSupport(ZhengBaSupportLogData data)
         {
             int result;
@@ -686,7 +686,7 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x060005CD RID: 1485 RVA: 0x0004F9D0 File Offset: 0x0004DBD0
+        
         public int ZhengBaRequestEnter(int roleId, int gameId, EZhengBaEnterType enter)
         {
             lock (this.Mutex)
@@ -732,7 +732,7 @@ namespace KF.Remoting
             return 0;
         }
 
-        // Token: 0x060005CE RID: 1486 RVA: 0x0004FBC0 File Offset: 0x0004DDC0
+        
         public int ZhengBaKuaFuLogin(int roleid, int gameId)
         {
             lock (this.Mutex)
@@ -752,7 +752,7 @@ namespace KF.Remoting
             return 0;
         }
 
-        // Token: 0x060005CF RID: 1487 RVA: 0x0004FD84 File Offset: 0x0004DF84
+        
         public List<ZhengBaNtfPkResultData> ZhengBaPkResult(int gameId, int winner1, int FirstLeaveRoleId)
         {
             List<ZhengBaNtfPkResultData> result;
@@ -889,76 +889,76 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x04000313 RID: 787
+        
         private static ZhengBaManagerK _instance = new ZhengBaManagerK();
 
-        // Token: 0x04000314 RID: 788
+        
         private ZhengBaSyncData SyncData = new ZhengBaSyncData
         {
             Month = ZhengBaUtils.MakeMonth(TimeUtil.NowDateTime())
         };
 
-        // Token: 0x04000315 RID: 789
+        
         private DateTime lastUpdateTime = TimeUtil.NowDateTime();
 
-        // Token: 0x04000316 RID: 790
+        
         private Queue<AsyncDataItem> AsyncEvQ = new Queue<AsyncDataItem>();
 
-        // Token: 0x04000317 RID: 791
+        
         private int HadUpGradeRoleNum = 0;
 
-        // Token: 0x04000318 RID: 792
+        
         private List<int> RandomGroup = new List<int>();
 
-        // Token: 0x04000319 RID: 793
+        
         private ZhengBaConfig _Config = new ZhengBaConfig();
 
-        // Token: 0x0400031A RID: 794
+        
         private List<ZhengBaManagerK.JoinRolePkData> TodayJoinRoleDatas = new List<ZhengBaManagerK.JoinRolePkData>();
 
-        // Token: 0x0400031B RID: 795
+        
         private Dictionary<int, ZhengBaPkLogData> ThisLoopPkLogs = new Dictionary<int, ZhengBaPkLogData>();
 
-        // Token: 0x0400031C RID: 796
+        
         private int CurrLoopIndex = 0;
 
-        // Token: 0x0400031D RID: 797
+        
         private ZhengBaStateMachine StateMachine = new ZhengBaStateMachine();
 
-        // Token: 0x0400031E RID: 798
+        
         private object Mutex = new object();
 
-        // Token: 0x0400031F RID: 799
+        
         private ZhengBaPersistence Persistence = ZhengBaPersistence.Instance;
 
-        // Token: 0x02000075 RID: 117
+        
         private class JoinRolePkData
         {
-            // Token: 0x04000323 RID: 803
+            
             public int RoleID;
 
-            // Token: 0x04000324 RID: 804
+            
             public int ZoneId;
 
-            // Token: 0x04000325 RID: 805
+            
             public string RoleName;
 
-            // Token: 0x04000326 RID: 806
+            
             public int Group;
 
-            // Token: 0x04000327 RID: 807
+            
             public int ToServerID;
 
-            // Token: 0x04000328 RID: 808
+            
             public int CurrGameID;
 
-            // Token: 0x04000329 RID: 809
+            
             public bool WaitReqEnter;
 
-            // Token: 0x0400032A RID: 810
+            
             public bool WaitKuaFuLogin;
 
-            // Token: 0x0400032B RID: 811
+            
             public int WinTimes;
         }
     }

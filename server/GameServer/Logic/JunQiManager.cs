@@ -12,10 +12,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200073B RID: 1851
+	
 	public class JunQiManager
 	{
-		// Token: 0x06002E53 RID: 11859 RVA: 0x00287B34 File Offset: 0x00285D34
+		
 		public static void AddKillJunQiItem(int mapCode, int npcID, int bhid)
 		{
 			string key = string.Format("{0}_{1}", mapCode, npcID);
@@ -29,7 +29,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E54 RID: 11860 RVA: 0x00287BB8 File Offset: 0x00285DB8
+		
 		public static bool CanInstallJunQiNow(int mapCode, int npcExtentionID, int bhid)
 		{
 			KillJunQiItem killJunQiItem = null;
@@ -53,7 +53,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06002E55 RID: 11861 RVA: 0x00287C74 File Offset: 0x00285E74
+		
 		public static void LoadBangHuiJunQiItemsDictFromDBServer()
 		{
 			byte[] bytesData = null;
@@ -87,7 +87,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E56 RID: 11862 RVA: 0x00287DB0 File Offset: 0x00285FB0
+		
 		public static void NotifySyncBangHuiJunQiItemsDict(GameClient client)
 		{
 			string gmCmdData = string.Format("-syncjunqi", new object[0]);
@@ -105,7 +105,7 @@ namespace GameServer.Logic
 			}), null, 0);
 		}
 
-		// Token: 0x06002E57 RID: 11863 RVA: 0x00287E50 File Offset: 0x00286050
+		
 		public static int GetJunQiLevelByBHID(int bhid)
 		{
 			int result;
@@ -128,7 +128,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E58 RID: 11864 RVA: 0x00287E94 File Offset: 0x00286094
+		
 		public static string GetJunQiNameByBHID(int bhid)
 		{
 			string result;
@@ -151,7 +151,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E59 RID: 11865 RVA: 0x00287EF8 File Offset: 0x002860F8
+		
 		public static Dictionary<int, BangHuiLingDiItemData> LoadBangHuiLingDiItemsDictFromDBServer(int serverId)
 		{
 			byte[] bytesData = null;
@@ -173,7 +173,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E5A RID: 11866 RVA: 0x00287F80 File Offset: 0x00286180
+		
 		public static void LoadBangHuiLingDiItemsDictFromDBServer()
 		{
 			Dictionary<int, BangHuiLingDiItemData> oldBangHuiLingDiItemsDict = JunQiManager._BangHuiLingDiItemsDict;
@@ -215,13 +215,13 @@ namespace GameServer.Logic
 			Global.UpdateWangChengZhanWeekDays(true);
 		}
 
-		// Token: 0x06002E5B RID: 11867 RVA: 0x00288130 File Offset: 0x00286330
+		
 		public static Dictionary<int, BangHuiLingDiItemData> GetBangHuiLingDiItemsDict()
 		{
 			return JunQiManager._BangHuiLingDiItemsDict;
 		}
 
-		// Token: 0x06002E5C RID: 11868 RVA: 0x00288148 File Offset: 0x00286348
+		
 		public static void NotifySyncBangHuiLingDiItemsDict()
 		{
 			JunQiManager.LoadBangHuiLingDiItemsDictFromDBServer();
@@ -240,7 +240,7 @@ namespace GameServer.Logic
 			}), null, 0);
 		}
 
-		// Token: 0x06002E5D RID: 11869 RVA: 0x002881DC File Offset: 0x002863DC
+		
 		public static BangHuiLingDiItemData GetItemByLingDiID(int lingDiID)
 		{
 			BangHuiLingDiItemData result;
@@ -263,7 +263,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E5E RID: 11870 RVA: 0x0028821C File Offset: 0x0028641C
+		
 		public static int GetBHIDByLingDiID(int lingDiID)
 		{
 			int result;
@@ -286,7 +286,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E5F RID: 11871 RVA: 0x00288260 File Offset: 0x00286460
+		
 		public static int GetTaxByLingDiID(int lingDiID)
 		{
 			int result;
@@ -309,7 +309,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E60 RID: 11872 RVA: 0x002882A4 File Offset: 0x002864A4
+		
 		public static BangHuiLingDiItemData GetFirstLingDiItemDataByBHID(int bhid)
 		{
 			BangHuiLingDiItemData result;
@@ -340,7 +340,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E61 RID: 11873 RVA: 0x0028836C File Offset: 0x0028656C
+		
 		public static BangHuiLingDiItemData GetAnyLingDiItemDataByBHID(int bhid)
 		{
 			BangHuiLingDiItemData result;
@@ -367,7 +367,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E62 RID: 11874 RVA: 0x00288408 File Offset: 0x00286608
+		
 		private static Point GetQiZuoNPCPosition(int mapCode, int npcID)
 		{
 			SystemXmlItem systemQiZuoItem = null;
@@ -390,7 +390,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E63 RID: 11875 RVA: 0x002884DC File Offset: 0x002866DC
+		
 		private static Point GetNormalMapJunQiPosition(int mapCode)
 		{
 			SystemXmlItem systemQiZiItem = null;
@@ -406,7 +406,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E64 RID: 11876 RVA: 0x00288540 File Offset: 0x00286740
+		
 		private static JunQiItem AddJunQi(int mapCode, int bhid, int zoneID, string bhName, int npcID, string junQiName, int junQiLevel, SceneUIClasses sceneType = SceneUIClasses.Normal)
 		{
 			SystemXmlItem systemJunQiItem = null;
@@ -473,7 +473,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E65 RID: 11877 RVA: 0x002887A0 File Offset: 0x002869A0
+		
 		public static JunQiItem FindJunQiByNpcID(int npcID)
 		{
 			JunQiItem JunQiItem = null;
@@ -484,7 +484,7 @@ namespace GameServer.Logic
 			return JunQiItem;
 		}
 
-		// Token: 0x06002E66 RID: 11878 RVA: 0x002887FC File Offset: 0x002869FC
+		
 		public static JunQiItem FindJunQiByID(int JunQiID)
 		{
 			JunQiItem JunQiItem = null;
@@ -495,7 +495,7 @@ namespace GameServer.Logic
 			return JunQiItem;
 		}
 
-		// Token: 0x06002E67 RID: 11879 RVA: 0x00288858 File Offset: 0x00286A58
+		
 		public static JunQiItem FindJunQiByBHID(int bhid)
 		{
 			JunQiItem JunQiItem = null;
@@ -513,7 +513,7 @@ namespace GameServer.Logic
 			return JunQiItem;
 		}
 
-		// Token: 0x06002E68 RID: 11880 RVA: 0x00288908 File Offset: 0x00286B08
+		
 		private static void RemoveJunQi(int JunQiID)
 		{
 			JunQiItem JunQiItem = null;
@@ -537,7 +537,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E69 RID: 11881 RVA: 0x002889E0 File Offset: 0x00286BE0
+		
 		private static int CalcJunQiNumByMapCode(int mapCode, out int bhid)
 		{
 			bhid = 0;
@@ -571,7 +571,7 @@ namespace GameServer.Logic
 			return maxNum;
 		}
 
-		// Token: 0x06002E6A RID: 11882 RVA: 0x00288B44 File Offset: 0x00286D44
+		
 		private static string GetBHNameByNPCID(int npcID)
 		{
 			JunQiItem junQiItem = JunQiManager.FindJunQiByNpcID(npcID);
@@ -587,7 +587,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E6B RID: 11883 RVA: 0x00288B84 File Offset: 0x00286D84
+		
 		public static bool ProcessNewJunQi(SocketListener sl, TCPOutPacketPool pool, int mapCode, int bhid, int zoneID, string bhName, int npcID, string junQiName, int junQiLevel, SceneUIClasses sceneType = SceneUIClasses.Normal)
 		{
 			JunQiItem JunQiItem = JunQiManager.AddJunQi(mapCode, bhid, zoneID, bhName, npcID, junQiName, junQiLevel, sceneType);
@@ -613,7 +613,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E6C RID: 11884 RVA: 0x00288C30 File Offset: 0x00286E30
+		
 		public static void ProcessDelJunQi(SocketListener sl, TCPOutPacketPool pool, int JunQiID)
 		{
 			JunQiItem JunQiItem = JunQiManager.FindJunQiByID(JunQiID);
@@ -624,7 +624,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E6D RID: 11885 RVA: 0x00288C78 File Offset: 0x00286E78
+		
 		public static void ProcessDelAllJunQiByMapCode(SocketListener sl, TCPOutPacketPool pool, int mapCode)
 		{
 			List<JunQiItem> junQiItemList = new List<JunQiItem>();
@@ -645,7 +645,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E6E RID: 11886 RVA: 0x00288D80 File Offset: 0x00286F80
+		
 		public static void ProcessDelAllJunQiByBHID(SocketListener sl, TCPOutPacketPool pool, int bhid)
 		{
 			List<JunQiItem> junQiItemList = new List<JunQiItem>();
@@ -666,7 +666,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E6F RID: 11887 RVA: 0x00288E88 File Offset: 0x00287088
+		
 		private static List<int> GetQiZuoNPCIDList(int mapCode)
 		{
 			SystemXmlItem systemQiZuoItem = null;
@@ -687,7 +687,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E70 RID: 11888 RVA: 0x00288EFC File Offset: 0x002870FC
+		
 		public static void ProcessAllNewJunQiByMapCode(int mapCode, int bhid, int zoneID, string bhName)
 		{
 			List<int> list = JunQiManager.GetQiZuoNPCIDList(mapCode);
@@ -702,7 +702,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E71 RID: 11889 RVA: 0x00288F70 File Offset: 0x00287170
+		
 		public static void NotifyOthersShowJunQi(SocketListener sl, TCPOutPacketPool pool, JunQiItem JunQiItem)
 		{
 			if (null != JunQiItem)
@@ -711,7 +711,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E72 RID: 11890 RVA: 0x00288FB8 File Offset: 0x002871B8
+		
 		public static void NotifyOthersHideJunQi(SocketListener sl, TCPOutPacketPool pool, JunQiItem JunQiItem)
 		{
 			if (null != JunQiItem)
@@ -720,7 +720,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E73 RID: 11891 RVA: 0x00288FF0 File Offset: 0x002871F0
+		
 		private static bool ProcessJunQiDead(SocketListener sl, TCPOutPacketPool pool, long nowTicks, JunQiItem JunQiItem)
 		{
 			bool result;
@@ -745,7 +745,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E74 RID: 11892 RVA: 0x00289050 File Offset: 0x00287250
+		
 		public static void ProcessAllJunQiItems(SocketListener sl, TCPOutPacketPool pool)
 		{
 			if (Global.GetBangHuiFightingLineID() == GameManager.ServerLineID)
@@ -769,7 +769,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E75 RID: 11893 RVA: 0x0028914C File Offset: 0x0028734C
+		
 		public static void SendMySelfJunQiItems(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList)
 		{
 			if (null != objsList)
@@ -788,7 +788,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E76 RID: 11894 RVA: 0x002891D0 File Offset: 0x002873D0
+		
 		public static void DelMySelfJunQiItems(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList)
 		{
 			if (null != objsList)
@@ -804,7 +804,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E77 RID: 11895 RVA: 0x0028923C File Offset: 0x0028743C
+		
 		public static void LookupEnemiesInCircle(GameClient client, int mapCode, int toX, int toY, int radius, List<object> enemiesList)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -832,7 +832,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E78 RID: 11896 RVA: 0x00289364 File Offset: 0x00287564
+		
 		public static void LookupEnemiesInCircleByAngle(GameClient client, int direction, int mapCode, int toX, int toY, int radius, List<JunQiItem> enemiesList, double angle)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -863,7 +863,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E79 RID: 11897 RVA: 0x002894C4 File Offset: 0x002876C4
+		
 		public static void LookupEnemiesAtGridXY(IObject attacker, int gridX, int gridY, List<object> enemiesList)
 		{
 			int mapCode = attacker.CurrentMapCode;
@@ -884,7 +884,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E7A RID: 11898 RVA: 0x0028956C File Offset: 0x0028776C
+		
 		public static void LookupAttackEnemies(IObject attacker, int direction, List<object> enemiesList)
 		{
 			int mapCode = attacker.CurrentMapCode;
@@ -896,7 +896,7 @@ namespace GameServer.Logic
 			JunQiManager.LookupEnemiesAtGridXY(attacker, (int)p.X, (int)p.Y, enemiesList);
 		}
 
-		// Token: 0x06002E7B RID: 11899 RVA: 0x002895D0 File Offset: 0x002877D0
+		
 		public static void LookupAttackEnemyIDs(IObject attacker, int direction, List<int> enemiesList)
 		{
 			List<object> objList = new List<object>();
@@ -907,7 +907,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E7C RID: 11900 RVA: 0x0028961C File Offset: 0x0028781C
+		
 		public static void LookupRangeAttackEnemies(IObject obj, int toX, int toY, int direction, string rangeMode, List<object> enemiesList)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[obj.CurrentMapCode];
@@ -923,7 +923,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E7D RID: 11901 RVA: 0x002896BC File Offset: 0x002878BC
+		
 		public static bool CanAttack(JunQiItem enemy)
 		{
 			bool result;
@@ -943,7 +943,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E7E RID: 11902 RVA: 0x00289718 File Offset: 0x00287918
+		
 		public static int Monster_NotifyInjured(SocketListener sl, TCPOutPacketPool pool, Monster monster, JunQiItem enemy, int burst, int injure, double injurePercent, int attackType, bool forceBurst, int addInjure, double attackPercent, int addAttackMin, int addAttackMax, double baseRate = 1.0, int addVlue = 0, int nHitFlyDistance = 0)
 		{
 			int ret = 0;
@@ -986,7 +986,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002E7F RID: 11903 RVA: 0x00289A4C File Offset: 0x00287C4C
+		
 		public static int NotifyInjured(SocketListener sl, TCPOutPacketPool pool, GameClient client, JunQiItem enemy, int burst, int injure, double injurePercent, int attackType, bool forceBurst, int addInjure, double attackPercent, int addAttackMin, int addAttackMax, double baseRate = 1.0, int addVlue = 0, int nHitFlyDistance = 0)
 		{
 			int ret = 0;
@@ -1029,7 +1029,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002E80 RID: 11904 RVA: 0x00289D30 File Offset: 0x00287F30
+		
 		public static void NotifyInjured(SocketListener sl, TCPOutPacketPool pool, GameClient client, int roleID, int enemy, int enemyX, int enemyY, int burst, int injure, double attackPercent, int addAttack, double baseRate = 1.0, int addVlue = 0, int nHitFlyDistance = 0)
 		{
 			object obj = JunQiManager.FindJunQiByID(enemy);
@@ -1069,7 +1069,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E81 RID: 11905 RVA: 0x00289FC0 File Offset: 0x002881C0
+		
 		private static void ProcessJunQiDead(SocketListener sl, TCPOutPacketPool pool, GameClient client, JunQiItem junQiItem)
 		{
 			if (!junQiItem.HandledDead)
@@ -1113,7 +1113,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E82 RID: 11906 RVA: 0x0028A1A8 File Offset: 0x002883A8
+		
 		public static void ParseWeekDaysTimes()
 		{
 			string lingDiZhanWeekDays_str = GameManager.systemParamsList.GetParamValueByName("LingDiZhanWeekDays");
@@ -1150,7 +1150,7 @@ namespace GameServer.Logic
 			JunQiManager.LingDiZhanEndDayTimes = Global.ParseDateTimeRangeStr(lingDiZhanEndDayTimes_str);
 		}
 
-		// Token: 0x06002E83 RID: 11907 RVA: 0x0028A2C4 File Offset: 0x002884C4
+		
 		private static bool IsDayOfWeek(int weekDayID)
 		{
 			bool result;
@@ -1172,7 +1172,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E84 RID: 11908 RVA: 0x0028A318 File Offset: 0x00288518
+		
 		public static bool IsInLingDiZhanFightingTime()
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -1190,7 +1190,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E85 RID: 11909 RVA: 0x0028A35C File Offset: 0x0028855C
+		
 		private static bool IsInLingDiZhanEndTime()
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -1208,7 +1208,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E86 RID: 11910 RVA: 0x0028A3A0 File Offset: 0x002885A0
+		
 		public static int GetLingDiIDBy2MapCode(int mapCode)
 		{
 			int result;
@@ -1237,7 +1237,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E87 RID: 11911 RVA: 0x0028A40C File Offset: 0x0028860C
+		
 		public static int GetMapCodeByLingDiID(int lingDiID)
 		{
 			int result;
@@ -1252,13 +1252,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E88 RID: 11912 RVA: 0x0028A438 File Offset: 0x00288638
+		
 		public static bool CanInstallJunQi(GameClient client)
 		{
 			return !JunQiManager.JugeLingDiZhanEndByMapCode(client.ClientData.MapCode) && LingDiZhanStates.Fighting == JunQiManager.LingDiZhanState;
 		}
 
-		// Token: 0x06002E89 RID: 11913 RVA: 0x0028A470 File Offset: 0x00288670
+		
 		private static bool JugeLingDiZhanEndByMapCode(int mapCode)
 		{
 			bool result = false;
@@ -1272,7 +1272,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E8A RID: 11914 RVA: 0x0028A4D8 File Offset: 0x002886D8
+		
 		private static void AddLingDiZhanEndResultByMapCode(int mapCode, bool result)
 		{
 			lock (JunQiManager.LingDiZhanResultsDict)
@@ -1281,7 +1281,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E8B RID: 11915 RVA: 0x0028A52C File Offset: 0x0028872C
+		
 		public static void ProcessLingDiZhanResult()
 		{
 			if (Global.GetBangHuiFightingLineID() == GameManager.ServerLineID)
@@ -1343,7 +1343,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E8C RID: 11916 RVA: 0x0028A6E0 File Offset: 0x002888E0
+		
 		public static void NotifySyncBangHuiLingDiZhanResult(int lingDiID, int mapCode, int bhid, int zoneID, string bhName)
 		{
 			string gmCmdData = string.Format("-syncldzresult {0} {1} {2} {3} {4}", new object[]
@@ -1368,7 +1368,7 @@ namespace GameServer.Logic
 			}), null, 0);
 		}
 
-		// Token: 0x06002E8D RID: 11917 RVA: 0x0028A7A0 File Offset: 0x002889A0
+		
 		public static void HandleLingDiZhanResultByMapCode(int lingDiID, int mapCode, int bhid, bool sendToOtherLine, bool lingDiOkHint = true)
 		{
 			JunQiItem junQiItem = null;
@@ -1414,7 +1414,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E8E RID: 11918 RVA: 0x0028A89C File Offset: 0x00288A9C
+		
 		public static void HandleLuoLanChengZhanResult(int lingDiID, int mapCode, int bhid, string bhName, bool sendToOtherLine, bool lingDiOkHint = true)
 		{
 			Global.UpdateLingDiForBH(lingDiID, bhid);
@@ -1425,7 +1425,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E8F RID: 11919 RVA: 0x0028A8CC File Offset: 0x00288ACC
+		
 		public static void HandleLingDiZhanResultByMapCode2(int lingDiID, int mapCode, int bhid, int zoneID, string bhName)
 		{
 			if (bhid > 0)
@@ -1443,7 +1443,7 @@ namespace GameServer.Logic
 			JunQiManager.NotifyAllLingDiMapInfoData(mapCode);
 		}
 
-		// Token: 0x06002E90 RID: 11920 RVA: 0x0028A918 File Offset: 0x00288B18
+		
 		public static void InitLingDiJunQi()
 		{
 			if (JunQiManager.LingDiIDs2MapCodes != null && JunQiManager.LingDiIDs2MapCodes.Length == 7)
@@ -1465,7 +1465,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E91 RID: 11921 RVA: 0x0028A9B0 File Offset: 0x00288BB0
+		
 		public static void InstallJunQiOnNormalMap(int lingDiID, int bhid, int zoneID, string bhName, bool forceClean = true)
 		{
 			List<int> mapCodesList = new List<int>();
@@ -1489,7 +1489,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E92 RID: 11922 RVA: 0x0028AAD0 File Offset: 0x00288CD0
+		
 		public static void ClearJunQiOnNormalMap(int lingDiID)
 		{
 			List<int> mapCodesList = new List<int>();
@@ -1507,7 +1507,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E93 RID: 11923 RVA: 0x0028ABA8 File Offset: 0x00288DA8
+		
 		public static void SendClearJunQiCmd(int bhid)
 		{
 			if (JunQiManager.LingDiIDs2MapCodes != null && JunQiManager.LingDiIDs2MapCodes.Length == 7)
@@ -1528,7 +1528,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E94 RID: 11924 RVA: 0x0028AC58 File Offset: 0x00288E58
+		
 		public static LingDiMapInfoData GetLingDiMapData(GameClient client)
 		{
 			int lingDiID = JunQiManager.GetLingDiIDBy2MapCode(client.ClientData.MapCode);
@@ -1544,7 +1544,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E95 RID: 11925 RVA: 0x0028AC98 File Offset: 0x00288E98
+		
 		private static LingDiMapInfoData FormatLingDiMapData(int mapCode)
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -1580,14 +1580,14 @@ namespace GameServer.Logic
 			return lingDiMapInfoData;
 		}
 
-		// Token: 0x06002E96 RID: 11926 RVA: 0x0028AE0C File Offset: 0x0028900C
+		
 		public static void NotifyAllLingDiMapInfoData(int mapCode)
 		{
 			LingDiMapInfoData lingDiMapInfoData = JunQiManager.FormatLingDiMapData(mapCode);
 			GameManager.ClientMgr.NotifyAllLingDiMapInfoData(mapCode, lingDiMapInfoData);
 		}
 
-		// Token: 0x06002E97 RID: 11927 RVA: 0x0028AE30 File Offset: 0x00289030
+		
 		private static void ProcessTimeAddRoleExp()
 		{
 			long ticks = TimeUtil.NOW();
@@ -1609,7 +1609,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E98 RID: 11928 RVA: 0x0028AEC4 File Offset: 0x002890C4
+		
 		private static int GetExperienceAwards(GameClient client, bool success)
 		{
 			int result;
@@ -1624,7 +1624,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E99 RID: 11929 RVA: 0x0028AEEC File Offset: 0x002890EC
+		
 		private static int GetRongYuAwards(GameClient client, bool success)
 		{
 			int result;
@@ -1639,14 +1639,14 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E9A RID: 11930 RVA: 0x0028AF14 File Offset: 0x00289114
+		
 		private static void ProcessRoleExperienceAwards(GameClient client, bool success)
 		{
 			int experience = JunQiManager.GetExperienceAwards(client, success);
 			GameManager.ClientMgr.ProcessRoleExperience(client, (long)experience, true, false, false, "none");
 		}
 
-		// Token: 0x06002E9B RID: 11931 RVA: 0x0028AF40 File Offset: 0x00289140
+		
 		private static void ProcessRoleBangGongAwards(GameClient client, bool success)
 		{
 			int rongYu = JunQiManager.GetRongYuAwards(client, success);
@@ -1663,13 +1663,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E9C RID: 11932 RVA: 0x0028AFD0 File Offset: 0x002891D0
+		
 		private static bool CanGetAWards(GameClient client, long nowTicks)
 		{
 			return nowTicks - client.ClientData.EnterMapTicks >= (long)JunQiManager.MaxHavingAwardsSecs;
 		}
 
-		// Token: 0x06002E9D RID: 11933 RVA: 0x0028B004 File Offset: 0x00289204
+		
 		private static void ProcessHuangChengFightingEndAwards()
 		{
 			List<object> objsList = GameManager.ClientMgr.GetMapClients(JunQiManager.LingDiIDs2MapCodes[2]);
@@ -1704,49 +1704,49 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04003C35 RID: 15413
+		
 		public static object JunQiMutex = new object();
 
-		// Token: 0x04003C36 RID: 15414
+		
 		private static Dictionary<string, KillJunQiItem> KillJunQiDict = new Dictionary<string, KillJunQiItem>();
 
-		// Token: 0x04003C37 RID: 15415
+		
 		private static Dictionary<int, BangHuiJunQiItemData> _BangHuiJunQiItemsDict = null;
 
-		// Token: 0x04003C38 RID: 15416
+		
 		private static Dictionary<int, BangHuiLingDiItemData> _BangHuiLingDiItemsDict = null;
 
-		// Token: 0x04003C39 RID: 15417
+		
 		private static Dictionary<int, JunQiItem> _NPCID2JunQiDict = new Dictionary<int, JunQiItem>();
 
-		// Token: 0x04003C3A RID: 15418
+		
 		private static Dictionary<int, JunQiItem> _ID2JunQiDict = new Dictionary<int, JunQiItem>();
 
-		// Token: 0x04003C3B RID: 15419
+		
 		private static int MaxInstallQiNum = 3;
 
-		// Token: 0x04003C3C RID: 15420
+		
 		private static int[] LingDiZhanWeekDays = null;
 
-		// Token: 0x04003C3D RID: 15421
+		
 		private static DateTimeRange[] LingDiZhanFightingDayTimes = null;
 
-		// Token: 0x04003C3E RID: 15422
+		
 		private static DateTimeRange[] LingDiZhanEndDayTimes = null;
 
-		// Token: 0x04003C3F RID: 15423
+		
 		private static int[] LingDiIDs2MapCodes = null;
 
-		// Token: 0x04003C40 RID: 15424
+		
 		public static LingDiZhanStates LingDiZhanState = LingDiZhanStates.None;
 
-		// Token: 0x04003C41 RID: 15425
+		
 		private static Dictionary<int, bool> LingDiZhanResultsDict = new Dictionary<int, bool>();
 
-		// Token: 0x04003C42 RID: 15426
+		
 		private static long LastAddBangZhanAwardsTicks = 0L;
 
-		// Token: 0x04003C43 RID: 15427
+		
 		private static int MaxHavingAwardsSecs = 1200000;
 	}
 }

@@ -10,10 +10,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic.MagicSword
 {
-	// Token: 0x0200047E RID: 1150
+	
 	public class MagicSwordManager
 	{
-		// Token: 0x060014ED RID: 5357 RVA: 0x00147A88 File Offset: 0x00145C88
+		
 		public void LoadMagicSwordData()
 		{
 			try
@@ -90,7 +90,7 @@ namespace GameServer.Logic.MagicSword
 			}
 		}
 
-		// Token: 0x060014EE RID: 5358 RVA: 0x00147CE4 File Offset: 0x00145EE4
+		
 		public bool InitMagicSwordInfo(GameClient client, EMagicSwordTowardType eType)
 		{
 			bool result;
@@ -118,25 +118,25 @@ namespace GameServer.Logic.MagicSword
 			return result;
 		}
 
-		// Token: 0x060014EF RID: 5359 RVA: 0x00147D78 File Offset: 0x00145F78
+		
 		public bool IsMagicSword(GameClient client)
 		{
 			return client != null && this.IsMagicSword(client.ClientData.Occupation);
 		}
 
-		// Token: 0x060014F0 RID: 5360 RVA: 0x00147DAC File Offset: 0x00145FAC
+		
 		public bool IsMagicSword(int nOccu)
 		{
 			return Global.CalcOriginalOccupationID(nOccu) == 3;
 		}
 
-		// Token: 0x060014F1 RID: 5361 RVA: 0x00147DD4 File Offset: 0x00145FD4
+		
 		public bool IsFirstLoginMagicSword(GameClient client, int nDestChangeLifeCount)
 		{
 			return this.IsVersionSystemOpenOfMagicSword() && client != null && this.IsMagicSword(client) && client.ClientData.ChangeLifeCount < nDestChangeLifeCount;
 		}
 
-		// Token: 0x060014F2 RID: 5362 RVA: 0x00147E2C File Offset: 0x0014602C
+		
 		public bool IsMagicSwordAngelWeapon(GameClient client, int nGoodsID)
 		{
 			bool result;
@@ -174,7 +174,7 @@ namespace GameServer.Logic.MagicSword
 			return result;
 		}
 
-		// Token: 0x060014F3 RID: 5363 RVA: 0x00147ECC File Offset: 0x001460CC
+		
 		public bool IsMagicSwordWeapon(int nGoodsID)
 		{
 			SystemXmlItem systemGoods = null;
@@ -204,13 +204,13 @@ namespace GameServer.Logic.MagicSword
 			return result;
 		}
 
-		// Token: 0x060014F4 RID: 5364 RVA: 0x00147F44 File Offset: 0x00146144
+		
 		public bool IsVersionSystemOpenOfMagicSword()
 		{
 			return GameManager.VersionSystemOpenMgr.IsVersionSystemOpen("MagicSword") && !GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot5);
 		}
 
-		// Token: 0x060014F5 RID: 5365 RVA: 0x00147F80 File Offset: 0x00146180
+		
 		public bool CanUseMagicOfMagicSword(GameClient client, int nMagicID)
 		{
 			bool result;
@@ -385,7 +385,7 @@ namespace GameServer.Logic.MagicSword
 			return result;
 		}
 
-		// Token: 0x060014F6 RID: 5366 RVA: 0x001483DC File Offset: 0x001465DC
+		
 		public bool IsCanAward2MagicSword(GameClient client, int nGoodsID)
 		{
 			int nOcc = Global.CalcOriginalOccupationID(client);
@@ -421,7 +421,7 @@ namespace GameServer.Logic.MagicSword
 			return result;
 		}
 
-		// Token: 0x060014F7 RID: 5367 RVA: 0x0014848C File Offset: 0x0014668C
+		
 		public EMagicSwordTowardType GetMagicSwordTowardType(GameClient client)
 		{
 			double meStrength = RoleAlgorithm.GetStrength(client, true);
@@ -438,7 +438,7 @@ namespace GameServer.Logic.MagicSword
 			return result;
 		}
 
-		// Token: 0x060014F8 RID: 5368 RVA: 0x001484BC File Offset: 0x001466BC
+		
 		public void AutoGiveMagicSwordGoods(GameClient client)
 		{
 			if (null == client)
@@ -561,7 +561,7 @@ namespace GameServer.Logic.MagicSword
 			}
 		}
 
-		// Token: 0x060014F9 RID: 5369 RVA: 0x00148940 File Offset: 0x00146B40
+		
 		public void AutoGiveMagicSwordDefaultSkillHotKey(GameClient client, EMagicSwordTowardType eType)
 		{
 			if (null != client)
@@ -596,7 +596,7 @@ namespace GameServer.Logic.MagicSword
 			}
 		}
 
-		// Token: 0x060014FA RID: 5370 RVA: 0x00148A60 File Offset: 0x00146C60
+		
 		public EMagicSwordTowardType GetMagicSwordTypeByWeapon(int nOccu, List<GoodsData> list, GameClient client = null)
 		{
 			EMagicSwordTowardType result;
@@ -689,7 +689,7 @@ namespace GameServer.Logic.MagicSword
 			return result;
 		}
 
-		// Token: 0x060014FB RID: 5371 RVA: 0x00148CB4 File Offset: 0x00146EB4
+		
 		public void AutoMaigcSwordFirstAddPoint(GameClient client, EMagicSwordTowardType eType)
 		{
 			if (null == client)

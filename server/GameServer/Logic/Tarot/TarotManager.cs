@@ -10,16 +10,16 @@ using Server.Tools;
 
 namespace GameServer.Logic.Tarot
 {
-    // Token: 0x0200042E RID: 1070
+    
     internal class TarotManager : ICmdProcessorEx, ICmdProcessor
     {
-        // Token: 0x06001393 RID: 5011 RVA: 0x00135980 File Offset: 0x00133B80
+        
         public static TarotManager getInstance()
         {
             return TarotManager.instance;
         }
 
-        // Token: 0x06001394 RID: 5012 RVA: 0x00135998 File Offset: 0x00133B98
+        
         public void Initialize()
         {
             string fileName = Global.GameResPath("Config/Tarot.xml");
@@ -88,7 +88,7 @@ namespace GameServer.Logic.Tarot
             TCPCmdDispatcher.getInstance().registerProcessorEx(1705, 3, 3, TarotManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
         }
 
-        // Token: 0x06001395 RID: 5013 RVA: 0x00135D1C File Offset: 0x00133F1C
+        
         public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             switch (nID)
@@ -186,7 +186,7 @@ namespace GameServer.Logic.Tarot
             return true;
         }
 
-        // Token: 0x06001396 RID: 5014 RVA: 0x001360B8 File Offset: 0x001342B8
+        
         public TarotManager.ETarotResult ProcessTarotUpCmd(GameClient client, int goodID)
         {
             TarotManager.ETarotResult result;
@@ -232,7 +232,7 @@ namespace GameServer.Logic.Tarot
             return result;
         }
 
-        // Token: 0x06001397 RID: 5015 RVA: 0x00136258 File Offset: 0x00134458
+        
         public TarotManager.ETarotResult ProcessSetTarotPosCmd(GameClient client, int goodID, byte pos)
         {
             TarotManager.ETarotResult result;
@@ -279,7 +279,7 @@ namespace GameServer.Logic.Tarot
             return result;
         }
 
-        // Token: 0x06001398 RID: 5016 RVA: 0x001363A4 File Offset: 0x001345A4
+        
         public TarotManager.ETarotResult ProcessUseKingPrivilegeCmd(GameClient client, out string strret)
         {
             strret = string.Empty;
@@ -366,7 +366,7 @@ namespace GameServer.Logic.Tarot
             return result;
         }
 
-        // Token: 0x06001399 RID: 5017 RVA: 0x00136624 File Offset: 0x00134824
+        
         public TarotManager.ETarotResult ProcessTarotMoneyCmd(GameClient client, int goodId, int num, int dbid, out int resNum)
         {
             resNum = 0;
@@ -452,7 +452,7 @@ namespace GameServer.Logic.Tarot
             return result;
         }
 
-        // Token: 0x0600139A RID: 5018 RVA: 0x001368E8 File Offset: 0x00134AE8
+        
         public int CountTarotNowToCurrLevel(int cardId, int level)
         {
             int NeedNum = 0;
@@ -466,7 +466,7 @@ namespace GameServer.Logic.Tarot
             return NeedNum;
         }
 
-        // Token: 0x0600139B RID: 5019 RVA: 0x0013696C File Offset: 0x00134B6C
+        
         public void RemoveTarotKingData(GameClient client)
         {
             TarotSystemData tarotData = client.ClientData.TarotData;
@@ -482,7 +482,7 @@ namespace GameServer.Logic.Tarot
             }
         }
 
-        // Token: 0x0600139C RID: 5020 RVA: 0x001369EC File Offset: 0x00134BEC
+        
         public void UpdataPalyerTarotAttr(GameClient client)
         {
             EquipPropItem itemNew = new EquipPropItem();
@@ -513,7 +513,7 @@ namespace GameServer.Logic.Tarot
             GameManager.ClientMgr.NotifyOthersLifeChanged(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, client, true, false, 7);
         }
 
-        // Token: 0x0600139D RID: 5021 RVA: 0x00136B98 File Offset: 0x00134D98
+        
         private static void UpdateTarotData2DB(GameClient client, TarotCardData tarotData, TarotKingData tarotKingBuffData)
         {
             string[] dbFields = null;
@@ -523,107 +523,107 @@ namespace GameServer.Logic.Tarot
             TCPProcessCmdResults retcmd = Global.RequestToDBServer(Global._TCPManager.tcpClientPool, Global._TCPManager.TcpOutPacketPool, 20100, sCmd, out dbFields, client.ServerId);
         }
 
-        // Token: 0x0600139E RID: 5022 RVA: 0x00136C14 File Offset: 0x00134E14
+        
         public bool processCmd(GameClient client, string[] cmdParams)
         {
             return false;
         }
 
-        // Token: 0x04001CDC RID: 7388
+        
         private static List<TarotManager.TarotTemplate> TarotTemplates = new List<TarotManager.TarotTemplate>();
 
-        // Token: 0x04001CDD RID: 7389
+        
         private static Dictionary<int, int> TarotMaxLevelDict = new Dictionary<int, int>();
 
-        // Token: 0x04001CDE RID: 7390
+        
         private static Dictionary<int, int> TarotNeedCardNum = new Dictionary<int, int>();
 
-        // Token: 0x04001CDF RID: 7391
+        
         private static List<int> TarotCardIds = new List<int>();
 
-        // Token: 0x04001CE0 RID: 7392
+        
         private static int KingItemId = 0;
 
-        // Token: 0x04001CE1 RID: 7393
+        
         private static long KingBuffTime = 0L;
 
-        // Token: 0x04001CE2 RID: 7394
+        
         private static int UseKingItemCount = 0;
 
-        // Token: 0x04001CE3 RID: 7395
+        
         private static List<int> KingBuffValueList = new List<int>();
 
-        // Token: 0x04001CE4 RID: 7396
+        
         private static TarotManager instance = new TarotManager();
 
-        // Token: 0x0200042F RID: 1071
+        
         public enum ETarotResult
         {
-            // Token: 0x04001CE6 RID: 7398
+            
             Error = -1,
-            // Token: 0x04001CE7 RID: 7399
+            
             Success,
-            // Token: 0x04001CE8 RID: 7400
+            
             Fail,
-            // Token: 0x04001CE9 RID: 7401
+            
             MaxLevel,
-            // Token: 0x04001CEA RID: 7402
+            
             NeedPart,
-            // Token: 0x04001CEB RID: 7403
+            
             PartSuitIsMax,
-            // Token: 0x04001CEC RID: 7404
+            
             NotOpen,
-            // Token: 0x04001CED RID: 7405
+            
             PartNumError,
-            // Token: 0x04001CEE RID: 7406
+            
             PosError,
-            // Token: 0x04001CEF RID: 7407
+            
             ItemNotEnough,
-            // Token: 0x04001CF0 RID: 7408
+            
             HasMaxNum,
-            // Token: 0x04001CF1 RID: 7409
+            
             MoneyNumError,
-            // Token: 0x04001CF2 RID: 7410
+            
             GoodIdError,
-            // Token: 0x04001CF3 RID: 7411
+            
             UseGoodError,
-            // Token: 0x04001CF4 RID: 7412
+            
             NotFindCard,
-            // Token: 0x04001CF5 RID: 7413
+            
             NotFindGood
         }
 
-        // Token: 0x02000430 RID: 1072
+        
         public class TarotTemplate
         {
-            // Token: 0x1700004E RID: 78
-            // (get) Token: 0x060013A1 RID: 5025 RVA: 0x00136C8C File Offset: 0x00134E8C
-            // (set) Token: 0x060013A2 RID: 5026 RVA: 0x00136CA3 File Offset: 0x00134EA3
+            
+            
+            
             public int ID { get; set; }
 
-            // Token: 0x1700004F RID: 79
-            // (get) Token: 0x060013A3 RID: 5027 RVA: 0x00136CAC File Offset: 0x00134EAC
-            // (set) Token: 0x060013A4 RID: 5028 RVA: 0x00136CC3 File Offset: 0x00134EC3
+            
+            
+            
             public string Name { get; set; }
 
-            // Token: 0x17000050 RID: 80
-            // (get) Token: 0x060013A5 RID: 5029 RVA: 0x00136CCC File Offset: 0x00134ECC
-            // (set) Token: 0x060013A6 RID: 5030 RVA: 0x00136CE3 File Offset: 0x00134EE3
+            
+            
+            
             public int GoodsID { get; set; }
 
-            // Token: 0x17000051 RID: 81
-            // (get) Token: 0x060013A7 RID: 5031 RVA: 0x00136CEC File Offset: 0x00134EEC
-            // (set) Token: 0x060013A8 RID: 5032 RVA: 0x00136D03 File Offset: 0x00134F03
+            
+            
+            
             public int Level { get; set; }
 
-            // Token: 0x17000052 RID: 82
-            // (get) Token: 0x060013A9 RID: 5033 RVA: 0x00136D0C File Offset: 0x00134F0C
-            // (set) Token: 0x060013AA RID: 5034 RVA: 0x00136D23 File Offset: 0x00134F23
+            
+            
+            
             public int NeedGoodID { get; set; }
 
-            // Token: 0x17000053 RID: 83
-            // (get) Token: 0x060013AB RID: 5035 RVA: 0x00136D2C File Offset: 0x00134F2C
-            // (set) Token: 0x060013AC RID: 5036 RVA: 0x00136D43 File Offset: 0x00134F43
+            
+            
+            
             public int NeedPartCount { get; set; }
         }
     }

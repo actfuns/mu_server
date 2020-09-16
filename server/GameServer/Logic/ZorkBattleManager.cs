@@ -18,29 +18,29 @@ using Tmsk.Contract.KuaFuData;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000844 RID: 2116
+	
 	public class ZorkBattleManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener, IEventListenerEx, IManager2
 	{
-		// Token: 0x06003B6F RID: 15215 RVA: 0x00328144 File Offset: 0x00326344
+		
 		public static ZorkBattleManager getInstance()
 		{
 			return ZorkBattleManager.instance;
 		}
 
-		// Token: 0x06003B70 RID: 15216 RVA: 0x0032815C File Offset: 0x0032635C
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x06003B71 RID: 15217 RVA: 0x00328180 File Offset: 0x00326380
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			ScheduleExecutor2.Instance.scheduleExecute(new NormalScheduleTask("ZorkBattleManager.TimerProc", new EventHandler(this.TimerProc)), 15000, 2000);
 			return true;
 		}
 
-		// Token: 0x06003B72 RID: 15218 RVA: 0x003281C0 File Offset: 0x003263C0
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(2100, 1, 1, ZorkBattleManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -59,7 +59,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003B73 RID: 15219 RVA: 0x003282F0 File Offset: 0x003264F0
+		
 		public bool showdown()
 		{
 			GlobalEventSource4Scene.getInstance().removeListener(10033, 57, ZorkBattleManager.getInstance());
@@ -72,19 +72,19 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003B74 RID: 15220 RVA: 0x00328390 File Offset: 0x00326590
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06003B75 RID: 15221 RVA: 0x003283A4 File Offset: 0x003265A4
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06003B76 RID: 15222 RVA: 0x003283B8 File Offset: 0x003265B8
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			if (nID != 2103)
@@ -113,7 +113,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003B77 RID: 15223 RVA: 0x003284A4 File Offset: 0x003266A4
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int eventType = eventObject.getEventType();
@@ -144,7 +144,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B78 RID: 15224 RVA: 0x00328580 File Offset: 0x00326780
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 			int eventType = eventObject.EventType;
@@ -187,7 +187,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B79 RID: 15225 RVA: 0x003286B4 File Offset: 0x003268B4
+		
 		public bool InitConfig()
 		{
 			bool success = true;
@@ -396,7 +396,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x06003B7A RID: 15226 RVA: 0x003292C0 File Offset: 0x003274C0
+		
 		private void TimerProc(object sender, EventArgs e)
 		{
 			if (this.IsGongNengOpened(null, false))
@@ -493,7 +493,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B7B RID: 15227 RVA: 0x003297D4 File Offset: 0x003279D4
+		
 		public List<int> BuildZorkBattleAnalysisData(GameClient client)
 		{
 			List<int> listAnalysisData = new List<int>(new int[7]);
@@ -511,7 +511,7 @@ namespace GameServer.Logic
 			return listAnalysisData;
 		}
 
-		// Token: 0x06003B7C RID: 15228 RVA: 0x00329870 File Offset: 0x00327A70
+		
 		public bool ProcessGetZorkBattleBaseDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -557,7 +557,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003B7D RID: 15229 RVA: 0x00329A38 File Offset: 0x00327C38
+		
 		public bool ProcessZorkBattleEnterCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -646,7 +646,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003B7E RID: 15230 RVA: 0x00329C68 File Offset: 0x00327E68
+		
 		public bool ProcessGetZorkBattleStateCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -713,7 +713,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003B7F RID: 15231 RVA: 0x00329EAC File Offset: 0x003280AC
+		
 		public bool ProcessGetZorkBattleRankInfoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -737,7 +737,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003B80 RID: 15232 RVA: 0x00329FB8 File Offset: 0x003281B8
+		
 		public bool ProcessGetZorkBattleAwardCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -817,7 +817,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003B81 RID: 15233 RVA: 0x0032A278 File Offset: 0x00328478
+		
 		public bool ProcessZorkBattleJoinCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -910,7 +910,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003B82 RID: 15234 RVA: 0x0032A508 File Offset: 0x00328708
+		
 		public int GetBirthPoint(GameClient client, out int posX, out int posY)
 		{
 			int side = client.ClientData.BattleWhichSide;
@@ -929,13 +929,13 @@ namespace GameServer.Logic
 			return -1;
 		}
 
-		// Token: 0x06003B83 RID: 15235 RVA: 0x0032A5A4 File Offset: 0x003287A4
+		
 		public bool IsGongNengOpened(GameClient client, bool hint = false)
 		{
 			return GlobalNew.IsGongNengOpened(client, GongNengIDs.Zork5v5, hint);
 		}
 
-		// Token: 0x06003B84 RID: 15236 RVA: 0x0032A5C0 File Offset: 0x003287C0
+		
 		public bool KuaFuLogin(KuaFuServerLoginData kuaFuServerLoginData)
 		{
 			KuaFu5v5FuBenData kfFuBenData = TianTiClient.getInstance().GetFuBenDataByGameId_ZorkBattle((int)kuaFuServerLoginData.GameId);
@@ -952,7 +952,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B85 RID: 15237 RVA: 0x0032A62C File Offset: 0x0032882C
+		
 		public bool OnInitGameKuaFu(GameClient client)
 		{
 			KuaFuServerLoginData kuaFuServerLoginData = Global.GetClientKuaFuServerLoginData(client);
@@ -1026,7 +1026,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B86 RID: 15238 RVA: 0x0032A914 File Offset: 0x00328B14
+		
 		public bool AddCopyScenes(GameClient client, CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool result;
@@ -1142,7 +1142,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B87 RID: 15239 RVA: 0x0032AE4C File Offset: 0x0032904C
+		
 		private void HandleNtfEnterEvent(KuaFu5v5FuBenData data)
 		{
 			foreach (GameClient client in GameManager.ClientMgr.GetAllClients(true))
@@ -1159,7 +1159,7 @@ namespace GameServer.Logic
 			LogManager.WriteLog(LogTypes.Error, string.Format("通知战队ID={0} 拥有进入魔域夺宝资格", zhanduiIdArray), null, true);
 		}
 
-		// Token: 0x06003B88 RID: 15240 RVA: 0x0032AF28 File Offset: 0x00329128
+		
 		private bool CheckMap(GameClient client)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -1172,7 +1172,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003B89 RID: 15241 RVA: 0x0032AF9C File Offset: 0x0032919C
+		
 		public ZorkBattleAwardConfig GetZorkBattleAwardConfigByJiFen(int jifen)
 		{
 			ZorkBattleAwardConfig awardConfig = null;
@@ -1189,7 +1189,7 @@ namespace GameServer.Logic
 			return awardConfig;
 		}
 
-		// Token: 0x06003B8A RID: 15242 RVA: 0x0032B074 File Offset: 0x00329274
+		
 		public List<int> GetZorkBattleRoleAnalysisData(int rid, int serverid)
 		{
 			List<int> result;
@@ -1206,7 +1206,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B8B RID: 15243 RVA: 0x0032B0B8 File Offset: 0x003292B8
+		
 		public List<int> GetZorkBattleRoleAnalysisData(GameClient client)
 		{
 			List<int> result;
@@ -1223,13 +1223,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B8C RID: 15244 RVA: 0x0032B0F8 File Offset: 0x003292F8
+		
 		private void SaveZorkBattleAchievementAwardData(GameClient client, List<int> countList)
 		{
 			Global.SaveRoleParamsIntListToDB(client, countList, "155", true);
 		}
 
-		// Token: 0x06003B8D RID: 15245 RVA: 0x0032B10C File Offset: 0x0032930C
+		
 		public List<int> GetZorkBattleAchievementAwardData(GameClient client)
 		{
 			List<int> result;
@@ -1246,7 +1246,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B8E RID: 15246 RVA: 0x0032B164 File Offset: 0x00329364
+		
 		public void FilterZorkBattleAchievementAwardData(List<int> countList)
 		{
 			if (countList.Count != 3)
@@ -1272,7 +1272,7 @@ namespace GameServer.Logic
 			countList.RemoveAll((int x) => x == 0);
 		}
 
-		// Token: 0x06003B8F RID: 15247 RVA: 0x0032B238 File Offset: 0x00329438
+		
 		private void FilterZorkBattleAnalysisData(List<int> countList)
 		{
 			if (countList.Count != 11)
@@ -1302,19 +1302,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B90 RID: 15248 RVA: 0x0032B318 File Offset: 0x00329518
+		
 		private void SaveZorkBattleRoleAnalysisDataOffline(int rid, List<int> countList, int serverid)
 		{
 			Global.SaveRoleParamsIntListToDBOffline(rid, countList, "154", serverid);
 		}
 
-		// Token: 0x06003B91 RID: 15249 RVA: 0x0032B329 File Offset: 0x00329529
+		
 		private void SaveZorkBattleRoleAnalysisData(GameClient client, List<int> countList)
 		{
 			Global.SaveRoleParamsIntListToDB(client, countList, "154", true);
 		}
 
-		// Token: 0x06003B92 RID: 15250 RVA: 0x0032B33C File Offset: 0x0032953C
+		
 		private void UpdateChengHaoBuffer(GameClient client)
 		{
 			if (this.ZorkBattleSyncDataCache.TopZhanDui > 0 && client.ClientData.ZhanDuiID == this.ZorkBattleSyncDataCache.TopZhanDui)
@@ -1347,7 +1347,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B93 RID: 15251 RVA: 0x0032B430 File Offset: 0x00329630
+		
 		public void InitZorkBattleZhanDuiData(TianTi5v5ZhanDuiData zhanduiData)
 		{
 			if (zhanduiData != null && 0 != this.ZorkBattleSyncDataCache.CurSeasonID)
@@ -1363,7 +1363,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B94 RID: 15252 RVA: 0x0032B4A0 File Offset: 0x003296A0
+		
 		public TianTi5v5ZhanDuiData GetZhanDuiData(int zhanDuiID, int serverID)
 		{
 			TianTi5v5ZhanDuiData zhanduiData = TianTi5v5Manager.getInstance().GetZhanDuiData(zhanDuiID, serverID);
@@ -1375,7 +1375,7 @@ namespace GameServer.Logic
 			return zhanduiData;
 		}
 
-		// Token: 0x06003B95 RID: 15253 RVA: 0x0032B4F4 File Offset: 0x003296F4
+		
 		public bool OnPreZhanDuiChangeMember(PreZhanDuiChangeMemberEventObject e)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -1412,7 +1412,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B96 RID: 15254 RVA: 0x0032B5F0 File Offset: 0x003297F0
+		
 		public bool CheckOpenState(DateTime now)
 		{
 			bool result;
@@ -1430,7 +1430,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B97 RID: 15255 RVA: 0x0032B658 File Offset: 0x00329858
+		
 		private void InitScene(ZorkBattleScene scene, GameClient client)
 		{
 			foreach (ZorkBattleArmyConfig item in this.RuntimeData.ZorkBattleArmyList)
@@ -1448,7 +1448,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B98 RID: 15256 RVA: 0x0032B780 File Offset: 0x00329980
+		
 		public bool RemoveCopyScene(CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool result;
@@ -1468,7 +1468,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B99 RID: 15257 RVA: 0x0032B7F8 File Offset: 0x003299F8
+		
 		private int CheckCondition(GameClient client, ref ZorkBattleSceneInfo sceneItem, ref ZorkBattleGameStates state)
 		{
 			int result = 0;
@@ -1514,7 +1514,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B9A RID: 15258 RVA: 0x0032BA50 File Offset: 0x00329C50
+		
 		private TimeSpan GetStartTime(int MapCodeID)
 		{
 			ZorkBattleSceneInfo sceneItem = null;
@@ -1558,7 +1558,7 @@ namespace GameServer.Logic
 			return startTime;
 		}
 
-		// Token: 0x06003B9B RID: 15259 RVA: 0x0032BCCC File Offset: 0x00329ECC
+		
 		public bool ClientRelive(GameClient client)
 		{
 			int toPosX;
@@ -1583,7 +1583,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B9C RID: 15260 RVA: 0x0032BDCC File Offset: 0x00329FCC
+		
 		public void OnProcessMonsterDead(GameClient client, Monster monster)
 		{
 			ZorkBattleRoleInfo contextData = client.SceneContextData2 as ZorkBattleRoleInfo;
@@ -1680,7 +1680,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B9D RID: 15261 RVA: 0x0032C2D0 File Offset: 0x0032A4D0
+		
 		public void OnInjureMonster(GameClient client, Monster monster, long injure)
 		{
 			if (401 == monster.MonsterType)
@@ -1739,7 +1739,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B9E RID: 15262 RVA: 0x0032C66C File Offset: 0x0032A86C
+		
 		private void ProcessEnd(ZorkBattleScene scene, bool bossKill, long nowTicks)
 		{
 			if (scene.m_eStatus < GameSceneStatuses.STATUS_END)
@@ -1885,7 +1885,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B9F RID: 15263 RVA: 0x0032CC2C File Offset: 0x0032AE2C
+		
 		public void TimerProc()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -1995,7 +1995,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BA0 RID: 15264 RVA: 0x0032D0D4 File Offset: 0x0032B2D4
+		
 		private void InitCreateDynamicMonster(ZorkBattleScene scene, long nowMs)
 		{
 			foreach (ZorkBattleArmyConfig army in scene.ZorkBattleArmyList)
@@ -2023,7 +2023,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BA1 RID: 15265 RVA: 0x0032D244 File Offset: 0x0032B444
+		
 		private void AddDelayCreateMonster(ZorkBattleScene scene, long ticks, object monster)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -2038,7 +2038,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BA2 RID: 15266 RVA: 0x0032D2C0 File Offset: 0x0032B4C0
+		
 		public void CheckCreateDynamicMonster(ZorkBattleScene scene, long nowMs)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -2078,7 +2078,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BA3 RID: 15267 RVA: 0x0032D4AC File Offset: 0x0032B6AC
+		
 		public void BroadScoreInfo(CopyMap copyMap, int specZhanDui = -1)
 		{
 			List<GameClient> objsList = copyMap.GetClientsList();
@@ -2098,7 +2098,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BA4 RID: 15268 RVA: 0x0032D540 File Offset: 0x0032B740
+		
 		public void NotifySpriteInjured(GameClient client)
 		{
 			ZorkBattleScene scene = client.SceneObject as ZorkBattleScene;
@@ -2108,7 +2108,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BA5 RID: 15269 RVA: 0x0032D5F4 File Offset: 0x0032B7F4
+		
 		public void NotifyTimeStateInfoAndScoreInfo(GameClient client, bool timeState = true, bool sideScore = true)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -2151,7 +2151,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BA6 RID: 15270 RVA: 0x0032D858 File Offset: 0x0032BA58
+		
 		public void OnKillRole(GameClient client, GameClient other)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -2240,7 +2240,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BA7 RID: 15271 RVA: 0x0032DEEC File Offset: 0x0032C0EC
+		
 		public void ResortZhanDuiRankByJiFen(ZorkBattleScene scene)
 		{
             lock(this.RuntimeData.Mutex)
@@ -2309,7 +2309,7 @@ namespace GameServer.Logic
 			}
         }
 
-		// Token: 0x06003BA8 RID: 15272 RVA: 0x0032DFE8 File Offset: 0x0032C1E8
+		
 		public void GiveAwards(ZorkBattleScene scene)
 		{
 			try
@@ -2369,13 +2369,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BA9 RID: 15273 RVA: 0x0032E20C File Offset: 0x0032C40C
+		
 		public void PushGameResultData(ZorkBattleScene scene)
 		{
 			TianTiClient.getInstance().GameFuBenComplete_ZorkBattle(scene.GameStatisticalData);
 		}
 
-		// Token: 0x06003BAA RID: 15274 RVA: 0x0032E220 File Offset: 0x0032C420
+		
 		private void NtfCanGetAward(GameClient client, int success, int ranknum, TianTi5v5ZhanDuiData zhanduiData, ZorkBattleTeamInfo teamInfo)
 		{
 			ZorkBattleRoleInfo contextData = client.SceneContextData2 as ZorkBattleRoleInfo;
@@ -2401,7 +2401,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BAB RID: 15275 RVA: 0x0032E2F0 File Offset: 0x0032C4F0
+		
 		private int GiveRoleAwards(GameClient client, int success, TianTi5v5ZhanDuiData zhanduiData, ZorkBattleTeamInfo teamInfo)
 		{
 			ZorkBattleRoleInfo contextData = client.SceneContextData2 as ZorkBattleRoleInfo;
@@ -2462,7 +2462,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003BAC RID: 15276 RVA: 0x0032E52C File Offset: 0x0032C72C
+		
 		public void LeaveFuBen(GameClient client)
 		{
 			ZorkBattleScene scene = client.SceneObject as ZorkBattleScene;
@@ -2474,13 +2474,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BAD RID: 15277 RVA: 0x0032E571 File Offset: 0x0032C771
+		
 		public void OnLogout(GameClient client)
 		{
 			this.LeaveFuBen(client);
 		}
 
-		// Token: 0x06003BAE RID: 15278 RVA: 0x0032E57C File Offset: 0x0032C77C
+		
 		private void CheckSceneScoreData(ZorkBattleScene zorkBattleScene, long nowTicks)
 		{
 			bool NtfScoreInfo = false;
@@ -2499,7 +2499,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BAF RID: 15279 RVA: 0x0032E624 File Offset: 0x0032C824
+		
 		private void CheckSceneBufferTime(ZorkBattleScene zorkBattleScene, long nowTicks)
 		{
 			List<ZorkBattleSceneBuff> sceneBuffDeleteList = new List<ZorkBattleSceneBuff>();
@@ -2559,7 +2559,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003BB0 RID: 15280 RVA: 0x0032E8CC File Offset: 0x0032CACC
+		
 		public void OnStartPlayGame(GameClient client)
 		{
 			ZorkBattleScene scene = client.SceneObject as ZorkBattleScene;
@@ -2603,7 +2603,7 @@ namespace GameServer.Logic
 			this.UpdateChengHaoBuffer(client);
 		}
 
-		// Token: 0x06003BB1 RID: 15281 RVA: 0x0032EAA4 File Offset: 0x0032CCA4
+		
 		private string BuildSceneBuffKey(object bufferOwner, int bufferGoodsID)
 		{
 			GameClient client = bufferOwner as GameClient;
@@ -2625,7 +2625,7 @@ namespace GameServer.Logic
 			return key;
 		}
 
-		// Token: 0x06003BB2 RID: 15282 RVA: 0x0032EB5C File Offset: 0x0032CD5C
+		
 		private void UpdateBuff4GameScene(ZorkBattleScene scene, object bufferOwner, int bufferGoodsID, object tagInfo, bool add)
 		{
 			try
@@ -2803,22 +2803,22 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04004625 RID: 17957
+		
 		public const SceneUIClasses ManagerType = SceneUIClasses.ZorkBattle;
 
-		// Token: 0x04004626 RID: 17958
+		
 		private static ZorkBattleManager instance = new ZorkBattleManager();
 
-		// Token: 0x04004627 RID: 17959
+		
 		public ZorkBattleData RuntimeData = new ZorkBattleData();
 
-		// Token: 0x04004628 RID: 17960
+		
 		public ZorkBattleSyncData ZorkBattleSyncDataCache = new ZorkBattleSyncData();
 
-		// Token: 0x04004629 RID: 17961
+		
 		public ConcurrentDictionary<int, ZorkBattleScene> SceneDict = new ConcurrentDictionary<int, ZorkBattleScene>();
 
-		// Token: 0x0400462A RID: 17962
+		
 		private static long NextHeartBeatTicks = 0L;
 	}
 }

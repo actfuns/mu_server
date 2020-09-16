@@ -8,10 +8,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006C5 RID: 1733
+	
 	public class FuBenManager
 	{
-		// Token: 0x060020DF RID: 8415 RVA: 0x001C2E94 File Offset: 0x001C1094
+		
 		public static int FindFuBenSeqIDByRoleID(int roleID)
 		{
 			int fuBenSeqID = 0;
@@ -30,7 +30,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060020E0 RID: 8416 RVA: 0x001C2EFC File Offset: 0x001C10FC
+		
 		public static FuBenInfoItem FindFuBenInfoBySeqID(int fuBenSeqID)
 		{
 			FuBenInfoItem fuBenInfoItem = null;
@@ -49,7 +49,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060020E1 RID: 8417 RVA: 0x001C2F60 File Offset: 0x001C1160
+		
 		public static void AddFuBenSeqID(int roleID, int fuBenSeqID, int goodsBinding, int fuBenID)
 		{
 			lock (FuBenManager._FuBenSeqIDDict)
@@ -72,7 +72,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020E2 RID: 8418 RVA: 0x001C303C File Offset: 0x001C123C
+		
 		public static void RemoveFuBenSeqID(int roleID)
 		{
 			int fuBenSeqID = -1;
@@ -89,7 +89,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020E3 RID: 8419 RVA: 0x001C30AC File Offset: 0x001C12AC
+		
 		public static void RemoveFuBenInfoBySeqID(int fuBenSeqID)
 		{
 			if (fuBenSeqID != -1)
@@ -101,7 +101,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020E4 RID: 8420 RVA: 0x001C3108 File Offset: 0x001C1308
+		
 		public static int GetFuBenSeqId(int tag = 0)
 		{
 			string[] dbFields = Global.ExecuteDBCmd(10049, string.Format("{0}", tag), 0);
@@ -116,7 +116,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x060020E5 RID: 8421 RVA: 0x001C3164 File Offset: 0x001C1364
+		
 		public static FuBenMapItem FindMapCodeByFuBenID(int fuBenID, int mapCode)
 		{
 			FuBenMapItem fuBenMapItem = null;
@@ -133,7 +133,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060020E6 RID: 8422 RVA: 0x001C31A8 File Offset: 0x001C13A8
+		
 		public static List<FuBenMapItem> GetAllFubenMapItem()
 		{
 			List<FuBenMapItem> list = new List<FuBenMapItem>();
@@ -144,7 +144,7 @@ namespace GameServer.Logic
 			return list;
 		}
 
-		// Token: 0x060020E7 RID: 8423 RVA: 0x001C320C File Offset: 0x001C140C
+		
 		public static List<int> FindMapCodeListByFuBenID(int fuBenID)
 		{
 			List<int> mapCodeList = null;
@@ -160,7 +160,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060020E8 RID: 8424 RVA: 0x001C3238 File Offset: 0x001C1438
+		
 		public static int FindFuBenIDByMapCode(int mapCode)
 		{
 			int fuBenID = -1;
@@ -176,7 +176,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060020E9 RID: 8425 RVA: 0x001C3264 File Offset: 0x001C1464
+		
 		public static bool IsFuBenMap(int mapCode)
 		{
 			bool isFuBenMap = FuBenManager.FindFuBenIDByMapCode(mapCode) > 0;
@@ -187,7 +187,7 @@ namespace GameServer.Logic
 			return isFuBenMap;
 		}
 
-		// Token: 0x060020EA RID: 8426 RVA: 0x001C329C File Offset: 0x001C149C
+		
 		public static int FindNextMapCodeByFuBenID(int mapCode)
 		{
 			int fuBenID = FuBenManager.FindFuBenIDByMapCode(mapCode);
@@ -223,7 +223,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060020EB RID: 8427 RVA: 0x001C3318 File Offset: 0x001C1518
+		
 		public static int FindMapCodeIndexByFuBenID(int mapCode)
 		{
 			int fuBenID = FuBenManager.FindFuBenIDByMapCode(mapCode);
@@ -255,7 +255,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060020EC RID: 8428 RVA: 0x001C3378 File Offset: 0x001C1578
+		
 		private static List<GoodsData> ParseGoodsDataList(string[] fields)
 		{
 			List<GoodsData> goodsDataList = new List<GoodsData>();
@@ -282,7 +282,7 @@ namespace GameServer.Logic
 			return goodsDataList;
 		}
 
-		// Token: 0x060020ED RID: 8429 RVA: 0x001C344C File Offset: 0x001C164C
+		
 		private static void ParseXmlItem(SystemXmlItem systemXmlItem)
 		{
 			int mapCode = systemXmlItem.GetIntValue("MapCode", -1);
@@ -357,7 +357,7 @@ namespace GameServer.Logic
 			FuBenManager._MapCode2FuBenDict[mapCode] = fuBenID;
 		}
 
-		// Token: 0x060020EE RID: 8430 RVA: 0x001C36E8 File Offset: 0x001C18E8
+		
 		public static void LoadFuBenMap()
 		{
 			XElement xml = null;
@@ -385,7 +385,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060020EF RID: 8431 RVA: 0x001C37BC File Offset: 0x001C19BC
+		
 		public static int GetFuBenMaxTimeSecs(int fuBenId)
 		{
 			SystemXmlItem copyItem = null;
@@ -402,7 +402,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060020F0 RID: 8432 RVA: 0x001C3818 File Offset: 0x001C1A18
+		
 		public static bool CanFuBenMapFallGoodsAutoGet(GameClient client)
 		{
 			int fuBenSeqID = client.ClientData.FuBenSeqID;
@@ -428,14 +428,14 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060020F1 RID: 8433 RVA: 0x001C3888 File Offset: 0x001C1A88
+		
 		public static int GetFuBenMapAwardsGoodsBinding(GameClient client)
 		{
 			int fuBenSeqID = client.ClientData.FuBenSeqID;
 			return FuBenManager.GetFuBenMapAwardsGoodsBinding(fuBenSeqID);
 		}
 
-		// Token: 0x060020F2 RID: 8434 RVA: 0x001C38AC File Offset: 0x001C1AAC
+		
 		public static int GetFuBenMapAwardsGoodsBinding(int fuBenSeqID)
 		{
 			FuBenInfoItem fuBenInfoItem = FuBenManager.FindFuBenInfoBySeqID(fuBenSeqID);
@@ -451,7 +451,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060020F3 RID: 8435 RVA: 0x001C38DC File Offset: 0x001C1ADC
+		
 		public static bool CanGetFuBenMapAwards(GameClient client)
 		{
 			int fuBenID = FuBenManager.FindFuBenIDByMapCode(client.ClientData.MapCode);
@@ -501,7 +501,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060020F4 RID: 8436 RVA: 0x001C39D4 File Offset: 0x001C1BD4
+		
 		public static bool CanAutoGetFuBenMapAwards(GameClient client)
 		{
 			int fuBenID = FuBenManager.FindFuBenIDByMapCode(client.ClientData.MapCode);
@@ -551,7 +551,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060020F5 RID: 8437 RVA: 0x001C3AF4 File Offset: 0x001C1CF4
+		
 		public static bool ProcessFuBenMapAwards(GameClient client, bool notifyClient = false)
 		{
 			bool result;
@@ -633,19 +633,19 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x040036A8 RID: 13992
+		
 		private static Dictionary<int, int> _FuBenSeqIDDict = new Dictionary<int, int>();
 
-		// Token: 0x040036A9 RID: 13993
+		
 		private static Dictionary<int, FuBenInfoItem> _FuBenSeqID2InfoDict = new Dictionary<int, FuBenInfoItem>();
 
-		// Token: 0x040036AA RID: 13994
+		
 		private static Dictionary<string, FuBenMapItem> _FuBenMapCode2MapItemDict = new Dictionary<string, FuBenMapItem>();
 
-		// Token: 0x040036AB RID: 13995
+		
 		private static Dictionary<int, List<int>> _FuBen2MapCodeListDict = new Dictionary<int, List<int>>();
 
-		// Token: 0x040036AC RID: 13996
+		
 		private static Dictionary<int, int> _MapCode2FuBenDict = new Dictionary<int, int>();
 	}
 }

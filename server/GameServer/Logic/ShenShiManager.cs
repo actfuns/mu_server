@@ -13,16 +13,16 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000419 RID: 1049
+	
 	public class ShenShiManager : IManager, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x06001253 RID: 4691 RVA: 0x0012280C File Offset: 0x00120A0C
+		
 		public static ShenShiManager getInstance()
 		{
 			return ShenShiManager.instance;
 		}
 
-		// Token: 0x06001254 RID: 4692 RVA: 0x00122824 File Offset: 0x00120A24
+		
 		public bool initialize()
 		{
 			this.LoadFuWenHoleXml();
@@ -34,7 +34,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001255 RID: 4693 RVA: 0x00122864 File Offset: 0x00120A64
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1870, 1, 1, ShenShiManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -53,25 +53,25 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001256 RID: 4694 RVA: 0x001229B0 File Offset: 0x00120BB0
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06001257 RID: 4695 RVA: 0x001229C4 File Offset: 0x00120BC4
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06001258 RID: 4696 RVA: 0x001229D8 File Offset: 0x00120BD8
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06001259 RID: 4697 RVA: 0x001229EC File Offset: 0x00120BEC
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -116,7 +116,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600125A RID: 4698 RVA: 0x00122B5C File Offset: 0x00120D5C
+		
 		public bool ProcessShenShiMainInfoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -140,7 +140,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600125B RID: 4699 RVA: 0x00122C04 File Offset: 0x00120E04
+		
 		public bool ProcessGetFuWenTabListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -159,7 +159,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600125C RID: 4700 RVA: 0x00122C84 File Offset: 0x00120E84
+		
 		public bool ProcessGetFuWenListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -178,7 +178,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600125D RID: 4701 RVA: 0x00122D04 File Offset: 0x00120F04
+		
 		public bool ProcessGetShenShiListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -198,7 +198,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600125E RID: 4702 RVA: 0x00122D88 File Offset: 0x00120F88
+		
 		public bool ProcessModFuWenCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -308,7 +308,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600125F RID: 4703 RVA: 0x001230F8 File Offset: 0x001212F8
+		
 		public bool ProcessModShenShiCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -406,7 +406,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001260 RID: 4704 RVA: 0x00123480 File Offset: 0x00121680
+		
 		public bool ProcessModSkillCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -478,7 +478,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001261 RID: 4705 RVA: 0x0012373C File Offset: 0x0012193C
+		
 		public bool ProcessFuWenChouQuCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -628,7 +628,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001262 RID: 4706 RVA: 0x00123DAC File Offset: 0x00121FAC
+		
 		public bool ProcessFuWenZhiZuoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -693,7 +693,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001263 RID: 4707 RVA: 0x00123FEC File Offset: 0x001221EC
+		
 		public bool ProcessFuWenFenJieCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -782,7 +782,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001264 RID: 4708 RVA: 0x001242F4 File Offset: 0x001224F4
+		
 		public bool ProcessModFuWenTabCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -835,7 +835,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001265 RID: 4709 RVA: 0x001244E8 File Offset: 0x001226E8
+		
 		public bool ProcessModFuWenTabNameCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -878,7 +878,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001266 RID: 4710 RVA: 0x00124688 File Offset: 0x00122888
+		
 		public bool ProcessFuWenTabBuyCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -934,7 +934,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001267 RID: 4711 RVA: 0x00124870 File Offset: 0x00122A70
+		
 		public void LoadFuWenHoleXml()
 		{
 			string fileName = "";
@@ -982,7 +982,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001268 RID: 4712 RVA: 0x00124A94 File Offset: 0x00122C94
+		
 		public void LoadFuWenXml()
 		{
 			string fileName = "";
@@ -1024,7 +1024,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001269 RID: 4713 RVA: 0x00124CDC File Offset: 0x00122EDC
+		
 		public void LoadFuWenGodXml()
 		{
 			string fileName = "";
@@ -1067,7 +1067,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600126A RID: 4714 RVA: 0x00124F04 File Offset: 0x00123104
+		
 		public void LoadFuWenRandomXml()
 		{
 			string fileName = "";
@@ -1125,13 +1125,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600126B RID: 4715 RVA: 0x00125200 File Offset: 0x00123400
+		
 		public void ReloadConfig()
 		{
 			this.LoadHuoDongFuWenRandomXml();
 		}
 
-		// Token: 0x0600126C RID: 4716 RVA: 0x0012520C File Offset: 0x0012340C
+		
 		public void LoadHuoDongFuWenRandomXml()
 		{
 			string fileName = "";
@@ -1189,7 +1189,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600126D RID: 4717 RVA: 0x00125508 File Offset: 0x00123708
+		
 		public void LoadDefaultXml()
 		{
 			try
@@ -1246,7 +1246,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600126E RID: 4718 RVA: 0x00125744 File Offset: 0x00123944
+		
 		public List<FuWenRandomItem> GetRandomList(int type)
 		{
 			List<FuWenRandomItem> randomList = this.ShenShiRunTimeData.FuWenRandomList;
@@ -1272,7 +1272,7 @@ namespace GameServer.Logic
 			return randomList;
 		}
 
-		// Token: 0x0600126F RID: 4719 RVA: 0x001257C8 File Offset: 0x001239C8
+		
 		public static FuWenTabData AddRoleFuWenTab(int rid, int tabID, int serverID)
 		{
 			FuWenTabData newTab = new FuWenTabData
@@ -1287,7 +1287,7 @@ namespace GameServer.Logic
 			return newTab;
 		}
 
-		// Token: 0x06001270 RID: 4720 RVA: 0x0012583C File Offset: 0x00123A3C
+		
 		public FuWenHoleItem GetFuWenHole(int fuWenId)
 		{
 			FuWenHoleItem ret = null;
@@ -1310,7 +1310,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06001271 RID: 4721 RVA: 0x001258F4 File Offset: 0x00123AF4
+		
 		public void InitRoleShenShiData(GameClient client)
 		{
 			if (null == client.ClientData.FuWenGoodsDataList)
@@ -1356,7 +1356,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001272 RID: 4722 RVA: 0x00125B2C File Offset: 0x00123D2C
+		
 		public int ToType(string type)
 		{
 			if (type != null)
@@ -1378,7 +1378,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06001273 RID: 4723 RVA: 0x00125B90 File Offset: 0x00123D90
+		
 		public static GoodsData AddFuWenGoodsData(GameClient client, int id, int goodsID, int forgeLevel, int quality, int goodsNum, int binding, int site, string jewelList, string startTime, string endTime, int addPropIndex, int bornIndex, int lucky, int strong, int ExcellenceProperty, int nAppendPropLev, int nEquipChangeLife, int bagIndex = 0, List<int> washProps = null)
 		{
 			GoodsData gd = new GoodsData
@@ -1416,7 +1416,7 @@ namespace GameServer.Logic
 			return gd;
 		}
 
-		// Token: 0x06001274 RID: 4724 RVA: 0x00125CCC File Offset: 0x00123ECC
+		
 		public static int GetIdleSlotOfFuWenBagGoods(GameClient client)
 		{
 			int idelPos = 0;
@@ -1448,25 +1448,25 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001275 RID: 4725 RVA: 0x00125DA4 File Offset: 0x00123FA4
+		
 		public static bool CanAddGoodsNum(GameClient client, int num)
 		{
 			return client != null && num > 0;
 		}
 
-		// Token: 0x06001276 RID: 4726 RVA: 0x00125DCC File Offset: 0x00123FCC
+		
 		public static int GetMaxFuWenCount()
 		{
 			return int.MaxValue;
 		}
 
-		// Token: 0x06001277 RID: 4727 RVA: 0x00125DE4 File Offset: 0x00123FE4
+		
 		public bool IsGongNengOpen(GameClient client, bool hint = false)
 		{
 			return !GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System2Dot6) && GlobalNew.IsGongNengOpened(client, GongNengIDs.ShenShiFuWen, hint);
 		}
 
-		// Token: 0x06001278 RID: 4728 RVA: 0x00125E14 File Offset: 0x00124014
+		
 		public static GoodsData GetGoodsByID(GameClient client, int goodsID, int bingding, string startTime, string endTime, ref int startIndex)
 		{
 			GoodsData result;
@@ -1498,7 +1498,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001279 RID: 4729 RVA: 0x00125F28 File Offset: 0x00124128
+		
 		public static void UpdateFuWenGoodsData(GameClient client, GoodsData goodsData)
 		{
 			if (client.ClientData.FuWenGoodsDataList != null && null != goodsData)
@@ -1523,7 +1523,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600127A RID: 4730 RVA: 0x00126040 File Offset: 0x00124240
+		
 		public static GoodsData GetFuWenGoodsDataByGoodsID(GameClient client, int goodsID)
 		{
 			GoodsData result;
@@ -1541,7 +1541,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600127B RID: 4731 RVA: 0x001260E8 File Offset: 0x001242E8
+		
 		public List<GoodsData> GetFuWenGoodsDataListByGoodsID(GameClient client, int goodsID)
 		{
 			List<GoodsData> ret = new List<GoodsData>();
@@ -1567,7 +1567,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600127C RID: 4732 RVA: 0x001261C8 File Offset: 0x001243C8
+		
 		public static int GetFuWenGoodsDataCountByGoodsID(GameClient client, int goodsID)
 		{
 			int result;
@@ -1593,7 +1593,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600127D RID: 4733 RVA: 0x001262A4 File Offset: 0x001244A4
+		
 		public static GoodsData GetFuWenGoodsDataByDbID(GameClient client, int id)
 		{
 			GoodsData result;
@@ -1622,7 +1622,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600127E RID: 4734 RVA: 0x00126378 File Offset: 0x00124578
+		
 		public string CheckShenShiList(GameClient client, int tabId)
 		{
 			string ret = "";
@@ -1657,7 +1657,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x0600127F RID: 4735 RVA: 0x00126510 File Offset: 0x00124710
+		
 		public List<int> GetActiveShenShiList(GameClient client, List<int> fuWenList)
 		{
 			List<int> ret = new List<int>();
@@ -1701,7 +1701,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001280 RID: 4736 RVA: 0x001266BC File Offset: 0x001248BC
+		
 		public List<int> SelectCanActiveList(List<int> shenShiList)
 		{
 			List<int> ret = new List<int>();
@@ -1725,7 +1725,7 @@ namespace GameServer.Logic
 			return typeShenShiDict.Values.ToList<FuWenGodItem>().ConvertAll<int>((FuWenGodItem _g) => _g.GodId);
 		}
 
-		// Token: 0x06001281 RID: 4737 RVA: 0x001267E4 File Offset: 0x001249E4
+		
 		public int GetTabEquipFuWenNum(GameClient client, int tabID, int goodsID)
 		{
 			int result;
@@ -1740,14 +1740,14 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001282 RID: 4738 RVA: 0x00126860 File Offset: 0x00124A60
+		
 		public bool CheckIsFuWenByGoodsID(int goodsID)
 		{
 			SystemXmlItem systemGoods = null;
 			return GameManager.SystemGoods.SystemXmlItemDict.TryGetValue(goodsID, out systemGoods) && systemGoods.GetIntValue("Categoriy", -1) == 940;
 		}
 
-		// Token: 0x06001283 RID: 4739 RVA: 0x001268A4 File Offset: 0x00124AA4
+		
 		public void UpdateFuWenTabList(GameClient client, int tabId)
 		{
 			lock (client.ClientData.FuWenTabList)
@@ -1798,7 +1798,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001284 RID: 4740 RVA: 0x00126A94 File Offset: 0x00124C94
+		
 		public int GetCurrentTabTotalLevel(GameClient client)
 		{
 			int totalLev = 0;
@@ -1824,7 +1824,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001285 RID: 4741 RVA: 0x00126B6C File Offset: 0x00124D6C
+		
 		public void UpdateFuWenProps(GameClient client)
 		{
 			int tabId = Global.GetRoleParamsInt32FromDB(client, "10185");
@@ -1867,7 +1867,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001286 RID: 4742 RVA: 0x00126D54 File Offset: 0x00124F54
+		
 		public void CheckShenShiProps(GameClient client, int tabId, bool writeDB = false)
 		{
 			try
@@ -1906,7 +1906,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001287 RID: 4743 RVA: 0x00126F48 File Offset: 0x00125148
+		
 		public FuWenTabData GetRoleFuWenTabData(GameClient client)
 		{
 			int tabId = Global.GetRoleParamsInt32FromDB(client, "10185");
@@ -1922,7 +1922,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001288 RID: 4744 RVA: 0x00126FA4 File Offset: 0x001251A4
+		
 		public List<int> GetAttackerShenShiActiveList(object attacker, ref int rid, ref int magicCode)
 		{
 			if (this.ShenShiRunTimeData.ParentMagicCode.ContainsKey(magicCode))
@@ -1957,7 +1957,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001289 RID: 4745 RVA: 0x00127090 File Offset: 0x00125290
+		
 		public double GetMagicCodeAddPercent(object attacker, object enemy, int magicCode)
 		{
 			double ret = 0.0;
@@ -2191,7 +2191,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x0600128A RID: 4746 RVA: 0x001278DC File Offset: 0x00125ADC
+		
 		public double GetMagicCodeAddInjure(object attacker, object enemy, int magicCode)
 		{
 			double ret = 0.0;
@@ -2247,7 +2247,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x0600128B RID: 4747 RVA: 0x00127B58 File Offset: 0x00125D58
+		
 		public double GetMagicCodeSkillCDSubPercent(GameClient client, int magicCode)
 		{
 			double ret = 0.0;
@@ -2302,7 +2302,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x0600128C RID: 4748 RVA: 0x00127E08 File Offset: 0x00126008
+		
 		public double GetMagicCodeAddPercent2(object attacker, List<object> enemyList, int magicCode)
 		{
 			double ret = 0.0;
@@ -2357,28 +2357,28 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x04001BF4 RID: 7156
+		
 		public ShenShiRunData ShenShiRunTimeData = new ShenShiRunData();
 
-		// Token: 0x04001BF5 RID: 7157
+		
 		public int FuWenFreeTime = 0;
 
-		// Token: 0x04001BF6 RID: 7158
+		
 		public int FuWenChouQuCost = 0;
 
-		// Token: 0x04001BF7 RID: 7159
+		
 		public int FuWenChouQuCost_10 = 0;
 
-		// Token: 0x04001BF8 RID: 7160
+		
 		public List<int> FuWenMagicList = new List<int>();
 
-		// Token: 0x04001BF9 RID: 7161
+		
 		public int InitFuWenTabNum = 0;
 
-		// Token: 0x04001BFA RID: 7162
+		
 		public List<int> FuWenTabBuyCost = new List<int>();
 
-		// Token: 0x04001BFB RID: 7163
+		
 		private static ShenShiManager instance = new ShenShiManager();
 	}
 }

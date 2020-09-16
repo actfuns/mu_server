@@ -5,10 +5,10 @@ using GameServer.Core.Executor;
 
 namespace GameServer.Logic.JingJiChang.FSM
 {
-	// Token: 0x02000726 RID: 1830
+	
 	internal class AttackState : IFSMState
 	{
-		// Token: 0x06002C77 RID: 11383 RVA: 0x0027B36C File Offset: 0x0027956C
+		
 		public AttackState(GameClient player, Robot owner, FinishStateMachine FSM)
 		{
 			this.owner = owner;
@@ -19,14 +19,14 @@ namespace GameServer.Logic.JingJiChang.FSM
 			this.fiveComboSkillList = JingJiChangConstants.getJingJiChangeFiveCombatSkillList(owner.getRoleDataMini().Occupation, eMagicSwordType);
 		}
 
-		// Token: 0x06002C78 RID: 11384 RVA: 0x0027B45B File Offset: 0x0027965B
+		
 		public void onBegin()
 		{
 			this.changeAction(GActions.Stand);
 			this.benginCombatTime = TimeUtil.NOW() + 2000L;
 		}
 
-		// Token: 0x06002C79 RID: 11385 RVA: 0x0027B478 File Offset: 0x00279678
+		
 		public void onEnd()
 		{
 			this.simulateEndTime = 0L;
@@ -35,7 +35,7 @@ namespace GameServer.Logic.JingJiChang.FSM
 			this.benginCombatTime = 0L;
 		}
 
-		// Token: 0x06002C7A RID: 11386 RVA: 0x0027B49C File Offset: 0x0027969C
+		
 		public void onUpdate(long ticks)
 		{
 			if (ticks >= this.benginCombatTime)
@@ -136,7 +136,7 @@ namespace GameServer.Logic.JingJiChang.FSM
 			}
 		}
 
-		// Token: 0x06002C7B RID: 11387 RVA: 0x0027B7D0 File Offset: 0x002799D0
+		
 		private bool testAttackDistance(out int direction)
 		{
 			direction = 0;
@@ -238,7 +238,7 @@ namespace GameServer.Logic.JingJiChang.FSM
 			return result;
 		}
 
-		// Token: 0x06002C7C RID: 11388 RVA: 0x0027BC5C File Offset: 0x00279E5C
+		
 		private void selectFiveComboSkill()
 		{
 			if (!this.isSelectFiveComboSkill)
@@ -257,7 +257,7 @@ namespace GameServer.Logic.JingJiChang.FSM
 			}
 		}
 
-		// Token: 0x06002C7D RID: 11389 RVA: 0x0027BCC8 File Offset: 0x00279EC8
+		
 		private void selectSkill(out bool isFiveCombo)
 		{
 			this.skillId = -1;
@@ -323,7 +323,7 @@ namespace GameServer.Logic.JingJiChang.FSM
 			}
 		}
 
-		// Token: 0x06002C7E RID: 11390 RVA: 0x0027BF44 File Offset: 0x0027A144
+		
 		private bool SkillNeedMagicVOk(int skillID)
 		{
 			int usedMagicV = Global.GetNeedMagicV(this.owner, skillID, 1);
@@ -340,7 +340,7 @@ namespace GameServer.Logic.JingJiChang.FSM
 			return true;
 		}
 
-		// Token: 0x06002C7F RID: 11391 RVA: 0x0027BFBC File Offset: 0x0027A1BC
+		
 		private void moveTo(long ticks)
 		{
 			if (ticks >= this.moveEndTime)
@@ -427,7 +427,7 @@ namespace GameServer.Logic.JingJiChang.FSM
 			}
 		}
 
-		// Token: 0x06002C80 RID: 11392 RVA: 0x0027C1F4 File Offset: 0x0027A3F4
+		
 		private void attack(int direction)
 		{
 			if (!this.owner.IsMoving)
@@ -466,7 +466,7 @@ namespace GameServer.Logic.JingJiChang.FSM
 			}
 		}
 
-		// Token: 0x06002C81 RID: 11393 RVA: 0x0027C3E4 File Offset: 0x0027A5E4
+		
 		private void changeAction(GActions action)
 		{
 			if (this.owner.VLife > 0.0)
@@ -480,7 +480,7 @@ namespace GameServer.Logic.JingJiChang.FSM
 			}
 		}
 
-		// Token: 0x06002C82 RID: 11394 RVA: 0x0027C548 File Offset: 0x0027A748
+		
 		private void simulate()
 		{
 			int frameCount;
@@ -508,58 +508,58 @@ namespace GameServer.Logic.JingJiChang.FSM
 			this.castSimulateEndTime = TimeUtil.NOW() + (long)(castFrameCount * 100);
 		}
 
-		// Token: 0x04003B06 RID: 15110
+		
 		public static readonly AIState state = AIState.ATTACK;
 
-		// Token: 0x04003B07 RID: 15111
+		
 		private Robot owner = null;
 
-		// Token: 0x04003B08 RID: 15112
+		
 		private FinishStateMachine FSM = null;
 
-		// Token: 0x04003B09 RID: 15113
+		
 		private long moveEndTime = 0L;
 
-		// Token: 0x04003B0A RID: 15114
+		
 		private MonsterMoving monsterMoving = new MonsterMoving();
 
-		// Token: 0x04003B0B RID: 15115
+		
 		private GameClient target = null;
 
-		// Token: 0x04003B0C RID: 15116
+		
 		private int skillId = -1;
 
-		// Token: 0x04003B0D RID: 15117
+		
 		private int prevSkillID = -1;
 
-		// Token: 0x04003B0E RID: 15118
+		
 		private long simulateEndTime = 0L;
 
-		// Token: 0x04003B0F RID: 15119
+		
 		private long castSimulateEndTime = 0L;
 
-		// Token: 0x04003B10 RID: 15120
+		
 		private long skillSpellCDTime = 0L;
 
-		// Token: 0x04003B11 RID: 15121
+		
 		private long benginCombatTime = 0L;
 
-		// Token: 0x04003B12 RID: 15122
+		
 		private int[] fiveComboSkillList;
 
-		// Token: 0x04003B13 RID: 15123
+		
 		private bool isTryHighPrioritySkill = false;
 
-		// Token: 0x04003B14 RID: 15124
+		
 		private bool isCombatCD = true;
 
-		// Token: 0x04003B15 RID: 15125
+		
 		private bool isUseFiveComboSkill = false;
 
-		// Token: 0x04003B16 RID: 15126
+		
 		private int fiveComboSkillIndex = 0;
 
-		// Token: 0x04003B17 RID: 15127
+		
 		private bool isSelectFiveComboSkill = false;
 	}
 }

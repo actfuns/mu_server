@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.GoldAuction
 {
-	// Token: 0x020000A7 RID: 167
+	
 	public class GoldAuctionConfigModel
 	{
-		// Token: 0x0600028D RID: 653 RVA: 0x0002B914 File Offset: 0x00029B14
+		
 		public static int LoadConfig()
 		{
 			try
@@ -36,7 +36,7 @@ namespace GameServer.Logic.GoldAuction
 			return 0;
 		}
 
-		// Token: 0x0600028E RID: 654 RVA: 0x0002B9EC File Offset: 0x00029BEC
+		
 		public static AuctionConfig GetAuctionConfig(int id)
 		{
 			AuctionConfig cfg = null;
@@ -54,7 +54,7 @@ namespace GameServer.Logic.GoldAuction
 			return cfg;
 		}
 
-		// Token: 0x0600028F RID: 655 RVA: 0x0002BA7C File Offset: 0x00029C7C
+		
 		public static AuctionAwardConfig RandAuctionAwardConfig()
 		{
 			try
@@ -90,7 +90,7 @@ namespace GameServer.Logic.GoldAuction
 			return null;
 		}
 
-		// Token: 0x06000290 RID: 656 RVA: 0x0002BBD0 File Offset: 0x00029DD0
+		
 		private static bool LoadAngelTempleAuctionAwardData(out List<AuctionAwardConfig> _AuctionAwardList)
 		{
 			_AuctionAwardList = new List<AuctionAwardConfig>();
@@ -138,7 +138,7 @@ namespace GameServer.Logic.GoldAuction
 			return true;
 		}
 
-		// Token: 0x06000291 RID: 657 RVA: 0x0002BDE0 File Offset: 0x00029FE0
+		
 		private static bool LoadAuctionData(out Dictionary<int, AuctionConfig> _AuctionAwardDict)
 		{
 			_AuctionAwardDict = new Dictionary<int, AuctionConfig>();
@@ -203,37 +203,37 @@ namespace GameServer.Logic.GoldAuction
 			return true;
 		}
 
-		// Token: 0x040003E5 RID: 997
+		
 		private const string Auction = "Config/Auction.xml";
 
-		// Token: 0x040003E6 RID: 998
+		
 		private const string AngelTempleAuctionAward = "Config/AngelTempleAuctionAward.xml";
 
-		// Token: 0x040003E7 RID: 999
+		
 		public const string AngelTempleAuction = "AngelTempleAuction";
 
-		// Token: 0x040003E8 RID: 1000
+		
 		public const string AngelTempleAuctionMin = "AngelTempleAuctionMin";
 
-		// Token: 0x040003E9 RID: 1001
+		
 		public const string AuctionZhanMengOpen = "AuctionZhanMengOpen";
 
-		// Token: 0x040003EA RID: 1002
+		
 		public const string BuyTitle = "购买成功";
 
-		// Token: 0x040003EB RID: 1003
+		
 		public const string BuyIntro = "在金团拍卖购买成功";
 
-		// Token: 0x040003EC RID: 1004
+		
 		public const string BuyFailTitle = "竞拍失败";
 
-		// Token: 0x040003ED RID: 1005
+		
 		public const string BuyFailIntro = "您参与的活动奖励{0}，在竞价中被超过,返还您{1}钻石";
 
-		// Token: 0x040003EE RID: 1006
+		
 		private static Dictionary<int, AuctionConfig> AuctionDict = new Dictionary<int, AuctionConfig>();
 
-		// Token: 0x040003EF RID: 1007
+		
 		private static List<AuctionAwardConfig> AuctionAwardList = new List<AuctionAwardConfig>();
 	}
 }

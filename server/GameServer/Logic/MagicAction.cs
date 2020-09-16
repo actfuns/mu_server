@@ -21,10 +21,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000741 RID: 1857
+	
 	internal class MagicAction
 	{
-		// Token: 0x06002EC9 RID: 11977 RVA: 0x0028C230 File Offset: 0x0028A430
+		
 		private static bool ProcessActionSeveralTimes(IObject self, IObject obj, MagicActionIDs id, double[] actionParams, int binding, int actionGoodsID, bool bIsVerify, int timesNum)
 		{
 			bool ret = true;
@@ -397,7 +397,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002ECA RID: 11978 RVA: 0x0028D238 File Offset: 0x0028B438
+		
 		public static bool ProcessAction(IObject self, IObject obj, MagicActionIDs id, double[] actionParams, int targetX = -1, int targetY = -1, int usedMaigcV = 0, int skillLevel = 1, int skillid = -1, int npcID = 0, int binding = 0, int direction = -1, int actionGoodsID = 0, bool bItemAddVal = false, bool bIsVerify = false, double manyRangeInjuredPercent = 1.0, int timesNum = 1, double shenShiInjurePercent = 0.0)
 		{
 			if (MagicAction.MaxHitNum == 0)
@@ -5729,7 +5729,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002ECB RID: 11979 RVA: 0x0029EBF0 File Offset: 0x0029CDF0
+		
 		public static void ZhongDuActionProc(long execTicks, object state)
 		{
 			MagicAction.ZhongDuContextData context = state as MagicAction.ZhongDuContextData;
@@ -5787,7 +5787,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002ECC RID: 11980 RVA: 0x0029EEF8 File Offset: 0x0029D0F8
+		
 		public static void ChenMoActionProc(long execTicks, object state)
 		{
 			MagicAction.ChenMoContextData context = state as MagicAction.ChenMoContextData;
@@ -5852,48 +5852,48 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04003C69 RID: 15465
+		
 		[ThreadStatic]
 		public static int MaxHitNum;
 
-		// Token: 0x02000742 RID: 1858
+		
 		public class ZhongDuContextData
 		{
-			// Token: 0x04003C6C RID: 15468
+			
 			public IObject Self;
 
-			// Token: 0x04003C6D RID: 15469
+			
 			public int Attacker;
 
-			// Token: 0x04003C6E RID: 15470
+			
 			public int Injure;
 
-			// Token: 0x04003C6F RID: 15471
+			
 			public int Occupation;
 
-			// Token: 0x04003C70 RID: 15472
+			
 			public double percent;
 		}
 
-		// Token: 0x02000743 RID: 1859
+		
 		public class ChenMoContextData
 		{
-			// Token: 0x04003C71 RID: 15473
+			
 			public IObject Self;
 
-			// Token: 0x04003C72 RID: 15474
+			
 			public int Attacker;
 
-			// Token: 0x04003C73 RID: 15475
+			
 			public int Injure;
 
-			// Token: 0x04003C74 RID: 15476
+			
 			public int Occupation;
 
-			// Token: 0x04003C75 RID: 15477
+			
 			public bool Stop;
 
-			// Token: 0x04003C76 RID: 15478
+			
 			public double percent;
 		}
 	}

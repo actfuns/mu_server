@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004AB RID: 1195
+	
 	public class RegressActiveTotalRecharge : Activity
 	{
-		// Token: 0x06001638 RID: 5688 RVA: 0x0015B920 File Offset: 0x00159B20
+		
 		public bool Init()
 		{
 			this.ActivityType = 112;
@@ -72,7 +72,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001639 RID: 5689 RVA: 0x0015BB60 File Offset: 0x00159D60
+		
 		public void OnRoleLogin(GameClient client)
 		{
 			if (!this.InActivityTime())
@@ -101,7 +101,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600163A RID: 5690 RVA: 0x0015BC20 File Offset: 0x00159E20
+		
 		public bool GiveAwardCheck(GameClient client, int Level, int Money, int RechargeConfID, out List<GoodsData> goodsList)
 		{
 			goodsList = null;
@@ -127,7 +127,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600163B RID: 5691 RVA: 0x0015BC80 File Offset: 0x00159E80
+		
 		public bool GiveAward(GameClient client, List<GoodsData> goodsData)
 		{
 			bool result;
@@ -153,10 +153,10 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04001FC7 RID: 8135
+		
 		protected const string RegressActiveTotalRechargeXml = "Config\\HuiGuiChongZhiGift.xml";
 
-		// Token: 0x04001FC8 RID: 8136
+		
 		private Dictionary<int, RegressActiveTotalRechargeXML> regressActiveTotalRechargeXML = new Dictionary<int, RegressActiveTotalRechargeXML>();
 	}
 }

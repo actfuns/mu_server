@@ -8,16 +8,16 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020003D9 RID: 985
+	
 	public class RebornStone
 	{
-		// Token: 0x060010FA RID: 4346 RVA: 0x00107A6C File Offset: 0x00105C6C
+		
 		public static RebornStone getInstance()
 		{
 			return RebornStone.instance;
 		}
 
-		// Token: 0x060010FB RID: 4347 RVA: 0x00107A84 File Offset: 0x00105C84
+		
 		public static bool ParseRebornStoneConfig()
 		{
 			string fileName = Global.GameResPath(RebornStoneConst.RebornEquipDaKong);
@@ -281,7 +281,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060010FC RID: 4348 RVA: 0x00108570 File Offset: 0x00106770
+		
 		public static double GetExpandValue(int HoleSuit)
 		{
 			double value;
@@ -297,7 +297,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060010FD RID: 4349 RVA: 0x001085A8 File Offset: 0x001067A8
+		
 		public static int MakeHoleQualityOne(int Suit, int Quality)
 		{
 			Dictionary<int, int> Item = new Dictionary<int, int>();
@@ -326,7 +326,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x060010FE RID: 4350 RVA: 0x00108740 File Offset: 0x00106940
+		
 		public Dictionary<int, Dictionary<int, int>> MakeHole(Dictionary<double, int> GaiLv, int Site)
 		{
 			Dictionary<int, Dictionary<int, int>> result;
@@ -353,7 +353,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060010FF RID: 4351 RVA: 0x001087EC File Offset: 0x001069EC
+		
 		public static int GetGoodsHoleInfo(GoodsData gd, int Site, out Dictionary<int, Dictionary<int, int>> HoleInfo, SystemXmlItem systemGoods)
 		{
 			HoleInfo = null;
@@ -377,7 +377,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06001100 RID: 4352 RVA: 0x001088FC File Offset: 0x00106AFC
+		
 		public static string MakeHoleInfo(Dictionary<int, Dictionary<int, int>> HoleInfo, int XuanCaiID)
 		{
 			string HoleInfoStr = "";
@@ -420,7 +420,7 @@ namespace GameServer.Logic
 			return HoleInfoStr;
 		}
 
-		// Token: 0x06001101 RID: 4353 RVA: 0x00108AE0 File Offset: 0x00106CE0
+		
 		public static Dictionary<int, Dictionary<int, int>> ParessMakeHoleInfo(string HoleInfoStr)
 		{
 			Dictionary<int, Dictionary<int, int>> HoleInfo = new Dictionary<int, Dictionary<int, int>>();
@@ -451,7 +451,7 @@ namespace GameServer.Logic
 			return HoleInfo;
 		}
 
-		// Token: 0x06001102 RID: 4354 RVA: 0x00108BC4 File Offset: 0x00106DC4
+		
 		public static bool UpdateGoodsPropsToDB(GameClient client, GoodsData goodsData)
 		{
 			string[] dbFields = null;
@@ -499,7 +499,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001103 RID: 4355 RVA: 0x00108D7C File Offset: 0x00106F7C
+		
 		public static Dictionary<int, int> GetUseGoodsByEquipSuitAndQuality(int Suit, int Quality)
 		{
 			foreach (KeyValuePair<int, RebornHoleStruct> it in RebornStone.RebornHoleStr)
@@ -512,7 +512,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06001104 RID: 4356 RVA: 0x00108E18 File Offset: 0x00107018
+		
 		public static bool RebornHoleRemoveUseGoods(GameClient client, GoodsData UseGood, int Count, out bool bUsedBinding)
 		{
 			bUsedBinding = false;
@@ -537,7 +537,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001105 RID: 4357 RVA: 0x00108EC4 File Offset: 0x001070C4
+		
 		public static bool RebornUseCaleMothed(Dictionary<int, Dictionary<bool, GoodsData>> GoodsDict, Dictionary<int, Dictionary<int, GoodsData>> UseGoodInfo, int Count)
 		{
 			int GroupUseNum = 0;
@@ -587,7 +587,7 @@ namespace GameServer.Logic
 			return flag;
 		}
 
-		// Token: 0x06001106 RID: 4358 RVA: 0x00109090 File Offset: 0x00107290
+		
 		public static bool RebornUseGoodHasBinding(GameClient client, int UseGoodID, int Count, int Binding, out bool EquipBindUse)
 		{
 			EquipBindUse = false;
@@ -769,7 +769,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001107 RID: 4359 RVA: 0x00109778 File Offset: 0x00107978
+		
 		public static Dictionary<int, Dictionary<int, GoodsData>> GetDictRebornUseGoodHasBinding(GameClient client, int UseGoodID, int Count, int Binding, out bool EquipBindUse)
 		{
 			EquipBindUse = false;
@@ -906,7 +906,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001108 RID: 4360 RVA: 0x00109C28 File Offset: 0x00107E28
+		
 		public static void ActiveXuanCaiAttr(GameClient client, GoodsData goodsData, Dictionary<int, int> Active, int StoneID)
 		{
 			double[] _ExtProps = new double[177];
@@ -1001,7 +1001,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001109 RID: 4361 RVA: 0x0010A000 File Offset: 0x00108200
+		
 		public static bool IsXuanCaiStone(GoodsData goodsData, out GoodsData OutGoodsData, out int XuanCaiStone)
 		{
 			XuanCaiStone = 0;
@@ -1062,7 +1062,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600110A RID: 4362 RVA: 0x0010A144 File Offset: 0x00108344
+		
 		public static void VoidXuanCaiProps(GameClient client)
 		{
 			double[] _ExtProps = new double[177];
@@ -1073,7 +1073,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x0600110B RID: 4363 RVA: 0x0010A184 File Offset: 0x00108384
+		
 		public static void RefreshProps(GameClient client, Dictionary<int, double> StoneAllAttr)
 		{
 			double[] _ExtProps = new double[177];
@@ -1091,7 +1091,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x0600110C RID: 4364 RVA: 0x0010A234 File Offset: 0x00108434
+		
 		public static void GetRefreshProps(GameClient client, GoodsData goodsData, Dictionary<int, int> Active, Dictionary<int, double> StoneAllAttr)
 		{
 			if (!string.IsNullOrEmpty(goodsData.Props))
@@ -1155,7 +1155,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600110D RID: 4365 RVA: 0x0010A52C File Offset: 0x0010872C
+		
 		public static RebornStornOpcode ProessMakeRebornEquipHold(GameClient client, int DBID, int Bind, int IsReset, int Number, out string prop, out int bind)
 		{
 			prop = "";
@@ -1338,7 +1338,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600110E RID: 4366 RVA: 0x0010AACC File Offset: 0x00108CCC
+		
 		public static RebornStornOpcode ProessRebornStoneInlayHold(GameClient client, int EquipDBID, int StoneDBID, int Number, out string prop, out int bind)
 		{
 			prop = "";
@@ -1478,7 +1478,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600110F RID: 4367 RVA: 0x0010AEC4 File Offset: 0x001090C4
+		
 		public static RebornStornOpcode ProessRebornStoneDisInlayHold(GameClient client, int EquipDBID, int Number, out string prop)
 		{
 			prop = "";
@@ -1606,7 +1606,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001110 RID: 4368 RVA: 0x0010B350 File Offset: 0x00109550
+		
 		public static RebornStornOpcode ProessRebornStoneComplex(GameClient client, int GoodID, int Count)
 		{
 			SystemXmlItem systemGoodsItem;
@@ -1667,7 +1667,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001111 RID: 4369 RVA: 0x0010B5A4 File Offset: 0x001097A4
+		
 		public static RebornStornOpcode RebornStoneResolve(GameClient client, int GoodsID, int Count, int bind)
 		{
 			RebornStornOpcode result;
@@ -1757,7 +1757,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001112 RID: 4370 RVA: 0x0010B8F8 File Offset: 0x00109AF8
+		
 		public static RebornStornOpcode RebornXuanCaiComplexStone(GameClient client, int DBID1, int num1, int DBID2, int num2, int DBID3, int num3)
 		{
 			GoodsData gd = RebornEquip.GetRebornGoodsByDbID(client, DBID1);
@@ -1920,7 +1920,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001113 RID: 4371 RVA: 0x0010BF28 File Offset: 0x0010A128
+		
 		public static RebornStornOpcode SaleRebornStoneProcess(GameClient client, string strGoodsID)
 		{
 			int nTotalChangeFengYing = 0;
@@ -2005,31 +2005,31 @@ namespace GameServer.Logic
 			return RebornStornOpcode.RebornBatchResolveStoneSucc;
 		}
 
-		// Token: 0x04001A23 RID: 6691
+		
 		public static Dictionary<int, RebornHoleStruct> RebornHoleStr = new Dictionary<int, RebornHoleStruct>();
 
-		// Token: 0x04001A24 RID: 6692
+		
 		public static Dictionary<int, int> RebornEquipHoleMap = new Dictionary<int, int>();
 
-		// Token: 0x04001A25 RID: 6693
+		
 		public static Dictionary<Dictionary<int, int>, int> ItemIDMap = new Dictionary<Dictionary<int, int>, int>();
 
-		// Token: 0x04001A26 RID: 6694
+		
 		public static Dictionary<int, double> RebornHoleExpend = new Dictionary<int, double>();
 
-		// Token: 0x04001A27 RID: 6695
+		
 		public static Dictionary<int, RebornStornStruct> RebornStoneXml = new Dictionary<int, RebornStornStruct>();
 
-		// Token: 0x04001A28 RID: 6696
+		
 		public static Dictionary<int, RebornStornComp> RebornStoneComplex = new Dictionary<int, RebornStornComp>();
 
-		// Token: 0x04001A29 RID: 6697
+		
 		public static Dictionary<int, Dictionary<int, RebornXuanCaiStorn>> RebornStoneActiveAttr = new Dictionary<int, Dictionary<int, RebornXuanCaiStorn>>();
 
-		// Token: 0x04001A2A RID: 6698
+		
 		public static int XuanCaiMaxLevel = 10;
 
-		// Token: 0x04001A2B RID: 6699
+		
 		private static RebornStone instance = new RebornStone();
 	}
 }

@@ -5,10 +5,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200075B RID: 1883
+	
 	internal class MonsterContainer
 	{
-		// Token: 0x06002F6F RID: 12143 RVA: 0x002A6768 File Offset: 0x002A4968
+		
 		public void initialize(IEnumerable<XElement> mapItems)
 		{
 			foreach (XElement mapItem in mapItems)
@@ -31,8 +31,8 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x17000353 RID: 851
-		// (get) Token: 0x06002F70 RID: 12144 RVA: 0x002A6860 File Offset: 0x002A4A60
+		
+		
 		public List<object> ObjectList
 		{
 			get
@@ -41,8 +41,8 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x17000354 RID: 852
-		// (get) Token: 0x06002F71 RID: 12145 RVA: 0x002A6878 File Offset: 0x002A4A78
+		
+		
 		public Dictionary<int, Dictionary<int, object>> ObjectDict
 		{
 			get
@@ -51,8 +51,8 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x17000355 RID: 853
-		// (get) Token: 0x06002F72 RID: 12146 RVA: 0x002A6890 File Offset: 0x002A4A90
+		
+		
 		public Dictionary<int, List<object>> MapObjectDict
 		{
 			get
@@ -61,8 +61,8 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x17000356 RID: 854
-		// (get) Token: 0x06002F73 RID: 12147 RVA: 0x002A68A8 File Offset: 0x002A4AA8
+		
+		
 		public Dictionary<int, List<object>> CopyMapIDObjectDict
 		{
 			get
@@ -71,7 +71,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002F74 RID: 12148 RVA: 0x002A68C0 File Offset: 0x002A4AC0
+		
 		public void AddObject(int id, int mapCode, int copyMapID, Monster obj)
 		{
 			lock (this._ObjectList)
@@ -131,7 +131,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002F75 RID: 12149 RVA: 0x002A6B30 File Offset: 0x002A4D30
+		
 		public void RemoveObject(int id, int mapCode, int copyMapID, Monster obj)
 		{
 			lock (this._ObjectList)
@@ -210,7 +210,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002F76 RID: 12150 RVA: 0x002A6DDC File Offset: 0x002A4FDC
+		
 		public List<object> GetObjectsByMap(int mapCode, int subMapCode = -1)
 		{
 			List<object> newObjList = null;
@@ -235,7 +235,7 @@ namespace GameServer.Logic
 			return newObjList;
 		}
 
-		// Token: 0x06002F77 RID: 12151 RVA: 0x002A6EC8 File Offset: 0x002A50C8
+		
 		public int GetObjectsCountByMap(int mapCode)
 		{
 			int count = 0;
@@ -250,7 +250,7 @@ namespace GameServer.Logic
 			return count;
 		}
 
-		// Token: 0x06002F78 RID: 12152 RVA: 0x002A6F38 File Offset: 0x002A5138
+		
 		public List<object> GetObjectsByCopyMapID(int copyMapID)
 		{
 			List<object> newObjList = null;
@@ -265,7 +265,7 @@ namespace GameServer.Logic
 			return newObjList;
 		}
 
-		// Token: 0x06002F79 RID: 12153 RVA: 0x002A6FAC File Offset: 0x002A51AC
+		
 		public int GetObjectsCountByCopyMapID(int copyMapID, int aliveType = -1)
 		{
 			int count = 0;
@@ -312,7 +312,7 @@ namespace GameServer.Logic
 			return count;
 		}
 
-		// Token: 0x06002F7A RID: 12154 RVA: 0x002A7168 File Offset: 0x002A5368
+		
 		public bool IsAnyMonsterAliveByCopyMapID(int copyMapID)
 		{
 			List<object> objList = null;
@@ -335,7 +335,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06002F7B RID: 12155 RVA: 0x002A7230 File Offset: 0x002A5430
+		
 		public object FindObject(int id, int mapCode)
 		{
 			object obj = null;
@@ -350,7 +350,7 @@ namespace GameServer.Logic
 			return obj;
 		}
 
-		// Token: 0x06002F7C RID: 12156 RVA: 0x002A72A0 File Offset: 0x002A54A0
+		
 		public List<object> FindObjectAll(int mapCode)
 		{
 			List<object> ret = new List<object>();
@@ -368,7 +368,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002F7D RID: 12157 RVA: 0x002A735C File Offset: 0x002A555C
+		
 		public List<object> FindObjectsByExtensionID(int extensionID, int copyMapID)
 		{
 			List<object> findObjsList = new List<object>();
@@ -392,22 +392,22 @@ namespace GameServer.Logic
 			return findObjsList;
 		}
 
-		// Token: 0x04003CD9 RID: 15577
+		
 		public List<object> _ObjectList = new List<object>(20000);
 
-		// Token: 0x04003CDA RID: 15578
+		
 		private Dictionary<int, Dictionary<int, object>> _ObjectDict = new Dictionary<int, Dictionary<int, object>>(10000);
 
-		// Token: 0x04003CDB RID: 15579
+		
 		private Dictionary<int, Dictionary<int, object>> _FreshPlayerObjectDict = new Dictionary<int, Dictionary<int, object>>(50);
 
-		// Token: 0x04003CDC RID: 15580
+		
 		private Dictionary<int, List<object>> _MapObjectDict = new Dictionary<int, List<object>>(10000);
 
-		// Token: 0x04003CDD RID: 15581
+		
 		private Dictionary<int, List<object>> _FreshPlayerMapObjectDict = new Dictionary<int, List<object>>(50);
 
-		// Token: 0x04003CDE RID: 15582
+		
 		private Dictionary<int, List<object>> _CopyMapIDObjectDict = new Dictionary<int, List<object>>(10000);
 	}
 }

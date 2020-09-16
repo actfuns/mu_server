@@ -11,10 +11,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000543 RID: 1347
+	
 	public class QingGongYanManager
 	{
-		// Token: 0x060019A9 RID: 6569 RVA: 0x0018F4E0 File Offset: 0x0018D6E0
+		
 		public void LoadQingGongYanConfig()
 		{
 			lock (this._QingGongYanMutex)
@@ -60,7 +60,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060019AA RID: 6570 RVA: 0x0018F780 File Offset: 0x0018D980
+		
 		private QingGongYanInfo GetQingGongYanConfig(int index)
 		{
 			QingGongYanInfo InfoData = null;
@@ -74,7 +74,7 @@ namespace GameServer.Logic
 			return InfoData;
 		}
 
-		// Token: 0x060019AB RID: 6571 RVA: 0x0018F7F0 File Offset: 0x0018D9F0
+		
 		public QingGongYanResult HoldQingGongYan(GameClient client, int index, int onlyCheck = 0)
 		{
 			QingGongYanResult result;
@@ -176,7 +176,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060019AC RID: 6572 RVA: 0x0018FB6C File Offset: 0x0018DD6C
+		
 		private bool IfNeedOpenQingGongYan()
 		{
 			QingGongYanInfo InfoData = this.GetInfoData();
@@ -194,7 +194,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060019AD RID: 6573 RVA: 0x0018FC18 File Offset: 0x0018DE18
+		
 		private bool IfNeedCloseQingGongYan()
 		{
 			QingGongYanInfo InfoData = this.GetInfoData();
@@ -212,7 +212,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060019AE RID: 6574 RVA: 0x0018FCA4 File Offset: 0x0018DEA4
+		
 		public void CheckQingGongYan(long ticks)
 		{
 			if (ticks - this.lastProcessTicks >= 10000L)
@@ -229,7 +229,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060019AF RID: 6575 RVA: 0x0018FD00 File Offset: 0x0018DF00
+		
 		private void OpenQingGongYan()
 		{
 			this.QingGongYanOpenFlag = true;
@@ -259,7 +259,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060019B0 RID: 6576 RVA: 0x0018FE24 File Offset: 0x0018E024
+		
 		private QingGongYanInfo GetInfoData()
 		{
 			int DBGrade = GameManager.GameConfigMgr.GetGameConfigItemInt("qinggongyan_grade", 0);
@@ -275,7 +275,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060019B1 RID: 6577 RVA: 0x0018FE5C File Offset: 0x0018E05C
+		
 		private void CloseQingGongYan()
 		{
 			if (null != this.QingGongYanNpc)
@@ -326,7 +326,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060019B2 RID: 6578 RVA: 0x00190120 File Offset: 0x0018E320
+		
 		public QingGongYanResult JoinQingGongYan(GameClient client)
 		{
 			QingGongYanResult result;
@@ -436,7 +436,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060019B3 RID: 6579 RVA: 0x00190540 File Offset: 0x0018E740
+		
 		public TCPProcessCmdResults ProcessHoldQingGongYanCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -489,7 +489,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x060019B4 RID: 6580 RVA: 0x00190734 File Offset: 0x0018E934
+		
 		public TCPProcessCmdResults ProcessQueryQingGongYanCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -562,7 +562,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x060019B5 RID: 6581 RVA: 0x001909C4 File Offset: 0x0018EBC4
+		
 		public TCPProcessCmdResults ProcessJoinQingGongYanCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -613,7 +613,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x060019B6 RID: 6582 RVA: 0x00190B90 File Offset: 0x0018ED90
+		
 		public TCPProcessCmdResults ProcessCMD_SPR_QueryQingGongYanOpenCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -640,19 +640,19 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x04002418 RID: 9240
+		
 		private object _QingGongYanMutex = new object();
 
-		// Token: 0x04002419 RID: 9241
+		
 		private Dictionary<int, QingGongYanInfo> QingGongYanDict = new Dictionary<int, QingGongYanInfo>();
 
-		// Token: 0x0400241A RID: 9242
+		
 		private bool QingGongYanOpenFlag = false;
 
-		// Token: 0x0400241B RID: 9243
+		
 		private NPC QingGongYanNpc = null;
 
-		// Token: 0x0400241C RID: 9244
+		
 		private long lastProcessTicks = 0L;
 	}
 }

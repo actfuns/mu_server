@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.GoldAuction
 {
-    // Token: 0x020000A8 RID: 168
+    
     public class GoldAuctionManager
     {
-        // Token: 0x06000294 RID: 660 RVA: 0x0002C0EC File Offset: 0x0002A2EC
+        
         public void InitData()
         {
             try
@@ -29,7 +29,7 @@ namespace GameServer.Logic.GoldAuction
             }
         }
 
-        // Token: 0x06000295 RID: 661 RVA: 0x0002C1A8 File Offset: 0x0002A3A8
+        
         private void InitFromDB()
         {
             try
@@ -75,7 +75,7 @@ namespace GameServer.Logic.GoldAuction
             }
         }
 
-        // Token: 0x06000296 RID: 662 RVA: 0x0002C368 File Offset: 0x0002A568
+        
         public bool SendUpdate2DB(GoldAuctionItem AuctionItem)
         {
             try
@@ -104,7 +104,7 @@ namespace GameServer.Logic.GoldAuction
             return false;
         }
 
-        // Token: 0x06000297 RID: 663 RVA: 0x0002C490 File Offset: 0x0002A690
+        
         public void UnLock(string ProductionTime, int AuctionSource)
         {
             try
@@ -124,7 +124,7 @@ namespace GameServer.Logic.GoldAuction
             }
         }
 
-        // Token: 0x06000298 RID: 664 RVA: 0x0002C568 File Offset: 0x0002A768
+        
         private GoldAuctionItem getGoldAuctionItem(string ProductionTime, int AuctionSource)
         {
             GoldAuctionItem item = null;
@@ -139,7 +139,7 @@ namespace GameServer.Logic.GoldAuction
             return item;
         }
 
-        // Token: 0x06000299 RID: 665 RVA: 0x0002C5E8 File Offset: 0x0002A7E8
+        
         public void AddNewAuctionItem(GoldAuctionItem AuctionItem)
         {
             try
@@ -165,7 +165,7 @@ namespace GameServer.Logic.GoldAuction
             }
         }
 
-        // Token: 0x0600029A RID: 666 RVA: 0x0002C72C File Offset: 0x0002A92C
+        
         public void DelGoldAuction(GoldAuctionItem Item, string info)
         {
             try
@@ -185,7 +185,7 @@ namespace GameServer.Logic.GoldAuction
             }
         }
 
-        // Token: 0x0600029B RID: 667 RVA: 0x0002C820 File Offset: 0x0002AA20
+        
         public bool UpdatePrice(GoldAuctionItem _item)
         {
             bool flag = false;
@@ -216,7 +216,7 @@ namespace GameServer.Logic.GoldAuction
             return flag;
         }
 
-        // Token: 0x0600029C RID: 668 RVA: 0x0002C928 File Offset: 0x0002AB28
+        
         public GoldAuctionItem GetGoldAuctionItem(int type, string ProductionTime, int AuctionSource, bool isLock)
         {
             GoldAuctionItem temp = null;
@@ -240,7 +240,7 @@ namespace GameServer.Logic.GoldAuction
             return temp;
         }
 
-        // Token: 0x0600029D RID: 669 RVA: 0x0002C9E4 File Offset: 0x0002ABE4
+        
         public void GetGoldAuctionS2C(int Auctiontype, int ordeType, int sortNum, int startNum, int maxNum, string Seach, int Color, ref GoldAuctionS2C clientData)
         {
             try
@@ -317,7 +317,7 @@ namespace GameServer.Logic.GoldAuction
             }
         }
 
-        // Token: 0x0600029E RID: 670 RVA: 0x0002CCF0 File Offset: 0x0002AEF0
+        
         public static bool IsOpenAuction(AuctionOrderEnum type)
         {
             try
@@ -337,7 +337,7 @@ namespace GameServer.Logic.GoldAuction
             return true;
         }
 
-        // Token: 0x0600029F RID: 671 RVA: 0x0002CDC8 File Offset: 0x0002AFC8
+        
         private void TimerProc(object sender, EventArgs e)
         {
             try
@@ -364,7 +364,7 @@ namespace GameServer.Logic.GoldAuction
             }
         }
 
-        // Token: 0x060002A0 RID: 672 RVA: 0x0002CF14 File Offset: 0x0002B114
+        
         private bool SetOutTimeItem(GoldAuctionItem AuctionItem)
         {
             try
@@ -412,7 +412,7 @@ namespace GameServer.Logic.GoldAuction
             return false;
         }
 
-        // Token: 0x060002A1 RID: 673 RVA: 0x0002D13C File Offset: 0x0002B33C
+        
         public bool DisposeAward(GoldAuctionItem Item)
         {
             try
@@ -494,7 +494,7 @@ namespace GameServer.Logic.GoldAuction
             return true;
         }
 
-        // Token: 0x060002A2 RID: 674 RVA: 0x0002D41C File Offset: 0x0002B61C
+        
         private void SendMoney(GoldAuctionItem AuctionItem, long averageNum, AuctionConfig AuctionCfg)
         {
             try
@@ -543,7 +543,7 @@ namespace GameServer.Logic.GoldAuction
             }
         }
 
-        // Token: 0x060002A3 RID: 675 RVA: 0x0002D6F0 File Offset: 0x0002B8F0
+        
         public void SendItem(int roleID, AuctionRoleData roleData, GoldAuctionItem AuctionItem, AuctionConfig AuctionCfg)
         {
             lock (this.AuctionMutex)
@@ -610,7 +610,7 @@ namespace GameServer.Logic.GoldAuction
             }
         }
 
-        // Token: 0x060002A4 RID: 676 RVA: 0x0002D990 File Offset: 0x0002BB90
+        
         public void ReturnOldAuctionMoney(AuctionRoleData BuyerData, string StrGoods)
         {
             try
@@ -635,7 +635,7 @@ namespace GameServer.Logic.GoldAuction
             }
         }
 
-        // Token: 0x060002A5 RID: 677 RVA: 0x0002DB00 File Offset: 0x0002BD00
+        
         private string GetItemName(string strGoods)
         {
             try
@@ -648,19 +648,19 @@ namespace GameServer.Logic.GoldAuction
             return "道具";
         }
 
-        // Token: 0x040003F0 RID: 1008
+        
         private const int PageSetNum = 10;
 
-        // Token: 0x040003F1 RID: 1009
+        
         private const string msgFlag = "True";
 
-        // Token: 0x040003F2 RID: 1010
+        
         private object AuctionMutex = new object();
 
-        // Token: 0x040003F3 RID: 1011
+        
         private List<GoldAuctionItem> AuctionItemList;
 
-        // Token: 0x040003F4 RID: 1012
+        
         private Dictionary<string, AuctionS2CCache> S2CCache;
     }
 }

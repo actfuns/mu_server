@@ -11,23 +11,23 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-    // Token: 0x020007FB RID: 2043
+    
     public class YaoSaiBossManager : IManager, ICmdProcessorEx, ICmdProcessor
     {
-        // Token: 0x060039DE RID: 14814 RVA: 0x0030E7F4 File Offset: 0x0030C9F4
+        
         public static YaoSaiBossManager getInstance()
         {
             return YaoSaiBossManager.instance;
         }
 
-        // Token: 0x060039DF RID: 14815 RVA: 0x0030E80C File Offset: 0x0030CA0C
+        
         public bool initialize()
         {
             this.LoadConfig();
             return true;
         }
 
-        // Token: 0x060039E0 RID: 14816 RVA: 0x0030E828 File Offset: 0x0030CA28
+        
         public bool startup()
         {
             TCPCmdDispatcher.getInstance().registerProcessorEx(1851, 2, 2, YaoSaiBossManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -40,25 +40,25 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x060039E1 RID: 14817 RVA: 0x0030E8E4 File Offset: 0x0030CAE4
+        
         public bool showdown()
         {
             return true;
         }
 
-        // Token: 0x060039E2 RID: 14818 RVA: 0x0030E8F8 File Offset: 0x0030CAF8
+        
         public bool destroy()
         {
             return true;
         }
 
-        // Token: 0x060039E3 RID: 14819 RVA: 0x0030E90C File Offset: 0x0030CB0C
+        
         public bool processCmd(GameClient client, string[] cmdParams)
         {
             return false;
         }
 
-        // Token: 0x060039E4 RID: 14820 RVA: 0x0030E920 File Offset: 0x0030CB20
+        
         public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             bool result;
@@ -90,7 +90,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x060039E5 RID: 14821 RVA: 0x0030E9E0 File Offset: 0x0030CBE0
+        
         public bool ProcessGetBossMiniInfoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -122,7 +122,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x060039E6 RID: 14822 RVA: 0x0030EAE4 File Offset: 0x0030CCE4
+        
         public bool ProcessZhaoHuanBossCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -279,7 +279,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x060039E7 RID: 14823 RVA: 0x0030EF98 File Offset: 0x0030D198
+        
         public bool ProcessTaoFaBossCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -354,7 +354,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x060039E8 RID: 14824 RVA: 0x0030F208 File Offset: 0x0030D408
+        
         public bool ProcessGetBossFightInFoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -376,7 +376,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x060039E9 RID: 14825 RVA: 0x0030F2A4 File Offset: 0x0030D4A4
+        
         public bool ProcessBossFightExcuteCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -463,7 +463,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x060039EA RID: 14826 RVA: 0x0030F658 File Offset: 0x0030D858
+        
         public bool ProcessGetBossFightLogCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -495,7 +495,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x060039EB RID: 14827 RVA: 0x0030F764 File Offset: 0x0030D964
+        
         public bool ProcessGiveBossKillAwardCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -689,7 +689,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x060039EC RID: 14828 RVA: 0x0030FFDC File Offset: 0x0030E1DC
+        
         public YaoSaiBossData GetRoleBossData(int rid)
         {
             YaoSaiBossData bossData = null;
@@ -710,7 +710,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x060039ED RID: 14829 RVA: 0x00310078 File Offset: 0x0030E278
+        
         public int GetZhanDouCount(int rid, int otherid)
         {
             try
@@ -742,7 +742,7 @@ namespace GameServer.Logic
             return 0;
         }
 
-        // Token: 0x060039EE RID: 14830 RVA: 0x00310198 File Offset: 0x0030E398
+        
         public int ExcuteInjure(GameClient client, YaoSaiBossData bossData, double injure)
         {
             try
@@ -816,7 +816,7 @@ namespace GameServer.Logic
             return -1;
         }
 
-        // Token: 0x060039EF RID: 14831 RVA: 0x00310508 File Offset: 0x0030E708
+        
         public YaoSaiBossFightData GetBossFightData(GameClient client, int otherID)
         {
             try
@@ -866,7 +866,7 @@ namespace GameServer.Logic
             return null;
         }
 
-        // Token: 0x060039F0 RID: 14832 RVA: 0x003106FC File Offset: 0x0030E8FC
+        
         public List<YaoSaiBossFightLog> GetFightLogList(int rid, int otherid)
         {
             List<YaoSaiBossFightLog> fightLogList = new List<YaoSaiBossFightLog>();
@@ -893,7 +893,7 @@ namespace GameServer.Logic
             return fightLogList;
         }
 
-        // Token: 0x060039F1 RID: 14833 RVA: 0x00310848 File Offset: 0x0030EA48
+        
         public bool CanFight(GameClient client, string jingLing)
         {
             bool ret = false;
@@ -939,7 +939,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x060039F2 RID: 14834 RVA: 0x0031098C File Offset: 0x0030EB8C
+        
         public double GetInjure(GameClient client, int bossID, string jingLing)
         {
             string[] zhenRong = jingLing.Split(new char[]
@@ -1011,7 +1011,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x060039F3 RID: 14835 RVA: 0x00310C0C File Offset: 0x0030EE0C
+        
         public void OnLogin(GameClient client, bool isNewDay)
         {
             if (isNewDay)
@@ -1022,7 +1022,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060039F4 RID: 14836 RVA: 0x00310C54 File Offset: 0x0030EE54
+        
         public void SaveAndBroadcastUpdateYaoSaiBoss(int roleID, YaoSaiBossData bossData, bool writeDB = true)
         {
             try
@@ -1091,7 +1091,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060039F5 RID: 14837 RVA: 0x00310FD4 File Offset: 0x0030F1D4
+        
         public void GiveFightAward(GameClient client, int otherid, double injure)
         {
             try
@@ -1191,7 +1191,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060039F6 RID: 14838 RVA: 0x00311434 File Offset: 0x0030F634
+        
         public int GetRoleBossState(int rid, int otherid)
         {
             try
@@ -1232,7 +1232,7 @@ namespace GameServer.Logic
             return 0;
         }
 
-        // Token: 0x060039F7 RID: 14839 RVA: 0x00311590 File Offset: 0x0030F790
+        
         public void LoadRunTimeDataFromDB()
         {
             try
@@ -1274,7 +1274,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060039F8 RID: 14840 RVA: 0x003117CC File Offset: 0x0030F9CC
+        
         public void LoadConfig()
         {
             this.LoadSystemParams();
@@ -1282,7 +1282,7 @@ namespace GameServer.Logic
             this.LoadRunTimeDataFromDB();
         }
 
-        // Token: 0x060039F9 RID: 14841 RVA: 0x003117E8 File Offset: 0x0030F9E8
+        
         public void LoadSystemParams()
         {
             try
@@ -1341,7 +1341,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060039FA RID: 14842 RVA: 0x003119DC File Offset: 0x0030FBDC
+        
         public void LoadPetBossXml()
         {
             string fileName = "";
@@ -1468,7 +1468,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060039FB RID: 14843 RVA: 0x00311EC0 File Offset: 0x003100C0
+        
         public void YaoSaiBossTimer_Work()
         {
             try
@@ -1484,43 +1484,43 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x040043AF RID: 17327
+        
         public YaoSaiBossRunTimeData RunTimeData = new YaoSaiBossRunTimeData();
 
-        // Token: 0x040043B0 RID: 17328
+        
         public static int PuTongZhaoHuanCount = 0;
 
-        // Token: 0x040043B1 RID: 17329
+        
         public static int ZuanShiZhaoHuanCost = 0;
 
-        // Token: 0x040043B2 RID: 17330
+        
         public static int TaoFaCount = 0;
 
-        // Token: 0x040043B3 RID: 17331
+        
         public static int ZhaoHuanFightCount = 0;
 
-        // Token: 0x040043B4 RID: 17332
+        
         public static int XieZhuFightCount = 0;
 
-        // Token: 0x040043B5 RID: 17333
+        
         public static int XieZhuAwardCount = 0;
 
-        // Token: 0x040043B6 RID: 17334
+        
         public static int FiveStartNeedGoods = 0;
 
-        // Token: 0x040043B7 RID: 17335
+        
         public static int FiveStartNeedNums = 0;
 
-        // Token: 0x040043B8 RID: 17336
+        
         public static int FiveStartNeedZuan = 0;
 
-        // Token: 0x040043B9 RID: 17337
+        
         public static List<int> EWaiFightCost = new List<int>();
 
-        // Token: 0x040043BA RID: 17338
+        
         public Dictionary<int, PetBossItem> PetBossXmlDict = new Dictionary<int, PetBossItem>();
 
-        // Token: 0x040043BB RID: 17339
+        
         private static YaoSaiBossManager instance = new YaoSaiBossManager();
     }
 }

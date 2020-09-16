@@ -8,11 +8,11 @@ using Server.Tools;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x0200002F RID: 47
+	
 	public class JieriHongBaoKingActivity : JieRiActivity
 	{
-		// Token: 0x17000001 RID: 1
-		// (get) Token: 0x0600006B RID: 107 RVA: 0x00007F4C File Offset: 0x0000614C
+		
+		
 		private int RANK_LVL_CNT
 		{
 			get
@@ -21,13 +21,13 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x0600006C RID: 108 RVA: 0x00007F6C File Offset: 0x0000616C
+		
 		public static JieriHongBaoKingActivity getInstance()
 		{
 			return JieriHongBaoKingActivity.instance;
 		}
 
-		// Token: 0x0600006D RID: 109 RVA: 0x00007FAC File Offset: 0x000061AC
+		
 		public bool OnRecv(GameClient client, int zuanshi, string strFrom)
 		{
 			bool result;
@@ -88,7 +88,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0600006E RID: 110 RVA: 0x00008228 File Offset: 0x00006428
+		
 		public bool Init()
 		{
 			try
@@ -193,7 +193,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x0600006F RID: 111 RVA: 0x00008624 File Offset: 0x00006824
+		
 		public bool CanGetAnyAward(GameClient client)
 		{
 			bool result;
@@ -226,7 +226,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000070 RID: 112 RVA: 0x00008714 File Offset: 0x00006914
+		
 		public bool LoadRankFromDB()
 		{
 			bool result;
@@ -265,7 +265,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000071 RID: 113 RVA: 0x000088C4 File Offset: 0x00006AC4
+		
 		private void buildRankingList(List<JieriHongBaoKingItemData> rankingList)
 		{
 			rankingList.Sort(delegate(JieriHongBaoKingItemData left, JieriHongBaoKingItemData right)
@@ -308,7 +308,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x06000072 RID: 114 RVA: 0x000089C0 File Offset: 0x00006BC0
+		
 		public void QueryActivityInfo(GameClient client)
 		{
 			JieriHongBaoKingData result = new JieriHongBaoKingData();
@@ -339,7 +339,7 @@ namespace GameServer.Logic.ActivityNew
 			client.sendCmd<JieriHongBaoKingData>(1429, result, false);
 		}
 
-		// Token: 0x06000073 RID: 115 RVA: 0x00008AF4 File Offset: 0x00006CF4
+		
 		public new void GetAward(GameClient client, int awardid)
 		{
 			int result = 0;
@@ -406,7 +406,7 @@ namespace GameServer.Logic.ActivityNew
 			client.sendCmd<int>(1428, result, false);
 		}
 
-		// Token: 0x06000074 RID: 116 RVA: 0x00008D4C File Offset: 0x00006F4C
+		
 		private JieriHongBaoKingItemData GetRoleRecvKingInfo(GameClient client, int count, int flags, int serverId)
 		{
 			int rid = client.ClientData.RoleID;
@@ -421,7 +421,7 @@ namespace GameServer.Logic.ActivityNew
 			return null;
 		}
 
-		// Token: 0x06000075 RID: 117 RVA: 0x00008DF4 File Offset: 0x00006FF4
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client, int id)
 		{
 			AwardItem allItem = null;
@@ -446,7 +446,7 @@ namespace GameServer.Logic.ActivityNew
 			return Global.CanAddGoodsNum(client, awardCnt);
 		}
 
-		// Token: 0x06000076 RID: 118 RVA: 0x00008ED4 File Offset: 0x000070D4
+		
 		public void OnChangeName(int roleId, string oldName, string newName)
 		{
 			if (!string.IsNullOrEmpty(oldName) && !string.IsNullOrEmpty(newName))
@@ -463,28 +463,28 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x040000FB RID: 251
+		
 		private const string CfgFile = "Config/JieRiGifts/JieRiHongBaoBang.xml";
 
-		// Token: 0x040000FC RID: 252
+		
 		private object Mutex = new object();
 
-		// Token: 0x040000FD RID: 253
+		
 		private Dictionary<int, JieriHongBaoKingItemData> recvDict = new Dictionary<int, JieriHongBaoKingItemData>();
 
-		// Token: 0x040000FE RID: 254
+		
 		private List<JieriHongBaoKingItemData> orderedRecvList = new List<JieriHongBaoKingItemData>();
 
-		// Token: 0x040000FF RID: 255
+		
 		public Dictionary<int, AwardItem> allAwardDict = new Dictionary<int, AwardItem>();
 
-		// Token: 0x04000100 RID: 256
+		
 		public Dictionary<int, AwardItem> occAwardDict = new Dictionary<int, AwardItem>();
 
-		// Token: 0x04000101 RID: 257
+		
 		private Dictionary<int, AwardEffectTimeItem> timeAwardDict = new Dictionary<int, AwardEffectTimeItem>();
 
-		// Token: 0x04000102 RID: 258
+		
 		private static JieriHongBaoKingActivity instance = new JieriHongBaoKingActivity();
 	}
 }

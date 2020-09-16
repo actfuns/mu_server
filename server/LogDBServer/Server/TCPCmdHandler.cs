@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace LogDBServer.Server
 {
-	// Token: 0x0200002E RID: 46
+	
 	internal class TCPCmdHandler
 	{
-		// Token: 0x060000F0 RID: 240 RVA: 0x00006638 File Offset: 0x00004838
+		
 		public static TCPProcessCmdResults ProcessCmd(GameServerClient client, DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25,7 +25,7 @@ namespace LogDBServer.Server
 			return result;
 		}
 
-		// Token: 0x060000F1 RID: 241 RVA: 0x00006684 File Offset: 0x00004884
+		
 		private static TCPProcessCmdResults ProcessOnlineServerHeartCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;

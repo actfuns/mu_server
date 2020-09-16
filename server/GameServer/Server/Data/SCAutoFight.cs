@@ -4,16 +4,16 @@ using Tmsk.Contract;
 
 namespace Server.Data
 {
-	// Token: 0x0200017F RID: 383
+	
 	[ProtoContract]
 	public class SCAutoFight : IProtoBuffData
 	{
-		// Token: 0x060004A9 RID: 1193 RVA: 0x0004113A File Offset: 0x0003F33A
+		
 		public SCAutoFight()
 		{
 		}
 
-		// Token: 0x060004AA RID: 1194 RVA: 0x00041164 File Offset: 0x0003F364
+		
 		public SCAutoFight(int state, int roleID, int fightType, int extTag1)
 		{
 			this.State = state;
@@ -22,7 +22,7 @@ namespace Server.Data
 			this.Tag = extTag1;
 		}
 
-		// Token: 0x060004AB RID: 1195 RVA: 0x000411B4 File Offset: 0x0003F3B4
+		
 		public int fromBytes(byte[] data, int offset, int count)
 		{
 			int pos = offset;
@@ -53,7 +53,7 @@ namespace Server.Data
 			return pos;
 		}
 
-		// Token: 0x060004AC RID: 1196 RVA: 0x0004126C File Offset: 0x0003F46C
+		
 		public byte[] toBytes()
 		{
 			int total = 0;
@@ -70,19 +70,19 @@ namespace Server.Data
 			return data;
 		}
 
-		// Token: 0x04000881 RID: 2177
+		
 		[ProtoMember(1)]
 		public int State = 0;
 
-		// Token: 0x04000882 RID: 2178
+		
 		[ProtoMember(2)]
 		public int RoleID = 0;
 
-		// Token: 0x04000883 RID: 2179
+		
 		[ProtoMember(3)]
 		public int FightType = 0;
 
-		// Token: 0x04000884 RID: 2180
+		
 		[ProtoMember(4)]
 		public int Tag = 0;
 	}

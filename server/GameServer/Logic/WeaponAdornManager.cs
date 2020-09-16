@@ -5,10 +5,10 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007B9 RID: 1977
+	
 	public class WeaponAdornManager
 	{
-		// Token: 0x060033F9 RID: 13305 RVA: 0x002DFA50 File Offset: 0x002DDC50
+		
 		public static int GetWeaponAdornOrder(int nOccupation, int nHandType, int nActionType)
 		{
 			int result;
@@ -23,7 +23,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060033FA RID: 13306 RVA: 0x002DFA8C File Offset: 0x002DDC8C
+		
 		public static WeaponAdornInfo GetWeaponAdornInfo(int nOccupation, int nHandType, int nActionType)
 		{
 			int nOrder = WeaponAdornManager.GetWeaponAdornOrder(nOccupation, nHandType, nActionType);
@@ -47,7 +47,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060033FB RID: 13307 RVA: 0x002DFAD0 File Offset: 0x002DDCD0
+		
 		public static int VerifyWeaponCanEquip(int nOccupation, int nHandType, int nActionType, Dictionary<int, List<GoodsData>> EquipDict)
 		{
 			WeaponAdornInfo weaponInfo = WeaponAdornManager.GetWeaponAdornInfo(nOccupation, nHandType, nActionType);
@@ -119,7 +119,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060033FC RID: 13308 RVA: 0x002DFCC4 File Offset: 0x002DDEC4
+		
 		public static void LoadWeaponAdornInfo()
 		{
 			try
@@ -188,7 +188,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04003F75 RID: 16245
+		
 		public static Dictionary<int, WeaponAdornInfo> dictWeaponAdornInfo = new Dictionary<int, WeaponAdornInfo>();
 	}
 }

@@ -16,10 +16,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004DC RID: 1244
+	
 	public class GlobalNew
 	{
-		// Token: 0x0600171F RID: 5919 RVA: 0x0016A5C8 File Offset: 0x001687C8
+		
 		public static bool IsGongNengOpened(GameClient client, GongNengIDs id, bool hint = false)
 		{
 			int versionGongNengId = (int)id;
@@ -146,7 +146,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001720 RID: 5920 RVA: 0x0016A9DC File Offset: 0x00168BDC
+		
 		public static void RefreshGongNeng(GameClient client)
 		{
 			CaiJiLogic.InitRoleDailyCaiJiData(client, false, false);
@@ -165,7 +165,7 @@ namespace GameServer.Logic
 			GameManager.ClientMgr.NotifyOthersLifeChanged(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, client, true, false, 7);
 		}
 
-		// Token: 0x06001721 RID: 5921 RVA: 0x0016AAB4 File Offset: 0x00168CB4
+		
 		public static int GetFuBenTabNeedTask(int fuBenTabId)
 		{
 			int needTaskId = 0;
@@ -176,7 +176,7 @@ namespace GameServer.Logic
 			return needTaskId;
 		}
 
-		// Token: 0x06001722 RID: 5922 RVA: 0x0016AAE0 File Offset: 0x00168CE0
+		
 		public static bool IsExtraGongNengOpen(GameClient client, ExtraGongNengIds extGongId)
 		{
 			int needLevel = 0;
@@ -189,7 +189,7 @@ namespace GameServer.Logic
 			return (needLevel <= 0 || needLevel <= Global.GetUnionLevel(client, false)) && (needTask <= 0 || needTask <= client.ClientData.MainTaskID) && (needVip <= 0 || needVip <= client.ClientData.VipLevel);
 		}
 
-		// Token: 0x06001723 RID: 5923 RVA: 0x0016AB84 File Offset: 0x00168D84
+		
 		public static string GetTaskName(int taskId)
 		{
 			SystemXmlItem systemTask = null;
@@ -205,7 +205,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001724 RID: 5924 RVA: 0x0016ABC4 File Offset: 0x00168DC4
+		
 		public static string PrintRoleProps(string otherRoleIdOrName)
 		{
 			string rolePropsStr = null;
@@ -234,7 +234,7 @@ namespace GameServer.Logic
 			return rolePropsStr;
 		}
 
-		// Token: 0x06001725 RID: 5925 RVA: 0x0016AC5C File Offset: 0x00168E5C
+		
 		public static bool GetNpcTaskData(GameClient client, int extensionID, NPCData npcData)
 		{
 			List<int> tasksList = null;
@@ -379,7 +379,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001726 RID: 5926 RVA: 0x0016B0C4 File Offset: 0x001692C4
+		
 		public static bool GetNpcFunctionData(GameClient client, int extensionID, NPCData npcData, SystemXmlItem systemNPC)
 		{
 			bool result;
@@ -438,7 +438,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001727 RID: 5927 RVA: 0x0016B23C File Offset: 0x0016943C
+		
 		public static TCPClient PopGameDbClient(int serverId, int poolId)
 		{
 			TCPClient result;
@@ -460,7 +460,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001728 RID: 5928 RVA: 0x0016B2AC File Offset: 0x001694AC
+		
 		public static void PushGameDbClient(int serverId, TCPClient tcpClient, int poolId)
 		{
 			if (serverId <= 0 || serverId == GameManager.ServerId || serverId == GameManager.KuaFuServerId)
@@ -480,7 +480,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001729 RID: 5929 RVA: 0x0016B320 File Offset: 0x00169520
+		
 		public static void UpdateKuaFuRoleDayLogData(int serverId, int roleId, DateTime now, int zoneId, int signUpCount, int startGameCount, int successCount, int faildCount, int gameType)
 		{
 			Global.SendToDB<RoleKuaFuDayLogData>(20003, new RoleKuaFuDayLogData
@@ -496,7 +496,7 @@ namespace GameServer.Logic
 			}, serverId);
 		}
 
-		// Token: 0x0600172A RID: 5930 RVA: 0x0016B394 File Offset: 0x00169594
+		
 		public static void RecordSwitchKuaFuServerLog(GameClient client)
 		{
 			ushort LastMapCode = 0;
@@ -529,7 +529,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x0600172B RID: 5931 RVA: 0x0016B4DC File Offset: 0x001696DC
+		
 		public static List<int[]> FindPath(Point startPoint, Point endPoint, int mapCode)
 		{
 			GameMap gameMap = GameManager.MapMgr.DictMaps[mapCode];
@@ -585,7 +585,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600172C RID: 5932 RVA: 0x0016B69C File Offset: 0x0016989C
+		
 		public static bool Copy<T>(T sData, ref T rData)
 		{
 			try
@@ -603,7 +603,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600172D RID: 5933 RVA: 0x0016B72C File Offset: 0x0016992C
+		
 		public static GoodsData ParseGoodsData(string fields)
 		{
 			try
@@ -627,13 +627,13 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x04002104 RID: 8452
+		
 		private static Stack<PathFinderFast> _pathStack = new Stack<PathFinderFast>();
 
-		// Token: 0x020004DD RID: 1245
+		
 		public class NpcCircleTaskData
 		{
-			// Token: 0x06001730 RID: 5936 RVA: 0x0016B7E0 File Offset: 0x001699E0
+			
 			public int DoRandomTaskID(GameClient client)
 			{
 				int result;
@@ -657,13 +657,13 @@ namespace GameServer.Logic
 				return result;
 			}
 
-			// Token: 0x04002105 RID: 8453
+			
 			public int taskclass = 0;
 
-			// Token: 0x04002106 RID: 8454
+			
 			public int oldTaskID = 0;
 
-			// Token: 0x04002107 RID: 8455
+			
 			public List<int> NpcAttachedTaskID = new List<int>();
 		}
 	}

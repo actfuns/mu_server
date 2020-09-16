@@ -5,10 +5,10 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020001DF RID: 479
+	
 	public class OccupationUtil
 	{
-		// Token: 0x0600060E RID: 1550 RVA: 0x00055368 File Offset: 0x00053568
+		
 		public static int GetOccuDamageType(int occuationIndex)
 		{
 			int result;
@@ -31,7 +31,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600060F RID: 1551 RVA: 0x000553A8 File Offset: 0x000535A8
+		
 		public static bool CostMoney(GameClient client, int moneyType, int modifyValue, ref string strCostList, string logMsg)
 		{
 			bool subRes = false;

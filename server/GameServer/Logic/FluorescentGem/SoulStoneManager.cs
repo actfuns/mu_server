@@ -12,10 +12,10 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic.FluorescentGem
 {
-	// Token: 0x020002D1 RID: 721
+	
 	public class SoulStoneManager : SingletonTemplate<SoulStoneManager>, IManager, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x06000B41 RID: 2881 RVA: 0x000B04A8 File Offset: 0x000AE6A8
+		
 		private SoulStoneManager()
 		{
 			this.JingHuaCategorys.Add(910);
@@ -39,7 +39,7 @@ namespace GameServer.Logic.FluorescentGem
 			this.EquipCategorys.Add(928);
 		}
 
-		// Token: 0x06000B42 RID: 2882 RVA: 0x000B0658 File Offset: 0x000AE858
+		
 		public bool initialize()
 		{
 			bool result;
@@ -55,7 +55,7 @@ namespace GameServer.Logic.FluorescentGem
 			return result;
 		}
 
-		// Token: 0x06000B43 RID: 2883 RVA: 0x000B06AC File Offset: 0x000AE8AC
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1321, 3, 3, SingletonTemplate<SoulStoneManager>.Instance(), TCPCmdFlags.IsStringArrayParams);
@@ -66,19 +66,19 @@ namespace GameServer.Logic.FluorescentGem
 			return true;
 		}
 
-		// Token: 0x06000B44 RID: 2884 RVA: 0x000B0738 File Offset: 0x000AE938
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000B45 RID: 2885 RVA: 0x000B074C File Offset: 0x000AE94C
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000B46 RID: 2886 RVA: 0x000B0760 File Offset: 0x000AE960
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -113,13 +113,13 @@ namespace GameServer.Logic.FluorescentGem
 			return result;
 		}
 
-		// Token: 0x06000B47 RID: 2887 RVA: 0x000B07F0 File Offset: 0x000AE9F0
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return true;
 		}
 
-		// Token: 0x06000B48 RID: 2888 RVA: 0x000B0804 File Offset: 0x000AEA04
+		
 		public void LoadJingHuaExpConfig()
 		{
 			Dictionary<int, int> tmpJingHuaExp = new Dictionary<int, int>();
@@ -160,7 +160,7 @@ namespace GameServer.Logic.FluorescentGem
 			this.equipLvlLimitDict = tmpLvlLimit;
 		}
 
-		// Token: 0x06000B49 RID: 2889 RVA: 0x000B096C File Offset: 0x000AEB6C
+		
 		private bool LoadRandType()
 		{
 			try
@@ -247,7 +247,7 @@ namespace GameServer.Logic.FluorescentGem
 			return true;
 		}
 
-		// Token: 0x06000B4A RID: 2890 RVA: 0x000B0D84 File Offset: 0x000AEF84
+		
 		private bool LoadRandInfo()
 		{
 			try
@@ -287,7 +287,7 @@ namespace GameServer.Logic.FluorescentGem
 			return true;
 		}
 
-		// Token: 0x06000B4B RID: 2891 RVA: 0x000B0FA0 File Offset: 0x000AF1A0
+		
 		private bool LoadExp()
 		{
 			try
@@ -330,7 +330,7 @@ namespace GameServer.Logic.FluorescentGem
 			return true;
 		}
 
-		// Token: 0x06000B4C RID: 2892 RVA: 0x000B11A0 File Offset: 0x000AF3A0
+		
 		private bool LoadStoneType()
 		{
 			try
@@ -354,7 +354,7 @@ namespace GameServer.Logic.FluorescentGem
 			return true;
 		}
 
-		// Token: 0x06000B4D RID: 2893 RVA: 0x000B1284 File Offset: 0x000AF484
+		
 		private bool LoadStoneGroup()
 		{
 			try
@@ -408,7 +408,7 @@ namespace GameServer.Logic.FluorescentGem
 			return true;
 		}
 
-		// Token: 0x06000B4E RID: 2894 RVA: 0x000B1480 File Offset: 0x000AF680
+		
 		private List<SoulStoneExtFuncItem> GetExtFuncItems()
 		{
 			JieRiFuLiActivity act = HuodongCachingMgr.GetJieriFuLiActivity();
@@ -453,26 +453,26 @@ namespace GameServer.Logic.FluorescentGem
 			return result;
 		}
 
-		// Token: 0x06000B4F RID: 2895 RVA: 0x000B155C File Offset: 0x000AF75C
+		
 		private bool IsGongNengOpened(GameClient client)
 		{
 			return client != null && GlobalNew.IsGongNengOpened(client, GongNengIDs.SoulStone, false);
 		}
 
-		// Token: 0x06000B50 RID: 2896 RVA: 0x000B1590 File Offset: 0x000AF790
+		
 		private int GenerateBagIndex(int cycle, int grid)
 		{
 			return cycle * 100 + grid;
 		}
 
-		// Token: 0x06000B51 RID: 2897 RVA: 0x000B15A8 File Offset: 0x000AF7A8
+		
 		private void ParseCycleAndGrid(int bagIndex, out int cycle, out int grid)
 		{
 			cycle = bagIndex / 100;
 			grid = bagIndex % 100;
 		}
 
-		// Token: 0x06000B52 RID: 2898 RVA: 0x000B15B8 File Offset: 0x000AF7B8
+		
 		public void CheckOpen(GameClient client)
 		{
 			if (client != null)
@@ -495,13 +495,13 @@ namespace GameServer.Logic.FluorescentGem
 			}
 		}
 
-		// Token: 0x06000B53 RID: 2899 RVA: 0x000B165C File Offset: 0x000AF85C
+		
 		public bool CanAddGoodsNum(GameClient client, int num)
 		{
 			return client != null && num > 0 && num + client.ClientData.SoulStoneInBag.Count <= 100;
 		}
 
-		// Token: 0x06000B54 RID: 2900 RVA: 0x000B16A4 File Offset: 0x000AF8A4
+		
 		public int GetIdleSlotOfBag(GameClient client)
 		{
 			byte[] flagArray = new byte[100];
@@ -523,7 +523,7 @@ namespace GameServer.Logic.FluorescentGem
 			return -1;
 		}
 
-		// Token: 0x06000B55 RID: 2901 RVA: 0x000B1740 File Offset: 0x000AF940
+		
 		private void AddSoulStoneGoods(GameClient client, GoodsData gd, int site)
 		{
 			if (client != null && gd != null)
@@ -540,7 +540,7 @@ namespace GameServer.Logic.FluorescentGem
 			}
 		}
 
-		// Token: 0x06000B56 RID: 2902 RVA: 0x000B17B0 File Offset: 0x000AF9B0
+		
 		public GoodsData AddSoulStoneGoods(GameClient client, int id, int goodsID, int forgeLevel, int quality, int goodsNum, int binding, int site, string jewelList, string startTime, string endTime, int addPropIndex, int bornIndex, int lucky, int strong, int ExcellenceProperty, int nAppendPropLev, int nEquipChangeLife, int bagIndex = 0, List<int> washProps = null)
 		{
 			GoodsData gd = new GoodsData
@@ -571,7 +571,7 @@ namespace GameServer.Logic.FluorescentGem
 			return gd;
 		}
 
-		// Token: 0x06000B57 RID: 2903 RVA: 0x000B1884 File Offset: 0x000AFA84
+		
 		public void RemoveSoulStoneGoods(GameClient client, GoodsData goodsData, int site)
 		{
 			if (goodsData != null && client != null)
@@ -587,7 +587,7 @@ namespace GameServer.Logic.FluorescentGem
 			}
 		}
 
-		// Token: 0x06000B58 RID: 2904 RVA: 0x000B1940 File Offset: 0x000AFB40
+		
 		private GoodsData GetSoulStoneByDbId(GameClient client, int site, int dbid)
 		{
 			GoodsData result;
@@ -606,7 +606,7 @@ namespace GameServer.Logic.FluorescentGem
 			return result;
 		}
 
-		// Token: 0x06000B59 RID: 2905 RVA: 0x000B19F8 File Offset: 0x000AFBF8
+		
 		private void UpdateProps(GameClient client)
 		{
 			if (client != null)
@@ -664,7 +664,7 @@ namespace GameServer.Logic.FluorescentGem
 			}
 		}
 
-		// Token: 0x06000B5A RID: 2906 RVA: 0x000B1D5C File Offset: 0x000AFF5C
+		
 		private int ExtCostTypeHadValue(GameClient client, ESoulStoneExtCostType costType)
 		{
 			int val = 0;
@@ -691,7 +691,7 @@ namespace GameServer.Logic.FluorescentGem
 			return val;
 		}
 
-		// Token: 0x06000B5B RID: 2907 RVA: 0x000B1DEC File Offset: 0x000AFFEC
+		
 		private bool DoExtCostType(GameClient client, ESoulStoneExtCostType costType, int val)
 		{
 			bool result;
@@ -726,7 +726,7 @@ namespace GameServer.Logic.FluorescentGem
 			return result;
 		}
 
-		// Token: 0x06000B5C RID: 2908 RVA: 0x000B1EBC File Offset: 0x000B00BC
+		
 		private bool ProcessSoulStoneQueryGet(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -745,7 +745,7 @@ namespace GameServer.Logic.FluorescentGem
 			return true;
 		}
 
-		// Token: 0x06000B5D RID: 2909 RVA: 0x000B1F2C File Offset: 0x000B012C
+		
 		private bool ProcessSoulStoneResetBag(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -766,7 +766,7 @@ namespace GameServer.Logic.FluorescentGem
 			return true;
 		}
 
-		// Token: 0x06000B5E RID: 2910 RVA: 0x000B205C File Offset: 0x000B025C
+		
 		private void ResetSoulStoneBag(GameClient client)
 		{
 			if (client != null)
@@ -813,7 +813,7 @@ namespace GameServer.Logic.FluorescentGem
 			}
 		}
 
-		// Token: 0x06000B5F RID: 2911 RVA: 0x000B20E0 File Offset: 0x000B02E0
+		
 		private bool ProcessSoulStoneModEquip(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -833,7 +833,7 @@ namespace GameServer.Logic.FluorescentGem
 			return true;
 		}
 
-		// Token: 0x06000B60 RID: 2912 RVA: 0x000B2228 File Offset: 0x000B0428
+		
 		private ESoulStoneErrorCode handleModEquip(GameClient client, int bagIndex, int newDbId)
 		{
 			ESoulStoneErrorCode result;
@@ -996,7 +996,7 @@ namespace GameServer.Logic.FluorescentGem
 			return result;
 		}
 
-		// Token: 0x06000B61 RID: 2913 RVA: 0x000B2918 File Offset: 0x000B0B18
+		
 		private bool ProcessSoulStoneLevelUp(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1038,7 +1038,7 @@ namespace GameServer.Logic.FluorescentGem
 			return true;
 		}
 
-		// Token: 0x06000B62 RID: 2914 RVA: 0x000B2A50 File Offset: 0x000B0C50
+		
 		private ESoulStoneErrorCode handleSoulStoneLevelUp(GameClient client, int target, int site, List<int> srcList, out int currLvl, out int currExp)
 		{
 			currLvl = 0;
@@ -1190,7 +1190,7 @@ namespace GameServer.Logic.FluorescentGem
 			return result;
 		}
 
-		// Token: 0x06000B63 RID: 2915 RVA: 0x000B3020 File Offset: 0x000B1220
+		
 		private bool ProcessSoulStoneGet(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1262,7 +1262,7 @@ namespace GameServer.Logic.FluorescentGem
 			return true;
 		}
 
-		// Token: 0x06000B64 RID: 2916 RVA: 0x000B331C File Offset: 0x000B151C
+		
 		private ESoulStoneErrorCode handleSoulStoneGetOne(GameClient client, List<int> selectExtFuncs, List<SoulStoneExtFuncItem> openedExtFuncs, out List<int> goodsIdList, out List<int> extGoodsList, int currTimes)
 		{
 			goodsIdList = new List<int>();
@@ -1495,7 +1495,7 @@ namespace GameServer.Logic.FluorescentGem
 			return result;
 		}
 
-		// Token: 0x06000B65 RID: 2917 RVA: 0x000B3CA0 File Offset: 0x000B1EA0
+		
 		public void GM_Test(GameClient client, string[] args)
 		{
 			if (client != null)
@@ -1570,34 +1570,34 @@ namespace GameServer.Logic.FluorescentGem
 			}
 		}
 
-		// Token: 0x04001292 RID: 4754
+		
 		private int defaultRandId;
 
-		// Token: 0x04001293 RID: 4755
+		
 		private Dictionary<int, SoulStoneRandConfig> randDict = new Dictionary<int, SoulStoneRandConfig>();
 
-		// Token: 0x04001294 RID: 4756
+		
 		private Dictionary<int, SoulStoneExpConfig> suitExpDict = new Dictionary<int, SoulStoneExpConfig>();
 
-		// Token: 0x04001295 RID: 4757
+		
 		private Dictionary<int, int> stone2TypeDict = new Dictionary<int, int>();
 
-		// Token: 0x04001296 RID: 4758
+		
 		private Dictionary<int, SoulStoneGroupConfig> groupDict = new Dictionary<int, SoulStoneGroupConfig>();
 
-		// Token: 0x04001297 RID: 4759
+		
 		private HashSet<int> EquipCategorys = new HashSet<int>();
 
-		// Token: 0x04001298 RID: 4760
+		
 		private HashSet<int> JingHuaCategorys = new HashSet<int>();
 
-		// Token: 0x04001299 RID: 4761
+		
 		private Dictionary<int, int> jinghuaExpDict = null;
 
-		// Token: 0x0400129A RID: 4762
+		
 		private Dictionary<int, int> equipLvlLimitDict = null;
 
-		// Token: 0x0400129B RID: 4763
+		
 		private bool bOpenStoneGetLog = false;
 	}
 }

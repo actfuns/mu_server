@@ -5,10 +5,10 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200077B RID: 1915
+	
 	public class ProcessHorse
 	{
-		// Token: 0x0600311A RID: 12570 RVA: 0x002B7C54 File Offset: 0x002B5E54
+		
 		public static int ProcessHorseEnchance(GameClient client, int horseDbID, int extPropIndex, bool allowAutoBuy)
 		{
 			HorseData horseData = Global.GetHorseDataByDbID(client, horseDbID);
@@ -142,7 +142,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600311B RID: 12571 RVA: 0x002B8060 File Offset: 0x002B6260
+		
 		public static int ProcessHorseQuickAllEnchance(GameClient client, int horseDbID)
 		{
 			HorseData horseData = Global.GetHorseDataByDbID(client, horseDbID);
@@ -226,7 +226,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600311C RID: 12572 RVA: 0x002B8334 File Offset: 0x002B6534
+		
 		public static int ProcessHorseUpgrade(GameClient client, int horseDbID, bool allowAutoBuy)
 		{
 			HorseData horseData = Global.GetHorseDataByDbID(client, horseDbID);
@@ -340,7 +340,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600311D RID: 12573 RVA: 0x002B86F0 File Offset: 0x002B68F0
+		
 		private static int ProcessHorseUpgradeNow(GameClient client, int horseDbID, HorseData horseData)
 		{
 			if (client.ClientData.HorseDbID > 0 && horseDbID == client.ClientData.HorseDbID)
@@ -377,7 +377,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x0600311E RID: 12574 RVA: 0x002B88CC File Offset: 0x002B6ACC
+		
 		public static int GetCurrentHorseBlessPoint(GameClient client)
 		{
 			int horseDbID = client.ClientData.HorseDbID;
@@ -410,7 +410,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600311F RID: 12575 RVA: 0x002B8948 File Offset: 0x002B6B48
+		
 		public static int ProcessAddHorseAwardLucky(GameClient client, int luckyValue, bool usedTimeLimited, string getType)
 		{
 			int result;
@@ -470,7 +470,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003120 RID: 12576 RVA: 0x002B8AA8 File Offset: 0x002B6CA8
+		
 		public static int ProcessAddHorseLucky(GameClient client, int horseDbID, int luckyGoodsID)
 		{
 			HorseData horseData = Global.GetHorseDataByDbID(client, horseDbID);

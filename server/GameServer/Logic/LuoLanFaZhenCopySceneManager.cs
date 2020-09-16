@@ -11,10 +11,10 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004C9 RID: 1225
+	
 	internal class LuoLanFaZhenCopySceneManager
 	{
-		// Token: 0x0600168F RID: 5775 RVA: 0x001600E4 File Offset: 0x0015E2E4
+		
 		public static int getAwardRate(int FuBenID, int FuBenSeqID)
 		{
 			int result;
@@ -41,7 +41,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001690 RID: 5776 RVA: 0x00160138 File Offset: 0x0015E338
+		
 		public static void initialize()
 		{
 			try
@@ -115,7 +115,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001691 RID: 5777 RVA: 0x001603FC File Offset: 0x0015E5FC
+		
 		public static bool OnFubenOver(int FubenSeqID)
 		{
 			lock (LuoLanFaZhenCopySceneManager.AllFazhenFubenData)
@@ -125,7 +125,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001692 RID: 5778 RVA: 0x00160454 File Offset: 0x0015E654
+		
 		public static SingleLuoLanFaZhenFubenData GetFubenData(int FubenSeqID)
 		{
 			SingleLuoLanFaZhenFubenData result;
@@ -148,36 +148,36 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001693 RID: 5779 RVA: 0x001604C4 File Offset: 0x0015E6C4
+		
 		public static bool IsLuoLanFaZhen(int FubenID)
 		{
 			return FubenID == LuoLanFaZhenCopySceneManager.LuoLanFaZhenFubenID;
 		}
 
-		// Token: 0x06001694 RID: 5780 RVA: 0x001604E0 File Offset: 0x0015E6E0
+		
 		public static bool IsLuoLanFaZhenMap(int mapcode)
 		{
 			return null != FuBenManager.FindMapCodeByFuBenID(LuoLanFaZhenCopySceneManager.LuoLanFaZhenFubenID, mapcode);
 		}
 
-		// Token: 0x06001695 RID: 5781 RVA: 0x00160504 File Offset: 0x0015E704
+		
 		public static bool EnterFubenMapWhenLogin(GameClient client)
 		{
 			return null != LuoLanFaZhenCopySceneManager.GetFubenData(client.ClientData.FuBenSeqID);
 		}
 
-		// Token: 0x06001696 RID: 5782 RVA: 0x0016052C File Offset: 0x0015E72C
+		
 		public static bool OnEnterFubenMap(GameClient client, int oldmapcode, bool isLogin)
 		{
 			return LuoLanFaZhenCopySceneManager.TryAddFubenData(client.ClientData.FuBenSeqID, client.ClientData.FuBenID, client.ClientData.CopyMapID, client.ClientData.MapCode);
 		}
 
-		// Token: 0x06001697 RID: 5783 RVA: 0x0016056F File Offset: 0x0015E76F
+		
 		public static void OnLeaveFubenMap(GameClient client, int toMapCode)
 		{
 		}
 
-		// Token: 0x06001698 RID: 5784 RVA: 0x00160574 File Offset: 0x0015E774
+		
 		public static void CreateRandomGates(int MapCode, FazhenMapData MapData)
 		{
 			SystemFazhenMapData sysMapData = null;
@@ -222,7 +222,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001699 RID: 5785 RVA: 0x00160788 File Offset: 0x0015E988
+		
 		protected static bool TryAddFubenData(int _FubenSeqID, int _FubenID, int _MapID, int _MapCode)
 		{
 			bool result;
@@ -274,7 +274,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600169A RID: 5786 RVA: 0x00160920 File Offset: 0x0015EB20
+		
 		public static TCPProcessCmdResults OnTeleport(GameClient client, int teleportID, TCPOutPacketPool pool, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -368,7 +368,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600169B RID: 5787 RVA: 0x00160C58 File Offset: 0x0015EE58
+		
 		public static bool OnKillMonster(GameClient client, Monster monster)
 		{
 			bool result;
@@ -444,7 +444,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600169C RID: 5788 RVA: 0x00160EDC File Offset: 0x0015F0DC
+		
 		public static TCPProcessCmdResults ProcessFazhenTeleportCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -543,7 +543,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x0600169D RID: 5789 RVA: 0x001612C8 File Offset: 0x0015F4C8
+		
 		public static TCPProcessCmdResults ProcessFazhenBossCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -602,7 +602,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x0600169E RID: 5790 RVA: 0x001614E0 File Offset: 0x0015F6E0
+		
 		public static void BroadMapData<T>(int cmdID, T cmdData, int mapCode, int FuBenSeqID)
 		{
 			List<object> objsList = GameManager.ClientMgr.GetMapClients(mapCode);
@@ -622,7 +622,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600169F RID: 5791 RVA: 0x00161560 File Offset: 0x0015F760
+		
 		public static void BroadMapData(int cmdID, string cmdData, int mapCode, int FuBenSeqID)
 		{
 			List<object> objsList = GameManager.ClientMgr.GetMapClients(mapCode);
@@ -642,7 +642,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060016A0 RID: 5792 RVA: 0x001615E0 File Offset: 0x0015F7E0
+		
 		public static void BroadMapMessage(string msg, int mapCode, int FuBenSeqID)
 		{
 			List<object> objsList = GameManager.ClientMgr.GetMapClients(mapCode);
@@ -662,40 +662,40 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060016A1 RID: 5793 RVA: 0x00161679 File Offset: 0x0015F879
+		
 		public static void GM_SetOpenState(int openstate)
 		{
 			LuoLanFaZhenCopySceneManager.GM_OpenState = openstate;
 		}
 
-		// Token: 0x04002065 RID: 8293
+		
 		public static int GM_OpenState = 0;
 
-		// Token: 0x04002066 RID: 8294
+		
 		public static SystemXmlItems systemLuoLanFaZhen = new SystemXmlItems();
 
-		// Token: 0x04002067 RID: 8295
+		
 		private static Dictionary<int, SingleLuoLanFaZhenFubenData> AllFazhenFubenData = new Dictionary<int, SingleLuoLanFaZhenFubenData>();
 
-		// Token: 0x04002068 RID: 8296
+		
 		private static Dictionary<int, SystemFazhenMapData> m_AllMapGatesStaticData = new Dictionary<int, SystemFazhenMapData>();
 
-		// Token: 0x04002069 RID: 8297
+		
 		public static int LuoLanFaZhenFubenID = 4201;
 
-		// Token: 0x0400206A RID: 8298
+		
 		public static int SpecialTeleRate = 10;
 
-		// Token: 0x0400206B RID: 8299
+		
 		protected static int FinalBossID = 0;
 
-		// Token: 0x0400206C RID: 8300
+		
 		protected static int SpecialBossID = 0;
 
-		// Token: 0x0400206D RID: 8301
+		
 		protected static int SpecialMapCode = 0;
 
-		// Token: 0x0400206E RID: 8302
+		
 		protected static int SpecialAwardRate = 0;
 	}
 }

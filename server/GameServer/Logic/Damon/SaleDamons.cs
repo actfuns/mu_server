@@ -5,10 +5,10 @@ using Server.Data;
 
 namespace GameServer.Logic.Damon
 {
-	// Token: 0x020004CC RID: 1228
+	
 	public class SaleDamons
 	{
-		// Token: 0x060016BD RID: 5821 RVA: 0x00162720 File Offset: 0x00160920
+		
 		public static TCPProcessCmdResults SaleDamonsProcess(GameClient client, int nRoleID, string strGoodsID)
 		{
 			int nTotalMoHe = 0;
@@ -78,7 +78,7 @@ namespace GameServer.Logic.Damon
 			return TCPProcessCmdResults.RESULT_OK;
 		}
 
-		// Token: 0x060016BE RID: 5822 RVA: 0x00162978 File Offset: 0x00160B78
+		
 		public static TCPProcessCmdResults SaleStoreDamonsProcess(GameClient client, int nRoleID, string strGoodsID)
 		{
 			int nTotalMoHe = 0;

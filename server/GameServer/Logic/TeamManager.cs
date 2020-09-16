@@ -8,16 +8,16 @@ using Server.Protocol;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007E3 RID: 2019
+	
 	public class TeamManager
 	{
-		// Token: 0x06003921 RID: 14625 RVA: 0x00309548 File Offset: 0x00307748
+		
 		public int GetNextAutoID()
 		{
 			return (int)(Interlocked.Increment(ref this.BaseAutoID) & 2147483647L);
 		}
 
-		// Token: 0x06003922 RID: 14626 RVA: 0x00309570 File Offset: 0x00307770
+		
 		public void AddRoleID2TeamID(int roleID, int teamID)
 		{
 			lock (this._RoleID2TeamIDDict)
@@ -26,7 +26,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003923 RID: 14627 RVA: 0x003095C4 File Offset: 0x003077C4
+		
 		public void RemoveRoleID2TeamID(int roleID)
 		{
 			lock (this._RoleID2TeamIDDict)
@@ -38,7 +38,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003924 RID: 14628 RVA: 0x0030962C File Offset: 0x0030782C
+		
 		public int FindRoleID2TeamID(int roleID)
 		{
 			int teamID = -1;
@@ -52,7 +52,7 @@ namespace GameServer.Logic
 			return teamID;
 		}
 
-		// Token: 0x06003925 RID: 14629 RVA: 0x00309698 File Offset: 0x00307898
+		
 		public void CreateTeam(TCPManager tcpMgr, TCPOutPacketPool pool, GameClient client)
 		{
 			int teamID = GameManager.TeamMgr.GetNextAutoID();
@@ -75,7 +75,7 @@ namespace GameServer.Logic
 			GameManager.ClientMgr.NotifyOthersTeamIDChanged(tcpMgr.MySocketListener, pool, client);
 		}
 
-		// Token: 0x06003926 RID: 14630 RVA: 0x00309770 File Offset: 0x00307970
+		
 		public void AddData(int teamID, TeamData td)
 		{
 			lock (this._TeamDataDict)
@@ -84,7 +84,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003927 RID: 14631 RVA: 0x003097C4 File Offset: 0x003079C4
+		
 		public void RemoveData(int teamID)
 		{
 			lock (this._TeamDataDict)
@@ -96,7 +96,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003928 RID: 14632 RVA: 0x0030982C File Offset: 0x00307A2C
+		
 		public TeamData FindData(int teamID)
 		{
 			TeamData td = null;
@@ -107,7 +107,7 @@ namespace GameServer.Logic
 			return td;
 		}
 
-		// Token: 0x06003929 RID: 14633 RVA: 0x0030988C File Offset: 0x00307A8C
+		
 		public int GetTotalDataCount()
 		{
 			int count = 0;
@@ -118,7 +118,7 @@ namespace GameServer.Logic
 			return count;
 		}
 
-		// Token: 0x0600392A RID: 14634 RVA: 0x003098E8 File Offset: 0x00307AE8
+		
 		public List<TeamData> GetTeamDataList(int startIndex, int count)
 		{
 			int index = 0;
@@ -145,7 +145,7 @@ namespace GameServer.Logic
 			return teamDataList;
 		}
 
-		// Token: 0x0600392B RID: 14635 RVA: 0x003099BC File Offset: 0x00307BBC
+		
 		public bool CanAddToTeam(int roleID, int teamID, int requestType)
 		{
 			TeamRequestItem teamRequestItem = null;
@@ -161,7 +161,7 @@ namespace GameServer.Logic
 			return ticks - teamRequestItem.RequestTicks >= 35000L;
 		}
 
-		// Token: 0x0600392C RID: 14636 RVA: 0x00309A68 File Offset: 0x00307C68
+		
 		public void AddTeamRequestItem(int roleID, int teamID, int requestType)
 		{
 			string key = string.Format("{0}_{1}_{2}", roleID, teamID, requestType);
@@ -176,7 +176,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600392D RID: 14637 RVA: 0x00309AF8 File Offset: 0x00307CF8
+		
 		public void RemoveTeamRequestItem(int roleID, int teamID, int requestType)
 		{
 			string key = string.Format("{0}_{1}_{2}", roleID, teamID, requestType);
@@ -186,16 +186,16 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04004320 RID: 17184
+		
 		private long BaseAutoID = 0L;
 
-		// Token: 0x04004321 RID: 17185
+		
 		private Dictionary<int, int> _RoleID2TeamIDDict = new Dictionary<int, int>();
 
-		// Token: 0x04004322 RID: 17186
+		
 		private Dictionary<int, TeamData> _TeamDataDict = new Dictionary<int, TeamData>();
 
-		// Token: 0x04004323 RID: 17187
+		
 		private Dictionary<string, TeamRequestItem> _TeamRequestDict = new Dictionary<string, TeamRequestItem>();
 	}
 }

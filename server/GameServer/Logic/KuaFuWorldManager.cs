@@ -8,10 +8,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200085E RID: 2142
+	
 	public class KuaFuWorldManager : SingletonTemplate<KuaFuWorldManager>
 	{
-		// Token: 0x06003C1A RID: 15386 RVA: 0x0033634C File Offset: 0x0033454C
+		
 		public bool IsTempRoleID(int roleID)
 		{
 			bool result;
@@ -22,7 +22,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003C1B RID: 15387 RVA: 0x003363A0 File Offset: 0x003345A0
+		
 		public bool CheckPTKuaFuLoginSign(KuaFuServerLoginData data)
 		{
 			string signKey = null;
@@ -54,7 +54,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x06003C1C RID: 15388 RVA: 0x00336498 File Offset: 0x00334698
+		
 		public KuaFuWorldRoleData GetWorldRoleData(int roleID, int serverID, string userID, int tempRoleID)
 		{
 			string channel = Data.GetChannelNameByUserID(userID);
@@ -94,13 +94,13 @@ namespace GameServer.Logic
 			return data;
 		}
 
-		// Token: 0x040046DC RID: 18140
+		
 		private object Mutex = new object();
 
-		// Token: 0x040046DD RID: 18141
+		
 		private Dictionary<int, KuaFuWorldRoleData> WorldRoleDataDict = new Dictionary<int, KuaFuWorldRoleData>();
 
-		// Token: 0x040046DE RID: 18142
+		
 		private HashSet<int> TempRoleIDs = new HashSet<int>();
 	}
 }

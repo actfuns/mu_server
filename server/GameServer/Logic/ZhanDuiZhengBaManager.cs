@@ -19,29 +19,29 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000828 RID: 2088
+	
 	public class ZhanDuiZhengBaManager : IManager, ICmdProcessorEx, ICmdProcessor, IManager2, IEventListener, IEventListenerEx, ICopySceneManager
 	{
-		// Token: 0x06003AF7 RID: 15095 RVA: 0x00320BFC File Offset: 0x0031EDFC
+		
 		public static ZhanDuiZhengBaManager getInstance()
 		{
 			return ZhanDuiZhengBaManager.instance;
 		}
 
-		// Token: 0x06003AF8 RID: 15096 RVA: 0x00320C14 File Offset: 0x0031EE14
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x06003AF9 RID: 15097 RVA: 0x00320C38 File Offset: 0x0031EE38
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			ScheduleExecutor2.Instance.scheduleExecute(new NormalScheduleTask("ZhanDuiZhengBaManager.TimerProc", new EventHandler(this.TimerProc)), 15000, 5000);
 			return true;
 		}
 
-		// Token: 0x06003AFA RID: 15098 RVA: 0x00320C78 File Offset: 0x0031EE78
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1272, 1, 2, ZhanDuiZhengBaManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -71,7 +71,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003AFB RID: 15099 RVA: 0x00320E4C File Offset: 0x0031F04C
+		
 		public bool showdown()
 		{
 			GlobalEventSource.getInstance().removeListener(10, ZhanDuiZhengBaManager.getInstance());
@@ -85,19 +85,19 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003AFC RID: 15100 RVA: 0x00320F04 File Offset: 0x0031F104
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06003AFD RID: 15101 RVA: 0x00320F18 File Offset: 0x0031F118
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06003AFE RID: 15102 RVA: 0x00320F2C File Offset: 0x0031F12C
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			switch (nID)
@@ -118,7 +118,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003AFF RID: 15103 RVA: 0x00320FC8 File Offset: 0x0031F1C8
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int eventType = eventObject.getEventType();
@@ -154,7 +154,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B00 RID: 15104 RVA: 0x003210C8 File Offset: 0x0031F2C8
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 			switch (eventObject.EventType)
@@ -198,7 +198,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B01 RID: 15105 RVA: 0x003211D0 File Offset: 0x0031F3D0
+		
 		public bool KFCallMsgFunc(KFCallMsg msg)
 		{
 			int kuaFuEventType = msg.KuaFuEventType;
@@ -217,7 +217,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003B02 RID: 15106 RVA: 0x0032124C File Offset: 0x0031F44C
+		
 		public bool InitConfig()
 		{
 			bool success = true;
@@ -261,7 +261,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x06003B03 RID: 15107 RVA: 0x003214D0 File Offset: 0x0031F6D0
+		
 		public bool ProcessGetMainInfoListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -310,7 +310,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003B04 RID: 15108 RVA: 0x0032167C File Offset: 0x0031F87C
+		
 		public bool ProcessGetZhanDuiListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -334,7 +334,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003B05 RID: 15109 RVA: 0x00321764 File Offset: 0x0031F964
+		
 		public bool ProcessSupportCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -424,7 +424,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003B06 RID: 15110 RVA: 0x00321AB8 File Offset: 0x0031FCB8
+		
 		public bool ProcessSupportListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -463,7 +463,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003B07 RID: 15111 RVA: 0x00321C5C File Offset: 0x0031FE5C
+		
 		public bool ProcessGetLogCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -487,7 +487,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003B08 RID: 15112 RVA: 0x00321D50 File Offset: 0x0031FF50
+		
 		public bool ProcessZhanDuiZhengBaEnterCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -549,20 +549,20 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06003B09 RID: 15113 RVA: 0x00321FC4 File Offset: 0x003201C4
+		
 		public bool IsGongNengOpened(GameClient client, bool hint = false)
 		{
 			return GlobalNew.IsGongNengOpened(client, GongNengIDs.ZhanDuiZhengBa, false);
 		}
 
-		// Token: 0x06003B0A RID: 15114 RVA: 0x00321FE0 File Offset: 0x003201E0
+		
 		private bool CheckMap(GameClient client)
 		{
 			SceneUIClasses sceneType = Global.GetMapSceneType(client.ClientData.MapCode);
 			return sceneType == SceneUIClasses.Normal;
 		}
 
-		// Token: 0x06003B0B RID: 15115 RVA: 0x00322014 File Offset: 0x00320214
+		
 		private bool GetBirthPoint(int mapCode, int side, out int toPosX, out int toPosY)
 		{
 			toPosX = -1;
@@ -586,7 +586,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B0C RID: 15116 RVA: 0x0032210C File Offset: 0x0032030C
+		
 		private bool OnKuaFuLogin(KuaFuServerLoginData data)
 		{
 			ZhanDuiZhengBaFuBenData copyInfo = null;
@@ -624,7 +624,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B0D RID: 15117 RVA: 0x00322290 File Offset: 0x00320490
+		
 		public bool OnKuaFuInitGame(GameClient client)
 		{
 			int zhanDuiID = client.ClientData.ZhanDuiID;
@@ -690,7 +690,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B0E RID: 15118 RVA: 0x00322554 File Offset: 0x00320754
+		
 		public void TimerProc(object sender, EventArgs e)
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -761,7 +761,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B0F RID: 15119 RVA: 0x003228FC File Offset: 0x00320AFC
+		
 		private void GiveSupportAwards()
 		{
 			foreach (GameClient client in GameManager.ClientMgr.GetAllClients(false))
@@ -771,7 +771,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B10 RID: 15120 RVA: 0x00322990 File Offset: 0x00320B90
+		
 		private void GiveSupportAwards(GameClient client)
 		{
 			try
@@ -823,7 +823,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B11 RID: 15121 RVA: 0x00322BF0 File Offset: 0x00320DF0
+		
 		private void GiveRankAwards(GameClient client)
 		{
 			try
@@ -880,7 +880,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B12 RID: 15122 RVA: 0x00322F04 File Offset: 0x00321104
+		
 		public void UpdateChengHaoBuffer(GameClient client)
 		{
 			TimeSpan ts = TimeUtil.GetTimeOfWeekNow2();
@@ -900,7 +900,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B13 RID: 15123 RVA: 0x00322FF8 File Offset: 0x003211F8
+		
 		public bool AddCopyScenes(GameClient client, CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool result;
@@ -949,7 +949,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B14 RID: 15124 RVA: 0x00323210 File Offset: 0x00321410
+		
 		public bool RemoveCopyScene(CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool result;
@@ -971,7 +971,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003B15 RID: 15125 RVA: 0x003232B0 File Offset: 0x003214B0
+		
 		public void TimerProc()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -1097,7 +1097,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B16 RID: 15126 RVA: 0x00323810 File Offset: 0x00321A10
+		
 		public void NotifyTimeStateInfoAndScoreInfo(GameClient client)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -1110,14 +1110,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B17 RID: 15127 RVA: 0x00323890 File Offset: 0x00321A90
+		
 		public void CompleteZhanDuiZhengBaScene(ZhanDuiZhengBaScene scene, int successSide)
 		{
 			scene.m_eStatus = GameSceneStatuses.STATUS_END;
 			scene.SuccessSide = successSide;
 		}
 
-		// Token: 0x06003B18 RID: 15128 RVA: 0x003238A4 File Offset: 0x00321AA4
+		
 		private int SceneCheckComplete(ZhanDuiZhengBaScene scene, bool complete = true)
 		{
 			int side = 0;
@@ -1150,7 +1150,7 @@ namespace GameServer.Logic
 			return side;
 		}
 
-		// Token: 0x06003B19 RID: 15129 RVA: 0x00323998 File Offset: 0x00321B98
+		
 		private void SceneRemoveRole(GameClient client)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -1170,7 +1170,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B1A RID: 15130 RVA: 0x00323A88 File Offset: 0x00321C88
+		
 		public void OnKillRole(GameClient client, GameClient other)
 		{
 			if (client.SceneType == 56)
@@ -1180,7 +1180,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B1B RID: 15131 RVA: 0x00323AF4 File Offset: 0x00321CF4
+		
 		public void RoleLeaveFuBen(GameClient client)
 		{
 			if (client.SceneType == 56)
@@ -1189,7 +1189,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B1C RID: 15132 RVA: 0x00323B20 File Offset: 0x00321D20
+		
 		private void ProcessEnd(ZhanDuiZhengBaScene scene, DateTime now, long nowTicks)
 		{
 			scene.m_eStatus = GameSceneStatuses.STATUS_AWARD;
@@ -1203,7 +1203,7 @@ namespace GameServer.Logic
 			this.GiveAwards(scene);
 		}
 
-		// Token: 0x06003B1D RID: 15133 RVA: 0x00323BCC File Offset: 0x00321DCC
+		
 		public void GiveAwards(ZhanDuiZhengBaScene scene)
 		{
 			try
@@ -1249,7 +1249,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003B1E RID: 15134 RVA: 0x00323D6C File Offset: 0x00321F6C
+		
 		public bool OnPreZhanDuiChangeMember(PreZhanDuiChangeMemberEventObject e)
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -1287,28 +1287,28 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04004545 RID: 17733
+		
 		public const SceneUIClasses ManagerType = SceneUIClasses.ZhanDuiZhengBa;
 
-		// Token: 0x04004546 RID: 17734
+		
 		public const GameTypes GameType = GameTypes.ZhanDuiZhengBa;
 
-		// Token: 0x04004547 RID: 17735
+		
 		private static ZhanDuiZhengBaManager instance = new ZhanDuiZhengBaManager();
 
-		// Token: 0x04004548 RID: 17736
+		
 		private EventSourceEx<KFCallMsg>.HandlerData NotifyEnterHandler = null;
 
-		// Token: 0x04004549 RID: 17737
+		
 		public ZhanDuiZhengBaData RuntimeData = new ZhanDuiZhengBaData();
 
-		// Token: 0x0400454A RID: 17738
+		
 		public ConcurrentDictionary<int, ZhanDuiZhengBaScene> ZhanDuiZhengBaSceneDict = new ConcurrentDictionary<int, ZhanDuiZhengBaScene>();
 
-		// Token: 0x0400454B RID: 17739
+		
 		public HashSet<int> CancledGameIdDict = new HashSet<int>();
 
-		// Token: 0x0400454C RID: 17740
+		
 		private static long NextHeartBeatTicks = 0L;
 	}
 }

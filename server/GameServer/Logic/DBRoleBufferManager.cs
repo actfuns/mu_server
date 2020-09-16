@@ -10,10 +10,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-    // Token: 0x02000621 RID: 1569
+    
     public class DBRoleBufferManager
     {
-        // Token: 0x06001FD5 RID: 8149 RVA: 0x001B8380 File Offset: 0x001B6580
+        
         public static void ProcessLifeVAndMagicVReserve(SocketListener sl, TCPOutPacketPool pool, GameClient client)
         {
             if (client.ClientData.CurrentLifeV > 0)
@@ -81,7 +81,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FD6 RID: 8150 RVA: 0x001B8718 File Offset: 0x001B6918
+        
         public static int ProcessHuZhaoSubLifeV(GameClient client, int subLifeV)
         {
             if (client.ClientData.CurrentLifeV > 0)
@@ -115,7 +115,7 @@ namespace GameServer.Logic
             return subLifeV;
         }
 
-        // Token: 0x06001FD7 RID: 8151 RVA: 0x001B883C File Offset: 0x001B6A3C
+        
         public static double ProcessHuZhaoRecoverPercent(GameClient client)
         {
             double percent = 0.0;
@@ -145,7 +145,7 @@ namespace GameServer.Logic
             return percent;
         }
 
-        // Token: 0x06001FD8 RID: 8152 RVA: 0x001B8900 File Offset: 0x001B6B00
+        
         public static int ProcessWuDiHuZhaoNoInjured(GameClient client, int subLifeV)
         {
             if (client.ClientData.CurrentLifeV > 0)
@@ -170,7 +170,7 @@ namespace GameServer.Logic
             return subLifeV;
         }
 
-        // Token: 0x06001FD9 RID: 8153 RVA: 0x001B8994 File Offset: 0x001B6B94
+        
         public static void ProcessTimeAddLifeMagic(GameClient client)
         {
             if (client.ClientData.CurrentLifeV > 0)
@@ -233,7 +233,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FDA RID: 8154 RVA: 0x001B8D2C File Offset: 0x001B6F2C
+        
         public static void ProcessTimeAddLifeNoShow(GameClient client)
         {
             if (client.ClientData.CurrentLifeV > 0)
@@ -288,7 +288,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FDB RID: 8155 RVA: 0x001B9074 File Offset: 0x001B7274
+        
         public static void ProcessTimeAddMagicNoShow(GameClient client)
         {
             if (client.ClientData.CurrentLifeV > 0)
@@ -337,7 +337,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FDC RID: 8156 RVA: 0x001B932C File Offset: 0x001B752C
+        
         public static void ProcessDSTimeAddLifeNoShow(GameClient client)
         {
             if (client.ClientData.CurrentLifeV > 0)
@@ -383,7 +383,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FDD RID: 8157 RVA: 0x001B95A4 File Offset: 0x001B77A4
+        
         public static void ProcessLingLiVReserve(SocketListener sl, TCPOutPacketPool pool, GameClient client)
         {
             if (Global.CanMapUseBuffer(client.ClientData.MapCode, 10))
@@ -410,7 +410,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FDE RID: 8158 RVA: 0x001B9680 File Offset: 0x001B7880
+        
         public static void ProcessLingLiVReserve2(SocketListener sl, TCPOutPacketPool pool, GameClient client, BufferData bufferData)
         {
             if (Global.CanMapUseBuffer(client.ClientData.MapCode, 10))
@@ -435,7 +435,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FDF RID: 8159 RVA: 0x001B9740 File Offset: 0x001B7940
+        
         public static double ProcessDblLingLi(GameClient client)
         {
             double ret = 1.0;
@@ -464,7 +464,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06001FE0 RID: 8160 RVA: 0x001B97C8 File Offset: 0x001B79C8
+        
         public static void RefreshTimePropBuffer(GameClient client, BufferItemTypes bufferItemType)
         {
             BufferData bufferData = Global.GetBufferDataFromDict(client, (int)bufferItemType);
@@ -498,7 +498,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FE1 RID: 8161 RVA: 0x001B9898 File Offset: 0x001B7A98
+        
         public static int GetTimeAddProp(GameClient client, BufferItemTypes bufferItemType)
         {
             int nRet = 0;
@@ -533,7 +533,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06001FE2 RID: 8162 RVA: 0x001B997C File Offset: 0x001B7B7C
+        
         public static int GetBuffAddProp(GameClient client, BufferItemTypes bufferItemType)
         {
             int nRet = 0;
@@ -564,7 +564,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06001FE3 RID: 8163 RVA: 0x001B9A30 File Offset: 0x001B7C30
+        
         public static double ProcessTimeAddProp(GameClient client, BufferItemTypes bufferItemType)
         {
             double ret = 0.0;
@@ -624,13 +624,13 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06001FE4 RID: 8164 RVA: 0x001B9BE4 File Offset: 0x001B7DE4
+        
         public static double ProcessTempBufferProp(GameClient client, ExtPropIndexes expPropIndex)
         {
             return 0.0;
         }
 
-        // Token: 0x06001FE5 RID: 8165 RVA: 0x001B9C00 File Offset: 0x001B7E00
+        
         public static double ProcessAddTempAttack(GameClient client)
         {
             double ret = 0.0;
@@ -659,7 +659,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06001FE6 RID: 8166 RVA: 0x001B9C88 File Offset: 0x001B7E88
+        
         public static void AddAttackBuffer(GameClient client)
         {
             if (null == client.ClientData.AddTempAttackBufferData)
@@ -677,7 +677,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FE7 RID: 8167 RVA: 0x001B9D14 File Offset: 0x001B7F14
+        
         public static void RemoveAttackBuffer(GameClient client)
         {
             BufferData bufferData = client.ClientData.AddTempAttackBufferData;
@@ -692,7 +692,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FE8 RID: 8168 RVA: 0x001B9D8C File Offset: 0x001B7F8C
+        
         public static double ProcessAddTempDefense(GameClient client)
         {
             double ret = 0.0;
@@ -721,7 +721,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06001FE9 RID: 8169 RVA: 0x001B9E14 File Offset: 0x001B8014
+        
         public static void AddDefenseBuffer(GameClient client)
         {
             if (null == client.ClientData.AddTempDefenseBufferData)
@@ -739,7 +739,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FEA RID: 8170 RVA: 0x001B9EA0 File Offset: 0x001B80A0
+        
         public static void RemoveDefenseBuffer(GameClient client)
         {
             BufferData bufferData = client.ClientData.AddTempDefenseBufferData;
@@ -754,7 +754,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FEB RID: 8171 RVA: 0x001B9F18 File Offset: 0x001B8118
+        
         public static double ProcessUpLifeLimit(GameClient client)
         {
             double ret = 0.0;
@@ -776,7 +776,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06001FEC RID: 8172 RVA: 0x001B9F84 File Offset: 0x001B8184
+        
         public static void AddUpLifeLimitStatus(GameClient client)
         {
             if (null == client.ClientData.UpLifeLimitBufferData)
@@ -794,7 +794,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FED RID: 8173 RVA: 0x001BA014 File Offset: 0x001B8214
+        
         public static void RemoveUpLifeLimitStatus(GameClient client)
         {
             BufferData bufferData = client.ClientData.UpLifeLimitBufferData;
@@ -809,7 +809,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FEE RID: 8174 RVA: 0x001BA08C File Offset: 0x001B828C
+        
         public static double ProcessRebornMultiExperience(GameClient client)
         {
             double ret = 1.0;
@@ -828,7 +828,7 @@ namespace GameServer.Logic
             return ret;
         }
 
-        // Token: 0x06001FEF RID: 8175 RVA: 0x001BA110 File Offset: 0x001B8310
+        
         public static double ProcessDblAndThreeExperience(GameClient client)
         {
             double ret = 1.0;
@@ -892,7 +892,7 @@ namespace GameServer.Logic
             return ret;
         }
 
-        // Token: 0x06001FF0 RID: 8176 RVA: 0x001BA304 File Offset: 0x001B8504
+        
         public static double ProcessDblAndThreeMoney(GameClient client)
         {
             double ret = 1.0;
@@ -926,7 +926,7 @@ namespace GameServer.Logic
             return ret;
         }
 
-        // Token: 0x06001FF1 RID: 8177 RVA: 0x001BA400 File Offset: 0x001B8600
+        
         public static double ProcessAutoGiveExperience(GameClient client)
         {
             double ret = 0.0;
@@ -966,7 +966,7 @@ namespace GameServer.Logic
             return ret;
         }
 
-        // Token: 0x06001FF2 RID: 8178 RVA: 0x001BA5C0 File Offset: 0x001B87C0
+        
         public static void ProcessWaWaGiveExperience(GameClient client, Monster monster)
         {
             if (monster.MonsterInfo.VLevel >= client.ClientData.Level)
@@ -1020,7 +1020,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FF3 RID: 8179 RVA: 0x001BA7A8 File Offset: 0x001B89A8
+        
         public static long ProcessZhuFuGiveExperience(GameClient client)
         {
             long ret = 0L;
@@ -1039,7 +1039,7 @@ namespace GameServer.Logic
             return ret;
         }
 
-        // Token: 0x06001FF4 RID: 8180 RVA: 0x001BA838 File Offset: 0x001B8A38
+        
         public static long ProcessErGuoTouGiveExperience(GameClient client, long subTicks, out double multiExpNum)
         {
             multiExpNum = 0.0;
@@ -1061,7 +1061,7 @@ namespace GameServer.Logic
             return ret;
         }
 
-        // Token: 0x06001FF5 RID: 8181 RVA: 0x001BA8E0 File Offset: 0x001B8AE0
+        
         public static double ProcessDblSkillUp(GameClient client)
         {
             double ret = 1.0;
@@ -1090,7 +1090,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06001FF6 RID: 8182 RVA: 0x001BA968 File Offset: 0x001B8B68
+        
         public static int ProcessAntiBoss(GameClient client, Monster monster, int injuredVal)
         {
             int result;
@@ -1125,7 +1125,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06001FF7 RID: 8183 RVA: 0x001BAA08 File Offset: 0x001B8C08
+        
         public static int ProcessAntiRole(GameClient client, GameClient otherClient, int injuredVal)
         {
             int result;
@@ -1156,7 +1156,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06001FF8 RID: 8184 RVA: 0x001BAA8C File Offset: 0x001B8C8C
+        
         public static double ProcessMonthVIP(GameClient client)
         {
             double ret = 0.0;
@@ -1185,7 +1185,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06001FF9 RID: 8185 RVA: 0x001BAB14 File Offset: 0x001B8D14
+        
         public static bool ProcessAutoFightingProtect(GameClient client)
         {
             bool ret = false;
@@ -1204,7 +1204,7 @@ namespace GameServer.Logic
             return ret;
         }
 
-        // Token: 0x06001FFA RID: 8186 RVA: 0x001BAB88 File Offset: 0x001B8D88
+        
         public static bool ProcessFallTianSheng(GameClient client)
         {
             bool ret = false;
@@ -1227,7 +1227,7 @@ namespace GameServer.Logic
             return ret;
         }
 
-        // Token: 0x06001FFB RID: 8187 RVA: 0x001BAC18 File Offset: 0x001B8E18
+        
         public static void ProcessGuMu(GameClient client, long elapseTicks)
         {
             BufferData bufferData = Global.GetBufferDataByID(client, 34);
@@ -1273,7 +1273,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FFC RID: 8188 RVA: 0x001BADC4 File Offset: 0x001B8FC4
+        
         public static void ProcessMingJieBuffer(GameClient client, long elapseTicks)
         {
             BufferData bufferData = Global.GetBufferDataByID(client, 35);
@@ -1292,7 +1292,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001FFD RID: 8189 RVA: 0x001BAE48 File Offset: 0x001B9048
+        
         public static double ProcessTimeAddPkKingAttackProp(GameClient client, ExtPropIndexes attackType)
         {
             double ret = 0.0;
@@ -1326,7 +1326,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06001FFE RID: 8190 RVA: 0x001BAEFC File Offset: 0x001B90FC
+        
         public static double ProcessTimeAddPkKingExpProp(GameClient client)
         {
             double ret = 0.0;
@@ -1359,13 +1359,13 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06001FFF RID: 8191 RVA: 0x001BAFC0 File Offset: 0x001B91C0
+        
         public static double ProcessTimeAddJunQiProp(GameClient client, ExtPropIndexes attackType)
         {
             return 0.0;
         }
 
-        // Token: 0x06002000 RID: 8192 RVA: 0x001BAFE0 File Offset: 0x001B91E0
+        
         public static void ProcessDSTimeSubLifeNoShow(GameClient client)
         {
             if (client.ClientData.CurrentLifeV > 0)
@@ -1409,7 +1409,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002001 RID: 8193 RVA: 0x001BB19C File Offset: 0x001B939C
+        
         private static void ProcessTimeSubLifeNoShow(GameClient client, int id)
         {
             if (client.ClientData.CurrentLifeV > 0)
@@ -1463,7 +1463,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002002 RID: 8194 RVA: 0x001BB38C File Offset: 0x001B958C
+        
         public static void ProcessAllTimeSubLifeNoShow(GameClient client)
         {
             for (int id = 93; id <= 96; id++)
@@ -1472,7 +1472,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002003 RID: 8195 RVA: 0x001BB3BC File Offset: 0x001B95BC
+        
         public static double ProcessSpecialAttackValueBuff(GameClient client, int BufferTypes)
         {
             double dValue = 0.0;

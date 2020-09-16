@@ -8,16 +8,16 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007EF RID: 2031
+	
 	public class ArenaBattleManager
 	{
-		// Token: 0x06003998 RID: 14744 RVA: 0x0030C3B8 File Offset: 0x0030A5B8
+		
 		public int GetBattlingState()
 		{
 			return (int)this.BattlingState;
 		}
 
-		// Token: 0x06003999 RID: 14745 RVA: 0x0030C3D0 File Offset: 0x0030A5D0
+		
 		public int GetBattlingLeftSecs()
 		{
 			long ticks = TimeUtil.NOW();
@@ -45,7 +45,7 @@ namespace GameServer.Logic
 			return (int)(((long)(paramSecs * 1000) - (ticks - this.StateStartTicks)) / 1000L);
 		}
 
-		// Token: 0x0600399A RID: 14746 RVA: 0x0030C488 File Offset: 0x0030A688
+		
 		public void LoadParams()
 		{
 			SystemXmlItem systemBattle = null;
@@ -85,7 +85,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600399B RID: 14747 RVA: 0x0030C674 File Offset: 0x0030A874
+		
 		public void ReloadGiveAwardsGoodsDataList(SystemXmlItem systemBattle = null)
 		{
 			if (null == systemBattle)
@@ -146,7 +146,7 @@ namespace GameServer.Logic
 			this.GiveAwardsGoodsDataList = goodsDataList;
 		}
 
-		// Token: 0x0600399C RID: 14748 RVA: 0x0030C847 File Offset: 0x0030AA47
+		
 		public void Init()
 		{
 			this.LoadParams();
@@ -157,7 +157,7 @@ namespace GameServer.Logic
 			Global.QueryDayActivityTotalPointInfoToDB(SpecialActivityTypes.TheKingOfPK);
 		}
 
-		// Token: 0x0600399D RID: 14749 RVA: 0x0030C878 File Offset: 0x0030AA78
+		
 		public void Process()
 		{
 			if (this.BattlingState > BattleStates.NoBattle)
@@ -171,7 +171,7 @@ namespace GameServer.Logic
 			this._HandleChangeNameEv();
 		}
 
-		// Token: 0x0600399E RID: 14750 RVA: 0x0030C8B4 File Offset: 0x0030AAB4
+		
 		private void ProcessBattling()
 		{
 			if (this.BattlingState == BattleStates.PublishMsg)
@@ -280,7 +280,7 @@ namespace GameServer.Logic
 			this.ProcessTimeNotifyBattleKilledNum();
 		}
 
-		// Token: 0x0600399F RID: 14751 RVA: 0x0030CDD8 File Offset: 0x0030AFD8
+		
 		private void ProcessNoBattle()
 		{
 			if (this.JugeStartBattle())
@@ -302,7 +302,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060039A0 RID: 14752 RVA: 0x0030CECC File Offset: 0x0030B0CC
+		
 		private bool JugeStartBattle()
 		{
 			string nowTime = TimeUtil.NowDateTime().ToString("HH:mm");
@@ -326,7 +326,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060039A1 RID: 14753 RVA: 0x0030CF40 File Offset: 0x0030B140
+		
 		public int LeftEnterCount()
 		{
 			int count = 0;
@@ -360,9 +360,9 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x170005AA RID: 1450
-		// (get) Token: 0x060039A2 RID: 14754 RVA: 0x0030D000 File Offset: 0x0030B200
-		// (set) Token: 0x060039A3 RID: 14755 RVA: 0x0030D018 File Offset: 0x0030B218
+		
+		
+		
 		public int TheKingOfPKTopPoint
 		{
 			get
@@ -375,9 +375,9 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170005AB RID: 1451
-		// (get) Token: 0x060039A4 RID: 14756 RVA: 0x0030D024 File Offset: 0x0030B224
-		// (set) Token: 0x060039A5 RID: 14757 RVA: 0x0030D03C File Offset: 0x0030B23C
+		
+		
+		
 		public string TheKingOfPKTopRoleName
 		{
 			get
@@ -390,9 +390,9 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170005AC RID: 1452
-		// (get) Token: 0x060039A6 RID: 14758 RVA: 0x0030D048 File Offset: 0x0030B248
-		// (set) Token: 0x060039A7 RID: 14759 RVA: 0x0030D060 File Offset: 0x0030B260
+		
+		
+		
 		public Dictionary<int, int> TheKingOfPKGetawardFlag
 		{
 			get
@@ -405,8 +405,8 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170005AD RID: 1453
-		// (get) Token: 0x060039A8 RID: 14760 RVA: 0x0030D06C File Offset: 0x0030B26C
+		
+		
 		public int BattleMapCode
 		{
 			get
@@ -415,8 +415,8 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170005AE RID: 1454
-		// (get) Token: 0x060039A9 RID: 14761 RVA: 0x0030D084 File Offset: 0x0030B284
+		
+		
 		public int BattleServerLineID
 		{
 			get
@@ -425,8 +425,8 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170005AF RID: 1455
-		// (get) Token: 0x060039AA RID: 14762 RVA: 0x0030D09C File Offset: 0x0030B29C
+		
+		
 		public bool AllowEnterMap
 		{
 			get
@@ -435,8 +435,8 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170005B0 RID: 1456
-		// (get) Token: 0x060039AB RID: 14763 RVA: 0x0030D0C4 File Offset: 0x0030B2C4
+		
+		
 		public bool IsFighting
 		{
 			get
@@ -445,9 +445,9 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170005B1 RID: 1457
-		// (get) Token: 0x060039AC RID: 14764 RVA: 0x0030D0EC File Offset: 0x0030B2EC
-		// (set) Token: 0x060039AD RID: 14765 RVA: 0x0030D138 File Offset: 0x0030B338
+		
+		
+		
 		public bool AllowAttack
 		{
 			get
@@ -468,8 +468,8 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170005B2 RID: 1458
-		// (get) Token: 0x060039AE RID: 14766 RVA: 0x0030D184 File Offset: 0x0030B384
+		
+		
 		public int AllowMinChangeLifeLev
 		{
 			get
@@ -478,8 +478,8 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170005B3 RID: 1459
-		// (get) Token: 0x060039AF RID: 14767 RVA: 0x0030D19C File Offset: 0x0030B39C
+		
+		
 		public int AllowMinLevel
 		{
 			get
@@ -488,9 +488,9 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170005B4 RID: 1460
-		// (get) Token: 0x060039B0 RID: 14768 RVA: 0x0030D1B4 File Offset: 0x0030B3B4
-		// (set) Token: 0x060039B1 RID: 14769 RVA: 0x0030D200 File Offset: 0x0030B400
+		
+		
+		
 		public int TotalClientCount
 		{
 			get
@@ -511,9 +511,9 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170005B5 RID: 1461
-		// (get) Token: 0x060039B2 RID: 14770 RVA: 0x0030D24C File Offset: 0x0030B44C
-		// (set) Token: 0x060039B3 RID: 14771 RVA: 0x0030D298 File Offset: 0x0030B498
+		
+		
+		
 		public int EnterBattleClientCount
 		{
 			get
@@ -534,7 +534,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060039B4 RID: 14772 RVA: 0x0030D2E4 File Offset: 0x0030B4E4
+		
 		public bool ClientEnter(GameClient client)
 		{
 			bool ret = false;
@@ -558,7 +558,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x060039B5 RID: 14773 RVA: 0x0030D3AC File Offset: 0x0030B5AC
+		
 		protected void ClientLeave(GameClient client)
 		{
 			lock (this.mutex)
@@ -569,7 +569,7 @@ namespace GameServer.Logic
 			this._bRoleEnterOrLeave = true;
 		}
 
-		// Token: 0x060039B6 RID: 14774 RVA: 0x0030D420 File Offset: 0x0030B620
+		
 		public void LeaveArenaBattleMap(GameClient client)
 		{
 			if (client.ClientData.MapCode == this.MapCode)
@@ -579,14 +579,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060039B7 RID: 14775 RVA: 0x0030D458 File Offset: 0x0030B658
+		
 		public bool EnterArenaBattleMap(GameClient client)
 		{
 			return client.ClientData.MapCode == this.MapCode && this.ClientEnter(client);
 		}
 
-		// Token: 0x170005B6 RID: 1462
-		// (get) Token: 0x060039B8 RID: 14776 RVA: 0x0030D490 File Offset: 0x0030B690
+		
+		
 		public string BattleDisableGoodsIDs
 		{
 			get
@@ -595,9 +595,9 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170005B7 RID: 1463
-		// (get) Token: 0x060039B9 RID: 14777 RVA: 0x0030D4A8 File Offset: 0x0030B6A8
-		// (set) Token: 0x060039BA RID: 14778 RVA: 0x0030D4F4 File Offset: 0x0030B6F4
+		
+		
+		
 		public int StartRoleNum
 		{
 			get
@@ -618,9 +618,9 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170005B8 RID: 1464
-		// (get) Token: 0x060039BB RID: 14779 RVA: 0x0030D540 File Offset: 0x0030B740
-		// (set) Token: 0x060039BC RID: 14780 RVA: 0x0030D58C File Offset: 0x0030B78C
+		
+		
+		
 		public int AllKilledRoleNum
 		{
 			get
@@ -641,20 +641,20 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060039BD RID: 14781 RVA: 0x0030D5D8 File Offset: 0x0030B7D8
+		
 		public void SetTotalPointInfo(string sName, int nValue)
 		{
 			this.TheKingOfPKTopRoleName = sName;
 			this.TheKingOfPKTopPoint = nValue;
 		}
 
-		// Token: 0x060039BE RID: 14782 RVA: 0x0030D5EC File Offset: 0x0030B7EC
+		
 		public bool IsInPkScene(int nMap)
 		{
 			return nMap == 10000;
 		}
 
-		// Token: 0x060039BF RID: 14783 RVA: 0x0030D614 File Offset: 0x0030B814
+		
 		public bool ProcessRoleDead(GameClient other)
 		{
 			int roleID = other.ClientData.RoleID;
@@ -674,7 +674,7 @@ namespace GameServer.Logic
 			return firstKill;
 		}
 
-		// Token: 0x060039C0 RID: 14784 RVA: 0x0030D6B0 File Offset: 0x0030B8B0
+		
 		private void ProcessBattleResultAwards()
 		{
 			GameClient championClient = this.ChampionClient;
@@ -695,7 +695,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060039C1 RID: 14785 RVA: 0x0030D740 File Offset: 0x0030B940
+		
 		private void AddBattleBufferAndFlags(GameClient client)
 		{
 			double[] actionParams = new double[]
@@ -716,20 +716,20 @@ namespace GameServer.Logic
 			EventLogManager.AddTitleEvent(client, 1, (int)actionParams[0], "pkKing");
 		}
 
-		// Token: 0x060039C2 RID: 14786 RVA: 0x0030D854 File Offset: 0x0030BA54
+		
 		public int GetPKKingRoleID()
 		{
 			return GameManager.GameConfigMgr.GetGameConfigItemInt("PKKingRole", 0);
 		}
 
-		// Token: 0x060039C3 RID: 14787 RVA: 0x0030D876 File Offset: 0x0030BA76
+		
 		public void SetPKKingRoleID(int roleID)
 		{
 			Global.UpdateDBGameConfigg("PKKingRole", roleID.ToString());
 			GameManager.GameConfigMgr.SetGameConfigItem("PKKingRole", roleID.ToString());
 		}
 
-		// Token: 0x060039C4 RID: 14788 RVA: 0x0030D8A4 File Offset: 0x0030BAA4
+		
 		private void ProcessTimeNotifyBattleKilledNum()
 		{
 			bool bNtf2Client = false;
@@ -756,7 +756,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060039C5 RID: 14789 RVA: 0x0030D960 File Offset: 0x0030BB60
+		
 		private void ProcessTimeAddRoleExp()
 		{
 			if (this.BattlingState == BattleStates.StartFight)
@@ -781,7 +781,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060039C6 RID: 14790 RVA: 0x0030DA08 File Offset: 0x0030BC08
+		
 		private void ProcessAward(GameClient client)
 		{
 			if (this.BattlingState >= BattleStates.StartFight)
@@ -874,9 +874,9 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170005B9 RID: 1465
-		// (get) Token: 0x060039C7 RID: 14791 RVA: 0x0030DDBC File Offset: 0x0030BFBC
-		// (set) Token: 0x060039C8 RID: 14792 RVA: 0x0030DE08 File Offset: 0x0030C008
+		
+		
+		
 		public RoleDataEx KingRoleData
 		{
 			get
@@ -897,7 +897,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060039C9 RID: 14793 RVA: 0x0030DE54 File Offset: 0x0030C054
+		
 		public void ReShowPKKing()
 		{
 			int roleID = this.GetPKKingRoleID();
@@ -907,14 +907,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060039CA RID: 14794 RVA: 0x0030DE7C File Offset: 0x0030C07C
+		
 		public void ClearDbKingNpc()
 		{
 			this.KingRoleData = null;
 			Global.sendToDB<bool, string>(13232, string.Format("{0}", 1), 0);
 		}
 
-		// Token: 0x060039CB RID: 14795 RVA: 0x0030DEA4 File Offset: 0x0030C0A4
+		
 		public void ReplacePKKingNpc(int roleId)
 		{
 			RoleDataEx rd = this.KingRoleData;
@@ -959,7 +959,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060039CC RID: 14796 RVA: 0x0030E034 File Offset: 0x0030C234
+		
 		public void RestorePKingNpc(int pkKingRoleID)
 		{
 			NPC npc = NPCGeneralManager.FindNPC(GameManager.MainMapCode, FakeRoleNpcId.PkKing);
@@ -971,13 +971,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060039CD RID: 14797 RVA: 0x0030E08C File Offset: 0x0030C28C
+		
 		public bool IsInArenaBattle(GameClient client)
 		{
 			return client.ClientData.MapCode == GameManager.ArenaBattleMgr.BattleMapCode;
 		}
 
-		// Token: 0x060039CE RID: 14798 RVA: 0x0030E0C4 File Offset: 0x0030C2C4
+		
 		public void AddArenaBattleKilledNum(GameClient client, object victim)
 		{
 			if (client.ClientData.MapCode == this.BattleMapCode)
@@ -998,7 +998,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060039CF RID: 14799 RVA: 0x0030E184 File Offset: 0x0030C384
+		
 		public void ClientEnterArenaBattle(GameClient client)
 		{
 			if (this.BattleMapCode < 0)
@@ -1053,7 +1053,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060039D0 RID: 14800 RVA: 0x0030E438 File Offset: 0x0030C638
+		
 		public void OnChangeName(int roleId, string oldName, string newName)
 		{
 			if (!string.IsNullOrEmpty(oldName) && !string.IsNullOrEmpty(newName))
@@ -1066,7 +1066,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060039D1 RID: 14801 RVA: 0x0030E4B0 File Offset: 0x0030C6B0
+		
 		private void _HandleChangeNameEv()
 		{
 			List<Tuple<int, string, string>> changeNameLst = null;
@@ -1104,121 +1104,121 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04004341 RID: 17217
+		
 		private int TopPoint = -1;
 
-		// Token: 0x04004342 RID: 17218
+		
 		private string TopRoleName = "";
 
-		// Token: 0x04004343 RID: 17219
+		
 		private Dictionary<int, int> GetawardFlag = new Dictionary<int, int>();
 
-		// Token: 0x04004344 RID: 17220
+		
 		private List<string> TimePointsList = new List<string>();
 
-		// Token: 0x04004345 RID: 17221
+		
 		private int MapCode = -1;
 
-		// Token: 0x04004346 RID: 17222
+		
 		private int MinChangeLifeLev = 0;
 
-		// Token: 0x04004347 RID: 17223
+		
 		private int MinLevel = 20;
 
-		// Token: 0x04004348 RID: 17224
+		
 		private int MinRequestNum = 100;
 
-		// Token: 0x04004349 RID: 17225
+		
 		private int MaxEnterNum = 300;
 
-		// Token: 0x0400434A RID: 17226
+		
 		private int FallGiftNum = 5;
 
-		// Token: 0x0400434B RID: 17227
+		
 		private int FallID = -1;
 
-		// Token: 0x0400434C RID: 17228
+		
 		private string DisableGoodsIDs = "";
 
-		// Token: 0x0400434D RID: 17229
+		
 		private List<GoodsData> GiveAwardsGoodsDataList = null;
 
-		// Token: 0x0400434E RID: 17230
+		
 		private int AddExpSecs = 60;
 
-		// Token: 0x0400434F RID: 17231
+		
 		private int ForceNotifyBattleScoreSec = 10;
 
-		// Token: 0x04004350 RID: 17232
+		
 		private int WaitingEnterSecs = 30;
 
-		// Token: 0x04004351 RID: 17233
+		
 		private int PrepareSecs = 30;
 
-		// Token: 0x04004352 RID: 17234
+		
 		private int FightingSecs = 300;
 
-		// Token: 0x04004353 RID: 17235
+		
 		private int ClearRolesSecs = 30;
 
-		// Token: 0x04004354 RID: 17236
+		
 		private int BattleLineID = 1;
 
-		// Token: 0x04004355 RID: 17237
+		
 		public static int m_nPushMsgDayID = -1;
 
-		// Token: 0x04004356 RID: 17238
+		
 		private Queue<Tuple<int, string, string>> _ChangeNameEvQ = new Queue<Tuple<int, string, string>>();
 
-		// Token: 0x04004357 RID: 17239
+		
 		private BattleStates BattlingState = BattleStates.NoBattle;
 
-		// Token: 0x04004358 RID: 17240
+		
 		private long StateStartTicks = 0L;
 
-		// Token: 0x04004359 RID: 17241
+		
 		private long KeepSingleTicks;
 
-		// Token: 0x0400435A RID: 17242
+		
 		private long LastNotifyBattleScoreTicks = 0L;
 
-		// Token: 0x0400435B RID: 17243
+		
 		private HashSet<int> DeadRoleSets = new HashSet<int>();
 
-		// Token: 0x0400435C RID: 17244
+		
 		private GameClient ChampionClient = null;
 
-		// Token: 0x0400435D RID: 17245
+		
 		private object mutex = new object();
 
-		// Token: 0x0400435E RID: 17246
+		
 		private bool _AllowAttack = false;
 
-		// Token: 0x0400435F RID: 17247
+		
 		private int _TotalClientCount = 0;
 
-		// Token: 0x04004360 RID: 17248
+		
 		private int _LastNotifyClientCount = 0;
 
-		// Token: 0x04004361 RID: 17249
+		
 		private bool _bRoleEnterOrLeave = false;
 
-		// Token: 0x04004362 RID: 17250
+		
 		private int _EnterBattleClientCount = 0;
 
-		// Token: 0x04004363 RID: 17251
+		
 		private int _StartRoleNum = 0;
 
-		// Token: 0x04004364 RID: 17252
+		
 		private int _AllKilledRoleNum = 0;
 
-		// Token: 0x04004365 RID: 17253
+		
 		private long LastAddBangZhanAwardsTicks = 0L;
 
-		// Token: 0x04004366 RID: 17254
+		
 		private object kingRoleDataMutex = new object();
 
-		// Token: 0x04004367 RID: 17255
+		
 		private RoleDataEx _kingRoleData = null;
 	}
 }

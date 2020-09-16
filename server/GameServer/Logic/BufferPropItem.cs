@@ -12,7 +12,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x1700058F RID: 1423
-		// (get) Token: 0x0600386E RID: 14446 RVA: 0x00302D1C File Offset: 0x00300F1C
+		
 		public double[] BaseProps
 		{
 			get
@@ -22,7 +22,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000590 RID: 1424
-		// (get) Token: 0x0600386F RID: 14447 RVA: 0x00302D34 File Offset: 0x00300F34
+		
 		public long[] BasePropsTick
 		{
 			get
@@ -32,7 +32,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000591 RID: 1425
-		// (get) Token: 0x06003870 RID: 14448 RVA: 0x00302D4C File Offset: 0x00300F4C
+		
 		public double[] ExtProps
 		{
 			get
@@ -42,7 +42,7 @@ namespace GameServer.Logic
 		}
 
 		// Token: 0x17000592 RID: 1426
-		// (get) Token: 0x06003871 RID: 14449 RVA: 0x00302D64 File Offset: 0x00300F64
+		
 		public long[] ExtPropsTick
 		{
 			get

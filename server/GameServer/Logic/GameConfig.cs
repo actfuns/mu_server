@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006C8 RID: 1736
+	
 	public class GameConfig
 	{
-		// Token: 0x060023A7 RID: 9127 RVA: 0x001E6B54 File Offset: 0x001E4D54
+		
 		public void LoadGameConfigFromDBServer()
 		{
 			this._GameConfigDict = Global.LoadDBGameConfigDict();
@@ -16,7 +16,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060023A8 RID: 9128 RVA: 0x001E6B8C File Offset: 0x001E4D8C
+		
 		public void SetGameConfigItem(string paramName, string paramValue)
 		{
 			lock (this._GameConfigDict)
@@ -26,7 +26,7 @@ namespace GameServer.Logic
 			this.ChangeParams(paramName, paramValue);
 		}
 
-		// Token: 0x060023A9 RID: 9129 RVA: 0x001E6BE8 File Offset: 0x001E4DE8
+		
 		public void UpdateGameConfigItem(string paramName, string paramValue, bool force = false)
 		{
 			lock (this._GameConfigDict)
@@ -44,7 +44,7 @@ namespace GameServer.Logic
 			Global.UpdateDBGameConfigg(paramName, paramValue);
 		}
 
-		// Token: 0x060023AA RID: 9130 RVA: 0x001E6C6C File Offset: 0x001E4E6C
+		
 		public void ModifyGameConfigItem(string paramName, int paramValue)
 		{
 			int value = 0;
@@ -56,7 +56,7 @@ namespace GameServer.Logic
 			this.ChangeParams(paramName, value.ToString());
 		}
 
-		// Token: 0x060023AB RID: 9131 RVA: 0x001E6CE4 File Offset: 0x001E4EE4
+		
 		public string GetGameConifgItem(string paramName)
 		{
 			string paramValue = null;
@@ -70,7 +70,7 @@ namespace GameServer.Logic
 			return paramValue;
 		}
 
-		// Token: 0x060023AC RID: 9132 RVA: 0x001E6D4C File Offset: 0x001E4F4C
+		
 		public string GetGameConfigItemStr(string paramName, string defVal)
 		{
 			string ret = this.GetGameConifgItem(paramName);
@@ -86,7 +86,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060023AD RID: 9133 RVA: 0x001E6D7C File Offset: 0x001E4F7C
+		
 		public int GetGameConfigItemInt(string paramName, int defVal)
 		{
 			string str = this.GetGameConifgItem(paramName);
@@ -111,7 +111,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060023AE RID: 9134 RVA: 0x001E6DD0 File Offset: 0x001E4FD0
+		
 		public double GetGameConfigItemDouble(string paramName, double defVal)
 		{
 			string str = this.GetGameConifgItem(paramName);
@@ -136,7 +136,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060023AF RID: 9135 RVA: 0x001E6E2C File Offset: 0x001E502C
+		
 		public void SendAllGameConfigItemsToGM(GameClient client)
 		{
 			lock (this._GameConfigDict)
@@ -150,7 +150,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060023B0 RID: 9136 RVA: 0x001E6F08 File Offset: 0x001E5108
+		
 		private void ChangeParams(string paramName, string paramValue)
 		{
 			bool updateHuoID = false;
@@ -175,7 +175,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x040036F0 RID: 14064
+		
 		private Dictionary<string, string> _GameConfigDict = new Dictionary<string, string>();
 	}
 }

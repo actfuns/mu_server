@@ -10,16 +10,16 @@ using Tmsk.Tools.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000037 RID: 55
+	
 	public class KuaFuCopyDbMgr
 	{
-		// Token: 0x06000273 RID: 627 RVA: 0x00025206 File Offset: 0x00023406
+		
 		private KuaFuCopyDbMgr()
 		{
 		}
 
-		// Token: 0x17000014 RID: 20
-		// (get) Token: 0x06000274 RID: 628 RVA: 0x00025238 File Offset: 0x00023438
+		
+		
 		public static KuaFuCopyDbMgr Instance
 		{
 			get
@@ -28,9 +28,9 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x17000015 RID: 21
-		// (get) Token: 0x06000275 RID: 629 RVA: 0x00025250 File Offset: 0x00023450
-		// (set) Token: 0x06000276 RID: 630 RVA: 0x0002529C File Offset: 0x0002349C
+		
+		
+		
 		public KFTeamCountControl TeamControl
 		{
 			get
@@ -51,7 +51,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000277 RID: 631 RVA: 0x000252E8 File Offset: 0x000234E8
+		
 		public void InitConfig()
 		{
 			try
@@ -68,7 +68,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000278 RID: 632 RVA: 0x00025360 File Offset: 0x00023560
+		
 		public void SaveCostTime(int ms)
 		{
 			try
@@ -83,7 +83,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000279 RID: 633 RVA: 0x000253B4 File Offset: 0x000235B4
+		
 		private int ExecuteSqlNoQuery(string sqlCmd)
 		{
 			int result;
@@ -99,7 +99,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600027A RID: 634 RVA: 0x000253F0 File Offset: 0x000235F0
+		
 		public void CheckLogAsyncEvents(AsyncDataItem[] evList)
 		{
 			if (evList != null)
@@ -144,7 +144,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600027B RID: 635 RVA: 0x000255DC File Offset: 0x000237DC
+		
 		public void SaveCopyTeamAnalysisData(KFCopyTeamAnalysis data)
 		{
 			if (data != null)
@@ -191,7 +191,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600027C RID: 636 RVA: 0x00025828 File Offset: 0x00023A28
+		
 		public int AddHongDongAwardRecordForUser(string userid, int activitytype, string keystr, long hasgettimes, string lastgettime)
 		{
 			string cmdText = string.Format("INSERT INTO t_huodongawarduserhist (userid, activitytype, keystr, hasgettimes,lastgettime) VALUES('{0}', {1}, '{2}', {3}, '{4}')", new object[]
@@ -205,7 +205,7 @@ namespace KF.Remoting
 			return this.ExecuteSqlNoQuery(cmdText);
 		}
 
-		// Token: 0x0600027D RID: 637 RVA: 0x00025874 File Offset: 0x00023A74
+		
 		public int UpdateHongDongAwardRecordForUser(string userid, int activitytype, string keystr, long hasgettimes, string lastgettime)
 		{
 			string cmdText = string.Format("update t_huodongawarduserhist set hasgettimes={0}, lastgettime='{1}' where userid='{2}' and activitytype={3} and keystr='{4}' and hasgettimes!={5}", new object[]
@@ -220,7 +220,7 @@ namespace KF.Remoting
 			return this.ExecuteSqlNoQuery(cmdText);
 		}
 
-		// Token: 0x0600027E RID: 638 RVA: 0x000258CC File Offset: 0x00023ACC
+		
 		public int GetAwardHistoryForUser(string userid, int activitytype, string keystr, out long hasgettimes, out string lastgettime)
 		{
 			hasgettimes = 0L;
@@ -248,19 +248,19 @@ namespace KF.Remoting
 			return ret;
 		}
 
-		// Token: 0x0400015B RID: 347
+		
 		private static readonly KuaFuCopyDbMgr g_Instance = new KuaFuCopyDbMgr();
 
-		// Token: 0x0400015C RID: 348
+		
 		public object Mutex = new object();
 
-		// Token: 0x0400015D RID: 349
+		
 		public bool Initialized = false;
 
-		// Token: 0x0400015E RID: 350
+		
 		private KFTeamCountControl _Control = null;
 
-		// Token: 0x0400015F RID: 351
+		
 		private object _ControlMutex = new object();
 	}
 }

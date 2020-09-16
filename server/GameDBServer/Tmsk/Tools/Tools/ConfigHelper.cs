@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace Tmsk.Tools.Tools
 {
-	// Token: 0x02000216 RID: 534
+	
 	public static class ConfigHelper
 	{
-		// Token: 0x06000C71 RID: 3185 RVA: 0x000A00BC File Offset: 0x0009E2BC
+		
 		public static XElement Load(string fileName)
 		{
 			XElement xml = null;
@@ -21,7 +21,7 @@ namespace Tmsk.Tools.Tools
 			return xml;
 		}
 
-		// Token: 0x06000C72 RID: 3186 RVA: 0x000A00E8 File Offset: 0x0009E2E8
+		
 		public static IEnumerable<XElement> GetXElements(XElement xml, string name)
 		{
 			try
@@ -35,7 +35,7 @@ namespace Tmsk.Tools.Tools
 			return null;
 		}
 
-		// Token: 0x06000C73 RID: 3187 RVA: 0x000A0130 File Offset: 0x0009E330
+		
 		public static XElement GetXElement(XElement xml, string name)
 		{
 			try
@@ -49,7 +49,7 @@ namespace Tmsk.Tools.Tools
 			return null;
 		}
 
-		// Token: 0x06000C74 RID: 3188 RVA: 0x000A01B8 File Offset: 0x0009E3B8
+		
 		public static XElement GetXElement(XElement xml, string name, string attrName, string attrValue)
 		{
 			try
@@ -63,7 +63,7 @@ namespace Tmsk.Tools.Tools
 			return null;
 		}
 
-		// Token: 0x06000C75 RID: 3189 RVA: 0x000A0268 File Offset: 0x0009E468
+		
 		public static string GetElementAttributeValue(XElement xml, string name, string attrName, string attrValue, string attribute, string defVal = "")
 		{
 			string val = defVal;
@@ -86,7 +86,7 @@ namespace Tmsk.Tools.Tools
 			return val;
 		}
 
-		// Token: 0x06000C76 RID: 3190 RVA: 0x000A0354 File Offset: 0x0009E554
+		
 		public static long GetElementAttributeValueLong(XElement xml, string name, string attrName, string attrValue, string attribute, long defVal = 0L)
 		{
 			long val = defVal;
@@ -112,7 +112,7 @@ namespace Tmsk.Tools.Tools
 			return val;
 		}
 
-		// Token: 0x06000C77 RID: 3191 RVA: 0x000A0450 File Offset: 0x0009E650
+		
 		public static int[] GetElementAttributeValueIntArray(XElement xml, string name, string attrName, string attrValue, string attribute, int[] defArr = null)
 		{
 			int[] arr = defArr;
@@ -140,7 +140,7 @@ namespace Tmsk.Tools.Tools
 			return arr;
 		}
 
-		// Token: 0x06000C78 RID: 3192 RVA: 0x000A055C File Offset: 0x0009E75C
+		
 		public static string[] GetElementAttributeValueStrArray(XElement xml, string name, string attrName, string attrValue, string attribute, string[] defArr = null)
 		{
 			string[] arr = defArr;
@@ -167,7 +167,7 @@ namespace Tmsk.Tools.Tools
 			return arr;
 		}
 
-		// Token: 0x06000C79 RID: 3193 RVA: 0x000A0628 File Offset: 0x0009E828
+		
 		public static string GetElementAttributeValue(XElement xml, string attribute, string defVal = "")
 		{
 			string val = defVal;
@@ -186,7 +186,7 @@ namespace Tmsk.Tools.Tools
 			return val;
 		}
 
-		// Token: 0x06000C7A RID: 3194 RVA: 0x000A0684 File Offset: 0x0009E884
+		
 		public static long GetElementAttributeValueLong(XElement xml, string attribute, long defVal = 0L)
 		{
 			long val = defVal;
@@ -208,7 +208,7 @@ namespace Tmsk.Tools.Tools
 			return val;
 		}
 
-		// Token: 0x06000C7B RID: 3195 RVA: 0x000A06F0 File Offset: 0x0009E8F0
+		
 		public static double GetElementAttributeValueDouble(XElement xml, string attribute, double defVal = 0.0)
 		{
 			double val = defVal;
@@ -230,7 +230,7 @@ namespace Tmsk.Tools.Tools
 			return val;
 		}
 
-		// Token: 0x06000C7C RID: 3196 RVA: 0x000A075C File Offset: 0x0009E95C
+		
 		public static int[] String2IntArray(string str, char spliter = ',')
 		{
 			int[] result;
@@ -249,7 +249,7 @@ namespace Tmsk.Tools.Tools
 			return result;
 		}
 
-		// Token: 0x06000C7D RID: 3197 RVA: 0x000A079C File Offset: 0x0009E99C
+		
 		public static List<int> String2IntList(string str, char spliter = ',')
 		{
 			List<int> list = new List<int>();
@@ -277,7 +277,7 @@ namespace Tmsk.Tools.Tools
 			return result;
 		}
 
-		// Token: 0x06000C7E RID: 3198 RVA: 0x000A0824 File Offset: 0x0009EA24
+		
 		private static int[] StringArray2IntArray(string[] sa, int start, int count)
 		{
 			int[] result2;
@@ -311,7 +311,7 @@ namespace Tmsk.Tools.Tools
 			return result2;
 		}
 
-		// Token: 0x06000C7F RID: 3199 RVA: 0x000A08C8 File Offset: 0x0009EAC8
+		
 		public static bool ParseStrInt2(string str, ref int v1, ref int v2, char splitChar = ',')
 		{
 			bool result;
@@ -341,7 +341,7 @@ namespace Tmsk.Tools.Tools
 			return result;
 		}
 
-		// Token: 0x06000C80 RID: 3200 RVA: 0x000A0938 File Offset: 0x0009EB38
+		
 		public static bool ParseStrInt3(string str, ref int v1, ref int v2, ref int v3, char splitChar = ',')
 		{
 			bool result;
@@ -373,7 +373,7 @@ namespace Tmsk.Tools.Tools
 			return result;
 		}
 
-		// Token: 0x06000C81 RID: 3201 RVA: 0x000A09BC File Offset: 0x0009EBBC
+		
 		public static bool ParserTimeRangeList(List<TimeSpan> list, string str, bool clear = true, char splitChar1 = '|', char splitChar2 = '-')
 		{
 			bool result;
@@ -415,7 +415,7 @@ namespace Tmsk.Tools.Tools
 			return result;
 		}
 
-		// Token: 0x06000C82 RID: 3202 RVA: 0x000A0AA0 File Offset: 0x0009ECA0
+		
 		public static bool ParserTimeRangeListWithDay(List<TimeSpan> list, string str, bool clear = true, char splitChar1 = '|', char splitChar2 = '-', char splitChar3 = ',')
 		{
 			bool result;
@@ -473,7 +473,7 @@ namespace Tmsk.Tools.Tools
 			return result;
 		}
 
-		// Token: 0x06000C83 RID: 3203 RVA: 0x000A0BFC File Offset: 0x0009EDFC
+		
 		public static List<List<int>> ParserIntArrayList(string str, bool verifyColumn = true, char splitChar1 = '|', char splitChar2 = ',')
 		{
 			List<List<int>> list = new List<List<int>>();

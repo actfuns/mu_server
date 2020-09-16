@@ -16,22 +16,22 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-    // Token: 0x020003BB RID: 955
+    
     public class LangHunLingYuManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener, IEventListenerEx, IManager2
     {
-        // Token: 0x0600108C RID: 4236 RVA: 0x000FFEB0 File Offset: 0x000FE0B0
+        
         public static LangHunLingYuManager getInstance()
         {
             return LangHunLingYuManager.instance;
         }
 
-        // Token: 0x0600108D RID: 4237 RVA: 0x000FFEC8 File Offset: 0x000FE0C8
+        
         public bool initialize()
         {
             return this.InitConfig();
         }
 
-        // Token: 0x0600108E RID: 4238 RVA: 0x000FFEEC File Offset: 0x000FE0EC
+        
         public bool initialize(ICoreInterface coreInterface)
         {
             TCPCmdDispatcher.getInstance().registerProcessorEx(1153, 1, 1, LangHunLingYuManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -63,14 +63,14 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x0600108F RID: 4239 RVA: 0x00100140 File Offset: 0x000FE340
+        
         public bool startup()
         {
             ScheduleExecutor2.Instance.scheduleExecute(new NormalScheduleTask("LangHunLingYuManager.TimerProc", new EventHandler(this.TimerProc)), 15000, 1428);
             return true;
         }
 
-        // Token: 0x06001090 RID: 4240 RVA: 0x00100180 File Offset: 0x000FE380
+        
         public bool showdown()
         {
             GlobalEventSource.getInstance().removeListener(11, LangHunLingYuManager.getInstance());
@@ -90,19 +90,19 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x06001091 RID: 4241 RVA: 0x001002C4 File Offset: 0x000FE4C4
+        
         public bool destroy()
         {
             return true;
         }
 
-        // Token: 0x06001092 RID: 4242 RVA: 0x001002D8 File Offset: 0x000FE4D8
+        
         public bool processCmd(GameClient client, string[] cmdParams)
         {
             return false;
         }
 
-        // Token: 0x06001093 RID: 4243 RVA: 0x001002EC File Offset: 0x000FE4EC
+        
         public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             switch (nID)
@@ -129,7 +129,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x06001094 RID: 4244 RVA: 0x001003B8 File Offset: 0x000FE5B8
+        
         public void processEvent(EventObject eventObject)
         {
             int nID = eventObject.getEventType();
@@ -164,7 +164,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001095 RID: 4245 RVA: 0x00100474 File Offset: 0x000FE674
+        
         public void processEvent(EventObjectEx eventObject)
         {
             int eventType = eventObject.EventType;
@@ -344,7 +344,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001096 RID: 4246 RVA: 0x00100960 File Offset: 0x000FEB60
+        
         public bool InitConfig()
         {
             bool success = true;
@@ -538,7 +538,7 @@ namespace GameServer.Logic
             return success;
         }
 
-        // Token: 0x06001097 RID: 4247 RVA: 0x001013AC File Offset: 0x000FF5AC
+        
         public int GetCityLevelById(int cityId)
         {
             lock (this.RuntimeData.Mutex)
@@ -552,7 +552,7 @@ namespace GameServer.Logic
             return 0;
         }
 
-        // Token: 0x06001098 RID: 4248 RVA: 0x00101424 File Offset: 0x000FF624
+        
         public int GetBangHuiCityLevel(int bhid)
         {
             lock (this.RuntimeData.Mutex)
@@ -566,7 +566,7 @@ namespace GameServer.Logic
             return 0;
         }
 
-        // Token: 0x06001099 RID: 4249 RVA: 0x001014A0 File Offset: 0x000FF6A0
+        
         public string GetBangHuiName(int bhid, out int zoneId)
         {
             zoneId = 0;
@@ -584,7 +584,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x0600109A RID: 4250 RVA: 0x001014EC File Offset: 0x000FF6EC
+        
         private void UpdateCityDataEx(LangHunLingYuCityDataEx cityDataEx)
         {
             if (null != cityDataEx)
@@ -726,7 +726,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600109B RID: 4251 RVA: 0x00101BBC File Offset: 0x000FFDBC
+        
         private void UpdateBangHuiDataEx(LangHunLingYuBangHuiDataEx bangHuiDataEx)
         {
             if (null != bangHuiDataEx)
@@ -744,7 +744,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600109C RID: 4252 RVA: 0x00101C6C File Offset: 0x000FFE6C
+        
         private void UpdateOtherCityList(Dictionary<int, List<int>> list)
         {
             lock (this.RuntimeData.Mutex)
@@ -753,7 +753,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600109D RID: 4253 RVA: 0x00101CC4 File Offset: 0x000FFEC4
+        
         private void UpdateCityOwnerAdmire(int rid, int admirecount)
         {
             lock (this.RuntimeData.Mutex)
@@ -771,7 +771,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600109E RID: 4254 RVA: 0x00101D88 File Offset: 0x000FFF88
+        
         private void UpdateCityOwnerHist(List<LangHunLingYuKingHist> list)
         {
             lock (this.RuntimeData.Mutex)
@@ -781,7 +781,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600109F RID: 4255 RVA: 0x00101DE8 File Offset: 0x000FFFE8
+        
         private void BroadcastBangHuiCityData(HashSet<long> newBangHuiIdHashSet, long oldBhid, long newBhid)
         {
             int count = GameManager.ClientMgr.GetMaxClientCount();
@@ -802,13 +802,13 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010A0 RID: 4256 RVA: 0x00101E79 File Offset: 0x00100079
+        
         private void OnInitGame(GameClient client)
         {
             this.UpdateChengHaoBuffer(client, 0L, this.RuntimeData.ChengHaoBHid);
         }
 
-        // Token: 0x060010A1 RID: 4257 RVA: 0x00101E94 File Offset: 0x00100094
+        
         private void UpdateChengHaoBuffer(GameClient client, long oldBhid, long newBhid)
         {
             if (newBhid > 0L && (long)client.ClientData.Faction == newBhid)
@@ -835,20 +835,20 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010A2 RID: 4258 RVA: 0x00101F36 File Offset: 0x00100136
+        
         public void OnLogin(GameClient client)
         {
             this.UpdateChengHaoBuffer(client, 0L, this.RuntimeData.ChengHaoBHid);
         }
 
-        // Token: 0x060010A3 RID: 4259 RVA: 0x00101F50 File Offset: 0x00100150
+        
         public bool CanGetAwardsByEnterTime(GameClient client)
         {
             int secs = DataHelper.UnixSecondsNow() - Global.GetRoleParamsInt32FromDB(client, "EnterBangHuiUnixSecs");
             return (long)secs >= GameManager.systemParamsList.GetParamValueIntByName("JiaRuTime", 0) * 60L * 60L;
         }
 
-        // Token: 0x060010A4 RID: 4260 RVA: 0x00101F9C File Offset: 0x0010019C
+        
         public void CheckTipsIconState(GameClient client)
         {
             int awardFlags = 0;
@@ -891,7 +891,7 @@ namespace GameServer.Logic
             client._IconStateMgr.SendIconStateToClient(client);
         }
 
-        // Token: 0x060010A5 RID: 4261 RVA: 0x00102100 File Offset: 0x00100300
+        
         public bool ProcessLangHunLingYuJoinCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -1002,7 +1002,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x060010A6 RID: 4262 RVA: 0x00102470 File Offset: 0x00100670
+        
         public bool ProcessLangHunLingYuEnterCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -1129,7 +1129,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x060010A7 RID: 4263 RVA: 0x001027F0 File Offset: 0x001009F0
+        
         public bool ProcessLangHunLingYuRoleDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -1219,7 +1219,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x060010A8 RID: 4264 RVA: 0x00102BB8 File Offset: 0x00100DB8
+        
         public bool ProcessLangHunLingYuCityDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -1246,7 +1246,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x060010A9 RID: 4265 RVA: 0x00102CAC File Offset: 0x00100EAC
+        
         public bool ProcessGetAdmireDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -1265,7 +1265,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x060010AA RID: 4266 RVA: 0x00102D24 File Offset: 0x00100F24
+        
         public bool ProcessGetAdmireHistoryCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -1312,7 +1312,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x060010AB RID: 4267 RVA: 0x00102F18 File Offset: 0x00101118
+        
         public bool ProcessAdmireCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -1439,7 +1439,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x060010AC RID: 4268 RVA: 0x00103438 File Offset: 0x00101638
+        
         public bool ProcessLangHunLingYuWorldDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -1470,7 +1470,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x060010AD RID: 4269 RVA: 0x00103554 File Offset: 0x00101754
+        
         public bool ProcessGetDailyAwardsCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -1569,14 +1569,14 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x060010AE RID: 4270 RVA: 0x001039EC File Offset: 0x00101BEC
+        
         private bool CheckMap(GameClient client)
         {
             SceneUIClasses sceneType = Global.GetMapSceneType(client.ClientData.MapCode);
             return sceneType == SceneUIClasses.Normal;
         }
 
-        // Token: 0x060010AF RID: 4271 RVA: 0x00103A20 File Offset: 0x00101C20
+        
         private int CheckSignUpCondition(int cityLevel, ref CityLevelInfo sceneItem, ref LangHunLingYuGameStates state)
         {
             int result = 0;
@@ -1606,7 +1606,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x060010B0 RID: 4272 RVA: 0x00103B74 File Offset: 0x00101D74
+        
         private int CheckFightCondition(int cityLevel, ref CityLevelInfo sceneItem, ref LangHunLingYuGameStates state)
         {
             int result = 0;
@@ -1638,7 +1638,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x060010B1 RID: 4273 RVA: 0x00103CD4 File Offset: 0x00101ED4
+        
         private TimeSpan GetStartTime(int cityLevel)
         {
             CityLevelInfo sceneItem = null;
@@ -1670,7 +1670,7 @@ namespace GameServer.Logic
             return startTime;
         }
 
-        // Token: 0x060010B2 RID: 4274 RVA: 0x00103E2C File Offset: 0x0010202C
+        
         private string GetBHName(int bangHuiID)
         {
             BangHuiMiniData bhData = Global.GetBangHuiMiniData(bangHuiID, 0);
@@ -1686,7 +1686,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x060010B3 RID: 4275 RVA: 0x00103E64 File Offset: 0x00102064
+        
         private void ProcessTimeAddRoleExp(LangHunLingYuScene scene)
         {
             long ticks = TimeUtil.NOW();
@@ -1710,7 +1710,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010B4 RID: 4276 RVA: 0x00103F64 File Offset: 0x00102164
+        
         public bool GetZhanMengBirthPoint(LangHunLingYuSceneInfo sceneInfo, GameClient client, int toMapCode, out int mapCode, out int posX, out int posY)
         {
             mapCode = sceneInfo.MapCode;
@@ -1803,7 +1803,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x060010B5 RID: 4277 RVA: 0x00104244 File Offset: 0x00102444
+        
         public bool ClientRelive(GameClient client)
         {
             int mapCode = client.ClientData.MapCode;
@@ -1835,7 +1835,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x060010B6 RID: 4278 RVA: 0x001043B0 File Offset: 0x001025B0
+        
         public bool ClientChangeMap(GameClient client, ref int toNewMapCode, ref int toNewPosX, ref int toNewPosY)
         {
             LangHunLingYuSceneInfo sceneInfo = client.SceneInfoObject as LangHunLingYuSceneInfo;
@@ -1860,7 +1860,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x060010B7 RID: 4279 RVA: 0x00104448 File Offset: 0x00102648
+        
         public bool OnSpriteClickOnNpc(GameClient client, int npcID, int npcExtentionID)
         {
             bool isQiZuo = false;
@@ -1906,7 +1906,7 @@ namespace GameServer.Logic
             return isQiZuo;
         }
 
-        // Token: 0x060010B8 RID: 4280 RVA: 0x001046D0 File Offset: 0x001028D0
+        
         public void OnProcessJunQiDead(GameClient client, Monster monster)
         {
             if (client != null && this.RuntimeData.JunQiMonsterHashSet.Contains(monster.MonsterInfo.ExtensionID))
@@ -1930,7 +1930,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010B9 RID: 4281 RVA: 0x001047D8 File Offset: 0x001029D8
+        
         private void ResetQiZhiBuff(GameClient client)
         {
             if (!VideoLogic.getInstance().IsGuanZhanGM(client))
@@ -1975,7 +1975,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010BA RID: 4282 RVA: 0x001049B0 File Offset: 0x00102BB0
+        
         public void OnStartPlayGame(GameClient client)
         {
             this.ResetQiZhiBuff(client);
@@ -1987,18 +1987,18 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010BB RID: 4283 RVA: 0x001049EE File Offset: 0x00102BEE
+        
         public void BroadcastLuoLanChengZhuLoginHint(GameClient client)
         {
         }
 
-        // Token: 0x060010BC RID: 4284 RVA: 0x001049F4 File Offset: 0x00102BF4
+        
         private void CreateMonster(CopyMap copyMap, QiZhiConfig qiZhiConfig, int monsterId)
         {
             GameManager.MonsterZoneMgr.AddDynamicMonsters(copyMap.MapCode, monsterId, copyMap.CopyMapID, 1, qiZhiConfig.PosX / this.RuntimeData.MapGridWidth, qiZhiConfig.PosY / this.RuntimeData.MapGridHeight, 0, 0, SceneUIClasses.LangHunLingYu, qiZhiConfig, null);
         }
 
-        // Token: 0x060010BD RID: 4285 RVA: 0x00104A48 File Offset: 0x00102C48
+        
         private bool RefuseChangeBangHui(int bhid)
         {
             CityLevelInfo sceneItem = null;
@@ -2021,7 +2021,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x060010BE RID: 4286 RVA: 0x00104AFC File Offset: 0x00102CFC
+        
         public bool OnPreBangHuiAddMember(PreBangHuiAddMemberEventObject e)
         {
             bool result;
@@ -2038,7 +2038,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x060010BF RID: 4287 RVA: 0x00104B54 File Offset: 0x00102D54
+        
         public bool OnPreBangHuiRemoveMember(PreBangHuiRemoveMemberEventObject e)
         {
             bool result;
@@ -2055,9 +2055,9 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x1700004C RID: 76
-        // (get) Token: 0x060010C0 RID: 4288 RVA: 0x00104BAC File Offset: 0x00102DAC
-        // (set) Token: 0x060010C1 RID: 4289 RVA: 0x00104BF8 File Offset: 0x00102DF8
+        
+        
+        
         private RoleDataEx OwnerRoleData
         {
             get
@@ -2078,7 +2078,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010C2 RID: 4290 RVA: 0x00104C44 File Offset: 0x00102E44
+        
         public void ReplaceLangHunLingYuNpc()
         {
             if (this.RuntimeData.OwnerHistList == null || this.RuntimeData.OwnerHistList.Count == 0 || this.RuntimeData.ChengHaoBHid == 0L)
@@ -2111,7 +2111,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010C3 RID: 4291 RVA: 0x00104D8C File Offset: 0x00102F8C
+        
         public void RestoreLangHunLingYuNpc()
         {
             this.OwnerRoleData = null;
@@ -2124,7 +2124,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010C4 RID: 4292 RVA: 0x00104DEC File Offset: 0x00102FEC
+        
         public void LangHunLingYuBuildMaxCityOwnerInfo(LangHunLingYuStatisticalData statisticalData, int ServerID)
         {
             if (statisticalData.CityId == 1)
@@ -2142,7 +2142,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010C5 RID: 4293 RVA: 0x00104E7C File Offset: 0x0010307C
+        
         public BangHuiDetailData GetBangHuiDetailDataAuto(int bhid, int roleID = -1, int ServerID = 0)
         {
             BangHuiDetailData bangHuiDetailData = Global.GetBangHuiDetailData(roleID, bhid, ServerID);
@@ -2156,7 +2156,7 @@ namespace GameServer.Logic
             return bangHuiDetailData;
         }
 
-        // Token: 0x060010C6 RID: 4294 RVA: 0x00104ECC File Offset: 0x001030CC
+        
         public bool CanEnterKuaFuMap(KuaFuServerLoginData kuaFuServerLoginData)
         {
             int rid = kuaFuServerLoginData.RoleId;
@@ -2199,7 +2199,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x060010C7 RID: 4295 RVA: 0x001050B8 File Offset: 0x001032B8
+        
         public bool OnInitGameKuaFu(GameClient client)
         {
             int bhid = client.ClientData.Faction;
@@ -2286,13 +2286,13 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x060010C8 RID: 4296 RVA: 0x001053FC File Offset: 0x001035FC
+        
         public bool IsGongNengOpened(GameClient client, bool hint = false)
         {
             return client.ClientData.GuanZhanGM > 0 || (GameManager.VersionSystemOpenMgr.IsVersionSystemOpen("LangHunLingYu") && !GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot9) && GlobalNew.IsGongNengOpened(client, GongNengIDs.LangHunLingYu, hint));
         }
 
-        // Token: 0x060010C9 RID: 4297 RVA: 0x001054E8 File Offset: 0x001036E8
+        
         public void FillGuanZhanData(GameClient client, GuanZhanData gzData)
         {
             lock (this.RuntimeData.Mutex)
@@ -2363,7 +2363,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010CA RID: 4298 RVA: 0x00105798 File Offset: 0x00103998
+        
         private void InitScene(LangHunLingYuScene scene, GameClient client)
         {
             foreach (LangHunLingYuQiZhiBuffOwnerData item in this.RuntimeData.QiZhiBuffOwnerDataList)
@@ -2379,7 +2379,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010CB RID: 4299 RVA: 0x00105880 File Offset: 0x00103A80
+        
         public bool AddCopyScenes(GameClient client, CopyMap copyMap, SceneUIClasses sceneType)
         {
             bool result;
@@ -2473,7 +2473,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x060010CC RID: 4300 RVA: 0x00105CA4 File Offset: 0x00103EA4
+        
         public bool RemoveCopyScene(CopyMap copyMap, SceneUIClasses sceneType)
         {
             bool result;
@@ -2493,13 +2493,13 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x060010CD RID: 4301 RVA: 0x00105D20 File Offset: 0x00103F20
+        
         public void OnLogout(GameClient client)
         {
             YongZheZhanChangClient.getInstance().ChangeRoleState(client.ClientData.RoleID, KuaFuRoleStates.StartGame, false);
         }
 
-        // Token: 0x060010CE RID: 4302 RVA: 0x00105D3C File Offset: 0x00103F3C
+        
         public void TimerProc(object sender, EventArgs e)
         {
             lock (this.RuntimeData.Mutex)
@@ -2659,7 +2659,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010CF RID: 4303 RVA: 0x001065DC File Offset: 0x001047DC
+        
         public void NotifyTimeStateInfoAndScoreInfo(GameClient client, bool timeState = true, bool otherInfo = true)
         {
             lock (this.RuntimeData.Mutex)
@@ -2681,7 +2681,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010D0 RID: 4304 RVA: 0x0010669C File Offset: 0x0010489C
+        
         public void ProcessWangChengZhanResult(LangHunLingYuScene scene, bool finish)
         {
             try
@@ -2718,7 +2718,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010D1 RID: 4305 RVA: 0x00106754 File Offset: 0x00104954
+        
         private void UpdateQiZhiBuffParams(int secs)
         {
             lock (this.RuntimeData.Mutex)
@@ -2730,7 +2730,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010D2 RID: 4306 RVA: 0x00106804 File Offset: 0x00104A04
+        
         private void GiveLangHunLingYuAwards(LangHunLingYuScene scene)
         {
             LangHunLingYuAwardsData successAwardsData = new LangHunLingYuAwardsData();
@@ -2785,7 +2785,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010D3 RID: 4307 RVA: 0x00106B4C File Offset: 0x00104D4C
+        
         public bool TryGenerateNewHuangChengBangHui(LangHunLingYuScene scene)
         {
             int newBHid = 0;
@@ -2826,7 +2826,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x060010D4 RID: 4308 RVA: 0x00106CE0 File Offset: 0x00104EE0
+        
         public void GetTheOnlyOneBangHui(LangHunLingYuScene scene, out int newBHid, out int newBHServerID)
         {
             newBHid = 0;
@@ -2879,7 +2879,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010D5 RID: 4309 RVA: 0x00106ED4 File Offset: 0x001050D4
+        
         public void NotifyLongTaRoleDataList(LangHunLingYuScene scene)
         {
             foreach (CopyMap copyMap in scene.CopyMapDict.Values)
@@ -2888,7 +2888,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010D6 RID: 4310 RVA: 0x00106F44 File Offset: 0x00105144
+        
         public void NotifyLongTaOwnerData(LangHunLingYuScene scene)
         {
             foreach (CopyMap copyMap in scene.CopyMapDict.Values)
@@ -2897,7 +2897,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010D7 RID: 4311 RVA: 0x00106FB4 File Offset: 0x001051B4
+        
         public void UpdateQiZhiBangHui(LangHunLingYuScene scene, int npcExtentionID, int bhid, string bhName, int zoneId)
         {
             int oldBHID = 0;
@@ -2963,7 +2963,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010D8 RID: 4312 RVA: 0x0010721C File Offset: 0x0010541C
+        
         private void UpdateQiZhiBuff4GameClient(GameClient client, EquipPropItem item, int bufferID, bool add)
         {
             try
@@ -2996,7 +2996,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010D9 RID: 4313 RVA: 0x00107324 File Offset: 0x00105524
+        
         public void NotifyQiZhiBuffOwnerDataList(LangHunLingYuScene scene)
         {
             lock (this.RuntimeData.Mutex)
@@ -3009,7 +3009,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060010DA RID: 4314 RVA: 0x001073E0 File Offset: 0x001055E0
+        
         private void HandleHuangChengResultEx(LangHunLingYuScene scene, bool isBattleOver = false)
         {
             int bhid = scene.LongTaOwnerData.OwnerBHid;
@@ -3053,22 +3053,22 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x04001904 RID: 6404
+        
         public const SceneUIClasses ManagerType = SceneUIClasses.LangHunLingYu;
 
-        // Token: 0x04001905 RID: 6405
+        
         private static LangHunLingYuManager instance = new LangHunLingYuManager();
 
-        // Token: 0x04001906 RID: 6406
+        
         public LangHunLingYuData RuntimeData = new LangHunLingYuData();
 
-        // Token: 0x04001907 RID: 6407
+        
         public LevelAwardsMgr _LevelAwardsMgr = new LevelAwardsMgr();
 
-        // Token: 0x04001908 RID: 6408
+        
         private object OwnerRoleDataMutex = new object();
 
-        // Token: 0x04001909 RID: 6409
+        
         private RoleDataEx _OwnerRoleData = null;
     }
 }

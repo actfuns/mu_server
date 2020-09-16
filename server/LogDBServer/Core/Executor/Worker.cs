@@ -4,17 +4,17 @@ using Server.Tools;
 
 namespace LogDBServer.Core.Executor
 {
-	// Token: 0x02000006 RID: 6
+	
 	internal class Worker
 	{
-		// Token: 0x06000013 RID: 19 RVA: 0x00002201 File Offset: 0x00000401
+		
 		public Worker(ScheduleExecutor executor)
 		{
 			this.executor = executor;
 		}
 
-		// Token: 0x17000005 RID: 5
-		// (set) Token: 0x06000014 RID: 20 RVA: 0x00002221 File Offset: 0x00000421
+		
+		
 		public Thread CurrentThread
 		{
 			set
@@ -23,7 +23,7 @@ namespace LogDBServer.Core.Executor
 			}
 		}
 
-		// Token: 0x06000015 RID: 21 RVA: 0x0000222C File Offset: 0x0000042C
+		
 		private TaskWrapper getCanExecuteTask()
 		{
 			int getNum = 0;
@@ -47,7 +47,7 @@ namespace LogDBServer.Core.Executor
 			return null;
 		}
 
-		// Token: 0x06000016 RID: 22 RVA: 0x000022A8 File Offset: 0x000004A8
+		
 		public void work()
 		{
 			TaskWrapper TaskWrapper = null;
@@ -97,10 +97,10 @@ namespace LogDBServer.Core.Executor
 			}
 		}
 
-		// Token: 0x04000009 RID: 9
+		
 		private ScheduleExecutor executor = null;
 
-		// Token: 0x0400000A RID: 10
+		
 		private Thread currentThread = null;
 	}
 }

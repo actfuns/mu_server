@@ -16,29 +16,29 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020000B8 RID: 184
+	
 	public class TianTi5v5Manager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener, IEventListenerEx, IManager2, ICopySceneManager
 	{
-		// Token: 0x060002F3 RID: 755 RVA: 0x00033BD8 File Offset: 0x00031DD8
+		
 		public static TianTi5v5Manager getInstance()
 		{
 			return TianTi5v5Manager.instance;
 		}
 
-		// Token: 0x060002F4 RID: 756 RVA: 0x00033BF0 File Offset: 0x00031DF0
+		
 		public bool initialize()
 		{
 			ScheduleExecutor2.Instance.scheduleExecute(new NormalScheduleTask("TianTi5v5Manager.TimerProc", new EventHandler(this.TimerProc)), 20000, 10000);
 			return this.InitConfig(false);
 		}
 
-		// Token: 0x060002F5 RID: 757 RVA: 0x00033C40 File Offset: 0x00031E40
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			return true;
 		}
 
-		// Token: 0x060002F6 RID: 758 RVA: 0x00033C54 File Offset: 0x00031E54
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(3693, 1, 1, TianTi5v5Manager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -73,7 +73,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060002F7 RID: 759 RVA: 0x00033F00 File Offset: 0x00032100
+		
 		public bool showdown()
 		{
 			GlobalEventSource4Scene.getInstance().removeListener(60, 55, TianTi5v5Manager.getInstance());
@@ -85,19 +85,19 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060002F8 RID: 760 RVA: 0x00033F84 File Offset: 0x00032184
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060002F9 RID: 761 RVA: 0x00033F98 File Offset: 0x00032198
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x060002FA RID: 762 RVA: 0x00033FAC File Offset: 0x000321AC
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			switch (nID)
@@ -148,7 +148,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060002FB RID: 763 RVA: 0x000341D0 File Offset: 0x000323D0
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int eventType = eventObject.getEventType();
@@ -196,7 +196,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060002FC RID: 764 RVA: 0x00034318 File Offset: 0x00032518
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 			int eventType = eventObject.EventType;
@@ -207,7 +207,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060002FD RID: 765 RVA: 0x0003434C File Offset: 0x0003254C
+		
 		public bool InitConfig(bool reload = false)
 		{
 			bool success = true;
@@ -352,7 +352,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x060002FE RID: 766 RVA: 0x00034B68 File Offset: 0x00032D68
+		
 		public void GMStartHuoDongNow(int v)
 		{
 			try
@@ -374,7 +374,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060002FF RID: 767 RVA: 0x00034C30 File Offset: 0x00032E30
+		
 		private TianTi5v5ZhanDuiData NewZhanDuiData(GameClient client)
 		{
 			int duanWeiId = this.RuntimeData.DuanWeiJiFenRangeDuanWeiIdDict.Values.Min();
@@ -402,7 +402,7 @@ namespace GameServer.Logic
 			return zhanDuiData;
 		}
 
-		// Token: 0x06000300 RID: 768 RVA: 0x00034DA0 File Offset: 0x00032FA0
+		
 		private TianTi5v5ZhanDuiRoleData NewRoleData(GameClient client)
 		{
 			TianTi5v5ZhanDuiRoleData roleTianTi5v5Data = new TianTi5v5ZhanDuiRoleData();
@@ -421,7 +421,7 @@ namespace GameServer.Logic
 			return roleTianTi5v5Data;
 		}
 
-		// Token: 0x06000301 RID: 769 RVA: 0x00034E84 File Offset: 0x00033084
+		
 		public void GMSetRoleData(GameClient client, int duanWeiId, int duanWeiJiFen, int rongYao, int monthDuanWeiRank, int lianSheng, int successCount, int fightCount)
 		{
 			TianTi5v5ZhanDuiData zhanDuiData = this.GetZhanDuiData(client.ClientData.ZhanDuiID, client.ServerId) ?? this.NewZhanDuiData(client);
@@ -447,7 +447,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000302 RID: 770 RVA: 0x00034FA0 File Offset: 0x000331A0
+		
 		public void TimerProc(object sender, EventArgs e)
 		{
 			bool modify = false;
@@ -499,7 +499,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000303 RID: 771 RVA: 0x00035214 File Offset: 0x00033414
+		
 		public bool ProcessTianTi5v5JoinCmd(int zhanDuiID, TianTi5v5PiPeiState piPeiState)
 		{
 			if (piPeiState.State == 0)
@@ -516,7 +516,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000304 RID: 772 RVA: 0x000352A4 File Offset: 0x000334A4
+		
 		public bool ProcessGetTianTi5v5DataAndDayPaiHangCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -534,7 +534,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000305 RID: 773 RVA: 0x00035300 File Offset: 0x00033500
+		
 		public bool ProcessGetDayPaiHangCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -561,7 +561,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000306 RID: 774 RVA: 0x000353F8 File Offset: 0x000335F8
+		
 		public bool ProcessTianTi5v5GetPaiHangAwardsCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -595,7 +595,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000307 RID: 775 RVA: 0x0003556C File Offset: 0x0003376C
+		
 		public bool ProcessTianTi5v5GeLogCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -612,7 +612,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000308 RID: 776 RVA: 0x00035620 File Offset: 0x00033820
+		
 		public bool ProcessConfirmBattleCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -723,7 +723,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000309 RID: 777 RVA: 0x00035B4C File Offset: 0x00033D4C
+		
 		public bool ProcessAcceptConfirmBattleCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -795,7 +795,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600030A RID: 778 RVA: 0x00035E50 File Offset: 0x00034050
+		
 		public bool ProcessTianTi5v5EnterCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -809,7 +809,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600030B RID: 779 RVA: 0x00035E94 File Offset: 0x00034094
+		
 		public bool ProcessTianTi5v5QuitCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -862,7 +862,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600030C RID: 780 RVA: 0x00036080 File Offset: 0x00034280
+		
 		public bool ProcessQuitFromZhanDui(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -880,7 +880,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600030D RID: 781 RVA: 0x000360E4 File Offset: 0x000342E4
+		
 		public bool ProcessDeleteZhanDui(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -898,7 +898,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600030E RID: 782 RVA: 0x00036148 File Offset: 0x00034348
+		
 		public bool ProcessDeleteZhanDuiMember(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -916,7 +916,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600030F RID: 783 RVA: 0x000361B8 File Offset: 0x000343B8
+		
 		public bool ProcessCreateZhanDui(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -935,7 +935,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000310 RID: 784 RVA: 0x00036234 File Offset: 0x00034434
+		
 		public int CreateZhanDui(GameClient client, string teamName, string xuanyan)
 		{
 			int result;
@@ -1007,7 +1007,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000311 RID: 785 RVA: 0x0003651C File Offset: 0x0003471C
+		
 		public bool ProcessAgreeZhanDuiInvite(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1026,7 +1026,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000312 RID: 786 RVA: 0x00036590 File Offset: 0x00034790
+		
 		public bool ProcessAgreeZhanDuiRequest(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1045,7 +1045,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000313 RID: 787 RVA: 0x00036604 File Offset: 0x00034804
+		
 		public List<TianTi5v5ZhanDuiMiniData> GetZhanDuiMiniDataList(int maxCount, int serverID)
 		{
 			AgeDataT<int> requestData = new AgeDataT<int>(this.RuntimeData.ZhanDuiSimpleList.Age, maxCount);
@@ -1073,7 +1073,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x06000314 RID: 788 RVA: 0x00036734 File Offset: 0x00034934
+		
 		public TianTi5v5ZhanDuiData GetZhanDuiData(int zhanDuiID, int serverID)
 		{
 			TianTi5v5ZhanDuiData result2;
@@ -1114,7 +1114,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x06000315 RID: 789 RVA: 0x0003687C File Offset: 0x00034A7C
+		
 		public TianTi5v5ZhanDuiData UpdateZhanDuiData2DB(TianTi5v5ZhanDuiData zhanDuiData, int serverID, ZhanDuiDataModeTypes ZhanDuiDataModeType)
 		{
 			int zhanDuiID = zhanDuiData.ZhanDuiID;
@@ -1156,7 +1156,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x06000316 RID: 790 RVA: 0x000369CC File Offset: 0x00034BCC
+		
 		public TianTi5v5ZhanDuiData UpdateZorkZhanDuiData2DB(TianTi5v5ZhanDuiData zhanDuiData, int serverID)
 		{
 			int zhanDuiID = zhanDuiData.ZhanDuiID;
@@ -1197,7 +1197,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x06000317 RID: 791 RVA: 0x00036B18 File Offset: 0x00034D18
+		
 		public TianTi5v5ZhanDuiData UpdateEscapeZhanDuiData2DB(TianTi5v5ZhanDuiData zhanDuiData, int serverID)
 		{
 			int zhanDuiID = zhanDuiData.ZhanDuiID;
@@ -1238,7 +1238,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x06000318 RID: 792 RVA: 0x00036C64 File Offset: 0x00034E64
+		
 		public bool DeleteZhanDuiData2DB(int zhanDuiID, int serverID)
 		{
 			int result = Global.sendToDB<int, int>(3699, zhanDuiID, serverID);
@@ -1257,7 +1257,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000319 RID: 793 RVA: 0x00036CF8 File Offset: 0x00034EF8
+		
 		public void ChangeRoleZhanDuiID2DB(int roleID, int zhanDuiID, int zhiWu, int serverID)
 		{
 			GameClient client = GameManager.ClientMgr.FindClient(roleID);
@@ -1284,7 +1284,7 @@ namespace GameServer.Logic
 			}, serverID);
 		}
 
-		// Token: 0x0600031A RID: 794 RVA: 0x00036D9C File Offset: 0x00034F9C
+		
 		public void BroadcastZhanDuiDataChanged(int zhanDuiID, int serverID)
 		{
 			List<int> list = new List<int>();
@@ -1302,7 +1302,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600031B RID: 795 RVA: 0x00036E48 File Offset: 0x00035048
+		
 		private void GetZhanDuiRoleState(TianTi5v5ZhanDuiData data)
 		{
 			if (data != null && null != data.teamerList)
@@ -1322,7 +1322,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600031C RID: 796 RVA: 0x00036EE0 File Offset: 0x000350E0
+		
 		public bool GetMainInfo(GameClient client)
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -1366,7 +1366,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600031D RID: 797 RVA: 0x000370AC File Offset: 0x000352AC
+		
 		public bool ProcessInviteOther2MyZhanDui(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1489,7 +1489,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600031E RID: 798 RVA: 0x00037518 File Offset: 0x00035718
+		
 		public bool ProcessRequestToZhanDui(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1591,7 +1591,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600031F RID: 799 RVA: 0x000378D4 File Offset: 0x00035AD4
+		
 		public int SendZhanDuiInviteData(GameClient client)
 		{
 			int result;
@@ -1639,7 +1639,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000320 RID: 800 RVA: 0x00037AE0 File Offset: 0x00035CE0
+		
 		public int SendZhanDuiRequestData(GameClient client)
 		{
 			int result;
@@ -1688,7 +1688,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000321 RID: 801 RVA: 0x00037CFC File Offset: 0x00035EFC
+		
 		public bool ProcessGetZhanDuiList(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1706,7 +1706,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000322 RID: 802 RVA: 0x00037DA0 File Offset: 0x00035FA0
+		
 		public int AddMe2ZhanDui(GameClient client, int nTeamID)
 		{
 			int result;
@@ -1779,7 +1779,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000323 RID: 803 RVA: 0x00038100 File Offset: 0x00036300
+		
 		public int ZhanDuiAddMember(GameClient client, int otherRoleID)
 		{
 			int result;
@@ -1876,7 +1876,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000324 RID: 804 RVA: 0x00038524 File Offset: 0x00036724
+		
 		public int QuitFromZhanDui(GameClient client)
 		{
 			int result;
@@ -1928,7 +1928,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000325 RID: 805 RVA: 0x00038830 File Offset: 0x00036A30
+		
 		public int DeleteZhanDuiMember(GameClient client, int targetRoleID)
 		{
 			int result;
@@ -1982,7 +1982,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000326 RID: 806 RVA: 0x00038AA0 File Offset: 0x00036CA0
+		
 		public int DeleteZhanDui(GameClient client)
 		{
 			int result;
@@ -2036,7 +2036,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000327 RID: 807 RVA: 0x00038D28 File Offset: 0x00036F28
+		
 		public bool ProcessUpdateZhanDuiXuanYan(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -2054,7 +2054,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000328 RID: 808 RVA: 0x00038D90 File Offset: 0x00036F90
+		
 		public bool ProcessGetMyZhanDuiInfo(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -2080,7 +2080,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000329 RID: 809 RVA: 0x00038E88 File Offset: 0x00037088
+		
 		public bool ProcessChangeZhanDuiLeader(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -2139,7 +2139,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600032A RID: 810 RVA: 0x000390EC File Offset: 0x000372EC
+		
 		public bool ProcessZhanDuiKF5V5JingJiData(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -2155,7 +2155,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600032B RID: 811 RVA: 0x00039140 File Offset: 0x00037340
+		
 		public bool InitRoleTianTi5v5Data(GameClient client)
 		{
 			bool result;
@@ -2214,7 +2214,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600032C RID: 812 RVA: 0x00039314 File Offset: 0x00037514
+		
 		public bool UpdateByMonth(TianTi5v5ZhanDuiData data)
 		{
 			DateTime now = DateTime.Now;
@@ -2243,7 +2243,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600032D RID: 813 RVA: 0x000393C8 File Offset: 0x000375C8
+		
 		public int GetBirthPoint(GameClient client, out int posX, out int posY)
 		{
 			int side = client.ClientData.BattleWhichSide;
@@ -2262,7 +2262,7 @@ namespace GameServer.Logic
 			return -1;
 		}
 
-		// Token: 0x0600032E RID: 814 RVA: 0x00039464 File Offset: 0x00037664
+		
 		public bool CanKuaFuLogin(KuaFuServerLoginData kuaFuServerLoginData)
 		{
 			int gameID = (int)kuaFuServerLoginData.GameId;
@@ -2296,7 +2296,7 @@ namespace GameServer.Logic
 			return fuBenData != null && fuBenData.LoginInfo.KuaFuServerId == GameManager.ServerId && fuBenData.RoleDict.ContainsKey(kuaFuServerLoginData.RoleId);
 		}
 
-		// Token: 0x0600032F RID: 815 RVA: 0x000395E4 File Offset: 0x000377E4
+		
 		public bool OnInitGame(GameClient client)
 		{
 			KuaFuServerLoginData kuaFuServerLoginData = Global.GetClientKuaFuServerLoginData(client);
@@ -2371,13 +2371,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000330 RID: 816 RVA: 0x000398B8 File Offset: 0x00037AB8
+		
 		public bool IsGongNengOpened(GameClient client, bool hint = false)
 		{
 			return GlobalNew.IsGongNengOpened(client, GongNengIDs.TianTi5v5, hint);
 		}
 
-		// Token: 0x06000331 RID: 817 RVA: 0x00039908 File Offset: 0x00037B08
+		
 		public bool CanGetMonthRankAwards(GameClient client, out DuanWeiRankAward duanWeiRankAward)
 		{
 			duanWeiRankAward = null;
@@ -2444,13 +2444,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000332 RID: 818 RVA: 0x00039BCC File Offset: 0x00037DCC
+		
 		public bool KuaFuServerOK()
 		{
 			return TianTiClient.getInstance().IsKuaFuServerOK();
 		}
 
-		// Token: 0x06000333 RID: 819 RVA: 0x00039BE8 File Offset: 0x00037DE8
+		
 		public int UpdateZhanDuiXuanYan(GameClient client, string xuanYan)
 		{
 			int result2;
@@ -2492,7 +2492,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x06000334 RID: 820 RVA: 0x00039D38 File Offset: 0x00037F38
+		
 		public bool AddCopyScenes(GameClient client, CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool result;
@@ -2547,7 +2547,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000335 RID: 821 RVA: 0x00039FFC File Offset: 0x000381FC
+		
 		public bool RemoveCopyScene(CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool result;
@@ -2570,7 +2570,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000336 RID: 822 RVA: 0x0003A094 File Offset: 0x00038294
+		
 		private void SaveClientBattleSide(TianTi5v5Scene scene, GameClient client)
 		{
 			TianTi5v5RoleMiniData tianTiRoleMiniData;
@@ -2593,7 +2593,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000337 RID: 823 RVA: 0x0003A168 File Offset: 0x00038368
+		
 		private TianTi5v5RoleMiniData GetEnemyBattleSide(TianTi5v5Scene scene, GameClient client)
 		{
 			foreach (KeyValuePair<int, TianTi5v5RoleMiniData> kv in scene.RoleIdDuanWeiIdDict)
@@ -2606,7 +2606,7 @@ namespace GameServer.Logic
 			return scene.RoleIdDuanWeiIdDict.Values.FirstOrDefault<TianTi5v5RoleMiniData>();
 		}
 
-		// Token: 0x06000338 RID: 824 RVA: 0x0003A214 File Offset: 0x00038414
+		
 		public void TimerProc()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -2752,7 +2752,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000339 RID: 825 RVA: 0x0003A854 File Offset: 0x00038A54
+		
 		public void NotifyTimeStateInfoAndScoreInfo(GameClient client)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -2765,14 +2765,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600033A RID: 826 RVA: 0x0003A8D4 File Offset: 0x00038AD4
+		
 		public void CompleteTianTi5v5Scene(TianTi5v5Scene scene, int successSide)
 		{
 			scene.m_eStatus = GameSceneStatuses.STATUS_END;
 			scene.SuccessSide = successSide;
 		}
 
-		// Token: 0x0600033B RID: 827 RVA: 0x0003A8E8 File Offset: 0x00038AE8
+		
 		public void CancleTianTi5v5Scene(int gameId)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -2781,7 +2781,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600033C RID: 828 RVA: 0x0003A974 File Offset: 0x00038B74
+		
 		private int SceneCheckComplete(TianTi5v5Scene scene, bool complete = true)
 		{
 			int side = 0;
@@ -2804,7 +2804,7 @@ namespace GameServer.Logic
 			return side;
 		}
 
-		// Token: 0x0600033D RID: 829 RVA: 0x0003AA14 File Offset: 0x00038C14
+		
 		private void SceneRemoveRole(GameClient client)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -2824,7 +2824,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600033E RID: 830 RVA: 0x0003AAD0 File Offset: 0x00038CD0
+		
 		public void OnKillRole(GameClient client, GameClient other)
 		{
 			if (client.SceneType == 55)
@@ -2834,7 +2834,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600033F RID: 831 RVA: 0x0003AB3C File Offset: 0x00038D3C
+		
 		public void RoleLeaveFuBen(GameClient client)
 		{
 			if (client.SceneType == 55)
@@ -2843,7 +2843,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000340 RID: 832 RVA: 0x0003AB68 File Offset: 0x00038D68
+		
 		private void ProcessEnd(TianTi5v5Scene scene, DateTime now, long nowTicks)
 		{
 			scene.m_eStatus = GameSceneStatuses.STATUS_AWARD;
@@ -2864,7 +2864,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000341 RID: 833 RVA: 0x0003ACD4 File Offset: 0x00038ED4
+		
 		public void GiveAwards(TianTi5v5Scene scene)
 		{
 			try
@@ -3065,7 +3065,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000342 RID: 834 RVA: 0x0003B570 File Offset: 0x00039770
+		
 		public void GameCanceled(TianTi5v5Scene scene)
 		{
 			try
@@ -3092,34 +3092,34 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0400045B RID: 1115
+		
 		public const SceneUIClasses ManagerType = SceneUIClasses.TianTi5v5;
 
-		// Token: 0x0400045C RID: 1116
+		
 		private static TianTi5v5Manager instance = new TianTi5v5Manager();
 
-		// Token: 0x0400045D RID: 1117
+		
 		public TianTi5v5Data RuntimeData = new TianTi5v5Data();
 
-		// Token: 0x0400045E RID: 1118
+		
 		public ConcurrentDictionary<int, TianTi5v5Scene> TianTi5v5SceneDict = new ConcurrentDictionary<int, TianTi5v5Scene>();
 
-		// Token: 0x0400045F RID: 1119
+		
 		public HashSet<int> CancledGameIdDict = new HashSet<int>();
 
-		// Token: 0x04000460 RID: 1120
+		
 		private static long NextHeartBeatTicks = 0L;
 
-		// Token: 0x020000B9 RID: 185
+		
 		[ProtoContract]
 		private class TianTi5v5ZhanDuiDataList : List<TianTi5v5ZhanDuiData>, ICompressed
 		{
-			// Token: 0x06000352 RID: 850 RVA: 0x0003B671 File Offset: 0x00039871
+			
 			public TianTi5v5ZhanDuiDataList()
 			{
 			}
 
-			// Token: 0x06000353 RID: 851 RVA: 0x0003B67C File Offset: 0x0003987C
+			
 			public TianTi5v5ZhanDuiDataList(List<TianTi5v5ZhanDuiData> list) : base(list)
 			{
 			}

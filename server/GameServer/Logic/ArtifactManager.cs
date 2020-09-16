@@ -7,47 +7,47 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-    // Token: 0x02000208 RID: 520
+    
     public class ArtifactManager : IManager
     {
-        // Token: 0x060006B0 RID: 1712 RVA: 0x0005E348 File Offset: 0x0005C548
+        
         public static ArtifactManager GetInstance()
         {
             return ArtifactManager.Instance;
         }
 
-        // Token: 0x060006B1 RID: 1713 RVA: 0x0005E360 File Offset: 0x0005C560
+        
         public bool initialize()
         {
             return true;
         }
 
-        // Token: 0x060006B2 RID: 1714 RVA: 0x0005E374 File Offset: 0x0005C574
+        
         public bool startup()
         {
             return true;
         }
 
-        // Token: 0x060006B3 RID: 1715 RVA: 0x0005E388 File Offset: 0x0005C588
+        
         public bool showdown()
         {
             return true;
         }
 
-        // Token: 0x060006B4 RID: 1716 RVA: 0x0005E39C File Offset: 0x0005C59C
+        
         public bool destroy()
         {
             return true;
         }
 
-        // Token: 0x060006B5 RID: 1717 RVA: 0x0005E3AF File Offset: 0x0005C5AF
+        
         public static void initArtifact()
         {
             ArtifactManager.LoadArtifactData();
             ArtifactManager.LoadArtifactSuitData();
         }
 
-        // Token: 0x060006B6 RID: 1718 RVA: 0x0005E3C0 File Offset: 0x0005C5C0
+        
         public static void LoadArtifactData()
         {
             string fileName = "Config/ZaiZao.xml";
@@ -124,7 +124,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060006B7 RID: 1719 RVA: 0x0005E720 File Offset: 0x0005C920
+        
         public static ArtifactData GetArtifactDataByNeedId(int needID)
         {
             foreach (ArtifactData d in ArtifactManager._artifactList)
@@ -137,7 +137,7 @@ namespace GameServer.Logic
             return null;
         }
 
-        // Token: 0x060006B8 RID: 1720 RVA: 0x0005E790 File Offset: 0x0005C990
+        
         public static void LoadArtifactSuitData()
         {
             string fileName = "Config/TaoZhuangProps.xml";
@@ -212,7 +212,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060006B9 RID: 1721 RVA: 0x0005EA9C File Offset: 0x0005CC9C
+        
         public static ArtifactSuitData GetArtifactSuitDataByEquipID(int equipID)
         {
             foreach (ArtifactSuitData d in ArtifactManager._artifactSuitList)
@@ -228,7 +228,7 @@ namespace GameServer.Logic
             return null;
         }
 
-        // Token: 0x060006BA RID: 1722 RVA: 0x0005EB50 File Offset: 0x0005CD50
+        
         public static ArtifactSuitData GetArtifactSuitDataBySuitID(int suitID)
         {
             foreach (ArtifactSuitData d in ArtifactManager._artifactSuitList)
@@ -241,7 +241,7 @@ namespace GameServer.Logic
             return null;
         }
 
-        // Token: 0x060006BB RID: 1723 RVA: 0x0005EBC0 File Offset: 0x0005CDC0
+        
         public static ArtifactResultData UpArtifact(GameClient client, int equipID, bool isUseBind)
         {
             ArtifactResultData result = new ArtifactResultData();
@@ -453,7 +453,7 @@ namespace GameServer.Logic
             return result2;
         }
 
-        // Token: 0x060006BC RID: 1724 RVA: 0x0005F2DC File Offset: 0x0005D4DC
+        
         public static void SetArtifactProp(GameClient client)
         {
             Dictionary<int, List<int>> suitTypeList = new Dictionary<int, List<int>>();
@@ -596,7 +596,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060006BD RID: 1725 RVA: 0x0005F8E4 File Offset: 0x0005DAE4
+        
         public static void SetRebornEquipArtifactProp(GameClient client)
         {
             Dictionary<int, List<int>> suitTypeList = new Dictionary<int, List<int>>();
@@ -994,45 +994,45 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x060006BE RID: 1726 RVA: 0x00060690 File Offset: 0x0005E890
+        
         public static void SetArtifactFailCount(GameClient client, int count)
         {
             Global.SaveRoleParamsInt32ValueToDB(client, "ArtifactFailCount", count, true);
         }
 
-        // Token: 0x04000B92 RID: 2962
+        
         private static ArtifactManager Instance = new ArtifactManager();
 
-        // Token: 0x04000B93 RID: 2963
+        
         private static List<ArtifactData> _artifactList = new List<ArtifactData>();
 
-        // Token: 0x04000B94 RID: 2964
+        
         private static List<ArtifactSuitData> _artifactSuitList = new List<ArtifactSuitData>();
 
-        // Token: 0x02000209 RID: 521
+        
         public enum ArtifactResultType
         {
-            // Token: 0x04000B96 RID: 2966
+            
             Success = 1,
-            // Token: 0x04000B97 RID: 2967
+            
             Fail = 0,
-            // Token: 0x04000B98 RID: 2968
+            
             EnoOpen = -1,
-            // Token: 0x04000B99 RID: 2969
+            
             EnoEquip = -2,
-            // Token: 0x04000B9A RID: 2970
+            
             EcantUp = -3,
-            // Token: 0x04000B9B RID: 2971
+            
             EnoZaiZao = -4,
-            // Token: 0x04000B9C RID: 2972
+            
             EnoGold = -5,
-            // Token: 0x04000B9D RID: 2973
+            
             EnoMaterial = -6,
-            // Token: 0x04000B9E RID: 2974
+            
             EnoBag = -7,
-            // Token: 0x04000B9F RID: 2975
+            
             EdelEquip = -8,
-            // Token: 0x04000BA0 RID: 2976
+            
             EaddEquip = -9
         }
     }

@@ -43,10 +43,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006D3 RID: 1747
+	
 	public class GlobalServiceManager
 	{
-		// Token: 0x06002996 RID: 10646 RVA: 0x00238538 File Offset: 0x00236738
+		
 		public static bool RegisterManager4Scene(int ManagerType, IManager manager)
 		{
 			lock (GlobalServiceManager.Scene2ManagerDict)
@@ -65,7 +65,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06002997 RID: 10647 RVA: 0x002385C4 File Offset: 0x002367C4
+		
 		public static void initialize()
 		{
 			ZhanMengShiJianManager.getInstance().initialize();
@@ -211,7 +211,7 @@ namespace GameServer.Logic
 			FuMoManager.getInstance().Initialize();
 		}
 
-		// Token: 0x06002998 RID: 10648 RVA: 0x00238CA0 File Offset: 0x00236EA0
+		
 		public static void startup()
 		{
 			ZhanMengShiJianManager.getInstance().startup();
@@ -264,7 +264,7 @@ namespace GameServer.Logic
 			FaceBookManager.getInstance().startup();
 		}
 
-		// Token: 0x06002999 RID: 10649 RVA: 0x00238EF8 File Offset: 0x002370F8
+		
 		public static void showdown()
 		{
 			ZhanMengShiJianManager.getInstance().showdown();
@@ -313,7 +313,7 @@ namespace GameServer.Logic
 			FaceBookManager.getInstance().showdown();
 		}
 
-		// Token: 0x0600299A RID: 10650 RVA: 0x00239118 File Offset: 0x00237318
+		
 		public static void destroy()
 		{
 			ZhanMengShiJianManager.getInstance().destroy();
@@ -362,7 +362,7 @@ namespace GameServer.Logic
 			FaceBookManager.getInstance().destroy();
 		}
 
-		// Token: 0x0600299B RID: 10651 RVA: 0x0023933C File Offset: 0x0023753C
+		
 		public static bool AddCopyScenes(GameClient client, CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool success = true;
@@ -391,7 +391,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x0600299C RID: 10652 RVA: 0x00239430 File Offset: 0x00237630
+		
 		public static bool RemoveCopyScene(CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool success = true;
@@ -420,7 +420,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x0600299D RID: 10653 RVA: 0x00239524 File Offset: 0x00237724
+		
 		public static void TimerProc()
 		{
 			lock (GlobalServiceManager.Scene2ManagerDict)
@@ -446,7 +446,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0400394F RID: 14671
+		
 		private static Dictionary<int, List<IManager>> Scene2ManagerDict = new Dictionary<int, List<IManager>>();
 	}
 }

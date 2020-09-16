@@ -4,10 +4,10 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006B9 RID: 1721
+	
 	public class EquipUpgradeMgr
 	{
-		// Token: 0x0600205F RID: 8287 RVA: 0x001BDE0C File Offset: 0x001BC00C
+		
 		public static int ProcessUpgrade(GameClient client, int goodsDbID)
 		{
 			GoodsData goodsData = Global.GetGoodsByDbID(client, goodsDbID);

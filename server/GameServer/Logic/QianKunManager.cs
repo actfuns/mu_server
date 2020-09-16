@@ -9,10 +9,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000780 RID: 1920
+	
 	public class QianKunManager
 	{
-		// Token: 0x0600314C RID: 12620 RVA: 0x002C112C File Offset: 0x002BF32C
+		
 		public static void LoadImpetrateItemsInfo()
 		{
 			lock (QianKunManager.m_mutex)
@@ -54,7 +54,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600314D RID: 12621 RVA: 0x002C1328 File Offset: 0x002BF528
+		
 		public static void LoadImpetrateItemsInfoFree()
 		{
 			lock (QianKunManager.m_mutex)
@@ -96,7 +96,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600314E RID: 12622 RVA: 0x002C1524 File Offset: 0x002BF724
+		
 		public static void LoadImpetrateItemsInfoTeQuan()
 		{
 			lock (QianKunManager.m_mutex)
@@ -138,7 +138,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600314F RID: 12623 RVA: 0x002C1720 File Offset: 0x002BF920
+		
 		public static void LoadImpetrateItemsInfoFreeTeQuan()
 		{
 			lock (QianKunManager.m_mutex)
@@ -180,7 +180,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003150 RID: 12624 RVA: 0x002C191C File Offset: 0x002BFB1C
+		
 		public static void LoadImpetrateItemsInfoHuodong()
 		{
 			lock (QianKunManager.m_mutex)
@@ -222,7 +222,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003151 RID: 12625 RVA: 0x002C1B18 File Offset: 0x002BFD18
+		
 		public static void LoadImpetrateItemsInfoFreeHuoDong()
 		{
 			lock (QianKunManager.m_mutex)
@@ -264,7 +264,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003152 RID: 12626 RVA: 0x002C1D14 File Offset: 0x002BFF14
+		
 		public static void ProcessRandomWaBao(GameClient client, int binding, Dictionary<int, SystemXmlItem> SystemXmlItemDict, int nType)
 		{
 			int randomNum = Global.GetRandomNumber(1, 10001);
@@ -348,7 +348,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003153 RID: 12627 RVA: 0x002C2188 File Offset: 0x002C0388
+		
 		public static string ProcessRandomWaBaoByZaDan(GameClient client, Dictionary<int, SystemXmlItem> SystemXmlItemDic, int nType, out string strRecord, int binding = 0, bool bMuProject = false)
 		{
 			strRecord = null;
@@ -530,7 +530,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003154 RID: 12628 RVA: 0x002C27F4 File Offset: 0x002C09F4
+		
 		public static string ProcessRandomWaBaoByZaDanSP(GameClient client, Dictionary<int, SystemXmlItem> SystemXmlItemDic, int nType, out string strRecord, int binding = 0, bool bMuProject = false)
 		{
 			strRecord = null;
@@ -639,25 +639,25 @@ namespace GameServer.Logic
 			return sResult;
 		}
 
-		// Token: 0x04003DAC RID: 15788
+		
 		public static Dictionary<int, Dictionary<int, SystemXmlItem>> m_ImpetrateDataInfo = null;
 
-		// Token: 0x04003DAD RID: 15789
+		
 		public static Dictionary<int, Dictionary<int, SystemXmlItem>> m_ImpetrateDataInfoFree = null;
 
-		// Token: 0x04003DAE RID: 15790
+		
 		public static Dictionary<int, Dictionary<int, SystemXmlItem>> m_ImpetrateDataHuoDong = null;
 
-		// Token: 0x04003DAF RID: 15791
+		
 		public static Dictionary<int, Dictionary<int, SystemXmlItem>> m_ImpetrateDataHuoDongFree = null;
 
-		// Token: 0x04003DB0 RID: 15792
+		
 		public static Dictionary<int, Dictionary<int, SystemXmlItem>> m_ImpetrateDataTeQuan = null;
 
-		// Token: 0x04003DB1 RID: 15793
+		
 		public static Dictionary<int, Dictionary<int, SystemXmlItem>> m_ImpetrateDataTeQuanFree = null;
 
-		// Token: 0x04003DB2 RID: 15794
+		
 		public static object m_mutex = new object();
 	}
 }

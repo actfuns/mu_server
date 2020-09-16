@@ -14,16 +14,16 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic.Reborn
 {
-	// Token: 0x020003F1 RID: 1009
+	
 	public class RebornEquip
 	{
-		// Token: 0x06001153 RID: 4435 RVA: 0x0010F48C File Offset: 0x0010D68C
+		
 		public static RebornEquip getInstance()
 		{
 			return RebornEquip.instance;
 		}
 
-		// Token: 0x06001154 RID: 4436 RVA: 0x0010F4A4 File Offset: 0x0010D6A4
+		
 		public static bool ParseRebornEquipConfig()
 		{
 			Dictionary<int, RebornEquipXmlStruct> EquipSQSWHot = new Dictionary<int, RebornEquipXmlStruct>();
@@ -463,7 +463,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x06001155 RID: 4437 RVA: 0x001105C8 File Offset: 0x0010E7C8
+		
 		public void InitRoleRebornGoodsData(GameClient client)
 		{
 			if (GlobalNew.IsGongNengOpened(client, GongNengIDs.Reborn, false))
@@ -493,7 +493,7 @@ namespace GameServer.Logic.Reborn
 			}
 		}
 
-		// Token: 0x06001156 RID: 4438 RVA: 0x00110704 File Offset: 0x0010E904
+		
 		public static void RefreshOneEquipProp(GameClient client, GoodsData goodsData, ref AllThingsCalcItem allThingsCalcItem)
 		{
 			SystemXmlItem systemGoods = null;
@@ -625,7 +625,7 @@ namespace GameServer.Logic.Reborn
 			}
 		}
 
-		// Token: 0x06001157 RID: 4439 RVA: 0x00110C44 File Offset: 0x0010EE44
+		
 		public static List<GoodsData> GetUsingGoodsList(SafeClientData clientData)
 		{
 			List<GoodsData> result;
@@ -651,7 +651,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x06001158 RID: 4440 RVA: 0x00110D1C File Offset: 0x0010EF1C
+		
 		public static int GetCurrGoodsQuality(GoodsData gd)
 		{
 			int result;
@@ -686,7 +686,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x06001159 RID: 4441 RVA: 0x00110D90 File Offset: 0x0010EF90
+		
 		public static int CalcFixAllEquipsStrongMoney(GameClient client)
 		{
 			int result;
@@ -738,7 +738,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x0600115A RID: 4442 RVA: 0x00110F84 File Offset: 0x0010F184
+		
 		public static int VerifyWeaponCanEquip(Dictionary<int, List<GoodsData>> EquipDict)
 		{
 			int nWeaponCount = 0;
@@ -780,7 +780,7 @@ namespace GameServer.Logic.Reborn
 			return 0;
 		}
 
-		// Token: 0x0600115B RID: 4443 RVA: 0x0011108C File Offset: 0x0010F28C
+		
 		public static bool isWarnRebornEquip(GameClient client, SystemXmlItem systemGoods)
 		{
 			int toReborn = systemGoods.GetIntValue("ToReborn", -1);
@@ -788,28 +788,28 @@ namespace GameServer.Logic.Reborn
 			return client.ClientData.RebornCount >= toReborn && client.ClientData.RebornLevel >= toRebornLevel;
 		}
 
-		// Token: 0x0600115C RID: 4444 RVA: 0x001110E4 File Offset: 0x0010F2E4
+		
 		public static bool IsRebornEquip(int goodsID)
 		{
 			int type = Global.GetGoodsCatetoriy(goodsID);
 			return type >= 30 && type <= 38;
 		}
 
-		// Token: 0x0600115D RID: 4445 RVA: 0x00111118 File Offset: 0x0010F318
+		
 		public static bool IsRebornEquipShengWu(int goodsID)
 		{
 			int type = Global.GetGoodsCatetoriy(goodsID);
 			return type == 37;
 		}
 
-		// Token: 0x0600115E RID: 4446 RVA: 0x00111144 File Offset: 0x0010F344
+		
 		public static bool IsRebornEquipShengQi(int goodsID)
 		{
 			int type = Global.GetGoodsCatetoriy(goodsID);
 			return type == 38;
 		}
 
-		// Token: 0x0600115F RID: 4447 RVA: 0x00111170 File Offset: 0x0010F370
+		
 		public static bool IsRebornEquipAttackOrDefense(int goodsID, out int Index)
 		{
 			Index = -1;
@@ -832,13 +832,13 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x06001160 RID: 4448 RVA: 0x001111E0 File Offset: 0x0010F3E0
+		
 		public static bool IsRebornType(int goodsID)
 		{
 			return RebornEquip.GetGoodsRebornEquip(goodsID) == 1;
 		}
 
-		// Token: 0x06001161 RID: 4449 RVA: 0x00111208 File Offset: 0x0010F408
+		
 		public static bool OneIsCanIntoRebornOrBaseBag(GameClient client, GoodsData goodsData, out int BagInt)
 		{
 			BagInt = 0;
@@ -867,7 +867,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x06001162 RID: 4450 RVA: 0x00111290 File Offset: 0x0010F490
+		
 		public static bool MoreIsCanIntoRebornOrBaseBag(GameClient client, List<GoodsData> goodsData, out int BagInt)
 		{
 			BagInt = 0;
@@ -892,7 +892,7 @@ namespace GameServer.Logic.Reborn
 			return true;
 		}
 
-		// Token: 0x06001163 RID: 4451 RVA: 0x0011137C File Offset: 0x0010F57C
+		
 		public static bool MoreIsCanIntoRebornOrBaseBagAward(GameClient client, List<AwardsItemData> goodsData, out int BagInt)
 		{
 			BagInt = 0;
@@ -922,7 +922,7 @@ namespace GameServer.Logic.Reborn
 			return true;
 		}
 
-		// Token: 0x06001164 RID: 4452 RVA: 0x0011147C File Offset: 0x0010F67C
+		
 		public static bool MoreIsCanIntoRebornOrBaseBagAward(GameClient client, List<GoodsData> goodsData, out int BagInt)
 		{
 			BagInt = 0;
@@ -952,7 +952,7 @@ namespace GameServer.Logic.Reborn
 			return true;
 		}
 
-		// Token: 0x06001165 RID: 4453 RVA: 0x0011157C File Offset: 0x0010F77C
+		
 		public static int GetGoodsRebornEquip(int goodsID)
 		{
 			SystemXmlItem systemGoods = null;
@@ -968,7 +968,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x06001166 RID: 4454 RVA: 0x001115B8 File Offset: 0x0010F7B8
+		
 		public static bool CanAddGoodsDataList(GameClient client, List<GoodsData> goodsDataList)
 		{
 			bool result;
@@ -988,7 +988,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x06001167 RID: 4455 RVA: 0x00111648 File Offset: 0x0010F848
+		
 		public static bool CanAddGoodsDataList2(GameClient client, int goodsID, int newGoodsNum, int binding, string endTime = "1900-01-01 12:00:00", bool canUseOld = true)
 		{
 			bool result;
@@ -1006,7 +1006,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x06001168 RID: 4456 RVA: 0x0011169C File Offset: 0x0010F89C
+		
 		private static int CalGoodsGridNum(GameClient client, int goodsID, int newGoodsNum, int binding, string endTime = "1900-01-01 12:00:00", bool canUseOld = true)
 		{
 			int gridNum = Global.GetGoodsGridNumByID(goodsID);
@@ -1051,7 +1051,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x06001169 RID: 4457 RVA: 0x00111860 File Offset: 0x0010FA60
+		
 		public static int GetTotalGoodsCountByID(GameClient client, int goodsID)
 		{
 			int result;
@@ -1080,7 +1080,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x0600116A RID: 4458 RVA: 0x00111970 File Offset: 0x0010FB70
+		
 		public static bool CanAddGoodsNum(GameClient client, int newGoodsCount)
 		{
 			bool result;
@@ -1096,7 +1096,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x0600116B RID: 4459 RVA: 0x001119AC File Offset: 0x0010FBAC
+		
 		public static int GetGoodsUsedGrid(GameClient client)
 		{
 			int ret = 0;
@@ -1122,7 +1122,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x0600116C RID: 4460 RVA: 0x00111A68 File Offset: 0x0010FC68
+		
 		public static bool RemoveGoodsData(GameClient client, GoodsData gd)
 		{
 			bool result;
@@ -1146,7 +1146,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x0600116D RID: 4461 RVA: 0x00111AF8 File Offset: 0x0010FCF8
+		
 		public static bool RemoveGoodsDataToDb(GameClient client, GoodsData goodsData)
 		{
 			string modGoodsCmd = string.Format("{0}:{1}:{2}:{3}:{4}:{5}:{6}:{7}:{8}", new object[]
@@ -1164,7 +1164,7 @@ namespace GameServer.Logic.Reborn
 			return TCPProcessCmdResults.RESULT_OK == Global.ModifyGoodsByCmdParams(client, modGoodsCmd, "客户端修改", null);
 		}
 
-		// Token: 0x0600116E RID: 4462 RVA: 0x00111BAC File Offset: 0x0010FDAC
+		
 		public static bool RemoveGoodsDataToDb(GameClient client, GoodsData goodsData, int Num)
 		{
 			bool result;
@@ -1191,7 +1191,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x0600116F RID: 4463 RVA: 0x00111C74 File Offset: 0x0010FE74
+		
 		public static void AddPortableGoodsData(GameClient client, GoodsData goodsData)
 		{
 			if (goodsData.Site == 15001)
@@ -1208,7 +1208,7 @@ namespace GameServer.Logic.Reborn
 			}
 		}
 
-		// Token: 0x06001170 RID: 4464 RVA: 0x00111D14 File Offset: 0x0010FF14
+		
 		public static void AddGoodsData(GameClient client, GoodsData gd)
 		{
 			if (null != gd)
@@ -1224,13 +1224,13 @@ namespace GameServer.Logic.Reborn
 			}
 		}
 
-		// Token: 0x06001171 RID: 4465 RVA: 0x00111DA8 File Offset: 0x0010FFA8
+		
 		public static int GetMaxMountCount()
 		{
 			return 240;
 		}
 
-		// Token: 0x06001172 RID: 4466 RVA: 0x00111DC0 File Offset: 0x0010FFC0
+		
 		public static int GetIdleSlotOfRebornGoods(GameClient client)
 		{
 			int idelPos = 0;
@@ -1265,7 +1265,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x06001173 RID: 4467 RVA: 0x00111EE4 File Offset: 0x001100E4
+		
 		public static int GetIdleSlotOfPortableGoods(GameClient client)
 		{
 			int idelPos = -1;
@@ -1300,13 +1300,13 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x06001174 RID: 4468 RVA: 0x00112003 File Offset: 0x00110203
+		
 		public static void UpdatePortableGoodsNum(GameClient client, int addNum)
 		{
 			client.ClientData.RebornGirdData.GoodsUsedGridNum += addNum;
 		}
 
-		// Token: 0x06001175 RID: 4469 RVA: 0x00112020 File Offset: 0x00110220
+		
 		public static void RemovePortableGoodsData(GameClient client, GoodsData goodsData)
 		{
 			RebornEquip.UpdatePortableGoodsNum(client, -1);
@@ -1319,7 +1319,7 @@ namespace GameServer.Logic.Reborn
 			}
 		}
 
-		// Token: 0x06001176 RID: 4470 RVA: 0x0011209C File Offset: 0x0011029C
+		
 		public static bool CanOpenPortableBag(GameClient client)
 		{
 			VIPDataInfo data;
@@ -1333,13 +1333,13 @@ namespace GameServer.Logic.Reborn
 			return true;
 		}
 
-		// Token: 0x06001177 RID: 4471 RVA: 0x00112110 File Offset: 0x00110310
+		
 		public static bool CanPortableAddGoods(GameClient client)
 		{
 			return client.ClientData.RebornGirdData.GoodsUsedGridNum < client.ClientData.RebornGirdData.ExtGridNum;
 		}
 
-		// Token: 0x06001178 RID: 4472 RVA: 0x00112144 File Offset: 0x00110344
+		
 		public static bool CanAddGoodsToReborn(GameClient client, int goodsID, int newGoodsNum, int binding, string endTime = "1900-01-01 12:00:00", bool canUseOld = true, bool bLeftGrid = false)
 		{
 			bool result;
@@ -1379,7 +1379,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x06001179 RID: 4473 RVA: 0x001122F0 File Offset: 0x001104F0
+		
 		public static GoodsData AddRebornGoodsData(GameClient client, int id, int goodsID, int forgeLevel, int quality, int goodsNum, int binding, int site, string jewelList, string startTime, string endTime, int addPropIndex, int bornIndex, int lucky, int strong, int ExcellenceProperty, int nAppendPropLev, int nEquipChangeLife, int bagIndex = 0, List<int> washProps = null)
 		{
 			GoodsData gd = new GoodsData
@@ -1417,7 +1417,7 @@ namespace GameServer.Logic.Reborn
 			return gd;
 		}
 
-		// Token: 0x0600117A RID: 4474 RVA: 0x0011242C File Offset: 0x0011062C
+		
 		public static List<int> GetRandomSuperior(List<int> bankListSource, int num)
 		{
 			List<int> ret = new List<int>();
@@ -1461,7 +1461,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x0600117B RID: 4475 RVA: 0x0011258C File Offset: 0x0011078C
+		
 		public static List<int> GetFixationSuperior(RebornSuperiorDrop superiorDrop)
 		{
 			List<int> ret = new List<int>();
@@ -1491,7 +1491,7 @@ namespace GameServer.Logic.Reborn
 			return ret;
 		}
 
-		// Token: 0x0600117C RID: 4476 RVA: 0x00112714 File Offset: 0x00110914
+		
 		public static List<int> CalZhuoYueAttrByID(int code)
 		{
 			List<int> ret = new List<int>();
@@ -1550,7 +1550,7 @@ namespace GameServer.Logic.Reborn
 			return ret;
 		}
 
-		// Token: 0x0600117D RID: 4477 RVA: 0x001129D4 File Offset: 0x00110BD4
+		
 		public static GoodsData GetRebornGoodsByDbID(GameClient client, int dbID)
 		{
 			GoodsData result;
@@ -1575,7 +1575,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x0600117E RID: 4478 RVA: 0x00112A98 File Offset: 0x00110C98
+		
 		public static List<GoodsData> GetRebornGoodsByDbIDDict(GameClient client, Dictionary<int, int> DBidList, out Dictionary<int, Dictionary<int, int>> IDNumMap)
 		{
 			IDNumMap = new Dictionary<int, Dictionary<int, int>>();
@@ -1623,7 +1623,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x0600117F RID: 4479 RVA: 0x00112C80 File Offset: 0x00110E80
+		
 		public static GoodsData GetRebornStoreGoodsByDbID(GameClient client, int dbID)
 		{
 			GoodsData result;
@@ -1648,7 +1648,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x06001180 RID: 4480 RVA: 0x00112D44 File Offset: 0x00110F44
+		
 		public static TCPProcessCmdResults SaleRebornEquipProcess(GameClient client, int nRoleID, string strGoodsID)
 		{
 			int nTotalExp = 0;
@@ -1791,13 +1791,13 @@ namespace GameServer.Logic.Reborn
 			return TCPProcessCmdResults.RESULT_OK;
 		}
 
-		// Token: 0x06001181 RID: 4481 RVA: 0x001132EC File Offset: 0x001114EC
+		
 		public static TCPProcessCmdResults SaleStoreRebornEquipProcess(GameClient client, int nRoleID, string strGoodsID)
 		{
 			return TCPProcessCmdResults.RESULT_OK;
 		}
 
-		// Token: 0x06001182 RID: 4482 RVA: 0x00113320 File Offset: 0x00111520
+		
 		public static void ResetBagAllGoods(GameClient client, bool notifyClient = true)
 		{
 			byte[] bytesCmd = null;
@@ -1939,7 +1939,7 @@ namespace GameServer.Logic.Reborn
 			}
 		}
 
-		// Token: 0x06001183 RID: 4483 RVA: 0x00113AB8 File Offset: 0x00111CB8
+		
 		public static void ResetStoreRebormGoods(GameClient client)
 		{
 			if (null != client.ClientData.RebornGoodsStoreList)
@@ -2028,19 +2028,19 @@ namespace GameServer.Logic.Reborn
 			Global._TCPManager.MySocketListener.SendData(client.ClientSocket, tcpOutPacket, true);
 		}
 
-		// Token: 0x06001184 RID: 4484 RVA: 0x00113F6C File Offset: 0x0011216C
+		
 		public static int GetRebornStoreCapacity(GameClient client)
 		{
 			return client.ClientData.RebornGirdData.ExtGridNum;
 		}
 
-		// Token: 0x06001185 RID: 4485 RVA: 0x00113F90 File Offset: 0x00112190
+		
 		public static int GetSelfBagCapacity(GameClient client)
 		{
 			return client.ClientData.RebornBagNum;
 		}
 
-		// Token: 0x06001186 RID: 4486 RVA: 0x00113FB0 File Offset: 0x001121B0
+		
 		private static void GetNormalAndExNum(GameClient client, int addGridNum, out int normalNum, out int exNum)
 		{
 			normalNum = 0;
@@ -2062,7 +2062,7 @@ namespace GameServer.Logic.Reborn
 			}
 		}
 
-		// Token: 0x06001187 RID: 4487 RVA: 0x0011406C File Offset: 0x0011226C
+		
 		public static int GetOneRebronBagExtendNeedYuanBaoForStorage(int extendPos)
 		{
 			int needYuanBao = (extendPos - Global.DefaultPortableGridNum) * Global.OnePortableGridYuanBao;
@@ -2073,7 +2073,7 @@ namespace GameServer.Logic.Reborn
 			return needYuanBao;
 		}
 
-		// Token: 0x06001188 RID: 4488 RVA: 0x001140AC File Offset: 0x001122AC
+		
 		public static int GetExtRebornNeedYuanBaoForStorage(GameClient client, int addNum, int hasTime)
 		{
 			int bagCapacity = RebornEquip.GetRebornStoreCapacity(client);
@@ -2092,7 +2092,7 @@ namespace GameServer.Logic.Reborn
 			return needYuanBao;
 		}
 
-		// Token: 0x06001189 RID: 4489 RVA: 0x0011413C File Offset: 0x0011233C
+		
 		public static int GetOneBagGridExtendNeedYuanBao(int extendPos)
 		{
 			int needYuanBao = (extendPos - Global.DefaultBagGridNum) * Global.OneBagGridYuanBao;
@@ -2103,7 +2103,7 @@ namespace GameServer.Logic.Reborn
 			return needYuanBao;
 		}
 
-		// Token: 0x0600118A RID: 4490 RVA: 0x0011417C File Offset: 0x0011237C
+		
 		public static int GetExtBagGridNeedYuanBao(GameClient client, int addNum, int hasTime)
 		{
 			int bagCapacity = RebornEquip.GetSelfBagCapacity(client);
@@ -2122,7 +2122,7 @@ namespace GameServer.Logic.Reborn
 			return needYuanBao;
 		}
 
-		// Token: 0x0600118B RID: 4491 RVA: 0x0011420C File Offset: 0x0011240C
+		
 		public static int ExtRoleRebornBagNumWithYuanBao(TCPOutPacketPool pool, GameClient client, int addGridNum)
 		{
 			int bagCapacity = RebornEquip.GetSelfBagCapacity(client);
@@ -2190,7 +2190,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x0600118C RID: 4492 RVA: 0x00114468 File Offset: 0x00112668
+		
 		public static int ExtRebornStoreWithYuanBao(TCPOutPacketPool pool, GameClient client, int addGridNum)
 		{
 			int bagCapacity = RebornEquip.GetRebornStoreCapacity(client);
@@ -2259,7 +2259,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x0600118D RID: 4493 RVA: 0x001146D4 File Offset: 0x001128D4
+		
 		public static bool ResetRebornBagGoodsData(GameClient client, GoodsData goodsData)
 		{
 			string[] dbFields = null;
@@ -2308,7 +2308,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x0600118E RID: 4494 RVA: 0x00114890 File Offset: 0x00112A90
+		
 		public static void NotifyRebornBagData(GameClient client)
 		{
 			TCPOutPacket tcpOutPacket = DataHelper.ObjectToTCPOutPacket<RebornPortableBagData>(client.ClientData.RebornGirdData, Global._TCPManager.TcpOutPacketPool, 2045);
@@ -2317,7 +2317,7 @@ namespace GameServer.Logic.Reborn
 			}
 		}
 
-		// Token: 0x0600118F RID: 4495 RVA: 0x001148DC File Offset: 0x00112ADC
+		
 		public static void NotifyRebornShowEquipData(GameClient client)
 		{
 			TCPOutPacket tcpOutPacket = DataHelper.ObjectToTCPOutPacket<int>(client.ClientData.RebornShowEquip, Global._TCPManager.TcpOutPacketPool, 2051);
@@ -2326,7 +2326,7 @@ namespace GameServer.Logic.Reborn
 			}
 		}
 
-		// Token: 0x06001190 RID: 4496 RVA: 0x00114928 File Offset: 0x00112B28
+		
 		public static TCPProcessCmdResults ProcessSpriteGetRebornGoodsListCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2387,7 +2387,7 @@ namespace GameServer.Logic.Reborn
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06001191 RID: 4497 RVA: 0x00114BA8 File Offset: 0x00112DA8
+		
 		public static TCPProcessCmdResults ProcessSpriteRebornResetBagCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2435,7 +2435,7 @@ namespace GameServer.Logic.Reborn
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06001192 RID: 4498 RVA: 0x00114DA0 File Offset: 0x00112FA0
+		
 		public static GoodsData GetGoodsByID(GameClient client, int goodsID)
 		{
 			GoodsData result;
@@ -2460,7 +2460,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x06001193 RID: 4499 RVA: 0x00114E64 File Offset: 0x00113064
+		
 		public static GoodsData GetBindingGoodsByID(GameClient client, int goodsID, int Binding)
 		{
 			GoodsData result;
@@ -2493,7 +2493,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x06001194 RID: 4500 RVA: 0x00114F8C File Offset: 0x0011318C
+		
 		public static List<GoodsData> GetBindingNotCountGoodsByID(GameClient client, int goodsID, int Binding)
 		{
 			List<GoodsData> result;
@@ -2519,7 +2519,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x06001195 RID: 4501 RVA: 0x00115080 File Offset: 0x00113280
+		
 		public static GoodsData GetGoodsByID(GameClient client, int goodsID, int bingding, string endTime, ref int startIndex)
 		{
 			GoodsData result;
@@ -2549,7 +2549,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x06001196 RID: 4502 RVA: 0x001151A8 File Offset: 0x001133A8
+		
 		public static TCPProcessCmdResults ProcessSpriteResetRebornStoreCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2591,7 +2591,7 @@ namespace GameServer.Logic.Reborn
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06001197 RID: 4503 RVA: 0x001152F8 File Offset: 0x001134F8
+		
 		public static TCPProcessCmdResults ProcessExtRebornStoreByYuanBaoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2643,7 +2643,7 @@ namespace GameServer.Logic.Reborn
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06001198 RID: 4504 RVA: 0x001154D8 File Offset: 0x001136D8
+		
 		public static TCPProcessCmdResults ProcessExtRebornBagNumByYuanBaoCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2697,7 +2697,7 @@ namespace GameServer.Logic.Reborn
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06001199 RID: 4505 RVA: 0x00115704 File Offset: 0x00113904
+		
 		public static TCPProcessCmdResults ProcessQueryRebornOpenGridCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2740,7 +2740,7 @@ namespace GameServer.Logic.Reborn
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x0600119A RID: 4506 RVA: 0x00115888 File Offset: 0x00113A88
+		
 		public static TCPProcessCmdResults ProcessQueryOpenRebornPortableGridCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2783,7 +2783,7 @@ namespace GameServer.Logic.Reborn
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x0600119B RID: 4507 RVA: 0x00115A04 File Offset: 0x00113C04
+		
 		public static RebornEquipOpcode RebornEquipShowProcess(GameClient client, int nRoleID)
 		{
 			RebornEquipOpcode result;
@@ -2808,7 +2808,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x0600119C RID: 4508 RVA: 0x00115ACC File Offset: 0x00113CCC
+		
 		public static RebornEquipOpcode RebornEquipShowModelProcess(GameClient client, int nRoleID)
 		{
 			RebornEquipOpcode result;
@@ -2833,13 +2833,13 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x0600119D RID: 4509 RVA: 0x00115B94 File Offset: 0x00113D94
+		
 		public static void NotifyRebornEquipUp(GameClient client, GoodsData gd)
 		{
 			GameManager.ClientMgr.NotifySelfAddGoods(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, client, gd.Id, gd.GoodsID, gd.Forge_level, gd.Quality, gd.GCount, gd.Binding, gd.Site, gd.Jewellist, 0, gd.Endtime, gd.AddPropIndex, gd.BornIndex, gd.Lucky, gd.Strong, gd.ExcellenceInfo, gd.AppendPropLev, gd.ChangeLifeLevForEquip, gd.BagIndex, gd.WashProps, null, 0, "");
 		}
 
-		// Token: 0x0600119E RID: 4510 RVA: 0x00115C38 File Offset: 0x00113E38
+		
 		public static List<GoodsData> GetRebornUsingAttackWeaponGoods(GameClient client)
 		{
 			List<GoodsData> result;
@@ -2876,7 +2876,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x0600119F RID: 4511 RVA: 0x00115D60 File Offset: 0x00113F60
+		
 		public static GoodsData GetMagicWeaponGoods(List<GoodsData> BaseWeap, bool IsBase)
 		{
 			GoodsData goods = null;
@@ -2935,7 +2935,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x060011A0 RID: 4512 RVA: 0x00115EE0 File Offset: 0x001140E0
+		
 		public static bool IsWeaponCanAttackOrActtion(GameClient client, out int Code)
 		{
 			Code = 0;
@@ -2965,7 +2965,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x060011A1 RID: 4513 RVA: 0x00115FB4 File Offset: 0x001141B4
+		
 		public static RebornEquipOpcode RebornEquipAdvanceProcess(GameClient client, int nRoleID, int DBID)
 		{
 			GoodsData goodsData = RebornEquip.GetRebornGoodsByDbID(client, DBID);
@@ -3048,7 +3048,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x060011A2 RID: 4514 RVA: 0x0011630C File Offset: 0x0011450C
+		
 		public static int GetGoodDataCategoriyByRebornPerfusion(int Item, int JieZhiHand = 0)
 		{
 			int result;
@@ -3095,13 +3095,13 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x060011A3 RID: 4515 RVA: 0x00116388 File Offset: 0x00114588
+		
 		public static long GetFreeTime()
 		{
 			return GameManager.systemParamsList.GetParamValueIntByName("EquipQuenchingFreeNum", 0);
 		}
 
-		// Token: 0x060011A4 RID: 4516 RVA: 0x001163AC File Offset: 0x001145AC
+		
 		public static int UseGoodAblePerfusion(GameClient client, int HoleSite, int Level, out int Able, out bool isFree)
 		{
 			Able = 0;
@@ -3172,7 +3172,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x060011A5 RID: 4517 RVA: 0x00116698 File Offset: 0x00114898
+		
 		public static RebornEquipData GetNewInfo(GameClient client, int HoleSite)
 		{
 			return new RebornEquipData
@@ -3184,7 +3184,7 @@ namespace GameServer.Logic.Reborn
 			};
 		}
 
-		// Token: 0x060011A6 RID: 4518 RVA: 0x00116724 File Offset: 0x00114924
+		
 		public static void RefreshProps(GameClient client)
 		{
 			if (client.ClientData.RebornEquipHoleInfo != null && client.ClientData.RebornEquipHoleInfo.Count != 0)
@@ -3249,7 +3249,7 @@ namespace GameServer.Logic.Reborn
 			}
 		}
 
-		// Token: 0x060011A7 RID: 4519 RVA: 0x00116A60 File Offset: 0x00114C60
+		
 		public static RebornPerfusionOpcode RebornEquipHolePerfusionProcess(GameClient client, int HoleSite, out int ClientAble)
 		{
 			ClientAble = 0;
@@ -3348,7 +3348,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x060011A8 RID: 4520 RVA: 0x00116E30 File Offset: 0x00115030
+		
 		public static RebornPerfusionOpcode RebornEquipHoleAbschreckenProcess(GameClient client, int HoleSite, out int ClientLevel, out int ClientAble)
 		{
 			ClientLevel = 0;
@@ -3468,13 +3468,13 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x060011A9 RID: 4521 RVA: 0x00117308 File Offset: 0x00115508
+		
 		public static double GetRebornEquipRate()
 		{
 			return Math.Min(GameManager.systemParamsList.GetParamValueDoubleByName("ChongShengReturnNum", 0.0), 1.0);
 		}
 
-		// Token: 0x060011AA RID: 4522 RVA: 0x00117340 File Offset: 0x00115540
+		
 		public static bool GetRebornEquipUseGoods(int goodsId, out int NiePan, out int DuanZao, out int CuiLian)
 		{
 			NiePan = 0;
@@ -3502,7 +3502,7 @@ namespace GameServer.Logic.Reborn
 			return result;
 		}
 
-		// Token: 0x060011AB RID: 4523 RVA: 0x0011741C File Offset: 0x0011561C
+		
 		public static bool SetRebornEquipUseGoods(GameClient client, int NiePan, int DuanZao, int Cuiian)
 		{
 			if (NiePan > 0)
@@ -3529,34 +3529,34 @@ namespace GameServer.Logic.Reborn
 			return true;
 		}
 
-		// Token: 0x04001AE1 RID: 6881
+		
 		public static Dictionary<int, RebornEquipEvolution> Evolution = new Dictionary<int, RebornEquipEvolution>();
 
-		// Token: 0x04001AE2 RID: 6882
+		
 		public static Dictionary<int, RebornSuperiorDrop> SuperiorDrop = new Dictionary<int, RebornSuperiorDrop>();
 
-		// Token: 0x04001AE3 RID: 6883
+		
 		public static Dictionary<int, RebornSuperiorType> SuperiorType = new Dictionary<int, RebornSuperiorType>();
 
-		// Token: 0x04001AE4 RID: 6884
+		
 		public static Dictionary<int, RebornEquipXmlStruct> EquipSQSW = new Dictionary<int, RebornEquipXmlStruct>();
 
-		// Token: 0x04001AE5 RID: 6885
+		
 		public static Dictionary<int, RebornEquipEvolution> RebornEquipUp = new Dictionary<int, RebornEquipEvolution>();
 
-		// Token: 0x04001AE6 RID: 6886
+		
 		public static Dictionary<int, Dictionary<int, RebornQuenching>> RebornEquipHole = new Dictionary<int, Dictionary<int, RebornQuenching>>();
 
-		// Token: 0x04001AE7 RID: 6887
+		
 		public static Dictionary<int, int> RebornEquipHoleLevelMap = new Dictionary<int, int>();
 
-		// Token: 0x04001AE8 RID: 6888
+		
 		public static Dictionary<int, List<int>> ExtPropIndexMap = new Dictionary<int, List<int>>();
 
-		// Token: 0x04001AE9 RID: 6889
+		
 		public static object Mutex = new object();
 
-		// Token: 0x04001AEA RID: 6890
+		
 		private static RebornEquip instance = new RebornEquip();
 	}
 }

@@ -10,15 +10,15 @@ using Server.Tools;
 
 namespace KF.Remoting
 {
-    // Token: 0x0200006B RID: 107
+    
     public class KuaFuLueDuoPersistence
     {
-        // Token: 0x0600053C RID: 1340 RVA: 0x000462F0 File Offset: 0x000444F0
+        
         private KuaFuLueDuoPersistence()
         {
         }
 
-        // Token: 0x0600053D RID: 1341 RVA: 0x00046360 File Offset: 0x00044560
+        
         public bool LoadDatabase(int seasonID, int seasonIDLast, int minSeasonID)
         {
             try
@@ -48,7 +48,7 @@ namespace KF.Remoting
             return false;
         }
 
-        // Token: 0x0600053E RID: 1342 RVA: 0x000463E8 File Offset: 0x000445E8
+        
         public bool LoadRankData(int minSeasonID, int seasonIDLast)
         {
             for (int rankLoop = 0; rankLoop < 6; rankLoop++)
@@ -61,7 +61,7 @@ namespace KF.Remoting
             return true;
         }
 
-        // Token: 0x0600053F RID: 1343 RVA: 0x00046424 File Offset: 0x00044624
+        
         public void AddDelayWriteSql(string sql)
         {
             lock (this.Mutex)
@@ -70,7 +70,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x06000540 RID: 1344 RVA: 0x00046478 File Offset: 0x00044678
+        
         private void WriteDataToDb(string sql)
         {
             try
@@ -84,7 +84,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x06000541 RID: 1345 RVA: 0x000464C8 File Offset: 0x000446C8
+        
         public void DelayWriteDataProc()
         {
             List<string> list = null;
@@ -103,7 +103,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x06000542 RID: 1346 RVA: 0x0004658C File Offset: 0x0004478C
+        
         private int ExecuteSqlNoQuery(string sqlCmd)
         {
             int result;
@@ -120,7 +120,7 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x06000543 RID: 1347 RVA: 0x000465D8 File Offset: 0x000447D8
+        
         public void ClearLastSeasonData()
         {
             this.ExecuteSqlNoQuery("delete from t_kfld_role;");
@@ -128,7 +128,7 @@ namespace KF.Remoting
             this.ExecuteSqlNoQuery("update `t_kfld_banghui` set `sum_ziyuan`='0',`last`=0;");
         }
 
-        // Token: 0x06000544 RID: 1348 RVA: 0x00046600 File Offset: 0x00044800
+        
         public void SaveKuaFuLueDuoBHData(KuaFuLueDuoBHData data)
         {
             string sql = string.Format("INSERT INTO t_kfld_banghui(`season`, `bhid`, `bhname`, `zoneid`, `sum_ziyuan`, `last`) VALUES({0},{1},'{2}',{3},{4},{5}) ON DUPLICATE KEY UPDATE `season`='{0}',`bhname`='{2}',`zoneid`={3},`sum_ziyuan`='{4}',`last`={5}", new object[]
@@ -143,7 +143,7 @@ namespace KF.Remoting
             this.ExecuteSqlNoQuery(sql);
         }
 
-        // Token: 0x06000545 RID: 1349 RVA: 0x00046678 File Offset: 0x00044878
+        
         public void SaveKuaFuLueDuoBHSeasonData(int season, KuaFuLueDuoBHData data)
         {
             string sql = string.Format("INSERT INTO t_kfld_banghui_season(`season`, `bhid`, `bhname`, `zoneid`, `jingjia`, `jingjia_sid`, `last_jingjia`,`group`) VALUES({0},{1},'{2}',{3},{4},{5},{6},{7}) ON DUPLICATE KEY UPDATE `bhname`='{2}',`zoneid`={3},`jingjia`='{4}',`jingjia_sid`={5},`last_jingjia`={6}", new object[]
@@ -160,7 +160,7 @@ namespace KF.Remoting
             this.ExecuteSqlNoQuery(sql);
         }
 
-        // Token: 0x06000546 RID: 1350 RVA: 0x0004670C File Offset: 0x0004490C
+        
         public void SaveKuaFuLueDuoRoleData(int season, int rid, string rname, int zoneid, int kill)
         {
             string sql = string.Format("INSERT INTO t_kfld_role(`rid`, `rname`,`zoneid`, `kill`, `season`,`last`) VALUES({0},'{1}',{2},{3},{4},{3}) ON DUPLICATE KEY UPDATE `rname`='{1}', `kill`=`kill`+{3},`last`={3},`season`={4}", new object[]
@@ -174,7 +174,7 @@ namespace KF.Remoting
             this.AddDelayWriteSql(sql);
         }
 
-        // Token: 0x06000547 RID: 1351 RVA: 0x00046760 File Offset: 0x00044960
+        
         public void SaveKuaFuLueDuoServerData(int season, KuaFuLueDuoServerInfo data)
         {
             string sql = string.Format("INSERT INTO t_kfld_server(`serverid`, `sum_ziyuan`, `last_ziyuan`,`mingxing`,`season`) VALUES({0},{1},{2},'{3}',{4}) ON DUPLICATE KEY UPDATE sum_ziyuan='{1}', `last_ziyuan`={2}, `mingxing`='{3}',`season`={4}", new object[]
@@ -188,21 +188,21 @@ namespace KF.Remoting
             this.ExecuteSqlNoQuery(sql);
         }
 
-        // Token: 0x06000548 RID: 1352 RVA: 0x000467C8 File Offset: 0x000449C8
+        
         public void SaveKuaFuLueDuoServerMingXing(int serverId, string mingxing)
         {
             string sql = string.Format("update t_kfld_server set `mingxing`='{1}' where serverid={0};", serverId, mingxing);
             this.ExecuteSqlNoQuery(sql);
         }
 
-        // Token: 0x06000549 RID: 1353 RVA: 0x000467F0 File Offset: 0x000449F0
+        
         public void SaveKuaFuLueDuoServerZhengFuData(int season, KuaFuLueDuoServerInfo data)
         {
             string sql = string.Format("UPDATE t_kfld_server set `season`={1},`zhengfu`={2} where `serverid`={0}", data.ServerId, season, (data.ZhengFuList == null) ? 0 : data.ZhengFuList.Count);
             this.AddDelayWriteSql(sql);
         }
 
-        // Token: 0x0600054A RID: 1354 RVA: 0x00046840 File Offset: 0x00044A40
+        
         public void SaveKuaFuLueDuoServerRankData(int season, int group, KuaFuLueDuoServerInfo data, int destServerId, int percent)
         {
             if (destServerId > 0)
@@ -219,7 +219,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x0600054B RID: 1355 RVA: 0x000468AC File Offset: 0x00044AAC
+        
         public int LoadSeasonCount()
         {
             object value = DbHelperMySQL.GetSingle("select count(*) from `t_kfld_season`");
@@ -235,13 +235,13 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x0600054C RID: 1356 RVA: 0x000468DF File Offset: 0x00044ADF
+        
         public void SaveSeasonID(int seasonID)
         {
             DbHelperMySQL.ExecuteSql(string.Format("INSERT IGNORE INTO `t_kfld_season` VALUES({0});", seasonID));
         }
 
-        // Token: 0x0600054D RID: 1357 RVA: 0x000468F8 File Offset: 0x00044AF8
+        
         public int[] GetHistSeasonIDs(int maxCount)
         {
             int[] result = new int[3];
@@ -275,13 +275,13 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x0600054E RID: 1358 RVA: 0x000469E0 File Offset: 0x00044BE0
+        
         public void SaveSignUpRound(int signUpRound)
         {
             DbHelperMySQL.ExecuteSql(string.Format("REPLACE INTO t_async(`id`,`value`) VALUES({0},{1});", 7, signUpRound));
         }
 
-        // Token: 0x0600054F RID: 1359 RVA: 0x00046A00 File Offset: 0x00044C00
+        
         public int GetSignUpRound()
         {
             object value = DbHelperMySQL.GetSingle("select value from t_async where id = " + 7);
@@ -297,7 +297,7 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x06000550 RID: 1360 RVA: 0x00046A40 File Offset: 0x00044C40
+        
         private bool LoadKuaFuLueDuoBHData(Dictionary<int, KuaFuData<KuaFuLueDuoBHData>> KuaFuLueDuoBHDataDict, int minSeason)
         {
             try
@@ -353,7 +353,7 @@ namespace KF.Remoting
             return true;
         }
 
-        // Token: 0x06000551 RID: 1361 RVA: 0x00046D24 File Offset: 0x00044F24
+        
         private bool LoadKuaFuLueDuoServerData(int minSeasonID)
         {
             try
@@ -446,7 +446,7 @@ namespace KF.Remoting
             return true;
         }
 
-        // Token: 0x06000552 RID: 1362 RVA: 0x00047144 File Offset: 0x00045344
+        
         private bool LoadKuaFuLueDuoBHData_Join(int season, Dictionary<int, KuaFuLueDuoServerJingJiaState> JingJiaDict)
         {
             try
@@ -514,7 +514,7 @@ namespace KF.Remoting
             return true;
         }
 
-        // Token: 0x06000553 RID: 1363 RVA: 0x000473AC File Offset: 0x000455AC
+        
         private string FormatLoadKuaFuLueDuoRankSql(int rankType, int minSeasonID, int seasonIDLast)
         {
             int RankLimit = KuaFuLueDuoConsts.MatchRankLimit[rankType];
@@ -540,7 +540,7 @@ namespace KF.Remoting
             return strSql;
         }
 
-        // Token: 0x06000554 RID: 1364 RVA: 0x00047478 File Offset: 0x00045678
+        
         public int GetRoleKillNum(int minSeasonID, long rid)
         {
             string sql = string.Format("SELECT `kill` FROM t_kfld_role WHERE rid={0} and season>={1};", rid, minSeasonID);
@@ -557,7 +557,7 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x06000555 RID: 1365 RVA: 0x000474C0 File Offset: 0x000456C0
+        
         private bool LoadKuaFuLueDuoRankInfo(int rankType, int minSeasonID, int seasonLast, Dictionary<int, KuaFuLueDuoRankListData> KuaFuLueDuoRankInfoDict)
         {
             try
@@ -640,34 +640,34 @@ namespace KF.Remoting
             return true;
         }
 
-        // Token: 0x040002D3 RID: 723
+        
         public static readonly KuaFuLueDuoPersistence Instance = new KuaFuLueDuoPersistence();
 
-        // Token: 0x040002D4 RID: 724
+        
         public object Mutex = new object();
 
-        // Token: 0x040002D5 RID: 725
+        
         public int SeasonCount;
 
-        // Token: 0x040002D6 RID: 726
+        
         public Dictionary<int, KuaFuLueDuoServerInfo> ServerInfoDict = new Dictionary<int, KuaFuLueDuoServerInfo>();
 
-        // Token: 0x040002D7 RID: 727
+        
         public int[] ZoneID2GroupIDs = new int[0];
 
-        // Token: 0x040002D8 RID: 728
+        
         public int[] ZoneID2ServerIDs = new int[0];
 
-        // Token: 0x040002D9 RID: 729
+        
         public Dictionary<int, KuaFuLueDuoRankListData> KuaFuLueDuoRankInfoDict = new Dictionary<int, KuaFuLueDuoRankListData>();
 
-        // Token: 0x040002DA RID: 730
+        
         public Dictionary<int, KuaFuData<KuaFuLueDuoBHData>> KuaFuLueDuoBHDataDict = new Dictionary<int, KuaFuData<KuaFuLueDuoBHData>>();
 
-        // Token: 0x040002DB RID: 731
+        
         public Dictionary<int, KuaFuLueDuoServerJingJiaState> JingJiaDict = new Dictionary<int, KuaFuLueDuoServerJingJiaState>();
 
-        // Token: 0x040002DC RID: 732
+        
         public Queue<string> DelayWriteSqlQueue = new Queue<string>();
     }
 }

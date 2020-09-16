@@ -4,11 +4,11 @@ using Tmsk.Contract;
 
 namespace Server.Data
 {
-	// Token: 0x02000173 RID: 371
+	
 	[ProtoContract]
 	public class CS_QueryFuBen : IProtoBuffData
 	{
-		// Token: 0x06000492 RID: 1170 RVA: 0x00040900 File Offset: 0x0003EB00
+		
 		public int fromBytes(byte[] data, int offset, int count)
 		{
 			int pos = offset;
@@ -36,7 +36,7 @@ namespace Server.Data
 			return pos;
 		}
 
-		// Token: 0x06000493 RID: 1171 RVA: 0x000409A8 File Offset: 0x0003EBA8
+		
 		public byte[] toBytes()
 		{
 			int total = 0;
@@ -51,15 +51,15 @@ namespace Server.Data
 			return data;
 		}
 
-		// Token: 0x04000844 RID: 2116
+		
 		[ProtoMember(1)]
 		public int RoleId = 0;
 
-		// Token: 0x04000845 RID: 2117
+		
 		[ProtoMember(2)]
 		public int MapId = 0;
 
-		// Token: 0x04000846 RID: 2118
+		
 		[ProtoMember(3)]
 		public int FuBenId = 0;
 	}

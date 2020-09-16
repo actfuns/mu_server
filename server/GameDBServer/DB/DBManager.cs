@@ -24,7 +24,7 @@ namespace GameDBServer.DB
 		}
 
 		// Token: 0x1700002C RID: 44
-		// (get) Token: 0x0600021D RID: 541 RVA: 0x0000B9F4 File Offset: 0x00009BF4
+		
 		public DBConnections DBConns
 		{
 			get
@@ -34,7 +34,7 @@ namespace GameDBServer.DB
 		}
 
 		// Token: 0x1700002D RID: 45
-		// (get) Token: 0x0600021E RID: 542 RVA: 0x0000BA0C File Offset: 0x00009C0C
+		
 		public DBUserMgr dbUserMgr
 		{
 			get
@@ -44,7 +44,7 @@ namespace GameDBServer.DB
 		}
 
 		// Token: 0x1700002E RID: 46
-		// (get) Token: 0x0600021F RID: 543 RVA: 0x0000BA24 File Offset: 0x00009C24
+		
 		public DBRoleMgr DBRoleMgr
 		{
 			get

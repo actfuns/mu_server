@@ -8,21 +8,21 @@ using Server.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000003 RID: 3
+	
 	internal class ClientAgentManager
 	{
-		// Token: 0x06000019 RID: 25 RVA: 0x000028B8 File Offset: 0x00000AB8
+		
 		public static ClientAgentManager Instance()
 		{
 			return ClientAgentManager._AgentMgr;
 		}
 
-		// Token: 0x0600001A RID: 26 RVA: 0x000028D0 File Offset: 0x00000AD0
+		
 		private ClientAgentManager()
 		{
 		}
 
-		// Token: 0x0600001B RID: 27 RVA: 0x00002928 File Offset: 0x00000B28
+		
 		public bool IsAgentAlive(int serverId)
 		{
 			lock (this.Mutex)
@@ -36,7 +36,7 @@ namespace KF.Remoting
 			return false;
 		}
 
-		// Token: 0x0600001C RID: 28 RVA: 0x000029A0 File Offset: 0x00000BA0
+		
 		public bool ExistAgent(int serverId)
 		{
 			bool result;
@@ -47,7 +47,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600001D RID: 29 RVA: 0x000029F4 File Offset: 0x00000BF4
+		
 		public bool IsAnyKfAgentAlive()
 		{
 			lock (this.Mutex)
@@ -63,7 +63,7 @@ namespace KF.Remoting
 			return false;
 		}
 
-		// Token: 0x0600001E RID: 30 RVA: 0x00002A9C File Offset: 0x00000C9C
+		
 		public bool IsKfAgent(int serverId)
 		{
 			bool result;
@@ -74,7 +74,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600001F RID: 31 RVA: 0x00002AFC File Offset: 0x00000CFC
+		
 		public void SetAllKfServerId(HashSet<int> existKfIds)
 		{
 			lock (this.Mutex)
@@ -85,7 +85,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000020 RID: 32 RVA: 0x00002B70 File Offset: 0x00000D70
+		
 		public ClientAgent GetCurrentClientAgent(int serverId)
 		{
 			ClientAgent agent;
@@ -101,7 +101,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000021 RID: 33 RVA: 0x00002BA8 File Offset: 0x00000DA8
+		
 		public void OnConnectionClose(object sender, EventArgs args)
 		{
 			if (null != OperationContext.Current)
@@ -118,7 +118,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000022 RID: 34 RVA: 0x00002C28 File Offset: 0x00000E28
+		
 		public int InitializeClient(KuaFuClientContext clientInfo, out bool bFistInit)
 		{
 			bFistInit = false;
@@ -257,14 +257,14 @@ namespace KF.Remoting
 			return clientId;
 		}
 
-		// Token: 0x06000023 RID: 35 RVA: 0x00003184 File Offset: 0x00001384
+		
 		public int InitializeClient(KuaFuClientContext clientInfo)
 		{
 			bool bPlaceHolder = false;
 			return this.InitializeClient(clientInfo, out bPlaceHolder);
 		}
 
-		// Token: 0x06000024 RID: 36 RVA: 0x000031A4 File Offset: 0x000013A4
+		
 		public void BroadCastAsyncEvent(GameTypes gameType, AsyncDataItem[] evItems)
 		{
 			if (evItems != null && evItems.Length > 0)
@@ -279,7 +279,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000025 RID: 37 RVA: 0x0000321C File Offset: 0x0000141C
+		
 		public void BroadCastAsyncEvent(GameTypes gameType, AsyncDataItem evItem, int srcServerId = 0)
 		{
 			if (evItem != null)
@@ -297,7 +297,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000026 RID: 38 RVA: 0x000032CC File Offset: 0x000014CC
+		
 		public void KFBroadCastAsyncEvent(GameTypes gameType, AsyncDataItem evItem)
 		{
 			if (evItem != null)
@@ -312,7 +312,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000027 RID: 39 RVA: 0x0000336C File Offset: 0x0000156C
+		
 		public void PostAsyncEvent(int ServerId, GameTypes gameType, AsyncDataItem evItem)
 		{
 			lock (this.Mutex)
@@ -325,7 +325,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000028 RID: 40 RVA: 0x000033D4 File Offset: 0x000015D4
+		
 		public AsyncDataItem[] PickAsyncEvent(int serverId, GameTypes gameType)
 		{
 			lock (this.Mutex)
@@ -339,7 +339,7 @@ namespace KF.Remoting
 			return null;
 		}
 
-		// Token: 0x06000029 RID: 41 RVA: 0x00003448 File Offset: 0x00001648
+		
 		public void BroadCastMsg(KFCallMsg msg, int srcServerId = 0)
 		{
 			lock (this.Mutex)
@@ -354,7 +354,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600002A RID: 42 RVA: 0x000034F0 File Offset: 0x000016F0
+		
 		public void KFBroadCastMsg(KFCallMsg msg)
 		{
 			if (msg != null)
@@ -369,7 +369,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600002B RID: 43 RVA: 0x00003590 File Offset: 0x00001790
+		
 		public void SendMsg(int serverId, KFCallMsg msg)
 		{
 			lock (this.Mutex)
@@ -385,7 +385,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600002C RID: 44 RVA: 0x00003630 File Offset: 0x00001830
+		
 		public void SendAsyncKuaFuMsg()
 		{
 			lock (this.Mutex)
@@ -419,7 +419,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600002D RID: 45 RVA: 0x00003774 File Offset: 0x00001974
+		
 		public bool AssginKfFuben(GameTypes gameType, long gameId, int roleNum, out int kfSrvId)
 		{
 			kfSrvId = 0;
@@ -446,7 +446,7 @@ namespace KF.Remoting
 			return false;
 		}
 
-		// Token: 0x0600002E RID: 46 RVA: 0x00003880 File Offset: 0x00001A80
+		
 		public bool SpecialKfFuben(GameTypes gameType, long gameId, int roleNum, out int kfSrvId)
 		{
 			kfSrvId = 0;
@@ -483,7 +483,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600002F RID: 47 RVA: 0x00003950 File Offset: 0x00001B50
+		
 		public void RemoveKfFuben(GameTypes gameType, int kfSrvId, long gameId)
 		{
 			lock (this.Mutex)
@@ -496,7 +496,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000030 RID: 48 RVA: 0x000039B8 File Offset: 0x00001BB8
+		
 		public void SetMainlinePayload(int serverId, int payload)
 		{
 			lock (this.Mutex)
@@ -509,7 +509,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000031 RID: 49 RVA: 0x00003A20 File Offset: 0x00001C20
+		
 		public void SetGameTypeLoad(GameTypes gameType, int signUpCount, int startCount)
 		{
 			lock (this.Mutex)
@@ -525,7 +525,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000032 RID: 50 RVA: 0x00003AA0 File Offset: 0x00001CA0
+		
 		public void GetServerState(int serverId, out int state, out int load)
 		{
 			state = 0;
@@ -544,7 +544,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000033 RID: 51 RVA: 0x00003B20 File Offset: 0x00001D20
+		
 		public Dictionary<int, GameTypeStaticsData> GetGameTypeStatics()
 		{
 			Dictionary<int, GameTypeStaticsData> result = new Dictionary<int, GameTypeStaticsData>();
@@ -582,25 +582,25 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0400000F RID: 15
+		
 		private static ClientAgentManager _AgentMgr = new ClientAgentManager();
 
-		// Token: 0x04000010 RID: 16
+		
 		private object Mutex = new object();
 
-		// Token: 0x04000011 RID: 17
+		
 		private Dictionary<int, ClientAgent> ServerId2ClientAgent = new Dictionary<int, ClientAgent>();
 
-		// Token: 0x04000012 RID: 18
+		
 		private Dictionary<string, ClientAgent> SessionId2ClientAgent = new Dictionary<string, ClientAgent>();
 
-		// Token: 0x04000013 RID: 19
+		
 		private HashSet<int> AllKfServerId = new HashSet<int>();
 
-		// Token: 0x04000014 RID: 20
+		
 		private HashSet<int> AutoKfServerId = new HashSet<int>();
 
-		// Token: 0x04000015 RID: 21
+		
 		private Dictionary<int, GameTypeStaticsData> GameTypeLoadDict = new Dictionary<int, GameTypeStaticsData>();
 	}
 }

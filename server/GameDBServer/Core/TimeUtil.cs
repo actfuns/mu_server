@@ -8,7 +8,7 @@ namespace GameDBServer.Core
     public class TimeUtil
     {
         // Token: 0x1700000C RID: 12
-        // (get) Token: 0x0600008A RID: 138 RVA: 0x00004E94 File Offset: 0x00003094
+        
         public static long CurrentTicksInexact
         {
             get
@@ -289,7 +289,7 @@ namespace GameDBServer.Core
         private static extern bool QueryPerformanceFrequency(ref long x);
 
         // Token: 0x1700000D RID: 13
-        // (get) Token: 0x060000A7 RID: 167 RVA: 0x000055B8 File Offset: 0x000037B8
+        
         public static long CounterPerSecs
         {
             get

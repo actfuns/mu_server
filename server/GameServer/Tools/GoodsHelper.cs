@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Tools
 {
-	// Token: 0x020008F1 RID: 2289
+	
 	public class GoodsHelper
 	{
-		// Token: 0x06004210 RID: 16912 RVA: 0x003C5F8C File Offset: 0x003C418C
+		
 		public static List<GoodsData> ParseGoodsDataList(string[] fields, string fileName)
 		{
 			int attrCount = 7;
@@ -34,7 +34,7 @@ namespace GameServer.Tools
 			return goodsDataList;
 		}
 
-		// Token: 0x06004211 RID: 16913 RVA: 0x003C6038 File Offset: 0x003C4238
+		
 		public static List<GoodsData> GetAwardPro(GameClient client, List<GoodsData> proGoodsList)
 		{
 			List<GoodsData> result;
@@ -57,7 +57,7 @@ namespace GameServer.Tools
 			return result;
 		}
 
-		// Token: 0x06004212 RID: 16914 RVA: 0x003C60C8 File Offset: 0x003C42C8
+		
 		public static GoodsData ParseGoodsData(string fields, string fileName)
 		{
 			int attrCount = 7;

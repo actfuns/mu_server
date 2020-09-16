@@ -2264,7 +2264,7 @@ namespace GameDBServer.Logic
 		private static HashSet<string> CCHashSet1 = new HashSet<string>();
 
 		// Token: 0x020001CD RID: 461
-		// (Invoke) Token: 0x060009AB RID: 2475
+		
 		public delegate T SQLDelegate<T>(MySQLDataReader reader);
 	}
 }

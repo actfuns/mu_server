@@ -5,10 +5,10 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020002E3 RID: 739
+	
 	public class MoneyUtil
 	{
-		// Token: 0x06000BD0 RID: 3024 RVA: 0x000B82B4 File Offset: 0x000B64B4
+		
 		public static bool CheckHasMoney(GameClient client, int moneyType, int modifyValue)
 		{
 			if (moneyType <= 40)
@@ -93,7 +93,7 @@ namespace GameServer.Logic
 			return (long)modifyValue <= client.ClientData.MoneyData[moneyType];
 		}
 
-		// Token: 0x06000BD1 RID: 3025 RVA: 0x000B8534 File Offset: 0x000B6734
+		
 		public static bool CostMoney(GameClient client, int moneyType, int modifyValue, ref string strCostList, string logMsg, bool consume = true)
 		{
 			bool subRes = false;

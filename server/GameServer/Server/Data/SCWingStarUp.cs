@@ -4,16 +4,16 @@ using Tmsk.Contract;
 
 namespace Server.Data
 {
-	// Token: 0x02000187 RID: 391
+	
 	[ProtoContract]
 	public class SCWingStarUp : IProtoBuffData
 	{
-		// Token: 0x060004C9 RID: 1225 RVA: 0x000423FA File Offset: 0x000405FA
+		
 		public SCWingStarUp()
 		{
 		}
 
-		// Token: 0x060004CA RID: 1226 RVA: 0x00042424 File Offset: 0x00040624
+		
 		public SCWingStarUp(int state, int roleID, int nNextStarLevel, int nNextStarExp)
 		{
 			this.RoleID = roleID;
@@ -22,7 +22,7 @@ namespace Server.Data
 			this.State = state;
 		}
 
-		// Token: 0x060004CB RID: 1227 RVA: 0x00042474 File Offset: 0x00040674
+		
 		public int fromBytes(byte[] data, int offset, int count)
 		{
 			int pos = offset;
@@ -53,7 +53,7 @@ namespace Server.Data
 			return pos;
 		}
 
-		// Token: 0x060004CC RID: 1228 RVA: 0x0004252C File Offset: 0x0004072C
+		
 		public byte[] toBytes()
 		{
 			int total = 0;
@@ -70,19 +70,19 @@ namespace Server.Data
 			return data;
 		}
 
-		// Token: 0x040008AD RID: 2221
+		
 		[ProtoMember(1)]
 		public int RoleID = 0;
 
-		// Token: 0x040008AE RID: 2222
+		
 		[ProtoMember(2)]
 		public int NextStarLevel = 0;
 
-		// Token: 0x040008AF RID: 2223
+		
 		[ProtoMember(3)]
 		public int NextStarExp = 0;
 
-		// Token: 0x040008B0 RID: 2224
+		
 		[ProtoMember(4)]
 		public int State = 0;
 	}

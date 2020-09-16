@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020005E5 RID: 1509
+	
 	public class ChuanQiUtils
 	{
-		// Token: 0x06001C74 RID: 7284 RVA: 0x001AA25C File Offset: 0x001A845C
+		
 		public static void TurnTo(IObject obj, Dircetions nDir)
 		{
 			if (nDir != obj.CurrentDir)
@@ -32,7 +32,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C75 RID: 7285 RVA: 0x001AA370 File Offset: 0x001A8570
+		
 		protected static void WalkNextPos(IObject obj, Dircetions nDir, out int nX, out int nY)
 		{
 			Point grid = obj.CurrentGrid;
@@ -77,7 +77,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C76 RID: 7286 RVA: 0x001AA420 File Offset: 0x001A8620
+		
 		public static bool WalkTo(IObject obj, Dircetions nDir)
 		{
 			if (obj is Monster)
@@ -112,7 +112,7 @@ namespace GameServer.Logic
 			return fResult;
 		}
 
-		// Token: 0x06001C77 RID: 7287 RVA: 0x001AA530 File Offset: 0x001A8730
+		
 		public static bool RunTo1(IObject obj, Dircetions nDir)
 		{
 			Point grid = obj.CurrentGrid;
@@ -164,7 +164,7 @@ namespace GameServer.Logic
 			return ChuanQiUtils.RunXY1(obj, nX, nY, nDir, pathStr);
 		}
 
-		// Token: 0x06001C78 RID: 7288 RVA: 0x001AA658 File Offset: 0x001A8858
+		
 		public static bool RunTo(IObject obj, Dircetions nDir)
 		{
 			Point grid = obj.CurrentGrid;
@@ -216,7 +216,7 @@ namespace GameServer.Logic
 			return ChuanQiUtils.RunXY(obj, nX, nY, nDir, pathStr);
 		}
 
-		// Token: 0x06001C79 RID: 7289 RVA: 0x001AA780 File Offset: 0x001A8980
+		
 		protected static bool WalkXY(IObject obj, int nX, int nY, Dircetions nDir, string pathStr)
 		{
 			bool result;
@@ -246,7 +246,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C7A RID: 7290 RVA: 0x001AA820 File Offset: 0x001A8A20
+		
 		protected static bool RunXY1(IObject obj, int nX, int nY, Dircetions nDir, string pathStr)
 		{
 			bool result;
@@ -276,7 +276,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C7B RID: 7291 RVA: 0x001AA8C0 File Offset: 0x001A8AC0
+		
 		protected static bool RunXY(IObject obj, int nX, int nY, Dircetions nDir, string pathStr)
 		{
 			Point grid = obj.CurrentGrid;
@@ -299,7 +299,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C7C RID: 7292 RVA: 0x001AA94C File Offset: 0x001A8B4C
+		
 		public static bool TransportTo(IObject obj, int nX, int nY, Dircetions nDir, int oldMapCode, string pathStr = "")
 		{
 			Point grid = obj.CurrentGrid;
@@ -335,7 +335,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C7D RID: 7293 RVA: 0x001AAA8C File Offset: 0x001A8C8C
+		
 		public static bool CanMonsterMoveOnCopyMap(Monster monster, int nX, int nY)
 		{
 			bool result;
@@ -388,7 +388,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C7E RID: 7294 RVA: 0x001AABF8 File Offset: 0x001A8DF8
+		
 		public static bool CanMove(IObject obj, int nX, int nY)
 		{
 			bool result;
@@ -404,7 +404,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C7F RID: 7295 RVA: 0x001AAC9C File Offset: 0x001A8E9C
+		
 		private static void Notify9Grid(IObject obj, bool force = false)
 		{
 			if (obj is Monster)
@@ -412,7 +412,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C80 RID: 7296 RVA: 0x001AACBC File Offset: 0x001A8EBC
+		
 		private static void NotifyOthersMyMoving(IObject obj, string pathString, int nSrcGridX, int nSrcGridY, int nDestGridX, int nDestGridY, Dircetions direction)
 		{
 			if (obj is Monster)
@@ -433,7 +433,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C81 RID: 7297 RVA: 0x001AADC8 File Offset: 0x001A8FC8
+		
 		private static void NotifyOthersMyMoving1(IObject obj, string pathString, int nSrcGridX, int nSrcGridY, int nDestGridX, int nDestGridY, Dircetions direction)
 		{
 			if (obj is Monster)
@@ -454,7 +454,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C82 RID: 7298 RVA: 0x001AAED4 File Offset: 0x001A90D4
+		
 		public static Point HitFly(GameClient client, IObject enemy, int gridNum)
 		{
 			bool isDead = false;
@@ -505,7 +505,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C83 RID: 7299 RVA: 0x001AB100 File Offset: 0x001A9300
+		
 		public static Point MonsterHitFly(Monster attacker, GameClient injurer, int gridNum)
 		{
 			bool isDead = false;

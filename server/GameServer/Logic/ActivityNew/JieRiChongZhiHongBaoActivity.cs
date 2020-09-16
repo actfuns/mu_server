@@ -6,16 +6,16 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x0200004A RID: 74
+	
 	public class JieRiChongZhiHongBaoActivity : Activity
 	{
-		// Token: 0x060000E4 RID: 228 RVA: 0x0000FEB4 File Offset: 0x0000E0B4
+		
 		public static JieRiChongZhiHongBaoActivity getInstance()
 		{
 			return JieRiChongZhiHongBaoActivity.instance;
 		}
 
-		// Token: 0x060000E5 RID: 229 RVA: 0x0000FECC File Offset: 0x0000E0CC
+		
 		public bool Init()
 		{
 			try
@@ -69,25 +69,25 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x060000E6 RID: 230 RVA: 0x00010178 File Offset: 0x0000E378
+		
 		public string GetKeyStr()
 		{
 			return this.ActivityKeyStr;
 		}
 
-		// Token: 0x04000198 RID: 408
+		
 		private const string CfgFile = "Config/JieRiGifts/JieRiChongZhiHongBao.xml";
 
-		// Token: 0x04000199 RID: 409
+		
 		private static JieRiChongZhiHongBaoActivity instance = new JieRiChongZhiHongBaoActivity();
 
-		// Token: 0x0400019A RID: 410
+		
 		private object Mutex = new object();
 
-		// Token: 0x0400019B RID: 411
+		
 		private HashSet<long> recvDict = new HashSet<long>();
 
-		// Token: 0x0400019C RID: 412
+		
 		private SortedDictionary<int, JieRiChongZhiHongBaoInfo> HongBaoDict = new SortedDictionary<int, JieRiChongZhiHongBaoInfo>();
 	}
 }

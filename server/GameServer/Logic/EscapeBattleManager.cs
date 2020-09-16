@@ -22,10 +22,10 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-    // Token: 0x0200008D RID: 141
+    
     public class EscapeBattleManager : ICopySceneManager, IManager, ICmdProcessorEx, ICmdProcessor, IManager2, IEventListener, IEventListenerEx
     {
-        // Token: 0x06000212 RID: 530 RVA: 0x000218FC File Offset: 0x0001FAFC
+        
         private void InitScene(EscapeBattleScene scene, GameClient client)
         {
             foreach (EscapeBattleCollection item in this.RuntimeData.CollectionConfigList)
@@ -50,7 +50,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000213 RID: 531 RVA: 0x00021B08 File Offset: 0x0001FD08
+        
         bool ICopySceneManager.AddCopyScenes(GameClient client, CopyMap copyMap, SceneUIClasses sceneType)
         {
             bool result;
@@ -166,7 +166,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000214 RID: 532 RVA: 0x00022124 File Offset: 0x00020324
+        
         bool ICopySceneManager.RemoveCopyScene(CopyMap copyMap, SceneUIClasses sceneType)
         {
             bool result;
@@ -186,7 +186,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000215 RID: 533 RVA: 0x0002219C File Offset: 0x0002039C
+        
         void ICopySceneManager.TimerProc()
         {
             long nowTicks = TimeUtil.NOW();
@@ -314,7 +314,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000216 RID: 534 RVA: 0x00022774 File Offset: 0x00020974
+        
         public void CheckUpdateSafeArea(EscapeBattleScene scene, long nowMs)
         {
             if (scene.ScoreData.AreaChangeTm.Ticks / 10000L <= nowMs)
@@ -351,7 +351,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000217 RID: 535 RVA: 0x000229D0 File Offset: 0x00020BD0
+        
         private void CheckSceneToAssState(EscapeBattleScene scene, long nowMs)
         {
             if (scene.m_eStatus == EscapeBattleGameSceneStatuses.STATUS_FIGHT)
@@ -394,7 +394,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000218 RID: 536 RVA: 0x00022B50 File Offset: 0x00020D50
+        
         private void InitSceneBuffOnFightAss(EscapeBattleScene scene, long nowMs)
         {
             if (scene.m_eStatus == EscapeBattleGameSceneStatuses.STATUS_FIGHT)
@@ -465,7 +465,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000219 RID: 537 RVA: 0x00022F68 File Offset: 0x00021168
+        
         private void InitCreateDynamicMonster(EscapeBattleScene scene, long nowMs)
         {
             List<EscapeBattleCollection> collectionList = scene.CollectionConfigList.FindAll((EscapeBattleCollection x) => x.eState == scene.m_eStatus);
@@ -479,7 +479,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600021A RID: 538 RVA: 0x00023010 File Offset: 0x00021210
+        
         private void AddDelayCreateMonster(EscapeBattleScene scene, long ticks, object monster)
         {
             lock (this.RuntimeData.Mutex)
@@ -494,7 +494,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600021B RID: 539 RVA: 0x0002308C File Offset: 0x0002128C
+        
         public void CheckDeleteDynamicMonster(EscapeBattleScene scene, bool chgState, long nowMs)
         {
             CopyMap copyMap = scene.CopyMap;
@@ -539,7 +539,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600021C RID: 540 RVA: 0x000231CC File Offset: 0x000213CC
+        
         public void CheckCreateDynamicMonster(EscapeBattleScene scene, long nowMs)
         {
             lock (this.RuntimeData.Mutex)
@@ -575,7 +575,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600021D RID: 541 RVA: 0x00023368 File Offset: 0x00021568
+        
         public void RandomOnePointInCircle(int centerX, int centerY, int radiusMin, int radiusMax, ref int PosX, ref int PosY)
         {
             PosX = centerX;
@@ -586,7 +586,7 @@ namespace GameServer.Logic
             PosY += (int)(Math.Sin(RandomAngle) * (double)RandomRadius);
         }
 
-        // Token: 0x0600021E RID: 542 RVA: 0x000233F0 File Offset: 0x000215F0
+        
         public bool RandomOnePointInArea(EscapeBattleScene scene, int RefreshRegion, ref int PosX, ref int PosY, ObjectTypes objType = ObjectTypes.OT_MONSTER)
         {
             EscapeMapSafeArea areaInfo;
@@ -650,7 +650,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x0600021F RID: 543 RVA: 0x00023624 File Offset: 0x00021824
+        
         private void ProcessEnd(EscapeBattleScene scene, bool overTime, long nowTicks)
         {
             if (scene.m_eStatus < EscapeBattleGameSceneStatuses.STATUS_END)
@@ -689,7 +689,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000220 RID: 544 RVA: 0x00023864 File Offset: 0x00021A64
+        
         public void BroadStateInfoAndScoreInfo(CopyMap copyMap, int specZhanDui = -1, bool timeState = true, bool sideScore = true)
         {
             List<GameClient> objsList = copyMap.GetClientsList();
@@ -709,7 +709,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000221 RID: 545 RVA: 0x000238F8 File Offset: 0x00021AF8
+        
         public void NotifySpriteInjured(GameClient client)
         {
             EscapeBattleScene scene = client.SceneObject as EscapeBattleScene;
@@ -719,7 +719,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000222 RID: 546 RVA: 0x000239B0 File Offset: 0x00021BB0
+        
         public void NotifyTimeStateInfoAndScoreInfo(GameClient client, bool timeState = true, bool sideScore = true)
         {
             lock (this.RuntimeData.Mutex)
@@ -769,7 +769,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000223 RID: 547 RVA: 0x00023CC4 File Offset: 0x00021EC4
+        
         public void PushGameResultData(EscapeBattleScene scene, int zhanduiId)
         {
             List<EscapeBattleRoleInfo> clientContextDataList;
@@ -852,7 +852,7 @@ namespace GameServer.Logic
             this.RuntimeData.PKResultQueue.Enqueue(resultPair);
         }
 
-        // Token: 0x06000224 RID: 548 RVA: 0x000240EC File Offset: 0x000222EC
+        
         public void GiveAwards(EscapeBattleScene scene, int zhanduiId)
         {
             try
@@ -928,7 +928,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000225 RID: 549 RVA: 0x000243B4 File Offset: 0x000225B4
+        
         private void NtfCanGetAward(GameClient client, int success, EscapeBattleScene scene, TianTi5v5ZhanDuiData zhanduiData, EscapeBattleTeamInfo teamInfo)
         {
             EscapeBattleRoleInfo contextData = client.SceneContextData2 as EscapeBattleRoleInfo;
@@ -974,7 +974,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000226 RID: 550 RVA: 0x0002456C File Offset: 0x0002276C
+        
         private int GiveRoleAwards(GameClient client, int success, EscapeBattleScene scene, TianTi5v5ZhanDuiData zhanduiData, EscapeBattleTeamInfo teamInfo, bool froceMail)
         {
             EscapeBattleRoleInfo contextData = client.SceneContextData2 as EscapeBattleRoleInfo;
@@ -1032,7 +1032,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000227 RID: 551 RVA: 0x00024790 File Offset: 0x00022990
+        
         public bool ClientRelive(GameClient client)
         {
             EscapeBattleScene scene = client.SceneObject as EscapeBattleScene;
@@ -1106,7 +1106,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000228 RID: 552 RVA: 0x00024AA0 File Offset: 0x00022CA0
+        
         private bool GetBirthPoint(int mapCode, int side, out int toPosX, out int toPosY)
         {
             toPosX = -1;
@@ -1130,7 +1130,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000229 RID: 553 RVA: 0x00024BB4 File Offset: 0x00022DB4
+        
         public void OnKillRole(GameClient client, GameClient other)
         {
             lock (this.RuntimeData.Mutex)
@@ -1164,7 +1164,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600022A RID: 554 RVA: 0x00024DC0 File Offset: 0x00022FC0
+        
         public void CheckZhanDuiWinLoseState(EscapeBattleScene scene)
         {
             lock (this.RuntimeData.Mutex)
@@ -1228,7 +1228,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600022B RID: 555 RVA: 0x00025098 File Offset: 0x00023298
+        
         public void RoleLeaveFuBen(GameClient client)
         {
             EscapeBattleScene scene = client.SceneObject as EscapeBattleScene;
@@ -1240,7 +1240,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600022C RID: 556 RVA: 0x0002510C File Offset: 0x0002330C
+        
         public void OnCaiJiFinish(GameClient client, Monster monster)
         {
             lock (this.RuntimeData.Mutex)
@@ -1277,7 +1277,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600022D RID: 557 RVA: 0x000252DC File Offset: 0x000234DC
+        
         public void RefreshTeamMemberReliveCount(EscapeBattleScene scene, EscapeBattleTeamInfo TeamInfo)
         {
             List<int[]> SeedVsNumList;
@@ -1299,7 +1299,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600022E RID: 558 RVA: 0x00025420 File Offset: 0x00023620
+        
         public int GetCaiJiMonsterTime(GameClient client, Monster monster)
         {
             EscapeBattleCollection tag = (monster != null) ? (monster.Tag as EscapeBattleCollection) : null;
@@ -1315,7 +1315,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x0600022F RID: 559 RVA: 0x00025498 File Offset: 0x00023698
+        
         private void CheckSceneAreaDamage(EscapeBattleScene scene, long nowTicks)
         {
             if (scene.AreaDamageTicks <= nowTicks)
@@ -1369,13 +1369,13 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000230 RID: 560 RVA: 0x00025784 File Offset: 0x00023984
+        
         private double CalClientDehurtValue(EscapeBattleScene scene, GameClient client)
         {
             return 0.0;
         }
 
-        // Token: 0x06000231 RID: 561 RVA: 0x000257A4 File Offset: 0x000239A4
+        
         private void UpdateBuff4GameClient(GameClient client, BufferItemTypes bufferItem, int modNum)
         {
             if (modNum != 0)
@@ -1407,7 +1407,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000232 RID: 562 RVA: 0x000258A0 File Offset: 0x00023AA0
+        
         private void RefreshBuffGameClientProps(GameClient client, BufferItemTypes bufferItem, long BufferVal)
         {
             EscapeBattleScene scene = client.SceneObject as EscapeBattleScene;
@@ -1466,26 +1466,26 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000233 RID: 563 RVA: 0x00025A60 File Offset: 0x00023C60
+        
         public static EscapeBattleManager getInstance()
         {
             return EscapeBattleManager.instance;
         }
 
-        // Token: 0x06000234 RID: 564 RVA: 0x00025A78 File Offset: 0x00023C78
+        
         public bool initialize()
         {
             return this.InitConfig();
         }
 
-        // Token: 0x06000235 RID: 565 RVA: 0x00025A9C File Offset: 0x00023C9C
+        
         public bool initialize(ICoreInterface coreInterface)
         {
             ScheduleExecutor2.Instance.scheduleExecute(new NormalScheduleTask("EscapeBattleManager.TimerProc", new EventHandler(this.TimerProc)), 15000, 2000);
             return true;
         }
 
-        // Token: 0x06000236 RID: 566 RVA: 0x00025ADC File Offset: 0x00023CDC
+        
         public bool startup()
         {
             TCPCmdDispatcher.getInstance().registerProcessorEx(2112, 1, 2, EscapeBattleManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -1524,7 +1524,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x06000237 RID: 567 RVA: 0x00025D24 File Offset: 0x00023F24
+        
         public bool showdown()
         {
             GlobalEventSource.getInstance().removeListener(10, EscapeBattleManager.getInstance());
@@ -1541,19 +1541,19 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x06000238 RID: 568 RVA: 0x00025E20 File Offset: 0x00024020
+        
         public bool destroy()
         {
             return true;
         }
 
-        // Token: 0x06000239 RID: 569 RVA: 0x00025E34 File Offset: 0x00024034
+        
         public bool processCmd(GameClient client, string[] cmdParams)
         {
             return false;
         }
 
-        // Token: 0x0600023A RID: 570 RVA: 0x00025E48 File Offset: 0x00024048
+        
         public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             switch (nID)
@@ -1576,7 +1576,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x0600023B RID: 571 RVA: 0x00025EF8 File Offset: 0x000240F8
+        
         public void processEvent(EventObject eventObject)
         {
             int eventType = eventObject.getEventType();
@@ -1614,7 +1614,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600023C RID: 572 RVA: 0x00026004 File Offset: 0x00024204
+        
         public void processEvent(EventObjectEx eventObject)
         {
             int eventType = eventObject.EventType;
@@ -1695,7 +1695,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600023D RID: 573 RVA: 0x00026220 File Offset: 0x00024420
+        
         public bool KFCallMsgFunc(KFCallMsg msg)
         {
             switch (msg.KuaFuEventType)
@@ -1763,7 +1763,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x0600023E RID: 574 RVA: 0x00026674 File Offset: 0x00024874
+        
         public bool InitConfig()
         {
             bool success = true;
@@ -1973,7 +1973,7 @@ namespace GameServer.Logic
             return success;
         }
 
-        // Token: 0x0600023F RID: 575 RVA: 0x00027194 File Offset: 0x00025394
+        
         public bool ProcessGetMainInfoListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -2054,7 +2054,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000240 RID: 576 RVA: 0x00027540 File Offset: 0x00025740
+        
         public bool ProcessEscapeJoinCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -2167,7 +2167,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000241 RID: 577 RVA: 0x000278E4 File Offset: 0x00025AE4
+        
         public bool ProcessEscapeInviteCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -2227,7 +2227,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000242 RID: 578 RVA: 0x00027AB0 File Offset: 0x00025CB0
+        
         public bool ProcessEscapeRankInfoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -2265,7 +2265,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000243 RID: 579 RVA: 0x00027CC0 File Offset: 0x00025EC0
+        
         public bool ProcessEscapeEnterCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -2345,7 +2345,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000244 RID: 580 RVA: 0x00027F68 File Offset: 0x00026168
+        
         public bool ProcessGetPaiHangAwardsCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -2380,7 +2380,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000245 RID: 581 RVA: 0x000280E8 File Offset: 0x000262E8
+        
         public bool ProcessEscapeDevilBuyCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -2430,13 +2430,13 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000246 RID: 582 RVA: 0x000282E0 File Offset: 0x000264E0
+        
         public bool IsGongNengOpened(GameClient client, bool hint = false)
         {
             return GlobalNew.IsGongNengOpened(client, GongNengIDs.EscapeBattle, false);
         }
 
-        // Token: 0x06000247 RID: 583 RVA: 0x000282FC File Offset: 0x000264FC
+        
         private bool CheckMap(GameClient client)
         {
             bool result;
@@ -2454,7 +2454,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000248 RID: 584 RVA: 0x000283B8 File Offset: 0x000265B8
+        
         public void OnStartPlayGame(GameClient client)
         {
             SceneUIClasses sceneType = Global.GetMapSceneType(client.ClientData.MapCode);
@@ -2497,7 +2497,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000249 RID: 585 RVA: 0x000285D8 File Offset: 0x000267D8
+        
         private bool CheckTime()
         {
             bool result;
@@ -2527,7 +2527,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x0600024A RID: 586 RVA: 0x00028720 File Offset: 0x00026920
+        
         private TimeSpan GetStartTime(int MapCodeID)
         {
             EscapeBattleMatchConfig sceneItem = null;
@@ -2563,7 +2563,7 @@ namespace GameServer.Logic
             return startTime;
         }
 
-        // Token: 0x0600024B RID: 587 RVA: 0x000288F8 File Offset: 0x00026AF8
+        
         private bool OnKuaFuLogin(KuaFuServerLoginData data)
         {
             EscapeBattleFuBenData copyInfo = null;
@@ -2601,7 +2601,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x0600024C RID: 588 RVA: 0x00028A7C File Offset: 0x00026C7C
+        
         public bool OnKuaFuInitGame(GameClient client)
         {
             int zhanDuiID = client.ClientData.ZhanDuiID;
@@ -2662,7 +2662,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x0600024D RID: 589 RVA: 0x00028D20 File Offset: 0x00026F20
+        
         public void TimerProc(object sender, EventArgs e)
         {
             DateTime now = TimeUtil.NowDateTime();
@@ -2814,7 +2814,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600024E RID: 590 RVA: 0x00029554 File Offset: 0x00027754
+        
         public void InitEscapeBattleZhanDuiData(TianTi5v5ZhanDuiData zhanduiData)
         {
             if (zhanduiData != null && 0 != this.RuntimeData.SyncData.Season)
@@ -2827,7 +2827,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600024F RID: 591 RVA: 0x000295B8 File Offset: 0x000277B8
+        
         public TianTi5v5ZhanDuiData GetZhanDuiData(int zhanDuiID, int serverID)
         {
             TianTi5v5ZhanDuiData zhanduiData = TianTi5v5Manager.getInstance().GetZhanDuiData(zhanDuiID, serverID);
@@ -2845,7 +2845,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000250 RID: 592 RVA: 0x00029610 File Offset: 0x00027810
+        
         public EscapeBDuanAwardsConfig GetEscapeBattleAwardConfigByJiFen(int jifen)
         {
             EscapeBDuanAwardsConfig awardConfig = null;
@@ -2862,7 +2862,7 @@ namespace GameServer.Logic
             return awardConfig;
         }
 
-        // Token: 0x06000251 RID: 593 RVA: 0x000296E8 File Offset: 0x000278E8
+        
         protected void SetSeasonRankDataFlags(GameClient client, bool bFight, bool bHasGet)
         {
             long seasonAwardDatas = Global.GetRoleParamsInt64FromDB(client, "10256");
@@ -2905,7 +2905,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000252 RID: 594 RVA: 0x00029880 File Offset: 0x00027A80
+        
         public int CanGetMonthRankAwards(GameClient client, out EscapeBattleAwardsConfig duanWeiRankAward)
         {
             duanWeiRankAward = null;
@@ -2959,7 +2959,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000253 RID: 595 RVA: 0x00029ABC File Offset: 0x00027CBC
+        
         public List<int> GetEscapeBattleRoleAnalysisData(GameClient client)
         {
             List<int> result;
@@ -2976,7 +2976,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000254 RID: 596 RVA: 0x00029B04 File Offset: 0x00027D04
+        
         private void FilterEscapeBattleAnalysisData(List<int> countList)
         {
             if (countList.Count != 4)
@@ -2998,20 +2998,20 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000255 RID: 597 RVA: 0x00029BA2 File Offset: 0x00027DA2
+        
         private void SaveEscapeBattleRoleAnalysisData(GameClient client, List<int> countList)
         {
             Global.SaveRoleParamsIntListToDB(client, countList, "156", true);
         }
 
-        // Token: 0x06000256 RID: 598 RVA: 0x00029BB4 File Offset: 0x00027DB4
+        
         public bool CanUseMaigc(GameClient client)
         {
             EscapeBattleScene scene = client.SceneObject as EscapeBattleScene;
             return null == scene || scene.m_eStatus >= EscapeBattleGameSceneStatuses.STATUS_FIGHT;
         }
 
-        // Token: 0x06000257 RID: 599 RVA: 0x00029C6C File Offset: 0x00027E6C
+        
         public void FillGuanZhanData(GameClient client, GuanZhanData gzData)
         {
             lock (this.RuntimeData.Mutex)
@@ -3083,7 +3083,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000258 RID: 600 RVA: 0x00029F30 File Offset: 0x00028130
+        
         public bool CheckOpenState(DateTime now)
         {
             bool result;
@@ -3101,7 +3101,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000259 RID: 601 RVA: 0x00029F98 File Offset: 0x00028198
+        
         public void CancleJoinState(GameClient client)
         {
             if (client.ClientData.ZhanDuiZhiWu == 1)
@@ -3121,7 +3121,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600025A RID: 602 RVA: 0x0002A044 File Offset: 0x00028244
+        
         public bool OnPreZhanDuiChangeMember(PreZhanDuiChangeMemberEventObject e)
         {
             DateTime now = TimeUtil.NowDateTime();
@@ -3156,28 +3156,28 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x04000351 RID: 849
+        
         public const SceneUIClasses ManagerType = SceneUIClasses.EscapeBattle;
 
-        // Token: 0x04000352 RID: 850
+        
         public const GameTypes GameType = GameTypes.EscapeBattle;
 
-        // Token: 0x04000353 RID: 851
+        
         public ConcurrentDictionary<int, EscapeBattleScene> SceneDict = new ConcurrentDictionary<int, EscapeBattleScene>();
 
-        // Token: 0x04000354 RID: 852
+        
         private static long NextHeartBeatTicks = 0L;
 
-        // Token: 0x04000355 RID: 853
+        
         private static EscapeBattleManager instance = new EscapeBattleManager();
 
-        // Token: 0x04000356 RID: 854
+        
         private EventSourceEx<KFCallMsg>.HandlerData NotifyEnterHandler = null;
 
-        // Token: 0x04000357 RID: 855
+        
         private EventSourceEx<KFCallMsg>.HandlerData NotifyGameStateHandler = null;
 
-        // Token: 0x04000358 RID: 856
+        
         public EscapeBattleData RuntimeData = new EscapeBattleData();
     }
 }

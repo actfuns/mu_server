@@ -7,21 +7,21 @@ using Server.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000013 RID: 19
+	
 	internal class CoupleWishService
 	{
-		// Token: 0x0600009C RID: 156 RVA: 0x00008C04 File Offset: 0x00006E04
+		
 		private CoupleWishService()
 		{
 		}
 
-		// Token: 0x0600009D RID: 157 RVA: 0x00008C78 File Offset: 0x00006E78
+		
 		public static CoupleWishService getInstance()
 		{
 			return CoupleWishService._Instance;
 		}
 
-		// Token: 0x0600009E RID: 158 RVA: 0x00008C90 File Offset: 0x00006E90
+		
 		public void StartUp()
 		{
 			try
@@ -36,7 +36,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600009F RID: 159 RVA: 0x00008D18 File Offset: 0x00006F18
+		
 		private void ReloadSyncData()
 		{
 			lock (this.Mutex)
@@ -72,7 +72,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060000A0 RID: 160 RVA: 0x00009038 File Offset: 0x00007238
+		
 		public void Update()
 		{
 			if (this.WishRecordMgr != null)
@@ -112,7 +112,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060000A1 RID: 161 RVA: 0x000091E8 File Offset: 0x000073E8
+		
 		public int CoupleWishWishRole(CoupleWishWishRoleReq req)
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -220,7 +220,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060000A2 RID: 162 RVA: 0x000096F8 File Offset: 0x000078F8
+		
 		public List<CoupleWishWishRecordData> CoupleWishGetWishRecord(int roleId)
 		{
 			List<CoupleWishWishRecordData> result;
@@ -239,7 +239,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060000A3 RID: 163 RVA: 0x0000976C File Offset: 0x0000796C
+		
 		public CoupleWishSyncData CoupleWishSyncCenterData(DateTime oldThisWeek, DateTime oldLastWeek, DateTime oldStatue)
 		{
 			CoupleWishSyncData result;
@@ -283,7 +283,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060000A4 RID: 164 RVA: 0x0000990C File Offset: 0x00007B0C
+		
 		public int CoupleWishPreDivorce(int man, int wife)
 		{
 			int result;
@@ -340,7 +340,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060000A5 RID: 165 RVA: 0x00009B48 File Offset: 0x00007D48
+		
 		public int CoupleWishAdmire(int fromRole, int fromZone, int admireType, int toCoupleId)
 		{
 			int result;
@@ -358,7 +358,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060000A6 RID: 166 RVA: 0x00009C4C File Offset: 0x00007E4C
+		
 		public int CoupleWishJoinParty(int fromRole, int fromZone, int toCoupleId)
 		{
 			int result;
@@ -391,7 +391,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060000A7 RID: 167 RVA: 0x00009D64 File Offset: 0x00007F64
+		
 		public void CoupleWishReportCoupleStatue(CoupleWishReportStatueData req)
 		{
 			if (req != null && req.ManStatue != null && req.WifeStatue != null)
@@ -415,7 +415,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060000A8 RID: 168 RVA: 0x00009E94 File Offset: 0x00008094
+		
 		private void CheckSortRank()
 		{
 			lock (this.Mutex)
@@ -467,7 +467,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060000A9 RID: 169 RVA: 0x0000A0BC File Offset: 0x000082BC
+		
 		private void CheckSaveRank()
 		{
 			lock (this.Mutex)
@@ -482,7 +482,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060000AA RID: 170 RVA: 0x0000A150 File Offset: 0x00008350
+		
 		private bool IsValidCoupleIfExist(int man, int wife)
 		{
 			bool result;
@@ -518,13 +518,13 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060000AB RID: 171 RVA: 0x0000A264 File Offset: 0x00008464
+		
 		private int CurrRankWeek(DateTime time)
 		{
 			return TimeUtil.MakeFirstWeekday(time);
 		}
 
-		// Token: 0x060000AC RID: 172 RVA: 0x0000A27C File Offset: 0x0000847C
+		
 		public void OnStopServer()
 		{
 			try
@@ -543,37 +543,37 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0400005F RID: 95
+		
 		private static readonly CoupleWishService _Instance = new CoupleWishService();
 
-		// Token: 0x04000060 RID: 96
+		
 		private object Mutex = new object();
 
-		// Token: 0x04000061 RID: 97
+		
 		private CoupleWishSyncData SyncData = new CoupleWishSyncData();
 
-		// Token: 0x04000062 RID: 98
+		
 		private DateTime LastUpdateTime = DateTime.MinValue;
 
-		// Token: 0x04000063 RID: 99
+		
 		private uint UpdateFrameCount = 0U;
 
-		// Token: 0x04000064 RID: 100
+		
 		private CoupleWishRecordManager WishRecordMgr = null;
 
-		// Token: 0x04000065 RID: 101
+		
 		private CoupleWishConfig _Config = new CoupleWishConfig();
 
-		// Token: 0x04000066 RID: 102
+		
 		private CoupleWishPersistence Persistence = CoupleWishPersistence.getInstance();
 
-		// Token: 0x04000067 RID: 103
+		
 		private Dictionary<int, long> WishCdControls = new Dictionary<int, long>();
 
-		// Token: 0x04000068 RID: 104
+		
 		private bool IsNeedSort = false;
 
-		// Token: 0x04000069 RID: 105
+		
 		private bool IsNeedSaveRank = false;
 	}
 }

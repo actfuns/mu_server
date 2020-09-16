@@ -8,10 +8,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000518 RID: 1304
+	
 	public class LogDBCmdManager
 	{
-		// Token: 0x0600186A RID: 6250 RVA: 0x0017E318 File Offset: 0x0017C518
+		
 		public void AddDBLogInfo(int nGoodDBID, string strObjName, string strFrom, string strCurrEnvName, string strTarEnvName, string strOptType, int nAmount, int nZoneID, string userid, int nSurplus, int serverId, GoodsData goodsData = null)
 		{
 			if (!("" == strObjName))
@@ -54,7 +54,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600186B RID: 6251 RVA: 0x0017E4AC File Offset: 0x0017C6AC
+		
 		public void AddMessageLog(int dbid, string strObjName, string strFrom, string strCurrEnvName, string strTarEnvName, string strOptType, int nAmount, int nZoneID, string userid, int nSurplus, int serverId, string extData)
 		{
 			strFrom = strFrom.Replace(':', '-');
@@ -74,7 +74,7 @@ namespace GameServer.Logic
 			this.AddDBCmd(20000, strLogInfo, null, serverId);
 		}
 
-		// Token: 0x0600186C RID: 6252 RVA: 0x0017E530 File Offset: 0x0017C730
+		
 		public void AddGameDBLogInfo(int nGoodDBID, string strObjName, string strFrom, string strCurrEnvName, string strTarEnvName, string strOptType, int nAmount, int nZoneID, string userid, int nSurplus, int serverId)
 		{
 			if (!("钻石" != strObjName))
@@ -97,7 +97,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600186D RID: 6253 RVA: 0x0017E5C8 File Offset: 0x0017C7C8
+		
 		public void AddTradeNumberInfo(int type, int money, int roleid1, int roleid2, int serverId = 0)
 		{
 			string today = TimeUtil.NowDateTime().ToString("yyyy-MM-dd HH:mm:ss");
@@ -113,7 +113,7 @@ namespace GameServer.Logic
 			this.AddDBCmd(20002, strLogInfo, null, serverId);
 		}
 
-		// Token: 0x0600186E RID: 6254 RVA: 0x0017E654 File Offset: 0x0017C854
+		
 		public void AddTradeFreqInfo(int type, int count, int roleid, int serverId = 0)
 		{
 			string today = TimeUtil.NowDateTime().ToString("yyyy-MM-dd HH:mm:ss");
@@ -128,7 +128,7 @@ namespace GameServer.Logic
 			this.AddDBCmd(20001, strLogInfo, null, serverId);
 		}
 
-		// Token: 0x0600186F RID: 6255 RVA: 0x0017E6D4 File Offset: 0x0017C8D4
+		
 		public string CombClientInfo(int roleid, int serverId)
 		{
 			string dbcmd = string.Format("{0}", roleid);
@@ -180,7 +180,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001870 RID: 6256 RVA: 0x0017E8A8 File Offset: 0x0017CAA8
+		
 		private void AddDBCmd(int cmdID, string cmdText, DBCommandEventHandler dbCommandEvent, int serverId)
 		{
 			DBCommand dbCmd = this._DBCmdPool.Pop();
@@ -201,7 +201,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001871 RID: 6257 RVA: 0x0017E944 File Offset: 0x0017CB44
+		
 		public int GetDBCmdCount()
 		{
 			int count;
@@ -212,7 +212,7 @@ namespace GameServer.Logic
 			return count;
 		}
 
-		// Token: 0x06001872 RID: 6258 RVA: 0x0017E998 File Offset: 0x0017CB98
+		
 		private TCPProcessCmdResults DoDBCmd(TCPClientPool tcpClientPool, TCPOutPacketPool pool, DBCommand dbCmd, out byte[] bytesData)
 		{
 			bytesData = Global.SendAndRecvData<string>(dbCmd.DBCommandID, dbCmd.DBCommandText, dbCmd.ServerId, 1);
@@ -228,7 +228,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001873 RID: 6259 RVA: 0x0017E9E0 File Offset: 0x0017CBE0
+		
 		public void ExecuteDBCmd(TCPClientPool tcpClientPool, TCPOutPacketPool pool)
 		{
 			lock (this._DBCmdQueue)
@@ -258,10 +258,10 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x040022B1 RID: 8881
+		
 		private DBCmdPool _DBCmdPool = new DBCmdPool(2000);
 
-		// Token: 0x040022B2 RID: 8882
+		
 		private Queue<DBCommand> _DBCmdQueue = new Queue<DBCommand>(2000);
 	}
 }

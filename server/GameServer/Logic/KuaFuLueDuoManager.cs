@@ -18,29 +18,29 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000222 RID: 546
+	
 	public class KuaFuLueDuoManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener, IEventListenerEx, IManager2
 	{
-		// Token: 0x0600073C RID: 1852 RVA: 0x0006B024 File Offset: 0x00069224
+		
 		public static KuaFuLueDuoManager getInstance()
 		{
 			return KuaFuLueDuoManager.instance;
 		}
 
-		// Token: 0x0600073D RID: 1853 RVA: 0x0006B03C File Offset: 0x0006923C
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x0600073E RID: 1854 RVA: 0x0006B060 File Offset: 0x00069260
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			ScheduleExecutor2.Instance.scheduleExecute(new NormalScheduleTask("KuaFuLueDuoManager.TimerProc", new EventHandler(this.TimerProc)), 15000, 5000);
 			return true;
 		}
 
-		// Token: 0x0600073F RID: 1855 RVA: 0x0006B0A0 File Offset: 0x000692A0
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1245, 1, 1, KuaFuLueDuoManager.getInstance(), TCPCmdFlags.IsBinaryStreamParams);
@@ -71,7 +71,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000740 RID: 1856 RVA: 0x0006B2E4 File Offset: 0x000694E4
+		
 		public bool showdown()
 		{
 			GlobalEventSource4Scene.getInstance().removeListener(23, 10000, KuaFuLueDuoManager.getInstance());
@@ -90,19 +90,19 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000741 RID: 1857 RVA: 0x0006B408 File Offset: 0x00069608
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000742 RID: 1858 RVA: 0x0006B41C File Offset: 0x0006961C
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06000743 RID: 1859 RVA: 0x0006B430 File Offset: 0x00069630
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			if (nID != 1252)
@@ -143,7 +143,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000744 RID: 1860 RVA: 0x0006B5A0 File Offset: 0x000697A0
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int eventType = eventObject.getEventType();
@@ -178,7 +178,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000745 RID: 1861 RVA: 0x0006B68C File Offset: 0x0006988C
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 			int eventType = eventObject.EventType;
@@ -307,7 +307,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000746 RID: 1862 RVA: 0x0006B97C File Offset: 0x00069B7C
+		
 		public bool InitConfig()
 		{
 			bool success = true;
@@ -422,7 +422,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x06000747 RID: 1863 RVA: 0x0006C164 File Offset: 0x0006A364
+		
 		public void LoadCollectXml()
 		{
 			string fileName = "";
@@ -460,7 +460,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000748 RID: 1864 RVA: 0x0006C37C File Offset: 0x0006A57C
+		
 		public void RefreshKuaFuLueDuoStoreData(KuaFuLueDuoStoreData KuaFuLueDuoStoreData, bool SetRefreshTm = true)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -513,7 +513,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000749 RID: 1865 RVA: 0x0006C580 File Offset: 0x0006A780
+		
 		public KuaFuLueDuoStoreData GetClientKuaFuLueDuoStoreData(GameClient client)
 		{
 			KuaFuLueDuoStoreData kuaFuLueDuoStoreData;
@@ -542,7 +542,7 @@ namespace GameServer.Logic
 			return kuaFuLueDuoStoreData;
 		}
 
-		// Token: 0x0600074A RID: 1866 RVA: 0x0006C6A8 File Offset: 0x0006A8A8
+		
 		public void SaveKuaFuLueDuoStoreData(GameClient client)
 		{
 			if (null != client.ClientData.KuaFuLueDuoStoreData)
@@ -562,7 +562,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600074B RID: 1867 RVA: 0x0006C7A8 File Offset: 0x0006A9A8
+		
 		public bool ProcessGetKuaFuLueDuoMallDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -587,7 +587,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600074C RID: 1868 RVA: 0x0006C850 File Offset: 0x0006AA50
+		
 		public bool ProcessKuaFuLueDuoMallBuyCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -699,7 +699,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600074D RID: 1869 RVA: 0x0006CD8C File Offset: 0x0006AF8C
+		
 		public bool ProcessKuaFuLueDuoMallRefreshCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -739,7 +739,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600074E RID: 1870 RVA: 0x0006CEEC File Offset: 0x0006B0EC
+		
 		public bool ProcessGetKuaFuLueDuoMainInfoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -789,7 +789,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600074F RID: 1871 RVA: 0x0006D148 File Offset: 0x0006B348
+		
 		private int GetKuaFuLueDuoRankNum(GameClient client, int ranktype)
 		{
 			int rankNum = 0;
@@ -857,7 +857,7 @@ namespace GameServer.Logic
 			return rankNum;
 		}
 
-		// Token: 0x06000750 RID: 1872 RVA: 0x0006D3B8 File Offset: 0x0006B5B8
+		
 		public bool ProcessGetKuaFuLueDuoRankInfoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -904,7 +904,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000751 RID: 1873 RVA: 0x0006D54C File Offset: 0x0006B74C
+		
 		public bool ProcessGetKuaFuLueDuoAnalysisDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -918,7 +918,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000752 RID: 1874 RVA: 0x0006D590 File Offset: 0x0006B790
+		
 		private int UpdateClientEnterNum(GameClient client)
 		{
 			int dayID = TimeUtil.GetOffsetDay2(TimeUtil.NowDateTime());
@@ -937,7 +937,7 @@ namespace GameServer.Logic
 			return dayID;
 		}
 
-		// Token: 0x06000753 RID: 1875 RVA: 0x0006D64C File Offset: 0x0006B84C
+		
 		public bool ProcessKuaFuLueDuoBuyEnterNumCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -992,7 +992,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000754 RID: 1876 RVA: 0x0006D82C File Offset: 0x0006BA2C
+		
 		public bool ProcessKuaFuLueDuoJoinCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1097,7 +1097,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000755 RID: 1877 RVA: 0x0006DBB0 File Offset: 0x0006BDB0
+		
 		public bool ProcessKuaFuLueDuoEnterCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1226,7 +1226,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000756 RID: 1878 RVA: 0x0006DF8C File Offset: 0x0006C18C
+		
 		public bool ProcessGetKuaFuLueDuoStateCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1310,7 +1310,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000757 RID: 1879 RVA: 0x0006E2FC File Offset: 0x0006C4FC
+		
 		public bool ProcessGetKuaFuLueDuoAwardInfoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1326,7 +1326,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000758 RID: 1880 RVA: 0x0006E35C File Offset: 0x0006C55C
+		
 		public bool ProcessGetKuaFuLueDuoAwardCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1343,20 +1343,20 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000759 RID: 1881 RVA: 0x0006E3C8 File Offset: 0x0006C5C8
+		
 		private bool CheckMap(GameClient client)
 		{
 			SceneUIClasses sceneType = Global.GetMapSceneType(client.ClientData.MapCode);
 			return sceneType == SceneUIClasses.Normal;
 		}
 
-		// Token: 0x0600075A RID: 1882 RVA: 0x0006E3F9 File Offset: 0x0006C5F9
+		
 		private void OnInitGame(GameClient client)
 		{
 			this.UpdateChengHaoBuffer(client, false);
 		}
 
-		// Token: 0x0600075B RID: 1883 RVA: 0x0006E408 File Offset: 0x0006C608
+		
 		private KuaFuLueDuoFuBenData GetFuBenDataByGameId(long gameId)
 		{
 			KuaFuLueDuoFuBenData fuBenData = null;
@@ -1388,7 +1388,7 @@ namespace GameServer.Logic
 			return fuBenData;
 		}
 
-		// Token: 0x0600075C RID: 1884 RVA: 0x0006E554 File Offset: 0x0006C754
+		
 		public bool KuaFuLogin(KuaFuServerLoginData kuaFuServerLoginData)
 		{
 			KuaFuLueDuoFuBenData fuBenData = this.GetFuBenDataByGameId(kuaFuServerLoginData.GameId);
@@ -1405,7 +1405,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600075D RID: 1885 RVA: 0x0006E5BC File Offset: 0x0006C7BC
+		
 		public bool OnInitGameKuaFu(GameClient client)
 		{
 			int bhid = client.ClientData.Faction;
@@ -1496,7 +1496,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600075E RID: 1886 RVA: 0x0006E974 File Offset: 0x0006CB74
+		
 		public bool GetZhanMengBirthPoint(KuaFuLueDuoConfig sceneInfo, GameClient client, int toMapCode, out int mapCode, out int posX, out int posY, bool isLogin = false)
 		{
 			mapCode = sceneInfo.MapCode;
@@ -1541,7 +1541,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600075F RID: 1887 RVA: 0x0006EB0C File Offset: 0x0006CD0C
+		
 		public void HandleNtfEnterEvent(KuaFuLueDuoNtfEnterData data)
 		{
 			foreach (GameClient client in GameManager.ClientMgr.GetAllClients(true))
@@ -1557,7 +1557,7 @@ namespace GameServer.Logic
 			LogManager.WriteLog(LogTypes.Error, string.Format("通知战盟ID={0}拥有进入跨服掠夺资格", string.Join<int>(",", data.BhIdList)), null, true);
 		}
 
-		// Token: 0x06000760 RID: 1888 RVA: 0x0006EBD8 File Offset: 0x0006CDD8
+		
 		private void TimerProc(object sender, EventArgs e)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -1691,19 +1691,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000761 RID: 1889 RVA: 0x0006F2F0 File Offset: 0x0006D4F0
+		
 		public bool IsGongNengOpenedEnter(GameClient client, bool hint = false)
 		{
 			return GlobalNew.IsGongNengOpened(client, GongNengIDs.KuaFuLueDuoEnter, hint);
 		}
 
-		// Token: 0x06000762 RID: 1890 RVA: 0x0006F30C File Offset: 0x0006D50C
+		
 		private bool IsGongNengOpenedJingJia(GameClient client, bool hint = false)
 		{
 			return GlobalNew.IsGongNengOpened(client, GongNengIDs.KuaFuLueDuoJingJia, hint);
 		}
 
-		// Token: 0x06000763 RID: 1891 RVA: 0x0006F328 File Offset: 0x0006D528
+		
 		public List<KuaFuLueDuoAwardsData> GetClientAwardsDataList(GameClient client, KuaFuLueDuoConfig sceneInfo)
 		{
 			List<KuaFuLueDuoAwardsData> awardsDataList = new List<KuaFuLueDuoAwardsData>();
@@ -1736,14 +1736,14 @@ namespace GameServer.Logic
 			return awardsDataList;
 		}
 
-		// Token: 0x06000764 RID: 1892 RVA: 0x0006F43C File Offset: 0x0006D63C
+		
 		private void NtfCanGetAward(GameClient client, KuaFuLueDuoConfig sceneInfo)
 		{
 			List<KuaFuLueDuoAwardsData> awardsDataList = this.GetClientAwardsDataList(client, sceneInfo);
 			client.sendCmd<List<KuaFuLueDuoAwardsData>>(1254, awardsDataList, false);
 		}
 
-		// Token: 0x06000765 RID: 1893 RVA: 0x0006F464 File Offset: 0x0006D664
+		
 		private bool ValidateAwardsInfo(List<int> args)
 		{
 			if (args != null && args.Count >= 8 && args[3] > 0)
@@ -1756,7 +1756,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000766 RID: 1894 RVA: 0x0006F4E4 File Offset: 0x0006D6E4
+		
 		private int GiveRoleAwards(GameClient client, KuaFuLueDuoConfig sceneInfo)
 		{
 			List<KuaFuLueDuoAwardsData> awardsDataList = new List<KuaFuLueDuoAwardsData>();
@@ -1808,7 +1808,7 @@ namespace GameServer.Logic
 			return 1;
 		}
 
-		// Token: 0x06000767 RID: 1895 RVA: 0x0006F6F8 File Offset: 0x0006D8F8
+		
 		public void GiveAwards(KuaFuLueDuoScene scene)
 		{
 			try
@@ -1892,7 +1892,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000768 RID: 1896 RVA: 0x0006FBD0 File Offset: 0x0006DDD0
+		
 		public void PushGameResultData(KuaFuLueDuoScene scene)
 		{
 			KuaFuLueDuoFuBenData fuBenData;
@@ -1917,7 +1917,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000769 RID: 1897 RVA: 0x0006FCCC File Offset: 0x0006DECC
+		
 		private void UpdateChengHaoBuffer(GameClient client, bool notify = true)
 		{
 			if (this.RuntimeData.ChengHaoBHid > 0L && (long)client.ClientData.Faction == this.RuntimeData.ChengHaoBHid)
@@ -1951,7 +1951,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600076A RID: 1898 RVA: 0x0006FDD0 File Offset: 0x0006DFD0
+		
 		public bool RefreshKuaFuLueDuoChampionBH()
 		{
 			bool chgChampion = false;
@@ -2001,7 +2001,7 @@ namespace GameServer.Logic
 			return chgChampion;
 		}
 
-		// Token: 0x0600076B RID: 1899 RVA: 0x0006FF50 File Offset: 0x0006E150
+		
 		private bool RefuseChangeBangHui(int bhid)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -2018,7 +2018,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600076C RID: 1900 RVA: 0x00070008 File Offset: 0x0006E208
+		
 		public bool PreRemoveBangHui(GameClient client)
 		{
 			bool result;
@@ -2034,7 +2034,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600076D RID: 1901 RVA: 0x00070058 File Offset: 0x0006E258
+		
 		public bool OnPreBangHuiRemoveMember(PreBangHuiRemoveMemberEventObject e)
 		{
 			bool result;
@@ -2051,7 +2051,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600076E RID: 1902 RVA: 0x000700B0 File Offset: 0x0006E2B0
+		
 		public bool OnPreBangHuiAddMember(PreBangHuiAddMemberEventObject e)
 		{
 			bool result;
@@ -2068,7 +2068,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600076F RID: 1903 RVA: 0x00070108 File Offset: 0x0006E308
+		
 		private void InitScene(KuaFuLueDuoScene scene, GameClient client)
 		{
 			int small = 0;
@@ -2100,7 +2100,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000770 RID: 1904 RVA: 0x0007028C File Offset: 0x0006E48C
+		
 		public bool AddCopyScenes(GameClient client, CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool result;
@@ -2214,7 +2214,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000771 RID: 1905 RVA: 0x000706F0 File Offset: 0x0006E8F0
+		
 		private int CheckCondition(GameClient client, ref KuaFuLueDuoConfig sceneItem, ref KuaFuLueDuoGameStates state, ref int signUpRound)
 		{
 			int result = 0;
@@ -2255,7 +2255,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000772 RID: 1906 RVA: 0x000708D8 File Offset: 0x0006EAD8
+		
 		private TimeSpan GetStartTime(int sceneId)
 		{
 			KuaFuLueDuoConfig sceneItem = null;
@@ -2278,7 +2278,7 @@ namespace GameServer.Logic
 			return TimeUtil.NowDateTime().TimeOfDay;
 		}
 
-		// Token: 0x06000773 RID: 1907 RVA: 0x000709C4 File Offset: 0x0006EBC4
+		
 		public int GetCaiJiMonsterTime(GameClient client, Monster monster)
 		{
 			int result;
@@ -2301,7 +2301,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000774 RID: 1908 RVA: 0x00070A14 File Offset: 0x0006EC14
+		
 		public void GMCaiJi(GameClient client, int ziYuan)
 		{
 			int addScore = ziYuan * 2;
@@ -2333,7 +2333,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000775 RID: 1909 RVA: 0x00070B34 File Offset: 0x0006ED34
+		
 		public void OnCaiJiFinish(GameClient client, Monster monster)
 		{
 			int addScore = 0;
@@ -2375,7 +2375,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000776 RID: 1910 RVA: 0x00070CBC File Offset: 0x0006EEBC
+		
 		public void InstallJunQi(KuaFuLueDuoScene scene, CopyMap copyMap, GameClient client, QiZhiConfig item)
 		{
 			GameMap gameMap = GameManager.MapMgr.GetGameMap(scene.SceneInfo.MapCode);
@@ -2387,7 +2387,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000777 RID: 1911 RVA: 0x00070D50 File Offset: 0x0006EF50
+		
 		public bool OnSpriteClickOnNpc(GameClient client, int npcID, int npcExtentionID)
 		{
 			bool isQiZuo = false;
@@ -2430,7 +2430,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000778 RID: 1912 RVA: 0x00070F00 File Offset: 0x0006F100
+		
 		public void OnProcessJunQiDead(GameClient client, Monster monster)
 		{
 			QiZhiConfig qizhiConfig = monster.Tag as QiZhiConfig;
@@ -2447,7 +2447,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000779 RID: 1913 RVA: 0x00070F98 File Offset: 0x0006F198
+		
 		public bool ClientRelive(GameClient client)
 		{
 			bool result;
@@ -2488,7 +2488,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600077A RID: 1914 RVA: 0x00071104 File Offset: 0x0006F304
+		
 		private void ProcessEnd(KuaFuLueDuoScene scene, long nowTicks)
 		{
 			Dictionary<int, int> lueDuoDict = new Dictionary<int, int>();
@@ -2527,7 +2527,7 @@ namespace GameServer.Logic
 			GameManager.ClientMgr.BroadSpecialCopyMapMessage<GameSceneStateTimeData>(827, scene.StateTimeData, scene.CopyMap);
 		}
 
-		// Token: 0x0600077B RID: 1915 RVA: 0x00071318 File Offset: 0x0006F518
+		
 		public void TimerProc()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -2648,7 +2648,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600077C RID: 1916 RVA: 0x00071864 File Offset: 0x0006FA64
+		
 		public void CheckCreateDynamicMonster(KuaFuLueDuoScene scene, long nowMs)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -2686,7 +2686,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600077D RID: 1917 RVA: 0x00071A30 File Offset: 0x0006FC30
+		
 		public void NotifyTimeStateInfoAndScoreInfo(GameClient client, bool timeState = true, bool sideScore = true)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -2715,7 +2715,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600077E RID: 1918 RVA: 0x00071B30 File Offset: 0x0006FD30
+		
 		public void NotifyTimeStateInfoAndScoreInfo(KuaFuLueDuoScene scene, bool timeState = true, bool sideScore = true)
 		{
 			List<GameClient> list = scene.CopyMap.GetClientsList();
@@ -2741,7 +2741,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600077F RID: 1919 RVA: 0x00071C30 File Offset: 0x0006FE30
+		
 		public void OnKillRole(GameClient client, GameClient other)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -2772,7 +2772,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000780 RID: 1920 RVA: 0x00071DE0 File Offset: 0x0006FFE0
+		
 		public void LeaveFuBen(GameClient client)
 		{
 			KuaFuLueDuoScene scene = client.SceneObject as KuaFuLueDuoScene;
@@ -2801,13 +2801,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000781 RID: 1921 RVA: 0x00071E91 File Offset: 0x00070091
+		
 		public void OnLogout(GameClient client)
 		{
 			this.LeaveFuBen(client);
 		}
 
-		// Token: 0x06000782 RID: 1922 RVA: 0x00071E9C File Offset: 0x0007009C
+		
 		public void OnStartPlayGame(GameClient client)
 		{
 			KuaFuLueDuoScene scene = client.SceneObject as KuaFuLueDuoScene;
@@ -2818,7 +2818,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000783 RID: 1923 RVA: 0x00071ED4 File Offset: 0x000700D4
+		
 		private void SceneInfoChangeRole(KuaFuLueDuoScene scene, GameClient client, int addNum = 0)
 		{
 			int bhid = client.ClientData.Faction;
@@ -2863,7 +2863,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000784 RID: 1924 RVA: 0x000720EC File Offset: 0x000702EC
+		
 		private void CheckSceneScoreTime(KuaFuLueDuoScene scene, long nowTicks)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -2876,35 +2876,35 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000785 RID: 1925 RVA: 0x0007214C File Offset: 0x0007034C
+		
 		private int CalMVPScore(KuaFuLueDuoScene scene, int factor)
 		{
 			int beginSecs = (int)(TimeUtil.NOW() - scene.m_lBeginTime) / 1000;
 			return (int)((1.0 + (double)beginSecs / 60.0 * 0.075) * (double)factor);
 		}
 
-		// Token: 0x04000CB1 RID: 3249
+		
 		public const SceneUIClasses ManagerType = SceneUIClasses.KuaFuLueDuo;
 
-		// Token: 0x04000CB2 RID: 3250
+		
 		private static KuaFuLueDuoManager instance = new KuaFuLueDuoManager();
 
-		// Token: 0x04000CB3 RID: 3251
+		
 		public KuaFuLueDuoData RuntimeData = new KuaFuLueDuoData();
 
-		// Token: 0x04000CB4 RID: 3252
+		
 		public KuaFuLueDuoSyncData SyncDataCache = new KuaFuLueDuoSyncData();
 
-		// Token: 0x04000CB5 RID: 3253
+		
 		public KuaFuLueDuoSyncData RequestSyncData = new KuaFuLueDuoSyncData();
 
-		// Token: 0x04000CB6 RID: 3254
+		
 		private RoleDataEx OwnerRoleData = null;
 
-		// Token: 0x04000CB7 RID: 3255
+		
 		public ConcurrentDictionary<int, KuaFuLueDuoScene> SceneDict = new ConcurrentDictionary<int, KuaFuLueDuoScene>();
 
-		// Token: 0x04000CB8 RID: 3256
+		
 		private static long NextHeartBeatTicks = 0L;
 	}
 }

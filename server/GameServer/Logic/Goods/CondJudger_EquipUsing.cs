@@ -4,10 +4,10 @@ using Server.Data;
 
 namespace GameServer.Logic.Goods
 {
-	// Token: 0x02000474 RID: 1140
+	
 	public class CondJudger_EquipUsing : ICondJudger
 	{
-		// Token: 0x060014CD RID: 5325 RVA: 0x00145DB0 File Offset: 0x00143FB0
+		
 		public bool Judge(GameClient client, string arg, out string failedMsg)
 		{
 			failedMsg = "";

@@ -39,16 +39,16 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006C7 RID: 1735
+	
 	public class ClientManager
 	{
-		// Token: 0x06002132 RID: 8498 RVA: 0x001C57D4 File Offset: 0x001C39D4
+		
 		public int GetMaxClientCount()
 		{
 			return 2000;
 		}
 
-		// Token: 0x06002133 RID: 8499 RVA: 0x001C57EC File Offset: 0x001C39EC
+		
 		public void initialize(IEnumerable<XElement> mapItems)
 		{
 			this.Container.initialize(mapItems);
@@ -59,7 +59,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002134 RID: 8500 RVA: 0x001C5834 File Offset: 0x001C3A34
+		
 		public bool AddClient(GameClient client)
 		{
 			try
@@ -100,13 +100,13 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06002135 RID: 8501 RVA: 0x001C59F4 File Offset: 0x001C3BF4
+		
 		public void AddClientToContainer(GameClient client)
 		{
 			this.Container.AddObject(client.ClientData.RoleID, client.ClientData.MapCode, client);
 		}
 
-		// Token: 0x06002136 RID: 8502 RVA: 0x001C5A1C File Offset: 0x001C3C1C
+		
 		public void RemoveClient(GameClient client)
 		{
 			try
@@ -155,7 +155,7 @@ namespace GameServer.Logic
 			this.RemoveClientFromContainer(client);
 		}
 
-		// Token: 0x06002137 RID: 8503 RVA: 0x001C5C18 File Offset: 0x001C3E18
+		
 		public void RemoveClientFromContainer(GameClient client)
 		{
 			GameMap gameMap = null;
@@ -177,7 +177,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002138 RID: 8504 RVA: 0x001C5D50 File Offset: 0x001C3F50
+		
 		public int FindClientNid(int RoleID)
 		{
 			int nNid = -1;
@@ -191,7 +191,7 @@ namespace GameServer.Logic
 			return nNid;
 		}
 
-		// Token: 0x06002139 RID: 8505 RVA: 0x001C5DB8 File Offset: 0x001C3FB8
+		
 		public GameClient FindClientByNid(int nNid)
 		{
 			GameClient result;
@@ -206,7 +206,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600213A RID: 8506 RVA: 0x001C5DEC File Offset: 0x001C3FEC
+		
 		public GameClient FindClient(TMSKSocket socket)
 		{
 			GameClient result;
@@ -221,14 +221,14 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600213B RID: 8507 RVA: 0x001C5E1C File Offset: 0x001C401C
+		
 		public GameClient FindClient(int roleID)
 		{
 			int nNid = this.FindClientNid(roleID);
 			return this.FindClientByNid(nNid);
 		}
 
-		// Token: 0x0600213C RID: 8508 RVA: 0x001C5E40 File Offset: 0x001C4040
+		
 		public bool ClientExists(GameClient client)
 		{
 			object obj = null;
@@ -239,7 +239,7 @@ namespace GameServer.Logic
 			return null != obj;
 		}
 
-		// Token: 0x0600213D RID: 8509 RVA: 0x001C5EB8 File Offset: 0x001C40B8
+		
 		public GameClient GetNextClient(ref int nNid, bool loading = false)
 		{
 			GameClient result;
@@ -273,13 +273,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600213E RID: 8510 RVA: 0x001C5F50 File Offset: 0x001C4150
+		
 		public List<object> GetMapClients(int mapCode)
 		{
 			return this.Container.GetObjectsByMap(mapCode);
 		}
 
-		// Token: 0x0600213F RID: 8511 RVA: 0x001C5F70 File Offset: 0x001C4170
+		
 		public List<GameClient> GetMapGameClients(int mapCode)
 		{
 			List<object> objsList = this.Container.GetObjectsByMap(mapCode);
@@ -298,7 +298,7 @@ namespace GameServer.Logic
 			return clientList;
 		}
 
-		// Token: 0x06002140 RID: 8512 RVA: 0x001C6004 File Offset: 0x001C4204
+		
 		public List<GameClient> GetMapAliveClients(int mapCode)
 		{
 			List<GameClient> lsAliveClient = new List<GameClient>();
@@ -323,7 +323,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002141 RID: 8513 RVA: 0x001C608C File Offset: 0x001C428C
+		
 		public List<GameClient> GetMapAliveClientsEx(int mapCode, bool writeLog = true)
 		{
 			List<GameClient> lsAliveClient = new List<GameClient>();
@@ -383,7 +383,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002142 RID: 8514 RVA: 0x001C62E4 File Offset: 0x001C44E4
+		
 		public int GetMapAliveClientCountEx(int mapCode)
 		{
 			int aliveClientCount = 0;
@@ -438,13 +438,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002143 RID: 8515 RVA: 0x001C651C File Offset: 0x001C471C
+		
 		public int GetMapClientsCount(int mapCode)
 		{
 			return this.Container.GetObjectsCountByMap(mapCode);
 		}
 
-		// Token: 0x06002144 RID: 8516 RVA: 0x001C653C File Offset: 0x001C473C
+		
 		public int GetClientCount()
 		{
 			int count = 0;
@@ -455,7 +455,7 @@ namespace GameServer.Logic
 			return 2000 - count;
 		}
 
-		// Token: 0x06002145 RID: 8517 RVA: 0x001C659C File Offset: 0x001C479C
+		
 		public int GetClientCountFromDict()
 		{
 			int count = 0;
@@ -466,13 +466,13 @@ namespace GameServer.Logic
 			return count;
 		}
 
-		// Token: 0x06002146 RID: 8518 RVA: 0x001C65F8 File Offset: 0x001C47F8
+		
 		public string GetAllMapRoleNumStr()
 		{
 			return this.Container.GetAllMapRoleNumStr();
 		}
 
-		// Token: 0x06002147 RID: 8519 RVA: 0x001C6618 File Offset: 0x001C4818
+		
 		public GameClient GetFirstClient()
 		{
 			GameClient client = null;
@@ -493,7 +493,7 @@ namespace GameServer.Logic
 			return client;
 		}
 
-		// Token: 0x06002148 RID: 8520 RVA: 0x001C66D8 File Offset: 0x001C48D8
+		
 		public GameClient GetRandomClient()
 		{
 			lock (this._DictClientNids)
@@ -509,7 +509,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002149 RID: 8521 RVA: 0x001C677C File Offset: 0x001C497C
+		
 		public void PushBackTcpOutPacket(TCPOutPacket tcpOutPacket)
 		{
 			if (null != tcpOutPacket)
@@ -518,7 +518,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600214A RID: 8522 RVA: 0x001C67A8 File Offset: 0x001C49A8
+		
 		public void SendToClients(SocketListener sl, TCPOutPacketPool pool, object self, List<object> objsList, byte[] bytesData, int cmdID)
 		{
 			if (null != objsList)
@@ -556,7 +556,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600214B RID: 8523 RVA: 0x001C689C File Offset: 0x001C4A9C
+		
 		public void SendToClients(SocketListener sl, TCPOutPacketPool pool, object self, List<object> objsList, string strCmd, int cmdID)
 		{
 			if (null != objsList)
@@ -592,7 +592,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600214C RID: 8524 RVA: 0x001C697C File Offset: 0x001C4B7C
+		
 		public void SendToClients<T>(SocketListener sl, TCPOutPacketPool pool, object self, List<object> objsList, T scData, int cmdID)
 		{
 			if (null != objsList)
@@ -621,7 +621,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600214D RID: 8525 RVA: 0x001C6A3C File Offset: 0x001C4C3C
+		
 		public void SendToClients<T1, T2>(SocketListener sl, TCPOutPacketPool pool, object self, List<T1> objsList, T2 data, int cmdID, int hideFlag, int includeRoleId)
 		{
 			if (null != objsList)
@@ -671,7 +671,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600214E RID: 8526 RVA: 0x001C6BC4 File Offset: 0x001C4DC4
+		
 		public void SendToClients(SocketListener sl, TCPOutPacketPool pool, object self, object obj, List<object> objsList, byte[] bytesData, byte[] bytesData2, int cmdID, bool sendIfHide)
 		{
 			if (null != objsList)
@@ -707,7 +707,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600214F RID: 8527 RVA: 0x001C6CC4 File Offset: 0x001C4EC4
+		
 		public void SendToClients<T1, T2>(SocketListener sl, TCPOutPacketPool pool, object self, object obj, List<T1> objsList, T2 data, T2 data2, int cmdID, int hideFlag, int includeRoleId)
 		{
 			if (null != objsList)
@@ -760,7 +760,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002150 RID: 8528 RVA: 0x001C6E60 File Offset: 0x001C5060
+		
 		public void SendToClient(SocketListener sl, TCPOutPacketPool pool, GameClient client, string strCmd, int cmdID)
 		{
 			if (null != client)
@@ -775,7 +775,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002151 RID: 8529 RVA: 0x001C6EAC File Offset: 0x001C50AC
+		
 		public void SendToClient(GameClient client, string strCmd, int cmdID)
 		{
 			if (null != client)
@@ -790,7 +790,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002152 RID: 8530 RVA: 0x001C6F08 File Offset: 0x001C5108
+		
 		public void SendToClient(GameClient client, byte[] buffer, int cmdID)
 		{
 			if (null != client)
@@ -805,14 +805,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002153 RID: 8531 RVA: 0x001C6F68 File Offset: 0x001C5168
+		
 		public void NotifyClientOpenWindow(GameClient client, int windowType, string strParams)
 		{
 			string cmd = string.Format("{0}:{1}:{2}", client.ClientData.RoleID, windowType, strParams);
 			this.SendToClient(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, client, cmd, 419);
 		}
 
-		// Token: 0x06002154 RID: 8532 RVA: 0x001C6FBC File Offset: 0x001C51BC
+		
 		public void NotifyOthersIamComing(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList, int cmd)
 		{
 			if (null != objsList)
@@ -823,7 +823,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002155 RID: 8533 RVA: 0x001C6FF8 File Offset: 0x001C51F8
+		
 		public int NotifySelfOnlineOthers(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList, int cmd)
 		{
 			int result;
@@ -867,7 +867,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002156 RID: 8534 RVA: 0x001C7128 File Offset: 0x001C5328
+		
 		public void NotifySelfOnline(SocketListener sl, TCPOutPacketPool pool, GameClient client, GameClient otherClient, int cmd)
 		{
 			if (null != otherClient)
@@ -880,7 +880,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002157 RID: 8535 RVA: 0x001C716C File Offset: 0x001C536C
+		
 		public void NotifySelfOnlineData(SocketListener sl, TCPOutPacketPool pool, GameClient client, GameClient otherClient, int cmd)
 		{
 			if (null != otherClient)
@@ -893,7 +893,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002158 RID: 8536 RVA: 0x001C71B0 File Offset: 0x001C53B0
+		
 		public void NotifySelfOtherData(SocketListener sl, TCPOutPacketPool pool, GameClient client, RoleDataEx roleDataEx, int cmd)
 		{
 			RoleData roleData = null;
@@ -907,7 +907,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002159 RID: 8537 RVA: 0x001C71F4 File Offset: 0x001C53F4
+		
 		public void NotifyMyselfOtherLoadAlready(SocketListener sl, TCPOutPacketPool pool, GameClient client, int otherRoleID, int mapCode, long startMoveTicks, int currentX, int currentY, int currentDirection, int action, int toX, int toY, double moveCost = 1.0, int extAction = 0, int currentPathIndex = 0)
 		{
 			GameClient otherClient = this.FindClient(otherRoleID);
@@ -934,7 +934,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600215A RID: 8538 RVA: 0x001C72D0 File Offset: 0x001C54D0
+		
 		public void NotifyMyselfOtherMoving(SocketListener sl, TCPOutPacketPool pool, GameClient client, int otherRoleID, int mapCode, int action, long startMoveTicks, int fromX, int fromY, int toX, int toY, int cmd, double moveCost = 1.0, int extAction = 0)
 		{
 			GameClient otherClient = this.FindClient(otherRoleID);
@@ -958,7 +958,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600215B RID: 8539 RVA: 0x001C7388 File Offset: 0x001C5588
+		
 		public void NotifyMyselfOthersMoving(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList)
 		{
 			if (null != objsList)
@@ -979,7 +979,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600215C RID: 8540 RVA: 0x001C7554 File Offset: 0x001C5754
+		
 		public void NotifyOthersMyMoving(SocketListener sl, TCPOutPacketPool pool, SpriteNotifyOtherMoveData moveData, GameClient client, int cmd, List<object> objsList = null)
 		{
 			if (null == objsList)
@@ -992,7 +992,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600215D RID: 8541 RVA: 0x001C759C File Offset: 0x001C579C
+		
 		public void NotifyOthersMyMovingEnd(SocketListener sl, TCPOutPacketPool pool, GameClient client, int mapCode, int action, int toX, int toY, int direction, int tryRun, bool sendToSelf, List<object> objsList = null)
 		{
 			if (null == objsList)
@@ -1006,7 +1006,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600215E RID: 8542 RVA: 0x001C7604 File Offset: 0x001C5804
+		
 		public void NotifyOthersStopMyMoving(SocketListener sl, TCPOutPacketPool pool, GameClient client, int stopIndex, List<object> objsList = null)
 		{
 			if (null == objsList)
@@ -1020,7 +1020,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600215F RID: 8543 RVA: 0x001C766C File Offset: 0x001C586C
+		
 		public bool NotifyOthersToMoving(SocketListener sl, TCPOutPacketPool pool, IObject obj, int mapCode, int copyMapID, int roleID, long startMoveTicks, int currentX, int currentY, int action, int toX, int toY, int cmd, double moveCost = 1.0, string pathString = "", List<object> objsList = null)
 		{
 			if (null == objsList)
@@ -1060,7 +1060,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002160 RID: 8544 RVA: 0x001C7738 File Offset: 0x001C5938
+		
 		public void NotifyMyselfMonsterLoadAlready(SocketListener sl, TCPOutPacketPool pool, GameClient client, int monsterID, int mapCode, long startMoveTicks, int currentX, int currentY, int currentDirection, int action, int toX, int toY, double moveCost = 1.0, int extAction = 0, string pathString = "", int currentPathIndex = 0)
 		{
 			LoadAlreadyData loadAlreadyData = new LoadAlreadyData
@@ -1086,7 +1086,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002161 RID: 8545 RVA: 0x001C77E8 File Offset: 0x001C59E8
+		
 		public void NotifyMyselfMonsterMoving(SocketListener sl, TCPOutPacketPool pool, GameClient client, int monsterID, int mapCode, int action, long startMoveTicks, int fromX, int fromY, int toX, int toY, int cmd, double moveCost = 1.0, int extAction = 0, string pathString = "")
 		{
 			byte[] bytes = DataHelper.ObjectToBytes<SpriteNotifyOtherMoveData>(new SpriteNotifyOtherMoveData
@@ -1109,7 +1109,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002162 RID: 8546 RVA: 0x001C7880 File Offset: 0x001C5A80
+		
 		public void NotifyMyselfMonstersMoving(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList)
 		{
 			if (null != objsList)
@@ -1128,7 +1128,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002163 RID: 8547 RVA: 0x001C7A14 File Offset: 0x001C5C14
+		
 		public void NotifyOthersMyAction(SocketListener sl, TCPOutPacketPool pool, GameClient client, int roleID, int mapCode, int direction, int action, int x, int y, int targetX, int targetY, int yAngle, int moveToX, int moveToY, int cmd)
 		{
 			List<object> objsList = Global.GetAll9Clients(client);
@@ -1151,7 +1151,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002164 RID: 8548 RVA: 0x001C7AA8 File Offset: 0x001C5CA8
+		
 		public void NotifyOthersMyAction(SocketListener sl, TCPOutPacketPool pool, GameClient client, SpriteActionData cmdData, int cmd)
 		{
 			List<object> objsList = Global.GetAll9Clients(client);
@@ -1161,7 +1161,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002165 RID: 8549 RVA: 0x001C7AE0 File Offset: 0x001C5CE0
+		
 		public void NotifyOthersDoAction(SocketListener sl, TCPOutPacketPool pool, IObject obj, int mapCode, int copyMapID, int roleID, int direction, int action, int x, int y, int targetX, int targetY, int cmd, List<object> objsList)
 		{
 			if (null == objsList)
@@ -1194,7 +1194,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002166 RID: 8550 RVA: 0x001C7BA4 File Offset: 0x001C5DA4
+		
 		public void NotifyOthersChangeAngle(SocketListener sl, TCPOutPacketPool pool, GameClient client, int roleID, int direction, int yAngle, int cmd)
 		{
 			List<object> objsList = Global.GetAll9Clients(client);
@@ -1205,7 +1205,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002167 RID: 8551 RVA: 0x001C7BF4 File Offset: 0x001C5DF4
+		
 		public void NotifyOthersMagicCode(SocketListener sl, TCPOutPacketPool pool, IObject attacker, int roleID, int mapCode, int magicCode, int cmd)
 		{
 			List<object> objsList = Global.GetAll9Clients(attacker);
@@ -1220,7 +1220,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002168 RID: 8552 RVA: 0x001C7C48 File Offset: 0x001C5E48
+		
 		public void NotifySpriteHited(SocketListener sl, TCPOutPacketPool pool, IObject attacker, int enemy, int enemyX, int enemyY, int magicCode)
 		{
 			List<object> objsList = Global.GetAll9Clients(attacker);
@@ -1256,7 +1256,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002169 RID: 8553 RVA: 0x001C7D6C File Offset: 0x001C5F6C
+		
 		public void AddDelayDecoToMap(IObject attacker, int magicCode, int mapCode, int copyMapID, int posX, int posY)
 		{
 			SystemXmlItem systemMagic = null;
@@ -1313,7 +1313,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600216A RID: 8554 RVA: 0x001C803C File Offset: 0x001C623C
+		
 		public void NotifyOthersRealive(SocketListener sl, TCPOutPacketPool pool, GameClient client, int roleID, int posX, int posY, int direction)
 		{
 			List<object> objsList = Global.GetAll9Clients(client);
@@ -1332,7 +1332,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600216B RID: 8555 RVA: 0x001C80B0 File Offset: 0x001C62B0
+		
 		public void NotifyTeamRealive(SocketListener sl, TCPOutPacketPool pool, int roleID, int posX, int posY, int direction)
 		{
 			GameClient otherClient = this.FindClient(roleID);
@@ -1389,7 +1389,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600216C RID: 8556 RVA: 0x001C8278 File Offset: 0x001C6478
+		
 		public void NotifyMySelfRealive(SocketListener sl, TCPOutPacketPool pool, GameClient client, int roleID, int posX, int posY, int direction)
 		{
 			MonsterRealiveData monsterRealiveData = new MonsterRealiveData
@@ -1406,7 +1406,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600216D RID: 8557 RVA: 0x001C82DC File Offset: 0x001C64DC
+		
 		public void NotifyMonsterRealive(SocketListener sl, TCPOutPacketPool pool, IObject obj, int mapCode, int copyMapID, int roleID, int posX, int posY, int direction, List<object> objsList)
 		{
 			if (null == objsList)
@@ -1433,7 +1433,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600216E RID: 8558 RVA: 0x001C836C File Offset: 0x001C656C
+		
 		public void NotifyOthersLeave(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList)
 		{
 			if (null != objsList)
@@ -1443,7 +1443,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600216F RID: 8559 RVA: 0x001C83B8 File Offset: 0x001C65B8
+		
 		public void NotifyOthersMonsterLeave(SocketListener sl, TCPOutPacketPool pool, Monster monster, List<object> objsList)
 		{
 			if (null != objsList)
@@ -1453,7 +1453,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002170 RID: 8560 RVA: 0x001C8400 File Offset: 0x001C6600
+		
 		public void NotifyMyselfLeaveOthers(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList)
 		{
 			if (null != objsList)
@@ -1476,7 +1476,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002171 RID: 8561 RVA: 0x001C84D0 File Offset: 0x001C66D0
+		
 		public void NotifyMyselfLeaveMonsters(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList)
 		{
 			if (null != objsList)
@@ -1494,7 +1494,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002172 RID: 8562 RVA: 0x001C8540 File Offset: 0x001C6740
+		
 		public bool NotifyMyselfLeaveMonsterByID(SocketListener sl, TCPOutPacketPool pool, GameClient client, int monsterID)
 		{
 			string strcmd = string.Format("{0}:{1}", monsterID, 2);
@@ -1502,7 +1502,7 @@ namespace GameServer.Logic
 			return sl.SendData(client.ClientSocket, tcpOutPacket, true);
 		}
 
-		// Token: 0x06002173 RID: 8563 RVA: 0x001C8590 File Offset: 0x001C6790
+		
 		public void JugeSpriteDead(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			if (client.ClientData.CurrentLifeV <= 0)
@@ -1512,7 +1512,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002174 RID: 8564 RVA: 0x001C864C File Offset: 0x001C684C
+		
 		public void NotifySelfLifeChanged(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			byte[] cmdData = DataHelper.ObjectToBytes<SpriteLifeChangeData>(new SpriteLifeChangeData
@@ -1526,7 +1526,7 @@ namespace GameServer.Logic
 			this.SendToClient(client, cmdData, 164);
 		}
 
-		// Token: 0x06002175 RID: 8565 RVA: 0x001C86CC File Offset: 0x001C68CC
+		
 		public bool NotifyOthersRelife(SocketListener sl, TCPOutPacketPool pool, IObject obj, int mapCode, int copyMapID, int roleID, int x, int y, int direction, double lifeV, double magicV, int cmd, List<object> objsList, int force = 0)
 		{
 			if (null == objsList)
@@ -1564,7 +1564,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002176 RID: 8566 RVA: 0x001C8784 File Offset: 0x001C6984
+		
 		public void UserFullLife(GameClient client, string reason, bool allSend = true)
 		{
 			RoleRelifeLog relifeLog = new RoleRelifeLog(client.ClientData.RoleID, client.ClientData.RoleName, client.ClientData.MapCode, reason);
@@ -1580,7 +1580,7 @@ namespace GameServer.Logic
 			GameManager.ClientMgr.NotifyOthersLifeChanged(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, client, allSend, false, 7);
 		}
 
-		// Token: 0x06002177 RID: 8567 RVA: 0x001C886C File Offset: 0x001C6A6C
+		
 		public void NotifyOthersLifeChanged(SocketListener sl, TCPOutPacketPool pool, GameClient client, bool allSend = true, bool resetMax = false, int flags = 7)
 		{
 			if (!client.ClientData.FirstPlayStart)
@@ -1649,7 +1649,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002178 RID: 8568 RVA: 0x001C8B30 File Offset: 0x001C6D30
+		
 		public void NotifyOthersGoBack(SocketListener sl, TCPOutPacketPool pool, GameClient client, int toPosX = -1, int toPosY = -1, int direction = -1)
 		{
 			if ("1" == GameManager.GameConfigMgr.GetGameConfigItemStr("log-changmap", "0"))
@@ -1691,7 +1691,7 @@ namespace GameServer.Logic
 			GameManager.ClientMgr.ChangePosition(sl, pool, client, posX, posY, direction, 159, 0);
 		}
 
-		// Token: 0x06002179 RID: 8569 RVA: 0x001C8CF8 File Offset: 0x001C6EF8
+		
 		public void NotifyOthersChangeEquip(SocketListener sl, TCPOutPacketPool pool, GameClient client, GoodsData goodsData, int refreshNow, WingData usingWinData = null)
 		{
 			List<object> objsList = Global.GetAll9Clients(client);
@@ -1708,7 +1708,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600217A RID: 8570 RVA: 0x001C8D60 File Offset: 0x001C6F60
+		
 		public void NotifyOthersRebornEquipChanged(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			List<object> objsList = Global.GetAll9Clients(client);
@@ -1719,7 +1719,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600217B RID: 8571 RVA: 0x001C8DC4 File Offset: 0x001C6FC4
+		
 		public void NotifyOthersRebornModelChanged(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			List<object> objsList = Global.GetAll9Clients(client);
@@ -1730,7 +1730,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600217C RID: 8572 RVA: 0x001C8E28 File Offset: 0x001C7028
+		
 		public void NotifyOthersPKModeChanged(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			List<object> objsList = Global.GetAll9Clients(client);
@@ -1741,7 +1741,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600217D RID: 8573 RVA: 0x001C8E88 File Offset: 0x001C7088
+		
 		public void Logout(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			try
@@ -1898,7 +1898,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600217E RID: 8574 RVA: 0x001C9560 File Offset: 0x001C7760
+		
 		private void SaleGoodsToOfflineSale(GameClient client)
 		{
 			if (client.ClientSocket.ClientKuaFuServerLoginData.RoleId <= 0 && !client.CheckCheatData.IsKickedRole)
@@ -1907,7 +1907,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600217F RID: 8575 RVA: 0x001C95A4 File Offset: 0x001C77A4
+		
 		private void ProcessFakeRoleForLiXianGuaJi(GameClient client)
 		{
 			if (client.ClientSocket.ClientKuaFuServerLoginData.RoleId <= 0 && !client.CheckCheatData.IsKickedRole)
@@ -1921,7 +1921,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002180 RID: 8576 RVA: 0x001C9628 File Offset: 0x001C7828
+		
 		public void NotifyUpdateTask(SocketListener sl, TCPOutPacketPool pool, GameClient client, int dbID, int taskID, int taskVal1, int taskVal2, int taskFocus, long chengjiuValue)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}:{5}", new object[]
@@ -1939,7 +1939,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002181 RID: 8577 RVA: 0x001C96AC File Offset: 0x001C78AC
+		
 		public void NotifyUpdateNPCTaskSate(SocketListener sl, TCPOutPacketPool pool, GameClient client, int npcID, int state)
 		{
 			string strcmd = string.Format("{0}:{1}", npcID, state);
@@ -1949,7 +1949,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002182 RID: 8578 RVA: 0x001C96FC File Offset: 0x001C78FC
+		
 		public void NotifyNPCTaskStateList(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<NPCTaskState> npcTaskStatList)
 		{
 			TCPOutPacket tcpOutPacket = DataHelper.ObjectToTCPOutPacket<List<NPCTaskState>>(npcTaskStatList, pool, 152);
@@ -1958,7 +1958,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002183 RID: 8579 RVA: 0x001C972C File Offset: 0x001C792C
+		
 		public bool GiveFirstTask(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, TCPRandKey tcpRandKey, GameClient client, bool bNeedTakeStartTask)
 		{
 			bool result;
@@ -2016,7 +2016,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002184 RID: 8580 RVA: 0x001C9998 File Offset: 0x001C7B98
+		
 		public EquipPropsData GetEquipPropsStr(GameClient client)
 		{
 			client.propsCacheModule.ResetAllProps();
@@ -2128,7 +2128,7 @@ namespace GameServer.Logic
 			return equipPropsData;
 		}
 
-		// Token: 0x06002185 RID: 8581 RVA: 0x001CA020 File Offset: 0x001C8220
+		
 		public void NotifyUpdateEquipProps(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			if (!client.ClientData.FirstPlayStart)
@@ -2148,7 +2148,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002186 RID: 8582 RVA: 0x001CA0C8 File Offset: 0x001C82C8
+		
 		public void NotifyUpdateEscapeBattleProps(SocketListener sl, TCPOutPacketPool pool, GameClient client, EscapeBattlePropNotify ebProp)
 		{
 			if (!client.ClientData.FirstPlayStart)
@@ -2161,18 +2161,18 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002187 RID: 8583 RVA: 0x001CA117 File Offset: 0x001C8317
+		
 		public void NotifyUpdateEquipProps(GameClient client)
 		{
 			this.NotifyUpdateEquipProps(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, client);
 		}
 
-		// Token: 0x06002188 RID: 8584 RVA: 0x001CA136 File Offset: 0x001C8336
+		
 		public void NotifyUpdateWeights(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 		}
 
-		// Token: 0x06002189 RID: 8585 RVA: 0x001CA13C File Offset: 0x001C833C
+		
 		public void NotifyUpdateEquipProps(SocketListener sl, TCPOutPacketPool pool, GameClient client, GameClient otherClient)
 		{
 			EquipPropsData equipPropsData = this.GetEquipPropsStr(otherClient);
@@ -2183,7 +2183,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600218A RID: 8586 RVA: 0x001CA17C File Offset: 0x001C837C
+		
 		public void AddSpriteLifeV(SocketListener sl, TCPOutPacketPool pool, GameClient c, double lifeV, string reason)
 		{
 			if (c.ClientData.CurrentLifeV > 0)
@@ -2202,7 +2202,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600218B RID: 8587 RVA: 0x001CA2C4 File Offset: 0x001C84C4
+		
 		public void SubSpriteLifeV(SocketListener sl, TCPOutPacketPool pool, GameClient c, double lifeV)
 		{
 			if (c.ClientData.CurrentLifeV > 0)
@@ -2213,7 +2213,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600218C RID: 8588 RVA: 0x001CA388 File Offset: 0x001C8588
+		
 		public void AddSpriteMagicV(SocketListener sl, TCPOutPacketPool pool, GameClient c, double magicV, string reason)
 		{
 			if (c.ClientData.CurrentLifeV > 0)
@@ -2232,7 +2232,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600218D RID: 8589 RVA: 0x001CA4D0 File Offset: 0x001C86D0
+		
 		public void SubSpriteMagicV(SocketListener sl, TCPOutPacketPool pool, GameClient c, double magicV)
 		{
 			if (c.ClientData.IsFlashPlayer != 1 || c.ClientData.MapCode != 6090)
@@ -2246,7 +2246,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600218E RID: 8590 RVA: 0x001CA5C4 File Offset: 0x001C87C4
+		
 		public void NotifyPetCmd(SocketListener sl, TCPOutPacketPool pool, GameClient client, int status, int petType, int extTag1, string extTag2, List<object> objsList)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}", new object[]
@@ -2270,7 +2270,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600218F RID: 8591 RVA: 0x001CA664 File Offset: 0x001C8864
+		
 		public void RemoveRolePet(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList, bool notifySelf)
 		{
 			if (client.ClientData.PetDbID > 0 && client.ClientData.PetRoleID > 0)
@@ -2283,7 +2283,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002190 RID: 8592 RVA: 0x001CA6DC File Offset: 0x001C88DC
+		
 		public void NotifySelfPetShow(GameClient client)
 		{
 			if (client.ClientData.PetDbID > 0)
@@ -2321,7 +2321,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002191 RID: 8593 RVA: 0x001CA8C8 File Offset: 0x001C8AC8
+		
 		public void NotifyOthersMyPetHide(GameClient client)
 		{
 			if (client.ClientData.PetRoleID > 0)
@@ -2331,7 +2331,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002192 RID: 8594 RVA: 0x001CA928 File Offset: 0x001C8B28
+		
 		public void NotifyMySelfOnlineOtherPet(SocketListener sl, TCPOutPacketPool pool, GameClient client, GameClient otherClient)
 		{
 			if (null != otherClient)
@@ -2373,7 +2373,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002193 RID: 8595 RVA: 0x001CAB18 File Offset: 0x001C8D18
+		
 		public void NotifyMySelfOnlineOtherPets(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList)
 		{
 			if (null != objsList)
@@ -2422,7 +2422,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002194 RID: 8596 RVA: 0x001CADCC File Offset: 0x001C8FCC
+		
 		public void NotifySelfPetsOfflines(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList)
 		{
 			if (null != objsList)
@@ -2471,7 +2471,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002195 RID: 8597 RVA: 0x001CB080 File Offset: 0x001C9280
+		
 		public void NotifyHorseCmd(SocketListener sl, TCPOutPacketPool pool, GameClient client, int status, int horseType, int horseDbID, int horseID, int horseBodyID, List<object> objsList)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}:{5}", new object[]
@@ -2496,7 +2496,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002196 RID: 8598 RVA: 0x001CB130 File Offset: 0x001C9330
+		
 		public void NotifySelfOnHorse(GameClient client)
 		{
 			if (client.ClientData.HorseDbID > 0)
@@ -2510,7 +2510,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002197 RID: 8599 RVA: 0x001CB1B8 File Offset: 0x001C93B8
+		
 		public void NotifySelfOtherHorse(SocketListener sl, TCPOutPacketPool pool, GameClient client, GameClient otherClient)
 		{
 			if (null != otherClient)
@@ -2541,7 +2541,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002198 RID: 8600 RVA: 0x001CB2CC File Offset: 0x001C94CC
+		
 		public void NotifySelfOthersHorse(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList)
 		{
 			if (null != objsList)
@@ -2579,7 +2579,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002199 RID: 8601 RVA: 0x001CB45C File Offset: 0x001C965C
+		
 		public void JugeTempHorseID(GameClient client)
 		{
 			if (client.ClientData.StartTempHorseIDTicks > 0L)
@@ -2614,7 +2614,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600219A RID: 8602 RVA: 0x001CB5C8 File Offset: 0x001C97C8
+		
 		public void NotifyJingMaiListCmd(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			TCPOutPacket tcpOutPacket = null;
@@ -2635,7 +2635,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600219B RID: 8603 RVA: 0x001CB654 File Offset: 0x001C9854
+		
 		public void NotifyJingMaiInfoCmd(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			TCPOutPacket tcpOutPacket = null;
@@ -2656,7 +2656,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600219C RID: 8604 RVA: 0x001CB6E0 File Offset: 0x001C98E0
+		
 		public void NotifyOtherJingMaiListCmd(SocketListener sl, TCPOutPacketPool pool, GameClient client, int otherRoleID)
 		{
 			TCPOutPacket tcpOutPacket = null;
@@ -2681,7 +2681,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600219D RID: 8605 RVA: 0x001CB78C File Offset: 0x001C998C
+		
 		public void NotifyEndChongXueCmd(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			string strcmd = string.Format("{0}", client.ClientData.RoleID);
@@ -2691,7 +2691,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600219E RID: 8606 RVA: 0x001CB7D8 File Offset: 0x001C99D8
+		
 		public void NotifyJingMaiResult(GameClient client, int retCode, int jingMaiID, int jingMaiLevel)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}", new object[]
@@ -2708,7 +2708,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600219F RID: 8607 RVA: 0x001CB870 File Offset: 0x001C9A70
+		
 		public bool RemoveOldestEnemy(TCPManager tcpMgr, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client)
 		{
 			int totalCount = Global.GetFriendCountByType(client, 2);
@@ -2725,7 +2725,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060021A0 RID: 8608 RVA: 0x001CB8CC File Offset: 0x001C9ACC
+		
 		public void AddToEnemyList(TCPManager tcpMgr, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int killedRoleID)
 		{
 			if (client.ClientData.MapCode != GameManager.BattleMgr.BattleMapCode && client.ClientData.MapCode != GameManager.ArenaBattleMgr.BattleMapCode)
@@ -2758,7 +2758,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021A1 RID: 8609 RVA: 0x001CBA1C File Offset: 0x001C9C1C
+		
 		public bool RemoveFriend(TCPManager tcpMgr, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int dbID)
 		{
 			bool ret = false;
@@ -2793,7 +2793,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x060021A2 RID: 8610 RVA: 0x001CBB44 File Offset: 0x001C9D44
+		
 		public bool AddFriend(TCPManager tcpMgr, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int dbID, int otherRoleID, string otherRoleName, int friendType)
 		{
 			bool ret = false;
@@ -2913,7 +2913,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x060021A3 RID: 8611 RVA: 0x001CBF2C File Offset: 0x001CA12C
+		
 		public void NotifyDianJiangData(SocketListener sl, TCPOutPacketPool pool, DJRoomData roomData)
 		{
 			if (null != roomData)
@@ -2943,7 +2943,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021A4 RID: 8612 RVA: 0x001CC00C File Offset: 0x001CA20C
+		
 		public void NotifyDJRoomRolesData(SocketListener sl, TCPOutPacketPool pool, DJRoomRolesData djRoomRolesData)
 		{
 			if (null != djRoomRolesData)
@@ -2981,7 +2981,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021A5 RID: 8613 RVA: 0x001CC16C File Offset: 0x001CA36C
+		
 		public void NotifyDianJiangCmd(SocketListener sl, TCPOutPacketPool pool, GameClient client, int status, int djCmdType, int extTag1, string extTag2, bool allSend = false)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}", new object[]
@@ -3028,7 +3028,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021A6 RID: 8614 RVA: 0x001CC280 File Offset: 0x001CA480
+		
 		public int DestroyDianJiangRoom(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			int result;
@@ -3098,7 +3098,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060021A7 RID: 8615 RVA: 0x001CC4E0 File Offset: 0x001CA6E0
+		
 		public int LeaveDianJiangRoom(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			int result;
@@ -3189,7 +3189,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060021A8 RID: 8616 RVA: 0x001CC82C File Offset: 0x001CAA2C
+		
 		public int ViewerLeaveDianJiangRoom(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			int result;
@@ -3252,7 +3252,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060021A9 RID: 8617 RVA: 0x001CCA10 File Offset: 0x001CAC10
+		
 		public int TransportDianJiangRoom(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			int result;
@@ -3317,7 +3317,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060021AA RID: 8618 RVA: 0x001CCC54 File Offset: 0x001CAE54
+		
 		public void NotifyDianJiangFightCmd(SocketListener sl, TCPOutPacketPool pool, DJRoomData djRoomData, int djCmdType, string extTag2, GameClient toClient = null)
 		{
 			if (null != djRoomData)
@@ -3418,7 +3418,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021AB RID: 8619 RVA: 0x001CCF64 File Offset: 0x001CB164
+		
 		public void NotifyDJFightRoomLeaveMsg(SocketListener sl, TCPOutPacketPool pool, DJRoomData djRoomData)
 		{
 			if (null != djRoomData)
@@ -3470,7 +3470,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021AC RID: 8620 RVA: 0x001CD208 File Offset: 0x001CB408
+		
 		public void NotifyDianJiangRoomRolesPoint(SocketListener sl, TCPOutPacketPool pool, DJRoomRolesPoint djRoomRolesPoint)
 		{
 			if (null != djRoomRolesPoint)
@@ -3542,7 +3542,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021AD RID: 8621 RVA: 0x001CD45C File Offset: 0x001CB65C
+		
 		public void RemoveDianJiangRoom(SocketListener sl, TCPOutPacketPool pool, DJRoomData djRoomData)
 		{
 			if (null != djRoomData)
@@ -3635,7 +3635,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021AE RID: 8622 RVA: 0x001CD7B8 File Offset: 0x001CB9B8
+		
 		public void NotifyArenaBattleCmd(SocketListener sl, TCPOutPacketPool pool, GameClient client, int status, int battleType, int extTag1, int leftSecs)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}", new object[]
@@ -3652,7 +3652,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021AF RID: 8623 RVA: 0x001CD838 File Offset: 0x001CBA38
+		
 		public void NotifyAllArenaBattleInviteMsg(SocketListener sl, TCPOutPacketPool pool, int minLevel, int battleType, int extTag1, int leftSecs)
 		{
 			int index = 0;
@@ -3680,7 +3680,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021B0 RID: 8624 RVA: 0x001CD918 File Offset: 0x001CBB18
+		
 		public void NotifyArenaBattleInviteMsg(SocketListener sl, TCPOutPacketPool pool, int mapCode, int battleType, int extTag1, int leftSecs)
 		{
 			List<object> objsList = this.Container.GetObjectsByMap(mapCode);
@@ -3698,7 +3698,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021B1 RID: 8625 RVA: 0x001CD994 File Offset: 0x001CBB94
+		
 		public void NotifyArenaBattleKilledNumCmd(SocketListener sl, TCPOutPacketPool pool, int roleNumKilled, int roleNumOnStart, int rowNumNow)
 		{
 			List<object> objsList = this.Container.GetObjectsByMap(GameManager.ArenaBattleMgr.BattleMapCode);
@@ -3716,7 +3716,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021B2 RID: 8626 RVA: 0x001CDA34 File Offset: 0x001CBC34
+		
 		public void NotifyBattleCmd(SocketListener sl, TCPOutPacketPool pool, GameClient client, int status, int battleType, int extTag1, int leftSecs)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}", new object[]
@@ -3733,7 +3733,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021B3 RID: 8627 RVA: 0x001CDAB4 File Offset: 0x001CBCB4
+		
 		public void NotifyAllBattleInviteMsg(SocketListener sl, TCPOutPacketPool pool, int minLevel, int battleType, int extTag1, int leftSecs)
 		{
 			int index = 0;
@@ -3761,7 +3761,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021B4 RID: 8628 RVA: 0x001CDB94 File Offset: 0x001CBD94
+		
 		public void NotifyBattleInviteMsg(SocketListener sl, TCPOutPacketPool pool, int mapCode, int battleType, int extTag1, int leftSecs)
 		{
 			List<object> objsList = this.Container.GetObjectsByMap(mapCode);
@@ -3779,7 +3779,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021B5 RID: 8629 RVA: 0x001CDC10 File Offset: 0x001CBE10
+		
 		public void BattleBeginForceLeaveg(SocketListener sl, TCPOutPacketPool pool, int mapCode)
 		{
 			List<object> objsList = this.Container.GetObjectsByMap(mapCode);
@@ -3796,7 +3796,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021B6 RID: 8630 RVA: 0x001CDC84 File Offset: 0x001CBE84
+		
 		public void NotifyBattleLeaveMsg(SocketListener sl, TCPOutPacketPool pool, int mapCode)
 		{
 			List<object> objsList = this.Container.GetObjectsByMap(mapCode);
@@ -3829,7 +3829,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021B7 RID: 8631 RVA: 0x001CDDBC File Offset: 0x001CBFBC
+		
 		public void NotifyBattleKilledNumCmd(SocketListener sl, TCPOutPacketPool pool, GameClient client, int tangJiFen, int suiJiFen)
 		{
 			int nTotal = BattleManager.BattleMaxPointNow;
@@ -3847,7 +3847,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021B8 RID: 8632 RVA: 0x001CDE4C File Offset: 0x001CC04C
+		
 		public void NotifyBattleKilledNumCmd(SocketListener sl, TCPOutPacketPool pool, int suiJiFen, int tangJiFen)
 		{
 			List<object> objsList = this.Container.GetObjectsByMap(GameManager.BattleMgr.BattleMapCode);
@@ -3865,7 +3865,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021B9 RID: 8633 RVA: 0x001CDED0 File Offset: 0x001CC0D0
+		
 		public void NotifyRoleBattleNameInfo(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			List<object> objsList = Global.GetAll9Clients(client);
@@ -3876,7 +3876,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021BA RID: 8634 RVA: 0x001CDF40 File Offset: 0x001CC140
+		
 		public void ProcessRoleBattleNameInfoTimeOut(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			if (client.ClientData.BattleNameIndex > 0)
@@ -3891,7 +3891,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021BB RID: 8635 RVA: 0x001CDFF8 File Offset: 0x001CC1F8
+		
 		public void NotifyRoleBattleRoleInfo(SocketListener sl, TCPOutPacketPool pool, int mapCode, int startTotalRoleNum, int allKilledRoleNum)
 		{
 			List<object> objsList = this.Container.GetObjectsByMap(mapCode);
@@ -3902,7 +3902,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021BC RID: 8636 RVA: 0x001CE04C File Offset: 0x001CC24C
+		
 		public void NotifyRoleBattleEndInfo(SocketListener sl, TCPOutPacketPool pool, int mapCode, List<BattleEndRoleItem> endRoleItemList)
 		{
 			if (endRoleItemList.Count > 0)
@@ -3916,7 +3916,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021BD RID: 8637 RVA: 0x001CE0A0 File Offset: 0x001CC2A0
+		
 		public void NotifyRoleBattleSideInfo(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			string strcmd = string.Format("{0}:{1}", client.ClientData.RoleID, client.ClientData.BattleWhichSide);
@@ -3926,7 +3926,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021BE RID: 8638 RVA: 0x001CE0FC File Offset: 0x001CC2FC
+		
 		public void NotifyRoleBattlePlayerSideNumberEndInfo(SocketListener sl, TCPOutPacketPool pool, int mapCode, int nNum1, int nNum2)
 		{
 			List<object> objsList = this.Container.GetObjectsByMap(mapCode);
@@ -3937,14 +3937,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021BF RID: 8639 RVA: 0x001CE150 File Offset: 0x001CC350
+		
 		public void NotifyAutoFightCmd(SocketListener sl, TCPOutPacketPool pool, GameClient client, int status, int fightType, int extTag1)
 		{
 			SCAutoFight scData = new SCAutoFight(status, client.ClientData.RoleID, fightType, extTag1);
 			client.sendCmd<SCAutoFight>(182, scData, false);
 		}
 
-		// Token: 0x060021C0 RID: 8640 RVA: 0x001CE184 File Offset: 0x001CC384
+		
 		public void NotifyTeamCmd(SocketListener sl, TCPOutPacketPool pool, GameClient client, int status, int teamType, int extTag1, string extTag2, int nOccu = -1, int nLev = -1, int nChangeLife = -1)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}:{5}:{6}:{7}", new object[]
@@ -3964,7 +3964,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021C1 RID: 8641 RVA: 0x001CE21C File Offset: 0x001CC41C
+		
 		public void NotifyTeamData(SocketListener sl, TCPOutPacketPool pool, TeamData td)
 		{
 			if (null != td)
@@ -3990,7 +3990,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021C2 RID: 8642 RVA: 0x001CE2F8 File Offset: 0x001CC4F8
+		
 		public void NotifyOthersTeamIDChanged(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			List<object> objsList = Global.GetAll9Clients(client);
@@ -4001,7 +4001,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021C3 RID: 8643 RVA: 0x001CE368 File Offset: 0x001CC568
+		
 		public void NotifyOthersTeamDestroy(SocketListener sl, TCPOutPacketPool pool, GameClient client, TeamData td)
 		{
 			if (null != td)
@@ -4025,7 +4025,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021C4 RID: 8644 RVA: 0x001CE438 File Offset: 0x001CC638
+		
 		public void NotifyTeamUpLevel(SocketListener sl, TCPOutPacketPool pool, GameClient client, bool zhuanShengChanged = false)
 		{
 			if (client.ClientData.TeamID > 0)
@@ -4057,13 +4057,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021C5 RID: 8645 RVA: 0x001CE5E0 File Offset: 0x001CC7E0
+		
 		public void NotifySelfChgZhanLi(GameClient client, int ZhanLi)
 		{
 			client.sendCmd<int>(675, ZhanLi, false);
 		}
 
-		// Token: 0x060021C6 RID: 8646 RVA: 0x001CE5F4 File Offset: 0x001CC7F4
+		
 		public void NotifyTeamCHGZhanLi(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			if (client.ClientData.TeamID > 0)
@@ -4098,7 +4098,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021C7 RID: 8647 RVA: 0x001CE78C File Offset: 0x001CC98C
+		
 		public void NotifyGoodsExchangeCmd(SocketListener sl, TCPOutPacketPool pool, int roleID, int otherRoleID, GameClient client, GameClient otherClient, int status, int exchangeType)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}", new object[]
@@ -4124,7 +4124,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021C8 RID: 8648 RVA: 0x001CE830 File Offset: 0x001CCA30
+		
 		public void NotifyGoodsExchangeData(SocketListener sl, TCPOutPacketPool pool, GameClient client, GameClient otherClient, ExchangeData ed)
 		{
 			byte[] bytesData = null;
@@ -4146,7 +4146,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021C9 RID: 8649 RVA: 0x001CE8EC File Offset: 0x001CCAEC
+		
 		private void ProcessExchangeData(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			if (client.ClientData.ExchangeID > 0)
@@ -4171,7 +4171,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021CA RID: 8650 RVA: 0x001CEA08 File Offset: 0x001CCC08
+		
 		public void NotifyMySelfNewGoodsPack(SocketListener sl, TCPOutPacketPool pool, GameClient client, int ownerRoleID, string ownerRoleName, int autoID, int goodsPackID, int mapCode, int toX, int toY, int goodsID, int goodsNum, long productTicks, int teamID, string teamRoleIDs, int lucky, int excellenceInfo, int appendPropLev, int forge_Level)
 		{
 			NewGoodsPackData newGoodsPackData = new NewGoodsPackData
@@ -4200,7 +4200,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021CB RID: 8651 RVA: 0x001CEAD0 File Offset: 0x001CCCD0
+		
 		public void NotifySelfGetThing(SocketListener sl, TCPOutPacketPool pool, GameClient client, int goodsDbID)
 		{
 			string strcmd = string.Format("{0}:{1}", client.ClientData.RoleID, goodsDbID);
@@ -4210,7 +4210,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021CC RID: 8652 RVA: 0x001CEB28 File Offset: 0x001CCD28
+		
 		public void NotifyOthersDelGoodsPack(SocketListener sl, TCPOutPacketPool pool, List<object> objsList, int mapCode, int autoID, int toRoleID)
 		{
 			if (null != objsList)
@@ -4220,7 +4220,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021CD RID: 8653 RVA: 0x001CEB70 File Offset: 0x001CCD70
+		
 		public void NotifyMySelfDelGoodsPack(SocketListener sl, TCPOutPacketPool pool, GameClient client, int autoID)
 		{
 			string strcmd = string.Format("{0}:{1}", autoID, -1);
@@ -4230,7 +4230,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021CE RID: 8654 RVA: 0x001CEBB8 File Offset: 0x001CCDB8
+		
 		public static void NotifySelfEnemyInjured(SocketListener sl, TCPOutPacketPool pool, GameClient client, int roleID, int enemy, int burst, int injure, double enemyLife, long newExperience, int nMerlinInjure = 0, EMerlinSecretAttrType eMerlinType = EMerlinSecretAttrType.EMSAT_None, int armorV_p1 = 0)
 		{
 			SpriteAttackResultData attackResultData = new SpriteAttackResultData();
@@ -4254,7 +4254,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021CF RID: 8655 RVA: 0x001CEC68 File Offset: 0x001CCE68
+		
 		private IObject GetInjuredObject(int mapCode, int injuredRoleID)
 		{
 			IObject injuredObj = null;
@@ -4286,7 +4286,7 @@ namespace GameServer.Logic
 			return injuredObj;
 		}
 
-		// Token: 0x060021D0 RID: 8656 RVA: 0x001CED00 File Offset: 0x001CCF00
+		
 		public void NotifySpriteInjured(SocketListener sl, TCPOutPacketPool pool, IObject attacker, int mapCode, int attackerRoleID, int injuredRoleID, int burst, int injure, double injuredRoleLife, int attackerLevel, Point hitToGrid, int nMerlinInjure = 0, EMerlinSecretAttrType eMerlinType = EMerlinSecretAttrType.EMSAT_None, int armorV_p1 = 0)
 		{
 			if (hitToGrid.X < 0.0 || hitToGrid.Y < 0.0)
@@ -4394,7 +4394,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021D1 RID: 8657 RVA: 0x001CF0B4 File Offset: 0x001CD2B4
+		
 		public void NotifySpriteTeamInjured(SocketListener sl, TCPOutPacketPool pool, int injuredRoleID, byte[] bytesCmd, byte[] bytesCmd2, int mapCode)
 		{
 			GameClient otherClient = this.FindClient(injuredRoleID);
@@ -4454,7 +4454,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021D2 RID: 8658 RVA: 0x001CF2B0 File Offset: 0x001CD4B0
+		
 		public void NotifyAllImportantMsg(SocketListener sl, TCPOutPacketPool pool, GameClient client, string msgText, GameInfoTypeIndexes typeIndex, ShowGameInfoTypes showGameInfoType, int errCode = 0, int minZhuanSheng = 0, int minLevel = 0, int maxZhuanSheng = 100, int maxLevel = 100)
 		{
 			int index = 0;
@@ -4474,7 +4474,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021D3 RID: 8659 RVA: 0x001CF350 File Offset: 0x001CD550
+		
 		public void NotifyBangHuiImportantMsg(SocketListener sl, TCPOutPacketPool pool, int faction, string msgText, GameInfoTypeIndexes typeIndex, ShowGameInfoTypes showGameInfoType, int errCode = 0)
 		{
 			int index = 0;
@@ -4488,7 +4488,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021D4 RID: 8660 RVA: 0x001CF3A4 File Offset: 0x001CD5A4
+		
 		public void SendBangHuiCmd<T>(int faction, int cmdId, T cmdData, bool excludeKuaFu = true, bool normalMapNoly = false)
 		{
 			int index = 0;
@@ -4508,7 +4508,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021D5 RID: 8661 RVA: 0x001CF430 File Offset: 0x001CD630
+		
 		public void NotifyImportantMsg(SocketListener sl, TCPOutPacketPool pool, GameClient client, string msgText, GameInfoTypeIndexes typeIndex, ShowGameInfoTypes showGameInfoType, int errCode = 0)
 		{
 			msgText = msgText.Replace(":", "``");
@@ -4525,7 +4525,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021D6 RID: 8662 RVA: 0x001CF4AC File Offset: 0x001CD6AC
+		
 		public void NotifyUseGoodsResult(SocketListener sl, TCPOutPacketPool pool, GameClient client, int goodsID, int useNum)
 		{
 			string strcmd = string.Format("{0}:{1}", goodsID, useNum);
@@ -4533,13 +4533,13 @@ namespace GameServer.Logic
 			sl.SendData(client.ClientSocket, tcpOutPacket, true);
 		}
 
-		// Token: 0x060021D7 RID: 8663 RVA: 0x001CF4F1 File Offset: 0x001CD6F1
+		
 		public void NotifyImportantMsg(GameClient client, string msgText, GameInfoTypeIndexes typeIndex, ShowGameInfoTypes showGameInfoType, int errCode = 0)
 		{
 			GameManager.ClientMgr.NotifyImportantMsg(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, client, msgText, typeIndex, showGameInfoType, errCode);
 		}
 
-		// Token: 0x060021D8 RID: 8664 RVA: 0x001CF51C File Offset: 0x001CD71C
+		
 		public void NotifyImportantMsgWithGoods(GameClient client, MsgWithGoodsType idx, ShowGameInfoTypes showType, List<GoodsData> goodsDataList, string param1, Dictionary<int, List<GoodsData>> goodsDic = null)
 		{
 			NotifyMsgWithGoodsData msgData = new NotifyMsgWithGoodsData
@@ -4557,7 +4557,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021D9 RID: 8665 RVA: 0x001CF598 File Offset: 0x001CD798
+		
 		public void NotifyGetAwardMsg(GameClient client, RoleAwardMsg type, string notifyParam)
 		{
 			List<GoodsData> goodsList = client.ClientData.GetAwardRecord(type);
@@ -4568,13 +4568,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021DA RID: 8666 RVA: 0x001CF5EB File Offset: 0x001CD7EB
+		
 		public void NotifyAddExpMsg(GameClient client, long addExp)
 		{
 			GameManager.ClientMgr.NotifyImportantMsg(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, client, string.Format(GLang.GetLang(60, new object[0]), addExp), GameInfoTypeIndexes.Error, ShowGameInfoTypes.ErrAndBox, 27);
 		}
 
-		// Token: 0x060021DB RID: 8667 RVA: 0x001CF62C File Offset: 0x001CD82C
+		
 		public void NotifyAddJinBiMsg(GameClient client, int addJinBi)
 		{
 			GameManager.ClientMgr.NotifyImportantMsg(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, client, StringUtil.substitute(GLang.GetLang(61, new object[0]), new object[]
@@ -4583,13 +4583,13 @@ namespace GameServer.Logic
 			}), GameInfoTypeIndexes.Error, ShowGameInfoTypes.ErrAndBox, 27);
 		}
 
-		// Token: 0x060021DC RID: 8668 RVA: 0x001CF681 File Offset: 0x001CD881
+		
 		public void NotifyHintMsg(GameClient client, string msg)
 		{
 			GameManager.ClientMgr.NotifyImportantMsg(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, client, msg, GameInfoTypeIndexes.Error, ShowGameInfoTypes.ErrAndBox, 0);
 		}
 
-		// Token: 0x060021DD RID: 8669 RVA: 0x001CF6A8 File Offset: 0x001CD8A8
+		
 		public void NotifyHintMsgDelay(GameClient client, string msg)
 		{
 			msg = msg.Replace(":", "``");
@@ -4603,13 +4603,13 @@ namespace GameServer.Logic
 			client.sendCmd(194, strcmd, false);
 		}
 
-		// Token: 0x060021DE RID: 8670 RVA: 0x001CF708 File Offset: 0x001CD908
+		
 		public void NotifyCopyMapHintMsg(GameClient client, string msg)
 		{
 			GameManager.ClientMgr.NotifyImportantMsg(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, client, msg, GameInfoTypeIndexes.Error, ShowGameInfoTypes.ErrAndBox, 0);
 		}
 
-		// Token: 0x060021DF RID: 8671 RVA: 0x001CF730 File Offset: 0x001CD930
+		
 		public void NotifyGMAuthCmd(SocketListener sl, TCPOutPacketPool pool, GameClient client, int auth)
 		{
 			string strcmd = string.Format("{0}:{1}", client.ClientData.RoleID, auth);
@@ -4619,7 +4619,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021E0 RID: 8672 RVA: 0x001CF784 File Offset: 0x001CD984
+		
 		public void NotifyAllBulletinMsg(SocketListener sl, TCPOutPacketPool pool, GameClient client, BulletinMsgData bulletinMsgData, int minZhuanSheng = 0, int minLevel = 0)
 		{
 			int index = 0;
@@ -4639,7 +4639,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021E1 RID: 8673 RVA: 0x001CF804 File Offset: 0x001CDA04
+		
 		public void NotifyBulletinMsg(SocketListener sl, TCPOutPacketPool pool, GameClient client, BulletinMsgData bulletinMsgData)
 		{
 			TCPOutPacket tcpOutPacket = DataHelper.ObjectToTCPOutPacket<BulletinMsgData>(bulletinMsgData, pool, 210);
@@ -4648,7 +4648,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021E2 RID: 8674 RVA: 0x001CF838 File Offset: 0x001CDA38
+		
 		public void ChangeRolePKValueAndPKPoint(SocketListener sl, TCPOutPacketPool pool, GameClient client, GameClient enemy)
 		{
 			if (client != enemy)
@@ -4698,7 +4698,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021E3 RID: 8675 RVA: 0x001CFA64 File Offset: 0x001CDC64
+		
 		public void SetRolePKValuePoint(SocketListener sl, TCPOutPacketPool pool, GameClient client, int pkValue, int pkPoint, bool writeToDB = true)
 		{
 			client.ClientData.PKValue = pkValue;
@@ -4718,7 +4718,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021E4 RID: 8676 RVA: 0x001CFB64 File Offset: 0x001CDD64
+		
 		public void ChangeRolePurpleName(SocketListener sl, TCPOutPacketPool pool, GameClient client, GameClient enemy)
 		{
 			if (client != enemy)
@@ -4746,7 +4746,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021E5 RID: 8677 RVA: 0x001CFC78 File Offset: 0x001CDE78
+		
 		public void ForceChangeRolePurpleName2(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			if (!Global.IsPurpleName(client))
@@ -4761,7 +4761,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021E6 RID: 8678 RVA: 0x001CFCF8 File Offset: 0x001CDEF8
+		
 		public void BroadcastRolePurpleName(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			if (client.ClientData.StartPurpleNameTicks > 0L)
@@ -4779,7 +4779,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021E7 RID: 8679 RVA: 0x001CFD8C File Offset: 0x001CDF8C
+		
 		public void NotifyAllChatMsg(SocketListener sl, TCPOutPacketPool pool, string cmdText, GameClient sender = null)
 		{
 			int index = 0;
@@ -4800,7 +4800,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021E8 RID: 8680 RVA: 0x001CFE30 File Offset: 0x001CE030
+		
 		public void NotifyFactionChatMsg(SocketListener sl, TCPOutPacketPool pool, int faction, string cmdText, GameClient sender = null)
 		{
 			if (faction > 0)
@@ -4827,7 +4827,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021E9 RID: 8681 RVA: 0x001CFED0 File Offset: 0x001CE0D0
+		
 		public void NotifyTeamChatMsg(SocketListener sl, TCPOutPacketPool pool, GameClient client, string cmdText)
 		{
 			if (client.ClientData.TeamID > 0)
@@ -4858,7 +4858,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021EA RID: 8682 RVA: 0x001CFFE8 File Offset: 0x001CE1E8
+		
 		public void NotifyMapChatMsg(SocketListener sl, TCPOutPacketPool pool, GameClient client, string cmdText)
 		{
 			List<object> clientList = new List<object>();
@@ -4869,7 +4869,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021EB RID: 8683 RVA: 0x001D004C File Offset: 0x001CE24C
+		
 		public void NotifyCopyMapChatMsg(SocketListener sl, TCPOutPacketPool pool, GameClient client, string cmdText)
 		{
 			if (client.ClientData.CopyMapID > 0 && client.ClientData.FuBenSeqID > 0)
@@ -4886,7 +4886,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021EC RID: 8684 RVA: 0x001D00E0 File Offset: 0x001CE2E0
+		
 		public void NotifyBattleSideChatMsg(SocketListener sl, TCPOutPacketPool pool, GameClient client, string cmdText)
 		{
 			if (client.ClientData.BattleWhichSide > 0)
@@ -4930,7 +4930,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021ED RID: 8685 RVA: 0x001D02B0 File Offset: 0x001CE4B0
+		
 		public void NotifyZhanDuiChatMsg(SocketListener sl, TCPOutPacketPool pool, GameClient client, string cmdText)
 		{
 			if (client.ClientData.ZhanDuiID > 0)
@@ -4974,7 +4974,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021EE RID: 8686 RVA: 0x001D0480 File Offset: 0x001CE680
+		
 		public bool NotifyClientChatMsg(SocketListener sl, TCPOutPacketPool pool, GameClient client, int fromRoleID, string fromRoleName, string toRoleName, int index, string textMsg, string chatType)
 		{
 			bool result = true;
@@ -5022,7 +5022,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060021EF RID: 8687 RVA: 0x001D05A0 File Offset: 0x001CE7A0
+		
 		public void SendSystemChatMessageToClient(SocketListener sl, TCPOutPacketPool pool, GameClient client, string textMsg)
 		{
 			if (null != client)
@@ -5041,7 +5041,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021F0 RID: 8688 RVA: 0x001D0610 File Offset: 0x001CE810
+		
 		public void SendSystemChatMessageToClients(SocketListener sl, TCPOutPacketPool pool, string textMsg)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}:{5}", new object[]
@@ -5056,7 +5056,7 @@ namespace GameServer.Logic
 			this.NotifyAllChatMsg(sl, pool, strcmd, null);
 		}
 
-		// Token: 0x060021F1 RID: 8689 RVA: 0x001D066C File Offset: 0x001CE86C
+		
 		public void SendChatMessage(SocketListener sl, TCPOutPacketPool pool, GameClient client, string cmdText)
 		{
 			TCPOutPacket tcpOutPacket = TCPOutPacket.MakeTCPOutPacket(pool, cmdText, 157);
@@ -5065,7 +5065,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021F2 RID: 8690 RVA: 0x001D06A0 File Offset: 0x001CE8A0
+		
 		public void HandleTransferChatMsg()
 		{
 			long ticks = TimeUtil.NOW();
@@ -5101,7 +5101,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021F3 RID: 8691 RVA: 0x001D0810 File Offset: 0x001CEA10
+		
 		public void TransferChatMsg(string chatMsg)
 		{
 			try
@@ -5173,7 +5173,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021F4 RID: 8692 RVA: 0x001D0A6C File Offset: 0x001CEC6C
+		
 		public void LogBatterEnemy(GameClient attacker, GameClient victim)
 		{
 			attacker.ClientData.RoleIDAttackebByMyself = victim.ClientData.RoleID;
@@ -5182,7 +5182,7 @@ namespace GameServer.Logic
 			GameManager.MonsterMgr.PetAttackMasterTargetTriggerEvent(victim, attacker);
 		}
 
-		// Token: 0x060021F5 RID: 8693 RVA: 0x001D0AC4 File Offset: 0x001CECC4
+		
 		public int NotifyOtherInjured(SocketListener sl, TCPOutPacketPool pool, GameClient client, GameClient enemy, int burst, int injure, double injurePercnet, int attackType, bool forceBurst, int addInjure, double attackPercent, int addAttackMin, int addAttackMax, int skillLevel, double skillBaseAddPercent, double skillUpAddPercent, bool ignoreDefenseAndDodge = false, bool dontEffectDSHide = false, double baseRate = 1.0, int addVlue = 0, int nHitFlyDistance = 0, int magicCode = 0, double shenShiInjurePercent = 0.0)
 		{
 			if ((enemy as GameClient).ClientData.CurrentLifeV > 0)
@@ -5314,7 +5314,7 @@ namespace GameServer.Logic
 			return injure;
 		}
 
-		// Token: 0x060021F6 RID: 8694 RVA: 0x001D1180 File Offset: 0x001CF380
+		
 		public void NotifyOtherInjured(SocketListener sl, TCPOutPacketPool pool, Monster monster, GameClient enemy, int burst, int injure, double injurePercnet, int attackType, bool forceBurst, int addInjure, double attackPercent, int addAttackMin, int addAttackMax, int skillLevel, double skillBaseAddPercent, double skillUpAddPercent, bool ignoreDefenseAndDodge = false, double baseRate = 1.0, int addVlue = 0, int nHitFlyDistance = 0, int magicCode = 0, double shenShiInjurePercent = 0.0)
 		{
 			if (null != enemy)
@@ -5402,7 +5402,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021F7 RID: 8695 RVA: 0x001D1580 File Offset: 0x001CF780
+		
 		public void SeekSpriteToLock(Monster monster)
 		{
 			if (monster.MonsterType == 1001)
@@ -5485,7 +5485,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021F8 RID: 8696 RVA: 0x001D1890 File Offset: 0x001CFA90
+		
 		public Point SeekMonsterPosition(GameClient client, int centerX, int centerY, int radiusGridNum, out int totalMonsterNum)
 		{
 			totalMonsterNum = 0;
@@ -5551,7 +5551,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060021F9 RID: 8697 RVA: 0x001D1A64 File Offset: 0x001CFC64
+		
 		public void LookupEnemiesInCircle(GameClient client, int mapCode, int toX, int toY, int radius, List<int> enemiesList)
 		{
 			List<object> objList = new List<object>();
@@ -5562,7 +5562,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021FA RID: 8698 RVA: 0x001D1AC0 File Offset: 0x001CFCC0
+		
 		public void LookupEnemiesInCircle(GameClient client, int mapCode, int toX, int toY, int radius, List<object> enemiesList, int nTargetType = -1)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -5593,7 +5593,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021FB RID: 8699 RVA: 0x001D1C38 File Offset: 0x001CFE38
+		
 		public void LookupEnemiesInCircle(int mapCode, int copyMapCode, int toX, int toY, int radius, List<object> enemiesList)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -5618,7 +5618,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021FC RID: 8700 RVA: 0x001D1D38 File Offset: 0x001CFF38
+		
 		public void LookupEnemiesInCircleByAngle(GameClient client, int direction, int mapCode, int toX, int toY, int radius, List<int> enemiesList, double angle, bool near180)
 		{
 			List<object> objList = new List<object>();
@@ -5629,7 +5629,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021FD RID: 8701 RVA: 0x001D1D98 File Offset: 0x001CFF98
+		
 		public void LookupEnemiesInCircleByAngle(GameClient client, int direction, int mapCode, int toX, int toY, int radius, List<object> enemiesList, double angle, bool near180)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -5667,7 +5667,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021FE RID: 8702 RVA: 0x001D1F70 File Offset: 0x001D0170
+		
 		public void LookupEnemiesInCircleByAngle(int direction, int mapCode, int copyMapCode, int toX, int toY, int radius, List<int> enemiesList, double angle, bool near180)
 		{
 			List<object> objList = new List<object>();
@@ -5678,7 +5678,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060021FF RID: 8703 RVA: 0x001D1FD0 File Offset: 0x001D01D0
+		
 		public void LookupEnemiesInCircleByAngle(int direction, int mapCode, int copyMapCode, int toX, int toY, int radius, List<object> enemiesList, double angle, bool near180)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -5718,7 +5718,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002200 RID: 8704 RVA: 0x001D2178 File Offset: 0x001D0378
+		
 		public void LookupRolesInCircle(GameClient client, int mapCode, int toX, int toY, int radius, List<object> rolesList)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -5746,7 +5746,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002201 RID: 8705 RVA: 0x001D22C4 File Offset: 0x001D04C4
+		
 		public void LookupRolesInSquare(GameClient client, int mapCode, int radius, int nWidth, List<object> rolesList)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -5789,7 +5789,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002202 RID: 8706 RVA: 0x001D2514 File Offset: 0x001D0714
+		
 		public void LookupRolesInSquare(int mapCode, int copyMapId, int srcX, int srcY, int toX, int toY, int radius, int nWidth, List<object> rolesList)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -5826,7 +5826,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002203 RID: 8707 RVA: 0x001D26A8 File Offset: 0x001D08A8
+		
 		public void LookupEnemiesAtGridXY(IObject attacker, int gridX, int gridY, List<object> enemiesList)
 		{
 			int mapCode = attacker.CurrentMapCode;
@@ -5847,7 +5847,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002204 RID: 8708 RVA: 0x001D2754 File Offset: 0x001D0954
+		
 		public void LookupAttackEnemies(IObject attacker, int direction, List<object> enemiesList)
 		{
 			int mapCode = attacker.CurrentMapCode;
@@ -5859,7 +5859,7 @@ namespace GameServer.Logic
 			this.LookupEnemiesAtGridXY(attacker, (int)p.X, (int)p.Y, enemiesList);
 		}
 
-		// Token: 0x06002205 RID: 8709 RVA: 0x001D27B8 File Offset: 0x001D09B8
+		
 		public void LookupAttackEnemyIDs(IObject attacker, int direction, List<int> enemiesList)
 		{
 			List<object> objList = new List<object>();
@@ -5870,7 +5870,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002206 RID: 8710 RVA: 0x001D280C File Offset: 0x001D0A0C
+		
 		public void LookupRangeAttackEnemies(IObject obj, int toX, int toY, int direction, string rangeMode, List<object> enemiesList)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[obj.CurrentMapCode];
@@ -5886,7 +5886,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002207 RID: 8711 RVA: 0x001D28AC File Offset: 0x001D0AAC
+		
 		public int InjureToEnemy(SocketListener sl, TCPOutPacketPool pool, GameClient enemy, int injured, int attackType, bool ignoreDefenseAndDodge, int skillLevel)
 		{
 			double totalSubValue = 0.0;
@@ -5951,7 +5951,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002208 RID: 8712 RVA: 0x001D2AF4 File Offset: 0x001D0CF4
+		
 		public void SpriteInjure2Blood(SocketListener sl, TCPOutPacketPool pool, GameClient client, int injured)
 		{
 			double percent = client.RoleMagicHelper.GetInjure2Life();
@@ -5962,7 +5962,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002209 RID: 8713 RVA: 0x001D2B3C File Offset: 0x001D0D3C
+		
 		public bool NotifyChangeMap(SocketListener sl, TCPOutPacketPool pool, GameClient client, int toMapCode, int maxX = -1, int mapY = -1, int direction = -1, int relife = 0)
 		{
 			bool isKuaFuMap = KuaFuManager.getInstance().IsKuaFuMap(toMapCode);
@@ -6024,7 +6024,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600220A RID: 8714 RVA: 0x001D2DB4 File Offset: 0x001D0FB4
+		
 		public bool ChangeMap(SocketListener sl, TCPOutPacketPool pool, GameClient client, int teleport, int toMapCode, int toMapX, int toMapY, int toMapDirection, int nID)
 		{
 			if ("1" == GameManager.GameConfigMgr.GetGameConfigItemStr("log-changmap", "0"))
@@ -6245,7 +6245,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600220B RID: 8715 RVA: 0x001D3734 File Offset: 0x001D1934
+		
 		public bool ChangePosition(SocketListener sl, TCPOutPacketPool pool, GameClient client, int toMapX, int toMapY, int toMapDirection, int nID, int animation = 0)
 		{
 			if (2 != animation)
@@ -6300,7 +6300,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600220C RID: 8716 RVA: 0x001D3968 File Offset: 0x001D1B68
+		
 		public bool ChangePosition2(SocketListener sl, TCPOutPacketPool pool, IObject obj, int roleID, int mapCode, int copyMapID, int toMapX, int toMapY, int toMapDirection, List<object> objsList)
 		{
 			int nID = 159;
@@ -6335,7 +6335,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600220D RID: 8717 RVA: 0x001D3A18 File Offset: 0x001D1C18
+		
 		public void NotifySelfAddGoods(SocketListener sl, TCPOutPacketPool pool, GameClient client, GoodsData goodsData, int nNewHint, int isPackUp = 0)
 		{
 			AddGoodsData addGoodsData = new AddGoodsData
@@ -6371,7 +6371,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600220E RID: 8718 RVA: 0x001D3B84 File Offset: 0x001D1D84
+		
 		public void NotifySelfAddGoods(SocketListener sl, TCPOutPacketPool pool, GameClient client, int id, int goodsID, int forgeLevel, int quality, int goodsNum, int binding, int site, string jewellist, int newHint, string newEndTime, int addPropIndex, int bornIndex, int lucky, int strong, int ExcellenceProperty, int nAppendPropLev, int ChangeLifeLevForEquip = 0, int bagIndex = 0, List<int> washProps = null, List<int> elementhrtsProps = null, int juHun_level = 0, string prop = "")
 		{
 			newEndTime = newEndTime.Replace(":", "$");
@@ -6408,14 +6408,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600220F RID: 8719 RVA: 0x001D3C9C File Offset: 0x001D1E9C
+		
 		public void NotifyModGoods(SocketListener sl, TCPOutPacketPool pool, GameClient client, int modType, int id, int isusing, int site, int gcount, int bagIndex, int newHint)
 		{
 			SCModGoods scData = new SCModGoods(0, modType, id, isusing, site, gcount, bagIndex, newHint);
 			client.sendCmd<SCModGoods>(131, scData, false);
 		}
 
-		// Token: 0x06002210 RID: 8720 RVA: 0x001D3CD0 File Offset: 0x001D1ED0
+		
 		public void NotifyMoveGoods(SocketListener sl, TCPOutPacketPool pool, GameClient client, GoodsData gd, int moveType)
 		{
 			if (0 == moveType)
@@ -6432,7 +6432,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002211 RID: 8721 RVA: 0x001D3DE4 File Offset: 0x001D1FE4
+		
 		public void NotifyGoodsInfo(SocketListener sl, TCPOutPacketPool pool, GameClient client, GoodsData gd)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}", client.ClientData.RoleID, gd.Id, gd.Lucky);
@@ -6442,7 +6442,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002212 RID: 8722 RVA: 0x001D3E48 File Offset: 0x001D2048
+		
 		public bool NotifyUseGoods(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int dbID, bool usingGoods, bool dontCalcLimitNum = false)
 		{
 			GoodsData goodsData = RebornEquip.GetRebornGoodsByDbID(client, dbID);
@@ -6456,7 +6456,7 @@ namespace GameServer.Logic
 			return this.NotifyUseGoods(sl, tcpClientPool, pool, client, goodsData, 1, usingGoods, dontCalcLimitNum);
 		}
 
-		// Token: 0x06002213 RID: 8723 RVA: 0x001D3E9C File Offset: 0x001D209C
+		
 		public bool NotifyUseGoodsByDbId(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int dbID, int useCount, bool usingGoods, bool dontCalcLimitNum = false)
 		{
 			GoodsData goodsData = RebornEquip.GetRebornGoodsByDbID(client, dbID);
@@ -6470,7 +6470,7 @@ namespace GameServer.Logic
 			return this.NotifyUseGoods(sl, tcpClientPool, pool, client, goodsData, useCount, usingGoods, dontCalcLimitNum);
 		}
 
-		// Token: 0x06002214 RID: 8724 RVA: 0x001D3EF0 File Offset: 0x001D20F0
+		
 		public bool NotifyUseGoodsByDbId(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int dbID, int useCount, bool usingGoods, out bool usedBinding, out bool usedTimeLimited, bool dontCalcLimitNum = false)
 		{
 			GoodsData goodsData = RebornEquip.GetRebornGoodsByDbID(client, dbID);
@@ -6484,7 +6484,7 @@ namespace GameServer.Logic
 			return this.NotifyUseGoods(sl, tcpClientPool, pool, client, goodsData.GoodsID, useCount, usingGoods, out usedBinding, out usedTimeLimited, dontCalcLimitNum);
 		}
 
-		// Token: 0x06002215 RID: 8725 RVA: 0x001D3F4C File Offset: 0x001D214C
+		
 		public bool NotifyUseGoods(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, GoodsData goodsData, int useCount, bool usingGoods, out bool usedBinding, out bool usedTimeLimited, bool dontCalcLimitNum = false)
 		{
 			usedBinding = false;
@@ -6509,7 +6509,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002216 RID: 8726 RVA: 0x001D400C File Offset: 0x001D220C
+		
 		public bool NotifyUseGoods(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, GoodsData goodsData, int subNum, bool usingGoods, bool dontCalcLimitNum = false)
 		{
 			bool result;
@@ -6755,7 +6755,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002217 RID: 8727 RVA: 0x001D48D8 File Offset: 0x001D2AD8
+		
 		public bool NotifyUseGoods(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int goodsID, int totalNum, bool usingGoods, out bool usedBinding, out bool usedTimeLimited, bool dontCalcLimitNum = false)
 		{
 			usedBinding = false;
@@ -6806,7 +6806,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002218 RID: 8728 RVA: 0x001D4AA4 File Offset: 0x001D2CA4
+		
 		public bool NotifyUseBindGoods(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int goodsID, int totalNum, bool usingGoods, out bool usedBinding, out bool usedTimeLimited, bool dontCalcLimitNum = false)
 		{
 			usedBinding = false;
@@ -6860,7 +6860,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002219 RID: 8729 RVA: 0x001D4C98 File Offset: 0x001D2E98
+		
 		public bool NotifyUseNotBindGoods(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int goodsID, int totalNum, bool usingGoods, out bool usedBinding, out bool usedTimeLimited, bool dontCalcLimitNum = false)
 		{
 			usedBinding = false;
@@ -6914,7 +6914,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x0600221A RID: 8730 RVA: 0x001D4E8C File Offset: 0x001D308C
+		
 		public bool FallRoleGoods(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, GoodsData goodsData)
 		{
 			bool result;
@@ -7006,7 +7006,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600221B RID: 8731 RVA: 0x001D518C File Offset: 0x001D338C
+		
 		public void NotifySelfPropertyValue(GameClient client, int moneyType, long value)
 		{
 			client.sendCmd<SCPropertyChange>(719, new SCPropertyChange
@@ -7017,13 +7017,13 @@ namespace GameServer.Logic
 			}, false);
 		}
 
-		// Token: 0x0600221C RID: 8732 RVA: 0x001D51CD File Offset: 0x001D33CD
+		
 		public void NotifyOthersPropertyValue(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x0600221D RID: 8733 RVA: 0x001D51D8 File Offset: 0x001D33D8
+		
 		public void NotifySelfMoneyChange(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}", client.ClientData.RoleID, client.ClientData.Money1, client.ClientData.Money2);
@@ -7033,7 +7033,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600221E RID: 8734 RVA: 0x001D5244 File Offset: 0x001D3444
+		
 		public bool AddMoney1(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int addMoney, string strFrom, bool writeToDB = true)
 		{
 			int oldMoney = client.ClientData.Money1;
@@ -7094,13 +7094,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600221F RID: 8735 RVA: 0x001D54E4 File Offset: 0x001D36E4
+		
 		public bool AddMoney1(GameClient client, int addMoney, string strFrom, bool writeToDB = true)
 		{
 			return this.AddMoney1(Global._TCPManager.MySocketListener, Global._TCPManager.tcpClientPool, Global._TCPManager.TcpOutPacketPool, client, addMoney, strFrom, writeToDB);
 		}
 
-		// Token: 0x06002220 RID: 8736 RVA: 0x001D5520 File Offset: 0x001D3720
+		
 		public bool SubMoney1(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int subMoney, string strFrom)
 		{
 			if (client.ClientData.Money1 - subMoney < 0)
@@ -7128,7 +7128,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06002221 RID: 8737 RVA: 0x001D56C4 File Offset: 0x001D38C4
+		
 		public void NotifySelfUserMoneyChange(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			string strcmd = string.Format("{0}:{1}", client.ClientData.RoleID, client.ClientData.UserMoney);
@@ -7138,13 +7138,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002222 RID: 8738 RVA: 0x001D571E File Offset: 0x001D391E
+		
 		public void NotifySelfUserMoneyChange(GameClient client)
 		{
 			client.sendCmd(168, string.Format("{0}:{1}", client.ClientData.RoleID, client.ClientData.UserMoney), false);
 		}
 
-		// Token: 0x06002223 RID: 8739 RVA: 0x001D5758 File Offset: 0x001D3958
+		
 		public bool AddUserMoney(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int addMoney, string msg, ActivityTypes result = ActivityTypes.None, string param = "")
 		{
 			lock (client.ClientData.UserMoneyMutex)
@@ -7185,7 +7185,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06002224 RID: 8740 RVA: 0x001D591C File Offset: 0x001D3B1C
+		
 		public bool AddOfflineUserMoney(TCPClientPool tcpClientPool, TCPOutPacketPool pool, int otherRoleID, string roleName, int addMoney, string msg, int zoneid, string userid)
 		{
 			string strcmd = string.Format("{0}:{1}", otherRoleID, addMoney);
@@ -7216,7 +7216,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002225 RID: 8741 RVA: 0x001D59EC File Offset: 0x001D3BEC
+		
 		public bool SubUserMoney(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int subMoney, string msg, bool bIsAddVipExp = true, bool isAddFund = true, bool isGM = false, DaiBiSySType SysType = DaiBiSySType.None)
 		{
 			if (DaiBiSySType.None != SysType)
@@ -7301,7 +7301,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06002226 RID: 8742 RVA: 0x001D5D2C File Offset: 0x001D3F2C
+		
 		public bool SubUserMoney(GameClient client, int subMoney, string msg, bool savedb = true, bool bIsAddVipExp = true, bool isAddFund = true, bool isExpense = true, DaiBiSySType SysType = DaiBiSySType.None)
 		{
 			if (DaiBiSySType.None != SysType)
@@ -7372,7 +7372,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06002227 RID: 8743 RVA: 0x001D5FA4 File Offset: 0x001D41A4
+		
 		public RoleBaseInfo QueryRoleBaseInfoFromDB(int roleID, int serverID = -1)
 		{
 			RoleBaseInfo roleBaseInfo = Global.sendToDB<RoleBaseInfo, string>(3004, roleID.ToString(), serverID);
@@ -7388,7 +7388,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002228 RID: 8744 RVA: 0x001D5FE4 File Offset: 0x001D41E4
+		
 		public int QueryTotaoChongZhiMoney(GameClient client)
 		{
 			string userID = GameManager.OnlineUserSession.FindUserID(client.ClientSocket);
@@ -7396,7 +7396,7 @@ namespace GameServer.Logic
 			return this.QueryTotaoChongZhiMoney(userID, zoneID, client.ServerId);
 		}
 
-		// Token: 0x06002229 RID: 8745 RVA: 0x001D6024 File Offset: 0x001D4224
+		
 		public int QueryTotaoChongZhiMoney(string userID, int zoneID, int ServerId)
 		{
 			string strcmd = string.Format("{0}:{1}", userID, zoneID);
@@ -7417,14 +7417,14 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600222A RID: 8746 RVA: 0x001D607C File Offset: 0x001D427C
+		
 		public int[] QueryUserIdValue(string userID, int ServerId)
 		{
 			string strcmd = string.Format("{0}", userID);
 			return Global.sendToDB<int[], string>(13001, strcmd, ServerId);
 		}
 
-		// Token: 0x0600222B RID: 8747 RVA: 0x001D60A8 File Offset: 0x001D42A8
+		
 		public int QueryTotaoChongZhiMoneyToday(GameClient client)
 		{
 			string userID = GameManager.OnlineUserSession.FindUserID(client.ClientSocket);
@@ -7447,7 +7447,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600222C RID: 8748 RVA: 0x001D612C File Offset: 0x001D432C
+		
 		public int QueryTotalChongZhiMoneyPeriod(GameClient client, DateTime fromDate, DateTime toDate)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}", client.ClientData.RoleID, fromDate.ToString("yyyy-MM-dd HH:mm:ss").Replace(':', '$'), toDate.ToString("yyyy-MM-dd HH:mm:ss").Replace(':', '$'));
@@ -7468,7 +7468,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600222D RID: 8749 RVA: 0x001D61BC File Offset: 0x001D43BC
+		
 		public int QueryTotalChongZhiMoneyPeriod(int RoleID, DateTime fromDate, DateTime toDate)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}", RoleID, fromDate.ToString("yyyy-MM-dd HH:mm:ss").Replace(':', '$'), toDate.ToString("yyyy-MM-dd HH:mm:ss").Replace(':', '$'));
@@ -7489,7 +7489,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600222E RID: 8750 RVA: 0x001D623C File Offset: 0x001D443C
+		
 		public int GetZoneIDByRoleID(int roleID)
 		{
 			string strcmd = string.Format("{0}", roleID);
@@ -7510,7 +7510,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600222F RID: 8751 RVA: 0x001D6294 File Offset: 0x001D4494
+		
 		public string GetUserIDByRoleID(int roleID)
 		{
 			string strcmd = string.Format("{0}", roleID);
@@ -7531,7 +7531,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002230 RID: 8752 RVA: 0x001D62EC File Offset: 0x001D44EC
+		
 		public bool AddUserMoneyOffLine(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int roleID, int addMoney, string msg, int zoneid, string userid)
 		{
 			string strcmd = string.Format("{0}:{1}", roleID, addMoney);
@@ -7563,7 +7563,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002231 RID: 8753 RVA: 0x001D63D8 File Offset: 0x001D45D8
+		
 		public void NotifySelfUserGoldChange(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			string strcmd = string.Format("{0}:{1}", client.ClientData.RoleID, client.ClientData.Gold);
@@ -7573,13 +7573,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002232 RID: 8754 RVA: 0x001D6434 File Offset: 0x001D4634
+		
 		public bool AddUserGold(GameClient client, int addGold, string strFrom)
 		{
 			return this.AddUserGold(Global._TCPManager.MySocketListener, Global._TCPManager.tcpClientPool, Global._TCPManager.TcpOutPacketPool, client, addGold, strFrom);
 		}
 
-		// Token: 0x06002233 RID: 8755 RVA: 0x001D6470 File Offset: 0x001D4670
+		
 		public bool AddUserGold(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int addGold, string strFrom = "")
 		{
 			int oldGold = client.ClientData.Gold;
@@ -7610,7 +7610,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06002234 RID: 8756 RVA: 0x001D65FC File Offset: 0x001D47FC
+		
 		public bool AddUserGoldOffLine(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int roleID, int addGold, string strFrom = "", string strUserID = "")
 		{
 			GameClient client = GameManager.ClientMgr.FindClient(roleID);
@@ -7648,7 +7648,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002235 RID: 8757 RVA: 0x001D670C File Offset: 0x001D490C
+		
 		public bool SubUserGold(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int subGold, string msg = "无", bool isGM = false)
 		{
 			int oldGold = client.ClientData.Gold;
@@ -7687,13 +7687,13 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06002236 RID: 8758 RVA: 0x001D68EC File Offset: 0x001D4AEC
+		
 		public bool SubUserGold(GameClient client, int subGold, string msg = "无")
 		{
 			return this.SubUserGold(Global._TCPManager.MySocketListener, Global._TCPManager.tcpClientPool, Global._TCPManager.TcpOutPacketPool, client, subGold, msg, false);
 		}
 
-		// Token: 0x06002237 RID: 8759 RVA: 0x001D6928 File Offset: 0x001D4B28
+		
 		public void NotifySelfUserYinLiangChange(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			string strcmd = string.Format("{0}:{1}", client.ClientData.RoleID, client.ClientData.YinLiang);
@@ -7703,7 +7703,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002238 RID: 8760 RVA: 0x001D6984 File Offset: 0x001D4B84
+		
 		public bool AddUserYinLiang(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int addYinLiang, string strFrom, bool isGM = false)
 		{
 			int oldYinLiang = client.ClientData.YinLiang;
@@ -7766,13 +7766,13 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06002239 RID: 8761 RVA: 0x001D6C38 File Offset: 0x001D4E38
+		
 		public bool AddUserYinLiang(GameClient client, int addYinLiang, string strFrom)
 		{
 			return this.AddUserYinLiang(Global._TCPManager.MySocketListener, Global._TCPManager.tcpClientPool, Global._TCPManager.TcpOutPacketPool, client, addYinLiang, strFrom, false);
 		}
 
-		// Token: 0x0600223A RID: 8762 RVA: 0x001D6C74 File Offset: 0x001D4E74
+		
 		public bool AddOfflineUserYinLiang(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, string userID, int roleID, string roleName, int addYinLiang, string strFrom, int zoneid)
 		{
 			string strcmd = string.Format("{0}:{1}", roleID, addYinLiang);
@@ -7803,7 +7803,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600223B RID: 8763 RVA: 0x001D6D50 File Offset: 0x001D4F50
+		
 		public bool SubUserYinLiang(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int subYinLiang, string strFrom, bool isGM = false)
 		{
 			int oldYinLiang = client.ClientData.YinLiang;
@@ -7855,7 +7855,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600223C RID: 8764 RVA: 0x001D6FB0 File Offset: 0x001D51B0
+		
 		public bool MoveGoodsDataToOtherRole(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GoodsData gd, GameClient fromClient, GameClient toClient, bool bAddToTarget = true)
 		{
 			string[] dbFields = null;
@@ -7969,7 +7969,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600223D RID: 8765 RVA: 0x001D7648 File Offset: 0x001D5848
+		
 		public bool MoveGoodsDataToOfflineRole(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GoodsData gd, string fromUserID, int fromRoleID, string fromRoleName, int fromRoleLevel, string toUserID, int toRoleID, string toRoleName, int toRoleLevel, bool bAddToTarget, int zoneid)
 		{
 			string[] dbFields = null;
@@ -8087,7 +8087,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600223E RID: 8766 RVA: 0x001D7C68 File Offset: 0x001D5E68
+		
 		public void NotifyGoodsStallCmd(SocketListener sl, TCPOutPacketPool pool, GameClient client, int status, int stallType)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}", status, client.ClientData.RoleID, stallType);
@@ -8097,7 +8097,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600223F RID: 8767 RVA: 0x001D7CC4 File Offset: 0x001D5EC4
+		
 		public void NotifyGoodsStallData(SocketListener sl, TCPOutPacketPool pool, GameClient client, StallData sd)
 		{
 			byte[] bytesData = null;
@@ -8113,7 +8113,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002240 RID: 8768 RVA: 0x001D7D48 File Offset: 0x001D5F48
+		
 		public void NotifySpriteStartStall(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			if (null != client.ClientData.StallDataItem)
@@ -8127,7 +8127,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002241 RID: 8769 RVA: 0x001D7DC0 File Offset: 0x001D5FC0
+		
 		public void NotifySpriteMarketBuy(SocketListener sl, TCPOutPacketPool pool, GameClient client, GameClient otherClient, int result, int buyType, int goodsDbID, int goodsID, int nID = 226)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}:{5}:{6}", new object[]
@@ -8146,7 +8146,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002242 RID: 8770 RVA: 0x001D7E78 File Offset: 0x001D6078
+		
 		public void NotifySpriteMarketBuy2(SocketListener sl, TCPOutPacketPool pool, GameClient client, int otherRoleID, int result, int buyType, int goodsDbID, int goodsID, int otherRoleZoneID, string otherRoleName, int nID = 226)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}:{5}:{6}", new object[]
@@ -8165,7 +8165,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002243 RID: 8771 RVA: 0x001D7F08 File Offset: 0x001D6108
+		
 		public void NotifySpriteMarketName(SocketListener sl, TCPOutPacketPool pool, GameClient client, string marketName, int offlineMarket)
 		{
 			List<object> objsList = Global.GetAll9Clients(client);
@@ -8176,7 +8176,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002244 RID: 8772 RVA: 0x001D7F60 File Offset: 0x001D6160
+		
 		public void RemoveCoolDown(SocketListener sl, TCPOutPacketPool pool, GameClient client, int type, int code)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}", client.ClientData.RoleID, type, code);
@@ -8186,7 +8186,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002245 RID: 8773 RVA: 0x001D7FB8 File Offset: 0x001D61B8
+		
 		public void NotifyUpdateInterPowerCmd(SocketListener sl, TCPOutPacketPool pool, GameClient client, int hintUser = 1)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}", client.ClientData.RoleID, client.ClientData.InterPower, hintUser);
@@ -8196,7 +8196,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002246 RID: 8774 RVA: 0x001D801C File Offset: 0x001D621C
+		
 		public bool AddInterPower(GameClient client, int addInterPower, bool enableFilter = false, bool writeToDB = true)
 		{
 			bool result;
@@ -8236,7 +8236,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002247 RID: 8775 RVA: 0x001D8164 File Offset: 0x001D6364
+		
 		public bool SubInterPower(GameClient client, int subInterPower)
 		{
 			if (subInterPower > 0)
@@ -8252,7 +8252,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06002248 RID: 8776 RVA: 0x001D8258 File Offset: 0x001D6458
+		
 		private void UpdateRoleOnlineTimes(GameClient client, long addTicks)
 		{
 			this.UpdateRoleOnlineTimesForKorea(client, addTicks);
@@ -8403,7 +8403,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002249 RID: 8777 RVA: 0x001D89D0 File Offset: 0x001D6BD0
+		
 		private void UpdateRoleOnlineTimesForKorea(GameClient client, long addTicks)
 		{
 			if (!client.ClientData.FirstPlayStart)
@@ -8430,7 +8430,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600224A RID: 8778 RVA: 0x001D8AE8 File Offset: 0x001D6CE8
+		
 		private bool UpdateRoleOnlineTimesForTengXun(GameClient client)
 		{
 			bool result;
@@ -8458,7 +8458,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600224B RID: 8779 RVA: 0x001D8B74 File Offset: 0x001D6D74
+		
 		public void NotifySelfDeco(SocketListener sl, TCPOutPacketPool pool, GameClient client, int decoID, int decoType, int toBody, int toX, int toY, int shakeMap, int toX1, int toY1, int moveTicks, int alphaTicks)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}:{5}:{6}:{7}:{8}:{9}:{10}", new object[]
@@ -8481,7 +8481,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600224C RID: 8780 RVA: 0x001D8C34 File Offset: 0x001D6E34
+		
 		public void NotifyOthersMyDeco(SocketListener sl, TCPOutPacketPool pool, GameClient client, int decoID, int decoType, int toBody, int toX, int toY, int shakeMap, int toX1, int toY1, int moveTicks, int alphaTicks, List<object> objsList = null)
 		{
 			if (null == objsList)
@@ -8508,7 +8508,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600224D RID: 8781 RVA: 0x001D8D08 File Offset: 0x001D6F08
+		
 		public void NotifyOthersMyDeco(SocketListener sl, TCPOutPacketPool pool, IObject obj, int mapCode, int copyMapID, int decoID, int decoType, int toBody, int toX, int toY, int shakeMap, int toX1, int toY1, int moveTicks, int alphaTicks, List<object> objsList = null)
 		{
 			if (null == objsList)
@@ -8542,7 +8542,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600224E RID: 8782 RVA: 0x001D8DF4 File Offset: 0x001D6FF4
+		
 		public void NotifyBufferData(GameClient client, BufferData bufferData)
 		{
 			TCPOutPacket tcpOutPacket = DataHelper.ObjectToTCPOutPacket<BufferData>(bufferData, Global._TCPManager.TcpOutPacketPool, 230);
@@ -8551,13 +8551,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600224F RID: 8783 RVA: 0x001D8E38 File Offset: 0x001D7038
+		
 		public bool VertifyBuffFashion(int bufferID)
 		{
 			return bufferID == 39 || bufferID == 111 || bufferID == 10013 || bufferID == 103 || bufferID == 10020 || bufferID == 10022 || bufferID == 10023 || bufferID == 10012 || bufferID == 10011 || bufferID == 10010 || bufferID == 10009 || bufferID == 10008 || bufferID == 10007 || bufferID == 10001 || bufferID == 10002 || bufferID == 10003 || bufferID == 10004 || bufferID == 9000 || bufferID == 9001 || bufferID == 9002 || bufferID == 9003 || bufferID == 9004 || bufferID == 9005 || bufferID == 9006 || bufferID == 9007 || bufferID == 9008 || bufferID == 9009 || bufferID == 9010 || bufferID == 9011 || bufferID == 9012 || bufferID == 9051 || bufferID == 9052;
 		}
 
-		// Token: 0x06002250 RID: 8784 RVA: 0x001D8F84 File Offset: 0x001D7184
+		
 		public void NotifyOtherBufferData(IObject self, BufferData bufferData)
 		{
 			OtherBufferData otherBufferData = new OtherBufferData
@@ -8610,7 +8610,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002251 RID: 8785 RVA: 0x001D9118 File Offset: 0x001D7318
+		
 		public void NotifySelfExperience(SocketListener sl, TCPOutPacketPool pool, GameClient client, long newExperience)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}", new object[]
@@ -8627,7 +8627,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002252 RID: 8786 RVA: 0x001D91B0 File Offset: 0x001D73B0
+		
 		public void ProcessRoleExperience(GameClient client, long experience, bool enableFilter = true, bool writeToDB = true, bool checkDead = false, string strFrom = "none")
 		{
 			if (client.ClientData.HideGM <= 0)
@@ -8700,7 +8700,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002253 RID: 8787 RVA: 0x001D9550 File Offset: 0x001D7750
+		
 		public void AddOnlieRoleExperience(GameClient client, int addPercent)
 		{
 			long needExperience = 0L;
@@ -8715,7 +8715,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002254 RID: 8788 RVA: 0x001D95C4 File Offset: 0x001D77C4
+		
 		public void AddAllOnlieRoleExperience(int addPercent)
 		{
 			int index = 0;
@@ -8729,7 +8729,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002255 RID: 8789 RVA: 0x001D9610 File Offset: 0x001D7810
+		
 		public long GetCurRoleLvUpNeedExp(GameClient client)
 		{
 			long result;
@@ -8757,7 +8757,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002256 RID: 8790 RVA: 0x001D96AC File Offset: 0x001D78AC
+		
 		public int AutoCompletionTaskByTaskID(TCPManager tcpMgr, TCPClientPool tcpClientPool, TCPOutPacketPool pool, TCPRandKey tcpRandKey, GameClient client, int nDestTaskID)
 		{
 			int result2;
@@ -8819,7 +8819,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x06002257 RID: 8791 RVA: 0x001D98B4 File Offset: 0x001D7AB4
+		
 		public void SearchRolesByStr(GameClient client, string roleName, int startIndex)
 		{
 			int index = startIndex;
@@ -8855,7 +8855,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002258 RID: 8792 RVA: 0x001D9A14 File Offset: 0x001D7C14
+		
 		public void ListMapRoles(GameClient client, int startIndex)
 		{
 			ListRolesData listRolesData = new ListRolesData
@@ -8927,7 +8927,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002259 RID: 8793 RVA: 0x001D9C88 File Offset: 0x001D7E88
+		
 		private void SendListRolesDataResult(GameClient client, ListRolesData listRolesData)
 		{
 			TCPOutPacket tcpOutPacket = DataHelper.ObjectToTCPOutPacket<ListRolesData>(listRolesData, Global._TCPManager.TcpOutPacketPool, 233);
@@ -8936,7 +8936,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600225A RID: 8794 RVA: 0x001D9CCC File Offset: 0x001D7ECC
+		
 		public void ListAllTeams(GameClient client, int startIndex)
 		{
 			SearchTeamData searchTeamData = new SearchTeamData
@@ -8962,7 +8962,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600225B RID: 8795 RVA: 0x001D9D5C File Offset: 0x001D7F5C
+		
 		private void SendListTeamsDataResult(GameClient client, SearchTeamData searchTeamData)
 		{
 			TCPOutPacket tcpOutPacket = DataHelper.ObjectToTCPOutPacket<SearchTeamData>(searchTeamData, Global._TCPManager.TcpOutPacketPool, 234);
@@ -8971,7 +8971,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600225C RID: 8796 RVA: 0x001D9DA0 File Offset: 0x001D7FA0
+		
 		public void NotifyDailyTaskData(GameClient client)
 		{
 			TCPOutPacket tcpOutPacket = DataHelper.ObjectToTCPOutPacket<List<DailyTaskData>>(client.ClientData.MyDailyTaskDataList, Global._TCPManager.TcpOutPacketPool, 236);
@@ -8980,7 +8980,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600225D RID: 8797 RVA: 0x001D9DEC File Offset: 0x001D7FEC
+		
 		public void NotifyFuBenData(GameClient client, FuBenData fuBenData)
 		{
 			TCPOutPacket tcpOutPacket = DataHelper.ObjectToTCPOutPacket<FuBenData>(fuBenData, Global._TCPManager.TcpOutPacketPool, 252);
@@ -8989,7 +8989,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600225E RID: 8798 RVA: 0x001D9E30 File Offset: 0x001D8030
+		
 		public void NotifyFuBenBeginInfo(GameClient client)
 		{
 			if (client.ClientData.IsFlashPlayer == 1 && client.ClientData.MapCode == 6090)
@@ -9072,7 +9072,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600225F RID: 8799 RVA: 0x001DA154 File Offset: 0x001D8354
+		
 		public void NotifyAllFuBenBeginInfo(CopyMap copyMap, int roleId, bool allKilled)
 		{
 			int fuBenSeqID = copyMap.FuBenSeqID;
@@ -9124,7 +9124,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002260 RID: 8800 RVA: 0x001DA2DC File Offset: 0x001D84DC
+		
 		public void NotifyAllMapFuBenBeginInfo(CopyMap copyMap, int roleId, bool allKilled)
 		{
 			FuBenInfoItem fuBenInfoItem = FuBenManager.FindFuBenInfoBySeqID(copyMap.FuBenSeqID);
@@ -9179,7 +9179,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002261 RID: 8801 RVA: 0x001DA4B4 File Offset: 0x001D86B4
+		
 		public void NotifyAllFuBenTongGuanJiangLi(CopyMap copyMap, byte[] bytesData)
 		{
 			int copyMapID = copyMap.CopyMapID;
@@ -9202,7 +9202,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002262 RID: 8802 RVA: 0x001DA564 File Offset: 0x001D8764
+		
 		public void NotifyAllFuBenMonstersNum(CopyMap copyMap, bool allKilled)
 		{
 			if (!GameManager.BloodCastleCopySceneMgr.IsBloodCastleCopyScene(copyMap.FubenMapID))
@@ -9244,7 +9244,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002263 RID: 8803 RVA: 0x001DA6A4 File Offset: 0x001D88A4
+		
 		public void NotifyDailyJingMaiData(GameClient client)
 		{
 			TCPOutPacket tcpOutPacket = DataHelper.ObjectToTCPOutPacket<DailyJingMaiData>(client.ClientData.MyDailyJingMaiData, Global._TCPManager.TcpOutPacketPool, 237);
@@ -9253,7 +9253,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002264 RID: 8804 RVA: 0x001DA6F0 File Offset: 0x001D88F0
+		
 		public void NotifyOtherJingMaiExp(GameClient client)
 		{
 			int canGetExpNum = Global.GetLeftAddJingMaiExpNum(client);
@@ -9264,7 +9264,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002265 RID: 8805 RVA: 0x001DA76C File Offset: 0x001D896C
+		
 		public void NotifySelfAddSkill(SocketListener sl, TCPOutPacketPool pool, GameClient client, int skillDbID, int skillID, int skillLevel)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}", new object[]
@@ -9280,7 +9280,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002266 RID: 8806 RVA: 0x001DA7E0 File Offset: 0x001D89E0
+		
 		public void AddNumSkill(GameClient client, SkillData skillData, int addNum, bool writeToDB = true)
 		{
 			if (addNum != 0)
@@ -9342,7 +9342,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002267 RID: 8807 RVA: 0x001DA990 File Offset: 0x001D8B90
+		
 		public void UpdateSkillInfo(GameClient client, SkillData skillData, bool writeToDB = true)
 		{
 			if (writeToDB)
@@ -9363,7 +9363,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002268 RID: 8808 RVA: 0x001DAA38 File Offset: 0x001D8C38
+		
 		public void NotifySkillUsedNumFull(GameClient client, SkillData skillData)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}", new object[]
@@ -9380,13 +9380,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002269 RID: 8809 RVA: 0x001DAAD7 File Offset: 0x001D8CD7
+		
 		public void NotifySkillCDTime(GameClient client, int skillid, long cdtime, bool waitEnterScene = false)
 		{
 			client.sendCmd(691, string.Format("{0}:{1}:{2}", client.ClientData.RoleID, skillid, cdtime), waitEnterScene);
 		}
 
-		// Token: 0x0600226A RID: 8810 RVA: 0x001DAB10 File Offset: 0x001D8D10
+		
 		public void NotifyPortableBagData(GameClient client)
 		{
 			TCPOutPacket tcpOutPacket = DataHelper.ObjectToTCPOutPacket<PortableBagData>(client.ClientData.MyPortableBagData, Global._TCPManager.TcpOutPacketPool, 241);
@@ -9395,7 +9395,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600226B RID: 8811 RVA: 0x001DAB5C File Offset: 0x001D8D5C
+		
 		public void NotifyHuodongData(GameClient client)
 		{
 			TCPOutPacket tcpOutPacket = DataHelper.ObjectToTCPOutPacket<HuodongData>(client.ClientData.MyHuodongData, Global._TCPManager.TcpOutPacketPool, 245);
@@ -9404,18 +9404,18 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600226C RID: 8812 RVA: 0x001DABA7 File Offset: 0x001D8DA7
+		
 		public void NotifyGetCombatGiftData(GameClient client)
 		{
 		}
 
-		// Token: 0x0600226D RID: 8813 RVA: 0x001DABAC File Offset: 0x001D8DAC
+		
 		public void NotifyGetLevelUpGiftData(GameClient client, int newLevel)
 		{
 			GameManager.ClientMgr.SendToClient(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, client, string.Format("{0}:{1}", client.ClientData.RoleID, newLevel), 445);
 		}
 
-		// Token: 0x0600226E RID: 8814 RVA: 0x001DAC00 File Offset: 0x001D8E00
+		
 		public void NotifyAllChangeHuoDongID(int bigAwardID, int songLiID)
 		{
 			int index = 0;
@@ -9433,7 +9433,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600226F RID: 8815 RVA: 0x001DACA4 File Offset: 0x001D8EA4
+		
 		public void NotifyTeamMemberFuBenEnterMsg(GameClient client, int leaderRoleID, int fuBenID, int fuBenSeqID)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}", new object[]
@@ -9451,7 +9451,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002270 RID: 8816 RVA: 0x001DAD40 File Offset: 0x001D8F40
+		
 		public void NotifyTeamFuBenEnterMsg(List<int> roleIDsList, int minLevel, int maxLevel, int leaderMapCode, int leaderRoleID, int fuBenID, int fuBenSeqID, int enterNumber, int maxFinishNum, bool igoreNumLimit = false)
 		{
 			if (roleIDsList != null && roleIDsList.Count > 0)
@@ -9485,7 +9485,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002271 RID: 8817 RVA: 0x001DAE4C File Offset: 0x001D904C
+		
 		public void InitLianZhanBuff(GameClient client)
 		{
 			BufferData bufferData = Global.GetBufferDataByID(client, 122);
@@ -9502,7 +9502,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002272 RID: 8818 RVA: 0x001DAEC0 File Offset: 0x001D90C0
+		
 		public double GetLianZhanExpRate(GameClient client)
 		{
 			double addPercent = 0.0;
@@ -9519,7 +9519,7 @@ namespace GameServer.Logic
 			return addPercent;
 		}
 
-		// Token: 0x06002273 RID: 8819 RVA: 0x001DAF24 File Offset: 0x001D9124
+		
 		public void ChangeRoleLianZhan(SocketListener sl, TCPOutPacketPool pool, GameClient client, Monster monster, int addNum = 1)
 		{
 			if (null != client)
@@ -9575,7 +9575,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002274 RID: 8820 RVA: 0x001DB1AC File Offset: 0x001D93AC
+		
 		public void UpdateRoleDailyData_Exp(GameClient client, long newExperience)
 		{
 			if (null == client.ClientData.MyRoleDailyData)
@@ -9594,7 +9594,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002275 RID: 8821 RVA: 0x001DB24C File Offset: 0x001D944C
+		
 		public void UpdateRoleDailyData_LingLi(GameClient client, int newLingLi)
 		{
 			if (null == client.ClientData.MyRoleDailyData)
@@ -9613,7 +9613,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002276 RID: 8822 RVA: 0x001DB2EC File Offset: 0x001D94EC
+		
 		public void UpdateRoleDailyData_KillBoss(GameClient client, int newKillBoss)
 		{
 			if (null == client.ClientData.MyRoleDailyData)
@@ -9632,7 +9632,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002277 RID: 8823 RVA: 0x001DB38C File Offset: 0x001D958C
+		
 		public void UpdateRoleDailyData_FuBenNum(GameClient client, int newFuBenNum, int nLev, bool bActiveChenJiu = true)
 		{
 			if (null == client.ClientData.MyRoleDailyData)
@@ -9656,7 +9656,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002278 RID: 8824 RVA: 0x001DB448 File Offset: 0x001D9648
+		
 		public long GetRoleDailyData_RebornExp(GameClient client, MoneyTypes types)
 		{
 			if (null == client.ClientData.MyRoleDailyData)
@@ -9684,7 +9684,7 @@ namespace GameServer.Logic
 			return 0L;
 		}
 
-		// Token: 0x06002279 RID: 8825 RVA: 0x001DB52C File Offset: 0x001D972C
+		
 		public void UpdateRoleDailyData_RebornExp(GameClient client, MoneyTypes types, long newExperience)
 		{
 			if (null == client.ClientData.MyRoleDailyData)
@@ -9719,7 +9719,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600227A RID: 8826 RVA: 0x001DB65C File Offset: 0x001D985C
+		
 		public void UpdateRoleDailyData_WuXingNum(GameClient client, int newWuXingNum)
 		{
 			if (null == client.ClientData.MyRoleDailyData)
@@ -9738,7 +9738,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600227B RID: 8827 RVA: 0x001DB6FC File Offset: 0x001D98FC
+		
 		public void UpdateRoleDailyData_SweepNum(GameClient client, int newWuXingNum)
 		{
 			if (null == client.ClientData.MyRoleDailyData)
@@ -9757,7 +9757,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600227C RID: 8828 RVA: 0x001DB79C File Offset: 0x001D999C
+		
 		public void NotifyRoleDailyData(GameClient client)
 		{
 			RoleDailyData roleDailyData = client.ClientData.MyRoleDailyData;
@@ -9767,7 +9767,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600227D RID: 8829 RVA: 0x001DB7EC File Offset: 0x001D99EC
+		
 		public void UpdateKillBoss(GameClient client, int killBossNum, Monster monster, bool writeToDB = false)
 		{
 			if (401 == monster.MonsterType)
@@ -9794,7 +9794,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600227E RID: 8830 RVA: 0x001DB8E8 File Offset: 0x001D9AE8
+		
 		public void UpdateBattleNum(GameClient client, int addNum, bool writeToDB = false)
 		{
 			client.ClientData.BattleNum += addNum;
@@ -9806,7 +9806,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600227F RID: 8831 RVA: 0x001DB968 File Offset: 0x001D9B68
+		
 		public void ChangeRoleHeroIndex(SocketListener sl, TCPOutPacketPool pool, GameClient client, int heroIndex, bool force = false)
 		{
 			if (!force)
@@ -9832,7 +9832,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002280 RID: 8832 RVA: 0x001DBA20 File Offset: 0x001D9C20
+		
 		public void NotifyBossInfoDictData(GameClient client)
 		{
 			Dictionary<int, BossData> dict = MonsterBossManager.GetBossDictData();
@@ -9842,7 +9842,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002281 RID: 8833 RVA: 0x001DBA68 File Offset: 0x001D9C68
+		
 		public void NotifyYaBiaoData(GameClient client)
 		{
 			TCPOutPacket tcpOutPacket = DataHelper.ObjectToTCPOutPacket<YaBiaoData>(client.ClientData.MyYaBiaoData, Global._TCPManager.TcpOutPacketPool, 270);
@@ -9851,7 +9851,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002282 RID: 8834 RVA: 0x001DBAB4 File Offset: 0x001D9CB4
+		
 		public void NotifyOtherBiaoCheLifeV(SocketListener sl, TCPOutPacketPool pool, List<object> objsList, int biaoCheID, int currentLifeV)
 		{
 			if (null != objsList)
@@ -9861,7 +9861,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002283 RID: 8835 RVA: 0x001DBAFC File Offset: 0x001D9CFC
+		
 		public void NotifyMySelfNewBiaoChe(SocketListener sl, TCPOutPacketPool pool, GameClient client, BiaoCheItem biaoCheItem)
 		{
 			BiaoCheData biaoCheData = Global.BiaoCheItem2BiaoCheData(biaoCheItem);
@@ -9871,7 +9871,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002284 RID: 8836 RVA: 0x001DBB34 File Offset: 0x001D9D34
+		
 		public void NotifyMySelfDelBiaoChe(SocketListener sl, TCPOutPacketPool pool, GameClient client, int biaoCheID)
 		{
 			string strcmd = string.Format("{0}", biaoCheID);
@@ -9881,7 +9881,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002285 RID: 8837 RVA: 0x001DBB78 File Offset: 0x001D9D78
+		
 		public void NotifyAllPopupWinMsg(SocketListener sl, TCPOutPacketPool pool, GameClient client, string strcmd)
 		{
 			int index = 0;
@@ -9898,7 +9898,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002286 RID: 8838 RVA: 0x001DBBDC File Offset: 0x001D9DDC
+		
 		public void NotifyPopupWinMsg(SocketListener sl, TCPOutPacketPool pool, GameClient client, string strcmd)
 		{
 			TCPOutPacket tcpOutPacket = TCPOutPacket.MakeTCPOutPacket(pool, strcmd, 284);
@@ -9907,7 +9907,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002287 RID: 8839 RVA: 0x001DBC0C File Offset: 0x001D9E0C
+		
 		private void ChangeDayLoginNum(GameClient client)
 		{
 			int dayID = TimeUtil.NowDateTime().DayOfYear;
@@ -9970,7 +9970,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002288 RID: 8840 RVA: 0x001DBF18 File Offset: 0x001DA118
+		
 		public void ChangeAllThingAddPropIndexs(GameClient client)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}", new object[]
@@ -9987,7 +9987,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002289 RID: 8841 RVA: 0x001DBFCC File Offset: 0x001DA1CC
+		
 		public void NotifyAllChangeHalfYinLiangPeriod(int halfYinLiangPeriod)
 		{
 			int index = 0;
@@ -10002,7 +10002,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600228A RID: 8842 RVA: 0x001DC050 File Offset: 0x001DA250
+		
 		public void ChangeBangHuiName(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			List<object> objsList = Global.GetAll9Clients(client);
@@ -10019,7 +10019,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600228B RID: 8843 RVA: 0x001DC0E0 File Offset: 0x001DA2E0
+		
 		public void ChangeBangHuiZhiWu(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			List<object> objsList = Global.GetAll9Clients(client);
@@ -10055,7 +10055,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600228C RID: 8844 RVA: 0x001DC254 File Offset: 0x001DA454
+		
 		public void NotifyOnlineBangHuiMgrRoleApplyMsg(int roleID, string roleName, int bhid, string bhName, string roleList)
 		{
 			if (!string.IsNullOrEmpty(roleList))
@@ -10099,7 +10099,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600228D RID: 8845 RVA: 0x001DC3CC File Offset: 0x001DA5CC
+		
 		public void NotifyInviteToBangHui(SocketListener sl, TCPOutPacketPool pool, GameClient otherClient, int inviteRoleID, string inviteRoleName, int bhid, string bhName, int nChangelifeLev)
 		{
 			if (Global.GetUnionLevel(otherClient, false) >= Global.JoinBangHuiNeedLevel)
@@ -10119,7 +10119,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600228E RID: 8846 RVA: 0x001DC450 File Offset: 0x001DA650
+		
 		public void NotifyJoinBangHui(SocketListener sl, TCPOutPacketPool pool, GameClient otherClient, int bhid, string bhName)
 		{
 			if (otherClient.ClientData.Faction <= 0)
@@ -10148,7 +10148,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600228F RID: 8847 RVA: 0x001DC590 File Offset: 0x001DA790
+		
 		public void NotifyLeaveBangHui(SocketListener sl, TCPOutPacketPool pool, GameClient otherClient, int bhid, string bhName, int leaveType)
 		{
 			if (otherClient.ClientData.Faction > 0)
@@ -10173,7 +10173,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002290 RID: 8848 RVA: 0x001DC6E0 File Offset: 0x001DA8E0
+		
 		public void NotifyBangHuiDestroy(int retCode, int roleID, int bhid)
 		{
 			MoYuLongXue.OnBangHuiDestroy(bhid);
@@ -10203,7 +10203,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002291 RID: 8849 RVA: 0x001DC82C File Offset: 0x001DAA2C
+		
 		public void NotifyBangHuiUpLevel(int bhid, int serverID, int level, bool isKF)
 		{
 			int index = 0;
@@ -10221,7 +10221,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002292 RID: 8850 RVA: 0x001DC8A8 File Offset: 0x001DAAA8
+		
 		public void NotifyBangHuiChangeName(int bhid, string newName)
 		{
 			int index = 0;
@@ -10243,7 +10243,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002293 RID: 8851 RVA: 0x001DC960 File Offset: 0x001DAB60
+		
 		public void NotifyRefuseApplyToBHMember(GameClient otherClient, string bhRoleName, string bhName)
 		{
 			if (otherClient.ClientData.Faction <= 0)
@@ -10256,7 +10256,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002294 RID: 8852 RVA: 0x001DC9CC File Offset: 0x001DABCC
+		
 		public void NotifyRefuseInviteToBHMember(GameClient otherClient, string bhRoleName, string bhName)
 		{
 			if (otherClient.ClientData.Faction > 0)
@@ -10269,7 +10269,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002295 RID: 8853 RVA: 0x001DCA34 File Offset: 0x001DAC34
+		
 		public void NotifySelfBangGongChange(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}", client.ClientData.RoleID, client.ClientData.BangGong, client.ClientData.BGMoney);
@@ -10279,7 +10279,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002296 RID: 8854 RVA: 0x001DCAA0 File Offset: 0x001DACA0
+		
 		public bool AddBangGong(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, ref int addBangGong, AddBangGongTypes addBangGongType, int nBangGongLimit = 0)
 		{
 			int oldBangGong = client.ClientData.BangGong;
@@ -10348,13 +10348,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002297 RID: 8855 RVA: 0x001DCD38 File Offset: 0x001DAF38
+		
 		public bool AddBangGong(GameClient client, ref int addBangGong, AddBangGongTypes addBangGongType, int nBangGongLimit = 0)
 		{
 			return this.AddBangGong(Global._TCPManager.MySocketListener, Global._TCPManager.tcpClientPool, Global._TCPManager.TcpOutPacketPool, client, ref addBangGong, addBangGongType, nBangGongLimit);
 		}
 
-		// Token: 0x06002298 RID: 8856 RVA: 0x001DCD74 File Offset: 0x001DAF74
+		
 		public bool SubUserBangGong(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int subBangGong)
 		{
 			int oldBangGong = client.ClientData.BangGong;
@@ -10399,7 +10399,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002299 RID: 8857 RVA: 0x001DCEDC File Offset: 0x001DB0DC
+		
 		public bool AddBangHuiTongQian(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int bhid, int addMoney)
 		{
 			int rid = (client == null) ? 0 : client.ClientData.RoleID;
@@ -10430,7 +10430,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600229A RID: 8858 RVA: 0x001DCFA0 File Offset: 0x001DB1A0
+		
 		public bool SubBangHuiTongQian(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int subMoney, out int bhZoneID)
 		{
 			bhZoneID = 0;
@@ -10465,7 +10465,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600229B RID: 8859 RVA: 0x001DD074 File Offset: 0x001DB274
+		
 		public void NotifyBangHuiZiJinChanged(GameClient client, int bhid)
 		{
 			int roleID = client.ClientData.RoleID;
@@ -10487,7 +10487,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600229C RID: 8860 RVA: 0x001DD138 File Offset: 0x001DB338
+		
 		public void NotifyOtherJunQiLifeV(SocketListener sl, TCPOutPacketPool pool, List<object> objsList, int junQiID, int currentLifeV)
 		{
 			if (null != objsList)
@@ -10497,7 +10497,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600229D RID: 8861 RVA: 0x001DD180 File Offset: 0x001DB380
+		
 		public void NotifyMySelfNewJunQi(SocketListener sl, TCPOutPacketPool pool, GameClient client, JunQiItem junQiItem)
 		{
 			JunQiData junQiData = Global.JunQiItem2JunQiData(junQiItem);
@@ -10507,7 +10507,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600229E RID: 8862 RVA: 0x001DD1B8 File Offset: 0x001DB3B8
+		
 		public void NotifyMySelfDelJunQi(SocketListener sl, TCPOutPacketPool pool, GameClient client, int junQiID)
 		{
 			string strcmd = string.Format("{0}", junQiID);
@@ -10517,7 +10517,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600229F RID: 8863 RVA: 0x001DD1FC File Offset: 0x001DB3FC
+		
 		public void NotifyLingDiForBHMsg(SocketListener sl, TCPOutPacketPool pool, GameClient client, string strcmd)
 		{
 			TCPOutPacket tcpOutPacket = TCPOutPacket.MakeTCPOutPacket(pool, strcmd, 323);
@@ -10526,7 +10526,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022A0 RID: 8864 RVA: 0x001DD22C File Offset: 0x001DB42C
+		
 		public void NotifyAllLingDiForBHMsg(SocketListener sl, TCPOutPacketPool pool, int lingDiID, int bhid, int zoneID, string bhName, int tax)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}", new object[]
@@ -10548,7 +10548,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022A1 RID: 8865 RVA: 0x001DD2BC File Offset: 0x001DB4BC
+		
 		public void NotifyAllLuoLanChengZhanRequestInfoList(List<LuoLanChengZhanRequestInfoEx> list)
 		{
 			int index = 0;
@@ -10562,13 +10562,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022A2 RID: 8866 RVA: 0x001DD305 File Offset: 0x001DB505
+		
 		public void NotifyLuoLanChengZhanRequestInfoList(GameClient client, List<LuoLanChengZhanRequestInfoEx> list)
 		{
 			client.sendCmd<List<LuoLanChengZhanRequestInfoEx>>(708, list, false);
 		}
 
-		// Token: 0x060022A3 RID: 8867 RVA: 0x001DD318 File Offset: 0x001DB518
+		
 		public void HandleBHJunQiUpLevel(int bhid, int junQiLevel)
 		{
 			double[] actionParams = new double[]
@@ -10586,7 +10586,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022A4 RID: 8868 RVA: 0x001DD37C File Offset: 0x001DB57C
+		
 		public void NotifyOtherFakeRoleLifeV(SocketListener sl, TCPOutPacketPool pool, List<object> objsList, int FakeRoleID, int currentLifeV)
 		{
 			if (null != objsList)
@@ -10596,7 +10596,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022A5 RID: 8869 RVA: 0x001DD3C4 File Offset: 0x001DB5C4
+		
 		public void NotifyMySelfNewFakeRole(SocketListener sl, TCPOutPacketPool pool, GameClient client, FakeRoleItem FakeRoleItem)
 		{
 			FakeRoleData FakeRoleData = Global.FakeRoleItem2FakeRoleData(FakeRoleItem);
@@ -10606,7 +10606,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022A6 RID: 8870 RVA: 0x001DD3FC File Offset: 0x001DB5FC
+		
 		public void NotifyMySelfDelFakeRole(SocketListener sl, TCPOutPacketPool pool, GameClient client, int FakeRoleID)
 		{
 			string strcmd = string.Format("{0}", FakeRoleID);
@@ -10616,7 +10616,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022A7 RID: 8871 RVA: 0x001DD440 File Offset: 0x001DB640
+		
 		public void NotifyAllDelFakeRole(SocketListener sl, TCPOutPacketPool pool, FakeRoleItem fakeRoleItem)
 		{
 			List<object> objsList = Global.GetAll9Clients(fakeRoleItem);
@@ -10624,7 +10624,7 @@ namespace GameServer.Logic
 			this.SendToClients(sl, pool, null, objsList, strcmd, 590);
 		}
 
-		// Token: 0x060022A8 RID: 8872 RVA: 0x001DD47C File Offset: 0x001DB67C
+		
 		public void NotifyChgHuangDiRoleIDMsg(SocketListener sl, TCPOutPacketPool pool, GameClient client, string strcmd)
 		{
 			TCPOutPacket tcpOutPacket = TCPOutPacket.MakeTCPOutPacket(pool, strcmd, 324);
@@ -10633,7 +10633,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022A9 RID: 8873 RVA: 0x001DD4AC File Offset: 0x001DB6AC
+		
 		public void NotifyAllChgHuangDiRoleIDMsg(SocketListener sl, TCPOutPacketPool pool, int oldHuangDiRoleID, int huangDiRoleID)
 		{
 			string strcmd = string.Format("{0}:{1}", oldHuangDiRoleID, huangDiRoleID);
@@ -10648,7 +10648,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022AA RID: 8874 RVA: 0x001DD510 File Offset: 0x001DB710
+		
 		public void NotifyInviteAddHuangFei(GameClient client, int otherRoleID, string otherRoleName, int randNum)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}", otherRoleID, otherRoleName, randNum);
@@ -10658,7 +10658,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022AB RID: 8875 RVA: 0x001DD56C File Offset: 0x001DB76C
+		
 		public void NotifyChgHuangHou(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			List<object> objsList = Global.GetAll9Clients(client);
@@ -10669,7 +10669,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022AC RID: 8876 RVA: 0x001DD5CC File Offset: 0x001DB7CC
+		
 		public void NotifyLingDiMapInfoData(GameClient client, LingDiMapInfoData lingDiMapInfoData)
 		{
 			TCPOutPacket tcpOutPacket = DataHelper.ObjectToTCPOutPacket<LingDiMapInfoData>(lingDiMapInfoData, Global._TCPManager.TcpOutPacketPool, 348);
@@ -10678,7 +10678,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022AD RID: 8877 RVA: 0x001DD610 File Offset: 0x001DB810
+		
 		public void NotifyAllLingDiMapInfoData(int mapCode, LingDiMapInfoData lingDiMapInfoData)
 		{
 			List<object> objsList = this.GetMapClients(mapCode);
@@ -10690,7 +10690,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022AE RID: 8878 RVA: 0x001DD668 File Offset: 0x001DB868
+		
 		public void NotifyHuangChengMapInfoData(GameClient client, HuangChengMapInfoData huangChengMapInfoData)
 		{
 			TCPOutPacket tcpOutPacket = DataHelper.ObjectToTCPOutPacket<HuangChengMapInfoData>(huangChengMapInfoData, Global._TCPManager.TcpOutPacketPool, 349);
@@ -10699,7 +10699,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022AF RID: 8879 RVA: 0x001DD6AC File Offset: 0x001DB8AC
+		
 		public void NotifyAllHuangChengMapInfoData(int mapCode, HuangChengMapInfoData huangChengMapInfoData)
 		{
 			List<object> objsList = this.GetMapClients(mapCode);
@@ -10711,7 +10711,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022B0 RID: 8880 RVA: 0x001DD704 File Offset: 0x001DB904
+		
 		public void NotifyWangChengMapInfoData(GameClient client, WangChengMapInfoData wangChengMapInfoData)
 		{
 			TCPOutPacket tcpOutPacket = DataHelper.ObjectToTCPOutPacket<WangChengMapInfoData>(wangChengMapInfoData, Global._TCPManager.TcpOutPacketPool, 454);
@@ -10720,7 +10720,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022B1 RID: 8881 RVA: 0x001DD748 File Offset: 0x001DB948
+		
 		public void NotifyAllWangChengMapInfoData(WangChengMapInfoData wangChengMapInfoData)
 		{
 			int index = 0;
@@ -10731,7 +10731,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022B2 RID: 8882 RVA: 0x001DD77C File Offset: 0x001DB97C
+		
 		public bool AddLingDiTaxMoney(int bhid, int lingDiID, int addMoney)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}", bhid, lingDiID, addMoney);
@@ -10739,7 +10739,7 @@ namespace GameServer.Logic
 			return null != dbFields && dbFields.Length == 4 && Convert.ToInt32(dbFields[0]) >= 0;
 		}
 
-		// Token: 0x060022B3 RID: 8883 RVA: 0x001DD7F0 File Offset: 0x001DB9F0
+		
 		public void NotifySelfSuiTangBattleAward(SocketListener sl, TCPOutPacketPool pool, GameClient client, int nPoint1, int nPoint2, long experience, int bindYuanBao, int chengJiu, bool bIsSuccess, int paiMing, string awardsGoods)
 		{
 			int nSelfPoint = client.ClientData.BattleKilledNum;
@@ -10762,7 +10762,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022B4 RID: 8884 RVA: 0x001DD8AC File Offset: 0x001DBAAC
+		
 		public bool NotifyLastUserMail(SocketListener sl, TCPClientPool tcpClientPool, TCPOutPacketPool pool, GameClient client, int mailID)
 		{
 			string strcmd = string.Format("{0}:{1}", client.ClientData.RoleID, mailID);
@@ -10773,7 +10773,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060022B5 RID: 8885 RVA: 0x001DD904 File Offset: 0x001DBB04
+		
 		public void SendMailWhenPacketFull(GameClient client, List<GoodsData> awardsItemList, string sContent, string sSubject)
 		{
 			int nTotalGroup = awardsItemList.Count / 5;
@@ -10804,7 +10804,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022B6 RID: 8886 RVA: 0x001DD9DC File Offset: 0x001DBBDC
+		
 		public void NotifyVipDailyData(GameClient client)
 		{
 			TCPOutPacket tcpOutPacket = DataHelper.ObjectToTCPOutPacket<List<VipDailyData>>(client.ClientData.VipDailyDataList, Global._TCPManager.TcpOutPacketPool, 389);
@@ -10813,7 +10813,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022B7 RID: 8887 RVA: 0x001DDA28 File Offset: 0x001DBC28
+		
 		public void NotifyYangGongBKAwardDailyData(GameClient client)
 		{
 			TCPOutPacket tcpOutPacket = DataHelper.ObjectToTCPOutPacket<YangGongBKDailyJiFenData>(client.ClientData.YangGongBKDailyJiFen, Global._TCPManager.TcpOutPacketPool, 392);
@@ -10822,7 +10822,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022B8 RID: 8888 RVA: 0x001DDA74 File Offset: 0x001DBC74
+		
 		public void NotifyAllShengXiaoGuessStateMsg(SocketListener sl, TCPOutPacketPool pool, int shengXiaoGuessState, int extraParams, int minLevel, int preGuessResult)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}", shengXiaoGuessState, extraParams, preGuessResult);
@@ -10857,7 +10857,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022B9 RID: 8889 RVA: 0x001DDB70 File Offset: 0x001DBD70
+		
 		public void NotifyShengXiaoGuessResultMsg(SocketListener sl, TCPOutPacketPool pool, GameClient client, string sResult)
 		{
 			if (null != client)
@@ -10870,7 +10870,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022BA RID: 8890 RVA: 0x001DDBCC File Offset: 0x001DBDCC
+		
 		public void NotifyClientShengXiaoGuessStateMsg(SocketListener sl, TCPOutPacketPool pool, GameClient client, int shengXiaoGuessState, int extraParams, int minLevel, int preGuessResult)
 		{
 			if (client != null && client.ClientData.Level >= minLevel)
@@ -10883,7 +10883,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022BB RID: 8891 RVA: 0x001DDC3C File Offset: 0x001DBE3C
+		
 		public void NotifyMySelfNewNPC(SocketListener sl, TCPOutPacketPool pool, GameClient client, NPC npc)
 		{
 			if (npc != null && null != npc.RoleBufferData)
@@ -10895,7 +10895,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022BC RID: 8892 RVA: 0x001DDC98 File Offset: 0x001DBE98
+		
 		public void NotifyMySelfNewNPCBy9Grid(SocketListener sl, TCPOutPacketPool pool, NPC npc)
 		{
 			if (npc != null && null != npc.RoleBufferData)
@@ -10911,7 +10911,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022BD RID: 8893 RVA: 0x001DDD0C File Offset: 0x001DBF0C
+		
 		public void NotifyMySelfDelNPC(SocketListener sl, TCPOutPacketPool pool, GameClient client, int mapCode, int npcID)
 		{
 			string strcmd = string.Format("{0}:{1}", npcID, mapCode);
@@ -10921,13 +10921,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022BE RID: 8894 RVA: 0x001DDD54 File Offset: 0x001DBF54
+		
 		public void NotifyMySelfDelNPC(SocketListener sl, TCPOutPacketPool pool, GameClient client, NPC npc)
 		{
 			this.NotifyMySelfDelNPC(sl, pool, client, npc.MapCode, npc.NpcID);
 		}
 
-		// Token: 0x060022BF RID: 8895 RVA: 0x001DDD70 File Offset: 0x001DBF70
+		
 		public void NotifyMySelfDelNPCBy9Grid(SocketListener sl, TCPOutPacketPool pool, NPC npc)
 		{
 			List<object> objsList = Global.GetAll9GridObjects(npc);
@@ -10940,7 +10940,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022C0 RID: 8896 RVA: 0x001DDDD4 File Offset: 0x001DBFD4
+		
 		private bool TryDirectMove(GameClient client, long startMoveTicks, List<Point> path)
 		{
 			int endGridX = (int)path[path.Count - 1].X;
@@ -10984,7 +10984,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060022C1 RID: 8897 RVA: 0x001DDFD8 File Offset: 0x001DC1D8
+		
 		public bool StartClientStoryboard(GameClient client, long startMoveTicks, List<Point> path, bool stepMove)
 		{
 			StoryBoard4Client.RemoveStoryBoard(client.ClientData.RoleID);
@@ -11022,7 +11022,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060022C2 RID: 8898 RVA: 0x001DE0E4 File Offset: 0x001DC2E4
+		
 		public void Move_Completed(object sender, EventArgs e)
 		{
 			StoryBoard4Client sb = sender as StoryBoard4Client;
@@ -11057,7 +11057,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022C3 RID: 8899 RVA: 0x001DE264 File Offset: 0x001DC464
+		
 		public bool StopClientStoryboard(GameClient client, long clientTicks = 0L, int posX = -1, int posY = -1)
 		{
 			if (clientTicks > 0L)
@@ -11079,7 +11079,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060022C4 RID: 8900 RVA: 0x001DE314 File Offset: 0x001DC514
+		
 		public void StopClientStoryboard(GameClient client, int stopIndex)
 		{
 			if (stopIndex > 0)
@@ -11092,7 +11092,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022C5 RID: 8901 RVA: 0x001DE358 File Offset: 0x001DC558
+		
 		public bool GetClientStoryboardLastPoint(GameClient client, out Point lastPoint)
 		{
 			lastPoint = new Point(0.0, 0.0);
@@ -11110,7 +11110,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060022C6 RID: 8902 RVA: 0x001DE3B4 File Offset: 0x001DC5B4
+		
 		public bool AddEquipStrong(GameClient client, GoodsData goodsData, int subStrong)
 		{
 			int maxStrong = Global.GetEquipGoodsMaxStrong(goodsData.GoodsID);
@@ -11157,7 +11157,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060022C7 RID: 8903 RVA: 0x001DE504 File Offset: 0x001DC704
+		
 		public int SubEquipStrong(GameClient client, GoodsData goodsData, int subStrong)
 		{
 			int modValue = goodsData.Strong / Global.MaxNotifyEquipStrongValue;
@@ -11175,7 +11175,7 @@ namespace GameServer.Logic
 			return modValue2;
 		}
 
-		// Token: 0x060022C8 RID: 8904 RVA: 0x001DE58C File Offset: 0x001DC78C
+		
 		public void NotifyMySelfEquipStrong(SocketListener sl, TCPOutPacketPool pool, GameClient client, GoodsData goodsData)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}", client.ClientData.RoleID, goodsData.Id, goodsData.Strong);
@@ -11185,7 +11185,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022C9 RID: 8905 RVA: 0x001DE5F0 File Offset: 0x001DC7F0
+		
 		public void NotifyDSHideCmd(SocketListener sl, TCPOutPacketPool pool, GameClient client)
 		{
 			List<object> objsList = Global.GetAll9Clients(client);
@@ -11196,7 +11196,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022CA RID: 8906 RVA: 0x001DE650 File Offset: 0x001DC850
+		
 		public void CheckDSHideState(GameClient client)
 		{
 			if (client.ClientData.DSHideStart > 0L)
@@ -11211,7 +11211,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022CB RID: 8907 RVA: 0x001DE6CC File Offset: 0x001DC8CC
+		
 		public void NotifyRoleStatusCmd(SocketListener sl, TCPOutPacketPool pool, GameClient client, int statusID, long startTicks, int slotSeconds, double tag = 0.0)
 		{
 			switch (statusID)
@@ -11244,7 +11244,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022CC RID: 8908 RVA: 0x001DE7C0 File Offset: 0x001DC9C0
+		
 		public void NotifyMonsterStatusCmd(SocketListener sl, TCPOutPacketPool pool, Monster monster, int statusID, long startTicks, int slotSeconds, double tag = 0.0)
 		{
 			List<object> objsList = Global.GetAll9Clients(monster);
@@ -11262,7 +11262,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022CD RID: 8909 RVA: 0x001DE83C File Offset: 0x001DCA3C
+		
 		public void NotifyMySelfNewDeco(SocketListener sl, TCPOutPacketPool pool, GameClient client, Decoration deco)
 		{
 			if (null != deco)
@@ -11285,7 +11285,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022CE RID: 8910 RVA: 0x001DE904 File Offset: 0x001DCB04
+		
 		public void NotifyMySelfDelDeco(SocketListener sl, TCPOutPacketPool pool, GameClient client, Decoration deco)
 		{
 			if (null != deco)
@@ -11298,7 +11298,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022CF RID: 8911 RVA: 0x001DE95C File Offset: 0x001DCB5C
+		
 		public void NotifyOthersDelDeco(SocketListener sl, TCPOutPacketPool pool, List<object> objsList, int mapCode, int autoID)
 		{
 			if (null != objsList)
@@ -11308,7 +11308,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022D0 RID: 8912 RVA: 0x001DE99C File Offset: 0x001DCB9C
+		
 		public bool ModifyFuWenZhiChenPointsValue(GameClient client, int addValue, string strFrom, bool writeToDB = true, bool notifyClient = true, bool isGM = false)
 		{
 			bool result;
@@ -11340,7 +11340,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060022D1 RID: 8913 RVA: 0x001DEAC0 File Offset: 0x001DCCC0
+		
 		public void ModifyShenLiJingHuaPointsValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -11357,7 +11357,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022D2 RID: 8914 RVA: 0x001DEBB0 File Offset: 0x001DCDB0
+		
 		public void ModifyChengJiuPointsValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -11375,14 +11375,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022D3 RID: 8915 RVA: 0x001DECA8 File Offset: 0x001DCEA8
+		
 		public int GetChengJiuPointsValue(GameClient client)
 		{
 			client.ClientData.ChengJiuPoints = (int)ChengJiuManager.GetChengJiuExtraDataByField(client, ChengJiuExtraDataField.ChengJiuPoints);
 			return client.ClientData.ChengJiuPoints;
 		}
 
-		// Token: 0x060022D4 RID: 8916 RVA: 0x001DECD8 File Offset: 0x001DCED8
+		
 		public int SetChengJiuLevelValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true)
 		{
 			client.ClientData.ChengJiuLevel = ChengJiuManager.GetChengJiuLevel(client);
@@ -11396,7 +11396,7 @@ namespace GameServer.Logic
 			return client.ClientData.ChengJiuLevel;
 		}
 
-		// Token: 0x060022D5 RID: 8917 RVA: 0x001DED9C File Offset: 0x001DCF9C
+		
 		public void ModifyZhuangBeiJiFenValue(GameClient client, int addValue, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -11410,19 +11410,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022D6 RID: 8918 RVA: 0x001DEDE1 File Offset: 0x001DCFE1
+		
 		public void SaveZhuangBeiJiFenValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "ZhuangBeiJiFen", nValue, writeToDB, "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022D7 RID: 8919 RVA: 0x001DEDF8 File Offset: 0x001DCFF8
+		
 		public int GetZhuangBeiJiFenValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "ZhuangBeiJiFen", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022D8 RID: 8920 RVA: 0x001DEE1C File Offset: 0x001DD01C
+		
 		public void ModifyLieShaValue(GameClient client, int addValue, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -11436,19 +11436,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022D9 RID: 8921 RVA: 0x001DEE61 File Offset: 0x001DD061
+		
 		public void SaveLieShaValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "LieShaZhi", nValue, writeToDB, "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022DA RID: 8922 RVA: 0x001DEE78 File Offset: 0x001DD078
+		
 		public int GetLieShaValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "LieShaZhi", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022DB RID: 8923 RVA: 0x001DEE9C File Offset: 0x001DD09C
+		
 		public void ModifyWuXingValue(GameClient client, int addValue, bool writeToDB = false, bool notifyClient = true, bool doChangeWuXueLevel = true)
 		{
 			if (0 != addValue)
@@ -11473,19 +11473,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022DC RID: 8924 RVA: 0x001DEF0B File Offset: 0x001DD10B
+		
 		public void SaveWuXingValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "WuXingZhi", nValue, writeToDB, "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022DD RID: 8925 RVA: 0x001DEF24 File Offset: 0x001DD124
+		
 		public int GetWuXingValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "WuXingZhi", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022DE RID: 8926 RVA: 0x001DEF48 File Offset: 0x001DD148
+		
 		public void ModifyZhenQiValue(GameClient client, int addValue, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -11499,19 +11499,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022DF RID: 8927 RVA: 0x001DEF8D File Offset: 0x001DD18D
+		
 		public void SaveZhenQiValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "ZhenQiZhi", nValue, writeToDB, "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022E0 RID: 8928 RVA: 0x001DEFA4 File Offset: 0x001DD1A4
+		
 		public int GetZhenQiValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "ZhenQiZhi", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022E1 RID: 8929 RVA: 0x001DEFC8 File Offset: 0x001DD1C8
+		
 		public void ModifyStarSoulValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -11531,7 +11531,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022E2 RID: 8930 RVA: 0x001DF0BC File Offset: 0x001DD2BC
+		
 		public void ModifyPetJiFenValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -11546,7 +11546,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022E3 RID: 8931 RVA: 0x001DF158 File Offset: 0x001DD358
+		
 		public bool ModifyYuanSuFenMoValue(GameClient client, int addValue, string strFrom, bool notifyClient = true, bool isGM = false)
 		{
 			bool result;
@@ -11587,7 +11587,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060022E4 RID: 8932 RVA: 0x001DF270 File Offset: 0x001DD470
+		
 		public bool ModifyMUMoHeValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true, bool isGM = false)
 		{
 			bool result;
@@ -11619,19 +11619,19 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060022E5 RID: 8933 RVA: 0x001DF35C File Offset: 0x001DD55C
+		
 		public void SaveMUMoHeValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueToDB(client, "MUMoHe", nValue, writeToDB);
 		}
 
-		// Token: 0x060022E6 RID: 8934 RVA: 0x001DF370 File Offset: 0x001DD570
+		
 		public int GetMUMoHeValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32FromDB(client, "MUMoHe");
 		}
 
-		// Token: 0x060022E7 RID: 8935 RVA: 0x001DF390 File Offset: 0x001DD590
+		
 		public bool ModifyTianDiJingYuanValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true, bool isGM = false)
 		{
 			bool result;
@@ -11664,19 +11664,19 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060022E8 RID: 8936 RVA: 0x001DF48C File Offset: 0x001DD68C
+		
 		public void SaveTianDiJingYuanValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "TianDiJingYuan", nValue, writeToDB, "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022E9 RID: 8937 RVA: 0x001DF4A4 File Offset: 0x001DD6A4
+		
 		public int GetTianDiJingYuanValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "TianDiJingYuan", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022EA RID: 8938 RVA: 0x001DF4C8 File Offset: 0x001DD6C8
+		
 		public bool ModifyZaiZaoValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true, bool isGM = false)
 		{
 			bool result;
@@ -11708,19 +11708,19 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060022EB RID: 8939 RVA: 0x001DF5B3 File Offset: 0x001DD7B3
+		
 		public void SaveZaiZaoValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "ZaiZaoPoint", nValue, writeToDB, "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022EC RID: 8940 RVA: 0x001DF5CC File Offset: 0x001DD7CC
+		
 		public int GetZaiZaoValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "ZaiZaoPoint", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022ED RID: 8941 RVA: 0x001DF5F0 File Offset: 0x001DD7F0
+		
 		public void ModifyShiLianLingValue(GameClient client, int addValue, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -11734,43 +11734,43 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022EE RID: 8942 RVA: 0x001DF635 File Offset: 0x001DD835
+		
 		public void SaveShiLianLingValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "ShiLianLing", nValue, writeToDB, "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022EF RID: 8943 RVA: 0x001DF64C File Offset: 0x001DD84C
+		
 		public int GetShiLianLingValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "ShiLianLing", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022F0 RID: 8944 RVA: 0x001DF66E File Offset: 0x001DD86E
+		
 		public void SaveJingMaiLevelValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "JingMaiLevel", nValue, writeToDB, "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022F1 RID: 8945 RVA: 0x001DF684 File Offset: 0x001DD884
+		
 		public int GetJingMaiLevelValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "JingMaiLevel", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022F2 RID: 8946 RVA: 0x001DF6A6 File Offset: 0x001DD8A6
+		
 		public void SaveWuXueLevelValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "WuXueLevel", nValue, writeToDB, "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022F3 RID: 8947 RVA: 0x001DF6BC File Offset: 0x001DD8BC
+		
 		public int GetWuXueLevelValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "WuXueLevel", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022F4 RID: 8948 RVA: 0x001DF6E0 File Offset: 0x001DD8E0
+		
 		public void ModifyZuanHuangLevelValue(GameClient client, int addValue, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -11784,19 +11784,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022F5 RID: 8949 RVA: 0x001DF726 File Offset: 0x001DD926
+		
 		public void SaveZuanHuangLevelValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "ZuanHuangLevel", nValue, writeToDB, "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022F6 RID: 8950 RVA: 0x001DF73C File Offset: 0x001DD93C
+		
 		public int GetZuanHuangLevelValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "ZuanHuangLevel", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022F7 RID: 8951 RVA: 0x001DF760 File Offset: 0x001DD960
+		
 		public void ModifySystemOpenValue(GameClient client, int addValue, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (addValue >= 0 && addValue <= 31)
@@ -11810,13 +11810,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022F8 RID: 8952 RVA: 0x001DF7B4 File Offset: 0x001DD9B4
+		
 		public int GetScoreBoxState(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "ScoreBoxState", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022F9 RID: 8953 RVA: 0x001DF7D8 File Offset: 0x001DD9D8
+		
 		public void ModifyScoreBoxState(GameClient client, int nOpen)
 		{
 			if (nOpen >= 0 && nOpen <= 2)
@@ -11826,19 +11826,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022FA RID: 8954 RVA: 0x001DF81A File Offset: 0x001DDA1A
+		
 		public void SaveSystemOpenValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "SystemOpenValue", nValue, writeToDB, "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022FB RID: 8955 RVA: 0x001DF830 File Offset: 0x001DDA30
+		
 		public int GetSystemOpenValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "SystemOpenValue", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022FC RID: 8956 RVA: 0x001DF854 File Offset: 0x001DDA54
+		
 		public void ModifyJunGongValue(GameClient client, int addValue, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -11853,19 +11853,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060022FD RID: 8957 RVA: 0x001DF8AE File Offset: 0x001DDAAE
+		
 		public void SaveJunGongValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "JunGong", nValue, writeToDB, "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022FE RID: 8958 RVA: 0x001DF8C4 File Offset: 0x001DDAC4
+		
 		public int GetJunGongValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "JunGong", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x060022FF RID: 8959 RVA: 0x001DF8E8 File Offset: 0x001DDAE8
+		
 		public void ModifyKaiFuOnlineDayID(GameClient client, int dayID, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (dayID >= 1 && dayID <= 7)
@@ -11878,19 +11878,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002300 RID: 8960 RVA: 0x001DF92C File Offset: 0x001DDB2C
+		
 		public void SaveKaiFuOnlineDayID(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueToDB(client, "KaiFuOnlineDayID", nValue, writeToDB);
 		}
 
-		// Token: 0x06002301 RID: 8961 RVA: 0x001DF940 File Offset: 0x001DDB40
+		
 		public int GetKaiFuOnlineDayID(GameClient client)
 		{
 			return Global.GetRoleParamsInt32FromDB(client, "KaiFuOnlineDayID");
 		}
 
-		// Token: 0x06002302 RID: 8962 RVA: 0x001DF960 File Offset: 0x001DDB60
+		
 		public void ModifyTo60or100ID(GameClient client, int nID, bool writeToDB = false, bool notifyClient = true)
 		{
 			this.SaveTo60or100ID(client, nID, writeToDB);
@@ -11900,19 +11900,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002303 RID: 8963 RVA: 0x001DF98E File Offset: 0x001DDB8E
+		
 		public void SaveTo60or100ID(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueToDB(client, "To60or100", nValue, writeToDB);
 		}
 
-		// Token: 0x06002304 RID: 8964 RVA: 0x001DF9A0 File Offset: 0x001DDBA0
+		
 		public int GetTo60or100ID(GameClient client)
 		{
 			return Global.GetRoleParamsInt32FromDB(client, "To60or100");
 		}
 
-		// Token: 0x06002305 RID: 8965 RVA: 0x001DF9C0 File Offset: 0x001DDBC0
+		
 		public void ModifyTreasureJiFenValue(GameClient client, int addValue, string strFrom, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -11935,7 +11935,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002306 RID: 8966 RVA: 0x001DFAB0 File Offset: 0x001DDCB0
+		
 		public void ModifyTreasureXueZuanValue(GameClient client, int addValue, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -11950,31 +11950,31 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002307 RID: 8967 RVA: 0x001DFB08 File Offset: 0x001DDD08
+		
 		public int GetTreasureJiFen(GameClient client)
 		{
 			return Global.GetRoleParamsInt32FromDB(client, "TreasureJiFen");
 		}
 
-		// Token: 0x06002308 RID: 8968 RVA: 0x001DFB25 File Offset: 0x001DDD25
+		
 		public void SaveTreasureJiFenValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueToDB(client, "TreasureJiFen", nValue, writeToDB);
 		}
 
-		// Token: 0x06002309 RID: 8969 RVA: 0x001DFB38 File Offset: 0x001DDD38
+		
 		public int GetTreasureXueZuan(GameClient client)
 		{
 			return Global.GetRoleParamsInt32FromDB(client, "TreasureXueZuan");
 		}
 
-		// Token: 0x0600230A RID: 8970 RVA: 0x001DFB55 File Offset: 0x001DDD55
+		
 		public void SaveTreasureXueZuanValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueToDB(client, "TreasureXueZuan", nValue, writeToDB);
 		}
 
-		// Token: 0x0600230B RID: 8971 RVA: 0x001DFB68 File Offset: 0x001DDD68
+		
 		public void ModifyZhanHunValue(GameClient client, int addValue, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -11989,7 +11989,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600230C RID: 8972 RVA: 0x001DFBC4 File Offset: 0x001DDDC4
+		
 		public bool ModifyTianTiRongYaoValue(GameClient client, int addValue, string strFrom, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -12016,19 +12016,19 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600230D RID: 8973 RVA: 0x001DFCEE File Offset: 0x001DDEEE
+		
 		public void SaveZhanHunValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "ZhanHun", nValue, writeToDB, "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x0600230E RID: 8974 RVA: 0x001DFD04 File Offset: 0x001DDF04
+		
 		public int GetZhanHunValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "ZhanHun", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x0600230F RID: 8975 RVA: 0x001DFD28 File Offset: 0x001DDF28
+		
 		public void ModifyRongYuValue(GameClient client, int addValue, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -12043,19 +12043,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002310 RID: 8976 RVA: 0x001DFD82 File Offset: 0x001DDF82
+		
 		public void SaveRongYuValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "RongYu", nValue, writeToDB, "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x06002311 RID: 8977 RVA: 0x001DFD98 File Offset: 0x001DDF98
+		
 		public int GetRongYuValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "RongYu", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x06002312 RID: 8978 RVA: 0x001DFDBC File Offset: 0x001DDFBC
+		
 		public void ModifyZhanHunLevelValue(GameClient client, int addValue, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -12070,19 +12070,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002313 RID: 8979 RVA: 0x001DFE0A File Offset: 0x001DE00A
+		
 		public void SaveZhanHunLevelValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "ZhanHunLevel", nValue, writeToDB, "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x06002314 RID: 8980 RVA: 0x001DFE20 File Offset: 0x001DE020
+		
 		public int GetZhanHunLevelValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "ZhanHunLevel", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x06002315 RID: 8981 RVA: 0x001DFE44 File Offset: 0x001DE044
+		
 		public void ModifyRongYuLevelValue(GameClient client, int addValue, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -12096,19 +12096,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002316 RID: 8982 RVA: 0x001DFE8A File Offset: 0x001DE08A
+		
 		public void SaveRongYuLevelValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "RongYuLevel", nValue, writeToDB, "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x06002317 RID: 8983 RVA: 0x001DFEA0 File Offset: 0x001DE0A0
+		
 		public int GetRongYuLevelValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "RongYuLevel", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x06002318 RID: 8984 RVA: 0x001DFEC4 File Offset: 0x001DE0C4
+		
 		public void ModifyShengWangValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -12129,7 +12129,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002319 RID: 8985 RVA: 0x001DFF88 File Offset: 0x001DE188
+		
 		public void ModifyLangHunFenMoValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (client != null)
@@ -12150,13 +12150,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600231A RID: 8986 RVA: 0x001E004C File Offset: 0x001DE24C
+		
 		public int GetLangHunFenMoValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32FromDB(client, "LangHunFenMo");
 		}
 
-		// Token: 0x0600231B RID: 8987 RVA: 0x001E006C File Offset: 0x001DE26C
+		
 		public bool ModifyOrnamentCharmPointValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true, bool isGM = false)
 		{
 			bool result;
@@ -12192,13 +12192,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600231C RID: 8988 RVA: 0x001E0170 File Offset: 0x001DE370
+		
 		public int GetOrnamentCharmPointValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32FromDB(client, "10153");
 		}
 
-		// Token: 0x0600231D RID: 8989 RVA: 0x001E0190 File Offset: 0x001DE390
+		
 		public bool ModifyBHMatchGuessJiFenValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true, bool isGM = false)
 		{
 			bool result;
@@ -12234,13 +12234,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600231E RID: 8990 RVA: 0x001E0298 File Offset: 0x001DE498
+		
 		public int GetBHMatchGuessJiFenValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32FromDB(client, "10190");
 		}
 
-		// Token: 0x0600231F RID: 8991 RVA: 0x001E02B8 File Offset: 0x001DE4B8
+		
 		public bool ModifyEraDonateValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true, bool isGM = false)
 		{
 			bool result;
@@ -12276,7 +12276,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002320 RID: 8992 RVA: 0x001E03C0 File Offset: 0x001DE5C0
+		
 		public int GetEraDonateValue(GameClient client)
 		{
 			int result;
@@ -12307,13 +12307,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002321 RID: 8993 RVA: 0x001E0480 File Offset: 0x001DE680
+		
 		public int GetEraDonateValueOffline(int rid)
 		{
 			return Global.SafeConvertToInt32(Global.GetRoleParamsFromDBByRoleID(rid, "10196", 0));
 		}
 
-		// Token: 0x06002322 RID: 8994 RVA: 0x001E04A4 File Offset: 0x001DE6A4
+		
 		public long GetRebornExpMaxAddValue(GameClient client, MoneyTypes types)
 		{
 			long result;
@@ -12351,7 +12351,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002323 RID: 8995 RVA: 0x001E05B8 File Offset: 0x001DE7B8
+		
 		public bool ModifyRebornExpMaxAddValue(GameClient client, long addValue, string strFrom, MoneyTypes types, bool writeToDB = false, bool notifyClient = true, bool isGM = false)
 		{
 			bool result;
@@ -12408,25 +12408,25 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002324 RID: 8996 RVA: 0x001E0770 File Offset: 0x001DE970
+		
 		public int GetCompType(GameClient client)
 		{
 			return Global.GetRoleParamsInt32FromDB(client, "10203");
 		}
 
-		// Token: 0x06002325 RID: 8997 RVA: 0x001E078D File Offset: 0x001DE98D
+		
 		public void SetCompType(GameClient client, int compType)
 		{
 			Global.SaveRoleParamsInt32ValueToDB(client, "10203", compType, true);
 		}
 
-		// Token: 0x06002326 RID: 8998 RVA: 0x001E07A0 File Offset: 0x001DE9A0
+		
 		public int GetCompBattleJiFenValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32FromDB(client, "10159");
 		}
 
-		// Token: 0x06002327 RID: 8999 RVA: 0x001E07C0 File Offset: 0x001DE9C0
+		
 		public bool ModifyCompBattleJiFenValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true, bool isGM = false)
 		{
 			bool result;
@@ -12463,13 +12463,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002328 RID: 9000 RVA: 0x001E08E4 File Offset: 0x001DEAE4
+		
 		public int GetCompMineJiFenValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32FromDB(client, "10215");
 		}
 
-		// Token: 0x06002329 RID: 9001 RVA: 0x001E0904 File Offset: 0x001DEB04
+		
 		public bool ModifyCompMineJiFenValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true, bool isGM = false)
 		{
 			bool result;
@@ -12506,13 +12506,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600232A RID: 9002 RVA: 0x001E0A28 File Offset: 0x001DEC28
+		
 		public int GetCompDonateValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32FromDB(client, "10204");
 		}
 
-		// Token: 0x0600232B RID: 9003 RVA: 0x001E0A48 File Offset: 0x001DEC48
+		
 		public bool ModifyCompDonateValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true, bool isGM = false)
 		{
 			bool result;
@@ -12549,7 +12549,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600232C RID: 9004 RVA: 0x001E0B6C File Offset: 0x001DED6C
+		
 		public void ModifyShenJiPointValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (client != null)
@@ -12570,7 +12570,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600232D RID: 9005 RVA: 0x001E0C30 File Offset: 0x001DEE30
+		
 		public bool ModifyAlchemyElementValue(GameClient client, int addValue, string strFrom, bool writeToDB = true, bool isGM = false)
 		{
 			bool result;
@@ -12610,7 +12610,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600232E RID: 9006 RVA: 0x001E0D6C File Offset: 0x001DEF6C
+		
 		public void ModifyShenJiJiFenValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (client != null)
@@ -12631,7 +12631,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600232F RID: 9007 RVA: 0x001E0E30 File Offset: 0x001DF030
+		
 		public void ModifyShenJiJiFenAddValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (client != null)
@@ -12652,25 +12652,25 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002330 RID: 9008 RVA: 0x001E0EF4 File Offset: 0x001DF0F4
+		
 		public int GetShenJiPointValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32FromDB(client, "10172");
 		}
 
-		// Token: 0x06002331 RID: 9009 RVA: 0x001E0F14 File Offset: 0x001DF114
+		
 		public int GetShenJiJiFenValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32FromDB(client, "10173");
 		}
 
-		// Token: 0x06002332 RID: 9010 RVA: 0x001E0F34 File Offset: 0x001DF134
+		
 		public int GetShenJiJiFenAddValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32FromDB(client, "10174");
 		}
 
-		// Token: 0x06002333 RID: 9011 RVA: 0x001E0F54 File Offset: 0x001DF154
+		
 		public void ModifyKingOfBattlePointValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (client != null)
@@ -12691,13 +12691,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002334 RID: 9012 RVA: 0x001E1018 File Offset: 0x001DF218
+		
 		public int GetKingOfBattlePointValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32FromDB(client, "10150");
 		}
 
-		// Token: 0x06002335 RID: 9013 RVA: 0x001E1038 File Offset: 0x001DF238
+		
 		public bool ModifyMoBiValue(GameClient client, int addValue, string strFrom, bool isGM = false)
 		{
 			bool result;
@@ -12725,7 +12725,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002336 RID: 9014 RVA: 0x001E1108 File Offset: 0x001DF308
+		
 		public bool ModifyLuckStarValue(GameClient client, int addValue, string strFrom, bool isGM = false, DaiBiSySType SysType = DaiBiSySType.None)
 		{
 			if (SysType != DaiBiSySType.None && addValue < 0)
@@ -12768,7 +12768,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002337 RID: 9015 RVA: 0x001E1270 File Offset: 0x001DF470
+		
 		public bool ModifyTeamRongYaoValue(GameClient client, int addValue, string strFrom, bool isGM = false)
 		{
 			bool result;
@@ -12796,7 +12796,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002338 RID: 9016 RVA: 0x001E1340 File Offset: 0x001DF540
+		
 		public bool ModifyTeamPointValue(GameClient client, int addValue, string strFrom, bool isGM = false)
 		{
 			bool result;
@@ -12824,7 +12824,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002339 RID: 9017 RVA: 0x001E1410 File Offset: 0x001DF610
+		
 		public bool ModifyMoBiValueOffline(int rid, string roleName, int zoneId, string userId, int addValue, string strFrom, bool isGM = false)
 		{
 			bool result;
@@ -12860,7 +12860,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600233A RID: 9018 RVA: 0x001E1518 File Offset: 0x001DF718
+		
 		public bool ModifyKuaFuLueDuoBuyNumAndDayID(GameClient client, int buyNum, int dayID, string strFrom)
 		{
 			bool result;
@@ -12882,7 +12882,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600233B RID: 9019 RVA: 0x001E15D8 File Offset: 0x001DF7D8
+		
 		public bool ModifyKuaFuLueDuoEnterNum(GameClient client, int addValue, string strFrom, bool isGM = false)
 		{
 			bool result;
@@ -12910,7 +12910,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600233C RID: 9020 RVA: 0x001E16A8 File Offset: 0x001DF8A8
+		
 		public bool ModifyJueXingValue(GameClient client, int addValue, string strFrom, bool isGM = false)
 		{
 			bool result;
@@ -12938,7 +12938,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600233D RID: 9021 RVA: 0x001E1778 File Offset: 0x001DF978
+		
 		public bool ModifyJueXingZhiChenValue(GameClient client, int addValue, string strFrom, bool writeToDB = true, bool notifyClient = true, bool isGM = false)
 		{
 			bool result;
@@ -12970,7 +12970,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600233E RID: 9022 RVA: 0x001E18A0 File Offset: 0x001DFAA0
+		
 		public bool ModifyYuanSuJueXingShiValue(GameClient client, int addValue, string strFrom, bool writeToDB = true, bool notifyClient = true, bool isGM = false)
 		{
 			bool result;
@@ -13002,7 +13002,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600233F RID: 9023 RVA: 0x001E19C8 File Offset: 0x001DFBC8
+		
 		public bool ModifyHunJingValue(GameClient client, int addValue, string strFrom, bool writeToDB = true, bool notifyClient = true, bool isGM = false)
 		{
 			bool result;
@@ -13034,7 +13034,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002340 RID: 9024 RVA: 0x001E1AF0 File Offset: 0x001DFCF0
+		
 		public bool ModifyMountPointValue(GameClient client, int addValue, string strFrom, bool writeToDB = true, bool notifyClient = true, bool isGM = false)
 		{
 			bool result;
@@ -13066,7 +13066,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002341 RID: 9025 RVA: 0x001E1C18 File Offset: 0x001DFE18
+		
 		public void ModifyZhengBaPointValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (client != null)
@@ -13087,37 +13087,37 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002342 RID: 9026 RVA: 0x001E1CDC File Offset: 0x001DFEDC
+		
 		public int GetZhengBaPointValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32FromDB(client, "ZhengBaPoint");
 		}
 
-		// Token: 0x06002343 RID: 9027 RVA: 0x001E1CF9 File Offset: 0x001DFEF9
+		
 		public void SaveWanMoTaPassLayerValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "WanMoTaCurrLayerOrder", nValue, true, "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x06002344 RID: 9028 RVA: 0x001E1D10 File Offset: 0x001DFF10
+		
 		public int GetWanMoTaPassLayerValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "WanMoTaCurrLayerOrder", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x06002345 RID: 9029 RVA: 0x001E1D32 File Offset: 0x001DFF32
+		
 		public void SaveShengWangValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "ShengWang", nValue, writeToDB, "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x06002346 RID: 9030 RVA: 0x001E1D48 File Offset: 0x001DFF48
+		
 		public int GetShengWangValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "ShengWang", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x06002347 RID: 9031 RVA: 0x001E1D6C File Offset: 0x001DFF6C
+		
 		public void ModifyShengWangLevelValue(GameClient client, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (0 != addValue)
@@ -13134,7 +13134,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002348 RID: 9032 RVA: 0x001E1E14 File Offset: 0x001E0014
+		
 		public void SaveShengWangLevelValue(GameClient client, int nValue, bool writeToDB = false)
 		{
 			Global.SaveRoleParamsInt32ValueWithTimeStampToDB(client, "ShengWangLevel", nValue, writeToDB, "2020-12-12 12:12:12");
@@ -13145,20 +13145,20 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002349 RID: 9033 RVA: 0x001E1E98 File Offset: 0x001E0098
+		
 		public int GetShengWangLevelValue(GameClient client)
 		{
 			return Global.GetRoleParamsInt32ValueWithTimeStampFromDB(client, "ShengWangLevel", "2020-12-12 12:12:12");
 		}
 
-		// Token: 0x0600234A RID: 9034 RVA: 0x001E1EBC File Offset: 0x001E00BC
+		
 		public void NotifySelfParamsValueChange(GameClient client, RoleCommonUseIntParamsIndexs index, int value)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}", client.ClientData.RoleID, (int)index, value);
 			this.SendToClient(client, strcmd, 427);
 		}
 
-		// Token: 0x0600234B RID: 9035 RVA: 0x001E1F00 File Offset: 0x001E0100
+		
 		public void ModifyLiXianBaiTanTicksValue(GameClient client, int addValue, bool writeToDB = false)
 		{
 			if (0 != addValue)

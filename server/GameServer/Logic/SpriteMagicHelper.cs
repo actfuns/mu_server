@@ -5,10 +5,10 @@ using GameServer.Interface;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007D8 RID: 2008
+	
 	public class SpriteMagicHelper
 	{
-		// Token: 0x060038AA RID: 14506 RVA: 0x00304004 File Offset: 0x00302204
+		
 		public void AddMagicHelper(MagicActionIDs magicActionID, double[] magicActionParams, int objID)
 		{
 			MagicHelperItem magicHelperItem = new MagicHelperItem
@@ -26,7 +26,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060038AB RID: 14507 RVA: 0x003040A0 File Offset: 0x003022A0
+		
 		public void RemoveMagicHelper(MagicActionIDs magicActionID)
 		{
 			lock (this._MagicHelperDict)
@@ -38,7 +38,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060038AC RID: 14508 RVA: 0x00304108 File Offset: 0x00302308
+		
 		private bool CanExecuteItem(MagicHelperItem magicHelperItem, int effectSecs, int maxNum)
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -75,7 +75,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060038AD RID: 14509 RVA: 0x00304234 File Offset: 0x00302434
+		
 		public double GetAddDrugEffect()
 		{
 			double percent = 1.0;
@@ -90,7 +90,7 @@ namespace GameServer.Logic
 			return percent;
 		}
 
-		// Token: 0x060038AE RID: 14510 RVA: 0x003042BC File Offset: 0x003024BC
+		
 		public double GetMoveSlow()
 		{
 			double percent = 0.0;
@@ -116,7 +116,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060038AF RID: 14511 RVA: 0x00304368 File Offset: 0x00302568
+		
 		public bool GetFreeze()
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -127,7 +127,7 @@ namespace GameServer.Logic
 			return null != magicHelperItem && this.CanExecuteItem(magicHelperItem, (int)magicHelperItem.MagicActionParams[0], 0);
 		}
 
-		// Token: 0x060038B0 RID: 14512 RVA: 0x003043F4 File Offset: 0x003025F4
+		
 		public double GetInjure2Life()
 		{
 			double percent = 0.0;
@@ -153,7 +153,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060038B1 RID: 14513 RVA: 0x003044A0 File Offset: 0x003026A0
+		
 		public double GetSubInjure()
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -177,7 +177,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060038B2 RID: 14514 RVA: 0x00304544 File Offset: 0x00302744
+		
 		public double GetAddInjure()
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -201,7 +201,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060038B3 RID: 14515 RVA: 0x003045E8 File Offset: 0x003027E8
+		
 		public double GetSubInjure1()
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -225,7 +225,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060038B4 RID: 14516 RVA: 0x0030468C File Offset: 0x0030288C
+		
 		public double GetAddInjure1()
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -249,7 +249,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060038B5 RID: 14517 RVA: 0x00304730 File Offset: 0x00302930
+		
 		public double GetInjure2Magic()
 		{
 			double percent = 0.0;
@@ -275,7 +275,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060038B6 RID: 14518 RVA: 0x003047DC File Offset: 0x003029DC
+		
 		public double GetNewInjure2Magic()
 		{
 			double injure2Magic = 0.0;
@@ -301,7 +301,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060038B7 RID: 14519 RVA: 0x0030487C File Offset: 0x00302A7C
+		
 		public double GetNewInjure2Magic3()
 		{
 			double injure2Magic = 0.0;
@@ -327,7 +327,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060038B8 RID: 14520 RVA: 0x0030491C File Offset: 0x00302B1C
+		
 		public double GetNewMagicSubInjure()
 		{
 			double injure2Magic = 0.0;
@@ -353,7 +353,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060038B9 RID: 14521 RVA: 0x003049BC File Offset: 0x00302BBC
+		
 		public void ExecuteAttack(IObject self)
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -392,7 +392,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060038BA RID: 14522 RVA: 0x00304BD0 File Offset: 0x00302DD0
+		
 		public void ExecuteNewAttack(IObject self)
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -433,7 +433,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060038BB RID: 14523 RVA: 0x00304E14 File Offset: 0x00303014
+		
 		public void ExecuteNewAttack3(IObject self)
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -474,7 +474,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060038BC RID: 14524 RVA: 0x00305040 File Offset: 0x00303240
+		
 		public void ExecuteMAttack(IObject self)
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -513,7 +513,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060038BD RID: 14525 RVA: 0x00305254 File Offset: 0x00303454
+		
 		public void ExecuteNewMAttack(IObject self)
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -554,7 +554,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060038BE RID: 14526 RVA: 0x00305498 File Offset: 0x00303698
+		
 		public void ExecuteNewMAttack3(IObject self)
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -595,7 +595,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060038BF RID: 14527 RVA: 0x003056C4 File Offset: 0x003038C4
+		
 		public void ExecuteNewMAttack4(IObject self)
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -636,7 +636,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060038C0 RID: 14528 RVA: 0x003058F4 File Offset: 0x00303AF4
+		
 		public void ExecuteSubLife(IObject self)
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -675,7 +675,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060038C1 RID: 14529 RVA: 0x00305B04 File Offset: 0x00303D04
+		
 		public void ExecuteSubLife2(IObject self)
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -724,7 +724,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060038C2 RID: 14530 RVA: 0x00305D80 File Offset: 0x00303F80
+		
 		public void ExecuteAddLife(IObject self)
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -746,7 +746,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060038C3 RID: 14531 RVA: 0x00305E80 File Offset: 0x00304080
+		
 		public void ExecuteAddMagic1(IObject self)
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -768,7 +768,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060038C4 RID: 14532 RVA: 0x00305F80 File Offset: 0x00304180
+		
 		public void ExecuteDelayAttack(IObject self)
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -811,7 +811,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060038C5 RID: 14533 RVA: 0x003061DC File Offset: 0x003043DC
+		
 		public void ExecuteDelayMAttack(IObject self)
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -854,7 +854,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060038C6 RID: 14534 RVA: 0x00306438 File Offset: 0x00304638
+		
 		public static void ExecuteAllItems(IObject self)
 		{
 			(self as GameClient).RoleMagicHelper.ExecuteAttack(self);
@@ -872,7 +872,7 @@ namespace GameServer.Logic
 			(self as GameClient).RoleMagicHelper.ExecuteDelayMAttack(self);
 		}
 
-		// Token: 0x060038C7 RID: 14535 RVA: 0x00306530 File Offset: 0x00304730
+		
 		public double MU_GetSubInjure1()
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -896,7 +896,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060038C8 RID: 14536 RVA: 0x003065D4 File Offset: 0x003047D4
+		
 		public double MU_GetSubInjure2()
 		{
 			MagicHelperItem magicHelperItem = null;
@@ -920,7 +920,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0400416C RID: 16748
+		
 		private Dictionary<MagicActionIDs, MagicHelperItem> _MagicHelperDict = new Dictionary<MagicActionIDs, MagicHelperItem>();
 	}
 }

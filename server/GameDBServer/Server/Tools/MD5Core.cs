@@ -3,15 +3,15 @@ using System.Text;
 
 namespace Server.Tools
 {
-	// Token: 0x0200021C RID: 540
+	
 	public sealed class MD5Core
 	{
-		// Token: 0x06000CB5 RID: 3253 RVA: 0x000A1FDC File Offset: 0x000A01DC
+		
 		private MD5Core()
 		{
 		}
 
-		// Token: 0x06000CB6 RID: 3254 RVA: 0x000A1FE8 File Offset: 0x000A01E8
+		
 		public static byte[] GetHash(string input, Encoding encoding)
 		{
 			if (null == input)
@@ -26,13 +26,13 @@ namespace Server.Tools
 			return MD5Core.GetHash(target);
 		}
 
-		// Token: 0x06000CB7 RID: 3255 RVA: 0x000A2040 File Offset: 0x000A0240
+		
 		public static byte[] GetHash(string input)
 		{
 			return MD5Core.GetHash(input, new UTF8Encoding());
 		}
 
-		// Token: 0x06000CB8 RID: 3256 RVA: 0x000A2060 File Offset: 0x000A0260
+		
 		public static string GetHashString(byte[] input)
 		{
 			if (null == input)
@@ -43,7 +43,7 @@ namespace Server.Tools
 			return retval.Replace("-", "");
 		}
 
-		// Token: 0x06000CB9 RID: 3257 RVA: 0x000A20AC File Offset: 0x000A02AC
+		
 		public static string GetHashString(string input, Encoding encoding)
 		{
 			if (null == input)
@@ -58,13 +58,13 @@ namespace Server.Tools
 			return MD5Core.GetHashString(target);
 		}
 
-		// Token: 0x06000CBA RID: 3258 RVA: 0x000A2104 File Offset: 0x000A0304
+		
 		public static string GetHashString(string input)
 		{
 			return MD5Core.GetHashString(input, new UTF8Encoding());
 		}
 
-		// Token: 0x06000CBB RID: 3259 RVA: 0x000A2124 File Offset: 0x000A0324
+		
 		public static byte[] GetHash(byte[] input)
 		{
 			if (null == input)
@@ -84,7 +84,7 @@ namespace Server.Tools
 			return MD5Core.GetHashFinalBlock(input, startIndex, input.Length - startIndex, abcd, (long)input.Length * 8L);
 		}
 
-		// Token: 0x06000CBC RID: 3260 RVA: 0x000A21C4 File Offset: 0x000A03C4
+		
 		internal static byte[] GetHashFinalBlock(byte[] input, int ibStart, int cbSize, ABCDStruct ABCD, long len)
 		{
 			byte[] working = new byte[64];
@@ -111,7 +111,7 @@ namespace Server.Tools
 			return output;
 		}
 
-		// Token: 0x06000CBD RID: 3261 RVA: 0x000A22B0 File Offset: 0x000A04B0
+		
 		internal static void GetHashBlock(byte[] input, ref ABCDStruct ABCDValue, int ibStart)
 		{
 			uint[] temp = MD5Core.Converter(input, ibStart);
@@ -189,37 +189,37 @@ namespace Server.Tools
 			ABCDValue.D = d + ABCDValue.D;
 		}
 
-		// Token: 0x06000CBE RID: 3262 RVA: 0x000A287C File Offset: 0x000A0A7C
+		
 		private static uint r1(uint a, uint b, uint c, uint d, uint x, int s, uint t)
 		{
 			return b + MD5Core.LSR(a + ((b & c) | ((b ^ uint.MaxValue) & d)) + x + t, s);
 		}
 
-		// Token: 0x06000CBF RID: 3263 RVA: 0x000A28A8 File Offset: 0x000A0AA8
+		
 		private static uint r2(uint a, uint b, uint c, uint d, uint x, int s, uint t)
 		{
 			return b + MD5Core.LSR(a + ((b & d) | (c & (d ^ uint.MaxValue))) + x + t, s);
 		}
 
-		// Token: 0x06000CC0 RID: 3264 RVA: 0x000A28D4 File Offset: 0x000A0AD4
+		
 		private static uint r3(uint a, uint b, uint c, uint d, uint x, int s, uint t)
 		{
 			return b + MD5Core.LSR(a + (b ^ c ^ d) + x + t, s);
 		}
 
-		// Token: 0x06000CC1 RID: 3265 RVA: 0x000A28FC File Offset: 0x000A0AFC
+		
 		private static uint r4(uint a, uint b, uint c, uint d, uint x, int s, uint t)
 		{
 			return b + MD5Core.LSR(a + (c ^ (b | (d ^ uint.MaxValue))) + x + t, s);
 		}
 
-		// Token: 0x06000CC2 RID: 3266 RVA: 0x000A2928 File Offset: 0x000A0B28
+		
 		private static uint LSR(uint i, int s)
 		{
 			return i << s | i >> 32 - s;
 		}
 
-		// Token: 0x06000CC3 RID: 3267 RVA: 0x000A294C File Offset: 0x000A0B4C
+		
 		private static uint[] Converter(byte[] input, int ibStart)
 		{
 			if (null == input)

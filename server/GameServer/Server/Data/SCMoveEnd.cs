@@ -4,16 +4,16 @@ using Tmsk.Contract;
 
 namespace Server.Data
 {
-	// Token: 0x02000185 RID: 389
+	
 	[ProtoContract]
 	public class SCMoveEnd : IProtoBuffData
 	{
-		// Token: 0x060004C1 RID: 1217 RVA: 0x00041EA0 File Offset: 0x000400A0
+		
 		public SCMoveEnd()
 		{
 		}
 
-		// Token: 0x060004C2 RID: 1218 RVA: 0x00041EF0 File Offset: 0x000400F0
+		
 		public SCMoveEnd(int roleID, int mapCode, int action, int toNewMapX, int toNewMapY, int toNewDiection, int tryRun, long clientTicks = 0L)
 		{
 			this.RoleID = roleID;
@@ -26,7 +26,7 @@ namespace Server.Data
 			this.clientTicks = clientTicks;
 		}
 
-		// Token: 0x060004C3 RID: 1219 RVA: 0x00041F7C File Offset: 0x0004017C
+		
 		public int fromBytes(byte[] data, int offset, int count)
 		{
 			int pos = offset;
@@ -67,7 +67,7 @@ namespace Server.Data
 			return pos;
 		}
 
-		// Token: 0x060004C4 RID: 1220 RVA: 0x00042088 File Offset: 0x00040288
+		
 		public byte[] toBytes()
 		{
 			int total = 0;
@@ -92,35 +92,35 @@ namespace Server.Data
 			return data;
 		}
 
-		// Token: 0x040008A0 RID: 2208
+		
 		[ProtoMember(1)]
 		public int RoleID = 0;
 
-		// Token: 0x040008A1 RID: 2209
+		
 		[ProtoMember(2)]
 		public int Action = 0;
 
-		// Token: 0x040008A2 RID: 2210
+		
 		[ProtoMember(3)]
 		public int MapCode = 0;
 
-		// Token: 0x040008A3 RID: 2211
+		
 		[ProtoMember(4)]
 		public int ToMapX = 0;
 
-		// Token: 0x040008A4 RID: 2212
+		
 		[ProtoMember(5)]
 		public int ToMapY = 0;
 
-		// Token: 0x040008A5 RID: 2213
+		
 		[ProtoMember(6)]
 		public int ToDiection = 0;
 
-		// Token: 0x040008A6 RID: 2214
+		
 		[ProtoMember(7)]
 		public int TryRun = 0;
 
-		// Token: 0x040008A7 RID: 2215
+		
 		[ProtoMember(8)]
 		public long clientTicks = 0L;
 	}

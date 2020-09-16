@@ -5,10 +5,10 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020001E6 RID: 486
+	
 	public class PassiveSkillModule
 	{
-		// Token: 0x06000617 RID: 1559 RVA: 0x00055B80 File Offset: 0x00053D80
+		
 		private void TryTriggerSkills(GameClient client, long nowTicks, SkillTriggerTypes type)
 		{
 			lock (this.mutex)
@@ -49,7 +49,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000618 RID: 1560 RVA: 0x00055D98 File Offset: 0x00053F98
+		
 		public void OnInjured(GameClient client)
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -60,21 +60,21 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000619 RID: 1561 RVA: 0x00055DD8 File Offset: 0x00053FD8
+		
 		public void OnProcessMagic(GameClient client, int enemy, int enemyX, int enemyY)
 		{
 			long nowTicks = TimeUtil.NOW();
 			this.TryTriggerSkills(client, nowTicks, SkillTriggerTypes.Attack);
 		}
 
-		// Token: 0x0600061A RID: 1562 RVA: 0x00055DF8 File Offset: 0x00053FF8
+		
 		public void OnKillMonster(GameClient client)
 		{
 			long nowTicks = TimeUtil.NOW();
 			this.TryTriggerSkills(client, nowTicks, SkillTriggerTypes.KillMonster);
 		}
 
-		// Token: 0x0600061B RID: 1563 RVA: 0x00055E18 File Offset: 0x00054018
+		
 		public void UpdateSkillList(List<PassiveSkillData> skillList)
 		{
 			if (null != skillList)
@@ -94,7 +94,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600061C RID: 1564 RVA: 0x00055F50 File Offset: 0x00054150
+		
 		public void UpdateOtherSkillList(List<PassiveSkillData> skillList)
 		{
 			if (null != skillList)
@@ -115,7 +115,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600061D RID: 1565 RVA: 0x000560E8 File Offset: 0x000542E8
+		
 		public void UpdateSkillData(int magicCode, int level, int triggerType, int triggerRate, int coolDown, int spanCD)
 		{
 			lock (this.mutex)
@@ -132,7 +132,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600061E RID: 1566 RVA: 0x0005616C File Offset: 0x0005436C
+		
 		public SkillData GetSkillData(int magicCode)
 		{
 			lock (this.mutex)
@@ -146,25 +146,25 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x04000AA0 RID: 2720
+		
 		private object mutex = new object();
 
-		// Token: 0x04000AA1 RID: 2721
+		
 		public Dictionary<int, PassiveSkillData> passiveSkillList = new Dictionary<int, PassiveSkillData>();
 
-		// Token: 0x04000AA2 RID: 2722
+		
 		private Dictionary<int, long> coolDownDict = new Dictionary<int, long>();
 
-		// Token: 0x04000AA3 RID: 2723
+		
 		private Dictionary<int, long> _spanTimeDict = new Dictionary<int, long>();
 
-		// Token: 0x04000AA4 RID: 2724
+		
 		public Dictionary<int, PassiveSkillData> OtherPassiveSkillList = new Dictionary<int, PassiveSkillData>();
 
-		// Token: 0x04000AA5 RID: 2725
+		
 		public long NextTriggerSkillForInjuredTicks;
 
-		// Token: 0x04000AA6 RID: 2726
+		
 		public SkillData currentSkillData = new SkillData();
 	}
 }

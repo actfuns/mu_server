@@ -13,7 +13,7 @@ namespace GameDBServer.Core.GameEvent.EventObjectImpl
 		}
 
 		// Token: 0x1700000A RID: 10
-		// (get) Token: 0x06000078 RID: 120 RVA: 0x00004AB4 File Offset: 0x00002CB4
+		
 		public DBRoleInfo RoleInfo
 		{
 			get

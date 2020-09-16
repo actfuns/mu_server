@@ -17,28 +17,28 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000509 RID: 1289
+	
 	public class HuanYingSiYuanManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener, IEventListenerEx, IManager2
 	{
-		// Token: 0x060017C1 RID: 6081 RVA: 0x00173838 File Offset: 0x00171A38
+		
 		public static HuanYingSiYuanManager getInstance()
 		{
 			return HuanYingSiYuanManager.instance;
 		}
 
-		// Token: 0x060017C2 RID: 6082 RVA: 0x00173850 File Offset: 0x00171A50
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x060017C3 RID: 6083 RVA: 0x00173874 File Offset: 0x00171A74
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			return true;
 		}
 
-		// Token: 0x060017C4 RID: 6084 RVA: 0x00173888 File Offset: 0x00171A88
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(820, 1, 1, HuanYingSiYuanManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -54,7 +54,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060017C5 RID: 6085 RVA: 0x00173980 File Offset: 0x00171B80
+		
 		public bool showdown()
 		{
 			GlobalEventSource4Scene.getInstance().removeListener(10001, 25, HuanYingSiYuanManager.getInstance());
@@ -64,19 +64,19 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060017C6 RID: 6086 RVA: 0x001739E8 File Offset: 0x00171BE8
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060017C7 RID: 6087 RVA: 0x001739FC File Offset: 0x00171BFC
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x060017C8 RID: 6088 RVA: 0x00173A10 File Offset: 0x00171C10
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			switch (nID)
@@ -97,7 +97,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060017C9 RID: 6089 RVA: 0x00173AAC File Offset: 0x00171CAC
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int eventType = eventObject.getEventType();
@@ -129,7 +129,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060017CA RID: 6090 RVA: 0x00173B64 File Offset: 0x00171D64
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 			switch (eventObject.EventType)
@@ -181,7 +181,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060017CB RID: 6091 RVA: 0x00173CE0 File Offset: 0x00171EE0
+		
 		public bool InitConfig()
 		{
 			bool success = true;
@@ -316,7 +316,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x060017CC RID: 6092 RVA: 0x001744B8 File Offset: 0x001726B8
+		
 		public void GMStartHuoDongNow()
 		{
 			try
@@ -331,7 +331,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060017CD RID: 6093 RVA: 0x00174534 File Offset: 0x00172734
+		
 		public bool ProcessHuanYingSiYuanEnqueueCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -387,7 +387,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x060017CE RID: 6094 RVA: 0x00174774 File Offset: 0x00172974
+		
 		public bool ProcessHuanYingSiYuanQueueRoleCountCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -424,7 +424,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x060017CF RID: 6095 RVA: 0x001748DC File Offset: 0x00172ADC
+		
 		public bool ProcessHuanYingSiYuanSuccessCountCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -446,7 +446,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x060017D0 RID: 6096 RVA: 0x0017495C File Offset: 0x00172B5C
+		
 		public bool ProcessHuanYingSiYuanScoreInfoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -463,7 +463,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x060017D1 RID: 6097 RVA: 0x001749BC File Offset: 0x00172BBC
+		
 		public bool ProcessHuanYingSiYuanEnterRespondCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -518,7 +518,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x060017D2 RID: 6098 RVA: 0x00174B80 File Offset: 0x00172D80
+		
 		public bool ProcessHuanYingSiYuanDequeueCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -552,7 +552,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x060017D3 RID: 6099 RVA: 0x00174C88 File Offset: 0x00172E88
+		
 		public int GetBirthPoint(GameClient client, out int posX, out int posY)
 		{
 			int side = client.ClientData.BattleWhichSide;
@@ -580,7 +580,7 @@ namespace GameServer.Logic
 			return -1;
 		}
 
-		// Token: 0x060017D4 RID: 6100 RVA: 0x00174D6C File Offset: 0x00172F6C
+		
 		public void InitRoleDailyHYSYData(GameClient client)
 		{
 			if (this.IsGongNengOpened(client, false))
@@ -607,7 +607,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060017D5 RID: 6101 RVA: 0x00174E1C File Offset: 0x0017301C
+		
 		public int GetLeftCount(GameClient client)
 		{
 			int dayid = Global.GetRoleParamsInt32FromDB(client, "HysySuccessDayId");
@@ -631,7 +631,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060017D6 RID: 6102 RVA: 0x00174EA0 File Offset: 0x001730A0
+		
 		public bool OnInitGame(GameClient client)
 		{
 			int posX;
@@ -664,7 +664,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060017D7 RID: 6103 RVA: 0x00174FB8 File Offset: 0x001731B8
+		
 		public bool ClientRelive(GameClient client)
 		{
 			bool result;
@@ -694,13 +694,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060017D8 RID: 6104 RVA: 0x00175084 File Offset: 0x00173284
+		
 		public bool IsGongNengOpened(GameClient client, bool hint = false)
 		{
 			return GameManager.VersionSystemOpenMgr.IsVersionSystemOpen("HuanYingSiYuan") && !GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot4Dot1) && GlobalNew.IsGongNengOpened(client, GongNengIDs.HuanYingSiYuan, hint);
 		}
 
-		// Token: 0x060017D9 RID: 6105 RVA: 0x001750CC File Offset: 0x001732CC
+		
 		public bool AddHuanYingSiYuanCopyScenes(GameClient client, CopyMap copyMap)
 		{
 			bool result;
@@ -751,7 +751,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060017DA RID: 6106 RVA: 0x001752B0 File Offset: 0x001734B0
+		
 		public bool RemoveHuanYingSiYuanListCopyScenes(CopyMap copyMap)
 		{
 			bool result;
@@ -774,7 +774,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060017DB RID: 6107 RVA: 0x00175348 File Offset: 0x00173548
+		
 		public void TimerProc()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -900,7 +900,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060017DC RID: 6108 RVA: 0x001758F8 File Offset: 0x00173AF8
+		
 		public int GetInternalId()
 		{
 			int id = Interlocked.Increment(ref this.InternalShengBeiId);
@@ -911,7 +911,7 @@ namespace GameServer.Logic
 			return id;
 		}
 
-		// Token: 0x060017DD RID: 6109 RVA: 0x00175930 File Offset: 0x00173B30
+		
 		public void NotifyTimeStateInfoAndScoreInfo(GameClient client, bool timeState = true, bool scoreInfo = true)
 		{
 			lock (HuanYingSiYuanManager.Mutex)
@@ -931,7 +931,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060017DE RID: 6110 RVA: 0x001759D0 File Offset: 0x00173BD0
+		
 		public void CreateMonster(HuanYingSiYuanScene scene, HuanYingSiYuanShengBeiContextData contextData = null)
 		{
 			int gridX = contextData.PosX / this.RuntimeData.MapGridWidth;
@@ -939,7 +939,7 @@ namespace GameServer.Logic
 			GameManager.MonsterZoneMgr.AddDynamicMonsters(this.RuntimeData.MapCode, contextData.MonsterId, contextData.CopyMapID, 1, gridX, gridY, 0, 0, SceneUIClasses.HuanYingSiYuan, contextData, null);
 		}
 
-		// Token: 0x060017DF RID: 6111 RVA: 0x00175A30 File Offset: 0x00173C30
+		
 		public int GetCaiJiMonsterTime(GameClient client, Monster monster)
 		{
 			HuanYingSiYuanShengBeiContextData contextData = client.SceneContextData as HuanYingSiYuanShengBeiContextData;
@@ -970,7 +970,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060017E0 RID: 6112 RVA: 0x00175AFC File Offset: 0x00173CFC
+		
 		public void OnCaiJiFinish(GameClient client, Monster monster)
 		{
 			HuanYingSiYuanShengBeiContextData contextData = monster.Tag as HuanYingSiYuanShengBeiContextData;
@@ -993,14 +993,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060017E1 RID: 6113 RVA: 0x00175BD4 File Offset: 0x00173DD4
+		
 		public void CompleteHuanYingSiYuanScene(HuanYingSiYuanScene huanYingSiYuanScene, int successSide)
 		{
 			huanYingSiYuanScene.m_eStatus = GameSceneStatuses.STATUS_END;
 			huanYingSiYuanScene.SuccessSide = successSide;
 		}
 
-		// Token: 0x060017E2 RID: 6114 RVA: 0x00175BE8 File Offset: 0x00173DE8
+		
 		public void OnKillRole(GameClient client, GameClient other)
 		{
 			this.TryLostShengBei(other);
@@ -1094,7 +1094,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060017E3 RID: 6115 RVA: 0x00175FA8 File Offset: 0x001741A8
+		
 		private void GetShengBei(HuanYingSiYuanScene huanYingSiYuanScene, GameClient client, HuanYingSiYuanShengBeiContextData contextData)
 		{
 			if (null != contextData)
@@ -1118,7 +1118,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060017E4 RID: 6116 RVA: 0x00176074 File Offset: 0x00174274
+		
 		private HuanYingSiYuanShengBeiContextData LostShengBei(GameClient client)
 		{
 			HuanYingSiYuanShengBeiContextData contextData = null;
@@ -1143,7 +1143,7 @@ namespace GameServer.Logic
 			return contextData;
 		}
 
-		// Token: 0x060017E5 RID: 6117 RVA: 0x00176138 File Offset: 0x00174338
+		
 		private void SubmitShengBei(GameClient client)
 		{
 			if (null != client.SceneContextData)
@@ -1217,7 +1217,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060017E6 RID: 6118 RVA: 0x001764B4 File Offset: 0x001746B4
+		
 		private void CheckShengBeiBufferTime(HuanYingSiYuanScene huanYingSiYuanScene, long nowTicks)
 		{
 			List<HuanYingSiYuanShengBeiContextData> shengBeiList = new List<HuanYingSiYuanShengBeiContextData>();
@@ -1256,7 +1256,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060017E7 RID: 6119 RVA: 0x0017666C File Offset: 0x0017486C
+		
 		private void TryLostShengBei(GameClient client)
 		{
 			lock (HuanYingSiYuanManager.Mutex)
@@ -1275,7 +1275,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060017E8 RID: 6120 RVA: 0x00176710 File Offset: 0x00174910
+		
 		public void GiveAwards(HuanYingSiYuanScene huanYingSiYuanScene)
 		{
 			try
@@ -1393,7 +1393,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060017E9 RID: 6121 RVA: 0x00176C0C File Offset: 0x00174E0C
+		
 		public void LeaveFuBen(GameClient client)
 		{
 			lock (HuanYingSiYuanManager.Mutex)
@@ -1417,34 +1417,34 @@ namespace GameServer.Logic
 			HuanYingSiYuanClient.getInstance().GameFuBenRoleChangeState(client.ClientData.RoleID, 0, 0, 0);
 		}
 
-		// Token: 0x060017EA RID: 6122 RVA: 0x00176D00 File Offset: 0x00174F00
+		
 		public void OnLogout(GameClient client)
 		{
 			this.LeaveFuBen(client);
 		}
 
-		// Token: 0x04002232 RID: 8754
+		
 		public const SceneUIClasses ManagerType = SceneUIClasses.HuanYingSiYuan;
 
-		// Token: 0x04002233 RID: 8755
+		
 		private static HuanYingSiYuanManager instance = new HuanYingSiYuanManager();
 
-		// Token: 0x04002234 RID: 8756
+		
 		public HuanYingSiYuanData RuntimeData = new HuanYingSiYuanData();
 
-		// Token: 0x04002235 RID: 8757
+		
 		public static object Mutex = new object();
 
-		// Token: 0x04002236 RID: 8758
+		
 		private int InternalShengBeiId = 0;
 
-		// Token: 0x04002237 RID: 8759
+		
 		public ConcurrentDictionary<int, HuanYingSiYuanScene> HuanYingSiYuanSceneDict = new ConcurrentDictionary<int, HuanYingSiYuanScene>();
 
-		// Token: 0x04002238 RID: 8760
+		
 		public Dictionary<int, int> GameId2FuBenSeq = new Dictionary<int, int>();
 
-		// Token: 0x04002239 RID: 8761
+		
 		private static long NextHeartBeatTicks = 0L;
 	}
 }

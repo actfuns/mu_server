@@ -11,21 +11,21 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007BE RID: 1982
+	
 	internal class WorldLevelManager
 	{
-		// Token: 0x06003402 RID: 13314 RVA: 0x002DFFD8 File Offset: 0x002DE1D8
+		
 		private WorldLevelManager()
 		{
 		}
 
-		// Token: 0x06003403 RID: 13315 RVA: 0x002E0014 File Offset: 0x002DE214
+		
 		public static WorldLevelManager getInstance()
 		{
 			return WorldLevelManager.instance;
 		}
 
-		// Token: 0x06003404 RID: 13316 RVA: 0x002E002C File Offset: 0x002DE22C
+		
 		public bool InitConfig()
 		{
 			bool success = true;
@@ -81,7 +81,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x06003405 RID: 13317 RVA: 0x002E0294 File Offset: 0x002DE494
+		
 		private string CalcJieRiLv()
 		{
 			string jieRiLvType = "";
@@ -115,7 +115,7 @@ namespace GameServer.Logic
 			return jieRiLvType;
 		}
 
-		// Token: 0x06003406 RID: 13318 RVA: 0x002E0418 File Offset: 0x002DE618
+		
 		public string GetJieRiConfigFileName(string filename)
 		{
 			string result;
@@ -154,7 +154,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003407 RID: 13319 RVA: 0x002E0540 File Offset: 0x002DE740
+		
 		public void ResetWorldLevel()
 		{
 			int dayID = TimeUtil.NowDateTime().DayOfYear;
@@ -235,7 +235,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003408 RID: 13320 RVA: 0x002E07E8 File Offset: 0x002DE9E8
+		
 		public void UpddateWorldLevelBuff(GameClient client)
 		{
 			int nMeTotalLevel = client.ClientData.GetRoleData().ChangeLifeCount * 100 + client.ClientData.GetRoleData().Level;
@@ -262,28 +262,28 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04003F9A RID: 16282
+		
 		private object Mutex = new object();
 
-		// Token: 0x04003F9B RID: 16283
+		
 		public int m_nWorldLevel = 0;
 
-		// Token: 0x04003F9C RID: 16284
+		
 		public int m_nResetWorldLevelDayID = 0;
 
-		// Token: 0x04003F9D RID: 16285
+		
 		public int JieRiStartDay;
 
-		// Token: 0x04003F9E RID: 16286
+		
 		public int JieRiWorldLevel;
 
-		// Token: 0x04003F9F RID: 16287
+		
 		private Dictionary<string, Tuple<int, int>> JieRiLvTypeDict = new Dictionary<string, Tuple<int, int>>();
 
-		// Token: 0x04003FA0 RID: 16288
+		
 		private Dictionary<string, Dictionary<string, string>> JieRiLvDict = new Dictionary<string, Dictionary<string, string>>();
 
-		// Token: 0x04003FA1 RID: 16289
+		
 		private static WorldLevelManager instance = new WorldLevelManager();
 	}
 }

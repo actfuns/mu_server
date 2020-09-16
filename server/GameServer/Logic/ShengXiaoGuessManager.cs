@@ -5,11 +5,11 @@ using GameServer.Core.Executor;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000796 RID: 1942
+	
 	public class ShengXiaoGuessManager
 	{
-		// Token: 0x170003B2 RID: 946
-		// (get) Token: 0x06003292 RID: 12946 RVA: 0x002CE390 File Offset: 0x002CC590
+		
+		
 		public int GuessMapCode
 		{
 			get
@@ -18,7 +18,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003293 RID: 12947 RVA: 0x002CE3A8 File Offset: 0x002CC5A8
+		
 		public void Init()
 		{
 			this.InitLegalGuessKeys();
@@ -26,7 +26,7 @@ namespace GameServer.Logic
 			this.Reset();
 		}
 
-		// Token: 0x06003294 RID: 12948 RVA: 0x002CE3C4 File Offset: 0x002CC5C4
+		
 		public void ReloadConfig(bool throwAble = false)
 		{
 			int[] paramsArr = GameManager.systemParamsList.GetParamValueIntArrayByName("ShengXiaoGuessParams", ',');
@@ -54,7 +54,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003295 RID: 12949 RVA: 0x002CE490 File Offset: 0x002CC690
+		
 		protected void InitLegalGuessKeys()
 		{
 			this.LegalGuessKeyList.Clear();
@@ -83,7 +83,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003296 RID: 12950 RVA: 0x002CE568 File Offset: 0x002CC768
+		
 		protected void Reset()
 		{
 			this.GuessStates = ShengXiaoGuessStates.NoMortgage;
@@ -96,7 +96,7 @@ namespace GameServer.Logic
 			this.ThisTimeCountDownSecs = 0L;
 		}
 
-		// Token: 0x06003297 RID: 12951 RVA: 0x002CE5DC File Offset: 0x002CC7DC
+		
 		public void Process()
 		{
 			if (this.GuessStates > ShengXiaoGuessStates.NoMortgage)
@@ -109,7 +109,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003298 RID: 12952 RVA: 0x002CE610 File Offset: 0x002CC810
+		
 		protected void ProcessGuessing()
 		{
 			if (this.GuessStates == ShengXiaoGuessStates.MortgageCountDown)
@@ -146,7 +146,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003299 RID: 12953 RVA: 0x002CE794 File Offset: 0x002CC994
+		
 		protected void ProcessNoGuess()
 		{
 			if (this.GuessItemListDict.Count > 0)
@@ -158,7 +158,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600329A RID: 12954 RVA: 0x002CE80C File Offset: 0x002CCA0C
+		
 		public int SubNeedGoods(GameClient client, int totalMortgageNum, bool allowAutoBuy = false)
 		{
 			int needSubGoodsNum = totalMortgageNum;
@@ -192,7 +192,7 @@ namespace GameServer.Logic
 			return 1;
 		}
 
-		// Token: 0x0600329B RID: 12955 RVA: 0x002CE908 File Offset: 0x002CCB08
+		
 		public int IsMortgageLegal(int guessKey, int mortgageNum)
 		{
 			int result;
@@ -219,7 +219,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600329C RID: 12956 RVA: 0x002CE988 File Offset: 0x002CCB88
+		
 		public int AddGuess(GameClient client, int guessKey, int mortgageNum, bool allowAutoBuy = false)
 		{
 			int ret = 1;
@@ -255,7 +255,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x0600329D RID: 12957 RVA: 0x002CEAC0 File Offset: 0x002CCCC0
+		
 		public void OnBossKilled()
 		{
 			if (this.GuessStates == ShengXiaoGuessStates.BossCountDown)
@@ -264,7 +264,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600329E RID: 12958 RVA: 0x002CEAE8 File Offset: 0x002CCCE8
+		
 		public bool ClientEnter(GameClient gameClient)
 		{
 			bool result;
@@ -293,18 +293,18 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600329F RID: 12959 RVA: 0x002CEBC1 File Offset: 0x002CCDC1
+		
 		public void ClientLeave()
 		{
 		}
 
-		// Token: 0x060032A0 RID: 12960 RVA: 0x002CEBC4 File Offset: 0x002CCDC4
+		
 		public List<int> GetLegalGuessServerLines()
 		{
 			return this.LegalServerLines;
 		}
 
-		// Token: 0x060032A1 RID: 12961 RVA: 0x002CEBDC File Offset: 0x002CCDDC
+		
 		public Dictionary<int, int> GetRoleGuessDictionay(int roleID)
 		{
 			Dictionary<int, int> dict = null;
@@ -318,7 +318,7 @@ namespace GameServer.Logic
 			return new Dictionary<int, int>();
 		}
 
-		// Token: 0x060032A2 RID: 12962 RVA: 0x002CEC54 File Offset: 0x002CCE54
+		
 		public void ProcessAwards(int resultShengXiaoMask)
 		{
 			string roleGuessResult = "";
@@ -431,14 +431,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032A3 RID: 12963 RVA: 0x002CF1A4 File Offset: 0x002CD3A4
+		
 		public int GenerateRandomShengXiao()
 		{
 			int nRandomShengXiaoIndex = Global.GetRandomNumber(0, 12);
 			return 1 << nRandomShengXiaoIndex;
 		}
 
-		// Token: 0x060032A4 RID: 12964 RVA: 0x002CF1C8 File Offset: 0x002CD3C8
+		
 		protected int GetMultipleByGuessKey(int guessKey)
 		{
 			int value = 0;
@@ -476,7 +476,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060032A5 RID: 12965 RVA: 0x002CF294 File Offset: 0x002CD494
+		
 		protected void AddGuessResultHistory(int result)
 		{
 			lock (this.ShengXiaoGuessResultHistory)
@@ -489,7 +489,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032A6 RID: 12966 RVA: 0x002CF30C File Offset: 0x002CD50C
+		
 		public string GetGuessResultHistory()
 		{
 			string results = "";
@@ -507,7 +507,7 @@ namespace GameServer.Logic
 			return results;
 		}
 
-		// Token: 0x060032A7 RID: 12967 RVA: 0x002CF3DC File Offset: 0x002CD5DC
+		
 		private int GetPreGuessResult()
 		{
 			lock (this.ShengXiaoGuessResultHistory)
@@ -520,52 +520,52 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x04003EAA RID: 16042
+		
 		private int MapCode = -1;
 
-		// Token: 0x04003EAB RID: 16043
+		
 		private int WaitingEnterSecs = 120;
 
-		// Token: 0x04003EAC RID: 16044
+		
 		private int WaitingKillBossSecs = 0;
 
-		// Token: 0x04003EAD RID: 16045
+		
 		private long ThisTimeCountDownSecs = 0L;
 
-		// Token: 0x04003EAE RID: 16046
+		
 		private int MaxMortgageForOnce = 100000;
 
-		// Token: 0x04003EAF RID: 16047
+		
 		private int NeedGoodsID = -1;
 
-		// Token: 0x04003EB0 RID: 16048
+		
 		private int SingleGoodsToYuanBaoNum = 100;
 
-		// Token: 0x04003EB1 RID: 16049
+		
 		private int GateGoldForBroadcast = 10000;
 
-		// Token: 0x04003EB2 RID: 16050
+		
 		private List<int> LegalServerLines = new List<int>();
 
-		// Token: 0x04003EB3 RID: 16051
+		
 		private ShengXiaoGuessStates GuessStates = ShengXiaoGuessStates.NoMortgage;
 
-		// Token: 0x04003EB4 RID: 16052
+		
 		private Dictionary<int, int> AwardMultipleDict = new Dictionary<int, int>();
 
-		// Token: 0x04003EB5 RID: 16053
+		
 		private List<int> LegalGuessKeyList = new List<int>();
 
-		// Token: 0x04003EB6 RID: 16054
+		
 		private long StateStartTicks = 0L;
 
-		// Token: 0x04003EB7 RID: 16055
+		
 		private bool IsBossKilled = false;
 
-		// Token: 0x04003EB8 RID: 16056
+		
 		private List<int> ShengXiaoGuessResultHistory = new List<int>();
 
-		// Token: 0x04003EB9 RID: 16057
+		
 		private Dictionary<int, Dictionary<int, int>> GuessItemListDict = new Dictionary<int, Dictionary<int, int>>();
 	}
 }

@@ -14,17 +14,17 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic.RefreshIconState
 {
-	// Token: 0x02000784 RID: 1924
+	
 	public class IconStateManager
 	{
-		// Token: 0x0600316C RID: 12652 RVA: 0x002C5B48 File Offset: 0x002C3D48
+		
 		public bool AddFlushIconState(ushort nIconOrder, bool bIconState)
 		{
 			ushort iState = (ushort)(bIconState ? 1 : 0);
 			return this.AddFlushIconState(nIconOrder, iState);
 		}
 
-		// Token: 0x0600316D RID: 12653 RVA: 0x002C5B6C File Offset: 0x002C3D6C
+		
 		public bool AddFlushIconState(ushort nIconOrder, ushort iState)
 		{
 			ushort nIconInfo = (ushort)(((int)nIconOrder << 1) + (int)iState);
@@ -52,7 +52,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x0600316E RID: 12654 RVA: 0x002C5C28 File Offset: 0x002C3E28
+		
 		public void ResetIconStateDict(bool bIsLogin)
 		{
 			lock (this.m_StateIconsDict)
@@ -65,7 +65,7 @@ namespace GameServer.Logic.RefreshIconState
 			}
 		}
 
-		// Token: 0x0600316F RID: 12655 RVA: 0x002C5C90 File Offset: 0x002C3E90
+		
 		public void SendIconStateToClient(GameClient client)
 		{
 			ushort[] arrState = null;
@@ -90,7 +90,7 @@ namespace GameServer.Logic.RefreshIconState
 			}
 		}
 
-		// Token: 0x06003170 RID: 12656 RVA: 0x002C5D94 File Offset: 0x002C3F94
+		
 		public void LoginGameFlushIconState(GameClient client)
 		{
 			this.ResetIconStateDict(true);
@@ -136,7 +136,7 @@ namespace GameServer.Logic.RefreshIconState
 			this.CheckFuMoMailIcon(client);
 		}
 
-		// Token: 0x06003171 RID: 12657 RVA: 0x002C5EF4 File Offset: 0x002C40F4
+		
 		public bool FlushChongZhiIconState(GameClient client)
 		{
 			this.CheckShouCiChongZhi(client);
@@ -153,7 +153,7 @@ namespace GameServer.Logic.RefreshIconState
 			return false;
 		}
 
-		// Token: 0x06003172 RID: 12658 RVA: 0x002C5F60 File Offset: 0x002C4160
+		
 		public bool FlushUsedMoneyconState(GameClient client)
 		{
 			this.CheckLeiJiXiaoFei(client);
@@ -164,7 +164,7 @@ namespace GameServer.Logic.RefreshIconState
 			return false;
 		}
 
-		// Token: 0x06003173 RID: 12659 RVA: 0x002C5F9C File Offset: 0x002C419C
+		
 		public bool CheckFuLiMeiRiHuoYue(GameClient client)
 		{
 			foreach (KeyValuePair<int, SystemXmlItem> kvp in GameManager.systemDailyActiveAward.SystemXmlItemDict)
@@ -182,7 +182,7 @@ namespace GameServer.Logic.RefreshIconState
 			return this.AddFlushIconState(3006, false);
 		}
 
-		// Token: 0x06003174 RID: 12660 RVA: 0x002C606C File Offset: 0x002C426C
+		
 		public bool CheckFuLiLianXuDengLuReward(GameClient client)
 		{
 			int nDay = TimeUtil.NowDateTime().DayOfYear;
@@ -194,14 +194,14 @@ namespace GameServer.Logic.RefreshIconState
 			return bFulsh;
 		}
 
-		// Token: 0x06003175 RID: 12661 RVA: 0x002C60D0 File Offset: 0x002C42D0
+		
 		public bool CheckFuLiLianXuDengLu(GameClient client)
 		{
 			bool bFulsh = this.CheckFuLiLianXuDengLuReward(client);
 			return this.AddFlushIconState(3007, bFulsh);
 		}
 
-		// Token: 0x06003176 RID: 12662 RVA: 0x002C60F8 File Offset: 0x002C42F8
+		
 		public bool CheckFuLiLeiJiDengLuReward(GameClient client)
 		{
 			int nFlag = Global.GetRoleParamsInt32FromDB(client, "TotalLoginAwardFlag");
@@ -242,7 +242,7 @@ namespace GameServer.Logic.RefreshIconState
 			return bFulsh;
 		}
 
-		// Token: 0x06003177 RID: 12663 RVA: 0x002C61E0 File Offset: 0x002C43E0
+		
 		public bool CheckShenYouAwardIcon(GameClient client)
 		{
 			bool result;
@@ -261,7 +261,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x06003178 RID: 12664 RVA: 0x002C6230 File Offset: 0x002C4430
+		
 		public bool CheckFuMoMailIcon(GameClient client)
 		{
 			bool result;
@@ -293,14 +293,14 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x06003179 RID: 12665 RVA: 0x002C62C0 File Offset: 0x002C44C0
+		
 		public bool CheckFuLiLeiJiDengLu(GameClient client)
 		{
 			bool bFulsh = this.CheckFuLiLeiJiDengLuReward(client);
 			return this.AddFlushIconState(3008, bFulsh);
 		}
 
-		// Token: 0x0600317A RID: 12666 RVA: 0x002C62E8 File Offset: 0x002C44E8
+		
 		public bool CheckFuLiYueKaFanLi(GameClient client)
 		{
 			bool result;
@@ -324,7 +324,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x0600317B RID: 12667 RVA: 0x002C63A0 File Offset: 0x002C45A0
+		
 		public bool CheckFuLiYueKaFanLiAward(GameClient client)
 		{
 			bool result;
@@ -347,7 +347,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x0600317C RID: 12668 RVA: 0x002C644C File Offset: 0x002C464C
+		
 		public bool CheckFuMeiRiZaiXian(GameClient client)
 		{
 			int nDate = TimeUtil.NowDateTime().DayOfYear;
@@ -383,7 +383,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x0600317D RID: 12669 RVA: 0x002C658C File Offset: 0x002C478C
+		
 		public bool CheckCombatGift(GameClient client)
 		{
 			long combatFlag = Global.GetRoleParamsInt64FromDB(client, "10154");
@@ -399,7 +399,7 @@ namespace GameServer.Logic.RefreshIconState
 			return this.AddFlushIconState(3014, exist);
 		}
 
-		// Token: 0x0600317E RID: 12670 RVA: 0x002C6600 File Offset: 0x002C4800
+		
 		public bool CheckFuUpLevelGift(GameClient client)
 		{
 			List<int> flagList = Global.GetRoleParamsIntListFromDB(client, "UpLevelGiftFlags");
@@ -415,7 +415,7 @@ namespace GameServer.Logic.RefreshIconState
 			return this.AddFlushIconState(3010, exist);
 		}
 
-		// Token: 0x0600317F RID: 12671 RVA: 0x002C6674 File Offset: 0x002C4874
+		
 		public bool CheckOneDollarBuy(GameClient client)
 		{
 			OneDollarBuyActivity act = HuodongCachingMgr.GetOneDollarBuyActivity();
@@ -431,7 +431,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x06003180 RID: 12672 RVA: 0x002C66B8 File Offset: 0x002C48B8
+		
 		public bool CheckFuLiChongZhiHuiKui(GameClient client)
 		{
 			bool bShouCiChongZhi = this.CheckShouCiChongZhi(client);
@@ -450,7 +450,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x06003181 RID: 12673 RVA: 0x002C6720 File Offset: 0x002C4920
+		
 		public bool CheckShouCiChongZhi(GameClient client)
 		{
 			int totalChongZhiMoney = GameManager.ClientMgr.QueryTotaoChongZhiMoney(client);
@@ -470,7 +470,7 @@ namespace GameServer.Logic.RefreshIconState
 			return this.AddFlushIconState(3002, 0);
 		}
 
-		// Token: 0x06003182 RID: 12674 RVA: 0x002C67A4 File Offset: 0x002C49A4
+		
 		public bool CheckOneDollarChongZhi(GameClient client)
 		{
 			bool hasGet;
@@ -478,7 +478,7 @@ namespace GameServer.Logic.RefreshIconState
 			return this.AddFlushIconState(15051, ret);
 		}
 
-		// Token: 0x06003183 RID: 12675 RVA: 0x002C67D0 File Offset: 0x002C49D0
+		
 		public bool CheckInputFanLiNewActivity(GameClient client)
 		{
 			bool hasGet;
@@ -486,7 +486,7 @@ namespace GameServer.Logic.RefreshIconState
 			return this.AddFlushIconState(15054, ret);
 		}
 
-		// Token: 0x06003184 RID: 12676 RVA: 0x002C67FC File Offset: 0x002C49FC
+		
 		public bool CheckMeiRiChongZhi(GameClient client)
 		{
 			bool hasGet;
@@ -504,7 +504,7 @@ namespace GameServer.Logic.RefreshIconState
 			return this.AddFlushIconState(3003, ret);
 		}
 
-		// Token: 0x06003185 RID: 12677 RVA: 0x002C6874 File Offset: 0x002C4A74
+		
 		public bool CheckLeiJiChongZhi(GameClient client)
 		{
 			bool hasGet;
@@ -512,7 +512,7 @@ namespace GameServer.Logic.RefreshIconState
 			return this.AddFlushIconState(3004, ret);
 		}
 
-		// Token: 0x06003186 RID: 12678 RVA: 0x002C68A0 File Offset: 0x002C4AA0
+		
 		public bool CheckLeiJiXiaoFei(GameClient client)
 		{
 			bool hasGet;
@@ -520,37 +520,37 @@ namespace GameServer.Logic.RefreshIconState
 			return this.AddFlushIconState(3005, ret);
 		}
 
-		// Token: 0x06003187 RID: 12679 RVA: 0x002C68CC File Offset: 0x002C4ACC
+		
 		public bool CheckMainXinFuIcon(GameClient client)
 		{
 			return false;
 		}
 
-		// Token: 0x06003188 RID: 12680 RVA: 0x002C68E0 File Offset: 0x002C4AE0
+		
 		public bool CheckXinFuKillBoss(GameClient client)
 		{
 			return false;
 		}
 
-		// Token: 0x06003189 RID: 12681 RVA: 0x002C68F4 File Offset: 0x002C4AF4
+		
 		public bool CheckXinFuChongZhiMoney(GameClient client)
 		{
 			return false;
 		}
 
-		// Token: 0x0600318A RID: 12682 RVA: 0x002C6908 File Offset: 0x002C4B08
+		
 		public bool CheckXinFuUseMoney(GameClient client)
 		{
 			return false;
 		}
 
-		// Token: 0x0600318B RID: 12683 RVA: 0x002C691C File Offset: 0x002C4B1C
+		
 		public bool CheckXinFuFreeGetMoney(GameClient client)
 		{
 			return false;
 		}
 
-		// Token: 0x0600318C RID: 12684 RVA: 0x002C6930 File Offset: 0x002C4B30
+		
 		public bool CheckJingJiChangLeftTimes(GameClient client)
 		{
 			bool result;
@@ -565,7 +565,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x0600318D RID: 12685 RVA: 0x002C697C File Offset: 0x002C4B7C
+		
 		public bool CheckJingJiChangJiangLi(GameClient client)
 		{
 			bool result;
@@ -580,7 +580,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x0600318E RID: 12686 RVA: 0x002C69BC File Offset: 0x002C4BBC
+		
 		public bool CheckJingJiChangJunXian(GameClient client)
 		{
 			bool result;
@@ -595,7 +595,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x0600318F RID: 12687 RVA: 0x002C69FC File Offset: 0x002C4BFC
+		
 		public bool CheckShiJieBoss(GameClient client)
 		{
 			bool result;
@@ -610,7 +610,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x06003190 RID: 12688 RVA: 0x002C6A3C File Offset: 0x002C4C3C
+		
 		public bool CheckHuoDongState(GameClient client)
 		{
 			bool result;
@@ -626,7 +626,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x06003191 RID: 12689 RVA: 0x002C6A80 File Offset: 0x002C4C80
+		
 		public bool CheckHuangJinBoss(GameClient client)
 		{
 			bool result;
@@ -641,7 +641,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x06003192 RID: 12690 RVA: 0x002C6AC0 File Offset: 0x002C4CC0
+		
 		public bool CheckZiYuanZhaoHui(GameClient client)
 		{
 			bool result;
@@ -656,7 +656,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x06003193 RID: 12691 RVA: 0x002C6AFC File Offset: 0x002C4CFC
+		
 		public bool CheckEmailCount(GameClient client, bool sendToClient = true)
 		{
 			string cmd = string.Format("{0}:{1}:{2}", client.ClientData.RoleID, 1, 1);
@@ -677,13 +677,13 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x06003194 RID: 12692 RVA: 0x002C6B90 File Offset: 0x002C4D90
+		
 		public bool CheckPaiHangState(GameClient client)
 		{
 			return this.AddFlushIconState(7500, Global.GetAdmireCount(client) < 10);
 		}
 
-		// Token: 0x06003195 RID: 12693 RVA: 0x002C6BB8 File Offset: 0x002C4DB8
+		
 		public bool CheckChengJiuUpLevelState(GameClient client)
 		{
 			bool result = this.AddFlushIconState(9000, ChengJiuManager.CanActiveNextChengHao(client));
@@ -691,7 +691,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x06003196 RID: 12694 RVA: 0x002C6BE8 File Offset: 0x002C4DE8
+		
 		public bool CheckVIPLevelAwardState(GameClient client)
 		{
 			for (int nIndex = 1; nIndex <= client.ClientData.VipLevel; nIndex++)
@@ -705,7 +705,7 @@ namespace GameServer.Logic.RefreshIconState
 			return this.AddFlushIconState(10001, false);
 		}
 
-		// Token: 0x06003197 RID: 12695 RVA: 0x002C6C58 File Offset: 0x002C4E58
+		
 		public bool CheckFreeImpetrateState(GameClient client)
 		{
 			bool bFlush = false;
@@ -720,20 +720,20 @@ namespace GameServer.Logic.RefreshIconState
 			return this.AddFlushIconState(8000, bFlush);
 		}
 
-		// Token: 0x06003198 RID: 12696 RVA: 0x002C6CE4 File Offset: 0x002C4EE4
+		
 		public bool CheckBuChangState(GameClient client)
 		{
 			bool bFlush = BuChangManager.CheckGiveBuChang(client);
 			return this.AddFlushIconState(11000, bFlush);
 		}
 
-		// Token: 0x06003199 RID: 12697 RVA: 0x002C6D0C File Offset: 0x002C4F0C
+		
 		public bool CheckRebornUpgrade(GameClient client)
 		{
 			return this.AddFlushIconState(21001, RebornManager.getInstance().CheckRebornUpgradeIcon(client));
 		}
 
-		// Token: 0x0600319A RID: 12698 RVA: 0x002C6D34 File Offset: 0x002C4F34
+		
 		public bool CheckReborn(GameClient client)
 		{
 			this.AddFlushIconState(21001, false);
@@ -741,7 +741,7 @@ namespace GameServer.Logic.RefreshIconState
 			return this.CheckRebornUpgrade(client) || bFlush;
 		}
 
-		// Token: 0x0600319B RID: 12699 RVA: 0x002C6D60 File Offset: 0x002C4F60
+		
 		public bool CheckThemeActivity(GameClient client)
 		{
 			this.AddFlushIconState(11501, false);
@@ -751,7 +751,7 @@ namespace GameServer.Logic.RefreshIconState
 			return this.CheckThemeDaLiBao(client) || bFlush;
 		}
 
-		// Token: 0x0600319C RID: 12700 RVA: 0x002C6DA4 File Offset: 0x002C4FA4
+		
 		public bool CheckThemeZhiGou(GameClient client)
 		{
 			ThemeZhiGouActivity act = HuodongCachingMgr.GetThemeZhiGouActivity();
@@ -772,7 +772,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x0600319D RID: 12701 RVA: 0x002C6DF0 File Offset: 0x002C4FF0
+		
 		public bool CheckRegressZhiGou(GameClient client)
 		{
 			RegressActiveDayBuy act = HuodongCachingMgr.GetRegressActiveDayBuy();
@@ -793,7 +793,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x0600319E RID: 12702 RVA: 0x002C6E3C File Offset: 0x002C503C
+		
 		public bool CheckThemeDaLiBao(GameClient client)
 		{
 			bool bFlush = false;
@@ -827,7 +827,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x0600319F RID: 12703 RVA: 0x002C6F0C File Offset: 0x002C510C
+		
 		public bool CheckHeFuActivity(GameClient client)
 		{
 			this.AddFlushIconState(12001, false);
@@ -844,7 +844,7 @@ namespace GameServer.Logic.RefreshIconState
 			return this.AddFlushIconState(12000, bFlush);
 		}
 
-		// Token: 0x060031A0 RID: 12704 RVA: 0x002C6FA0 File Offset: 0x002C51A0
+		
 		public bool CheckHeFuLogin(GameClient client)
 		{
 			HeFuLoginActivity activity = HuodongCachingMgr.GetHeFuLoginActivity();
@@ -886,7 +886,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031A1 RID: 12705 RVA: 0x002C7068 File Offset: 0x002C5268
+		
 		public bool CheckHeFuTotalLogin(GameClient client)
 		{
 			HeFuTotalLoginActivity activity = HuodongCachingMgr.GetHeFuTotalLoginActivity();
@@ -921,7 +921,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031A2 RID: 12706 RVA: 0x002C7124 File Offset: 0x002C5324
+		
 		public bool CheckHeFuRecharge(GameClient client)
 		{
 			int currday = Global.GetOffsetDay(TimeUtil.NowDateTime());
@@ -974,7 +974,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031A3 RID: 12707 RVA: 0x002C72AC File Offset: 0x002C54AC
+		
 		public bool CheckHeFuPKKing(GameClient client)
 		{
 			HeFuPKKingActivity activity = HuodongCachingMgr.GetHeFuPKKingActivity();
@@ -1003,7 +1003,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031A4 RID: 12708 RVA: 0x002C7338 File Offset: 0x002C5538
+		
 		public bool CheckHeFuLuoLan(GameClient client)
 		{
 			HeFuLuoLanActivity activity = HuodongCachingMgr.GetHeFuLuoLanActivity();
@@ -1083,13 +1083,13 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031A5 RID: 12709 RVA: 0x002C7590 File Offset: 0x002C5790
+		
 		public bool CheckCaiJiState(GameClient client)
 		{
 			return this.AddFlushIconState(13000, CaiJiLogic.HasLeftnum(client));
 		}
 
-		// Token: 0x060031A6 RID: 12710 RVA: 0x002C75B4 File Offset: 0x002C57B4
+		
 		public bool CheckSpecialActivity(GameClient client)
 		{
 			SpecialActivity act = HuodongCachingMgr.GetSpecialActivity();
@@ -1106,7 +1106,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031A7 RID: 12711 RVA: 0x002C75F4 File Offset: 0x002C57F4
+		
 		public bool CheckEverydayActivity(GameClient client)
 		{
 			EverydayActivity act = HuodongCachingMgr.GetEverydayActivity();
@@ -1123,7 +1123,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031A8 RID: 12712 RVA: 0x002C7634 File Offset: 0x002C5834
+		
 		public bool CheckSpecPriorityActivity(GameClient client)
 		{
 			SpecPriorityActivity act = HuodongCachingMgr.GetSpecPriorityActivity();
@@ -1140,7 +1140,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031A9 RID: 12713 RVA: 0x002C7674 File Offset: 0x002C5874
+		
 		public bool CheckJieRiActivity(GameClient client, bool isLogin)
 		{
 			if (isLogin)
@@ -1207,13 +1207,13 @@ namespace GameServer.Logic.RefreshIconState
 			return this.AddFlushIconState(14000, isJieRiActivityTipActived) || bAnyChildTipChanged;
 		}
 
-		// Token: 0x060031AA RID: 12714 RVA: 0x002C795C File Offset: 0x002C5B5C
+		
 		public bool IsAnyJieRiTipActived()
 		{
 			return this.IsAnyTipActived(IconStateManager.m_jieRiIconList);
 		}
 
-		// Token: 0x060031AB RID: 12715 RVA: 0x002C797C File Offset: 0x002C5B7C
+		
 		public bool IsAnyTipActived(List<ActivityTipTypes> iconTipList)
 		{
 			bool bAnyActived = false;
@@ -1238,7 +1238,7 @@ namespace GameServer.Logic.RefreshIconState
 			return bAnyActived;
 		}
 
-		// Token: 0x060031AC RID: 12716 RVA: 0x002C7A50 File Offset: 0x002C5C50
+		
 		public bool CheckJieRiLogin(GameClient client)
 		{
 			JieriDaLiBaoActivity activity = HuodongCachingMgr.GetJieriDaLiBaoActivity();
@@ -1272,7 +1272,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031AD RID: 12717 RVA: 0x002C7B2C File Offset: 0x002C5D2C
+		
 		public bool CheckJieRiTotalLogin(GameClient client)
 		{
 			JieRiDengLuActivity activity = HuodongCachingMgr.GetJieRiDengLuActivity();
@@ -1315,7 +1315,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031AE RID: 12718 RVA: 0x002C7C4C File Offset: 0x002C5E4C
+		
 		public bool CheckJieRiDayCZ(GameClient client)
 		{
 			JieriCZSongActivity activity = HuodongCachingMgr.GetJieriCZSongActivity();
@@ -1358,7 +1358,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031AF RID: 12719 RVA: 0x002C7DA8 File Offset: 0x002C5FA8
+		
 		public bool CheckJieRiLeiJiXF(GameClient client)
 		{
 			JieRiTotalConsumeActivity activity = HuodongCachingMgr.GetJieRiTotalConsumeActivity();
@@ -1401,7 +1401,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031B0 RID: 12720 RVA: 0x002C7F04 File Offset: 0x002C6104
+		
 		public bool CheckJieRiLeiJiCZ(GameClient client)
 		{
 			JieRiLeiJiCZActivity activity = HuodongCachingMgr.GetJieRiLeiJiCZActivity();
@@ -1444,7 +1444,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031B1 RID: 12721 RVA: 0x002C8060 File Offset: 0x002C6260
+		
 		public bool CheckJieRiLeiJi(GameClient client)
 		{
 			JieRiMeiRiLeiJiActivity activity = HuodongCachingMgr.GetJieriMeiRiLeiJiActivity();
@@ -1505,7 +1505,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031B2 RID: 12722 RVA: 0x002C822C File Offset: 0x002C642C
+		
 		public bool CheckJieRiHongBaoBang(GameClient client)
 		{
 			JieriHongBaoKingActivity activity = JieriHongBaoKingActivity.getInstance();
@@ -1513,7 +1513,7 @@ namespace GameServer.Logic.RefreshIconState
 			return this.AddFlushIconState(14032, bFlush);
 		}
 
-		// Token: 0x060031B3 RID: 12723 RVA: 0x002C8258 File Offset: 0x002C6458
+		
 		public bool CheckJieRiPCKingEveryDay(GameClient client)
 		{
 			bool bFlush = false;
@@ -1525,7 +1525,7 @@ namespace GameServer.Logic.RefreshIconState
 			return this.AddFlushIconState(14035, bFlush);
 		}
 
-		// Token: 0x060031B4 RID: 12724 RVA: 0x002C8294 File Offset: 0x002C6494
+		
 		public bool CheckJieRiCZKING(GameClient client)
 		{
 			KingActivity activity = HuodongCachingMgr.GetJieRiCZKingActivity();
@@ -1561,7 +1561,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result2;
 		}
 
-		// Token: 0x060031B5 RID: 12725 RVA: 0x002C8388 File Offset: 0x002C6588
+		
 		public bool CheckJieRiXFKING(GameClient client)
 		{
 			KingActivity activity = HuodongCachingMgr.GetJieriXiaoFeiKingActivity();
@@ -1597,7 +1597,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result2;
 		}
 
-		// Token: 0x060031B6 RID: 12726 RVA: 0x002C847C File Offset: 0x002C667C
+		
 		public bool CheckJieriGive(GameClient client)
 		{
 			JieriGiveActivity act = HuodongCachingMgr.GetJieriGiveActivity();
@@ -1614,7 +1614,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031B7 RID: 12727 RVA: 0x002C84C0 File Offset: 0x002C66C0
+		
 		public bool CheckJieriRecv(GameClient client)
 		{
 			JieriRecvActivity act = HuodongCachingMgr.GetJieriRecvActivity();
@@ -1631,7 +1631,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031B8 RID: 12728 RVA: 0x002C8504 File Offset: 0x002C6704
+		
 		public bool CheckJieriDanBiChongZhi(GameClient client)
 		{
 			DanBiChongZhiActivity act = HuodongCachingMgr.GetDanBiChongZhiActivity();
@@ -1648,7 +1648,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031B9 RID: 12729 RVA: 0x002C8548 File Offset: 0x002C6748
+		
 		public bool CheckJieriIPointsExchg(GameClient client)
 		{
 			JieriIPointsExchgActivity act = HuodongCachingMgr.GetJieriIPointsExchgActivity();
@@ -1665,7 +1665,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031BA RID: 12730 RVA: 0x002C858C File Offset: 0x002C678C
+		
 		public bool CheckJieriGiveKing(GameClient client)
 		{
 			JieRiGiveKingActivity act = HuodongCachingMgr.GetJieriGiveKingActivity();
@@ -1682,7 +1682,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031BB RID: 12731 RVA: 0x002C85D0 File Offset: 0x002C67D0
+		
 		public bool CheckJieriRecvKing(GameClient client)
 		{
 			JieRiRecvKingActivity act = HuodongCachingMgr.GetJieriRecvKingActivity();
@@ -1699,7 +1699,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031BC RID: 12732 RVA: 0x002C8614 File Offset: 0x002C6814
+		
 		public bool CheckJieriLianXuCharge(GameClient client)
 		{
 			JieriLianXuChargeActivity act = HuodongCachingMgr.GetJieriLianXuChargeActivity();
@@ -1716,7 +1716,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031BD RID: 12733 RVA: 0x002C8658 File Offset: 0x002C6858
+		
 		public bool CheckGuildIcon(GameClient client, bool isLogin)
 		{
 			if (isLogin)
@@ -1733,7 +1733,7 @@ namespace GameServer.Logic.RefreshIconState
 			return this.AddFlushIconState(15000, bFlush);
 		}
 
-		// Token: 0x060031BE RID: 12734 RVA: 0x002C86B8 File Offset: 0x002C68B8
+		
 		public bool CheckGuildCopyMap(GameClient client)
 		{
 			bool bFlush = false;
@@ -1772,7 +1772,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031BF RID: 12735 RVA: 0x002C8790 File Offset: 0x002C6990
+		
 		public bool CheckPetIcon(GameClient client)
 		{
 			this.AddFlushIconState(16000, false);
@@ -1782,7 +1782,7 @@ namespace GameServer.Logic.RefreshIconState
 			return bFlush | this.CheckCallPetIcon(client);
 		}
 
-		// Token: 0x060031C0 RID: 12736 RVA: 0x002C87D4 File Offset: 0x002C69D4
+		
 		public bool CheckBuildingFreeQueue(GameClient client)
 		{
 			BuildingManager BuildingMgr = BuildingManager.getInstance();
@@ -1792,7 +1792,7 @@ namespace GameServer.Logic.RefreshIconState
 			return free < 4;
 		}
 
-		// Token: 0x060031C1 RID: 12737 RVA: 0x002C8804 File Offset: 0x002C6A04
+		
 		public bool CheckBuildingAward(GameClient client)
 		{
 			bool bFlush = false;
@@ -1801,7 +1801,7 @@ namespace GameServer.Logic.RefreshIconState
 			return bFlush | BuildingMgr.CheckAnyTaskFinish(client);
 		}
 
-		// Token: 0x060031C2 RID: 12738 RVA: 0x002C8834 File Offset: 0x002C6A34
+		
 		public bool CheckBuildingIcon(GameClient client, bool isLogin)
 		{
 			if (isLogin)
@@ -1814,13 +1814,13 @@ namespace GameServer.Logic.RefreshIconState
 			return this.AddFlushIconState(15050, bFlush);
 		}
 
-		// Token: 0x060031C3 RID: 12739 RVA: 0x002C8880 File Offset: 0x002C6A80
+		
 		public bool CheckJunTuanEraIcon(GameClient client)
 		{
 			return this.AddFlushIconState(15053, EraManager.getInstance().CheckJunTuanEraIcon(client));
 		}
 
-		// Token: 0x060031C4 RID: 12740 RVA: 0x002C88A8 File Offset: 0x002C6AA8
+		
 		public bool CheckKF5V5DDailyPaiHang(GameClient client)
 		{
 			DuanWeiRankAward duanWeiRankAward;
@@ -1836,7 +1836,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031C5 RID: 12741 RVA: 0x002C88EC File Offset: 0x002C6AEC
+		
 		public bool CheckTianTiMonthPaiMingAwards(GameClient client)
 		{
 			ushort iState = 0;
@@ -1858,20 +1858,20 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031C6 RID: 12742 RVA: 0x002C893C File Offset: 0x002C6B3C
+		
 		public bool CheckPetBagIcon(GameClient client)
 		{
 			return false;
 		}
 
-		// Token: 0x060031C7 RID: 12743 RVA: 0x002C8950 File Offset: 0x002C6B50
+		
 		public bool CheckCallPetIcon(GameClient client)
 		{
 			bool bFlush = CallPetManager.getFreeSec(client) <= 0L;
 			return this.AddFlushIconState(16001, bFlush);
 		}
 
-		// Token: 0x060031C8 RID: 12744 RVA: 0x002C897C File Offset: 0x002C6B7C
+		
 		public void DoSpriteIconTicks(GameClient client)
 		{
 			long startTicks = TimeUtil.NOW();
@@ -1903,7 +1903,7 @@ namespace GameServer.Logic.RefreshIconState
 			}
 		}
 
-		// Token: 0x060031C9 RID: 12745 RVA: 0x002C8A6C File Offset: 0x002C6C6C
+		
 		public bool CheckJieRiFanLi(GameClient client, ActivityTypes nActType)
 		{
 			JieriFanLiActivity activity = HuodongCachingMgr.GetJieriFanLiActivity(nActType);
@@ -1998,7 +1998,7 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x060031CA RID: 12746 RVA: 0x002C8C78 File Offset: 0x002C6E78
+		
 		public void xxxxx(GameClient client)
 		{
 			bool bFlush = false;
@@ -2014,7 +2014,7 @@ namespace GameServer.Logic.RefreshIconState
 			client._IconStateMgr.SendIconStateToClient(client);
 		}
 
-		// Token: 0x060031CB RID: 12747 RVA: 0x002C8D0C File Offset: 0x002C6F0C
+		
 		public bool CheckFreeZhuanPanChouState(GameClient client)
 		{
 			bool bFlush = false;
@@ -2047,22 +2047,22 @@ namespace GameServer.Logic.RefreshIconState
 			return result;
 		}
 
-		// Token: 0x04003E53 RID: 15955
+		
 		private Dictionary<ushort, ushort> m_StateIconsDict = new Dictionary<ushort, ushort>();
 
-		// Token: 0x04003E54 RID: 15956
+		
 		private Dictionary<ushort, ushort> m_StateCacheIconsDict = new Dictionary<ushort, ushort>();
 
-		// Token: 0x04003E55 RID: 15957
+		
 		private ActivityIconStateData m_ActivityIconStateData = new ActivityIconStateData();
 
-		// Token: 0x04003E56 RID: 15958
+		
 		private long m_LastTicks = 0L;
 
-		// Token: 0x04003E57 RID: 15959
+		
 		private long m_LastTicksBuilding = 0L;
 
-		// Token: 0x04003E58 RID: 15960
+		
 		private static List<ActivityTipTypes> m_jieRiIconList = new List<ActivityTipTypes>
 		{
 			ActivityTipTypes.JieRiLogin,

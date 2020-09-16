@@ -15,29 +15,29 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000344 RID: 836
+	
 	public class KuaFuBossManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener, IEventListenerEx, IManager2
 	{
-		// Token: 0x06000E03 RID: 3587 RVA: 0x000DE0EC File Offset: 0x000DC2EC
+		
 		public static KuaFuBossManager getInstance()
 		{
 			return KuaFuBossManager.instance;
 		}
 
-		// Token: 0x06000E04 RID: 3588 RVA: 0x000DE104 File Offset: 0x000DC304
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x06000E05 RID: 3589 RVA: 0x000DE128 File Offset: 0x000DC328
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			ScheduleExecutor2.Instance.scheduleExecute(new NormalScheduleTask("KuaFuBossManager.TimerProc", new EventHandler(this.TimerProc)), 15000, 5000);
 			return true;
 		}
 
-		// Token: 0x06000E06 RID: 3590 RVA: 0x000DE168 File Offset: 0x000DC368
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1120, 1, 1, KuaFuBossManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -48,7 +48,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000E07 RID: 3591 RVA: 0x000DE1EC File Offset: 0x000DC3EC
+		
 		public bool showdown()
 		{
 			GlobalEventSource4Scene.getInstance().removeListener(10001, 31, KuaFuBossManager.getInstance());
@@ -56,19 +56,19 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000E08 RID: 3592 RVA: 0x000DE228 File Offset: 0x000DC428
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000E09 RID: 3593 RVA: 0x000DE23C File Offset: 0x000DC43C
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06000E0A RID: 3594 RVA: 0x000DE250 File Offset: 0x000DC450
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			switch (nID)
@@ -83,7 +83,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000E0B RID: 3595 RVA: 0x000DE2B0 File Offset: 0x000DC4B0
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int eventType = eventObject.getEventType();
@@ -97,7 +97,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000E0C RID: 3596 RVA: 0x000DE2F8 File Offset: 0x000DC4F8
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 			int eventType = eventObject.EventType;
@@ -121,7 +121,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000E0D RID: 3597 RVA: 0x000DE3D8 File Offset: 0x000DC5D8
+		
 		public bool InitConfig()
 		{
 			bool success = true;
@@ -222,7 +222,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x06000E0E RID: 3598 RVA: 0x000DEA10 File Offset: 0x000DCC10
+		
 		private void TimerProc(object sender, EventArgs e)
 		{
 			bool notifyPrepareGame = false;
@@ -319,7 +319,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000E0F RID: 3599 RVA: 0x000DEF70 File Offset: 0x000DD170
+		
 		public bool ProcessKuaFuBossJoinCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -363,14 +363,14 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000E10 RID: 3600 RVA: 0x000DF0AC File Offset: 0x000DD2AC
+		
 		private bool CheckMap(GameClient client)
 		{
 			SceneUIClasses sceneType = Global.GetMapSceneType(client.ClientData.MapCode);
 			return sceneType == SceneUIClasses.Normal;
 		}
 
-		// Token: 0x06000E11 RID: 3601 RVA: 0x000DF0E0 File Offset: 0x000DD2E0
+		
 		private int CheckCondition(GameClient client, ref KuaFuBossSceneInfo sceneItem, ref KuaFuBossGameStates state)
 		{
 			int result = 0;
@@ -429,7 +429,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000E12 RID: 3602 RVA: 0x000DF370 File Offset: 0x000DD570
+		
 		private TimeSpan GetStartTime(int sceneId)
 		{
 			KuaFuBossSceneInfo sceneItem = null;
@@ -461,7 +461,7 @@ namespace GameServer.Logic
 			return startTime;
 		}
 
-		// Token: 0x06000E13 RID: 3603 RVA: 0x000DF514 File Offset: 0x000DD714
+		
 		public bool ProcessGetKuaFuBossStateCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -512,7 +512,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000E14 RID: 3604 RVA: 0x000DF650 File Offset: 0x000DD850
+		
 		public bool ProcessKuaFuBossEnterCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -581,7 +581,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000E15 RID: 3605 RVA: 0x000DF84C File Offset: 0x000DDA4C
+		
 		public int GetBirthPoint(GameClient client, out int posX, out int posY)
 		{
 			int result;
@@ -600,7 +600,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000E16 RID: 3606 RVA: 0x000DF8FC File Offset: 0x000DDAFC
+		
 		public bool OnInitGame(GameClient client)
 		{
 			KuaFuServerLoginData kuaFuServerLoginData = Global.GetClientKuaFuServerLoginData(client);
@@ -663,7 +663,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000E17 RID: 3607 RVA: 0x000DFB7C File Offset: 0x000DDD7C
+		
 		public bool ClientRelive(GameClient client)
 		{
 			int toPosX;
@@ -677,13 +677,13 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000E18 RID: 3608 RVA: 0x000DFC10 File Offset: 0x000DDE10
+		
 		public bool IsGongNengOpened(GameClient client, bool hint = false)
 		{
 			return !GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot8) && GameManager.VersionSystemOpenMgr.IsVersionSystemOpen("KuaFuBoss") && GlobalNew.IsGongNengOpened(client, GongNengIDs.KuaFuBoss, hint);
 		}
 
-		// Token: 0x06000E19 RID: 3609 RVA: 0x000DFC54 File Offset: 0x000DDE54
+		
 		public bool AddCopyScenes(GameClient client, CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool result;
@@ -751,7 +751,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000E1A RID: 3610 RVA: 0x000DFEE0 File Offset: 0x000DE0E0
+		
 		public bool RemoveCopyScene(CopyMap copyMap, SceneUIClasses sceneType)
 		{
 			bool result;
@@ -771,7 +771,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000E1B RID: 3611 RVA: 0x000DFF58 File Offset: 0x000DE158
+		
 		private void NotifySceneData(KuaFuBossScene scene)
 		{
 			if (null != scene)
@@ -780,7 +780,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000E1C RID: 3612 RVA: 0x000DFF8C File Offset: 0x000DE18C
+		
 		public void NotifyTimeStateInfoAndScoreInfo(GameClient client, bool timeState = true, bool sideScore = true)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -800,7 +800,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000E1D RID: 3613 RVA: 0x000E0034 File Offset: 0x000DE234
+		
 		public void CheckCreateDynamicMonster(KuaFuBossScene scene, long nowMs)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -836,7 +836,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000E1E RID: 3614 RVA: 0x000E0228 File Offset: 0x000DE428
+		
 		public void OnKillMonster(GameClient client, Monster monster)
 		{
 			if (monster.ManagerType == SceneUIClasses.KuaFuBoss)
@@ -871,7 +871,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000E1F RID: 3615 RVA: 0x000E03A8 File Offset: 0x000DE5A8
+		
 		public void TimerProc()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -984,7 +984,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000E20 RID: 3616 RVA: 0x000E08AC File Offset: 0x000DEAAC
+		
 		public void LeaveFuBen(GameClient client)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -997,25 +997,25 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000E21 RID: 3617 RVA: 0x000E0928 File Offset: 0x000DEB28
+		
 		public void OnLogout(GameClient client)
 		{
 			this.LeaveFuBen(client);
 		}
 
-		// Token: 0x040015FB RID: 5627
+		
 		public const SceneUIClasses ManagerType = SceneUIClasses.KuaFuBoss;
 
-		// Token: 0x040015FC RID: 5628
+		
 		private static KuaFuBossManager instance = new KuaFuBossManager();
 
-		// Token: 0x040015FD RID: 5629
+		
 		public KuaFuBossData RuntimeData = new KuaFuBossData();
 
-		// Token: 0x040015FE RID: 5630
+		
 		public ConcurrentDictionary<int, KuaFuBossScene> SceneDict = new ConcurrentDictionary<int, KuaFuBossScene>();
 
-		// Token: 0x040015FF RID: 5631
+		
 		private static long NextHeartBeatTicks = 0L;
 	}
 }

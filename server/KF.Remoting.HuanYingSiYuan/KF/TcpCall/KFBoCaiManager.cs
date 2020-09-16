@@ -11,29 +11,29 @@ using Tmsk.Contract.KuaFuData;
 
 namespace KF.TcpCall
 {
-	// Token: 0x0200002E RID: 46
+	
 	[AutoCSer.Net.TcpStaticServer.Server(Name = "KfCall", IsServer = true, IsAttribute = true, IsClientAwaiter = false, MemberFilters = MemberFilters.Static, IsSegmentation = true, ClientSegmentationCopyPath = "GameServer\\Remoting\\")]
 	public class KFBoCaiManager
 	{
-		// Token: 0x0600021F RID: 543 RVA: 0x00020310 File Offset: 0x0001E510
+		
 		public static KFBoCaiManager GetInstance()
 		{
 			return KFBoCaiManager.instance;
 		}
 
-		// Token: 0x06000220 RID: 544 RVA: 0x00020327 File Offset: 0x0001E527
+		
 		private KFBoCaiManager()
 		{
 		}
 
-		// Token: 0x06000221 RID: 545 RVA: 0x00020334 File Offset: 0x0001E534
+		
 		~KFBoCaiManager()
 		{
 			this.BackgroundThread.Abort();
 			this.BackgroundUpdate.Abort();
 		}
 
-		// Token: 0x06000222 RID: 546 RVA: 0x00020378 File Offset: 0x0001E578
+		
 		public void StartUp()
 		{
 			try
@@ -53,7 +53,7 @@ namespace KF.TcpCall
 			}
 		}
 
-		// Token: 0x06000223 RID: 547 RVA: 0x00020424 File Offset: 0x0001E624
+		
 		public void ThreadProc(object state)
 		{
 			try
@@ -71,7 +71,7 @@ namespace KF.TcpCall
 			}
 		}
 
-		// Token: 0x06000224 RID: 548 RVA: 0x00020480 File Offset: 0x0001E680
+		
 		public void ThreadUpdate(object state)
 		{
 			try
@@ -89,7 +89,7 @@ namespace KF.TcpCall
 			}
 		}
 
-		// Token: 0x06000225 RID: 549 RVA: 0x000204DC File Offset: 0x0001E6DC
+		
 		[AutoCSer.Net.TcpStaticServer.Method(ParameterFlags = ParameterFlags.SerializeBox, ServerTask = ServerTaskType.Queue, IsClientAwaiter = false)]
 		public static bool IsCanBuy(int type, string buyValue, int buyNum, long DataPeriods)
 		{
@@ -111,7 +111,7 @@ namespace KF.TcpCall
 			return false;
 		}
 
-		// Token: 0x06000226 RID: 550 RVA: 0x00020550 File Offset: 0x0001E750
+		
 		[AutoCSer.Net.TcpStaticServer.Method(ParameterFlags = ParameterFlags.SerializeBox, ServerTask = ServerTaskType.Queue, IsClientAwaiter = false)]
 		public static bool BuyBoCai(KFBuyBocaiData data)
 		{
@@ -133,7 +133,7 @@ namespace KF.TcpCall
 			return false;
 		}
 
-		// Token: 0x06000227 RID: 551 RVA: 0x000205C8 File Offset: 0x0001E7C8
+		
 		[AutoCSer.Net.TcpStaticServer.Method(ParameterFlags = ParameterFlags.SerializeBox, ServerTask = ServerTaskType.Queue, IsClientAwaiter = false)]
 		public static OpenLottery GetOpenLottery(int type)
 		{
@@ -155,7 +155,7 @@ namespace KF.TcpCall
 			return null;
 		}
 
-		// Token: 0x06000228 RID: 552 RVA: 0x00020634 File Offset: 0x0001E834
+		
 		[AutoCSer.Net.TcpStaticServer.Method(ParameterFlags = ParameterFlags.SerializeBox, ServerTask = ServerTaskType.Queue, IsClientAwaiter = false)]
 		public static List<OpenLottery> GetOpenLottery(int type, long DataPeriods, bool getOne)
 		{
@@ -189,7 +189,7 @@ namespace KF.TcpCall
 			return dList;
 		}
 
-		// Token: 0x06000229 RID: 553 RVA: 0x000206F4 File Offset: 0x0001E8F4
+		
 		[AutoCSer.Net.TcpStaticServer.Method(ParameterFlags = ParameterFlags.SerializeBox, ServerTask = ServerTaskType.Queue, IsClientAwaiter = false)]
 		public static KFStageData GetKFStageData(int type)
 		{
@@ -211,7 +211,7 @@ namespace KF.TcpCall
 			return null;
 		}
 
-		// Token: 0x0600022A RID: 554 RVA: 0x00020760 File Offset: 0x0001E960
+		
 		[AutoCSer.Net.TcpStaticServer.Method(ParameterFlags = ParameterFlags.SerializeBox, ServerTask = ServerTaskType.Queue, IsClientAwaiter = false)]
 		public static List<KFBoCaoHistoryData> GetWinHistory(int type)
 		{
@@ -233,7 +233,7 @@ namespace KF.TcpCall
 			return null;
 		}
 
-		// Token: 0x0600022B RID: 555 RVA: 0x000207CC File Offset: 0x0001E9CC
+		
 		[AutoCSer.Net.TcpStaticServer.Method(ParameterFlags = ParameterFlags.SerializeBox, ServerTask = ServerTaskType.Queue, IsClientAwaiter = false)]
 		public static bool BoCaiBuyItem(KFBoCaiShopDB Item, int maxNum)
 		{
@@ -248,61 +248,61 @@ namespace KF.TcpCall
 			return false;
 		}
 
-		// Token: 0x04000134 RID: 308
+		
 		private static KFBoCaiManager instance = new KFBoCaiManager();
 
-		// Token: 0x04000135 RID: 309
+		
 		private Thread BackgroundThread;
 
-		// Token: 0x04000136 RID: 310
+		
 		private Thread BackgroundUpdate;
 
-		// Token: 0x0200002F RID: 47
+		
 		internal static class TcpStaticServer
 		{
-			// Token: 0x0600022D RID: 557 RVA: 0x00020820 File Offset: 0x0001EA20
+			
 			[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public static bool _M5(KFBoCaiShopDB Item, int maxNum)
 			{
 				return KFBoCaiManager.BoCaiBuyItem(Item, maxNum);
 			}
 
-			// Token: 0x0600022E RID: 558 RVA: 0x0002083C File Offset: 0x0001EA3C
+			
 			[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public static bool _M6(KFBuyBocaiData data)
 			{
 				return KFBoCaiManager.BuyBoCai(data);
 			}
 
-			// Token: 0x0600022F RID: 559 RVA: 0x00020854 File Offset: 0x0001EA54
+			
 			[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public static KFStageData _M7(int type)
 			{
 				return KFBoCaiManager.GetKFStageData(type);
 			}
 
-			// Token: 0x06000230 RID: 560 RVA: 0x0002086C File Offset: 0x0001EA6C
+			
 			[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public static OpenLottery _M8(int type)
 			{
 				return KFBoCaiManager.GetOpenLottery(type);
 			}
 
-			// Token: 0x06000231 RID: 561 RVA: 0x00020884 File Offset: 0x0001EA84
+			
 			[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public static List<OpenLottery> _M9(int type, long DataPeriods, bool getOne)
 			{
 				return KFBoCaiManager.GetOpenLottery(type, DataPeriods, getOne);
 			}
 
-			// Token: 0x06000232 RID: 562 RVA: 0x000208A0 File Offset: 0x0001EAA0
+			
 			[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public static List<KFBoCaoHistoryData> _M10(int type)
 			{
 				return KFBoCaiManager.GetWinHistory(type);
 			}
 
-			// Token: 0x06000233 RID: 563 RVA: 0x000208B8 File Offset: 0x0001EAB8
+			
 			[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			public static bool _M11(int type, string buyValue, int buyNum, long DataPeriods)
 			{

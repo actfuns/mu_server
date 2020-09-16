@@ -4,10 +4,10 @@ using System.Xml.Linq;
 
 namespace GameServer.Logic.MUWings
 {
-	// Token: 0x0200076A RID: 1898
+	
 	public class WingStarCacheManager
 	{
-		// Token: 0x060030C5 RID: 12485 RVA: 0x002B4B94 File Offset: 0x002B2D94
+		
 		public static SystemXmlItem GetWingStarCacheItem(int occupation, int level, int starNum)
 		{
 			string key = string.Format("{0}_{1}_{2}", occupation, level, starNum);
@@ -24,7 +24,7 @@ namespace GameServer.Logic.MUWings
 			return result;
 		}
 
-		// Token: 0x060030C6 RID: 12486 RVA: 0x002B4BDC File Offset: 0x002B2DDC
+		
 		public static void LoadWingStarItemsByOccupation(int occupation)
 		{
 			if (occupation != 4)
@@ -61,7 +61,7 @@ namespace GameServer.Logic.MUWings
 			}
 		}
 
-		// Token: 0x060030C7 RID: 12487 RVA: 0x002B4D7C File Offset: 0x002B2F7C
+		
 		public static void LoadWingStarItems()
 		{
 			for (int i = 0; i < 6; i++)
@@ -70,7 +70,7 @@ namespace GameServer.Logic.MUWings
 			}
 		}
 
-		// Token: 0x04003D62 RID: 15714
+		
 		private static Dictionary<string, SystemXmlItem> WingStarItemsDict = new Dictionary<string, SystemXmlItem>();
 	}
 }

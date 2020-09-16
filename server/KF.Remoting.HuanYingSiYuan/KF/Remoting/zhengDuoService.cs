@@ -10,16 +10,16 @@ using Tmsk.Contract.KuaFuData;
 
 namespace KF.Remoting
 {
-	// Token: 0x0200007A RID: 122
+	
 	public class zhengDuoService
 	{
-		// Token: 0x060005F1 RID: 1521 RVA: 0x000508F0 File Offset: 0x0004EAF0
+		
 		public static zhengDuoService Instance()
 		{
 			return zhengDuoService._instance;
 		}
 
-		// Token: 0x060005F2 RID: 1522 RVA: 0x00050908 File Offset: 0x0004EB08
+		
 		public void InitConfig()
 		{
 			if (!this._config.Load(KuaFuServerManager.GetResourcePath("Config\\PlunderLands.xml", KuaFuServerManager.ResourcePathTypes.GameRes), KuaFuServerManager.GetResourcePath("Config\\PlunderLandsMonster.xml", KuaFuServerManager.ResourcePathTypes.GameRes), KuaFuServerManager.GetResourcePath("Config\\PlunderLandsRebirth.xml", KuaFuServerManager.ResourcePathTypes.GameRes)))
@@ -32,7 +32,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060005F3 RID: 1523 RVA: 0x00050968 File Offset: 0x0004EB68
+		
 		private void LoadDBConfig()
 		{
 			lock (this.Mutex)
@@ -65,7 +65,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060005F4 RID: 1524 RVA: 0x00050A6C File Offset: 0x0004EC6C
+		
 		private void ReloadRankDatas(int weekDay)
 		{
 			Dictionary<int, ZhengDuoRankData> dict;
@@ -90,7 +90,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060005F5 RID: 1525 RVA: 0x00050B1C File Offset: 0x0004ED1C
+		
 		private ZhengDuoSceneInfo GetCurrentZhengDuoSceneInfo(TimeSpan timeOfWeek)
 		{
 			foreach (ZhengDuoSceneInfo info in this._config.SceneDataDict.Values)
@@ -103,7 +103,7 @@ namespace KF.Remoting
 			return null;
 		}
 
-		// Token: 0x060005F6 RID: 1526 RVA: 0x00050BAC File Offset: 0x0004EDAC
+		
 		public int GetSuccessRank(EZhengDuoStep step)
 		{
 			int result;
@@ -128,7 +128,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060005F7 RID: 1527 RVA: 0x00050BEC File Offset: 0x0004EDEC
+		
 		public ZhengDuoSyncData ZhengDuoSync(int serverID, long version)
 		{
 			ZhengDuoSyncData result;
@@ -143,7 +143,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060005F8 RID: 1528 RVA: 0x00050C20 File Offset: 0x0004EE20
+		
 		public int ZhengDuoSign(int serverID, int bhid, int usedTime, int zoneId, string bhName, int bhLevel, long bhZhanLi)
 		{
 			int week = TimeUtil.GetWeekStartDayIdNow();
@@ -210,7 +210,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x060005F9 RID: 1529 RVA: 0x00050EA8 File Offset: 0x0004F0A8
+		
 		private List<ZhengDuoRankData> GetListByGroup(int rank1, int step)
 		{
 			List<ZhengDuoRankData> rankDataList = new List<ZhengDuoRankData>();
@@ -250,7 +250,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060005FA RID: 1530 RVA: 0x00050F8C File Offset: 0x0004F18C
+		
 		private ZhengDuoRankData GetEnemy(ZhengDuoRankData rankData0, int step)
 		{
 			int bits = step - 2;
@@ -288,7 +288,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060005FB RID: 1531 RVA: 0x000510D0 File Offset: 0x0004F2D0
+		
 		public int ZhengDuoResult(int bhidSuccess, int[] bhids)
 		{
 			int result;
@@ -378,7 +378,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060005FC RID: 1532 RVA: 0x00051438 File Offset: 0x0004F638
+		
 		private void ProcessZhengDuoRank(int step, bool notify = true)
 		{
 			if (step >= 1)
@@ -483,7 +483,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060005FD RID: 1533 RVA: 0x0005192C File Offset: 0x0004FB2C
+		
 		public int GmCommand(string[] args, byte[] data)
 		{
 			if (args.Length > 0)
@@ -524,7 +524,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x060005FE RID: 1534 RVA: 0x00051AB8 File Offset: 0x0004FCB8
+		
 		private void ClearZhengDuoFuBenData()
 		{
 			lock (this.Mutex)
@@ -546,7 +546,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060005FF RID: 1535 RVA: 0x00051BA0 File Offset: 0x0004FDA0
+		
 		public ZhengDuoFuBenData GetZhengDuoFuBenDataByBhid(int bhid)
 		{
 			ZhengDuoFuBenData fuBenData = null;
@@ -615,7 +615,7 @@ namespace KF.Remoting
 			return fuBenData;
 		}
 
-		// Token: 0x06000600 RID: 1536 RVA: 0x00051EF4 File Offset: 0x000500F4
+		
 		public ZhengDuoFuBenData GetZhengDuoFuBenData(long gameId)
 		{
 			lock (this.Mutex)
@@ -629,7 +629,7 @@ namespace KF.Remoting
 			return null;
 		}
 
-		// Token: 0x06000601 RID: 1537 RVA: 0x00051F60 File Offset: 0x00050160
+		
 		public void Update(DateTime now)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System2Dot2))
@@ -790,43 +790,43 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0400033E RID: 830
+		
 		private const GameTypes GameType = GameTypes.ZhengDuo;
 
-		// Token: 0x0400033F RID: 831
+		
 		private static zhengDuoService _instance = new zhengDuoService();
 
-		// Token: 0x04000340 RID: 832
+		
 		private ZhengDuoPersistence _persistence = ZhengDuoPersistence.Instance;
 
-		// Token: 0x04000341 RID: 833
+		
 		public readonly GameTypes EvItemGameType = GameTypes.TianTi;
 
-		// Token: 0x04000342 RID: 834
+		
 		public Dictionary<int, ZhengDuoRankData> RankDict = new Dictionary<int, ZhengDuoRankData>();
 
-		// Token: 0x04000343 RID: 835
+		
 		public Dictionary<long, ZhengDuoFuBenData> FuBenDict = new Dictionary<long, ZhengDuoFuBenData>();
 
-		// Token: 0x04000344 RID: 836
+		
 		public Dictionary<int, ZhengDuoFuBenData> Bhid2FuBenDict = new Dictionary<int, ZhengDuoFuBenData>();
 
-		// Token: 0x04000345 RID: 837
+		
 		public ZhengDuoSceneInfo CurrentSceneInfo;
 
-		// Token: 0x04000346 RID: 838
+		
 		public ZhengDuoSyncData SyncData = new ZhengDuoSyncData();
 
-		// Token: 0x04000347 RID: 839
+		
 		public DateTime RankTime;
 
-		// Token: 0x04000348 RID: 840
+		
 		private int StepProcessEnd;
 
-		// Token: 0x04000349 RID: 841
+		
 		public object Mutex = new object();
 
-		// Token: 0x0400034A RID: 842
+		
 		private KFZhengDuoConfig _config = new KFZhengDuoConfig();
 	}
 }

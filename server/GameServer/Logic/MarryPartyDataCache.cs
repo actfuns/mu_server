@@ -6,15 +6,15 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200052D RID: 1325
+	
 	public class MarryPartyDataCache
 	{
-		// Token: 0x17000066 RID: 102
-		// (get) Token: 0x06001935 RID: 6453 RVA: 0x00189930 File Offset: 0x00187B30
-		// (set) Token: 0x06001936 RID: 6454 RVA: 0x00189947 File Offset: 0x00187B47
+		
+		
+		
 		public Dictionary<int, MarryPartyData> MarryPartyList { private get; set; }
 
-		// Token: 0x06001937 RID: 6455 RVA: 0x00189950 File Offset: 0x00187B50
+		
 		public MarryPartyData AddParty(int roleID, int partyType, long startTime, int husbandRoleID, int wifeRoleID, string husbandName, string wifeName)
 		{
 			MarryPartyData data = null;
@@ -39,7 +39,7 @@ namespace GameServer.Logic
 			return data;
 		}
 
-		// Token: 0x06001938 RID: 6456 RVA: 0x00189A1C File Offset: 0x00187C1C
+		
 		public void SetPartyTime(MarryPartyData data, long startTime)
 		{
 			lock (this.MarryPartyList)
@@ -48,7 +48,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001939 RID: 6457 RVA: 0x00189A68 File Offset: 0x00187C68
+		
 		public bool RemoveParty(int roleid)
 		{
 			bool result;
@@ -59,7 +59,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600193A RID: 6458 RVA: 0x00189ABC File Offset: 0x00187CBC
+		
 		public void RemovePartyCancel(MarryPartyData partyData)
 		{
 			lock (this.MarryPartyList)
@@ -74,7 +74,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600193B RID: 6459 RVA: 0x00189B2C File Offset: 0x00187D2C
+		
 		public bool IncPartyJoin(int roleid, int maxJoin, out bool remove)
 		{
 			remove = false;
@@ -103,7 +103,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600193C RID: 6460 RVA: 0x00189BD8 File Offset: 0x00187DD8
+		
 		public void IncPartyJoinCancel(int roleid)
 		{
 			MarryPartyData data = null;
@@ -116,7 +116,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600193D RID: 6461 RVA: 0x00189C44 File Offset: 0x00187E44
+		
 		public MarryPartyData GetParty(int roleid)
 		{
 			MarryPartyData data = null;
@@ -129,7 +129,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600193E RID: 6462 RVA: 0x00189CA0 File Offset: 0x00187EA0
+		
 		public int GetPartyCount()
 		{
 			int count;
@@ -140,7 +140,7 @@ namespace GameServer.Logic
 			return count;
 		}
 
-		// Token: 0x0600193F RID: 6463 RVA: 0x00189CF4 File Offset: 0x00187EF4
+		
 		public TCPOutPacket GetPartyList(TCPOutPacketPool pool, int cmdID)
 		{
 			TCPOutPacket result;
@@ -151,7 +151,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001940 RID: 6464 RVA: 0x00189D48 File Offset: 0x00187F48
+		
 		public bool HasPartyStarted(long ticks)
 		{
 			bool showNPC = false;
@@ -169,7 +169,7 @@ namespace GameServer.Logic
 			return showNPC;
 		}
 
-		// Token: 0x06001941 RID: 6465 RVA: 0x00189DFC File Offset: 0x00187FFC
+		
 		public void OnChangeName(int roleId, string oldName, string newName)
 		{
 			if (!string.IsNullOrEmpty(oldName) && !string.IsNullOrEmpty(newName))

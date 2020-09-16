@@ -7,11 +7,11 @@ using Server.Data;
 
 namespace GameServer.Logic.LiXianBaiTan
 {
-	// Token: 0x0200073E RID: 1854
+	
 	public class LiXianBaiTanManager : ScheduleTask, IManager
 	{
-		// Token: 0x17000338 RID: 824
-		// (get) Token: 0x06002EA2 RID: 11938 RVA: 0x0028B240 File Offset: 0x00289440
+		
+		
 		public TaskInternalLock InternalLock
 		{
 			get
@@ -20,45 +20,45 @@ namespace GameServer.Logic.LiXianBaiTan
 			}
 		}
 
-		// Token: 0x06002EA3 RID: 11939 RVA: 0x0028B258 File Offset: 0x00289458
+		
 		public static LiXianBaiTanManager getInstance()
 		{
 			return LiXianBaiTanManager._Instance;
 		}
 
-		// Token: 0x06002EA4 RID: 11940 RVA: 0x0028B270 File Offset: 0x00289470
+		
 		public bool initialize()
 		{
 			ScheduleExecutor2.Instance.scheduleExecute(this, 0, 30000);
 			return true;
 		}
 
-		// Token: 0x06002EA5 RID: 11941 RVA: 0x0028B298 File Offset: 0x00289498
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x06002EA6 RID: 11942 RVA: 0x0028B2AC File Offset: 0x002894AC
+		
 		public bool showdown()
 		{
 			ScheduleExecutor2.Instance.scheduleCancle(this);
 			return true;
 		}
 
-		// Token: 0x06002EA7 RID: 11943 RVA: 0x0028B2CC File Offset: 0x002894CC
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06002EA8 RID: 11944 RVA: 0x0028B2DF File Offset: 0x002894DF
+		
 		public void run()
 		{
 			this.ProcessQueue();
 		}
 
-		// Token: 0x06002EA9 RID: 11945 RVA: 0x0028B2EC File Offset: 0x002894EC
+		
 		public void ProcessQueue()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -79,7 +79,7 @@ namespace GameServer.Logic.LiXianBaiTan
 			}
 		}
 
-		// Token: 0x06002EAA RID: 11946 RVA: 0x0028B3BC File Offset: 0x002895BC
+		
 		public static void AddLiXianSaleGoodsItem(LiXianSaleGoodsItem liXianSaleGoodsItem)
 		{
 			SaleManager.AddLiXianSaleGoodsItem(liXianSaleGoodsItem);
@@ -89,7 +89,7 @@ namespace GameServer.Logic.LiXianBaiTan
 			}
 		}
 
-		// Token: 0x06002EAB RID: 11947 RVA: 0x0028B41C File Offset: 0x0028961C
+		
 		public static void AddLiXianSaleGoodsItems(GameClient client, int fakeRoleID)
 		{
 			string userID = GameManager.OnlineUserSession.FindUserID(client.ClientSocket);
@@ -134,7 +134,7 @@ namespace GameServer.Logic.LiXianBaiTan
 			}
 		}
 
-		// Token: 0x06002EAC RID: 11948 RVA: 0x0028B630 File Offset: 0x00289830
+		
 		public static LiXianSaleGoodsItem RemoveLiXianSaleGoodsItem(int goodsDbID)
 		{
 			SaleManager.RemoveSaleGoodsItem(goodsDbID);
@@ -151,13 +151,13 @@ namespace GameServer.Logic.LiXianBaiTan
 			return result;
 		}
 
-		// Token: 0x06002EAD RID: 11949 RVA: 0x0028B6A8 File Offset: 0x002898A8
+		
 		public static void RemoveLiXianSaleGoodsItems(GameClient client)
 		{
 			LiXianBaiTanManager.RemoveLiXianSaleGoodsItems(client.ClientData.RoleID);
 		}
 
-		// Token: 0x06002EAE RID: 11950 RVA: 0x0028B6BC File Offset: 0x002898BC
+		
 		public static void RemoveLiXianSaleGoodsItems(int roleID)
 		{
 			lock (LiXianBaiTanManager._LiXianSaleGoodsDict)
@@ -182,7 +182,7 @@ namespace GameServer.Logic.LiXianBaiTan
 			}
 		}
 
-		// Token: 0x06002EAF RID: 11951 RVA: 0x0028B7F8 File Offset: 0x002899F8
+		
 		public static void GetBackLiXianSaleLeftTicks(GameClient client)
 		{
 			LiXianSaleRoleItem liXianSaleRoleItem = null;
@@ -201,7 +201,7 @@ namespace GameServer.Logic.LiXianBaiTan
 			}
 		}
 
-		// Token: 0x06002EB0 RID: 11952 RVA: 0x0028B8A8 File Offset: 0x00289AA8
+		
 		public static List<GoodsData> GetLiXianSaleGoodsList(int roleID)
 		{
 			List<GoodsData> saleGoodsDataList = new List<GoodsData>();
@@ -219,7 +219,7 @@ namespace GameServer.Logic.LiXianBaiTan
 			return saleGoodsDataList;
 		}
 
-		// Token: 0x06002EB1 RID: 11953 RVA: 0x0028B970 File Offset: 0x00289B70
+		
 		public static void DelFakeRoleByClient(GameClient client)
 		{
 			int fakeRoleID = -1;
@@ -238,7 +238,7 @@ namespace GameServer.Logic.LiXianBaiTan
 			}
 		}
 
-		// Token: 0x06002EB2 RID: 11954 RVA: 0x0028B9FC File Offset: 0x00289BFC
+		
 		public static int GetLiXianRoleCountByPoint(Point grid)
 		{
 			int roleCount = 0;
@@ -255,16 +255,16 @@ namespace GameServer.Logic.LiXianBaiTan
 			return roleCount;
 		}
 
-		// Token: 0x04003C54 RID: 15444
+		
 		private TaskInternalLock _InternalLock = new TaskInternalLock();
 
-		// Token: 0x04003C55 RID: 15445
+		
 		private static LiXianBaiTanManager _Instance = new LiXianBaiTanManager();
 
-		// Token: 0x04003C56 RID: 15446
+		
 		private static Dictionary<int, LiXianSaleGoodsItem> _LiXianSaleGoodsDict = new Dictionary<int, LiXianSaleGoodsItem>();
 
-		// Token: 0x04003C57 RID: 15447
+		
 		private static Dictionary<int, LiXianSaleRoleItem> _LiXianRoleInfoDict = new Dictionary<int, LiXianSaleRoleItem>();
 	}
 }

@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200075E RID: 1886
+	
 	public class MonsterMoving
 	{
-		// Token: 0x06002FD8 RID: 12248 RVA: 0x002AE048 File Offset: 0x002AC248
+		
 		public bool _LinearMove(Monster sprite, Point p, int action)
 		{
 			long ticks = TimeUtil.NOW();
@@ -32,7 +32,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002FD9 RID: 12249 RVA: 0x002AE11C File Offset: 0x002AC31C
+		
 		public bool FindLinearNoObsMaxPoint(GameMap gameMap, Monster sprite, Point p, out Point maxPoint)
 		{
 			List<ANode> path = new List<ANode>();
@@ -52,13 +52,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002FDA RID: 12250 RVA: 0x002AE220 File Offset: 0x002AC420
+		
 		protected double CalcDirection(Point op, Point ep)
 		{
 			return Global.GetDirectionByTan(ep.X, ep.Y, op.X, op.Y);
 		}
 
-		// Token: 0x06002FDB RID: 12251 RVA: 0x002AE254 File Offset: 0x002AC454
+		
 		private bool AStarMove(Monster sprite, Point p, int action)
 		{
 			Point srcPoint = sprite.Coordinate;
@@ -148,19 +148,19 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002FDC RID: 12252 RVA: 0x002AE678 File Offset: 0x002AC878
+		
 		private void Move_Completed(object sender, EventArgs e)
 		{
 			Global.RemoveStoryboard((sender as StoryBoardEx).Name);
 		}
 
-		// Token: 0x06002FDD RID: 12253 RVA: 0x002AE68C File Offset: 0x002AC88C
+		
 		public double CalcDirection(Monster sprite, Point p)
 		{
 			return Global.GetDirectionByTan(p.X, p.Y, sprite.Coordinate.X, sprite.Coordinate.Y);
 		}
 
-		// Token: 0x06002FDE RID: 12254 RVA: 0x002AE6D0 File Offset: 0x002AC8D0
+		
 		public void ChangeDirection(Monster sprite, double direction)
 		{
 			if (sprite.Direction != direction)
@@ -169,7 +169,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FDF RID: 12255 RVA: 0x002AE6F8 File Offset: 0x002AC8F8
+		
 		public double ChangeDirection(Monster sprite, Point p)
 		{
 			double direction = Global.GetDirectionByTan(p.X, p.Y, sprite.Coordinate.X, sprite.Coordinate.Y);

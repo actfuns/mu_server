@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000510 RID: 1296
+	
 	internal class GroupMailManager
 	{
-		// Token: 0x06001840 RID: 6208 RVA: 0x0017A3A8 File Offset: 0x001785A8
+		
 		public static void ResetData()
 		{
 			lock (GroupMailManager.GroupMailDataDict_Mutex)
@@ -19,7 +19,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001841 RID: 6209 RVA: 0x0017A400 File Offset: 0x00178600
+		
 		public static void RequestNewGroupMailList()
 		{
 			List<GroupMailData> GroupMailList = Global.sendToDB<List<GroupMailData>, string>(10177, string.Format("{0}", GroupMailManager.LastMaxGroupMailID), 0);
@@ -39,7 +39,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001842 RID: 6210 RVA: 0x0017A4F0 File Offset: 0x001786F0
+		
 		private static void AddGroupMailData(GroupMailData gmailData)
 		{
 			lock (GroupMailManager.GroupMailDataDict_Mutex)
@@ -48,7 +48,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001843 RID: 6211 RVA: 0x0017A548 File Offset: 0x00178748
+		
 		private static bool InConditions(GameClient client, GroupMailData gmailData)
 		{
 			bool result;
@@ -165,7 +165,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001844 RID: 6212 RVA: 0x0017A874 File Offset: 0x00178A74
+		
 		public static void CheckRoleGroupMail(GameClient client)
 		{
 			long currTicks = TimeUtil.NOW();
@@ -188,7 +188,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001845 RID: 6213 RVA: 0x0017A968 File Offset: 0x00178B68
+		
 		private static void SendGMail2Role(GameClient client, GroupMailData gmailData)
 		{
 			if (GroupMailManager.SetGMailNeverSend(client, gmailData.GMailID, 0))
@@ -198,7 +198,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001846 RID: 6214 RVA: 0x0017A9C4 File Offset: 0x00178BC4
+		
 		public static bool IfGMailIsSend(GameClient client, int gmailID)
 		{
 			bool result;
@@ -209,7 +209,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001847 RID: 6215 RVA: 0x0017AA28 File Offset: 0x00178C28
+		
 		public static void SetGMailIsSend(GameClient client, int gmailID)
 		{
 			lock (client.ClientData.GroupMailRecordList)
@@ -221,7 +221,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001848 RID: 6216 RVA: 0x0017AAA4 File Offset: 0x00178CA4
+		
 		public static bool SetGMailNeverSend(GameClient client, int gmailID, int mailID)
 		{
 			string dbCmds = string.Format("{0}:{1}:{2}", client.ClientData.RoleID, gmailID, mailID);
@@ -248,13 +248,13 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x04002263 RID: 8803
+		
 		private static int LastMaxGroupMailID = 0;
 
-		// Token: 0x04002264 RID: 8804
+		
 		private static object GroupMailDataDict_Mutex = new object();
 
-		// Token: 0x04002265 RID: 8805
+		
 		private static Dictionary<int, GroupMailData> GroupMailDataDict = new Dictionary<int, GroupMailData>();
 	}
 }

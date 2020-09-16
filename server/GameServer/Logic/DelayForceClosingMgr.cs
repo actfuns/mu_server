@@ -5,10 +5,10 @@ using Server.TCP;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000626 RID: 1574
+	
 	public class DelayForceClosingMgr
 	{
-		// Token: 0x06002026 RID: 8230 RVA: 0x001BC0BC File Offset: 0x001BA2BC
+		
 		public static void AddDelaySocket(TMSKSocket socket)
 		{
 			long ticks = TimeUtil.NOW();
@@ -21,7 +21,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002027 RID: 8231 RVA: 0x001BC124 File Offset: 0x001BA324
+		
 		public static void RemoveDelaySocket(TMSKSocket socket)
 		{
 			lock (DelayForceClosingMgr._Socket2UDict)
@@ -30,7 +30,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002028 RID: 8232 RVA: 0x001BC174 File Offset: 0x001BA374
+		
 		private static List<TMSKSocket> GetDelaySockets()
 		{
 			List<TMSKSocket> socketsList = new List<TMSKSocket>();
@@ -49,7 +49,7 @@ namespace GameServer.Logic
 			return socketsList;
 		}
 
-		// Token: 0x06002029 RID: 8233 RVA: 0x001BC244 File Offset: 0x001BA444
+		
 		public static void ProcessDelaySockets()
 		{
 			List<TMSKSocket> socketsList = DelayForceClosingMgr.GetDelaySockets();
@@ -70,7 +70,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04002CDA RID: 11482
+		
 		private static Dictionary<TMSKSocket, long> _Socket2UDict = new Dictionary<TMSKSocket, long>();
 	}
 }

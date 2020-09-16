@@ -10,18 +10,18 @@ using Tmsk.Tools.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000027 RID: 39
+	
 	public class HongBaoManager_K
 	{
-		// Token: 0x060001B9 RID: 441 RVA: 0x000188D4 File Offset: 0x00016AD4
+		
 		public static HongBaoManager_K getInstance()
 		{
 			return HongBaoManager_K._Instance;
 		}
 
-		// Token: 0x17000013 RID: 19
-		// (get) Token: 0x060001BA RID: 442 RVA: 0x000188EC File Offset: 0x00016AEC
-		// (set) Token: 0x060001BB RID: 443 RVA: 0x00018909 File Offset: 0x00016B09
+		
+		
+		
 		private KuaFuCmdData JunTuanBaseDataListCmdData
 		{
 			get
@@ -34,7 +34,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060001BC RID: 444 RVA: 0x00018918 File Offset: 0x00016B18
+		
 		public void ThreadProc(object state)
 		{
 			if (this.Initialiazed)
@@ -63,7 +63,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060001BD RID: 445 RVA: 0x000189DC File Offset: 0x00016BDC
+		
 		public bool LoadConfig()
 		{
 			try
@@ -128,7 +128,7 @@ namespace KF.Remoting
 			return true;
 		}
 
-		// Token: 0x060001BE RID: 446 RVA: 0x00018D3C File Offset: 0x00016F3C
+		
 		public bool InitData()
 		{
 			lock (this.Mutex)
@@ -167,7 +167,7 @@ namespace KF.Remoting
 			return true;
 		}
 
-		// Token: 0x060001BF RID: 447 RVA: 0x00018ED0 File Offset: 0x000170D0
+		
 		public List<SystemHongBaoData> SendHongBaoProc(DateTime now)
 		{
 			List<SystemHongBaoData> list = new List<SystemHongBaoData>();
@@ -209,7 +209,7 @@ namespace KF.Remoting
 			return list;
 		}
 
-		// Token: 0x060001C0 RID: 448 RVA: 0x000190C4 File Offset: 0x000172C4
+		
 		public void CheckHongBaoState(long nowTicks, bool writedb)
 		{
 			lock (this.Mutex)
@@ -240,7 +240,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060001C1 RID: 449 RVA: 0x00019270 File Offset: 0x00017470
+		
 		public AsyncDataItem GetHongBaoDataList(long dataAge)
 		{
 			try
@@ -273,7 +273,7 @@ namespace KF.Remoting
 			return null;
 		}
 
-		// Token: 0x060001C2 RID: 450 RVA: 0x00019364 File Offset: 0x00017564
+		
 		public int OpenHongBao(int hongBaoId, int rid, int zoneid, string userid, string rname)
 		{
 			try
@@ -314,7 +314,7 @@ namespace KF.Remoting
 			return -11000;
 		}
 
-		// Token: 0x060001C3 RID: 451 RVA: 0x000194E0 File Offset: 0x000176E0
+		
 		public void AddServerTotalCharge(string keyStr, long addCharge)
 		{
 			try
@@ -337,85 +337,85 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x040000F5 RID: 245
+		
 		private const double SaveServerStateProcInterval = 30.0;
 
-		// Token: 0x040000F6 RID: 246
+		
 		private const long DelaySendTicks = 15000L;
 
-		// Token: 0x040000F7 RID: 247
+		
 		private const string CfgFile = "Config/JieRiGifts/JieRiChongZhiHongBao.xml";
 
-		// Token: 0x040000F8 RID: 248
+		
 		private static HongBaoManager_K _Instance = new HongBaoManager_K();
 
-		// Token: 0x040000F9 RID: 249
+		
 		private object Mutex = new object();
 
-		// Token: 0x040000FA RID: 250
+		
 		public string FromDate = "";
 
-		// Token: 0x040000FB RID: 251
+		
 		public string ToDate = "";
 
-		// Token: 0x040000FC RID: 252
+		
 		public string AwardStartDate = "";
 
-		// Token: 0x040000FD RID: 253
+		
 		public string AwardEndDate = "";
 
-		// Token: 0x040000FE RID: 254
+		
 		public int ActivityType = -1;
 
-		// Token: 0x040000FF RID: 255
+		
 		protected int CodeForParamsValidate = 0;
 
-		// Token: 0x04000100 RID: 256
+		
 		public string ActivityKeyStr;
 
-		// Token: 0x04000101 RID: 257
+		
 		public DateTime StartTime;
 
-		// Token: 0x04000102 RID: 258
+		
 		public DateTime EndTime;
 
-		// Token: 0x04000103 RID: 259
+		
 		public readonly GameTypes GameType = GameTypes.JunTuan;
 
-		// Token: 0x04000104 RID: 260
+		
 		private DateTime CheckTime20;
 
-		// Token: 0x04000105 RID: 261
+		
 		private bool Initialiazed = false;
 
-		// Token: 0x04000106 RID: 262
+		
 		private DateTime SaveServerStateProcTime;
 
-		// Token: 0x04000107 RID: 263
+		
 		private int LastUpdateRankHour = -1;
 
-		// Token: 0x04000108 RID: 264
+		
 		public JunTuanPersistence Persistence = JunTuanPersistence.Instance;
 
-		// Token: 0x04000109 RID: 265
+		
 		private long HuoDongStartTicks;
 
-		// Token: 0x0400010A RID: 266
+		
 		private int NextSendID;
 
-		// Token: 0x0400010B RID: 267
+		
 		private long LeftCharge;
 
-		// Token: 0x0400010C RID: 268
+		
 		private long TotalCharge;
 
-		// Token: 0x0400010D RID: 269
+		
 		private SortedList<int, JieRiChongZhiHongBaoInfo> ConfigDict = new SortedList<int, JieRiChongZhiHongBaoInfo>();
 
-		// Token: 0x0400010E RID: 270
+		
 		private Dictionary<int, SystemHongBaoData> HongBaoDataDict = new Dictionary<int, SystemHongBaoData>();
 
-		// Token: 0x0400010F RID: 271
+		
 		private Dictionary<long, int> HongBaoRecvDict = new Dictionary<long, int>();
 	}
 }

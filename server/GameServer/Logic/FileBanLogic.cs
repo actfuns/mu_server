@@ -10,10 +10,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000249 RID: 585
+	
 	internal class FileBanLogic
 	{
-		// Token: 0x0600080B RID: 2059 RVA: 0x0007A628 File Offset: 0x00078828
+		
 		private static void LoadBanFile()
 		{
 			long currTicks = TimeUtil.NOW();
@@ -61,7 +61,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600080C RID: 2060 RVA: 0x0007A7EC File Offset: 0x000789EC
+		
 		public static void Tick()
 		{
 			FileBanLogic.LoadBanFile();
@@ -107,13 +107,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600080D RID: 2061 RVA: 0x0007A965 File Offset: 0x00078B65
+		
 		public static void ClearBanList()
 		{
 			FileBanLogic.m_IsNeedClear = 1;
 		}
 
-		// Token: 0x0600080E RID: 2062 RVA: 0x0007A970 File Offset: 0x00078B70
+		
 		public static void BroadCastDetectHook()
 		{
 			int index = 0;
@@ -127,7 +127,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600080F RID: 2063 RVA: 0x0007A9B4 File Offset: 0x00078BB4
+		
 		public static void BroadCastDetectHook(List<string> uidList)
 		{
 			if (uidList != null)
@@ -147,7 +147,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000810 RID: 2064 RVA: 0x0007AA4C File Offset: 0x00078C4C
+		
 		private static void SendMagicCrashMsg(GameClient client, MagicCrashUnityType crashType)
 		{
 			if (client != null)
@@ -158,13 +158,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04000DE9 RID: 3561
+		
 		private static List<string> m_BanList = new List<string>();
 
-		// Token: 0x04000DEA RID: 3562
+		
 		private static long m_UpdateTicks = 0L;
 
-		// Token: 0x04000DEB RID: 3563
+		
 		private static int m_IsNeedClear = 0;
 	}
 }

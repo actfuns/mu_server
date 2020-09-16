@@ -4,16 +4,16 @@ using Tmsk.Contract;
 
 namespace Server.Data
 {
-	// Token: 0x02000183 RID: 387
+	
 	[ProtoContract]
 	public class SCMapChange : IProtoBuffData
 	{
-		// Token: 0x060004B9 RID: 1209 RVA: 0x00041896 File Offset: 0x0003FA96
+		
 		public SCMapChange()
 		{
 		}
 
-		// Token: 0x060004BA RID: 1210 RVA: 0x000418D4 File Offset: 0x0003FAD4
+		
 		public SCMapChange(int roleID, int teleportID, int newMapCode, int toNewMapX, int toNewMapY, int toNewDiection, int state)
 		{
 			this.RoleID = roleID;
@@ -25,7 +25,7 @@ namespace Server.Data
 			this.State = state;
 		}
 
-		// Token: 0x060004BB RID: 1211 RVA: 0x00041950 File Offset: 0x0003FB50
+		
 		public int fromBytes(byte[] data, int offset, int count)
 		{
 			int pos = offset;
@@ -65,7 +65,7 @@ namespace Server.Data
 			return pos;
 		}
 
-		// Token: 0x060004BC RID: 1212 RVA: 0x00041A50 File Offset: 0x0003FC50
+		
 		public byte[] toBytes()
 		{
 			int total = 0;
@@ -88,31 +88,31 @@ namespace Server.Data
 			return data;
 		}
 
-		// Token: 0x04000891 RID: 2193
+		
 		[ProtoMember(1)]
 		public int RoleID = 0;
 
-		// Token: 0x04000892 RID: 2194
+		
 		[ProtoMember(2)]
 		public int TeleportID = 0;
 
-		// Token: 0x04000893 RID: 2195
+		
 		[ProtoMember(3)]
 		public int NewMapCode = 0;
 
-		// Token: 0x04000894 RID: 2196
+		
 		[ProtoMember(4)]
 		public int ToNewMapX = 0;
 
-		// Token: 0x04000895 RID: 2197
+		
 		[ProtoMember(5)]
 		public int ToNewMapY = 0;
 
-		// Token: 0x04000896 RID: 2198
+		
 		[ProtoMember(6)]
 		public int ToNewDiection = 0;
 
-		// Token: 0x04000897 RID: 2199
+		
 		[ProtoMember(7)]
 		public int State = 0;
 	}

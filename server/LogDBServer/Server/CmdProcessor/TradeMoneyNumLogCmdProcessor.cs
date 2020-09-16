@@ -5,22 +5,22 @@ using Server.Tools;
 
 namespace LogDBServer.Server.CmdProcessor
 {
-	// Token: 0x02000029 RID: 41
+	
 	public class TradeMoneyNumLogCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x060000E1 RID: 225 RVA: 0x00006388 File Offset: 0x00004588
+		
 		private TradeMoneyNumLogCmdProcessor()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(20002, this);
 		}
 
-		// Token: 0x060000E2 RID: 226 RVA: 0x000063A4 File Offset: 0x000045A4
+		
 		public static TradeMoneyNumLogCmdProcessor getInstance()
 		{
 			return TradeMoneyNumLogCmdProcessor.instance;
 		}
 
-		// Token: 0x060000E3 RID: 227 RVA: 0x000063BC File Offset: 0x000045BC
+		
 		public void processCmd(GameServerClient client, byte[] cmdParams, int count)
 		{
 			string cmdData = null;
@@ -52,7 +52,7 @@ namespace LogDBServer.Server.CmdProcessor
 			}
 		}
 
-		// Token: 0x04000063 RID: 99
+		
 		private static TradeMoneyNumLogCmdProcessor instance = new TradeMoneyNumLogCmdProcessor();
 	}
 }

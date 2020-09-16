@@ -8,10 +8,10 @@ using Tmsk.Tools.Tools;
 
 namespace KF.Remoting.KFBoCai
 {
-	// Token: 0x0200002C RID: 44
+	
 	public class KFBoCaiConfigManager
 	{
-		// Token: 0x06000206 RID: 518 RVA: 0x0001EBD8 File Offset: 0x0001CDD8
+		
 		public static int LoadConfig(bool isReload = true)
 		{
 			try
@@ -48,7 +48,7 @@ namespace KF.Remoting.KFBoCai
 			return 0;
 		}
 
-		// Token: 0x06000207 RID: 519 RVA: 0x0001ED1C File Offset: 0x0001CF1C
+		
 		public static CaiShuZiConfig GetCaiShuZiConfig()
 		{
 			CaiShuZiConfig cfg = null;
@@ -83,7 +83,7 @@ namespace KF.Remoting.KFBoCai
 			return cfg;
 		}
 
-		// Token: 0x06000208 RID: 520 RVA: 0x0001EE74 File Offset: 0x0001D074
+		
 		public static CaiShuZiConfig GetCaiShuZiConfig(int ID)
 		{
 			CaiShuZiConfig cfg = null;
@@ -101,7 +101,7 @@ namespace KF.Remoting.KFBoCai
 			return cfg;
 		}
 
-		// Token: 0x06000209 RID: 521 RVA: 0x0001EF28 File Offset: 0x0001D128
+		
 		public static CaiDaXiaoConfig GetCaiDaXiaoConfig()
 		{
 			CaiDaXiaoConfig cfg = null;
@@ -136,7 +136,7 @@ namespace KF.Remoting.KFBoCai
 			return cfg;
 		}
 
-		// Token: 0x0600020A RID: 522 RVA: 0x0001F058 File Offset: 0x0001D258
+		
 		private static bool LoadCaiShuZi(out List<CaiShuZiConfig> _CaiShuZiCfgList)
 		{
 			_CaiShuZiCfgList = new List<CaiShuZiConfig>();
@@ -208,7 +208,7 @@ namespace KF.Remoting.KFBoCai
 			return true;
 		}
 
-		// Token: 0x0600020B RID: 523 RVA: 0x0001F3C0 File Offset: 0x0001D5C0
+		
 		private static bool Load_DuiHuanShangCheng(out List<DuiHuanShangChengConfig> _DuiHuanShangChengCgfList)
 		{
 			_DuiHuanShangChengCgfList = new List<DuiHuanShangChengConfig>();
@@ -240,7 +240,7 @@ namespace KF.Remoting.KFBoCai
 			return true;
 		}
 
-		// Token: 0x0600020C RID: 524 RVA: 0x0001F544 File Offset: 0x0001D744
+		
 		private static bool LoadCaiDaXiao(out List<CaiDaXiaoConfig> _CaiDaXiaoCfgList)
 		{
 			_CaiDaXiaoCfgList = new List<CaiDaXiaoConfig>();
@@ -282,22 +282,22 @@ namespace KF.Remoting.KFBoCai
 			return true;
 		}
 
-		// Token: 0x0400012D RID: 301
+		
 		private const string CaiShuZi = "Config/CaiShuZi.xml";
 
-		// Token: 0x0400012E RID: 302
+		
 		private const string CaiDaXiao = "Config/CaiDaXiao.xml";
 
-		// Token: 0x0400012F RID: 303
+		
 		private const string DuiHuanShangCheng = "Config/DuiHuanShangCheng.xml";
 
-		// Token: 0x04000130 RID: 304
+		
 		private static List<CaiShuZiConfig> CaiShuZiCfgList = new List<CaiShuZiConfig>();
 
-		// Token: 0x04000131 RID: 305
+		
 		private static List<CaiDaXiaoConfig> CaiDaXiaoCfgList = new List<CaiDaXiaoConfig>();
 
-		// Token: 0x04000132 RID: 306
+		
 		private static List<DuiHuanShangChengConfig> DuiHuanShangChengCgfList = new List<DuiHuanShangChengConfig>();
 	}
 }

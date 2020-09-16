@@ -9,15 +9,15 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000247 RID: 583
+	
 	internal class GetInterestingDataMgr : SingletonTemplate<GetInterestingDataMgr>
 	{
-		// Token: 0x06000805 RID: 2053 RVA: 0x0007A189 File Offset: 0x00078389
+		
 		private GetInterestingDataMgr()
 		{
 		}
 
-		// Token: 0x06000806 RID: 2054 RVA: 0x0007A194 File Offset: 0x00078394
+		
 		public void LoadConfig()
 		{
 			GetInterestingDataMgr.GetIntervalMs = GameManager.systemParamsList.GetParamValueIntByName("GetIntervalMs", -1);
@@ -27,7 +27,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000807 RID: 2055 RVA: 0x0007A1D8 File Offset: 0x000783D8
+		
 		public void Update(GameClient client)
 		{
 			if (GameManager.VersionSystemOpenMgr.IsVersionSystemOpen("GetInterestingData"))
@@ -79,7 +79,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000808 RID: 2056 RVA: 0x0007A3C4 File Offset: 0x000785C4
+		
 		public TCPProcessCmdResults OnResponse(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -126,7 +126,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_OK;
 		}
 
-		// Token: 0x06000809 RID: 2057 RVA: 0x0007A58C File Offset: 0x0007878C
+		
 		private void _CheckSpeed(GameClient client, InterestingData.Item item, string[] fields)
 		{
 			double clientSpeed = Convert.ToDouble(fields[2]);
@@ -142,10 +142,10 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04000DE4 RID: 3556
+		
 		private static long GetIntervalMs = 180000L;
 
-		// Token: 0x04000DE5 RID: 3557
+		
 		private static long _FirstGetIntervalMs = 30000L;
 	}
 }

@@ -9,23 +9,23 @@ using Server.Tools;
 
 namespace GameServer.Logic.UnionPalace
 {
-	// Token: 0x020004A0 RID: 1184
+	
 	public class UnionPalaceManager : ICmdProcessorEx, ICmdProcessor, IManager
 	{
-		// Token: 0x060015E7 RID: 5607 RVA: 0x00157618 File Offset: 0x00155818
+		
 		public static UnionPalaceManager getInstance()
 		{
 			return UnionPalaceManager.instance;
 		}
 
-		// Token: 0x060015E8 RID: 5608 RVA: 0x00157630 File Offset: 0x00155830
+		
 		public bool initialize()
 		{
 			UnionPalaceManager.InitConfig();
 			return true;
 		}
 
-		// Token: 0x060015E9 RID: 5609 RVA: 0x0015764C File Offset: 0x0015584C
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1035, 1, 1, UnionPalaceManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -33,25 +33,25 @@ namespace GameServer.Logic.UnionPalace
 			return true;
 		}
 
-		// Token: 0x060015EA RID: 5610 RVA: 0x00157690 File Offset: 0x00155890
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x060015EB RID: 5611 RVA: 0x001576A4 File Offset: 0x001558A4
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060015EC RID: 5612 RVA: 0x001576B8 File Offset: 0x001558B8
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return true;
 		}
 
-		// Token: 0x060015ED RID: 5613 RVA: 0x001576CC File Offset: 0x001558CC
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -70,7 +70,7 @@ namespace GameServer.Logic.UnionPalace
 			return result;
 		}
 
-		// Token: 0x060015EE RID: 5614 RVA: 0x00157714 File Offset: 0x00155914
+		
 		private bool ProcessCmdUnionPalaceData(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -90,7 +90,7 @@ namespace GameServer.Logic.UnionPalace
 			return false;
 		}
 
-		// Token: 0x060015EF RID: 5615 RVA: 0x00157784 File Offset: 0x00155984
+		
 		private bool ProcessCmdUnionPalaceUp(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -114,7 +114,7 @@ namespace GameServer.Logic.UnionPalace
 			return false;
 		}
 
-		// Token: 0x060015F0 RID: 5616 RVA: 0x0015787C File Offset: 0x00155A7C
+		
 		public static UnionPalaceData UnionPalaceGetData(GameClient client, bool isUpdataProps = false)
 		{
             UnionPalaceData myUPData2;
@@ -222,7 +222,7 @@ namespace GameServer.Logic.UnionPalace
             return myUPData2;
 		}
 
-		// Token: 0x060015F1 RID: 5617 RVA: 0x00157CDC File Offset: 0x00155EDC
+		
 		public static void ModifyUnionPalaceData(GameClient client, UnionPalaceData data)
 		{
 			List<int> dataList = new List<int>();
@@ -237,7 +237,7 @@ namespace GameServer.Logic.UnionPalace
 			Global.SaveRoleParamsIntListToDB(client, dataList, "UnionPalace", true);
 		}
 
-		// Token: 0x060015F2 RID: 5618 RVA: 0x00157D3C File Offset: 0x00155F3C
+		
 		public static UnionPalaceData UnionPalaceUp(GameClient client)
 		{
 			UnionPalaceData result;
@@ -374,7 +374,7 @@ namespace GameServer.Logic.UnionPalace
 			return result;
 		}
 
-		// Token: 0x060015F3 RID: 5619 RVA: 0x001582AC File Offset: 0x001564AC
+		
 		public static void initSetUnionPalaceProps(GameClient client, bool isUpdataProps = false)
 		{
 			lock (client.ClientData.LockUnionPalace)
@@ -386,7 +386,7 @@ namespace GameServer.Logic.UnionPalace
 			}
 		}
 
-		// Token: 0x060015F4 RID: 5620 RVA: 0x001583C8 File Offset: 0x001565C8
+		
 		public static void SetUnionPalaceProps(GameClient client, UnionPalaceData myData)
 		{
 			lock (client.ClientData.LockUnionPalace)
@@ -451,7 +451,7 @@ namespace GameServer.Logic.UnionPalace
 			}
 		}
 
-		// Token: 0x060015F5 RID: 5621 RVA: 0x001586E0 File Offset: 0x001568E0
+		
 		public static int GetUpCount(GameClient client, int day)
 		{
 			int count = 0;
@@ -472,7 +472,7 @@ namespace GameServer.Logic.UnionPalace
 			return count;
 		}
 
-		// Token: 0x060015F6 RID: 5622 RVA: 0x00158744 File Offset: 0x00156944
+		
 		public static void ModifyUpCount(GameClient client, int count)
 		{
 			List<int> dataList = new List<int>();
@@ -484,13 +484,13 @@ namespace GameServer.Logic.UnionPalace
 			Global.SaveRoleParamsIntListToDB(client, dataList, "UnionPalaceUpCount", true);
 		}
 
-		// Token: 0x060015F7 RID: 5623 RVA: 0x00158784 File Offset: 0x00156984
+		
 		public static bool IsGongNengOpened(GameClient client)
 		{
 			return !GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System2Dot0) && GlobalNew.IsGongNengOpened(client, GongNengIDs.ZhanMengShenDian, false) && GameManager.VersionSystemOpenMgr.IsVersionSystemOpen("UnionPalace");
 		}
 
-		// Token: 0x060015F8 RID: 5624 RVA: 0x001587C9 File Offset: 0x001569C9
+		
 		public static void InitConfig()
 		{
 			UnionPalaceManager.LoadUnionPalaceBasicInfo();
@@ -498,7 +498,7 @@ namespace GameServer.Logic.UnionPalace
 			UnionPalaceManager.LoadUnionPalaceRateInfo();
 		}
 
-		// Token: 0x060015F9 RID: 5625 RVA: 0x001587E0 File Offset: 0x001569E0
+		
 		private static void LoadUnionPalaceBasicInfo()
 		{
 			string fileName = Global.GameResPath("Config/ShenDianLevelUp.xml");
@@ -546,7 +546,7 @@ namespace GameServer.Logic.UnionPalace
 			}
 		}
 
-		// Token: 0x060015FA RID: 5626 RVA: 0x00158A34 File Offset: 0x00156C34
+		
 		public static void LoadUnionPalaceSpecialInfo()
 		{
 			string fileName = Global.GameResPath("Config/ShenDianExtra.xml");
@@ -576,7 +576,7 @@ namespace GameServer.Logic.UnionPalace
 			}
 		}
 
-		// Token: 0x060015FB RID: 5627 RVA: 0x00158B78 File Offset: 0x00156D78
+		
 		public static void LoadUnionPalaceRateInfo()
 		{
 			string fileName = Global.GameResPath("Config/ShenDianScale.xml");
@@ -627,7 +627,7 @@ namespace GameServer.Logic.UnionPalace
 			}
 		}
 
-		// Token: 0x060015FC RID: 5628 RVA: 0x00158D90 File Offset: 0x00156F90
+		
 		public static UnionPalaceBasicInfo GetUPBasicInfoByID(int id)
 		{
 			UnionPalaceBasicInfo result;
@@ -642,7 +642,7 @@ namespace GameServer.Logic.UnionPalace
 			return result;
 		}
 
-		// Token: 0x060015FD RID: 5629 RVA: 0x00158DC4 File Offset: 0x00156FC4
+		
 		public static UnionPalaceSpecialInfo GetUPSpecialInfoByID(int id)
 		{
 			UnionPalaceSpecialInfo result;
@@ -657,7 +657,7 @@ namespace GameServer.Logic.UnionPalace
 			return result;
 		}
 
-		// Token: 0x060015FE RID: 5630 RVA: 0x00158DF8 File Offset: 0x00156FF8
+		
 		public static UnionPalaceRateInfo GetUPRateInfoByID(int id)
 		{
 			UnionPalaceRateInfo result;
@@ -672,7 +672,7 @@ namespace GameServer.Logic.UnionPalace
 			return result;
 		}
 
-		// Token: 0x060015FF RID: 5631 RVA: 0x00158E2C File Offset: 0x0015702C
+		
 		public static int GetUnionPalaceZG(GameClient client, int upCount = 0)
 		{
 			if (upCount <= 0)
@@ -688,7 +688,7 @@ namespace GameServer.Logic.UnionPalace
 			return zhanGongList[upCount];
 		}
 
-		// Token: 0x06001600 RID: 5632 RVA: 0x00158E80 File Offset: 0x00157080
+		
 		public static void SetUnionPalaceLevelByID(GameClient client, int id)
 		{
 			List<int> dataList = new List<int>();
@@ -701,7 +701,7 @@ namespace GameServer.Logic.UnionPalace
 			UnionPalaceManager.initSetUnionPalaceProps(client, true);
 		}
 
-		// Token: 0x06001601 RID: 5633 RVA: 0x00158ECC File Offset: 0x001570CC
+		
 		public static void SetUnionPalaceCount(GameClient client, int count)
 		{
 			count = ((count < 0) ? 0 : count);
@@ -710,40 +710,40 @@ namespace GameServer.Logic.UnionPalace
 			myUPData.ZhanGongNeed = UnionPalaceManager.GetUnionPalaceZG(client, 0);
 		}
 
-		// Token: 0x06001602 RID: 5634 RVA: 0x00158F06 File Offset: 0x00157106
+		
 		public static void SetUnionPalaceRate(GameClient client, int rate)
 		{
 			UnionPalaceManager._gmRate = rate;
 		}
 
-		// Token: 0x04001F6C RID: 8044
+		
 		private const int DEFAULT_MIN_ID = 1;
 
-		// Token: 0x04001F6D RID: 8045
+		
 		private const int UP_LEVEL_MAX = 5;
 
-		// Token: 0x04001F6E RID: 8046
+		
 		private const int STATUE_COUNT = 8;
 
-		// Token: 0x04001F6F RID: 8047
+		
 		private const int UNION_PALACE_MAX_LEVEL = 9;
 
-		// Token: 0x04001F70 RID: 8048
+		
 		private const int STATUE_MAX_LEVEL = 5;
 
-		// Token: 0x04001F71 RID: 8049
+		
 		public static int _gmRate = 1;
 
-		// Token: 0x04001F72 RID: 8050
+		
 		private static UnionPalaceManager instance = new UnionPalaceManager();
 
-		// Token: 0x04001F73 RID: 8051
+		
 		private static Dictionary<int, UnionPalaceBasicInfo> _unionPalaceBasicList = new Dictionary<int, UnionPalaceBasicInfo>();
 
-		// Token: 0x04001F74 RID: 8052
+		
 		private static Dictionary<int, UnionPalaceSpecialInfo> _unionPalaceSpecialList = new Dictionary<int, UnionPalaceSpecialInfo>();
 
-		// Token: 0x04001F75 RID: 8053
+		
 		private static Dictionary<int, UnionPalaceRateInfo> _unionPalaceRateList = new Dictionary<int, UnionPalaceRateInfo>();
 	}
 }

@@ -6,16 +6,16 @@ using System.Threading;
 
 namespace Server.TCP
 {
-	// Token: 0x020008D1 RID: 2257
+	
 	public class MemoryManager
 	{
-		// Token: 0x06004075 RID: 16501 RVA: 0x003BCFD1 File Offset: 0x003BB1D1
+		
 		public void AddBatchBlock(int blockNum, int blockSize)
 		{
 			this.AddBatchBlock2(blockNum, blockSize);
 		}
 
-		// Token: 0x06004076 RID: 16502 RVA: 0x003BCFE0 File Offset: 0x003BB1E0
+		
 		public void AddBatchBlock2(int blockNum, int blockSize)
 		{
 			blockNum /= 8;
@@ -46,7 +46,7 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x06004077 RID: 16503 RVA: 0x003BD114 File Offset: 0x003BB314
+		
 		public void Push(MemoryBlock item)
 		{
 			if (null == item)
@@ -75,7 +75,7 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x06004078 RID: 16504 RVA: 0x003BD210 File Offset: 0x003BB410
+		
 		public MemoryBlock Pop(int needSize)
 		{
 			MemoryStackArray stackArray;
@@ -97,7 +97,7 @@ namespace Server.TCP
 			return new MemoryBlock(needSize, false);
 		}
 
-		// Token: 0x06004079 RID: 16505 RVA: 0x003BD2E0 File Offset: 0x003BB4E0
+		
 		private int GetIndex(int needSize)
 		{
 			int destSize = -1;
@@ -112,7 +112,7 @@ namespace Server.TCP
 			return destSize;
 		}
 
-		// Token: 0x0600407A RID: 16506 RVA: 0x003BD374 File Offset: 0x003BB574
+		
 		public string GetCacheInfoStr()
 		{
 			StringBuilder bufferTxt = new StringBuilder();
@@ -154,7 +154,7 @@ namespace Server.TCP
 			return bufferTxt.ToString();
 		}
 
-		// Token: 0x0600407B RID: 16507 RVA: 0x003BD56C File Offset: 0x003BB76C
+		
 		public string GetUsedMemoryAllocStackTrace()
 		{
 			StringBuilder sb = new StringBuilder();
@@ -171,7 +171,7 @@ namespace Server.TCP
 			return sb.ToString();
 		}
 
-		// Token: 0x0600407C RID: 16508 RVA: 0x003BD648 File Offset: 0x003BB848
+		
 		public static long GetNewAllocMemorySize()
 		{
 			long memorySize = 0L;
@@ -182,28 +182,28 @@ namespace Server.TCP
 			return memorySize;
 		}
 
-		// Token: 0x04004F4D RID: 20301
+		
 		public const int ConstSplitePoolNum = 16;
 
-		// Token: 0x04004F4E RID: 20302
+		
 		public const int ConstSplitePoolMask = 15;
 
-		// Token: 0x04004F4F RID: 20303
+		
 		private static object MemoryLock = new object();
 
-		// Token: 0x04004F50 RID: 20304
+		
 		private static long TotalNewAllocMemorySize = 0L;
 
-		// Token: 0x04004F51 RID: 20305
+		
 		private Dictionary<int, MemoryStackArray> MemoryDict = new Dictionary<int, MemoryStackArray>();
 
-		// Token: 0x04004F52 RID: 20306
+		
 		private Dictionary<MemoryBlock, StackTrace> MemoryBlockStackTraceDict = new Dictionary<MemoryBlock, StackTrace>();
 
-		// Token: 0x04004F53 RID: 20307
+		
 		private List<int> BlockSizeList = new List<int>();
 
-		// Token: 0x04004F54 RID: 20308
+		
 		private Dictionary<MemoryBlock, byte> BlockDict = new Dictionary<MemoryBlock, byte>();
 	}
 }

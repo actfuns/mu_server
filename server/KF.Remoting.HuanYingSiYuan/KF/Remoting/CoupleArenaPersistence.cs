@@ -10,21 +10,21 @@ using Server.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x0200000D RID: 13
+	
 	internal class CoupleArenaPersistence
 	{
-		// Token: 0x06000062 RID: 98 RVA: 0x00004F18 File Offset: 0x00003118
+		
 		private CoupleArenaPersistence()
 		{
 		}
 
-		// Token: 0x06000063 RID: 99 RVA: 0x00004F3C File Offset: 0x0000313C
+		
 		public static CoupleArenaPersistence getInstance()
 		{
 			return CoupleArenaPersistence._Instance;
 		}
 
-		// Token: 0x06000064 RID: 100 RVA: 0x00004F54 File Offset: 0x00003154
+		
 		public int GetNextDbCoupleId()
 		{
 			if (this.CurrDbCoupleId == Global.UninitGameId)
@@ -36,7 +36,7 @@ namespace KF.Remoting
 			return this.CurrDbCoupleId;
 		}
 
-		// Token: 0x06000065 RID: 101 RVA: 0x00004FA8 File Offset: 0x000031A8
+		
 		public long GetNextGameId()
 		{
 			if (this.CurrGameId == (long)Global.UninitGameId)
@@ -48,7 +48,7 @@ namespace KF.Remoting
 			return this.CurrGameId;
 		}
 
-		// Token: 0x06000066 RID: 102 RVA: 0x00005000 File Offset: 0x00003200
+		
 		public bool CheckClearRank(int currWeek)
 		{
 			bool result;
@@ -76,7 +76,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000067 RID: 103 RVA: 0x000050C4 File Offset: 0x000032C4
+		
 		public void FlushRandList2Db(List<CoupleArenaCoupleDataK> list)
 		{
 			StringBuilder sb = new StringBuilder();
@@ -110,7 +110,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000068 RID: 104 RVA: 0x00005234 File Offset: 0x00003434
+		
 		public List<CoupleArenaCoupleDataK> LoadRankFromDb()
 		{
 			MySqlDataReader sdr = null;
@@ -160,7 +160,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000069 RID: 105 RVA: 0x00005468 File Offset: 0x00003668
+		
 		public bool ClearCoupleData(int db_coupleid)
 		{
 			bool result;
@@ -178,7 +178,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600006A RID: 106 RVA: 0x000054B8 File Offset: 0x000036B8
+		
 		public void AddPkLog(long gameId, DateTime startTime, DateTime endTime, int man1, int wife1, int result1, int man2, int wife2, int result2)
 		{
 			try
@@ -204,7 +204,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600006B RID: 107 RVA: 0x0000557C File Offset: 0x0000377C
+		
 		public void WriteCoupleData(CoupleArenaCoupleDataK coupleData)
 		{
 			if (coupleData != null)
@@ -240,13 +240,13 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0400003A RID: 58
+		
 		private static CoupleArenaPersistence _Instance = new CoupleArenaPersistence();
 
-		// Token: 0x0400003B RID: 59
+		
 		private int CurrDbCoupleId = Global.UninitGameId;
 
-		// Token: 0x0400003C RID: 60
+		
 		private long CurrGameId = (long)Global.UninitGameId;
 	}
 }

@@ -6,7 +6,7 @@ namespace GameServer.Core.Executor
 	public class NormalScheduleTask : ScheduleTask
 	{
 		// Token: 0x17000006 RID: 6
-		// (get) Token: 0x0600037E RID: 894 RVA: 0x0003C6F8 File Offset: 0x0003A8F8
+		
 		public TaskInternalLock InternalLock
 		{
 			get

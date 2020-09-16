@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameServer.Tools.CheckSysValue
 {
-	// Token: 0x020008EA RID: 2282
+	
 	public class CheckSysValueHelper
 	{
-		// Token: 0x060041F2 RID: 16882 RVA: 0x003C41A0 File Offset: 0x003C23A0
+		
 		public static void WriteMap(string cmd = null)
 		{
 			try
@@ -25,7 +25,7 @@ namespace GameServer.Tools.CheckSysValue
 			}
 		}
 
-		// Token: 0x060041F3 RID: 16883 RVA: 0x003C420C File Offset: 0x003C240C
+		
 		private static void WriteLine(string str, ConsoleColor Color = ConsoleColor.Green)
 		{
 			Console.ForegroundColor = Color;
@@ -33,7 +33,7 @@ namespace GameServer.Tools.CheckSysValue
 			Console.ForegroundColor = ConsoleColor.White;
 		}
 
-		// Token: 0x060041F4 RID: 16884 RVA: 0x003C4228 File Offset: 0x003C2428
+		
 		private static void _setSeachMgr(ref GetValueModel model)
 		{
 			while (string.IsNullOrEmpty(model.TypeName))
@@ -82,7 +82,7 @@ namespace GameServer.Tools.CheckSysValue
 			CheckSysValueHelper._setSeach(model);
 		}
 
-		// Token: 0x060041F5 RID: 16885 RVA: 0x003C43C4 File Offset: 0x003C25C4
+		
 		private static void _setSeach(GetValueModel model)
 		{
 			if (null != model)
@@ -116,7 +116,7 @@ namespace GameServer.Tools.CheckSysValue
 			}
 		}
 
-		// Token: 0x060041F6 RID: 16886 RVA: 0x003C4514 File Offset: 0x003C2714
+		
 		private static string _getSeachKey(GetValueModel model)
 		{
 			string strKey = string.Format("{0},{1}", model.TypeName, model.SeachName);
@@ -127,7 +127,7 @@ namespace GameServer.Tools.CheckSysValue
 			return strKey;
 		}
 
-		// Token: 0x060041F7 RID: 16887 RVA: 0x003C4594 File Offset: 0x003C2794
+		
 		private static string _setResult(List<string> dlist, string str, GetValueModel model)
 		{
 			int MAXLEN = 0;
@@ -195,7 +195,7 @@ namespace GameServer.Tools.CheckSysValue
 			return "";
 		}
 
-		// Token: 0x060041F8 RID: 16888 RVA: 0x003C4834 File Offset: 0x003C2A34
+		
 		private static void _AddSeach(ref GetValueModel model)
 		{
 			SeachData seach = new SeachData();
@@ -239,7 +239,7 @@ namespace GameServer.Tools.CheckSysValue
 			model.SeachDataList.Add(seach);
 		}
 
-		// Token: 0x060041F9 RID: 16889 RVA: 0x003C49C8 File Offset: 0x003C2BC8
+		
 		private static bool _SetCheck(GetValueModel model)
 		{
 			CheckValueResult result = CheckModel.GetValue(model, Assembly.GetExecutingAssembly(), true);
@@ -348,7 +348,7 @@ namespace GameServer.Tools.CheckSysValue
 			return result2;
 		}
 
-		// Token: 0x060041FA RID: 16890 RVA: 0x003C4F48 File Offset: 0x003C3148
+		
 		public static void GetValue(string cmd = null)
 		{
 			try
@@ -485,10 +485,10 @@ namespace GameServer.Tools.CheckSysValue
 			CheckSysValueHelper.WriteLine("已经结束 。。。。。 help 查看帮助", ConsoleColor.Green);
 		}
 
-		// Token: 0x04004FF7 RID: 20471
+		
 		private static Dictionary<string, List<string>> AttrDict = new Dictionary<string, List<string>>();
 
-		// Token: 0x04004FF8 RID: 20472
+		
 		private static Dictionary<string, string> AttrTypeDict = new Dictionary<string, string>();
 	}
 }

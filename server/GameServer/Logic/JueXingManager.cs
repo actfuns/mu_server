@@ -9,16 +9,16 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020002FF RID: 767
+	
 	public class JueXingManager : IManager, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x06000C31 RID: 3121 RVA: 0x000BE9AC File Offset: 0x000BCBAC
+		
 		public static JueXingManager getInstance()
 		{
 			return JueXingManager.instance;
 		}
 
-		// Token: 0x06000C32 RID: 3122 RVA: 0x000BE9C4 File Offset: 0x000BCBC4
+		
 		public bool initialize()
 		{
 			this.LoadConfig();
@@ -29,13 +29,13 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000C33 RID: 3123 RVA: 0x000BE9FA File Offset: 0x000BCBFA
+		
 		public void LoadConfig()
 		{
 			this.LoadDefaultXml();
 		}
 
-		// Token: 0x06000C34 RID: 3124 RVA: 0x000BEA04 File Offset: 0x000BCC04
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1886, 1, 1, JueXingManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -46,25 +46,25 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000C35 RID: 3125 RVA: 0x000BEA90 File Offset: 0x000BCC90
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000C36 RID: 3126 RVA: 0x000BEAA4 File Offset: 0x000BCCA4
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000C37 RID: 3127 RVA: 0x000BEAB8 File Offset: 0x000BCCB8
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06000C38 RID: 3128 RVA: 0x000BEACC File Offset: 0x000BCCCC
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -100,7 +100,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000C39 RID: 3129 RVA: 0x000BEB94 File Offset: 0x000BCD94
+		
 		public bool ProcessGetJueXingDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -119,7 +119,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000C3A RID: 3130 RVA: 0x000BEC3C File Offset: 0x000BCE3C
+		
 		public bool ProcessJueXingJiHuoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -194,7 +194,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000C3B RID: 3131 RVA: 0x000BEF14 File Offset: 0x000BD114
+		
 		public bool ProcessTaoZhuangChangeCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -249,7 +249,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000C3C RID: 3132 RVA: 0x000BF148 File Offset: 0x000BD348
+		
 		public bool ProcessMoHuaCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -312,7 +312,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000C3D RID: 3133 RVA: 0x000BF3B0 File Offset: 0x000BD5B0
+		
 		public bool ProcessHuiShouCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -392,7 +392,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000C3E RID: 3134 RVA: 0x000BF654 File Offset: 0x000BD854
+		
 		public void UpdataPalyerJueXingAttr(GameClient client, bool hint = true)
 		{
 			if (this.IsGongNengOpen(client, false))
@@ -453,7 +453,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000C3F RID: 3135 RVA: 0x000BF9A0 File Offset: 0x000BDBA0
+		
 		public void UpdateTaoZhuangAttr(GameClient client, TaoZhuangData taoZhuangEquip, ref List<PassiveSkillData> passiveSkillList, ref double[] _ExtProps)
 		{
 			if (null != taoZhuangEquip)
@@ -537,7 +537,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000C40 RID: 3136 RVA: 0x000BFDC4 File Offset: 0x000BDFC4
+		
 		public void LoadDefaultXml()
 		{
 			try
@@ -559,7 +559,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000C41 RID: 3137 RVA: 0x000BFEC8 File Offset: 0x000BE0C8
+		
 		public void LoadAwakenActivationXml()
 		{
 			string fileName = "";
@@ -630,7 +630,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000C42 RID: 3138 RVA: 0x000C01F0 File Offset: 0x000BE3F0
+		
 		public void LoadAwakenSuitXml()
 		{
 			string fileName = "";
@@ -803,7 +803,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000C43 RID: 3139 RVA: 0x000C0950 File Offset: 0x000BEB50
+		
 		public void LoadAwakenLevelXml()
 		{
 			string fileName = "";
@@ -868,7 +868,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000C44 RID: 3140 RVA: 0x000C0C44 File Offset: 0x000BEE44
+		
 		public void LoadAwakenRecoveryXml()
 		{
 			string fileName = "";
@@ -900,7 +900,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000C45 RID: 3141 RVA: 0x000C0D98 File Offset: 0x000BEF98
+		
 		public void InitRoleJueXingData(GameClient client)
 		{
 			if (this.IsGongNengOpen(client, false))
@@ -934,13 +934,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000C46 RID: 3142 RVA: 0x000C0EB0 File Offset: 0x000BF0B0
+		
 		public bool IsGongNengOpen(GameClient client, bool hint = false)
 		{
 			return !GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System2Dot7) && GlobalNew.IsGongNengOpened(client, GongNengIDs.JueXing, hint);
 		}
 
-		// Token: 0x06000C47 RID: 3143 RVA: 0x000C0FBC File Offset: 0x000BF1BC
+		
 		public bool CanAddAttribute(GameClient client, int position)
 		{
 			int begin = 0;
@@ -1014,10 +1014,10 @@ namespace GameServer.Logic
 			}) != null;
 		}
 
-		// Token: 0x040013CF RID: 5071
+		
 		public JueXingRunData JueXingRunTimeData = new JueXingRunData();
 
-		// Token: 0x040013D0 RID: 5072
+		
 		private static JueXingManager instance = new JueXingManager();
 	}
 }

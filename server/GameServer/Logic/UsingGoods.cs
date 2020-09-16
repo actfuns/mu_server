@@ -5,10 +5,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007E8 RID: 2024
+	
 	public class UsingGoods
 	{
-		// Token: 0x06003947 RID: 14663 RVA: 0x0030A288 File Offset: 0x00308488
+		
 		public static int ProcessUsingGoodsVerify(GameClient client, int goodsID, int binding, out List<MagicActionItem> magicActionItemList, out int categoriy, int subNum)
 		{
 			magicActionItemList = null;
@@ -59,7 +59,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003948 RID: 14664 RVA: 0x0030A3D8 File Offset: 0x003085D8
+		
 		public static int ProcessUsingGoods(GameClient client, int goodsID, int binding, List<MagicActionItem> magicActionItemList, int categoriy, int subNum)
 		{
 			bool bItemAddVal = false;
@@ -90,7 +90,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06003949 RID: 14665 RVA: 0x0030A4F8 File Offset: 0x003086F8
+		
 		public static bool IfProcessSeveralTimesAction(int goodsID, string toType)
 		{
 			List<MagicActionItem> magicActionItemList = UsingGoods.GetMagicActionListByGoodsID(goodsID);
@@ -119,7 +119,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600394A RID: 14666 RVA: 0x0030A5B0 File Offset: 0x003087B0
+		
 		public static List<MagicActionItem> GetMagicActionListByGoodsID(int goodsID)
 		{
 			List<MagicActionItem> magicActionItemList = null;

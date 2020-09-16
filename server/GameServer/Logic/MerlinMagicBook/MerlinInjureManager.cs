@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.MerlinMagicBook
 {
-	// Token: 0x02000387 RID: 903
+	
 	public class MerlinInjureManager
 	{
-		// Token: 0x06000F71 RID: 3953 RVA: 0x000F26B8 File Offset: 0x000F08B8
+		
 		public int CalcMerlinInjure(IObject attacker, IObject defender, int nBaseInjure, ref EMerlinSecretAttrType eref)
 		{
 			eref = EMerlinSecretAttrType.EMSAT_None;
@@ -49,7 +49,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			return 0;
 		}
 
-		// Token: 0x06000F72 RID: 3954 RVA: 0x000F27C0 File Offset: 0x000F09C0
+		
 		private EMerlinSecretAttrType GetMerlinInjureType(IObject attacker, IObject defender, ref double percent)
 		{
 			try
@@ -113,7 +113,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			return EMerlinSecretAttrType.EMSAT_None;
 		}
 
-		// Token: 0x06000F73 RID: 3955 RVA: 0x000F2980 File Offset: 0x000F0B80
+		
 		public double GetMerlinInjurePercent(IObject attacker, IObject defender, EMerlinSecretAttrType eType)
 		{
 			double val = 0.0;
@@ -168,7 +168,7 @@ namespace GameServer.Logic.MerlinMagicBook
 			return (val > 0.0) ? val : 0.0;
 		}
 
-		// Token: 0x06000F74 RID: 3956 RVA: 0x000F2B5C File Offset: 0x000F0D5C
+		
 		private int TriggerEffect(IObject attacker, IObject defender, int nBaseInjure, EMerlinSecretAttrType eType, double percent)
 		{
 			int nInjure = 0;

@@ -11,10 +11,10 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic.LoginWaiting
 {
-	// Token: 0x02000351 RID: 849
+	
 	public class LoginWaitLogic
 	{
-		// Token: 0x06000E8A RID: 3722 RVA: 0x000E4C30 File Offset: 0x000E2E30
+		
 		public void LoadConfig()
 		{
 			string strCfg = GameManager.PlatConfigMgr.GetGameConfigItemStr("userwaitconfig", "700,1000,400,30000,180000,20000");
@@ -23,7 +23,7 @@ namespace GameServer.Logic.LoginWaiting
 			this.m_IntConfig[1] = Global.String2IntArray(strCfg, ',');
 		}
 
-		// Token: 0x06000E8B RID: 3723 RVA: 0x000E4C88 File Offset: 0x000E2E88
+		
 		public int GetConfig(LoginWaitLogic.UserType userType, LoginWaitLogic.ConfigType type)
 		{
 			int result;
@@ -42,7 +42,7 @@ namespace GameServer.Logic.LoginWaiting
 			return result;
 		}
 
-		// Token: 0x06000E8C RID: 3724 RVA: 0x000E4CD8 File Offset: 0x000E2ED8
+		
 		public LoginWaitLogic()
 		{
 			for (LoginWaitLogic.UserType i = LoginWaitLogic.UserType.Normal; i < LoginWaitLogic.UserType.Max_Type; i++)
@@ -51,7 +51,7 @@ namespace GameServer.Logic.LoginWaiting
 			}
 		}
 
-		// Token: 0x06000E8D RID: 3725 RVA: 0x000E4D74 File Offset: 0x000E2F74
+		
 		public int GetTotalWaitingCount()
 		{
 			int result;
@@ -67,7 +67,7 @@ namespace GameServer.Logic.LoginWaiting
 			return result;
 		}
 
-		// Token: 0x06000E8E RID: 3726 RVA: 0x000E4DF4 File Offset: 0x000E2FF4
+		
 		public int GetWaitingCount(LoginWaitLogic.UserType userType)
 		{
 			int count;
@@ -78,7 +78,7 @@ namespace GameServer.Logic.LoginWaiting
 			return count;
 		}
 
-		// Token: 0x06000E8F RID: 3727 RVA: 0x000E4E48 File Offset: 0x000E3048
+		
 		public bool IsInWait(string userID)
 		{
 			bool result;
@@ -104,7 +104,7 @@ namespace GameServer.Logic.LoginWaiting
 			return result;
 		}
 
-		// Token: 0x06000E90 RID: 3728 RVA: 0x000E4ED4 File Offset: 0x000E30D4
+		
 		public bool AddToWait(string userID, int zoneID, LoginWaitLogic.UserType userType, TMSKSocket socket)
 		{
 			try
@@ -138,7 +138,7 @@ namespace GameServer.Logic.LoginWaiting
 			return true;
 		}
 
-		// Token: 0x06000E91 RID: 3729 RVA: 0x000E4FFC File Offset: 0x000E31FC
+		
 		public void RemoveWait(string userID)
 		{
 			try
@@ -161,7 +161,7 @@ namespace GameServer.Logic.LoginWaiting
 			}
 		}
 
-		// Token: 0x06000E92 RID: 3730 RVA: 0x000E50F8 File Offset: 0x000E32F8
+		
 		public LoginWaitLogic.UserInfo TopWaiting(LoginWaitLogic.UserType userType)
 		{
 			LoginWaitLogic.UserInfo userInfo = null;
@@ -183,7 +183,7 @@ namespace GameServer.Logic.LoginWaiting
 			return userInfo;
 		}
 
-		// Token: 0x06000E93 RID: 3731 RVA: 0x000E519C File Offset: 0x000E339C
+		
 		public LoginWaitLogic.UserInfo PopTopWaiting(LoginWaitLogic.UserType userType)
 		{
 			LoginWaitLogic.UserInfo userInfo = null;
@@ -207,7 +207,7 @@ namespace GameServer.Logic.LoginWaiting
 			return userInfo;
 		}
 
-		// Token: 0x06000E94 RID: 3732 RVA: 0x000E5260 File Offset: 0x000E3460
+		
 		public void OutWaitInfo(LoginWaitLogic.UserType userType, int index)
 		{
 			try
@@ -239,7 +239,7 @@ namespace GameServer.Logic.LoginWaiting
 			}
 		}
 
-		// Token: 0x06000E95 RID: 3733 RVA: 0x000E5390 File Offset: 0x000E3590
+		
 		public int GetAllowCount()
 		{
 			int count;
@@ -250,7 +250,7 @@ namespace GameServer.Logic.LoginWaiting
 			return count;
 		}
 
-		// Token: 0x06000E96 RID: 3734 RVA: 0x000E53E4 File Offset: 0x000E35E4
+		
 		public bool AddToAllow(string userID, int mSeconds)
 		{
 			try
@@ -281,7 +281,7 @@ namespace GameServer.Logic.LoginWaiting
 			return false;
 		}
 
-		// Token: 0x06000E97 RID: 3735 RVA: 0x000E54CC File Offset: 0x000E36CC
+		
 		public void RemoveAllow(string userID)
 		{
 			try
@@ -300,7 +300,7 @@ namespace GameServer.Logic.LoginWaiting
 			}
 		}
 
-		// Token: 0x06000E98 RID: 3736 RVA: 0x000E5558 File Offset: 0x000E3758
+		
 		public bool IsInAllowDict(string userID)
 		{
 			bool result;
@@ -327,7 +327,7 @@ namespace GameServer.Logic.LoginWaiting
 			return result;
 		}
 
-		// Token: 0x06000E99 RID: 3737 RVA: 0x000E5604 File Offset: 0x000E3804
+		
 		public void NotifyWaitingInfo(LoginWaitLogic.UserInfo userInfo, int count, long seconds)
 		{
 			try
@@ -348,7 +348,7 @@ namespace GameServer.Logic.LoginWaiting
 			}
 		}
 
-		// Token: 0x06000E9A RID: 3738 RVA: 0x000E56C4 File Offset: 0x000E38C4
+		
 		public bool NotifyUserEnter(LoginWaitLogic.UserInfo userInfo)
 		{
 			try
@@ -404,7 +404,7 @@ namespace GameServer.Logic.LoginWaiting
 			return true;
 		}
 
-		// Token: 0x06000E9B RID: 3739 RVA: 0x000E5908 File Offset: 0x000E3B08
+		
 		public LoginWaitLogic.UserType GetUserType(string userID)
 		{
 			LoginWaitLogic.UserType userType = LoginWaitLogic.UserType.Normal;
@@ -431,13 +431,13 @@ namespace GameServer.Logic.LoginWaiting
 			return userType;
 		}
 
-		// Token: 0x06000E9C RID: 3740 RVA: 0x000E59A0 File Offset: 0x000E3BA0
+		
 		public int GetUserCount()
 		{
 			return GameManager.ClientMgr.GetClientCount() + this.GetAllowCount();
 		}
 
-		// Token: 0x06000E9D RID: 3741 RVA: 0x000E59F0 File Offset: 0x000E3BF0
+		
 		public void UpdateWaitingList()
 		{
 			long currTick = TimeUtil.NOW();
@@ -486,7 +486,7 @@ namespace GameServer.Logic.LoginWaiting
 			}
 		}
 
-		// Token: 0x06000E9E RID: 3742 RVA: 0x000E5C5C File Offset: 0x000E3E5C
+		
 		public void Tick()
 		{
 			long currTick = TimeUtil.NOW();
@@ -499,7 +499,7 @@ namespace GameServer.Logic.LoginWaiting
 			}
 		}
 
-		// Token: 0x06000E9F RID: 3743 RVA: 0x000E5CA8 File Offset: 0x000E3EA8
+		
 		public void ProcessWaitingList(LoginWaitLogic.UserType userType)
 		{
 			try
@@ -586,86 +586,86 @@ namespace GameServer.Logic.LoginWaiting
 			}
 		}
 
-		// Token: 0x0400166B RID: 5739
+		
 		private int[][] m_IntConfig = new int[2][];
 
-		// Token: 0x0400166C RID: 5740
+		
 		private int m_UserUpdateInt = 5000;
 
-		// Token: 0x0400166D RID: 5741
+		
 		private List<LoginWaitLogic.UserInfo>[] m_UserList = new List<LoginWaitLogic.UserInfo>[2];
 
-		// Token: 0x0400166E RID: 5742
+		
 		private Dictionary<string, TMSKSocket> m_User2SocketDict = new Dictionary<string, TMSKSocket>();
 
-		// Token: 0x0400166F RID: 5743
+		
 		private object m_Mutex = new object();
 
-		// Token: 0x04001670 RID: 5744
+		
 		private long m_UpdateTick = 0L;
 
-		// Token: 0x04001671 RID: 5745
+		
 		private long m_UpdateAllowTick = 0L;
 
-		// Token: 0x04001672 RID: 5746
+		
 		private long m_LastEnterSecs = 30L;
 
-		// Token: 0x04001673 RID: 5747
+		
 		private long m_LastEnterFromFirstSecs = 30L;
 
-		// Token: 0x04001674 RID: 5748
+		
 		private Dictionary<string, long> m_AllowUserDict = new Dictionary<string, long>();
 
-		// Token: 0x02000352 RID: 850
+		
 		public enum ConfigType
 		{
-			// Token: 0x04001677 RID: 5751
+			
 			NeedWaitNum,
-			// Token: 0x04001678 RID: 5752
+			
 			MaxServerNum,
-			// Token: 0x04001679 RID: 5753
+			
 			MaxQueueNum,
-			// Token: 0x0400167A RID: 5754
+			
 			WaitUpdateInt,
-			// Token: 0x0400167B RID: 5755
+			
 			AllowMSeconds,
-			// Token: 0x0400167C RID: 5756
+			
 			LogouAllowMSeconds
 		}
 
-		// Token: 0x02000353 RID: 851
+		
 		public enum UserType
 		{
-			// Token: 0x0400167E RID: 5758
+			
 			Normal,
-			// Token: 0x0400167F RID: 5759
+			
 			Vip,
-			// Token: 0x04001680 RID: 5760
+			
 			Max_Type
 		}
 
-		// Token: 0x02000354 RID: 852
+		
 		public class UserInfo
 		{
-			// Token: 0x04001681 RID: 5761
+			
 			public TMSKSocket socket = null;
 
-			// Token: 0x04001682 RID: 5762
+			
 			public string userID = "";
 
-			// Token: 0x04001683 RID: 5763
+			
 			public int zoneID = 0;
 
-			// Token: 0x04001684 RID: 5764
+			
 			public long startTick = 0L;
 
-			// Token: 0x04001685 RID: 5765
+			
 			public long updateTick = 0L;
 
-			// Token: 0x04001686 RID: 5766
+			
 			public long firstTick = 0L;
 
-			// Token: 0x04001687 RID: 5767
+			
 			public long overTick = 0L;
 		}
 	}

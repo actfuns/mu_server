@@ -12,22 +12,22 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200028A RID: 650
+	
 	public class CopyWolfManager : IManager, IEventListener, IEventListenerEx
 	{
-		// Token: 0x06000959 RID: 2393 RVA: 0x0009442C File Offset: 0x0009262C
+		
 		public static CopyWolfManager getInstance()
 		{
 			return CopyWolfManager.instance;
 		}
 
-		// Token: 0x0600095A RID: 2394 RVA: 0x00094444 File Offset: 0x00092644
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x0600095B RID: 2395 RVA: 0x00094468 File Offset: 0x00092668
+		
 		public bool startup()
 		{
 			GlobalEventSource.getInstance().registerListener(11, CopyWolfManager.getInstance());
@@ -37,7 +37,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600095C RID: 2396 RVA: 0x000944C8 File Offset: 0x000926C8
+		
 		public bool showdown()
 		{
 			GlobalEventSource.getInstance().removeListener(11, CopyWolfManager.getInstance());
@@ -47,13 +47,13 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600095D RID: 2397 RVA: 0x00094528 File Offset: 0x00092728
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600095E RID: 2398 RVA: 0x0009453C File Offset: 0x0009273C
+		
 		public void processEvent(EventObject eventObject)
 		{
 			if (eventObject.getEventType() == 11)
@@ -80,7 +80,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600095F RID: 2399 RVA: 0x00094624 File Offset: 0x00092824
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 			if (eventObject.EventType == 30)
@@ -135,7 +135,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000960 RID: 2400 RVA: 0x00094824 File Offset: 0x00092A24
+		
 		public bool InitConfig()
 		{
 			bool success = true;
@@ -224,7 +224,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x06000961 RID: 2401 RVA: 0x00094C40 File Offset: 0x00092E40
+		
 		public bool AddCopyScene(GameClient client, CopyMap copyMap)
 		{
 			bool result;
@@ -266,7 +266,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000962 RID: 2402 RVA: 0x00094DD0 File Offset: 0x00092FD0
+		
 		public bool RemoveCopyScene(CopyMap copyMap)
 		{
 			bool result;
@@ -286,7 +286,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000963 RID: 2403 RVA: 0x00094E54 File Offset: 0x00093054
+		
 		public void TimerProc()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -420,7 +420,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000964 RID: 2404 RVA: 0x000953C8 File Offset: 0x000935C8
+		
 		public void CreateMonster(CopyWolfSceneInfo scene, int upWave = 1)
 		{
 			CopyMap copyMap = scene.CopyMapInfo;
@@ -487,7 +487,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000965 RID: 2405 RVA: 0x000956F0 File Offset: 0x000938F0
+		
 		public void CreateFort(CopyWolfSceneInfo scene)
 		{
 			CopyMap copyMap = scene.CopyMapInfo;
@@ -527,13 +527,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000966 RID: 2406 RVA: 0x000958DC File Offset: 0x00093ADC
+		
 		public bool IsCopyWolf(int fubenID)
 		{
 			return fubenID == this._runtimeData.CopyID;
 		}
 
-		// Token: 0x06000967 RID: 2407 RVA: 0x000958FC File Offset: 0x00093AFC
+		
 		public void MonsterDead(Monster monster)
 		{
 			CreateMonsterTagInfo tagInfo = monster.Tag as CreateMonsterTagInfo;
@@ -574,7 +574,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000968 RID: 2408 RVA: 0x00095A50 File Offset: 0x00093C50
+		
 		public void MonsterDead(GameClient client, Monster monster)
 		{
 			if (client.ClientData.FuBenSeqID >= 0 && client.ClientData.CopyMapID >= 0 && this.IsCopyWolf(client.ClientData.FuBenID))
@@ -610,7 +610,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000969 RID: 2409 RVA: 0x00095BC4 File Offset: 0x00093DC4
+		
 		public void FortDead(Monster fortMonster)
 		{
 			CreateMonsterTagInfo tagInfo = fortMonster.Tag as CreateMonsterTagInfo;
@@ -636,7 +636,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600096A RID: 2410 RVA: 0x00095CC0 File Offset: 0x00093EC0
+		
 		public void GiveAwards(CopyWolfSceneInfo scene, int leftSecond)
 		{
 			try
@@ -704,7 +704,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600096B RID: 2411 RVA: 0x00095FA8 File Offset: 0x000941A8
+		
 		public void NotifyTimeStateInfoAndScoreInfo(GameClient client, bool timeState = true, bool scoreInfo = true)
 		{
 			lock (CopyWolfManager._mutex)
@@ -724,7 +724,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600096C RID: 2412 RVA: 0x0009604C File Offset: 0x0009424C
+		
 		public void LeaveFuBen(GameClient client)
 		{
 			CopyWolfSceneInfo scene = null;
@@ -745,13 +745,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600096D RID: 2413 RVA: 0x00096134 File Offset: 0x00094334
+		
 		public void OnLogout(GameClient client)
 		{
 			this.LeaveFuBen(client);
 		}
 
-		// Token: 0x0600096E RID: 2414 RVA: 0x00096140 File Offset: 0x00094340
+		
 		public bool ClientRelive(GameClient client)
 		{
 			GameMap gameMap = null;
@@ -776,7 +776,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600096F RID: 2415 RVA: 0x0009628C File Offset: 0x0009448C
+		
 		public int GetScore(int monsterScore, int second, int life)
 		{
 			int timeScore = this._runtimeData.ScoreRateTime * second;
@@ -784,37 +784,37 @@ namespace GameServer.Logic
 			return Math.Max(0, monsterScore + timeScore + lifeScore);
 		}
 
-		// Token: 0x06000970 RID: 2416 RVA: 0x000962C8 File Offset: 0x000944C8
+		
 		public int AwardExp(int baseValue, int score)
 		{
 			return (int)((double)baseValue * (1.0 + Math.Pow((double)Math.Min(score, 1000000), 0.34) / 100.0));
 		}
 
-		// Token: 0x06000971 RID: 2417 RVA: 0x0009630C File Offset: 0x0009450C
+		
 		public int AwardGoldBind(int baseValue, int score)
 		{
 			return (int)((double)baseValue * (1.0 + Math.Pow((double)Math.Min(score, 500000), 0.34) / 100.0));
 		}
 
-		// Token: 0x06000972 RID: 2418 RVA: 0x00096350 File Offset: 0x00094550
+		
 		public int AwardWolfMoney(int baseValue, int score)
 		{
 			return 200 + Math.Min(score, 100000) / 100;
 		}
 
-		// Token: 0x0400101A RID: 4122
+		
 		public const GameTypes _gameType = GameTypes.CopyWolf;
 
-		// Token: 0x0400101B RID: 4123
+		
 		private static long _nextHeartBeatTicks = 0L;
 
-		// Token: 0x0400101C RID: 4124
+		
 		public static object _mutex = new object();
 
-		// Token: 0x0400101D RID: 4125
+		
 		public CopyWolfInfo _runtimeData = new CopyWolfInfo();
 
-		// Token: 0x0400101E RID: 4126
+		
 		private static CopyWolfManager instance = new CopyWolfManager();
 	}
 }

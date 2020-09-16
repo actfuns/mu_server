@@ -10,10 +10,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x0200019F RID: 415
+	
 	public class JieRiCZQGActivity : Activity, IEventListener
 	{
-		// Token: 0x060004E2 RID: 1250 RVA: 0x00042A50 File Offset: 0x00040C50
+		
 		public void processEvent(EventObject eventObject)
 		{
 			if (eventObject.getEventType() == 36)
@@ -27,13 +27,13 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060004E3 RID: 1251 RVA: 0x00042AB4 File Offset: 0x00040CB4
+		
 		public void Dispose()
 		{
 			GlobalEventSource.getInstance().removeListener(36, this);
 		}
 
-		// Token: 0x060004E4 RID: 1252 RVA: 0x00042AC8 File Offset: 0x00040CC8
+		
 		public bool Init()
 		{
 			try
@@ -95,7 +95,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x060004E5 RID: 1253 RVA: 0x00042DA0 File Offset: 0x00040FA0
+		
 		public List<JieriCZQGData> BuildChongZhiQiangGouInfoForClient(GameClient client)
 		{
 			List<JieriCZQGData> list = new List<JieriCZQGData>();
@@ -125,10 +125,10 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0400091F RID: 2335
+		
 		protected Dictionary<int, JieriCZQGConfigData> CZQGConfigDict = new Dictionary<int, JieriCZQGConfigData>();
 
-		// Token: 0x04000920 RID: 2336
+		
 		protected HashSet<int> CZQGZhiGouIDSet = new HashSet<int>();
 	}
 }

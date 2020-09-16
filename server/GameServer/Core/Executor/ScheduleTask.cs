@@ -6,7 +6,7 @@ namespace GameServer.Core.Executor
 	public interface ScheduleTask
 	{
 		// Token: 0x17000005 RID: 5
-		// (get) Token: 0x0600037C RID: 892
+		
 		TaskInternalLock InternalLock { get; }
 
 		// Token: 0x0600037D RID: 893

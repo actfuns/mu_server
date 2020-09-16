@@ -17,11 +17,11 @@ using Tmsk.Contract;
 
 namespace KF.TcpCall
 {
-    // Token: 0x02000059 RID: 89
+    
     [AutoCSer.Net.TcpStaticServer.Server(Name = "KfCall", IsServer = true, IsAttribute = true, IsClientAwaiter = false, MemberFilters = MemberFilters.Static, IsSegmentation = true, ClientSegmentationCopyPath = "GameServer\\Remoting\\")]
     public static class ZhanDuiZhengBa_K
     {
-        // Token: 0x06000411 RID: 1041 RVA: 0x000342FC File Offset: 0x000324FC
+        
         static ZhanDuiZhengBa_K()
         {
             ZhanDuiZhengBa_K.StateMachine.Install(new StateMachineSimple.StateHandler(1, null, new Action<DateTime>(ZhanDuiZhengBa_K.MS_Idle_Update), null));
@@ -34,7 +34,7 @@ namespace KF.TcpCall
             ZhanDuiZhengBa_K.StateMachine.SetCurrState(1, TimeUtil.NowDateTime());
         }
 
-        // Token: 0x06000412 RID: 1042 RVA: 0x0003447C File Offset: 0x0003267C
+        
         public static bool InitConfig()
         {
             lock (ZhanDuiZhengBa_K.Mutex)
@@ -51,7 +51,7 @@ namespace KF.TcpCall
             return true;
         }
 
-        // Token: 0x06000413 RID: 1043 RVA: 0x0003451C File Offset: 0x0003271C
+        
         public static void Update()
         {
             if (ZhanDuiZhengBa_K.Initialize)
@@ -82,7 +82,7 @@ namespace KF.TcpCall
             }
         }
 
-        // Token: 0x06000414 RID: 1044 RVA: 0x00034634 File Offset: 0x00032834
+        
         private static void MS_Idle_Update(DateTime now)
         {
             if (now.Day == ZhanDuiZhengBaConfig.StartDay)
@@ -163,7 +163,7 @@ namespace KF.TcpCall
             }
         }
 
-        // Token: 0x06000415 RID: 1045 RVA: 0x00034A30 File Offset: 0x00032C30
+        
         private static void MS_Init_Enter(DateTime now)
         {
             ZhanDuiZhengBa_K.TodayJoinRoleDatas.Clear();
@@ -185,7 +185,7 @@ namespace KF.TcpCall
             ZhanDuiZhengBa_K.StateMachine.SetCurrState(4, now);
         }
 
-        // Token: 0x06000416 RID: 1046 RVA: 0x00034B1C File Offset: 0x00032D1C
+        
         private static bool CreateGameFuBen(DateTime now, ZhanDuiZhengBaMatchConfig matchConfig, ZhanDuiZhengBa_K.JoinRolePkData joinRole1, ZhanDuiZhengBa_K.JoinRolePkData joinRole2)
         {
             bool result;
@@ -250,7 +250,7 @@ namespace KF.TcpCall
             return result;
         }
 
-        // Token: 0x06000417 RID: 1047 RVA: 0x00034E6C File Offset: 0x0003306C
+        
         private static void MS_InitPkLoop_Update(DateTime now)
         {
             ZhanDuiZhengBaMatchConfig matchConfig = ZhanDuiZhengBa_K._Config.MatchConfigList.Find((ZhanDuiZhengBaMatchConfig _m) => _m.ID == ZhanDuiZhengBa_K.SyncData.RealActID);
@@ -300,7 +300,7 @@ namespace KF.TcpCall
             ZhanDuiZhengBa_K.StateMachine.SetCurrState(5, now);
         }
 
-        // Token: 0x06000418 RID: 1048 RVA: 0x0003505C File Offset: 0x0003325C
+        
         private static void MS_NotifyEnter_Update(DateTime now)
         {
             ZhanDuiZhengBaMatchConfig matchConfig = ZhanDuiZhengBa_K._Config.MatchConfigList.Find((ZhanDuiZhengBaMatchConfig _m) => _m.ID == ZhanDuiZhengBa_K.SyncData.RealActID);
@@ -310,7 +310,7 @@ namespace KF.TcpCall
             }
         }
 
-        // Token: 0x06000419 RID: 1049 RVA: 0x000350FC File Offset: 0x000332FC
+        
         private static void MS_PkLoopStart_Update(DateTime now)
         {
             ZhanDuiZhengBaMatchConfig matchConfig = ZhanDuiZhengBa_K._Config.MatchConfigList.Find((ZhanDuiZhengBaMatchConfig _m) => _m.ID == ZhanDuiZhengBa_K.SyncData.RealActID);
@@ -320,7 +320,7 @@ namespace KF.TcpCall
             }
         }
 
-        // Token: 0x0600041A RID: 1050 RVA: 0x000351A8 File Offset: 0x000333A8
+        
         private static void MS_PkLoopEnd_Update(DateTime now)
         {
             ZhanDuiZhengBaMatchConfig matchConfig = ZhanDuiZhengBa_K._Config.MatchConfigList.Find((ZhanDuiZhengBaMatchConfig _m) => _m.ID == ZhanDuiZhengBa_K.SyncData.RealActID);
@@ -344,13 +344,13 @@ namespace KF.TcpCall
             }
         }
 
-        // Token: 0x0600041B RID: 1051 RVA: 0x00035338 File Offset: 0x00033538
+        
         private static void MS_TodayPkEnd_Enter(DateTime now)
         {
             ZhanDuiZhengBa_K.FixSyncData(now);
         }
 
-        // Token: 0x0600041C RID: 1052 RVA: 0x00035368 File Offset: 0x00033568
+        
         private static void MS_TodayPkEnd_Update(DateTime now)
         {
             ZhanDuiZhengBaMatchConfig matchConfig = ZhanDuiZhengBa_K._Config.MatchConfigList.Find((ZhanDuiZhengBaMatchConfig _m) => _m.ID == ZhanDuiZhengBa_K.SyncData.RealActID);
@@ -360,7 +360,7 @@ namespace KF.TcpCall
             }
         }
 
-        // Token: 0x0600041D RID: 1053 RVA: 0x000353D4 File Offset: 0x000335D4
+        
         public static void LoadSyncData(DateTime now, bool reload = false)
         {
             int selectRoleIfNewCreate = 64;
@@ -372,7 +372,7 @@ namespace KF.TcpCall
             }
         }
 
-        // Token: 0x0600041E RID: 1054 RVA: 0x00035574 File Offset: 0x00033774
+        
         private static bool FixSyncData_State(DateTime now)
         {
             bool bForceModify = false;
@@ -498,7 +498,7 @@ namespace KF.TcpCall
             return bForceModify;
         }
 
-        // Token: 0x0600041F RID: 1055 RVA: 0x00035B4C File Offset: 0x00033D4C
+        
         private static void FixSyncData(DateTime now)
         {
             lock (ZhanDuiZhengBa_K.Mutex)
@@ -516,7 +516,7 @@ namespace KF.TcpCall
             }
         }
 
-        // Token: 0x06000420 RID: 1056 RVA: 0x00035C24 File Offset: 0x00033E24
+        
         [AutoCSer.Net.TcpStaticServer.Method(ParameterFlags = ParameterFlags.SerializeBox, ServerTask = ServerTaskType.Queue, IsClientAwaiter = false)]
         public static ZhanDuiZhengBaSyncData SyncZhengBaData(ZhanDuiZhengBaSyncData lastSyncData)
         {
@@ -543,7 +543,7 @@ namespace KF.TcpCall
             return result;
         }
 
-        // Token: 0x06000421 RID: 1057 RVA: 0x00035DBC File Offset: 0x00033FBC
+        
         [AutoCSer.Net.TcpStaticServer.Method(ParameterFlags = ParameterFlags.SerializeBox, ServerTask = ServerTaskType.Queue, IsClientAwaiter = false)]
         public static int ZhengBaKuaFuLogin(AutoCSer.Net.TcpInternalServer.ServerSocketSender socket, int zhanDuiID, int gameId, int srcServerID, out ZhanDuiZhengBaFuBenData copyData)
         {
@@ -586,7 +586,7 @@ namespace KF.TcpCall
             return result;
         }
 
-        // Token: 0x06000422 RID: 1058 RVA: 0x00035F30 File Offset: 0x00034130
+        
         [AutoCSer.Net.TcpStaticServer.Method(ParameterFlags = ParameterFlags.SerializeBox, ServerTask = ServerTaskType.Queue, IsClientAwaiter = false)]
         public static int ZhengBaRequestEnter(int zhanDuiID, out int gameId, out int kuaFuServerID, out string[] ips, out int[] ports)
         {
@@ -642,7 +642,7 @@ namespace KF.TcpCall
             return result;
         }
 
-        // Token: 0x06000423 RID: 1059 RVA: 0x000361FC File Offset: 0x000343FC
+        
         [AutoCSer.Net.TcpStaticServer.Method(ParameterFlags = ParameterFlags.SerializeBox, ServerTask = ServerTaskType.Queue, IsClientAwaiter = false)]
         public static List<ZhanDuiZhengBaNtfPkResultData> ZhengBaPkResult(int gameId, int winner1)
         {
@@ -725,129 +725,129 @@ namespace KF.TcpCall
             return result;
         }
 
-        // Token: 0x04000226 RID: 550
+        
         private static object Mutex = new object();
 
-        // Token: 0x04000227 RID: 551
+        
         private static bool Initialize = false;
 
-        // Token: 0x04000228 RID: 552
+        
         private static GameTypes GameType = GameTypes.ZhanDuiZhengBa;
 
-        // Token: 0x04000229 RID: 553
+        
         private static StateMachineSimple StateMachine = new StateMachineSimple(8);
 
-        // Token: 0x0400022A RID: 554
+        
         private static ZhanDuiZhengBaSyncData SyncData = new ZhanDuiZhengBaSyncData
         {
             Month = ZhanDuiZhengBaUtils.MakeMonth(TimeUtil.NowDateTime())
         };
 
-        // Token: 0x0400022B RID: 555
+        
         private static DateTime lastUpdateTime = TimeUtil.NowDateTime();
 
-        // Token: 0x0400022C RID: 556
+        
         private static Queue<KFCallMsg> AsyncEvQ = new Queue<KFCallMsg>();
 
-        // Token: 0x0400022D RID: 557
+        
         private static ZhanDuiZhengBaConfig _Config = new ZhanDuiZhengBaConfig();
 
-        // Token: 0x0400022E RID: 558
+        
         private static List<ZhanDuiZhengBa_K.JoinRolePkData> TodayJoinRoleDatas = new List<ZhanDuiZhengBa_K.JoinRolePkData>();
 
-        // Token: 0x0400022F RID: 559
+        
         private static Dictionary<int, ZhanDuiZhengBaPkLogData> ThisLoopPkLogs = new Dictionary<int, ZhanDuiZhengBaPkLogData>();
 
-        // Token: 0x04000230 RID: 560
+        
         private static ZhanDuiZhengBaPersistence Persistence = ZhanDuiZhengBaPersistence.Instance;
 
-        // Token: 0x0200005A RID: 90
+        
         private class JoinRolePkData
         {
-            // Token: 0x04000237 RID: 567
+            
             public int ZhanDuiID;
 
-            // Token: 0x04000238 RID: 568
+            
             public int ZoneId;
 
-            // Token: 0x04000239 RID: 569
+            
             public string RoleName;
 
-            // Token: 0x0400023A RID: 570
+            
             public int Group;
 
-            // Token: 0x0400023B RID: 571
+            
             public int Rank;
 
-            // Token: 0x0400023C RID: 572
+            
             public int ToServerID;
 
-            // Token: 0x0400023D RID: 573
+            
             public int CurrGameID;
 
-            // Token: 0x0400023E RID: 574
+            
             public bool WaitReqEnter;
 
-            // Token: 0x0400023F RID: 575
+            
             public ZhanDuiZhengBaFuBenData CopyData;
         }
 
-        // Token: 0x0200005B RID: 91
+        
         public class StateType
         {
-            // Token: 0x04000240 RID: 576
+            
             public const int None = 0;
 
-            // Token: 0x04000241 RID: 577
+            
             public const int Idle = 1;
 
-            // Token: 0x04000242 RID: 578
+            
             public const int Init = 2;
 
-            // Token: 0x04000243 RID: 579
+            
             public const int TodayPkEnd = 3;
 
-            // Token: 0x04000244 RID: 580
+            
             public const int InitPkLoop = 4;
 
-            // Token: 0x04000245 RID: 581
+            
             public const int NotifyEnter = 5;
 
-            // Token: 0x04000246 RID: 582
+            
             public const int PkLoopStart = 6;
 
-            // Token: 0x04000247 RID: 583
+            
             public const int PkLoopEnd = 7;
 
-            // Token: 0x04000248 RID: 584
+            
             public const int Max = 8;
         }
 
-        // Token: 0x0200005C RID: 92
+        
         internal static class TcpStaticServer
         {
-            // Token: 0x0600042C RID: 1068 RVA: 0x0003669C File Offset: 0x0003489C
+            
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public static ZhanDuiZhengBaSyncData _M16(ZhanDuiZhengBaSyncData lastSyncData)
             {
                 return ZhanDuiZhengBa_K.SyncZhengBaData(lastSyncData);
             }
 
-            // Token: 0x0600042D RID: 1069 RVA: 0x000366B4 File Offset: 0x000348B4
+            
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public static int _M17(AutoCSer.Net.TcpInternalServer.ServerSocketSender _sender_, int zhanDuiID, int gameId, int srcServerID, out ZhanDuiZhengBaFuBenData copyData)
             {
                 return ZhanDuiZhengBa_K.ZhengBaKuaFuLogin(_sender_, zhanDuiID, gameId, srcServerID, out copyData);
             }
 
-            // Token: 0x0600042E RID: 1070 RVA: 0x000366D4 File Offset: 0x000348D4
+            
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public static List<ZhanDuiZhengBaNtfPkResultData> _M18(int gameId, int winner1)
             {
                 return ZhanDuiZhengBa_K.ZhengBaPkResult(gameId, winner1);
             }
 
-            // Token: 0x0600042F RID: 1071 RVA: 0x000366F0 File Offset: 0x000348F0
+            
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public static int _M19(int zhanDuiID, out int gameId, out int kuaFuServerID, out string[] ips, out int[] ports)
             {

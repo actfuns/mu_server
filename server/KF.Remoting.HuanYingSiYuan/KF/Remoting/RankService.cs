@@ -9,21 +9,21 @@ using Tmsk.Contract.KuaFuData;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000046 RID: 70
+	
 	public class RankService
 	{
-		// Token: 0x060002FB RID: 763 RVA: 0x0002A0B0 File Offset: 0x000282B0
+		
 		private RankService()
 		{
 		}
 
-		// Token: 0x060002FC RID: 764 RVA: 0x0002A164 File Offset: 0x00028364
+		
 		public static RankService getInstance()
 		{
 			return RankService._Instance;
 		}
 
-		// Token: 0x060002FD RID: 765 RVA: 0x0002A17C File Offset: 0x0002837C
+		
 		public long RankVersion(int serverID)
 		{
 			long result;
@@ -38,7 +38,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060002FE RID: 766 RVA: 0x0002A1AC File Offset: 0x000283AC
+		
 		public bool IsAgent(int serverID)
 		{
 			bool isAgent = ClientAgentManager.Instance().ExistAgent(serverID);
@@ -48,7 +48,7 @@ namespace KF.Remoting
 			return isAgent;
 		}
 
-		// Token: 0x060002FF RID: 767 RVA: 0x0002A1D4 File Offset: 0x000283D4
+		
 		public int RankGradeUpdate(int serverID, KFRankData newData)
 		{
 			int result;
@@ -119,7 +119,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000300 RID: 768 RVA: 0x0002A43C File Offset: 0x0002863C
+		
 		public List<KFRankData> FilterRankTopList(List<KFRankData> _RankTopList, RankInfo info)
 		{
 			List<KFRankData> result;
@@ -149,7 +149,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000301 RID: 769 RVA: 0x0002A4CC File Offset: 0x000286CC
+		
 		public List<KFRankData> RankTopList(int serverID, int rankType)
 		{
 			List<KFRankData> result;
@@ -189,7 +189,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000302 RID: 770 RVA: 0x0002A5AC File Offset: 0x000287AC
+		
 		public KFRankData RankRole(int serverID, int rankType, int roleID)
 		{
 			KFRankData result;
@@ -248,7 +248,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000303 RID: 771 RVA: 0x0002A6CC File Offset: 0x000288CC
+		
 		public void StartUp()
 		{
 			try
@@ -262,7 +262,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000304 RID: 772 RVA: 0x0002A710 File Offset: 0x00028910
+		
 		private void InitRankConfig()
 		{
 			this._rankInfoDic.Clear();
@@ -298,7 +298,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000305 RID: 773 RVA: 0x0002A848 File Offset: 0x00028A48
+		
 		private void JudgeClearOlympicsActivityData()
 		{
 			DateTime timeNow = TimeUtil.NowDateTime();
@@ -344,7 +344,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000306 RID: 774 RVA: 0x0002AA0C File Offset: 0x00028C0C
+		
 		private void InitRankDB()
 		{
 			this._newRankDic.Clear();
@@ -366,7 +366,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000307 RID: 775 RVA: 0x0002AB10 File Offset: 0x00028D10
+		
 		public void Update()
 		{
 			try
@@ -400,7 +400,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000308 RID: 776 RVA: 0x0002AC84 File Offset: 0x00028E84
+		
 		private void RankSort(int rankType)
 		{
 			lock (this._lockRank)
@@ -543,52 +543,52 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x040001B6 RID: 438
+		
 		private static readonly RankService _Instance = new RankService();
 
-		// Token: 0x040001B7 RID: 439
+		
 		private object _lockRank = new object();
 
-		// Token: 0x040001B8 RID: 440
+		
 		public readonly GameTypes _gameType = GameTypes.Ally;
 
-		// Token: 0x040001B9 RID: 441
+		
 		private DateTime timeOlympicsBegin = DateTime.MinValue;
 
-		// Token: 0x040001BA RID: 442
+		
 		private DateTime timeOlympicsEnd = DateTime.MinValue;
 
-		// Token: 0x040001BB RID: 443
+		
 		private RankPersistence _persistence = RankPersistence.Instance;
 
-		// Token: 0x040001BC RID: 444
+		
 		private ConcurrentDictionary<int, List<KFRankData>> _oldRankDic = new ConcurrentDictionary<int, List<KFRankData>>();
 
-		// Token: 0x040001BD RID: 445
+		
 		private ConcurrentDictionary<int, List<KFRankData>> _newRankDic = new ConcurrentDictionary<int, List<KFRankData>>();
 
-		// Token: 0x040001BE RID: 446
+		
 		private ConcurrentDictionary<int, Dictionary<int, int>> _oldRankIndexDic = new ConcurrentDictionary<int, Dictionary<int, int>>();
 
-		// Token: 0x040001BF RID: 447
+		
 		private ConcurrentDictionary<int, Dictionary<int, int>> _newRankIndexDic = new ConcurrentDictionary<int, Dictionary<int, int>>();
 
-		// Token: 0x040001C0 RID: 448
+		
 		private ConcurrentDictionary<int, List<KFRankData>> _oldRankTopDic = new ConcurrentDictionary<int, List<KFRankData>>();
 
-		// Token: 0x040001C1 RID: 449
+		
 		private ConcurrentDictionary<int, List<KFRankData>> _newRankTopDic = new ConcurrentDictionary<int, List<KFRankData>>();
 
-		// Token: 0x040001C2 RID: 450
+		
 		private ConcurrentDictionary<int, bool> _rankIsSortDic = new ConcurrentDictionary<int, bool>();
 
-		// Token: 0x040001C3 RID: 451
+		
 		private ConcurrentDictionary<int, RankInfo> _rankInfoDic = new ConcurrentDictionary<int, RankInfo>();
 
-		// Token: 0x040001C4 RID: 452
+		
 		private DateTime _lastUpdateTime = DateTime.MinValue;
 
-		// Token: 0x040001C5 RID: 453
+		
 		private bool _isUpdate = false;
 	}
 }

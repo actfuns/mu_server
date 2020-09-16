@@ -12,16 +12,16 @@ using Tmsk.Tools.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000023 RID: 35
+	
 	public class JunTuanEraService
 	{
-		// Token: 0x0600010B RID: 267 RVA: 0x0000D80C File Offset: 0x0000BA0C
+		
 		public static JunTuanEraService Instance()
 		{
 			return JunTuanEraService._instance;
 		}
 
-		// Token: 0x0600010C RID: 268 RVA: 0x0000D824 File Offset: 0x0000BA24
+		
 		public void InitConfig()
 		{
 			try
@@ -94,7 +94,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600010D RID: 269 RVA: 0x0000DBC8 File Offset: 0x0000BDC8
+		
 		public KuaFuCmdData GetEraRankData(long dataAge)
 		{
 			KuaFuCmdData result;
@@ -119,7 +119,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600010E RID: 270 RVA: 0x0000DC74 File Offset: 0x0000BE74
+		
 		public KuaFuCmdData GetEraData(int juntuanid, long dataAge)
 		{
 			KuaFuCmdData result;
@@ -176,7 +176,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600010F RID: 271 RVA: 0x0000DE80 File Offset: 0x0000C080
+		
 		public bool EraDonate(int juntuanid, int taskid, int var1, int var2, int var3)
 		{
 			bool result;
@@ -260,7 +260,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000110 RID: 272 RVA: 0x0000E130 File Offset: 0x0000C330
+		
 		private void HandleFastEraStage(KFEraData data)
 		{
 			if (data.EraStage > this.RuntimeData.CurFastEraStage)
@@ -274,7 +274,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000111 RID: 273 RVA: 0x0000E2AC File Offset: 0x0000C4AC
+		
 		private bool HandleAddEraProcess(KuaFuData<KFEraData> data, EraTaskConfig taskConfig)
 		{
 			bool result;
@@ -388,7 +388,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000112 RID: 274 RVA: 0x0000E748 File Offset: 0x0000C948
+		
 		private bool CheckTaskComplete(EraTaskData taskData, EraTaskConfig taskConfig)
 		{
 			bool taskcomplete = true;
@@ -411,7 +411,7 @@ namespace KF.Remoting
 			return taskcomplete;
 		}
 
-		// Token: 0x06000113 RID: 275 RVA: 0x0000E7EC File Offset: 0x0000C9EC
+		
 		private int CalCurrentEraID(DateTime now)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -428,7 +428,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x06000114 RID: 276 RVA: 0x0000E8C8 File Offset: 0x0000CAC8
+		
 		public void HandleChangeEraID(DateTime now, bool broadCast = false)
 		{
 			lock (this.Mutex)
@@ -459,7 +459,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000115 RID: 277 RVA: 0x0000E9EC File Offset: 0x0000CBEC
+		
 		private bool InRankAwardTime()
 		{
 			int curEraID = this.RuntimeData.CurrentEraID;
@@ -491,7 +491,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000116 RID: 278 RVA: 0x0000EB08 File Offset: 0x0000CD08
+		
 		public void OnJunTuanDestroy(int juntuanId)
 		{
 			if (!this.InRankAwardTime())
@@ -520,7 +520,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000117 RID: 279 RVA: 0x0000EC14 File Offset: 0x0000CE14
+		
 		public void LoadJunTuanEraData()
 		{
 			this.HandleChangeEraID(TimeUtil.NowDateTime(), false);
@@ -529,7 +529,7 @@ namespace KF.Remoting
 			this.LoadEraRankData();
 		}
 
-		// Token: 0x06000118 RID: 280 RVA: 0x0000EC3C File Offset: 0x0000CE3C
+		
 		private void HandleEraTaskAccident()
 		{
 			if (this.EraDataDict.Count > 0)
@@ -574,7 +574,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000119 RID: 281 RVA: 0x0000EE9C File Offset: 0x0000D09C
+		
 		private void LoadEraRankData()
 		{
 			MySqlDataReader sdr = null;
@@ -614,7 +614,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600011A RID: 282 RVA: 0x0000F01C File Offset: 0x0000D21C
+		
 		private void LoadEraData()
 		{
 			MySqlDataReader sdr = null;
@@ -652,7 +652,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600011B RID: 283 RVA: 0x0000F1D4 File Offset: 0x0000D3D4
+		
 		private List<EraTaskData> LoadEraTaskList(int junTuanId)
 		{
 			MySqlDataReader sdr = null;
@@ -687,7 +687,7 @@ namespace KF.Remoting
 			return null;
 		}
 
-		// Token: 0x0600011C RID: 284 RVA: 0x0000F300 File Offset: 0x0000D500
+		
 		private void SaveEraTaskData(int junTuanId, EraTaskData data)
 		{
 			string sql = string.Format("INSERT INTO `t_juntuan_era_task` (`eraid`,`juntuanid`,`taskid`,`taskv1`,`taskv2`,`taskv3`) VALUES ({0},{1},{2},{3},{4},{5})\r\n                                ON DUPLICATE KEY UPDATE `taskv1`={3}, `taskv2`={4}, `taskv3`={5};", new object[]
@@ -702,7 +702,7 @@ namespace KF.Remoting
 			this.ExecuteSqlNoQuery(sql);
 		}
 
-		// Token: 0x0600011D RID: 285 RVA: 0x0000F380 File Offset: 0x0000D580
+		
 		private void SaveEraData(KFEraData data, bool chgProcess = false)
 		{
 			string sql = string.Format("INSERT INTO `t_juntuan_era` (`eraid`,`juntuanid`,`stage`,`process`,`tmpoints`,`ranktm`) VALUES ({0},{1},{2},{3},'{4}',NOW())\r\n                                ON DUPLICATE KEY UPDATE `stage`={2}, `process`={3}, `tmpoints`='{4}';", new object[]
@@ -721,14 +721,14 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600011E RID: 286 RVA: 0x0000F424 File Offset: 0x0000D624
+		
 		private void ClearEraData(int eraID, int juntuanId)
 		{
 			string sql = string.Format("DELETE FROM `t_juntuan_era` WHERE `eraid`={0} AND `juntuanid`={1}", eraID, juntuanId);
 			this.ExecuteSqlNoQuery(sql);
 		}
 
-		// Token: 0x0600011F RID: 287 RVA: 0x0000F454 File Offset: 0x0000D654
+		
 		private int ExecuteSqlNoQuery(string sqlCmd)
 		{
 			int result;
@@ -745,19 +745,19 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x040000CB RID: 203
+		
 		private static JunTuanEraService _instance = new JunTuanEraService();
 
-		// Token: 0x040000CC RID: 204
+		
 		private object Mutex = new object();
 
-		// Token: 0x040000CD RID: 205
+		
 		private JunTuanEraRuntimeData RuntimeData = new JunTuanEraRuntimeData();
 
-		// Token: 0x040000CE RID: 206
+		
 		public KuaFuData<List<KFEraRankData>> EraRankList = new KuaFuData<List<KFEraRankData>>();
 
-		// Token: 0x040000CF RID: 207
+		
 		public Dictionary<int, KuaFuData<KFEraData>> EraDataDict = new Dictionary<int, KuaFuData<KFEraData>>();
 	}
 }

@@ -4,11 +4,11 @@ using Tmsk.Contract;
 
 namespace Server.Data
 {
-	// Token: 0x02000157 RID: 343
+	
 	[ProtoContract]
 	public class LoadAlreadyData : IProtoBuffData
 	{
-		// Token: 0x06000470 RID: 1136 RVA: 0x0003FB98 File Offset: 0x0003DD98
+		
 		public int fromBytes(byte[] data, int offset, int count)
 		{
 			int pos = offset;
@@ -66,7 +66,7 @@ namespace Server.Data
 			return pos;
 		}
 
-		// Token: 0x06000471 RID: 1137 RVA: 0x0003FD34 File Offset: 0x0003DF34
+		
 		public byte[] toBytes()
 		{
 			int total = 0;
@@ -101,55 +101,55 @@ namespace Server.Data
 			return data;
 		}
 
-		// Token: 0x04000793 RID: 1939
+		
 		[ProtoMember(1)]
 		public int RoleID = 0;
 
-		// Token: 0x04000794 RID: 1940
+		
 		[ProtoMember(2)]
 		public int MapCode = 0;
 
-		// Token: 0x04000795 RID: 1941
+		
 		[ProtoMember(3)]
 		public long StartMoveTicks = 0L;
 
-		// Token: 0x04000796 RID: 1942
+		
 		[ProtoMember(4)]
 		public int CurrentX = 0;
 
-		// Token: 0x04000797 RID: 1943
+		
 		[ProtoMember(5)]
 		public int CurrentY = 0;
 
-		// Token: 0x04000798 RID: 1944
+		
 		[ProtoMember(6)]
 		public int CurrentDirection = 0;
 
-		// Token: 0x04000799 RID: 1945
+		
 		[ProtoMember(7)]
 		public int Action = 0;
 
-		// Token: 0x0400079A RID: 1946
+		
 		[ProtoMember(8)]
 		public int ToX = 0;
 
-		// Token: 0x0400079B RID: 1947
+		
 		[ProtoMember(9)]
 		public int ToY = 0;
 
-		// Token: 0x0400079C RID: 1948
+		
 		[ProtoMember(10)]
 		public double MoveCost = 1.0;
 
-		// Token: 0x0400079D RID: 1949
+		
 		[ProtoMember(11)]
 		public int ExtAction = 0;
 
-		// Token: 0x0400079E RID: 1950
+		
 		[ProtoMember(12)]
 		public string PathString = "";
 
-		// Token: 0x0400079F RID: 1951
+		
 		[ProtoMember(13)]
 		public int CurrentPathIndex = 0;
 	}

@@ -28,10 +28,10 @@ using Server.Tools;
 
 namespace GameDBServer.Server
 {
-	// Token: 0x02000208 RID: 520
+	
 	public class TCPCmdHandler
 	{
-		// Token: 0x06000AB8 RID: 2744 RVA: 0x00066218 File Offset: 0x00064418
+		
 		public static TCPProcessCmdResults ProcessCmd(GameServerClient client, DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			TCPProcessCmdResults result = TCPProcessCmdResults.RESULT_FAILED;
@@ -1685,7 +1685,7 @@ namespace GameDBServer.Server
 			return result2;
 		}
 
-		// Token: 0x06000AB9 RID: 2745 RVA: 0x00069188 File Offset: 0x00067388
+		
 		private static TCPProcessCmdResults ProcessGetUsrSecondPassword(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1731,7 +1731,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000ABA RID: 2746 RVA: 0x00069304 File Offset: 0x00067504
+		
 		private static TCPProcessCmdResults ProcessUsrSetSecPwd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1784,7 +1784,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000ABB RID: 2747 RVA: 0x000694A8 File Offset: 0x000676A8
+		
 		private static TCPProcessCmdResults ProcessRoleHuobiOffline(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1886,7 +1886,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000ABC RID: 2748 RVA: 0x00069900 File Offset: 0x00067B00
+		
 		private static TCPProcessCmdResults ProcessSubRoleHuobiOffline(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2234,7 +2234,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000ABD RID: 2749 RVA: 0x0006A780 File Offset: 0x00068980
+		
 		private static TCPProcessCmdResults ProcessRoleBuyYueKaButOffline(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2316,7 +2316,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000ABE RID: 2750 RVA: 0x0006AA80 File Offset: 0x00068C80
+		
 		private static TCPProcessCmdResults ProcessRegUserIDCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2380,7 +2380,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000ABF RID: 2751 RVA: 0x0006AC84 File Offset: 0x00068E84
+		
 		private static TCPProcessCmdResults ProcessGetRoleListCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2460,7 +2460,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AC0 RID: 2752 RVA: 0x0006AFB8 File Offset: 0x000691B8
+		
 		private static TCPProcessCmdResults ProcessGetRandomNameNameCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2501,7 +2501,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AC1 RID: 2753 RVA: 0x0006B0F4 File Offset: 0x000692F4
+		
 		private static TCPProcessCmdResults ProcessCreateRoleCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2749,7 +2749,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AC2 RID: 2754 RVA: 0x0006BAE0 File Offset: 0x00069CE0
+		
 		private static TCPProcessCmdResults ProcessUnPreRemoveRoleCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2814,7 +2814,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AC3 RID: 2755 RVA: 0x0006BD60 File Offset: 0x00069F60
+		
 		private static TCPProcessCmdResults ProcessPreRemoveRoleCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2895,7 +2895,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AC4 RID: 2756 RVA: 0x0006C0D0 File Offset: 0x0006A2D0
+		
 		private static TCPProcessCmdResults ProcessRemoveRoleCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -2959,7 +2959,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AC5 RID: 2757 RVA: 0x0006C330 File Offset: 0x0006A530
+		
 		private static TCPProcessCmdResults ProcessInitGameCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3109,7 +3109,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AC6 RID: 2758 RVA: 0x0006C918 File Offset: 0x0006AB18
+		
 		private static TCPProcessCmdResults ProcessRoleOnLineGameCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3180,7 +3180,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AC7 RID: 2759 RVA: 0x0006CBF0 File Offset: 0x0006ADF0
+		
 		private static TCPProcessCmdResults ProcessUpdateAccountActiveCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3220,7 +3220,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AC8 RID: 2760 RVA: 0x0006CD28 File Offset: 0x0006AF28
+		
 		private static TCPProcessCmdResults ProcessRoleHeartGameCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3268,7 +3268,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AC9 RID: 2761 RVA: 0x0006CEC4 File Offset: 0x0006B0C4
+		
 		private static TCPProcessCmdResults ProcessRoleOffLineGameCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3352,7 +3352,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000ACA RID: 2762 RVA: 0x0006D22C File Offset: 0x0006B42C
+		
 		private static TCPProcessCmdResults ProcessGetServerListCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3422,7 +3422,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000ACB RID: 2763 RVA: 0x0006D470 File Offset: 0x0006B670
+		
 		private static TCPProcessCmdResults ProcessOnlineServerHeartCmd(GameServerClient client, DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3469,7 +3469,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000ACC RID: 2764 RVA: 0x0006D5E0 File Offset: 0x0006B7E0
+		
 		private static TCPProcessCmdResults ProcessGetServerIdCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3489,7 +3489,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000ACD RID: 2765 RVA: 0x0006D65C File Offset: 0x0006B85C
+		
 		private static TCPProcessCmdResults ProcessGetServerPTIDCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3509,7 +3509,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000ACE RID: 2766 RVA: 0x0006D6D8 File Offset: 0x0006B8D8
+		
 		private static TCPProcessCmdResults ProcessGetServerDayDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3551,7 +3551,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000ACF RID: 2767 RVA: 0x0006D85C File Offset: 0x0006BA5C
+		
 		private static TCPProcessCmdResults ProcessSetServerDayDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3587,7 +3587,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AD0 RID: 2768 RVA: 0x0006D96C File Offset: 0x0006BB6C
+		
 		private static TCPProcessCmdResults ProcessNewTaskCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3680,7 +3680,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AD1 RID: 2769 RVA: 0x0006DCD4 File Offset: 0x0006BED4
+		
 		private static TCPProcessCmdResults ProcessUpdatePosCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3758,7 +3758,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AD2 RID: 2770 RVA: 0x0006DFB4 File Offset: 0x0006C1B4
+		
 		private static TCPProcessCmdResults ProcessUpdateExpLevelCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3841,7 +3841,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AD3 RID: 2771 RVA: 0x0006E2FC File Offset: 0x0006C4FC
+		
 		private static TCPProcessCmdResults ProcessUpdateInterPowerCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3908,7 +3908,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AD4 RID: 2772 RVA: 0x0006E564 File Offset: 0x0006C764
+		
 		private static TCPProcessCmdResults ProcessUpdateMoney1Cmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -3970,7 +3970,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AD5 RID: 2773 RVA: 0x0006E7C0 File Offset: 0x0006C9C0
+		
 		private static TCPProcessCmdResults ProcessAddGoodsCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4081,7 +4081,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AD6 RID: 2774 RVA: 0x0006EC08 File Offset: 0x0006CE08
+		
 		private static TCPProcessCmdResults ProcessUpdateGoodsCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4224,7 +4224,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AD7 RID: 2775 RVA: 0x0006F534 File Offset: 0x0006D734
+		
 		private static TCPProcessCmdResults ProcessUpdateTaskCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4299,7 +4299,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AD8 RID: 2776 RVA: 0x0006F88C File Offset: 0x0006DA8C
+		
 		private static TCPProcessCmdResults ProcessCompleteTaskCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4412,7 +4412,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AD9 RID: 2777 RVA: 0x0006FCA0 File Offset: 0x0006DEA0
+		
 		private static TCPProcessCmdResults ProcessGetFriendsCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4536,7 +4536,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000ADA RID: 2778 RVA: 0x000701A8 File Offset: 0x0006E3A8
+		
 		private static TCPProcessCmdResults ProcessAddFriendCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4766,7 +4766,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000ADB RID: 2779 RVA: 0x00070958 File Offset: 0x0006EB58
+		
 		private static TCPProcessCmdResults ProcessRemoveFriendCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4843,7 +4843,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000ADC RID: 2780 RVA: 0x00070C3C File Offset: 0x0006EE3C
+		
 		private static TCPProcessCmdResults ProcessUpdatePKModeCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4904,7 +4904,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000ADD RID: 2781 RVA: 0x00070E94 File Offset: 0x0006F094
+		
 		private static TCPProcessCmdResults ProcessUpdatePKValCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -4979,7 +4979,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000ADE RID: 2782 RVA: 0x0007114C File Offset: 0x0006F34C
+		
 		private static TCPProcessCmdResults ProcessAbandonTaskCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5051,7 +5051,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000ADF RID: 2783 RVA: 0x00071408 File Offset: 0x0006F608
+		
 		private static TCPProcessCmdResults ProcessGMSetTaskCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5094,7 +5094,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AE0 RID: 2784 RVA: 0x00071588 File Offset: 0x0006F788
+		
 		private static TCPProcessCmdResults ProcessModKeysCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5163,7 +5163,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AE1 RID: 2785 RVA: 0x000717F4 File Offset: 0x0006F9F4
+		
 		private static TCPProcessCmdResults ProcessUpdateUserMoneyCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5291,7 +5291,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AE2 RID: 2786 RVA: 0x00071D64 File Offset: 0x0006FF64
+		
 		private static TCPProcessCmdResults ProcessUpdateUserYinLiangCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5364,7 +5364,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AE3 RID: 2787 RVA: 0x0007202C File Offset: 0x0007022C
+		
 		private static TCPProcessCmdResults ProcessMoveGoodsCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5509,7 +5509,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AE4 RID: 2788 RVA: 0x0007259C File Offset: 0x0007079C
+		
 		private static TCPProcessCmdResults ProcessUpdateLeftFightSecsCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5570,7 +5570,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AE5 RID: 2789 RVA: 0x000727F0 File Offset: 0x000709F0
+		
 		private static TCPProcessCmdResults ProcessQueryNameByIDCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5657,7 +5657,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AE6 RID: 2790 RVA: 0x00072A94 File Offset: 0x00070C94
+		
 		private static TCPProcessCmdResults ProcessQueryUserMoneyByNameCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5733,7 +5733,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AE7 RID: 2791 RVA: 0x00072D20 File Offset: 0x00070F20
+		
 		private static TCPProcessCmdResults ProcessSpriteChatCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5803,7 +5803,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AE8 RID: 2792 RVA: 0x00072FA0 File Offset: 0x000711A0
+		
 		private static TCPProcessCmdResults ProcessGetChatMsgListCmd(GameServerClient client, DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5849,7 +5849,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AE9 RID: 2793 RVA: 0x000730F8 File Offset: 0x000712F8
+		
 		private static TCPProcessCmdResults ProcessAddHorseCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -5924,7 +5924,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AEA RID: 2794 RVA: 0x000733AC File Offset: 0x000715AC
+		
 		private static TCPProcessCmdResults ProcessAddPetCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6005,7 +6005,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AEB RID: 2795 RVA: 0x00073690 File Offset: 0x00071890
+		
 		private static TCPProcessCmdResults ProcessGetHorseListCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6059,7 +6059,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AEC RID: 2796 RVA: 0x00073890 File Offset: 0x00071A90
+		
 		private static TCPProcessCmdResults ProcessGetOtherHorseListCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6120,7 +6120,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AED RID: 2797 RVA: 0x00073ACC File Offset: 0x00071CCC
+		
 		private static TCPProcessCmdResults ProcessGetPetListCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6174,7 +6174,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AEE RID: 2798 RVA: 0x00073CCC File Offset: 0x00071ECC
+		
 		private static TCPProcessCmdResults ProcessModHorseCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6262,7 +6262,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AEF RID: 2799 RVA: 0x00074118 File Offset: 0x00072318
+		
 		private static TCPProcessCmdResults ProcessModPetCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6340,7 +6340,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AF0 RID: 2800 RVA: 0x00074424 File Offset: 0x00072624
+		
 		private static TCPProcessCmdResults ProcessHorseOnCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6394,7 +6394,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AF1 RID: 2801 RVA: 0x00074638 File Offset: 0x00072838
+		
 		private static TCPProcessCmdResults ProcessHorseOffCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6447,7 +6447,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AF2 RID: 2802 RVA: 0x00074844 File Offset: 0x00072A44
+		
 		private static TCPProcessCmdResults ProcessPetOutCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6500,7 +6500,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AF3 RID: 2803 RVA: 0x00074A50 File Offset: 0x00072C50
+		
 		private static TCPProcessCmdResults ProcessPetInCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6553,7 +6553,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AF4 RID: 2804 RVA: 0x00074C5C File Offset: 0x00072E5C
+		
 		private static TCPProcessCmdResults ProcessGetGoodsListBySiteCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6605,7 +6605,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AF5 RID: 2805 RVA: 0x00074E44 File Offset: 0x00073044
+		
 		private static TCPProcessCmdResults ProcessGetGoodsListBySiteRangeCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6658,7 +6658,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AF6 RID: 2806 RVA: 0x00075038 File Offset: 0x00073238
+		
 		private static TCPProcessCmdResults ProcessGetAddDJPointCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6729,7 +6729,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AF7 RID: 2807 RVA: 0x0007532C File Offset: 0x0007352C
+		
 		private static TCPProcessCmdResults ProcessGetDJPointsCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6808,7 +6808,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AF8 RID: 2808 RVA: 0x00075608 File Offset: 0x00073808
+		
 		private static TCPProcessCmdResults ProcessUpDianJiangLevelCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6894,7 +6894,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AF9 RID: 2809 RVA: 0x00075928 File Offset: 0x00073B28
+		
 		private static TCPProcessCmdResults ProcessBanRoleNameCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6936,7 +6936,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AFA RID: 2810 RVA: 0x00075A6C File Offset: 0x00073C6C
+		
 		private static TCPProcessCmdResults ProcessBanRoleChatCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -6978,7 +6978,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AFB RID: 2811 RVA: 0x00075BB0 File Offset: 0x00073DB0
+		
 		private static TCPProcessCmdResults ProcessGetBanRoleChatDictCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7017,7 +7017,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AFC RID: 2812 RVA: 0x00075CD0 File Offset: 0x00073ED0
+		
 		private static TCPProcessCmdResults ProcessAddBullMsgCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7063,7 +7063,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AFD RID: 2813 RVA: 0x00075E54 File Offset: 0x00074054
+		
 		private static TCPProcessCmdResults ProcessRemoveBullMsgCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7105,7 +7105,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AFE RID: 2814 RVA: 0x00075F98 File Offset: 0x00074198
+		
 		private static TCPProcessCmdResults ProcessGetBullMsgDictCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7144,7 +7144,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000AFF RID: 2815 RVA: 0x000760C0 File Offset: 0x000742C0
+		
 		private static TCPProcessCmdResults ProcessUpdateOnlineTimeCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7204,7 +7204,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B00 RID: 2816 RVA: 0x000762F0 File Offset: 0x000744F0
+		
 		private static TCPProcessCmdResults ProcessGameConfigDictCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7243,7 +7243,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B01 RID: 2817 RVA: 0x00076418 File Offset: 0x00074618
+		
 		private static TCPProcessCmdResults ProcessGameConfigItemCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7288,7 +7288,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B02 RID: 2818 RVA: 0x00076580 File Offset: 0x00074780
+		
 		private static TCPProcessCmdResults ProcessResetBigGuanCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7341,7 +7341,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B03 RID: 2819 RVA: 0x00076780 File Offset: 0x00074980
+		
 		private static TCPProcessCmdResults ProcessAddSkillCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7408,7 +7408,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B04 RID: 2820 RVA: 0x000769F4 File Offset: 0x00074BF4
+		
 		private static TCPProcessCmdResults ProcessUpSkillInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7474,7 +7474,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B05 RID: 2821 RVA: 0x00076C8C File Offset: 0x00074E8C
+		
 		private static TCPProcessCmdResults ProcessUpdateJingMaiExpCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7531,7 +7531,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B06 RID: 2822 RVA: 0x00076EC0 File Offset: 0x000750C0
+		
 		private static TCPProcessCmdResults ProcessUpdateSkillIDCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7592,7 +7592,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B07 RID: 2823 RVA: 0x00077114 File Offset: 0x00075314
+		
 		private static TCPProcessCmdResults ProcessUpdateJieBiaoInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7655,7 +7655,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B08 RID: 2824 RVA: 0x00077384 File Offset: 0x00075584
+		
 		private static TCPProcessCmdResults ProcessUpdateAutoDrinkCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7718,7 +7718,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B09 RID: 2825 RVA: 0x000775FC File Offset: 0x000757FC
+		
 		private static TCPProcessCmdResults ProcessUpdateBufferItemCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7813,7 +7813,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B0A RID: 2826 RVA: 0x0007798C File Offset: 0x00075B8C
+		
 		private static TCPProcessCmdResults ProcessUnDelRoleNameCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7851,7 +7851,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B0B RID: 2827 RVA: 0x00077A8C File Offset: 0x00075C8C
+		
 		private static TCPProcessCmdResults ProcessDelRoleNameCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7892,7 +7892,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B0C RID: 2828 RVA: 0x00077BC4 File Offset: 0x00075DC4
+		
 		private static TCPProcessCmdResults ProcessUpdateDailyTaskDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -7975,7 +7975,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B0D RID: 2829 RVA: 0x00077ED8 File Offset: 0x000760D8
+		
 		private static TCPProcessCmdResults ProcessUpdateDailyJingMaiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -8034,7 +8034,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B0E RID: 2830 RVA: 0x00078120 File Offset: 0x00076320
+		
 		private static TCPProcessCmdResults ProcessUpdateNumSkillIDCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -8095,7 +8095,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B0F RID: 2831 RVA: 0x00078374 File Offset: 0x00076574
+		
 		private static TCPProcessCmdResults ProcessUpdatePBInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -8157,7 +8157,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B10 RID: 2832 RVA: 0x000785D4 File Offset: 0x000767D4
+		
 		private static TCPProcessCmdResults ProcessUpdateRoleBagNumCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -8219,7 +8219,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B11 RID: 2833 RVA: 0x00078830 File Offset: 0x00076A30
+		
 		private static TCPProcessCmdResults ProcessUpdateHuoDongInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -8313,7 +8313,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B12 RID: 2834 RVA: 0x00078DD0 File Offset: 0x00076FD0
+		
 		private static TCPProcessCmdResults ProcessUpdateInputPointsUserIDCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -8429,7 +8429,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B13 RID: 2835 RVA: 0x00079208 File Offset: 0x00077408
+		
 		private static TCPProcessCmdResults ProcessUpdateInputPointsCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -8554,7 +8554,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B14 RID: 2836 RVA: 0x000796D4 File Offset: 0x000778D4
+		
 		private static TCPProcessCmdResults ProcessUpdateSpecJiFenCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -8679,7 +8679,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B15 RID: 2837 RVA: 0x00079BA0 File Offset: 0x00077DA0
+		
 		private static TCPProcessCmdResults ProcessUpdateEveryJiFenCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -8804,7 +8804,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B16 RID: 2838 RVA: 0x0007A06C File Offset: 0x0007826C
+		
 		private static TCPProcessCmdResults ProcessSubChongZhiJiFenCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -8894,7 +8894,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B17 RID: 2839 RVA: 0x0007A3E8 File Offset: 0x000785E8
+		
 		private static TCPProcessCmdResults ProcessUseLiPinMaCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -8957,7 +8957,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B18 RID: 2840 RVA: 0x0007A62C File Offset: 0x0007882C
+		
 		private static TCPProcessCmdResults ProcessDeleteSpecActCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9031,7 +9031,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B19 RID: 2841 RVA: 0x0007A94C File Offset: 0x00078B4C
+		
 		private static TCPProcessCmdResults ProcessDeleteEveryActCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9106,7 +9106,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B1A RID: 2842 RVA: 0x0007AC8C File Offset: 0x00078E8C
+		
 		private static TCPProcessCmdResults ProcessGetSpecActInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9155,7 +9155,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B1B RID: 2843 RVA: 0x0007AE3C File Offset: 0x0007903C
+		
 		private static TCPProcessCmdResults ProcessUpdateSpecActCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9217,7 +9217,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B1C RID: 2844 RVA: 0x0007B0BC File Offset: 0x000792BC
+		
 		private static TCPProcessCmdResults ProcessUpdateSpecPriorityActCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9279,7 +9279,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B1D RID: 2845 RVA: 0x0007B33C File Offset: 0x0007953C
+		
 		private static TCPProcessCmdResults ProcessDeleteSpecPriorityActCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9353,7 +9353,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B1E RID: 2846 RVA: 0x0007B664 File Offset: 0x00079864
+		
 		private static TCPProcessCmdResults ProcessUpdateEveryActCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9415,7 +9415,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B1F RID: 2847 RVA: 0x0007B8E4 File Offset: 0x00079AE4
+		
 		private static TCPProcessCmdResults ProcessUpdateFuBenDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9500,7 +9500,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B20 RID: 2848 RVA: 0x0007BC40 File Offset: 0x00079E40
+		
 		private static TCPProcessCmdResults ProcessGetFuBenSeqIDCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9541,7 +9541,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B21 RID: 2849 RVA: 0x0007BD84 File Offset: 0x00079F84
+		
 		private static TCPProcessCmdResults ProcessGetFuBenHistDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9582,7 +9582,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B22 RID: 2850 RVA: 0x0007BEBC File Offset: 0x0007A0BC
+		
 		private static TCPProcessCmdResults ProcessAddFuBenHistDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9638,7 +9638,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B23 RID: 2851 RVA: 0x0007C0AC File Offset: 0x0007A2AC
+		
 		private static TCPProcessCmdResults ProcessUpdateLianZhanCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9699,7 +9699,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B24 RID: 2852 RVA: 0x0007C30C File Offset: 0x0007A50C
+		
 		private static TCPProcessCmdResults ProcessUpdateRoleDailyDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9789,7 +9789,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B25 RID: 2853 RVA: 0x0007C6D0 File Offset: 0x0007A8D0
+		
 		private static TCPProcessCmdResults ProcessUpdateKillBossCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9850,7 +9850,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B26 RID: 2854 RVA: 0x0007C930 File Offset: 0x0007AB30
+		
 		private static TCPProcessCmdResults ProcessUpdateRoleStatCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9910,7 +9910,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B27 RID: 2855 RVA: 0x0007CB60 File Offset: 0x0007AD60
+		
 		private static TCPProcessCmdResults ProcessGetPaiHangListCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -9963,7 +9963,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B28 RID: 2856 RVA: 0x0007CD30 File Offset: 0x0007AF30
+		
 		private static TCPProcessCmdResults ProcessUpdateYaBiaoDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10055,7 +10055,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B29 RID: 2857 RVA: 0x0007D0EC File Offset: 0x0007B2EC
+		
 		private static TCPProcessCmdResults ProcessUpdateYaBiaoDataStateCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10121,7 +10121,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B2A RID: 2858 RVA: 0x0007D36C File Offset: 0x0007B56C
+		
 		private static TCPProcessCmdResults ProcessGetOtherAttrib2DataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10170,7 +10170,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B2B RID: 2859 RVA: 0x0007D4C4 File Offset: 0x0007B6C4
+		
 		private static TCPProcessCmdResults ProcessUpdateBattleNameCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10233,7 +10233,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B2C RID: 2860 RVA: 0x0007D730 File Offset: 0x0007B930
+		
 		private static TCPProcessCmdResults ProcessAddMallBuyItemCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10294,7 +10294,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B2D RID: 2861 RVA: 0x0007D964 File Offset: 0x0007BB64
+		
 		private static TCPProcessCmdResults ProcessAddQiZhenGeBuyItemCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10355,7 +10355,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B2E RID: 2862 RVA: 0x0007DB98 File Offset: 0x0007BD98
+		
 		private static TCPProcessCmdResults ProcessGetLiPinMaInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10421,7 +10421,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B2F RID: 2863 RVA: 0x0007DDEC File Offset: 0x0007BFEC
+		
 		private static TCPProcessCmdResults ProcessGetInputPointsCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10522,7 +10522,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B30 RID: 2864 RVA: 0x0007E1B0 File Offset: 0x0007C3B0
+		
 		private static TCPProcessCmdResults ProcessGetSpecJiFenCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10623,7 +10623,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B31 RID: 2865 RVA: 0x0007E574 File Offset: 0x0007C774
+		
 		private static TCPProcessCmdResults ProcessGetEveryJiFenCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10724,7 +10724,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B32 RID: 2866 RVA: 0x0007E938 File Offset: 0x0007CB38
+		
 		private static TCPProcessCmdResults ProcessGetChongZhiJiFenCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10787,7 +10787,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B33 RID: 2867 RVA: 0x0007EBAC File Offset: 0x0007CDAC
+		
 		private static TCPProcessCmdResults ProcessUpdateCZTaskIDCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10848,7 +10848,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B34 RID: 2868 RVA: 0x0007EE00 File Offset: 0x0007D000
+		
 		private static TCPProcessCmdResults ProcessGetTotalOnlineNumCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10888,7 +10888,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B35 RID: 2869 RVA: 0x0007EF34 File Offset: 0x0007D134
+		
 		private static TCPProcessCmdResults ProcessGetFuBenHistListDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10926,7 +10926,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B36 RID: 2870 RVA: 0x0007F048 File Offset: 0x0007D248
+		
 		private static TCPProcessCmdResults ProcessUpdateBattleNumCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -10987,7 +10987,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B37 RID: 2871 RVA: 0x0007F2A8 File Offset: 0x0007D4A8
+		
 		private static TCPProcessCmdResults ProcessUpdateHeroIndexCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11048,7 +11048,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B38 RID: 2872 RVA: 0x0007F508 File Offset: 0x0007D708
+		
 		private static TCPProcessCmdResults ProcessForceReloadPaiHangCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11089,7 +11089,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B39 RID: 2873 RVA: 0x0007F64C File Offset: 0x0007D84C
+		
 		private static TCPProcessCmdResults ProcessGetOtherHorseDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11157,7 +11157,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B3A RID: 2874 RVA: 0x0007F8C8 File Offset: 0x0007DAC8
+		
 		private static TCPProcessCmdResults ProcessAddYinPiaoBuyItemCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11218,7 +11218,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B3B RID: 2875 RVA: 0x0007FAFC File Offset: 0x0007DCFC
+		
 		private static TCPProcessCmdResults ProcessGetBangHuiListCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11261,7 +11261,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B3C RID: 2876 RVA: 0x0007FC50 File Offset: 0x0007DE50
+		
 		private static TCPProcessCmdResults ProcessGetBangHuiFuBenCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11301,7 +11301,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B3D RID: 2877 RVA: 0x0007FD7C File Offset: 0x0007DF7C
+		
 		private static TCPProcessCmdResults ProcessUpdateBangHuiFuBenCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11345,7 +11345,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B3E RID: 2878 RVA: 0x0007FED4 File Offset: 0x0007E0D4
+		
 		private static TCPProcessCmdResults ProcessCreateBangHuiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11457,7 +11457,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B3F RID: 2879 RVA: 0x000802FC File Offset: 0x0007E4FC
+		
 		private static TCPProcessCmdResults ProcessGetBangHuiMiniDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11508,7 +11508,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B40 RID: 2880 RVA: 0x0008047C File Offset: 0x0007E67C
+		
 		private static TCPProcessCmdResults ProcessQueryBangHuiDetailCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11579,7 +11579,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B41 RID: 2881 RVA: 0x00080708 File Offset: 0x0007E908
+		
 		private static TCPProcessCmdResults ProcessUpdateBangHuiBulletinCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11626,7 +11626,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B42 RID: 2882 RVA: 0x0008088C File Offset: 0x0007EA8C
+		
 		private static TCPProcessCmdResults ProcessGVoiceSetPrioritysCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11673,7 +11673,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B43 RID: 2883 RVA: 0x00080A34 File Offset: 0x0007EC34
+		
 		private static TCPProcessCmdResults ProcessGVoiceGetPrioritysCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11698,7 +11698,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B44 RID: 2884 RVA: 0x00080AD4 File Offset: 0x0007ECD4
+		
 		private static TCPProcessCmdResults ProcessUpdateZhengDuoUsedTimeCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11731,7 +11731,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B45 RID: 2885 RVA: 0x00080BBC File Offset: 0x0007EDBC
+		
 		private static TCPProcessCmdResults ProcessGetZhengDuoUsedTimeCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11762,7 +11762,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B46 RID: 2886 RVA: 0x00080C88 File Offset: 0x0007EE88
+		
 		private static TCPProcessCmdResults ProcessGetBHMemberDataListCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11827,7 +11827,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B47 RID: 2887 RVA: 0x00080E88 File Offset: 0x0007F088
+		
 		private static TCPProcessCmdResults ProcessUpdateBHVerifyCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11915,7 +11915,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B48 RID: 2888 RVA: 0x0008116C File Offset: 0x0007F36C
+		
 		private static TCPProcessCmdResults ProcessQueryBHMGRListCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -11981,7 +11981,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B49 RID: 2889 RVA: 0x00081388 File Offset: 0x0007F588
+		
 		private static TCPProcessCmdResults ProcessBangHuiVerifyCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -12031,7 +12031,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B4A RID: 2890 RVA: 0x00081534 File Offset: 0x0007F734
+		
 		private static TCPProcessCmdResults ProcessAddBHMemberCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -12157,7 +12157,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B4B RID: 2891 RVA: 0x000819B0 File Offset: 0x0007FBB0
+		
 		private static TCPProcessCmdResults ProcessRemoveBHMemberCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -12279,7 +12279,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B4C RID: 2892 RVA: 0x00081E1C File Offset: 0x0008001C
+		
 		private static TCPProcessCmdResults ProcessQuitFromBangHuiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -12356,7 +12356,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B4D RID: 2893 RVA: 0x0008214C File Offset: 0x0008034C
+		
 		private static TCPProcessCmdResults ProcessDestroyBangHuiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -12419,7 +12419,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B4E RID: 2894 RVA: 0x000823A4 File Offset: 0x000805A4
+		
 		private static TCPProcessCmdResults ProcessChgBHMemberZhiWuCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -12610,7 +12610,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B4F RID: 2895 RVA: 0x00082A70 File Offset: 0x00080C70
+		
 		private static TCPProcessCmdResults ProcessChgJunTuanMemberZhiWuCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			try
@@ -12680,7 +12680,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B50 RID: 2896 RVA: 0x00082D28 File Offset: 0x00080F28
+		
 		private static TCPProcessCmdResults ProcessChgBHMemberChengHaoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -12786,7 +12786,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B51 RID: 2897 RVA: 0x000830A0 File Offset: 0x000812A0
+		
 		private static TCPProcessCmdResults ProcessSearchRolesFromDBCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -12852,7 +12852,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B52 RID: 2898 RVA: 0x000832CC File Offset: 0x000814CC
+		
 		private static TCPProcessCmdResults ProcessGetBangGongHistCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -12899,7 +12899,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B53 RID: 2899 RVA: 0x00083434 File Offset: 0x00081634
+		
 		private static TCPProcessCmdResults ProcessDonateBGMoneyCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -12993,7 +12993,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B54 RID: 2900 RVA: 0x0008376C File Offset: 0x0008196C
+		
 		private static TCPProcessCmdResults ProcessDonateBGGoodsCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13088,7 +13088,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B55 RID: 2901 RVA: 0x00083AB4 File Offset: 0x00081CB4
+		
 		private static TCPProcessCmdResults ProcessUpdateBangGongCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13178,7 +13178,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B56 RID: 2902 RVA: 0x00083E44 File Offset: 0x00082044
+		
 		private static TCPProcessCmdResults ProcessUpdateBHTongQianCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13249,7 +13249,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B57 RID: 2903 RVA: 0x00084100 File Offset: 0x00082300
+		
 		private static TCPProcessCmdResults ProcessAddBHTongQianCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13310,7 +13310,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B58 RID: 2904 RVA: 0x00084328 File Offset: 0x00082528
+		
 		private static TCPProcessCmdResults ProcessGetBangQiInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13359,7 +13359,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B59 RID: 2905 RVA: 0x0008449C File Offset: 0x0008269C
+		
 		private static TCPProcessCmdResults ProcessRenameBangQiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13425,7 +13425,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B5A RID: 2906 RVA: 0x000846F8 File Offset: 0x000828F8
+		
 		private static TCPProcessCmdResults ProcessUpLevelBangQiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13545,7 +13545,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B5B RID: 2907 RVA: 0x00084B8C File Offset: 0x00082D8C
+		
 		private static TCPProcessCmdResults ProcessGMUpdateBangLevel(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13596,7 +13596,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B5C RID: 2908 RVA: 0x00084D30 File Offset: 0x00082F30
+		
 		private static TCPProcessCmdResults ProcessGetBHJunQiListCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13634,7 +13634,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B5D RID: 2909 RVA: 0x00084E48 File Offset: 0x00083048
+		
 		private static TCPProcessCmdResults ProcessGetBHLingDiDictCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13672,7 +13672,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B5E RID: 2910 RVA: 0x00084F60 File Offset: 0x00083160
+		
 		private static TCPProcessCmdResults ProcessUpdateLingDiForBHCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13753,7 +13753,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B5F RID: 2911 RVA: 0x000851E4 File Offset: 0x000833E4
+		
 		private static TCPProcessCmdResults ProcessGetLeaderRoleIDByBHIDCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13801,7 +13801,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B60 RID: 2912 RVA: 0x000853A8 File Offset: 0x000835A8
+		
 		private static TCPProcessCmdResults ProcessGetBHLingDiInfoDictByBHIDCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13853,7 +13853,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B61 RID: 2913 RVA: 0x00085538 File Offset: 0x00083738
+		
 		private static TCPProcessCmdResults ProcessSetLingDiTaxCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -13953,7 +13953,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B62 RID: 2914 RVA: 0x000858B0 File Offset: 0x00083AB0
+		
 		private static TCPProcessCmdResults ProcessSetLingDiWarRequestCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14017,7 +14017,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B63 RID: 2915 RVA: 0x00085AC0 File Offset: 0x00083CC0
+		
 		private static TCPProcessCmdResults ProcessTakeLingDiDailyAwardCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14153,7 +14153,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B64 RID: 2916 RVA: 0x00085F6C File Offset: 0x0008416C
+		
 		private static TCPProcessCmdResults ProcessTakeLingDiTaxMoneyCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14311,7 +14311,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B65 RID: 2917 RVA: 0x000864FC File Offset: 0x000846FC
+		
 		private static TCPProcessCmdResults ProcessAddLingDiTaxMoneyCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14378,7 +14378,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B66 RID: 2918 RVA: 0x0008672C File Offset: 0x0008492C
+		
 		private static TCPProcessCmdResults ProcessGetHuangDiBHInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14437,7 +14437,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B67 RID: 2919 RVA: 0x0008690C File Offset: 0x00084B0C
+		
 		private static TCPProcessCmdResults ProcessQueryQiZhenGeBuyHistCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14484,7 +14484,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B68 RID: 2920 RVA: 0x00086A64 File Offset: 0x00084C64
+		
 		private static TCPProcessCmdResults ProcessGetHuangDiRoleDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14534,7 +14534,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B69 RID: 2921 RVA: 0x00086BCC File Offset: 0x00084DCC
+		
 		private static TCPProcessCmdResults ProcessAddHuangFeiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14661,7 +14661,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B6A RID: 2922 RVA: 0x00087028 File Offset: 0x00085228
+		
 		private static TCPProcessCmdResults ProcessRemoveHuangFeiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14776,7 +14776,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B6B RID: 2923 RVA: 0x00087424 File Offset: 0x00085624
+		
 		private static TCPProcessCmdResults ProcessGetHuangFeiDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14816,7 +14816,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B6C RID: 2924 RVA: 0x00087550 File Offset: 0x00085750
+		
 		private static TCPProcessCmdResults ProcessSendToLaoFangCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -14959,7 +14959,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B6D RID: 2925 RVA: 0x00087A0C File Offset: 0x00085C0C
+		
 		private static TCPProcessCmdResults ProcessAddRefreshQiZhenRecCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15009,7 +15009,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B6E RID: 2926 RVA: 0x00087BD8 File Offset: 0x00085DD8
+		
 		private static TCPProcessCmdResults ProcessClrCachingRoleDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15066,7 +15066,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B6F RID: 2927 RVA: 0x00087DB0 File Offset: 0x00085FB0
+		
 		private static TCPProcessCmdResults ProcessClrAllCachingRoleDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15107,7 +15107,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B70 RID: 2928 RVA: 0x00087EFC File Offset: 0x000860FC
+		
 		private static TCPProcessCmdResults ProcessAddMoneyWarningCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15157,7 +15157,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B71 RID: 2929 RVA: 0x000880C8 File Offset: 0x000862C8
+		
 		private static TCPProcessCmdResults ProcessGetGoodsByDbIDCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15205,7 +15205,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B72 RID: 2930 RVA: 0x00088230 File Offset: 0x00086430
+		
 		private static TCPProcessCmdResults ProcessQueryChongZhiMoneyCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15249,7 +15249,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B73 RID: 2931 RVA: 0x00088380 File Offset: 0x00086580
+		
 		private static TCPProcessCmdResults ProcessQueryUserIdValueCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15292,7 +15292,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B74 RID: 2932 RVA: 0x000884F0 File Offset: 0x000866F0
+		
 		private static TCPProcessCmdResults ProcessQueryDayChongZhiMoneyCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15339,7 +15339,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B75 RID: 2933 RVA: 0x00088658 File Offset: 0x00086858
+		
 		private static TCPProcessCmdResults ProcessQueryPeriodChongZhiMoneyCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15394,7 +15394,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B76 RID: 2934 RVA: 0x00088848 File Offset: 0x00086A48
+		
 		private static TCPProcessCmdResults ProcessAddBuyItemFromNpcCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15456,7 +15456,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B77 RID: 2935 RVA: 0x00088A88 File Offset: 0x00086C88
+		
 		private static TCPProcessCmdResults ProcessAddYinLiangBuyItemCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15517,7 +15517,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B78 RID: 2936 RVA: 0x00088CBC File Offset: 0x00086EBC
+		
 		private static TCPProcessCmdResults ProcessAddBangGongBuyItemCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15578,7 +15578,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B79 RID: 2937 RVA: 0x00088EF0 File Offset: 0x000870F0
+		
 		private static TCPProcessCmdResults ProcessGetUserMailListCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15618,7 +15618,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B7A RID: 2938 RVA: 0x0008901C File Offset: 0x0008721C
+		
 		private static TCPProcessCmdResults ProcessGetUserMailCountCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15660,7 +15660,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B7B RID: 2939 RVA: 0x00089160 File Offset: 0x00087360
+		
 		private static TCPProcessCmdResults ProcessGetUserMailDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15701,7 +15701,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B7C RID: 2940 RVA: 0x00089298 File Offset: 0x00087498
+		
 		private static TCPProcessCmdResults ProcessSendUserMailCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15753,7 +15753,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B7D RID: 2941 RVA: 0x00089470 File Offset: 0x00087670
+		
 		private static TCPProcessCmdResults ProcessFetchMailGoodsCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15795,7 +15795,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B7E RID: 2942 RVA: 0x000895D0 File Offset: 0x000877D0
+		
 		private static TCPProcessCmdResults ProcessDeleteUserMailCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15854,7 +15854,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B7F RID: 2943 RVA: 0x000897B8 File Offset: 0x000879B8
+		
 		private static TCPProcessCmdResults ProcessGetRoleIDByRoleNameCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15895,7 +15895,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B80 RID: 2944 RVA: 0x00089904 File Offset: 0x00087B04
+		
 		private static TCPProcessCmdResults ProcessSprQueryInputFanLiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -15954,7 +15954,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B81 RID: 2945 RVA: 0x00089B14 File Offset: 0x00087D14
+		
 		private static TCPProcessCmdResults ProcessSprQueryInputJiaSongCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16026,7 +16026,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B82 RID: 2946 RVA: 0x00089DBC File Offset: 0x00087FBC
+		
 		private static TCPProcessCmdResults ProcessSprQueryInputKingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16081,7 +16081,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B83 RID: 2947 RVA: 0x00089FE8 File Offset: 0x000881E8
+		
 		private static TCPProcessCmdResults ProcessSprQueryLevelKingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16118,7 +16118,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B84 RID: 2948 RVA: 0x0008A0FC File Offset: 0x000882FC
+		
 		private static TCPProcessCmdResults ProcessSprQueryEquipKingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16155,7 +16155,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B85 RID: 2949 RVA: 0x0008A210 File Offset: 0x00088410
+		
 		private static TCPProcessCmdResults ProcessSprQueryHorseKingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16192,7 +16192,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B86 RID: 2950 RVA: 0x0008A324 File Offset: 0x00088524
+		
 		private static TCPProcessCmdResults ProcessSprQueryJingMaiKingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16229,7 +16229,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B87 RID: 2951 RVA: 0x0008A438 File Offset: 0x00088638
+		
 		private static TCPProcessCmdResults ProcessExcuteInputFanLiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16310,7 +16310,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B88 RID: 2952 RVA: 0x0008A784 File Offset: 0x00088984
+		
 		private static TCPProcessCmdResults ProcessExcuteInputJiaSongCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16403,7 +16403,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B89 RID: 2953 RVA: 0x0008AB4C File Offset: 0x00088D4C
+		
 		private static TCPProcessCmdResults ProcessExcuteInputKingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16512,7 +16512,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B8A RID: 2954 RVA: 0x0008AFB8 File Offset: 0x000891B8
+		
 		private static TCPProcessCmdResults ProcessExcuteLevelKingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16549,7 +16549,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B8B RID: 2955 RVA: 0x0008B0CC File Offset: 0x000892CC
+		
 		private static TCPProcessCmdResults ProcessExcuteEquipKingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16586,7 +16586,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B8C RID: 2956 RVA: 0x0008B1E0 File Offset: 0x000893E0
+		
 		private static TCPProcessCmdResults ProcessExcuteHorseKingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16623,7 +16623,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B8D RID: 2957 RVA: 0x0008B2F4 File Offset: 0x000894F4
+		
 		private static TCPProcessCmdResults ProcessExcuteJingMaiKingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16660,7 +16660,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B8E RID: 2958 RVA: 0x0008B408 File Offset: 0x00089608
+		
 		private static TCPProcessCmdResults ProcessSprQueryAwardHistoryCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16736,7 +16736,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B8F RID: 2959 RVA: 0x0008B6AC File Offset: 0x000898AC
+		
 		private static TCPProcessCmdResults ProcessSprQueryUserActivityInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16795,7 +16795,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B90 RID: 2960 RVA: 0x0008B8B0 File Offset: 0x00089AB0
+		
 		private static TCPProcessCmdResults ProcessSprUpdateUserActivityInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16862,7 +16862,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B91 RID: 2961 RVA: 0x0008BB24 File Offset: 0x00089D24
+		
 		private static TCPProcessCmdResults ProcessDBQueryLimitGoodsUsedNumCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16927,7 +16927,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B92 RID: 2962 RVA: 0x0008BD3C File Offset: 0x00089F3C
+		
 		private static TCPProcessCmdResults ProcessDBUpdateLimitGoodsUsedNumCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -16987,7 +16987,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B93 RID: 2963 RVA: 0x0008BF64 File Offset: 0x0008A164
+		
 		private static TCPProcessCmdResults ProcessUpdateDailyVipDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17071,7 +17071,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B94 RID: 2964 RVA: 0x0008C264 File Offset: 0x0008A464
+		
 		private static TCPProcessCmdResults ProcessUpdateYangGongBKDailyJiFenDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17136,7 +17136,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B95 RID: 2965 RVA: 0x0008C4B4 File Offset: 0x0008A6B4
+		
 		private static TCPProcessCmdResults ProcessUpdateSingleTimeAwardFlagCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17197,7 +17197,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B96 RID: 2966 RVA: 0x0008C708 File Offset: 0x0008A908
+		
 		private static TCPProcessCmdResults ProcessAddShengXiaoGuessHisotryCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17285,7 +17285,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B97 RID: 2967 RVA: 0x0008CA00 File Offset: 0x0008AC00
+		
 		private static TCPProcessCmdResults ProcessQueryShengXiaoGuessHistCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17332,7 +17332,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B98 RID: 2968 RVA: 0x0008CB60 File Offset: 0x0008AD60
+		
 		private static TCPProcessCmdResults ProcessUpdateUserGoldCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17405,7 +17405,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B99 RID: 2969 RVA: 0x0008CE28 File Offset: 0x0008B028
+		
 		private static TCPProcessCmdResults ProcessAddGoldBuyItemCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17466,7 +17466,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B9A RID: 2970 RVA: 0x0008D05C File Offset: 0x0008B25C
+		
 		private static TCPProcessCmdResults ProcessUpdateGoodsLimitCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17526,7 +17526,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B9B RID: 2971 RVA: 0x0008D28C File Offset: 0x0008B48C
+		
 		private static TCPProcessCmdResults ProcessUpdateRoleParamCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17576,7 +17576,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B9C RID: 2972 RVA: 0x0008D450 File Offset: 0x0008B650
+		
 		private static TCPProcessCmdResults ProcessGetRoleParamCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17618,7 +17618,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B9D RID: 2973 RVA: 0x0008D598 File Offset: 0x0008B798
+		
 		private static TCPProcessCmdResults ProcessUpdateWebOldPlayerCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17661,7 +17661,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B9E RID: 2974 RVA: 0x0008D6FC File Offset: 0x0008B8FC
+		
 		private static TCPProcessCmdResults ProcessAddQiangGouBuyItemCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17724,7 +17724,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000B9F RID: 2975 RVA: 0x0008D94C File Offset: 0x0008BB4C
+		
 		private static TCPProcessCmdResults ProcessQueryQiangGouBuyItemInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17778,7 +17778,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BA0 RID: 2976 RVA: 0x0008DB3C File Offset: 0x0008BD3C
+		
 		private static TCPProcessCmdResults ProcessAddZaJinDanHisotryCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17853,7 +17853,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BA1 RID: 2977 RVA: 0x0008DDD8 File Offset: 0x0008BFD8
+		
 		private static TCPProcessCmdResults ProcessQueryZaJinDanHistoryCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17900,7 +17900,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BA2 RID: 2978 RVA: 0x0008DF38 File Offset: 0x0008C138
+		
 		private static TCPProcessCmdResults ProcessQueryFirstChongZhiDaLiByUserIDCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17949,7 +17949,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BA3 RID: 2979 RVA: 0x0008E0C0 File Offset: 0x0008C2C0
+		
 		private static TCPProcessCmdResults ProcessQueryDayChongZhiDaLiByUserIDCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -17999,7 +17999,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BA4 RID: 2980 RVA: 0x0008E24C File Offset: 0x0008C44C
+		
 		private static TCPProcessCmdResults ProcessQueryKaiFuOnlineAwardRoleIDCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18062,7 +18062,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BA5 RID: 2981 RVA: 0x0008E440 File Offset: 0x0008C640
+		
 		private static TCPProcessCmdResults ProcessAddKaiFuOnlineAwardCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18107,7 +18107,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BA6 RID: 2982 RVA: 0x0008E5B8 File Offset: 0x0008C7B8
+		
 		private static TCPProcessCmdResults ProcessQueryKaiFuOnlineAwardListCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18147,7 +18147,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BA7 RID: 2983 RVA: 0x0008E6E4 File Offset: 0x0008C8E4
+		
 		private static TCPProcessCmdResults ProcessAddGiveUserMoneyItemCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18190,7 +18190,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BA8 RID: 2984 RVA: 0x0008E83C File Offset: 0x0008CA3C
+		
 		private static TCPProcessCmdResults ProcessAddExchange1ItemCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18236,7 +18236,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BA9 RID: 2985 RVA: 0x0008E9BC File Offset: 0x0008CBBC
+		
 		private static TCPProcessCmdResults ProcessAddExchange2ItemCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18280,7 +18280,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BAA RID: 2986 RVA: 0x0008EB28 File Offset: 0x0008CD28
+		
 		private static TCPProcessCmdResults ProcessAddExchange3ItemCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18324,7 +18324,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BAB RID: 2987 RVA: 0x0008EC94 File Offset: 0x0008CE94
+		
 		private static TCPProcessCmdResults ProcessAddFallGoodsItemCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18376,7 +18376,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BAC RID: 2988 RVA: 0x0008EE68 File Offset: 0x0008D068
+		
 		private static TCPProcessCmdResults ProcessUpdateRolePropsCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18462,7 +18462,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BAD RID: 2989 RVA: 0x0008F154 File Offset: 0x0008D354
+		
 		private static TCPProcessCmdResults ProcessQueryThemeDaLiBaoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18516,7 +18516,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BAE RID: 2990 RVA: 0x0008F34C File Offset: 0x0008D54C
+		
 		private static TCPProcessCmdResults ProcessQueryJieriDaLiBaoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18570,7 +18570,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BAF RID: 2991 RVA: 0x0008F540 File Offset: 0x0008D740
+		
 		private static TCPProcessCmdResults ProcessQueryJieriDengLuCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18631,7 +18631,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BB0 RID: 2992 RVA: 0x0008F760 File Offset: 0x0008D960
+		
 		private static TCPProcessCmdResults ProcessQueryJieriVIPCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18692,7 +18692,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BB1 RID: 2993 RVA: 0x0008F980 File Offset: 0x0008DB80
+		
 		private static TCPProcessCmdResults ProcessQueryJieriCZSongCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18761,7 +18761,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BB2 RID: 2994 RVA: 0x0008FBDC File Offset: 0x0008DDDC
+		
 		private static TCPProcessCmdResults ProcessQueryJieriCZLeiJiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18832,7 +18832,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BB3 RID: 2995 RVA: 0x0008FE40 File Offset: 0x0008E040
+		
 		private static TCPProcessCmdResults ProcessQueryJieRiMeiRiLeiJiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18900,7 +18900,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BB4 RID: 2996 RVA: 0x00090094 File Offset: 0x0008E294
+		
 		private static TCPProcessCmdResults ProcessQueryJieriTotalConsumeCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -18971,7 +18971,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BB5 RID: 2997 RVA: 0x000902F8 File Offset: 0x0008E4F8
+		
 		private static TCPProcessCmdResults ProcessQueryJieriXiaoFeiKingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19072,7 +19072,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BB6 RID: 2998 RVA: 0x000906E0 File Offset: 0x0008E8E0
+		
 		private static TCPProcessCmdResults ProcessInputPointsExchangeCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19146,7 +19146,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BB7 RID: 2999 RVA: 0x000909BC File Offset: 0x0008EBBC
+		
 		private static TCPProcessCmdResults ProcessExecuteDanBiChongZhiJiangLiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19226,7 +19226,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BB8 RID: 3000 RVA: 0x00090CEC File Offset: 0x0008EEEC
+		
 		private static TCPProcessCmdResults ProcessQueryDanBiChongZhiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19309,7 +19309,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BB9 RID: 3001 RVA: 0x00091034 File Offset: 0x0008F234
+		
 		private static TCPProcessCmdResults ProcessQueryJieriCZKingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19409,7 +19409,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BBA RID: 3002 RVA: 0x00091408 File Offset: 0x0008F608
+		
 		private static TCPProcessCmdResults ProcessExecuteThemeDaLiBaoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19480,7 +19480,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BBB RID: 3003 RVA: 0x000916F8 File Offset: 0x0008F8F8
+		
 		private static TCPProcessCmdResults ProcessExecuteJieriDaLiBaoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19551,7 +19551,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BBC RID: 3004 RVA: 0x000919E0 File Offset: 0x0008FBE0
+		
 		private static TCPProcessCmdResults ProcessExecuteJieriDengLuCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19645,7 +19645,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BBD RID: 3005 RVA: 0x00091DBC File Offset: 0x0008FFBC
+		
 		private static TCPProcessCmdResults ProcessExecuteJieriVIPCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19723,7 +19723,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BBE RID: 3006 RVA: 0x000920EC File Offset: 0x000902EC
+		
 		private static TCPProcessCmdResults ProcessExecuteJieriCZSongCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19830,7 +19830,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BBF RID: 3007 RVA: 0x00092534 File Offset: 0x00090734
+		
 		private static TCPProcessCmdResults ProcessExecuteJieriMeiRiLeiJiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -19937,7 +19937,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BC0 RID: 3008 RVA: 0x0009297C File Offset: 0x00090B7C
+		
 		private static TCPProcessCmdResults ProcessExecuteJieriCZLeiJiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20062,7 +20062,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BC1 RID: 3009 RVA: 0x00092E5C File Offset: 0x0009105C
+		
 		private static TCPProcessCmdResults ProcessExecuteJieriTotalConsumeCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20187,7 +20187,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BC2 RID: 3010 RVA: 0x0009333C File Offset: 0x0009153C
+		
 		private static TCPProcessCmdResults ProcessExecuteJieriXiaoFeiKingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20296,7 +20296,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BC3 RID: 3011 RVA: 0x000937C8 File Offset: 0x000919C8
+		
 		private static TCPProcessCmdResults ProcessExecuteJieriCZKingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20405,28 +20405,28 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BC4 RID: 3012 RVA: 0x00093C3C File Offset: 0x00091E3C
+		
 		private static TCPProcessCmdResults ProcessQueryHeFuDaLiBaoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BC5 RID: 3013 RVA: 0x00093C54 File Offset: 0x00091E54
+		
 		private static TCPProcessCmdResults ProcessQueryHeFuVIPCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BC6 RID: 3014 RVA: 0x00093C6C File Offset: 0x00091E6C
+		
 		private static TCPProcessCmdResults ProcessQueryHeFuCZSongCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BC7 RID: 3015 RVA: 0x00093C84 File Offset: 0x00091E84
+		
 		private static TCPProcessCmdResults ProcessQueryHeFuPKKingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20487,7 +20487,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BC8 RID: 3016 RVA: 0x00093EC8 File Offset: 0x000920C8
+		
 		private static TCPProcessCmdResults ProcessQueryHeFuWCKingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20546,14 +20546,14 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BC9 RID: 3017 RVA: 0x000940F8 File Offset: 0x000922F8
+		
 		private static TCPProcessCmdResults ProcessQueryHeFuCZFanLiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BCA RID: 3018 RVA: 0x00094110 File Offset: 0x00092310
+		
 		private static TCPProcessCmdResults ProcessQueryXinCZFanLiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20663,28 +20663,28 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BCB RID: 3019 RVA: 0x000945C8 File Offset: 0x000927C8
+		
 		private static TCPProcessCmdResults ProcessExecuteHeFuDaLiBaoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BCC RID: 3020 RVA: 0x000945E0 File Offset: 0x000927E0
+		
 		private static TCPProcessCmdResults ProcessExecuteHeFuVIPCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BCD RID: 3021 RVA: 0x000945F8 File Offset: 0x000927F8
+		
 		private static TCPProcessCmdResults ProcessExecuteHeFuCZSongCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BCE RID: 3022 RVA: 0x00094610 File Offset: 0x00092810
+		
 		private static TCPProcessCmdResults ProcessExecuteHeFuPKKingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20762,7 +20762,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BCF RID: 3023 RVA: 0x00094944 File Offset: 0x00092B44
+		
 		private static TCPProcessCmdResults ProcessExecuteHeFuWCKingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20845,14 +20845,14 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BD0 RID: 3024 RVA: 0x00094C94 File Offset: 0x00092E94
+		
 		private static TCPProcessCmdResults ProcessExecuteHeFuCZFanLiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BD1 RID: 3025 RVA: 0x00094CAC File Offset: 0x00092EAC
+		
 		private static TCPProcessCmdResults ProcessExecuteXinCZFanLiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -20976,7 +20976,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BD2 RID: 3026 RVA: 0x00095204 File Offset: 0x00093404
+		
 		private static TCPProcessCmdResults ProcessQueryActivityInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21048,7 +21048,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BD3 RID: 3027 RVA: 0x00095514 File Offset: 0x00093714
+		
 		private static TCPProcessCmdResults ProcessQueryXingYunChouJiangInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21122,7 +21122,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BD4 RID: 3028 RVA: 0x0009579C File Offset: 0x0009399C
+		
 		private static TCPProcessCmdResults ProcessExcuteXingYunChouJiangInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21214,7 +21214,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BD5 RID: 3029 RVA: 0x00095B1C File Offset: 0x00093D1C
+		
 		private static TCPProcessCmdResults ProcessBHMatchLoadSupportFlagCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21256,7 +21256,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BD6 RID: 3030 RVA: 0x00095C60 File Offset: 0x00093E60
+		
 		private static TCPProcessCmdResults ProcessBHMatchUpdateSupportFlagCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21292,7 +21292,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BD7 RID: 3031 RVA: 0x00095D70 File Offset: 0x00093F70
+		
 		private static TCPProcessCmdResults ProcessQueryYueDuChouJiangHistoryCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21339,7 +21339,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BD8 RID: 3032 RVA: 0x00095ED0 File Offset: 0x000940D0
+		
 		private static TCPProcessCmdResults ProcessExcuteAddYueDuChouJiangInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21405,7 +21405,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BD9 RID: 3033 RVA: 0x00096120 File Offset: 0x00094320
+		
 		private static TCPProcessCmdResults ProcessExecuteChangeOccupationCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21486,7 +21486,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BDA RID: 3034 RVA: 0x00096450 File Offset: 0x00094650
+		
 		private static TCPProcessCmdResults ProcessGetUsingGoodsDataListCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21526,7 +21526,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BDB RID: 3035 RVA: 0x00096580 File Offset: 0x00094780
+		
 		private static TCPProcessCmdResults ProcessQueryBloodCastleEnterCountCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21577,7 +21577,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BDC RID: 3036 RVA: 0x00096728 File Offset: 0x00094928
+		
 		private static TCPProcessCmdResults ProcessUpdateBloodCastleEnterCountCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21629,7 +21629,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BDD RID: 3037 RVA: 0x00096908 File Offset: 0x00094B08
+		
 		private static TCPProcessCmdResults ProcessQueryFuBenHisInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21686,7 +21686,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BDE RID: 3038 RVA: 0x00096AF8 File Offset: 0x00094CF8
+		
 		private static TCPProcessCmdResults ProcessCompleteFlashSceneCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21735,7 +21735,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BDF RID: 3039 RVA: 0x00096C84 File Offset: 0x00094E84
+		
 		private static TCPProcessCmdResults ProcessFinishFreshPlayerStatusCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21816,7 +21816,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BE0 RID: 3040 RVA: 0x00096F4C File Offset: 0x0009514C
+		
 		private static TCPProcessCmdResults ProcessCleanDataWhenFreshPlayerLogOutCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21892,7 +21892,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BE1 RID: 3041 RVA: 0x00097204 File Offset: 0x00095404
+		
 		private static TCPProcessCmdResults ProcessChangeTaskStarLevelCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -21959,7 +21959,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BE2 RID: 3042 RVA: 0x00097450 File Offset: 0x00095650
+		
 		private static TCPProcessCmdResults ProcessChangeLifeCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22040,7 +22040,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BE3 RID: 3043 RVA: 0x0009775C File Offset: 0x0009595C
+		
 		private static TCPProcessCmdResults ProcessAdmiredPlayerCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22113,7 +22113,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BE4 RID: 3044 RVA: 0x00097A1C File Offset: 0x00095C1C
+		
 		private static TCPProcessCmdResults ProcessQueryRoleMiniInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22136,7 +22136,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BE5 RID: 3045 RVA: 0x00097AA0 File Offset: 0x00095CA0
+		
 		private static TCPProcessCmdResults ProcessUpdateRoleSomeInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22195,7 +22195,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BE6 RID: 3046 RVA: 0x00097CEC File Offset: 0x00095EEC
+		
 		private static TCPProcessCmdResults ProcessQueryDayActivityPoinCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22261,7 +22261,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BE7 RID: 3047 RVA: 0x00097F18 File Offset: 0x00096118
+		
 		private static TCPProcessCmdResults ProcessQueryRoleDayActivityPoinCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22391,7 +22391,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BE8 RID: 3048 RVA: 0x00098388 File Offset: 0x00096588
+		
 		private static TCPProcessCmdResults ProcessUpdateRoleDayActivityPoinCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22482,7 +22482,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BE9 RID: 3049 RVA: 0x000986C8 File Offset: 0x000968C8
+		
 		private static TCPProcessCmdResults ProcessQueryEveryDayOnLineAwardGiftInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22538,7 +22538,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BEA RID: 3050 RVA: 0x000988C4 File Offset: 0x00096AC4
+		
 		private static TCPProcessCmdResults ProcessSetAutoAssignPropertyPointCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22591,7 +22591,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BEB RID: 3051 RVA: 0x00098AA4 File Offset: 0x00096CA4
+		
 		private static TCPProcessCmdResults ProcessUpdatePushMessageInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22644,7 +22644,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BEC RID: 3052 RVA: 0x00098C84 File Offset: 0x00096E84
+		
 		private static TCPProcessCmdResults ProcessQueryPushMsgUerListCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22685,7 +22685,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BED RID: 3053 RVA: 0x00098DB8 File Offset: 0x00096FB8
+		
 		private static TCPProcessCmdResults ProcessAddWingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22760,7 +22760,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BEE RID: 3054 RVA: 0x00099078 File Offset: 0x00097278
+		
 		private static TCPProcessCmdResults ProcessModWingCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22839,7 +22839,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BEF RID: 3055 RVA: 0x00099428 File Offset: 0x00097628
+		
 		private static TCPProcessCmdResults ProcessReferPictureJudgeInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22916,7 +22916,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BF0 RID: 3056 RVA: 0x000996D0 File Offset: 0x000978D0
+		
 		private static TCPProcessCmdResults ProcessQueryMoJingExchangeInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -22964,7 +22964,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BF1 RID: 3057 RVA: 0x0009985C File Offset: 0x00097A5C
+		
 		private static TCPProcessCmdResults ProcessUpdateMoJingExchangeInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23019,7 +23019,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BF2 RID: 3058 RVA: 0x00099A58 File Offset: 0x00097C58
+		
 		private static TCPProcessCmdResults ProcessUpdateGoodsCmd2(DBManager dbMgr, GameServerClient client, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23073,7 +23073,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_OK;
 		}
 
-		// Token: 0x06000BF3 RID: 3059 RVA: 0x00099C24 File Offset: 0x00097E24
+		
 		private static TCPProcessCmdResults ProcessUpdateStarConstellationCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23150,7 +23150,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BF4 RID: 3060 RVA: 0x00099ECC File Offset: 0x000980CC
+		
 		private static TCPProcessCmdResults ProcessQueryVipLevelAwardFlagCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23198,7 +23198,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BF5 RID: 3061 RVA: 0x0009A06C File Offset: 0x0009826C
+		
 		private static TCPProcessCmdResults ProcessUpdateVipLevelAwardFlagCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23259,7 +23259,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BF6 RID: 3062 RVA: 0x0009A2CC File Offset: 0x000984CC
+		
 		private static TCPProcessCmdResults ProcessUpdateOnePieceTreasureLogCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23301,7 +23301,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BF7 RID: 3063 RVA: 0x0009A40C File Offset: 0x0009860C
+		
 		private static TCPProcessCmdResults ProcessAddItemLogCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23340,7 +23340,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BF8 RID: 3064 RVA: 0x0009A52C File Offset: 0x0009872C
+		
 		private static TCPProcessCmdResults ProcessUpdateRoleKuaFuDayLogCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23375,7 +23375,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BF9 RID: 3065 RVA: 0x0009A630 File Offset: 0x00098830
+		
 		private static TCPProcessCmdResults ProcessAddRoleStoreYinliang(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23456,7 +23456,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BFA RID: 3066 RVA: 0x0009A934 File Offset: 0x00098B34
+		
 		private static TCPProcessCmdResults ProcessAddRoleStoreMoney(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23537,7 +23537,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BFB RID: 3067 RVA: 0x0009AC38 File Offset: 0x00098E38
+		
 		private static TCPProcessCmdResults ProcessUpdateLingYu(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23600,7 +23600,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BFC RID: 3068 RVA: 0x0009AEC0 File Offset: 0x000990C0
+		
 		private static TCPProcessCmdResults ProcessAddFuMoMoneyGiveMail(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23668,7 +23668,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BFD RID: 3069 RVA: 0x0009B13C File Offset: 0x0009933C
+		
 		private static TCPProcessCmdResults ProcessGetFuMoMoneyMapAcceptNum(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23716,7 +23716,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BFE RID: 3070 RVA: 0x0009B2E0 File Offset: 0x000994E0
+		
 		private static TCPProcessCmdResults ProcessAddFuMoMoneyGiveMailTemp(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23776,7 +23776,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000BFF RID: 3071 RVA: 0x0009B51C File Offset: 0x0009971C
+		
 		private static TCPProcessCmdResults ProcessGetFuMoMoneyMailList(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23822,7 +23822,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C00 RID: 3072 RVA: 0x0009B67C File Offset: 0x0009987C
+		
 		private static TCPProcessCmdResults ProcessGetFuMoMoneyMailMapList(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23869,7 +23869,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C01 RID: 3073 RVA: 0x0009B7E8 File Offset: 0x000999E8
+		
 		private static TCPProcessCmdResults ProcessUpdateFuMoMoneyMailMap(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23925,7 +23925,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C02 RID: 3074 RVA: 0x0009B9C0 File Offset: 0x00099BC0
+		
 		private static TCPProcessCmdResults ProcessUpdateFuMoAcceptMap(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -23977,7 +23977,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C03 RID: 3075 RVA: 0x0009BB88 File Offset: 0x00099D88
+		
 		private static TCPProcessCmdResults ProcessDeleteFuMoMail(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24027,7 +24027,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C04 RID: 3076 RVA: 0x0009BD28 File Offset: 0x00099F28
+		
 		private static TCPProcessCmdResults ProcessDeleteFuMoMailList(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24085,7 +24085,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C05 RID: 3077 RVA: 0x0009BF04 File Offset: 0x0009A104
+		
 		private static TCPProcessCmdResults ProcessUpdateFuMoMailReadState(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24139,7 +24139,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C06 RID: 3078 RVA: 0x0009C0D8 File Offset: 0x0009A2D8
+		
 		private static TCPProcessCmdResults ProcessFuMoMailIndexCount(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24184,7 +24184,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C07 RID: 3079 RVA: 0x0009C22C File Offset: 0x0009A42C
+		
 		private static TCPProcessCmdResults ProcessQueryRoleMoneyInfo(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24269,7 +24269,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C08 RID: 3080 RVA: 0x0009C5C4 File Offset: 0x0009A7C4
+		
 		private static TCPProcessCmdResults ProcessAutoCompletionTaskByTaskID(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24324,7 +24324,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C09 RID: 3081 RVA: 0x0009C7FC File Offset: 0x0009A9FC
+		
 		private static TCPProcessCmdResults ProcessUpdateMarriageDataCmd(DBManager dbMgr, GameServerClient client, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24394,7 +24394,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_OK;
 		}
 
-		// Token: 0x06000C0A RID: 3082 RVA: 0x0009CAC8 File Offset: 0x0009ACC8
+		
 		private static TCPProcessCmdResults ProcessGetMarriageDataCmd(DBManager dbMgr, TCPOutPacketPool pool, GameServerClient client, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24443,7 +24443,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C0B RID: 3083 RVA: 0x0009CC10 File Offset: 0x0009AE10
+		
 		private static TCPProcessCmdResults ProcessExecuteJieriFanLiCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24544,7 +24544,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C0C RID: 3084 RVA: 0x0009D040 File Offset: 0x0009B240
+		
 		private static TCPProcessCmdResults ProcessQueryMarryParty(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24583,7 +24583,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C0D RID: 3085 RVA: 0x0009D168 File Offset: 0x0009B368
+		
 		private static TCPProcessCmdResults ProcessAddMarryParty(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24635,7 +24635,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C0E RID: 3086 RVA: 0x0009D338 File Offset: 0x0009B538
+		
 		private static TCPProcessCmdResults ProcessRemoveMarryParty(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24679,7 +24679,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C0F RID: 3087 RVA: 0x0009D48C File Offset: 0x0009B68C
+		
 		private static TCPProcessCmdResults ProcessIncMarryPartyJoin(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24733,7 +24733,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C10 RID: 3088 RVA: 0x0009D67C File Offset: 0x0009B87C
+		
 		private static TCPProcessCmdResults ProcessClearMarryPartyJoin(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24786,7 +24786,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C11 RID: 3089 RVA: 0x0009D85C File Offset: 0x0009BA5C
+		
 		private static TCPProcessCmdResults ProcessUpdateHolyItemDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24864,7 +24864,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C12 RID: 3090 RVA: 0x0009DB38 File Offset: 0x0009BD38
+		
 		private static TCPProcessCmdResults ProcessGmBanCheck(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24892,7 +24892,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C13 RID: 3091 RVA: 0x0009DBF4 File Offset: 0x0009BDF4
+		
 		private static TCPProcessCmdResults ProcessGmBanLog(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24924,7 +24924,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C14 RID: 3092 RVA: 0x0009DCE0 File Offset: 0x0009BEE0
+		
 		private static TCPProcessCmdResults ProcessTenInitCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24963,7 +24963,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C15 RID: 3093 RVA: 0x0009DE00 File Offset: 0x0009C000
+		
 		private static TCPProcessCmdResults ProcessSpreadAwardGetCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -24990,7 +24990,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C16 RID: 3094 RVA: 0x0009DEB8 File Offset: 0x0009C0B8
+		
 		private static TCPProcessCmdResults ProcessSpreadAwardUpdateCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25019,7 +25019,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C17 RID: 3095 RVA: 0x0009DF84 File Offset: 0x0009C184
+		
 		private static TCPProcessCmdResults ProcessActivateStateGetCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25045,7 +25045,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C18 RID: 3096 RVA: 0x0009E034 File Offset: 0x0009C234
+		
 		private static TCPProcessCmdResults ProcessActivateStateSetCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25073,7 +25073,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C19 RID: 3097 RVA: 0x0009E0FC File Offset: 0x0009C2FC
+		
 		private static TCPProcessCmdResults ProcessFacebookInitCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25112,7 +25112,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C1A RID: 3098 RVA: 0x0009E21C File Offset: 0x0009C41C
+		
 		private static TCPProcessCmdResults ProcessGetZoneIdByRid(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25153,7 +25153,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C1B RID: 3099 RVA: 0x0009E35C File Offset: 0x0009C55C
+		
 		private static TCPProcessCmdResults ProcessRebornYinJiUpdateCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25208,7 +25208,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C1C RID: 3100 RVA: 0x0009E524 File Offset: 0x0009C724
+		
 		private static TCPProcessCmdResults ProcessGetRebornYinJiInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -25254,7 +25254,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000C1D RID: 3101 RVA: 0x0009E67C File Offset: 0x0009C87C
+		
 		private static TCPProcessCmdResults ProcessRebornYinJiInsertInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;

@@ -13,16 +13,16 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic.KuaFuIPStatistics
 {
-	// Token: 0x0200034C RID: 844
+	
 	public class IPStatisticsManager : IManager, IEventListener
 	{
-		// Token: 0x06000E3D RID: 3645 RVA: 0x000E1170 File Offset: 0x000DF370
+		
 		public static IPStatisticsManager getInstance()
 		{
 			return IPStatisticsManager.instance;
 		}
 
-		// Token: 0x06000E3E RID: 3646 RVA: 0x000E1188 File Offset: 0x000DF388
+		
 		public bool initialize()
 		{
 			IPStatisticsManager.event2IPTypeDict.Add(EventTypes.PlayerCreateRoleBeBan, IPInfoType.createRoleFailByBan);
@@ -52,7 +52,7 @@ namespace GameServer.Logic.KuaFuIPStatistics
 			return true;
 		}
 
-		// Token: 0x06000E3F RID: 3647 RVA: 0x000E1308 File Offset: 0x000DF508
+		
 		public void LoadConfig()
 		{
 			try
@@ -126,7 +126,7 @@ namespace GameServer.Logic.KuaFuIPStatistics
 			}
 		}
 
-		// Token: 0x06000E40 RID: 3648 RVA: 0x000E1754 File Offset: 0x000DF954
+		
 		private bool isCanPassIP(long ipAsInt)
 		{
 			bool result;
@@ -151,13 +151,13 @@ namespace GameServer.Logic.KuaFuIPStatistics
 			return result;
 		}
 
-		// Token: 0x06000E41 RID: 3649 RVA: 0x000E1830 File Offset: 0x000DFA30
+		
 		private bool isCanPassUserID(string userID)
 		{
 			return IPStatisticsManager._UserIDPass.Contains(userID);
 		}
 
-		// Token: 0x06000E42 RID: 3650 RVA: 0x000E1850 File Offset: 0x000DFA50
+		
 		private bool checkUserID(int[] Count, StatisticsControl config)
 		{
 			bool bPass = true;
@@ -183,25 +183,25 @@ namespace GameServer.Logic.KuaFuIPStatistics
 			return bPass;
 		}
 
-		// Token: 0x06000E43 RID: 3651 RVA: 0x000E1918 File Offset: 0x000DFB18
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x06000E44 RID: 3652 RVA: 0x000E192C File Offset: 0x000DFB2C
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000E45 RID: 3653 RVA: 0x000E1940 File Offset: 0x000DFB40
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000E46 RID: 3654 RVA: 0x000E1954 File Offset: 0x000DFB54
+		
 		public void processEvent(EventObject eventObject)
 		{
 			if (!GameManager.IsKuaFuServer)
@@ -263,7 +263,7 @@ namespace GameServer.Logic.KuaFuIPStatistics
 			}
 		}
 
-		// Token: 0x06000E47 RID: 3655 RVA: 0x000E1B8C File Offset: 0x000DFD8C
+		
 		public List<IPStatisticsData> getCurrDataList()
 		{
 			List<IPStatisticsData> result;
@@ -292,7 +292,7 @@ namespace GameServer.Logic.KuaFuIPStatistics
 			return result;
 		}
 
-		// Token: 0x06000E48 RID: 3656 RVA: 0x000E1CD0 File Offset: 0x000DFED0
+		
 		public void TimerProcForIP()
 		{
 			if (!GameManager.IsKuaFuServer)
@@ -312,7 +312,7 @@ namespace GameServer.Logic.KuaFuIPStatistics
 			}
 		}
 
-		// Token: 0x06000E49 RID: 3657 RVA: 0x000E1D44 File Offset: 0x000DFF44
+		
 		public void TimerProcForUserID()
 		{
 			int currMinite = Global.GetOffsetMiniteNow();
@@ -434,7 +434,7 @@ namespace GameServer.Logic.KuaFuIPStatistics
 			}
 		}
 
-		// Token: 0x06000E4A RID: 3658 RVA: 0x000E23FC File Offset: 0x000E05FC
+		
 		public void RequestResult()
 		{
 			long currTicks = TimeUtil.NOW();
@@ -503,7 +503,7 @@ namespace GameServer.Logic.KuaFuIPStatistics
 			}
 		}
 
-		// Token: 0x06000E4B RID: 3659 RVA: 0x000E278C File Offset: 0x000E098C
+		
 		public void ReportProc()
 		{
 			List<IPStatisticsData> ipDataList = this.getCurrDataList();
@@ -514,7 +514,7 @@ namespace GameServer.Logic.KuaFuIPStatistics
 			}
 		}
 
-		// Token: 0x06000E4C RID: 3660 RVA: 0x000E27F8 File Offset: 0x000E09F8
+		
 		public bool GetIPInBeOperation(TMSKSocket socket, IPOperaType type)
 		{
 			if (type == IPOperaType.BanConnect)
@@ -549,7 +549,7 @@ namespace GameServer.Logic.KuaFuIPStatistics
 			return false;
 		}
 
-		// Token: 0x06000E4D RID: 3661 RVA: 0x000E2920 File Offset: 0x000E0B20
+		
 		public bool GetUserIDInBeOperation(string userid, IPOperaType type)
 		{
 			lock (this.dictOperaUserID)
@@ -572,7 +572,7 @@ namespace GameServer.Logic.KuaFuIPStatistics
 			return false;
 		}
 
-		// Token: 0x06000E4E RID: 3662 RVA: 0x000E29F0 File Offset: 0x000E0BF0
+		
 		public void SetUserIdValue(string userID, int vipExp, int unionLevel)
 		{
 			lock (IPStatisticsManager._UserIdValueDict)
@@ -600,7 +600,7 @@ namespace GameServer.Logic.KuaFuIPStatistics
 			}
 		}
 
-		// Token: 0x06000E4F RID: 3663 RVA: 0x000E2A9C File Offset: 0x000E0C9C
+		
 		public int[] GetUserIdValue(string userID)
 		{
 			try
@@ -631,7 +631,7 @@ namespace GameServer.Logic.KuaFuIPStatistics
 			return null;
 		}
 
-		// Token: 0x06000E50 RID: 3664 RVA: 0x000E2B90 File Offset: 0x000E0D90
+		
 		public bool CheckUserIdValue(string userID, string configName)
 		{
 			if (!string.IsNullOrEmpty(userID))
@@ -656,49 +656,49 @@ namespace GameServer.Logic.KuaFuIPStatistics
 			return false;
 		}
 
-		// Token: 0x0400163E RID: 5694
+		
 		private static IPStatisticsManager instance = new IPStatisticsManager();
 
-		// Token: 0x0400163F RID: 5695
+		
 		private static Dictionary<long, IPStatisticsData> dictIPStatisticsData = new Dictionary<long, IPStatisticsData>();
 
-		// Token: 0x04001640 RID: 5696
+		
 		private static int lastMinite = Global.GetOffsetMiniteNow();
 
-		// Token: 0x04001641 RID: 5697
+		
 		private static long updateTicks = TimeUtil.NOW();
 
-		// Token: 0x04001642 RID: 5698
+		
 		private static Dictionary<EventTypes, IPInfoType> event2IPTypeDict = new Dictionary<EventTypes, IPInfoType>();
 
-		// Token: 0x04001643 RID: 5699
+		
 		private static Dictionary<long, IPOperaData> dictOperaMothod = new Dictionary<long, IPOperaData>();
 
-		// Token: 0x04001644 RID: 5700
+		
 		private List<IPPassList> _IPPassList = new List<IPPassList>();
 
-		// Token: 0x04001645 RID: 5701
+		
 		private static Dictionary<EventTypes, UserParamType> event2UserTypeDict = new Dictionary<EventTypes, UserParamType>();
 
-		// Token: 0x04001646 RID: 5702
+		
 		private Dictionary<string, UserIDState> dictUserStateData = new Dictionary<string, UserIDState>();
 
-		// Token: 0x04001647 RID: 5703
+		
 		private Dictionary<string, UserOperaData> dictOperaUserID = new Dictionary<string, UserOperaData>();
 
-		// Token: 0x04001648 RID: 5704
+		
 		private static int lastUserIDMinite = Global.GetOffsetMiniteNow();
 
-		// Token: 0x04001649 RID: 5705
+		
 		private static List<StatisticsControl> _UserIDControlList = new List<StatisticsControl>();
 
-		// Token: 0x0400164A RID: 5706
+		
 		private static HashSet<string> _UserIDPass = new HashSet<string>();
 
-		// Token: 0x0400164B RID: 5707
+		
 		private static Dictionary<string, int[]> _UserIdValueDict = new Dictionary<string, int[]>();
 
-		// Token: 0x0400164C RID: 5708
+		
 		private static bool bBeReload = false;
 	}
 }

@@ -8,16 +8,16 @@ using Server.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000006 RID: 6
+	
 	public static class CmdMonitor
 	{
-		// Token: 0x06000035 RID: 53 RVA: 0x00003D9C File Offset: 0x00001F9C
+		
 		static CmdMonitor()
 		{
 			CmdMonitor.Reset();
 		}
 
-		// Token: 0x06000036 RID: 54 RVA: 0x00003DEC File Offset: 0x00001FEC
+		
 		public static void Reset()
 		{
 			CmdMonitor.StartTime = TimeUtil.NowDateTime();
@@ -27,7 +27,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000037 RID: 55 RVA: 0x00003E2C File Offset: 0x0000202C
+		
 		public static string GetCmdName(PorcessCmdMoniter m)
 		{
 			string result;
@@ -61,7 +61,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000038 RID: 56 RVA: 0x00003F7C File Offset: 0x0000217C
+		
 		public static void RecordCmdDetail(string cmdName, long processTime, long dataSize, TCPProcessCmdResults result = TCPProcessCmdResults.RESULT_OK)
 		{
 			int cmdId;
@@ -77,7 +77,7 @@ namespace KF.Remoting
 			CmdMonitor.cmdMoniter[cmdId].onProcessNoWait(processTime, dataSize, result);
 		}
 
-		// Token: 0x06000039 RID: 57 RVA: 0x00004010 File Offset: 0x00002210
+		
 		public static void RecordCmdDetail(string cmdName, long processTime, long dataSize, long outSize, TCPProcessCmdResults result = TCPProcessCmdResults.RESULT_OK)
 		{
 			int cmdId;
@@ -94,25 +94,25 @@ namespace KF.Remoting
 			CmdMonitor.cmdMoniter[cmdId].OnOutputData(outSize);
 		}
 
-		// Token: 0x0600003A RID: 58 RVA: 0x000040B4 File Offset: 0x000022B4
+		
 		public static void RecordCmdDetail(int cmdId, long processTime, long dataSize, TCPProcessCmdResults result = TCPProcessCmdResults.RESULT_OK)
 		{
 			CmdMonitor.cmdMoniter[cmdId].onProcessNoWait(processTime, dataSize, result);
 		}
 
-		// Token: 0x0600003B RID: 59 RVA: 0x000040C7 File Offset: 0x000022C7
+		
 		public static void RecordCmdDetail2(int cmdId, long processTime, long waitTime)
 		{
 			CmdMonitor.cmdMoniter[cmdId].onProcess(processTime, waitTime);
 		}
 
-		// Token: 0x0600003C RID: 60 RVA: 0x000040D9 File Offset: 0x000022D9
+		
 		public static void RecordCmdOutputDataSize(int cmdId, long dataSize)
 		{
 			CmdMonitor.cmdMoniter[cmdId].OnOutputData(dataSize);
 		}
 
-		// Token: 0x0600003D RID: 61 RVA: 0x000040EC File Offset: 0x000022EC
+		
 		public static void ShowServerTCPInfo(object obj)
 		{
 			try
@@ -221,28 +221,28 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0400001D RID: 29
+		
 		private static object mutex = new object();
 
-		// Token: 0x0400001E RID: 30
+		
 		public static long TotalHandledCmdsNum;
 
-		// Token: 0x0400001F RID: 31
+		
 		public static long processCmdNum = 0L;
 
-		// Token: 0x04000020 RID: 32
+		
 		public static long processTotalTime = 0L;
 
-		// Token: 0x04000021 RID: 33
+		
 		public static PorcessCmdMoniter[] cmdMoniter = new PorcessCmdMoniter[1024];
 
-		// Token: 0x04000022 RID: 34
+		
 		public static DateTime StartTime;
 
-		// Token: 0x04000023 RID: 35
+		
 		private static Dictionary<string, int> cmdMapper = new Dictionary<string, int>();
 
-		// Token: 0x04000024 RID: 36
+		
 		private static KeyValue<string, int>[] array = KfCall._identityCommandNames_();
 	}
 }

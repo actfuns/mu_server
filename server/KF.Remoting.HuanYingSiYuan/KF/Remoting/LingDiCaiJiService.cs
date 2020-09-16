@@ -8,18 +8,18 @@ using Server.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000026 RID: 38
+	
 	public class LingDiCaiJiService
 	{
-		// Token: 0x060001A9 RID: 425 RVA: 0x00017504 File Offset: 0x00015704
+		
 		public static LingDiCaiJiService Instance()
 		{
 			return LingDiCaiJiService._instance;
 		}
 
-		// Token: 0x17000012 RID: 18
-		// (get) Token: 0x060001AA RID: 426 RVA: 0x0001751C File Offset: 0x0001571C
-		// (set) Token: 0x060001AB RID: 427 RVA: 0x00017534 File Offset: 0x00015734
+		
+		
+		
 		public int KfServerId
 		{
 			get
@@ -32,7 +32,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060001AC RID: 428 RVA: 0x00017540 File Offset: 0x00015740
+		
 		public void InitConfig()
 		{
 			try
@@ -190,7 +190,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060001AD RID: 429 RVA: 0x00017BA0 File Offset: 0x00015DA0
+		
 		public bool isLingZhu(int junTuanId)
 		{
 			bool result;
@@ -215,7 +215,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060001AE RID: 430 RVA: 0x00017C64 File Offset: 0x00015E64
+		
 		public int SetDoubleOpenTime(int roleId, int lingDiType, DateTime openTime, int openSeconds)
 		{
 			LingDiData data = null;
@@ -260,7 +260,7 @@ namespace KF.Remoting
 			return ret;
 		}
 
-		// Token: 0x060001AF RID: 431 RVA: 0x00017E0C File Offset: 0x0001600C
+		
 		public int SetShouWeiTime(int roleId, int lingDiType, DateTime openTime, int index)
 		{
 			int ret = 0;
@@ -310,7 +310,7 @@ namespace KF.Remoting
 			return ret;
 		}
 
-		// Token: 0x060001B0 RID: 432 RVA: 0x00018030 File Offset: 0x00016230
+		
 		public int CanEnterKuaFuMap(int roleId, int lingDiType)
 		{
 			lock (this.Mutex)
@@ -348,7 +348,7 @@ namespace KF.Remoting
 			return this.KfServerId;
 		}
 
-		// Token: 0x060001B1 RID: 433 RVA: 0x0001815C File Offset: 0x0001635C
+		
 		public int UpdateMapRoleNum(int lingDiType, int roleNum, int serverId)
 		{
 			if (this.KfServerId <= 0)
@@ -388,7 +388,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060001B2 RID: 434 RVA: 0x00018254 File Offset: 0x00016454
+		
 		public int GetLingDiRoleNum(int lingDiType)
 		{
 			if (this.KfServerId <= 0)
@@ -427,7 +427,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060001B3 RID: 435 RVA: 0x0001832C File Offset: 0x0001652C
+		
 		public List<LingDiData> GetLingDiData()
 		{
 			List<LingDiData> ret = new List<LingDiData>();
@@ -442,7 +442,7 @@ namespace KF.Remoting
 			return ret;
 		}
 
-		// Token: 0x060001B4 RID: 436 RVA: 0x000183C4 File Offset: 0x000165C4
+		
 		public int SetLingZhu(int roleId, int lingDiType, int junTuanId, string junTuanName, int zhiWu, byte[] roledata)
 		{
 			try
@@ -501,7 +501,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x060001B5 RID: 437 RVA: 0x00018684 File Offset: 0x00016884
+		
 		public int SetShouWei(int lingDiType, List<LingDiShouWei> shouWeiList)
 		{
 			try
@@ -529,7 +529,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x060001B6 RID: 438 RVA: 0x0001879C File Offset: 0x0001699C
+		
 		public bool GetClientCacheItems(int serverId)
 		{
 			lock (this.Mutex)
@@ -551,31 +551,31 @@ namespace KF.Remoting
 			return false;
 		}
 
-		// Token: 0x040000EC RID: 236
+		
 		private static LingDiCaiJiService _instance = new LingDiCaiJiService();
 
-		// Token: 0x040000ED RID: 237
+		
 		private int _KfServerId = 0;
 
-		// Token: 0x040000EE RID: 238
+		
 		private object Mutex = new object();
 
-		// Token: 0x040000EF RID: 239
+		
 		private int RoleNumDiGong = 0;
 
-		// Token: 0x040000F0 RID: 240
+		
 		private int RoleNumHuangMo = 0;
 
-		// Token: 0x040000F1 RID: 241
+		
 		private int RoleNumMax = 0;
 
-		// Token: 0x040000F2 RID: 242
+		
 		public List<LingDiData> LingDiDataList = new List<LingDiData>();
 
-		// Token: 0x040000F3 RID: 243
+		
 		public Dictionary<int, int> BroadcastServerIdHashSet = new Dictionary<int, int>();
 
-		// Token: 0x040000F4 RID: 244
+		
 		public bool Initialized = false;
 	}
 }

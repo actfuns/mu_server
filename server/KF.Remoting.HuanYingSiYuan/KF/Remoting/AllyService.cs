@@ -15,11 +15,11 @@ using Tmsk.Contract.KuaFuData;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000088 RID: 136
+	
 	[ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, ConcurrencyMode = ConcurrencyMode.Multiple, UseSynchronizationContext = true)]
 	public class AllyService : MarshalByRefObject, IAllyService
 	{
-		// Token: 0x060006FD RID: 1789 RVA: 0x0005C4CC File Offset: 0x0005A6CC
+		
 		public override object InitializeLifetimeService()
 		{
 			AllyService.Instance = this;
@@ -31,7 +31,7 @@ namespace KF.Remoting
 			return lease;
 		}
 
-		// Token: 0x060006FE RID: 1790 RVA: 0x0005C518 File Offset: 0x0005A718
+		
 		public AllyService()
 		{
 			AllyService.Instance = this;
@@ -40,13 +40,13 @@ namespace KF.Remoting
 			this._BackgroundThread.Start();
 		}
 
-		// Token: 0x060006FF RID: 1791 RVA: 0x0005C5C0 File Offset: 0x0005A7C0
+		
 		~AllyService()
 		{
 			this._BackgroundThread.Abort();
 		}
 
-		// Token: 0x06000700 RID: 1792 RVA: 0x0005C5F8 File Offset: 0x0005A7F8
+		
 		public void ThreadProc(object state)
 		{
 			do
@@ -82,7 +82,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000701 RID: 1793 RVA: 0x0005C70C File Offset: 0x0005A90C
+		
 		private void ClearAcceptData()
 		{
 			lock (this._Mutex)
@@ -110,7 +110,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000702 RID: 1794 RVA: 0x0005C8E0 File Offset: 0x0005AAE0
+		
 		private void ClearRequestData()
 		{
 			lock (this._Mutex)
@@ -138,7 +138,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000703 RID: 1795 RVA: 0x0005CA84 File Offset: 0x0005AC84
+		
 		public int InitializeClient(KuaFuClientContext clientInfo)
 		{
 			int result;
@@ -162,13 +162,13 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000704 RID: 1796 RVA: 0x0005CB38 File Offset: 0x0005AD38
+		
 		public AsyncDataItem[] GetClientCacheItems(int serverID)
 		{
 			return ClientAgentManager.Instance().PickAsyncEvent(serverID, this._gameType);
 		}
 
-		// Token: 0x06000705 RID: 1797 RVA: 0x0005CB5C File Offset: 0x0005AD5C
+		
 		public long UnionAllyVersion(int serverID)
 		{
 			long result;
@@ -183,7 +183,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000706 RID: 1798 RVA: 0x0005CB8C File Offset: 0x0005AD8C
+		
 		public int UnionAllyInit(int serverID, int unionID, bool isKF)
 		{
 			int result;
@@ -224,7 +224,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000707 RID: 1799 RVA: 0x0005CC80 File Offset: 0x0005AE80
+		
 		private void CheckAllyLog(int serverID, int unionID)
 		{
 			List<AllyLogData> list = AllyPersistence.Instance.DBAllyLogList(unionID);
@@ -238,7 +238,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000708 RID: 1800 RVA: 0x0005CCE4 File Offset: 0x0005AEE4
+		
 		public int UnionDataChange(int serverID, AllyData newData)
 		{
 			int result;
@@ -343,7 +343,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000709 RID: 1801 RVA: 0x0005D128 File Offset: 0x0005B328
+		
 		public int UnionDel(int serverID, int unionID)
 		{
 			int result;
@@ -397,7 +397,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600070A RID: 1802 RVA: 0x0005D374 File Offset: 0x0005B574
+		
 		public List<AllyData> AllyDataList(int serverID, int unionID, int type)
 		{
 			List<AllyData> resultlist = new List<AllyData>();
@@ -425,7 +425,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600070B RID: 1803 RVA: 0x0005D3D4 File Offset: 0x0005B5D4
+		
 		public List<int> InitAllyIDList(int unionID)
 		{
 			List<int> result;
@@ -446,7 +446,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600070C RID: 1804 RVA: 0x0005D454 File Offset: 0x0005B654
+		
 		public List<AllyData> AllyList(int unionID)
 		{
 			List<AllyData> result;
@@ -478,7 +478,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600070D RID: 1805 RVA: 0x0005D594 File Offset: 0x0005B794
+		
 		private List<KFAllyData> InitAllyRequestList(int unionID)
 		{
 			List<KFAllyData> result;
@@ -515,7 +515,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600070E RID: 1806 RVA: 0x0005D700 File Offset: 0x0005B900
+		
 		public List<AllyData> AllyRequestList(int unionID)
 		{
 			List<AllyData> result;
@@ -534,7 +534,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600070F RID: 1807 RVA: 0x0005D7B4 File Offset: 0x0005B9B4
+		
 		public void AllyRequestAdd(int unionID, KFAllyData item)
 		{
 			lock (this._Mutex)
@@ -544,7 +544,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000710 RID: 1808 RVA: 0x0005D80C File Offset: 0x0005BA0C
+		
 		public List<KFAllyData> InitAllyAcceptList(int unionID)
 		{
 			List<KFAllyData> result;
@@ -580,7 +580,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000711 RID: 1809 RVA: 0x0005D970 File Offset: 0x0005BB70
+		
 		public List<AllyData> AllyAcceptList(int unionID)
 		{
 			List<AllyData> result;
@@ -599,7 +599,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000712 RID: 1810 RVA: 0x0005DA24 File Offset: 0x0005BC24
+		
 		public void AllyAcceptAdd(int unionID, KFAllyData item)
 		{
 			lock (this._Mutex)
@@ -609,7 +609,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000713 RID: 1811 RVA: 0x0005DA7C File Offset: 0x0005BC7C
+		
 		public AllyData AllyRequest(int serverID, int unionID, int zoneID, string unionName)
 		{
 			AllyData result;
@@ -711,7 +711,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000714 RID: 1812 RVA: 0x0005DD94 File Offset: 0x0005BF94
+		
 		public int AllyOperate(int serverID, int unionID, int targetID, int operateType, bool isDel = false)
 		{
 			int result2;
@@ -749,7 +749,7 @@ namespace KF.Remoting
 			return result2;
 		}
 
-		// Token: 0x06000715 RID: 1813 RVA: 0x0005DE7C File Offset: 0x0005C07C
+		
 		public int OperateRemove(int serverID, int unionID, int targetID, bool isDel = false)
 		{
 			int result;
@@ -838,7 +838,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000716 RID: 1814 RVA: 0x0005E16C File Offset: 0x0005C36C
+		
 		public int OperateCancel(int serverID, int unionID, int targetID, bool isDel = false)
 		{
 			int result;
@@ -893,7 +893,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000717 RID: 1815 RVA: 0x0005E324 File Offset: 0x0005C524
+		
 		public int OperateAgree(int serverID, int unionID, int targetID)
 		{
 			int result;
@@ -1011,7 +1011,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000718 RID: 1816 RVA: 0x0005E718 File Offset: 0x0005C918
+		
 		public int OperateRefuse(int serverID, int unionID, int targetID, bool isDel = false)
 		{
 			int result;
@@ -1086,7 +1086,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000719 RID: 1817 RVA: 0x0005E984 File Offset: 0x0005CB84
+		
 		private KFAllyData GetUnionData(int unionID)
 		{
 			KFAllyData result;
@@ -1106,7 +1106,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600071A RID: 1818 RVA: 0x0005EA48 File Offset: 0x0005CC48
+		
 		private KFAllyData GetUnionData(int unionZoneID, string unionName)
 		{
 			KFAllyData result;
@@ -1133,7 +1133,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600071B RID: 1819 RVA: 0x0005EB50 File Offset: 0x0005CD50
+		
 		private bool UnionIsAlly(int unionID, int targetID)
 		{
 			bool result;
@@ -1153,7 +1153,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600071C RID: 1820 RVA: 0x0005EBFC File Offset: 0x0005CDFC
+		
 		private bool UnionIsRequest(int unionID, int targetID)
 		{
 			bool result;
@@ -1172,7 +1172,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600071D RID: 1821 RVA: 0x0005EC84 File Offset: 0x0005CE84
+		
 		private KFAllyData GetRequestData(int unionID, int targetID)
 		{
 			KFAllyData result;
@@ -1191,7 +1191,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600071E RID: 1822 RVA: 0x0005ED20 File Offset: 0x0005CF20
+		
 		private bool UnionIsAccept(int unionID, int targetID)
 		{
 			bool result;
@@ -1210,7 +1210,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600071F RID: 1823 RVA: 0x0005EDA8 File Offset: 0x0005CFA8
+		
 		private KFAllyData GetAcceptData(int unionID, int targetID)
 		{
 			KFAllyData result;
@@ -1229,7 +1229,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000720 RID: 1824 RVA: 0x0005EE44 File Offset: 0x0005D044
+		
 		public bool IsAgent(int serverID)
 		{
 			bool isAgent = ClientAgentManager.Instance().ExistAgent(serverID);
@@ -1240,64 +1240,64 @@ namespace KF.Remoting
 			return isAgent;
 		}
 
-		// Token: 0x06000721 RID: 1825 RVA: 0x0005EE84 File Offset: 0x0005D084
+		
 		public long RankVersion(int serverID)
 		{
 			return RankService.getInstance().RankVersion(serverID);
 		}
 
-		// Token: 0x06000722 RID: 1826 RVA: 0x0005EEA4 File Offset: 0x0005D0A4
+		
 		public int RankGradeUpdate(int serverID, KFRankData rankData)
 		{
 			return RankService.getInstance().RankGradeUpdate(serverID, rankData);
 		}
 
-		// Token: 0x06000723 RID: 1827 RVA: 0x0005EEC4 File Offset: 0x0005D0C4
+		
 		public List<KFRankData> RankTopList(int serverID, int rankType)
 		{
 			return RankService.getInstance().RankTopList(serverID, rankType);
 		}
 
-		// Token: 0x06000724 RID: 1828 RVA: 0x0005EEE4 File Offset: 0x0005D0E4
+		
 		public KFRankData RankRole(int serverID, int rankType, int roleID)
 		{
 			return RankService.getInstance().RankRole(serverID, rankType, roleID);
 		}
 
-		// Token: 0x040003C2 RID: 962
+		
 		private const double REQUEST_SECOND_CLEAR_SPAN = 30.0;
 
-		// Token: 0x040003C3 RID: 963
+		
 		private object _Mutex = new object();
 
-		// Token: 0x040003C4 RID: 964
+		
 		public readonly GameTypes _gameType = GameTypes.Ally;
 
-		// Token: 0x040003C5 RID: 965
+		
 		public readonly GameTypes EvItemGameType = GameTypes.TianTi;
 
-		// Token: 0x040003C6 RID: 966
+		
 		private ConcurrentDictionary<int, KFAllyData> _unionDic = new ConcurrentDictionary<int, KFAllyData>();
 
-		// Token: 0x040003C7 RID: 967
+		
 		private ConcurrentDictionary<int, List<int>> _allyDic = new ConcurrentDictionary<int, List<int>>();
 
-		// Token: 0x040003C8 RID: 968
+		
 		private ConcurrentDictionary<int, List<KFAllyData>> _requestDic = new ConcurrentDictionary<int, List<KFAllyData>>();
 
-		// Token: 0x040003C9 RID: 969
+		
 		private ConcurrentDictionary<int, List<KFAllyData>> _acceptDic = new ConcurrentDictionary<int, List<KFAllyData>>();
 
-		// Token: 0x040003CA RID: 970
+		
 		public static AllyService Instance = null;
 
-		// Token: 0x040003CB RID: 971
+		
 		public AllyPersistence _Persistence = AllyPersistence.Instance;
 
-		// Token: 0x040003CC RID: 972
+		
 		public Thread _BackgroundThread;
 
-		// Token: 0x040003CD RID: 973
+		
 		private DateTime _clearTimeRequest = DateTime.MinValue;
 	}
 }

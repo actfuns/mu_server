@@ -16,23 +16,23 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007AD RID: 1965
+	
 	public class VideoLogic : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener
 	{
-		// Token: 0x0600335D RID: 13149 RVA: 0x002D9C74 File Offset: 0x002D7E74
+		
 		public static VideoLogic getInstance()
 		{
 			return VideoLogic.instance;
 		}
 
-		// Token: 0x0600335E RID: 13150 RVA: 0x002D9C8C File Offset: 0x002D7E8C
+		
 		public bool initialize()
 		{
 			this.LoadVideoXml();
 			return true;
 		}
 
-		// Token: 0x0600335F RID: 13151 RVA: 0x002D9CA8 File Offset: 0x002D7EA8
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1402, 1, 1, VideoLogic.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -42,7 +42,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003360 RID: 13152 RVA: 0x002D9D10 File Offset: 0x002D7F10
+		
 		public bool showdown()
 		{
 			GlobalEventSource.getInstance().removeListener(28, VideoLogic.getInstance());
@@ -50,13 +50,13 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003361 RID: 13153 RVA: 0x002D9D48 File Offset: 0x002D7F48
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06003362 RID: 13154 RVA: 0x002D9D5C File Offset: 0x002D7F5C
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int eventType = eventObject.getEventType();
@@ -80,13 +80,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003363 RID: 13155 RVA: 0x002D9DE0 File Offset: 0x002D7FE0
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06003364 RID: 13156 RVA: 0x002D9DF4 File Offset: 0x002D7FF4
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -105,7 +105,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003365 RID: 13157 RVA: 0x002D9E54 File Offset: 0x002D8054
+		
 		public void LoadVideoXml()
 		{
 			lock (this.Mutex)
@@ -177,7 +177,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003366 RID: 13158 RVA: 0x002DA27C File Offset: 0x002D847C
+		
 		public TCPProcessCmdResults ProcessOpenVideoCmd(TMSKSocket socket, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -228,7 +228,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003367 RID: 13159 RVA: 0x002DA458 File Offset: 0x002D8658
+		
 		private VideoData GetVideoRoomData(GameClient client)
 		{
 			foreach (VideoData videoData in this.VideoList)
@@ -241,13 +241,13 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06003368 RID: 13160 RVA: 0x002DA544 File Offset: 0x002D8744
+		
 		private int GetPlayerFilterStatus(GameClient client, VideoData data)
 		{
 			return (client.ClientData.Level >= data.LevelSift || client.ClientData.VipLevel >= data.VIPSift || client.ClientData.ChangeLifeCount >= data.ZhuanshengSift) ? 1 : 0;
 		}
 
-		// Token: 0x06003369 RID: 13161 RVA: 0x002DA594 File Offset: 0x002D8794
+		
 		public int GetOrSendPlayerVideoStatus(GameClient client, List<int> RoleCommonUseIntPamams = null)
 		{
 			int status = (this.GetVideoRoomData(client) == null) ? 0 : 1;
@@ -259,7 +259,7 @@ namespace GameServer.Logic
 			return status;
 		}
 
-		// Token: 0x0600336A RID: 13162 RVA: 0x002DA604 File Offset: 0x002D8804
+		
 		public bool IsGuanZhanGM(GameClient client)
 		{
 			lock (this.Mutex)
@@ -273,7 +273,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600336B RID: 13163 RVA: 0x002DA690 File Offset: 0x002D8890
+		
 		public bool GetGuanZhanPos(int mapCode, ref int posX, ref int posY)
 		{
 			ChuanSongItem item = null;
@@ -299,7 +299,7 @@ namespace GameServer.Logic
 			return item != null;
 		}
 
-		// Token: 0x0600336C RID: 13164 RVA: 0x002DA78C File Offset: 0x002D898C
+		
 		public TCPProcessCmdResults ProcessGuanZhanMoveToCmd(TMSKSocket socket, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -353,7 +353,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x0600336D RID: 13165 RVA: 0x002DA99C File Offset: 0x002D8B9C
+		
 		public bool ProcessGuanZhanRoleMiniDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -397,7 +397,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600336E RID: 13166 RVA: 0x002DAACC File Offset: 0x002D8CCC
+		
 		public bool ProcessGuanZhanTrackingCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -453,7 +453,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600336F RID: 13167 RVA: 0x002DAD2C File Offset: 0x002D8F2C
+		
 		private void Tracking(GameClient tClient, GameClient beTClient)
 		{
 			try
@@ -484,7 +484,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003370 RID: 13168 RVA: 0x002DAF54 File Offset: 0x002D9154
+		
 		public void CancleTracking(GameClient client, bool notify = true)
 		{
 			try
@@ -516,7 +516,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003371 RID: 13169 RVA: 0x002DB0C4 File Offset: 0x002D92C4
+		
 		public void TryTrackingOther(GameClient tClient, GameClient lostClient)
 		{
 			try
@@ -570,7 +570,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003372 RID: 13170 RVA: 0x002DB324 File Offset: 0x002D9524
+		
 		public void ClientRelive(GameClient client)
 		{
 			try
@@ -611,7 +611,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003373 RID: 13171 RVA: 0x002DB46C File Offset: 0x002D966C
+		
 		private void HandleStartPlayGame(GameClient client)
 		{
 			try
@@ -673,7 +673,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003374 RID: 13172 RVA: 0x002DB720 File Offset: 0x002D9920
+		
 		private void HandlePlayerLogout(GameClient client)
 		{
 			try
@@ -705,19 +705,19 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04003F3F RID: 16191
+		
 		private static VideoLogic instance = new VideoLogic();
 
-		// Token: 0x04003F40 RID: 16192
+		
 		public object Mutex = new object();
 
-		// Token: 0x04003F41 RID: 16193
+		
 		private List<VideoData> VideoList = new List<VideoData>();
 
-		// Token: 0x04003F42 RID: 16194
+		
 		private Dictionary<string, int> VideoGMDict = new Dictionary<string, int>();
 
-		// Token: 0x04003F43 RID: 16195
+		
 		private Dictionary<int, ChuanSongItem> ChuanSongDict = new Dictionary<int, ChuanSongItem>();
 	}
 }

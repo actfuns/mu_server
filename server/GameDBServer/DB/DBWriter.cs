@@ -15,7 +15,7 @@ namespace GameDBServer.DB
 	public class DBWriter
 	{
 		// Token: 0x170000D0 RID: 208
-		// (get) Token: 0x060007C8 RID: 1992 RVA: 0x00047D90 File Offset: 0x00045F90
+		
 		public static string CurrentGoodsBakTableName
 		{
 			get

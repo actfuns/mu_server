@@ -10,10 +10,10 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007C5 RID: 1989
+	
 	public class RoleAlgorithm
 	{
-		// Token: 0x0600341D RID: 13341 RVA: 0x002E18E0 File Offset: 0x002DFAE0
+		
 		static RoleAlgorithm()
 		{
 			RoleAlgorithm.ExtListArray = new List<ExtPropIndexes>[177];
@@ -22,7 +22,7 @@ namespace GameServer.Logic
 			RoleAlgorithm.CreateNewBaseArray(RoleAlgorithm.roleExtPropDic, RoleAlgorithm.BaseListArray);
 		}
 
-		// Token: 0x0600341E RID: 13342 RVA: 0x002E4C40 File Offset: 0x002E2E40
+		
 		public static void CreateNewExtArray(Dictionary<ExtPropIndexes, ExtPropItem> oldDic, List<ExtPropIndexes>[] ExtArray)
 		{
 			foreach (ExtPropIndexes key in oldDic.Keys)
@@ -46,7 +46,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600341F RID: 13343 RVA: 0x002E4D50 File Offset: 0x002E2F50
+		
 		public static void CreateNewBaseArray(Dictionary<ExtPropIndexes, ExtPropItem> oldDic, List<ExtPropIndexes>[] BaseArray)
 		{
 			foreach (ExtPropIndexes key in oldDic.Keys)
@@ -62,13 +62,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003420 RID: 13344 RVA: 0x002E4DFC File Offset: 0x002E2FFC
+		
 		public static bool NeedNotifyClient(ExtPropIndexes attribute)
 		{
 			return RoleAlgorithm.NotifyList.Contains(attribute);
 		}
 
-		// Token: 0x06003421 RID: 13345 RVA: 0x002E4E1C File Offset: 0x002E301C
+		
 		public static double GetPureExtProp(GameClient client, int extProp)
 		{
 			double dValue = 0.0;
@@ -145,7 +145,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003422 RID: 13346 RVA: 0x002E50A8 File Offset: 0x002E32A8
+		
 		public static double GetExtProp(GameClient client, int extProp)
 		{
 			double dValue = 0.0;
@@ -229,7 +229,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003423 RID: 13347 RVA: 0x002E5374 File Offset: 0x002E3574
+		
 		public static double GetBaseExtProp(GameClient client, ExtPropItem extPropItem)
 		{
 			double val = 0.0;
@@ -238,7 +238,7 @@ namespace GameServer.Logic
 			return val;
 		}
 
-		// Token: 0x06003424 RID: 13348 RVA: 0x002E53B0 File Offset: 0x002E35B0
+		
 		public static double GetStrength(GameClient client, bool bAddBuff = true)
 		{
 			double dValue = (double)client.ClientData.PropStrength + client.RoleBuffer.GetBaseProp(0) + client.ClientData.RoleStarConstellationProp.StarConstellationFirstProps[0] + client.ClientData.PropsCacheManager.GetBaseProp(0);
@@ -249,7 +249,7 @@ namespace GameServer.Logic
 			return dValue;
 		}
 
-		// Token: 0x06003425 RID: 13349 RVA: 0x002E5424 File Offset: 0x002E3624
+		
 		public static double GetIntelligence(GameClient client, bool bAddBuff = true)
 		{
 			double dValue = (double)client.ClientData.PropIntelligence + client.RoleBuffer.GetBaseProp(1) + client.ClientData.RoleStarConstellationProp.StarConstellationFirstProps[1] + client.ClientData.PropsCacheManager.GetBaseProp(1);
@@ -260,7 +260,7 @@ namespace GameServer.Logic
 			return dValue;
 		}
 
-		// Token: 0x06003426 RID: 13350 RVA: 0x002E5498 File Offset: 0x002E3698
+		
 		public static double GetDexterity(GameClient client, bool bAddBuff = true)
 		{
 			double dValue = (double)client.ClientData.PropDexterity + client.RoleBuffer.GetBaseProp(2) + client.ClientData.RoleStarConstellationProp.StarConstellationFirstProps[2] + client.ClientData.PropsCacheManager.GetBaseProp(2);
@@ -271,7 +271,7 @@ namespace GameServer.Logic
 			return dValue;
 		}
 
-		// Token: 0x06003427 RID: 13351 RVA: 0x002E550C File Offset: 0x002E370C
+		
 		public static double GetConstitution(GameClient client, bool bAddBuff = true)
 		{
 			double dValue = (double)client.ClientData.PropConstitution + client.RoleBuffer.GetBaseProp(3) + client.ClientData.RoleStarConstellationProp.StarConstellationFirstProps[3] + client.ClientData.PropsCacheManager.GetBaseProp(3);
@@ -282,7 +282,7 @@ namespace GameServer.Logic
 			return dValue;
 		}
 
-		// Token: 0x06003428 RID: 13352 RVA: 0x002E5610 File Offset: 0x002E3810
+		
 		public static double GetMagicSkillIncrease(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(33, delegate
@@ -300,7 +300,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003429 RID: 13353 RVA: 0x002E56DC File Offset: 0x002E38DC
+		
 		public static double GetPhySkillIncrease(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(31, delegate
@@ -317,7 +317,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x0600342A RID: 13354 RVA: 0x002E571C File Offset: 0x002E391C
+		
 		public static double GetAttackSpeed(GameClient client)
 		{
 			int nOcc = Global.CalcOriginalOccupationID(client);
@@ -325,7 +325,7 @@ namespace GameServer.Logic
 			return roleBasePropItem.AttackSpeed;
 		}
 
-		// Token: 0x0600342B RID: 13355 RVA: 0x002E57A4 File Offset: 0x002E39A4
+		
 		public static double GetAttackSpeedServer(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(1, delegate
@@ -336,7 +336,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x0600342C RID: 13356 RVA: 0x002E58EC File Offset: 0x002E3AEC
+		
 		public static double GetFatalAttack(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(35, delegate
@@ -353,7 +353,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x0600342D RID: 13357 RVA: 0x002E592C File Offset: 0x002E3B2C
+		
 		public static double GetDeFatalAttack(GameClient client)
 		{
 			double val = 0.0;
@@ -362,14 +362,14 @@ namespace GameServer.Logic
 			return val * 100.0;
 		}
 
-		// Token: 0x0600342E RID: 13358 RVA: 0x002E597C File Offset: 0x002E3B7C
+		
 		public static double GetFatalHurt(GameClient client)
 		{
 			double val = 0.0;
 			return val + client.ClientData.PropsCacheManager.GetExtProp(90);
 		}
 
-		// Token: 0x0600342F RID: 13359 RVA: 0x002E59B0 File Offset: 0x002E3BB0
+		
 		public static double GetDeLuckyAttack(GameClient client)
 		{
 			double val = 0.0;
@@ -378,13 +378,13 @@ namespace GameServer.Logic
 			return val * 100.0;
 		}
 
-		// Token: 0x06003430 RID: 13360 RVA: 0x002E5A00 File Offset: 0x002E3C00
+		
 		public static double GetFatalAttack(Monster monster)
 		{
 			return monster.MonsterInfo.MonsterFatalAttack * 100.0;
 		}
 
-		// Token: 0x06003431 RID: 13361 RVA: 0x002E5B24 File Offset: 0x002E3D24
+		
 		public static double GetDoubleAttack(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(36, delegate
@@ -400,7 +400,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003432 RID: 13362 RVA: 0x002E5B64 File Offset: 0x002E3D64
+		
 		public static double GetDeDoubleAttack(GameClient client)
 		{
 			double val = 0.0;
@@ -409,7 +409,7 @@ namespace GameServer.Logic
 			return val * 100.0;
 		}
 
-		// Token: 0x06003433 RID: 13363 RVA: 0x002E5BB4 File Offset: 0x002E3DB4
+		
 		public static double GetSavagePercent(GameClient client)
 		{
 			double val = 0.0;
@@ -418,7 +418,7 @@ namespace GameServer.Logic
 			return Math.Max(val, 0.0);
 		}
 
-		// Token: 0x06003434 RID: 13364 RVA: 0x002E5C00 File Offset: 0x002E3E00
+		
 		public static double GetDeSavagePercent(GameClient client)
 		{
 			double val = 0.0;
@@ -427,7 +427,7 @@ namespace GameServer.Logic
 			return Math.Max(val, 0.0);
 		}
 
-		// Token: 0x06003435 RID: 13365 RVA: 0x002E5C4C File Offset: 0x002E3E4C
+		
 		public static double GetColdPercent(GameClient client)
 		{
 			double val = 0.0;
@@ -436,7 +436,7 @@ namespace GameServer.Logic
 			return Math.Max(val, 0.0);
 		}
 
-		// Token: 0x06003436 RID: 13366 RVA: 0x002E5C98 File Offset: 0x002E3E98
+		
 		public static double GetDeColdPercent(GameClient client)
 		{
 			double val = 0.0;
@@ -445,7 +445,7 @@ namespace GameServer.Logic
 			return Math.Max(val, 0.0);
 		}
 
-		// Token: 0x06003437 RID: 13367 RVA: 0x002E5CE4 File Offset: 0x002E3EE4
+		
 		public static double GetRuthlessPercent(GameClient client)
 		{
 			double val = 0.0;
@@ -454,7 +454,7 @@ namespace GameServer.Logic
 			return Math.Max(val, 0.0);
 		}
 
-		// Token: 0x06003438 RID: 13368 RVA: 0x002E5D30 File Offset: 0x002E3F30
+		
 		public static double GetDeRuthlessPercent(GameClient client)
 		{
 			double val = 0.0;
@@ -463,13 +463,13 @@ namespace GameServer.Logic
 			return Math.Max(val, 0.0);
 		}
 
-		// Token: 0x06003439 RID: 13369 RVA: 0x002E5D7C File Offset: 0x002E3F7C
+		
 		public static double GetDoubleAttack(Monster monster)
 		{
 			return monster.MonsterInfo.MonsterDoubleAttack * 100.0;
 		}
 
-		// Token: 0x0600343A RID: 13370 RVA: 0x002E5E68 File Offset: 0x002E4068
+		
 		public static double GetMoveSpeed(GameClient client)
 		{
 			double result;
@@ -496,7 +496,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600343B RID: 13371 RVA: 0x002E5FE0 File Offset: 0x002E41E0
+		
 		public static double GetDamageThornPercent(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(29, delegate
@@ -512,13 +512,13 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x0600343C RID: 13372 RVA: 0x002E6020 File Offset: 0x002E4220
+		
 		public static double GetDamageThornPercent(Monster monster)
 		{
 			return monster.MonsterInfo.MonsterDamageThornPercent;
 		}
 
-		// Token: 0x0600343D RID: 13373 RVA: 0x002E6114 File Offset: 0x002E4314
+		
 		public static double GetDamageThorn(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(30, delegate
@@ -532,14 +532,14 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x0600343E RID: 13374 RVA: 0x002E6154 File Offset: 0x002E4354
+		
 		public static double GetDamageThorn(Monster monster)
 		{
 			double val = monster.MonsterInfo.MonsterDamageThorn;
 			return Global.GMax(0.0, val);
 		}
 
-		// Token: 0x0600343F RID: 13375 RVA: 0x002E623C File Offset: 0x002E443C
+		
 		public static double GetStrong(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(0, delegate
@@ -552,32 +552,32 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003440 RID: 13376 RVA: 0x002E6278 File Offset: 0x002E4478
+		
 		public static double GetStrong(Monster monster)
 		{
 			return 0.0;
 		}
 
-		// Token: 0x06003441 RID: 13377 RVA: 0x002E6294 File Offset: 0x002E4494
+		
 		public static double GetMinADefenseV(GameClient client)
 		{
 			return RoleAlgorithm.GetExtProp(client, 3);
 		}
 
-		// Token: 0x06003442 RID: 13378 RVA: 0x002E62B0 File Offset: 0x002E44B0
+		
 		public static double GetMinADefenseV(Monster monster)
 		{
 			double val = (double)monster.MonsterInfo.Defense;
 			return val * (1.0 + monster.TempPropsBuffer.GetExtProp(42));
 		}
 
-		// Token: 0x06003443 RID: 13379 RVA: 0x002E62EC File Offset: 0x002E44EC
+		
 		public static double GetMaxADefenseV(GameClient client)
 		{
 			return RoleAlgorithm.GetExtProp(client, 4);
 		}
 
-		// Token: 0x06003444 RID: 13380 RVA: 0x002E63C8 File Offset: 0x002E45C8
+		
 		public static double GetIncreasePhyDefense(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(42, delegate
@@ -591,20 +591,20 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003445 RID: 13381 RVA: 0x002E6408 File Offset: 0x002E4608
+		
 		public static double GetMaxADefenseV(Monster monster)
 		{
 			double val = (double)monster.MonsterInfo.Defense;
 			return val * (1.0 + monster.TempPropsBuffer.GetExtProp(42));
 		}
 
-		// Token: 0x06003446 RID: 13382 RVA: 0x002E6444 File Offset: 0x002E4644
+		
 		public static double GetMinMDefenseV(GameClient client)
 		{
 			return RoleAlgorithm.GetExtProp(client, 5);
 		}
 
-		// Token: 0x06003447 RID: 13383 RVA: 0x002E6520 File Offset: 0x002E4720
+		
 		public static double GetIncreaseMagDefense(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(43, delegate
@@ -618,46 +618,46 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003448 RID: 13384 RVA: 0x002E6560 File Offset: 0x002E4760
+		
 		public static double GetMinMDefenseV(Monster monster)
 		{
 			double val = (double)monster.MonsterInfo.MDefense;
 			return val * (1.0 + monster.TempPropsBuffer.GetExtProp(43));
 		}
 
-		// Token: 0x06003449 RID: 13385 RVA: 0x002E659C File Offset: 0x002E479C
+		
 		public static double GetMaxMDefenseV(GameClient client)
 		{
 			return RoleAlgorithm.GetExtProp(client, 6);
 		}
 
-		// Token: 0x0600344A RID: 13386 RVA: 0x002E65B8 File Offset: 0x002E47B8
+		
 		public static double GetMaxMDefenseV(Monster monster)
 		{
 			double val = (double)monster.MonsterInfo.MDefense;
 			return val * (1.0 + monster.TempPropsBuffer.GetExtProp(43));
 		}
 
-		// Token: 0x0600344B RID: 13387 RVA: 0x002E65F4 File Offset: 0x002E47F4
+		
 		public static double GetMinAttackV(GameClient client)
 		{
 			return RoleAlgorithm.GetExtProp(client, 7);
 		}
 
-		// Token: 0x0600344C RID: 13388 RVA: 0x002E6610 File Offset: 0x002E4810
+		
 		public static double GetMinAttackV(Monster monster)
 		{
 			double attackVal = (double)monster.MonsterInfo.MinAttack;
 			return attackVal * (1.0 + monster.TempPropsBuffer.GetExtProp(11));
 		}
 
-		// Token: 0x0600344D RID: 13389 RVA: 0x002E664C File Offset: 0x002E484C
+		
 		public static double GetMaxAttackV(GameClient client)
 		{
 			return RoleAlgorithm.GetExtProp(client, 8);
 		}
 
-		// Token: 0x0600344E RID: 13390 RVA: 0x002E6744 File Offset: 0x002E4944
+		
 		public static double GetIncreasePhyAttack(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(11, delegate
@@ -674,33 +674,33 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x0600344F RID: 13391 RVA: 0x002E6784 File Offset: 0x002E4984
+		
 		public static double GetMaxAttackV(Monster monster)
 		{
 			int attackVal = monster.MonsterInfo.MaxAttack;
 			return (double)attackVal;
 		}
 
-		// Token: 0x06003450 RID: 13392 RVA: 0x002E67A4 File Offset: 0x002E49A4
+		
 		public static double GetMinMagicAttackV(GameClient client)
 		{
 			return RoleAlgorithm.GetExtProp(client, 9);
 		}
 
-		// Token: 0x06003451 RID: 13393 RVA: 0x002E67C0 File Offset: 0x002E49C0
+		
 		public static double GetMinMagicAttackV(Monster monster)
 		{
 			double attackVal = (double)monster.MonsterInfo.MinAttack;
 			return attackVal * (1.0 + monster.TempPropsBuffer.GetExtProp(12));
 		}
 
-		// Token: 0x06003452 RID: 13394 RVA: 0x002E67FC File Offset: 0x002E49FC
+		
 		public static double GetMaxMagicAttackV(GameClient client)
 		{
 			return RoleAlgorithm.GetExtProp(client, 10);
 		}
 
-		// Token: 0x06003453 RID: 13395 RVA: 0x002E68F4 File Offset: 0x002E4AF4
+		
 		public static double GetIncreaseMagAttack(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(12, delegate
@@ -717,14 +717,14 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003454 RID: 13396 RVA: 0x002E6934 File Offset: 0x002E4B34
+		
 		public static double GetMaxMagicAttackV(Monster monster)
 		{
 			int attackVal = monster.MonsterInfo.MaxAttack;
 			return (double)attackVal;
 		}
 
-		// Token: 0x06003455 RID: 13397 RVA: 0x002E6BAC File Offset: 0x002E4DAC
+		
 		public static double GetMaxLifeV(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(13, delegate
@@ -766,7 +766,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003456 RID: 13398 RVA: 0x002E6D30 File Offset: 0x002E4F30
+		
 		public static double GetMaxLifePercentV(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(14, delegate
@@ -789,7 +789,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003457 RID: 13399 RVA: 0x002E6E64 File Offset: 0x002E5064
+		
 		public static double GetLifeStealV(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(44, delegate
@@ -805,21 +805,21 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003458 RID: 13400 RVA: 0x002E6EA4 File Offset: 0x002E50A4
+		
 		public static double GetLifeStealPercentV(GameClient client)
 		{
 			double val = 0.0;
 			return val + client.ClientData.PropsCacheManager.GetExtProp(67);
 		}
 
-		// Token: 0x06003459 RID: 13401 RVA: 0x002E6ED8 File Offset: 0x002E50D8
+		
 		public static double GetPotionPercentV(GameClient client)
 		{
 			double val = 0.0;
 			return val + client.ClientData.PropsCacheManager.GetExtProp(68);
 		}
 
-		// Token: 0x0600345A RID: 13402 RVA: 0x002E6FE8 File Offset: 0x002E51E8
+		
 		public static double GetAddAttackV(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(45, delegate
@@ -833,7 +833,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x0600345B RID: 13403 RVA: 0x002E7104 File Offset: 0x002E5304
+		
 		public static double GetAddDefenseV(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(46, delegate
@@ -847,21 +847,21 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x0600345C RID: 13404 RVA: 0x002E7144 File Offset: 0x002E5344
+		
 		public static double GetAddAttackPercent(GameClient client)
 		{
 			double val = 0.0;
 			return val + client.ClientData.PropsCacheManager.GetExtProp(91);
 		}
 
-		// Token: 0x0600345D RID: 13405 RVA: 0x002E7178 File Offset: 0x002E5378
+		
 		public static double GetAddDefensePercent(GameClient client)
 		{
 			double val = 0.0;
 			return val + client.ClientData.PropsCacheManager.GetExtProp(92);
 		}
 
-		// Token: 0x0600345E RID: 13406 RVA: 0x002E72E4 File Offset: 0x002E54E4
+		
 		public static double GetMaxMagicV(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(15, delegate
@@ -880,7 +880,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x0600345F RID: 13407 RVA: 0x002E7444 File Offset: 0x002E5644
+		
 		public static double GetLuckV(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(17, delegate
@@ -898,13 +898,13 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003460 RID: 13408 RVA: 0x002E7484 File Offset: 0x002E5684
+		
 		public static double GetLuckV(Monster monster)
 		{
 			return monster.MonsterInfo.MonsterLucky;
 		}
 
-		// Token: 0x06003461 RID: 13409 RVA: 0x002E7658 File Offset: 0x002E5858
+		
 		public static double GetHitV(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(18, delegate
@@ -925,20 +925,20 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003462 RID: 13410 RVA: 0x002E7698 File Offset: 0x002E5898
+		
 		public static double GetHitPercent(GameClient client)
 		{
 			return client.ClientData.ExcellenceProp[6] + client.ClientData.ExcellenceProp[19] + client.RoleBuffer.GetExtProp(54) + client.ClientData.PropsCacheManager.GetExtProp(54);
 		}
 
-		// Token: 0x06003463 RID: 13411 RVA: 0x002E76F4 File Offset: 0x002E58F4
+		
 		public static double GetHitV(Monster monster)
 		{
 			double val = monster.MonsterInfo.HitV;
 			return val * (1.0 + monster.TempPropsBuffer.GetExtProp(18));
 		}
 
-		// Token: 0x06003464 RID: 13412 RVA: 0x002E78E4 File Offset: 0x002E5AE4
+		
 		public static double GetDodgeV(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(19, delegate
@@ -958,19 +958,19 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003465 RID: 13413 RVA: 0x002E7924 File Offset: 0x002E5B24
+		
 		public static double GetDodgePercent(GameClient client)
 		{
 			return client.ClientData.ExcellenceProp[12] + client.ClientData.ExcellenceProp[25] + client.RoleBuffer.GetExtProp(55) + client.ClientData.PropsCacheManager.GetExtProp(55);
 		}
 
-		// Token: 0x06003466 RID: 13414 RVA: 0x002E7980 File Offset: 0x002E5B80
+		
 		public static double GetDodgeV(Monster monster)
 		{
 			return monster.MonsterInfo.Dodge;
 		}
 
-		// Token: 0x06003467 RID: 13415 RVA: 0x002E79A0 File Offset: 0x002E5BA0
+		
 		public static double GetLifeRecoverValPercentV(GameClient client)
 		{
 			int nOcc = Global.CalcOriginalOccupationID(client);
@@ -978,7 +978,7 @@ namespace GameServer.Logic
 			return roleBasePropItem.RecoverLifeV;
 		}
 
-		// Token: 0x06003468 RID: 13416 RVA: 0x002E7AC4 File Offset: 0x002E5CC4
+		
 		public static double GetLifeRecoverAddPercentV(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(20, delegate
@@ -993,20 +993,20 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003469 RID: 13417 RVA: 0x002E7B04 File Offset: 0x002E5D04
+		
 		public static double GetLifeRecoverAddPercentOnlySandR(GameClient client)
 		{
 			double addrate = 0.0;
 			return addrate + client.ClientData.PropsCacheManager.GetExtProp(88);
 		}
 
-		// Token: 0x0600346A RID: 13418 RVA: 0x002E7B38 File Offset: 0x002E5D38
+		
 		public static double GetLifeRecoverValPercentV(Monster monster)
 		{
 			return monster.MonsterInfo.RecoverLifeV;
 		}
 
-		// Token: 0x0600346B RID: 13419 RVA: 0x002E7B58 File Offset: 0x002E5D58
+		
 		public static double GetMagicRecoverValPercentV(GameClient client)
 		{
 			int nOcc = Global.CalcOriginalOccupationID(client);
@@ -1014,26 +1014,26 @@ namespace GameServer.Logic
 			return roleBasePropItem.RecoverMagicV;
 		}
 
-		// Token: 0x0600346C RID: 13420 RVA: 0x002E7B94 File Offset: 0x002E5D94
+		
 		public static double GetMagicRecoverAddPercentV(GameClient client)
 		{
 			return 0.0;
 		}
 
-		// Token: 0x0600346D RID: 13421 RVA: 0x002E7BB0 File Offset: 0x002E5DB0
+		
 		public static double GetMagicRecoverAddPercentOnlySandR(GameClient client)
 		{
 			double addrate = 0.0;
 			return addrate + client.ClientData.PropsCacheManager.GetExtProp(89);
 		}
 
-		// Token: 0x0600346E RID: 13422 RVA: 0x002E7BE4 File Offset: 0x002E5DE4
+		
 		public static double GetMagicRecoverValPercentV(Monster monster)
 		{
 			return monster.MonsterInfo.RecoverMagicV;
 		}
 
-		// Token: 0x0600346F RID: 13423 RVA: 0x002E7CF0 File Offset: 0x002E5EF0
+		
 		public static double GetSubAttackInjurePercent(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(24, delegate
@@ -1048,20 +1048,20 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003470 RID: 13424 RVA: 0x002E7D30 File Offset: 0x002E5F30
+		
 		public static double GetInjurePenetrationPercent(GameClient client)
 		{
 			double val = client.ClientData.PropsCacheManager.GetExtProp(93);
 			return Math.Max(0.0, val);
 		}
 
-		// Token: 0x06003471 RID: 13425 RVA: 0x002E7D64 File Offset: 0x002E5F64
+		
 		public static double GetSubAttackInjurePercent(Monster monster)
 		{
 			return monster.MonsterInfo.MonsterSubAttackInjurePercent;
 		}
 
-		// Token: 0x06003472 RID: 13426 RVA: 0x002E7E5C File Offset: 0x002E605C
+		
 		public static double GetSubAttackInjureValue(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(25, delegate
@@ -1075,13 +1075,13 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003473 RID: 13427 RVA: 0x002E7E9C File Offset: 0x002E609C
+		
 		public static double GetSubAttackInjureValue(Monster monster)
 		{
 			return monster.MonsterInfo.MonsterSubAttackInjure;
 		}
 
-		// Token: 0x06003474 RID: 13428 RVA: 0x002E7F98 File Offset: 0x002E6198
+		
 		public static double GetMaxMagicPercent(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(16, delegate
@@ -1095,7 +1095,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003475 RID: 13429 RVA: 0x002E80E0 File Offset: 0x002E62E0
+		
 		public static double GetIgnoreDefensePercent(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(28, delegate
@@ -1111,13 +1111,13 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003476 RID: 13430 RVA: 0x002E8120 File Offset: 0x002E6320
+		
 		public static double GetIgnoreDefensePercent(Monster monster)
 		{
 			return monster.MonsterInfo.MonsterIgnoreDefensePercent;
 		}
 
-		// Token: 0x06003477 RID: 13431 RVA: 0x002E8248 File Offset: 0x002E6448
+		
 		public static double GetDecreaseInjurePercent(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(37, delegate
@@ -1133,13 +1133,13 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003478 RID: 13432 RVA: 0x002E8288 File Offset: 0x002E6488
+		
 		public static double GetDecreaseInjurePercent(Monster monster)
 		{
 			return 0.0;
 		}
 
-		// Token: 0x06003479 RID: 13433 RVA: 0x002E8380 File Offset: 0x002E6580
+		
 		public static double GetDecreaseInjureValue(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(38, delegate
@@ -1153,13 +1153,13 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x0600347A RID: 13434 RVA: 0x002E83C0 File Offset: 0x002E65C0
+		
 		public static double GetDecreaseInjureValue(Monster monster)
 		{
 			return 0.0;
 		}
 
-		// Token: 0x0600347B RID: 13435 RVA: 0x002E84B8 File Offset: 0x002E66B8
+		
 		public static double GetCounteractInjurePercent(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(39, delegate
@@ -1173,13 +1173,13 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x0600347C RID: 13436 RVA: 0x002E84F8 File Offset: 0x002E66F8
+		
 		public static double GetCounteractInjurePercent(Monster monster)
 		{
 			return 0.0;
 		}
 
-		// Token: 0x0600347D RID: 13437 RVA: 0x002E85F0 File Offset: 0x002E67F0
+		
 		public static double GetCounteractInjureValue(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(40, delegate
@@ -1193,13 +1193,13 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x0600347E RID: 13438 RVA: 0x002E8630 File Offset: 0x002E6830
+		
 		public static double GetCounteractInjureValue(Monster monster)
 		{
 			return 0.0;
 		}
 
-		// Token: 0x0600347F RID: 13439 RVA: 0x002E8794 File Offset: 0x002E6994
+		
 		public static double GetAddAttackInjurePercent(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(26, delegate
@@ -1222,13 +1222,13 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003480 RID: 13440 RVA: 0x002E87D4 File Offset: 0x002E69D4
+		
 		public static double GetAddAttackInjurePercent(Monster monster)
 		{
 			return 0.0;
 		}
 
-		// Token: 0x06003481 RID: 13441 RVA: 0x002E88D0 File Offset: 0x002E6AD0
+		
 		public static double GetAddAttackInjureValue(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(27, delegate
@@ -1242,13 +1242,13 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003482 RID: 13442 RVA: 0x002E8910 File Offset: 0x002E6B10
+		
 		public static double GetAddAttackInjureValue(Monster monster)
 		{
 			return 0.0;
 		}
 
-		// Token: 0x06003483 RID: 13443 RVA: 0x002E8A20 File Offset: 0x002E6C20
+		
 		public static double GetIgnoreDefenseRate(GameClient client)
 		{
 			return client.propsCacheModule.GetExtPropsValue(41, delegate
@@ -1263,13 +1263,13 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x06003484 RID: 13444 RVA: 0x002E8A60 File Offset: 0x002E6C60
+		
 		public static double GetIgnoreDefenseRate(Monster monster)
 		{
 			return monster.MonsterInfo.MonsterIgnoreDefenseRate;
 		}
 
-		// Token: 0x06003485 RID: 13445 RVA: 0x002E8A80 File Offset: 0x002E6C80
+		
 		public static double GetFrozenPercent(IObject obj)
 		{
 			double dVal = 0.0;
@@ -1304,7 +1304,7 @@ namespace GameServer.Logic
 			return Math.Max(dVal, 0.0);
 		}
 
-		// Token: 0x06003486 RID: 13446 RVA: 0x002E8B7C File Offset: 0x002E6D7C
+		
 		public static double GetPalsyPercent(IObject obj)
 		{
 			double dVal = 0.0;
@@ -1339,7 +1339,7 @@ namespace GameServer.Logic
 			return Math.Max(dVal, 0.0);
 		}
 
-		// Token: 0x06003487 RID: 13447 RVA: 0x002E8C78 File Offset: 0x002E6E78
+		
 		public static double GetSpeedDownPercent(IObject obj)
 		{
 			double dVal = 0.0;
@@ -1374,7 +1374,7 @@ namespace GameServer.Logic
 			return Math.Max(dVal, 0.0);
 		}
 
-		// Token: 0x06003488 RID: 13448 RVA: 0x002E8D74 File Offset: 0x002E6F74
+		
 		public static double GetBlowPercent(IObject obj)
 		{
 			double dVal = 0.0;
@@ -1409,7 +1409,7 @@ namespace GameServer.Logic
 			return Math.Max(dVal, 0.0);
 		}
 
-		// Token: 0x06003489 RID: 13449 RVA: 0x002E8E70 File Offset: 0x002E7070
+		
 		public static double GetAutoRevivePercent(object obj)
 		{
 			double dVal = 0.0;
@@ -1438,7 +1438,7 @@ namespace GameServer.Logic
 			return dVal;
 		}
 
-		// Token: 0x0600348A RID: 13450 RVA: 0x002E8F20 File Offset: 0x002E7120
+		
 		public static double GetExtPropValue(GameClient client, ExtPropIndexes extPropIndex)
 		{
 			double val = 0.0;
@@ -1446,7 +1446,7 @@ namespace GameServer.Logic
 			return val + client.ClientData.PropsCacheManager.GetExtProp((int)extPropIndex);
 		}
 
-		// Token: 0x0600348B RID: 13451 RVA: 0x002E8F68 File Offset: 0x002E7168
+		
 		public static double CalRebornAttackInjureValue(IObject obj, IObject objTarget, ExtPropIndexes propIdx, ref int damageType)
 		{
 			double Attack = 0.0;
@@ -1540,7 +1540,7 @@ namespace GameServer.Logic
 			return result * (1.0 + InjurePct) * WeakPercent;
 		}
 
-		// Token: 0x0600348C RID: 13452 RVA: 0x002E94A4 File Offset: 0x002E76A4
+		
 		private static double GetAttackPower(IObject obj, int damage, int val, int luck, int nFatalValue, out int nDamageType, int nMaxAttackValue, double subSpPercent = 0.0)
 		{
 			nDamageType = 0;
@@ -1588,7 +1588,7 @@ namespace GameServer.Logic
 			return (double)result;
 		}
 
-		// Token: 0x0600348D RID: 13453 RVA: 0x002E9620 File Offset: 0x002E7820
+		
 		public static double CalcInjureValue(IObject obj, IObject objTarget, double damage, ref int damageType, double elementInjurePercnet)
 		{
 			double result = damage;
@@ -1705,7 +1705,7 @@ namespace GameServer.Logic
 			return result * (1.0 + SingletonTemplate<CoupleArenaManager>.Instance().CalcBuffHurt(obj, objTarget));
 		}
 
-		// Token: 0x0600348E RID: 13454 RVA: 0x002E9AD4 File Offset: 0x002E7CD4
+		
 		public static int GetRateIndexPercent(double[] rateArr)
 		{
 			int index = -1;
@@ -1731,7 +1731,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x0600348F RID: 13455 RVA: 0x002E9B44 File Offset: 0x002E7D44
+		
 		public static int GetRateIndex(double[] rateArr, int max)
 		{
 			int index = -1;
@@ -1757,7 +1757,7 @@ namespace GameServer.Logic
 			return result2;
 		}
 
-		// Token: 0x06003490 RID: 13456 RVA: 0x002E9BB4 File Offset: 0x002E7DB4
+		
 		private static double GetDefensePower(int baseDefense, int val)
 		{
 			if (val < 0)
@@ -1767,26 +1767,26 @@ namespace GameServer.Logic
 			return (double)(baseDefense + Global.GetRandomNumber(0, val + 1));
 		}
 
-		// Token: 0x06003491 RID: 13457 RVA: 0x002E9BE0 File Offset: 0x002E7DE0
+		
 		private static double GetDefenseValue(int minDefense, int maxDefense)
 		{
 			return RoleAlgorithm.GetDefensePower(minDefense, maxDefense - minDefense);
 		}
 
-		// Token: 0x06003492 RID: 13458 RVA: 0x002E9BFC File Offset: 0x002E7DFC
+		
 		public static double CalcAttackValue(IObject obj, int minAttackV, int maxAttackV, int lucky, int nFatalValue, out int nDamageType, double subSpPercent = 0.0)
 		{
 			nDamageType = 0;
 			return RoleAlgorithm.GetAttackPower(obj, minAttackV, maxAttackV - minAttackV, lucky, nFatalValue, out nDamageType, maxAttackV, subSpPercent);
 		}
 
-		// Token: 0x06003493 RID: 13459 RVA: 0x002E9C24 File Offset: 0x002E7E24
+		
 		public static double GetRealInjuredValue(long attackV, long defenseV)
 		{
 			return (double)((int)Math.Max(attackV - defenseV, (long)((int)Math.Max((double)attackV * 0.1, 5.0))));
 		}
 
-		// Token: 0x06003494 RID: 13460 RVA: 0x002E9C68 File Offset: 0x002E7E68
+		
 		public static double GetRealHitRate(double hitV, double dodgeV)
 		{
 			double result;
@@ -1804,7 +1804,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003495 RID: 13461 RVA: 0x002E9CD0 File Offset: 0x002E7ED0
+		
 		public static double GetRealHitRate(double DodgePercent)
 		{
 			double result;
@@ -1821,7 +1821,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003496 RID: 13462 RVA: 0x002E9D20 File Offset: 0x002E7F20
+		
 		public static int CallAttackArmor(IObject attacker, IObject obj, ref int injure1, ref int injure2)
 		{
 			int currentArmorV = -1;
@@ -1860,7 +1860,7 @@ namespace GameServer.Logic
 			return currentArmorV;
 		}
 
-		// Token: 0x06003497 RID: 13463 RVA: 0x002E9E90 File Offset: 0x002E8090
+		
 		public static int CalcAttackInjure(int attackType, IObject obj, int injured, IObject attacker = null)
 		{
 			double subPercent = 0.0;
@@ -1908,7 +1908,7 @@ namespace GameServer.Logic
 			return injured;
 		}
 
-		// Token: 0x06003498 RID: 13464 RVA: 0x002EA080 File Offset: 0x002E8280
+		
 		public static int GetDefenseByCalcingIgnoreDefense(int attackType, IObject self, int defense, ref int burst)
 		{
 			double ignorePercent = 0.0;
@@ -1942,7 +1942,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003499 RID: 13465 RVA: 0x002EA11C File Offset: 0x002E831C
+		
 		private static bool ClientIgnorePhyAttack(GameClient client, ref int burst)
 		{
 			double ignorePhyAttackPercent = RoleAlgorithm.GetExtPropValue(client, ExtPropIndexes.IgnorePhyAttackPercent);
@@ -1959,7 +1959,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600349A RID: 13466 RVA: 0x002EA160 File Offset: 0x002E8360
+		
 		private static bool ClientIgnoreMagicAttack(GameClient client, ref int burst)
 		{
 			double ignorePhyAttackPercent = RoleAlgorithm.GetExtPropValue(client, ExtPropIndexes.IgnoreMagyAttackPercent);
@@ -1976,7 +1976,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600349B RID: 13467 RVA: 0x002EA1A4 File Offset: 0x002E83A4
+		
 		public static void AttackEnemy(GameClient client, Monster monster, bool forceBurst, double injurePercnet, int addInjure, double attackPercent, int addAttackMin, int addAttackMax, out int burst, out int injure, bool ignoreDefenseAndDodge, double baseRate, int addVlue, int magicCode = 0, double shenShiInjurePercent = 0.0)
 		{
 			burst = 0;
@@ -2050,7 +2050,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600349C RID: 13468 RVA: 0x002EA444 File Offset: 0x002E8644
+		
 		public static void AttackEnemy(Monster monster, GameClient client, bool forceBurst, double injurePercnet, int addInjure, double attackPercent, int addAttackMin, int addAttackMax, out int burst, out int injure, bool ignoreDefenseAndDodge, double baseRate, int addVlue, int magicCode = 0, double shenShiInjurePercent = 0.0)
 		{
 			burst = 0;
@@ -2120,7 +2120,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600349D RID: 13469 RVA: 0x002EA660 File Offset: 0x002E8860
+		
 		public static void AttackEnemy(Monster monster, Monster enemy, bool forceBurst, double injurePercnet, int addInjure, double attackPercent, int addAttackMin, int addAttackMax, out int burst, out int injure, bool ignoreDefenseAndDodge, double baseRate = 1.0, int addVlue = 0, int magicCode = 0, double shenShiInjurePercent = 0.0)
 		{
 			burst = 0;
@@ -2176,7 +2176,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600349E RID: 13470 RVA: 0x002EA820 File Offset: 0x002E8A20
+		
 		public static void AttackEnemy(GameClient client, GameClient enemy, bool forceBurst, double injurePercnet, int addInjure, double attackPercent, int addAttackMin, int addAttackMax, out int burst, out int injure, bool ignoreDefenseAndDodge, double baseRate, int addVlue, int magicCode = 0, double shenShiInjurePercent = 0.0)
 		{
 			burst = 0;
@@ -2256,7 +2256,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600349F RID: 13471 RVA: 0x002EAAE8 File Offset: 0x002E8CE8
+		
 		public static void MAttackEnemy(GameClient client, Monster monster, bool forceBurst, double injurePercnet, int addInjure, double attackPercent, int addAttackMin, int addAttackMax, out int burst, out int injure, bool ignoreDefenseAndDodge, double baseRate, int addVlue, int magicCode = 0, double shenShiInjurePercent = 0.0)
 		{
 			burst = 0;
@@ -2330,7 +2330,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060034A0 RID: 13472 RVA: 0x002EAD84 File Offset: 0x002E8F84
+		
 		public static void MAttackEnemy(Monster monster, GameClient client, bool forceBurst, double injurePercnet, int addInjure, double attackPercent, int addAttackMin, int addAttackMax, out int burst, out int injure, bool ignoreDefenseAndDodge, double baseRate, int addVlue, int magicCode = 0, double shenShiInjurePercent = 0.0)
 		{
 			burst = 0;
@@ -2396,7 +2396,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060034A1 RID: 13473 RVA: 0x002EAF7C File Offset: 0x002E917C
+		
 		public static void MAttackEnemy(Monster monster, Monster enemy, bool forceBurst, double injurePercnet, int addInjure, double attackPercent, int addAttackMin, int addAttackMax, out int burst, out int injure, bool ignoreDefenseAndDodge, double baseRate = 1.0, int addVlue = 0, int magicCode = 0, double shenShiInjurePercent = 0.0)
 		{
 			burst = 0;
@@ -2454,7 +2454,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060034A2 RID: 13474 RVA: 0x002EB12C File Offset: 0x002E932C
+		
 		public static void MAttackEnemy(GameClient client, GameClient enemy, bool forceBurst, double injurePercnet, int addInjure, double attackPercent, int addAttackMin, int addAttackMax, out int burst, out int injure, bool ignoreDefenseAndDodge, double baseRate, int addVlue, int magicCode = 0, double shenShiInjurePercent = 0.0)
 		{
 			burst = 0;
@@ -2533,7 +2533,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060034A3 RID: 13475 RVA: 0x002EB3F0 File Offset: 0x002E95F0
+		
 		public static double GetRoleNegativeRate(GameClient client, double baseVal, ExtPropIndexes extPropIndex)
 		{
 			double val = client.ClientData.EquipProp.ExtProps[(int)extPropIndex] + client.RoleBuffer.GetExtProp((int)extPropIndex);
@@ -2543,7 +2543,7 @@ namespace GameServer.Logic
 			return val + baseVal;
 		}
 
-		// Token: 0x060034A4 RID: 13476 RVA: 0x002EB460 File Offset: 0x002E9660
+		
 		public static double GetRoleStateDingSheng(GameClient client, double baseVal)
 		{
 			double val = client.ClientData.EquipProp.ExtProps[47] + client.RoleBuffer.GetExtProp(47);
@@ -2554,7 +2554,7 @@ namespace GameServer.Logic
 			return val + 0.1 * (double)client.ClientData.ChangeLifeCount;
 		}
 
-		// Token: 0x060034A5 RID: 13477 RVA: 0x002EB4EC File Offset: 0x002E96EC
+		
 		public static double GetRoleStateMoveSpeed(GameClient client, double baseVal)
 		{
 			double val = client.ClientData.EquipProp.ExtProps[48] + client.RoleBuffer.GetExtProp(48);
@@ -2565,7 +2565,7 @@ namespace GameServer.Logic
 			return val + 0.1 * (double)client.ClientData.ChangeLifeCount;
 		}
 
-		// Token: 0x060034A6 RID: 13478 RVA: 0x002EB578 File Offset: 0x002E9778
+		
 		public static double GetRoleStateJiTui(GameClient client, double baseVal)
 		{
 			double val = client.ClientData.EquipProp.ExtProps[49] + client.RoleBuffer.GetExtProp(49);
@@ -2575,7 +2575,7 @@ namespace GameServer.Logic
 			return val + baseVal;
 		}
 
-		// Token: 0x060034A7 RID: 13479 RVA: 0x002EB5EC File Offset: 0x002E97EC
+		
 		public static double GetRoleStateHunMi(GameClient client, double baseVal)
 		{
 			double val = client.ClientData.EquipProp.ExtProps[50] + client.RoleBuffer.GetExtProp(50);
@@ -2586,13 +2586,13 @@ namespace GameServer.Logic
 			return val + 0.1 * (double)client.ClientData.ChangeLifeCount;
 		}
 
-		// Token: 0x04003FBD RID: 16317
+		
 		public static List<ExtPropIndexes>[] ExtListArray;
 
-		// Token: 0x04003FBE RID: 16318
+		
 		public static List<ExtPropIndexes>[] BaseListArray;
 
-		// Token: 0x04003FBF RID: 16319
+		
 		public static Dictionary<ExtPropIndexes, ExtPropItem> roleExtPropDic = new Dictionary<ExtPropIndexes, ExtPropItem>
 		{
 			{
@@ -4608,7 +4608,7 @@ namespace GameServer.Logic
 			}
 		};
 
-		// Token: 0x04003FC0 RID: 16320
+		
 		public static List<ExtPropIndexes> NotifyList = new List<ExtPropIndexes>
 		{
 			ExtPropIndexes.MinAttack,

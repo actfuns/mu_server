@@ -15,8 +15,8 @@ namespace GameDBServer.Logic
 	internal class CFirstChargeMgr
 	{
 		// Token: 0x170000BB RID: 187
-		// (get) Token: 0x060004CD RID: 1229 RVA: 0x00027484 File Offset: 0x00025684
-		// (set) Token: 0x060004CE RID: 1230 RVA: 0x000274D0 File Offset: 0x000256D0
+		
+		
 		public static SingleChargeData ChargeData
 		{
 			get

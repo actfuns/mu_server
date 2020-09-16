@@ -9,34 +9,34 @@ using Server.Tools;
 
 namespace GameServer.Logic.FuMo
 {
-	// Token: 0x020002BB RID: 699
+	
 	internal class FuMoManager : ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x06000AED RID: 2797 RVA: 0x000AB778 File Offset: 0x000A9978
+		
 		public static FuMoManager getInstance()
 		{
 			return FuMoManager.instance;
 		}
 
-		// Token: 0x06000AEE RID: 2798 RVA: 0x000AB790 File Offset: 0x000A9990
+		
 		public static bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x06000AEF RID: 2799 RVA: 0x000AB7A4 File Offset: 0x000A99A4
+		
 		public static bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000AF0 RID: 2800 RVA: 0x000AB7B8 File Offset: 0x000A99B8
+		
 		public static bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000AF1 RID: 2801 RVA: 0x000AB85C File Offset: 0x000A9A5C
+		
 		public void Initialize()
 		{
 			string fileName = Global.GameResPath("Config/EquipEnchantmentExtra.xml");
@@ -172,7 +172,7 @@ namespace GameServer.Logic.FuMo
 			TCPCmdDispatcher.getInstance().registerProcessorEx(2029, 2, 2, FuMoManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
 		}
 
-		// Token: 0x06000AF2 RID: 2802 RVA: 0x000AC054 File Offset: 0x000AA254
+		
 		public static bool TryFuMoTrueAttrValue(List<int> inAttr, out List<int> outAttr)
 		{
 			bool flag = true;
@@ -208,7 +208,7 @@ namespace GameServer.Logic.FuMo
 			return true;
 		}
 
-		// Token: 0x06000AF3 RID: 2803 RVA: 0x000AC13C File Offset: 0x000AA33C
+		
 		public static bool IsSameIDFromRandom(int rand1, int rand2, out int resid)
 		{
 			int tempid = -1;
@@ -238,7 +238,7 @@ namespace GameServer.Logic.FuMo
 			return result;
 		}
 
-		// Token: 0x06000AF4 RID: 2804 RVA: 0x000AC224 File Offset: 0x000AA424
+		
 		public static bool FilterAttrWeight(int rAttr1, int rAttr2, out List<int> list)
 		{
 			list = new List<int>();
@@ -285,7 +285,7 @@ namespace GameServer.Logic.FuMo
 			return false;
 		}
 
-		// Token: 0x06000AF5 RID: 2805 RVA: 0x000AC3D0 File Offset: 0x000AA5D0
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			switch (nID)
@@ -460,7 +460,7 @@ namespace GameServer.Logic.FuMo
 			return true;
 		}
 
-		// Token: 0x06000AF6 RID: 2806 RVA: 0x000AC994 File Offset: 0x000AAB94
+		
 		public static bool GetRandomValue(List<int> inList, out List<int> outList)
 		{
 			int count = 0;
@@ -520,7 +520,7 @@ namespace GameServer.Logic.FuMo
 			return true;
 		}
 
-		// Token: 0x06000AF7 RID: 2807 RVA: 0x000ACC28 File Offset: 0x000AAE28
+		
 		public static bool GetRandomAttrArray(out List<int> list)
 		{
 			list = null;
@@ -542,7 +542,7 @@ namespace GameServer.Logic.FuMo
 			return FuMoManager.GetRandomValue(inList, out list);
 		}
 
-		// Token: 0x06000AF8 RID: 2808 RVA: 0x000ACD54 File Offset: 0x000AAF54
+		
 		private static TCPProcessCmdResults UpdateMailFuMoData2DB(GameClient client, int recrid, int num, string content, string recname)
 		{
 			string[] dbFields = null;
@@ -558,7 +558,7 @@ namespace GameServer.Logic.FuMo
 			return Global.RequestToDBServer(Global._TCPManager.tcpClientPool, Global._TCPManager.TcpOutPacketPool, 14102, sCmd, out dbFields, client.ServerId);
 		}
 
-		// Token: 0x06000AF9 RID: 2809 RVA: 0x000ACDF8 File Offset: 0x000AAFF8
+		
 		private static TCPProcessCmdResults UpdateMailFuMoGiveNumData2DB(GameClient client, string recrid_list, int nDate, int accept, int give)
 		{
 			string[] dbFields = null;
@@ -573,7 +573,7 @@ namespace GameServer.Logic.FuMo
 			return Global.RequestToDBServer(Global._TCPManager.tcpClientPool, Global._TCPManager.TcpOutPacketPool, 14104, sCmd, out dbFields, client.ServerId);
 		}
 
-		// Token: 0x06000AFA RID: 2810 RVA: 0x000ACE84 File Offset: 0x000AB084
+		
 		private static TCPProcessCmdResults UpdateFuMoMailMap2DB(GameClient client, int rid, int give, int nDate, string recid_list)
 		{
 			string[] dbFields = null;
@@ -587,7 +587,7 @@ namespace GameServer.Logic.FuMo
 			return Global.RequestToDBServer(Global._TCPManager.tcpClientPool, Global._TCPManager.TcpOutPacketPool, 14108, sCmd, out dbFields, client.ServerId);
 		}
 
-		// Token: 0x06000AFB RID: 2811 RVA: 0x000ACEFC File Offset: 0x000AB0FC
+		
 		private static TCPProcessCmdResults UpdateFuMoAcceptNum(GameClient client, int nDate, int num)
 		{
 			string[] dbFields = null;
@@ -595,7 +595,7 @@ namespace GameServer.Logic.FuMo
 			return Global.RequestToDBServer(Global._TCPManager.tcpClientPool, Global._TCPManager.TcpOutPacketPool, 14101, sCmd, out dbFields, client.ServerId);
 		}
 
-		// Token: 0x06000AFC RID: 2812 RVA: 0x000ACF60 File Offset: 0x000AB160
+		
 		private static TCPProcessCmdResults DeleteFuMoMail(GameClient client, int mailid)
 		{
 			string[] dbFields = null;
@@ -603,7 +603,7 @@ namespace GameServer.Logic.FuMo
 			return Global.RequestToDBServer(Global._TCPManager.tcpClientPool, Global._TCPManager.TcpOutPacketPool, 14109, sCmd, out dbFields, client.ServerId);
 		}
 
-		// Token: 0x06000AFD RID: 2813 RVA: 0x000ACFC0 File Offset: 0x000AB1C0
+		
 		private static TCPProcessCmdResults DeleteFuMoMailList(GameClient client, string mailid_list)
 		{
 			string[] dbFields = null;
@@ -611,7 +611,7 @@ namespace GameServer.Logic.FuMo
 			return Global.RequestToDBServer(Global._TCPManager.tcpClientPool, Global._TCPManager.TcpOutPacketPool, 14110, sCmd, out dbFields, client.ServerId);
 		}
 
-		// Token: 0x06000AFE RID: 2814 RVA: 0x000AD01C File Offset: 0x000AB21C
+		
 		private static TCPProcessCmdResults UpdateMailState(GameClient client, int mailid)
 		{
 			string[] dbFields = null;
@@ -619,7 +619,7 @@ namespace GameServer.Logic.FuMo
 			return Global.RequestToDBServer(Global._TCPManager.tcpClientPool, Global._TCPManager.TcpOutPacketPool, 14111, sCmd, out dbFields, client.ServerId);
 		}
 
-		// Token: 0x06000AFF RID: 2815 RVA: 0x000AD07C File Offset: 0x000AB27C
+		
 		public static FuMoMailOptEnum GiveFuMoMoneyToDB(GameClient client, int recrid, string recname)
 		{
 			FuMoMailOptEnum result;
@@ -721,13 +721,13 @@ namespace GameServer.Logic.FuMo
 			return result;
 		}
 
-		// Token: 0x06000B00 RID: 2816 RVA: 0x000AD428 File Offset: 0x000AB628
+		
 		private static FuMoMailOptEnum ProcessFoMoMoneyGiveCmd(GameClient client, int recrid, string recname)
 		{
 			return FuMoManager.GiveFuMoMoneyToDB(client, recrid, recname);
 		}
 
-		// Token: 0x06000B01 RID: 2817 RVA: 0x000AD444 File Offset: 0x000AB644
+		
 		private static FuMoMailOptEnum ProcessGetFoMoMoneyMailListCmd(GameClient client, out Dictionary<int, List<FuMoMailData>> maildata)
 		{
 			maildata = null;
@@ -736,7 +736,7 @@ namespace GameServer.Logic.FuMo
 			return FuMoMailOptEnum.FuMo_AcceptSucc;
 		}
 
-		// Token: 0x06000B02 RID: 2818 RVA: 0x000AD488 File Offset: 0x000AB688
+		
 		private static FuMoMailOptEnum ProcessGetFuMoMoneyCmd(GameClient client, int mailid, int GetType, out int ResGetNum)
 		{
 			ResGetNum = 0;
@@ -915,7 +915,7 @@ namespace GameServer.Logic.FuMo
 			return result;
 		}
 
-		// Token: 0x06000B03 RID: 2819 RVA: 0x000ADB84 File Offset: 0x000ABD84
+		
 		private static FuMoMailOptEnum ProcessEquipFuMoAttrAppendCmd(GameClient client, int roleID, int DbID, out FuMoCachedTemplate FMCached)
 		{
 			FMCached = new FuMoCachedTemplate
@@ -1016,7 +1016,7 @@ namespace GameServer.Logic.FuMo
 			return result;
 		}
 
-		// Token: 0x06000B04 RID: 2820 RVA: 0x000ADF1C File Offset: 0x000AC11C
+		
 		private static FuMoMailOptEnum ProcessSaveFuMoAttrCmd(GameClient client, int roleID, int DbID)
 		{
 			GoodsData equipData = Global.GetGoodsByDbID(client, DbID);
@@ -1069,7 +1069,7 @@ namespace GameServer.Logic.FuMo
 			return result;
 		}
 
-		// Token: 0x06000B05 RID: 2821 RVA: 0x000AE0F8 File Offset: 0x000AC2F8
+		
 		private static FuMoMailOptEnum ProcessNotSaveFuMoAttrCmd(GameClient client, int roleID, out FuMoCachedTemplate temp)
 		{
 			temp = null;
@@ -1096,7 +1096,7 @@ namespace GameServer.Logic.FuMo
 			return result;
 		}
 
-		// Token: 0x06000B06 RID: 2822 RVA: 0x000AE17C File Offset: 0x000AC37C
+		
 		private static FuMoMailOptEnum ProcessSpriteEquipAppendFuMoAttrInhertCmd(GameClient client, int roleID, int leftGoodsDbID, int rightGoodsDbID, int nSubMoneyType)
 		{
 			GoodsData leftGoodsData = Global.GetGoodsByDbID(client, leftGoodsDbID);
@@ -1228,7 +1228,7 @@ namespace GameServer.Logic.FuMo
 			return result;
 		}
 
-		// Token: 0x06000B07 RID: 2823 RVA: 0x000AE634 File Offset: 0x000AC834
+		
 		private static FuMoMailOptEnum ProcessGiveTodayUserListCmd(GameClient client, int roleID, out string UserList)
 		{
 			UserList = null;
@@ -1245,7 +1245,7 @@ namespace GameServer.Logic.FuMo
 			return FuMoMailOptEnum.FuMo_AcceptSucc;
 		}
 
-		// Token: 0x06000B08 RID: 2824 RVA: 0x000AE6DC File Offset: 0x000AC8DC
+		
 		private static FuMoMailOptEnum UpdataIsReadCmd(GameClient client, int roleID, int mailID)
 		{
 			string strdb = string.Format("{0}:{1}", roleID, mailID);
@@ -1263,43 +1263,43 @@ namespace GameServer.Logic.FuMo
 			return result;
 		}
 
-		// Token: 0x06000B09 RID: 2825 RVA: 0x000AE744 File Offset: 0x000AC944
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x040011F9 RID: 4601
+		
 		public static Dictionary<int, FuMoExtraTemplate> FuMoExtras = new Dictionary<int, FuMoExtraTemplate>();
 
-		// Token: 0x040011FA RID: 4602
+		
 		public static Dictionary<int, FuMoRandomTemplate> FuMoRandoms = new Dictionary<int, FuMoRandomTemplate>();
 
-		// Token: 0x040011FB RID: 4603
+		
 		public static FuMoParemLimit FuMoParems = new FuMoParemLimit();
 
-		// Token: 0x040011FC RID: 4604
+		
 		public static Dictionary<int, List<int>> IDMap = new Dictionary<int, List<int>>();
 
-		// Token: 0x040011FD RID: 4605
+		
 		public static Dictionary<int, FuMoCachedTemplate> FuMoCached = new Dictionary<int, FuMoCachedTemplate>();
 
-		// Token: 0x040011FE RID: 4606
+		
 		public static Dictionary<int, int> IDRandomsTypeMap = new Dictionary<int, int>();
 
-		// Token: 0x040011FF RID: 4607
+		
 		public static Dictionary<int, int> IDExtrasTypeMap = new Dictionary<int, int>();
 
-		// Token: 0x04001200 RID: 4608
+		
 		public static int MaxRandomID = 0;
 
-		// Token: 0x04001201 RID: 4609
+		
 		public static int MaxExtrasID = 0;
 
-		// Token: 0x04001202 RID: 4610
+		
 		public static object Mutex = new object();
 
-		// Token: 0x04001203 RID: 4611
+		
 		private static FuMoManager instance = new FuMoManager();
 	}
 }

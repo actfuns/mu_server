@@ -21,16 +21,16 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic.UserMoneyCharge
 {
-	// Token: 0x020004A4 RID: 1188
+	
 	public class UserMoneyMgr
 	{
-		// Token: 0x06001617 RID: 5655 RVA: 0x001595B8 File Offset: 0x001577B8
+		
 		public static UserMoneyMgr getInstance()
 		{
 			return UserMoneyMgr.instance;
 		}
 
-		// Token: 0x06001618 RID: 5656 RVA: 0x001595D0 File Offset: 0x001577D0
+		
 		public bool InitConfig()
 		{
 			this.InitFirstChargeConfigData();
@@ -60,7 +60,7 @@ namespace GameServer.Logic.UserMoneyCharge
 			return true;
 		}
 
-		// Token: 0x06001619 RID: 5657 RVA: 0x001596C4 File Offset: 0x001578C4
+		
 		public void InitItemChargeConfigData()
 		{
 			try
@@ -126,7 +126,7 @@ namespace GameServer.Logic.UserMoneyCharge
 			}
 		}
 
-		// Token: 0x0600161A RID: 5658 RVA: 0x001599D4 File Offset: 0x00157BD4
+		
 		public void InitFirstChargeConfigData()
 		{
 			try
@@ -203,7 +203,7 @@ namespace GameServer.Logic.UserMoneyCharge
 			}
 		}
 
-		// Token: 0x0600161B RID: 5659 RVA: 0x00159CD4 File Offset: 0x00157ED4
+		
 		public void NotifyActivityState(GameClient client)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}", new object[]
@@ -217,7 +217,7 @@ namespace GameServer.Logic.UserMoneyCharge
 			client.sendCmd(770, strcmd, false);
 		}
 
-		// Token: 0x0600161C RID: 5660 RVA: 0x00159D34 File Offset: 0x00157F34
+		
 		public int GetActivityPlatformType()
 		{
 			string strCmd = GameManager.GameConfigMgr.GetGameConfigItemStr("platformtype", "app");
@@ -246,7 +246,7 @@ namespace GameServer.Logic.UserMoneyCharge
 			return (int)platform;
 		}
 
-		// Token: 0x0600161D RID: 5661 RVA: 0x00159DDC File Offset: 0x00157FDC
+		
 		private void GiveClientChargeItem(GameClient client, List<GoodsData> awardList)
 		{
 			int outBag;
@@ -267,7 +267,7 @@ namespace GameServer.Logic.UserMoneyCharge
 			}
 		}
 
-		// Token: 0x0600161E RID: 5662 RVA: 0x00159ED0 File Offset: 0x001580D0
+		
 		public int GetChargeItemPurchaseNum(GameClient client, int ZhiGouID)
 		{
 			int PurchaseNum = 0;
@@ -279,7 +279,7 @@ namespace GameServer.Logic.UserMoneyCharge
 			return PurchaseNum;
 		}
 
-		// Token: 0x0600161F RID: 5663 RVA: 0x00159F3C File Offset: 0x0015813C
+		
 		private void AddChargeItemPurchaseNum(GameClient client, int ZhiGouID)
 		{
 			int PurchaseNum = 0;
@@ -291,7 +291,7 @@ namespace GameServer.Logic.UserMoneyCharge
 			}
 		}
 
-		// Token: 0x06001620 RID: 5664 RVA: 0x00159FB0 File Offset: 0x001581B0
+		
 		public int GetChargeItemDayPurchaseNum(GameClient client, int ZhiGouID)
 		{
 			int PurchaseNum = 0;
@@ -309,7 +309,7 @@ namespace GameServer.Logic.UserMoneyCharge
 			return PurchaseNum;
 		}
 
-		// Token: 0x06001621 RID: 5665 RVA: 0x0015A05C File Offset: 0x0015825C
+		
 		private void AddChargeItemDayPurchaseNum(GameClient client, int ZhiGouID, string chargeTime)
 		{
 			DateTime ChargeTm;
@@ -327,7 +327,7 @@ namespace GameServer.Logic.UserMoneyCharge
 			}
 		}
 
-		// Token: 0x06001622 RID: 5666 RVA: 0x0015A0F8 File Offset: 0x001582F8
+		
 		public bool CheckChargeItemConfigLogic(int zhigouID, int PurchaseNum, string GoodsOne, string GoodsTwo, string FromSystem)
 		{
 			Dictionary<int, ChargeItemData> ChargeItemDict = Data.ChargeItemDict;
@@ -363,7 +363,7 @@ namespace GameServer.Logic.UserMoneyCharge
 			return result;
 		}
 
-		// Token: 0x06001623 RID: 5667 RVA: 0x0015A208 File Offset: 0x00158408
+		
 		private void ComputeClientChargeItem(GameClient client, List<TempItemChargeInfo> list)
 		{
 			lock (client.ClientData.ChargeItemPurchaseDict)
@@ -403,7 +403,7 @@ namespace GameServer.Logic.UserMoneyCharge
 			}
 		}
 
-		// Token: 0x06001624 RID: 5668 RVA: 0x0015A3F4 File Offset: 0x001585F4
+		
 		public void HandleSystemChargeMoney(string userID, int addMoney)
 		{
 			TMSKSocket clientSocket = GameManager.OnlineUserSession.FindSocketByUserID(userID);
@@ -419,7 +419,7 @@ namespace GameServer.Logic.UserMoneyCharge
 			}
 		}
 
-		// Token: 0x06001625 RID: 5669 RVA: 0x0015A4D4 File Offset: 0x001586D4
+		
 		public void HandleClientChargeMoney(string userID, int rid, int addMoney, bool transmit, int superInputFanLi = 0)
 		{
 			JieriIPointsExchgActivity act = HuodongCachingMgr.GetJieriIPointsExchgActivity();
@@ -488,7 +488,7 @@ namespace GameServer.Logic.UserMoneyCharge
 			}
 		}
 
-		// Token: 0x06001626 RID: 5670 RVA: 0x0015A6F0 File Offset: 0x001588F0
+		
 		public void HandleClientChargeItem(GameClient client, byte HandleDel = 0)
 		{
 			if (client != null && !GameManager.IsKuaFuServer)
@@ -669,7 +669,7 @@ namespace GameServer.Logic.UserMoneyCharge
 			}
 		}
 
-		// Token: 0x06001627 RID: 5671 RVA: 0x0015ADBC File Offset: 0x00158FBC
+		
 		public void ProcessSendBindGold(GameClient client, int bindMoney, string userId, int rid, string firstbindData)
 		{
 			if (client != null)
@@ -683,7 +683,7 @@ namespace GameServer.Logic.UserMoneyCharge
 			}
 		}
 
-		// Token: 0x06001628 RID: 5672 RVA: 0x0015AE50 File Offset: 0x00159050
+		
 		public TCPProcessCmdResults ProcessGetFirstChargeInfoCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -731,10 +731,10 @@ namespace GameServer.Logic.UserMoneyCharge
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x04001F8A RID: 8074
+		
 		private static UserMoneyMgr instance = new UserMoneyMgr();
 
-		// Token: 0x04001F8B RID: 8075
+		
 		public int PlatformOpenStateVavle = 0;
 	}
 }

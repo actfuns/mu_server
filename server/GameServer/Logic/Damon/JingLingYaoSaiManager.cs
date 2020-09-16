@@ -6,10 +6,10 @@ using Server.Protocol;
 
 namespace GameServer.Logic.Damon
 {
-	// Token: 0x0200029A RID: 666
+	
 	internal class JingLingYaoSaiManager
 	{
-		// Token: 0x060009E1 RID: 2529 RVA: 0x0009D56C File Offset: 0x0009B76C
+		
 		public static GoodsData GetPaiZhuDamonGoodsDataByDbID(GameClient client, int id)
 		{
 			GoodsData result;
@@ -34,7 +34,7 @@ namespace GameServer.Logic.Damon
 			return result;
 		}
 
-		// Token: 0x060009E2 RID: 2530 RVA: 0x0009D634 File Offset: 0x0009B834
+		
 		public static void AddPaiZhuDamonGoodsData(GameClient client, GoodsData goodsData, bool refreshProps = true)
 		{
 			if (goodsData.Site == 0)
@@ -50,7 +50,7 @@ namespace GameServer.Logic.Damon
 			}
 		}
 
-		// Token: 0x060009E3 RID: 2531 RVA: 0x0009D6C8 File Offset: 0x0009B8C8
+		
 		public static void AddOldPaiZhuDamonGoodsData(GameClient client)
 		{
 			if (null != client.ClientData.GoodsDataList)
@@ -117,7 +117,7 @@ namespace GameServer.Logic.Damon
 			}
 		}
 
-		// Token: 0x060009E4 RID: 2532 RVA: 0x0009D9C8 File Offset: 0x0009BBC8
+		
 		public static void InitPaiZhuDemonGoodsDataList(GameClient client)
 		{
 			if (null == client.ClientData.PaiZhuDamonGoodsDataList)
@@ -131,7 +131,7 @@ namespace GameServer.Logic.Damon
 			}
 		}
 
-		// Token: 0x060009E5 RID: 2533 RVA: 0x0009DA80 File Offset: 0x0009BC80
+		
 		public static void RemovePaiZhuDamonGoodsData(GameClient client, GoodsData goodsData)
 		{
 			if (null != client.ClientData.PaiZhuDamonGoodsDataList)
@@ -146,7 +146,7 @@ namespace GameServer.Logic.Damon
 			}
 		}
 
-		// Token: 0x060009E6 RID: 2534 RVA: 0x0009DB08 File Offset: 0x0009BD08
+		
 		public static bool CanAddGoodsToPaiZhuDamonCangKu(GameClient client, int goodsID, int newGoodsNum, int binding, string endTime = "1900-01-01 12:00:00", bool canUseOld = true)
 		{
 			bool result;
@@ -191,13 +191,13 @@ namespace GameServer.Logic.Damon
 			return result;
 		}
 
-		// Token: 0x060009E7 RID: 2535 RVA: 0x0009DC7C File Offset: 0x0009BE7C
+		
 		public static int GetPaiZhuDamonBagCapacity(GameClient client)
 		{
 			return Global.ManorPetMax;
 		}
 
-		// Token: 0x060009E8 RID: 2536 RVA: 0x0009DC94 File Offset: 0x0009BE94
+		
 		public static int GetIdleSlotOfPaiZhuDamonGoods(GameClient client)
 		{
 			int idelPos = 0;

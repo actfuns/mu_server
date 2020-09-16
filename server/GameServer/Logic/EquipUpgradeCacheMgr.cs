@@ -4,10 +4,10 @@ using System.Xml.Linq;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006B8 RID: 1720
+	
 	public class EquipUpgradeCacheMgr
 	{
-		// Token: 0x0600205A RID: 8282 RVA: 0x001BDB8C File Offset: 0x001BBD8C
+		
 		public static SystemXmlItem GetEquipUpgradeCacheItem(int categoriy, int suitID)
 		{
 			SystemXmlItem result;
@@ -31,7 +31,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600205B RID: 8283 RVA: 0x001BDBE4 File Offset: 0x001BBDE4
+		
 		public static SystemXmlItem GetEquipUpgradeItemByGoodsID(int goodsID, int maxSuiItID)
 		{
 			SystemXmlItem systemGoods = null;
@@ -60,7 +60,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600205C RID: 8284 RVA: 0x001BDC68 File Offset: 0x001BBE68
+		
 		public static void LoadEquipUpgradeItems()
 		{
 			string fileName = "";
@@ -96,7 +96,7 @@ namespace GameServer.Logic
 			EquipUpgradeCacheMgr._EquipUpgradeItemsDict = equipUpgradeItemsDict;
 		}
 
-		// Token: 0x0400365E RID: 13918
+		
 		private static Dictionary<string, SystemXmlItem> _EquipUpgradeItemsDict = new Dictionary<string, SystemXmlItem>();
 	}
 }

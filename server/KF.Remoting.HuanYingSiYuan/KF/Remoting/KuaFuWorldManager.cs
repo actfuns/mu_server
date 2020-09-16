@@ -13,10 +13,10 @@ using Tmsk.Contract.KuaFuData;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000057 RID: 87
+	
 	public class KuaFuWorldManager : TSingleton<KuaFuWorldManager>, IKuaFuWorld
 	{
-		// Token: 0x060003E7 RID: 999 RVA: 0x000335EC File Offset: 0x000317EC
+		
 		public KuaFuWorldManager()
 		{
 			this.BackgroundThread = new Thread(new ParameterizedThreadStart(this.ThreadProc));
@@ -24,7 +24,7 @@ namespace KF.Remoting
 			this.BackgroundThread.Start();
 		}
 
-		// Token: 0x060003E8 RID: 1000 RVA: 0x00033668 File Offset: 0x00031868
+		
 		public void LoadConfig(bool reload = false)
 		{
 			try
@@ -40,7 +40,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060003E9 RID: 1001 RVA: 0x000336B0 File Offset: 0x000318B0
+		
 		public void ThreadProc(object state)
 		{
 			int sleepMS = 0;
@@ -66,13 +66,13 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060003EA RID: 1002 RVA: 0x0003374C File Offset: 0x0003194C
+		
 		public AsyncDataItem[] GetClientCacheItems(int serverId)
 		{
 			return ClientAgentManager.Instance().PickAsyncEvent(serverId, this.GameType);
 		}
 
-		// Token: 0x060003EB RID: 1003 RVA: 0x00033770 File Offset: 0x00031970
+		
 		public int InitializeClient(KuaFuClientContext clientInfo)
 		{
 			int result;
@@ -106,7 +106,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060003EC RID: 1004 RVA: 0x0003388C File Offset: 0x00031A8C
+		
 		public void UpdateKuaFuMapClientCount(int serverId, Dictionary<int, int> mapClientCountDict)
 		{
 			if (mapClientCountDict != null && mapClientCountDict.Count > 0)
@@ -120,7 +120,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060003ED RID: 1005 RVA: 0x00033904 File Offset: 0x00031B04
+		
 		public int ExecuteCommand(string cmd)
 		{
 			int result;
@@ -136,7 +136,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060003EE RID: 1006 RVA: 0x00033940 File Offset: 0x00031B40
+		
 		public AsyncDataItem GetKuaFuLineDataList(int mapCode)
 		{
 			return new AsyncDataItem(KuaFuEventTypes.Other, new object[]
@@ -145,13 +145,13 @@ namespace KF.Remoting
 			});
 		}
 
-		// Token: 0x060003EF RID: 1007 RVA: 0x00033970 File Offset: 0x00031B70
+		
 		public List<KuaFuServerInfo> GetKuaFuServerInfoData(int age)
 		{
 			return KuaFuServerManager.GetKuaFuServerInfoData(age);
 		}
 
-		// Token: 0x060003F0 RID: 1008 RVA: 0x00033988 File Offset: 0x00031B88
+		
 		public int RegPTKuaFuRoleData(ref KuaFuWorldRoleData data)
 		{
 			data.WorldRoleID = ConstData.FormatWorldRoleID(data.LocalRoleID, data.PTID);
@@ -209,7 +209,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060003F1 RID: 1009 RVA: 0x00033B30 File Offset: 0x00031D30
+		
 		public KuaFuWorldRoleData LoadKuaFuWorldRoleData(int roleId, int ptid, string worldRoleID)
 		{
 			KuaFuWorldRoleData roleData;
@@ -232,7 +232,7 @@ namespace KF.Remoting
 			return roleData;
 		}
 
-		// Token: 0x060003F2 RID: 1010 RVA: 0x00033C20 File Offset: 0x00031E20
+		
 		public int EnterPTKuaFuMap(int serverID, int roleId, int ptid, int mapCode, int kuaFuLine, out string signToken, out string signKey, out int kuaFuServerID, out string[] ips, out int[] ports)
 		{
 			ips = null;
@@ -295,7 +295,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060003F3 RID: 1011 RVA: 0x00033DE0 File Offset: 0x00031FE0
+		
 		public int CheckEnterWorldKuaFuSign(string worldRoleID, string token, out string signKey, out string[] ips, out int[] ports)
 		{
 			int result = -100;
@@ -333,55 +333,55 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060003F4 RID: 1012 RVA: 0x00033EF4 File Offset: 0x000320F4
+		
 		public void Reborn_SetRoleData4Selector(int ptId, int roleId, byte[] bytes)
 		{
 			RebornService.Instance().SetRoleData4Selector(ptId, roleId, bytes);
 		}
 
-		// Token: 0x060003F5 RID: 1013 RVA: 0x00033F08 File Offset: 0x00032108
+		
 		public int Reborn_RoleReborn(int ptId, int roleId, string roleName, int level)
 		{
 			return RebornService.Instance().RoleReborn(ptId, roleId, roleName, level);
 		}
 
-		// Token: 0x060003F6 RID: 1014 RVA: 0x00033F2C File Offset: 0x0003212C
+		
 		public RebornSyncData Reborn_SyncData(long ageRank, long ageBoss)
 		{
 			return RebornService.Instance().Reborn_SyncData(ageRank, ageBoss);
 		}
 
-		// Token: 0x060003F7 RID: 1015 RVA: 0x00033F4A File Offset: 0x0003214A
+		
 		public void Reborn_RebornOpt(int ptid, int rid, int optType, int param1, int param2, string param3)
 		{
 			RebornService.Instance().RebornOpt(ptid, rid, optType, param1, param2, param3);
 		}
 
-		// Token: 0x060003F8 RID: 1016 RVA: 0x00033F64 File Offset: 0x00032164
+		
 		public KuaFuCmdData Reborn_GetRebornRoleData(int ptId, int roleId, long dataAge)
 		{
 			return RebornService.Instance().GetRebornRoleData(ptId, roleId, dataAge);
 		}
 
-		// Token: 0x060003F9 RID: 1017 RVA: 0x00033F83 File Offset: 0x00032183
+		
 		public void Reborn_ChangeName(int ptId, int roleId, string roleName)
 		{
 			RebornService.Instance().ChangeName(ptId, roleId, roleName);
 		}
 
-		// Token: 0x060003FA RID: 1018 RVA: 0x00033F94 File Offset: 0x00032194
+		
 		public void Reborn_PlatFormChat(int serverId, byte[] bytes)
 		{
 			RebornService.Instance().PlatFormChat(serverId, bytes);
 		}
 
-		// Token: 0x060003FB RID: 1019 RVA: 0x00033FA4 File Offset: 0x000321A4
+		
 		private void Broadcast2GsAgent(AsyncDataItem item)
 		{
 			ClientAgentManager.Instance().BroadCastAsyncEvent(this.GameType, item, 0);
 		}
 
-		// Token: 0x060003FC RID: 1020 RVA: 0x00034018 File Offset: 0x00032218
+		
 		public int ExecCommand(string[] args)
 		{
 			int result = 0;
@@ -417,31 +417,31 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0400021C RID: 540
+		
 		private const string PTKuaFuManager = "AliasName";
 
-		// Token: 0x0400021D RID: 541
+		
 		private object Mutex = new object();
 
-		// Token: 0x0400021E RID: 542
+		
 		private bool ConfigLoadFinished;
 
-		// Token: 0x0400021F RID: 543
+		
 		public GameTypes GameType = GameTypes.KuaFuWorld;
 
-		// Token: 0x04000220 RID: 544
+		
 		private Dictionary<string, KuaFuWorldRoleData> RoleDataDict = new Dictionary<string, KuaFuWorldRoleData>();
 
-		// Token: 0x04000221 RID: 545
+		
 		private Dictionary<string, KuaFuServerLoginData> WorldRoleIDDict = new Dictionary<string, KuaFuServerLoginData>();
 
-		// Token: 0x04000222 RID: 546
+		
 		private Dictionary<string, KuaFuServerLoginData> RandomTokenDict = new Dictionary<string, KuaFuServerLoginData>();
 
-		// Token: 0x04000223 RID: 547
+		
 		private Thread BackgroundThread;
 
-		// Token: 0x04000224 RID: 548
+		
 		public static char[] WriteSpaceChars = new char[]
 		{
 			' '

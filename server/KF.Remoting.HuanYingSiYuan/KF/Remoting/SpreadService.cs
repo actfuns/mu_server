@@ -15,11 +15,11 @@ using Tmsk.Tools.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000063 RID: 99
+	
 	[ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, ConcurrencyMode = ConcurrencyMode.Multiple, UseSynchronizationContext = true)]
 	public class SpreadService : MarshalByRefObject, ISpreadService
 	{
-		// Token: 0x06000479 RID: 1145 RVA: 0x0003A0E0 File Offset: 0x000382E0
+		
 		public override object InitializeLifetimeService()
 		{
 			SpreadService.Instance = this;
@@ -31,7 +31,7 @@ namespace KF.Remoting
 			return lease;
 		}
 
-		// Token: 0x0600047A RID: 1146 RVA: 0x0003A12C File Offset: 0x0003832C
+		
 		public SpreadService()
 		{
 			SpreadService.Instance = this;
@@ -40,13 +40,13 @@ namespace KF.Remoting
 			this._BackgroundThread.Start();
 		}
 
-		// Token: 0x0600047B RID: 1147 RVA: 0x0003A1D8 File Offset: 0x000383D8
+		
 		~SpreadService()
 		{
 			this._BackgroundThread.Abort();
 		}
 
-		// Token: 0x0600047C RID: 1148 RVA: 0x0003A210 File Offset: 0x00038410
+		
 		public void ThreadProc(object state)
 		{
 			do
@@ -87,7 +87,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600047D RID: 1149 RVA: 0x0003A378 File Offset: 0x00038578
+		
 		private void ClearSpreadData()
 		{
 			if (this._spreadDataDic != null && this._spreadDataDic.Count > 0)
@@ -103,7 +103,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600047E RID: 1150 RVA: 0x0003A4AC File Offset: 0x000386AC
+		
 		private void ClearVerifyData()
 		{
 			if (this._spreadVerifyDataDic != null && this._spreadVerifyDataDic.Count > 0)
@@ -119,7 +119,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600047F RID: 1151 RVA: 0x0003A5E4 File Offset: 0x000387E4
+		
 		private void ClearTelData()
 		{
 			if (this._telTotalDic != null && this._telTotalDic.Count > 0)
@@ -135,7 +135,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000480 RID: 1152 RVA: 0x0003A728 File Offset: 0x00038928
+		
 		private void ClearRoleData()
 		{
 			if (this._roleTotalDic != null && this._roleTotalDic.Count > 0)
@@ -151,7 +151,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x06000481 RID: 1153 RVA: 0x0003A804 File Offset: 0x00038A04
+		
 		public int InitializeClient(KuaFuClientContext clientInfo)
 		{
 			int result;
@@ -175,7 +175,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000482 RID: 1154 RVA: 0x0003A8B4 File Offset: 0x00038AB4
+		
 		public int SpreadSign(int serverID, int zoneID, int roleID)
 		{
 			int result;
@@ -211,7 +211,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000483 RID: 1155 RVA: 0x0003A950 File Offset: 0x00038B50
+		
 		public int[] SpreadCount(int serverID, int zoneID, int roleID)
 		{
 			int[] array = new int[3];
@@ -254,7 +254,7 @@ namespace KF.Remoting
 			return result2;
 		}
 
-		// Token: 0x06000484 RID: 1156 RVA: 0x0003AA40 File Offset: 0x00038C40
+		
 		public int CheckVerifyCode(int cserverID, string cuserID, int czoneID, int croleID, int pzoneID, int proleID, int isVip, int isLevel)
 		{
 			int result;
@@ -308,7 +308,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000485 RID: 1157 RVA: 0x0003AB4C File Offset: 0x00038D4C
+		
 		public int TelCodeGet(int cserverID, int czoneID, int croleID, string tel)
 		{
 			int result;
@@ -366,7 +366,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000486 RID: 1158 RVA: 0x0003AC50 File Offset: 0x00038E50
+		
 		public int TelCodeVerify(int serverID, int czoneID, int croleID, int telCode)
 		{
 			int result;
@@ -425,7 +425,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x06000487 RID: 1159 RVA: 0x0003AE00 File Offset: 0x00039000
+		
 		public bool SpreadLevel(int pzoneID, int proleID, int czoneID, int croleID)
 		{
 			KFSpreadData pData = this.GetSpreadData(pzoneID, proleID);
@@ -455,7 +455,7 @@ namespace KF.Remoting
 			return result2;
 		}
 
-		// Token: 0x06000488 RID: 1160 RVA: 0x0003AEB4 File Offset: 0x000390B4
+		
 		public bool SpreadVip(int pzoneID, int proleID, int czoneID, int croleID)
 		{
 			KFSpreadData pData = this.GetSpreadData(pzoneID, proleID);
@@ -485,7 +485,7 @@ namespace KF.Remoting
 			return result2;
 		}
 
-		// Token: 0x06000489 RID: 1161 RVA: 0x0003AF68 File Offset: 0x00039168
+		
 		private void NotifySpreadData(KFSpreadData data)
 		{
 			ClientAgentManager.Instance().PostAsyncEvent(data.ServerID, this.GameType, new AsyncDataItem(KuaFuEventTypes.SpreadCount, new object[]
@@ -498,7 +498,7 @@ namespace KF.Remoting
 			}));
 		}
 
-		// Token: 0x0600048A RID: 1162 RVA: 0x0003AFE8 File Offset: 0x000391E8
+		
 		private int GetTelCodeRandom()
 		{
 			int result;
@@ -513,7 +513,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600048B RID: 1163 RVA: 0x0003B020 File Offset: 0x00039220
+		
 		private KFSpreadData GetSpreadData(int pzoneID, int proleID)
 		{
 			KFSpreadKey pkey = KFSpreadKey.Get(pzoneID, proleID);
@@ -542,7 +542,7 @@ namespace KF.Remoting
 			return pData;
 		}
 
-		// Token: 0x0600048C RID: 1164 RVA: 0x0003B0E0 File Offset: 0x000392E0
+		
 		private KFSpreadRoleTotal GetRoleTotalData(int cserverID, int czoneId, int croleID, bool isAddCount = false)
 		{
 			KFSpreadKey key = KFSpreadKey.Get(czoneId, croleID);
@@ -589,7 +589,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600048D RID: 1165 RVA: 0x0003B1E8 File Offset: 0x000393E8
+		
 		private KFSpreadTelTotal GetTelTotalData(string tel, bool isAddCount = false)
 		{
 			KFSpreadTelTotal data = null;
@@ -633,7 +633,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600048E RID: 1166 RVA: 0x0003B2D8 File Offset: 0x000394D8
+		
 		private int TimeSpanSecond(DateTime begin, DateTime end)
 		{
 			TimeSpan tb = new TimeSpan(begin.Ticks);
@@ -641,7 +641,7 @@ namespace KF.Remoting
 			return te.Subtract(tb).Duration().Seconds;
 		}
 
-		// Token: 0x0600048F RID: 1167 RVA: 0x0003B324 File Offset: 0x00039524
+		
 		public bool IsAgent(int serverID)
 		{
 			bool isAgent = ClientAgentManager.Instance().ExistAgent(serverID);
@@ -652,52 +652,52 @@ namespace KF.Remoting
 			return isAgent;
 		}
 
-		// Token: 0x06000490 RID: 1168 RVA: 0x0003B364 File Offset: 0x00039564
+		
 		public AsyncDataItem[] GetClientCacheItems(int serverID)
 		{
 			return ClientAgentManager.Instance().PickAsyncEvent(serverID, this.GameType);
 		}
 
-		// Token: 0x0400026D RID: 621
+		
 		private const double CLEAR_INTERVAL_SPREAD = 86400.0;
 
-		// Token: 0x0400026E RID: 622
+		
 		private const double CLEAR_INTERVAL_VERIFY = 3600.0;
 
-		// Token: 0x0400026F RID: 623
+		
 		private const int TEL_CODE_OUT_TIME = 90;
 
-		// Token: 0x04000270 RID: 624
+		
 		public static SpreadService Instance = null;
 
-		// Token: 0x04000271 RID: 625
+		
 		public SpreadPersistence _Persistence = SpreadPersistence.Instance;
 
-		// Token: 0x04000272 RID: 626
+		
 		private object _Mutex = new object();
 
-		// Token: 0x04000273 RID: 627
+		
 		public readonly GameTypes GameType = GameTypes.Spread;
 
-		// Token: 0x04000274 RID: 628
+		
 		private DateTime _clearTimeSpread = DateTime.MinValue;
 
-		// Token: 0x04000275 RID: 629
+		
 		private DateTime _clearTimeVerify = DateTime.MinValue;
 
-		// Token: 0x04000276 RID: 630
+		
 		private ConcurrentDictionary<KFSpreadKey, KFSpreadData> _spreadDataDic = new ConcurrentDictionary<KFSpreadKey, KFSpreadData>();
 
-		// Token: 0x04000277 RID: 631
+		
 		private ConcurrentDictionary<KFSpreadKey, KFSpreadVerifyData> _spreadVerifyDataDic = new ConcurrentDictionary<KFSpreadKey, KFSpreadVerifyData>();
 
-		// Token: 0x04000278 RID: 632
+		
 		private ConcurrentDictionary<string, KFSpreadTelTotal> _telTotalDic = new ConcurrentDictionary<string, KFSpreadTelTotal>();
 
-		// Token: 0x04000279 RID: 633
+		
 		private ConcurrentDictionary<KFSpreadKey, KFSpreadRoleTotal> _roleTotalDic = new ConcurrentDictionary<KFSpreadKey, KFSpreadRoleTotal>();
 
-		// Token: 0x0400027A RID: 634
+		
 		public Thread _BackgroundThread;
 	}
 }

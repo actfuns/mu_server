@@ -13,8 +13,8 @@ namespace GameServer.Logic.ActivityNew
 	public class JieriPlatChargeKing : Activity
 	{
 		// Token: 0x1700001A RID: 26
-		// (get) Token: 0x06000591 RID: 1425 RVA: 0x0004EA40 File Offset: 0x0004CC40
-		// (set) Token: 0x06000592 RID: 1426 RVA: 0x0004EA8C File Offset: 0x0004CC8C
+		
+		
 		public List<InputKingPaiHangData> RealRankList
 		{
 			get

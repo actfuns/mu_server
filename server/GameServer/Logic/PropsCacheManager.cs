@@ -5,16 +5,16 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000540 RID: 1344
+	
 	public class PropsCacheManager
 	{
-		// Token: 0x06001998 RID: 6552 RVA: 0x0018E8ED File Offset: 0x0018CAED
+		
 		public PropsCacheManager(GameClient client)
 		{
 			this.PropsCacheRoot.Client = client;
 		}
 
-		// Token: 0x06001999 RID: 6553 RVA: 0x0018E914 File Offset: 0x0018CB14
+		
 		public int GetAge()
 		{
 			int age;
@@ -25,7 +25,7 @@ namespace GameServer.Logic
 			return age;
 		}
 
-		// Token: 0x0600199A RID: 6554 RVA: 0x0018E968 File Offset: 0x0018CB68
+		
 		public bool IsChanged()
 		{
 			lock (this.PropsCacheRoot)
@@ -39,7 +39,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600199B RID: 6555 RVA: 0x0018E9EC File Offset: 0x0018CBEC
+		
 		public double[] getCopyBaseProp()
 		{
 			double[] baseProps = this.PropsCacheRoot.BaseProps;
@@ -51,7 +51,7 @@ namespace GameServer.Logic
 			return copyBaseProps;
 		}
 
-		// Token: 0x0600199C RID: 6556 RVA: 0x0018EA30 File Offset: 0x0018CC30
+		
 		public double[] getCopyExtProp()
 		{
 			double[] extProps = this.PropsCacheRoot.ExtProps;
@@ -63,7 +63,7 @@ namespace GameServer.Logic
 			return copyExtProps;
 		}
 
-		// Token: 0x0600199D RID: 6557 RVA: 0x0018EA74 File Offset: 0x0018CC74
+		
 		public void SetBaseProps(params object[] args)
 		{
 			PropsCacheItem parent = this.PropsCacheRoot;
@@ -114,7 +114,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600199E RID: 6558 RVA: 0x0018EC00 File Offset: 0x0018CE00
+		
 		public void SetBasePropsSingle(params object[] args)
 		{
 			PropsCacheItem parent = this.PropsCacheRoot;
@@ -157,7 +157,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600199F RID: 6559 RVA: 0x0018ED5C File Offset: 0x0018CF5C
+		
 		public void SetExtProps(params object[] args)
 		{
 			PropsCacheItem parent = this.PropsCacheRoot;
@@ -222,7 +222,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060019A0 RID: 6560 RVA: 0x0018EF54 File Offset: 0x0018D154
+		
 		public void SetExtPropsSingle(params object[] args)
 		{
 			PropsCacheItem parent = this.PropsCacheRoot;
@@ -265,7 +265,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060019A1 RID: 6561 RVA: 0x0018F0B4 File Offset: 0x0018D2B4
+		
 		public List<PropsCacheItem> GetAllPropsCacheItems(PropsCacheItem parent = null)
 		{
 			List<PropsCacheItem> list = new List<PropsCacheItem>();
@@ -290,7 +290,7 @@ namespace GameServer.Logic
 			return list;
 		}
 
-		// Token: 0x060019A2 RID: 6562 RVA: 0x0018F19C File Offset: 0x0018D39C
+		
 		public double GetBaseProp(int index)
 		{
 			double tempProp = 0.0;
@@ -301,7 +301,7 @@ namespace GameServer.Logic
 			return tempProp;
 		}
 
-		// Token: 0x060019A3 RID: 6563 RVA: 0x0018F200 File Offset: 0x0018D400
+		
 		public double GetExtProp(int index)
 		{
 			double tempProp = 0.0;
@@ -312,7 +312,7 @@ namespace GameServer.Logic
 			return tempProp;
 		}
 
-		// Token: 0x060019A4 RID: 6564 RVA: 0x0018F264 File Offset: 0x0018D464
+		
 		public void SetNodeState(params object[] args)
 		{
 			PropsCacheItem parent = this.PropsCacheRoot;
@@ -349,7 +349,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060019A5 RID: 6565 RVA: 0x0018F374 File Offset: 0x0018D574
+		
 		public double GetExtPropFinal(int index)
 		{
 			double result;
@@ -360,13 +360,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x040023F8 RID: 9208
+		
 		private PropsCacheItem PropsCacheRoot = new PropsCacheItem(null, 0);
 
-		// Token: 0x040023F9 RID: 9209
+		
 		public static readonly double[] ConstBaseProps = new double[4];
 
-		// Token: 0x040023FA RID: 9210
+		
 		public static readonly double[] ConstExtProps = new double[177];
 	}
 }

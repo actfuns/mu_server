@@ -4,11 +4,11 @@ using Tmsk.Contract;
 
 namespace Server.Data
 {
-	// Token: 0x020005A1 RID: 1441
+	
 	[ProtoContract]
 	public class SpriteRelifeData : IProtoBuffData
 	{
-		// Token: 0x06001A46 RID: 6726 RVA: 0x00194A5C File Offset: 0x00192C5C
+		
 		public int fromBytes(byte[] data, int offset, int count)
 		{
 			int pos = offset;
@@ -48,7 +48,7 @@ namespace Server.Data
 			return pos;
 		}
 
-		// Token: 0x06001A47 RID: 6727 RVA: 0x00194B5C File Offset: 0x00192D5C
+		
 		public byte[] toBytes()
 		{
 			int total = 0;
@@ -71,31 +71,31 @@ namespace Server.Data
 			return data;
 		}
 
-		// Token: 0x0400288C RID: 10380
+		
 		[ProtoMember(1)]
 		public int roleID;
 
-		// Token: 0x0400288D RID: 10381
+		
 		[ProtoMember(2)]
 		public int x;
 
-		// Token: 0x0400288E RID: 10382
+		
 		[ProtoMember(3)]
 		public int y;
 
-		// Token: 0x0400288F RID: 10383
+		
 		[ProtoMember(4)]
 		public int direction;
 
-		// Token: 0x04002890 RID: 10384
+		
 		[ProtoMember(5)]
 		public double lifeV;
 
-		// Token: 0x04002891 RID: 10385
+		
 		[ProtoMember(6)]
 		public double magicV;
 
-		// Token: 0x04002892 RID: 10386
+		
 		[ProtoMember(7)]
 		public int force;
 	}

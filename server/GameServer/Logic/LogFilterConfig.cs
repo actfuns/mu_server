@@ -6,10 +6,10 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020002AE RID: 686
+	
 	public class LogFilterConfig
 	{
-		// Token: 0x06000A19 RID: 2585 RVA: 0x000A18DC File Offset: 0x0009FADC
+		
 		public static bool InitConfig()
 		{
 			HashSet<int> goodsIdHashSet = new HashSet<int>();
@@ -65,44 +65,44 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000A1A RID: 2586 RVA: 0x000A1ACC File Offset: 0x0009FCCC
+		
 		public static bool LogGoodsIdLog(int goodsId)
 		{
 			HashSet<int> goodsIdHashSet = LogFilterConfig.NeedLogGoodsIdHashSet;
 			return null == goodsIdHashSet || goodsIdHashSet.Contains(goodsId);
 		}
 
-		// Token: 0x06000A1B RID: 2587 RVA: 0x000A1AF8 File Offset: 0x0009FCF8
+		
 		public static bool LogMoneyTypeLog(int moneyType)
 		{
 			HashSet<int> moneyTypeHashSet = LogFilterConfig.NeedLogMoneyTypeHashSet;
 			return null == moneyTypeHashSet || moneyTypeHashSet.Contains(moneyType);
 		}
 
-		// Token: 0x06000A1C RID: 2588 RVA: 0x000A1B24 File Offset: 0x0009FD24
+		
 		public static bool LogGameLog(int type)
 		{
 			HashSet<int> noLogGameHashSet = LogFilterConfig.NoLogGameHashSet;
 			return null != noLogGameHashSet && !noLogGameHashSet.Contains(type);
 		}
 
-		// Token: 0x06000A1D RID: 2589 RVA: 0x000A1B54 File Offset: 0x0009FD54
+		
 		public static bool LogOperatorLog(int type)
 		{
 			HashSet<int> noLogOperatorHashSet = LogFilterConfig.NoLogOperatorHashSet;
 			return null != noLogOperatorHashSet && !noLogOperatorHashSet.Contains(type);
 		}
 
-		// Token: 0x04001183 RID: 4483
+		
 		private static HashSet<int> NeedLogGoodsIdHashSet;
 
-		// Token: 0x04001184 RID: 4484
+		
 		private static HashSet<int> NeedLogMoneyTypeHashSet;
 
-		// Token: 0x04001185 RID: 4485
+		
 		private static HashSet<int> NoLogOperatorHashSet;
 
-		// Token: 0x04001186 RID: 4486
+		
 		private static HashSet<int> NoLogGameHashSet;
 	}
 }

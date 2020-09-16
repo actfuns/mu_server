@@ -6,22 +6,22 @@ using Server.Tools;
 
 namespace GameDBServer.Server.CmdProcessor
 {
-	// Token: 0x020001E9 RID: 489
+	
 	public class BaiTanLogAddCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x06000A34 RID: 2612 RVA: 0x00061744 File Offset: 0x0005F944
+		
 		private BaiTanLogAddCmdProcessor()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(10150, this);
 		}
 
-		// Token: 0x06000A35 RID: 2613 RVA: 0x00061760 File Offset: 0x0005F960
+		
 		public static BaiTanLogAddCmdProcessor getInstance()
 		{
 			return BaiTanLogAddCmdProcessor.instance;
 		}
 
-		// Token: 0x06000A36 RID: 2614 RVA: 0x00061778 File Offset: 0x0005F978
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			string cmdData = null;
@@ -79,7 +79,7 @@ namespace GameDBServer.Server.CmdProcessor
 			}
 		}
 
-		// Token: 0x04000C4A RID: 3146
+		
 		private static BaiTanLogAddCmdProcessor instance = new BaiTanLogAddCmdProcessor();
 	}
 }

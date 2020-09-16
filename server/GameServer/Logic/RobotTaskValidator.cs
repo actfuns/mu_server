@@ -21,23 +21,23 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200024C RID: 588
+	
 	internal class RobotTaskValidator
 	{
-		// Token: 0x06000821 RID: 2081 RVA: 0x0007B0D8 File Offset: 0x000792D8
+		
 		private RobotTaskValidator()
 		{
 		}
 
-		// Token: 0x06000822 RID: 2082 RVA: 0x0007B2A8 File Offset: 0x000794A8
+		
 		public static RobotTaskValidator getInstance()
 		{
 			return RobotTaskValidator.instance;
 		}
 
-		// Token: 0x1700001E RID: 30
-		// (get) Token: 0x06000823 RID: 2083 RVA: 0x0007B2C0 File Offset: 0x000794C0
-		// (set) Token: 0x06000824 RID: 2084 RVA: 0x0007B2D8 File Offset: 0x000794D8
+		
+		
+		
 		public bool UseWorkThread
 		{
 			get
@@ -50,7 +50,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000825 RID: 2085 RVA: 0x0007B2E4 File Offset: 0x000794E4
+		
 		public bool Initialize(bool client, int seed, int randomCount, string pubKey)
 		{
 			try
@@ -84,7 +84,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000826 RID: 2086 RVA: 0x0007B418 File Offset: 0x00079618
+		
 		private uint GenMagicRandom(uint seed, int loop)
 		{
 			uint w = seed;
@@ -97,7 +97,7 @@ namespace GameServer.Logic
 			return (z << 16) + w;
 		}
 
-		// Token: 0x06000827 RID: 2087 RVA: 0x0007B478 File Offset: 0x00079678
+		
 		private void AddTaskToHashSet(string taskId)
 		{
 			using (this.m_Mutex.Enter(4))
@@ -112,7 +112,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000828 RID: 2088 RVA: 0x0007B4F0 File Offset: 0x000796F0
+		
 		public void FlushTaskListToFile(object sender, EventArgs e)
 		{
 			try
@@ -140,7 +140,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000829 RID: 2089 RVA: 0x0007B5DC File Offset: 0x000797DC
+		
 		public void SendTaskListKey(GameClient client)
 		{
 			if (!client.CheckCheatData.RobotTaskCheckInitialed)
@@ -159,13 +159,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600082A RID: 2090 RVA: 0x0007B684 File Offset: 0x00079884
+		
 		public bool BanIsOpen()
 		{
 			return this._BanIsOpen;
 		}
 
-		// Token: 0x0600082B RID: 2091 RVA: 0x0007B69C File Offset: 0x0007989C
+		
 		public bool YueYuIsOpen()
 		{
 			using (this.m_Mutex.Enter(6))
@@ -178,7 +178,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600082C RID: 2092 RVA: 0x0007B720 File Offset: 0x00079920
+		
 		public bool IsYueYu(GameClient client, string appStr)
 		{
 			using (this.m_Mutex.Enter(7))
@@ -199,7 +199,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600082D RID: 2093 RVA: 0x0007B7EC File Offset: 0x000799EC
+		
 		public bool BanYueYu(GameClient client, out bool isLog, string clientData = "0", int jailbreak = 1, int autoStart = 0, string taskStr = "*", int banCount = 0)
 		{
 			isLog = false;
@@ -218,7 +218,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600082E RID: 2094 RVA: 0x0007B88C File Offset: 0x00079A8C
+		
 		public bool LoadRobotTaskData()
 		{
 			this._platformType = GameCoreInterface.getinstance().GetPlatformType();
@@ -506,7 +506,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600082F RID: 2095 RVA: 0x0007C65C File Offset: 0x0007A85C
+		
 		public void UpdateTaskListTimeout(GameClient client)
 		{
 			if (this.BanIsOpen())
@@ -515,7 +515,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000830 RID: 2096 RVA: 0x0007C690 File Offset: 0x0007A890
+		
 		public bool KickTimeout(GameClient client)
 		{
 			bool result;
@@ -590,7 +590,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000831 RID: 2097 RVA: 0x0007C9C0 File Offset: 0x0007ABC0
+		
 		public TCPProcessCmdResults ProcessTaskList(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -623,7 +623,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_OK;
 		}
 
-		// Token: 0x06000832 RID: 2098 RVA: 0x0007CA70 File Offset: 0x0007AC70
+		
 		private void AddRobotDataItem(int cmdId, GameClient client, byte[] data)
 		{
 			RobotDataItem item = new RobotDataItem
@@ -638,7 +638,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000833 RID: 2099 RVA: 0x0007CAE4 File Offset: 0x0007ACE4
+		
 		public void TimerProc()
 		{
 			for (;;)
@@ -681,7 +681,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000834 RID: 2100 RVA: 0x0007CC50 File Offset: 0x0007AE50
+		
 		public int BanYueYu(GameClient client, string devInfo)
 		{
 			int result;
@@ -773,7 +773,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000835 RID: 2101 RVA: 0x0007CFC4 File Offset: 0x0007B1C4
+		
 		public bool ValidateTaskList(byte[] data, GameClient client)
 		{
 			bool result;
@@ -1255,7 +1255,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000836 RID: 2102 RVA: 0x0007E2A4 File Offset: 0x0007C4A4
+		
 		public bool KickWarn(GameClient client, BanType banType, string clientData, int jailbreak = 0, int autoStart = 0, string taskID = "", int banCount = -1, bool forceKick = false)
 		{
 			client.CheckCheatData.KickWarnMaxCount++;
@@ -1274,7 +1274,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000837 RID: 2103 RVA: 0x0007E38C File Offset: 0x0007C58C
+		
 		private int BanRoleByCount(GameClient client, bool addBanCount)
 		{
 			int banMinute = this.m_BanMinutes;
@@ -1305,7 +1305,7 @@ namespace GameServer.Logic
 			return banMinute;
 		}
 
-		// Token: 0x06000838 RID: 2104 RVA: 0x0007E528 File Offset: 0x0007C728
+		
 		private bool BanLog(GameClient client, BanType banType, string clientData, int jailbreak = 0, int autoStart = 0, string taskID = "", int banCount = -1, bool isForce = false)
 		{
 			bool result;
@@ -1358,7 +1358,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000839 RID: 2105 RVA: 0x0007E720 File Offset: 0x0007C920
+		
 		private bool BanKick(GameClient client, BanType banType, string clientData = "", int jailbreak = 0, int autoStart = 0, string taskID = "", int banCount = -1, bool isForce = false)
 		{
 			bool result;
@@ -1422,7 +1422,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600083A RID: 2106 RVA: 0x0007E9E0 File Offset: 0x0007CBE0
+		
 		private bool BanClose(GameClient client, BanType banType, string clientData = "", int jailbreak = 0, int autoStart = 0, string taskID = "", int banCount = -1, bool isForce = false)
 		{
 			bool result;
@@ -1465,7 +1465,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600083B RID: 2107 RVA: 0x0007EB90 File Offset: 0x0007CD90
+		
 		private bool BanRate(GameClient client, BanType banType, string clientData = "", int jailbreak = 0, int autoStart = 0, string taskID = "", int banCount = -1, bool isForce = false)
 		{
 			bool result;
@@ -1511,7 +1511,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600083C RID: 2108 RVA: 0x0007ECD4 File Offset: 0x0007CED4
+		
 		private void BanDBLog(GameClient client, BanType banType, string banID, int banCount)
 		{
 			string dbcmd = string.Format("{0}:{1}:{2}:{3}:{4}:{5}:{6}", new object[]
@@ -1527,7 +1527,7 @@ namespace GameServer.Logic
 			Global.ExecuteDBCmd(13112, dbcmd, client.ServerId);
 		}
 
-		// Token: 0x0600083D RID: 2109 RVA: 0x0007ED58 File Offset: 0x0007CF58
+		
 		public void RobotDataReset(GameClient client)
 		{
 			if (client != null)
@@ -1544,7 +1544,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600083E RID: 2110 RVA: 0x0007EDF0 File Offset: 0x0007CFF0
+		
 		public double GetRobotSceneDropRate(GameClient client, int mapID, double dropRate, int monsterType)
 		{
 			double result;
@@ -1571,7 +1571,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600083F RID: 2111 RVA: 0x0007EE64 File Offset: 0x0007D064
+		
 		public string GetIp(GameClient client)
 		{
 			string ip = "0";
@@ -1590,7 +1590,7 @@ namespace GameServer.Logic
 			return ip;
 		}
 
-		// Token: 0x06000840 RID: 2112 RVA: 0x0007EEC4 File Offset: 0x0007D0C4
+		
 		private string GetTaskName(string task)
 		{
 			string taskStr = task;
@@ -1602,103 +1602,103 @@ namespace GameServer.Logic
 			return taskStr;
 		}
 
-		// Token: 0x04000DF3 RID: 3571
+		
 		private const int BAN_REASON = 2;
 
-		// Token: 0x04000DF4 RID: 3572
+		
 		private const long KICK_DELAY_TIME = 1000L;
 
-		// Token: 0x04000DF5 RID: 3573
+		
 		private static RobotTaskValidator instance = new RobotTaskValidator();
 
-		// Token: 0x04000DF6 RID: 3574
+		
 		private MyTagLock m_Mutex = new MyTagLock(true);
 
-		// Token: 0x04000DF7 RID: 3575
+		
 		private int m_TaskListVerifySeed;
 
-		// Token: 0x04000DF8 RID: 3576
+		
 		private int m_TaskListVerifyRandomCount = 50;
 
-		// Token: 0x04000DF9 RID: 3577
+		
 		private RSACryptoServiceProvider m_TaskListRSA;
 
-		// Token: 0x04000DFA RID: 3578
+		
 		private string m_TaskListRSAPubKey;
 
-		// Token: 0x04000DFB RID: 3579
+		
 		private RobotTaskValidator.TaskCheckList m_TaskCheckList = new RobotTaskValidator.TaskCheckList();
 
-		// Token: 0x04000DFC RID: 3580
+		
 		private PlatformTypes _platformType = PlatformTypes.Tmsk;
 
-		// Token: 0x04000DFD RID: 3581
+		
 		private bool _useWorkThread = true;
 
-		// Token: 0x04000DFE RID: 3582
+		
 		private int _banCheckMaxCount = 5;
 
-		// Token: 0x04000DFF RID: 3583
+		
 		private int _kickWarnMaxCount = 2;
 
-		// Token: 0x04000E00 RID: 3584
+		
 		private int _banLevelLimit = 401;
 
-		// Token: 0x04000E01 RID: 3585
+		
 		private int _banVipLimit = 6;
 
-		// Token: 0x04000E02 RID: 3586
+		
 		private int _canLogIp = 0;
 
-		// Token: 0x04000E03 RID: 3587
+		
 		private int m_BanMinutes = 0;
 
-		// Token: 0x04000E04 RID: 3588
+		
 		private int[] m_BanMiuteList;
 
-		// Token: 0x04000E05 RID: 3589
+		
 		private HashSet<string> m_AllTaskHashSet = new HashSet<string>();
 
-		// Token: 0x04000E06 RID: 3590
+		
 		private Dictionary<int, int> _logCountDic = new Dictionary<int, int>();
 
-		// Token: 0x04000E07 RID: 3591
+		
 		private bool _jiaoBenIsOpen = false;
 
-		// Token: 0x04000E08 RID: 3592
+		
 		private bool _vmIsOpen = false;
 
-		// Token: 0x04000E09 RID: 3593
+		
 		private int _timeOutCount = 5;
 
-		// Token: 0x04000E0A RID: 3594
+		
 		private long _timeOutMinute = 5L;
 
-		// Token: 0x04000E0B RID: 3595
+		
 		private Dictionary<string, int> _cancelAppDic = new Dictionary<string, int>();
 
-		// Token: 0x04000E0C RID: 3596
+		
 		private string[] _specialAppList = null;
 
-		// Token: 0x04000E0D RID: 3597
+		
 		private Dictionary<PlatformTypes, int> _yyOpenPlatform = new Dictionary<PlatformTypes, int>();
 
-		// Token: 0x04000E0E RID: 3598
+		
 		private Dictionary<string, int> _yueyuAppDic = new Dictionary<string, int>();
 
-		// Token: 0x04000E0F RID: 3599
+		
 		private int _appCount = 10;
 
-		// Token: 0x04000E10 RID: 3600
+		
 		private int _multiCount = 3;
 
-		// Token: 0x04000E11 RID: 3601
+		
 		private int _decryptCount = 5;
 
-		// Token: 0x04000E12 RID: 3602
+		
 		private bool _banRateNum = false;
 
-		// Token: 0x04000E13 RID: 3603
+		
 		private int[] _appPlatformCount = new int[]
 		{
 			0,
@@ -1706,34 +1706,34 @@ namespace GameServer.Logic
 			5
 		};
 
-		// Token: 0x04000E14 RID: 3604
+		
 		private Dictionary<BanReasonType, int> _banReasonDic = new Dictionary<BanReasonType, int>();
 
-		// Token: 0x04000E15 RID: 3605
+		
 		private Dictionary<string, BanInfo> m_RobotTaskList = new Dictionary<string, BanInfo>();
 
-		// Token: 0x04000E16 RID: 3606
+		
 		private Dictionary<string, int> m_RobotBuildList = new Dictionary<string, int>();
 
-		// Token: 0x04000E17 RID: 3607
+		
 		private Dictionary<string, int> m_RobotCPUList = new Dictionary<string, int>();
 
-		// Token: 0x04000E18 RID: 3608
+		
 		private Dictionary<string, int> m_RobotPhoneList = new Dictionary<string, int>();
 
-		// Token: 0x04000E19 RID: 3609
+		
 		private Dictionary<string, int> m_RobotSignList = new Dictionary<string, int>();
 
-		// Token: 0x04000E1A RID: 3610
+		
 		private Dictionary<string, int> m_YueYuDevList = new Dictionary<string, int>();
 
-		// Token: 0x04000E1B RID: 3611
+		
 		private Dictionary<string, int> m_YueYuOSVerList = new Dictionary<string, int>();
 
-		// Token: 0x04000E1C RID: 3612
+		
 		private Dictionary<string, List<string>> m_NewYueYuDevOSVerListDict = new Dictionary<string, List<string>>();
 
-		// Token: 0x04000E1D RID: 3613
+		
 		private int[] _vmSignGameOpenSeven = new int[]
 		{
 			0,
@@ -1741,7 +1741,7 @@ namespace GameServer.Logic
 			120
 		};
 
-		// Token: 0x04000E1E RID: 3614
+		
 		private int[] _yueYuGameOpenSeveb = new int[]
 		{
 			0,
@@ -1749,32 +1749,32 @@ namespace GameServer.Logic
 			120
 		};
 
-		// Token: 0x04000E1F RID: 3615
+		
 		private HashSet<int> VMBanMapCodes = new HashSet<int>();
 
-		// Token: 0x04000E20 RID: 3616
+		
 		private Thread BackgroundThread;
 
-		// Token: 0x04000E21 RID: 3617
+		
 		public ConcurrentDictionary<int, double> _DropRateDownMapDict = new ConcurrentDictionary<int, double>();
 
-		// Token: 0x04000E22 RID: 3618
+		
 		public ConcurrentDictionary<int, int> m_DropRateDownMonsterTypeHashSet = new ConcurrentDictionary<int, int>();
 
-		// Token: 0x04000E23 RID: 3619
+		
 		private Dictionary<PlatformTypes, int> _banOpenPlatform = new Dictionary<PlatformTypes, int>();
 
-		// Token: 0x04000E24 RID: 3620
+		
 		private bool _BanIsOpen = false;
 
-		// Token: 0x04000E25 RID: 3621
+		
 		private Queue<RobotDataItem> RobotDataItemQueue = new Queue<RobotDataItem>();
 
-		// Token: 0x0200024D RID: 589
+		
 		[ProtoContract]
 		public class TaskCheckList : ICompressed
 		{
-			// Token: 0x04000E26 RID: 3622
+			
 			[ProtoMember(1)]
 			public byte[] TaskCheckListData;
 		}

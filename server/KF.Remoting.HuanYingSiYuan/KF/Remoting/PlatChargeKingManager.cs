@@ -8,10 +8,10 @@ using Tmsk.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000039 RID: 57
+	
 	internal class PlatChargeKingManager
 	{
-		// Token: 0x06000299 RID: 665 RVA: 0x00025F3C File Offset: 0x0002413C
+		
 		public void Update()
 		{
 			try
@@ -122,7 +122,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600029A RID: 666 RVA: 0x0002629C File Offset: 0x0002449C
+		
 		public InputKingPaiHangDataEx GetRankEx()
 		{
 			InputKingPaiHangDataEx result = null;
@@ -134,7 +134,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600029B RID: 667 RVA: 0x000262F8 File Offset: 0x000244F8
+		
 		public List<InputKingPaiHangDataEx> GetRankExList(DateTime fromDate, DateTime toDate)
 		{
 			List<InputKingPaiHangDataEx> result = null;
@@ -157,7 +157,7 @@ namespace KF.Remoting
 			return result2;
 		}
 
-		// Token: 0x0600029C RID: 668 RVA: 0x00026464 File Offset: 0x00024664
+		
 		public InputKingPaiHangDataEx MergePlatfromInputKingList(List<InputKingPaiHangDataEx> EveryPlatfrom)
 		{
 			InputKingPaiHangDataEx InputRes = new InputKingPaiHangDataEx();
@@ -245,7 +245,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600029D RID: 669 RVA: 0x00026624 File Offset: 0x00024824
+		
 		public List<InputKingPaiHangDataEx> MergePlatfromInputKingListEveryDay(Dictionary<int, List<InputKingPaiHangDataEx>> EveryPlatfrom)
 		{
 			List<InputKingPaiHangDataEx> res = new List<InputKingPaiHangDataEx>();
@@ -294,7 +294,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600029E RID: 670 RVA: 0x000267AC File Offset: 0x000249AC
+		
 		public long QueryHuodongAwardUserHist(int actType, string huoDongKeyStr, string userid)
 		{
 			long hasgettimes = 0L;
@@ -306,7 +306,7 @@ namespace KF.Remoting
 			return hasgettimes;
 		}
 
-		// Token: 0x0600029F RID: 671 RVA: 0x00026818 File Offset: 0x00024A18
+		
 		public int UpdateHuodongAwardUserHist(int actType, string huoDongKeyStr, string userid, int extTag)
 		{
 			long hasgettimes = 0L;
@@ -329,37 +329,37 @@ namespace KF.Remoting
 			return ret;
 		}
 
-		// Token: 0x060002A0 RID: 672 RVA: 0x000268DC File Offset: 0x00024ADC
+		
 		private bool IsNeedDownload()
 		{
 			return this.bHasVisitor;
 		}
 
-		// Token: 0x060002A1 RID: 673 RVA: 0x00026900 File Offset: 0x00024B00
+		
 		private bool IsNeedDownloadEveryDay()
 		{
 			return this.bHasVisitorEvery;
 		}
 
-		// Token: 0x04000168 RID: 360
+		
 		private object Mutex = new object();
 
-		// Token: 0x04000169 RID: 361
+		
 		private InputKingPaiHangDataEx rankEx = null;
 
-		// Token: 0x0400016A RID: 362
+		
 		private bool bHasVisitor = false;
 
-		// Token: 0x0400016B RID: 363
+		
 		private DateTime MeiRiPCKingFromDate = DateTime.MinValue;
 
-		// Token: 0x0400016C RID: 364
+		
 		private DateTime MeiRiPCKingToDate = DateTime.MinValue;
 
-		// Token: 0x0400016D RID: 365
+		
 		private List<InputKingPaiHangDataEx> rankExList = new List<InputKingPaiHangDataEx>();
 
-		// Token: 0x0400016E RID: 366
+		
 		private bool bHasVisitorEvery = false;
 	}
 }

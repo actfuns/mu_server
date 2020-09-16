@@ -8,16 +8,16 @@ using Neo.IronLua;
 
 namespace GameServer.Logic
 {
-    // Token: 0x0200051A RID: 1306
+    
     public class LuaExeManager
     {
-        // Token: 0x06001876 RID: 6262 RVA: 0x0017EB58 File Offset: 0x0017CD58
+        
         public static LuaExeManager getInstance()
         {
             return LuaExeManager.instance;
         }
 
-        // Token: 0x06001877 RID: 6263 RVA: 0x0017EB70 File Offset: 0x0017CD70
+        
         public void InitLuaEnv()
         {
             this.gEnv = this.lua.CreateEnvironment();
@@ -27,7 +27,7 @@ namespace GameServer.Logic
             LuaExeManager.timerCheckDict.Enabled = true;
         }
 
-        // Token: 0x06001878 RID: 6264 RVA: 0x0017EC08 File Offset: 0x0017CE08
+        
         private void CheckDictLuaInfo(object source, ElapsedEventArgs e)
         {
             lock (this.dictLuaCache)
@@ -61,7 +61,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06001879 RID: 6265 RVA: 0x0017ED9C File Offset: 0x0017CF9C
+        
         public LuaGlobal ExeLua(string strLuaPath)
         {
             LuaExeInfo exeInfo = null;
@@ -83,7 +83,7 @@ namespace GameServer.Logic
             return this.gEnv;
         }
 
-        // Token: 0x0600187A RID: 6266 RVA: 0x0017EEB4 File Offset: 0x0017D0B4
+        
         public LuaResult ExecLuaFunction(LuaManager luaManager, dynamic g, string strLuaFunction, GameClient client)
         {
             lock (this.dictLuaCache)
@@ -92,19 +92,19 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x040022B5 RID: 8885
+        
         private Dictionary<string, LuaExeInfo> dictLuaCache = new Dictionary<string, LuaExeInfo>();
 
-        // Token: 0x040022B6 RID: 8886
+        
         private Lua lua = new Lua();
 
-        // Token: 0x040022B7 RID: 8887
+        
         private LuaGlobal gEnv = null;
 
-        // Token: 0x040022B8 RID: 8888
+        
         private static Timer timerCheckDict;
 
-        // Token: 0x040022B9 RID: 8889
+        
         private static LuaExeManager instance = new LuaExeManager();
     }
 }

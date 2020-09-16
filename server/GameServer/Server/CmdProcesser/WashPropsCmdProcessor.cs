@@ -3,22 +3,22 @@ using GameServer.Logic;
 
 namespace GameServer.Server.CmdProcesser
 {
-	// Token: 0x020008AB RID: 2219
+	
 	public class WashPropsCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x06003D9C RID: 15772 RVA: 0x00349D0A File Offset: 0x00347F0A
+		
 		public WashPropsCmdProcessor(TCPGameServerCmds cmdID)
 		{
 			this.CmdID = cmdID;
 		}
 
-		// Token: 0x06003D9D RID: 15773 RVA: 0x00349D28 File Offset: 0x00347F28
+		
 		public static WashPropsCmdProcessor getInstance(TCPGameServerCmds cmdID)
 		{
 			return new WashPropsCmdProcessor(cmdID);
 		}
 
-		// Token: 0x06003D9E RID: 15774 RVA: 0x00349D40 File Offset: 0x00347F40
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			int nID = (int)this.CmdID;
@@ -45,7 +45,7 @@ namespace GameServer.Server.CmdProcesser
 			return result;
 		}
 
-		// Token: 0x040047BC RID: 18364
+		
 		private TCPGameServerCmds CmdID = TCPGameServerCmds.CMD_SPR_EXEC_WASHPROPS;
 	}
 }

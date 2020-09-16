@@ -5,10 +5,10 @@ using GameServer.Core.Executor;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007A1 RID: 1953
+	
 	public class StoryBoard4Client
 	{
-		// Token: 0x060032DF RID: 13023 RVA: 0x002D2508 File Offset: 0x002D0708
+		
 		public static StoryBoard4Client FindStoryBoard(int roleID)
 		{
 			StoryBoard4Client storyBd = null;
@@ -19,7 +19,7 @@ namespace GameServer.Logic
 			return storyBd;
 		}
 
-		// Token: 0x060032E0 RID: 13024 RVA: 0x002D2564 File Offset: 0x002D0764
+		
 		public static void RemoveStoryBoard(int roleID)
 		{
 			StoryBoard4Client storyBd = null;
@@ -36,7 +36,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032E1 RID: 13025 RVA: 0x002D25E0 File Offset: 0x002D07E0
+		
 		public static StoryBoard4Client StopStoryBoard(int roleID, long clientTicks)
 		{
 			StoryBoard4Client storyBd = null;
@@ -55,7 +55,7 @@ namespace GameServer.Logic
 			return storyBd;
 		}
 
-		// Token: 0x060032E2 RID: 13026 RVA: 0x002D2668 File Offset: 0x002D0868
+		
 		public static void StopStoryBoard(int roleID, int stopIndex)
 		{
 			StoryBoard4Client storyBd = null;
@@ -72,7 +72,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032E3 RID: 13027 RVA: 0x002D26D8 File Offset: 0x002D08D8
+		
 		public static int GetStoryBoardPathIndex(int roleID)
 		{
 			StoryBoard4Client storyBd = null;
@@ -95,7 +95,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060032E4 RID: 13028 RVA: 0x002D2754 File Offset: 0x002D0954
+		
 		public static void ClearStoryBoard()
 		{
 			List<StoryBoard4Client> list = new List<StoryBoard4Client>();
@@ -118,13 +118,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032E5 RID: 13029 RVA: 0x002D283C File Offset: 0x002D0A3C
+		
 		private static long getMyTimer()
 		{
 			return TimeUtil.NOW();
 		}
 
-		// Token: 0x060032E6 RID: 13030 RVA: 0x002D2854 File Offset: 0x002D0A54
+		
 		public static void runStoryBoards()
 		{
 			long currentTicks = StoryBoard4Client.getMyTimer();
@@ -147,14 +147,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x14000005 RID: 5
+		
 		// (add) Token: 0x060032E7 RID: 13031 RVA: 0x002D2938 File Offset: 0x002D0B38
 		// (remove) Token: 0x060032E8 RID: 13032 RVA: 0x002D2974 File Offset: 0x002D0B74
 		public event StoryBoard4Client.CompletedDelegateHandle _Completed = null;
 
-		// Token: 0x170003B5 RID: 949
-		// (get) Token: 0x060032E9 RID: 13033 RVA: 0x002D29B0 File Offset: 0x002D0BB0
-		// (set) Token: 0x060032EA RID: 13034 RVA: 0x002D29C8 File Offset: 0x002D0BC8
+		
+		
+		
 		public StoryBoard4Client.CompletedDelegateHandle Completed
 		{
 			get
@@ -167,14 +167,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032EB RID: 13035 RVA: 0x002D29D4 File Offset: 0x002D0BD4
+		
 		public StoryBoard4Client(int roleID)
 		{
 			this._RoleID = roleID;
 		}
 
-		// Token: 0x170003B6 RID: 950
-		// (get) Token: 0x060032EC RID: 13036 RVA: 0x002D2AC8 File Offset: 0x002D0CC8
+		
+		
 		public int RoleID
 		{
 			get
@@ -183,7 +183,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032ED RID: 13037 RVA: 0x002D2AE0 File Offset: 0x002D0CE0
+		
 		public void Binding()
 		{
 			lock (StoryBoard4Client.StoryBoardDict)
@@ -195,13 +195,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032EE RID: 13038 RVA: 0x002D2B4C File Offset: 0x002D0D4C
+		
 		public void UnBinding()
 		{
 			this.Clear();
 		}
 
-		// Token: 0x060032EF RID: 13039 RVA: 0x002D2B58 File Offset: 0x002D0D58
+		
 		public void Clear()
 		{
 			if (-1 != this._RoleID)
@@ -210,8 +210,8 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170003B7 RID: 951
-		// (get) Token: 0x060032F0 RID: 13040 RVA: 0x002D2B84 File Offset: 0x002D0D84
+		
+		
 		public int CurrentX
 		{
 			get
@@ -220,8 +220,8 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170003B8 RID: 952
-		// (get) Token: 0x060032F1 RID: 13041 RVA: 0x002D2B9C File Offset: 0x002D0D9C
+		
+		
 		public int CurrentY
 		{
 			get
@@ -230,7 +230,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032F2 RID: 13042 RVA: 0x002D2BB4 File Offset: 0x002D0DB4
+		
 		public bool Start(GameClient client, List<Point> path, int cellSizeX, int cellSizeY, long elapsedTicks)
 		{
 			bool result;
@@ -270,7 +270,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060032F3 RID: 13043 RVA: 0x002D2D98 File Offset: 0x002D0F98
+		
 		private void StopOnNextGrid(int stopIndex)
 		{
 			lock (this.mutex)
@@ -296,7 +296,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032F4 RID: 13044 RVA: 0x002D2EC8 File Offset: 0x002D10C8
+		
 		public bool IsStopped()
 		{
 			bool stopped;
@@ -307,7 +307,7 @@ namespace GameServer.Logic
 			return stopped;
 		}
 
-		// Token: 0x060032F5 RID: 13045 RVA: 0x002D2F14 File Offset: 0x002D1114
+		
 		public int GetStoryBoardPathIndex()
 		{
 			int pathIndex;
@@ -318,8 +318,8 @@ namespace GameServer.Logic
 			return pathIndex;
 		}
 
-		// Token: 0x170003B9 RID: 953
-		// (get) Token: 0x060032F6 RID: 13046 RVA: 0x002D2F60 File Offset: 0x002D1160
+		
+		
 		public Point LastPoint
 		{
 			get
@@ -328,7 +328,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032F7 RID: 13047 RVA: 0x002D2F78 File Offset: 0x002D1178
+		
 		public void Run(long currentTicks)
 		{
 			lock (this.mutex)
@@ -355,7 +355,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032F8 RID: 13048 RVA: 0x002D3064 File Offset: 0x002D1264
+		
 		private double GetClientMoveSpeed(GameClient client)
 		{
 			double result;
@@ -370,7 +370,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060032F9 RID: 13049 RVA: 0x002D30B4 File Offset: 0x002D12B4
+		
 		private static long GetNeedTicks(bool needWalking, int dir)
 		{
 			int speed = needWalking ? 225 : 125;
@@ -386,7 +386,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060032FA RID: 13050 RVA: 0x002D3100 File Offset: 0x002D1300
+		
 		private static int CalcDirection(int x1, int y1, int x2, int y2)
 		{
 			int result;
@@ -435,7 +435,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060032FB RID: 13051 RVA: 0x002D31CC File Offset: 0x002D13CC
+		
 		private bool StepMove(double toMoveDist, GameClient client)
 		{
 			StoryBoard4Client sb = StoryBoard4Client.FindStoryBoard(this._RoleID);
@@ -537,7 +537,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060032FC RID: 13052 RVA: 0x002D35CC File Offset: 0x002D17CC
+		
 		private static double GetDirectionByTan(double targetX, double targetY, double currentX, double currentY)
 		{
 			int direction = 0;
@@ -585,7 +585,7 @@ namespace GameServer.Logic
 			return (double)direction;
 		}
 
-		// Token: 0x060032FD RID: 13053 RVA: 0x002D3690 File Offset: 0x002D1890
+		
 		private bool DetectNextGrid()
 		{
 			bool result;
@@ -615,7 +615,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060032FE RID: 13054 RVA: 0x002D379C File Offset: 0x002D199C
+		
 		private bool CanMoveToNext()
 		{
 			GameClient client = GameManager.ClientMgr.FindClient(this._RoleID);
@@ -635,71 +635,71 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04003EED RID: 16109
+		
 		private const float DiagCost = 1.414213f;
 
-		// Token: 0x04003EEE RID: 16110
+		
 		private static Dictionary<int, StoryBoard4Client> StoryBoardDict = new Dictionary<int, StoryBoard4Client>();
 
-		// Token: 0x04003EEF RID: 16111
+		
 		private static long LastRunStoryTicks = 0L;
 
-		// Token: 0x04003EF1 RID: 16113
+		
 		private int _RoleID = -1;
 
-		// Token: 0x04003EF2 RID: 16114
+		
 		private object mutex = new object();
 
-		// Token: 0x04003EF3 RID: 16115
+		
 		private int _PathIndex = 0;
 
-		// Token: 0x04003EF4 RID: 16116
+		
 		private int _LastTargetX = 0;
 
-		// Token: 0x04003EF5 RID: 16117
+		
 		private int _LastTargetY = 0;
 
-		// Token: 0x04003EF6 RID: 16118
+		
 		private double _CurrentX = 0.0;
 
-		// Token: 0x04003EF7 RID: 16119
+		
 		private double _CurrentY = 0.0;
 
-		// Token: 0x04003EF8 RID: 16120
+		
 		private int _CellSizeX = GameManager.MapGridWidth;
 
-		// Token: 0x04003EF9 RID: 16121
+		
 		private int _CellSizeY = GameManager.MapGridHeight;
 
-		// Token: 0x04003EFA RID: 16122
+		
 		private List<Point> _Path = null;
 
-		// Token: 0x04003EFB RID: 16123
+		
 		private long _LastRunTicks = 0L;
 
-		// Token: 0x04003EFC RID: 16124
+		
 		private bool _Started = false;
 
-		// Token: 0x04003EFD RID: 16125
+		
 		private bool _CompletedState = false;
 
-		// Token: 0x04003EFE RID: 16126
+		
 		private bool _Stopped = false;
 
-		// Token: 0x04003EFF RID: 16127
+		
 		private int _LastStopIndex = -1;
 
-		// Token: 0x04003F00 RID: 16128
+		
 		private Point _FirstPoint = new Point(0.0, 0.0);
 
-		// Token: 0x04003F01 RID: 16129
+		
 		private Point _LastPoint = new Point(0.0, 0.0);
 
-		// Token: 0x04003F02 RID: 16130
+		
 		private double _MovingSpeedPerSec = 500.0;
 
-		// Token: 0x020007A2 RID: 1954
-		// (Invoke) Token: 0x06003301 RID: 13057
+		
+		
 		public delegate void CompletedDelegateHandle(object sender, EventArgs e);
 	}
 }

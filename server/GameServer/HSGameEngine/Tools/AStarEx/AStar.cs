@@ -5,10 +5,10 @@ using Server.Tools;
 
 namespace HSGameEngine.Tools.AStarEx
 {
-	// Token: 0x020008D6 RID: 2262
+	
 	public class AStar
 	{
-		// Token: 0x06004138 RID: 16696 RVA: 0x003BF4F0 File Offset: 0x003BD6F0
+		
 		public List<ANode> find(NodeGrid grid)
 		{
 			List<ANode> result;
@@ -23,7 +23,7 @@ namespace HSGameEngine.Tools.AStarEx
 			return result;
 		}
 
-		// Token: 0x06004139 RID: 16697 RVA: 0x003BF51C File Offset: 0x003BD71C
+		
 		public bool findPath(NodeGrid grid)
 		{
 			this._grid = grid;
@@ -55,7 +55,7 @@ namespace HSGameEngine.Tools.AStarEx
 			return this.search();
 		}
 
-		// Token: 0x0600413A RID: 16698 RVA: 0x003BF6B8 File Offset: 0x003BD8B8
+		
 		public bool search()
 		{
 			try
@@ -152,13 +152,13 @@ namespace HSGameEngine.Tools.AStarEx
 			return true;
 		}
 
-		// Token: 0x0600413B RID: 16699 RVA: 0x003BFB30 File Offset: 0x003BDD30
+		
 		private int IndexOfClose(long node)
 		{
 			return this._closed.ContainsKey(node) ? 0 : -1;
 		}
 
-		// Token: 0x0600413C RID: 16700 RVA: 0x003BFB58 File Offset: 0x003BDD58
+		
 		private void buildPath()
 		{
 			this._path = new List<ANode>();
@@ -176,13 +176,13 @@ namespace HSGameEngine.Tools.AStarEx
 			Debug.WriteLine(string.Format("Find Path count={0}", count));
 		}
 
-		// Token: 0x0600413D RID: 16701 RVA: 0x003BFC38 File Offset: 0x003BDE38
+		
 		private bool isDiagonalWalkable(long node1, long node2)
 		{
 			return this._grid.isDiagonalWalkable(node1, node2);
 		}
 
-		// Token: 0x0600413E RID: 16702 RVA: 0x003BFC58 File Offset: 0x003BDE58
+		
 		private double diagonal(int nodex, int nodey)
 		{
 			double dx = (double)((nodex - this._endNodeX < 0) ? (this._endNodeX - nodex) : (nodex - this._endNodeX));
@@ -192,8 +192,8 @@ namespace HSGameEngine.Tools.AStarEx
 			return this._diagCost * diag + this._straightCost * (straight - 2.0 * diag);
 		}
 
-		// Token: 0x1700062F RID: 1583
-		// (get) Token: 0x0600413F RID: 16703 RVA: 0x003BFCD8 File Offset: 0x003BDED8
+		
+		
 		public List<ANode> path
 		{
 			get
@@ -202,40 +202,40 @@ namespace HSGameEngine.Tools.AStarEx
 			}
 		}
 
-		// Token: 0x04004F7F RID: 20351
+		
 		public const double costMultiplier = 1.0;
 
-		// Token: 0x04004F80 RID: 20352
+		
 		private BinaryStack _open;
 
-		// Token: 0x04004F81 RID: 20353
+		
 		private Dictionary<long, bool> _closed;
 
-		// Token: 0x04004F82 RID: 20354
+		
 		private NodeGrid _grid;
 
-		// Token: 0x04004F83 RID: 20355
+		
 		private int _endNodeX;
 
-		// Token: 0x04004F84 RID: 20356
+		
 		private int _endNodeY;
 
-		// Token: 0x04004F85 RID: 20357
+		
 		private int _startNodeX;
 
-		// Token: 0x04004F86 RID: 20358
+		
 		private int _startNodeY;
 
-		// Token: 0x04004F87 RID: 20359
+		
 		private List<ANode> _path;
 
-		// Token: 0x04004F88 RID: 20360
+		
 		private double _straightCost = 1.0;
 
-		// Token: 0x04004F89 RID: 20361
+		
 		private double _diagCost = 1.4142135623730951;
 
-		// Token: 0x04004F8A RID: 20362
+		
 		public static int MaxOpenNodeCount = 200;
 	}
 }

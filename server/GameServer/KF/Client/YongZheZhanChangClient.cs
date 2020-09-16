@@ -12,23 +12,23 @@ using Tmsk.Contract;
 
 namespace KF.Client
 {
-	// Token: 0x02000810 RID: 2064
+	
 	[CallbackBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, IgnoreExtensionDataObject = true, UseSynchronizationContext = false)]
 	public class YongZheZhanChangClient : MarshalByRefObject, IKuaFuClient, IManager2
 	{
-		// Token: 0x06003A5A RID: 14938 RVA: 0x003183A8 File Offset: 0x003165A8
+		
 		public static YongZheZhanChangClient getInstance()
 		{
 			return YongZheZhanChangClient.instance;
 		}
 
-		// Token: 0x06003A5B RID: 14939 RVA: 0x003183C0 File Offset: 0x003165C0
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x06003A5C RID: 14940 RVA: 0x003183D4 File Offset: 0x003165D4
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			this.CoreInterface = coreInterface;
@@ -39,25 +39,25 @@ namespace KF.Client
 			return true;
 		}
 
-		// Token: 0x06003A5D RID: 14941 RVA: 0x00318430 File Offset: 0x00316630
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x06003A5E RID: 14942 RVA: 0x00318444 File Offset: 0x00316644
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06003A5F RID: 14943 RVA: 0x00318458 File Offset: 0x00316658
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06003A60 RID: 14944 RVA: 0x0031846C File Offset: 0x0031666C
+		
 		public void ExecuteEventCallBackAsync(object state)
 		{
 			AsyncDataItem[] items = state as AsyncDataItem[];
@@ -70,7 +70,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06003A61 RID: 14945 RVA: 0x003184C0 File Offset: 0x003166C0
+		
 		public void UpdateKuaFuMapClientCount(Dictionary<int, int> dict)
 		{
 			lock (this.Mutex)
@@ -91,7 +91,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06003A62 RID: 14946 RVA: 0x00318558 File Offset: 0x00316758
+		
 		public void TimerProc(object sender, EventArgs e)
 		{
 			try
@@ -126,7 +126,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06003A63 RID: 14947 RVA: 0x00318654 File Offset: 0x00316854
+		
 		private void CloseConnection()
 		{
 			this.ClientInfo.ClientId = 0;
@@ -137,19 +137,19 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06003A64 RID: 14948 RVA: 0x003186C4 File Offset: 0x003168C4
+		
 		private void OnConnectionClose(object sender, EventArgs e)
 		{
 			this.CloseConnection();
 		}
 
-		// Token: 0x06003A65 RID: 14949 RVA: 0x003186CE File Offset: 0x003168CE
+		
 		private void ResetKuaFuService()
 		{
 			this.CloseConnection();
 		}
 
-		// Token: 0x06003A66 RID: 14950 RVA: 0x003186D8 File Offset: 0x003168D8
+		
 		private IYongZheZhanChangService GetKuaFuService(bool noWait = false)
 		{
 			try
@@ -218,7 +218,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06003A67 RID: 14951 RVA: 0x00318954 File Offset: 0x00316B54
+		
 		public int UpdateRoleData(KuaFuRoleData kuaFuRoleData, int roleId = 0)
 		{
 			int result = 0;
@@ -245,7 +245,7 @@ namespace KF.Client
 			return result2;
 		}
 
-		// Token: 0x06003A68 RID: 14952 RVA: 0x00318A08 File Offset: 0x00316C08
+		
 		public int RoleChangeState(int serverId, int rid, int state)
 		{
 			int result = -11;
@@ -264,7 +264,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06003A69 RID: 14953 RVA: 0x00318A60 File Offset: 0x00316C60
+		
 		public int GameFuBenChangeState(int gameId, GameFuBenState state, DateTime time)
 		{
 			int result = -11000;
@@ -292,7 +292,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06003A6A RID: 14954 RVA: 0x00318B1C File Offset: 0x00316D1C
+		
 		public int GetNewFuBenSeqId()
 		{
 			int result;
@@ -307,13 +307,13 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06003A6B RID: 14955 RVA: 0x00318B4C File Offset: 0x00316D4C
+		
 		public object GetDataFromClientServer(int dataType, params object[] args)
 		{
 			return null;
 		}
 
-		// Token: 0x06003A6C RID: 14956 RVA: 0x00318B60 File Offset: 0x00316D60
+		
 		public void EventCallBackHandler(AsyncDataItem item)
 		{
 			try
@@ -447,7 +447,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06003A6D RID: 14957 RVA: 0x00318F74 File Offset: 0x00317174
+		
 		public int OnRoleChangeState(int roleId, int state, int age)
 		{
 			lock (this.Mutex)
@@ -465,7 +465,7 @@ namespace KF.Client
 			return 0;
 		}
 
-		// Token: 0x06003A6E RID: 14958 RVA: 0x00318FF8 File Offset: 0x003171F8
+		
 		public int YongZheZhanChangSignUp(string userId, int roleId, int zoneId, int gameType, int groupIndex, int zhanDouLi)
 		{
 			int result2;
@@ -524,7 +524,7 @@ namespace KF.Client
 			return result2;
 		}
 
-		// Token: 0x06003A6F RID: 14959 RVA: 0x00319184 File Offset: 0x00317384
+		
 		public int ChangeRoleState(int roleId, KuaFuRoleStates state, bool noWait = false)
 		{
 			int result = -11;
@@ -566,7 +566,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06003A70 RID: 14960 RVA: 0x003192C4 File Offset: 0x003174C4
+		
 		public YongZheZhanChangFuBenData GetKuaFuFuBenData(int gameId)
 		{
 			YongZheZhanChangFuBenData yongZheZhanChangFuBenData = null;
@@ -602,7 +602,7 @@ namespace KF.Client
 			return yongZheZhanChangFuBenData;
 		}
 
-		// Token: 0x06003A71 RID: 14961 RVA: 0x003193D0 File Offset: 0x003175D0
+		
 		private void ClearOverTimeFuBen(DateTime now)
 		{
 			lock (this.Mutex)
@@ -622,7 +622,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06003A72 RID: 14962 RVA: 0x003194DC File Offset: 0x003176DC
+		
 		public int GetKuaFuRoleState(int roleId)
 		{
 			int state = 0;
@@ -645,7 +645,7 @@ namespace KF.Client
 			return state;
 		}
 
-		// Token: 0x06003A73 RID: 14963 RVA: 0x0031955C File Offset: 0x0031775C
+		
 		public int GameFuBenRoleChangeState(int roleId, int state, int serverId = 0, int gameId = 0)
 		{
 			try
@@ -673,7 +673,7 @@ namespace KF.Client
 			return 0;
 		}
 
-		// Token: 0x06003A74 RID: 14964 RVA: 0x003195FC File Offset: 0x003177FC
+		
 		public void RemoveRoleData(int roleId)
 		{
 			lock (this.Mutex)
@@ -683,7 +683,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06003A75 RID: 14965 RVA: 0x0031965C File Offset: 0x0031785C
+		
 		public KuaFuRoleData GetKuaFuRoleDataFromServer(int serverId, int roleId)
 		{
 			KuaFuRoleData kuaFuRoleData = null;
@@ -703,7 +703,7 @@ namespace KF.Client
 			return kuaFuRoleData;
 		}
 
-		// Token: 0x06003A76 RID: 14966 RVA: 0x003196B4 File Offset: 0x003178B4
+		
 		public bool KuaFuLogin(KuaFuServerLoginData kuaFuServerLoginData)
 		{
 			YongZheZhanChangFuBenData YongZheZhanChangFuBenData = this.GetKuaFuFuBenData((int)kuaFuServerLoginData.GameId);
@@ -725,7 +725,7 @@ namespace KF.Client
 			return false;
 		}
 
-		// Token: 0x06003A77 RID: 14967 RVA: 0x00319758 File Offset: 0x00317958
+		
 		public void PushGameResultData(object data)
 		{
 			IYongZheZhanChangService kuaFuService = this.GetKuaFuService(false);
@@ -745,7 +745,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06003A78 RID: 14968 RVA: 0x003197B8 File Offset: 0x003179B8
+		
 		public int ExecuteCommand(string cmd)
 		{
 			IYongZheZhanChangService kuaFuService = this.GetKuaFuService(false);
@@ -763,7 +763,7 @@ namespace KF.Client
 			return -11003;
 		}
 
-		// Token: 0x06003A79 RID: 14969 RVA: 0x0031980C File Offset: 0x00317A0C
+		
 		public object GetKuaFuLineDataList(int mapCode)
 		{
 			IYongZheZhanChangService kuaFuService = this.GetKuaFuService(false);
@@ -785,7 +785,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06003A7A RID: 14970 RVA: 0x0031988C File Offset: 0x00317A8C
+		
 		public int EnterKuaFuMap(int roleId, int mapCode, int kuaFuLine, int roleSourceServerId, KuaFuServerLoginData kuaFuServerLoginData)
 		{
 			IYongZheZhanChangService kuaFuService = this.GetKuaFuService(false);
@@ -817,7 +817,7 @@ namespace KF.Client
 			return -11003;
 		}
 
-		// Token: 0x06003A7B RID: 14971 RVA: 0x0031995C File Offset: 0x00317B5C
+		
 		public bool CanEnterKuaFuMap(KuaFuServerLoginData kuaFuServerLoginData)
 		{
 			SceneUIClasses sceneType = Global.GetMapSceneType((int)kuaFuServerLoginData.GameId);
@@ -842,7 +842,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06003A7C RID: 14972 RVA: 0x003199F4 File Offset: 0x00317BF4
+		
 		public KuaFuMapRoleData GetKuaFuMapRoleData(int roleId)
 		{
 			IYongZheZhanChangService kuaFuService = this.GetKuaFuService(false);
@@ -860,7 +860,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06003A7D RID: 14973 RVA: 0x00319A44 File Offset: 0x00317C44
+		
 		public int LangHunLingYuSignUp(string bhName, int bhid, int zoneId, int gameType, int groupIndex, int zhanDouLi)
 		{
 			int result = -11000;
@@ -888,7 +888,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06003A7E RID: 14974 RVA: 0x00319AD0 File Offset: 0x00317CD0
+		
 		public int GameFuBenComplete(LangHunLingYuStatisticalData data)
 		{
 			int result = -11000;
@@ -916,7 +916,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06003A7F RID: 14975 RVA: 0x00319B54 File Offset: 0x00317D54
+		
 		public bool LangHunLingYunAdmire(int rid)
 		{
 			try
@@ -941,7 +941,7 @@ namespace KF.Client
 			return false;
 		}
 
-		// Token: 0x06003A80 RID: 14976 RVA: 0x00319BC4 File Offset: 0x00317DC4
+		
 		public LangHunLingYuFuBenData GetLangHunLingYuGameFuBenData(int gameId)
 		{
 			try
@@ -966,7 +966,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06003A81 RID: 14977 RVA: 0x00319C34 File Offset: 0x00317E34
+		
 		public bool LangHunLingYuKuaFuLoginData(int roleId, int cityId, int gameId, KuaFuServerLoginData kuaFuServerLoginData)
 		{
 			try
@@ -1017,55 +1017,55 @@ namespace KF.Client
 			return false;
 		}
 
-		// Token: 0x04004446 RID: 17478
+		
 		private static YongZheZhanChangClient instance = new YongZheZhanChangClient();
 
-		// Token: 0x04004447 RID: 17479
+		
 		private object Mutex = new object();
 
-		// Token: 0x04004448 RID: 17480
+		
 		private object RemotingMutex = new object();
 
-		// Token: 0x04004449 RID: 17481
+		
 		private ICoreInterface CoreInterface = null;
 
-		// Token: 0x0400444A RID: 17482
+		
 		private IYongZheZhanChangService KuaFuService = null;
 
-		// Token: 0x0400444B RID: 17483
+		
 		private bool ClientInitialized = false;
 
-		// Token: 0x0400444C RID: 17484
+		
 		private KuaFuClientContext ClientInfo = new KuaFuClientContext();
 
-		// Token: 0x0400444D RID: 17485
+		
 		public int SceneType = 27;
 
-		// Token: 0x0400444E RID: 17486
+		
 		private int CurrentRequestCount = 0;
 
-		// Token: 0x0400444F RID: 17487
+		
 		private int MaxRequestCount = 50;
 
-		// Token: 0x04004450 RID: 17488
+		
 		private Dictionary<int, KuaFuRoleData> RoleId2RoleDataDict = new Dictionary<int, KuaFuRoleData>();
 
-		// Token: 0x04004451 RID: 17489
+		
 		private Dictionary<int, int> RoleId2KuaFuStateDict = new Dictionary<int, int>();
 
-		// Token: 0x04004452 RID: 17490
+		
 		private Dictionary<int, YongZheZhanChangFuBenData> FuBenDataDict = new Dictionary<int, YongZheZhanChangFuBenData>();
 
-		// Token: 0x04004453 RID: 17491
+		
 		private Dictionary<int, LangHunLingYuFuBenData> LangHunLingYuFuBenDataDict = new Dictionary<int, LangHunLingYuFuBenData>();
 
-		// Token: 0x04004454 RID: 17492
+		
 		private DateTime NextClearFuBenTime;
 
-		// Token: 0x04004455 RID: 17493
+		
 		private string RemoteServiceUri = null;
 
-		// Token: 0x04004456 RID: 17494
+		
 		private DuplexChannelFactory<IYongZheZhanChangService> channelFactory;
 	}
 }

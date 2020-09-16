@@ -6,22 +6,22 @@ using Server.Data;
 
 namespace GameServer.Server.CmdProcesser
 {
-	// Token: 0x0200089A RID: 2202
+	
 	public class GetSweepWanMoTaAwardCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x06003D49 RID: 15689 RVA: 0x00344B7B File Offset: 0x00342D7B
+		
 		private GetSweepWanMoTaAwardCmdProcessor()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(619, 1, this);
 		}
 
-		// Token: 0x06003D4A RID: 15690 RVA: 0x00344B98 File Offset: 0x00342D98
+		
 		public static GetSweepWanMoTaAwardCmdProcessor getInstance()
 		{
 			return GetSweepWanMoTaAwardCmdProcessor.instance;
 		}
 
-		// Token: 0x06003D4B RID: 15691 RVA: 0x00344BB0 File Offset: 0x00342DB0
+		
 		private int GiveSweepReward(GameClient client)
 		{
 			int result;
@@ -49,7 +49,7 @@ namespace GameServer.Server.CmdProcesser
 			return result;
 		}
 
-		// Token: 0x06003D4C RID: 15692 RVA: 0x00344CE0 File Offset: 0x00342EE0
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			int nID = 619;
@@ -78,7 +78,7 @@ namespace GameServer.Server.CmdProcesser
 			return result;
 		}
 
-		// Token: 0x040047AA RID: 18346
+		
 		private static GetSweepWanMoTaAwardCmdProcessor instance = new GetSweepWanMoTaAwardCmdProcessor();
 	}
 }

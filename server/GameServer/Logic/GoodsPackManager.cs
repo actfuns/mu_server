@@ -20,28 +20,28 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006E8 RID: 1768
+	
 	public class GoodsPackManager
 	{
-		// Token: 0x06002A5B RID: 10843 RVA: 0x0025AE2C File Offset: 0x0025902C
+		
 		public int GetNextAutoID()
 		{
 			return (int)(Interlocked.Increment(ref this.BaseAutoID) & 2147483647L);
 		}
 
-		// Token: 0x06002A5C RID: 10844 RVA: 0x0025AE54 File Offset: 0x00259054
+		
 		public int GetNextGoodsID()
 		{
 			return (int)(Interlocked.Increment(ref this.BaseGoodsID) & 2147483647L);
 		}
 
-		// Token: 0x06002A5D RID: 10845 RVA: 0x0025AE7C File Offset: 0x0025907C
+		
 		public int GetNextRoleGoodsPackID()
 		{
 			return (int)(Interlocked.Increment(ref this.BaseRoleGoodsPackID) & 2147483647L);
 		}
 
-		// Token: 0x06002A5E RID: 10846 RVA: 0x0025AEA4 File Offset: 0x002590A4
+		
 		private void InitGlobalFallGoodsLimitDict()
 		{
 			lock (this._GlobalFallGoodsLimitDict)
@@ -63,7 +63,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002A5F RID: 10847 RVA: 0x0025AFA4 File Offset: 0x002591A4
+		
 		private int GetGlobalFallGoodsLimitNum(int goodsPackID)
 		{
 			int limitNum = 0;
@@ -75,7 +75,7 @@ namespace GameServer.Logic
 			return limitNum;
 		}
 
-		// Token: 0x06002A60 RID: 10848 RVA: 0x0025B008 File Offset: 0x00259208
+		
 		private bool JudgeModifyGlobalFallGoodsLimit(int goodsPackID)
 		{
 			int limitNum = this.GetGlobalFallGoodsLimitNum(goodsPackID);
@@ -107,7 +107,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A61 RID: 10849 RVA: 0x0025B0D4 File Offset: 0x002592D4
+		
 		private List<FallGoodsItem> GetNormalFallGoodsItem(int goodsPackID)
 		{
 			List<FallGoodsItem> fallGoodsItemList = null;
@@ -193,7 +193,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A62 RID: 10850 RVA: 0x0025B374 File Offset: 0x00259574
+		
 		private List<FallGoodsItem> ParseGoodsDataList(int goodsPackID, string goodsData)
 		{
 			List<FallGoodsItem> fallGoodsItemList = new List<FallGoodsItem>();
@@ -252,7 +252,7 @@ namespace GameServer.Logic
 			return fallGoodsItemList;
 		}
 
-		// Token: 0x06002A63 RID: 10851 RVA: 0x0025B538 File Offset: 0x00259738
+		
 		public List<GoodsData> GetFixedGoodsDataList(List<FallGoodsItem> fixedFallGoodsItemList, int count)
 		{
 			List<GoodsData> result;
@@ -329,14 +329,14 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A64 RID: 10852 RVA: 0x0025B7C0 File Offset: 0x002599C0
+		
 		public void ResetLimitTimeRange()
 		{
 			this._LimitTimeStartDayTime = new DateTime(2000, 1, 1);
 			this._LimitTimeEndDayTime = new DateTime(2000, 1, 1);
 		}
 
-		// Token: 0x06002A65 RID: 10853 RVA: 0x0025B7E8 File Offset: 0x002599E8
+		
 		private bool JugeInLimitTimeRange()
 		{
 			if (2000 == this._LimitTimeStartDayTime.Year)
@@ -351,7 +351,7 @@ namespace GameServer.Logic
 			return today.Ticks >= this._LimitTimeStartDayTime.Ticks && today.Ticks < this._LimitTimeEndDayTime.Ticks;
 		}
 
-		// Token: 0x06002A66 RID: 10854 RVA: 0x0025B898 File Offset: 0x00259A98
+		
 		private List<FallGoodsItem> GetLimitTimeFallGoodsItem(int goodsPackID)
 		{
 			List<FallGoodsItem> result;
@@ -444,7 +444,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A67 RID: 10855 RVA: 0x0025BB4C File Offset: 0x00259D4C
+		
 		public List<FallGoodsItem> GetFixedFallGoodsItemList(int goodsPackID)
 		{
 			List<FallGoodsItem> fixedFallGoodsItemList = null;
@@ -478,7 +478,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A68 RID: 10856 RVA: 0x0025BC3C File Offset: 0x00259E3C
+		
 		public int GetFallGoodsMaxCount(int goodsPackID)
 		{
 			Tuple<int, int> maxCount = null;
@@ -519,7 +519,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A69 RID: 10857 RVA: 0x0025BD78 File Offset: 0x00259F78
+		
 		public int GetFixedFallGoodsMaxCount(int goodsPackID)
 		{
 			Tuple<int, int> maxCount = null;
@@ -553,7 +553,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A6A RID: 10858 RVA: 0x0025BE98 File Offset: 0x0025A098
+		
 		private int GetLimitTimeFallGoodsMaxCount(int goodsPackID)
 		{
 			int maxCount = -1;
@@ -582,7 +582,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A6B RID: 10859 RVA: 0x0025BF80 File Offset: 0x0025A180
+		
 		private FallQualityItem GetFallQualityItem(int fallQualityID)
 		{
 			FallQualityItem fallQualityItem = null;
@@ -642,7 +642,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A6C RID: 10860 RVA: 0x0025C158 File Offset: 0x0025A358
+		
 		private FallLevelItem GetFallLevelItem(int fallLevelID)
 		{
 			FallLevelItem fallLevelItem = null;
@@ -702,7 +702,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A6D RID: 10861 RVA: 0x0025C334 File Offset: 0x0025A534
+		
 		private FallBornIndexItem GetFallBornIndexItem(int fallBornIndexID)
 		{
 			FallBornIndexItem fallBornIndexItem = null;
@@ -762,7 +762,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A6E RID: 10862 RVA: 0x0025C510 File Offset: 0x0025A710
+		
 		private ZhuiJiaIDItem GetZhuiJiaIDItem(int zhuiJiaID)
 		{
 			ZhuiJiaIDItem zhuiJiaIDItem = null;
@@ -822,7 +822,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A6F RID: 10863 RVA: 0x0025C6EC File Offset: 0x0025A8EC
+		
 		public ExcellencePropertyGroupItem GetExcellencePropertyGroupItem(int excellencePropertyGroupID)
 		{
 			ExcellencePropertyGroupItem excellencePropertyGroupItem = null;
@@ -860,7 +860,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A70 RID: 10864 RVA: 0x0025C7FC File Offset: 0x0025A9FC
+		
 		private ExcellencePropertyItem[] ParseExcellencePropertyItems(SystemXmlItem goodsExcellencePropertyItem)
 		{
 			ExcellencePropertyItem[] excellencePropertyItems = null;
@@ -897,7 +897,7 @@ namespace GameServer.Logic
 			return excellencePropertyItems;
 		}
 
-		// Token: 0x06002A71 RID: 10865 RVA: 0x0025C90C File Offset: 0x0025AB0C
+		
 		public int ResetCachingItems()
 		{
 			int ret = GameManager.SystemMonsterGoodsList.ReloadLoadFromXMlFile();
@@ -1002,9 +1002,9 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x170002A7 RID: 679
-		// (get) Token: 0x06002A72 RID: 10866 RVA: 0x0025CD24 File Offset: 0x0025AF24
-		// (set) Token: 0x06002A73 RID: 10867 RVA: 0x0025CD3C File Offset: 0x0025AF3C
+		
+		
+		
 		public Dictionary<int, GoodsPackItem> GoodsPackDict
 		{
 			get
@@ -1017,7 +1017,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002A74 RID: 10868 RVA: 0x0025CD48 File Offset: 0x0025AF48
+		
 		private int GetFallGoodsQuality(int fallQualityID)
 		{
 			int goodsQuality = 0;
@@ -1052,7 +1052,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A75 RID: 10869 RVA: 0x0025CE00 File Offset: 0x0025B000
+		
 		public int GetFallGoodsLevel(int fallLevelID)
 		{
 			int goodsLevel = 0;
@@ -1087,7 +1087,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A76 RID: 10870 RVA: 0x0025CEB8 File Offset: 0x0025B0B8
+		
 		private int GetFallGoodsBornIndex(IObject attacker, int fallBornIndexID, int goodsID)
 		{
 			int goodsBornIndex = 0;
@@ -1108,7 +1108,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A77 RID: 10871 RVA: 0x0025CEFC File Offset: 0x0025B0FC
+		
 		public int GetLuckyGoodsID(int luckyPercent)
 		{
 			int rndPercent = Global.GetRandomNumber(1, 100001);
@@ -1124,7 +1124,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A78 RID: 10872 RVA: 0x0025CF30 File Offset: 0x0025B130
+		
 		public int GetZhuiJiaGoodsLevelID(int zhuiJiaID)
 		{
 			int appendPropLev = 0;
@@ -1159,7 +1159,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A79 RID: 10873 RVA: 0x0025CFE8 File Offset: 0x0025B1E8
+		
 		public int GetExcellencePropertysID(int GoodsID, int excellencePropertyGroupID)
 		{
 			int result;
@@ -1226,7 +1226,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A7A RID: 10874 RVA: 0x0025D1B4 File Offset: 0x0025B3B4
+		
 		public List<FallGoodsItem> GetFallGoodsItemByPercent(List<FallGoodsItem> gallGoodsItemList, int maxFallCount, int fallAlgorithm, double robotDropRate = 1.0)
 		{
 			List<FallGoodsItem> result;
@@ -1281,7 +1281,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A7B RID: 10875 RVA: 0x0025D2F4 File Offset: 0x0025B4F4
+		
 		private FallGoodsItem PickUpGoodsItemByPercent(List<FallGoodsItem> gallGoodsItemList, int randPercent)
 		{
 			FallGoodsItem fallGoodsItem = null;
@@ -1296,7 +1296,7 @@ namespace GameServer.Logic
 			return fallGoodsItem;
 		}
 
-		// Token: 0x06002A7C RID: 10876 RVA: 0x0025D380 File Offset: 0x0025B580
+		
 		public List<GoodsData> GetGoodsDataList(IObject attacker, int goodsPackID, int maxFallCount, int forceBinding, double robotDropRate = 1.0)
 		{
 			List<FallGoodsItem> fallGoodsItemList = this.GetNormalFallGoodsItem(goodsPackID);
@@ -1385,7 +1385,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A7D RID: 10877 RVA: 0x0025D6AC File Offset: 0x0025B8AC
+		
 		private List<GoodsData> GetEraGoodsDataList(IObject attacker, int goodsPackID, int maxFallCount, int forceBinding, double robotDropRate = 1.0)
 		{
 			List<GoodsData> result;
@@ -1459,7 +1459,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A7E RID: 10878 RVA: 0x0025D908 File Offset: 0x0025BB08
+		
 		private List<GoodsData> GetLimitTimeGoodsDataList(IObject attacker, int goodsPackID, int maxFallCount, int forceBinding, double robotDropRate = 1.0)
 		{
 			List<FallGoodsItem> fallGoodsItemList = this.GetLimitTimeFallGoodsItem(goodsPackID);
@@ -1519,7 +1519,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A7F RID: 10879 RVA: 0x0025DB00 File Offset: 0x0025BD00
+		
 		private bool JugeFuBenMapFall(MapGrid mapGrid, int copyMapID, int newGridX, int newGridY)
 		{
 			bool result;
@@ -1550,7 +1550,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A80 RID: 10880 RVA: 0x0025DB90 File Offset: 0x0025BD90
+		
 		private bool JugeTaskTargetFall(MapGrid mapGrid, int copyMapID, int newGridX, int newGridY, GoodsPackItem goodsPackData)
 		{
 			bool canFall = true;
@@ -1575,7 +1575,7 @@ namespace GameServer.Logic
 			return canFall;
 		}
 
-		// Token: 0x06002A81 RID: 10881 RVA: 0x0025DC50 File Offset: 0x0025BE50
+		
 		private Point FindABlankPoint(ObjectTypes objType, int mapCode, Dictionary<string, bool> dict, Point centerPoint, int copyMapID)
 		{
 			GameMap gameMap = GameManager.MapMgr.DictMaps[mapCode];
@@ -1685,7 +1685,7 @@ namespace GameServer.Logic
 			return fallPoint;
 		}
 
-		// Token: 0x06002A82 RID: 10882 RVA: 0x0025E198 File Offset: 0x0025C398
+		
 		private Point FindABlankPointEx(ObjectTypes objType, int mapCode, Dictionary<string, bool> dict, Point centerPoint, int copyMapID, IObject attacker)
 		{
 			GameMap gameMap = GameManager.MapMgr.DictMaps[mapCode];
@@ -1763,13 +1763,13 @@ namespace GameServer.Logic
 			return fallPoint;
 		}
 
-		// Token: 0x06002A83 RID: 10883 RVA: 0x0025E498 File Offset: 0x0025C698
+		
 		public Point GetFallGoodsPosition(ObjectTypes objType, int mapCode, Dictionary<string, bool> dict, Point centerPoint, int copyMapID, IObject attacker)
 		{
 			return this.FindABlankPointEx(objType, mapCode, dict, centerPoint, copyMapID, attacker);
 		}
 
-		// Token: 0x06002A84 RID: 10884 RVA: 0x0025E4BC File Offset: 0x0025C6BC
+		
 		private GoodsPackItem GetMonsterGoodsPackItem(GameClient client, int ownerRoleID, string ownerRoleName, int goodsPackID, List<int> teamRoleIDs, int mapCode, int copyMapID, int toX, int toY, int forceBinding, string monsterName, int belongTo, int fallLevel, int teamID)
 		{
 			int maxFallCountByID = this.GetFallGoodsMaxCount(goodsPackID);
@@ -1837,7 +1837,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A85 RID: 10885 RVA: 0x0025E6C0 File Offset: 0x0025C8C0
+		
 		public List<GoodsPackItem> GetMonsterGoodsPackItemList(IObject attacker, int ownerRoleID, string ownerRoleName, int goodsPackID, List<int> teamRoleIDs, int mapCode, int copyMapID, int toX, int toY, int forceBinding, string monsterName, int belongTo, int fallLevel, int teamID, int monsterType = -1, List<long> teamRoleDamages = null)
 		{
 			int maxFallCountByID = this.GetFallGoodsMaxCount(goodsPackID);
@@ -1919,7 +1919,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A86 RID: 10886 RVA: 0x0025E954 File Offset: 0x0025CB54
+		
 		private GoodsPackItem GetRoleGoodsPackItem(int ownerRoleID, string ownerRoleName, int goodsPackID, List<GoodsData> goodsDataList, int mapCode, int copyMapID, int toGridX, int toGridY, string fromRoleName)
 		{
 			GoodsPackItem goodsPackItem = new GoodsPackItem
@@ -1949,7 +1949,7 @@ namespace GameServer.Logic
 			return goodsPackItem;
 		}
 
-		// Token: 0x06002A87 RID: 10887 RVA: 0x0025EA60 File Offset: 0x0025CC60
+		
 		public List<GoodsPackItem> GetRoleGoodsPackItemList(int ownerRoleID, string ownerRoleName, List<GoodsData> goodsDataList, int mapCode, int copyMapID, int toGridX, int toGridY, string fromRoleName)
 		{
 			Dictionary<string, bool> gridDict = new Dictionary<string, bool>();
@@ -1986,7 +1986,7 @@ namespace GameServer.Logic
 			return goodsPackItemList;
 		}
 
-		// Token: 0x06002A88 RID: 10888 RVA: 0x0025EBCC File Offset: 0x0025CDCC
+		
 		private GoodsPackItem GetBattleGoodsPackItem(int ownerRoleID, string ownerRoleName, int goodsPackID, List<GoodsData> awardsGoodsDataList, List<GoodsData> giveGoodsDataList, int mapCode, int copyMapID, int toX, int toY)
 		{
 			List<GoodsData> packGoodsDataList = new List<GoodsData>();
@@ -2049,7 +2049,7 @@ namespace GameServer.Logic
 			return goodsPackItem;
 		}
 
-		// Token: 0x06002A89 RID: 10889 RVA: 0x0025EE5C File Offset: 0x0025D05C
+		
 		private int FindGoodsID2RoleID(GoodsPackItem goodsPackItem, int goodsDbID)
 		{
 			int roleID = -1;
@@ -2069,7 +2069,7 @@ namespace GameServer.Logic
 			return roleID;
 		}
 
-		// Token: 0x06002A8A RID: 10890 RVA: 0x0025EEDC File Offset: 0x0025D0DC
+		
 		private void AddGoodsID2RoleID(GoodsPackItem goodsPackItem, int goodsDbID, int roleID)
 		{
 			if (null != goodsPackItem)
@@ -2081,7 +2081,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002A8B RID: 10891 RVA: 0x0025EF3C File Offset: 0x0025D13C
+		
 		private void SendRandMessage(GameClient[] clientsArray, string msgText)
 		{
 			foreach (GameClient gc in clientsArray)
@@ -2093,7 +2093,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002A8C RID: 10892 RVA: 0x0025EF98 File Offset: 0x0025D198
+		
 		private void JugeGoodsID2RoleID(GameClient client, GoodsPackItem goodsPackItem, int goodsDbID, int goodsID)
 		{
 			int MaxRandNum = -1;
@@ -2145,7 +2145,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002A8D RID: 10893 RVA: 0x0025F13C File Offset: 0x0025D33C
+		
 		private void JugeGoodsID2RoleIDByDamageRandom(GameClient client, GoodsPackItem goodsPackItem, int goodsDbID, int goodsID)
 		{
 			GameClient toClient = null;
@@ -2184,7 +2184,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002A8E RID: 10894 RVA: 0x0025F2A4 File Offset: 0x0025D4A4
+		
 		public GoodsPackItem FindGoodsPackItem(int autoID)
 		{
 			GoodsPackItem goodsPackItem = null;
@@ -2198,14 +2198,14 @@ namespace GameServer.Logic
 			return goodsPackItem;
 		}
 
-		// Token: 0x06002A8F RID: 10895 RVA: 0x0025F30C File Offset: 0x0025D50C
+		
 		public static bool IsFallTongQianGoods(int goodsID)
 		{
 			int fallTongQianGoodsID = (int)GameManager.systemParamsList.GetParamValueIntByName("FallTongQianGoodsID", -1);
 			return fallTongQianGoodsID == goodsID;
 		}
 
-		// Token: 0x06002A90 RID: 10896 RVA: 0x0025F340 File Offset: 0x0025D540
+		
 		private static bool ProcessFallTongQian(TCPOutPacketPool pool, GameClient client, int goodsID, int goodsNum, int fallLevel)
 		{
 			bool result;
@@ -2236,7 +2236,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A91 RID: 10897 RVA: 0x0025F3F8 File Offset: 0x0025D5F8
+		
 		public bool AutoAddThingIntoBag(SocketListener sl, TCPOutPacketPool pool, GameClient client, GoodsPackItem goodsPackItem, GoodsData goodsData)
 		{
 			bool result;
@@ -2289,7 +2289,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A92 RID: 10898 RVA: 0x0025F654 File Offset: 0x0025D854
+		
 		private bool CanAutoFightGetThings(GameClient client, GoodsPackItem goodsPackItem, GoodsData goodsData)
 		{
 			bool result;
@@ -2336,7 +2336,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A93 RID: 10899 RVA: 0x0025F76C File Offset: 0x0025D96C
+		
 		public bool AutoGetThings(SocketListener sl, TCPOutPacketPool pool, GameClient client, GoodsPackItem goodsPackItem)
 		{
 			if (client.ClientData.AutoFighting)
@@ -2376,7 +2376,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A94 RID: 10900 RVA: 0x0025F890 File Offset: 0x0025DA90
+		
 		public string FormatTeamRoleIDs(GoodsPackItem goodsPackItem)
 		{
 			string teamRoleIDs = "";
@@ -2403,7 +2403,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A95 RID: 10901 RVA: 0x0025F934 File Offset: 0x0025DB34
+		
 		public List<GoodsPackItem> ProcessMonster(SocketListener sl, TCPOutPacketPool pool, IObject attacker, Monster monster)
 		{
 			List<GoodsPackItem> result;
@@ -2418,7 +2418,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A96 RID: 10902 RVA: 0x0025F97C File Offset: 0x0025DB7C
+		
 		public List<GoodsPackItem> ProcessMonsterByClient(SocketListener sl, TCPOutPacketPool pool, GameClient client, Monster monster)
 		{
 			JunTuanManager.getInstance().AddJunTuanTaskValue(client, monster, 1, 1);
@@ -2585,7 +2585,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A97 RID: 10903 RVA: 0x0026006C File Offset: 0x0025E26C
+		
 		public List<GoodsPackItem> ProcessMonsterByMonster(SocketListener sl, TCPOutPacketPool pool, Monster attacker, Monster monster)
 		{
 			List<GoodsPackItem> result;
@@ -2614,7 +2614,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A98 RID: 10904 RVA: 0x00260158 File Offset: 0x0025E358
+		
 		public void ProcessTaskDropByTargetNum(GameClient client, string goodsData, Monster monster)
 		{
 			if (!string.IsNullOrEmpty(goodsData))
@@ -2669,7 +2669,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002A99 RID: 10905 RVA: 0x00260424 File Offset: 0x0025E624
+		
 		public void ProcessGoodsPackItem(IObject attacker, IObject obj, GoodsPackItem goodsPackItem, int forceBinding)
 		{
 			if (null != goodsPackItem)
@@ -2679,7 +2679,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002A9A RID: 10906 RVA: 0x00260480 File Offset: 0x0025E680
+		
 		public void ProcessRole(SocketListener sl, TCPOutPacketPool pool, GameClient client, GameClient otherClient, string enemyName, out string strDropList)
 		{
 			strDropList = "";
@@ -2813,7 +2813,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002A9B RID: 10907 RVA: 0x002609E8 File Offset: 0x0025EBE8
+		
 		public void ProcessRoleAbandonGoods(SocketListener sl, TCPOutPacketPool pool, GameClient client, GoodsData goodsData, int toGridX, int toGridY)
 		{
 			List<GoodsData> goodsDataList = new List<GoodsData>();
@@ -2829,7 +2829,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002A9C RID: 10908 RVA: 0x00260AAC File Offset: 0x0025ECAC
+		
 		private GameClient GetBattleRandomClient(List<BattleRoleItem> battleRoleItemList)
 		{
 			int randNum = Global.GetRandomNumber(0, 101);
@@ -2857,7 +2857,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002A9D RID: 10909 RVA: 0x00260B34 File Offset: 0x0025ED34
+		
 		private void AddBattleBufferAndFlags(GameClient client, int bufferType)
 		{
 			double[] actionParams = new double[2];
@@ -2890,12 +2890,12 @@ namespace GameServer.Logic
 			GameManager.ClientMgr.UpdateBattleNum(client, 1, false);
 		}
 
-		// Token: 0x06002A9E RID: 10910 RVA: 0x00260C91 File Offset: 0x0025EE91
+		
 		public void ProcessBattle(SocketListener sl, TCPOutPacketPool pool, List<object> objsList, List<GoodsData> giveGoodsDataList, int fallGoodsPackID, int fallNum)
 		{
 		}
 
-		// Token: 0x06002A9F RID: 10911 RVA: 0x00260C98 File Offset: 0x0025EE98
+		
 		public void SendMySelfGoodsPackItems(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList)
 		{
 			if (null != objsList)
@@ -2936,7 +2936,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002AA0 RID: 10912 RVA: 0x00260E8C File Offset: 0x0025F08C
+		
 		public void DelMySelfGoodsPackItems(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList)
 		{
 			if (null != objsList)
@@ -2966,7 +2966,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002AA1 RID: 10913 RVA: 0x00260FAC File Offset: 0x0025F1AC
+		
 		public void ProcessAllGoodsPackItems(SocketListener sl, TCPOutPacketPool pool)
 		{
 			List<GoodsPackItem> goodsPackItemList = new List<GoodsPackItem>();
@@ -2993,7 +2993,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002AA2 RID: 10914 RVA: 0x0026110C File Offset: 0x0025F30C
+		
 		private bool CanOpenGoodsPack(GoodsPackItem goodsPackItem, int roleID)
 		{
 			bool result;
@@ -3043,7 +3043,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002AA3 RID: 10915 RVA: 0x00261258 File Offset: 0x0025F458
+		
 		public void UnLockGoodsPackItem(GameClient client)
 		{
 			if (null != client.ClientData.LockedGoodsPackItem)
@@ -3059,7 +3059,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002AA4 RID: 10916 RVA: 0x002612F8 File Offset: 0x0025F4F8
+		
 		public List<GoodsData> GetLeftGoodsDataList(GoodsPackItem goodsPackItem)
 		{
 			List<GoodsData> result;
@@ -3082,7 +3082,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002AA5 RID: 10917 RVA: 0x00261378 File Offset: 0x0025F578
+		
 		private void ProcessTeamGoodsPack(GameClient client, GoodsPackItem goodsPackItem)
 		{
 			if (null != goodsPackItem)
@@ -3132,7 +3132,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002AA6 RID: 10918 RVA: 0x00261508 File Offset: 0x0025F708
+		
 		public GoodsPackListData ProcessClickOnGoodsPack(SocketListener sl, TCPOutPacketPool pool, GameClient client, int autoID, out TCPOutPacket tcpOutPacket, int nID, int openState, bool tcpPacketData)
 		{
 			tcpOutPacket = null;
@@ -3232,7 +3232,7 @@ namespace GameServer.Logic
 			return goodsPackListData;
 		}
 
-		// Token: 0x06002AA7 RID: 10919 RVA: 0x00261864 File Offset: 0x0025FA64
+		
 		private GoodsPackItem GetLockedGoodsPackItem(GameClient client, int autoID)
 		{
 			GoodsPackItem goodsPackItem = null;
@@ -3252,7 +3252,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002AA8 RID: 10920 RVA: 0x002618AC File Offset: 0x0025FAAC
+		
 		public void ProcessGetThing(SocketListener sl, TCPOutPacketPool pool, GameClient client, int autoID, int goodsDbID, out bool bRet)
 		{
 			bRet = true;
@@ -3396,7 +3396,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002AA9 RID: 10921 RVA: 0x0026204C File Offset: 0x0026024C
+		
 		public void ExternalRemoveGoodsPack(GoodsPackItem goodsPackItem)
 		{
 			GameManager.MapGridMgr.DictGrids[goodsPackItem.MapCode].RemoveObject(goodsPackItem);
@@ -3404,7 +3404,7 @@ namespace GameServer.Logic
 			GameManager.ClientMgr.NotifyOthersDelGoodsPack(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, objsList, goodsPackItem.MapCode, goodsPackItem.AutoID, -1);
 		}
 
-		// Token: 0x06002AAA RID: 10922 RVA: 0x002620AC File Offset: 0x002602AC
+		
 		public List<FallGoodsItem> GetFallGoodsItemList(int goodsPackID)
 		{
 			List<FallGoodsItem> fallGoodsItemList = this.GetNormalFallGoodsItem(goodsPackID);
@@ -3420,7 +3420,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002AAB RID: 10923 RVA: 0x002620D8 File Offset: 0x002602D8
+		
 		public List<FallGoodsItem> GetRandomFallGoodsItemList(int goodsPackID, int maxFallCount, bool isGood)
 		{
 			List<FallGoodsItem> fallGoodsItemList = this.GetNormalFallGoodsItem(goodsPackID);
@@ -3448,7 +3448,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002AAC RID: 10924 RVA: 0x00262164 File Offset: 0x00260364
+		
 		public List<GoodsData> GetGoodsDataListFromFallGoodsItemList(List<FallGoodsItem> fallGoodsItemList)
 		{
 			List<GoodsData> result;
@@ -3498,7 +3498,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002AAD RID: 10925 RVA: 0x00262300 File Offset: 0x00260500
+		
 		private GoodsPackItem FindGoodsPackItemByPos(Point grid, GameClient gameClient)
 		{
 			MapGrid mapGrid = null;
@@ -3536,7 +3536,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002AAE RID: 10926 RVA: 0x00262418 File Offset: 0x00260618
+		
 		public void ProcessClickGoodsPackWhenMovingEnd(GameClient client)
 		{
 			GoodsPackItem goodsPackItem = this.FindGoodsPackItemByPos(client.CurrentGrid, client);
@@ -3583,7 +3583,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002AAF RID: 10927 RVA: 0x002625B0 File Offset: 0x002607B0
+		
 		private void InitShiQuGoodsList()
 		{
 			lock (this._CacheShiQuGoodsDict)
@@ -3615,7 +3615,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002AB0 RID: 10928 RVA: 0x002626C8 File Offset: 0x002608C8
+		
 		private int GetPickUpShiQuGoodsType(int goodsID)
 		{
 			lock (this._CacheShiQuGoodsDict)
@@ -3632,7 +3632,7 @@ namespace GameServer.Logic
 			return -1;
 		}
 
-		// Token: 0x06002AB1 RID: 10929 RVA: 0x00262784 File Offset: 0x00260984
+		
 		private bool CanPickUpGoodss(GameClient client, GoodsPackItem goodsPackItem)
 		{
 			bool result;
@@ -3732,7 +3732,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002AB2 RID: 10930 RVA: 0x00262A68 File Offset: 0x00260C68
+		
 		private List<GoodsPackItem> FindGoodsPackItemListByPos(Point grid, int girdNum, GameClient gameClient)
 		{
 			MapGrid mapGrid = null;
@@ -3799,7 +3799,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002AB3 RID: 10931 RVA: 0x00262C84 File Offset: 0x00260E84
+		
 		public void ProcessClickGoodsPackWhenMovingToOtherGrid(GameClient client, int gridNum = 1)
 		{
 			List<GoodsPackItem> goodsPackItemList = this.FindGoodsPackItemListByPos(client.CurrentGrid, gridNum, client);
@@ -3854,7 +3854,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002AB4 RID: 10932 RVA: 0x00262EA0 File Offset: 0x002610A0
+		
 		private void WriteFallGoodsRecords(GoodsPackItem goodsPackItem)
 		{
 			GoodsData goodsData = goodsPackItem.GoodsDataList[0];
@@ -3881,7 +3881,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002AB5 RID: 10933 RVA: 0x00262FD0 File Offset: 0x002611D0
+		
 		private void TakeFallGoodsRecords(GoodsPackItem goodsPackItem, GameClient client)
 		{
 			GoodsData goodsData = goodsPackItem.GoodsDataList[0];
@@ -3907,79 +3907,79 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x040039B7 RID: 14775
+		
 		private long BaseAutoID = 0L;
 
-		// Token: 0x040039B8 RID: 14776
+		
 		private long BaseGoodsID = 0L;
 
-		// Token: 0x040039B9 RID: 14777
+		
 		private long BaseRoleGoodsPackID = 0L;
 
-		// Token: 0x040039BA RID: 14778
+		
 		private int GlobalFallGoodsLimitDayID;
 
-		// Token: 0x040039BB RID: 14779
+		
 		private Dictionary<int, int> _GlobalFallGoodsLimitDict = new Dictionary<int, int>();
 
-		// Token: 0x040039BC RID: 14780
+		
 		private Dictionary<int, int> GlobalFallGoodsNumDict = new Dictionary<int, int>();
 
-		// Token: 0x040039BD RID: 14781
+		
 		private Dictionary<int, List<FallGoodsItem>> _FallGoodsItemsDict = new Dictionary<int, List<FallGoodsItem>>();
 
-		// Token: 0x040039BE RID: 14782
+		
 		private Dictionary<int, List<FallGoodsItem>> _LimitTimeFallGoodsItemsDict = new Dictionary<int, List<FallGoodsItem>>();
 
-		// Token: 0x040039BF RID: 14783
+		
 		private DateTime _LimitTimeStartDayTime = new DateTime(2000, 1, 1);
 
-		// Token: 0x040039C0 RID: 14784
+		
 		private DateTime _LimitTimeEndDayTime = new DateTime(2000, 1, 1);
 
-		// Token: 0x040039C1 RID: 14785
+		
 		private Dictionary<int, List<FallGoodsItem>> _FixedGoodsItemsDict = new Dictionary<int, List<FallGoodsItem>>();
 
-		// Token: 0x040039C2 RID: 14786
+		
 		private Dictionary<int, Tuple<int, int>> _FallGoodsMaxCountDict = new Dictionary<int, Tuple<int, int>>();
 
-		// Token: 0x040039C3 RID: 14787
+		
 		private Dictionary<int, int> _LimitTimeFallGoodsMaxCountDict = new Dictionary<int, int>();
 
-		// Token: 0x040039C4 RID: 14788
+		
 		private Dictionary<int, FallQualityItem> _FallGoodsQualityDict = new Dictionary<int, FallQualityItem>();
 
-		// Token: 0x040039C5 RID: 14789
+		
 		private Dictionary<int, FallLevelItem> _FallGoodsLevelDict = new Dictionary<int, FallLevelItem>();
 
-		// Token: 0x040039C6 RID: 14790
+		
 		private Dictionary<int, FallBornIndexItem> _FallGoodsBornIndexDict = new Dictionary<int, FallBornIndexItem>();
 
-		// Token: 0x040039C7 RID: 14791
+		
 		private Dictionary<int, ZhuiJiaIDItem> _ZhuiJiaIDDict = new Dictionary<int, ZhuiJiaIDItem>();
 
-		// Token: 0x040039C8 RID: 14792
+		
 		private Dictionary<int, ExcellencePropertyGroupItem> _ExcellencePropertyGroupItemDict = new Dictionary<int, ExcellencePropertyGroupItem>();
 
-		// Token: 0x040039C9 RID: 14793
+		
 		public static int TeamShareMode_Flags = 1;
 
-		// Token: 0x040039CA RID: 14794
+		
 		public static bool TeamShareMode_MaxDamage = false;
 
-		// Token: 0x040039CB RID: 14795
+		
 		public static bool TeamShareMode_RandomByDamage = false;
 
-		// Token: 0x040039CC RID: 14796
+		
 		public static int MaxFallCount = 10000;
 
-		// Token: 0x040039CD RID: 14797
+		
 		private Dictionary<int, GoodsPackItem> _GoodsPackDict = new Dictionary<int, GoodsPackItem>();
 
-		// Token: 0x040039CE RID: 14798
+		
 		private HashSet<int> ProhibitRollHashSet;
 
-		// Token: 0x040039CF RID: 14799
+		
 		private Dictionary<int, Dictionary<int, bool>> _CacheShiQuGoodsDict = new Dictionary<int, Dictionary<int, bool>>();
 	}
 }

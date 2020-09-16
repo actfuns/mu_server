@@ -12,10 +12,10 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic.Marriage.CoupleWish
 {
-    // Token: 0x02000368 RID: 872
+    
     public class CoupleWishManager : SingletonTemplate<CoupleWishManager>, IManager, ICmdProcessorEx, ICmdProcessor
     {
-        // Token: 0x06000F06 RID: 3846 RVA: 0x000EC5C0 File Offset: 0x000EA7C0
+        
         public bool initialize()
         {
             bool result;
@@ -67,7 +67,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
             return result;
         }
 
-        // Token: 0x06000F07 RID: 3847 RVA: 0x000EC7BC File Offset: 0x000EA9BC
+        
         public bool startup()
         {
             TCPCmdDispatcher.getInstance().registerProcessorEx(1390, 1, 1, SingletonTemplate<CoupleWishManager>.Instance(), TCPCmdFlags.IsStringArrayParams);
@@ -80,19 +80,19 @@ namespace GameServer.Logic.Marriage.CoupleWish
             return true;
         }
 
-        // Token: 0x06000F08 RID: 3848 RVA: 0x000EC874 File Offset: 0x000EAA74
+        
         public bool showdown()
         {
             return true;
         }
 
-        // Token: 0x06000F09 RID: 3849 RVA: 0x000EC888 File Offset: 0x000EAA88
+        
         public bool destroy()
         {
             return true;
         }
 
-        // Token: 0x06000F0A RID: 3850 RVA: 0x000EC89C File Offset: 0x000EAA9C
+        
         public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             if (nID == 1390)
@@ -126,13 +126,13 @@ namespace GameServer.Logic.Marriage.CoupleWish
             return true;
         }
 
-        // Token: 0x06000F0B RID: 3851 RVA: 0x000EC980 File Offset: 0x000EAB80
+        
         public bool processCmd(GameClient client, string[] cmdParams)
         {
             return true;
         }
 
-        // Token: 0x06000F0C RID: 3852 RVA: 0x000EC994 File Offset: 0x000EAB94
+        
         private void HandleJoinPartyCommand(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             int toCoupleId = Convert.ToInt32(cmdParams[1]);
@@ -142,7 +142,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
             }
         }
 
-        // Token: 0x06000F0D RID: 3853 RVA: 0x000ECA04 File Offset: 0x000EAC04
+        
         private void HandleGetPartyDataCommand(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             lock (this.Mutex)
@@ -152,7 +152,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
             }
         }
 
-        // Token: 0x06000F0E RID: 3854 RVA: 0x000ECA60 File Offset: 0x000EAC60
+        
         private void HandleGetAdmireDataCommand(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             lock (this.Mutex)
@@ -162,7 +162,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
             }
         }
 
-        // Token: 0x06000F0F RID: 3855 RVA: 0x000ECABC File Offset: 0x000EACBC
+        
         private void HandleAdmireStatueCommand(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             int toCoupleId = Convert.ToInt32(cmdParams[1]);
@@ -176,7 +176,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
             }
         }
 
-        // Token: 0x06000F10 RID: 3856 RVA: 0x000ECB78 File Offset: 0x000EAD78
+        
         private void HandleWishOtherRoleCommand(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             CoupleWishWishReqData cliReq = DataHelper.BytesToObject<CoupleWishWishReqData>(bytes, 0, bytes.Length);
@@ -361,7 +361,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
             }
         }
 
-        // Token: 0x06000F11 RID: 3857 RVA: 0x000ED3F8 File Offset: 0x000EB5F8
+        
         private void HandleGetWishRecordCommand(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             List<CoupleWishWishRecordData> records = TianTiClient.getInstance().CoupleWishGetWishRecord(client.ClientData.RoleID);
@@ -372,7 +372,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
             client.sendCmd<List<CoupleWishWishRecordData>>(nID, records, false);
         }
 
-        // Token: 0x06000F12 RID: 3858 RVA: 0x000ED438 File Offset: 0x000EB638
+        
         private void HandleGetMainDataCommand(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             if (this.IsGongNengOpened(client))
@@ -407,7 +407,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
             }
         }
 
-        // Token: 0x06000F13 RID: 3859 RVA: 0x000ED670 File Offset: 0x000EB870
+        
         private int CheckGiveAward(GameClient client)
         {
             int result;
@@ -491,7 +491,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
             return result;
         }
 
-        // Token: 0x06000F14 RID: 3860 RVA: 0x000EDADC File Offset: 0x000EBCDC
+        
         public void CheckTipsIconState(GameClient client)
         {
             if (client != null && this.IsGongNengOpened(client))
@@ -525,13 +525,13 @@ namespace GameServer.Logic.Marriage.CoupleWish
             }
         }
 
-        // Token: 0x06000F15 RID: 3861 RVA: 0x000EDC94 File Offset: 0x000EBE94
+        
         public bool IsGongNengOpened(GameClient client)
         {
             return client != null;
         }
 
-        // Token: 0x06000F16 RID: 3862 RVA: 0x000EDCB8 File Offset: 0x000EBEB8
+        
         private void SaveGetNextEffectAward(GameClient client, int day, CoupleWishManager.EWishEffectAwardType awardType, int get)
         {
             string szEffectAward = Global.GetRoleParamByName(client, "34");
@@ -560,7 +560,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
             }), true);
         }
 
-        // Token: 0x06000F17 RID: 3863 RVA: 0x000EDDC4 File Offset: 0x000EBFC4
+        
         private bool GetNextCanEffectAward(GameClient client, int day, out CoupleWishManager.EWishEffectAwardType awardType, out int canGetMax)
         {
             awardType = CoupleWishManager.EWishEffectAwardType.None;
@@ -601,7 +601,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
             return result;
         }
 
-        // Token: 0x06000F18 RID: 3864 RVA: 0x000EDED8 File Offset: 0x000EC0D8
+        
         private void HandleWishEffect(CoupleWishNtfWishEffectData effectData)
         {
             if (effectData != null)
@@ -682,13 +682,13 @@ namespace GameServer.Logic.Marriage.CoupleWish
             }
         }
 
-        // Token: 0x06000F19 RID: 3865 RVA: 0x000EE240 File Offset: 0x000EC440
+        
         public bool PreClearDivorceData(int man, int wife)
         {
             return TianTiClient.getInstance().CoupleWishPreDivorce(man, wife) >= 0;
         }
 
-        // Token: 0x06000F1A RID: 3866 RVA: 0x000EE26C File Offset: 0x000EC46C
+        
         private void TimerProc(object sender, EventArgs e)
         {
             CoupleWishSyncData _syncData = TianTiClient.getInstance().CoupleWishSyncCenterData(this.SyncData.ThisWeek.ModifyTime, this.SyncData.LastWeek.ModifyTime, this.SyncData.Statue.ModifyTime);
@@ -736,22 +736,22 @@ namespace GameServer.Logic.Marriage.CoupleWish
             }
         }
 
-        // Token: 0x0400170E RID: 5902
+        
         private object Mutex = new object();
 
-        // Token: 0x0400170F RID: 5903
+        
         private CoupleWishSyncData SyncData = new CoupleWishSyncData();
 
-        // Token: 0x04001710 RID: 5904
+        
         private List<CoupleWishCoupleData> ThisWeekTopNList = new List<CoupleWishCoupleData>();
 
-        // Token: 0x04001711 RID: 5905
+        
         public readonly CoupleWishConfig _Config = new CoupleWishConfig();
 
-        // Token: 0x04001712 RID: 5906
+        
         private CoupleWishStatueManager StatueMgr = new CoupleWishStatueManager();
 
-        // Token: 0x04001713 RID: 5907
+        
         private Dictionary<CoupleWishManager.EWishEffectAwardType, int> WishEffectDayMaxAward = new Dictionary<CoupleWishManager.EWishEffectAwardType, int>
         {
             {
@@ -768,21 +768,21 @@ namespace GameServer.Logic.Marriage.CoupleWish
             }
         };
 
-        // Token: 0x04001714 RID: 5908
+        
         private HashSet<int> CanEffectAwardMap = new HashSet<int>();
 
-        // Token: 0x02000369 RID: 873
+        
         private enum EWishEffectAwardType
         {
-            // Token: 0x04001716 RID: 5910
+            
             BangJin,
-            // Token: 0x04001717 RID: 5911
+            
             BangZuan,
-            // Token: 0x04001718 RID: 5912
+            
             Exp,
-            // Token: 0x04001719 RID: 5913
+            
             Max,
-            // Token: 0x0400171A RID: 5914
+            
             None = 99
         }
     }

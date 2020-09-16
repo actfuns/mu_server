@@ -4,10 +4,10 @@ using GameServer.Core.Executor;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006DA RID: 1754
+	
 	public class GoldTempleManager
 	{
-		// Token: 0x060029DA RID: 10714 RVA: 0x00258F84 File Offset: 0x00257184
+		
 		public void HeartBeatGoldtempleScene()
 		{
 			int nRoleNum = GameManager.ClientMgr.GetMapClientsCount(Data.GoldtempleData.MapID);
@@ -31,7 +31,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029DB RID: 10715 RVA: 0x00259034 File Offset: 0x00257234
+		
 		public void SubDiamond(GameClient client)
 		{
 			long lTicks = TimeUtil.NOW();
@@ -45,7 +45,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060029DC RID: 10716 RVA: 0x002590B0 File Offset: 0x002572B0
+		
 		public void KickOutScene(GameClient client)
 		{
 			int toMapCode = GameManager.MainMapCode;
@@ -67,10 +67,10 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04003978 RID: 14712
+		
 		public int m_SubMoneyInterval = 60000;
 
-		// Token: 0x04003979 RID: 14713
+		
 		public long m_SubMoneyTick = 0L;
 	}
 }

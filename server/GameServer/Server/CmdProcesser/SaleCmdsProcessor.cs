@@ -12,11 +12,11 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Server.CmdProcesser
 {
-	// Token: 0x020008A8 RID: 2216
+	
 	public class SaleCmdsProcessor : ICmdProcessor
 	{
-		// Token: 0x170005D9 RID: 1497
-		// (get) Token: 0x06003D81 RID: 15745 RVA: 0x0034574C File Offset: 0x0034394C
+		
+		
 		private TCPManager tcpMgr
 		{
 			get
@@ -25,8 +25,8 @@ namespace GameServer.Server.CmdProcesser
 			}
 		}
 
-		// Token: 0x170005DA RID: 1498
-		// (get) Token: 0x06003D82 RID: 15746 RVA: 0x00345764 File Offset: 0x00343964
+		
+		
 		private TCPOutPacketPool pool
 		{
 			get
@@ -35,8 +35,8 @@ namespace GameServer.Server.CmdProcesser
 			}
 		}
 
-		// Token: 0x170005DB RID: 1499
-		// (get) Token: 0x06003D83 RID: 15747 RVA: 0x00345780 File Offset: 0x00343980
+		
+		
 		private TCPClientPool tcpClientPool
 		{
 			get
@@ -45,19 +45,19 @@ namespace GameServer.Server.CmdProcesser
 			}
 		}
 
-		// Token: 0x06003D84 RID: 15748 RVA: 0x0034579C File Offset: 0x0034399C
+		
 		public SaleCmdsProcessor(TCPGameServerCmds cmdID)
 		{
 			this.CmdID = cmdID;
 		}
 
-		// Token: 0x06003D85 RID: 15749 RVA: 0x003457BC File Offset: 0x003439BC
+		
 		public static SaleCmdsProcessor getInstance(TCPGameServerCmds cmdID)
 		{
 			return new SaleCmdsProcessor(cmdID);
 		}
 
-		// Token: 0x06003D86 RID: 15750 RVA: 0x003457D4 File Offset: 0x003439D4
+		
 		private bool CanUseMarket(GameClient client)
 		{
 			bool result;
@@ -79,7 +79,7 @@ namespace GameServer.Server.CmdProcesser
 			return result;
 		}
 
-		// Token: 0x06003D87 RID: 15751 RVA: 0x00345814 File Offset: 0x00343A14
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			int nID = (int)this.CmdID;
@@ -117,7 +117,7 @@ namespace GameServer.Server.CmdProcesser
 			return result;
 		}
 
-		// Token: 0x06003D88 RID: 15752 RVA: 0x003458BC File Offset: 0x00343ABC
+		
 		private bool OpenMarket(GameClient client, string[] fields)
 		{
 			int roleID = Convert.ToInt32(fields[0]);
@@ -156,7 +156,7 @@ namespace GameServer.Server.CmdProcesser
 			return result;
 		}
 
-		// Token: 0x06003D89 RID: 15753 RVA: 0x00345A34 File Offset: 0x00343C34
+		
 		private bool MarketSaleMoney(GameClient client, string[] fields)
 		{
 			int roleID = Convert.ToInt32(fields[0]);
@@ -328,7 +328,7 @@ namespace GameServer.Server.CmdProcesser
 			return result;
 		}
 
-		// Token: 0x06003D8A RID: 15754 RVA: 0x003460D4 File Offset: 0x003442D4
+		
 		private bool SaleGoods(GameClient client, string[] fields)
 		{
 			TCPGameServerCmds nID = this.CmdID;
@@ -794,7 +794,7 @@ namespace GameServer.Server.CmdProcesser
 			return result;
 		}
 
-		// Token: 0x06003D8B RID: 15755 RVA: 0x00347388 File Offset: 0x00345588
+		
 		private bool SelfSaleGoodsList(GameClient client, string[] fields)
 		{
 			int roleID = Convert.ToInt32(fields[0]);
@@ -813,7 +813,7 @@ namespace GameServer.Server.CmdProcesser
 			return result;
 		}
 
-		// Token: 0x06003D8C RID: 15756 RVA: 0x003473E4 File Offset: 0x003455E4
+		
 		private bool OtherSaleGoodsList(GameClient client, string[] fields)
 		{
 			int roleID = Convert.ToInt32(fields[0]);
@@ -842,7 +842,7 @@ namespace GameServer.Server.CmdProcesser
 			return result;
 		}
 
-		// Token: 0x06003D8D RID: 15757 RVA: 0x00347478 File Offset: 0x00345678
+		
 		private bool MarketRoleList(GameClient client, string[] fields)
 		{
 			List<SaleRoleData> saleRoleDataList = SaleRoleManager.GetSaleRoleDataList();
@@ -850,7 +850,7 @@ namespace GameServer.Server.CmdProcesser
 			return true;
 		}
 
-		// Token: 0x06003D8E RID: 15758 RVA: 0x003474A0 File Offset: 0x003456A0
+		
 		private bool MarketGoodsList(GameClient client, string[] fields)
 		{
 			int roleID = Convert.ToInt32(fields[0]);
@@ -990,7 +990,7 @@ namespace GameServer.Server.CmdProcesser
 			return result;
 		}
 
-		// Token: 0x06003D8F RID: 15759 RVA: 0x00347914 File Offset: 0x00345B14
+		
 		private int CalcRealMoneyAfterTax(int money, MoneyTypes moneyType, out int tax)
 		{
 			tax = 0;
@@ -1012,13 +1012,13 @@ namespace GameServer.Server.CmdProcesser
 			return money - tax;
 		}
 
-		// Token: 0x06003D90 RID: 15760 RVA: 0x003479AC File Offset: 0x00345BAC
+		
 		private bool CheckBuyParams(GoodsData SalingGoodsData, int clientMoneyType, int clientMoneyValue)
 		{
 			return clientMoneyValue > 0 && ((clientMoneyType == 8 && SalingGoodsData.SaleMoney1 == clientMoneyValue) || (clientMoneyType == 40 && SalingGoodsData.SaleYuanBao == clientMoneyValue) || (clientMoneyType == 141 && SalingGoodsData.SaleYinPiao == clientMoneyValue));
 		}
 
-		// Token: 0x06003D91 RID: 15761 RVA: 0x00347A24 File Offset: 0x00345C24
+		
 		private bool MarketBuyGoods(GameClient client, string[] fields)
 		{
 			int roleID = Convert.ToInt32(fields[0]);
@@ -1472,7 +1472,7 @@ namespace GameServer.Server.CmdProcesser
 			return result;
 		}
 
-		// Token: 0x06003D92 RID: 15762 RVA: 0x0034971C File Offset: 0x0034791C
+		
 		private void GiveBackSaleGoodsMoney(GameClient client, GameClient saller, GoodsData SalingGoodsData, int saleMoney, int saleYuanBao, int site)
 		{
 			SalingGoodsData.SaleMoney1 = saleMoney;
@@ -1505,7 +1505,7 @@ namespace GameServer.Server.CmdProcesser
 			}
 		}
 
-		// Token: 0x06003D93 RID: 15763 RVA: 0x003498E4 File Offset: 0x00347AE4
+		
 		private void GiveBackSaleGoodsMoneyOffline(GameClient client, string userID, int sallerRoleID, string sallerName, GoodsData SalingGoodsData, int saleMoney, int saleYuanBao, int site)
 		{
 			SalingGoodsData.SaleMoney1 = saleMoney;
@@ -1538,7 +1538,7 @@ namespace GameServer.Server.CmdProcesser
 			}
 		}
 
-		// Token: 0x040047B8 RID: 18360
+		
 		private TCPGameServerCmds CmdID = TCPGameServerCmds.CMD_SPR_OPENMARKET2;
 	}
 }

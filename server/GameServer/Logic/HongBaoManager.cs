@@ -14,29 +14,29 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020002EE RID: 750
+	
 	public class HongBaoManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener, IEventListenerEx, IManager2
 	{
-		// Token: 0x06000BDD RID: 3037 RVA: 0x000B89F8 File Offset: 0x000B6BF8
+		
 		public static HongBaoManager getInstance()
 		{
 			return HongBaoManager.instance;
 		}
 
-		// Token: 0x06000BDE RID: 3038 RVA: 0x000B8A10 File Offset: 0x000B6C10
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x06000BDF RID: 3039 RVA: 0x000B8A34 File Offset: 0x000B6C34
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			ScheduleExecutor2.Instance.scheduleExecute(new NormalScheduleTask("HongBaoManager.TimerProc", new EventHandler(this.TimerProc)), 15000, 1000);
 			return true;
 		}
 
-		// Token: 0x06000BE0 RID: 3040 RVA: 0x000B8A74 File Offset: 0x000B6C74
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1420, 0, 1, HongBaoManager.getInstance(), TCPCmdFlags.IsBinaryStreamParams);
@@ -50,26 +50,26 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000BE1 RID: 3041 RVA: 0x000B8B44 File Offset: 0x000B6D44
+		
 		public bool showdown()
 		{
 			GlobalEventSource.getInstance().removeListener(14, HongBaoManager.getInstance());
 			return true;
 		}
 
-		// Token: 0x06000BE2 RID: 3042 RVA: 0x000B8B6C File Offset: 0x000B6D6C
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000BE3 RID: 3043 RVA: 0x000B8B80 File Offset: 0x000B6D80
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06000BE4 RID: 3044 RVA: 0x000B8B94 File Offset: 0x000B6D94
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			switch (nID)
@@ -92,7 +92,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000BE5 RID: 3045 RVA: 0x000B8C44 File Offset: 0x000B6E44
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int nID = eventObject.getEventType();
@@ -107,7 +107,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000BE6 RID: 3046 RVA: 0x000B8C84 File Offset: 0x000B6E84
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 			int eventType = eventObject.EventType;
@@ -130,7 +130,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000BE7 RID: 3047 RVA: 0x000B8D4C File Offset: 0x000B6F4C
+		
 		public bool InitConfig()
 		{
 			bool success = true;
@@ -167,7 +167,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x06000BE8 RID: 3048 RVA: 0x000B8FFC File Offset: 0x000B71FC
+		
 		public bool ProcessGetHongBaoDataListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -325,7 +325,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000BE9 RID: 3049 RVA: 0x000B9730 File Offset: 0x000B7930
+		
 		public bool GetHongBaoRankCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -410,7 +410,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000BEA RID: 3050 RVA: 0x000B9A24 File Offset: 0x000B7C24
+		
 		public bool ProcessFaHongBaoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -586,7 +586,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000BEB RID: 3051 RVA: 0x000BA04C File Offset: 0x000B824C
+		
 		public bool ShowHongBaoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -682,7 +682,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000BEC RID: 3052 RVA: 0x000BA4E4 File Offset: 0x000B86E4
+		
 		public bool GetHongBaoDetailCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1110,7 +1110,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000BED RID: 3053 RVA: 0x000BB3CC File Offset: 0x000B95CC
+		
 		public bool GetJirRiHongBaoBangDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1125,7 +1125,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000BEE RID: 3054 RVA: 0x000BB41C File Offset: 0x000B961C
+		
 		public bool GetJirRiHongBaoBangAwardsCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1141,19 +1141,19 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000BEF RID: 3055 RVA: 0x000BB480 File Offset: 0x000B9680
+		
 		public bool IsGongNengOpened(GameClient client, bool hint = false)
 		{
 			return !GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System2Dot5) || true;
 		}
 
-		// Token: 0x06000BF0 RID: 3056 RVA: 0x000BB4A6 File Offset: 0x000B96A6
+		
 		public void OnInitGame(GameClient client)
 		{
 			this.NotifyHongBaoData(client);
 		}
 
-		// Token: 0x06000BF1 RID: 3057 RVA: 0x000BB4B4 File Offset: 0x000B96B4
+		
 		public void AddChargeValue(long value)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -1165,7 +1165,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000BF2 RID: 3058 RVA: 0x000BB520 File Offset: 0x000B9720
+		
 		public void UpdateChongZhiHongBaoDataList(KuaFuCmdData cmdData)
 		{
 			JieRiChongZhiHongBaoActivity activity = JieRiChongZhiHongBaoActivity.getInstance();
@@ -1210,7 +1210,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000BF3 RID: 3059 RVA: 0x000BB778 File Offset: 0x000B9978
+		
 		private void TimerProc(object sender, EventArgs e)
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -1388,7 +1388,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000BF4 RID: 3060 RVA: 0x000BC1D0 File Offset: 0x000BA3D0
+		
 		public void OnDestoryZhanMeng(int bhid)
 		{
 			lock (this.RuntimeData.Mutex)
@@ -1397,7 +1397,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000BF5 RID: 3061 RVA: 0x000BC22C File Offset: 0x000BA42C
+		
 		private bool AddRoleZuanShiBySendMail(int roleID, int zuanShi, string subject, string content, string msg)
 		{
 			string mailGoodsString = "";
@@ -1427,7 +1427,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000BF6 RID: 3062 RVA: 0x000BC328 File Offset: 0x000BA528
+		
 		private int RankCompareProc(HongBaoRankItemData x, HongBaoRankItemData y)
 		{
 			int ret = y.daimondNum - x.daimondNum;
@@ -1443,7 +1443,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000BF7 RID: 3063 RVA: 0x000BC398 File Offset: 0x000BA598
+		
 		private void AddFaHongBaoRank(GameClient client, ZhanMengHongBaoData data, int type, int addValue)
 		{
 			List<HongBaoRankItemData> list;
@@ -1477,7 +1477,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000BF8 RID: 3064 RVA: 0x000BC514 File Offset: 0x000BA714
+		
 		public void NotifyHongBaoData(GameClient client)
 		{
 			int bhid = client.ClientData.Faction;
@@ -1579,7 +1579,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000BF9 RID: 3065 RVA: 0x000BCA28 File Offset: 0x000BAC28
+		
 		private void InitHongBaoData()
 		{
 			bool zhanMengHongBaoInitialized = false;
@@ -1704,10 +1704,10 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04001343 RID: 4931
+		
 		private static HongBaoManager instance = new HongBaoManager();
 
-		// Token: 0x04001344 RID: 4932
+		
 		public HongBaoRuntimeData RuntimeData = new HongBaoRuntimeData();
 	}
 }

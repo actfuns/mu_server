@@ -23,14 +23,14 @@ using Tmsk.Tools;
 
 namespace GameDBServer
 {
-	// Token: 0x0200019C RID: 412
+	
 	public class Program
 	{
-		// Token: 0x06000761 RID: 1889
+		
 		[DllImport("kernel32.dll")]
 		private static extern bool SetConsoleCtrlHandler(Program.ControlCtrlDelegate HandlerRoutine, bool Add);
 
-		// Token: 0x06000762 RID: 1890 RVA: 0x00044BC8 File Offset: 0x00042DC8
+		
 		public static bool HandlerRoutine(int CtrlType)
 		{
 			switch (CtrlType)
@@ -39,19 +39,19 @@ namespace GameDBServer
 			return true;
 		}
 
-		// Token: 0x06000763 RID: 1891
+		
 		[DllImport("user32.dll")]
 		private static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
 
-		// Token: 0x06000764 RID: 1892
+		
 		[DllImport("user32.dll")]
 		private static extern IntPtr GetSystemMenu(IntPtr hWnd, IntPtr bRevert);
 
-		// Token: 0x06000765 RID: 1893
+		
 		[DllImport("user32.dll")]
 		private static extern IntPtr RemoveMenu(IntPtr hMenu, uint uPosition, uint uFlags);
 
-		// Token: 0x06000766 RID: 1894 RVA: 0x00044BF8 File Offset: 0x00042DF8
+		
 		private static void HideCloseBtn()
 		{
 			Console.Title = "游戏数据库服务器";
@@ -61,7 +61,7 @@ namespace GameDBServer
 			Program.RemoveMenu(closeMenu, SC_CLOSE, 0U);
 		}
 
-		// Token: 0x06000767 RID: 1895 RVA: 0x00044C38 File Offset: 0x00042E38
+		
 		private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
 		{
 			try
@@ -74,13 +74,13 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000768 RID: 1896 RVA: 0x00044C80 File Offset: 0x00042E80
+		
 		private static void ExceptionHook()
 		{
 			AppDomain.CurrentDomain.UnhandledException += Program.CurrentDomain_UnhandledException;
 		}
 
-		// Token: 0x06000769 RID: 1897 RVA: 0x00044C9C File Offset: 0x00042E9C
+		
 		public static void DeleteFile(string strFileName)
 		{
 			string strFullFileName = Directory.GetCurrentDirectory() + "\\" + strFileName;
@@ -95,7 +95,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x0600076A RID: 1898 RVA: 0x00044D08 File Offset: 0x00042F08
+		
 		public static void WritePIDToFile(string strFile)
 		{
 			string strFileName = Directory.GetCurrentDirectory() + "\\" + strFile;
@@ -104,7 +104,7 @@ namespace GameDBServer
 			File.WriteAllText(strFileName, string.Concat(nPID));
 		}
 
-		// Token: 0x0600076B RID: 1899 RVA: 0x00044D48 File Offset: 0x00042F48
+		
 		public static int GetServerPIDFromFile()
 		{
 			string strFileName = Directory.GetCurrentDirectory() + "\\GameServerStop.txt";
@@ -121,7 +121,7 @@ namespace GameDBServer
 			return result;
 		}
 
-		// Token: 0x0600076C RID: 1900 RVA: 0x00044D8C File Offset: 0x00042F8C
+		
 		private static void Main(string[] args)
 		{
 			if (args.Length > 0)
@@ -160,7 +160,7 @@ namespace GameDBServer
 			thread.Abort();
 		}
 
-		// Token: 0x0600076D RID: 1901 RVA: 0x00044EAC File Offset: 0x000430AC
+		
 		public static void ConsoleInputThread(object obj)
 		{
 			string cmd = Console.ReadLine();
@@ -187,7 +187,7 @@ namespace GameDBServer
 			Program.OnExitServer();
 		}
 
-		// Token: 0x0600076E RID: 1902 RVA: 0x00044F44 File Offset: 0x00043144
+		
 		private static void ParseInputCmd(string cmd)
 		{
 			Program.CmdCallback cb = null;
@@ -201,26 +201,26 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x0600076F RID: 1903 RVA: 0x00044F88 File Offset: 0x00043188
+		
 		private static void OnStartServer()
 		{
 			Program.ServerConsole.InitServer();
 			Console.Title = string.Format("游戏数据库服务器{0}区@{1}@{2}", GameDBManager.ZoneID, Program.GetVersionDateTime(), Program.ProgramExtName);
 		}
 
-		// Token: 0x06000770 RID: 1904 RVA: 0x00044FBA File Offset: 0x000431BA
+		
 		private static void OnExitServer()
 		{
 			Program.ServerConsole.ExitServer();
 		}
 
-		// Token: 0x06000771 RID: 1905 RVA: 0x00044FC8 File Offset: 0x000431C8
+		
 		public static void Exit()
 		{
 			Program.NeedExitServer = true;
 		}
 
-		// Token: 0x06000772 RID: 1906 RVA: 0x00044FD4 File Offset: 0x000431D4
+		
 		private static void InitCommonCmd()
 		{
 			Program.CmdDict.Add("help", new Program.CmdCallback(Program.ShowCmdHelpInfo));
@@ -231,7 +231,7 @@ namespace GameDBServer
 			Program.CmdDict.Add("show tcpinfo", new Program.CmdCallback(Program.ServerConsole.ShowServerTCPInfo));
 		}
 
-		// Token: 0x06000773 RID: 1907 RVA: 0x00045090 File Offset: 0x00043290
+		
 		private static void ShowCmdHelpInfo(string cmd = null)
 		{
 			Console.WriteLine(string.Format("游戏数据库服务器", new object[0]));
@@ -244,7 +244,7 @@ namespace GameDBServer
 			Console.WriteLine("输入 show tcpinfo， 查看指令消耗信息");
 		}
 
-		// Token: 0x06000774 RID: 1908 RVA: 0x00045104 File Offset: 0x00043304
+		
 		private static void GarbageCollect(string cmd = null)
 		{
 			try
@@ -257,7 +257,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000775 RID: 1909 RVA: 0x00045140 File Offset: 0x00043340
+		
 		private static void AppendLiPinMaCmd(string cmd = null)
 		{
 			try
@@ -270,7 +270,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000776 RID: 1910 RVA: 0x00045184 File Offset: 0x00043384
+		
 		private void AppendLiPinMa()
 		{
 			if (!this.updateLiPinMaWorker.IsBusy)
@@ -280,7 +280,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000777 RID: 1911 RVA: 0x000451B8 File Offset: 0x000433B8
+		
 		private static void LoadNamesCmd(string cmd = null)
 		{
 			try
@@ -293,7 +293,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000778 RID: 1912 RVA: 0x000451FC File Offset: 0x000433FC
+		
 		private void LoadNames()
 		{
 			if (!this.updatePreNamesWorker.IsBusy)
@@ -302,7 +302,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000779 RID: 1913 RVA: 0x00045228 File Offset: 0x00043428
+		
 		private static void ShowServerBaseInfo(string cmd = null)
 		{
 			string info = string.Format("已经连接的登录服务器连接数:{0}", Program.ServerConsole.TotalConnections);
@@ -313,7 +313,7 @@ namespace GameDBServer
 			Console.WriteLine(info);
 		}
 
-		// Token: 0x0600077A RID: 1914 RVA: 0x000452C4 File Offset: 0x000434C4
+		
 		private void ShowServerTCPInfo(string cmd = null)
 		{
 			bool clear = cmd.Contains("/c");
@@ -393,9 +393,9 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x170000BC RID: 188
-		// (get) Token: 0x0600077C RID: 1916 RVA: 0x0004566C File Offset: 0x0004386C
-		// (set) Token: 0x0600077B RID: 1915 RVA: 0x00045660 File Offset: 0x00043860
+		
+		
+		
 		public int TotalConnections
 		{
 			get
@@ -408,7 +408,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x0600077D RID: 1917 RVA: 0x00045684 File Offset: 0x00043884
+		
 		private void closingTimer_Tick(object sender, EventArgs e)
 		{
 			try
@@ -432,7 +432,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x0600077E RID: 1918 RVA: 0x0004571C File Offset: 0x0004391C
+		
 		private void MainDispatcherWorker_DoWork(object sender, EventArgs e)
 		{
 			long startTicks = DateTime.Now.Ticks / 10000L;
@@ -473,7 +473,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x0600077F RID: 1919 RVA: 0x00045860 File Offset: 0x00043A60
+		
 		private void UserReturnCheckWorker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			try
@@ -486,7 +486,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000780 RID: 1920 RVA: 0x000458A8 File Offset: 0x00043AA8
+		
 		private void updateGiftCode_DoWork(object sender, DoWorkEventArgs e)
 		{
 			try
@@ -499,7 +499,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000781 RID: 1921 RVA: 0x000458EC File Offset: 0x00043AEC
+		
 		private void ShowInfoTicks(object sender, EventArgs e)
 		{
 			try
@@ -512,13 +512,13 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000782 RID: 1922 RVA: 0x00045930 File Offset: 0x00043B30
+		
 		private static void InitProgramExtName()
 		{
 			Program.ProgramExtName = AppDomain.CurrentDomain.BaseDirectory;
 		}
 
-		// Token: 0x06000783 RID: 1923 RVA: 0x00045944 File Offset: 0x00043B44
+		
 		public void InitServer()
 		{
 			Program.InitProgramExtName();
@@ -685,13 +685,13 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000784 RID: 1924 RVA: 0x0004629C File Offset: 0x0004449C
+		
 		public static void ValidateZoneID()
 		{
 			Console.WriteLine("本服区号:{0}", GameDBManager.ZoneID);
 		}
 
-		// Token: 0x06000785 RID: 1925 RVA: 0x000462B4 File Offset: 0x000444B4
+		
 		public void ExitServer()
 		{
 			if (!Program.NeedExitServer)
@@ -713,7 +713,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000786 RID: 1926 RVA: 0x00046344 File Offset: 0x00044544
+		
 		private void ExecuteBackgroundWorkers(object sender, EventArgs e)
 		{
 			if (!this.eventWorker.IsBusy)
@@ -774,7 +774,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000787 RID: 1927 RVA: 0x000464F8 File Offset: 0x000446F8
+		
 		private void eventWorker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			try
@@ -789,7 +789,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000788 RID: 1928 RVA: 0x00046540 File Offset: 0x00044740
+		
 		private void updateMoneyWorker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			try
@@ -805,7 +805,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000789 RID: 1929 RVA: 0x000465A0 File Offset: 0x000447A0
+		
 		private void releaseMemoryWorker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			try
@@ -826,7 +826,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x0600078A RID: 1930 RVA: 0x00046630 File Offset: 0x00044830
+		
 		private void updateLiPinMaWorker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			try
@@ -839,7 +839,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x0600078B RID: 1931 RVA: 0x00046678 File Offset: 0x00044878
+		
 		private void updatePreDeleteRoleWorker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			try
@@ -857,7 +857,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x0600078C RID: 1932 RVA: 0x000466E4 File Offset: 0x000448E4
+		
 		private void updatePreNamesWorker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			try
@@ -870,7 +870,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x0600078D RID: 1933 RVA: 0x00046728 File Offset: 0x00044928
+		
 		private void updatePaiHangWorker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			try
@@ -888,7 +888,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x0600078E RID: 1934 RVA: 0x000467AC File Offset: 0x000449AC
+		
 		private void dbWriterWorker_DoWork(object sender, EventArgs e)
 		{
 			try
@@ -907,7 +907,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x0600078F RID: 1935 RVA: 0x0004683C File Offset: 0x00044A3C
+		
 		private void dbGoodsBakTableWorker_DoWork(object sender, EventArgs e)
 		{
 			try
@@ -925,7 +925,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000790 RID: 1936 RVA: 0x000468A8 File Offset: 0x00044AA8
+		
 		private void updateLastMail_DoWork(object sender, DoWorkEventArgs e)
 		{
 			try
@@ -939,7 +939,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000791 RID: 1937 RVA: 0x000468F8 File Offset: 0x00044AF8
+		
 		private void updateGroupMail_DoWork(object sender, DoWorkEventArgs e)
 		{
 			try
@@ -952,7 +952,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000792 RID: 1938 RVA: 0x0004693C File Offset: 0x00044B3C
+		
 		private void updateTen_DoWork(object sender, DoWorkEventArgs e)
 		{
 			try
@@ -965,7 +965,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000793 RID: 1939 RVA: 0x00046980 File Offset: 0x00044B80
+		
 		private void updateFacebook_DoWork(object sender, DoWorkEventArgs e)
 		{
 			try
@@ -978,7 +978,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000794 RID: 1940 RVA: 0x000469C4 File Offset: 0x00044BC4
+		
 		public bool CanExit()
 		{
 			if (this._TCPManager.MySocketListener.ConnectedSocketsCount > 0)
@@ -992,7 +992,7 @@ namespace GameDBServer
 			return true;
 		}
 
-		// Token: 0x06000795 RID: 1941 RVA: 0x00046A2C File Offset: 0x00044C2C
+		
 		private void Window_Closing()
 		{
 			if (!this.MustCloseNow)
@@ -1006,7 +1006,7 @@ namespace GameDBServer
 			}
 		}
 
-		// Token: 0x06000796 RID: 1942 RVA: 0x00046A70 File Offset: 0x00044C70
+		
 		public static string GetVersionDateTime()
 		{
 			Program.AssemblyFileVersion = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location);
@@ -1019,117 +1019,117 @@ namespace GameDBServer
 			return dtv.ToString("yyyy-MM-dd HH") + string.Format(" {0}", Program.AssemblyFileVersion.FilePrivatePart);
 		}
 
-		// Token: 0x04000952 RID: 2386
+		
 		public static FileVersionInfo AssemblyFileVersion;
 
-		// Token: 0x04000953 RID: 2387
+		
 		private static Program.ControlCtrlDelegate newDelegate = new Program.ControlCtrlDelegate(Program.HandlerRoutine);
 
-		// Token: 0x04000954 RID: 2388
+		
 		public static Program ServerConsole = new Program();
 
-		// Token: 0x04000955 RID: 2389
+		
 		private static Dictionary<string, Program.CmdCallback> CmdDict = new Dictionary<string, Program.CmdCallback>();
 
-		// Token: 0x04000956 RID: 2390
+		
 		private static bool NeedExitServer = false;
 
-		// Token: 0x04000957 RID: 2391
+		
 		private static string[] cmdLineARGS = null;
 
-		// Token: 0x04000958 RID: 2392
+		
 		private int _TotalConnections = 0;
 
-		// Token: 0x04000959 RID: 2393
+		
 		private DBManager _DBManger = DBManager.getInstance();
 
-		// Token: 0x0400095A RID: 2394
+		
 		private TCPManager _TCPManager = null;
 
-		// Token: 0x0400095B RID: 2395
+		
 		private bool MustCloseNow = false;
 
-		// Token: 0x0400095C RID: 2396
+		
 		private bool EnterClosingMode = false;
 
-		// Token: 0x0400095D RID: 2397
+		
 		private int ClosingCounter = 6000;
 
-		// Token: 0x0400095E RID: 2398
+		
 		private long LastWriteDBLogTicks = DateTime.Now.Ticks / 10000L;
 
-		// Token: 0x0400095F RID: 2399
+		
 		private long NextReleaseIdleDataTicks = DateTime.Now.Ticks / 10000L;
 
-		// Token: 0x04000960 RID: 2400
+		
 		private long NextPreRemoveRoleTicks = DateTime.Now.Ticks / 10000L;
 
-		// Token: 0x04000961 RID: 2401
+		
 		private long LastdbGoodsBakTableWorkerTicks = DateTime.Now.Ticks / 10000L;
 
-		// Token: 0x04000962 RID: 2402
+		
 		private static string ProgramExtName = "";
 
-		// Token: 0x04000963 RID: 2403
+		
 		private BackgroundWorker eventWorker;
 
-		// Token: 0x04000964 RID: 2404
+		
 		private BackgroundWorker updateMoneyWorker;
 
-		// Token: 0x04000965 RID: 2405
+		
 		private BackgroundWorker releaseMemoryWorker;
 
-		// Token: 0x04000966 RID: 2406
+		
 		private BackgroundWorker updateLiPinMaWorker;
 
-		// Token: 0x04000967 RID: 2407
+		
 		private BackgroundWorker updatePreDeleteWorker;
 
-		// Token: 0x04000968 RID: 2408
+		
 		private BackgroundWorker updatePreNamesWorker;
 
-		// Token: 0x04000969 RID: 2409
+		
 		private BackgroundWorker updatePaiHangWorker;
 
-		// Token: 0x0400096A RID: 2410
+		
 		private BackgroundWorker dbWriterWorker;
 
-		// Token: 0x0400096B RID: 2411
+		
 		private BackgroundWorker updateLastMailWorker;
 
-		// Token: 0x0400096C RID: 2412
+		
 		private BackgroundWorker dbGoodsBakTableWorker;
 
-		// Token: 0x0400096D RID: 2413
+		
 		private BackgroundWorker MainDispatcherWorker;
 
-		// Token: 0x0400096E RID: 2414
+		
 		private BackgroundWorker updateGroupMailWorker;
 
-		// Token: 0x0400096F RID: 2415
+		
 		private BackgroundWorker userReturnCheckWorker;
 
-		// Token: 0x04000970 RID: 2416
+		
 		private BackgroundWorker updateTenWorker;
 
-		// Token: 0x04000971 RID: 2417
+		
 		private BackgroundWorker updateGiftCodeWorker;
 
-		// Token: 0x04000972 RID: 2418
+		
 		private BackgroundWorker updateFacebookWorker;
 
-		// Token: 0x04000973 RID: 2419
+		
 		private long LastReleaseMemoryTicks = DateTime.Now.Ticks / 10000L;
 
-		// Token: 0x04000974 RID: 2420
+		
 		private bool toAppendLiPinMa = false;
 
-		// Token: 0x0200019D RID: 413
-		// (Invoke) Token: 0x0600079A RID: 1946
+		
+		
 		public delegate bool ControlCtrlDelegate(int CtrlType);
 
-		// Token: 0x0200019E RID: 414
-		// (Invoke) Token: 0x0600079E RID: 1950
+		
+		
 		public delegate void CmdCallback(string cmd);
 	}
 }

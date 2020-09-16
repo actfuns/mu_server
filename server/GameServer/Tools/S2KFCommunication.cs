@@ -5,10 +5,10 @@ using Server.Tools;
 
 namespace GameServer.Tools
 {
-	// Token: 0x020008F8 RID: 2296
+	
 	public class S2KFCommunication
 	{
-		// Token: 0x06004278 RID: 17016 RVA: 0x003C9470 File Offset: 0x003C7670
+		
 		public static void start(string cmd = null)
 		{
 			try
@@ -52,7 +52,7 @@ namespace GameServer.Tools
 			}
 		}
 
-		// Token: 0x06004279 RID: 17017 RVA: 0x003C9608 File Offset: 0x003C7808
+		
 		public static void SetEnd()
 		{
 			S2KFCommunication.endNum++;
@@ -62,7 +62,7 @@ namespace GameServer.Tools
 			}
 		}
 
-		// Token: 0x0600427A RID: 17018 RVA: 0x003C9644 File Offset: 0x003C7844
+		
 		public static void stop(string cmd = null)
 		{
 			try
@@ -109,13 +109,13 @@ namespace GameServer.Tools
 			}
 		}
 
-		// Token: 0x04005031 RID: 20529
+		
 		private static int endNum = 0;
 
-		// Token: 0x04005032 RID: 20530
+		
 		private static bool stage = false;
 
-		// Token: 0x04005033 RID: 20531
+		
 		private static List<ThreadTimerModel> objList;
 	}
 }

@@ -10,10 +10,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200079F RID: 1951
+	
 	public class StarConstellationManager
 	{
-		// Token: 0x060032CF RID: 13007 RVA: 0x002D04C8 File Offset: 0x002CE6C8
+		
 		public void LoadStarConstellationTypeInfo()
 		{
 			try
@@ -132,7 +132,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032D0 RID: 13008 RVA: 0x002D09F8 File Offset: 0x002CEBF8
+		
 		public void LoadStarConstellationDetailInfo()
 		{
 			for (int i = 0; i < 6; i++)
@@ -254,7 +254,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032D1 RID: 13009 RVA: 0x002D0F8C File Offset: 0x002CF18C
+		
 		public int GetExtendPropIndex(int nValue, StarConstellationTypeInfo starInfo)
 		{
 			if (nValue > 0)
@@ -277,7 +277,7 @@ namespace GameServer.Logic
 			return -1;
 		}
 
-		// Token: 0x060032D2 RID: 13010 RVA: 0x002D1018 File Offset: 0x002CF218
+		
 		public void InitPlayerStarConstellationPorperty(GameClient client)
 		{
 			if (client.ClientData.RoleStarConstellationInfo != null && client.ClientData.RoleStarConstellationInfo.Count > 0)
@@ -317,7 +317,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032D3 RID: 13011 RVA: 0x002D11D0 File Offset: 0x002CF3D0
+		
 		public int ActivationStarConstellation(GameClient client, int nStarSiteID)
 		{
 			int result;
@@ -468,7 +468,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060032D4 RID: 13012 RVA: 0x002D1734 File Offset: 0x002CF934
+		
 		public void ActivationStarConstellationExtendProp(GameClient client, int nSiteID)
 		{
 			if (client != null && client.ClientData.RoleStarConstellationInfo != null)
@@ -497,7 +497,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032D5 RID: 13013 RVA: 0x002D17F0 File Offset: 0x002CF9F0
+		
 		public void ActivationStarConstellationAll(GameClient client)
 		{
 			int nOccupation = client.ClientData.Occupation;
@@ -536,7 +536,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060032D6 RID: 13014 RVA: 0x002D1A3C File Offset: 0x002CFC3C
+		
 		public bool IfStarConstellationPerfect(GameClient client)
 		{
 			int nOccupation = client.ClientData.Occupation;
@@ -564,7 +564,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060032D7 RID: 13015 RVA: 0x002D1B24 File Offset: 0x002CFD24
+		
 		public void ActivationStarConstellationProp(GameClient client, PropertyInfo tmpProp, int nModulus = 1)
 		{
 			if (tmpProp.PropertyID1 >= 0 && tmpProp.AddPropertyMinValue1 > 0)
@@ -613,16 +613,16 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04003EE9 RID: 16105
+		
 		public Dictionary<int, StarConstellationTypeInfo> m_StarConstellationTypeInfo = new Dictionary<int, StarConstellationTypeInfo>();
 
-		// Token: 0x04003EEA RID: 16106
+		
 		public Dictionary<int, Dictionary<int, Dictionary<int, StarConstellationDetailInfo>>> m_StarConstellationDetailInfo = new Dictionary<int, Dictionary<int, Dictionary<int, StarConstellationDetailInfo>>>();
 
-		// Token: 0x04003EEB RID: 16107
+		
 		public int m_MaxStarSiteID = 0;
 
-		// Token: 0x04003EEC RID: 16108
+		
 		public int m_MaxStarSlotID = 0;
 	}
 }

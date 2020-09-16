@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004F9 RID: 1273
+	
 	public class GuildCopyMapDBManager
 	{
-		// Token: 0x060017AB RID: 6059 RVA: 0x00173140 File Offset: 0x00171340
+		
 		public GuildCopyMapDB FindGuildCopyMapDB(int guildid, int serverId)
 		{
 			GuildCopyMapDB result;
@@ -70,7 +70,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060017AC RID: 6060 RVA: 0x00173350 File Offset: 0x00171550
+		
 		public void AddGuildCopyMapDB(GuildCopyMapDB data)
 		{
 			if (!this.GuildCopyMapDBDict.ContainsKey(data.GuildID))
@@ -79,7 +79,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060017AD RID: 6061 RVA: 0x0017338C File Offset: 0x0017158C
+		
 		public bool UpdateGuildCopyMapDB(GuildCopyMapDB data, int serverId)
 		{
 			GuildCopyMapDB oldData = this.FindGuildCopyMapDB(data.GuildID, serverId);
@@ -120,7 +120,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060017AE RID: 6062 RVA: 0x00173524 File Offset: 0x00171724
+		
 		public void ResetGuildCopyMapDB(int guildid, int serverId)
 		{
 			GuildCopyMapDB data = new GuildCopyMapDB
@@ -134,7 +134,7 @@ namespace GameServer.Logic
 			this.UpdateGuildCopyMapDB(data, serverId);
 		}
 
-		// Token: 0x040021B4 RID: 8628
+		
 		private Dictionary<int, GuildCopyMapDB> GuildCopyMapDBDict = new Dictionary<int, GuildCopyMapDB>();
 	}
 }

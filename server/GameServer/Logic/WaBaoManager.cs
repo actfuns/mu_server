@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007E9 RID: 2025
+	
 	public class WaBaoManager
 	{
-		// Token: 0x0600394C RID: 14668 RVA: 0x0030A5E8 File Offset: 0x003087E8
+		
 		public static TCPOutPacket ProcessRandomWaBao(GameClient client, TCPOutPacketPool pool, int cmd)
 		{
 			GoodsData goodsData = new GoodsData
@@ -97,7 +97,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600394D RID: 14669 RVA: 0x0030A8BC File Offset: 0x00308ABC
+		
 		public static TCPOutPacket ProcessGetWaBaoGoodsData(GameClient client, TCPOutPacketPool pool, int cmd)
 		{
 			TCPOutPacket result;
@@ -129,7 +129,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600394E RID: 14670 RVA: 0x0030AADC File Offset: 0x00308CDC
+		
 		public static TCPOutPacket ProcessWaBaoByYaoShi(GameClient client, TCPOutPacketPool pool, int cmd, int idXiangZi, int idYaoShi, bool autoBuy)
 		{
 			GoodsData goodsData = new GoodsData

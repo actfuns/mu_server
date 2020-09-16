@@ -13,22 +13,22 @@ using Share.Server;
 
 namespace GameDBServer.Server
 {
-	// Token: 0x02000202 RID: 514
+	
 	internal class PlatTCPManager
 	{
-		// Token: 0x06000A9C RID: 2716 RVA: 0x000655C8 File Offset: 0x000637C8
+		
 		private PlatTCPManager()
 		{
 		}
 
-		// Token: 0x06000A9D RID: 2717 RVA: 0x000655F8 File Offset: 0x000637F8
+		
 		public static PlatTCPManager getInstance()
 		{
 			return PlatTCPManager.instance;
 		}
 
-		// Token: 0x170000E6 RID: 230
-		// (get) Token: 0x06000A9E RID: 2718 RVA: 0x00065610 File Offset: 0x00063810
+		
+		
 		public Dictionary<int, PlatTCPManager.NetCommandFunc> ProcessCmdFuncDict
 		{
 			get
@@ -37,7 +37,7 @@ namespace GameDBServer.Server
 			}
 		}
 
-		// Token: 0x06000A9F RID: 2719 RVA: 0x00065628 File Offset: 0x00063828
+		
 		public void initialize(int capacity)
 		{
 			capacity = Math.Max(capacity, 10);
@@ -54,7 +54,7 @@ namespace GameDBServer.Server
 			this.InitCmds();
 		}
 
-		// Token: 0x06000AA0 RID: 2720 RVA: 0x000656F4 File Offset: 0x000638F4
+		
 		protected bool InitCmds()
 		{
 			this._ProcessCmdFuncDict = new Dictionary<int, PlatTCPManager.NetCommandFunc>();
@@ -63,8 +63,8 @@ namespace GameDBServer.Server
 			return true;
 		}
 
-		// Token: 0x170000E7 RID: 231
-		// (get) Token: 0x06000AA1 RID: 2721 RVA: 0x00065744 File Offset: 0x00063944
+		
+		
 		public SocketListener MySocketListener
 		{
 			get
@@ -73,20 +73,20 @@ namespace GameDBServer.Server
 			}
 		}
 
-		// Token: 0x06000AA2 RID: 2722 RVA: 0x0006575C File Offset: 0x0006395C
+		
 		public void Start(string ip, int port)
 		{
 			this.socketListener.Init();
 			this.socketListener.Start(ip, port);
 		}
 
-		// Token: 0x06000AA3 RID: 2723 RVA: 0x00065779 File Offset: 0x00063979
+		
 		public void Stop()
 		{
 			this.socketListener.Stop();
 		}
 
-		// Token: 0x06000AA4 RID: 2724 RVA: 0x00065788 File Offset: 0x00063988
+		
 		private void SocketConnected(object sender, SocketAsyncEventArgs e)
 		{
 			SocketListener sl = sender as SocketListener;
@@ -101,7 +101,7 @@ namespace GameDBServer.Server
 			}
 		}
 
-		// Token: 0x06000AA5 RID: 2725 RVA: 0x00065810 File Offset: 0x00063A10
+		
 		private void SocketClosed(object sender, SocketAsyncEventArgs e)
 		{
 			SocketListener sl = sender as SocketListener;
@@ -121,7 +121,7 @@ namespace GameDBServer.Server
 			}
 		}
 
-		// Token: 0x06000AA6 RID: 2726 RVA: 0x000658F8 File Offset: 0x00063AF8
+		
 		private bool SocketReceived(object sender, SocketAsyncEventArgs e)
 		{
 			SocketListener sl = sender as SocketListener;
@@ -138,14 +138,14 @@ namespace GameDBServer.Server
 			return tcpInPacket.WriteData(e.Buffer, e.Offset, e.BytesTransferred);
 		}
 
-		// Token: 0x06000AA7 RID: 2727 RVA: 0x000659C4 File Offset: 0x00063BC4
+		
 		private void SocketSended(object sender, SocketAsyncEventArgs e)
 		{
 			TCPOutPacket tcpOutPacket = (e.UserToken as AsyncUserToken).Tag as TCPOutPacket;
 			this.tcpOutPacketPool.Push(tcpOutPacket);
 		}
 
-		// Token: 0x06000AA8 RID: 2728 RVA: 0x000659F8 File Offset: 0x00063BF8
+		
 		private bool TCPCmdPacketEvent(object sender)
 		{
 			TCPInPacket tcpInPacket = sender as TCPInPacket;
@@ -176,7 +176,7 @@ namespace GameDBServer.Server
 			return result2;
 		}
 
-		// Token: 0x06000AA9 RID: 2729 RVA: 0x00065B04 File Offset: 0x00063D04
+		
 		public static TCPProcessCmdResults ProcessCmd(Socket socket, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -194,7 +194,7 @@ namespace GameDBServer.Server
 			return result;
 		}
 
-		// Token: 0x06000AAA RID: 2730 RVA: 0x00065B6C File Offset: 0x00063D6C
+		
 		private TCPProcessCmdResults ProcessRechargeData(TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -284,7 +284,7 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06000AAB RID: 2731 RVA: 0x00065F3C File Offset: 0x0006413C
+		
 		private TCPProcessCmdResults ProcessPlatGift(TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -327,47 +327,47 @@ namespace GameDBServer.Server
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x04000C72 RID: 3186
+		
 		private static PlatTCPManager instance = new PlatTCPManager();
 
-		// Token: 0x04000C73 RID: 3187
+		
 		private TCPInPacketPool tcpInPacketPool = null;
 
-		// Token: 0x04000C74 RID: 3188
+		
 		private TCPOutPacketPool tcpOutPacketPool = null;
 
-		// Token: 0x04000C75 RID: 3189
+		
 		private Dictionary<Socket, int> inputServers = null;
 
-		// Token: 0x04000C76 RID: 3190
+		
 		private Dictionary<Socket, TCPInPacket> dictInPackets = null;
 
-		// Token: 0x04000C77 RID: 3191
+		
 		private Dictionary<int, PlatTCPManager.NetCommandFunc> _ProcessCmdFuncDict;
 
-		// Token: 0x04000C78 RID: 3192
+		
 		private SocketListener socketListener = null;
 
-		// Token: 0x02000203 RID: 515
-		// (Invoke) Token: 0x06000AAE RID: 2734
+		
+		
 		public delegate TCPProcessCmdResults NetCommandFunc(TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket);
 
-		// Token: 0x02000204 RID: 516
+		
 		public class RechargeConst
 		{
-			// Token: 0x04000C79 RID: 3193
+			
 			public const int Sucess = 1;
 
-			// Token: 0x04000C7A RID: 3194
+			
 			public const int InputError = -2;
 
-			// Token: 0x04000C7B RID: 3195
+			
 			public const int TempMoneyError = -3;
 
-			// Token: 0x04000C7C RID: 3196
+			
 			public const int SignError = -4;
 
-			// Token: 0x04000C7D RID: 3197
+			
 			public const int AllExist = -5;
 		}
 	}

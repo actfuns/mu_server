@@ -7,15 +7,15 @@ using Tmsk.Contract.KuaFuData;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000079 RID: 121
+	
 	public class ZhengDuoPersistence
 	{
-		// Token: 0x060005E9 RID: 1513 RVA: 0x000504F0 File Offset: 0x0004E6F0
+		
 		private ZhengDuoPersistence()
 		{
 		}
 
-		// Token: 0x060005EA RID: 1514 RVA: 0x000504FC File Offset: 0x0004E6FC
+		
 		public int DBWeekAndStepGet(int type)
 		{
 			int result = 0;
@@ -37,14 +37,14 @@ namespace KF.Remoting
 			return result2;
 		}
 
-		// Token: 0x060005EB RID: 1515 RVA: 0x00050570 File Offset: 0x0004E770
+		
 		public bool DBWeekAndStepSet(int type, int value)
 		{
 			string sql = string.Format("REPLACE INTO t_async(id,value) \r\n                                        VALUES('{0}','{1}')", type, value);
 			return this.ExecuteSqlNoQuery(sql) > 0;
 		}
 
-		// Token: 0x060005EC RID: 1516 RVA: 0x000505A4 File Offset: 0x0004E7A4
+		
 		public Dictionary<int, ZhengDuoRankData> DBRankList(int week)
 		{
 			Dictionary<int, ZhengDuoRankData> dic = new Dictionary<int, ZhengDuoRankData>();
@@ -83,7 +83,7 @@ namespace KF.Remoting
 			return dic;
 		}
 
-		// Token: 0x060005ED RID: 1517 RVA: 0x00050764 File Offset: 0x0004E964
+		
 		public bool DBRankUpdata(ZhengDuoRankData data)
 		{
 			bool result;
@@ -115,14 +115,14 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060005EE RID: 1518 RVA: 0x00050870 File Offset: 0x0004EA70
+		
 		public long CreateZhengDuoFuBen(int gametype, int serverId)
 		{
 			string sql = string.Format("INSERT INTO t_game(gametype,serverid,createtime) VALUES({0},{1},NOW());", gametype, serverId);
 			return DbHelperMySQL.ExecuteSqlGetIncrement(sql, null);
 		}
 
-		// Token: 0x060005EF RID: 1519 RVA: 0x000508A0 File Offset: 0x0004EAA0
+		
 		private int ExecuteSqlNoQuery(string sqlCmd)
 		{
 			int i = 0;
@@ -138,7 +138,7 @@ namespace KF.Remoting
 			return i;
 		}
 
-		// Token: 0x0400033D RID: 829
+		
 		public static readonly ZhengDuoPersistence Instance = new ZhengDuoPersistence();
 	}
 }

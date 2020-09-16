@@ -4,11 +4,11 @@ using Tmsk.Contract;
 
 namespace Server.Data
 {
-	// Token: 0x020005A0 RID: 1440
+	
 	[ProtoContract]
 	public class SpritePositionData : IProtoBuffData
 	{
-		// Token: 0x06001A43 RID: 6723 RVA: 0x00194888 File Offset: 0x00192A88
+		
 		public int fromBytes(byte[] data, int offset, int count)
 		{
 			int pos = offset;
@@ -42,7 +42,7 @@ namespace Server.Data
 			return pos;
 		}
 
-		// Token: 0x06001A44 RID: 6724 RVA: 0x00194958 File Offset: 0x00192B58
+		
 		public byte[] toBytes()
 		{
 			int total = 0;
@@ -61,23 +61,23 @@ namespace Server.Data
 			return data;
 		}
 
-		// Token: 0x04002887 RID: 10375
+		
 		[ProtoMember(1)]
 		public int roleID = 0;
 
-		// Token: 0x04002888 RID: 10376
+		
 		[ProtoMember(2)]
 		public int mapCode = 0;
 
-		// Token: 0x04002889 RID: 10377
+		
 		[ProtoMember(3)]
 		public int toX = 0;
 
-		// Token: 0x0400288A RID: 10378
+		
 		[ProtoMember(4)]
 		public int toY = 0;
 
-		// Token: 0x0400288B RID: 10379
+		
 		[ProtoMember(5)]
 		public long currentPosTicks = 0L;
 	}

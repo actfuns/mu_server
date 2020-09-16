@@ -9,26 +9,26 @@ using Server.Tools;
 
 namespace GameServer.Server
 {
-	// Token: 0x020008B9 RID: 2233
+	
 	public class TCPClient
 	{
-		// Token: 0x170005E5 RID: 1509
-		// (get) Token: 0x06003DDF RID: 15839 RVA: 0x0034C8D4 File Offset: 0x0034AAD4
-		// (set) Token: 0x06003DE0 RID: 15840 RVA: 0x0034C8EB File Offset: 0x0034AAEB
+		
+		
+		
 		public IConnectInfoContainer RootWindow { get; set; }
 
-		// Token: 0x170005E6 RID: 1510
-		// (get) Token: 0x06003DE1 RID: 15841 RVA: 0x0034C8F4 File Offset: 0x0034AAF4
-		// (set) Token: 0x06003DE2 RID: 15842 RVA: 0x0034C90B File Offset: 0x0034AB0B
+		
+		
+		
 		public int ListIndex { get; set; }
 
-		// Token: 0x06003DE3 RID: 15843 RVA: 0x0034C914 File Offset: 0x0034AB14
+		
 		public bool ValidateIpPort(string ip, int port)
 		{
 			return !(ip != this.ServerIP) && port == this.ServerPort;
 		}
 
-		// Token: 0x06003DE4 RID: 15844 RVA: 0x0034C94C File Offset: 0x0034AB4C
+		
 		public void Connect(string ip, int port, string serverName)
 		{
 			this.ServerName = serverName;
@@ -72,7 +72,7 @@ namespace GameServer.Server
 			}
 		}
 
-		// Token: 0x06003DE5 RID: 15845 RVA: 0x0034CB14 File Offset: 0x0034AD14
+		
 		public void Disconnect()
 		{
 			lock (this.MutexSocket)
@@ -93,7 +93,7 @@ namespace GameServer.Server
 			}
 		}
 
-		// Token: 0x06003DE6 RID: 15846 RVA: 0x0034CBE0 File Offset: 0x0034ADE0
+		
 		public bool IsConnected()
 		{
 			bool ret = false;
@@ -104,7 +104,7 @@ namespace GameServer.Server
 			return ret;
 		}
 
-		// Token: 0x06003DE7 RID: 15847 RVA: 0x0034CC3C File Offset: 0x0034AE3C
+		
 		public byte[] SendData(TCPOutPacket tcpOutPacket)
 		{
 			byte[] result;
@@ -182,25 +182,25 @@ namespace GameServer.Server
 			return result;
 		}
 
-		// Token: 0x040047EA RID: 18410
+		
 		private object MutexSocket = new object();
 
-		// Token: 0x040047EB RID: 18411
+		
 		private TMSKSocket _Socket = null;
 
-		// Token: 0x040047EC RID: 18412
+		
 		private string ServerIP = "";
 
-		// Token: 0x040047ED RID: 18413
+		
 		private int ServerPort = 0;
 
-		// Token: 0x040047EE RID: 18414
+		
 		public string ServerName = "";
 
-		// Token: 0x040047EF RID: 18415
+		
 		public bool NoDelay = false;
 
-		// Token: 0x040047F0 RID: 18416
+		
 		public int LastCmdID;
 	}
 }

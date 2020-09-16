@@ -13,29 +13,29 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007AF RID: 1967
+	
 	public class GVoiceManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener, IEventListenerEx, IManager2
 	{
-		// Token: 0x0600338F RID: 13199 RVA: 0x002DBA0C File Offset: 0x002D9C0C
+		
 		public static GVoiceManager getInstance()
 		{
 			return GVoiceManager.instance;
 		}
 
-		// Token: 0x06003390 RID: 13200 RVA: 0x002DBA24 File Offset: 0x002D9C24
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x06003391 RID: 13201 RVA: 0x002DBA48 File Offset: 0x002D9C48
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			ScheduleExecutor2.Instance.scheduleExecute(new NormalScheduleTask("GVoiceManager.TimerProc", new EventHandler(this.TimerProc)), 15000, 1000);
 			return true;
 		}
 
-		// Token: 0x06003392 RID: 13202 RVA: 0x002DBA88 File Offset: 0x002D9C88
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1110, 1, 1, GVoiceManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -45,26 +45,26 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06003393 RID: 13203 RVA: 0x002DBAF8 File Offset: 0x002D9CF8
+		
 		public bool showdown()
 		{
 			GlobalEventSource.getInstance().removeListener(28, GVoiceManager.getInstance());
 			return true;
 		}
 
-		// Token: 0x06003394 RID: 13204 RVA: 0x002DBB20 File Offset: 0x002D9D20
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06003395 RID: 13205 RVA: 0x002DBB34 File Offset: 0x002D9D34
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06003396 RID: 13206 RVA: 0x002DBB48 File Offset: 0x002D9D48
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -86,7 +86,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003397 RID: 13207 RVA: 0x002DBBA4 File Offset: 0x002D9DA4
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int nID = eventObject.getEventType();
@@ -101,12 +101,12 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003398 RID: 13208 RVA: 0x002DBBE2 File Offset: 0x002D9DE2
+		
 		public void processEvent(EventObjectEx eventObject)
 		{
 		}
 
-		// Token: 0x06003399 RID: 13209 RVA: 0x002DBBE8 File Offset: 0x002D9DE8
+		
 		public bool InitConfig()
 		{
 			bool success = true;
@@ -160,7 +160,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x0600339A RID: 13210 RVA: 0x002DBF4C File Offset: 0x002DA14C
+		
 		public void SendGVoiceInitData(GameClient client)
 		{
 			client.sendCmd<GVoiceSceneData>(1110, new GVoiceSceneData
@@ -170,7 +170,7 @@ namespace GameServer.Logic
 			}, false);
 		}
 
-		// Token: 0x0600339B RID: 13211 RVA: 0x002DBF90 File Offset: 0x002DA190
+		
 		public bool ProcessGetGVoiceSceneDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -264,7 +264,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600339C RID: 13212 RVA: 0x002DC304 File Offset: 0x002DA504
+		
 		public bool ProcessGVoiceSetRoleListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -342,7 +342,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600339D RID: 13213 RVA: 0x002DC58C File Offset: 0x002DA78C
+		
 		public bool ProcessGVoiceGetRoleListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -394,13 +394,13 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600339E RID: 13214 RVA: 0x002DC790 File Offset: 0x002DA990
+		
 		public bool IsGongNengOpened(GameClient client, bool hint = false)
 		{
 			return GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System2Dot6) || Global.GetUnionLevel(client, false) >= Global.GetUnionLevel(this.RuntimeData.VoiceMessage[0], this.RuntimeData.VoiceMessage[1], false) || client.ClientData.VipLevel >= this.RuntimeData.VoiceMessage[2];
 		}
 
-		// Token: 0x0600339F RID: 13215 RVA: 0x002DC80C File Offset: 0x002DAA0C
+		
 		public void OnStartPlayGame(GameClient client)
 		{
 			int mapCode = client.ClientData.MapCode;
@@ -418,7 +418,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060033A0 RID: 13216 RVA: 0x002DC89C File Offset: 0x002DAA9C
+		
 		public void UpdateGVoicePriority(GMCmdData cmdData, bool force = true)
 		{
 			if (cmdData.Fields.Length >= 4)
@@ -477,7 +477,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060033A1 RID: 13217 RVA: 0x002DCB64 File Offset: 0x002DAD64
+		
 		private void TimerProc(object sender, EventArgs e)
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -488,10 +488,10 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04003F50 RID: 16208
+		
 		private static GVoiceManager instance = new GVoiceManager();
 
-		// Token: 0x04003F51 RID: 16209
+		
 		public GVoiceRuntimeData RuntimeData = new GVoiceRuntimeData();
 	}
 }

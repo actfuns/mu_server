@@ -14,10 +14,10 @@ using Tmsk.Contract.Tools;
 
 namespace KF.TcpCall
 {
-	// Token: 0x02000895 RID: 2197
+	
 	public class KFCallManager
 	{
-		// Token: 0x06003D2F RID: 15663 RVA: 0x0034442C File Offset: 0x0034262C
+		
 		public static bool Start()
 		{
 			lock (KFCallManager.Mutex)
@@ -62,7 +62,7 @@ namespace KF.TcpCall
 			return true;
 		}
 
-		// Token: 0x06003D30 RID: 15664 RVA: 0x00344578 File Offset: 0x00342778
+		
 		private static void NewKFClient(string host, int port)
 		{
 			AutoCSer.Net.TcpInternalServer.ServerAttribute attribute = new AutoCSer.Net.TcpInternalServer.ServerAttribute();
@@ -82,7 +82,7 @@ namespace KF.TcpCall
 			tcpClient.TryCreateSocket();
 		}
 
-		// Token: 0x06003D31 RID: 15665 RVA: 0x00344624 File Offset: 0x00342824
+		
 		private static bool verifyMethod(AutoCSer.Net.TcpInternalServer.ClientSocketSender sender)
 		{
 			ReturnValue<bool> returnValue = TcpCall.KFServiceBase.InitializeClient(sender, KFCallManager.ClientInfo);
@@ -101,13 +101,13 @@ namespace KF.TcpCall
 			return result;
 		}
 
-		// Token: 0x06003D32 RID: 15666 RVA: 0x003446F1 File Offset: 0x003428F1
+		
 		private static void OnSetSocket(KFCallManager.KFClient client)
 		{
 			client.KeepGetMessage = TcpCall.KFServiceBase.KeepGetMessage(new Action<ReturnValue<KFCallMsg>>(KFCallManager.KFCallMsgFunc));
 		}
 
-		// Token: 0x06003D33 RID: 15667 RVA: 0x0034470C File Offset: 0x0034290C
+		
 		public static void KFCallMsgFunc(ReturnValue<KFCallMsg> msg)
 		{
 			if (msg.Type == ReturnType.Success)
@@ -116,31 +116,31 @@ namespace KF.TcpCall
 			}
 		}
 
-		// Token: 0x04004797 RID: 18327
+		
 		private static object Mutex = new object();
 
-		// Token: 0x04004798 RID: 18328
+		
 		public static EventSourceEx<KFCallMsg> MsgSource = new EventSourceEx<KFCallMsg>();
 
-		// Token: 0x04004799 RID: 18329
+		
 		public static bool IsLogin;
 
-		// Token: 0x0400479A RID: 18330
+		
 		public static string Host;
 
-		// Token: 0x0400479B RID: 18331
+		
 		public static int Port;
 
-		// Token: 0x0400479C RID: 18332
+		
 		public static KuaFuClientContext ClientInfo;
 
-		// Token: 0x0400479D RID: 18333
+		
 		private static KFCallManager.KFClient Current;
 
-		// Token: 0x02000896 RID: 2198
+		
 		private class KFClient : IDisposable
 		{
-			// Token: 0x06003D36 RID: 15670 RVA: 0x0034479C File Offset: 0x0034299C
+			
 			public KFClient(AutoCSer.Net.TcpStaticServer.Client client, AutoCSer.Net.TcpInternalServer.ServerAttribute attribute, KuaFuClientContext clientInfo, Action<KFCallManager.KFClient> onSetSocket)
 			{
 				this._Attribute = attribute;
@@ -155,13 +155,13 @@ namespace KF.TcpCall
 				});
 			}
 
-			// Token: 0x06003D37 RID: 15671 RVA: 0x003447EC File Offset: 0x003429EC
+			
 			~KFClient()
 			{
 				this.Dispose();
 			}
 
-			// Token: 0x06003D38 RID: 15672 RVA: 0x00344820 File Offset: 0x00342A20
+			
 			public void Dispose()
 			{
 				if (!this.IsDisposed)
@@ -183,22 +183,22 @@ namespace KF.TcpCall
 				}
 			}
 
-			// Token: 0x0400479E RID: 18334
+			
 			private bool IsDisposed;
 
-			// Token: 0x0400479F RID: 18335
+			
 			public AutoCSer.Net.TcpInternalServer.ServerAttribute _Attribute;
 
-			// Token: 0x040047A0 RID: 18336
+			
 			private AutoCSer.Net.TcpStaticServer.Client tcpClient;
 
-			// Token: 0x040047A1 RID: 18337
+			
 			private ClientSocketBase _Socket;
 
-			// Token: 0x040047A2 RID: 18338
+			
 			public Action<KFCallManager.KFClient> OnSetSocket;
 
-			// Token: 0x040047A3 RID: 18339
+			
 			public KeepCallback KeepGetMessage;
 		}
 	}

@@ -6,10 +6,10 @@ using System.Web.Script.Serialization;
 
 namespace CheckSysValueDll
 {
-	// Token: 0x020008F0 RID: 2288
+	
 	public class RelationMapModel
 	{
-		// Token: 0x06004203 RID: 16899 RVA: 0x003C55B4 File Offset: 0x003C37B4
+		
 		private static void GetEnumList()
 		{
 			string filePath = AppDomain.CurrentDomain.BaseDirectory + "CheckRelation\\EnumType.json";
@@ -31,7 +31,7 @@ namespace CheckSysValueDll
 			}
 		}
 
-		// Token: 0x06004204 RID: 16900 RVA: 0x003C562C File Offset: 0x003C382C
+		
 		private static string CreatDirectory()
 		{
 			string Path = AppDomain.CurrentDomain.BaseDirectory + "CheckRelation\\";
@@ -42,7 +42,7 @@ namespace CheckSysValueDll
 			return Path;
 		}
 
-		// Token: 0x06004205 RID: 16901 RVA: 0x003C5668 File Offset: 0x003C3868
+		
 		private static void ReadRelationMap()
 		{
 			if (RelationMapModel.Map.Count <= 0)
@@ -90,7 +90,7 @@ namespace CheckSysValueDll
 			}
 		}
 
-		// Token: 0x06004206 RID: 16902 RVA: 0x003C5798 File Offset: 0x003C3998
+		
 		public static void WriteMap(Assembly assembly)
 		{
 			string Path = RelationMapModel.CreatDirectory();
@@ -128,7 +128,7 @@ namespace CheckSysValueDll
 			RelationMapModel.isWrite = true;
 		}
 
-		// Token: 0x06004207 RID: 16903 RVA: 0x003C59AC File Offset: 0x003C3BAC
+		
 		private static void GetRelationMap(Assembly assembly)
 		{
 			RelationMapModel.Map.Clear();
@@ -172,7 +172,7 @@ namespace CheckSysValueDll
 			}
 		}
 
-		// Token: 0x06004208 RID: 16904 RVA: 0x003C5B00 File Offset: 0x003C3D00
+		
 		private static bool IsEnum(Type type)
 		{
 			try
@@ -185,7 +185,7 @@ namespace CheckSysValueDll
 			return false;
 		}
 
-		// Token: 0x06004209 RID: 16905 RVA: 0x003C5B5C File Offset: 0x003C3D5C
+		
 		private static bool IsFilter(string Name)
 		{
 			try
@@ -210,7 +210,7 @@ namespace CheckSysValueDll
 			return false;
 		}
 
-		// Token: 0x0600420A RID: 16906 RVA: 0x003C5BDC File Offset: 0x003C3DDC
+		
 		public static object GetObject(Assembly assembly, string TypeName, string AttrName, ref CheckValueResult resultData)
 		{
 			TypeName = TypeName.Trim();
@@ -265,7 +265,7 @@ namespace CheckSysValueDll
 			return result;
 		}
 
-		// Token: 0x0600420B RID: 16907 RVA: 0x003C5D74 File Offset: 0x003C3F74
+		
 		public static List<string> FuzzySeachType(string name)
 		{
 			name = name.Trim();
@@ -291,7 +291,7 @@ namespace CheckSysValueDll
 			return result;
 		}
 
-		// Token: 0x0600420C RID: 16908 RVA: 0x003C5E24 File Offset: 0x003C4024
+		
 		public static List<string> FuzzySeach(string name, List<string> dlist)
 		{
 			List<string> temp = new List<string>();
@@ -314,7 +314,7 @@ namespace CheckSysValueDll
 			return temp;
 		}
 
-		// Token: 0x0600420D RID: 16909 RVA: 0x003C5ED0 File Offset: 0x003C40D0
+		
 		public static List<string> GetSeachAttr(string type)
 		{
 			RelationMapModel.ReadRelationMap();
@@ -337,13 +337,13 @@ namespace CheckSysValueDll
 			return result;
 		}
 
-		// Token: 0x04005008 RID: 20488
+		
 		private static bool isWrite = false;
 
-		// Token: 0x04005009 RID: 20489
+		
 		private static List<string> EnumList = new List<string>();
 
-		// Token: 0x0400500A RID: 20490
+		
 		private static Dictionary<string, List<string>> Map = new Dictionary<string, List<string>>();
 	}
 }

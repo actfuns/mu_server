@@ -5,10 +5,10 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020005E4 RID: 1508
+	
 	public class ChuanQiQianHua
 	{
-		// Token: 0x06001C6B RID: 7275 RVA: 0x001A9DC8 File Offset: 0x001A7FC8
+		
 		public static List<ChuanQiQianHuaItem> GetListChuanQiQianHuaItem(int qianHuaID)
 		{
 			List<ChuanQiQianHuaItem> list = null;
@@ -20,7 +20,7 @@ namespace GameServer.Logic
 			return list;
 		}
 
-		// Token: 0x06001C6C RID: 7276 RVA: 0x001A9E24 File Offset: 0x001A8024
+		
 		public static void LoadEquipQianHuaProps()
 		{
 			XElement xml = null;
@@ -52,7 +52,7 @@ namespace GameServer.Logic
 			ChuanQiQianHua.QianHuaItemDict = dict;
 		}
 
-		// Token: 0x06001C6D RID: 7277 RVA: 0x001A9F38 File Offset: 0x001A8138
+		
 		private static List<ChuanQiQianHuaItem> ParseSystemXmlItem(SystemXmlItem systemXmlItem)
 		{
 			List<ChuanQiQianHuaItem> list = new List<ChuanQiQianHuaItem>();
@@ -77,7 +77,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C6E RID: 7278 RVA: 0x001A9FBC File Offset: 0x001A81BC
+		
 		public static int GetExtPropIndexeFromStr(string str)
 		{
 			int index = -1;
@@ -104,13 +104,13 @@ namespace GameServer.Logic
 			return index;
 		}
 
-		// Token: 0x06001C6F RID: 7279 RVA: 0x001AA0B0 File Offset: 0x001A82B0
+		
 		private static List<ChuanQiQianHuaItem> ParseChuanQiQianHuaItem(int qianHuaID, string strValue)
 		{
 			return new List<ChuanQiQianHuaItem>();
 		}
 
-		// Token: 0x06001C70 RID: 7280 RVA: 0x001AA0CC File Offset: 0x001A82CC
+		
 		public static void ApplayEquipQianHuaProps(double[] equipProps, int occupation, GoodsData goodsData, SystemXmlItem systemGoods, bool toAdd)
 		{
 			List<MagicActionItem> magicActionItemList = null;
@@ -147,10 +147,10 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04002A62 RID: 10850
+		
 		public static Dictionary<int, List<ChuanQiQianHuaItem>> QianHuaItemDict = null;
 
-		// Token: 0x04002A63 RID: 10851
+		
 		public static Dictionary<string, int> StrToExtPropIndexDict = new Dictionary<string, int>();
 	}
 }

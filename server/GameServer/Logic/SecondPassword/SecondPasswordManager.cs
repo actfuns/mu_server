@@ -11,12 +11,12 @@ using Server.Tools;
 
 namespace GameServer.Logic.SecondPassword
 {
-	// Token: 0x02000794 RID: 1940
+	
 	public class SecondPasswordManager
 	{
-		// Token: 0x170003B0 RID: 944
-		// (get) Token: 0x0600327A RID: 12922 RVA: 0x002CD1F0 File Offset: 0x002CB3F0
-		// (set) Token: 0x0600327B RID: 12923 RVA: 0x002CD208 File Offset: 0x002CB408
+		
+		
+		
 		public static long ValidSecWhenLogout
 		{
 			get
@@ -33,7 +33,7 @@ namespace GameServer.Logic.SecondPassword
 			}
 		}
 
-		// Token: 0x0600327C RID: 12924 RVA: 0x002CD23C File Offset: 0x002CB43C
+		
 		public static SecPwdState GetSecPwdState(string userid)
 		{
 			SecPwdState result2;
@@ -53,7 +53,7 @@ namespace GameServer.Logic.SecondPassword
 			return result2;
 		}
 
-		// Token: 0x0600327D RID: 12925 RVA: 0x002CD2AC File Offset: 0x002CB4AC
+		
 		public static void SetSecPwdState(string usrid, SecPwdState state)
 		{
 			if (!string.IsNullOrEmpty(usrid))
@@ -72,7 +72,7 @@ namespace GameServer.Logic.SecondPassword
 			}
 		}
 
-		// Token: 0x0600327E RID: 12926 RVA: 0x002CD328 File Offset: 0x002CB528
+		
 		public static TCPProcessCmdResults ProcessSetSecPwd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -171,7 +171,7 @@ namespace GameServer.Logic.SecondPassword
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x0600327F RID: 12927 RVA: 0x002CD62C File Offset: 0x002CB82C
+		
 		public static TCPProcessCmdResults ProcClrSecPwd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -217,7 +217,7 @@ namespace GameServer.Logic.SecondPassword
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003280 RID: 12928 RVA: 0x002CD798 File Offset: 0x002CB998
+		
 		public static void OnUsrLogout(string userID)
 		{
 			SecPwdState pwdState = SecondPasswordManager.GetSecPwdState(userID);
@@ -228,7 +228,7 @@ namespace GameServer.Logic.SecondPassword
 			}
 		}
 
-		// Token: 0x06003281 RID: 12929 RVA: 0x002CD7DC File Offset: 0x002CB9DC
+		
 		public static SecPwdState InitUserState(string userID, bool alreadyOnline)
 		{
 			SecPwdState result2;
@@ -276,7 +276,7 @@ namespace GameServer.Logic.SecondPassword
 			return result2;
 		}
 
-		// Token: 0x06003282 RID: 12930 RVA: 0x002CD8C0 File Offset: 0x002CBAC0
+		
 		public static TCPProcessCmdResults ProcessUsrCheckState(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -322,7 +322,7 @@ namespace GameServer.Logic.SecondPassword
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003283 RID: 12931 RVA: 0x002CDA14 File Offset: 0x002CBC14
+		
 		public static TCPProcessCmdResults ProcessUsrVerify(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -368,7 +368,7 @@ namespace GameServer.Logic.SecondPassword
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x06003284 RID: 12932 RVA: 0x002CDB30 File Offset: 0x002CBD30
+		
 		private static bool Update2DB(string useid, string secpwd)
 		{
 			string cmd2db = string.Format("{0}:{1}", useid, secpwd);
@@ -376,13 +376,13 @@ namespace GameServer.Logic.SecondPassword
 			return dbFields != null && dbFields.Length == 2;
 		}
 
-		// Token: 0x06003285 RID: 12933 RVA: 0x002CDB74 File Offset: 0x002CBD74
+		
 		private static bool Clear2DB(string userid)
 		{
 			return SecondPasswordManager.Update2DB(userid, "");
 		}
 
-		// Token: 0x06003286 RID: 12934 RVA: 0x002CDB94 File Offset: 0x002CBD94
+		
 		public static bool ClearUserSecPwd(string usrid)
 		{
 			bool result;
@@ -438,16 +438,16 @@ namespace GameServer.Logic.SecondPassword
 			return result;
 		}
 
-		// Token: 0x04003EA4 RID: 16036
+		
 		private const int _PwdMinLen = 6;
 
-		// Token: 0x04003EA5 RID: 16037
+		
 		private const int _PwdMaxLen = 8;
 
-		// Token: 0x04003EA6 RID: 16038
+		
 		private static long _ValidSecWhenLogout = 300L;
 
-		// Token: 0x04003EA7 RID: 16039
+		
 		private static Dictionary<string, SecPwdState> _UsrSecPwdDict = new Dictionary<string, SecPwdState>();
 	}
 }

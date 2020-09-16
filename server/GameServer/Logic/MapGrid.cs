@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-    // Token: 0x02000749 RID: 1865
+    
     public class MapGrid
     {
-        // Token: 0x06002EE7 RID: 12007 RVA: 0x0029FE74 File Offset: 0x0029E074
+        
         public MapGrid(int mapCode, int mapWidth, int mapHeight, int mapGridWidth, int mapGridHeight, GameMap gameMap)
         {
             this.MapCode = mapCode;
@@ -29,8 +29,8 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x1700033A RID: 826
-        // (get) Token: 0x06002EE8 RID: 12008 RVA: 0x0029FF8C File Offset: 0x0029E18C
+        
+        
         public int MapGridWidth
         {
             get
@@ -39,8 +39,8 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x1700033B RID: 827
-        // (get) Token: 0x06002EE9 RID: 12009 RVA: 0x0029FFA4 File Offset: 0x0029E1A4
+        
+        
         public int MapGridHeight
         {
             get
@@ -49,8 +49,8 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x1700033C RID: 828
-        // (get) Token: 0x06002EEA RID: 12010 RVA: 0x0029FFBC File Offset: 0x0029E1BC
+        
+        
         public int MapGridXNum
         {
             get
@@ -59,8 +59,8 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x1700033D RID: 829
-        // (get) Token: 0x06002EEB RID: 12011 RVA: 0x0029FFD4 File Offset: 0x0029E1D4
+        
+        
         public int MapGridYNum
         {
             get
@@ -69,13 +69,13 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002EEC RID: 12012 RVA: 0x0029FFEC File Offset: 0x0029E1EC
+        
         private int GetGridIndex(int gridX, int gridY)
         {
             return this._MapGridXNum * gridY + gridX;
         }
 
-        // Token: 0x06002EED RID: 12013 RVA: 0x002A0008 File Offset: 0x0029E208
+        
         private void ChangeMapGridsSpriteNum(int index, IObject obj, short addOrSubNum)
         {
             this.MyMapGridSpriteItem[index].ObjsListReadOnly = null;
@@ -126,7 +126,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002EEE RID: 12014 RVA: 0x002A01FC File Offset: 0x0029E3FC
+        
         public int GetRoleNum(int gridX, int gridY)
         {
             int roleNum = 0;
@@ -138,7 +138,7 @@ namespace GameServer.Logic
             return roleNum;
         }
 
-        // Token: 0x06002EEF RID: 12015 RVA: 0x002A0274 File Offset: 0x0029E474
+        
         public void GetObjectsNum(int gridX, int gridY, out int totalNum, out int roleNum, out int monsterNum, out int nPCNum, out int biaoCheNum, out int junQiNum, out int goodsPackNum, out int decoNum)
         {
             int gridIndex = this.GetGridIndex(gridX, gridY);
@@ -155,7 +155,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002EF0 RID: 12016 RVA: 0x002A0374 File Offset: 0x0029E574
+        
         public bool MoveObjectEx(int oldGridX, int oldGridY, int newGridX, int newGridY, IObject obj)
         {
             int oldX = oldGridX * this._MapGridWidth;
@@ -165,7 +165,7 @@ namespace GameServer.Logic
             return this.MoveObject(oldX, oldY, newX, newY, obj);
         }
 
-        // Token: 0x06002EF1 RID: 12017 RVA: 0x002A03BC File Offset: 0x0029E5BC
+        
         public bool MoveObject(int oldX, int oldY, int newX, int newY, IObject obj)
         {
             bool result;
@@ -227,7 +227,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06002EF2 RID: 12018 RVA: 0x002A06A8 File Offset: 0x0029E8A8
+        
         private void HandleTracking(int oldX, int oldY, int newX, int newY, IObject obj)
         {
             if (obj is GameClient)
@@ -259,7 +259,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002EF3 RID: 12019 RVA: 0x002A086C File Offset: 0x0029EA6C
+        
         public bool RemoveObject(IObject obj)
         {
             lock (this.ModifyMutex)
@@ -291,7 +291,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x06002EF4 RID: 12020 RVA: 0x002A09C4 File Offset: 0x0029EBC4
+        
         public int GetGridClientCountForConsole()
         {
             int result;
@@ -302,7 +302,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06002EF5 RID: 12021 RVA: 0x002A0A34 File Offset: 0x0029EC34
+        
         public List<object> FindObjects(int gridX, int gridY)
         {
             int gridIndex = this._MapGridXNum * gridY + gridX;
@@ -336,7 +336,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06002EF6 RID: 12022 RVA: 0x002A0B58 File Offset: 0x0029ED58
+        
         public List<object> FindGoodsPackItems(int gridX, int gridY)
         {
             int gridIndex = this._MapGridXNum * gridY + gridX;
@@ -360,7 +360,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06002EF7 RID: 12023 RVA: 0x002A0C2C File Offset: 0x0029EE2C
+        
         public List<object> FindGameClient(int gridX, int gridY)
         {
             int gridIndex = this._MapGridXNum * gridY + gridX;
@@ -384,7 +384,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06002EF8 RID: 12024 RVA: 0x002A0D00 File Offset: 0x0029EF00
+        
         public List<object> FindObjects(int toX, int toY, int radius)
         {
             List<object> result;
@@ -419,7 +419,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06002EF9 RID: 12025 RVA: 0x002A0DEC File Offset: 0x0029EFEC
+        
         public bool CanMove(ObjectTypes objType, int gridX, int gridY, int holdGridNum, byte holdBitSet = 0)
         {
             bool result;
@@ -506,43 +506,43 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x04003C80 RID: 15488
+        
         private object ModifyMutex = new object();
 
-        // Token: 0x04003C81 RID: 15489
+        
         public GameMap _GameMap = null;
 
-        // Token: 0x04003C82 RID: 15490
+        
         public bool FlagOptimizeFindObjects;
 
-        // Token: 0x04003C83 RID: 15491
+        
         private int MapCode;
 
-        // Token: 0x04003C84 RID: 15492
+        
         private int MapWidth;
 
-        // Token: 0x04003C85 RID: 15493
+        
         private int MapHeight;
 
-        // Token: 0x04003C86 RID: 15494
+        
         private int _MapGridWidth;
 
-        // Token: 0x04003C87 RID: 15495
+        
         private int _MapGridHeight;
 
-        // Token: 0x04003C88 RID: 15496
+        
         private int _MapGridXNum = 0;
 
-        // Token: 0x04003C89 RID: 15497
+        
         private int _MapGridYNum = 0;
 
-        // Token: 0x04003C8A RID: 15498
+        
         private int _MapGridTotalNum = 0;
 
-        // Token: 0x04003C8B RID: 15499
+        
         private Dictionary<object, int> _Obj2GridDict = new Dictionary<object, int>(1000);
 
-        // Token: 0x04003C8C RID: 15500
+        
         private MapGridSpriteItem[] MyMapGridSpriteItem = null;
     }
 }

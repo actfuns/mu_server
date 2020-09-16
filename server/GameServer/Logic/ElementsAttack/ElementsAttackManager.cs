@@ -5,10 +5,10 @@ using GameServer.Logic.JingJiChang;
 
 namespace GameServer.Logic.ElementsAttack
 {
-	// Token: 0x0200029B RID: 667
+	
 	public class ElementsAttackManager
 	{
-		// Token: 0x060009EA RID: 2538 RVA: 0x0009DDA8 File Offset: 0x0009BFA8
+		
 		public string CalcElementInjureLog(IObject attacker, IObject defender, double injurePercent)
 		{
 			StringBuilder sb = new StringBuilder();
@@ -23,7 +23,7 @@ namespace GameServer.Logic.ElementsAttack
 			return sb.ToString();
 		}
 
-		// Token: 0x060009EB RID: 2539 RVA: 0x0009DE2C File Offset: 0x0009C02C
+		
 		public int CalcAllElementDamage(IObject attacker, IObject defender)
 		{
 			int result;
@@ -50,7 +50,7 @@ namespace GameServer.Logic.ElementsAttack
 			return result;
 		}
 
-		// Token: 0x060009EC RID: 2540 RVA: 0x0009DED0 File Offset: 0x0009C0D0
+		
 		private int CalcElementDamage(IObject attacker, IObject defender, EElementDamageType eEDT, double dmgAddPercent = 0.0, double dmgSubPercent = 0.0, double penetAddPercent = 0.0)
 		{
 			double AtkPenetration = this.GetElementDamagePenetration(attacker, eEDT) + penetAddPercent;
@@ -79,7 +79,7 @@ namespace GameServer.Logic.ElementsAttack
 			return (nElementInjure > 0) ? nElementInjure : 0;
 		}
 
-		// Token: 0x060009ED RID: 2541 RVA: 0x0009DFFC File Offset: 0x0009C1FC
+		
 		public double GetElementDamagePenetration(IObject attacker, EElementDamageType eEDT)
 		{
 			double val = 0.0;
@@ -162,7 +162,7 @@ namespace GameServer.Logic.ElementsAttack
 			return Math.Max(val, 0.0);
 		}
 
-		// Token: 0x060009EE RID: 2542 RVA: 0x0009E2C8 File Offset: 0x0009C4C8
+		
 		public double GetDeElementDamagePenetration(IObject defender, EElementDamageType eEDT)
 		{
 			double val = 0.0;
@@ -233,7 +233,7 @@ namespace GameServer.Logic.ElementsAttack
 			return Math.Max(val, 0.0);
 		}
 
-		// Token: 0x060009EF RID: 2543 RVA: 0x0009E4F4 File Offset: 0x0009C6F4
+		
 		public int GetElementAttack(IObject attacker, EElementDamageType eEDT)
 		{
 			int val = 0;
@@ -304,7 +304,7 @@ namespace GameServer.Logic.ElementsAttack
 			return Math.Max(val, 0);
 		}
 
-		// Token: 0x060009F0 RID: 2544 RVA: 0x0009E71C File Offset: 0x0009C91C
+		
 		public double GetElementEnhance(IObject attacker, EElementDamageType eEDT)
 		{
 			double val = 0.0;
@@ -340,7 +340,7 @@ namespace GameServer.Logic.ElementsAttack
 			return val;
 		}
 
-		// Token: 0x060009F1 RID: 2545 RVA: 0x0009E7CC File Offset: 0x0009C9CC
+		
 		public double GetDeElementReduce(IObject attacker, EElementDamageType eEDT)
 		{
 			double val = 0.0;
@@ -376,7 +376,7 @@ namespace GameServer.Logic.ElementsAttack
 			return val;
 		}
 
-		// Token: 0x060009F2 RID: 2546 RVA: 0x0009E87C File Offset: 0x0009CA7C
+		
 		public double GetJJCRobotExtProps(int nIndex, double[] extProps)
 		{
 			double result;
@@ -391,10 +391,10 @@ namespace GameServer.Logic.ElementsAttack
 			return result;
 		}
 
-		// Token: 0x0400106E RID: 4206
+		
 		public const bool LogElementInjure = false;
 
-		// Token: 0x0400106F RID: 4207
+		
 		public static readonly string[] ElementAttrName = new string[]
 		{
 			"unknown",

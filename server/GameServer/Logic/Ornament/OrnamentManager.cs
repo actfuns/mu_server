@@ -11,16 +11,16 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic.Ornament
 {
-	// Token: 0x020003B0 RID: 944
+	
 	public class OrnamentManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener
 	{
-		// Token: 0x06000FFD RID: 4093 RVA: 0x000F9C70 File Offset: 0x000F7E70
+		
 		public static OrnamentManager getInstance()
 		{
 			return OrnamentManager.instance;
 		}
 
-		// Token: 0x06000FFE RID: 4094 RVA: 0x000F9C88 File Offset: 0x000F7E88
+		
 		public bool initialize()
 		{
 			this.evHandlerDict = new Dictionary<OrnamentGoalType, Action<OrnamentGoalEventObject, List<int>, Dictionary<int, OrnamentConfigData>>>();
@@ -44,7 +44,7 @@ namespace GameServer.Logic.Ornament
 			return this.InitConfig();
 		}
 
-		// Token: 0x06000FFF RID: 4095 RVA: 0x000F9E68 File Offset: 0x000F8068
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1615, 1, 1, OrnamentManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -56,7 +56,7 @@ namespace GameServer.Logic.Ornament
 			return true;
 		}
 
-		// Token: 0x06001000 RID: 4096 RVA: 0x000F9F00 File Offset: 0x000F8100
+		
 		public bool showdown()
 		{
 			GlobalEventSource.getInstance().removeListener(37, OrnamentManager.getInstance());
@@ -64,19 +64,19 @@ namespace GameServer.Logic.Ornament
 			return true;
 		}
 
-		// Token: 0x06001001 RID: 4097 RVA: 0x000F9F38 File Offset: 0x000F8138
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06001002 RID: 4098 RVA: 0x000F9F4C File Offset: 0x000F814C
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06001003 RID: 4099 RVA: 0x000F9F60 File Offset: 0x000F8160
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -109,7 +109,7 @@ namespace GameServer.Logic.Ornament
 			return result;
 		}
 
-		// Token: 0x06001004 RID: 4100 RVA: 0x000FA020 File Offset: 0x000F8220
+		
 		public void OnLogin(GameClient client)
 		{
 			bool isDisable = GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System2Dot2);
@@ -156,7 +156,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x06001005 RID: 4101 RVA: 0x000FA254 File Offset: 0x000F8454
+		
 		private void HandleBHMatchGoldAccident(GameClient client)
 		{
 			Dictionary<int, OrnamentData> OrnamentDataDict = client.ClientData.OrnamentDataDict;
@@ -203,7 +203,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x06001006 RID: 4102 RVA: 0x000FA458 File Offset: 0x000F8658
+		
 		public int GetOrnamentCharmPoint(GoodsData goodsData)
 		{
 			bool isDisable = GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System2Dot2);
@@ -240,7 +240,7 @@ namespace GameServer.Logic.Ornament
 			return result;
 		}
 
-		// Token: 0x06001007 RID: 4103 RVA: 0x000FA51C File Offset: 0x000F871C
+		
 		private void InitOrnamentSlotData(GameClient client)
 		{
 			OrnamentData oData = null;
@@ -254,7 +254,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x06001008 RID: 4104 RVA: 0x000FA58C File Offset: 0x000F878C
+		
 		private int CalcOrnamentSlotForgeTotalLev(GameClient client)
 		{
 			int result = 0;
@@ -268,7 +268,7 @@ namespace GameServer.Logic.Ornament
 			return result;
 		}
 
-		// Token: 0x06001009 RID: 4105 RVA: 0x000FA628 File Offset: 0x000F8828
+		
 		private void TryActiveOrnamentSlot(GameClient client)
 		{
 			int totalLev = this.CalcOrnamentSlotForgeTotalLev(client);
@@ -299,7 +299,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x0600100A RID: 4106 RVA: 0x000FA734 File Offset: 0x000F8934
+		
 		private bool UpdateDb(int roleid, OrnamentData itemData, int serverId)
 		{
 			bool result;
@@ -319,7 +319,7 @@ namespace GameServer.Logic.Ornament
 			return result;
 		}
 
-		// Token: 0x0600100B RID: 4107 RVA: 0x000FA794 File Offset: 0x000F8994
+		
 		public int _CanUsingOrnament(GameClient client, int toBagIndex, List<GoodsData> usingList)
 		{
 			int i = 0;
@@ -343,7 +343,7 @@ namespace GameServer.Logic.Ornament
 			return 0;
 		}
 
-		// Token: 0x0600100C RID: 4108 RVA: 0x000FA814 File Offset: 0x000F8A14
+		
 		public GoodsData GetOrnamentGoodsDataByDbID(GameClient client, int id)
 		{
 			GoodsData result;
@@ -368,7 +368,7 @@ namespace GameServer.Logic.Ornament
 			return result;
 		}
 
-		// Token: 0x0600100D RID: 4109 RVA: 0x000FA8DC File Offset: 0x000F8ADC
+		
 		public GoodsData GetOrnamentGoodsDataByGoodsID(GameClient client, int id)
 		{
 			GoodsData result;
@@ -393,7 +393,7 @@ namespace GameServer.Logic.Ornament
 			return result;
 		}
 
-		// Token: 0x0600100E RID: 4110 RVA: 0x000FA9A4 File Offset: 0x000F8BA4
+		
 		public GoodsData AddOrnamentGoodsData(GameClient client, int id, int goodsID, int forgeLevel, int quality, int goodsNum, int binding, int site, string jewelList, string endTime, int addPropIndex, int bornIndex, int lucky, int strong, int ExcellenceProperty, int nAppendPropLev, int nEquipChangeLife)
 		{
 			GoodsData gd = new GoodsData
@@ -423,7 +423,7 @@ namespace GameServer.Logic.Ornament
 			return gd;
 		}
 
-		// Token: 0x0600100F RID: 4111 RVA: 0x000FAA6C File Offset: 0x000F8C6C
+		
 		public void AddOrnamentGoodsData(GameClient client, GoodsData goodsData)
 		{
 			if (goodsData.Site == 9000)
@@ -440,7 +440,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x06001010 RID: 4112 RVA: 0x000FAB0C File Offset: 0x000F8D0C
+		
 		public bool OrnamentCanSaleBack(GameClient client, int GoodsID)
 		{
 			bool isDisable = GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System2Dot2);
@@ -480,7 +480,7 @@ namespace GameServer.Logic.Ornament
 			return result;
 		}
 
-		// Token: 0x06001011 RID: 4113 RVA: 0x000FAC20 File Offset: 0x000F8E20
+		
 		public bool OrnamentCanAdd(GameClient client, int GoodsID)
 		{
 			int nCategories = Global.GetGoodsCatetoriy(GoodsID);
@@ -512,7 +512,7 @@ namespace GameServer.Logic.Ornament
 			return result;
 		}
 
-		// Token: 0x06001012 RID: 4114 RVA: 0x000FAD18 File Offset: 0x000F8F18
+		
 		public void RemoveOrnamentGoodsData(GameClient client, GoodsData goodsData)
 		{
 			if (null != client.ClientData.OrnamentGoodsDataList)
@@ -538,7 +538,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x06001013 RID: 4115 RVA: 0x000FAE00 File Offset: 0x000F9000
+		
 		public void RefreshOrnamentProps(GameClient client)
 		{
 			lock (client.ClientData.OrnamentGoodsDataList)
@@ -631,7 +631,7 @@ namespace GameServer.Logic.Ornament
 			GameManager.ClientMgr.NotifyUpdateEquipProps(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, client);
 		}
 
-		// Token: 0x06001014 RID: 4116 RVA: 0x000FB260 File Offset: 0x000F9460
+		
 		private bool CheckCanActiveChengJiuOrnament(GameClient client, OrnamentData data, OrnamentConfigData itemConfig)
 		{
 			bool result;
@@ -665,7 +665,7 @@ namespace GameServer.Logic.Ornament
 			return result;
 		}
 
-		// Token: 0x06001015 RID: 4117 RVA: 0x000FB2F4 File Offset: 0x000F94F4
+		
 		public void processEvent(EventObject eventObject)
 		{
 			if (eventObject.getEventType() == 14)
@@ -709,7 +709,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x06001016 RID: 4118 RVA: 0x000FB464 File Offset: 0x000F9664
+		
 		private void _Handle_Talent(OrnamentGoalEventObject evObj, List<int> goalIdList, Dictionary<int, OrnamentConfigData> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -732,7 +732,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x06001017 RID: 4119 RVA: 0x000FB55C File Offset: 0x000F975C
+		
 		private void _Handle_GoalAddNum(OrnamentGoalEventObject evObj, List<int> goalIdList, Dictionary<int, OrnamentConfigData> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -766,7 +766,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x06001018 RID: 4120 RVA: 0x000FB6B4 File Offset: 0x000F98B4
+		
 		private void _Handle_KingOfBattle(OrnamentGoalEventObject evObj, List<int> goalIdList, Dictionary<int, OrnamentConfigData> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -800,7 +800,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x06001019 RID: 4121 RVA: 0x000FB808 File Offset: 0x000F9A08
+		
 		private void _Handle_YongZheZhanChang(OrnamentGoalEventObject evObj, List<int> goalIdList, Dictionary<int, OrnamentConfigData> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -834,7 +834,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x0600101A RID: 4122 RVA: 0x000FB95C File Offset: 0x000F9B5C
+		
 		private void _Handle_HuanYingSiYuan(OrnamentGoalEventObject evObj, List<int> goalIdList, Dictionary<int, OrnamentConfigData> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -868,7 +868,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x0600101B RID: 4123 RVA: 0x000FBAB0 File Offset: 0x000F9CB0
+		
 		private void _Handle_JingJiChallenge(OrnamentGoalEventObject evObj, List<int> goalIdList, Dictionary<int, OrnamentConfigData> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -902,7 +902,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x0600101C RID: 4124 RVA: 0x000FBC04 File Offset: 0x000F9E04
+		
 		private void _Handle_BHMatchGoldChampion(OrnamentGoalEventObject evObj, List<int> goalIdList, Dictionary<int, OrnamentConfigData> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -936,7 +936,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x0600101D RID: 4125 RVA: 0x000FBD58 File Offset: 0x000F9F58
+		
 		private void _Handle_BHMatchJoin(OrnamentGoalEventObject evObj, List<int> goalIdList, Dictionary<int, OrnamentConfigData> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -963,7 +963,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x0600101E RID: 4126 RVA: 0x000FBE60 File Offset: 0x000FA060
+		
 		private void _Handle_EscapeKillRole(OrnamentGoalEventObject evObj, List<int> goalIdList, Dictionary<int, OrnamentConfigData> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -990,7 +990,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x0600101F RID: 4127 RVA: 0x000FBF68 File Offset: 0x000FA168
+		
 		private void _Handle_BHMatchGoldMVP(OrnamentGoalEventObject evObj, List<int> goalIdList, Dictionary<int, OrnamentConfigData> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1017,7 +1017,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x06001020 RID: 4128 RVA: 0x000FC070 File Offset: 0x000FA270
+		
 		private void _Handle_BHMatchWin(OrnamentGoalEventObject evObj, List<int> goalIdList, Dictionary<int, OrnamentConfigData> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1044,7 +1044,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x06001021 RID: 4129 RVA: 0x000FC178 File Offset: 0x000FA378
+		
 		private void _Handle_KingOfBattleMVP(OrnamentGoalEventObject evObj, List<int> goalIdList, Dictionary<int, OrnamentConfigData> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1078,7 +1078,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x06001022 RID: 4130 RVA: 0x000FC2CC File Offset: 0x000FA4CC
+		
 		private void _Handle_YongZheZhanChangMVP(OrnamentGoalEventObject evObj, List<int> goalIdList, Dictionary<int, OrnamentConfigData> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1112,7 +1112,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x06001023 RID: 4131 RVA: 0x000FC420 File Offset: 0x000FA620
+		
 		private void _Handle_TianTiPT(OrnamentGoalEventObject evObj, List<int> goalIdList, Dictionary<int, OrnamentConfigData> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1149,7 +1149,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x06001024 RID: 4132 RVA: 0x000FC590 File Offset: 0x000FA790
+		
 		private void _Handle_TianTiDiamond(OrnamentGoalEventObject evObj, List<int> goalIdList, Dictionary<int, OrnamentConfigData> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1186,7 +1186,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x06001025 RID: 4133 RVA: 0x000FC700 File Offset: 0x000FA900
+		
 		private void _Handle_CoupleArenaDuanWei(OrnamentGoalEventObject evObj, List<int> goalIdList, Dictionary<int, OrnamentConfigData> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1224,7 +1224,7 @@ namespace GameServer.Logic.Ornament
 			}
 		}
 
-		// Token: 0x06001026 RID: 4134 RVA: 0x000FC89C File Offset: 0x000FAA9C
+		
 		public bool ProcessOrnamentGetDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1240,7 +1240,7 @@ namespace GameServer.Logic.Ornament
 			return false;
 		}
 
-		// Token: 0x06001027 RID: 4135 RVA: 0x000FC900 File Offset: 0x000FAB00
+		
 		public bool ProcessOrnamentGetGoodsListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1256,7 +1256,7 @@ namespace GameServer.Logic.Ornament
 			return false;
 		}
 
-		// Token: 0x06001028 RID: 4136 RVA: 0x000FC964 File Offset: 0x000FAB64
+		
 		public bool ProcessOrnamentSlotForgeCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1352,7 +1352,7 @@ namespace GameServer.Logic.Ornament
 			return false;
 		}
 
-		// Token: 0x06001029 RID: 4137 RVA: 0x000FCCC4 File Offset: 0x000FAEC4
+		
 		public bool ProcessOrnamentActiveCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1431,7 +1431,7 @@ namespace GameServer.Logic.Ornament
 			return false;
 		}
 
-		// Token: 0x0600102A RID: 4138 RVA: 0x000FD058 File Offset: 0x000FB258
+		
 		public bool InitConfig()
 		{
 			List<int> tempOrnamentSlotOpenConfig = new List<int>();
@@ -1461,7 +1461,7 @@ namespace GameServer.Logic.Ornament
 			return this.LoadOrnamentConfigFile() && this.LoadOrnamentSlotLevUpFile() && this.LoadOrnamentGroupFile();
 		}
 
-		// Token: 0x0600102B RID: 4139 RVA: 0x000FD174 File Offset: 0x000FB374
+		
 		public bool LoadOrnamentConfigFile()
 		{
 			try
@@ -1508,7 +1508,7 @@ namespace GameServer.Logic.Ornament
 			return true;
 		}
 
-		// Token: 0x0600102C RID: 4140 RVA: 0x000FD3A8 File Offset: 0x000FB5A8
+		
 		public bool LoadOrnamentSlotLevUpFile()
 		{
 			try
@@ -1544,7 +1544,7 @@ namespace GameServer.Logic.Ornament
 			return true;
 		}
 
-		// Token: 0x0600102D RID: 4141 RVA: 0x000FD510 File Offset: 0x000FB710
+		
 		public bool LoadOrnamentGroupFile()
 		{
 			try
@@ -1608,37 +1608,37 @@ namespace GameServer.Logic.Ornament
 			return true;
 		}
 
-		// Token: 0x040018D2 RID: 6354
+		
 		private const string Ornament_OrnamentFileName = "Config/Ornament.xml";
 
-		// Token: 0x040018D3 RID: 6355
+		
 		private const string Ornament_OrnamentSiteFileName = "Config/OrnamentSite.xml";
 
-		// Token: 0x040018D4 RID: 6356
+		
 		private const string Ornament_OrnamentGroupFileName = "Config/OrnamentGroup.xml";
 
-		// Token: 0x040018D5 RID: 6357
+		
 		private Dictionary<OrnamentGoalType, Action<OrnamentGoalEventObject, List<int>, Dictionary<int, OrnamentConfigData>>> evHandlerDict = null;
 
-		// Token: 0x040018D6 RID: 6358
+		
 		private Dictionary<OrnamentGoalType, List<int>> Func2GoalId = null;
 
-		// Token: 0x040018D7 RID: 6359
+		
 		private object ConfigMutex = new object();
 
-		// Token: 0x040018D8 RID: 6360
+		
 		protected List<int> OrnamentSlotOpenConfig = new List<int>();
 
-		// Token: 0x040018D9 RID: 6361
+		
 		protected Dictionary<int, OrnamentConfigData> OrnamentConfig = null;
 
-		// Token: 0x040018DA RID: 6362
+		
 		protected Dictionary<int, OrnamentSlotConfigData> OrnamentSlotLevUpConfig = null;
 
-		// Token: 0x040018DB RID: 6363
+		
 		protected List<OrnamentGroupConfigData> OrnamentGroupConfig = null;
 
-		// Token: 0x040018DC RID: 6364
+		
 		private static OrnamentManager instance = new OrnamentManager();
 	}
 }

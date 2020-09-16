@@ -6,21 +6,21 @@ using Tmsk.Contract.KuaFuData;
 
 namespace KF.Remoting.KFBoCai
 {
-	// Token: 0x02000031 RID: 49
+	
 	public class KFBoCaiShopManager
 	{
-		// Token: 0x06000249 RID: 585 RVA: 0x000223F8 File Offset: 0x000205F8
+		
 		public static KFBoCaiShopManager GetInstance()
 		{
 			return KFBoCaiShopManager.instance;
 		}
 
-		// Token: 0x0600024A RID: 586 RVA: 0x0002240F File Offset: 0x0002060F
+		
 		private KFBoCaiShopManager()
 		{
 		}
 
-		// Token: 0x0600024B RID: 587 RVA: 0x00022430 File Offset: 0x00020630
+		
 		public void InitData()
 		{
 			try
@@ -39,7 +39,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x0600024C RID: 588 RVA: 0x000224E8 File Offset: 0x000206E8
+		
 		public void Update()
 		{
 			try
@@ -59,7 +59,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x0600024D RID: 589 RVA: 0x000225E8 File Offset: 0x000207E8
+		
 		private bool AddItem(KFBoCaiShopDB Item)
 		{
 			try
@@ -87,7 +87,7 @@ namespace KF.Remoting.KFBoCai
 			return false;
 		}
 
-		// Token: 0x0600024E RID: 590 RVA: 0x00022734 File Offset: 0x00020934
+		
 		public bool BuyItem(KFBoCaiShopDB Item, int maxNum)
 		{
 			try
@@ -112,16 +112,16 @@ namespace KF.Remoting.KFBoCai
 			return false;
 		}
 
-		// Token: 0x0400013E RID: 318
+		
 		private static KFBoCaiShopManager instance = new KFBoCaiShopManager();
 
-		// Token: 0x0400013F RID: 319
+		
 		private List<KFBoCaiShopDB> cacheList = new List<KFBoCaiShopDB>();
 
-		// Token: 0x04000140 RID: 320
+		
 		private DateTime StartTime;
 
-		// Token: 0x04000141 RID: 321
+		
 		public object mutex = new object();
 	}
 }

@@ -5,10 +5,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006DB RID: 1755
+	
 	public class GoodsBaoGuoCachingMgr
 	{
-		// Token: 0x060029DE RID: 10718 RVA: 0x002591A4 File Offset: 0x002573A4
+		
 		public static List<GoodsData> FindGoodsBaoGuoByID(int baoguoID)
 		{
 			List<GoodsData> goodsDataList = null;
@@ -16,7 +16,7 @@ namespace GameServer.Logic
 			return goodsDataList;
 		}
 
-		// Token: 0x060029DF RID: 10719 RVA: 0x002591C8 File Offset: 0x002573C8
+		
 		public static int LoadGoodsBaoGuoDict()
 		{
 			try
@@ -93,7 +93,7 @@ namespace GameServer.Logic
 			return -1;
 		}
 
-		// Token: 0x0400397A RID: 14714
+		
 		private static Dictionary<int, List<GoodsData>> _GoodsBaoGuoDict = null;
 	}
 }

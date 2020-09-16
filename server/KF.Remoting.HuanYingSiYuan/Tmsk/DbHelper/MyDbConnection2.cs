@@ -8,17 +8,17 @@ using Server.Tools;
 
 namespace Tmsk.DbHelper
 {
-	// Token: 0x0200001E RID: 30
+	
 	public class MyDbConnection2
 	{
-		// Token: 0x060000D9 RID: 217 RVA: 0x0000AF78 File Offset: 0x00009178
+		
 		public MyDbConnection2(string connStr, string pageCodeNames)
 		{
 			this.ConnStr = connStr;
 			this.PageCodeNames = pageCodeNames;
 		}
 
-		// Token: 0x060000DA RID: 218 RVA: 0x0000AFA8 File Offset: 0x000091A8
+		
 		public bool Open()
 		{
 			bool success = false;
@@ -52,7 +52,7 @@ namespace Tmsk.DbHelper
 			return success;
 		}
 
-		// Token: 0x060000DB RID: 219 RVA: 0x0000B068 File Offset: 0x00009268
+		
 		public bool IsConnected()
 		{
 			if (null != this.DbConn)
@@ -65,7 +65,7 @@ namespace Tmsk.DbHelper
 			return false;
 		}
 
-		// Token: 0x060000DC RID: 220 RVA: 0x0000B0B8 File Offset: 0x000092B8
+		
 		public void Close()
 		{
 			if (null != this.DbConn)
@@ -81,7 +81,7 @@ namespace Tmsk.DbHelper
 			}
 		}
 
-		// Token: 0x060000DD RID: 221 RVA: 0x0000B108 File Offset: 0x00009308
+		
 		public void UseDatabase(string databaseKey, string databaseName)
 		{
 			if (databaseKey != this.DatabaseKey && !string.IsNullOrEmpty(databaseName))
@@ -91,7 +91,7 @@ namespace Tmsk.DbHelper
 			}
 		}
 
-		// Token: 0x060000DE RID: 222 RVA: 0x0000B14C File Offset: 0x0000934C
+		
 		public int ExecuteNonQuery(string sql, int commandTimeout = 0)
 		{
 			int result = -1;
@@ -113,7 +113,7 @@ namespace Tmsk.DbHelper
 			return result;
 		}
 
-		// Token: 0x060000DF RID: 223 RVA: 0x0000B1E0 File Offset: 0x000093E0
+		
 		public int ExecuteWithContent(string sql, string content)
 		{
 			int result = 0;
@@ -133,7 +133,7 @@ namespace Tmsk.DbHelper
 			return result;
 		}
 
-		// Token: 0x060000E0 RID: 224 RVA: 0x0000B278 File Offset: 0x00009478
+		
 		public object GetSingle(string sql, int commandTimeout = 0, params MySqlParameter[] cmdParms)
 		{
 			try
@@ -167,7 +167,7 @@ namespace Tmsk.DbHelper
 			return null;
 		}
 
-		// Token: 0x060000E1 RID: 225 RVA: 0x0000B370 File Offset: 0x00009570
+		
 		public object ExecuteSqlGet(string sql, string content)
 		{
 			try
@@ -191,7 +191,7 @@ namespace Tmsk.DbHelper
 			return null;
 		}
 
-		// Token: 0x060000E2 RID: 226 RVA: 0x0000B430 File Offset: 0x00009630
+		
 		public MySqlDataReader ExecuteReader(string sql, params MySqlParameter[] cmdParms)
 		{
 			try
@@ -217,7 +217,7 @@ namespace Tmsk.DbHelper
 			return null;
 		}
 
-		// Token: 0x060000E3 RID: 227 RVA: 0x0000B4E8 File Offset: 0x000096E8
+		
 		public DataSet Query(string SQLString, int Times = 0)
 		{
 			DataSet ds = new DataSet();
@@ -245,7 +245,7 @@ namespace Tmsk.DbHelper
 			return ds;
 		}
 
-		// Token: 0x060000E4 RID: 228 RVA: 0x0000B590 File Offset: 0x00009790
+		
 		public DataSet Query(string SQLString, params MySqlParameter[] cmdParms)
 		{
 			DataSet ds = new DataSet();
@@ -275,7 +275,7 @@ namespace Tmsk.DbHelper
 			return result;
 		}
 
-		// Token: 0x060000E5 RID: 229 RVA: 0x0000B650 File Offset: 0x00009850
+		
 		public int ExecuteSqlTran(List<string> SQLStringList)
 		{
 			MySqlConnection connection = this.DbConn;
@@ -309,7 +309,7 @@ namespace Tmsk.DbHelper
 			return result;
 		}
 
-		// Token: 0x060000E6 RID: 230 RVA: 0x0000B724 File Offset: 0x00009924
+		
 		public int ExecuteSqlInsertImg(string strSQL, List<Tuple<string, byte[]>> imgList)
 		{
 			int result = 0;
@@ -334,7 +334,7 @@ namespace Tmsk.DbHelper
 			return result;
 		}
 
-		// Token: 0x060000E7 RID: 231 RVA: 0x0000B80C File Offset: 0x00009A0C
+		
 		public int ExecuteSqlTran(List<CommandInfo> list, List<CommandInfo> oracleCmdSqlList)
 		{
 			MySqlConnection connection = this.DbConn;
@@ -420,7 +420,7 @@ namespace Tmsk.DbHelper
 			return result;
 		}
 
-		// Token: 0x060000E8 RID: 232 RVA: 0x0000BB50 File Offset: 0x00009D50
+		
 		public int ExecuteSql(string sql, params MySqlParameter[] cmdParms)
 		{
 			int result = 0;
@@ -440,7 +440,7 @@ namespace Tmsk.DbHelper
 			return result;
 		}
 
-		// Token: 0x060000E9 RID: 233 RVA: 0x0000BBEC File Offset: 0x00009DEC
+		
 		public void ExecuteSqlTran(Hashtable SQLStringList)
 		{
 			using (MySqlTransaction trans = this.DbConn.BeginTransaction())
@@ -469,7 +469,7 @@ namespace Tmsk.DbHelper
 			}
 		}
 
-		// Token: 0x060000EA RID: 234 RVA: 0x0000BD0C File Offset: 0x00009F0C
+		
 		public void ExecuteSqlTranWithIndentity(Hashtable SQLStringList)
 		{
 			using (MySqlTransaction trans = this.DbConn.BeginTransaction())
@@ -513,7 +513,7 @@ namespace Tmsk.DbHelper
 			}
 		}
 
-		// Token: 0x060000EB RID: 235 RVA: 0x0000BEFC File Offset: 0x0000A0FC
+		
 		public int ExecuteSqlTran(List<CommandInfo> cmdList)
 		{
 			int result;
@@ -577,7 +577,7 @@ namespace Tmsk.DbHelper
 			return result;
 		}
 
-		// Token: 0x060000EC RID: 236 RVA: 0x0000C144 File Offset: 0x0000A344
+		
 		public void ExecuteSqlTranWithIndentity(List<CommandInfo> SQLStringList)
 		{
 			using (MySqlTransaction trans = this.DbConn.BeginTransaction())
@@ -620,7 +620,7 @@ namespace Tmsk.DbHelper
 			}
 		}
 
-		// Token: 0x060000ED RID: 237 RVA: 0x0000C31C File Offset: 0x0000A51C
+		
 		private static void PrepareCommand(MySqlCommand cmd, MySqlConnection conn, MySqlTransaction trans, string cmdText, MySqlParameter[] cmdParms)
 		{
 			if (conn.State != ConnectionState.Open)
@@ -647,19 +647,19 @@ namespace Tmsk.DbHelper
 			}
 		}
 
-		// Token: 0x040000B1 RID: 177
+		
 		public MySqlConnection DbConn = null;
 
-		// Token: 0x040000B2 RID: 178
+		
 		public string DatabaseKey = null;
 
-		// Token: 0x040000B3 RID: 179
+		
 		private string DatabaseName = null;
 
-		// Token: 0x040000B4 RID: 180
+		
 		private string ConnStr;
 
-		// Token: 0x040000B5 RID: 181
+		
 		private string PageCodeNames;
 	}
 }

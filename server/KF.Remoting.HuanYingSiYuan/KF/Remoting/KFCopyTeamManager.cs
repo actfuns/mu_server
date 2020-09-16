@@ -8,16 +8,16 @@ using Server.Tools;
 
 namespace KF.Remoting
 {
-    // Token: 0x02000035 RID: 53
+    
     public class KFCopyTeamManager
     {
-        // Token: 0x06000254 RID: 596 RVA: 0x000228DF File Offset: 0x00020ADF
+        
         public void SetService(KuaFuCopyService service)
         {
             this._KFCopyService = service;
         }
 
-        // Token: 0x06000255 RID: 597 RVA: 0x000228EC File Offset: 0x00020AEC
+        
         public KFCopyTeamCreateRsp CreateTeam(KFCopyTeamCreateReq req)
         {
             KFCopyTeamCreateRsp rsp = new KFCopyTeamCreateRsp();
@@ -87,7 +87,7 @@ namespace KF.Remoting
             return rsp;
         }
 
-        // Token: 0x06000256 RID: 598 RVA: 0x00022C20 File Offset: 0x00020E20
+        
         public KFCopyTeamJoinRsp JoinTeam(KFCopyTeamJoinReq req)
         {
             KFCopyTeamJoinRsp rsp = new KFCopyTeamJoinRsp();
@@ -144,7 +144,7 @@ namespace KF.Remoting
             return rsp;
         }
 
-        // Token: 0x06000257 RID: 599 RVA: 0x00022EB0 File Offset: 0x000210B0
+        
         public KFCopyTeamKickoutRsp KickoutTeam(KFCopyTeamKickoutReq req)
         {
             KFCopyTeamKickoutRsp rsp = new KFCopyTeamKickoutRsp();
@@ -208,7 +208,7 @@ namespace KF.Remoting
             return rsp;
         }
 
-        // Token: 0x06000258 RID: 600 RVA: 0x000231C8 File Offset: 0x000213C8
+        
         public KFCopyTeamLeaveRsp LeaveTeam(KFCopyTeamLeaveReq req)
         {
             KFCopyTeamLeaveRsp rsp = new KFCopyTeamLeaveRsp();
@@ -268,7 +268,7 @@ namespace KF.Remoting
             return rsp;
         }
 
-        // Token: 0x06000259 RID: 601 RVA: 0x00023480 File Offset: 0x00021680
+        
         public KFCopyTeamSetReadyRsp TeamSetReady(KFCopyTeamSetReadyReq req)
         {
             KFCopyTeamSetReadyRsp rsp = new KFCopyTeamSetReadyRsp();
@@ -331,7 +331,7 @@ namespace KF.Remoting
             return rsp;
         }
 
-        // Token: 0x0600025A RID: 602 RVA: 0x0002371C File Offset: 0x0002191C
+        
         public KFCopyTeamSetFlagRsp TeamSetFlag(KFCopyTeamSetFlagReq req)
         {
             KFCopyTeamSetFlagRsp rsp = new KFCopyTeamSetFlagRsp();
@@ -395,7 +395,7 @@ namespace KF.Remoting
             return rsp;
         }
 
-        // Token: 0x0600025B RID: 603 RVA: 0x000239EC File Offset: 0x00021BEC
+        
         public KFCopyTeamStartRsp StartGame(KFCopyTeamStartReq req)
         {
             KFCopyTeamStartRsp rsp = new KFCopyTeamStartRsp();
@@ -466,7 +466,7 @@ namespace KF.Remoting
             return rsp;
         }
 
-        // Token: 0x0600025C RID: 604 RVA: 0x00023CFC File Offset: 0x00021EFC
+        
         private void ForceLeaveRoom(int roleId)
         {
             lock (this.Mutex)
@@ -485,7 +485,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x0600025D RID: 605 RVA: 0x00023D94 File Offset: 0x00021F94
+        
         private void AddAsyncEvent(AsyncDataItem evItem)
         {
             if (evItem != null)
@@ -497,7 +497,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x0600025E RID: 606 RVA: 0x00023DF4 File Offset: 0x00021FF4
+        
         public AsyncDataItem[] PopAsyncEvent()
         {
             AsyncDataItem[] itemArray = null;
@@ -509,7 +509,7 @@ namespace KF.Remoting
             return itemArray;
         }
 
-        // Token: 0x0600025F RID: 607 RVA: 0x00023EAC File Offset: 0x000220AC
+        
         public void Update()
         {
             long nowMs = TimeUtil.NOW();
@@ -575,7 +575,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x06000260 RID: 608 RVA: 0x00024154 File Offset: 0x00022354
+        
         public void RemoveTeam(long teamId)
         {
             lock (this.Mutex)
@@ -612,7 +612,7 @@ namespace KF.Remoting
             }
         }
 
-        // Token: 0x06000261 RID: 609 RVA: 0x00024334 File Offset: 0x00022534
+        
         public CopyTeamErrorCodes RemoveMember(long teamId, int roleid)
         {
             CopyTeamErrorCodes result;
@@ -675,7 +675,7 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x06000262 RID: 610 RVA: 0x00024564 File Offset: 0x00022764
+        
         public CopyTeamData GetTeamData(long teamid)
         {
             CopyTeamData result;
@@ -694,7 +694,7 @@ namespace KF.Remoting
             return result;
         }
 
-        // Token: 0x06000263 RID: 611 RVA: 0x000245C8 File Offset: 0x000227C8
+        
         public KFCopyTeamAnalysis BuildAnalysisData()
         {
             KFCopyTeamAnalysis data = new KFCopyTeamAnalysis();
@@ -727,31 +727,31 @@ namespace KF.Remoting
             return data;
         }
 
-        // Token: 0x0400014A RID: 330
+        
         private object Mutex = new object();
 
-        // Token: 0x0400014B RID: 331
+        
         private Dictionary<int, long> RoleId2JoinedTeam = new Dictionary<int, long>();
 
-        // Token: 0x0400014C RID: 332
+        
         private Dictionary<long, CopyTeamData> CopyTeamDict = new Dictionary<long, CopyTeamData>();
 
-        // Token: 0x0400014D RID: 333
+        
         private Dictionary<int, HashSet<long>> CopyId2Teams = new Dictionary<int, HashSet<long>>();
 
-        // Token: 0x0400014E RID: 334
+        
         private long TimeLimitCopyLastCheckMs = 0L;
 
-        // Token: 0x0400014F RID: 335
+        
         private Dictionary<long, long> TimeLimitCopy = new Dictionary<long, long>();
 
-        // Token: 0x04000150 RID: 336
+        
         private Queue<AsyncDataItem> RoomEventQ = new Queue<AsyncDataItem>();
 
-        // Token: 0x04000151 RID: 337
+        
         private KuaFuCopyService _KFCopyService = null;
 
-        // Token: 0x04000152 RID: 338
+        
         public long TimeLimitMemberNoReadyMs = 0L;
     }
 }

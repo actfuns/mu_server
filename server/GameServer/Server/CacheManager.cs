@@ -4,10 +4,10 @@ using GameServer.Logic;
 
 namespace GameServer.Server
 {
-	// Token: 0x02000898 RID: 2200
+	
 	public class CacheManager
 	{
-		// Token: 0x06003D3B RID: 15675 RVA: 0x00344898 File Offset: 0x00342A98
+		
 		private static RoleMiniInfo GetRoleMiniInfo(long rid, int serverId)
 		{
 			RoleMiniInfo roleMiniInfo;
@@ -29,7 +29,7 @@ namespace GameServer.Server
 			return roleMiniInfo;
 		}
 
-		// Token: 0x06003D3C RID: 15676 RVA: 0x0034496C File Offset: 0x00342B6C
+		
 		public static void OnInitGame(GameClient client)
 		{
 			lock (CacheManager.roleMiniInfoDict)
@@ -47,7 +47,7 @@ namespace GameServer.Server
 			}
 		}
 
-		// Token: 0x06003D3D RID: 15677 RVA: 0x00344A0C File Offset: 0x00342C0C
+		
 		public static int GetZoneIdByRoleId(long rid, int serverId)
 		{
 			RoleMiniInfo roleMiniInfo = CacheManager.GetRoleMiniInfo(rid, serverId);
@@ -63,7 +63,7 @@ namespace GameServer.Server
 			return result;
 		}
 
-		// Token: 0x06003D3E RID: 15678 RVA: 0x00344A3C File Offset: 0x00342C3C
+		
 		public static string GetUserIdByRoleId(int rid, int serverId)
 		{
 			RoleMiniInfo roleMiniInfo = CacheManager.GetRoleMiniInfo((long)rid, serverId);
@@ -79,7 +79,7 @@ namespace GameServer.Server
 			return result;
 		}
 
-		// Token: 0x040047A7 RID: 18343
+		
 		private static Dictionary<long, RoleMiniInfo> roleMiniInfoDict = new Dictionary<long, RoleMiniInfo>();
 	}
 }

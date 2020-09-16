@@ -7,15 +7,15 @@ using Tmsk.Tools.Tools;
 
 namespace KF.Remoting.IPStatistics
 {
-	// Token: 0x02000021 RID: 33
+	
 	public class IPStatisticsPersistence
 	{
-		// Token: 0x060000F9 RID: 249 RVA: 0x0000C90F File Offset: 0x0000AB0F
+		
 		private IPStatisticsPersistence()
 		{
 		}
 
-		// Token: 0x060000FA RID: 250 RVA: 0x0000C930 File Offset: 0x0000AB30
+		
 		public void LoadConfig()
 		{
 			try
@@ -65,7 +65,7 @@ namespace KF.Remoting.IPStatistics
 			}
 		}
 
-		// Token: 0x060000FB RID: 251 RVA: 0x0000CC48 File Offset: 0x0000AE48
+		
 		public bool isCanPassIP(long ipAsInt)
 		{
 			bool result;
@@ -90,13 +90,13 @@ namespace KF.Remoting.IPStatistics
 			return result;
 		}
 
-		// Token: 0x040000C2 RID: 194
+		
 		public static readonly IPStatisticsPersistence Instance = new IPStatisticsPersistence();
 
-		// Token: 0x040000C3 RID: 195
+		
 		public List<StatisticsControl> _IPControlList = new List<StatisticsControl>();
 
-		// Token: 0x040000C4 RID: 196
+		
 		public List<IPPassList> _IPPassList = new List<IPPassList>();
 	}
 }

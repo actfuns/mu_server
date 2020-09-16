@@ -9,10 +9,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200076D RID: 1901
+	
 	public class NPCGeneralManager
 	{
-		// Token: 0x060030E1 RID: 12513 RVA: 0x002B5A38 File Offset: 0x002B3C38
+		
 		public static bool ReloadMapNPCRoles(int mapCode)
 		{
 			string fileName = string.Format("Map/{0}/npcs.xml", mapCode);
@@ -22,7 +22,7 @@ namespace GameServer.Logic
 			return NPCGeneralManager.LoadMapNPCRoles(mapCode, gameMap);
 		}
 
-		// Token: 0x060030E2 RID: 12514 RVA: 0x002B5A8C File Offset: 0x002B3C8C
+		
 		public static bool LoadMapNPCRoles(int mapCode, GameMap gameMap)
 		{
 			string fileName = string.Format("Map/{0}/npcs.xml", mapCode);
@@ -70,7 +70,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060030E3 RID: 12515 RVA: 0x002B5C78 File Offset: 0x002B3E78
+		
 		public static NPC GetNPCFromConfig(int mapCode, int npcID, int toX, int toY, int dir)
 		{
 			SystemXmlItem systemNPCItem = null;
@@ -107,7 +107,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060030E4 RID: 12516 RVA: 0x002B5D1C File Offset: 0x002B3F1C
+		
 		public static bool AddNpcToMap(NPC myNpc)
 		{
 			MapGrid mapGrid;
@@ -147,7 +147,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060030E5 RID: 12517 RVA: 0x002B5EEC File Offset: 0x002B40EC
+		
 		public static void RemoveMapNpcs(int mapCode)
 		{
 			if (mapCode > 0)
@@ -172,7 +172,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060030E6 RID: 12518 RVA: 0x002B6000 File Offset: 0x002B4200
+		
 		public static void RemoveMapNpc(int mapCode, int npcID)
 		{
 			if (mapCode > 0)
@@ -193,7 +193,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060030E7 RID: 12519 RVA: 0x002B60D0 File Offset: 0x002B42D0
+		
 		public static NPC FindNPC(int mapCode, int npcID)
 		{
 			foreach (KeyValuePair<string, NPC> item in NPCGeneralManager.ListNpc)
@@ -206,7 +206,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x060030E8 RID: 12520 RVA: 0x002B6160 File Offset: 0x002B4360
+		
 		public static byte[] GenerateNpcRoleBufferData(NPC myNpc)
 		{
 			SystemXmlItem systemNPC = null;
@@ -230,7 +230,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060030E9 RID: 12521 RVA: 0x002B6204 File Offset: 0x002B4404
+		
 		public static void SendMySelfNPCs(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList)
 		{
 			if (null != objsList)
@@ -249,7 +249,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060030EA RID: 12522 RVA: 0x002B6270 File Offset: 0x002B4470
+		
 		public static void DelMySelfNpcs(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList)
 		{
 			if (null != objsList)
@@ -265,10 +265,10 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04003D6D RID: 15725
+		
 		public static Dictionary<string, NPC> ListNpc = new Dictionary<string, NPC>();
 
-		// Token: 0x04003D6E RID: 15726
+		
 		public static object mutexAddNPC = new object();
 	}
 }

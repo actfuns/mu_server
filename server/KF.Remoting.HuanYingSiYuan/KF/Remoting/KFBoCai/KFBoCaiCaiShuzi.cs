@@ -8,23 +8,23 @@ using Tmsk.Contract.KuaFuData;
 
 namespace KF.Remoting.KFBoCai
 {
-	// Token: 0x0200002B RID: 43
+	
 	public class KFBoCaiCaiShuzi : BocaiBase
 	{
-		// Token: 0x060001F3 RID: 499 RVA: 0x0001CEB4 File Offset: 0x0001B0B4
+		
 		public static KFBoCaiCaiShuzi GetInstance()
 		{
 			return KFBoCaiCaiShuzi.instance;
 		}
 
-		// Token: 0x060001F4 RID: 500 RVA: 0x0001CECB File Offset: 0x0001B0CB
+		
 		private KFBoCaiCaiShuzi()
 		{
 			this.StopBuyTime = 1800;
 			this.BoCaiType = BoCaiTypeEnum.Bocai_CaiShuzi;
 		}
 
-		// Token: 0x060001F5 RID: 501 RVA: 0x0001CEF0 File Offset: 0x0001B0F0
+		
 		private void InitConfig()
 		{
 			try
@@ -64,7 +64,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x060001F6 RID: 502 RVA: 0x0001D100 File Offset: 0x0001B300
+		
 		private void StartServerSamePeriods(DateTime time)
 		{
 			try
@@ -157,7 +157,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x060001F7 RID: 503 RVA: 0x0001D4F0 File Offset: 0x0001B6F0
+		
 		private void GetOldBalance()
 		{
 			List<OpenLottery> dList;
@@ -172,7 +172,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x060001F8 RID: 504 RVA: 0x0001D570 File Offset: 0x0001B770
+		
 		protected override void Init()
 		{
 			try
@@ -222,7 +222,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x060001F9 RID: 505 RVA: 0x0001D778 File Offset: 0x0001B978
+		
 		private bool StartBuy(DateTime time, long Periods, long SurplusBalance = 0L)
 		{
 			this.PeriodsStartTime = DateTime.Parse(TimeUtil.DataTimeToString(time, "yyyy-MM-dd HH:mm:ss"));
@@ -245,7 +245,7 @@ namespace KF.Remoting.KFBoCai
 			return result;
 		}
 
-		// Token: 0x060001FA RID: 506 RVA: 0x0001D814 File Offset: 0x0001BA14
+		
 		private void SetUpToDBOpenData()
 		{
 			try
@@ -267,7 +267,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x060001FB RID: 507 RVA: 0x0001D928 File Offset: 0x0001BB28
+		
 		public override void UpData(bool reload = false)
 		{
 			try
@@ -348,7 +348,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x060001FC RID: 508 RVA: 0x0001DC74 File Offset: 0x0001BE74
+		
 		private void GetWinRoleNum(List<int> value, out int no1Num, out int no2Num, out int no3Num, out List<KFBoCaoHistoryData> Hsitory)
 		{
 			no1Num = 0;
@@ -406,7 +406,7 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x060001FD RID: 509 RVA: 0x0001DEC8 File Offset: 0x0001C0C8
+		
 		public override void Thread()
 		{
 			try
@@ -533,13 +533,13 @@ namespace KF.Remoting.KFBoCai
 			}
 		}
 
-		// Token: 0x060001FE RID: 510 RVA: 0x0001E4E0 File Offset: 0x0001C6E0
+		
 		private long GetNowPeriods(DateTime _time)
 		{
 			return Convert.ToInt64(string.Format("{0}1", TimeUtil.DataTimeToString(_time, "yyMMdd")));
 		}
 
-		// Token: 0x060001FF RID: 511 RVA: 0x0001E50C File Offset: 0x0001C70C
+		
 		public bool IsCanBuy(string buyValue, int buyNum, long DataPeriods)
 		{
 			bool result;
@@ -556,7 +556,7 @@ namespace KF.Remoting.KFBoCai
 			return result;
 		}
 
-		// Token: 0x06000200 RID: 512 RVA: 0x0001E594 File Offset: 0x0001C794
+		
 		public bool BuyBoCai(KFBuyBocaiData data)
 		{
 			bool result;
@@ -601,7 +601,7 @@ namespace KF.Remoting.KFBoCai
 			return result;
 		}
 
-		// Token: 0x06000201 RID: 513 RVA: 0x0001E780 File Offset: 0x0001C980
+		
 		public override OpenLottery GetOpenLottery()
 		{
 			OpenLottery result;
@@ -622,7 +622,7 @@ namespace KF.Remoting.KFBoCai
 			return result;
 		}
 
-		// Token: 0x06000202 RID: 514 RVA: 0x0001E850 File Offset: 0x0001CA50
+		
 		public override KFStageData GetKFStageData()
 		{
 			KFStageData result;
@@ -658,7 +658,7 @@ namespace KF.Remoting.KFBoCai
 			return result;
 		}
 
-		// Token: 0x06000203 RID: 515 RVA: 0x0001E9B4 File Offset: 0x0001CBB4
+		
 		private long GetLastTime(BoCaiStageEnum stage)
 		{
 			try
@@ -691,7 +691,7 @@ namespace KF.Remoting.KFBoCai
 			return 0L;
 		}
 
-		// Token: 0x06000204 RID: 516 RVA: 0x0001EABC File Offset: 0x0001CCBC
+		
 		public List<KFBoCaoHistoryData> GetWinHistory()
 		{
 			List<KFBoCaoHistoryData> result;
@@ -716,16 +716,16 @@ namespace KF.Remoting.KFBoCai
 			return result;
 		}
 
-		// Token: 0x04000129 RID: 297
+		
 		private const int UpAllBalanceTime = 600;
 
-		// Token: 0x0400012A RID: 298
+		
 		private static KFBoCaiCaiShuzi instance = new KFBoCaiCaiShuzi();
 
-		// Token: 0x0400012B RID: 299
+		
 		private CaiShuZiConfig Config = null;
 
-		// Token: 0x0400012C RID: 300
+		
 		private DateTime UpBalanceTime;
 	}
 }

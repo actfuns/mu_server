@@ -9,16 +9,16 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200052C RID: 1324
+	
 	internal class MarriageOtherLogic : ICmdProcessorEx, ICmdProcessor, IEventListener
 	{
-		// Token: 0x06001920 RID: 6432 RVA: 0x00188238 File Offset: 0x00186438
+		
 		public static MarriageOtherLogic getInstance()
 		{
 			return MarriageOtherLogic.instance;
 		}
 
-		// Token: 0x06001921 RID: 6433 RVA: 0x00188250 File Offset: 0x00186450
+		
 		public void init()
 		{
 			try
@@ -112,18 +112,18 @@ namespace GameServer.Logic
 			TCPCmdDispatcher.getInstance().registerProcessorEx(873, 1, 1, MarriageOtherLogic.getInstance(), TCPCmdFlags.IsStringArrayParams);
 		}
 
-		// Token: 0x06001922 RID: 6434 RVA: 0x001886D0 File Offset: 0x001868D0
+		
 		public void destroy()
 		{
 		}
 
-		// Token: 0x06001923 RID: 6435 RVA: 0x001886D4 File Offset: 0x001868D4
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06001924 RID: 6436 RVA: 0x001886E8 File Offset: 0x001868E8
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			switch (nID)
@@ -200,12 +200,12 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001925 RID: 6437 RVA: 0x00188894 File Offset: 0x00186A94
+		
 		public void processEvent(EventObject eventObject)
 		{
 		}
 
-		// Token: 0x06001926 RID: 6438 RVA: 0x00188898 File Offset: 0x00186A98
+		
 		public void PlayGameAfterSend(GameClient client)
 		{
 			this.SendMarriageDataToClient(client, true);
@@ -220,7 +220,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001927 RID: 6439 RVA: 0x00188918 File Offset: 0x00186B18
+		
 		public MarryOtherResult ChangeMarriageMessage(GameClient client, string strMessage)
 		{
 			MarryOtherResult result;
@@ -259,7 +259,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001928 RID: 6440 RVA: 0x00188A3C File Offset: 0x00186C3C
+		
 		public MarryOtherResult ChangeRing(GameClient client, int nRingID)
 		{
 			MarryOtherResult result;
@@ -320,7 +320,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001929 RID: 6441 RVA: 0x00188C68 File Offset: 0x00186E68
+		
 		public void UpdateRingAttr(GameClient client, bool bNeedUpdateSpouse = false, bool bIsLogin = false)
 		{
 			if (MarryLogic.IsVersionSystemOpenOfMarriage())
@@ -375,13 +375,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600192A RID: 6442 RVA: 0x00188EF4 File Offset: 0x001870F4
+		
 		private double RingAttrJiSuan(sbyte level, sbyte star, double ExpProp)
 		{
 			return ExpProp * ((double)(1 + (level - 1) * 2) + (double)star * this.dRingmodulus);
 		}
 
-		// Token: 0x0600192B RID: 6443 RVA: 0x00188F1C File Offset: 0x0018711C
+		
 		public void ResetRingAttr(GameClient client)
 		{
 			if (-1 != client.ClientData.MyMarriageData.nRingID)
@@ -397,13 +397,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600192C RID: 6444 RVA: 0x00188FBC File Offset: 0x001871BC
+		
 		public int GetMaxGoodwillStar()
 		{
 			return (int)this.byMaxGoodwillStar;
 		}
 
-		// Token: 0x0600192D RID: 6445 RVA: 0x00188FD4 File Offset: 0x001871D4
+		
 		public MarryOtherResult GiveRose(GameClient client, int nGoodsDBId)
 		{
 			MarryOtherResult result;
@@ -471,7 +471,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600192E RID: 6446 RVA: 0x00189250 File Offset: 0x00187450
+		
 		public bool CanAddMarriageGoodWill(GameClient client)
 		{
 			bool result;
@@ -492,7 +492,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600192F RID: 6447 RVA: 0x001892D4 File Offset: 0x001874D4
+		
 		public void UpdateMarriageGoodWill(GameClient client, int addGoodwillValue)
 		{
 			if (MarryLogic.IsVersionSystemOpenOfMarriage())
@@ -586,7 +586,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001930 RID: 6448 RVA: 0x001896F4 File Offset: 0x001878F4
+		
 		public void ChangeDayUpdate(GameClient client, bool bIsFirstLogin = true)
 		{
 			if (bIsFirstLogin && client.ClientData.MyMarriageData.nGivenrose != 0)
@@ -597,7 +597,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001931 RID: 6449 RVA: 0x00189744 File Offset: 0x00187944
+		
 		public void SendMarriageDataToClient(GameClient client, bool bSendSpouseData = true)
 		{
 			if (null != client.ClientData.MyMarriageData)
@@ -610,7 +610,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001932 RID: 6450 RVA: 0x00189790 File Offset: 0x00187990
+		
 		public void SendSpouseDataToClient(GameClient client)
 		{
 			try
@@ -645,34 +645,34 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0400233D RID: 9021
+		
 		private static MarriageOtherLogic instance = new MarriageOtherLogic();
 
-		// Token: 0x0400233E RID: 9022
+		
 		private Dictionary<int, MarriageRoseData> RoseDataDic = new Dictionary<int, MarriageRoseData>();
 
-		// Token: 0x0400233F RID: 9023
+		
 		private Dictionary<sbyte, Dictionary<sbyte, int>> GoodwillLvDic = new Dictionary<sbyte, Dictionary<sbyte, int>>();
 
-		// Token: 0x04002340 RID: 9024
+		
 		private List<int> GoodwillAllExpList = new List<int>();
 
-		// Token: 0x04002341 RID: 9025
+		
 		public SystemXmlItems WeddingRingDic = new SystemXmlItems();
 
-		// Token: 0x04002342 RID: 9026
+		
 		private sbyte byMaxGoodwillStar = 0;
 
-		// Token: 0x04002343 RID: 9027
+		
 		private sbyte byMaxGoodwillLv = 0;
 
-		// Token: 0x04002344 RID: 9028
+		
 		private double[] dNeedGam;
 
-		// Token: 0x04002345 RID: 9029
+		
 		private double dRingmodulus = 0.0;
 
-		// Token: 0x04002346 RID: 9030
+		
 		private double dOtherRingmodulus = 0.0;
 	}
 }

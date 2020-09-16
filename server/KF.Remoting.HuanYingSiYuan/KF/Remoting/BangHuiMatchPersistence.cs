@@ -9,27 +9,27 @@ using Server.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000064 RID: 100
+	
 	public class BangHuiMatchPersistence
 	{
-		// Token: 0x0600049A RID: 1178 RVA: 0x0003B390 File Offset: 0x00039590
+		
 		private BangHuiMatchPersistence()
 		{
 		}
 
-		// Token: 0x0600049B RID: 1179 RVA: 0x0003B40C File Offset: 0x0003960C
+		
 		public bool LoadDatabase(int seasonIDCur_Gold, int seasonIDLast_Gold, int seasonIDCur_Rookie, int seasonIDLast_Rookie)
 		{
 			return this.LoadBHMatchBHData(BangHuiMatchType.BHMT_Begin, this.BHMatchBHDataDict_Gold) && this.LoadBHMatchBHData(BangHuiMatchType.Rookie, this.BHMatchBHDataDict_Rookie) && this.LoadBHMatchPKInfoList(BangHuiMatchType.BHMT_Begin, this.BHMatchPKInfoList_Gold) && this.LoadBHMatchBHData_Join(BangHuiMatchType.BHMT_Begin, seasonIDCur_Gold, this.BHMatchBHDataList_GoldJoin, false) && this.LoadBHMatchBHData_Join(BangHuiMatchType.Rookie, seasonIDCur_Rookie, this.BHMatchBHDataList_RookieJoin, false) && this.LoadBHMatchBHData_Join(BangHuiMatchType.Rookie, seasonIDLast_Rookie, this.BHMatchBHDataList_RookieJoinLast, true) && this.LoadBHMatchBHData_LastSeason(BangHuiMatchType.BHMT_Begin, seasonIDLast_Gold) && this.LoadBHMatchBHData_LastSeason(BangHuiMatchType.Rookie, seasonIDLast_Rookie) && this.ReloadDatabasePerRound(1, seasonIDCur_Gold, seasonIDLast_Gold, true) && this.ReloadDatabasePerRound(2, seasonIDCur_Rookie, seasonIDLast_Rookie, true);
 		}
 
-		// Token: 0x0600049C RID: 1180 RVA: 0x0003B4F4 File Offset: 0x000396F4
+		
 		public bool ReloadRankInfo(int renkType, int seasonIDCur, int seasonIDLast)
 		{
 			return this.LoadBHMatchRankInfo(renkType, seasonIDCur, seasonIDLast, this.BHMatchRankInfoDict);
 		}
 
-		// Token: 0x0600049D RID: 1181 RVA: 0x0003B518 File Offset: 0x00039718
+		
 		public bool ReloadDatabasePerRound(int matchType, int seasonIDCur, int seasonIDLast, bool changeSeason = false)
 		{
 			for (int rankLoop = 0; rankLoop < 14; rankLoop++)
@@ -45,7 +45,7 @@ namespace KF.Remoting
 			return true;
 		}
 
-		// Token: 0x0600049E RID: 1182 RVA: 0x0003B568 File Offset: 0x00039768
+		
 		private bool CheckCanReloadRankInfo(int matchType, int rankLoop, bool changeSeason)
 		{
 			switch (rankLoop)
@@ -71,7 +71,7 @@ namespace KF.Remoting
 			return changeSeason || (rankLoop != 4 && rankLoop != 0 && rankLoop != 5 && rankLoop != 1);
 		}
 
-		// Token: 0x0600049F RID: 1183 RVA: 0x0003B604 File Offset: 0x00039804
+		
 		public void AddDelayWriteSql(string sql)
 		{
 			lock (this.Mutex)
@@ -80,7 +80,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004A0 RID: 1184 RVA: 0x0003B658 File Offset: 0x00039858
+		
 		private void WriteDataToDb(string sql)
 		{
 			try
@@ -94,7 +94,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004A1 RID: 1185 RVA: 0x0003B6A8 File Offset: 0x000398A8
+		
 		public void DelayWriteDataProc()
 		{
 			List<string> list = null;
@@ -113,7 +113,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004A2 RID: 1186 RVA: 0x0003B76C File Offset: 0x0003996C
+		
 		private int ExecuteSqlNoQuery(string sqlCmd)
 		{
 			int result;
@@ -130,7 +130,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060004A3 RID: 1187 RVA: 0x0003B7B8 File Offset: 0x000399B8
+		
 		public void SaveBHMatchBHData(BHMatchBHData data, bool chgChampion = true, bool chgKill = true)
 		{
 			string sql = string.Format("INSERT INTO t_banghui_match_bh(`type`, `bhid`, `bhname`, `zoneid_bh`, `rid`, `rname`, `zoneid_r`, `play`, `champion`, `kill`, bullshit, bestrecord) VALUES({0},{1},'{2}',{3},{4},'{5}',{6},{7},{8},{9},{10},{11}) ON DUPLICATE KEY UPDATE `bhname`='{2}',`zoneid_bh`={3},`rid`={4},`rname`='{5}',`zoneid_r`={6},`play`={7},`champion`={8},`kill`={9},`bullshit`={10},`bestrecord`={11};", new object[]
@@ -161,7 +161,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004A4 RID: 1188 RVA: 0x0003B8EC File Offset: 0x00039AEC
+		
 		public void SaveBHMatchBHSeasonData(int season, BHMatchBHData data, bool chgWin = true, bool chgScore = true)
 		{
 			string sql = string.Format("INSERT INTO t_banghui_match_bh_season(`type`, season, bhid, win, `group`, score) VALUES({0},{1},{2},{3},{4},{5}) ON DUPLICATE KEY UPDATE win={3},`group`={4},score={5};", new object[]
@@ -186,7 +186,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004A5 RID: 1189 RVA: 0x0003B9D8 File Offset: 0x00039BD8
+		
 		public void SaveBHMatchRolesSeasonData(int season, BHMatchRoleData roleData, bool chgMvp = true, bool chgKill = true)
 		{
 			string sql = string.Format("INSERT INTO t_banghui_match_roles_season(`type`, season, rid, mvp, `kill`) VALUES({0},{1},{2},{3},{4}) ON DUPLICATE KEY UPDATE mvp=mvp+{3}, `kill`=`kill`+{4};", new object[]
@@ -210,7 +210,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004A6 RID: 1190 RVA: 0x0003BAB8 File Offset: 0x00039CB8
+		
 		public void SaveBHMatchRolesData(int type, int rid, string rname, int zoneid, int bhid, byte[] roledata)
 		{
 			if (null != roledata)
@@ -242,7 +242,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004A7 RID: 1191 RVA: 0x0003BB78 File Offset: 0x00039D78
+		
 		public void SaveBHMatchPKInfo(BangHuiMatchPKInfo pkinfo)
 		{
 			string sql = string.Format("INSERT INTO t_banghui_match_pk_log(`type`, season, round, bhid1, zoneid1, bhid2, zoneid2, result, logtime) VALUES({0},{1},{2},{3},{4},{5},{6},{7},'{8}')  ON DUPLICATE KEY UPDATE result={7};", new object[]
@@ -260,7 +260,7 @@ namespace KF.Remoting
 			this.ExecuteSqlNoQuery(sql);
 		}
 
-		// Token: 0x060004A8 RID: 1192 RVA: 0x0003BC20 File Offset: 0x00039E20
+		
 		public int LoadLastSeasonIDGold()
 		{
 			DbHelperMySQL.ExecuteSql(string.Format("INSERT IGNORE INTO t_async(`id`,`value`) VALUES({0},{1});", 44, 0));
@@ -268,20 +268,20 @@ namespace KF.Remoting
 			return Convert.ToInt32(value);
 		}
 
-		// Token: 0x060004A9 RID: 1193 RVA: 0x0003BC6C File Offset: 0x00039E6C
+		
 		public void SaveLastSeasonIDGold(int seasonID)
 		{
 			DbHelperMySQL.ExecuteSql(string.Format("REPLACE INTO t_async(`id`,`value`) VALUES({0},{1});", 44, seasonID));
 		}
 
-		// Token: 0x060004AA RID: 1194 RVA: 0x0003BC8C File Offset: 0x00039E8C
+		
 		public int GetGoldSeasonID()
 		{
 			object value = DbHelperMySQL.GetSingle("SELECT MAX(season) FROM t_banghui_match_bh_season WHERE `type`=" + 1);
 			return Convert.ToInt32(value);
 		}
 
-		// Token: 0x060004AB RID: 1195 RVA: 0x0003BCBC File Offset: 0x00039EBC
+		
 		public byte[] LoadBHMatchRoleData(int type, int rid)
 		{
 			byte[] result;
@@ -305,7 +305,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060004AC RID: 1196 RVA: 0x0003BD24 File Offset: 0x00039F24
+		
 		private bool LoadBHMatchBHData(BangHuiMatchType type, Dictionary<int, KuaFuData<BHMatchBHData>> BHMatchBHDataDict)
 		{
 			bool result;
@@ -357,7 +357,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060004AD RID: 1197 RVA: 0x0003BFA0 File Offset: 0x0003A1A0
+		
 		private bool LoadBHMatchPKInfoList(BangHuiMatchType type, KuaFuData<List<BangHuiMatchPKInfo>> BHMatchPKInfoList_Gold)
 		{
 			bool result;
@@ -410,7 +410,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060004AE RID: 1198 RVA: 0x0003C1AC File Offset: 0x0003A3AC
+		
 		private bool LoadBHMatchBHData_LastSeason(BangHuiMatchType type, int seasonID)
 		{
 			try
@@ -447,7 +447,7 @@ namespace KF.Remoting
 			return true;
 		}
 
-		// Token: 0x060004AF RID: 1199 RVA: 0x0003C314 File Offset: 0x0003A514
+		
 		private bool LoadBHMatchBHData_Join(BangHuiMatchType type, int seasonID, List<BHMatchBHData> BHMatchBHDataList_Join, bool lastSeason = false)
 		{
 			bool result;
@@ -508,7 +508,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060004B0 RID: 1200 RVA: 0x0003C510 File Offset: 0x0003A710
+		
 		private string FormatLoadBHMatchRankSql(int rankType, int seasonIDCur, int seasonIDLast)
 		{
 			int RankLimit = BHMatchConsts.MatchRankLimit[rankType];
@@ -563,7 +563,7 @@ namespace KF.Remoting
 			return strSql;
 		}
 
-		// Token: 0x060004B1 RID: 1201 RVA: 0x0003C750 File Offset: 0x0003A950
+		
 		private bool LoadBHMatchRankInfo(int rankType, int seasonCur, int seasonLast, KuaFuData<Dictionary<int, List<BangHuiMatchRankInfo>>> BHMatchRankInfoDict)
 		{
 			bool result;
@@ -674,34 +674,34 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x04000283 RID: 643
+		
 		public static readonly BangHuiMatchPersistence Instance = new BangHuiMatchPersistence();
 
-		// Token: 0x04000284 RID: 644
+		
 		public object Mutex = new object();
 
-		// Token: 0x04000285 RID: 645
+		
 		public KuaFuData<Dictionary<int, List<BangHuiMatchRankInfo>>> BHMatchRankInfoDict = new KuaFuData<Dictionary<int, List<BangHuiMatchRankInfo>>>();
 
-		// Token: 0x04000286 RID: 646
+		
 		public Dictionary<int, KuaFuData<BHMatchBHData>> BHMatchBHDataDict_Gold = new Dictionary<int, KuaFuData<BHMatchBHData>>();
 
-		// Token: 0x04000287 RID: 647
+		
 		public Dictionary<int, KuaFuData<BHMatchBHData>> BHMatchBHDataDict_Rookie = new Dictionary<int, KuaFuData<BHMatchBHData>>();
 
-		// Token: 0x04000288 RID: 648
+		
 		public KuaFuData<List<BangHuiMatchPKInfo>> BHMatchPKInfoList_Gold = new KuaFuData<List<BangHuiMatchPKInfo>>();
 
-		// Token: 0x04000289 RID: 649
+		
 		public List<BHMatchBHData> BHMatchBHDataList_GoldJoin = new List<BHMatchBHData>();
 
-		// Token: 0x0400028A RID: 650
+		
 		public List<BHMatchBHData> BHMatchBHDataList_RookieJoin = new List<BHMatchBHData>();
 
-		// Token: 0x0400028B RID: 651
+		
 		public List<BHMatchBHData> BHMatchBHDataList_RookieJoinLast = new List<BHMatchBHData>();
 
-		// Token: 0x0400028C RID: 652
+		
 		public Queue<string> DelayWriteSqlQueue = new Queue<string>();
 	}
 }

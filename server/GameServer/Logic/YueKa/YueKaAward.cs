@@ -5,10 +5,10 @@ using Server.Data;
 
 namespace GameServer.Logic.YueKa
 {
-	// Token: 0x02000820 RID: 2080
+	
 	internal class YueKaAward
 	{
-		// Token: 0x06003ADB RID: 15067 RVA: 0x0031F4A8 File Offset: 0x0031D6A8
+		
 		public void Init(XElement xml)
 		{
 			this.Day = (int)Global.GetSafeAttributeLong(xml, "Day");
@@ -17,7 +17,7 @@ namespace GameServer.Logic.YueKa
 			this._InitGoods(this.OccGoodsList, Global.GetSafeAttributeStr(xml, "GoodsTwo"));
 		}
 
-		// Token: 0x06003ADC RID: 15068 RVA: 0x0031F50C File Offset: 0x0031D70C
+		
 		public List<GoodsData> GetGoodsByOcc(int occ)
 		{
 			List<GoodsData> goodsDataList = new List<GoodsData>();
@@ -37,7 +37,7 @@ namespace GameServer.Logic.YueKa
 			return goodsDataList;
 		}
 
-		// Token: 0x06003ADD RID: 15069 RVA: 0x0031F5EC File Offset: 0x0031D7EC
+		
 		private GoodsData _ParseGoodsFromDetail(Tuple<int, int, int, int, int, int, int> detail)
 		{
 			return new GoodsData
@@ -65,7 +65,7 @@ namespace GameServer.Logic.YueKa
 			};
 		}
 
-		// Token: 0x06003ADE RID: 15070 RVA: 0x0031F6C8 File Offset: 0x0031D8C8
+		
 		private void _InitGoods(List<Tuple<int, int, int, int, int, int, int>> lst, string goods)
 		{
 			if (!string.IsNullOrEmpty(goods))
@@ -95,16 +95,16 @@ namespace GameServer.Logic.YueKa
 			}
 		}
 
-		// Token: 0x040044ED RID: 17645
+		
 		public int Day = 0;
 
-		// Token: 0x040044EE RID: 17646
+		
 		public int BindZuanShi = 0;
 
-		// Token: 0x040044EF RID: 17647
+		
 		public List<Tuple<int, int, int, int, int, int, int>> AllGoodsList = new List<Tuple<int, int, int, int, int, int, int>>();
 
-		// Token: 0x040044F0 RID: 17648
+		
 		public List<Tuple<int, int, int, int, int, int, int>> OccGoodsList = new List<Tuple<int, int, int, int, int, int, int>>();
 	}
 }

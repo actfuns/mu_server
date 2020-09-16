@@ -5,22 +5,22 @@ using Server.Tools;
 
 namespace GameServer.Server.CmdProcesser
 {
-	// Token: 0x020008B0 RID: 2224
+	
 	public class ZhanMengBuildUpLevelCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x06003DB0 RID: 15792 RVA: 0x0034BAB8 File Offset: 0x00349CB8
+		
 		private ZhanMengBuildUpLevelCmdProcessor()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(601, 4, this);
 		}
 
-		// Token: 0x06003DB1 RID: 15793 RVA: 0x0034BAD8 File Offset: 0x00349CD8
+		
 		public static ZhanMengBuildUpLevelCmdProcessor getInstance()
 		{
 			return ZhanMengBuildUpLevelCmdProcessor.instance;
 		}
 
-		// Token: 0x06003DB2 RID: 15794 RVA: 0x0034BAF0 File Offset: 0x00349CF0
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			int roleID = Global.SafeConvertToInt32(cmdParams[0]);
@@ -139,7 +139,7 @@ namespace GameServer.Server.CmdProcesser
 			return result;
 		}
 
-		// Token: 0x040047C1 RID: 18369
+		
 		private static ZhanMengBuildUpLevelCmdProcessor instance = new ZhanMengBuildUpLevelCmdProcessor();
 	}
 }

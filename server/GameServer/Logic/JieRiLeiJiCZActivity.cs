@@ -5,10 +5,10 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000706 RID: 1798
+	
 	public class JieRiLeiJiCZActivity : Activity
 	{
-		// Token: 0x06002B33 RID: 11059 RVA: 0x0026732C File Offset: 0x0026552C
+		
 		public override AwardItem GetAward(int _params)
 		{
 			AwardItem myAwardItem = null;
@@ -19,7 +19,7 @@ namespace GameServer.Logic
 			return myAwardItem;
 		}
 
-		// Token: 0x06002B34 RID: 11060 RVA: 0x00267364 File Offset: 0x00265564
+		
 		public AwardItem GetOccAward(int _params)
 		{
 			AwardItem myAwardItem = null;
@@ -30,7 +30,7 @@ namespace GameServer.Logic
 			return myAwardItem;
 		}
 
-		// Token: 0x06002B35 RID: 11061 RVA: 0x0026739C File Offset: 0x0026559C
+		
 		public override bool GiveAward(GameClient client, int _params)
 		{
 			AwardItem myAwardItem = this.GetAward(_params);
@@ -67,7 +67,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002B36 RID: 11062 RVA: 0x00267474 File Offset: 0x00265674
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client, int _params)
 		{
 			AwardItem myAwardItem = this.GetAward(_params);
@@ -84,7 +84,7 @@ namespace GameServer.Logic
 			return GoodsDataList.Count <= 0 || Global.CanAddGoodsDataList(client, GoodsDataList);
 		}
 
-		// Token: 0x06002B37 RID: 11063 RVA: 0x002674EC File Offset: 0x002656EC
+		
 		public override string GetAwardMinConditionValues()
 		{
 			StringBuilder strBuilder = new StringBuilder();
@@ -103,10 +103,10 @@ namespace GameServer.Logic
 			return strBuilder.ToString();
 		}
 
-		// Token: 0x04003A2F RID: 14895
+		
 		public Dictionary<int, AwardItem> AwardItemDict = new Dictionary<int, AwardItem>();
 
-		// Token: 0x04003A30 RID: 14896
+		
 		public Dictionary<int, AwardItem> OccAwardItemDict = new Dictionary<int, AwardItem>();
 	}
 }

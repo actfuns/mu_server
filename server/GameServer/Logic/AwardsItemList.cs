@@ -9,7 +9,7 @@ namespace GameServer.Logic
 	public class AwardsItemList
 	{
 		// Token: 0x17000018 RID: 24
-		// (get) Token: 0x06000436 RID: 1078 RVA: 0x0003EE08 File Offset: 0x0003D008
+		
 		public List<AwardsItemData> Items
 		{
 			get

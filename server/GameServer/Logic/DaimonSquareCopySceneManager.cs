@@ -8,23 +8,23 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000614 RID: 1556
+	
 	public class DaimonSquareCopySceneManager
 	{
-		// Token: 0x06001F72 RID: 8050 RVA: 0x001B2F95 File Offset: 0x001B1195
+		
 		public void InitDaimonSquareCopyScene()
 		{
 			Global.QueryDayActivityTotalPointInfoToDB(SpecialActivityTypes.DemoSque);
 		}
 
-		// Token: 0x06001F73 RID: 8051 RVA: 0x001B2F9F File Offset: 0x001B119F
+		
 		public void SetDaimonSquareCopySceneTotalPoint(string sName, int nPoint)
 		{
 			this.m_nDaimonSquareMaxName = sName;
 			this.m_nDaimonSquareMaxPoint = nPoint;
 		}
 
-		// Token: 0x06001F74 RID: 8052 RVA: 0x001B2FB0 File Offset: 0x001B11B0
+		
 		public bool CanEnterExistCopyScene(GameClient client)
 		{
 			CopyMap copyMap = null;
@@ -62,7 +62,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001F75 RID: 8053 RVA: 0x001B30BC File Offset: 0x001B12BC
+		
 		public void AddDaimonSquareCopyScenes(int nSequenceID, int nFubenID, int nMapCodeID, CopyMap mapInfo)
 		{
 			lock (this.m_DaimonSquareCopyScenesList)
@@ -93,7 +93,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F76 RID: 8054 RVA: 0x001B31D8 File Offset: 0x001B13D8
+		
 		public void RemoveDaimonSquareListCopyScenes(CopyMap cmInfo, int nSqeID, int nCopyID)
 		{
 			lock (this.m_DaimonSquareCopyScenesList)
@@ -122,7 +122,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F77 RID: 8055 RVA: 0x001B32EC File Offset: 0x001B14EC
+		
 		public int CheckDaimonSquareListScenes(int nFuBenMapID)
 		{
 			lock (this.m_DaimonSquareCopyScenesInfo)
@@ -161,20 +161,20 @@ namespace GameServer.Logic
 			return -1;
 		}
 
-		// Token: 0x06001F78 RID: 8056 RVA: 0x001B345C File Offset: 0x001B165C
+		
 		public bool IsDaimonSquareCopyScene(int nFuBenMapID)
 		{
 			return Data.DaimonSquareDataInfoList.ContainsKey(nFuBenMapID);
 		}
 
-		// Token: 0x06001F79 RID: 8057 RVA: 0x001B3488 File Offset: 0x001B1688
+		
 		public bool IsDaimonSquareCopyScene2(int nMpaCodeID)
 		{
 			SceneUIClasses sceneType = Global.GetMapSceneType(nMpaCodeID);
 			return sceneType == SceneUIClasses.Demon;
 		}
 
-		// Token: 0x06001F7A RID: 8058 RVA: 0x001B34B4 File Offset: 0x001B16B4
+		
 		public CopyMap GetDaimonSquareCopySceneInfo(int nSequenceID)
 		{
 			CopyMap result;
@@ -197,7 +197,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001F7B RID: 8059 RVA: 0x001B34F0 File Offset: 0x001B16F0
+		
 		public DaimonSquareScene GetDaimonSquareCopySceneDataInfo(CopyMap cmInfo, int nSequenceID, int nFuBenID)
 		{
 			DaimonSquareScene result;
@@ -228,7 +228,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001F7C RID: 8060 RVA: 0x001B3560 File Offset: 0x001B1760
+		
 		public int EnterDaimonSquareSceneCopySceneCount(GameClient client, int nFubenID, out int nDemonNum)
 		{
 			nDemonNum = -1;
@@ -270,7 +270,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001F7D RID: 8061 RVA: 0x001B36A8 File Offset: 0x001B18A8
+		
 		public void SendMegToClient(GameClient client, int nFubenID, int nSquID, int nCmdID)
 		{
 			CopyMap cmInfo = null;
@@ -324,7 +324,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F7E RID: 8062 RVA: 0x001B3924 File Offset: 0x001B1B24
+		
 		public int EnterDaimonSquareSceneCopyScene(GameClient client, int nFubenID, int nDemonNum, out int nSeqID, int mapCode)
 		{
 			nSeqID = -1;
@@ -470,7 +470,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001F7F RID: 8063 RVA: 0x001B3F94 File Offset: 0x001B2194
+		
 		public void HeartBeatDaimonSquareScene()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -656,7 +656,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F80 RID: 8064 RVA: 0x001B48E8 File Offset: 0x001B2AE8
+		
 		public void DaimonSquareSceneCreateMonster(DaimonSquareScene bcTmp, DaimonSquareDataInfo bcDataTmp, int nCopyMapID, CopyMap cmInfo)
 		{
 			string[] sNum = null;
@@ -726,7 +726,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F81 RID: 8065 RVA: 0x001B4BE8 File Offset: 0x001B2DE8
+		
 		public void OnStartPlayGame(GameClient client)
 		{
 			if (client.ClientData.FuBenSeqID >= 0 && client.ClientData.CopyMapID >= 0 && this.IsDaimonSquareCopyScene(client.ClientData.FuBenID))
@@ -748,7 +748,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F82 RID: 8066 RVA: 0x001B4D14 File Offset: 0x001B2F14
+		
 		public void DaimonSquareSceneKillMonster(GameClient client, Monster monster)
 		{
 			if (client.ClientData.FuBenSeqID >= 0 && client.ClientData.CopyMapID >= 0 && this.IsDaimonSquareCopyScene(client.ClientData.FuBenID))
@@ -799,7 +799,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F83 RID: 8067 RVA: 0x001B4F60 File Offset: 0x001B3160
+		
 		public static void CompleteDaimonSquareScene(GameClient client, DaimonSquareScene bsInfo, DaimonSquareDataInfo dsData)
 		{
 			int nFlag = Global.GetRoleParamsInt32FromDB(client, "DaimonSquareSceneFinishFlag");
@@ -812,7 +812,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F84 RID: 8068 RVA: 0x001B4FC8 File Offset: 0x001B31C8
+		
 		public void GiveAwardDaimonSquareCopyScene(GameClient client, int nMultiple)
 		{
 			int FuBenSeqID = Global.GetRoleParamsInt32FromDB(client, "DaimonSquareFuBenSeqID");
@@ -919,7 +919,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F85 RID: 8069 RVA: 0x001B5464 File Offset: 0x001B3664
+		
 		public void LeaveDaimonSquareCopyScene(GameClient client, bool clearScore = false)
 		{
 			int nFuBenId = Global.GetRoleParamsInt32FromDB(client, "DaimonSquareSceneid");
@@ -959,18 +959,18 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F86 RID: 8070 RVA: 0x001B5688 File Offset: 0x001B3888
+		
 		public void LogOutWhenInDaimonSquareCopyMap(GameClient client)
 		{
 			this.LeaveDaimonSquareCopyScene(client, false);
 		}
 
-		// Token: 0x06001F87 RID: 8071 RVA: 0x001B5694 File Offset: 0x001B3894
+		
 		public static void CleanDaimonSquareCopyScene(int mapid)
 		{
 		}
 
-		// Token: 0x06001F88 RID: 8072 RVA: 0x001B569C File Offset: 0x001B389C
+		
 		public void OnChangeName(int roleId, string oldName, string newName)
 		{
 			if (!string.IsNullOrEmpty(oldName) && !string.IsNullOrEmpty(newName))
@@ -982,22 +982,22 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04002C0F RID: 11279
+		
 		public Dictionary<int, CopyMap> m_DaimonSquareCopyScenesList = new Dictionary<int, CopyMap>();
 
-		// Token: 0x04002C10 RID: 11280
+		
 		public Dictionary<int, Dictionary<int, DaimonSquareScene>> m_DaimonSquareCopyScenesInfo = new Dictionary<int, Dictionary<int, DaimonSquareScene>>();
 
-		// Token: 0x04002C11 RID: 11281
+		
 		public static object m_Mutex = new object();
 
-		// Token: 0x04002C12 RID: 11282
+		
 		public int m_nDaimonSquareMaxPoint = -1;
 
-		// Token: 0x04002C13 RID: 11283
+		
 		public string m_nDaimonSquareMaxName = "";
 
-		// Token: 0x04002C14 RID: 11284
+		
 		private static long LastHeartBeatTicks = 0L;
 	}
 }

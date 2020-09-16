@@ -4,10 +4,10 @@ using System.Xml.Linq;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000737 RID: 1847
+	
 	public class JingMaiCacheManager
 	{
-		// Token: 0x06002E02 RID: 11778 RVA: 0x002862B0 File Offset: 0x002844B0
+		
 		public static SystemXmlItem GetJingMaiItem(int occupation, int jingMaiID, int jingMaiBodyLevel)
 		{
 			string key = string.Format("{0}_{1}_{2}", occupation, jingMaiID, jingMaiBodyLevel);
@@ -24,7 +24,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002E03 RID: 11779 RVA: 0x002862F8 File Offset: 0x002844F8
+		
 		public static void LoadJingMaiItemsByOccupation(int occupation)
 		{
 			string fileName = "";
@@ -58,7 +58,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002E04 RID: 11780 RVA: 0x00286480 File Offset: 0x00284680
+		
 		public static void LoadJingMaiItems()
 		{
 			for (int i = 0; i < 3; i++)
@@ -67,7 +67,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04003C1E RID: 15390
+		
 		private static Dictionary<string, SystemXmlItem> JingMaiItemsDict = new Dictionary<string, SystemXmlItem>();
 	}
 }

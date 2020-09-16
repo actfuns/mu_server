@@ -11,7 +11,7 @@ namespace GameServer.Logic.ActivityNew
 	public class JieRiRecvKingActivity : Activity
 	{
 		// Token: 0x1700001B RID: 27
-		// (get) Token: 0x060005A0 RID: 1440 RVA: 0x0004F208 File Offset: 0x0004D408
+		
 		private int RANK_LVL_CNT
 		{
 			get

@@ -8,22 +8,22 @@ using Server.Tools;
 
 namespace GameServer.Logic.OnePiece
 {
-	// Token: 0x020003A7 RID: 935
+	
 	public class OnePieceManager : IManager, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x06000FC4 RID: 4036 RVA: 0x000F6A00 File Offset: 0x000F4C00
+		
 		public static OnePieceManager getInstance()
 		{
 			return OnePieceManager.instance;
 		}
 
-		// Token: 0x06000FC5 RID: 4037 RVA: 0x000F6A18 File Offset: 0x000F4C18
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x06000FC6 RID: 4038 RVA: 0x000F6A3C File Offset: 0x000F4C3C
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1600, 1, 1, OnePieceManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -35,25 +35,25 @@ namespace GameServer.Logic.OnePiece
 			return true;
 		}
 
-		// Token: 0x06000FC7 RID: 4039 RVA: 0x000F6AE0 File Offset: 0x000F4CE0
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000FC8 RID: 4040 RVA: 0x000F6AF4 File Offset: 0x000F4CF4
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000FC9 RID: 4041 RVA: 0x000F6B08 File Offset: 0x000F4D08
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06000FCA RID: 4042 RVA: 0x000F6B1C File Offset: 0x000F4D1C
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -89,7 +89,7 @@ namespace GameServer.Logic.OnePiece
 			return result;
 		}
 
-		// Token: 0x06000FCB RID: 4043 RVA: 0x000F6C58 File Offset: 0x000F4E58
+		
 		public void GetOnePieceTreasureData(GameClient client, OnePieceTreasureData myTreasureData)
 		{
 			int currday = Global.GetOffsetDay(TimeUtil.NowDateTime());
@@ -130,7 +130,7 @@ namespace GameServer.Logic.OnePiece
 			}
 		}
 
-		// Token: 0x06000FCC RID: 4044 RVA: 0x000F6D8C File Offset: 0x000F4F8C
+		
 		public void JudgeResetOnePieceTreasureData(GameClient client)
 		{
 			if (client.ClientData.OnePieceMoveLeft == 0)
@@ -177,7 +177,7 @@ namespace GameServer.Logic.OnePiece
 			}
 		}
 
-		// Token: 0x06000FCD RID: 4045 RVA: 0x000F6F04 File Offset: 0x000F5104
+		
 		public void HandleDicePassDay(GameClient client, int currday, int lastday, OnePieceTreasureData myOnePieceData)
 		{
 			int passday = 1;
@@ -192,7 +192,7 @@ namespace GameServer.Logic.OnePiece
 			}
 		}
 
-		// Token: 0x06000FCE RID: 4046 RVA: 0x000F6F54 File Offset: 0x000F5154
+		
 		public int ResetRolePos(GameClient client)
 		{
 			int posid = this.GenPosID(1, 0);
@@ -202,7 +202,7 @@ namespace GameServer.Logic.OnePiece
 			return posid;
 		}
 
-		// Token: 0x06000FCF RID: 4047 RVA: 0x000F6FA0 File Offset: 0x000F51A0
+		
 		public void ModifyOnePieceTreasureData(GameClient client, OnePieceTreasureData myOnePieceData)
 		{
 			int currday = Global.GetOffsetDay(TimeUtil.NowDateTime());
@@ -232,19 +232,19 @@ namespace GameServer.Logic.OnePiece
 			Global.SaveRoleParamsStringToDB(client, strFlag, result, true);
 		}
 
-		// Token: 0x06000FD0 RID: 4048 RVA: 0x000F707C File Offset: 0x000F527C
+		
 		public int GenPosID(int floor, int cell)
 		{
 			return 1000 * floor + cell;
 		}
 
-		// Token: 0x06000FD1 RID: 4049 RVA: 0x000F7098 File Offset: 0x000F5298
+		
 		public int GetFloorByPosID(int posid)
 		{
 			return posid / 1000;
 		}
 
-		// Token: 0x06000FD2 RID: 4050 RVA: 0x000F70B4 File Offset: 0x000F52B4
+		
 		public int FilterPosIDChangeFloor(GameClient client, int posid)
 		{
 			int result;
@@ -285,7 +285,7 @@ namespace GameServer.Logic.OnePiece
 			return result;
 		}
 
-		// Token: 0x06000FD3 RID: 4051 RVA: 0x000F7178 File Offset: 0x000F5378
+		
 		public int GetNextPosIDForEvent(int posid, bool foward = true)
 		{
 			int nextPosID;
@@ -326,7 +326,7 @@ namespace GameServer.Logic.OnePiece
 			return result;
 		}
 
-		// Token: 0x06000FD4 RID: 4052 RVA: 0x000F7240 File Offset: 0x000F5440
+		
 		public int RollMoveNum()
 		{
 			int move = 0;
@@ -354,7 +354,7 @@ namespace GameServer.Logic.OnePiece
 			return result;
 		}
 
-		// Token: 0x06000FD5 RID: 4053 RVA: 0x000F72D0 File Offset: 0x000F54D0
+		
 		public int RandomTreasureEvent(List<OnePieceRandomEvent> LisRandomEvent)
 		{
 			int EventID = 0;
@@ -381,7 +381,7 @@ namespace GameServer.Logic.OnePiece
 			return result;
 		}
 
-		// Token: 0x06000FD6 RID: 4054 RVA: 0x000F7368 File Offset: 0x000F5568
+		
 		public void SyncOnePieceEvent(GameClient client, int EventID, int EventValue = 0, int ErrCode = 0, List<int> BoxIDList = null)
 		{
 			OnePieceTreasureEvent myTreasureEvent = new OnePieceTreasureEvent
@@ -395,7 +395,7 @@ namespace GameServer.Logic.OnePiece
 			GameManager.ClientMgr.SendToClient(client, bytesData, 1603);
 		}
 
-		// Token: 0x06000FD7 RID: 4055 RVA: 0x000F73B8 File Offset: 0x000F55B8
+		
 		public void ModifyOnePieceDice(GameClient client, OnePieceTreasureData myOnePieceData, int diceType, int num)
 		{
 			bool RollNumReachMax = false;
@@ -448,7 +448,7 @@ namespace GameServer.Logic.OnePiece
 			}
 		}
 
-		// Token: 0x06000FD8 RID: 4056 RVA: 0x000F7518 File Offset: 0x000F5718
+		
 		public int GiveCopyMapGift(GameClient client, int fuBenID)
 		{
 			OnePieceTreasureData myOnePieceData = new OnePieceTreasureData();
@@ -480,7 +480,7 @@ namespace GameServer.Logic.OnePiece
 			return result;
 		}
 
-		// Token: 0x06000FD9 RID: 4057 RVA: 0x000F75B0 File Offset: 0x000F57B0
+		
 		public OnePieceTreasureErrorCode GiveOnePieceEventAward(GameClient client, OnePieceTreasureData myOnePieceData, OnePieceTreasureEventConfig myTreasureEventConfig)
 		{
 			OnePieceTreasureErrorCode ret = OnePieceTreasureErrorCode.OnePiece_Success;
@@ -560,7 +560,7 @@ namespace GameServer.Logic.OnePiece
 			return ret;
 		}
 
-		// Token: 0x06000FDA RID: 4058 RVA: 0x000F7918 File Offset: 0x000F5B18
+		
 		public OnePieceTreasureErrorCode TriggerEventAward(GameClient client, OnePieceTreasureData myOnePieceData, OnePieceTreasureEventConfig myTreasureEventConfig)
 		{
 			OnePieceTreasureErrorCode ret = this.GiveOnePieceEventAward(client, myOnePieceData, myTreasureEventConfig);
@@ -577,7 +577,7 @@ namespace GameServer.Logic.OnePiece
 			return result;
 		}
 
-		// Token: 0x06000FDB RID: 4059 RVA: 0x000F795C File Offset: 0x000F5B5C
+		
 		public OnePieceTreasureErrorCode TriggerEventExcharge(GameClient client, OnePieceTreasureData myOnePieceData, OnePieceTreasureEventConfig myTreasureEventConfig)
 		{
 			int i = 0;
@@ -624,7 +624,7 @@ namespace GameServer.Logic.OnePiece
 			return OnePieceTreasureErrorCode.OnePiece_Success;
 		}
 
-		// Token: 0x06000FDC RID: 4060 RVA: 0x000F7B10 File Offset: 0x000F5D10
+		
 		public OnePieceTreasureErrorCode TriggerEventMove(GameClient client, OnePieceTreasureData myOnePieceData, OnePieceTreasureEventConfig myTreasureEventConfig)
 		{
 			OnePieceTreasureErrorCode result;
@@ -644,7 +644,7 @@ namespace GameServer.Logic.OnePiece
 			return result;
 		}
 
-		// Token: 0x06000FDD RID: 4061 RVA: 0x000F7B94 File Offset: 0x000F5D94
+		
 		public OnePieceTreasureErrorCode TriggerEventCombat(GameClient client, OnePieceTreasureEventConfig myTreasureEventConfig)
 		{
 			SystemXmlItem systemFuBenItem = null;
@@ -687,7 +687,7 @@ namespace GameServer.Logic.OnePiece
 			return result;
 		}
 
-		// Token: 0x06000FDE RID: 4062 RVA: 0x000F7D94 File Offset: 0x000F5F94
+		
 		public int GiveOnePieceBoxAward(GameClient client, OnePieceTreasureBoxConfig myBoxConfig)
 		{
 			int ret = 0;
@@ -725,7 +725,7 @@ namespace GameServer.Logic.OnePiece
 			return ret;
 		}
 
-		// Token: 0x06000FDF RID: 4063 RVA: 0x000F7F6C File Offset: 0x000F616C
+		
 		public int TryGiveOnePieceBoxListAward(GameClient client)
 		{
 			List<int> OnePieceBoxIDList = client.ClientData.OnePieceBoxIDList;
@@ -756,7 +756,7 @@ namespace GameServer.Logic.OnePiece
 			return result;
 		}
 
-		// Token: 0x06000FE0 RID: 4064 RVA: 0x000F8034 File Offset: 0x000F6234
+		
 		public OnePieceTreasureErrorCode TriggerEventTreasureBox(GameClient client, OnePieceTreasureEventConfig myTreasureEventConfig)
 		{
 			List<int> BoxIDList = new List<int>();
@@ -788,7 +788,7 @@ namespace GameServer.Logic.OnePiece
 			return OnePieceTreasureErrorCode.OnePiece_Success;
 		}
 
-		// Token: 0x06000FE1 RID: 4065 RVA: 0x000F8184 File Offset: 0x000F6384
+		
 		public OnePieceTreasureErrorCode TriggerEvent(GameClient client, OnePieceTreasureData myOnePieceData, OnePieceTreasureEventConfig myTreasureEventConfig)
 		{
 			OnePieceTreasureErrorCode result;
@@ -816,7 +816,7 @@ namespace GameServer.Logic.OnePiece
 			return result;
 		}
 
-		// Token: 0x06000FE2 RID: 4066 RVA: 0x000F8200 File Offset: 0x000F6400
+		
 		public bool OnePieceMoveTrigger(GameClient client, ref OnePieceTreasureData myOnePieceData, OnePieceTreasureMapConfig myTreasureMapConfig, TriggerType Trigger)
 		{
 			bool result;
@@ -853,7 +853,7 @@ namespace GameServer.Logic.OnePiece
 			return result;
 		}
 
-		// Token: 0x06000FE3 RID: 4067 RVA: 0x000F82C8 File Offset: 0x000F64C8
+		
 		public void HandleRoleLogout(GameClient client)
 		{
 			if (this.IfCanContinueMove(client))
@@ -873,7 +873,7 @@ namespace GameServer.Logic.OnePiece
 			}
 		}
 
-		// Token: 0x06000FE4 RID: 4068 RVA: 0x000F8344 File Offset: 0x000F6544
+		
 		public int CalculateMoveCellToNextEvent(GameClient client, int MoveCellNum, OnePieceTreasureData myOnePieceData)
 		{
 			int result;
@@ -909,7 +909,7 @@ namespace GameServer.Logic.OnePiece
 			return result;
 		}
 
-		// Token: 0x06000FE5 RID: 4069 RVA: 0x000F83DC File Offset: 0x000F65DC
+		
 		public void HandleOnePieceTreasureMove(GameClient client, int MoveCellNum, OnePieceTreasureData myOnePieceData)
 		{
 			OnePieceTreasureMapConfig myTreasureMapConfig = null;
@@ -953,7 +953,7 @@ namespace GameServer.Logic.OnePiece
 			myOnePieceData.PosID = this.FilterPosIDChangeFloor(client, myOnePieceData.PosID);
 		}
 
-		// Token: 0x06000FE6 RID: 4070 RVA: 0x000F84F4 File Offset: 0x000F66F4
+		
 		public void GM_SetDice(GameClient client, int diceType, int newNum)
 		{
 			OnePieceTreasureData myOnePieceData = new OnePieceTreasureData();
@@ -973,7 +973,7 @@ namespace GameServer.Logic.OnePiece
 			this.ModifyOnePieceTreasureData(client, myOnePieceData);
 		}
 
-		// Token: 0x06000FE7 RID: 4071 RVA: 0x000F8560 File Offset: 0x000F6760
+		
 		public void GM_SetPosID(GameClient client, int posid)
 		{
 			OnePieceTreasureMapConfig myTreasureMapConfig = null;
@@ -988,7 +988,7 @@ namespace GameServer.Logic.OnePiece
 			}
 		}
 
-		// Token: 0x06000FE8 RID: 4072 RVA: 0x000F85BC File Offset: 0x000F67BC
+		
 		public void GM_PrintTreasureData(GameClient client)
 		{
 			OnePieceTreasureData myOnePieceData = new OnePieceTreasureData();
@@ -1005,7 +1005,7 @@ namespace GameServer.Logic.OnePiece
 			GameManager.ClientMgr.SendSystemChatMessageToClient(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, client, strinfo);
 		}
 
-		// Token: 0x06000FE9 RID: 4073 RVA: 0x000F8674 File Offset: 0x000F6874
+		
 		public void UpdateOnePieceTreasureLogDB(GameClient client, OnePieceTreasureLogType LogType, int addValue = 1)
 		{
 			EventLogManager.AddRoleEvent(client, OpTypes.Trace, OpTags.Building, LogRecordType.IntValue, new object[]
@@ -1015,7 +1015,7 @@ namespace GameServer.Logic.OnePiece
 			});
 		}
 
-		// Token: 0x06000FEA RID: 4074 RVA: 0x000F86AC File Offset: 0x000F68AC
+		
 		public bool ProcessOnePieceGetInfoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1035,7 +1035,7 @@ namespace GameServer.Logic.OnePiece
 			return false;
 		}
 
-		// Token: 0x06000FEB RID: 4075 RVA: 0x000F8724 File Offset: 0x000F6924
+		
 		public bool ProcessOnePieceRollMiracleCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1088,7 +1088,7 @@ namespace GameServer.Logic.OnePiece
 			return false;
 		}
 
-		// Token: 0x06000FEC RID: 4076 RVA: 0x000F8904 File Offset: 0x000F6B04
+		
 		public bool ProcessOnePieceRollCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1134,7 +1134,7 @@ namespace GameServer.Logic.OnePiece
 			return false;
 		}
 
-		// Token: 0x06000FED RID: 4077 RVA: 0x000F8A98 File Offset: 0x000F6C98
+		
 		public bool ProcessOnePieceDiceBuyCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1222,19 +1222,19 @@ namespace GameServer.Logic.OnePiece
 			return false;
 		}
 
-		// Token: 0x06000FEE RID: 4078 RVA: 0x000F8DC8 File Offset: 0x000F6FC8
+		
 		public bool IfHaveOnePieceBoxListAward(GameClient client)
 		{
 			return client.ClientData.OnePieceBoxIDList != null;
 		}
 
-		// Token: 0x06000FEF RID: 4079 RVA: 0x000F8DF4 File Offset: 0x000F6FF4
+		
 		public bool IfCanContinueMove(GameClient client)
 		{
 			return client.ClientData.OnePieceMoveLeft != 0 || this.IfHaveOnePieceBoxListAward(client);
 		}
 
-		// Token: 0x06000FF0 RID: 4080 RVA: 0x000F8E30 File Offset: 0x000F7030
+		
 		public bool ProcessOnePieceMoveCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1276,7 +1276,7 @@ namespace GameServer.Logic.OnePiece
 			return false;
 		}
 
-		// Token: 0x06000FF1 RID: 4081 RVA: 0x000F8F64 File Offset: 0x000F7164
+		
 		public bool ProcessOnePieceTriggerEventCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1324,7 +1324,7 @@ namespace GameServer.Logic.OnePiece
 			return false;
 		}
 
-		// Token: 0x06000FF2 RID: 4082 RVA: 0x000F90E8 File Offset: 0x000F72E8
+		
 		public bool InitConfig()
 		{
 			string TreasureDice = GameManager.systemParamsList.GetParamValueByName("TreasureDice");
@@ -1372,7 +1372,7 @@ namespace GameServer.Logic.OnePiece
 			return this.LoadOnePieceTreasureMapFile() && this.LoadOnePieceTreasureEventFile() && this.LoadOnePieceTreasureBoxFile();
 		}
 
-		// Token: 0x06000FF3 RID: 4083 RVA: 0x000F9278 File Offset: 0x000F7478
+		
 		public bool LoadOnePieceTreasureMapFile()
 		{
 			try
@@ -1431,7 +1431,7 @@ namespace GameServer.Logic.OnePiece
 			return true;
 		}
 
-		// Token: 0x06000FF4 RID: 4084 RVA: 0x000F94B8 File Offset: 0x000F76B8
+		
 		public bool LoadOnePieceTreasureEventFile()
 		{
 			try
@@ -1554,7 +1554,7 @@ namespace GameServer.Logic.OnePiece
 			return true;
 		}
 
-		// Token: 0x06000FF5 RID: 4085 RVA: 0x000F9934 File Offset: 0x000F7B34
+		
 		public bool LoadOnePieceTreasureBoxFile()
 		{
 			try
@@ -1613,52 +1613,52 @@ namespace GameServer.Logic.OnePiece
 			return true;
 		}
 
-		// Token: 0x04001893 RID: 6291
+		
 		private const string OnePiece_TreasureMapfileName = "Config/Treasure/TreasureMap.xml";
 
-		// Token: 0x04001894 RID: 6292
+		
 		private const string OnePiece_TreasureEventfileName = "Config/Treasure/TreasureEvent.xml";
 
-		// Token: 0x04001895 RID: 6293
+		
 		private const string OnePiece_TreasureBoxfileName = "Config/Treasure/TreasureBox.xml";
 
-		// Token: 0x04001896 RID: 6294
+		
 		private const int OnePiece_FloorHashNum = 1000;
 
-		// Token: 0x04001897 RID: 6295
+		
 		private const int OnePiece_FloorCellNum = 30;
 
-		// Token: 0x04001898 RID: 6296
+		
 		private const int OnePiece_DiceMaxNum = 99;
 
-		// Token: 0x04001899 RID: 6297
+		
 		public List<double> SystemParamsTreasureDice = new List<double>();
 
-		// Token: 0x0400189A RID: 6298
+		
 		public int SystemParamsTreasureFreeNum = 0;
 
-		// Token: 0x0400189B RID: 6299
+		
 		public int SystemParamsTreasureMiracleNum = 0;
 
-		// Token: 0x0400189C RID: 6300
+		
 		public int SystemParamsTreasurePrice = 0;
 
-		// Token: 0x0400189D RID: 6301
+		
 		public int SystemParamsTreasureSuperPrice = 0;
 
-		// Token: 0x0400189E RID: 6302
+		
 		public int OnePiece_FakeRollNum_GM = 0;
 
-		// Token: 0x0400189F RID: 6303
+		
 		private static OnePieceManager instance = new OnePieceManager();
 
-		// Token: 0x040018A0 RID: 6304
+		
 		public Dictionary<int, OnePieceTreasureMapConfig> TreasureMapConfig = new Dictionary<int, OnePieceTreasureMapConfig>();
 
-		// Token: 0x040018A1 RID: 6305
+		
 		public Dictionary<int, OnePieceTreasureEventConfig> TreasureEventConfig = new Dictionary<int, OnePieceTreasureEventConfig>();
 
-		// Token: 0x040018A2 RID: 6306
+		
 		public Dictionary<int, List<OnePieceTreasureBoxConfig>> TreasureBoxConfig = new Dictionary<int, List<OnePieceTreasureBoxConfig>>();
 	}
 }

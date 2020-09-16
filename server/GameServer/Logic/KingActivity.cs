@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020006F9 RID: 1785
+	
 	public class KingActivity : Activity
 	{
-		// Token: 0x06002AF2 RID: 10994 RVA: 0x002645B0 File Offset: 0x002627B0
+		
 		public override string GetAwardMinConditionValues()
 		{
 			StringBuilder strBuilder = new StringBuilder();
@@ -28,7 +28,7 @@ namespace GameServer.Logic
 			return strBuilder.ToString();
 		}
 
-		// Token: 0x06002AF3 RID: 10995 RVA: 0x00264644 File Offset: 0x00262844
+		
 		public override List<int> GetAwardMinConditionlist()
 		{
 			List<int> cons = new List<int>();
@@ -43,7 +43,7 @@ namespace GameServer.Logic
 			return cons;
 		}
 
-		// Token: 0x06002AF4 RID: 10996 RVA: 0x002646B0 File Offset: 0x002628B0
+		
 		public override bool GiveAward(GameClient client, int _params)
 		{
 			AwardItem myAwardItem = null;
@@ -64,7 +64,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002AF5 RID: 10997 RVA: 0x0026470C File Offset: 0x0026290C
+		
 		public override bool GiveAward(GameClient client, int _params1, int _params2)
 		{
 			AwardItem myAwardItem = null;
@@ -99,7 +99,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002AF6 RID: 10998 RVA: 0x002647C0 File Offset: 0x002629C0
+		
 		protected bool GiveAwardByOccupation(GameClient client, AwardItem myAwardItem, int occupation)
 		{
 			bool result;
@@ -136,7 +136,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002AF7 RID: 10999 RVA: 0x002649E0 File Offset: 0x00262BE0
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client, int nBtnIndex)
 		{
 			bool result;
@@ -169,7 +169,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002AF8 RID: 11000 RVA: 0x00264B28 File Offset: 0x00262D28
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client)
 		{
 			int needSpace = 0;
@@ -217,13 +217,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04003A0D RID: 14861
+		
 		public Dictionary<int, int> RoleLimit = new Dictionary<int, int>();
 
-		// Token: 0x04003A0E RID: 14862
+		
 		public Dictionary<int, AwardItem> AwardDict = new Dictionary<int, AwardItem>();
 
-		// Token: 0x04003A0F RID: 14863
+		
 		public Dictionary<int, AwardItem> AwardDict2 = new Dictionary<int, AwardItem>();
 	}
 }

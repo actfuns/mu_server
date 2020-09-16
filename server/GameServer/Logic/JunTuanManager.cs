@@ -14,29 +14,29 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-    // Token: 0x02000318 RID: 792
+    
     public class JunTuanManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener, IEventListenerEx, IManager2
     {
-        // Token: 0x06000CC1 RID: 3265 RVA: 0x000C6038 File Offset: 0x000C4238
+        
         public static JunTuanManager getInstance()
         {
             return JunTuanManager.instance;
         }
 
-        // Token: 0x06000CC2 RID: 3266 RVA: 0x000C6050 File Offset: 0x000C4250
+        
         public bool initialize()
         {
             return this.InitConfig();
         }
 
-        // Token: 0x06000CC3 RID: 3267 RVA: 0x000C6074 File Offset: 0x000C4274
+        
         public bool initialize(ICoreInterface coreInterface)
         {
             ScheduleExecutor2.Instance.scheduleExecute(new NormalScheduleTask("JunTuanManager.TimerProc", new EventHandler(this.TimerProc)), 15000, 1800);
             return true;
         }
 
-        // Token: 0x06000CC4 RID: 3268 RVA: 0x000C60B4 File Offset: 0x000C42B4
+        
         public bool startup()
         {
             TCPCmdDispatcher.getInstance().registerProcessorEx(1230, 1, 1, JunTuanManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -61,26 +61,26 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x06000CC5 RID: 3269 RVA: 0x000C6294 File Offset: 0x000C4494
+        
         public bool showdown()
         {
             GlobalEventSource.getInstance().removeListener(10, JunTuanManager.getInstance());
             return true;
         }
 
-        // Token: 0x06000CC6 RID: 3270 RVA: 0x000C62BC File Offset: 0x000C44BC
+        
         public bool destroy()
         {
             return true;
         }
 
-        // Token: 0x06000CC7 RID: 3271 RVA: 0x000C62D0 File Offset: 0x000C44D0
+        
         public bool processCmd(GameClient client, string[] cmdParams)
         {
             return false;
         }
 
-        // Token: 0x06000CC8 RID: 3272 RVA: 0x000C62E4 File Offset: 0x000C44E4
+        
         public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             switch (nID)
@@ -123,7 +123,7 @@ namespace GameServer.Logic
             return true;
         }
 
-        // Token: 0x06000CC9 RID: 3273 RVA: 0x000C6460 File Offset: 0x000C4660
+        
         public void processEvent(EventObject eventObject)
         {
             int nID = eventObject.getEventType();
@@ -149,7 +149,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000CCA RID: 3274 RVA: 0x000C64D8 File Offset: 0x000C46D8
+        
         public void processEvent(EventObjectEx eventObject)
         {
             int eventType = eventObject.EventType;
@@ -172,7 +172,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000CCB RID: 3275 RVA: 0x000C65A0 File Offset: 0x000C47A0
+        
         public bool InitConfig()
         {
             bool success = true;
@@ -222,7 +222,7 @@ namespace GameServer.Logic
             return success;
         }
 
-        // Token: 0x06000CCC RID: 3276 RVA: 0x000C68E4 File Offset: 0x000C4AE4
+        
         public bool ProcessGetJunTuanListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -243,7 +243,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000CCD RID: 3277 RVA: 0x000C6964 File Offset: 0x000C4B64
+        
         public bool ProcessGetJunTuanDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -273,7 +273,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000CCE RID: 3278 RVA: 0x000C6A54 File Offset: 0x000C4C54
+        
         public bool ProcessJunTuanCreateCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -374,7 +374,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000CCF RID: 3279 RVA: 0x000C6D78 File Offset: 0x000C4F78
+        
         public bool ProcessJunTuanBulltinCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -422,7 +422,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000CD0 RID: 3280 RVA: 0x000C6ED8 File Offset: 0x000C50D8
+        
         public bool ProcessQuitJunTuanCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -472,7 +472,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000CD1 RID: 3281 RVA: 0x000C701C File Offset: 0x000C521C
+        
         public bool ProcessDestroyJunTuanCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -518,7 +518,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000CD2 RID: 3282 RVA: 0x000C7140 File Offset: 0x000C5340
+        
         public bool ProcessJunTuanBangHuiZhiWuCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -564,7 +564,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000CD3 RID: 3283 RVA: 0x000C72AC File Offset: 0x000C54AC
+        
         public bool ProcessJunTuanRoleZhiWuCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -653,7 +653,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000CD4 RID: 3284 RVA: 0x000C768C File Offset: 0x000C588C
+        
         public bool ProcessGetJunTuanRequestListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -680,7 +680,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000CD5 RID: 3285 RVA: 0x000C7744 File Offset: 0x000C5944
+        
         public bool ProcessGetJunTuanLogListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -707,7 +707,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000CD6 RID: 3286 RVA: 0x000C77E8 File Offset: 0x000C59E8
+        
         public bool ProcessGetJunTuanRoleListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -760,7 +760,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000CD7 RID: 3287 RVA: 0x000C79F8 File Offset: 0x000C5BF8
+        
         public bool ProcessGetJunTuanRankListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -787,7 +787,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000CD8 RID: 3288 RVA: 0x000C7A9C File Offset: 0x000C5C9C
+        
         public bool ProcessJunTuanJoinCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -851,7 +851,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000CD9 RID: 3289 RVA: 0x000C7CA8 File Offset: 0x000C5EA8
+        
         public bool ProcessJunTuanJoinResponseCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -890,7 +890,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000CDA RID: 3290 RVA: 0x000C7DD8 File Offset: 0x000C5FD8
+        
         public bool ProcessGetJunTuanBangHuiListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -926,7 +926,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000CDB RID: 3291 RVA: 0x000C7ED8 File Offset: 0x000C60D8
+        
         public bool ProcessGetJunTuanTaskAwardCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -1055,7 +1055,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000CDC RID: 3292 RVA: 0x000C83BC File Offset: 0x000C65BC
+        
         public bool ProcessGetJunTuanTaskListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             try
@@ -1122,13 +1122,13 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06000CDD RID: 3293 RVA: 0x000C8680 File Offset: 0x000C6880
+        
         public bool IsGongNengOpened(GameClient client, bool hint = false)
         {
             return !GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System2Dot4) && GlobalNew.IsGongNengOpened(client, GongNengIDs.JunTuan, hint);
         }
 
-        // Token: 0x06000CDE RID: 3294 RVA: 0x000C86B0 File Offset: 0x000C68B0
+        
         public JunTuanRolePermissionInfo GetRolePermitionInfo(int zhiwu)
         {
             if (zhiwu == 0)
@@ -1151,12 +1151,12 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000CDF RID: 3295 RVA: 0x000C873C File Offset: 0x000C693C
+        
         public void UpdateJunTuanData(KuaFuData<JunTuanData> data)
         {
         }
 
-        // Token: 0x06000CE0 RID: 3296 RVA: 0x000C8740 File Offset: 0x000C6940
+        
         public void UpdateBhJunTuan(JunTuanBangHuiMiniData data)
         {
             GameManager.ClientMgr.BroadcastServerCmd<JunTuanBangHuiMiniData>(1229, data, true);
@@ -1194,12 +1194,12 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000CE1 RID: 3297 RVA: 0x000C8960 File Offset: 0x000C6B60
+        
         public void UpdateJunTuanTaskData(JunTuanTaskData data)
         {
         }
 
-        // Token: 0x06000CE2 RID: 3298 RVA: 0x000C8964 File Offset: 0x000C6B64
+        
         public JunTuanBaseData GetJunTuanBaseDataByJunTuanID(int junTuanID)
         {
             JunTuanBaseData result;
@@ -1212,7 +1212,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000CE3 RID: 3299 RVA: 0x000C89EC File Offset: 0x000C6BEC
+        
         public void OnInitGame(RoleDataEx dbRd)
         {
             bool flag = false;
@@ -1233,7 +1233,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000CE4 RID: 3300 RVA: 0x000C8B04 File Offset: 0x000C6D04
+        
         public void OnInitGame(GameClient client)
         {
             if (!KuaFuManager.KuaFuWorldKuaFuGameServer)
@@ -1268,7 +1268,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000CE5 RID: 3301 RVA: 0x000C8CA8 File Offset: 0x000C6EA8
+        
         public void JunTuanChat(GameClient client, string text)
         {
             long nowTicks = TimeUtil.NOW();
@@ -1308,7 +1308,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000CE6 RID: 3302 RVA: 0x000C8E70 File Offset: 0x000C7070
+        
         private int GetJunTuanZhiWu(RoleDataEx dbRd, int bhZhiWu)
         {
             int bhid = dbRd.Faction;
@@ -1331,7 +1331,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000CE7 RID: 3303 RVA: 0x000C8EB4 File Offset: 0x000C70B4
+        
         private int GetJunTuanZhiWu(GameClient client, int bhZhiWu)
         {
             int bhid = client.ClientData.Faction;
@@ -1354,7 +1354,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000CE8 RID: 3304 RVA: 0x000C8F08 File Offset: 0x000C7108
+        
         private List<JunTuanRoleData> GetJunTuanRoleList(int bhid, int serverId)
         {
             List<JunTuanRoleData> roleList = new List<JunTuanRoleData>();
@@ -1383,7 +1383,7 @@ namespace GameServer.Logic
             return roleList;
         }
 
-        // Token: 0x06000CE9 RID: 3305 RVA: 0x000C9054 File Offset: 0x000C7254
+        
         public void DelayUpdateJunTuanRoleList(int bhid)
         {
             lock (this.RuntimeData.Mutex)
@@ -1392,14 +1392,14 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000CEA RID: 3306 RVA: 0x000C90B0 File Offset: 0x000C72B0
+        
         public int UpdateJunTuanRoleList(int bhid, int serverId)
         {
             List<JunTuanRoleData> roleList = this.GetJunTuanRoleList(bhid, serverId);
             return JunTuanClient.getInstance().UpdateRoleDataList(bhid, roleList);
         }
 
-        // Token: 0x06000CEB RID: 3307 RVA: 0x000C90D8 File Offset: 0x000C72D8
+        
         public void AddJunTuanTaskValue(int bhid, int junTuanId, int sceneType, int taskValue)
         {
             if (bhid > 0 && junTuanId > 0)
@@ -1424,7 +1424,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000CEC RID: 3308 RVA: 0x000C922C File Offset: 0x000C742C
+        
         public void AddJunTuanTaskValue(GameClient client, int taskType, int taskValue)
         {
             if (!KuaFuManager.KuaFuWorldKuaFuGameServer)
@@ -1475,7 +1475,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000CED RID: 3309 RVA: 0x000C94CC File Offset: 0x000C76CC
+        
         public void AddJunTuanTaskValue(GameClient client, Monster monter, int taskType, int taskValue)
         {
             if (!KuaFuManager.KuaFuWorldKuaFuGameServer)
@@ -1511,7 +1511,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000CEE RID: 3310 RVA: 0x000C969C File Offset: 0x000C789C
+        
         private void TimerProc(object sender, EventArgs e)
         {
             bool all = false;
@@ -1649,7 +1649,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000CEF RID: 3311 RVA: 0x000C9F08 File Offset: 0x000C8108
+        
         public void OnChatListData(byte[] data)
         {
             if (null != data)
@@ -1665,7 +1665,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000CF0 RID: 3312 RVA: 0x000C9F80 File Offset: 0x000C8180
+        
         public void BroadcastJunTuanChatMsg(KFChat kfChat)
         {
             foreach (GameClient client in GameManager.ClientMgr.GetAllClients(true))
@@ -1677,7 +1677,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000CF1 RID: 3313 RVA: 0x000CA008 File Offset: 0x000C8208
+        
         public void JunTuanZhiWuChanged(GameClient client, JunTuanBangHuiMiniData data)
         {
             client.ClientData.JunTuanId = data.JunTuanId;
@@ -1690,7 +1690,7 @@ namespace GameServer.Logic
             EraManager.getInstance().OnJunTuanZhiWuChanged(client);
         }
 
-        // Token: 0x06000CF2 RID: 3314 RVA: 0x000CA09C File Offset: 0x000C829C
+        
         public bool OnBangHuiMemberChanged(GameClient client, int bhid)
         {
             int serverId = client.ServerId;
@@ -1712,7 +1712,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000CF3 RID: 3315 RVA: 0x000CA104 File Offset: 0x000C8304
+        
         public bool PreRemoveBangHui(GameClient client)
         {
             int bhid = client.ClientData.Faction;
@@ -1721,7 +1721,7 @@ namespace GameServer.Logic
             return null == bhData || bhData.QiLevel < this.RuntimeData.LegionsNeed || JunTuanClient.getInstance().RemoveBangHui(bhid) >= 0;
         }
 
-        // Token: 0x06000CF4 RID: 3316 RVA: 0x000CA180 File Offset: 0x000C8380
+        
         public void OnRoleChangName(int roleId, string oldName, string newName)
         {
             if (!string.IsNullOrEmpty(oldName) && !string.IsNullOrEmpty(newName))
@@ -1738,7 +1738,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000CF5 RID: 3317 RVA: 0x000CA210 File Offset: 0x000C8410
+        
         public bool PreRemoveRole(int roleId)
         {
             SafeClientData clientData = Global.GetSafeClientDataFromLocalOrDB(roleId);
@@ -1773,7 +1773,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06000CF6 RID: 3318 RVA: 0x000CA330 File Offset: 0x000C8530
+        
         public void OnBangHuiChangeName(int bhid, string newName)
         {
             BangHuiDetailData bhData = Global.GetBangHuiDetailData(-1, bhid, GameManager.ServerId);
@@ -1783,7 +1783,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06000CF7 RID: 3319 RVA: 0x000CA37C File Offset: 0x000C857C
+        
         public void NotifyJunTuanRequest(int junTuanId, bool icon)
         {
             foreach (GameClient client in GameManager.ClientMgr.GetAllClients(true))
@@ -1798,10 +1798,10 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x04001471 RID: 5233
+        
         private static JunTuanManager instance = new JunTuanManager();
 
-        // Token: 0x04001472 RID: 5234
+        
         public JunTuanRuntimeData RuntimeData = new JunTuanRuntimeData();
     }
 }

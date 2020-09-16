@@ -16,10 +16,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic.Copy
 {
-    // Token: 0x02000290 RID: 656
+    
     public class CopyTeamManager : SingletonTemplate<CopyTeamManager>, IManager, ICmdProcessorEx, ICmdProcessor, IEventListener, IEventListenerEx, ICopySceneManager
     {
-        // Token: 0x06000989 RID: 2441 RVA: 0x000972AC File Offset: 0x000954AC
+        
         public bool IsKuaFuCopy(int copyId)
         {
             SystemXmlItem systemFuBenItem = null;
@@ -58,7 +58,7 @@ namespace GameServer.Logic.Copy
             return result;
         }
 
-        // Token: 0x0600098A RID: 2442 RVA: 0x0009735C File Offset: 0x0009555C
+        
         public bool HandleKuaFuLogin(KuaFuServerLoginData data)
         {
             bool result;
@@ -116,7 +116,7 @@ namespace GameServer.Logic.Copy
             return result;
         }
 
-        // Token: 0x0600098B RID: 2443 RVA: 0x00097554 File Offset: 0x00095754
+        
         public bool HandleKuaFuInitGame(GameClient client)
         {
             bool result;
@@ -166,7 +166,7 @@ namespace GameServer.Logic.Copy
             return result;
         }
 
-        // Token: 0x0600098C RID: 2444 RVA: 0x000976C8 File Offset: 0x000958C8
+        
         private bool GetBirthPoint(int mapCode, out int toPosX, out int toPosY)
         {
             toPosX = -1;
@@ -190,7 +190,7 @@ namespace GameServer.Logic.Copy
             return result;
         }
 
-        // Token: 0x0600098D RID: 2445 RVA: 0x00097738 File Offset: 0x00095938
+        
         public void OnCopyRemove(int FuBenSeqId)
         {
             long teamId = -1L;
@@ -215,7 +215,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x0600098E RID: 2446 RVA: 0x000977F8 File Offset: 0x000959F8
+        
         private void OnTeamCreate(CopyTeamCreateData data)
         {
             if (data != null)
@@ -257,7 +257,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x0600098F RID: 2447 RVA: 0x000979FC File Offset: 0x00095BFC
+        
         private void OnTeamJoin(CopyTeamJoinData data)
         {
             if (data != null)
@@ -288,7 +288,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x06000990 RID: 2448 RVA: 0x00097B64 File Offset: 0x00095D64
+        
         private void OnTeamKickout(CopyTeamKickoutData data)
         {
             if (data != null)
@@ -320,7 +320,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x06000991 RID: 2449 RVA: 0x00097CEC File Offset: 0x00095EEC
+        
         private void OnTeamLeave(CopyTeamLeaveData data)
         {
             if (data != null)
@@ -366,7 +366,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x06000992 RID: 2450 RVA: 0x00097F54 File Offset: 0x00096154
+        
         private void OnTeamSetReady(CopyTeamReadyData data)
         {
             if (data != null)
@@ -420,7 +420,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x06000993 RID: 2451 RVA: 0x000981DC File Offset: 0x000963DC
+        
         private void OnTeamSetFlag(CopyTeamFlagData data)
         {
             if (data != null)
@@ -445,7 +445,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x06000994 RID: 2452 RVA: 0x000982D0 File Offset: 0x000964D0
+        
         private void OnTeamDestroy(CopyTeamDestroyData data)
         {
             if (data != null)
@@ -484,7 +484,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x06000995 RID: 2453 RVA: 0x00098488 File Offset: 0x00096688
+        
         private void OnTeamStart(CopyTeamStartData data)
         {
             if (data != null)
@@ -540,12 +540,12 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x06000996 RID: 2454 RVA: 0x00098740 File Offset: 0x00096940
+        
         private CopyTeamManager()
         {
         }
 
-        // Token: 0x06000997 RID: 2455 RVA: 0x000987CC File Offset: 0x000969CC
+        
         public bool initialize()
         {
             TCPCmdDispatcher.getInstance().registerProcessor(621, 6, SingletonTemplate<CopyTeamManager>.Instance());
@@ -596,19 +596,19 @@ namespace GameServer.Logic.Copy
             return true;
         }
 
-        // Token: 0x06000998 RID: 2456 RVA: 0x00098AE4 File Offset: 0x00096CE4
+        
         public bool startup()
         {
             return true;
         }
 
-        // Token: 0x06000999 RID: 2457 RVA: 0x00098AF8 File Offset: 0x00096CF8
+        
         public bool showdown()
         {
             return true;
         }
 
-        // Token: 0x0600099A RID: 2458 RVA: 0x00098B0C File Offset: 0x00096D0C
+        
         public bool destroy()
         {
             GlobalEventSource.getInstance().removeListener(13, SingletonTemplate<CopyTeamManager>.Instance());
@@ -625,7 +625,7 @@ namespace GameServer.Logic.Copy
             return true;
         }
 
-        // Token: 0x0600099B RID: 2459 RVA: 0x00098C28 File Offset: 0x00096E28
+        
         public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             switch (nID)
@@ -640,13 +640,13 @@ namespace GameServer.Logic.Copy
             return true;
         }
 
-        // Token: 0x0600099C RID: 2460 RVA: 0x00098C8C File Offset: 0x00096E8C
+        
         public bool processCmd(GameClient client, string[] cmdParams)
         {
             return true;
         }
 
-        // Token: 0x0600099D RID: 2461 RVA: 0x00098CA0 File Offset: 0x00096EA0
+        
         public void processEvent(EventObject eventObject)
         {
             if (eventObject.getEventType() == 13)
@@ -666,7 +666,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x0600099E RID: 2462 RVA: 0x00098D28 File Offset: 0x00096F28
+        
         public void processEvent(EventObjectEx eventObject)
         {
             switch (eventObject.EventType)
@@ -699,7 +699,7 @@ namespace GameServer.Logic.Copy
             eventObject.Handled = true;
         }
 
-        // Token: 0x0600099F RID: 2463 RVA: 0x00098E1C File Offset: 0x0009701C
+        
         private bool HandleNetCmd_CopyTeam(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             int teamType = Convert.ToInt32(cmdParams[1]);
@@ -748,7 +748,7 @@ namespace GameServer.Logic.Copy
             return true;
         }
 
-        // Token: 0x060009A0 RID: 2464 RVA: 0x00098F90 File Offset: 0x00097190
+        
         private bool HandleNetCmd_RegRoomNotify(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             int copyId = Convert.ToInt32(cmdParams[1]);
@@ -764,13 +764,13 @@ namespace GameServer.Logic.Copy
             return true;
         }
 
-        // Token: 0x060009A1 RID: 2465 RVA: 0x00098FD5 File Offset: 0x000971D5
+        
         private bool HandleNetCmd_GetRoomList(GameClient client, int nID, byte[] bytes, string[] cmdParams)
         {
             throw new NotImplementedException();
         }
 
-        // Token: 0x060009A2 RID: 2466 RVA: 0x00098FE0 File Offset: 0x000971E0
+        
         private void HandleCreateCopyTeam(GameClient client, int copyId, int minCombat, int autoStart, int kickNoReady)
         {
             if (!client.ClientSocket.IsKuaFuLogin)
@@ -859,7 +859,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x060009A3 RID: 2467 RVA: 0x0009935C File Offset: 0x0009755C
+        
         public void HandleApplyCopyTeam(GameClient client, long teamId)
         {
             if (!client.ClientSocket.IsKuaFuLogin)
@@ -966,7 +966,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x060009A4 RID: 2468 RVA: 0x000997EC File Offset: 0x000979EC
+        
         public void HandleKickoutCopyTeam(GameClient client, int otherRoleId)
         {
             if (!client.ClientSocket.IsKuaFuLogin)
@@ -1037,7 +1037,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x060009A5 RID: 2469 RVA: 0x00099B44 File Offset: 0x00097D44
+        
         public void HandleQuitFromTeam(GameClient client, bool notifyOther = true)
         {
             lock (this.Mutex)
@@ -1105,7 +1105,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x060009A6 RID: 2470 RVA: 0x00099E80 File Offset: 0x00098080
+        
         public void HandleSetReady(GameClient client, int ready)
         {
             if (!client.ClientSocket.IsKuaFuLogin)
@@ -1170,7 +1170,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x060009A7 RID: 2471 RVA: 0x0009A140 File Offset: 0x00098340
+        
         public void HandleQuickJoinTeam(GameClient client, int copyId)
         {
             if (!client.ClientSocket.IsKuaFuLogin)
@@ -1243,7 +1243,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x060009A8 RID: 2472 RVA: 0x0009A40C File Offset: 0x0009860C
+        
         public void HandleModKickFlag(GameClient client, int flag)
         {
             if (!client.ClientSocket.IsKuaFuLogin)
@@ -1310,7 +1310,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x060009A9 RID: 2473 RVA: 0x0009A6F8 File Offset: 0x000988F8
+        
         public void HandleModAutoStart(GameClient client, int flag)
         {
             if (!client.ClientSocket.IsKuaFuLogin)
@@ -1377,7 +1377,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x060009AA RID: 2474 RVA: 0x0009A9DC File Offset: 0x00098BDC
+        
         public void HandleClickStart(GameClient client, int fubenSeqId)
         {
             lock (this.Mutex)
@@ -1440,7 +1440,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x060009AB RID: 2475 RVA: 0x0009ACD8 File Offset: 0x00098ED8
+        
         private void RegisterCopyTeamListNotify(GameClient client, int copyId)
         {
             lock (this.Mutex)
@@ -1466,7 +1466,7 @@ namespace GameServer.Logic.Copy
             this.SendTeamList(client, 0, copyId);
         }
 
-        // Token: 0x060009AC RID: 2476 RVA: 0x0009ADC0 File Offset: 0x00098FC0
+        
         public void UnRegisterCopyTeamListNotify(GameClient client)
         {
             lock (this.Mutex)
@@ -1479,7 +1479,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x060009AD RID: 2477 RVA: 0x0009AE68 File Offset: 0x00099068
+        
         public bool CanEnterScene(GameClient client, out CopyTeamData td)
         {
             td = null;
@@ -1541,7 +1541,7 @@ namespace GameServer.Logic.Copy
             return result;
         }
 
-        // Token: 0x060009AE RID: 2478 RVA: 0x0009B060 File Offset: 0x00099260
+        
         public bool CanEnterOtherScene(GameClient client)
         {
             lock (this.Mutex)
@@ -1555,7 +1555,7 @@ namespace GameServer.Logic.Copy
             return true;
         }
 
-        // Token: 0x060009AF RID: 2479 RVA: 0x0009B0D4 File Offset: 0x000992D4
+        
         public void Update()
         {
             long nowMs = TimeUtil.NOW();
@@ -1589,7 +1589,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x060009B0 RID: 2480 RVA: 0x0009B2BC File Offset: 0x000994BC
+        
         public List<CopyTeamData> GetTeamDataList(int startIndex, int count, int sceneIndex, int zhanLi)
         {
             int index = 0;
@@ -1612,7 +1612,7 @@ namespace GameServer.Logic.Copy
             return teamDataList;
         }
 
-        // Token: 0x060009B1 RID: 2481 RVA: 0x0009B3C0 File Offset: 0x000995C0
+        
         public List<CopyTeamData> GetTeamDataListInCopyMap(int sceneIndex = -1)
         {
             List<CopyTeamData> teamDataList = new List<CopyTeamData>();
@@ -1632,7 +1632,7 @@ namespace GameServer.Logic.Copy
             return teamDataList;
         }
 
-        // Token: 0x060009B2 RID: 2482 RVA: 0x0009B4A4 File Offset: 0x000996A4
+        
         public CopyTeamMemberData ClientDataToTeamMemberData(SafeClientData clientData)
         {
             return new CopyTeamMemberData
@@ -1658,13 +1658,13 @@ namespace GameServer.Logic.Copy
             };
         }
 
-        // Token: 0x060009B3 RID: 2483 RVA: 0x0009B598 File Offset: 0x00099798
+        
         public void RoleLeaveFuBen(GameClient client)
         {
             this.HandleQuitFromTeam(client, true);
         }
 
-        // Token: 0x060009B4 RID: 2484 RVA: 0x0009B5A4 File Offset: 0x000997A4
+        
         public void OnPlayerLogin(GameClient client)
         {
             if (client != null)
@@ -1691,7 +1691,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x060009B5 RID: 2485 RVA: 0x0009B68C File Offset: 0x0009988C
+        
         public void OnPlayerLogout(GameClient client)
         {
             if (client != null)
@@ -1719,13 +1719,13 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x060009B6 RID: 2486 RVA: 0x0009B758 File Offset: 0x00099958
+        
         public bool IsTeamCopyMapCode(int mapCode)
         {
             return this.MapCode2ToFubenId.ContainsKey(mapCode);
         }
 
-        // Token: 0x060009B7 RID: 2487 RVA: 0x0009B778 File Offset: 0x00099978
+        
         public List<int> GetTeamCopyMapCodes(int fubenId)
         {
             List<int> mapCodes = null;
@@ -1741,13 +1741,13 @@ namespace GameServer.Logic.Copy
             return result;
         }
 
-        // Token: 0x060009B8 RID: 2488 RVA: 0x0009B7A4 File Offset: 0x000999A4
+        
         public bool NeedRecordDamageInfoFuBenID(int fuBenID)
         {
             return this.RecordDamagesFuBenIDHashSet.Contains(fuBenID) || GameManager.GuildCopyMapMgr.IsGuildCopyMap(fuBenID);
         }
 
-        // Token: 0x060009B9 RID: 2489 RVA: 0x0009B7D4 File Offset: 0x000999D4
+        
         public bool IsInRoleId2JoinedTeam(int nRid)
         {
             bool result;
@@ -1758,7 +1758,7 @@ namespace GameServer.Logic.Copy
             return result;
         }
 
-        // Token: 0x060009BA RID: 2490 RVA: 0x0009B828 File Offset: 0x00099A28
+        
         public void NotifyTeamListChange(CopyTeamData td)
         {
             if (td != null)
@@ -1789,7 +1789,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x060009BB RID: 2491 RVA: 0x0009B96C File Offset: 0x00099B6C
+        
         public void NotifyListTeamData(GameClient client, CopyTeamData ctd)
         {
             int memberCount = (ctd.StartTime > 0L) ? 0 : ctd.MemberCount;
@@ -1804,7 +1804,7 @@ namespace GameServer.Logic.Copy
             client.sendCmd(625, strcmd, false);
         }
 
-        // Token: 0x060009BC RID: 2492 RVA: 0x0009B9EC File Offset: 0x00099BEC
+        
         public void NotifyListTeamRemove(GameClient client, long teamID, int sceneIndex = -1)
         {
             string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}", new object[]
@@ -1818,7 +1818,7 @@ namespace GameServer.Logic.Copy
             client.sendCmd(625, strcmd, false);
         }
 
-        // Token: 0x060009BD RID: 2493 RVA: 0x0009BA48 File Offset: 0x00099C48
+        
         public void NotifyTeamCmd(GameClient client, CopyTeamErrorCodes status, int teamType, long extTag1, string extTag2, int nOccu = -1, int nLev = -1, int nChangeLife = -1)
         {
             string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}:{5}:{6}:{7}", new object[]
@@ -1835,7 +1835,7 @@ namespace GameServer.Logic.Copy
             client.sendCmd(621, strcmd, false);
         }
 
-        // Token: 0x060009BE RID: 2494 RVA: 0x0009BACC File Offset: 0x00099CCC
+        
         public void NotifyTeamData(CopyTeamData td)
         {
             if (td != null)
@@ -1857,7 +1857,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x060009BF RID: 2495 RVA: 0x0009BBAC File Offset: 0x00099DAC
+        
         public void NotifyTeamCmds(CopyTeamData td, CopyTeamErrorCodes status, int teamType, long extTag1, string extTag2)
         {
             if (td != null)
@@ -1879,14 +1879,14 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x060009C0 RID: 2496 RVA: 0x0009BC8C File Offset: 0x00099E8C
+        
         public void NotifyTeamStateChanged(GameClient client, long teamID, int roleID, int isReady)
         {
             string strcmd = string.Format("{0}:{1}:{2}", roleID, teamID, isReady);
             client.sendCmd(623, strcmd, false);
         }
 
-        // Token: 0x060009C1 RID: 2497 RVA: 0x0009BCC8 File Offset: 0x00099EC8
+        
         public void NotifyTeamFuBenEnterMsg(List<int> roleIDsList, int minLevel, int maxLevel, int leaderMapCode, int leaderRoleID, int fuBenID, int fuBenSeqID, int enterNumber, int maxFinishNum, bool igoreNumLimit = false)
         {
             if (roleIDsList != null && roleIDsList.Count > 0)
@@ -1917,7 +1917,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x060009C2 RID: 2498 RVA: 0x0009BDC0 File Offset: 0x00099FC0
+        
         public void SendTeamList(GameClient client, int startIndex, int copyId)
         {
             CopySearchTeamData searchData = new CopySearchTeamData
@@ -1952,7 +1952,7 @@ namespace GameServer.Logic.Copy
             client.sendCmd<CopySearchTeamData>(620, searchData, false);
         }
 
-        // Token: 0x060009C3 RID: 2499 RVA: 0x0009BF74 File Offset: 0x0009A174
+        
         public void OnLeaveFuBen(GameClient client, SceneUIClasses sceneType)
         {
             CopyMap copyMap = GameManager.CopyMapMgr.FindCopyMap(client.ClientData.MapCode, client.ClientData.FuBenSeqID);
@@ -1962,7 +1962,7 @@ namespace GameServer.Logic.Copy
             }
         }
 
-        // Token: 0x060009C4 RID: 2500 RVA: 0x0009BFBC File Offset: 0x0009A1BC
+        
         public bool AddCopyScenes(GameClient client, CopyMap copyMap, SceneUIClasses sceneType)
         {
             int fuBenSeqId = copyMap.FuBenSeqID;
@@ -1971,54 +1971,54 @@ namespace GameServer.Logic.Copy
             return true;
         }
 
-        // Token: 0x060009C5 RID: 2501 RVA: 0x0009BFFC File Offset: 0x0009A1FC
+        
         public bool RemoveCopyScene(CopyMap copyMap, SceneUIClasses sceneType)
         {
             return true;
         }
 
-        // Token: 0x060009C6 RID: 2502 RVA: 0x0009C00F File Offset: 0x0009A20F
+        
         public void TimerProc()
         {
         }
 
-        // Token: 0x0400103E RID: 4158
+        
         public const int ConstCopyType = 1;
 
-        // Token: 0x0400103F RID: 4159
+        
         private HashSet<int> RecordDamagesFuBenIDHashSet = new HashSet<int>();
 
-        // Token: 0x04001040 RID: 4160
+        
         private Dictionary<int, HashSet<int>> FuBenId2Watchers = new Dictionary<int, HashSet<int>>();
 
-        // Token: 0x04001041 RID: 4161
+        
         private Dictionary<int, HashSet<long>> FuBenId2Teams = new Dictionary<int, HashSet<long>>();
 
-        // Token: 0x04001042 RID: 4162
+        
         private Dictionary<int, int> MapCode2ToFubenId = new Dictionary<int, int>();
 
-        // Token: 0x04001043 RID: 4163
+        
         private Dictionary<int, List<int>> FuBenId2MapCodes = new Dictionary<int, List<int>>();
 
-        // Token: 0x04001044 RID: 4164
+        
         private Dictionary<long, CopyTeamData> CopyTeamDict = new Dictionary<long, CopyTeamData>();
 
-        // Token: 0x04001045 RID: 4165
+        
         public long TimeLimitMemberNoReadyMs = 0L;
 
-        // Token: 0x04001046 RID: 4166
+        
         private Dictionary<int, long> CreatKuaFuCopyLinkIntervalDic = new Dictionary<int, long>();
 
-        // Token: 0x04001047 RID: 4167
+        
         private int ThisServerId;
 
-        // Token: 0x04001048 RID: 4168
+        
         private Dictionary<int, long> RoleId2JoinedTeam = new Dictionary<int, long>();
 
-        // Token: 0x04001049 RID: 4169
+        
         private Dictionary<int, long> FuBenSeq2TeamId = new Dictionary<int, long>();
 
-        // Token: 0x0400104A RID: 4170
+        
         private object Mutex = new object();
     }
 }

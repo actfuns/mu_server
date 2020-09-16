@@ -8,12 +8,12 @@ using Server.Tools;
 
 namespace Server.TCP
 {
-	// Token: 0x020008C8 RID: 2248
+	
 	public class SendBufferManager
 	{
-		// Token: 0x17000603 RID: 1539
-		// (get) Token: 0x0600402B RID: 16427 RVA: 0x003BB1CC File Offset: 0x003B93CC
-		// (set) Token: 0x0600402C RID: 16428 RVA: 0x003BB1E4 File Offset: 0x003B93E4
+		
+		
+		
 		public bool Exit
 		{
 			get
@@ -26,7 +26,7 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x0600402E RID: 16430 RVA: 0x003BB21C File Offset: 0x003B941C
+		
 		public bool AddOutPacket(TMSKSocket s, TCPOutPacket tcpOutPacket)
 		{
 			SendBuffer sendBuffer = s._SendBuffer;
@@ -72,7 +72,7 @@ namespace Server.TCP
 			return result;
 		}
 
-		// Token: 0x0600402F RID: 16431 RVA: 0x003BB360 File Offset: 0x003B9560
+		
 		public void TrySendAll()
 		{
 			List<TMSKSocket> lsSocket = new List<TMSKSocket>(2000);
@@ -104,7 +104,7 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x06004030 RID: 16432 RVA: 0x003BB498 File Offset: 0x003B9698
+		
 		public void Remove(TMSKSocket s)
 		{
 			SendBuffer sendBuffer = null;
@@ -123,7 +123,7 @@ namespace Server.TCP
 			Global._FullBufferManager.Remove(s);
 		}
 
-		// Token: 0x06004031 RID: 16433 RVA: 0x003BB540 File Offset: 0x003B9740
+		
 		public void Add(TMSKSocket s)
 		{
 			lock (this.BufferDict)
@@ -137,7 +137,7 @@ namespace Server.TCP
 			}
 		}
 
-		// Token: 0x06004032 RID: 16434 RVA: 0x003BB5B8 File Offset: 0x003B97B8
+		
 		public void OnSendBufferOK(TMSKSocket s)
 		{
 			SendBuffer sendBuffer = s._SendBuffer;
@@ -148,16 +148,16 @@ namespace Server.TCP
 			Global._FullBufferManager.Remove(s);
 		}
 
-		// Token: 0x04004F30 RID: 20272
+		
 		public int MaxOutPacketSize = 0;
 
-		// Token: 0x04004F31 RID: 20273
+		
 		public int MaxOutPacketSizeCmdID = 0;
 
-		// Token: 0x04004F32 RID: 20274
+		
 		private Dictionary<TMSKSocket, SendBuffer> BufferDict = new Dictionary<TMSKSocket, SendBuffer>();
 
-		// Token: 0x04004F33 RID: 20275
+		
 		private bool _Exit = false;
 	}
 }

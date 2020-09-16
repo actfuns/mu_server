@@ -14,10 +14,10 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic
 {
-    // Token: 0x02000529 RID: 1321
+    
     internal class MarryLogic
     {
-        // Token: 0x06001905 RID: 6405 RVA: 0x00186124 File Offset: 0x00184324
+        
         public static void LoadMarryBaseConfig()
         {
             MarryLogic.MarryCost = Convert.ToInt32(GameManager.systemParamsList.GetParamValueByName("JieHunCost"));
@@ -27,13 +27,13 @@ namespace GameServer.Logic
             MarryLogic.DivorceForceCost = Convert.ToInt32(GameManager.systemParamsList.GetParamValueByName("DivorceZuanShiCost"));
         }
 
-        // Token: 0x06001906 RID: 6406 RVA: 0x001861B0 File Offset: 0x001843B0
+        
         public static bool IsVersionSystemOpenOfMarriage()
         {
             return !GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot5) && GameManager.VersionSystemOpenMgr.IsVersionSystemOpen("Marriage");
         }
 
-        // Token: 0x06001907 RID: 6407 RVA: 0x001861E4 File Offset: 0x001843E4
+        
         public static MarryApplyData AddMarryApply(int roleID, MarryApplyType type, int spouseID)
         {
             MarryApplyData data = null;
@@ -62,7 +62,7 @@ namespace GameServer.Logic
             return data;
         }
 
-        // Token: 0x06001908 RID: 6408 RVA: 0x001862C0 File Offset: 0x001844C0
+        
         public static bool RemoveMarryApply(int roleID, MarryApplyType type = MarryApplyType.ApplyNull)
         {
             bool result;
@@ -101,7 +101,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06001909 RID: 6409 RVA: 0x00186398 File Offset: 0x00184598
+        
         public static void ApplyPeriodicClear(long ticks)
         {
             if (ticks >= MarryLogic.NextPeriodicCheckTime)
@@ -126,7 +126,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600190A RID: 6410 RVA: 0x001864A4 File Offset: 0x001846A4
+        
         public static void ApplyShutdownClear()
         {
             lock (MarryLogic.MarryApplyList)
@@ -143,7 +143,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600190B RID: 6411 RVA: 0x00186568 File Offset: 0x00184768
+        
         public static void ApplyLogoutClear(GameClient client)
         {
             lock (MarryLogic.MarryApplyList)
@@ -160,7 +160,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600190C RID: 6412 RVA: 0x001865F0 File Offset: 0x001847F0
+        
         public static void ApplyReturnMoney(int roleID, MarryApplyData applyData, GameClient client = null)
         {
             if (client == null)
@@ -180,7 +180,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x0600190D RID: 6413 RVA: 0x0018669C File Offset: 0x0018489C
+        
         public static bool ApplyExist(int roleID)
         {
             lock (MarryLogic.MarryApplyList)
@@ -199,7 +199,7 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x0600190E RID: 6414 RVA: 0x00186774 File Offset: 0x00184974
+        
         public static TCPProcessCmdResults ProcessMarryInit(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
         {
             string cmdData = null;
@@ -253,7 +253,7 @@ namespace GameServer.Logic
             return TCPProcessCmdResults.RESULT_FAILED;
         }
 
-        // Token: 0x0600190F RID: 6415 RVA: 0x0018699C File Offset: 0x00184B9C
+        
         public static TCPProcessCmdResults ProcessMarryReply(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
         {
             tcpOutPacket = null;
@@ -299,7 +299,7 @@ namespace GameServer.Logic
             return TCPProcessCmdResults.RESULT_FAILED;
         }
 
-        // Token: 0x06001910 RID: 6416 RVA: 0x00186B48 File Offset: 0x00184D48
+        
         public static TCPProcessCmdResults ProcessMarryDivorce(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
         {
             tcpOutPacket = null;
@@ -344,7 +344,7 @@ namespace GameServer.Logic
             return TCPProcessCmdResults.RESULT_FAILED;
         }
 
-        // Token: 0x06001911 RID: 6417 RVA: 0x00186CC4 File Offset: 0x00184EC4
+        
         public static TCPProcessCmdResults ProcessMarryAutoReject(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
         {
             tcpOutPacket = null;
@@ -389,13 +389,13 @@ namespace GameServer.Logic
             return TCPProcessCmdResults.RESULT_FAILED;
         }
 
-        // Token: 0x06001912 RID: 6418 RVA: 0x00186E6C File Offset: 0x0018506C
+        
         public static bool SameSexMarry(bool diff = false)
         {
             return diff || GameManager.PlatConfigMgr.GetGameConfigItemStr("SameSexMarry", "0") == "1";
         }
 
-        // Token: 0x06001913 RID: 6419 RVA: 0x00186EA4 File Offset: 0x001850A4
+        
         public static MarryResult MarryInit(GameClient client, int spouseID)
         {
             MarryResult result;
@@ -483,7 +483,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06001914 RID: 6420 RVA: 0x00187150 File Offset: 0x00185350
+        
         public static MarryResult MarryReply(GameClient client, int sourceID, int accept)
         {
             MarryResult result;
@@ -602,7 +602,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06001915 RID: 6421 RVA: 0x00187710 File Offset: 0x00185910
+        
         public static MarryResult MarryDivorce(GameClient client, MarryDivorceType divorceType)
         {
             MarryResult result;
@@ -791,7 +791,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06001916 RID: 6422 RVA: 0x00187F6C File Offset: 0x0018616C
+        
         public static bool SendDivorceMail(int roleID, string subject, string content, GameClient client, int serverId)
         {
             string mailGoodsString = "";
@@ -816,7 +816,7 @@ namespace GameServer.Logic
             return fieldsData == null;
         }
 
-        // Token: 0x06001917 RID: 6423 RVA: 0x00188028 File Offset: 0x00186228
+        
         public static MarryResult MarryAutoReject(GameClient client, int autoReject)
         {
             if ((int)client.ClientData.MyMarriageData.byAutoReject != autoReject)
@@ -827,7 +827,7 @@ namespace GameServer.Logic
             return MarryResult.Success;
         }
 
-        // Token: 0x06001918 RID: 6424 RVA: 0x00188070 File Offset: 0x00186270
+        
         public static bool IsMarried(int roleID)
         {
             RoleDataEx roleDataEx = MarryLogic.GetOfflineRoleData(roleID);
@@ -841,21 +841,21 @@ namespace GameServer.Logic
             return false;
         }
 
-        // Token: 0x06001919 RID: 6425 RVA: 0x001880B8 File Offset: 0x001862B8
+        
         public static int GetSpouseID(int roleID)
         {
             RoleDataEx roleDataEx = MarryLogic.GetOfflineRoleData(roleID);
             return (roleDataEx != null && roleDataEx.MyMarriageData != null) ? roleDataEx.MyMarriageData.nSpouseID : -1;
         }
 
-        // Token: 0x0600191A RID: 6426 RVA: 0x001880EC File Offset: 0x001862EC
+        
         public static string GetRoleName(int roleID)
         {
             RoleDataEx roleDataEx = MarryLogic.GetOfflineRoleData(roleID);
             return (roleDataEx != null) ? roleDataEx.RoleName : "";
         }
 
-        // Token: 0x0600191B RID: 6427 RVA: 0x00188118 File Offset: 0x00186318
+        
         public static RoleDataEx GetOfflineRoleData(int roleID)
         {
             GameClient client = GameManager.ClientMgr.FindClient(roleID);
@@ -872,7 +872,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x0600191C RID: 6428 RVA: 0x00188164 File Offset: 0x00186364
+        
         public static void OnChangeName(int roleId, string oldName, string newName)
         {
             if (!string.IsNullOrEmpty(oldName) && !string.IsNullOrEmpty(newName))
@@ -890,25 +890,25 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x04002325 RID: 8997
+        
         public static Dictionary<int, MarryApplyData> MarryApplyList = new Dictionary<int, MarryApplyData>();
 
-        // Token: 0x04002326 RID: 8998
+        
         public static long NextPeriodicCheckTime = 0L;
 
-        // Token: 0x04002327 RID: 8999
+        
         private static int MarryCost;
 
-        // Token: 0x04002328 RID: 9000
+        
         private static int MarryCD;
 
-        // Token: 0x04002329 RID: 9001
+        
         private static int MarryReplyTime;
 
-        // Token: 0x0400232A RID: 9002
+        
         private static int DivorceCost;
 
-        // Token: 0x0400232B RID: 9003
+        
         private static int DivorceForceCost;
     }
 }

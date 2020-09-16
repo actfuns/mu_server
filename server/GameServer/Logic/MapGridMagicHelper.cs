@@ -8,10 +8,10 @@ using GameServer.Interface;
 
 namespace GameServer.Logic
 {
-    // Token: 0x02000750 RID: 1872
+    
     public class MapGridMagicHelper
     {
-        // Token: 0x06002F18 RID: 12056 RVA: 0x002A17C8 File Offset: 0x0029F9C8
+        
         public void AddMagicHelper(MagicActionIDs magicActionID, double[] magicActionParams, int mapCode, Point centerGridXY, int gridWidthNum, int gridHeightNum, int copyMapID = -1)
         {
             if (copyMapID < 0)
@@ -71,7 +71,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002F19 RID: 12057 RVA: 0x002A1A50 File Offset: 0x0029FC50
+        
         public void AddMagicHelperEx(MagicActionIDs magicActionID, double[] magicActionParams, int mapCode, int posX, int posY, int copyMapID = -1)
         {
             if (copyMapID < 0)
@@ -108,7 +108,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002F1A RID: 12058 RVA: 0x002A1B78 File Offset: 0x0029FD78
+        
         public void AddMagicHelperExAction(MagicActionIDs magicActionID, double[] magicActionParams, int mapCode, Point centerGridXY, int gridWidthNum, int gridHeightNum, int copyMapID = -1)
         {
             if (copyMapID < 0)
@@ -173,7 +173,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002F1B RID: 12059 RVA: 0x002A1DF0 File Offset: 0x0029FFF0
+        
         private bool CanExecuteItem(Dictionary<MagicActionIDs, GridMagicHelperItem> dict, GridMagicHelperItem magicHelperItem, double effectSecs, int maxNum)
         {
             long nowTicks = TimeUtil.NOW();
@@ -210,7 +210,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06002F1C RID: 12060 RVA: 0x002A1F0C File Offset: 0x002A010C
+        
         private bool CanExecuteItemEx(GridMagicHelperItemKey key, GridMagicHelperItemEx magicHelperItem, double effectSecs, int maxNum, long nowTicks)
         {
             long ticks = magicHelperItem.StartedTicks + (long)(effectSecs * 1000.0);
@@ -246,7 +246,7 @@ namespace GameServer.Logic
             return result;
         }
 
-        // Token: 0x06002F1D RID: 12061 RVA: 0x002A202C File Offset: 0x002A022C
+        
         public void ExecuteMAttack(string gridXY, Dictionary<MagicActionIDs, GridMagicHelperItem> dict)
         {
             string[] fields = gridXY.Split(new char[]
@@ -326,7 +326,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002F1E RID: 12062 RVA: 0x002A2484 File Offset: 0x002A0684
+        
         public void ExecuteMUFireWall(int id, string gridXY, Dictionary<MagicActionIDs, GridMagicHelperItem> dict)
         {
             string[] fields = gridXY.Split(new char[]
@@ -440,7 +440,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002F1F RID: 12063 RVA: 0x002A2AD4 File Offset: 0x002A0CD4
+        
         public void ExecuteAllItems()
         {
             List<string> list = new List<string>();
@@ -466,7 +466,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002F20 RID: 12064 RVA: 0x002A2BFC File Offset: 0x002A0DFC
+        
         public int GetObjectAddMapBuffer(int nAttackID)
         {
             int nCount = 0;
@@ -486,7 +486,7 @@ namespace GameServer.Logic
             return nCount;
         }
 
-        // Token: 0x06002F21 RID: 12065 RVA: 0x002A2CCC File Offset: 0x002A0ECC
+        
         public void ExecuteAllItemsEx()
         {
             long nowTicks = TimeUtil.NOW();
@@ -529,7 +529,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002F22 RID: 12066 RVA: 0x002A2EE4 File Offset: 0x002A10E4
+        
         public void ExecuteMUFireWall_X(GridMagicHelperItemKey key, GridMagicHelperItemEx magicHelperItem, long nowTicks)
         {
             int id = (int)key.MagicActionID;
@@ -730,7 +730,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002F23 RID: 12067 RVA: 0x002A387C File Offset: 0x002A1A7C
+        
         public void ExecuteMUFireWallAction(GridMagicHelperItemKey key, GridMagicHelperItemEx magicHelperItem, long nowTicks)
         {
             magicHelperItem.ExecutedNum++;
@@ -784,7 +784,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002F24 RID: 12068 RVA: 0x002A3AF4 File Offset: 0x002A1CF4
+        
         public void ExecuteMUFireSector(GridMagicHelperItemKey key, GridMagicHelperItemEx magicHelperItem, long nowTicks)
         {
             int id = (int)key.MagicActionID;
@@ -886,7 +886,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002F25 RID: 12069 RVA: 0x002A4108 File Offset: 0x002A2308
+        
         public void ExecuteMUFireStraight(GridMagicHelperItemKey key, GridMagicHelperItemEx magicHelperItem, long nowTicks)
         {
             int id = (int)key.MagicActionID;
@@ -989,7 +989,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002F26 RID: 12070 RVA: 0x002A4720 File Offset: 0x002A2920
+        
         public void AddGridMagic(MagicActionIDs magicActionID, double[] magicActionParams, int mapCode, int posX, int posY, int DelayDecoration, int DecorationTime, int copyMapID, int maxHitCount = 8)
         {
             if (copyMapID < 0)
@@ -1038,7 +1038,7 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x06002F27 RID: 12071 RVA: 0x002A48BC File Offset: 0x002A2ABC
+        
         public void FireWallActionProc(long execTicks, object state)
         {
             MapGridMagicHelper.GridMagicItem item = state as MapGridMagicHelper.GridMagicItem;
@@ -1048,22 +1048,22 @@ namespace GameServer.Logic
             }
         }
 
-        // Token: 0x04003CC2 RID: 15554
+        
         private Dictionary<string, Dictionary<MagicActionIDs, GridMagicHelperItem>> _GridMagicHelperDict = new Dictionary<string, Dictionary<MagicActionIDs, GridMagicHelperItem>>();
 
-        // Token: 0x04003CC3 RID: 15555
+        
         private SortedDictionary<GridMagicHelperItemKey, GridMagicHelperItemEx> _GridMagicHelperDictEx = new SortedDictionary<GridMagicHelperItemKey, GridMagicHelperItemEx>(GridMagicHelperItemKey.Comparer);
 
-        // Token: 0x04003CC4 RID: 15556
+        
         private TimedActionManager Mgr = new TimedActionManager();
 
-        // Token: 0x02000751 RID: 1873
+        
         private class GridMagicItem
         {
-            // Token: 0x04003CC5 RID: 15557
+            
             public GridMagicHelperItemKey ItemKey;
 
-            // Token: 0x04003CC6 RID: 15558
+            
             public GridMagicHelperItemEx MagicHelperItem;
         }
     }

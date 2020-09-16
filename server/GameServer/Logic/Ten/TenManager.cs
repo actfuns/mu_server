@@ -8,40 +8,40 @@ using Server.Tools;
 
 namespace GameServer.Logic.Ten
 {
-	// Token: 0x02000432 RID: 1074
+	
 	public class TenManager : IManager
 	{
-		// Token: 0x060013AF RID: 5039 RVA: 0x00136DF8 File Offset: 0x00134FF8
+		
 		public static TenManager getInstance()
 		{
 			return TenManager.instance;
 		}
 
-		// Token: 0x060013B0 RID: 5040 RVA: 0x00136E10 File Offset: 0x00135010
+		
 		public bool initialize()
 		{
 			return TenManager.initConfig();
 		}
 
-		// Token: 0x060013B1 RID: 5041 RVA: 0x00136E30 File Offset: 0x00135030
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x060013B2 RID: 5042 RVA: 0x00136E44 File Offset: 0x00135044
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x060013B3 RID: 5043 RVA: 0x00136E58 File Offset: 0x00135058
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060013B4 RID: 5044 RVA: 0x00136E6C File Offset: 0x0013506C
+		
 		public static bool initConfig()
 		{
 			string fileName = Global.GameResPath("Config/TenAward.xml");
@@ -119,7 +119,7 @@ namespace GameServer.Logic.Ten
 			return result;
 		}
 
-		// Token: 0x060013B5 RID: 5045 RVA: 0x00137130 File Offset: 0x00135330
+		
 		public static void initDb()
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot7))
@@ -166,10 +166,10 @@ namespace GameServer.Logic.Ten
 			}
 		}
 
-		// Token: 0x04001D0C RID: 7436
+		
 		private static TenManager instance = new TenManager();
 
-		// Token: 0x04001D0D RID: 7437
+		
 		private static Dictionary<int, TenAwardData> _tenAwardDic = new Dictionary<int, TenAwardData>();
 	}
 }

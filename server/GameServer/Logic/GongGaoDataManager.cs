@@ -6,10 +6,10 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004DE RID: 1246
+	
 	public class GongGaoDataManager
 	{
-		// Token: 0x06001732 RID: 5938 RVA: 0x0016B884 File Offset: 0x00169A84
+		
 		public static void LoadGongGaoData()
 		{
 			string fullPathFileName = Global.IsolateResPath("Config/Gonggao.xml");
@@ -17,7 +17,7 @@ namespace GameServer.Logic
 			GongGaoDataManager.systemGongGaoMgr.LoadFromXMlFile("Config/Gonggao.xml", "", "ID", 1);
 		}
 
-		// Token: 0x06001733 RID: 5939 RVA: 0x0016B8C4 File Offset: 0x00169AC4
+		
 		public static void CheckGongGaoInfo(GameClient client, int nID)
 		{
 			string strBeginTime = "";
@@ -58,10 +58,10 @@ namespace GameServer.Logic
 			client.sendCmd<GongGaoData>(nID, gongGaoData, false);
 		}
 
-		// Token: 0x04002108 RID: 8456
+		
 		public static SystemXmlItems systemGongGaoMgr = new SystemXmlItems();
 
-		// Token: 0x04002109 RID: 8457
+		
 		public static string strGongGaoXML = "";
 	}
 }

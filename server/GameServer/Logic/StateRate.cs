@@ -3,10 +3,10 @@ using GameServer.Interface;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007A0 RID: 1952
+	
 	public class StateRate
 	{
-		// Token: 0x060032D9 RID: 13017 RVA: 0x002D1EC4 File Offset: 0x002D00C4
+		
 		public static double GetStateDingShengRate(IObject self, IObject obj, double selfBaseRate, double objBaseRate)
 		{
 			double dSelfRealRate;
@@ -42,7 +42,7 @@ namespace GameServer.Logic
 			return dSelfRealRate - dObjRealRate;
 		}
 
-		// Token: 0x060032DA RID: 13018 RVA: 0x002D1FE0 File Offset: 0x002D01E0
+		
 		public static double GetStateMoveSpeed(IObject self, IObject obj, double selfBaseRate, double objBaseRate)
 		{
 			double dSelfRealRate;
@@ -78,7 +78,7 @@ namespace GameServer.Logic
 			return dSelfRealRate - dObjRealRate;
 		}
 
-		// Token: 0x060032DB RID: 13019 RVA: 0x002D20FC File Offset: 0x002D02FC
+		
 		public static double GetNegativeRate(IObject self, IObject obj, double baseRate, ExtPropIndexes extPropIndex, MagicActionIDs actionId)
 		{
 			int selfZhuanSheng = 0;
@@ -128,7 +128,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060032DC RID: 13020 RVA: 0x002D22C8 File Offset: 0x002D04C8
+		
 		public static double GetStateJiTui(IObject self, IObject obj, double selfBaseRate, double objBaseRate)
 		{
 			double dSelfRealRate;
@@ -164,7 +164,7 @@ namespace GameServer.Logic
 			return dSelfRealRate - dObjRealRate;
 		}
 
-		// Token: 0x060032DD RID: 13021 RVA: 0x002D23E4 File Offset: 0x002D05E4
+		
 		public static double GetStateHunMi(IObject self, IObject obj, double selfBaseRate, double objBaseRate)
 		{
 			double dSelfRealRate;

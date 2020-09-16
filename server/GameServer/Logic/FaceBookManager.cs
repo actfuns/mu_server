@@ -8,40 +8,40 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004DA RID: 1242
+	
 	public class FaceBookManager : IManager
 	{
-		// Token: 0x06001711 RID: 5905 RVA: 0x00169F88 File Offset: 0x00168188
+		
 		public static FaceBookManager getInstance()
 		{
 			return FaceBookManager.instance;
 		}
 
-		// Token: 0x06001712 RID: 5906 RVA: 0x00169FA0 File Offset: 0x001681A0
+		
 		public bool initialize()
 		{
 			return FaceBookManager.initFacebook();
 		}
 
-		// Token: 0x06001713 RID: 5907 RVA: 0x00169FC0 File Offset: 0x001681C0
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x06001714 RID: 5908 RVA: 0x00169FD4 File Offset: 0x001681D4
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06001715 RID: 5909 RVA: 0x00169FE8 File Offset: 0x001681E8
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06001716 RID: 5910 RVA: 0x00169FFC File Offset: 0x001681FC
+		
 		public static bool initFacebook()
 		{
 			string fileName = "Config/FacebookAward.xml";
@@ -108,7 +108,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001717 RID: 5911 RVA: 0x0016A298 File Offset: 0x00168498
+		
 		private static void initFacebookDb()
 		{
 			string dbCmds = "";
@@ -146,10 +146,10 @@ namespace GameServer.Logic
 			Global.RequestToDBServer(Global._TCPManager.tcpClientPool, Global._TCPManager.TcpOutPacketPool, 21000, dbCmds, out dbFields, 0);
 		}
 
-		// Token: 0x04002101 RID: 8449
+		
 		private static FaceBookManager instance = new FaceBookManager();
 
-		// Token: 0x04002102 RID: 8450
+		
 		private static Dictionary<int, FacebookAwardData> _FacebookAwards = new Dictionary<int, FacebookAwardData>();
 	}
 }

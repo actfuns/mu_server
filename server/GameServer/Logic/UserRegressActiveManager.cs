@@ -9,34 +9,34 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020004B0 RID: 1200
+	
 	public class UserRegressActiveManager : IManager, ICmdProcessorEx, ICmdProcessor, IManager2
 	{
-		// Token: 0x0600164B RID: 5707 RVA: 0x0015CF9C File Offset: 0x0015B19C
+		
 		public static UserRegressActiveManager getInstance()
 		{
 			return UserRegressActiveManager.instance;
 		}
 
-		// Token: 0x0600164C RID: 5708 RVA: 0x0015CFB4 File Offset: 0x0015B1B4
+		
 		public bool InitConfig()
 		{
 			return true;
 		}
 
-		// Token: 0x0600164D RID: 5709 RVA: 0x0015CFC8 File Offset: 0x0015B1C8
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x0600164E RID: 5710 RVA: 0x0015CFEC File Offset: 0x0015B1EC
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			return true;
 		}
 
-		// Token: 0x0600164F RID: 5711 RVA: 0x0015D000 File Offset: 0x0015B200
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(2070, 1, 1, UserRegressActiveManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -50,25 +50,25 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001650 RID: 5712 RVA: 0x0015D0D4 File Offset: 0x0015B2D4
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06001651 RID: 5713 RVA: 0x0015D0E8 File Offset: 0x0015B2E8
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06001652 RID: 5714 RVA: 0x0015D0FC File Offset: 0x0015B2FC
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06001653 RID: 5715 RVA: 0x0015D110 File Offset: 0x0015B310
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			switch (nID)
@@ -237,7 +237,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06001654 RID: 5716 RVA: 0x0015D654 File Offset: 0x0015B854
+		
 		public static bool GetRegressMinRegtime(GameClient client, out string Regtime)
 		{
 			string[] dbFields = null;
@@ -265,7 +265,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001655 RID: 5717 RVA: 0x0015D710 File Offset: 0x0015B910
+		
 		public RegressActiveOpcode ProcessGetRegressAcitveFile(GameClient client, out string ToClientRegtime, out int ToClientID, out int ToClientLevel, out int CurrDay, out int ActiveMoney)
 		{
 			ToClientRegtime = "";
@@ -338,7 +338,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001656 RID: 5718 RVA: 0x0015D8F8 File Offset: 0x0015BAF8
+		
 		public Dictionary<int, int> ProcessSignInfo(Dictionary<string, string> SignInfoStr, int ThisDay, out string SignDay)
 		{
 			Dictionary<int, int> Info = new Dictionary<int, int>();
@@ -372,7 +372,7 @@ namespace GameServer.Logic
 			return Info;
 		}
 
-		// Token: 0x06001657 RID: 5719 RVA: 0x0015DA2C File Offset: 0x0015BC2C
+		
 		public Dictionary<int, int> ChangeData(Dictionary<string, string> SignInfoStr, Dictionary<int, int> Info)
 		{
 			Dictionary<int, int> Dict = new Dictionary<int, int>();
@@ -400,7 +400,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001658 RID: 5720 RVA: 0x0015DAB4 File Offset: 0x0015BCB4
+		
 		public RegressActiveOpcode ProcessRegressSignInfo(GameClient client, out Dictionary<int, int> SignInfo)
 		{
 			SignInfo = new Dictionary<int, int>();
@@ -451,7 +451,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001659 RID: 5721 RVA: 0x0015DBEC File Offset: 0x0015BDEC
+		
 		public RegressActiveOpcode ProcessRegressAcitveDaySignAward(GameClient client, int Level, int Day)
 		{
 			RegressActiveOpen iflAct = HuodongCachingMgr.GetRegressActiveOpen();
@@ -573,7 +573,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600165A RID: 5722 RVA: 0x0015DF28 File Offset: 0x0015C128
+		
 		public RegressActiveOpcode ProcessRegressAcitveRechargeInfo(GameClient client, int RoleID, out int Money, out string ConfIDList)
 		{
 			Money = 0;
@@ -644,7 +644,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600165B RID: 5723 RVA: 0x0015E1C8 File Offset: 0x0015C3C8
+		
 		public void RoleOnlineHandler(GameClient client)
 		{
 			RegressActiveOpen RegressAct = HuodongCachingMgr.GetRegressActiveOpen();
@@ -665,7 +665,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600165C RID: 5724 RVA: 0x0015E28C File Offset: 0x0015C48C
+		
 		public string RepairRegressStoreData(string[] idList)
 		{
 			string temp = "";
@@ -697,7 +697,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600165D RID: 5725 RVA: 0x0015E374 File Offset: 0x0015C574
+		
 		public RegressActiveOpcode ProcessRegressAcitveRecharge(GameClient client, int Level, int RechargeConfID)
 		{
 			RegressActiveOpen iflAct = HuodongCachingMgr.GetRegressActiveOpen();
@@ -851,7 +851,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600165E RID: 5726 RVA: 0x0015E8C4 File Offset: 0x0015CAC4
+		
 		public RegressActiveOpcode ProcessRegressAcitveDayBuy(GameClient client, int Role, int Level, out Dictionary<int, int> ZhiGouDict)
 		{
 			ZhiGouDict = null;
@@ -901,7 +901,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600165F RID: 5727 RVA: 0x0015E9A0 File Offset: 0x0015CBA0
+		
 		public RegressActiveOpcode ProcessRegressAcitveGetStoreInfo(GameClient client, out Dictionary<int, int> GoodInfo)
 		{
 			GoodInfo = null;
@@ -931,7 +931,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001660 RID: 5728 RVA: 0x0015EAB8 File Offset: 0x0015CCB8
+		
 		public RegressActiveOpcode ProcessRegressAcitveStore(GameClient client, int StoreConfID, int Level, int GoodsID, int Count)
 		{
 			RegressActiveOpen iflAct = HuodongCachingMgr.GetRegressActiveOpen();
@@ -1053,7 +1053,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04001FDB RID: 8155
+		
 		private static UserRegressActiveManager instance = new UserRegressActiveManager();
 	}
 }

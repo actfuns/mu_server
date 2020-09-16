@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020005BB RID: 1467
+	
 	public class BanChatManager
 	{
-		// Token: 0x06001AA2 RID: 6818 RVA: 0x00198034 File Offset: 0x00196234
+		
 		public static void GetBanChatDictFromDBServer()
 		{
 			long ticks = TimeUtil.NOW();
@@ -32,7 +32,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001AA3 RID: 6819 RVA: 0x00198120 File Offset: 0x00196320
+		
 		public static void AddBanRoleName(string roleName, int banHours)
 		{
 			lock (BanChatManager._Mutex)
@@ -45,7 +45,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001AA4 RID: 6820 RVA: 0x001981A0 File Offset: 0x001963A0
+		
 		public static bool IsBanRoleName(string roleName, long roleId)
 		{
 			lock (BanChatManager._Mutex)
@@ -70,13 +70,13 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0400295A RID: 10586
+		
 		private static object _Mutex = new object();
 
-		// Token: 0x0400295B RID: 10587
+		
 		private static Dictionary<string, long> _BanChatDict = null;
 
-		// Token: 0x0400295C RID: 10588
+		
 		private static long LastGetBanChatDictTicks = 0L;
 	}
 }

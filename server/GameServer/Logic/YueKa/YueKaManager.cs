@@ -11,10 +11,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.YueKa
 {
-	// Token: 0x02000823 RID: 2083
+	
 	public class YueKaManager
 	{
-		// Token: 0x06003AE6 RID: 15078 RVA: 0x0031FA10 File Offset: 0x0031DC10
+		
 		public static void LoadConfig()
 		{
 			GeneralCachingXmlMgr.RemoveCachingXml(Global.GameResPath(YueKaManager.YUE_KA_GOODS_FILE));
@@ -45,7 +45,7 @@ namespace GameServer.Logic.YueKa
 			}
 		}
 
-		// Token: 0x06003AE7 RID: 15079 RVA: 0x0031FB1C File Offset: 0x0031DD1C
+		
 		public static void HandleUserBuyYueKa(string userID, int roleID)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot4Dot1))
@@ -93,7 +93,7 @@ namespace GameServer.Logic.YueKa
 			}
 		}
 
-		// Token: 0x06003AE8 RID: 15080 RVA: 0x0031FD98 File Offset: 0x0031DF98
+		
 		public static TCPProcessCmdResults ProcessGetYueKaData(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -140,7 +140,7 @@ namespace GameServer.Logic.YueKa
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003AE9 RID: 15081 RVA: 0x0031FF6C File Offset: 0x0031E16C
+		
 		public static TCPProcessCmdResults ProcessGetYueKaAward(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -185,7 +185,7 @@ namespace GameServer.Logic.YueKa
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06003AEA RID: 15082 RVA: 0x003200F8 File Offset: 0x0031E2F8
+		
 		private static YueKaError _GetYueKaAward(GameClient client, int day)
 		{
 			YueKaError result;
@@ -252,7 +252,7 @@ namespace GameServer.Logic.YueKa
 			return result;
 		}
 
-		// Token: 0x06003AEB RID: 15083 RVA: 0x00320474 File Offset: 0x0031E674
+		
 		private static void _SendAward2Player(GameClient client, YueKaAward award)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot4Dot1))
@@ -276,7 +276,7 @@ namespace GameServer.Logic.YueKa
 			}
 		}
 
-		// Token: 0x06003AEC RID: 15084 RVA: 0x0032065C File Offset: 0x0031E85C
+		
 		public static void CheckValid(GameClient client)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot4Dot1))
@@ -322,14 +322,14 @@ namespace GameServer.Logic.YueKa
 			}
 		}
 
-		// Token: 0x06003AED RID: 15085 RVA: 0x00320854 File Offset: 0x0031EA54
+		
 		private static void _UpdateYKDetail2DB(GameClient client, YueKaDetail YKDetail)
 		{
 			string value = client.ClientData.YKDetail.SerializeToString();
 			Global.SaveRoleParamsStringToDB(client, "YueKaInfo", value, true);
 		}
 
-		// Token: 0x06003AEE RID: 15086 RVA: 0x00320884 File Offset: 0x0031EA84
+		
 		public static void UpdateNewDay(GameClient client)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot4Dot1))
@@ -349,16 +349,16 @@ namespace GameServer.Logic.YueKa
 			}
 		}
 
-		// Token: 0x04004500 RID: 17664
+		
 		public static int DAYS_PER_YUE_KA = 30;
 
-		// Token: 0x04004501 RID: 17665
+		
 		public static readonly int YUE_KA_MONEY_ID_IN_CHARGE_FILE = 10000;
 
-		// Token: 0x04004502 RID: 17666
+		
 		private static readonly string YUE_KA_GOODS_FILE = "Config/Activity/Card.xml";
 
-		// Token: 0x04004503 RID: 17667
+		
 		private static Dictionary<int, YueKaAward> AllGoodsDict = new Dictionary<int, YueKaAward>();
 	}
 }

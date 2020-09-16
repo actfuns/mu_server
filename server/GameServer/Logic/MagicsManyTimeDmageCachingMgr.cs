@@ -4,10 +4,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200051D RID: 1309
+	
 	public static class MagicsManyTimeDmageCachingMgr
 	{
-		// Token: 0x060018D6 RID: 6358 RVA: 0x001846CC File Offset: 0x001828CC
+		
 		public static List<ManyTimeDmageItem> GetManyTimeDmageItems(int magicCode)
 		{
 			List<ManyTimeDmageItem> manyTimeDmageItemList = null;
@@ -23,7 +23,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060018D7 RID: 6359 RVA: 0x001846F8 File Offset: 0x001828F8
+		
 		public static void ParseManyTimeDmageItems(SystemXmlItems systemMagicMgr)
 		{
 			Dictionary<int, List<ManyTimeDmageItem>> manyTimeDmageItemsDict = new Dictionary<int, List<ManyTimeDmageItem>>();
@@ -38,7 +38,7 @@ namespace GameServer.Logic
 			MagicsManyTimeDmageCachingMgr.ManyTimeDmageCachingDict = manyTimeDmageItemsDict;
 		}
 
-		// Token: 0x060018D8 RID: 6360 RVA: 0x00184790 File Offset: 0x00182990
+		
 		private static void ParseMagicManyTimeDmage(Dictionary<int, List<ManyTimeDmageItem>> dict, int id, string manyTimeDmage)
 		{
 			manyTimeDmage = manyTimeDmage.Trim();
@@ -49,7 +49,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060018D9 RID: 6361 RVA: 0x001847C8 File Offset: 0x001829C8
+		
 		private static List<ManyTimeDmageItem> ParseItems(int id, string manyTimeDmage)
 		{
 			List<ManyTimeDmageItem> manyTimeDmageItemsList = new List<ManyTimeDmageItem>();
@@ -81,7 +81,7 @@ namespace GameServer.Logic
 			return manyTimeDmageItemsList;
 		}
 
-		// Token: 0x040022D0 RID: 8912
+		
 		public static Dictionary<int, List<ManyTimeDmageItem>> ManyTimeDmageCachingDict = new Dictionary<int, List<ManyTimeDmageItem>>();
 	}
 }

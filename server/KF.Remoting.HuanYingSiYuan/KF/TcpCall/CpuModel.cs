@@ -4,10 +4,10 @@ using System.Diagnostics;
 
 namespace KF.TcpCall
 {
-	// Token: 0x02000084 RID: 132
+	
 	public class CpuModel
 	{
-		// Token: 0x060006E1 RID: 1761 RVA: 0x0005B60C File Offset: 0x0005980C
+		
 		public void Start()
 		{
 			this.cpulist = new List<float>();
@@ -19,7 +19,7 @@ namespace KF.TcpCall
 			this.MaxNum = 0f;
 		}
 
-		// Token: 0x060006E2 RID: 1762 RVA: 0x0005B67C File Offset: 0x0005987C
+		
 		public void GetValue()
 		{
 			float value = this.Cpu.NextValue();
@@ -37,7 +37,7 @@ namespace KF.TcpCall
 			}
 		}
 
-		// Token: 0x060006E3 RID: 1763 RVA: 0x0005B6F0 File Offset: 0x000598F0
+		
 		public void Print()
 		{
 			if (this.cpulist.Count < 1)
@@ -56,16 +56,16 @@ namespace KF.TcpCall
 			}
 		}
 
-		// Token: 0x040003B7 RID: 951
+		
 		private PerformanceCounter Cpu;
 
-		// Token: 0x040003B8 RID: 952
+		
 		private List<float> cpulist = new List<float>();
 
-		// Token: 0x040003B9 RID: 953
+		
 		private float MaxNum;
 
-		// Token: 0x040003BA RID: 954
+		
 		private float MinNum;
 	}
 }

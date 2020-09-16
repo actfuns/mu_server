@@ -4,15 +4,15 @@ using System.Xml.Linq;
 
 namespace GameServer.Logic.RefreshIconState
 {
-	// Token: 0x02000786 RID: 1926
+	
 	public class TimerBossManager
 	{
-		// Token: 0x060031CF RID: 12751 RVA: 0x002C8F97 File Offset: 0x002C7197
+		
 		private TimerBossManager()
 		{
 		}
 
-		// Token: 0x060031D0 RID: 12752 RVA: 0x002C8FC4 File Offset: 0x002C71C4
+		
 		private void LoadWorldBossInfo()
 		{
 			try
@@ -49,7 +49,7 @@ namespace GameServer.Logic.RefreshIconState
 			}
 		}
 
-		// Token: 0x060031D1 RID: 12753 RVA: 0x002C915C File Offset: 0x002C735C
+		
 		private void LoadHuangJinBossInfo()
 		{
 			try
@@ -86,7 +86,7 @@ namespace GameServer.Logic.RefreshIconState
 			}
 		}
 
-		// Token: 0x060031D2 RID: 12754 RVA: 0x002C92F4 File Offset: 0x002C74F4
+		
 		public static TimerBossManager getInstance()
 		{
 			if (null == TimerBossManager.instance)
@@ -105,7 +105,7 @@ namespace GameServer.Logic.RefreshIconState
 			return TimerBossManager.instance;
 		}
 
-		// Token: 0x060031D3 RID: 12755 RVA: 0x002C9380 File Offset: 0x002C7580
+		
 		public void AddBoss(int nBirthType, int nRoleID)
 		{
 			lock (this.m_LivedInMapBoss)
@@ -122,7 +122,7 @@ namespace GameServer.Logic.RefreshIconState
 			}
 		}
 
-		// Token: 0x060031D4 RID: 12756 RVA: 0x002C9400 File Offset: 0x002C7600
+		
 		public void RemoveBoss(int nRoleID)
 		{
 			int nBirthType = 0;
@@ -144,7 +144,7 @@ namespace GameServer.Logic.RefreshIconState
 			}
 		}
 
-		// Token: 0x060031D5 RID: 12757 RVA: 0x002C9494 File Offset: 0x002C7694
+		
 		public bool HaveWorldBoss(GameClient client)
 		{
 			lock (this.m_LivedInMapBoss)
@@ -170,7 +170,7 @@ namespace GameServer.Logic.RefreshIconState
 			return false;
 		}
 
-		// Token: 0x060031D6 RID: 12758 RVA: 0x002C95BC File Offset: 0x002C77BC
+		
 		public bool HaveHuangJinBoss(GameClient client)
 		{
 			lock (this.m_LivedInMapBoss)
@@ -196,7 +196,7 @@ namespace GameServer.Logic.RefreshIconState
 			return false;
 		}
 
-		// Token: 0x060031D7 RID: 12759 RVA: 0x002C96E4 File Offset: 0x002C78E4
+		
 		public void RefreshHuangJinBoss()
 		{
 			int count = GameManager.ClientMgr.GetMaxClientCount();
@@ -211,7 +211,7 @@ namespace GameServer.Logic.RefreshIconState
 			}
 		}
 
-		// Token: 0x060031D8 RID: 12760 RVA: 0x002C9740 File Offset: 0x002C7940
+		
 		public void RefreshWorldBoss()
 		{
 			int count = GameManager.ClientMgr.GetMaxClientCount();
@@ -226,19 +226,19 @@ namespace GameServer.Logic.RefreshIconState
 			}
 		}
 
-		// Token: 0x04003E5C RID: 15964
+		
 		private Dictionary<int, TimerBossData> m_WorldBossDict = new Dictionary<int, TimerBossData>();
 
-		// Token: 0x04003E5D RID: 15965
+		
 		private Dictionary<int, TimerBossData> m_HuangJinBossDict = new Dictionary<int, TimerBossData>();
 
-		// Token: 0x04003E5E RID: 15966
+		
 		private Dictionary<int, int> m_LivedInMapBoss = new Dictionary<int, int>();
 
-		// Token: 0x04003E5F RID: 15967
+		
 		private static TimerBossManager instance = null;
 
-		// Token: 0x04003E60 RID: 15968
+		
 		private static object Mutex = new object();
 	}
 }

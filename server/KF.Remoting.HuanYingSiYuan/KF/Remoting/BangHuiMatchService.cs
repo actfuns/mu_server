@@ -8,18 +8,18 @@ using Server.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000065 RID: 101
+	
 	public class BangHuiMatchService
 	{
-		// Token: 0x060004B3 RID: 1203 RVA: 0x0003CB0C File Offset: 0x0003AD0C
+		
 		public static BangHuiMatchService Instance()
 		{
 			return BangHuiMatchService._instance;
 		}
 
-		// Token: 0x1700001E RID: 30
-		// (get) Token: 0x060004B4 RID: 1204 RVA: 0x0003CB24 File Offset: 0x0003AD24
-		// (set) Token: 0x060004B5 RID: 1205 RVA: 0x0003CB41 File Offset: 0x0003AD41
+		
+		
+		
 		private KuaFuData<Dictionary<int, List<BangHuiMatchRankInfo>>> BHMatchRankInfoDict
 		{
 			get
@@ -32,9 +32,9 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x1700001F RID: 31
-		// (get) Token: 0x060004B6 RID: 1206 RVA: 0x0003CB50 File Offset: 0x0003AD50
-		// (set) Token: 0x060004B7 RID: 1207 RVA: 0x0003CB6D File Offset: 0x0003AD6D
+		
+		
+		
 		private KuaFuData<List<BangHuiMatchPKInfo>> BHMatchPKInfoList_Gold
 		{
 			get
@@ -47,9 +47,9 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x17000020 RID: 32
-		// (get) Token: 0x060004B8 RID: 1208 RVA: 0x0003CB7C File Offset: 0x0003AD7C
-		// (set) Token: 0x060004B9 RID: 1209 RVA: 0x0003CB99 File Offset: 0x0003AD99
+		
+		
+		
 		private Dictionary<int, KuaFuData<BHMatchBHData>> BHMatchBHDataDict_Gold
 		{
 			get
@@ -62,9 +62,9 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x17000021 RID: 33
-		// (get) Token: 0x060004BA RID: 1210 RVA: 0x0003CBA8 File Offset: 0x0003ADA8
-		// (set) Token: 0x060004BB RID: 1211 RVA: 0x0003CBC5 File Offset: 0x0003ADC5
+		
+		
+		
 		private Dictionary<int, KuaFuData<BHMatchBHData>> BHMatchBHDataDict_Rookie
 		{
 			get
@@ -77,9 +77,9 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x17000022 RID: 34
-		// (get) Token: 0x060004BC RID: 1212 RVA: 0x0003CBD4 File Offset: 0x0003ADD4
-		// (set) Token: 0x060004BD RID: 1213 RVA: 0x0003CBF1 File Offset: 0x0003ADF1
+		
+		
+		
 		private List<BHMatchBHData> BHMatchBHDataList_GoldJoin
 		{
 			get
@@ -92,9 +92,9 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x17000023 RID: 35
-		// (get) Token: 0x060004BE RID: 1214 RVA: 0x0003CC00 File Offset: 0x0003AE00
-		// (set) Token: 0x060004BF RID: 1215 RVA: 0x0003CC1D File Offset: 0x0003AE1D
+		
+		
+		
 		private List<BHMatchBHData> BHMatchBHDataList_RookieJoin
 		{
 			get
@@ -107,9 +107,9 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x17000024 RID: 36
-		// (get) Token: 0x060004C0 RID: 1216 RVA: 0x0003CC2C File Offset: 0x0003AE2C
-		// (set) Token: 0x060004C1 RID: 1217 RVA: 0x0003CC49 File Offset: 0x0003AE49
+		
+		
+		
 		private List<BHMatchBHData> BHMatchBHDataList_RookieJoinLast
 		{
 			get
@@ -122,7 +122,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004C2 RID: 1218 RVA: 0x0003CC58 File Offset: 0x0003AE58
+		
 		public void InitConfig()
 		{
 			string strLeagueNewNum = KuaFuServerManager.systemParamsList.GetParamValueByName("LeagueNewNum");
@@ -142,7 +142,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004C3 RID: 1219 RVA: 0x0003CD3C File Offset: 0x0003AF3C
+		
 		private int ComputeCurrentSeasonID(DateTime now)
 		{
 			int GoldSeasonID = this.Persistence.GetGoldSeasonID();
@@ -151,7 +151,7 @@ namespace KF.Remoting
 			return (GoldSeasonID == 0 || GoldSeasonID != CurSeasonID_Gold) ? CurSeasonID_Rookie : CurSeasonID_Gold;
 		}
 
-		// Token: 0x060004C4 RID: 1220 RVA: 0x0003CD78 File Offset: 0x0003AF78
+		
 		private int GetCurrentSeasonIDByTime(DateTime now, bool calGold = true)
 		{
 			int result;
@@ -195,14 +195,14 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060004C5 RID: 1221 RVA: 0x0003CF7C File Offset: 0x0003B17C
+		
 		private int FixRound(BangHuiMatchType type, int round)
 		{
 			BHMatchConfig matchConfig = this.RuntimeData.GetBHMatchConfig((int)type);
 			return (round > matchConfig.RoundNum) ? 1 : round;
 		}
 
-		// Token: 0x060004C6 RID: 1222 RVA: 0x0003CFAC File Offset: 0x0003B1AC
+		
 		private int GetCurrentRoundByTime(BangHuiMatchType type, DateTime now)
 		{
 			int result;
@@ -265,7 +265,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060004C7 RID: 1223 RVA: 0x0003D1C0 File Offset: 0x0003B3C0
+		
 		private int ComputeLastSeasonID(int CurSeasonID)
 		{
 			int result;
@@ -280,7 +280,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060004C8 RID: 1224 RVA: 0x0003D204 File Offset: 0x0003B404
+		
 		public void LoadDatabase(DateTime now)
 		{
 			try
@@ -304,7 +304,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004C9 RID: 1225 RVA: 0x0003D2F0 File Offset: 0x0003B4F0
+		
 		private void InitFuBenManagerData(DateTime now)
 		{
 			this.LastUpdateTime = now;
@@ -324,7 +324,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004CA RID: 1226 RVA: 0x0003D4B0 File Offset: 0x0003B6B0
+		
 		private void HandleBHMatchGoldAccident(DateTime now)
 		{
 			if (this.CurrentSeasonID_Gold != 0 && 0 != this.BHMatchBHDataList_GoldJoin.Count)
@@ -343,7 +343,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004CB RID: 1227 RVA: 0x0003D598 File Offset: 0x0003B798
+		
 		public void SwitchLastGoldBH_GM()
 		{
 			List<BangHuiMatchRankInfo> goldRankList = null;
@@ -355,7 +355,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004CC RID: 1228 RVA: 0x0003D5E8 File Offset: 0x0003B7E8
+		
 		private void ReloadChampionRoleData_Gold()
 		{
 			List<BangHuiMatchRankInfo> goldRankList = null;
@@ -380,7 +380,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004CD RID: 1229 RVA: 0x0003D8E8 File Offset: 0x0003BAE8
+		
 		private void FixCurGoldRankInfo()
 		{
 			List<BangHuiMatchRankInfo> goldRankList = null;
@@ -506,7 +506,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004CE RID: 1230 RVA: 0x0003DDF0 File Offset: 0x0003BFF0
+		
 		private BangHuiMatchType GetMatchTypeByBhid(int bhid)
 		{
 			BangHuiMatchType result;
@@ -524,7 +524,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060004CF RID: 1231 RVA: 0x0003DE78 File Offset: 0x0003C078
+		
 		public void Update(DateTime now)
 		{
 			try
@@ -552,7 +552,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004D0 RID: 1232 RVA: 0x0003DF9C File Offset: 0x0003C19C
+		
 		private void MS_Init_Update(DateTime now, int param)
 		{
 			if (this.RuntimeData.CheckOpenState(now))
@@ -591,7 +591,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004D1 RID: 1233 RVA: 0x0003E1B0 File Offset: 0x0003C3B0
+		
 		private void MS_SignUp_Update(DateTime now, int param)
 		{
 			if (this.RuntimeData.CheckOpenState(now))
@@ -624,7 +624,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004D2 RID: 1234 RVA: 0x0003E3B4 File Offset: 0x0003C5B4
+		
 		private void MS_PrepareGame_Update(DateTime now, int param)
 		{
 			if (ClientAgentManager.Instance().IsAnyKfAgentAlive())
@@ -835,7 +835,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004D3 RID: 1235 RVA: 0x0003EC80 File Offset: 0x0003CE80
+		
 		private void MS_NotifyEnter_Update(DateTime now, int param)
 		{
 			BHMatchConfig matchConfig = this.RuntimeData.GetBHMatchConfig(param);
@@ -875,7 +875,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004D4 RID: 1236 RVA: 0x0003EE48 File Offset: 0x0003D048
+		
 		private void MS_GameStart_Update(DateTime now, int param)
 		{
 			BHMatchConfig matchConfig = this.RuntimeData.GetBHMatchConfig(param);
@@ -904,7 +904,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004D5 RID: 1237 RVA: 0x0003EF6C File Offset: 0x0003D16C
+		
 		private void HandleUnCompleteFuBenData()
 		{
 			foreach (KeyValuePair<int, BHMatchFuBenMgrData> fubenMgrItem in this.FuBenMgrDict)
@@ -959,7 +959,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004D6 RID: 1238 RVA: 0x0003F2D0 File Offset: 0x0003D4D0
+		
 		private void MS_RankAnalyse_Enter(DateTime now, int param)
 		{
 			this.HandleUnCompleteFuBenData();
@@ -1012,7 +1012,7 @@ namespace KF.Remoting
 			}), null, true);
 		}
 
-		// Token: 0x060004D7 RID: 1239 RVA: 0x0003F528 File Offset: 0x0003D728
+		
 		private void GenerateNextRoundPKInfo_Gold(DateTime now, int round)
 		{
 			if (this.BHMatchBHDataList_GoldJoin.Count == 8)
@@ -1029,7 +1029,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004D8 RID: 1240 RVA: 0x0003F60C File Offset: 0x0003D80C
+		
 		private void GeneratePKInfo(byte type, int season, int round, BHMatchBHData bh1Data, BHMatchBHData bh2Data, byte result)
 		{
 			BangHuiMatchPKInfo pkInfo = null;
@@ -1062,7 +1062,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x060004D9 RID: 1241 RVA: 0x0003F840 File Offset: 0x0003DA40
+		
 		private void HandlePromotion()
 		{
 			List<BangHuiMatchRankInfo> RookieRankList = null;
@@ -1204,7 +1204,7 @@ namespace KF.Remoting
 			this.BHMatchBHDataList_RookieJoin.Clear();
 		}
 
-		// Token: 0x060004DA RID: 1242 RVA: 0x0003FED0 File Offset: 0x0003E0D0
+		
 		public BHMatchSyncData SyncData_BHMatch(long ageRank, long agePKInfo, long ageChampion)
 		{
 			BHMatchSyncData SyncData = new BHMatchSyncData();
@@ -1246,7 +1246,7 @@ namespace KF.Remoting
 			return SyncData;
 		}
 
-		// Token: 0x060004DB RID: 1243 RVA: 0x000400A0 File Offset: 0x0003E2A0
+		
 		public string GetKuaFuGameState_BHMatch(int bhid)
 		{
 			string result = "";
@@ -1280,7 +1280,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060004DC RID: 1244 RVA: 0x00040240 File Offset: 0x0003E440
+		
 		public bool CheckRookieJoinLast_BHMatch(int bhid)
 		{
 			try
@@ -1301,7 +1301,7 @@ namespace KF.Remoting
 			return false;
 		}
 
-		// Token: 0x060004DD RID: 1245 RVA: 0x00040314 File Offset: 0x0003E514
+		
 		public int RookieSignUp_BHMatch(int bhid, int zoneid_bh, string bhname, int rid, string rname, int zoneid_r)
 		{
 			int result = 0;
@@ -1400,7 +1400,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060004DE RID: 1246 RVA: 0x000406D4 File Offset: 0x0003E8D4
+		
 		public BHMatchFuBenData GetFuBenDataByBhid_BHMatch(int bhid)
 		{
 			BHMatchFuBenData fuBenData = null;
@@ -1421,7 +1421,7 @@ namespace KF.Remoting
 			return fuBenData;
 		}
 
-		// Token: 0x060004DF RID: 1247 RVA: 0x0004078C File Offset: 0x0003E98C
+		
 		public BHMatchFuBenData GetFuBenDataByGameId_BHMatch(int gameid)
 		{
 			BHMatchFuBenData fuBenData = null;
@@ -1446,7 +1446,7 @@ namespace KF.Remoting
 			return fuBenData;
 		}
 
-		// Token: 0x060004E0 RID: 1248 RVA: 0x00040840 File Offset: 0x0003EA40
+		
 		public KuaFuCmdData GetBHDataByBhid_BHMatch(int type, int bhid, long age)
 		{
 			try
@@ -1487,7 +1487,7 @@ namespace KF.Remoting
 			return null;
 		}
 
-		// Token: 0x060004E1 RID: 1249 RVA: 0x00040950 File Offset: 0x0003EB50
+		
 		public int GameFuBenComplete_BHMatch(BangHuiMatchStatisticalData data)
 		{
 			int result = 0;
@@ -1623,55 +1623,55 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x060004E2 RID: 1250 RVA: 0x00041090 File Offset: 0x0003F290
+		
 		public int RemoveBangHui_BHMatch(int bhid)
 		{
 			return 0;
 		}
 
-		// Token: 0x0400028D RID: 653
+		
 		private static BangHuiMatchService _instance = new BangHuiMatchService();
 
-		// Token: 0x0400028E RID: 654
+		
 		public readonly GameTypes GameType = GameTypes.BangHuiMatch;
 
-		// Token: 0x0400028F RID: 655
+		
 		public readonly GameTypes EvItemGameType = GameTypes.TianTi;
 
-		// Token: 0x04000290 RID: 656
+		
 		private object Mutex = new object();
 
-		// Token: 0x04000291 RID: 657
+		
 		private BangHuiMatchCommonData RuntimeData = new BangHuiMatchCommonData();
 
-		// Token: 0x04000292 RID: 658
+		
 		public BangHuiMatchPersistence Persistence = BangHuiMatchPersistence.Instance;
 
-		// Token: 0x04000293 RID: 659
+		
 		public KuaFuCmdData BHMatchChampionRoleData_Gold = new KuaFuCmdData();
 
-		// Token: 0x04000294 RID: 660
+		
 		private int CurrentSeasonID_Gold = 0;
 
-		// Token: 0x04000295 RID: 661
+		
 		private int LastSeasonID_Gold = 0;
 
-		// Token: 0x04000296 RID: 662
+		
 		private int CurrentSeasonID_Rookie = 0;
 
-		// Token: 0x04000297 RID: 663
+		
 		private int LastSeasonID_Rookie = 0;
 
-		// Token: 0x04000298 RID: 664
+		
 		private Dictionary<int, BHMatchFuBenMgrData> FuBenMgrDict = new Dictionary<int, BHMatchFuBenMgrData>();
 
-		// Token: 0x04000299 RID: 665
+		
 		private Dictionary<int, BHMatchStateMachine> StateMachineDict = new Dictionary<int, BHMatchStateMachine>();
 
-		// Token: 0x0400029A RID: 666
+		
 		private uint UpdateFrameCount = 0U;
 
-		// Token: 0x0400029B RID: 667
+		
 		private DateTime LastUpdateTime = DateTime.MinValue;
 	}
 }

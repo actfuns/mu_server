@@ -8,25 +8,25 @@ using Server.Tools;
 
 namespace Server.Protocol
 {
-	// Token: 0x02000868 RID: 2152
+	
 	public class TCPInPacket : IDisposable
 	{
-		// Token: 0x06003CA9 RID: 15529 RVA: 0x0034179C File Offset: 0x0033F99C
+		
 		public TCPInPacket(int recvBufferSize = 6144)
 		{
 			this.PacketBytes = new byte[recvBufferSize];
 			TCPInPacket.IncInstanceCount();
 		}
 
-		// Token: 0x06003CAA RID: 15530 RVA: 0x00341828 File Offset: 0x0033FA28
+		
 		public byte[] GetPacketBytes()
 		{
 			return this.PacketBytes;
 		}
 
-		// Token: 0x170005BC RID: 1468
-		// (get) Token: 0x06003CAB RID: 15531 RVA: 0x00341840 File Offset: 0x0033FA40
-		// (set) Token: 0x06003CAC RID: 15532 RVA: 0x00341858 File Offset: 0x0033FA58
+		
+		
+		
 		public int LastCheckTicks
 		{
 			get
@@ -39,9 +39,9 @@ namespace Server.Protocol
 			}
 		}
 
-		// Token: 0x170005BD RID: 1469
-		// (get) Token: 0x06003CAD RID: 15533 RVA: 0x00341864 File Offset: 0x0033FA64
-		// (set) Token: 0x06003CAE RID: 15534 RVA: 0x0034187C File Offset: 0x0033FA7C
+		
+		
+		
 		public TMSKSocket CurrentSocket
 		{
 			get
@@ -54,8 +54,8 @@ namespace Server.Protocol
 			}
 		}
 
-		// Token: 0x170005BE RID: 1470
-		// (get) Token: 0x06003CAF RID: 15535 RVA: 0x00341888 File Offset: 0x0033FA88
+		
+		
 		public ushort PacketCmdID
 		{
 			get
@@ -64,13 +64,13 @@ namespace Server.Protocol
 			}
 		}
 
-		// Token: 0x170005BF RID: 1471
-		// (get) Token: 0x06003CB0 RID: 15536 RVA: 0x003418A8 File Offset: 0x0033FAA8
-		// (set) Token: 0x06003CB1 RID: 15537 RVA: 0x003418BF File Offset: 0x0033FABF
+		
+		
+		
 		public ushort LastPacketCmdID { get; set; }
 
-		// Token: 0x170005C0 RID: 1472
-		// (get) Token: 0x06003CB2 RID: 15538 RVA: 0x003418C8 File Offset: 0x0033FAC8
+		
+		
 		public int PacketDataSize
 		{
 			get
@@ -79,8 +79,8 @@ namespace Server.Protocol
 			}
 		}
 
-		// Token: 0x170005C1 RID: 1473
-		// (get) Token: 0x06003CB3 RID: 15539 RVA: 0x003418E8 File Offset: 0x0033FAE8
+		
+		
 		public Queue<CmdPacket> CmdPacketPool
 		{
 			get
@@ -89,9 +89,9 @@ namespace Server.Protocol
 			}
 		}
 
-		// Token: 0x170005C2 RID: 1474
-		// (get) Token: 0x06003CB4 RID: 15540 RVA: 0x00341900 File Offset: 0x0033FB00
-		// (set) Token: 0x06003CB5 RID: 15541 RVA: 0x00341918 File Offset: 0x0033FB18
+		
+		
+		
 		public bool IsDealingByWorkerThread
 		{
 			get
@@ -104,7 +104,7 @@ namespace Server.Protocol
 			}
 		}
 
-		// Token: 0x06003CB6 RID: 15542 RVA: 0x00341924 File Offset: 0x0033FB24
+		
 		public bool CacheCmdPacketData(int nID, byte[] data, int count)
 		{
 			bool result;
@@ -123,7 +123,7 @@ namespace Server.Protocol
 			return result;
 		}
 
-		// Token: 0x06003CB7 RID: 15543 RVA: 0x003419A0 File Offset: 0x0033FBA0
+		
 		public bool PopCmdPackets(Queue<CmdPacket> ls)
 		{
 			ls.Clear();
@@ -151,7 +151,7 @@ namespace Server.Protocol
 			return result;
 		}
 
-		// Token: 0x06003CB8 RID: 15544 RVA: 0x00341A5C File Offset: 0x0033FC5C
+		
 		public void OnThreadDealingComplete()
 		{
 			lock (this._cmdPacketPool)
@@ -160,7 +160,7 @@ namespace Server.Protocol
 			}
 		}
 
-		// Token: 0x06003CB9 RID: 15545 RVA: 0x00341AA8 File Offset: 0x0033FCA8
+		
 		public int GetCacheCmdPacketCount()
 		{
 			int result;
@@ -171,19 +171,19 @@ namespace Server.Protocol
 			return result;
 		}
 
-		// Token: 0x06003CBA RID: 15546 RVA: 0x00341AFC File Offset: 0x0033FCFC
+		
 		public void Dispose()
 		{
 			this.Reset();
 			TCPInPacket.DecInstanceCount();
 		}
 
-		// Token: 0x14000007 RID: 7
+		
 		// (add) Token: 0x06003CBB RID: 15547 RVA: 0x00341B0C File Offset: 0x0033FD0C
 		// (remove) Token: 0x06003CBC RID: 15548 RVA: 0x00341B48 File Offset: 0x0033FD48
 		public event TCPCmdPacketEventHandler TCPCmdPacketEvent;
 
-		// Token: 0x06003CBD RID: 15549 RVA: 0x00341B84 File Offset: 0x0033FD84
+		
 		public bool WriteData(byte[] buffer, int offset, int count)
 		{
 			bool result;
@@ -279,7 +279,7 @@ namespace Server.Protocol
 			return result;
 		}
 
-		// Token: 0x06003CBE RID: 15550 RVA: 0x00341EF8 File Offset: 0x003400F8
+		
 		public void Reset()
 		{
 			lock (this.mutex)
@@ -296,7 +296,7 @@ namespace Server.Protocol
 			}
 		}
 
-		// Token: 0x06003CBF RID: 15551 RVA: 0x00341F84 File Offset: 0x00340184
+		
 		private bool HandlePolicyFileRequest(byte[] buffer, int offset, int count)
 		{
 			this.TCPCmdPacketEvent(this, 1);
@@ -309,7 +309,7 @@ namespace Server.Protocol
 			return true;
 		}
 
-		// Token: 0x06003CC0 RID: 15552 RVA: 0x00341FD0 File Offset: 0x003401D0
+		
 		public static void IncInstanceCount()
 		{
 			lock (TCPInPacket.CountLock)
@@ -318,7 +318,7 @@ namespace Server.Protocol
 			}
 		}
 
-		// Token: 0x06003CC1 RID: 15553 RVA: 0x00342020 File Offset: 0x00340220
+		
 		public static void DecInstanceCount()
 		{
 			lock (TCPInPacket.CountLock)
@@ -327,7 +327,7 @@ namespace Server.Protocol
 			}
 		}
 
-		// Token: 0x06003CC2 RID: 15554 RVA: 0x00342070 File Offset: 0x00340270
+		
 		public static int GetInstanceCount()
 		{
 			int count = 0;
@@ -338,49 +338,49 @@ namespace Server.Protocol
 			return count;
 		}
 
-		// Token: 0x04004720 RID: 18208
+		
 		public const string POLICY_STRING = "<policy-file-request/>\0";
 
-		// Token: 0x04004721 RID: 18209
+		
 		private object mutex = new object();
 
-		// Token: 0x04004722 RID: 18210
+		
 		private byte[] PacketBytes = null;
 
-		// Token: 0x04004723 RID: 18211
+		
 		private int _LastCheckTicks = 0;
 
-		// Token: 0x04004724 RID: 18212
+		
 		private TMSKSocket _Socket = null;
 
-		// Token: 0x04004725 RID: 18213
+		
 		private ushort _PacketCmdID = 0;
 
-		// Token: 0x04004726 RID: 18214
+		
 		private int _PacketDataSize = 0;
 
-		// Token: 0x04004727 RID: 18215
+		
 		private Queue<CmdPacket> _cmdPacketPool = new Queue<CmdPacket>();
 
-		// Token: 0x04004728 RID: 18216
+		
 		private bool _isDealingByWorkerThread = false;
 
-		// Token: 0x04004729 RID: 18217
+		
 		private int PacketDataHaveSize = 0;
 
-		// Token: 0x0400472A RID: 18218
+		
 		private bool IsWaitingData = false;
 
-		// Token: 0x0400472C RID: 18220
+		
 		private byte[] CmdHeaderBuffer = new byte[6];
 
-		// Token: 0x0400472D RID: 18221
+		
 		private int CmdHeaderSize = 0;
 
-		// Token: 0x0400472E RID: 18222
+		
 		private static object CountLock = new object();
 
-		// Token: 0x0400472F RID: 18223
+		
 		private static int TotalInstanceCount = 0;
 	}
 }

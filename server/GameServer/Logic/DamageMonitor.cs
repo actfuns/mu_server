@@ -5,10 +5,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200028F RID: 655
+	
 	public class DamageMonitor
 	{
-		// Token: 0x06000983 RID: 2435 RVA: 0x00096F34 File Offset: 0x00095134
+		
 		public void Set(int mapCode, int RoleID)
 		{
 			if (!this.Get(mapCode, RoleID))
@@ -26,7 +26,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000984 RID: 2436 RVA: 0x00096F9C File Offset: 0x0009519C
+		
 		public void Remove(int mapCode, int RoleID)
 		{
 			if (this.Get(mapCode, RoleID))
@@ -38,7 +38,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000985 RID: 2437 RVA: 0x00096FE4 File Offset: 0x000951E4
+		
 		public bool Get(int mapCode, int RoleID)
 		{
 			if (this.DictMonitorList.ContainsKey(mapCode))
@@ -51,13 +51,13 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000986 RID: 2438 RVA: 0x0009702A File Offset: 0x0009522A
+		
 		public void Clear(int mapCode, int RoleID)
 		{
 			this.DictMonitorList.Clear();
 		}
 
-		// Token: 0x06000987 RID: 2439 RVA: 0x0009703C File Offset: 0x0009523C
+		
 		public void Out(GameClient client)
 		{
 			if (null != client)
@@ -106,7 +106,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0400103D RID: 4157
+		
 		private Dictionary<int, List<int>> DictMonitorList = new Dictionary<int, List<int>>();
 	}
 }

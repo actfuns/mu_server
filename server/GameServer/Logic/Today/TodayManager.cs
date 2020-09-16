@@ -13,23 +13,23 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic.Today
 {
-	// Token: 0x0200044E RID: 1102
+	
 	public class TodayManager : ICmdProcessorEx, ICmdProcessor, IManager
 	{
-		// Token: 0x0600142E RID: 5166 RVA: 0x0013E214 File Offset: 0x0013C414
+		
 		public static TodayManager getInstance()
 		{
 			return TodayManager.instance;
 		}
 
-		// Token: 0x0600142F RID: 5167 RVA: 0x0013E22C File Offset: 0x0013C42C
+		
 		public bool initialize()
 		{
 			TodayManager.InitConfig();
 			return true;
 		}
 
-		// Token: 0x06001430 RID: 5168 RVA: 0x0013E248 File Offset: 0x0013C448
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1030, 1, 1, TodayManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -37,25 +37,25 @@ namespace GameServer.Logic.Today
 			return true;
 		}
 
-		// Token: 0x06001431 RID: 5169 RVA: 0x0013E28C File Offset: 0x0013C48C
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06001432 RID: 5170 RVA: 0x0013E2A0 File Offset: 0x0013C4A0
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06001433 RID: 5171 RVA: 0x0013E2B4 File Offset: 0x0013C4B4
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return true;
 		}
 
-		// Token: 0x06001434 RID: 5172 RVA: 0x0013E2C8 File Offset: 0x0013C4C8
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -74,7 +74,7 @@ namespace GameServer.Logic.Today
 			return result;
 		}
 
-		// Token: 0x06001435 RID: 5173 RVA: 0x0013E310 File Offset: 0x0013C510
+		
 		private bool ProcessCmdTodayData(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -94,7 +94,7 @@ namespace GameServer.Logic.Today
 			return false;
 		}
 
-		// Token: 0x06001436 RID: 5174 RVA: 0x0013E380 File Offset: 0x0013C580
+		
 		private bool ProcessCmdTodayAward(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -116,7 +116,7 @@ namespace GameServer.Logic.Today
 			return false;
 		}
 
-		// Token: 0x06001437 RID: 5175 RVA: 0x0013E410 File Offset: 0x0013C610
+		
 		private string GetTodayData(GameClient client)
 		{
 			string result = "{0}:{1}";
@@ -151,7 +151,7 @@ namespace GameServer.Logic.Today
 			return result2;
 		}
 
-		// Token: 0x06001438 RID: 5176 RVA: 0x0013E598 File Offset: 0x0013C798
+		
 		private string TodayAward(GameClient client, bool isAll, int todayID)
 		{
 			string result = "{0}:{1}";
@@ -329,7 +329,7 @@ namespace GameServer.Logic.Today
 			return result2;
 		}
 
-		// Token: 0x06001439 RID: 5177 RVA: 0x0013EEAC File Offset: 0x0013D0AC
+		
 		private List<TodayInfo> InitToday(GameClient client)
 		{
 			List<TodayInfo> infoList = new List<TodayInfo>();
@@ -348,7 +348,7 @@ namespace GameServer.Logic.Today
 			return infoList;
 		}
 
-		// Token: 0x0600143A RID: 5178 RVA: 0x0013EFE8 File Offset: 0x0013D1E8
+		
 		private TodayInfo GetTadayInfoByID(GameClient client, int id)
 		{
 			TodayInfo result = null;
@@ -376,7 +376,7 @@ namespace GameServer.Logic.Today
 			return result2;
 		}
 
-		// Token: 0x0600143B RID: 5179 RVA: 0x0013F09C File Offset: 0x0013D29C
+		
 		private int GetMaxNum(GameClient client, TodayInfo todayInfo)
 		{
 			int num = 0;
@@ -420,7 +420,7 @@ namespace GameServer.Logic.Today
 			return Math.Max(0, num);
 		}
 
-		// Token: 0x0600143C RID: 5180 RVA: 0x0013F154 File Offset: 0x0013D354
+		
 		private int GetFinishNum(GameClient client, TodayInfo todayInfo)
 		{
 			int num = 0;
@@ -460,7 +460,7 @@ namespace GameServer.Logic.Today
 			return num;
 		}
 
-		// Token: 0x0600143D RID: 5181 RVA: 0x0013F260 File Offset: 0x0013D460
+		
 		private FuBenData GetFuBenData(GameClient client, int fuBenID)
 		{
 			bool isNotify = false;
@@ -484,7 +484,7 @@ namespace GameServer.Logic.Today
 			return fuBenData;
 		}
 
-		// Token: 0x0600143E RID: 5182 RVA: 0x0013F2E4 File Offset: 0x0013D4E4
+		
 		private bool SetFinishNum(GameClient client, TodayInfo todayInfo, SystemXmlItem fuBenInfo)
 		{
 			int num = todayInfo.NumMax - todayInfo.NumEnd;
@@ -550,7 +550,7 @@ namespace GameServer.Logic.Today
 			return true;
 		}
 
-		// Token: 0x0600143F RID: 5183 RVA: 0x0013F4F4 File Offset: 0x0013D6F4
+		
 		public static TaskData GetTaoTask(GameClient client)
 		{
 			TaskData result;
@@ -581,13 +581,13 @@ namespace GameServer.Logic.Today
 			return result;
 		}
 
-		// Token: 0x06001440 RID: 5184 RVA: 0x0013F5E4 File Offset: 0x0013D7E4
+		
 		public bool IsGongNengOpened()
 		{
 			return !GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot7) && GameManager.VersionSystemOpenMgr.IsVersionSystemOpen("Today");
 		}
 
-		// Token: 0x06001441 RID: 5185 RVA: 0x0013F624 File Offset: 0x0013D824
+		
 		public static void InitConfig()
 		{
 			string fileName = Global.GameResPath("Config/JianFu.xml");
@@ -649,10 +649,10 @@ namespace GameServer.Logic.Today
 			}
 		}
 
-		// Token: 0x04001DC7 RID: 7623
+		
 		private static TodayManager instance = new TodayManager();
 
-		// Token: 0x04001DC8 RID: 7624
+		
 		private static List<TodayInfo> _todayInfoList = new List<TodayInfo>();
 	}
 }

@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000613 RID: 1555
+	
 	public class DailyActiveManager
 	{
-		// Token: 0x06001F4D RID: 8013 RVA: 0x001B15C8 File Offset: 0x001AF7C8
+		
 		public static void InitDailyActiveFlagIndex()
 		{
 			DailyActiveManager.m_DailyActiveInfo.Clear();
@@ -64,7 +64,7 @@ namespace GameServer.Logic
 			index += 2;
 		}
 
-		// Token: 0x06001F4E RID: 8014 RVA: 0x001B17B0 File Offset: 0x001AF9B0
+		
 		public static void InitRoleDailyActiveData(GameClient client)
 		{
 			client.ClientData.DailyActiveValues = (int)DailyActiveManager.GetDailyActiveDataByField(client, DailyActiveDataField1.DailyActiveValue);
@@ -75,13 +75,13 @@ namespace GameServer.Logic
 			client.ClientData.DailyActiveDayBuyItemInMall = (int)DailyActiveManager.GetDailyActiveDataByField(client, DailyActiveDataField1.DailyActiveBuyItemInMall);
 		}
 
-		// Token: 0x06001F4F RID: 8015 RVA: 0x001B1831 File Offset: 0x001AFA31
+		
 		public static void SaveRoleDailyActiveData(GameClient client)
 		{
 			DailyActiveManager.ModifyDailyActiveInfor(client, client.ClientData.DailyTotalKillMonsterNum, DailyActiveDataField1.DailyActiveTotalKilledMonsterNum, true);
 		}
 
-		// Token: 0x06001F50 RID: 8016 RVA: 0x001B1848 File Offset: 0x001AFA48
+		
 		protected static ushort GetDailyActiveIDByIndex(int index)
 		{
 			for (int i = 0; i < DailyActiveManager.m_DailyActiveInfo.Count; i++)
@@ -94,7 +94,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06001F51 RID: 8017 RVA: 0x001B18AC File Offset: 0x001AFAAC
+		
 		protected static int GetCompletedFlagIndex(int DailyActiveID)
 		{
 			int index = -1;
@@ -110,7 +110,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001F52 RID: 8018 RVA: 0x001B18DC File Offset: 0x001AFADC
+		
 		protected static int GetAwardFlagIndex(int DailyActiveID)
 		{
 			int index = -1;
@@ -126,7 +126,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001F53 RID: 8019 RVA: 0x001B190C File Offset: 0x001AFB0C
+		
 		public static void AddDailyActivePoints(GameClient client, int DailyActiveID, SystemXmlItem itemDailyActive, bool writeToDB = false)
 		{
 			int awardDailyActiveValue = Math.Max(0, itemDailyActive.GetIntValue("Award", -1));
@@ -154,7 +154,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F54 RID: 8020 RVA: 0x001B1A08 File Offset: 0x001AFC08
+		
 		public static uint GetDailyActiveDataByField(GameClient client, DailyActiveDataField1 field)
 		{
 			List<uint> lsUint = Global.GetRoleParamsUIntListFromDB(client, "DailyActiveInfo1");
@@ -170,7 +170,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001F55 RID: 8021 RVA: 0x001B1A40 File Offset: 0x001AFC40
+		
 		public static void ModifyDailyActiveInfor(GameClient client, uint value, DailyActiveDataField1 field, bool writeToDB = false)
 		{
 			List<uint> lsUint = Global.GetRoleParamsUIntListFromDB(client, "DailyActiveInfo1");
@@ -182,27 +182,27 @@ namespace GameServer.Logic
 			Global.SaveRoleParamsUintListToDB(client, lsUint, "DailyActiveInfo1", writeToDB);
 		}
 
-		// Token: 0x06001F56 RID: 8022 RVA: 0x001B1A8C File Offset: 0x001AFC8C
+		
 		public int GetDailyActiveValue(GameClient client)
 		{
 			client.ClientData.DailyActiveValues = (int)DailyActiveManager.GetDailyActiveDataByField(client, DailyActiveDataField1.DailyActiveValue);
 			return client.ClientData.DailyActiveValues;
 		}
 
-		// Token: 0x06001F57 RID: 8023 RVA: 0x001B1ABC File Offset: 0x001AFCBC
+		
 		public static bool IsDailyActiveCompleted(GameClient client, int DailyActiveID)
 		{
 			return DailyActiveManager.IsFlagIsTrue(client, DailyActiveID, false);
 		}
 
-		// Token: 0x06001F58 RID: 8024 RVA: 0x001B1AD8 File Offset: 0x001AFCD8
+		
 		public static int IsDailyActiveAwardFetched(GameClient client, int nID)
 		{
 			int nFlag = Global.GetRoleParamsInt32FromDB(client, "DailyActiveAwardFlag");
 			return nFlag & Global.GetBitValue(nID + 1);
 		}
 
-		// Token: 0x06001F59 RID: 8025 RVA: 0x001B1B04 File Offset: 0x001AFD04
+		
 		public static void OnDailyActiveCompleted(GameClient client, int DailyActiveID)
 		{
 			DailyActiveManager.UpdateDailyActiveFlag(client, DailyActiveID);
@@ -213,7 +213,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F5A RID: 8026 RVA: 0x001B1B48 File Offset: 0x001AFD48
+		
 		public static void NotifyClientDailyActiveData(GameClient client, int justCompleteddailyactive = -1, bool bRefresh = false)
 		{
 			if (client.ClientData.MyRoleDailyData != null && !bRefresh)
@@ -248,7 +248,7 @@ namespace GameServer.Logic
 			GameManager.ClientMgr.SendToClient(client, bytesData, 558);
 		}
 
-		// Token: 0x06001F5B RID: 8027 RVA: 0x001B1CD8 File Offset: 0x001AFED8
+		
 		protected static List<ushort> GetDailyActiveInfoArray(GameClient client)
 		{
 			List<ulong> lsLong = Global.GetRoleParamsUlongListFromDB(client, "DailyActiveFlag");
@@ -271,7 +271,7 @@ namespace GameServer.Logic
 			return lsUshort;
 		}
 
-		// Token: 0x06001F5C RID: 8028 RVA: 0x001B1D78 File Offset: 0x001AFF78
+		
 		public static int GiveDailyActiveAward(GameClient client, int nid)
 		{
 			int awardDailyActiveValue = 0;
@@ -384,7 +384,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001F5D RID: 8029 RVA: 0x001B2270 File Offset: 0x001B0470
+		
 		public static bool IsFlagIsTrue(GameClient client, int DailyActiveID, bool forAward = false)
 		{
 			int index = DailyActiveManager.GetCompletedFlagIndex(DailyActiveID);
@@ -424,7 +424,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001F5E RID: 8030 RVA: 0x001B2308 File Offset: 0x001B0508
+		
 		public static bool UpdateDailyActiveFlag(GameClient client, int DailyActiveID)
 		{
 			int index = DailyActiveManager.GetCompletedFlagIndex(DailyActiveID);
@@ -451,7 +451,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001F5F RID: 8031 RVA: 0x001B2398 File Offset: 0x001B0598
+		
 		public static void UpdateDailyActiveAwardFlag(GameClient client, int nID)
 		{
 			int nFlag = Global.GetRoleParamsInt32FromDB(client, "DailyActiveAwardFlag");
@@ -459,7 +459,7 @@ namespace GameServer.Logic
 			Global.SaveRoleParamsInt32ValueToDB(client, "DailyActiveAwardFlag", i, true);
 		}
 
-		// Token: 0x06001F60 RID: 8032 RVA: 0x001B23CC File Offset: 0x001B05CC
+		
 		public static void ProcessDailyActiveKillMonster(GameClient killer, Monster victim)
 		{
 			if (DailyActiveManager.CheckLevCondition(killer, 1300) || DailyActiveManager.CheckLevCondition(killer, 1301) || DailyActiveManager.CheckLevCondition(killer, 1302))
@@ -486,7 +486,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F61 RID: 8033 RVA: 0x001B24C8 File Offset: 0x001B06C8
+		
 		public static void CheckDailyActiveKillMonster(GameClient client)
 		{
 			if (client.ClientData.DailyTotalKillMonsterNum >= client.ClientData.DailyNextKillMonsterNum && 2147483647U != client.ClientData.DailyNextKillMonsterNum)
@@ -501,7 +501,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F62 RID: 8034 RVA: 0x001B2564 File Offset: 0x001B0764
+		
 		public static void CheckDailyActiveKillBoss(GameClient client)
 		{
 			if (!DailyActiveManager.IsDailyActiveCompleted(client, 1400))
@@ -516,7 +516,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F63 RID: 8035 RVA: 0x001B25EC File Offset: 0x001B07EC
+		
 		protected static uint CheckSingleConditionForDailyActive(GameClient client, int DailyActiveMinID, int DailyActiveMaxID, long roleCurrentValue, string strCheckField, out bool bIsCompleted)
 		{
 			bIsCompleted = false;
@@ -557,7 +557,7 @@ namespace GameServer.Logic
 			return needMinValue;
 		}
 
-		// Token: 0x06001F64 RID: 8036 RVA: 0x001B271C File Offset: 0x001B091C
+		
 		public static void ProcessOnlineForDailyActive(GameClient client)
 		{
 			bool bIsCompleted = false;
@@ -578,7 +578,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F65 RID: 8037 RVA: 0x001B27B0 File Offset: 0x001B09B0
+		
 		public static void ProcessLoginForDailyActive(GameClient client, out bool bIsCompleted)
 		{
 			bIsCompleted = false;
@@ -596,7 +596,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F66 RID: 8038 RVA: 0x001B2844 File Offset: 0x001B0A44
+		
 		public static void ProcessBuyItemInMallForDailyActive(GameClient client, int nValue)
 		{
 			int xiaoFei = Global.GetRoleParamsInt32FromDB(client, "10175");
@@ -619,7 +619,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F67 RID: 8039 RVA: 0x001B2910 File Offset: 0x001B0B10
+		
 		public static void ProcessCompleteDailyTaskForDailyActive(GameClient client, int nValue)
 		{
 			if (!DailyActiveManager.IsDailyActiveCompleted(client, 400) || !DailyActiveManager.IsDailyActiveCompleted(client, 401))
@@ -634,7 +634,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F68 RID: 8040 RVA: 0x001B29B0 File Offset: 0x001B0BB0
+		
 		public static void ProcessCompleteCopyMapForDailyActive(GameClient client, int nCopyMapLev, int count = 1)
 		{
 			if (!DailyActiveManager.IsDailyActiveCompleted(client, 500) || !DailyActiveManager.IsDailyActiveCompleted(client, 600) || !DailyActiveManager.IsDailyActiveCompleted(client, 700))
@@ -679,7 +679,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F69 RID: 8041 RVA: 0x001B2B0C File Offset: 0x001B0D0C
+		
 		public static void ProcessCompleteDailyActivityForDailyActive(GameClient client, int nType)
 		{
 			if (!DailyActiveManager.IsDailyActiveCompleted(client, 800) || !DailyActiveManager.IsDailyActiveCompleted(client, 900) || !DailyActiveManager.IsDailyActiveCompleted(client, 1000))
@@ -721,7 +721,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F6A RID: 8042 RVA: 0x001B2C5C File Offset: 0x001B0E5C
+		
 		public static void ProcessDailyActiveEquipForge(GameClient client)
 		{
 			if (!DailyActiveManager.IsDailyActiveCompleted(client, 1100))
@@ -737,7 +737,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F6B RID: 8043 RVA: 0x001B2CC8 File Offset: 0x001B0EC8
+		
 		public static void ProcessDailyActiveEquipAppend(GameClient client)
 		{
 			if (!DailyActiveManager.IsDailyActiveCompleted(client, 1200))
@@ -753,7 +753,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F6C RID: 8044 RVA: 0x001B2D34 File Offset: 0x001B0F34
+		
 		public static void ProcessDailyActiveChangeLife(GameClient client)
 		{
 			if (!DailyActiveManager.IsDailyActiveCompleted(client, 1500))
@@ -769,7 +769,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F6D RID: 8045 RVA: 0x001B2DA0 File Offset: 0x001B0FA0
+		
 		public static void ProcessDailyActiveMergeFruit(GameClient client)
 		{
 			if (!DailyActiveManager.IsDailyActiveCompleted(client, 1600))
@@ -785,7 +785,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001F6E RID: 8046 RVA: 0x001B2E0C File Offset: 0x001B100C
+		
 		public static bool CheckLevCondition(GameClient client, int daTpye)
 		{
 			SystemXmlItem itemDailyActive = null;
@@ -818,7 +818,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001F6F RID: 8047 RVA: 0x001B2EC0 File Offset: 0x001B10C0
+		
 		public static void CleanDailyActiveInfo(GameClient client)
 		{
 			List<ulong> lsLong = new List<ulong>();
@@ -837,10 +837,10 @@ namespace GameServer.Logic
 			client.ClientData.DailyActiveDayLginCount = 0U;
 		}
 
-		// Token: 0x04002C0D RID: 11277
+		
 		private static Dictionary<int, int> m_DailyActiveInfo = new Dictionary<int, int>();
 
-		// Token: 0x04002C0E RID: 11278
+		
 		public static int m_DailyActiveDayID = 0;
 	}
 }

@@ -4,10 +4,10 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200071B RID: 1819
+	
 	public class ChongJiHaoLiActivity : KingActivity
 	{
-		// Token: 0x06002B75 RID: 11125 RVA: 0x0026851C File Offset: 0x0026671C
+		
 		public override AwardItem GetAward(GameClient client, int _params)
 		{
 			AwardItem result;
@@ -22,7 +22,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002B76 RID: 11126 RVA: 0x00268554 File Offset: 0x00266754
+		
 		public override AwardItem GetAward(GameClient client, int _params1, int _params2)
 		{
 			if (_params2 == 1)
@@ -42,7 +42,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x06002B77 RID: 11127 RVA: 0x002685C8 File Offset: 0x002667C8
+		
 		public override bool GiveAward(GameClient client, int _params1, int _params2)
 		{
 			AwardItem myAwardItem = null;
@@ -75,7 +75,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002B78 RID: 11128 RVA: 0x00268650 File Offset: 0x00266850
+		
 		protected new bool GiveAwardByOccupation(GameClient client, AwardItem myAwardItem, int occupation)
 		{
 			bool result;
@@ -107,7 +107,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002B79 RID: 11129 RVA: 0x00268820 File Offset: 0x00266A20
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client, int nBtnIndex)
 		{
 			bool result;

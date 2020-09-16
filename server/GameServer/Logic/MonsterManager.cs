@@ -22,77 +22,77 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200075D RID: 1885
+	
 	public class MonsterManager
 	{
-		// Token: 0x06002F81 RID: 12161 RVA: 0x002A75D8 File Offset: 0x002A57D8
+		
 		public void initialize(IEnumerable<XElement> mapItems)
 		{
 			this.MyMonsterContainer.initialize(mapItems);
 		}
 
-		// Token: 0x06002F82 RID: 12162 RVA: 0x002A75E8 File Offset: 0x002A57E8
+		
 		public static bool CanMonsterSeekRange(Monster monster)
 		{
 			return monster.MonsterType != 101 || monster.MonsterInfo.VLevel > MonsterManager.MinSeekRangeMonsterLevel;
 		}
 
-		// Token: 0x06002F83 RID: 12163 RVA: 0x002A762C File Offset: 0x002A582C
+		
 		public void AddMonster(Monster monster)
 		{
 			this.MyMonsterContainer.AddObject(monster.RoleID, monster.MonsterZoneNode.MapCode, monster.CopyMapID, monster);
 		}
 
-		// Token: 0x06002F84 RID: 12164 RVA: 0x002A7653 File Offset: 0x002A5853
+		
 		public void RemoveMonster(Monster monster)
 		{
 			this.MyMonsterContainer.RemoveObject(monster.RoleID, monster.MonsterZoneNode.MapCode, monster.CopyMapID, monster);
 		}
 
-		// Token: 0x06002F85 RID: 12165 RVA: 0x002A767C File Offset: 0x002A587C
+		
 		public int GetTotalMonstersCount()
 		{
 			return this.MyMonsterContainer.ObjectList.Count;
 		}
 
-		// Token: 0x06002F86 RID: 12166 RVA: 0x002A76A0 File Offset: 0x002A58A0
+		
 		public List<object> GetObjectsByMap(int mapCode)
 		{
 			return this.MyMonsterContainer.GetObjectsByMap(mapCode, -1);
 		}
 
-		// Token: 0x06002F87 RID: 12167 RVA: 0x002A76C0 File Offset: 0x002A58C0
+		
 		public int GetMapMonstersCount(int mapCode)
 		{
 			return this.MyMonsterContainer.GetObjectsCountByMap(mapCode);
 		}
 
-		// Token: 0x06002F88 RID: 12168 RVA: 0x002A76E0 File Offset: 0x002A58E0
+		
 		public List<object> GetCopyMapIDMonsterList(int copyMapID)
 		{
 			return this.MyMonsterContainer.GetObjectsByCopyMapID(copyMapID);
 		}
 
-		// Token: 0x06002F89 RID: 12169 RVA: 0x002A7700 File Offset: 0x002A5900
+		
 		public int GetCopyMapIDMonstersCount(int copyMapID, int aliveType = -1)
 		{
 			return this.MyMonsterContainer.GetObjectsCountByCopyMapID(copyMapID, aliveType);
 		}
 
-		// Token: 0x06002F8A RID: 12170 RVA: 0x002A7720 File Offset: 0x002A5920
+		
 		public bool IsAnyMonsterAliveByCopyMapID(int copyMapID)
 		{
 			return this.MyMonsterContainer.IsAnyMonsterAliveByCopyMapID(copyMapID);
 		}
 
-		// Token: 0x06002F8B RID: 12171 RVA: 0x002A7740 File Offset: 0x002A5940
+		
 		public Monster FindMonster(int mapCode, int roleID)
 		{
 			object obj = this.MyMonsterContainer.FindObject(roleID, mapCode);
 			return obj as Monster;
 		}
 
-		// Token: 0x06002F8C RID: 12172 RVA: 0x002A7768 File Offset: 0x002A5968
+		
 		public List<Monster> FindMonsterAll(int mapCode)
 		{
 			List<object> objList = this.MyMonsterContainer.FindObjectAll(mapCode);
@@ -107,13 +107,13 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002F8D RID: 12173 RVA: 0x002A77F4 File Offset: 0x002A59F4
+		
 		public List<object> FindMonsterByExtensionID(int copyMapID, int extensionID)
 		{
 			return this.MyMonsterContainer.FindObjectsByExtensionID(extensionID, copyMapID);
 		}
 
-		// Token: 0x06002F8E RID: 12174 RVA: 0x002A7814 File Offset: 0x002A5A14
+		
 		public void LookupEnemiesInCircle(int mapCode, int copyMapID, int toX, int toY, int radius, List<object> enemiesList)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -137,7 +137,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002F8F RID: 12175 RVA: 0x002A78E0 File Offset: 0x002A5AE0
+		
 		public void LookupEnemiesInCircleByAngle(int direction, int mapCode, int copyMapID, int toX, int toY, int radius, List<int> enemiesList, double angle, bool near180)
 		{
 			List<object> objList = new List<object>();
@@ -148,7 +148,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002F90 RID: 12176 RVA: 0x002A793C File Offset: 0x002A5B3C
+		
 		public void LookupEnemiesInCircleByAngle(int direction, int mapCode, int copyMapID, int toX, int toY, int radius, List<object> enemiesList, double angle, bool near180)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -182,7 +182,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002F91 RID: 12177 RVA: 0x002A7AA8 File Offset: 0x002A5CA8
+		
 		public void LookupEnemiesInCircleByRoleAngle(int centerAngle, int mapCode, int copyMapID, int toX, int toY, int radius, List<object> enemiesList, double angle, bool near180)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -213,7 +213,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002F92 RID: 12178 RVA: 0x002A7BEC File Offset: 0x002A5DEC
+		
 		public void LookupRolesInSquare(GameClient client, int mapCode, int radius, int nWidth, List<object> rolesList)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -253,7 +253,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002F93 RID: 12179 RVA: 0x002A7E08 File Offset: 0x002A6008
+		
 		public void LookupEnemiesAtGridXY(IObject attacker, int gridX, int gridY, List<object> enemiesList)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[attacker.CurrentMapCode];
@@ -273,7 +273,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002F94 RID: 12180 RVA: 0x002A7EA0 File Offset: 0x002A60A0
+		
 		public void LookupAttackEnemies(IObject attacker, int direction, List<object> enemiesList)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[attacker.CurrentMapCode];
@@ -284,7 +284,7 @@ namespace GameServer.Logic
 			this.LookupEnemiesAtGridXY(attacker, (int)p.X, (int)p.Y, enemiesList);
 		}
 
-		// Token: 0x06002F95 RID: 12181 RVA: 0x002A7F00 File Offset: 0x002A6100
+		
 		public void LookupAttackEnemyIDs(IObject attacker, int direction, List<int> enemiesList)
 		{
 			List<object> objList = new List<object>();
@@ -295,7 +295,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002F96 RID: 12182 RVA: 0x002A7F50 File Offset: 0x002A6150
+		
 		public void LookupRangeAttackEnemies(IObject obj, int toX, int toY, int direction, string rangeMode, List<object> enemiesList)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[obj.CurrentMapCode];
@@ -311,7 +311,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002F97 RID: 12183 RVA: 0x002A7FF0 File Offset: 0x002A61F0
+		
 		public void LookupRolesInSquare(int mapCode, int copyMapId, int srcX, int srcY, int toX, int toY, int radius, int nWidth, List<object> rolesList, int type)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -374,7 +374,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002F98 RID: 12184 RVA: 0x002A8298 File Offset: 0x002A6498
+		
 		public void LookupEnemiesInCircleByAngle(int direction, int mapCode, int copyMapId, int srcX, int srcY, int toX, int toY, int radius, List<object> enemiesList, double angle, bool near180, int type)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -434,7 +434,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002F99 RID: 12185 RVA: 0x002A8510 File Offset: 0x002A6710
+		
 		public void LookupEnemiesInCircle(int mapCode, int copyMapId, int srcX, int srcY, int toX, int toY, int radius, List<object> enemiesList, int type)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -480,7 +480,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002F9A RID: 12186 RVA: 0x002A86C0 File Offset: 0x002A68C0
+		
 		public void SendMonsterToClients(SocketListener sl, Monster monster, TCPOutPacketPool pool, List<object> objList, int cmd)
 		{
 			if (null != objList)
@@ -509,7 +509,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002F9B RID: 12187 RVA: 0x002A8798 File Offset: 0x002A6998
+		
 		public int SendMonstersToClient(SocketListener sl, GameClient client, TCPOutPacketPool pool, List<object> objList, int cmd)
 		{
 			int result;
@@ -561,7 +561,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002F9C RID: 12188 RVA: 0x002A8918 File Offset: 0x002A6B18
+		
 		public void ProcessMonsterDead(SocketListener sl, TCPOutPacketPool pool, IObject attacker, Monster monster, int enemyExperience, int enemyMoney, int injure)
 		{
 			monster.TimedActionMgr.RemoveItem(0);
@@ -587,7 +587,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002F9D RID: 12189 RVA: 0x002A8A3C File Offset: 0x002A6C3C
+		
 		private void ProcessMonsterDeadByClient(SocketListener sl, TCPOutPacketPool pool, GameClient client, Monster monster, int enemyExperience, int enemyMoney)
 		{
 			if (!monster.HandledDead)
@@ -761,7 +761,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002F9E RID: 12190 RVA: 0x002A91EC File Offset: 0x002A73EC
+		
 		private void ProcessMonsterDeadByMonster(SocketListener sl, TCPOutPacketPool pool, Monster attacker, Monster monster, int enemyExperience, int enemyMoney)
 		{
 			if (!monster.HandledDead)
@@ -779,7 +779,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002F9F RID: 12191 RVA: 0x002A9258 File Offset: 0x002A7458
+		
 		private void ProcessSpriteKillMonster(SocketListener sl, TCPOutPacketPool pool, GameClient client, Monster monster, int enemyExperience, int enemyMoney)
 		{
 			int oldLevel = client.ClientData.Level;
@@ -878,7 +878,7 @@ namespace GameServer.Logic
 			GameManager.CopyMapMgr.ProcessKilledMonster(client, monster);
 		}
 
-		// Token: 0x06002FA0 RID: 12192 RVA: 0x002A9668 File Offset: 0x002A7868
+		
 		public void ProcessMonsterDeadEvents(SocketListener sl, TCPOutPacketPool pool, IObject attacker, Monster monster)
 		{
 			if (901 == monster.MonsterType)
@@ -887,7 +887,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FA1 RID: 12193 RVA: 0x002A9698 File Offset: 0x002A7898
+		
 		public bool ChangePosition(SocketListener sl, TCPOutPacketPool pool, Monster monster, int toMapX, int toMapY, int toMapDirection, int nID, int animation = 0)
 		{
 			if (toMapDirection > 0)
@@ -928,12 +928,12 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002FA2 RID: 12194 RVA: 0x002A980A File Offset: 0x002A7A0A
+		
 		public void ProcessOtherEventsOnMonsterDead(SocketListener sl, TCPOutPacketPool pool, GameClient client, Monster monster)
 		{
 		}
 
-		// Token: 0x06002FA3 RID: 12195 RVA: 0x002A9810 File Offset: 0x002A7A10
+		
 		public void AddSpriteLifeV(SocketListener sl, TCPOutPacketPool pool, Monster monster, double lifeV)
 		{
 			if (monster.VLife > 0.0)
@@ -947,7 +947,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FA4 RID: 12196 RVA: 0x002A98DC File Offset: 0x002A7ADC
+		
 		public void SubSpriteLifeV(SocketListener sl, TCPOutPacketPool pool, Monster monster, double lifeV)
 		{
 			if (monster.VLife > 0.0)
@@ -961,7 +961,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FA5 RID: 12197 RVA: 0x002A99A4 File Offset: 0x002A7BA4
+		
 		public void AddSpriteMagicV(SocketListener sl, TCPOutPacketPool pool, Monster monster, double magicV)
 		{
 			if (monster.VLife > 0.0)
@@ -972,7 +972,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FA6 RID: 12198 RVA: 0x002A9A50 File Offset: 0x002A7C50
+		
 		public void SubSpriteMagicV(SocketListener sl, TCPOutPacketPool pool, Monster monster, double magicV)
 		{
 			if (monster.VLife > 0.0)
@@ -983,7 +983,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FA7 RID: 12199 RVA: 0x002A9AFC File Offset: 0x002A7CFC
+		
 		public int InjureToEnemy(Monster monster, int injured)
 		{
 			injured = DBMonsterBuffer.ProcessHuZhaoSubLifeV(monster, Math.Max(0, injured));
@@ -992,7 +992,7 @@ namespace GameServer.Logic
 			return Math.Max(0, injured);
 		}
 
-		// Token: 0x06002FA8 RID: 12200 RVA: 0x002A9B44 File Offset: 0x002A7D44
+		
 		public int NotifyInjured(SocketListener sl, TCPOutPacketPool pool, GameClient client, Monster enemy, int burst, int injure, double injurePercent, int attackType, bool forceBurst, int addInjure, double attackPercent, int addAttackMin, int addAttackMax, int skillLevel, double skillBaseAddPercent, double skillUpAddPercent, bool ignoreDefenseAndDodge = false, double baseRate = 1.0, int addVlue = 0, int nHitFlyDistance = 0, int magicCode = 0, double shenShiInjurePercent = 0.0)
 		{
 			int ret = 0;
@@ -1249,7 +1249,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002FA9 RID: 12201 RVA: 0x002AA5D8 File Offset: 0x002A87D8
+		
 		public int Monster_NotifyInjured(SocketListener sl, TCPOutPacketPool pool, Monster attacker, Monster enemy, int burst, int injure, double injurePercent, int attackType, bool forceBurst, int addInjure, double attackPercent, int addAttackMin, int addAttackMax, int skillLevel, double skillBaseAddPercent, double skillUpAddPercent, bool ignoreDefenseAndDodge = false, double baseRate = 1.0, int addVlue = 0, int nHitFlyDistance = 0, int magicCode = 0, double shenShiInjurePercent = 0.0)
 		{
 			int ret = 0;
@@ -1334,7 +1334,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06002FAA RID: 12202 RVA: 0x002AA9AC File Offset: 0x002A8BAC
+		
 		public void DoMonsterHeartTimer(int mapCode = -1, int subMapCode = -1)
 		{
 			long ticks = TimeUtil.NOW();
@@ -1368,17 +1368,17 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FAB RID: 12203 RVA: 0x002AAACC File Offset: 0x002A8CCC
+		
 		private void MoveToRandomPoint(SocketListener sl, TCPOutPacketPool pool, Monster monster)
 		{
 		}
 
-		// Token: 0x06002FAC RID: 12204 RVA: 0x002AAAD0 File Offset: 0x002A8CD0
+		
 		private void CheckMonsterStandStatus(Monster monster)
 		{
 		}
 
-		// Token: 0x06002FAD RID: 12205 RVA: 0x002AAAE0 File Offset: 0x002A8CE0
+		
 		private bool CheckMonsterInObs(SocketListener sl, TCPOutPacketPool pool, Monster monster, long ticks)
 		{
 			if (1001 == monster.MonsterType)
@@ -1443,7 +1443,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002FAE RID: 12206 RVA: 0x002AAD00 File Offset: 0x002A8F00
+		
 		private void SearchViewRange(SocketListener sl, TCPOutPacketPool pool, Monster monster, long ticks, int rolesNum)
 		{
 			if (ticks - monster.LastSeekEnemyTicks >= monster.NextSeekEnemyTicks)
@@ -1456,14 +1456,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FAF RID: 12207 RVA: 0x002AAD52 File Offset: 0x002A8F52
+		
 		private void SelectTarget(Monster monster, IObject obj, long ticks)
 		{
 			monster.LockObject = obj.GetObjectID();
 			monster.LockFocusTime = ticks;
 		}
 
-		// Token: 0x06002FB0 RID: 12208 RVA: 0x002AAD6A File Offset: 0x002A8F6A
+		
 		public void LoseTarget(Monster monster)
 		{
 			monster.LockObject = -1;
@@ -1471,7 +1471,7 @@ namespace GameServer.Logic
 			monster.PetLockObjectPriority = 0;
 		}
 
-		// Token: 0x06002FB1 RID: 12209 RVA: 0x002AAD88 File Offset: 0x002A8F88
+		
 		private bool CanLock(Monster monster, IObject obj)
 		{
 			bool result;
@@ -1570,7 +1570,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002FB2 RID: 12210 RVA: 0x002AB040 File Offset: 0x002A9240
+		
 		public void PetAttackMasterTargetTriggerEvent(Monster monster, IObject obj)
 		{
 			if (1001 == monster.MonsterType && this.CanLock(monster, obj))
@@ -1583,7 +1583,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FB3 RID: 12211 RVA: 0x002AB0B8 File Offset: 0x002A92B8
+		
 		public void PetAttackMasterTargetTriggerEvent(GameClient client, IObject obj)
 		{
 			Monster monster = Global.GetPetMonsterByMonsterByType(client, MonsterTypes.DSPetMonster);
@@ -1593,7 +1593,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FB4 RID: 12212 RVA: 0x002AB0F4 File Offset: 0x002A92F4
+		
 		private int CalculatePetAttackMasterTargetPriority(Monster monster, IObject obj)
 		{
 			int result;
@@ -1676,7 +1676,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002FB5 RID: 12213 RVA: 0x002AB33C File Offset: 0x002A953C
+		
 		private void TryToLockObject(SocketListener sl, TCPOutPacketPool pool, Monster monster, long ticks)
 		{
 			bool IfTryLock = ticks - monster.LastLockEnemyTicks > 8000L || (ticks - monster.LastLockEnemyTicks > 1000L && -1 == monster.LockObject);
@@ -1746,7 +1746,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FB6 RID: 12214 RVA: 0x002AB5D0 File Offset: 0x002A97D0
+		
 		private bool IsLockObjectValid(Monster monster, GameClient gameClient, long ticks)
 		{
 			bool result;
@@ -1775,7 +1775,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002FB7 RID: 12215 RVA: 0x002AB698 File Offset: 0x002A9898
+		
 		private bool IsLockObjectValid(Monster monster, Monster targetMonster, long ticks)
 		{
 			bool result;
@@ -1804,7 +1804,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002FB8 RID: 12216 RVA: 0x002AB764 File Offset: 0x002A9964
+		
 		private bool IsLockObjectValid(Monster monster, JunQiItem targetJunQi, long ticks)
 		{
 			bool result;
@@ -1833,7 +1833,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002FB9 RID: 12217 RVA: 0x002AB828 File Offset: 0x002A9A28
+		
 		private bool IsLockObjectValid(Monster monster, IObject lockObject, long ticks)
 		{
 			bool result;
@@ -1852,7 +1852,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002FBA RID: 12218 RVA: 0x002AB8A4 File Offset: 0x002A9AA4
+		
 		private bool CheckLockObject(SocketListener sl, TCPOutPacketPool pool, Monster monster, IObject lockObject, long ticks)
 		{
 			bool result;
@@ -1881,7 +1881,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002FBB RID: 12219 RVA: 0x002AB990 File Offset: 0x002A9B90
+		
 		private bool CheckLockObject(SocketListener sl, TCPOutPacketPool pool, Monster monster, Monster targetMonster, long ticks)
 		{
 			bool result;
@@ -1905,14 +1905,14 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002FBC RID: 12220 RVA: 0x002ABA60 File Offset: 0x002A9C60
+		
 		private Dircetions GetWonderingWalkDir(Monster monster)
 		{
 			monster.CurrentDir = (Dircetions)Global.GetRandomNumber(0, 8);
 			return monster.CurrentDir;
 		}
 
-		// Token: 0x06002FBD RID: 12221 RVA: 0x002ABA88 File Offset: 0x002A9C88
+		
 		private void Wondering(SocketListener sl, TCPOutPacketPool pool, Monster monster, long ticks)
 		{
 			if (1001 == monster.MonsterType)
@@ -1980,7 +1980,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FBE RID: 12222 RVA: 0x002ABD34 File Offset: 0x002A9F34
+		
 		private void DoMonsterStandAction(SocketListener sl, TCPOutPacketPool pool, Monster monster, long ticks)
 		{
 			List<object> listObjs = Global.GetAll9Clients(monster);
@@ -1990,7 +1990,7 @@ namespace GameServer.Logic
 			monster.Action = GActions.Stand;
 		}
 
-		// Token: 0x06002FBF RID: 12223 RVA: 0x002ABDCC File Offset: 0x002A9FCC
+		
 		private void DoMonsterAI(SocketListener sl, TCPOutPacketPool pool, Monster monster, long ticks, int count, int IndexOfMonsterAiAttack)
 		{
 			if (monster._Action == GActions.Attack)
@@ -2017,7 +2017,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FC0 RID: 12224 RVA: 0x002ABF08 File Offset: 0x002AA108
+		
 		private void MonsterReturn(Monster monster)
 		{
 			int nDir = (int)monster.CurrentDir;
@@ -2063,7 +2063,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FC1 RID: 12225 RVA: 0x002AC024 File Offset: 0x002AA224
+		
 		private void GoToLockObject(SocketListener sl, TCPOutPacketPool pool, Monster monster, IObject obj, long ticks, bool justMove = false)
 		{
 			if (!monster.IsMoving)
@@ -2265,7 +2265,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FC2 RID: 12226 RVA: 0x002AC608 File Offset: 0x002AA808
+		
 		public bool TargetInAttackRange(Monster attacker, IObject defenser, out int direction)
 		{
 			direction = (int)attacker.Direction;
@@ -2377,7 +2377,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002FC3 RID: 12227 RVA: 0x002AC934 File Offset: 0x002AAB34
+		
 		public void MonsterAttack(SocketListener sl, TCPOutPacketPool pool, Monster monster, IObject enemyObject, int direction, long ticks)
 		{
 			if (!monster.IsMoving)
@@ -2418,7 +2418,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FC4 RID: 12228 RVA: 0x002ACA54 File Offset: 0x002AAC54
+		
 		private int GetMapRolesCount(Dictionary<int, int> dict, int mapCode)
 		{
 			int roleNum = 0;
@@ -2436,7 +2436,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002FC5 RID: 12229 RVA: 0x002ACA94 File Offset: 0x002AAC94
+		
 		public void DoMonsterAttack(SocketListener sl, TCPOutPacketPool pool, int IndexOfMonsterAiAttack, int mapCode = -1, int subMapCode = -1)
 		{
 			Dictionary<int, int> mapRolesNumDict = new Dictionary<int, int>();
@@ -2617,7 +2617,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FC6 RID: 12230 RVA: 0x002ACFB8 File Offset: 0x002AB1B8
+		
 		public void MonsterAutoSearchRoad(Monster monster)
 		{
 			long ticks = TimeUtil.NOW();
@@ -2656,7 +2656,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FC7 RID: 12231 RVA: 0x002AD1B8 File Offset: 0x002AB3B8
+		
 		public bool DispatchMonsterOwnedByRole(Monster monster, SocketListener sl, TCPOutPacketPool pool, long ticks)
 		{
 			if (monster.OwnerClient != null)
@@ -2696,7 +2696,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06002FC8 RID: 12232 RVA: 0x002AD3C0 File Offset: 0x002AB5C0
+		
 		public bool DispatchMonsterOwnedByMonster(Monster monster, SocketListener sl, TCPOutPacketPool pool, long ticks)
 		{
 			if (monster.OwnerMonster != null)
@@ -2736,7 +2736,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06002FC9 RID: 12233 RVA: 0x002AD5A8 File Offset: 0x002AB7A8
+		
 		public void DoMonsterLifeMagicV(SocketListener sl, TCPOutPacketPool pool, Monster monster, long ticks, int mapRoleNum)
 		{
 			DBMonsterBuffer.ProcessDSTimeAddLifeNoShow(monster);
@@ -2771,7 +2771,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FCA RID: 12234 RVA: 0x002AD730 File Offset: 0x002AB930
+		
 		public void AddDelayDeadMonster(Monster obj)
 		{
 			lock (this.ListDelayDeadMonster)
@@ -2784,14 +2784,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FCB RID: 12235 RVA: 0x002AD7A8 File Offset: 0x002AB9A8
+		
 		public void DeadMonsterImmediately(Monster obj)
 		{
 			obj.OnDead();
 			this.AddDelayDeadMonster(obj);
 		}
 
-		// Token: 0x06002FCC RID: 12236 RVA: 0x002AD7BC File Offset: 0x002AB9BC
+		
 		public void DoMonsterDeadCall()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -2831,13 +2831,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FCD RID: 12237 RVA: 0x002AD9BC File Offset: 0x002ABBBC
+		
 		public bool AddKilledMonsterFirst(long monsterUniqueId)
 		{
 			return this.DeadMonsterUniqueIdDict.TryAdd(monsterUniqueId, TimeUtil.CurrentTicksInexact + 15000L);
 		}
 
-		// Token: 0x06002FCE RID: 12238 RVA: 0x002AD9E8 File Offset: 0x002ABBE8
+		
 		public void DoDeadMonsterUniqueIdProc(long nowTicks)
 		{
 			foreach (KeyValuePair<long, long> kv in this.DeadMonsterUniqueIdDict)
@@ -2850,7 +2850,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FCF RID: 12239 RVA: 0x002ADA64 File Offset: 0x002ABC64
+		
 		protected int GetSkillAttackGridNum(Monster monster, int skillID)
 		{
 			int result;
@@ -2893,7 +2893,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002FD0 RID: 12240 RVA: 0x002ADB00 File Offset: 0x002ABD00
+		
 		protected void InstantAttack(Monster monster, double direction, Point enemyPos)
 		{
 			int autoUseSkillID = monster.GetAutoUseSkillID();
@@ -2929,7 +2929,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FD1 RID: 12241 RVA: 0x002ADC28 File Offset: 0x002ABE28
+		
 		public void DoAttackAction(Monster monster, double direction)
 		{
 			if (monster.VLife > 0.0)
@@ -2950,7 +2950,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06002FD2 RID: 12242 RVA: 0x002ADD1C File Offset: 0x002ABF1C
+		
 		public int DoMagicAttack(Monster monster, int magicCode, int lockObject, bool doAttackAction = false)
 		{
 			SystemXmlItem systemMagic = null;
@@ -3031,19 +3031,19 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06002FD3 RID: 12243 RVA: 0x002ADF86 File Offset: 0x002AC186
+		
 		protected void MagicAttack(Monster monster, int magicCode, int magicRange, bool notChangeDirection = false)
 		{
 			this.SpellCasting(monster, magicCode, notChangeDirection);
 		}
 
-		// Token: 0x06002FD4 RID: 12244 RVA: 0x002ADF94 File Offset: 0x002AC194
+		
 		protected double CalcDirection(Monster monster, Point p)
 		{
 			return Global.GetDirectionByTan(p.X, p.Y, monster.Coordinate.X, monster.Coordinate.Y);
 		}
 
-		// Token: 0x06002FD5 RID: 12245 RVA: 0x002ADFD8 File Offset: 0x002AC1D8
+		
 		protected void SpellCasting(Monster monster, int magicCode, bool notChangeDirection = false)
 		{
 			double newDirection = monster.Direction;
@@ -3054,19 +3054,19 @@ namespace GameServer.Logic
 			this.DoAttackAction(monster, newDirection);
 		}
 
-		// Token: 0x04003CE1 RID: 15585
+		
 		public static int MinSeekRangeMonsterLevel = 0;
 
-		// Token: 0x04003CE2 RID: 15586
+		
 		private MonsterContainer MyMonsterContainer = new MonsterContainer();
 
-		// Token: 0x04003CE3 RID: 15587
+		
 		private MonsterMoving monsterMoving = new MonsterMoving();
 
-		// Token: 0x04003CE4 RID: 15588
+		
 		private ConcurrentDictionary<long, long> DeadMonsterUniqueIdDict = new ConcurrentDictionary<long, long>();
 
-		// Token: 0x04003CE5 RID: 15589
+		
 		private List<Monster> ListDelayDeadMonster = new List<Monster>();
 	}
 }

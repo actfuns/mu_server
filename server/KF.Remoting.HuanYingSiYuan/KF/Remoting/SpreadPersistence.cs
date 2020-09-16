@@ -8,15 +8,15 @@ using Tmsk.Tools.Tools;
 
 namespace KF.Remoting
 {
-	// Token: 0x02000062 RID: 98
+	
 	public class SpreadPersistence
 	{
-		// Token: 0x0600046A RID: 1130 RVA: 0x00039A80 File Offset: 0x00037C80
+		
 		private SpreadPersistence()
 		{
 		}
 
-		// Token: 0x0600046B RID: 1131 RVA: 0x00039AA0 File Offset: 0x00037CA0
+		
 		public void InitConfig()
 		{
 			try
@@ -37,7 +37,7 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600046C RID: 1132 RVA: 0x00039BF0 File Offset: 0x00037DF0
+		
 		private int ExecuteSqlNoQuery2(string sqlCmd)
 		{
 			int i = 0;
@@ -52,7 +52,7 @@ namespace KF.Remoting
 			return i;
 		}
 
-		// Token: 0x0600046D RID: 1133 RVA: 0x00039C34 File Offset: 0x00037E34
+		
 		public bool DBSpreadSign(int pzoneID, int proleID)
 		{
 			string sql = string.Format("REPLACE INTO t_spread(logTime, zoneID, roleID) VALUES('{0}','{1}','{2}')", TimeUtil.NowDateTime().ToString("yyyy-MM-dd HH:mm:ss"), pzoneID, proleID);
@@ -60,7 +60,7 @@ namespace KF.Remoting
 			return i > 0;
 		}
 
-		// Token: 0x0600046E RID: 1134 RVA: 0x00039C7C File Offset: 0x00037E7C
+		
 		public bool DBSpreadSignCheck(int pzoneID, int proleID)
 		{
 			try
@@ -82,7 +82,7 @@ namespace KF.Remoting
 			return false;
 		}
 
-		// Token: 0x0600046F RID: 1135 RVA: 0x00039CF8 File Offset: 0x00037EF8
+		
 		public bool DBSpreadVeruftCheck(int czoneID, int croleID, string cuserID)
 		{
 			try
@@ -104,7 +104,7 @@ namespace KF.Remoting
 			return false;
 		}
 
-		// Token: 0x06000470 RID: 1136 RVA: 0x00039D74 File Offset: 0x00037F74
+		
 		public int DBSpreadCountAll(int pzoneID, int proleID)
 		{
 			try
@@ -122,7 +122,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x06000471 RID: 1137 RVA: 0x00039DDC File Offset: 0x00037FDC
+		
 		public int DBSpreadCountVip(int pzoneID, int proleID)
 		{
 			try
@@ -140,7 +140,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x06000472 RID: 1138 RVA: 0x00039E44 File Offset: 0x00038044
+		
 		public int DBSpreadCountLevel(int pzoneID, int proleID)
 		{
 			try
@@ -158,7 +158,7 @@ namespace KF.Remoting
 			return 0;
 		}
 
-		// Token: 0x06000473 RID: 1139 RVA: 0x00039EAC File Offset: 0x000380AC
+		
 		public bool DBSpreadIsVip(int pzoneID, int proleID, int czoneID, int croleID)
 		{
 			string sql = string.Format("UPDATE t_spread_role set isVip=1 where pzoneID={0} and proleID={1} and czoneID={2} and croleID={3};", new object[]
@@ -172,7 +172,7 @@ namespace KF.Remoting
 			return i > 0;
 		}
 
-		// Token: 0x06000474 RID: 1140 RVA: 0x00039F04 File Offset: 0x00038104
+		
 		public bool DBSpreadIsLevel(int pzoneID, int proleID, int czoneID, int croleID)
 		{
 			string sql = string.Format("UPDATE t_spread_role set isLevel=1 where  pzoneID={0} and proleID={1} and czoneID={2} and croleID={3};", new object[]
@@ -186,7 +186,7 @@ namespace KF.Remoting
 			return i > 0;
 		}
 
-		// Token: 0x06000475 RID: 1141 RVA: 0x00039F5C File Offset: 0x0003815C
+		
 		public bool DBSpreadRoleAdd(int pzoneID, int proleID, string cuserID, int czoneID, int croleID, string tel, int isVip, int isLevel)
 		{
 			string sql = string.Format("INSERT INTO t_spread_role(pzoneID,proleID,cuserID,czoneID,croleID,tel,isVip,isLevel,logTime) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')", new object[]
@@ -205,7 +205,7 @@ namespace KF.Remoting
 			return i > 0;
 		}
 
-		// Token: 0x06000476 RID: 1142 RVA: 0x00039FE8 File Offset: 0x000381E8
+		
 		public bool DBSpreadTelCodeAdd(int pzoneID, int proleID, int czoneID, int croleID, string tel, int telCode)
 		{
 			string sql = string.Format("INSERT INTO t_spread_tel(pzoneID, proleID, czoneID,croleID,tel,telCode,logTime) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", new object[]
@@ -222,7 +222,7 @@ namespace KF.Remoting
 			return i > 0;
 		}
 
-		// Token: 0x06000477 RID: 1143 RVA: 0x0003A064 File Offset: 0x00038264
+		
 		public bool DBSpreadTelBind(string tel)
 		{
 			try
@@ -244,13 +244,13 @@ namespace KF.Remoting
 			return false;
 		}
 
-		// Token: 0x0400026A RID: 618
+		
 		public static readonly SpreadPersistence Instance = new SpreadPersistence();
 
-		// Token: 0x0400026B RID: 619
+		
 		public object Mutex = new object();
 
-		// Token: 0x0400026C RID: 620
+		
 		public bool Initialized = false;
 	}
 }

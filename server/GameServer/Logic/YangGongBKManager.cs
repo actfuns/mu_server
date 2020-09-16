@@ -4,10 +4,10 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007EC RID: 2028
+	
 	public class YangGongBKManager
 	{
-		// Token: 0x06003952 RID: 14674 RVA: 0x0030AE94 File Offset: 0x00309094
+		
 		public static YangGongBKItem OpenYangGongBK(GameClient client, bool isBaoWuBinding)
 		{
 			YangGongBKItem yangGongBKItem = null;
@@ -83,7 +83,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003953 RID: 14675 RVA: 0x0030B188 File Offset: 0x00309388
+		
 		public static int ClickYangGongBK(GameClient client, YangGongBKItem yangGongBKItem, out GoodsData goodsData)
 		{
 			goodsData = null;
@@ -160,7 +160,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0400433D RID: 17213
+		
 		private static double[] YangGongBKNumPercents = null;
 	}
 }

@@ -10,23 +10,23 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020002C6 RID: 710
+	
 	public class FundManager : IManager, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x06000B17 RID: 2839 RVA: 0x000AE914 File Offset: 0x000ACB14
+		
 		public static FundManager getInstance()
 		{
 			return FundManager.instance;
 		}
 
-		// Token: 0x06000B18 RID: 2840 RVA: 0x000AE92C File Offset: 0x000ACB2C
+		
 		public bool initialize()
 		{
 			FundManager.InitConfig();
 			return true;
 		}
 
-		// Token: 0x06000B19 RID: 2841 RVA: 0x000AE948 File Offset: 0x000ACB48
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1032, 1, 1, FundManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -35,25 +35,25 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000B1A RID: 2842 RVA: 0x000AE9A4 File Offset: 0x000ACBA4
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000B1B RID: 2843 RVA: 0x000AE9B8 File Offset: 0x000ACBB8
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000B1C RID: 2844 RVA: 0x000AE9CC File Offset: 0x000ACBCC
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06000B1D RID: 2845 RVA: 0x000AE9E0 File Offset: 0x000ACBE0
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -75,7 +75,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000B1E RID: 2846 RVA: 0x000AEA3C File Offset: 0x000ACC3C
+		
 		public bool ProcessFundInfoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -95,7 +95,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000B1F RID: 2847 RVA: 0x000AEAAC File Offset: 0x000ACCAC
+		
 		public bool ProcessFundBuyCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -116,7 +116,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000B20 RID: 2848 RVA: 0x000AEB2C File Offset: 0x000ACD2C
+		
 		public bool ProcessFundAwardCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -137,7 +137,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000B21 RID: 2849 RVA: 0x000AEBAC File Offset: 0x000ACDAC
+		
 		private static FundData FundGetData(GameClient client)
 		{
 			FundData fundData = FundManager.GetFundData(client);
@@ -149,7 +149,7 @@ namespace GameServer.Logic
 			return FundManager.GetFundData(client);
 		}
 
-		// Token: 0x06000B22 RID: 2850 RVA: 0x000AEBE8 File Offset: 0x000ACDE8
+		
 		private static FundData FundBuy(GameClient client, int fundType)
 		{
 			FundData myData = FundManager.GetFundData(client);
@@ -243,7 +243,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000B23 RID: 2851 RVA: 0x000AEEFC File Offset: 0x000AD0FC
+		
 		private static FundData FundAward(GameClient client, int fundType)
 		{
 			FundData myData = FundManager.GetFundData(client);
@@ -338,7 +338,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000B24 RID: 2852 RVA: 0x000AF168 File Offset: 0x000AD368
+		
 		private static bool AddDiamone(GameClient client, bool isBind, int diamond)
 		{
 			bool result;
@@ -353,7 +353,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000B25 RID: 2853 RVA: 0x000AF1D4 File Offset: 0x000AD3D4
+		
 		public static FundData GetFundData(GameClient client)
 		{
 			FundData myFundData;
@@ -364,7 +364,7 @@ namespace GameServer.Logic
 			return myFundData;
 		}
 
-		// Token: 0x06000B26 RID: 2854 RVA: 0x000AF22C File Offset: 0x000AD42C
+		
 		public static void initFundData(GameClient client)
 		{
 			lock (client.ClientData.LockFund)
@@ -419,7 +419,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000B27 RID: 2855 RVA: 0x000AF524 File Offset: 0x000AD724
+		
 		private static FundItem initFundItem(GameClient client, EFund fundType)
 		{
             FundItem result;
@@ -449,7 +449,7 @@ namespace GameServer.Logic
             return result;
 		}
 
-		// Token: 0x06000B28 RID: 2856 RVA: 0x000AF6A8 File Offset: 0x000AD8A8
+		
 		private static void checkFundItemValue(GameClient client, FundItem fundItem)
 		{
 			lock (client.ClientData.LockFund)
@@ -470,7 +470,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000B29 RID: 2857 RVA: 0x000AF898 File Offset: 0x000ADA98
+		
 		private static void initFundAwardNext(GameClient client, FundItem fundItem)
 		{
 			lock (client.ClientData.LockFund)
@@ -519,38 +519,38 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000B2A RID: 2858 RVA: 0x000AFB04 File Offset: 0x000ADD04
+		
 		private static List<FundDBItem> DBFundInfo(GameClient client)
 		{
 			List<FundDBItem> list = new List<FundDBItem>();
 			return Global.sendToDB<List<FundDBItem>, int>(13116, client.ClientData.RoleID, client.ServerId);
 		}
 
-		// Token: 0x06000B2B RID: 2859 RVA: 0x000AFB3C File Offset: 0x000ADD3C
+		
 		private static bool DBFundBuy(GameClient client, FundDBItem item)
 		{
 			return Global.sendToDB<bool, FundDBItem>(13117, item, client.ServerId);
 		}
 
-		// Token: 0x06000B2C RID: 2860 RVA: 0x000AFB64 File Offset: 0x000ADD64
+		
 		private static bool DBFundAward(GameClient client, FundDBItem item)
 		{
 			return Global.sendToDB<bool, FundDBItem>(13118, item, client.ServerId);
 		}
 
-		// Token: 0x06000B2D RID: 2861 RVA: 0x000AFB8C File Offset: 0x000ADD8C
+		
 		private static bool DBFundMoney(GameClient client, FundDBItem item)
 		{
 			return Global.sendToDB<bool, FundDBItem>(13119, item, client.ServerId);
 		}
 
-		// Token: 0x06000B2E RID: 2862 RVA: 0x000AFBB4 File Offset: 0x000ADDB4
+		
 		public static bool IsGongNengOpened(GameClient client, bool hint = false)
 		{
 			return GameManager.VersionSystemOpenMgr.IsVersionSystemOpen("Fund") && GlobalNew.IsGongNengOpened(client, GongNengIDs.Fund, hint);
 		}
 
-		// Token: 0x06000B2F RID: 2863 RVA: 0x000AFBE8 File Offset: 0x000ADDE8
+		
 		public static void FundChangeLife(GameClient client)
 		{
 			FundData fundData = FundManager.GetFundData(client);
@@ -574,7 +574,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000B30 RID: 2864 RVA: 0x000AFCB8 File Offset: 0x000ADEB8
+		
 		public static void FundVip(GameClient client)
 		{
 			FundData fundData = FundManager.GetFundData(client);
@@ -600,7 +600,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000B31 RID: 2865 RVA: 0x000AFD90 File Offset: 0x000ADF90
+		
 		public static void FundMoneyCost(GameClient client, int moneyCost)
 		{
 			FundData fundData = FundManager.GetFundData(client);
@@ -632,7 +632,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000B32 RID: 2866 RVA: 0x000AFE98 File Offset: 0x000AE098
+		
 		private static bool InitConfig()
 		{
 			string fileName = "";
@@ -707,7 +707,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000B33 RID: 2867 RVA: 0x000B022C File Offset: 0x000AE42C
+		
 		private static void CheckActivityTip(GameClient client)
 		{
 			lock (client.ClientData.LockFund)
@@ -744,13 +744,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04001247 RID: 4679
+		
 		private static FundManager instance = new FundManager();
 
-		// Token: 0x04001248 RID: 4680
+		
 		private static Dictionary<int, FundInfo> _fundDic = new Dictionary<int, FundInfo>();
 
-		// Token: 0x04001249 RID: 4681
+		
 		private static Dictionary<int, FundAwardInfo> _fundAwardDic = new Dictionary<int, FundAwardInfo>();
 	}
 }

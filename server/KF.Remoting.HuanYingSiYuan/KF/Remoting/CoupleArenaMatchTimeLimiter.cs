@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace KF.Remoting
 {
-	// Token: 0x0200000C RID: 12
+	
 	internal class CoupleArenaMatchTimeLimiter
 	{
-		// Token: 0x0600005C RID: 92 RVA: 0x00004DBC File Offset: 0x00002FBC
+		
 		public int GetMatchTimes(int a1, int a2, int b1, int b2)
 		{
 			long min;
@@ -26,7 +26,7 @@ namespace KF.Remoting
 			return result;
 		}
 
-		// Token: 0x0600005D RID: 93 RVA: 0x00004E10 File Offset: 0x00003010
+		
 		public void AddMatchTimes(int a1, int a2, int b1, int b2, int times = 1)
 		{
 			long min;
@@ -49,13 +49,13 @@ namespace KF.Remoting
 			}
 		}
 
-		// Token: 0x0600005E RID: 94 RVA: 0x00004E8A File Offset: 0x0000308A
+		
 		public void Reset()
 		{
 			this.TimesDict.Clear();
 		}
 
-		// Token: 0x0600005F RID: 95 RVA: 0x00004E9C File Offset: 0x0000309C
+		
 		private void GetUnionCouple2(int a1, int a2, int b1, int b2, out long min, out long max)
 		{
 			long l = this.GetUnionCouple(a1, a2);
@@ -64,7 +64,7 @@ namespace KF.Remoting
 			max = Math.Max(l, l2);
 		}
 
-		// Token: 0x06000060 RID: 96 RVA: 0x00004ED4 File Offset: 0x000030D4
+		
 		private long GetUnionCouple(int a1, int a2)
 		{
 			int min = Math.Min(a1, a2);
@@ -74,7 +74,7 @@ namespace KF.Remoting
 			return v | (long)((ulong)max);
 		}
 
-		// Token: 0x04000039 RID: 57
+		
 		private Dictionary<long, Dictionary<long, int>> TimesDict = new Dictionary<long, Dictionary<long, int>>();
 	}
 }

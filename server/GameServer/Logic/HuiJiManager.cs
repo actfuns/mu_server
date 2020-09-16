@@ -10,22 +10,22 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020001EB RID: 491
+	
 	public class HuiJiManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener
 	{
-		// Token: 0x06000624 RID: 1572 RVA: 0x00056298 File Offset: 0x00054498
+		
 		public static HuiJiManager getInstance()
 		{
 			return HuiJiManager.instance;
 		}
 
-		// Token: 0x06000625 RID: 1573 RVA: 0x000562B0 File Offset: 0x000544B0
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x06000626 RID: 1574 RVA: 0x000562D4 File Offset: 0x000544D4
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int nID = eventObject.getEventType();
@@ -40,7 +40,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000627 RID: 1575 RVA: 0x00056320 File Offset: 0x00054520
+		
 		public bool InitConfig()
 		{
 			bool success = true;
@@ -103,7 +103,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x06000628 RID: 1576 RVA: 0x00056718 File Offset: 0x00054918
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1445, 1, 1, HuiJiManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -112,26 +112,26 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000629 RID: 1577 RVA: 0x00056770 File Offset: 0x00054970
+		
 		public bool showdown()
 		{
 			GlobalEventSource.getInstance().removeListener(10, HuiJiManager.getInstance());
 			return true;
 		}
 
-		// Token: 0x0600062A RID: 1578 RVA: 0x00056798 File Offset: 0x00054998
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600062B RID: 1579 RVA: 0x000567AC File Offset: 0x000549AC
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x0600062C RID: 1580 RVA: 0x000567C0 File Offset: 0x000549C0
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -150,13 +150,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600062D RID: 1581 RVA: 0x00056808 File Offset: 0x00054A08
+		
 		private bool IsGongNengOpened(GameClient client)
 		{
 			return this.RuntimeData.IsGongNengOpend && GlobalNew.IsGongNengOpened(client, GongNengIDs.HuiJiHuTi, false);
 		}
 
-		// Token: 0x0600062E RID: 1582 RVA: 0x00056844 File Offset: 0x00054A44
+		
 		private bool ProcessHuiJiStarUpCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			int result = 0;
@@ -339,7 +339,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600062F RID: 1583 RVA: 0x00056F18 File Offset: 0x00055118
+		
 		private bool ProcessExecuteHuiJiHuTiCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			int result = 0;
@@ -388,7 +388,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000630 RID: 1584 RVA: 0x00057098 File Offset: 0x00055298
+		
 		public void OnRoleDead(GameClient client)
 		{
 			ExtData extData = ExtDataManager.GetClientExtData(client);
@@ -403,7 +403,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000631 RID: 1585 RVA: 0x00057124 File Offset: 0x00055324
+		
 		public void OnInitGame(GameClient client)
 		{
 			if (client.ClientData.HuiJiData == null)
@@ -448,7 +448,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000632 RID: 1586 RVA: 0x000572BC File Offset: 0x000554BC
+		
 		public void InitDataByTask(GameClient client)
 		{
 			if (client.ClientData.HuiJiData.huiji <= 0)
@@ -460,7 +460,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000633 RID: 1587 RVA: 0x00057304 File Offset: 0x00055504
+		
 		public void OnHuiJiStateChange(GameClient client, bool active, int level = 0, int keepTicks = 0, double[] props = null)
 		{
 			if (active)
@@ -505,7 +505,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000634 RID: 1588 RVA: 0x000574A8 File Offset: 0x000556A8
+		
 		public EmblemStarInfo GetHuiJiStartInfo(GameClient client)
 		{
 			EmblemStarInfo starInfo;
@@ -517,10 +517,10 @@ namespace GameServer.Logic
 			return starInfo;
 		}
 
-		// Token: 0x04000AD4 RID: 2772
+		
 		private static HuiJiManager instance = new HuiJiManager();
 
-		// Token: 0x04000AD5 RID: 2773
+		
 		private HuiJiManagerData RuntimeData = new HuiJiManagerData();
 	}
 }

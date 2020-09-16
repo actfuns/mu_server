@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020005B7 RID: 1463
+	
 	public class AllThingsCalcItem
 	{
-		// Token: 0x06001A7E RID: 6782 RVA: 0x001957B8 File Offset: 0x001939B8
+		
 		public static void InitAllForgeLevelInfo()
 		{
 			lock (AllThingsCalcItem.QiangHuaFuJiaItemList)
@@ -33,7 +33,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001A7F RID: 6783 RVA: 0x00195960 File Offset: 0x00193B60
+		
 		public void ChangeTotalForgeLevel(int level, bool toAdd)
 		{
 			lock (this.TotalForgeLevelAccDict)
@@ -63,7 +63,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001A80 RID: 6784 RVA: 0x00195A94 File Offset: 0x00193C94
+		
 		public int GetTotalForgeLevelValidIndex()
 		{
 			lock (this.TotalForgeLevelAccDict)
@@ -80,7 +80,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06001A81 RID: 6785 RVA: 0x00195B5C File Offset: 0x00193D5C
+		
 		public static QiangHuaFuJiaItem GetQiangHuaFuJiaItem(int index)
 		{
 			if (index >= 0)
@@ -96,58 +96,58 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x04002917 RID: 10519
+		
 		public int TotalPurpleQualityNum = 0;
 
-		// Token: 0x04002918 RID: 10520
+		
 		public int TotalGoldQualityNum = 0;
 
-		// Token: 0x04002919 RID: 10521
+		
 		public int TotalForge5LevelNum = 0;
 
-		// Token: 0x0400291A RID: 10522
+		
 		public int TotalForge7LevelNum = 0;
 
-		// Token: 0x0400291B RID: 10523
+		
 		public int TotalForge9LevelNum = 0;
 
-		// Token: 0x0400291C RID: 10524
+		
 		public int TotalForge11LevelNum = 0;
 
-		// Token: 0x0400291D RID: 10525
+		
 		public int TotalForge13LevelNum = 0;
 
-		// Token: 0x0400291E RID: 10526
+		
 		public int TotalForge15LevelNum = 0;
 
-		// Token: 0x0400291F RID: 10527
+		
 		public int TotalJewel4LevelNum = 0;
 
-		// Token: 0x04002920 RID: 10528
+		
 		public int TotalJewel5LevelNum = 0;
 
-		// Token: 0x04002921 RID: 10529
+		
 		public int TotalJewel6LevelNum = 0;
 
-		// Token: 0x04002922 RID: 10530
+		
 		public int TotalJewel7LevelNum = 0;
 
-		// Token: 0x04002923 RID: 10531
+		
 		public int TotalJewel8LevelNum = 0;
 
-		// Token: 0x04002924 RID: 10532
+		
 		public int TotalGreenZhuoYueNum = 0;
 
-		// Token: 0x04002925 RID: 10533
+		
 		public int TotalBlueZhuoYueNum = 0;
 
-		// Token: 0x04002926 RID: 10534
+		
 		public int TotalPurpleZhuoYueNum = 0;
 
-		// Token: 0x04002927 RID: 10535
+		
 		public Dictionary<int, int> TotalForgeLevelAccDict = new Dictionary<int, int>();
 
-		// Token: 0x04002928 RID: 10536
+		
 		public static List<QiangHuaFuJiaItem> QiangHuaFuJiaItemList = new List<QiangHuaFuJiaItem>();
 	}
 }

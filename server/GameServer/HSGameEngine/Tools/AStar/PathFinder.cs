@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace HSGameEngine.Tools.AStar
 {
-	// Token: 0x020008DF RID: 2271
+	
 	public class PathFinder : IPathFinder
 	{
-		// Token: 0x1400000E RID: 14
+		
 		// (add) Token: 0x0600417A RID: 16762 RVA: 0x003C0494 File Offset: 0x003BE694
 		// (remove) Token: 0x0600417B RID: 16763 RVA: 0x003C04D0 File Offset: 0x003BE6D0
 		public event PathFinderDebugHandler PathFinderDebug;
 
-		// Token: 0x0600417C RID: 16764 RVA: 0x003C050C File Offset: 0x003BE70C
+		
 		public PathFinder(byte[,] grid)
 		{
 			if (grid == null)
@@ -21,8 +21,8 @@ namespace HSGameEngine.Tools.AStar
 			this.mGrid = grid;
 		}
 
-		// Token: 0x17000643 RID: 1603
-		// (get) Token: 0x0600417D RID: 16765 RVA: 0x003C05D0 File Offset: 0x003BE7D0
+		
+		
 		public bool Stopped
 		{
 			get
@@ -31,9 +31,9 @@ namespace HSGameEngine.Tools.AStar
 			}
 		}
 
-		// Token: 0x17000644 RID: 1604
-		// (get) Token: 0x0600417E RID: 16766 RVA: 0x003C05E8 File Offset: 0x003BE7E8
-		// (set) Token: 0x0600417F RID: 16767 RVA: 0x003C0600 File Offset: 0x003BE800
+		
+		
+		
 		public HeuristicFormula Formula
 		{
 			get
@@ -46,9 +46,9 @@ namespace HSGameEngine.Tools.AStar
 			}
 		}
 
-		// Token: 0x17000645 RID: 1605
-		// (get) Token: 0x06004180 RID: 16768 RVA: 0x003C060C File Offset: 0x003BE80C
-		// (set) Token: 0x06004181 RID: 16769 RVA: 0x003C0624 File Offset: 0x003BE824
+		
+		
+		
 		public bool Diagonals
 		{
 			get
@@ -61,9 +61,9 @@ namespace HSGameEngine.Tools.AStar
 			}
 		}
 
-		// Token: 0x17000646 RID: 1606
-		// (get) Token: 0x06004182 RID: 16770 RVA: 0x003C0630 File Offset: 0x003BE830
-		// (set) Token: 0x06004183 RID: 16771 RVA: 0x003C0648 File Offset: 0x003BE848
+		
+		
+		
 		public bool HeavyDiagonals
 		{
 			get
@@ -76,9 +76,9 @@ namespace HSGameEngine.Tools.AStar
 			}
 		}
 
-		// Token: 0x17000647 RID: 1607
-		// (get) Token: 0x06004184 RID: 16772 RVA: 0x003C0654 File Offset: 0x003BE854
-		// (set) Token: 0x06004185 RID: 16773 RVA: 0x003C066C File Offset: 0x003BE86C
+		
+		
+		
 		public int HeuristicEstimate
 		{
 			get
@@ -91,9 +91,9 @@ namespace HSGameEngine.Tools.AStar
 			}
 		}
 
-		// Token: 0x17000648 RID: 1608
-		// (get) Token: 0x06004186 RID: 16774 RVA: 0x003C0678 File Offset: 0x003BE878
-		// (set) Token: 0x06004187 RID: 16775 RVA: 0x003C0690 File Offset: 0x003BE890
+		
+		
+		
 		public bool PunishChangeDirection
 		{
 			get
@@ -106,9 +106,9 @@ namespace HSGameEngine.Tools.AStar
 			}
 		}
 
-		// Token: 0x17000649 RID: 1609
-		// (get) Token: 0x06004188 RID: 16776 RVA: 0x003C069C File Offset: 0x003BE89C
-		// (set) Token: 0x06004189 RID: 16777 RVA: 0x003C06B4 File Offset: 0x003BE8B4
+		
+		
+		
 		public bool ReopenCloseNodes
 		{
 			get
@@ -121,9 +121,9 @@ namespace HSGameEngine.Tools.AStar
 			}
 		}
 
-		// Token: 0x1700064A RID: 1610
-		// (get) Token: 0x0600418A RID: 16778 RVA: 0x003C06C0 File Offset: 0x003BE8C0
-		// (set) Token: 0x0600418B RID: 16779 RVA: 0x003C06D8 File Offset: 0x003BE8D8
+		
+		
+		
 		public bool TieBreaker
 		{
 			get
@@ -136,9 +136,9 @@ namespace HSGameEngine.Tools.AStar
 			}
 		}
 
-		// Token: 0x1700064B RID: 1611
-		// (get) Token: 0x0600418C RID: 16780 RVA: 0x003C06E4 File Offset: 0x003BE8E4
-		// (set) Token: 0x0600418D RID: 16781 RVA: 0x003C06FC File Offset: 0x003BE8FC
+		
+		
+		
 		public int SearchLimit
 		{
 			get
@@ -151,9 +151,9 @@ namespace HSGameEngine.Tools.AStar
 			}
 		}
 
-		// Token: 0x1700064C RID: 1612
-		// (get) Token: 0x0600418E RID: 16782 RVA: 0x003C0708 File Offset: 0x003BE908
-		// (set) Token: 0x0600418F RID: 16783 RVA: 0x003C0720 File Offset: 0x003BE920
+		
+		
+		
 		public double CompletedTime
 		{
 			get
@@ -166,9 +166,9 @@ namespace HSGameEngine.Tools.AStar
 			}
 		}
 
-		// Token: 0x1700064D RID: 1613
-		// (get) Token: 0x06004190 RID: 16784 RVA: 0x003C072C File Offset: 0x003BE92C
-		// (set) Token: 0x06004191 RID: 16785 RVA: 0x003C0744 File Offset: 0x003BE944
+		
+		
+		
 		public bool DebugProgress
 		{
 			get
@@ -181,9 +181,9 @@ namespace HSGameEngine.Tools.AStar
 			}
 		}
 
-		// Token: 0x1700064E RID: 1614
-		// (get) Token: 0x06004192 RID: 16786 RVA: 0x003C0750 File Offset: 0x003BE950
-		// (set) Token: 0x06004193 RID: 16787 RVA: 0x003C0768 File Offset: 0x003BE968
+		
+		
+		
 		public bool DebugFoundPath
 		{
 			get
@@ -196,13 +196,13 @@ namespace HSGameEngine.Tools.AStar
 			}
 		}
 
-		// Token: 0x06004194 RID: 16788 RVA: 0x003C0772 File Offset: 0x003BE972
+		
 		public void FindPathStop()
 		{
 			this.mStop = true;
 		}
 
-		// Token: 0x06004195 RID: 16789 RVA: 0x003C0798 File Offset: 0x003BE998
+		
 		public List<PathFinderNode> FindPath(Point2D start, Point2D end)
 		{
 			bool found = false;
@@ -453,7 +453,7 @@ namespace HSGameEngine.Tools.AStar
 			return null;
 		}
 
-		// Token: 0x06004196 RID: 16790 RVA: 0x003C120C File Offset: 0x003BF40C
+		
 		public List<PathFinderNode> Floyd(List<PathFinderNode> _floydPath)
 		{
 			List<PathFinderNode> result;
@@ -490,7 +490,7 @@ namespace HSGameEngine.Tools.AStar
 			return result;
 		}
 
-		// Token: 0x06004197 RID: 16791 RVA: 0x003C1320 File Offset: 0x003BF520
+		
 		private List<PathFinderNode> ReverseList(List<PathFinderNode> floydPath)
 		{
 			List<PathFinderNode> myFloydPath = new List<PathFinderNode>();
@@ -501,68 +501,68 @@ namespace HSGameEngine.Tools.AStar
 			return myFloydPath;
 		}
 
-		// Token: 0x06004198 RID: 16792 RVA: 0x003C1363 File Offset: 0x003BF563
+		
 		private void FloydVector(PathFinderNode target, PathFinderNode n1, PathFinderNode n2)
 		{
 			target.PX = n1.PX - n2.PX;
 			target.PY = n1.PY - n2.PY;
 		}
 
-		// Token: 0x04004FB1 RID: 20401
+		
 		private byte[,] mGrid = null;
 
-		// Token: 0x04004FB2 RID: 20402
+		
 		private PriorityQueueB<PathFinderNode> mOpen = new PriorityQueueB<PathFinderNode>(new PathFinder.ComparePFNode());
 
-		// Token: 0x04004FB3 RID: 20403
+		
 		private List<PathFinderNode> mClose = new List<PathFinderNode>();
 
-		// Token: 0x04004FB4 RID: 20404
+		
 		private bool mStop = false;
 
-		// Token: 0x04004FB5 RID: 20405
+		
 		private bool mStopped = true;
 
-		// Token: 0x04004FB6 RID: 20406
+		
 		private int mHoriz = 0;
 
-		// Token: 0x04004FB7 RID: 20407
+		
 		private HeuristicFormula mFormula = HeuristicFormula.Manhattan;
 
-		// Token: 0x04004FB8 RID: 20408
+		
 		private bool mDiagonals = true;
 
-		// Token: 0x04004FB9 RID: 20409
+		
 		private int mHEstimate = 2;
 
-		// Token: 0x04004FBA RID: 20410
+		
 		private bool mPunishChangeDirection = false;
 
-		// Token: 0x04004FBB RID: 20411
+		
 		private bool mReopenCloseNodes = false;
 
-		// Token: 0x04004FBC RID: 20412
+		
 		private bool mTieBreaker = false;
 
-		// Token: 0x04004FBD RID: 20413
+		
 		private bool mHeavyDiagonals = false;
 
-		// Token: 0x04004FBE RID: 20414
+		
 		private int mSearchLimit = 2000;
 
-		// Token: 0x04004FBF RID: 20415
+		
 		private double mCompletedTime = 0.0;
 
-		// Token: 0x04004FC0 RID: 20416
+		
 		private bool mDebugProgress = false;
 
-		// Token: 0x04004FC1 RID: 20417
+		
 		private bool mDebugFoundPath = false;
 
-		// Token: 0x020008E0 RID: 2272
+		
 		internal class ComparePFNode : IComparer<PathFinderNode>
 		{
-			// Token: 0x06004199 RID: 16793 RVA: 0x003C1394 File Offset: 0x003BF594
+			
 			public int Compare(PathFinderNode x, PathFinderNode y)
 			{
 				int result;

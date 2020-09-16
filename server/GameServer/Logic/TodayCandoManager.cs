@@ -13,11 +13,11 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020007A3 RID: 1955
+	
 	public class TodayCandoManager
 	{
-		// Token: 0x170003BA RID: 954
-		// (get) Token: 0x06003304 RID: 13060 RVA: 0x002D38F0 File Offset: 0x002D1AF0
+		
+		
 		public static XElement xmlData
 		{
 			get
@@ -48,7 +48,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06003305 RID: 13061 RVA: 0x002D39D4 File Offset: 0x002D1BD4
+		
 		private static int GetLeftCountByType(GameClient client, int type, int copyId)
 		{
 			int leftnum = 0;
@@ -204,13 +204,13 @@ namespace GameServer.Logic
 			return leftnum;
 		}
 
-		// Token: 0x06003306 RID: 13062 RVA: 0x002D3E94 File Offset: 0x002D2094
+		
 		private static bool TaskHasDone(GameClient client, int taskID)
 		{
 			return client.ClientData.MainTaskID >= taskID;
 		}
 
-		// Token: 0x06003307 RID: 13063 RVA: 0x002D3EB8 File Offset: 0x002D20B8
+		
 		private static List<TodayCandoData> GetRoleCandoData(int typeId, GameClient client)
 		{
 			List<TodayCandoData> candolist = new List<TodayCandoData>();
@@ -338,7 +338,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06003308 RID: 13064 RVA: 0x002D4324 File Offset: 0x002D2524
+		
 		public static TCPProcessCmdResults ProcessQueryTodayCandoInfo(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -382,10 +382,10 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x04003F03 RID: 16131
+		
 		private static object _xmlDataMutex = new object();
 
-		// Token: 0x04003F04 RID: 16132
+		
 		private static XElement _xmlData = null;
 	}
 }

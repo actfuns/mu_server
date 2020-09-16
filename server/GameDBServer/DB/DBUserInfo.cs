@@ -11,12 +11,12 @@ namespace GameDBServer.DB
 	public class DBUserInfo
 	{
 		// Token: 0x170000BD RID: 189
-		// (get) Token: 0x060007A1 RID: 1953 RVA: 0x00046C40 File Offset: 0x00044E40
-		// (set) Token: 0x060007A2 RID: 1954 RVA: 0x00046C57 File Offset: 0x00044E57
+		
+		
 		public string UserID { get; set; }
 
 		// Token: 0x170000BE RID: 190
-		// (get) Token: 0x060007A3 RID: 1955 RVA: 0x00046C60 File Offset: 0x00044E60
+		
 		public List<int> ListRoleIDs
 		{
 			get
@@ -26,7 +26,7 @@ namespace GameDBServer.DB
 		}
 
 		// Token: 0x170000BF RID: 191
-		// (get) Token: 0x060007A4 RID: 1956 RVA: 0x00046C78 File Offset: 0x00044E78
+		
 		public List<int> ListRoleSexes
 		{
 			get
@@ -36,7 +36,7 @@ namespace GameDBServer.DB
 		}
 
 		// Token: 0x170000C0 RID: 192
-		// (get) Token: 0x060007A5 RID: 1957 RVA: 0x00046C90 File Offset: 0x00044E90
+		
 		public List<int> ListRoleOccups
 		{
 			get
@@ -46,7 +46,7 @@ namespace GameDBServer.DB
 		}
 
 		// Token: 0x170000C1 RID: 193
-		// (get) Token: 0x060007A6 RID: 1958 RVA: 0x00046CA8 File Offset: 0x00044EA8
+		
 		public List<string> ListRoleNames
 		{
 			get
@@ -56,7 +56,7 @@ namespace GameDBServer.DB
 		}
 
 		// Token: 0x170000C2 RID: 194
-		// (get) Token: 0x060007A7 RID: 1959 RVA: 0x00046CC0 File Offset: 0x00044EC0
+		
 		public List<int> ListRoleLevels
 		{
 			get
@@ -66,7 +66,7 @@ namespace GameDBServer.DB
 		}
 
 		// Token: 0x170000C3 RID: 195
-		// (get) Token: 0x060007A8 RID: 1960 RVA: 0x00046CD8 File Offset: 0x00044ED8
+		
 		public List<int> ListRoleZoneIDs
 		{
 			get
@@ -76,7 +76,7 @@ namespace GameDBServer.DB
 		}
 
 		// Token: 0x170000C4 RID: 196
-		// (get) Token: 0x060007A9 RID: 1961 RVA: 0x00046CF0 File Offset: 0x00044EF0
+		
 		public List<int> ListRoleChangeLifeCount
 		{
 			get
@@ -86,7 +86,7 @@ namespace GameDBServer.DB
 		}
 
 		// Token: 0x170000C5 RID: 197
-		// (get) Token: 0x060007AA RID: 1962 RVA: 0x00046D08 File Offset: 0x00044F08
+		
 		public List<string> ListRolePreRemoveTime
 		{
 			get
@@ -96,53 +96,53 @@ namespace GameDBServer.DB
 		}
 
 		// Token: 0x170000C6 RID: 198
-		// (get) Token: 0x060007AB RID: 1963 RVA: 0x00046D20 File Offset: 0x00044F20
-		// (set) Token: 0x060007AC RID: 1964 RVA: 0x00046D37 File Offset: 0x00044F37
+		
+		
 		public string SecPwd { get; set; }
 
 		// Token: 0x170000C7 RID: 199
-		// (get) Token: 0x060007AD RID: 1965 RVA: 0x00046D40 File Offset: 0x00044F40
-		// (set) Token: 0x060007AE RID: 1966 RVA: 0x00046D57 File Offset: 0x00044F57
+		
+		
 		public int Money { get; set; }
 
 		// Token: 0x170000C8 RID: 200
-		// (get) Token: 0x060007AF RID: 1967 RVA: 0x00046D60 File Offset: 0x00044F60
-		// (set) Token: 0x060007B0 RID: 1968 RVA: 0x00046D77 File Offset: 0x00044F77
+		
+		
 		public int RealMoney { get; set; }
 
 		// Token: 0x170000C9 RID: 201
-		// (get) Token: 0x060007B1 RID: 1969 RVA: 0x00046D80 File Offset: 0x00044F80
-		// (set) Token: 0x060007B2 RID: 1970 RVA: 0x00046D97 File Offset: 0x00044F97
+		
+		
 		public int GiftID { get; set; }
 
 		// Token: 0x170000CA RID: 202
-		// (get) Token: 0x060007B3 RID: 1971 RVA: 0x00046DA0 File Offset: 0x00044FA0
-		// (set) Token: 0x060007B4 RID: 1972 RVA: 0x00046DB7 File Offset: 0x00044FB7
+		
+		
 		public int GiftJiFen { get; set; }
 
 		// Token: 0x170000CB RID: 203
-		// (get) Token: 0x060007B5 RID: 1973 RVA: 0x00046DC0 File Offset: 0x00044FC0
-		// (set) Token: 0x060007B6 RID: 1974 RVA: 0x00046DD7 File Offset: 0x00044FD7
+		
+		
 		public int InputPoints { get; set; }
 
 		// Token: 0x170000CC RID: 204
-		// (get) Token: 0x060007B7 RID: 1975 RVA: 0x00046DE0 File Offset: 0x00044FE0
-		// (set) Token: 0x060007B8 RID: 1976 RVA: 0x00046DF7 File Offset: 0x00044FF7
+		
+		
 		public int SpecJiFen { get; set; }
 
 		// Token: 0x170000CD RID: 205
-		// (get) Token: 0x060007B9 RID: 1977 RVA: 0x00046E00 File Offset: 0x00045000
-		// (set) Token: 0x060007BA RID: 1978 RVA: 0x00046E17 File Offset: 0x00045017
+		
+		
 		public int EveryJiFen { get; set; }
 
 		// Token: 0x170000CE RID: 206
-		// (get) Token: 0x060007BB RID: 1979 RVA: 0x00046E20 File Offset: 0x00045020
-		// (set) Token: 0x060007BC RID: 1980 RVA: 0x00046E37 File Offset: 0x00045037
+		
+		
 		public string PushMessageID { get; set; }
 
 		// Token: 0x170000CF RID: 207
-		// (get) Token: 0x060007BD RID: 1981 RVA: 0x00046E40 File Offset: 0x00045040
-		// (set) Token: 0x060007BE RID: 1982 RVA: 0x00046E58 File Offset: 0x00045058
+		
+		
 		public long LastReferenceTicks
 		{
 			get

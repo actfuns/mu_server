@@ -8,16 +8,16 @@ using Server.Tools;
 
 namespace GameServer.Logic.Marriage.CoupleWish
 {
-	// Token: 0x02000371 RID: 881
+	
 	internal class CoupleWishStatueManager
 	{
-		// Token: 0x06000F22 RID: 3874 RVA: 0x000EE5C2 File Offset: 0x000EC7C2
+		
 		public void SetWishConfig(CoupleWishConfig config)
 		{
 			this._Config = config;
 		}
 
-		// Token: 0x06000F23 RID: 3875 RVA: 0x000EE5CC File Offset: 0x000EC7CC
+		
 		public bool LoadConfig()
 		{
 			bool result;
@@ -42,7 +42,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
 			return result;
 		}
 
-		// Token: 0x06000F24 RID: 3876 RVA: 0x000EE66C File Offset: 0x000EC86C
+		
 		public void SetDiaoXiang(CoupleWishSyncStatueData newStatue)
 		{
 			if (newStatue.DbCoupleId > 0 && (newStatue.ManRoleDataEx == null || newStatue.WifeRoleDataEx == null))
@@ -85,7 +85,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
 			this._Statue = newStatue;
 		}
 
-		// Token: 0x06000F25 RID: 3877 RVA: 0x000EE8B0 File Offset: 0x000ECAB0
+		
 		public CoupleWishYanHuiData HandleQueryParty(GameClient client)
 		{
 			CoupleWishYanHuiData data = new CoupleWishYanHuiData();
@@ -100,7 +100,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
 			return data;
 		}
 
-		// Token: 0x06000F26 RID: 3878 RVA: 0x000EE954 File Offset: 0x000ECB54
+		
 		public int HandleJoinParty(GameClient client, int toCouleId)
 		{
 			int result;
@@ -147,7 +147,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
 			return result;
 		}
 
-		// Token: 0x06000F27 RID: 3879 RVA: 0x000EEB54 File Offset: 0x000ECD54
+		
 		private int GetJoinPartyNum(GameClient client, int toCoupleId)
 		{
 			int result;
@@ -174,14 +174,14 @@ namespace GameServer.Logic.Marriage.CoupleWish
 			return result;
 		}
 
-		// Token: 0x06000F28 RID: 3880 RVA: 0x000EEBD0 File Offset: 0x000ECDD0
+		
 		private void AddJoinPartyNum(GameClient client, int toCoupleId, int addNum = 1)
 		{
 			int totalNum = addNum + this.GetJoinPartyNum(client, toCoupleId);
 			Global.SaveRoleParamsStringToDB(client, "31", string.Format("{0},{1}", toCoupleId, totalNum), true);
 		}
 
-		// Token: 0x06000F29 RID: 3881 RVA: 0x000EEC0C File Offset: 0x000ECE0C
+		
 		public CoupleWishTop1AdmireData HandleQueryAdmireData(GameClient client)
 		{
 			CoupleWishTop1AdmireData data = new CoupleWishTop1AdmireData();
@@ -196,7 +196,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
 			return data;
 		}
 
-		// Token: 0x06000F2A RID: 3882 RVA: 0x000EECF0 File Offset: 0x000ECEF0
+		
 		public int HandleAdmireStatue(GameClient client, int toCoupleId, int admireType)
 		{
 			int toDay = TimeUtil.MakeYearMonthDay(TimeUtil.NowDateTime());
@@ -306,7 +306,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
 			return result;
 		}
 
-		// Token: 0x06000F2B RID: 3883 RVA: 0x000EF1AC File Offset: 0x000ED3AC
+		
 		private int GetAdmireCount(GameClient client, int toDay)
 		{
 			int result;
@@ -333,7 +333,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
 			return result;
 		}
 
-		// Token: 0x06000F2C RID: 3884 RVA: 0x000EF228 File Offset: 0x000ED428
+		
 		private void AddAdmireCount(GameClient client, int toDay, int toCoupleId, int addCount = 1)
 		{
 			if (client != null)
@@ -343,7 +343,7 @@ namespace GameServer.Logic.Marriage.CoupleWish
 			}
 		}
 
-		// Token: 0x06000F2D RID: 3885 RVA: 0x000EF278 File Offset: 0x000ED478
+		
 		private void ReshowCoupleStatue(RoleData4Selector manStatue, RoleData4Selector wifeStatue)
 		{
 			NPC manNpc = NPCGeneralManager.FindNPC(GameManager.MainMapCode, FakeRoleNpcId.CoupleWishMan);
@@ -382,25 +382,25 @@ namespace GameServer.Logic.Marriage.CoupleWish
 			}
 		}
 
-		// Token: 0x04001742 RID: 5954
+		
 		private int YanHuiMapCode;
 
-		// Token: 0x04001743 RID: 5955
+		
 		private int YanHuiNpcId;
 
-		// Token: 0x04001744 RID: 5956
+		
 		private int YanHuiNpcX;
 
-		// Token: 0x04001745 RID: 5957
+		
 		private int YanHuiNpcY;
 
-		// Token: 0x04001746 RID: 5958
+		
 		private int YanHuiNpcDir;
 
-		// Token: 0x04001747 RID: 5959
+		
 		private CoupleWishSyncStatueData _Statue = null;
 
-		// Token: 0x04001748 RID: 5960
+		
 		private CoupleWishConfig _Config = null;
 	}
 }
