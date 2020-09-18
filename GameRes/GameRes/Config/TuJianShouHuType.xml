@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <DiaoXiang ID="100" Type="100" Name="勇者之灵" GoodsID="601001" />
+  <DiaoXiang ID="200" Type="200" Name="仙踪之灵" GoodsID="601002" />
+  <DiaoXiang ID="300" Type="300" Name="冰晶之灵" GoodsID="601003" />
+  <DiaoXiang ID="400" Type="400" Name="死亡之灵" GoodsID="601004" />
+  <DiaoXiang ID="500" Type="500" Name="神塔之灵" GoodsID="601005" />
+  <DiaoXiang ID="600" Type="600" Name="海洋之灵" GoodsID="601006" />
+  <DiaoXiang ID="700" Type="700" Name="沙漠之灵" GoodsID="601007" />
+  <DiaoXiang ID="800" Type="800" Name="云雾之灵" GoodsID="601008" />
+  <DiaoXiang ID="900" Type="900" Name="森林之灵" GoodsID="601009" />
+  <DiaoXiang ID="1000" Type="1000" Name="废墟之灵" GoodsID="601010" />
+  <DiaoXiang ID="1100" Type="1100" Name="遗迹之灵" GoodsID="601011" />
+  <DiaoXiang ID="1200" Type="1200" Name="冰霜之灵" GoodsID="601012" />
+  <DiaoXiang ID="1300" Type="1300" Name="安宁之灵" GoodsID="601013" />
+  <DiaoXiang ID="1400" Type="1400" Name="卡伦之灵" GoodsID="601014" />
+  <DiaoXiang ID="1500" Type="1500" Name="幻术之灵" GoodsID="601015" />
+  <DiaoXiang ID="1600" Type="1600" Name="西荒之灵" GoodsID="601016" />
+  <DiaoXiang ID="1700" Type="1700" Name="东宫之灵" GoodsID="601017" />
+  <DiaoXiang ID="1800" Type="1800" Name="邪寺之灵" GoodsID="601018" />
+  <DiaoXiang ID="1900" Type="1900" Name="迷窟之灵" GoodsID="601019" />
+  <DiaoXiang ID="2000" Type="2000" Name="迷踪之灵" GoodsID="601020" />
+</Config>

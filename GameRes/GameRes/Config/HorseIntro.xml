@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}坐骑系统说明" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、通过{17e43e}坐骑猎取{dac7ae}和{17e43e}万魔峡谷{dac7ae}副本可获得{17e43e}坐骑" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、第{17e43e}一{dac7ae}次获得某种坐骑的时候，可以激活相应坐骑的{17e43e}图鉴属性{dac7ae}，激活后永久生效" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、获得的坐骑可以在{17e43e}背包{dac7ae}中点击，进行{17e43e}入库{dac7ae}操作" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4、{17e43e}入库{dac7ae}的坐骑可以选择一个{17e43e}出战{dac7ae}，出战后坐骑的{17e43e}基础属性{dac7ae}和{17e43e}卓越属性{dac7ae}会增加到角色身上" Bold="0" />
+  <HelpIntro ID="6" Intro="{dac7ae}5、作用不大的坐骑可以选择{17e43e}回收{dac7ae}，回收获得的{17e43e}魂晶{dac7ae}可以用来提升入库坐骑栏位的等级，根据栏位的等级可以提升入库坐骑的基础属性" Bold="0" />
+  <HelpIntro ID="7" Intro="{dac7ae}6、消耗{17e43e}坐骑进阶丹{dac7ae}可以进阶坐骑，进阶坐骑可以提高坐骑{17e43e}基础属性{dac7ae}，同时提升坐骑{17e43e}技能等级{dac7ae}" Bold="0" />
+  <HelpIntro ID="8" Intro="{dac7ae}7、入库的坐骑可以激活{17e43e}坐骑奇缘{dac7ae}和{17e43e}坐骑组合{dac7ae}，来增加角色的属性" Bold="0" />
+  <HelpIntro ID="9" Intro="{dac7ae}8、每个坐骑都有一个{17e43e}技能{dac7ae}，战斗界面左下的技能栏是{17e43e}坐骑技能栏{dac7ae}，可将某个{17e43e}入库{dac7ae}坐骑的技能设置在栏位上，战斗时可以施放" Bold="0" />
+  <HelpIntro ID="10" Intro="{dac7ae}9、有{17e43e}出战{dac7ae}坐骑的时候，角色移动会骑乘坐骑，骑乘坐骑后{17e43e}移动速度加快" Bold="0" />
+</Config>

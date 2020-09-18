@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>	
+<contents>
+  <!--公告时间必须配置双数，如01:02:00:00-->
+  <!--公告时间中没有24:00:00,可配置成23:59:59-->
+  <Activities ID="1" FromDate="2015-01-12 00:00:00" ToDate="2015-01-17 23:59:59" />
+  <content ID="2" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="20" align="left" text="亲爱的玩家：" />
+  <content ID="3" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="20" align="left" text="《全民奇迹》已更新至1.2.0版本，更新内容如下" />  
+  <content ID="4" size="20" blck="blck=1" color="fac60d" incIndent="0" lineInterval="5" align="left" text="新增内容" />
+  <content ID="5" size="16" blck="blck=1" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="1、增加世界等级系统" />
+  <content ID="6" size="16" blck="blck=1" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="2、增加装备培养系统" />
+  <content ID="7" size="16" blck="blck=1" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="3、增加水晶幻境系统" />
+  <content ID="8" size="16" blck="blck=1" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="4、增加讨伐任务系统" />
+  <content ID="9" size="16" blck="blck=1" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="5、开放等级上限至7转100级" />
+  <content ID="10" size="16" blck="blck=1" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="6、开放7转地图：坎特鲁遗址" />
+  <content ID="11" size="16" blck="blck=1" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="7、开放7转恶魔广场、血色城堡" />
+  <content ID="12" size="16" blck="blck=1" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="8、新增装备传承：装备培养传承" />
+  <content ID="13" size="16" blck="blck=1" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="9、新增多人副本：恶魔来袭" />
+  <content ID="14" size="16" blck="blck=1" color="e3b36c" incIndent="0" lineInterval="20" align="left" text="10、新增武器：将长柄、盾牌、弩箭筒装备补全，同时开放进阶" />
+  <content ID="15" size="20" blck="blck=1" color="fac60d" incIndent="0" lineInterval="5" align="left" text="系统优化" />
+  <content ID="16" size="16" blck="blck=1" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="1、经验累积调整：达到等级上限了，经验仍可累积" />
+  <content ID="17" size="16" blck="blck=1" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="2、优化BOSS技能" />
+  <content ID="18" size="16" blck="blck=1" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="3、优化了任务追踪部分的操作方式" />
+  <content ID="19" size="16" blck="blck=1" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="4、优化了部分NPC对话文字描述" />
+  <content ID="20" size="16" blck="blck=1" color="e3b36c" incIndent="0" lineInterval="20" align="left" text="5、优化祝福晶石和灵魂晶石的道具描述" />
+  <content ID="21" size="20" blck="blck=1" color="fac60d" incIndent="0" lineInterval="5" align="left" text="修复问题列表" />
+  <content ID="22" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="1、修复资源找回功能无法找回绑钻的错误" />
+  <content ID="23" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="2、修复血色城堡钻石和金币领取奖励翻倍，金币显示错误的错误" />
+  <content ID="24" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="3、修复活动副本VIP专属里火龙突袭进入提示显示错误的错误" />
+  <content ID="25" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="4、修复了血色城堡通关之后奖励的玛雅宝石没有获得的错误" />
+  <content ID="26" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="5、修复战盟委任时导致战盟无首领的问题" />
+  <content ID="27" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="6、修复了VIP界面显示充值进度被清除的错误" />
+  <content ID="28" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="7、修复了系统设置成功，没即时生效的错误" />
+  <content ID="29" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="8、修复了穿卸装备，战斗力显示不即时刷新的错误 " />
+  <content ID="30" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="9、修复了副本内进入竞技场使人物卡在竞技场内的错误" />
+  <content ID="31" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="10、修复了祈福操作卡住的错误" />
+  <content ID="32" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="11、修复了角色自动寻路不正确的错误" />
+  <content ID="33" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="12、修复了战盟增益属性与增益效果界面显示属性不符的错误" />
+  <content ID="34" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="13、修复了背包内点击回收、取消按钮切换，游戏币不显示的错误" />
+  <content ID="35" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="14、修复了竞技场内进入活动副本，导致活动副本的开启倒计时提前结束的错误" />
+  <content ID="36" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="15、修复了重复使用BUFF技能，战斗力显示不刷新的错误" />
+  <content ID="37" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="16、修复了交易行物品颜色显示的错误" />
+  <content ID="38" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="17、修复了自动挂机不自动释放增益技能的错误" />
+  <content ID="39" size="16" blck="blck=0" color="e3b36c" incIndent="0" lineInterval="5" align="left" text="18、修复了阵营战重新进入导致出生地位置不正确的错误" />
+</contents>

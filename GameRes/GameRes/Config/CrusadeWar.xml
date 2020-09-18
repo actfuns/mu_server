@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CrusadeWar ID="1" Name="跨服讨伐" ApplyBegin="7,19:00" ApplyEnd="7,19:15|7,19:30|7,19:45|7,20:00" MapCode="91001" TimePoints="7,21:30-22:00" PrepareSecs="180" FightingSecs="1620" ClearRolesSecs="15" AttackerMaxNum="50" DefenderMaxNum="150" Exp="1000000" BandJinBi="3000000" JueXingNum="40" ShowGoods="8002|8014|8053" />
+</Config>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ZhouMoChongZhiType ID="1" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="2" MaxLevel="100" MinZuanShi="300" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="2" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="2" MaxLevel="100" MinZuanShi="800" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="3" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="2" MaxLevel="100" MinZuanShi="1500" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="4" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="2" MaxLevel="100" MinZuanShi="3000" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="5" MinZhuanSheng="3" MinLevel="1" MaxZhuanSheng="4" MaxLevel="100" MinZuanShi="300" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="6" MinZhuanSheng="3" MinLevel="1" MaxZhuanSheng="4" MaxLevel="100" MinZuanShi="800" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="7" MinZhuanSheng="3" MinLevel="1" MaxZhuanSheng="4" MaxLevel="100" MinZuanShi="1500" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="8" MinZhuanSheng="3" MinLevel="1" MaxZhuanSheng="4" MaxLevel="100" MinZuanShi="3000" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="9" MinZhuanSheng="5" MinLevel="1" MaxZhuanSheng="6" MaxLevel="100" MinZuanShi="300" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="10" MinZhuanSheng="5" MinLevel="1" MaxZhuanSheng="6" MaxLevel="100" MinZuanShi="800" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="11" MinZhuanSheng="5" MinLevel="1" MaxZhuanSheng="6" MaxLevel="100" MinZuanShi="1500" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="12" MinZhuanSheng="5" MinLevel="1" MaxZhuanSheng="6" MaxLevel="100" MinZuanShi="3000" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="13" MinZhuanSheng="7" MinLevel="1" MaxZhuanSheng="8" MaxLevel="100" MinZuanShi="300" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="14" MinZhuanSheng="7" MinLevel="1" MaxZhuanSheng="8" MaxLevel="100" MinZuanShi="800" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="15" MinZhuanSheng="7" MinLevel="1" MaxZhuanSheng="8" MaxLevel="100" MinZuanShi="1500" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="16" MinZhuanSheng="7" MinLevel="1" MaxZhuanSheng="8" MaxLevel="100" MinZuanShi="3000" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="17" MinZhuanSheng="9" MinLevel="1" MaxZhuanSheng="10" MaxLevel="100" MinZuanShi="300" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="18" MinZhuanSheng="9" MinLevel="1" MaxZhuanSheng="10" MaxLevel="100" MinZuanShi="800" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="19" MinZhuanSheng="9" MinLevel="1" MaxZhuanSheng="10" MaxLevel="100" MinZuanShi="1500" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="20" MinZhuanSheng="9" MinLevel="1" MaxZhuanSheng="10" MaxLevel="100" MinZuanShi="3000" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="21" MinZhuanSheng="11" MinLevel="1" MaxZhuanSheng="20" MaxLevel="100" MinZuanShi="300" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="22" MinZhuanSheng="11" MinLevel="1" MaxZhuanSheng="20" MaxLevel="100" MinZuanShi="800" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="23" MinZhuanSheng="11" MinLevel="1" MaxZhuanSheng="20" MaxLevel="100" MinZuanShi="1500" Num="4" Intro="" />
+  <ZhouMoChongZhiType ID="24" MinZhuanSheng="11" MinLevel="1" MaxZhuanSheng="20" MaxLevel="100" MinZuanShi="3000" Num="4" Intro="" />
+</Config>

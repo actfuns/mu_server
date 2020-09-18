@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Copy ID="1" BOSSID="900" AwardName="江湖俊杰" />
+  <Copy ID="2" BOSSID="910" AwardName="声名鹊起" />
+  <Copy ID="3" BOSSID="920" AwardName="锋芒毕露" />
+  <Copy ID="4" BOSSID="930" AwardName="名震四方" />
+  <Copy ID="5" BOSSID="940" AwardName="如雷贯耳" />
+  <Copy ID="6" BOSSID="950" AwardName="威风八面" />
+  <Copy ID="7" BOSSID="960" AwardName="威震九洲" />
+  <Copy ID="8" BOSSID="970" AwardName="德高望重" />
+  <Copy ID="9" BOSSID="980" AwardName="万人敬仰" />
+  <Copy ID="10" BOSSID="990" AwardName="常胜将军" />
+  <Copy ID="11" BOSSID="1000" AwardName="战无不胜" />
+  <Copy ID="12" BOSSID="1010" AwardName="天下无敌" />
+  <Copy ID="13" BOSSID="1020" AwardName="独孤求败" />
+</Config>

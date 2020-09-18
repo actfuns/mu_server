@@ -7,35 +7,35 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x0200016F RID: 367
+	
 	public class ArmorManager : SingletonTemplate<ArmorManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x0600066E RID: 1646 RVA: 0x0003B5AC File Offset: 0x000397AC
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x0600066F RID: 1647 RVA: 0x0003B5C0 File Offset: 0x000397C0
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(1447, SingletonTemplate<ArmorManager>.Instance());
 			return true;
 		}
 
-		// Token: 0x06000670 RID: 1648 RVA: 0x0003B5E8 File Offset: 0x000397E8
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000671 RID: 1649 RVA: 0x0003B5FC File Offset: 0x000397FC
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000672 RID: 1650 RVA: 0x0003B610 File Offset: 0x00039810
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			if (nID == 1447)
@@ -44,7 +44,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000673 RID: 1651 RVA: 0x0003B63C File Offset: 0x0003983C
+		
 		private void ProcessArmorLevelStarUpCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			int ret = 0;
@@ -70,7 +70,7 @@ namespace GameDBServer.Logic
 			client.sendCmd(nID, string.Format("{0}", ret));
 		}
 
-		// Token: 0x0400089A RID: 2202
+		
 		private object Mutex = new object();
 	}
 }

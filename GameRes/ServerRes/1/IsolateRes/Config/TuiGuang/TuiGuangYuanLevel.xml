@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <TuiGuangYuanLevel MinZhuanSheng="3" MinLevel="1"/>
+  <GiftList>
+  <Award GoodsOne="2030,5,1,0,0,0,0|50021,5,1,0,0,0,0|5120,5,1,0,0,0,0|5088,5,1,0,0,0,0|5141,5,1,0,0,0,0" GoodsTwo="" />
+  </GiftList>
+</Config>

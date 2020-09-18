@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <Monsters>
+    <Monster ID="1" Code="1001" X="10950" Y="9050" Radius="1000" Num="6" Timeslot="3" PursuitRadius="1100" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="2" Code="1001" X="11350" Y="9450" Radius="500" Num="4" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="3" Code="1001" X="11150" Y="8450" Radius="500" Num="4" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="4" Code="1001" X="10050" Y="9350" Radius="500" Num="4" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="5" Code="1002" X="8750" Y="7050" Radius="600" Num="4" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="6" Code="1002" X="7750" Y="7150" Radius="800" Num="5" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="7" Code="1002" X="7350" Y="6750" Radius="700" Num="4" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="8" Code="1002" X="6550" Y="5950" Radius="500" Num="4" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="9" Code="1003" X="9550" Y="5250" Radius="500" Num="4" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="10" Code="1003" X="9050" Y="4350" Radius="800" Num="5" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="11" Code="1003" X="7150" Y="3450" Radius="500" Num="4" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="12" Code="1003" X="7850" Y="3850" Radius="600" Num="4" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="13" Code="1004" X="3150" Y="6050" Radius="800" Num="5" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="14" Code="1004" X="5150" Y="6050" Radius="500" Num="4" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="15" Code="1004" X="3150" Y="5850" Radius="500" Num="4" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="16" Code="1004" X="2650" Y="6550" Radius="500" Num="4" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="17" Code="1005" X="4850" Y="8850" Radius="1000" Num="6" Timeslot="3" PursuitRadius="1100" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="18" Code="1005" X="5650" Y="8850" Radius="500" Num="4" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="19" Code="1005" X="4550" Y="8650" Radius="500" Num="4" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="20" Code="1005" X="4450" Y="9250" Radius="500" Num="4" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="21" Code="1006" X="4850" Y="11350" Radius="500" Num="4" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="22" Code="1006" X="5250" Y="11750" Radius="500" Num="4" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="23" Code="1006" X="3950" Y="11450" Radius="500" Num="4" Timeslot="3" PursuitRadius="900" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="24" Code="1090" X="4950" Y="13050" Radius="1" Num="1" Timeslot="900" PursuitRadius="2000" BirthType="1" TimePoints="02:00|04:00|06:00|08:00|10:00|12:00|14:00|16:00|18:00|20:00|22:00|00:00" BirthRate="1" />
+    <Monster ID="25" Code="1090" X="9950" Y="8850" Radius="5" Num="1" Timeslot="1800" PursuitRadius="1600" BirthType="1" TimePoints="02:00|04:00|06:00|08:00|10:00|12:00|14:00|16:00|18:00|20:00|22:00|00:00" BirthRate="1" />
+    <Monster ID="26" Code="1090" X="8350" Y="4750" Radius="5" Num="1" Timeslot="1800" PursuitRadius="1600" BirthType="1" TimePoints="02:00|04:00|06:00|08:00|10:00|12:00|14:00|16:00|18:00|20:00|22:00|00:00" BirthRate="1" />
+    <Monster ID="27" Code="1090" X="7550" Y="7450" Radius="5" Num="1" Timeslot="1800" PursuitRadius="1600" BirthType="1" TimePoints="02:00|04:00|06:00|08:00|10:00|12:00|14:00|16:00|18:00|20:00|22:00|00:00" BirthRate="1" />
+  </Monsters>
+</Map>

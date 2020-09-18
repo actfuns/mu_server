@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+	<Items>
+		<Item Description="1.｛color=#ffffff00 uline=false tag= text=【提升坐骑】｝：在梦隋唐中坐骑属性是附加到人物属性之上的，所以提升坐骑属性几乎能够最快捷方便的提升人物能力，在游戏中提升坐骑有两种方式，一是｛color=#ff00ff00 uline=false tag= text=坐骑强化｝，只需要做｛color=#ff00ff00 uline=false tag= text=坐骑日常任务｝即可获得炼骨寒铁，对特定属性进行强化即可；二是｛color=#ff00ff00 uline=false tag= text=坐骑进阶｝，通过参加｛color=#ff00ff00 uline=false tag= text=五行奇阵｝获得进阶符或直接在｛color=#ff00ff00 uline=false tag= text=【商城-坐骑类】｝购买，累积进阶幸运值即可对坐骑进行进阶，进阶后的坐骑其属性及属性可强化上限都会获得大量提升。"/>	
+		<Item Description="2.｛color=#ffffff00 uline=false tag= text=【装备精炼】｝：梦隋唐中的装备分为白、绿、蓝、紫、金五种品质，您可以通过｛color=#ff00ff00 uline=false tag= text=副本掉落｝、｛color=#ff00ff00 uline=false tag= text=BOSS掉落｝、以及使用｛color=#ff00ff00 uline=false tag= text=各色精炼石｝对装备进行提品来获得各品级装备。"/>	
+		<Item Description="3.｛color=#ffffff00 uline=false tag= text=【天生洗炼】｝：副本及BOSS掉落装备本身即带有天生属性，您也可以通过｛color=#ff00ff00 uline=false tag= text=开启杨公宝库｝直接获取满天生紫色装备，同时也能够通过｛color=#ff00ff00 uline=false tag= text=天缘石｝对普通装备进行洗炼来获得满天生装备，天生共分为｛color=#ff00ff00 uline=false tag= text=普通｝、｛color=#ff00ff00 uline=false tag= text=良好｝、｛color=#ff00ff00 uline=false tag= text=优秀｝、｛color=#ff00ff00 uline=false tag= text=完美｝、｛color=#ff00ff00 uline=false tag= text=无双｝五个品级，其中无双将提升装备｛color=#ff00ff00 uline=false tag= text=100%基础属性｝，该属性也同样受到强化等操作的加成。"/>	
+		<Item Description="4.｛color=#ffffff00 uline=false tag= text=【宝石镶嵌】｝：您可以｛color=#ff00ff00 uline=false tag= text=击杀野外BOSS｝、参加系统的各种｛color=#ff00ff00 uline=false tag= text=日常活动｝、｛color=#ff00ff00 uline=false tag= text=商城购买｝等途径获得各种宝石，不同类型的宝石可以提升人物的各种属性，同时宝石也可以方便并且免费的｛color=#ff00ff00 uline=false tag= text=镶嵌｝、｛color=#ff00ff00 uline=false tag= text=摘取｝以及｛color=#ff00ff00 uline=false tag= text=合成更高级宝石｝。"/>	
+		<Item Description="5.｛color=#ffffff00 uline=false tag= text=【装备强化】｝：当您获得强化石的时候可以对装备进行强化，强化装备可以针对装备不同的特点，对相应的属性进行强力的提升。强化石可以通过｛color=#ff00ff00 uline=false tag= text=野外BOSS｝、｛color=#ff00ff00 uline=false tag= text=参加系统的各种日常活动｝及｛color=#ff00ff00 uline=false tag= text=【商城-宝石类】｝中购买等途径获得，也可以免费将低级强化石｛color=#ff00ff00 uline=false tag= text=合成高级强化石｝。"/>	
+		<Item Description="6.｛color=#ffffff00 uline=false tag= text=【装备精锻】｝：您可以通过｛color=#ff00ff00 uline=false tag= text=精锻石｝对装备进行精锻，提升装备的｛color=#ff00ff00 uline=false tag= text=附加属性｝，精锻石只在商城出售，可以对装备的附加属性进行强化提升。"/>	
+		<Item Description="7.｛color=#ffffff00 uline=false tag= text=【提升技能】｝：在梦隋唐，提升技能熟练度可以对技能进行升级，更高等级的技能所获得的能力提升也是巨大的，其中主动技能会｛color=#ff00ff00 uline=false tag= text=放大本身攻击倍数｝，而各被动技能会提升其目标属性。"/>	
+	</Items>
+</Config>

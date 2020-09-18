@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <BianQiang ID="101" Name="翅膀星级" Image="WingStar" PlaceType="2" Parameter="1061" Link="701" />
+  <BianQiang ID="102" Name="翅膀等阶" Image="WingLevel" PlaceType="2" Parameter="1061" Link="701" />
+  <BianQiang ID="201" Name="技能升级" Image="SkillLevelup" PlaceType="1" Parameter="0,1" Link="700" />
+  <BianQiang ID="301" Name="装备进阶" Image="EquipLevel" PlaceType="2" Parameter="1152" Link="202" />
+  <BianQiang ID="302" Name="装备强化" Image="EquipStrengthen" PlaceType="2" Parameter="1152" Link="200" />
+  <BianQiang ID="303" Name="装备追加" Image="EquipSuperaddition" PlaceType="2" Parameter="1351" Link="201" />
+  <BianQiang ID="401" Name="护身符" Image="Amulet" PlaceType="2" Parameter="1464" Link="305" />
+  <BianQiang ID="501" Name="VIP增益" Image="VIPBuff" PlaceType="1" Parameter="0,1" Link="800" />
+  <BianQiang ID="601" Name="成就称号" Image="TitleLevel" PlaceType="1" Parameter="0,1" Link="801" />
+  <BianQiang ID="701" Name="竞技军衔" Image="MilitaryRanklevel" PlaceType="2" Parameter="1420" Link="207" />
+  <BianQiang ID="801" Name="激活星座" Image="Constellation" PlaceType="2" Parameter="1080" Link="702" />
+  <BianQiang ID="901" Name="转生等级" Image="ZhuanSheng" PlaceType="1" Parameter="0,1" Link="1100" />
+  <BianQiang ID="1001" Name="装备培养" Image="EquipPeiyang" PlaceType="2" Parameter="1791" Link="210" />
+  <BianQiang ID="1101" Name="精灵等级" Image="JingLingLevelup" PlaceType="2" Parameter="1110" Link="1330" />
+  <BianQiang ID="1201" Name="元素之心" Image="YuanSuLevelup" PlaceType="2" Parameter="2110" Link="1340" />
+  <BianQiang ID="1301" Name="翅膀翎羽" Image="WingLingYu" PlaceType="3" Parameter="4,0" Link="1350" />
+  <BianQiang ID="1302" Name="翅膀注灵" Image="WingZhuLing" PlaceType="3" Parameter="5,0" Link="1351" />
+  <BianQiang ID="1303" Name="翅膀注魂" Image="WingZhuHun" PlaceType="3" Parameter="6,0" Link="1352" />
+  <BianQiang ID="1401" Name="成就符文" Image="ChengJiuFuWen" PlaceType="4" Parameter="4" Link="1360" />
+  <BianQiang ID="1501" Name="神器再造" Image="ShenQiZaiZao" PlaceType="2" Parameter="4170" Link="310" />
+  <BianQiang ID="1601" Name="军衔勋章" Image="JunXianXunZhang" PlaceType="5" Parameter="4" Link="2003" />
+  <BianQiang ID="1701" Name="梅林之书" Image="MeiLinZhiShu" PlaceType="2" Parameter="2561" Link="350" />
+  <BianQiang ID="1801" Name="守护神" Image="ShouHuShen" PlaceType="2" Parameter="2133" Link="340" />
+  <BianQiang ID="1901" Name="荧光宝石" Image="YingShi" PlaceType="2" Parameter="3070" Link="390" />
+  <BianQiang ID="2001" Name="圣物" Image="ShengWu" PlaceType="2" Parameter="2890" Link="380" />
+  <BianQiang ID="2101" Name="精灵技能" Image="JingLingJiNeng" PlaceType="2" Parameter="1901" Link="1470" />
+  <BianQiang ID="2201" Name="战盟神殿" Image="ZhanMengShenDian" PlaceType="2" Parameter="1820" Link="1460" />
+  <BianQiang ID="2301" Name="塔罗牌" Image="TaLuoPai" PlaceType="2" Parameter="3580" Link="1490" />
+  <BianQiang ID="2401" Name="神器" Image="ShenQi" PlaceType="2" Parameter="3970" Link="1495" />
+  <BianQiang ID="2501" Name="精灵神迹" Image="ShenJi" PlaceType="2" Parameter="2121" Link="1500" />
+  <BianQiang ID="2601" Name="徽记" Image="HuiJi" PlaceType="2" Parameter="2320" Link="1498" />
+  <BianQiang ID="2701" Name="坐骑等级" Image="ZuoQiLevelup" PlaceType="2" Parameter="2372" Link="1515" />
+  <BianQiang ID="2801" Name="重生装备灌注" Image="ChongShengZhuangBeiGuanZhu" PlaceType="6" Parameter="60" Link="1538" />
+  <BianQiang ID="2901" Name="魔神秘宝等阶" Image="MiBaoLevelup" PlaceType="6" Parameter="1" Link="1539" />
+</config>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item NPCID="81000" PosX="7200" PosY="7800" Monster="8800004" />
+  <Item NPCID="81001" PosX="7200" PosY="8500" Monster="8800004" />
+  <Item NPCID="81002" PosX="8200" PosY="7800" Monster="8800003" />
+  <Item NPCID="81003" PosX="8200" PosY="8500" Monster="8800003" />
+</Items>

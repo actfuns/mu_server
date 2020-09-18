@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="2" Title="充值返利" FromDate="2013-03-14 00:00:00" ToDate="2013-03-16 23:59:59" AwardStartDate="2013-03-17 00:00:00" 
+  AwardEndDate="2013-03-20 23:59:59" IsNeedCode="1"/>
+  <GiftList Description="活动期内充值均可获得系统返利的10%元宝奖励，可在活动结束后进行领取。">
+  <Award FanLi="0.1" />
+  </GiftList>
+</Config>

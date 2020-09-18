@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Monster ID="1" CodeID="82000" MonsterID="9100000" Name="战争之王" X="3950" Y="4100" Time="0" Boss="1" />
+  <Monster ID="2" CodeID="82001" MonsterID="9100001" Name="战争之王" X="3950" Y="4100" Time="0" Boss="1" />
+</Config>

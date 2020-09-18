@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <LeagueNewRandom ID="1" Name="第一组" BeginNum="1" EndNum="10" />
+  <LeagueNewRandom ID="2" Name="第二组" BeginNum="11" EndNum="20" />
+  <LeagueNewRandom ID="3" Name="第三组" BeginNum="21" EndNum="30" />
+  <LeagueNewRandom ID="4" Name="第四组" BeginNum="31" EndNum="40" />
+  <LeagueNewRandom ID="5" Name="第五组" BeginNum="41" EndNum="50" />
+  <LeagueNewRandom ID="6" Name="第六组" BeginNum="51" EndNum="100" />
+  <LeagueNewRandom ID="7" Name="第七组" BeginNum="101" EndNum="150" />
+  <LeagueNewRandom ID="8" Name="第八组" BeginNum="151" EndNum="200" />
+  <LeagueNewRandom ID="9" Name="第九组" BeginNum="201" EndNum="-1" />
+</Config>

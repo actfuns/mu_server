@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <LegionsWest ID="1" QiZhiID="9400000" QiZuoID="82000" QiZuoSite="9650|10150" RebirthSite="9850|10350" RebirthRadius="10" ProduceTime="5" ProduceNum="10" />
+  <LegionsWest ID="2" QiZhiID="9400001" QiZuoID="82001" QiZuoSite="5650|6150" RebirthSite="5450|5950" RebirthRadius="10" ProduceTime="5" ProduceNum="10" />
+  <LegionsWest ID="3" QiZhiID="9400002" QiZuoID="82002" QiZuoSite="5650|10150" RebirthSite="5450|10350" RebirthRadius="10" ProduceTime="5" ProduceNum="10" />
+  <LegionsWest ID="4" QiZhiID="9400003" QiZuoID="82003" QiZuoSite="9350|5850" RebirthSite="9550|5650" RebirthRadius="10" ProduceTime="5" ProduceNum="10" />
+  <LegionsWest ID="5" QiZhiID="9400004" QiZuoID="82004" QiZuoSite="7650|8150" RebirthSite="7250|8250" RebirthRadius="10" ProduceTime="5" ProduceNum="15" />
+</Config>

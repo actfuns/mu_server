@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <Flag>
+    <Level ID="2" GoodsOneNumber="50" GoodsTwoNumber="400" GoodsThreeNumber="400" GoodsFourNumber="400" GoodsFiveNumber="400" UseMoney="10000000" />
+    <Level ID="3" GoodsOneNumber="200" GoodsTwoNumber="1600" GoodsThreeNumber="1600" GoodsFourNumber="1600" GoodsFiveNumber="1600" UseMoney="40000000" />
+    <Level ID="4" GoodsOneNumber="500" GoodsTwoNumber="3500" GoodsThreeNumber="3500" GoodsFourNumber="3500" GoodsFiveNumber="3500" UseMoney="200000000" />
+  </Flag>
+</config>

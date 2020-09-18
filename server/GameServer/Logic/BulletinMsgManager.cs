@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020005DE RID: 1502
+	
 	public class BulletinMsgManager
 	{
-		// Token: 0x06001BF7 RID: 7159 RVA: 0x001A3AD8 File Offset: 0x001A1CD8
+		
 		public void LoadBulletinMsgFromDBServer()
 		{
 			this._BulletinMsgDict = Global.LoadDBBulletinMsgDict();
@@ -19,7 +19,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001BF8 RID: 7160 RVA: 0x001A3B10 File Offset: 0x001A1D10
+		
 		public BulletinMsgData AddBulletinMsg(string msgID, int playMinutes, int playNum, string bulletinText, int msgType = 0)
 		{
 			BulletinMsgData bulletinMsgData = new BulletinMsgData
@@ -47,7 +47,7 @@ namespace GameServer.Logic
 			return bulletinMsgData;
 		}
 
-		// Token: 0x06001BF9 RID: 7161 RVA: 0x001A3C0C File Offset: 0x001A1E0C
+		
 		public BulletinMsgData AddBulletinMsgBackground(string msgID, string fromDate, string toDate, int interval, string bulletinText)
 		{
 			BulletinMsgData bulletinMsgData = new BulletinMsgData
@@ -84,7 +84,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001BFA RID: 7162 RVA: 0x001A3D20 File Offset: 0x001A1F20
+		
 		public BulletinMsgData RemoveBulletinMsg(string msgID)
 		{
 			BulletinMsgData bulletinMsgData = null;
@@ -102,7 +102,7 @@ namespace GameServer.Logic
 			return bulletinMsgData;
 		}
 
-		// Token: 0x06001BFB RID: 7163 RVA: 0x001A3DBC File Offset: 0x001A1FBC
+		
 		public void SendAllBulletinMsg(GameClient client)
 		{
 			long ticks = TimeUtil.NOW();
@@ -123,7 +123,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001BFC RID: 7164 RVA: 0x001A3EBC File Offset: 0x001A20BC
+		
 		public void SendAllBulletinMsgToGM(GameClient client)
 		{
 			List<string> msgList = new List<string>();
@@ -151,7 +151,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001BFD RID: 7165 RVA: 0x001A4038 File Offset: 0x001A2238
+		
 		public void ProcessBulletinMsg()
 		{
 			long ticks = TimeUtil.NOW();
@@ -193,7 +193,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04002A2D RID: 10797
+		
 		private Dictionary<string, BulletinMsgData> _BulletinMsgDict = new Dictionary<string, BulletinMsgData>();
 	}
 }

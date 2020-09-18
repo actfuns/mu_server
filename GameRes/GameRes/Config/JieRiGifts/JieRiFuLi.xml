@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="66" FromDate="2018-02-28 00:00:00" ToDate="2018-03-05 23:59:59" AwardStartDate="2018-02-28 00:00:00" AwardEndDate="2018-03-05 23:59:59" />
+  <GiftList Description="活动期间，开放以下额外功能福利！">
+    <JieRiDuoBei ID="1" Name="精灵狂欢" TypeID="1" Depict="精灵捕获得额外专属精灵" Button="0" Function="1" AwardStartDate="00:00:00" AwardEndDate="23:59:59" Link="1430" />
+    <!--魂石辅助功能Button控制开启，Function控制功能，格式：功能,货币；功能1额外获得魂石精华、功能2减少消耗、功能3提高成功率、功能4锁定不变色，货币：魔晶、星魂、成就、声望、钻石-->
+    <JieRiDuoBei ID="2" Name="魂石辅助" TypeID="2" Depict="魂石聚魂辅助功能开启" Button="1" Function="2,2" AwardStartDate="00:00:00" AwardEndDate="23:59:59" Link="1420" />
+    <JieRiDuoBei ID="3" Name="祈福狂欢" TypeID="3" Depict="祈福可获得额外专属奖励" Button="1" Function="1" AwardStartDate="00:00:00" AwardEndDate="23:59:59" Link="400" />
+    <JieRiDuoBei ID="4" Name="强化+20开放" TypeID="4" Depict="强化上限提高的+20" Button="1" Function="1" AwardStartDate="00:00:00" AwardEndDate="23:59:59" Link="200" />
+    <JieRiDuoBei ID="5" Name="符文狂欢" TypeID="5" Depict="符文抽取辅助狂欢" Button="0" Function="1" AwardStartDate="00:00:00" AwardEndDate="23:59:59" Link="1501" />
+  </GiftList>
+</Config>

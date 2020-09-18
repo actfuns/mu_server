@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CoupleDuanWeiType TypeID="1" Name="初遇"  />
+  <CoupleDuanWeiType TypeID="2" Name="相识"  />
+  <CoupleDuanWeiType TypeID="3" Name="相知"  />
+  <CoupleDuanWeiType TypeID="4" Name="相恋"  />
+  <CoupleDuanWeiType TypeID="5" Name="相爱"  />
+  <CoupleDuanWeiType TypeID="6" Name="定情"  />
+  <CoupleDuanWeiType TypeID="7" Name="厮守"  />
+</Config>

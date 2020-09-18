@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Level ID="2" HorseOne="109999" HorseTwo="110000" HorseThree="1" GoodsNum="320006,3" UseYinLiang="200" />
+  <Level ID="3" HorseOne="109997" HorseTwo="109999" HorseThree="0.5" GoodsNum="320006,3" UseYinLiang="300" />
+  <Level ID="4" HorseOne="109989" HorseTwo="109993" HorseThree="0.3" GoodsNum="320006,4" UseYinLiang="400" />
+  <Level ID="5" HorseOne="109974" HorseTwo="109980" HorseThree="0.2" GoodsNum="320006,4" UseYinLiang="500" />
+  <Level ID="6" HorseOne="109948" HorseTwo="109960" HorseThree="0.1" GoodsNum="320006,5" UseYinLiang="600" />
+  <Level ID="7" HorseOne="109896" HorseTwo="109920" HorseThree="0.05" GoodsNum="320006,7" UseYinLiang="700" />
+  <Level ID="8" HorseOne="109793" HorseTwo="109833" HorseThree="0.03" GoodsNum="320006,10" UseYinLiang="800" />
+  <Level ID="9" HorseOne="109490" HorseTwo="109550" HorseThree="0.02" GoodsNum="320006,10" UseYinLiang="900" />
+  <Level ID="10" HorseOne="109146" HorseTwo="109266" HorseThree="0.01" GoodsNum="320006,10" UseYinLiang="1000" />
+</Config>

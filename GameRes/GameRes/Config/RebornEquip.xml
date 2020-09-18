@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <RebornEquip ID="1" GoodsID="2300000" Name="血色天使之盔" ZSMod="CSZS_head_001.unity3d" FSMod="CSFS_head_001.unity3d" GSMOd="CSGS_head_001.unity3d" LMJSMod="CSMJS_head_001.unity3d" FMJSMod="CSMJS_head_001.unity3d" ZHSMod="CSZHS_head_001.unity3d" />
+  <RebornEquip ID="2" GoodsID="2300001" Name="无畏天使之盔" ZSMod="CSZS_head_001.unity3d" FSMod="CSFS_head_001.unity3d" GSMOd="CSGS_head_001.unity3d" LMJSMod="CSMJS_head_001.unity3d" FMJSMod="CSMJS_head_001.unity3d" ZHSMod="CSZHS_head_001.unity3d" />
+  <RebornEquip ID="3" GoodsID="2300002" Name="先锋天使之盔" ZSMod="CSZS_head_001.unity3d" FSMod="CSFS_head_001.unity3d" GSMOd="CSGS_head_001.unity3d" LMJSMod="CSMJS_head_001.unity3d" FMJSMod="CSMJS_head_001.unity3d" ZHSMod="CSZHS_head_001.unity3d" />
+  <RebornEquip ID="4" GoodsID="2300100" Name="血色天使之铠" ZSMod="CSZS_chest_001.unity3d" FSMod="CSFS_chest_001.unity3d" GSMOd="CSGS_chest_001.unity3d" LMJSMod="CSMJS_chest_001.unity3d" FMJSMod="CSMJS_chest_001.unity3d" ZHSMod="CSZHS_chest_001.unity3d" />
+  <RebornEquip ID="5" GoodsID="2300101" Name="无畏天使之铠" ZSMod="CSZS_chest_001.unity3d" FSMod="CSFS_chest_001.unity3d" GSMOd="CSGS_chest_001.unity3d" LMJSMod="CSMJS_chest_001.unity3d" FMJSMod="CSMJS_chest_001.unity3d" ZHSMod="CSZHS_chest_001.unity3d" />
+  <RebornEquip ID="6" GoodsID="2300102" Name="先锋天使之铠" ZSMod="CSZS_chest_001.unity3d" FSMod="CSFS_chest_001.unity3d" GSMOd="CSGS_chest_001.unity3d" LMJSMod="CSMJS_chest_001.unity3d" FMJSMod="CSMJS_chest_001.unity3d" ZHSMod="CSZHS_chest_001.unity3d" />
+  <RebornEquip ID="7" GoodsID="2300200" Name="血色天使护手" ZSMod="CSZS_hand_001.unity3d" FSMod="CSFS_hand_001.unity3d" GSMOd="CSGS_hand_001.unity3d" LMJSMod="CSMJS_hand_001.unity3d" FMJSMod="CSMJS_hand_001.unity3d" ZHSMod="CSZHS_hand_001.unity3d" />
+  <RebornEquip ID="8" GoodsID="2300201" Name="无畏天使护手" ZSMod="CSZS_hand_001.unity3d" FSMod="CSFS_hand_001.unity3d" GSMOd="CSGS_hand_001.unity3d" LMJSMod="CSMJS_hand_001.unity3d" FMJSMod="CSMJS_hand_001.unity3d" ZHSMod="CSZHS_hand_001.unity3d" />
+  <RebornEquip ID="9" GoodsID="2300202" Name="先锋天使护手" ZSMod="CSZS_hand_001.unity3d" FSMod="CSFS_hand_001.unity3d" GSMOd="CSGS_hand_001.unity3d" LMJSMod="CSMJS_hand_001.unity3d" FMJSMod="CSMJS_hand_001.unity3d" ZHSMod="CSZHS_hand_001.unity3d" />
+  <RebornEquip ID="10" GoodsID="2300300" Name="血色天使护腿" ZSMod="CSZS_leg_001.unity3d" FSMod="CSFS_leg_001.unity3d" GSMOd="CSGS_leg_001.unity3d" LMJSMod="CSMJS_leg_001.unity3d" FMJSMod="CSMJS_leg_001.unity3d" ZHSMod="CSZHS_leg_001.unity3d" />
+  <RebornEquip ID="11" GoodsID="2300301" Name="无畏天使护腿" ZSMod="CSZS_leg_001.unity3d" FSMod="CSFS_leg_001.unity3d" GSMOd="CSGS_leg_001.unity3d" LMJSMod="CSMJS_leg_001.unity3d" FMJSMod="CSMJS_leg_001.unity3d" ZHSMod="CSZHS_leg_001.unity3d" />
+  <RebornEquip ID="12" GoodsID="2300302" Name="先锋天使护腿" ZSMod="CSZS_leg_001.unity3d" FSMod="CSFS_leg_001.unity3d" GSMOd="CSGS_leg_001.unity3d" LMJSMod="CSMJS_leg_001.unity3d" FMJSMod="CSMJS_leg_001.unity3d" ZHSMod="CSZHS_leg_001.unity3d" />
+  <RebornEquip ID="13" GoodsID="2300400" Name="血色天使之靴" ZSMod="CSZS_foot_001.unity3d" FSMod="CSFS_foot_001.unity3d" GSMOd="CSGS_foot_001.unity3d" LMJSMod="CSMJS_foot_001.unity3d" FMJSMod="CSMJS_foot_001.unity3d" ZHSMod="CSZHS_foot_001.unity3d" />
+  <RebornEquip ID="14" GoodsID="2300401" Name="无畏天使之靴" ZSMod="CSZS_foot_001.unity3d" FSMod="CSFS_foot_001.unity3d" GSMOd="CSGS_foot_001.unity3d" LMJSMod="CSMJS_foot_001.unity3d" FMJSMod="CSMJS_foot_001.unity3d" ZHSMod="CSZHS_foot_001.unity3d" />
+  <RebornEquip ID="15" GoodsID="2300402" Name="先锋天使之靴" ZSMod="CSZS_foot_001.unity3d" FSMod="CSFS_foot_001.unity3d" GSMOd="CSGS_foot_001.unity3d" LMJSMod="CSMJS_foot_001.unity3d" FMJSMod="CSMJS_foot_001.unity3d" ZHSMod="CSZHS_foot_001.unity3d" />
+  <RebornEquip ID="16" GoodsID="2300700" Name="血色天使圣物" ZSMod="2310000" FSMod="2310001" GSMOd="2310002" LMJSMod="2310000" FMJSMod="2310003" ZHSMod="2310004" />
+  <RebornEquip ID="17" GoodsID="2300701" Name="无畏天使圣物" ZSMod="2310010" FSMod="2310011" GSMOd="2310012" LMJSMod="2310010" FMJSMod="2310013" ZHSMod="2310014" />
+  <RebornEquip ID="18" GoodsID="2300702" Name="先锋天使圣物" ZSMod="2310020" FSMod="2310021" GSMOd="2310022" LMJSMod="2310020" FMJSMod="2310023" ZHSMod="2310024" />
+  <RebornEquip ID="19" GoodsID="2300800" Name="血色天使圣器" ZSMod="2310005" FSMod="2310006" GSMOd="2310007" LMJSMod="2310005" FMJSMod="2310008" ZHSMod="2310009" />
+  <RebornEquip ID="20" GoodsID="2300801" Name="无畏天使圣器" ZSMod="2310015" FSMod="2310016" GSMOd="2310017" LMJSMod="2310015" FMJSMod="2310018" ZHSMod="2310019" />
+  <RebornEquip ID="21" GoodsID="2300802" Name="先锋天使圣器" ZSMod="2310025" FSMod="2310026" GSMOd="2310027" LMJSMod="2310025" FMJSMod="2310028" ZHSMod="2310029" />
+</Config>

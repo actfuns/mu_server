@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+   <Activities ActivityType="9" FromDate="2017-01-26 00:00:00" ToDate="2017-02-01 23:59:59" AwardStartDate="2017-01-26 00:00:00"  AwardEndDate="2017-02-01 23:59:59" />
+  <GiftList Description="活动期间，所有玩家均可在此处免费领取大礼包一份。">
+  <Award GoodsOne="63099,1,1,0,0,0,0|63064,5,1,0,0,0,0|50165,1,1,0,0,0,0|4037,1,1,0,0,0,0|51226,10,1,0,0,0,0" GoodsTwo=""  GoodsThr="" EffectiveTime="" />
+  </GiftList>
+</Config>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、重生装备中仅有{17e43e}圣物{-}初始有一个炫彩宝石孔，其他部位初始均没有宝石孔" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、使用{17e43e}【神匠尖锥】{-}可在重生装备上打孔，打出的是{17e43e}重生宝石孔{-}，可以镶嵌重生宝石" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、可以使用{17e43e}【神匠尖锥】{-}反复进行打孔，从而获得高品质的重生宝石孔，重生宝石孔{17e43e}最高品质{-}与重生装备{17e43e}品质相同" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4、高品质的重生宝石孔对宝石{17e43e}属性有放大{-}作用" Bold="0" />
+  <HelpIntro ID="6" Intro="{dac7ae}5、炫彩宝石孔仅能镶嵌{17e43e}炫彩宝石{-}，炫彩宝石需要镶嵌{17e43e}指定要求{-}的重生宝石才能激活属性" Bold="0" />
+  <HelpIntro ID="7" Intro="{dac7ae}6、【神匠尖锥】在重生地图的{17e43e}精英怪{-}中有掉落，商城中也可以直接购买" Bold="0" />
+  <HelpIntro ID="8" Intro="{dac7ae}7、重生宝石在重生地图的{17e43e}精英怪{-}掉落，参与重生地图{17e43e}BOSS{-}讨伐可获得" Bold="0" />
+  <HelpIntro ID="9" Intro="{dac7ae}8、炫彩宝石通过参与重生地图{17e43e}BOSS{-}讨伐排名奖励可获得" Bold="0" />
+</Config>

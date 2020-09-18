@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ManorCollectMonster ID="1" MonsterID="9300004" Name="神力精华·小" GatherTime="5" FuHuoTime="1" ShenLiJingHua="300" YuanSuFenMo="120" YingShiFenMo="120" LangHunFenMo="50" Type="0" />
+  <ManorCollectMonster ID="2" MonsterID="9300005" Name="神力精华·中" GatherTime="10" FuHuoTime="30" ShenLiJingHua="500" YuanSuFenMo="200" YingShiFenMo="200" LangHunFenMo="80" Type="1" />
+  <ManorCollectMonster ID="3" MonsterID="9300006" Name="神力精华·大" GatherTime="15" FuHuoTime="60" ShenLiJingHua="700" YuanSuFenMo="280" YingShiFenMo="280" LangHunFenMo="110" Type="2" />
+  <ManorCollectMonster ID="4" MonsterID="9300007" Name="神力精华·超" GatherTime="30" FuHuoTime="120" ShenLiJingHua="1000" YuanSuFenMo="400" YingShiFenMo="400" LangHunFenMo="160" Type="3" />
+  <ManorCollectMonster ID="5" MonsterID="9300012" Name="神力精华·小" GatherTime="5" FuHuoTime="1" ShenLiJingHua="300" YuanSuFenMo="120" YingShiFenMo="120" LangHunFenMo="50" Type="0" />
+  <ManorCollectMonster ID="6" MonsterID="9300013" Name="神力精华·中" GatherTime="10" FuHuoTime="30" ShenLiJingHua="500" YuanSuFenMo="200" YingShiFenMo="200" LangHunFenMo="80" Type="1" />
+  <ManorCollectMonster ID="7" MonsterID="9300014" Name="神力精华·大" GatherTime="15" FuHuoTime="60" ShenLiJingHua="700" YuanSuFenMo="280" YingShiFenMo="280" LangHunFenMo="110" Type="2" />
+  <ManorCollectMonster ID="8" MonsterID="9300015" Name="神力精华·超" GatherTime="30" FuHuoTime="120" ShenLiJingHua="1000" YuanSuFenMo="400" YingShiFenMo="400" LangHunFenMo="160" Type="3" />
+</Config>

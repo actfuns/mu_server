@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+<Teleports>
+	<Teleport Code="197" FrameNum="13" Tip="坎特鲁废墟" Key="10"  To="10" ToX="12750" ToY="8050" ToDirection="0" X="10950" Y="11950" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+	<Teleport Code="197" FrameNum="13" Tip="魅音迷窟" Key="11"  To="100" ToX="9650" ToY="10150" ToDirection="0" X="4950" Y="14250" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+	<Teleport Code="197" FrameNum="13" Tip="迷踪遗迹" Key="12"  To="110" ToX="9250" ToY="9850" ToDirection="0" X="2550" Y="10450" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />	
+</Teleports>
+</Map>

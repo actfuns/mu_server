@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <MagicWord Level="1" NeedGoods="2102,1" Num="2,2,3,3,4,5" MaxNum="5" />
+  <MagicWord Level="2" NeedGoods="2102,1" Num="2,2,3,3,4,5,6" MaxNum="6" />
+  <MagicWord Level="3" NeedGoods="2102,1" Num="3,3,4,4,5,5,6,7" MaxNum="7" />
+  <MagicWord Level="4" NeedGoods="2102,1" Num="3,3,4,4,5,5,6,7,8" MaxNum="8" />
+  <MagicWord Level="5" NeedGoods="2102,1" Num="4,4,5,5,6,6,7,8,9" MaxNum="9" />
+  <MagicWord Level="6" NeedGoods="2102,1" Num="4,4,5,5,6,6,7,8,9,10" MaxNum="10" />
+  <MagicWord Level="7" NeedGoods="2102,1" Num="5,5,6,6,7,7,8,8,9,10,11" MaxNum="11" />
+  <MagicWord Level="8" NeedGoods="2102,1" Num="5,5,6,6,7,7,8,8,9,10,11,12" MaxNum="12" />
+  <MagicWord Level="9" NeedGoods="2102,1" Num="6,6,7,7,8,8,9,9,10,10,11,12,13," MaxNum="13" />
+  <MagicWord Level="10" NeedGoods="2102,1" Num="6,6,7,7,8,8,9,9,10,10,11,12,13,14," MaxNum="14" />
+  <MagicWord Level="11" NeedGoods="2102,1" Num="7,7,8,8,9,9,10,10,11,11,12,12,13,14,15" MaxNum="15" />
+  <MagicWord Level="12" NeedGoods="2102,1" Num="7,7,8,8,9,9,10,10,11,11,12,12,13,14,15,16" MaxNum="16" />
+  <MagicWord Level="13" NeedGoods="2102,1" Num="8,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,17" MaxNum="17" />
+  <MagicWord Level="14" NeedGoods="2102,1" Num="8,8,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,17,18" MaxNum="18" />
+  <MagicWord Level="15" NeedGoods="2102,1" Num="9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,16,17,17,18,19" MaxNum="19" />
+  <MagicWord Level="16" NeedGoods="2102,1" Num="9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,16,17,17,18,19,20,21" MaxNum="21" />
+  <MagicWord Level="17" NeedGoods="2102,1" Num="10,10,11,11,12,12,13,13,14,14,15,15,16,16,17,17,18,18,19,20,21,22,23" MaxNum="23" />
+  <MagicWord Level="18" NeedGoods="2102,1" Num="10,10,11,11,12,12,13,13,14,14,15,15,16,16,17,17,18,18,19,20,21,22,23,24,25" MaxNum="25" />
+  <MagicWord Level="19" NeedGoods="2102,1" Num="10,10,11,11,12,12,13,13,14,14,15,15,16,16,17,17,18,19,20,21,22,23,24,25,26,27" MaxNum="27" />
+  <MagicWord Level="20" NeedGoods="2102,1" Num="12,12,13,13,14,14,15,15,16,16,17,17,18,18,19,19,20,20,21,21,22,23,24,25,26,27,28,29,30" MaxNum="30" />
+</Config>

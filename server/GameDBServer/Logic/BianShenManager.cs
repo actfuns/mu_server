@@ -7,35 +7,35 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x0200016E RID: 366
+	
 	public class BianShenManager : SingletonTemplate<BianShenManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x06000667 RID: 1639 RVA: 0x0003B3B0 File Offset: 0x000395B0
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x06000668 RID: 1640 RVA: 0x0003B3C4 File Offset: 0x000395C4
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(1449, SingletonTemplate<BianShenManager>.Instance());
 			return true;
 		}
 
-		// Token: 0x06000669 RID: 1641 RVA: 0x0003B3EC File Offset: 0x000395EC
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x0600066A RID: 1642 RVA: 0x0003B400 File Offset: 0x00039600
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600066B RID: 1643 RVA: 0x0003B414 File Offset: 0x00039614
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			if (nID == 1449)
@@ -44,7 +44,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600066C RID: 1644 RVA: 0x0003B440 File Offset: 0x00039640
+		
 		private void ProcessBianShenLevelStarUpCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			int ret = 0;
@@ -70,7 +70,7 @@ namespace GameDBServer.Logic
 			client.sendCmd(nID, string.Format("{0}", ret));
 		}
 
-		// Token: 0x04000899 RID: 2201
+		
 		private object Mutex = new object();
 	}
 }

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>   
+	<!--ID，流水号；BeginTime，活动开启时间；FinishTime，活动结束时间；NotLoggedInBegin，未登录起始时间；NotLoggedInFinish，未登录结束时间；Level，账号下最大等级角色要求达到；VIP，账号下最大等级VIP要求达到-->
+    <HuoDongZhaoHui ID="1" HuoDongID="1" BeginTime="2017-07-05 00:00:00" FinishTime="2017-07-11 23:59:59" NotLoggedInBegin="2017-06-12 00:00:00" NotLoggedInFinish="2017-06-27 23:59:59" Level="3,1" VIP="0" />
+</Config>

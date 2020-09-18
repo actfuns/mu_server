@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+      <Teleports>
+	<Teleport Code="197" FrameNum="13" Tip="仙踪林" Key="10"  To="2" ToX="12850" ToY="4550" ToDirection="7" X="1006" Y="8411" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+	<Teleport Code="197" FrameNum="13" Tip="死亡沙漠" Key="11"  To="7" ToX="9150" ToY="2450" ToDirection="7" X="13193" Y="14253" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+      </Teleports>
+</Map>

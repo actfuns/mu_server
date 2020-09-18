@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Copy ID="197" PrevID="" NextID="" OccupCondition="-1" TriggerCondition="-1" TimeParameters="-1" PostTaskPlotID="-1" Dark="1" IconID="32" PosX="" PosY=""  HintType="-1" Text="" Deco1="guideTask" Codes="1002,1,1002,1,1003" XiaoGuo="" />
+  <Copy ID="112" PrevID="" NextID="" OccupCondition="-1" TriggerCondition="-1" TimeParameters="-1" PostTaskPlotID="-1" Dark="1" IconID="32" PosX="" PosY=""  HintType="-1" Text="" Deco1="guideTask" Codes="1002,1,1002,1,1003" XiaoGuo="" />
+  <Copy ID="238" PrevID="" NextID="" OccupCondition="-1" TriggerCondition="-1" TimeParameters="-1" PostTaskPlotID="-1" Dark="1" IconID="32" PosX="" PosY=""  HintType="-1" Text="" Deco1="guideTask" Codes="1002,1,1002,1,1003" XiaoGuo="" /> 
+  <Copy ID="180" PrevID="" NextID="" OccupCondition="-1" TriggerCondition="-1" TimeParameters="-1" PostTaskPlotID="-1" Dark="1" IconID="32" PosX="" PosY=""  HintType="-1" Text="" Deco1="guideTask" Codes="1002,1,1002,1,1003" XiaoGuo="" />   
+  <Copy ID="300" PrevID="" NextID="" OccupCondition="-1" TriggerCondition="-1" TimeParameters="-1" PostTaskPlotID="-1" Dark="1" IconID="32" PosX="" PosY=""  HintType="-1" Text="" Deco1="guideTask" Codes="1002,1,1002,1,1003" XiaoGuo="" />   
+  <Copy ID="28" PrevID="" NextID="" OccupCondition="-1" TriggerCondition="-1" TimeParameters="-1" PostTaskPlotID="-1" Dark="1" IconID="32" PosX="" PosY=""  HintType="-1" Text="" Deco1="guideTask" Codes="1002,1,1002,1,1003" XiaoGuo="" />    
+  <Copy ID="400" PrevID="" NextID="" OccupCondition="-1" TriggerCondition="7" TimeParameters="1100" PostTaskPlotID="-1" Dark="1" IconID="32" PosX="" PosY=""  HintType="-1" Text="" Deco1="guideTask" Codes="1002,1,1002,1,1003" XiaoGuo="" />       
+  <Copy ID="14" PrevID="" NextID="" OccupCondition="-1" TriggerCondition="7" TimeParameters="1154" PostTaskPlotID="-1" Dark="1" IconID="32" PosX="" PosY=""  HintType="-1" Text="" Deco1="guideTask" Codes="1002,1,1002,1,1003" XiaoGuo="" />       
+  <Copy ID="140" PrevID="" NextID="" OccupCondition="-1" TriggerCondition="7" TimeParameters="1470" PostTaskPlotID="-1" Dark="1" IconID="32" PosX="" PosY=""  HintType="-1" Text="" Deco1="guideTask" Codes="1002,1,1002,1,1003" XiaoGuo="" /> 
+  <Copy ID="170" PrevID="" NextID="" OccupCondition="-1" TriggerCondition="-1" TimeParameters="-1" PostTaskPlotID="-1" Dark="1" IconID="32" PosX="" PosY=""  HintType="-1" Text="" Deco1="guideTask" Codes="1002,1,1002,1,1003" XiaoGuo="" />  
+  <Copy ID="720" PrevID="" NextID="" OccupCondition="-1" TriggerCondition="7" TimeParameters="1181" PostTaskPlotID="-1" Dark="1" IconID="32" PosX="" PosY=""  HintType="-1" Text="" Deco1="guideTask" Codes="1002,1,1002,1,1003" XiaoGuo="" /> 
+  <Copy ID="700" PrevID="" NextID="" OccupCondition="-1" TriggerCondition="7" TimeParameters="1262" PostTaskPlotID="-1" Dark="1" IconID="32" PosX="" PosY=""  HintType="-1" Text="" Deco1="guideTask" Codes="1002,1,1002,1,1003" XiaoGuo="" />   
+</Config>

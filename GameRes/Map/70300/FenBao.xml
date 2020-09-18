@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <Monsters>
+	<Monster ID="1" Code="9640001" />
+	<Monster ID="2" Code="9640004" />
+	<Monster ID="3" Code="9640007" />
+	<Monster ID="4" Code="9640010" />
+	<Monster ID="5" Code="9640013" />
+	<Monster ID="6" Code="9640016" />
+  </Monsters>
+</Map>

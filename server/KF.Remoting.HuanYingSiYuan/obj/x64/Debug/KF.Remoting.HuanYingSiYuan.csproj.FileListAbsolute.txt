@@ -31,3 +31,19 @@ C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Remoting.HuanYing
 C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Remoting.HuanYingSiYuan\obj\x64\Debug\KF.Remoting.HuanYingSiYuan.csproj.CopyComplete
 C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Remoting.HuanYingSiYuan\obj\x64\Debug\KF.Remoting.HuanYingSiYuan.dll
 C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\KF.Remoting.HuanYingSiYuan\obj\x64\Debug\KF.Remoting.HuanYingSiYuan.pdb
+C:\Users\admin\Desktop\MU_Server\server\KF.Remoting.HuanYingSiYuan\bin\Debug\KF.Remoting.HuanYingSiYuan.dll
+C:\Users\admin\Desktop\MU_Server\server\KF.Remoting.HuanYingSiYuan\bin\Debug\KF.Remoting.HuanYingSiYuan.pdb
+C:\Users\admin\Desktop\MU_Server\server\KF.Remoting.HuanYingSiYuan\bin\Debug\AutoCSer.dll
+C:\Users\admin\Desktop\MU_Server\server\KF.Remoting.HuanYingSiYuan\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\admin\Desktop\MU_Server\server\KF.Remoting.HuanYingSiYuan\bin\Debug\MySql.Data.dll
+C:\Users\admin\Desktop\MU_Server\server\KF.Remoting.HuanYingSiYuan\bin\Debug\MySQLDriverCS.dll
+C:\Users\admin\Desktop\MU_Server\server\KF.Remoting.HuanYingSiYuan\bin\Debug\Tmsk.Contract.dll
+C:\Users\admin\Desktop\MU_Server\server\KF.Remoting.HuanYingSiYuan\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\admin\Desktop\MU_Server\server\KF.Remoting.HuanYingSiYuan\bin\Debug\protobuf-net.dll
+C:\Users\admin\Desktop\MU_Server\server\KF.Remoting.HuanYingSiYuan\bin\Debug\zlib.net.dll
+C:\Users\admin\Desktop\MU_Server\server\KF.Remoting.HuanYingSiYuan\bin\Debug\MySQLDriverCS.pdb
+C:\Users\admin\Desktop\MU_Server\server\KF.Remoting.HuanYingSiYuan\bin\Debug\Tmsk.Contract.pdb
+C:\Users\admin\Desktop\MU_Server\server\KF.Remoting.HuanYingSiYuan\obj\x64\Debug\KF.Remoting.HuanYingSiYuan.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\MU_Server\server\KF.Remoting.HuanYingSiYuan\obj\x64\Debug\KF.Remoting.HuanYingSiYuan.csproj.CopyComplete
+C:\Users\admin\Desktop\MU_Server\server\KF.Remoting.HuanYingSiYuan\obj\x64\Debug\KF.Remoting.HuanYingSiYuan.dll
+C:\Users\admin\Desktop\MU_Server\server\KF.Remoting.HuanYingSiYuan\obj\x64\Debug\KF.Remoting.HuanYingSiYuan.pdb

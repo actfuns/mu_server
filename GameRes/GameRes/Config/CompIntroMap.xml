@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}PK模式" Bold="1" />
+  <HelpIntro ID="2" Intro="势力地图中同势力角色固定为{17e43e}友善{-}，不同势力角色固定为{ff0000}敌对{-}，PK模式在势力地图中不生效" Bold="0" />
+  <HelpIntro ID="3" Intro="{fac60d}势力繁荣" Bold="1" />
+  <HelpIntro ID="4" Intro="1、势力繁荣为衡量势力强弱的标准，{17e43e}采集水晶{-}、{17e43e}参与击杀势力BOSS{-}均会为己方势力积累繁荣度" Bold="0" />
+  <HelpIntro ID="5" Intro="2、繁荣度影响势力商店中每日刷新的商品数量，{17e43e}繁荣度越高商城内商品越多{-}" Bold="0" />
+  <HelpIntro ID="6" Intro="3、势力每天会消耗繁荣度，当繁荣度过低时不再消耗" Bold="0" />
+  <HelpIntro ID="7" Intro="{fac60d}水晶资源" Bold="1" />
+  <HelpIntro ID="8" Intro="1、每天{17e43e}12:00-18:00{-}，势力地图指定区域会生长水晶，水晶需一段时间成长，成熟后才能采集" Bold="0" />
+  <HelpIntro ID="9" Intro="2、玩家可手动采集成熟的水晶，未手动采集的水晶一段时间后会被{17e43e}系统自动采集" Bold="0" />
+  <HelpIntro ID="10" Intro="3、在系统自动采集前，可以盗采其他势力的水晶来提高本势力的繁荣度" Bold="0" />
+  <HelpIntro ID="11" Intro="4、水晶附近会有{ff0000}势力守卫{-}看守水晶" Bold="0" />
+  <HelpIntro ID="12" Intro="{fac60d}势力BOSS" Bold="1" />
+  <HelpIntro ID="13" Intro="1、每天{17e43e}16:00{-}势力地图中会刷新势力BOSS——{17e43e}沉睡者·诺普修{-}" Bold="0" />
+  <HelpIntro ID="14" Intro="2、BOSS被击杀后，对BOSS造成伤害均可获得{17e43e}势力贡献{-}、{17e43e}势力军衔{-}，并增加{17e43e}势力繁荣度{-}" Bold="0" />
+  <HelpIntro ID="15" Intro="3、BOSS被击杀时，只有{17e43e}在地图内{-}才能获得奖励，{ff0000}离开势力地图{-}或{ff0000}下线无法{-}获得奖励" Bold="0" />
+  <HelpIntro ID="16" Intro="4、造成伤害最多的角色获得特殊称号——{17e43e}屠魔勇士{-}，3个地图的屠魔勇士称号{17e43e}可叠加{-}" Bold="0" />
+</Config>

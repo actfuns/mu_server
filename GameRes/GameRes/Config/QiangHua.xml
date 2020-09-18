@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <QiangHua ID="4001" QiangHua="3,MaxLifePercent,0.01|5,Mdefense,6-10|7,Defense,12-20|9,Attack,30-50" />
+  <QiangHua ID="4002" QiangHua="3,MaxLifePercent,0.02|5,Mdefense,6-10|7,Defense,12-20|9,Attack,30-50|10,Attack,60-100" />
+  <QiangHua ID="4011" QiangHua="3,MaxLifePercent,0.01|5,Mdefense,6-10|7,Defense,12-20|9,Mattack,30-50" />
+  <QiangHua ID="4012" QiangHua="3,MaxLifePercent,0.02|5,Mdefense,6-10|7,Defense,12-20|9,Mattack,30-50|10,Mattack,60-100" />
+  <QiangHua ID="4021" QiangHua="3,MaxLifePercent,0.01|5,Mdefense,6-10|7,Defense,12-20|9,DSAttack,30-50" />
+  <QiangHua ID="4022" QiangHua="3,MaxLifePercent,0.02|5,Mdefense,6-10|7,Defense,12-20|9,DSAttack,30-50|10,DSAttack,60-100" />
+  <QiangHua ID="5001" QiangHua="3,MaxLifePercent,0.03|5,Mdefense,12-20|7,Defense,18-30|9,Attack,30-50|10,Attack,60-100" />
+  <QiangHua ID="5002" QiangHua="3,MaxLifeV,250|3,MaxLifePercent,0.05|5,Mdefense,20-40|5,MaxLifeV,500|7,Defense,30-60|7,MaxLifeV,1000|9,Attack,60-100|9,MaxLifeV,1500|10,Attack,120-200|10,Lucky,2|10,MaxLifeV,2000" />
+  <QiangHua ID="5003" QiangHua="3,MaxLifePercent,0.02|5,Mdefense,9-15|7,Defense,15-30|9,Attack,30-60|10,Attack,60-100" />
+  <QiangHua ID="5004" QiangHua="3,MaxLifePercent,0.05|5,Mdefense,18-30|7,Defense,24-40|9,Attack,40-80|9,MaxLifeV,800|10,Attack,60-120|10,MaxLifeV,1500" />
+  <QiangHua ID="5011" QiangHua="3,MaxLifeV,200|3,MaxLifePercent,0.03|5,Mdefense,12-20|5,MaxLifeV,400|7,Defense,30-60|7,MaxLifeV,800|9,Mattack,30-50|9,MaxLifeV,1200|10,Mattack,60-100|10,MaxLifeV,1600" />
+  <QiangHua ID="5012" QiangHua="3,MaxLifeV,250|3,MaxLifePercent,0.05|5,Mdefense,20-40|5,MaxLifeV,500|7,Defense,30-60|7,MaxLifeV,1000|9,Mattack,60-100|9,MaxLifeV,1500|10,Mattack,120-200|10,Lucky,2|10,MaxLifeV,2000" />
+  <QiangHua ID="5013" QiangHua="3,MaxLifePercent,0.02|5,Mdefense,9-15|7,Defense,15-30|9,Mattack,30-60|10,Mattack,60-100" />
+  <QiangHua ID="5014" QiangHua="3,MaxLifePercent,0.05|5,Mdefense,18-30|7,Defense,24-40|9,Mattack,40-80|9,MaxLifeV,800|10,Mattack,60-120|10,MaxLifeV,1500" />
+  <QiangHua ID="5021" QiangHua="3,MaxLifePercent,0.03|5,Mdefense,12-20|7,Defense,18-30|9,DSAttack,30-50|10,DSAttack,60-100" />
+  <QiangHua ID="5022" QiangHua="3,MaxLifeV,250|3,MaxLifePercent,0.05|5,Mdefense,20-40|5,MaxLifeV,500|7,Defense,30-60|7,MaxLifeV,1000|9,DSAttack,60-100|9,MaxLifeV,1500|10,DSAttack,120-200|10,Lucky,2|10,MaxLifeV,2000" />
+  <QiangHua ID="5023" QiangHua="3,MaxLifePercent,0.02|5,Mdefense,9-15|7,Defense,15-30|9,DSAttack,30-60|10,DSAttack,60-100" />
+  <QiangHua ID="5024" QiangHua="3,MaxLifePercent,0.05|5,Mdefense,18-30|7,Defense,24-40|9,DSAttack,40-80|9,MaxLifeV,800|10,DSAttack,60-120|10,MaxLifeV,1500" />
+  <QiangHua ID="5501" QiangHua="3,MaxLifePercent,0.03|5,Mdefense,9-15|7,Defense,18-30|9,Attack,30-50|10,Attack,60-100" />
+  <QiangHua ID="5511" QiangHua="3,MaxLifePercent,0.03|5,Mdefense,9-15|7,Defense,18-30|9,Mattack,30-50|10,Mattack,60-100" />
+  <QiangHua ID="5521" QiangHua="3,MaxLifePercent,0.03|5,Mdefense,9-15|7,Defense,18-30|9,DSAttack,30-50|10,DSAttack,60-100" />
+  <QiangHua ID="7001" QiangHua="3,MaxLifePercent,0.05|5,Mdefense,20-40|5,MaxLifeV,750|7,Defense,30-60|7,MaxLifeV,1000|9,Attack,60-100|9,MaxLifeV,1500|10,Attack,120-200|10,Lucky,2|10,MaxLifeV,2000|11,Attack,180-300|11,MaxLifeV,4000|12,Attack,300-500|12,MaxLifeV,6000" />
+  <QiangHua ID="7002" QiangHua="3,MaxLifePercent,0.05|5,Mdefense,18-30|7,Defense,24-40|9,Attack,40-80|9,MaxLifeV,800|10,Attack,60-120|10,MaxLifeV,1500|11,Attack,180-300|11,MaxLifeV,2500|12,Attack,300-500|12,MaxLifeV,3500" />
+  <QiangHua ID="7011" QiangHua="3,MaxLifePercent,0.05|5,Mdefense,20-40|5,MaxLifeV,750|7,Defense,30-60|7,MaxLifeV,1000|9,Mattack,60-100|9,MaxLifeV,1500|10,Mattack,120-200|10,Lucky,2|10,MaxLifeV,2000|11,Mattack,180-300|11,MaxLifeV,2500|12,Mattack,300-500|12,MaxLifeV,3000" />
+  <QiangHua ID="7012" QiangHua="3,MaxLifePercent,0.05|5,Mdefense,18-30|7,Defense,24-40|9,Mattack,40-80|9,MaxLifeV,600|10,Mattack,60-120|10,MaxLifeV,1200|11,Mattack,180-300|11,MaxLifeV,1400|12,Mattack,300-500|12,MaxLifeV,1600" />
+  <QiangHua ID="7021" QiangHua="3,MaxLifePercent,0.05|5,Mdefense,20-40|5,MaxLifeV,750|7,Defense,30-60|7,MaxLifeV,1000|9,DSAttack,60-100|9,MaxLifeV,1500|10,DSAttack,120-200|10,Lucky,2|10,MaxLifeV,2000|11,DSAttack,180-300|11,MaxLifeV,3000|12,DSAttack,300-500|12,MaxLifeV,4000" />
+  <QiangHua ID="7022" QiangHua="3,MaxLifePercent,0.05|5,Mdefense,18-30|7,Defense,24-40|9,DSAttack,40-80|9,MaxLifeV,800|10,DSAttack,60-120|10,MaxLifeV,1500|11,DSAttack,180-300|11,MaxLifeV,2000|12,DSAttack,180-300|12,MaxLifeV,2500" />
+  <QiangHua ID="8001" QiangHua="3,MaxLifePercent,0.05|5,Mdefense,9-15|7,Defense,18-30|9,Attack,30-50|10,Attack,60-120" />
+  <QiangHua ID="8011" QiangHua="3,MaxLifePercent,0.05|5,Mdefense,9-15|7,Defense,18-30|9,Mattack,30-50|10,Mattack,60-120" />
+  <QiangHua ID="8021" QiangHua="3,MaxLifePercent,0.05|5,Mdefense,9-15|7,Defense,18-30|9,DSAttack,30-50|10,DSAttack,60-120" />
+  <QiangHua ID="9001" QiangHua="3,MaxLifePercent,0.03|5,Mdefense,9-5|7,Defense,18-30|9,Attack,30-50|10,Attack,60-120|11,Attack,120-200|12,Attack,180-300" />
+  <QiangHua ID="9011" QiangHua="3,MaxLifePercent,0.03|5,Mdefense,9-5|7,Defense,18-30|9,Mattack,30-50|10,Mattack,60-120|11,Mattack,120-200|12,Mattack,180-300" />
+  <QiangHua ID="9021" QiangHua="3,MaxLifePercent,0.03|5,Mdefense,9-5|7,Defense,18-30|9,DSAttack,30-50|10,DSAttack,60-120|11,DSAttack,120-200|12,DSAttack,180-300" />
+  <QiangHua ID="100" QiangHua="3,MaxLifePercent,0.01|5,Mdefense,6-10|7,Defense,12-20|9,Attack,30-50|9,Mattack,30-50|9,DSAttack,30-50|10,Attack,60-100|10,Mattack,60-100|10,DSAttack,60-100" />
+  <QiangHua ID="200" QiangHua="3,MaxLifeV,150|3,MaxLifePercent,0.03|5,Mdefense,12-20|5,MaxLifeV,300|7,Defense,18-30|7,MaxLifeV,600|9,Mattack,30-50|9,MaxLifeV,900|10,Mattack,60-100|10,MaxLifeV,1200" />
+  <QiangHua ID="300" QiangHua="3,MaxLifeV,200|3,MaxLifePercent,0.03|5,Mdefense,9-15|5,MaxLifeV,300|7,Defense,18-30|9,Attack,30-50|9,Mattack,30-50|9,DSAttack,30-50|10,Attack,60-100|10,Mattack,60-100|10,DSAttack,60-100" />
+  <QiangHua ID="400" QiangHua="3,MaxLifePercent,0.03|5,Mdefense,20-30|7,Defense,30-50|9,Attack,40-60|9,Mattack,40-60|9,DSAttack,40-60|10,Attack,60-100|10,Mattack,60-100|10,DSAttack,60-100|11,Attack,120-200|11,Mattack,120-200|11,DSAttack,120-200|12,Attack,180-300|12,Mattack,180-300|12,DSAttack,180-300" />
+</config>

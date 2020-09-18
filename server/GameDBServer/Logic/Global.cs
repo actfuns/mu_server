@@ -23,10 +23,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x020001CC RID: 460
+	
 	public class Global
 	{
-		// Token: 0x06000944 RID: 2372 RVA: 0x00059498 File Offset: 0x00057698
+		
 		public static string GetXElementNodePath(XElement element)
 		{
 			string result;
@@ -48,13 +48,13 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000945 RID: 2373 RVA: 0x0005950C File Offset: 0x0005770C
+		
 		public static XElement GetXElement(XElement XML, string newroot)
 		{
 			return XML.DescendantsAndSelf(newroot).Single<XElement>();
 		}
 
-		// Token: 0x06000946 RID: 2374 RVA: 0x00059530 File Offset: 0x00057730
+		
 		public static XElement GetSafeXElement(XElement XML, string newroot)
 		{
 			XElement result;
@@ -69,13 +69,13 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000947 RID: 2375 RVA: 0x000595BC File Offset: 0x000577BC
+		
 		public static XElement GetXElement(XElement XML, string newroot, string attribute, string value)
 		{
 			return XML.DescendantsAndSelf(newroot).Single((XElement X) => X.Attribute(attribute).Value == value);
 		}
 
-		// Token: 0x06000948 RID: 2376 RVA: 0x0005963C File Offset: 0x0005783C
+		
 		public static XElement GetSafeXElement(XElement XML, string newroot, string attribute, string value)
 		{
 			XElement result;
@@ -96,7 +96,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000949 RID: 2377 RVA: 0x000596D4 File Offset: 0x000578D4
+		
 		public static XAttribute GetSafeAttribute(XElement XML, string attribute)
 		{
 			XAttribute result;
@@ -116,14 +116,14 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600094A RID: 2378 RVA: 0x00059744 File Offset: 0x00057944
+		
 		public static string GetSafeAttributeStr(XElement XML, string attribute)
 		{
 			XAttribute attrib = Global.GetSafeAttribute(XML, attribute);
 			return (string)attrib;
 		}
 
-		// Token: 0x0600094B RID: 2379 RVA: 0x00059764 File Offset: 0x00057964
+		
 		public static long GetSafeAttributeLong(XElement XML, string attribute)
 		{
 			XAttribute attrib = Global.GetSafeAttribute(XML, attribute);
@@ -147,7 +147,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600094C RID: 2380 RVA: 0x000597D8 File Offset: 0x000579D8
+		
 		public static double GetSafeAttributeDouble(XElement XML, string attribute)
 		{
 			XAttribute attrib = Global.GetSafeAttribute(XML, attribute);
@@ -171,7 +171,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600094D RID: 2381 RVA: 0x00059850 File Offset: 0x00057A50
+		
 		public static XAttribute GetSafeAttribute(XElement XML, string root, string attribute)
 		{
 			XAttribute result;
@@ -191,14 +191,14 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600094E RID: 2382 RVA: 0x000598CC File Offset: 0x00057ACC
+		
 		public static string GetSafeAttributeStr(XElement XML, string root, string attribute)
 		{
 			XAttribute attrib = Global.GetSafeAttribute(XML, root, attribute);
 			return (string)attrib;
 		}
 
-		// Token: 0x0600094F RID: 2383 RVA: 0x000598F0 File Offset: 0x00057AF0
+		
 		public static long GetSafeAttributeLong(XElement XML, string root, string attribute)
 		{
 			XAttribute attrib = Global.GetSafeAttribute(XML, root, attribute);
@@ -222,7 +222,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000950 RID: 2384 RVA: 0x00059964 File Offset: 0x00057B64
+		
 		public static double GetSafeAttributeDouble(XElement XML, string root, string attribute)
 		{
 			XAttribute attrib = Global.GetSafeAttribute(XML, root, attribute);
@@ -246,7 +246,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000951 RID: 2385 RVA: 0x000599E0 File Offset: 0x00057BE0
+		
 		public static void DBRoleInfo2RoleDataEx(DBRoleInfo dbRoleInfo, RoleDataEx roleDataEx)
 		{
 			lock (dbRoleInfo)
@@ -454,7 +454,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000952 RID: 2386 RVA: 0x0005A3E0 File Offset: 0x000585E0
+		
 		public static void DBRoleInfo2RoleData4Selector(DBManager dbMgr, DBRoleInfo dbRoleInfo, RoleData4Selector roleData4Selector)
 		{
 			lock (dbRoleInfo)
@@ -488,7 +488,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000953 RID: 2387 RVA: 0x0005A550 File Offset: 0x00058750
+		
 		public static LineData LineItemToLineData(LineItem lineItem)
 		{
 			return new LineData
@@ -500,7 +500,7 @@ namespace GameDBServer.Logic
 			};
 		}
 
-		// Token: 0x06000954 RID: 2388 RVA: 0x0005A59C File Offset: 0x0005879C
+		
 		public static int SafeConvertToInt32(string str, int fromBase = 10)
 		{
 			str = str.Trim();
@@ -523,7 +523,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000955 RID: 2389 RVA: 0x0005A5EC File Offset: 0x000587EC
+		
 		public static long SafeConvertToInt64(string str, int fromBase = 10)
 		{
 			str = str.Trim();
@@ -546,7 +546,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000956 RID: 2390 RVA: 0x0005A63C File Offset: 0x0005883C
+		
 		public static DateTime SafeConvertToDateTime(string str, DateTime defValue)
 		{
 			str = str.Trim();
@@ -573,52 +573,52 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000957 RID: 2391 RVA: 0x0005A698 File Offset: 0x00058898
+		
 		public static double GetOffsetSecond(DateTime date)
 		{
 			double temp = (date - DateTime.Parse("2011-11-11")).TotalMilliseconds;
 			return temp / 1000.0;
 		}
 
-		// Token: 0x06000958 RID: 2392 RVA: 0x0005A6D0 File Offset: 0x000588D0
+		
 		public static long GetOffsetMinute(DateTime date)
 		{
 			return (long)(Global.GetOffsetSecond(date) / 60.0);
 		}
 
-		// Token: 0x06000959 RID: 2393 RVA: 0x0005A6F4 File Offset: 0x000588F4
+		
 		public static int GetOffsetDay(DateTime now)
 		{
 			double temp = (now - DateTime.Parse("2011-11-11")).TotalMilliseconds;
 			return (int)(temp / 1000.0 / 60.0 / 60.0 / 24.0);
 		}
 
-		// Token: 0x0600095A RID: 2394 RVA: 0x0005A74C File Offset: 0x0005894C
+		
 		public static string GetDayStartTime(DateTime now)
 		{
 			return Global.GetDateTimeString(now.Date);
 		}
 
-		// Token: 0x0600095B RID: 2395 RVA: 0x0005A76C File Offset: 0x0005896C
+		
 		public static string GetDayEndTime(DateTime now)
 		{
 			return Global.GetDateTimeString(now.Date.AddDays(1.0));
 		}
 
-		// Token: 0x0600095C RID: 2396 RVA: 0x0005A79C File Offset: 0x0005899C
+		
 		public static string GetDateTimeString(DateTime now)
 		{
 			return now.ToString("yyyy-MM-dd HH:mm:ss");
 		}
 
-		// Token: 0x0600095D RID: 2397 RVA: 0x0005A7BC File Offset: 0x000589BC
+		
 		public static DateTime GetRealDate(int day)
 		{
 			DateTime startDay = DateTime.Parse("2011-11-11");
 			return Global.GetAddDaysDataTime(startDay, day, true);
 		}
 
-		// Token: 0x0600095E RID: 2398 RVA: 0x0005A7E4 File Offset: 0x000589E4
+		
 		public static string GetSocketRemoteEndPoint(Socket s)
 		{
 			try
@@ -631,7 +631,7 @@ namespace GameDBServer.Logic
 			return "";
 		}
 
-		// Token: 0x0600095F RID: 2399 RVA: 0x0005A828 File Offset: 0x00058A28
+		
 		public static string GetDebugHelperInfo(Socket socket)
 		{
 			string result;
@@ -654,7 +654,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000960 RID: 2400 RVA: 0x0005A888 File Offset: 0x00058A88
+		
 		public static List<GoodsData> GetGoodsDataListBySite(DBRoleInfo dbRoleInfo, int site)
 		{
 			List<GoodsData> goodsDataList = new List<GoodsData>();
@@ -677,7 +677,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000961 RID: 2401 RVA: 0x0005A904 File Offset: 0x00058B04
+		
 		public static List<GoodsData> GetGoodsDataListBySiteRange(DBRoleInfo dbRoleInfo, int siteBegin, int siteEnd)
 		{
 			List<GoodsData> goodsDataList = new List<GoodsData>();
@@ -700,7 +700,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000962 RID: 2402 RVA: 0x0005A994 File Offset: 0x00058B94
+		
 		public static int GetGoodsDataCountBySite(DBRoleInfo dbRoleInfo, int site)
 		{
 			int result;
@@ -723,7 +723,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000963 RID: 2403 RVA: 0x0005A9FC File Offset: 0x00058BFC
+		
 		public static GoodsData GetGoodsDataByDbID(DBRoleInfo dbRoleInfo, int goodsDbID)
 		{
 			lock (dbRoleInfo)
@@ -742,7 +742,7 @@ namespace GameDBServer.Logic
 			return null;
 		}
 
-		// Token: 0x06000964 RID: 2404 RVA: 0x0005AAA0 File Offset: 0x00058CA0
+		
 		public static List<GoodsData> GetUsingGoodsDataList(DBRoleInfo dbRoleInfo)
 		{
 			List<GoodsData> usingGoodsDataList = new List<GoodsData>();
@@ -765,7 +765,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000965 RID: 2405 RVA: 0x0005AB34 File Offset: 0x00058D34
+		
 		public static void UpdateGoodsLimitByID(DBRoleInfo dbRoleInfo, int goodsID, int dayID, int usedNum)
 		{
 			lock (dbRoleInfo)
@@ -798,7 +798,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000966 RID: 2406 RVA: 0x0005AC3C File Offset: 0x00058E3C
+		
 		public static HorseData GetHorseDataByDbID(DBRoleInfo dbRoleInfo, int dbID)
 		{
 			HorseData result;
@@ -826,7 +826,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000967 RID: 2407 RVA: 0x0005ACEC File Offset: 0x00058EEC
+		
 		public static PetData GetPetDataByDbID(DBRoleInfo dbRoleInfo, int dbID)
 		{
 			PetData result;
@@ -854,7 +854,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000968 RID: 2408 RVA: 0x0005AD9C File Offset: 0x00058F9C
+		
 		public static DJPointData GetRoleDJPointData(DBRoleInfo dbRoleInfo)
 		{
 			DJPointData djPointData = null;
@@ -878,7 +878,7 @@ namespace GameDBServer.Logic
 			return djPointData;
 		}
 
-		// Token: 0x06000969 RID: 2409 RVA: 0x0005AEAC File Offset: 0x000590AC
+		
 		public static int GetRoleOnlineState(DBRoleInfo dbRoleInfo)
 		{
 			int result;
@@ -897,7 +897,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600096A RID: 2410 RVA: 0x0005AEE0 File Offset: 0x000590E0
+		
 		public static int GetUserOnlineState(DBUserInfo dbUserInfo)
 		{
 			int result;
@@ -912,7 +912,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600096B RID: 2411 RVA: 0x0005AF0C File Offset: 0x0005910C
+		
 		public static DBRoleInfo FindOnlineRoleInfoByUserInfo(DBManager dbMgr, DBUserInfo dbUserInfo)
 		{
 			DBRoleInfo result;
@@ -939,38 +939,38 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600096C RID: 2412 RVA: 0x0005AF90 File Offset: 0x00059190
+		
 		public static bool IsGameServerClientOnline(int lineId)
 		{
 			GameServerClient client = LineManager.GetGameServerClient(lineId);
 			return client != null && client.CurrentSocket != null && client == TCPManager.getInstance().getClient(client.CurrentSocket);
 		}
 
-		// Token: 0x0600096D RID: 2413 RVA: 0x0005AFD8 File Offset: 0x000591D8
+		
 		public static string FormatRoleName(DBRoleInfo dbRoleInfo)
 		{
 			return Global.FormatRoleName(dbRoleInfo.ZoneID, dbRoleInfo.RoleName);
 		}
 
-		// Token: 0x0600096E RID: 2414 RVA: 0x0005AFFC File Offset: 0x000591FC
+		
 		public static string FormatRoleName(string zoneID, string roleName)
 		{
 			return roleName;
 		}
 
-		// Token: 0x0600096F RID: 2415 RVA: 0x0005B010 File Offset: 0x00059210
+		
 		public static string FormatRoleName(int zoneID, string roleName)
 		{
 			return roleName;
 		}
 
-		// Token: 0x06000970 RID: 2416 RVA: 0x0005B024 File Offset: 0x00059224
+		
 		public static string FormatBangHuiName(int zoneID, string bhName)
 		{
 			return bhName;
 		}
 
-		// Token: 0x06000971 RID: 2417 RVA: 0x0005B038 File Offset: 0x00059238
+		
 		public static int GetDBRoleInfoByZhiWu(List<BangHuiMgrItemData> bangHuiMgrItemDataList, int zhiWu)
 		{
 			int result;
@@ -992,7 +992,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000972 RID: 2418 RVA: 0x0005B0A0 File Offset: 0x000592A0
+		
 		public static void WriteRoleInfoLog(DBManager dbMgr, DBRoleInfo dbRoleInfo)
 		{
 			try
@@ -1026,7 +1026,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000973 RID: 2419 RVA: 0x0005B1B0 File Offset: 0x000593B0
+		
 		public static void LoadLangDict()
 		{
 			XElement xml = null;
@@ -1056,7 +1056,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000974 RID: 2420 RVA: 0x0005B284 File Offset: 0x00059484
+		
 		public static string GetLang(string chineseText)
 		{
 			string result;
@@ -1083,7 +1083,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000975 RID: 2421 RVA: 0x0005B2DC File Offset: 0x000594DC
+		
 		public static List<MailData> LoadUserMailItemDataList(DBManager dbMgr, int rid)
 		{
 			DBRoleInfo dbRoleInfo = dbMgr.GetDBRoleInfo(ref rid);
@@ -1094,13 +1094,13 @@ namespace GameDBServer.Logic
 			return DBQuery.GetMailItemDataList(dbMgr, rid);
 		}
 
-		// Token: 0x06000976 RID: 2422 RVA: 0x0005B310 File Offset: 0x00059510
+		
 		public static int LoadUserMailItemDataCount(DBManager dbMgr, int rid, int excludeReadState = 0, int limitCount = 1)
 		{
 			return DBQuery.GetMailItemDataCount(dbMgr, rid, excludeReadState, limitCount);
 		}
 
-		// Token: 0x06000977 RID: 2423 RVA: 0x0005B32C File Offset: 0x0005952C
+		
 		public static MailData LoadMailItemData(DBManager dbMgr, int rid, int mailID)
 		{
 			MailData mailData = DBQuery.GetMailItemData(dbMgr, rid, mailID);
@@ -1116,7 +1116,7 @@ namespace GameDBServer.Logic
 			return mailData;
 		}
 
-		// Token: 0x06000978 RID: 2424 RVA: 0x0005B38C File Offset: 0x0005958C
+		
 		public static bool UpdateHasReadMailFlag(DBManager dbMgr, int rid, int mailID)
 		{
 			bool ret = true;
@@ -1124,7 +1124,7 @@ namespace GameDBServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06000979 RID: 2425 RVA: 0x0005B3AC File Offset: 0x000595AC
+		
 		public static bool UpdateHasFetchMailGoodsStat(DBManager dbMgr, int rid, int mailID)
 		{
 			bool ret = DBWriter.UpdateMailHasFetchGoodsFlag(dbMgr, mailID, rid);
@@ -1132,7 +1132,7 @@ namespace GameDBServer.Logic
 			return ret;
 		}
 
-		// Token: 0x0600097A RID: 2426 RVA: 0x0005B3D4 File Offset: 0x000595D4
+		
 		public static bool DeleteMail(DBManager dbMgr, int rid, string mailIDs)
 		{
 			bool result = false;
@@ -1160,7 +1160,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600097B RID: 2427 RVA: 0x0005B478 File Offset: 0x00059678
+		
 		public static int AddMail(DBManager dbMgr, string[] fields, out int addGoodsCount)
 		{
 			int senderrid = Convert.ToInt32(fields[0]);
@@ -1200,7 +1200,7 @@ namespace GameDBServer.Logic
 			return mailID;
 		}
 
-		// Token: 0x0600097C RID: 2428 RVA: 0x0005B5A4 File Offset: 0x000597A4
+		
 		private static int AddMailGoods(DBManager dbMgr, int mailid, string[] goodsArr)
 		{
 			int result;
@@ -1230,7 +1230,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600097D RID: 2429 RVA: 0x0005B6B4 File Offset: 0x000598B4
+		
 		public static int FindDBRoleID(DBManager dbMgr, string roleName)
 		{
 			int roleID = dbMgr.DBRoleMgr.FindDBRoleID(roleName);
@@ -1253,7 +1253,7 @@ namespace GameDBServer.Logic
 			return roleID;
 		}
 
-		// Token: 0x0600097E RID: 2430 RVA: 0x0005B728 File Offset: 0x00059928
+		
 		public static void GetRoleRealNameAndZoneID(string inRoleName, out string outRoleName, out int zoneID)
 		{
 			outRoleName = "";
@@ -1272,20 +1272,20 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600097F RID: 2431 RVA: 0x0005B7BC File Offset: 0x000599BC
+		
 		public static int TransMoneyToYuanBao(int money)
 		{
 			int moneyToYuanBao = GameDBManager.GameConfigMgr.GetGameConfigItemInt("money-to-yuanbao", 10);
 			return money * moneyToYuanBao;
 		}
 
-		// Token: 0x06000980 RID: 2432 RVA: 0x0005B7E8 File Offset: 0x000599E8
+		
 		public static string GetHuoDongKeyString(string fromDate, string toDate)
 		{
 			return string.Format("{0}_{1}", fromDate, toDate);
 		}
 
-		// Token: 0x06000981 RID: 2433 RVA: 0x0005B808 File Offset: 0x00059A08
+		
 		public static bool IsInActivityPeriod(string fromDate, string toDate)
 		{
 			try
@@ -1301,7 +1301,7 @@ namespace GameDBServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000982 RID: 2434 RVA: 0x0005B868 File Offset: 0x00059A68
+		
 		public static bool GetUserMaxLevelRole(DBManager dbMgr, string userID, out string maxLevelRoleName, out int maxLevelRoleZoneID)
 		{
 			maxLevelRoleName = "";
@@ -1341,7 +1341,7 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000983 RID: 2435 RVA: 0x0005B9B0 File Offset: 0x00059BB0
+		
 		public static bool GetRoleNameAndUserID(DBManager dbMgr, int rid, out string maxLevelRoleName, out string userID)
 		{
 			maxLevelRoleName = "";
@@ -1355,7 +1355,7 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000984 RID: 2436 RVA: 0x0005B9F4 File Offset: 0x00059BF4
+		
 		public static List<HuoDongPaiHangData> GetPaiHangItemListByHuoDongLimit(DBManager dbMgr, List<int> minGateValueList, int activityType, string midDate, int maxPaiHang = 10)
 		{
 			List<HuoDongPaiHangData> listPaiHangReal = DBQuery.GetActivityPaiHangListNearMidTime(dbMgr, activityType, midDate, maxPaiHang);
@@ -1383,7 +1383,7 @@ namespace GameDBServer.Logic
 			return listPaiHang;
 		}
 
-		// Token: 0x06000985 RID: 2437 RVA: 0x0005BAC8 File Offset: 0x00059CC8
+		
 		public static List<InputKingPaiHangData> GetInputKingPaiHangListByHuoDongLimit(DBManager dbMgr, string fromDate, string toDate, List<int> minGateValueList, int maxPaiHang = 3)
 		{
 			RankDataKey key = new RankDataKey(RankType.Charge, fromDate, toDate, minGateValueList);
@@ -1405,7 +1405,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000986 RID: 2438 RVA: 0x0005BB28 File Offset: 0x00059D28
+		
 		public static List<InputKingPaiHangData> GetUsedMoneyKingPaiHangListByHuoDongLimit(DBManager dbMgr, string fromDate, string toDate, List<int> minGateValueList, int maxPaiHang = 3)
 		{
 			RankDataKey key = new RankDataKey(RankType.Consume, fromDate, toDate, minGateValueList);
@@ -1427,7 +1427,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000987 RID: 2439 RVA: 0x0005BB88 File Offset: 0x00059D88
+		
 		public static TCPProcessCmdResults ProcessHuoDongForKing(DBManager dbMgr, TCPOutPacketPool pool, int nID, string[] fields, int activityType, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1505,7 +1505,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000988 RID: 2440 RVA: 0x0005BE80 File Offset: 0x0005A080
+		
 		public static TCPProcessCmdResults GetHuoDongPaiHangForKing(DBManager dbMgr, TCPOutPacketPool pool, int nID, string[] fields, int activityType, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1531,7 +1531,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000989 RID: 2441 RVA: 0x0005BF58 File Offset: 0x0005A158
+		
 		public static void LogAndExitProcess(string error)
 		{
 			Console.ForegroundColor = ConsoleColor.Red;
@@ -1547,7 +1547,7 @@ namespace GameDBServer.Logic
 			Process.GetCurrentProcess().Kill();
 		}
 
-		// Token: 0x0600098A RID: 2442 RVA: 0x0005BFE4 File Offset: 0x0005A1E4
+		
 		public static bool InitDBAutoIncrementValues(DBManager dbManger)
 		{
 			int baseValue = GameDBManager.ZoneID * GameDBManager.DBAutoIncreaseStepValue;
@@ -1581,7 +1581,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600098B RID: 2443 RVA: 0x0005C0D4 File Offset: 0x0005A2D4
+		
 		public static void UpdateRoleParamByName(DBManager dbMgr, DBRoleInfo dbRoleInfo, string name, string value, RoleParamType roleParamType = null)
 		{
 			if (roleParamType == null)
@@ -1621,7 +1621,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600098C RID: 2444 RVA: 0x0005C1E4 File Offset: 0x0005A3E4
+		
 		public static long ModifyRoleParamLongByName(DBManager dbMgr, DBRoleInfo dbRoleInfo, string name, long value, RoleParamType roleParamType = null)
 		{
 			value += Global.GetRoleParamsInt64(dbRoleInfo, name);
@@ -1629,7 +1629,7 @@ namespace GameDBServer.Logic
 			return value;
 		}
 
-		// Token: 0x0600098D RID: 2445 RVA: 0x0005C214 File Offset: 0x0005A414
+		
 		public static string GetRoleParamByName(DBRoleInfo dbRoleInfo, string name)
 		{
 			lock (dbRoleInfo)
@@ -1643,7 +1643,7 @@ namespace GameDBServer.Logic
 			return null;
 		}
 
-		// Token: 0x0600098E RID: 2446 RVA: 0x0005C280 File Offset: 0x0005A480
+		
 		public static int GetRoleParamsInt32(DBRoleInfo dbRoleInfo, string name)
 		{
 			string valueString = Global.GetRoleParamByName(dbRoleInfo, name);
@@ -1659,7 +1659,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600098F RID: 2447 RVA: 0x0005C2BC File Offset: 0x0005A4BC
+		
 		public static long GetRoleParamsInt64(DBRoleInfo dbRoleInfo, string name)
 		{
 			string valueString = Global.GetRoleParamByName(dbRoleInfo, name);
@@ -1675,7 +1675,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000990 RID: 2448 RVA: 0x0005C2F8 File Offset: 0x0005A4F8
+		
 		public static int AddNewQiangGouBuyItem(DBManager dbMgr, int roleID, int goodsID, int goodsNum, int totalPrice, int leftMoney, int qiangGouId, int actStartDay)
 		{
 			lock (Global.QiangGouMutex)
@@ -1689,7 +1689,7 @@ namespace GameDBServer.Logic
 			return 1;
 		}
 
-		// Token: 0x06000991 RID: 2449 RVA: 0x0005C36C File Offset: 0x0005A56C
+		
 		public static void QueryQiangGouBuyItemInfo(DBManager dbMgr, int roleID, int goodsID, int qiangGouId, int random, int actStartDay, out int roleBuyNum, out int totalBuyNum)
 		{
 			lock (Global.QiangGouMutex)
@@ -1699,13 +1699,13 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000992 RID: 2450 RVA: 0x0005C3D0 File Offset: 0x0005A5D0
+		
 		public static int GetBitValue(int whichOne)
 		{
 			return (int)Math.Pow(2.0, (double)(whichOne - 1));
 		}
 
-		// Token: 0x06000993 RID: 2451 RVA: 0x0005C3FC File Offset: 0x0005A5FC
+		
 		public static long GetBitRangeValue(long value, int startBit, int count)
 		{
 			long result;
@@ -1736,7 +1736,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000994 RID: 2452 RVA: 0x0005C480 File Offset: 0x0005A680
+		
 		public static DateTime GetAddDaysDataTime(DateTime dateTime, int addDays, bool roundDay = true)
 		{
 			if (roundDay)
@@ -1746,7 +1746,7 @@ namespace GameDBServer.Logic
 			return new DateTime(dateTime.Ticks + (long)addDays * 10000L * 1000L * 24L * 60L * 60L);
 		}
 
-		// Token: 0x06000995 RID: 2453 RVA: 0x0005C4E8 File Offset: 0x0005A6E8
+		
 		public static WingData GetWingData(DBRoleInfo dbRoleInfo)
 		{
 			WingData result;
@@ -1764,7 +1764,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000996 RID: 2454 RVA: 0x0005C540 File Offset: 0x0005A740
+		
 		public static TCPProcessCmdResults SaveConsumeLog(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1823,7 +1823,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000997 RID: 2455 RVA: 0x0005C754 File Offset: 0x0005A954
+		
 		public static string GetLocalAddressIPs()
 		{
 			string addressIP = "";
@@ -1850,7 +1850,7 @@ namespace GameDBServer.Logic
 			return addressIP;
 		}
 
-		// Token: 0x06000998 RID: 2456 RVA: 0x0005C810 File Offset: 0x0005AA10
+		
 		public static string GetInternalIP()
 		{
 			string localIP = "?";
@@ -1879,7 +1879,7 @@ namespace GameDBServer.Logic
 			return localIP;
 		}
 
-		// Token: 0x06000999 RID: 2457 RVA: 0x0005C8F8 File Offset: 0x0005AAF8
+		
 		public static int GetTotalUsedMoney(DBManager dbMgr, int roleID)
 		{
 			DBRoleInfo dbRoleInfo = dbMgr.GetDBRoleInfo(ref roleID);
@@ -1911,7 +1911,7 @@ namespace GameDBServer.Logic
 			return result2;
 		}
 
-		// Token: 0x0600099A RID: 2458 RVA: 0x0005C9C0 File Offset: 0x0005ABC0
+		
 		public static void AddTotalUsedMoney(DBManager dbMgr, int roleID, int addMoney)
 		{
 			DBRoleInfo dbRoleInfo = dbMgr.GetDBRoleInfo(ref roleID);
@@ -1934,7 +1934,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600099B RID: 2459 RVA: 0x0005CA98 File Offset: 0x0005AC98
+		
 		public static List<uint> ParseRoleparamStreamValueToList(string value)
 		{
 			List<uint> lsValues = new List<uint>();
@@ -1959,7 +1959,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600099C RID: 2460 RVA: 0x0005CB28 File Offset: 0x0005AD28
+		
 		public static string ParseListToRoleparamStreamValue(List<uint> lsUint)
 		{
 			string newStringValue = "";
@@ -1972,7 +1972,7 @@ namespace GameDBServer.Logic
 			return Convert.ToBase64String(b);
 		}
 
-		// Token: 0x0600099D RID: 2461 RVA: 0x0005CB98 File Offset: 0x0005AD98
+		
 		public static int[] StringArray2IntArray(string[] sa)
 		{
 			int[] da = new int[sa.Length];
@@ -1985,7 +1985,7 @@ namespace GameDBServer.Logic
 			return da;
 		}
 
-		// Token: 0x0600099E RID: 2462 RVA: 0x0005CBF0 File Offset: 0x0005ADF0
+		
 		public static List<GoodsData> ParseGoodsDataList(string strGoodIDs)
 		{
 			string[] fields = strGoodIDs.Split(new char[]
@@ -2022,7 +2022,7 @@ namespace GameDBServer.Logic
 			return goodsDataList;
 		}
 
-		// Token: 0x0600099F RID: 2463 RVA: 0x0005CCEC File Offset: 0x0005AEEC
+		
 		public static Encoding GetSysEncoding()
 		{
 			Encoding result;
@@ -2037,7 +2037,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x060009A0 RID: 2464 RVA: 0x0005CD28 File Offset: 0x0005AF28
+		
 		public static void CheckCodes()
 		{
 			bool result = true;
@@ -2051,7 +2051,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060009A1 RID: 2465 RVA: 0x0005CD9C File Offset: 0x0005AF9C
+		
 		public static bool CheckDuplicateEnum(Type type)
 		{
 			bool result = true;
@@ -2069,7 +2069,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x060009A2 RID: 2466 RVA: 0x0005CE68 File Offset: 0x0005B068
+		
 		public static bool CheckDuplicateFieldValue(Type type)
 		{
 			bool result = true;
@@ -2087,7 +2087,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x060009A3 RID: 2467 RVA: 0x0005CEF0 File Offset: 0x0005B0F0
+		
 		public static bool CheckAllProtoBufContract()
 		{
 			bool result = true;
@@ -2141,7 +2141,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x060009A4 RID: 2468 RVA: 0x0005D0F4 File Offset: 0x0005B2F4
+		
 		public static string GCC(int formatId, params object[] args)
 		{
 			string format = Global.FormatArray[formatId];
@@ -2166,7 +2166,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x060009A5 RID: 2469 RVA: 0x0005D198 File Offset: 0x0005B398
+		
 		public static bool CCC(string cc, int formatId, params object[] args)
 		{
 			string format = Global.FormatArray[formatId];
@@ -2175,7 +2175,7 @@ namespace GameDBServer.Logic
 			return cc == cc2;
 		}
 
-		// Token: 0x060009A6 RID: 2470 RVA: 0x0005D1D8 File Offset: 0x0005B3D8
+		
 		public static bool AddCC(string cc)
 		{
 			bool result;
@@ -2186,7 +2186,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x060009A7 RID: 2471 RVA: 0x0005D228 File Offset: 0x0005B428
+		
 		public static bool ProcessGMMsg(string[] args)
 		{
 			bool result;
@@ -2209,47 +2209,47 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x04000BD7 RID: 3031
+		
 		public const int MaxFuMoMailNum = 50;
 
-		// Token: 0x04000BD8 RID: 3032
+		
 		public static object BangHuiMutex = new object();
 
-		// Token: 0x04000BD9 RID: 3033
+		
 		private static Dictionary<string, string> LangDict = null;
 
-		// Token: 0x04000BDA RID: 3034
+		
 		private static Dictionary<string, List<InputKingPaiHangData>> dictCachingInputMoneyKingPaiHangListByHuoDongLimit = new Dictionary<string, List<InputKingPaiHangData>>();
 
-		// Token: 0x04000BDB RID: 3035
+		
 		private static Dictionary<string, long> dictInputMoneyKingPaiHangListByHuoDongLimitHour = new Dictionary<string, long>();
 
-		// Token: 0x04000BDC RID: 3036
+		
 		private static object CachingInputMoneyKingPaiHangLock = new object();
 
-		// Token: 0x04000BDD RID: 3037
+		
 		private static Dictionary<string, List<InputKingPaiHangData>> dictCachingUsedMoneyKingPaiHangListByHuoDongLimit = new Dictionary<string, List<InputKingPaiHangData>>();
 
-		// Token: 0x04000BDE RID: 3038
+		
 		private static Dictionary<string, long> dictUsedMoneyKingPaiHangListByHuoDongLimitHour = new Dictionary<string, long>();
 
-		// Token: 0x04000BDF RID: 3039
+		
 		private static object CachingUsedMoneyKingPaiHangLock = new object();
 
-		// Token: 0x04000BE0 RID: 3040
+		
 		public static object QiangGouMutex = new object();
 
-		// Token: 0x04000BE1 RID: 3041
+		
 		private static object addtotalusedmoney_mutex = new object();
 
-		// Token: 0x04000BE2 RID: 3042
+		
 		public static string[] DontCheckEnumNames = new string[]
 		{
 			"Max",
 			"Max_Configed"
 		};
 
-		// Token: 0x04000BE3 RID: 3043
+		
 		private static readonly string[] FormatArray = new string[]
 		{
 			"",
@@ -2260,10 +2260,10 @@ namespace GameDBServer.Logic
 			"jOU81>.fjoeanl3fw16d2.*{0}YY{1}.{2}={3}1f3sl3e5-{4}"
 		};
 
-		// Token: 0x04000BE4 RID: 3044
+		
 		private static HashSet<string> CCHashSet1 = new HashSet<string>();
 
-		// Token: 0x020001CD RID: 461
+		
 		
 		public delegate T SQLDelegate<T>(MySQLDataReader reader);
 	}

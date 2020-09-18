@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <Levelup Level="1" Cost="0" />
+  <Levelup Level="2" Cost="120" />
+  <Levelup Level="3" Cost="360" />
+  <Levelup Level="4" Cost="690" />
+  <Levelup Level="5" Cost="1120" />
+  <Levelup Level="6" Cost="1640" />
+  <Levelup Level="7" Cost="2230" />
+  <Levelup Level="8" Cost="2910" />
+  <Levelup Level="9" Cost="3660" />
+  <Levelup Level="10" Cost="4480" />
+  <Levelup Level="11" Cost="5370" />
+  <Levelup Level="12" Cost="6320" />
+  <Levelup Level="13" Cost="7340" />
+  <Levelup Level="14" Cost="8430" />
+  <Levelup Level="15" Cost="9580" />
+  <Levelup Level="16" Cost="10780" />
+  <Levelup Level="17" Cost="12050" />
+  <Levelup Level="18" Cost="13380" />
+  <Levelup Level="19" Cost="14770" />
+  <Levelup Level="20" Cost="16210" />
+  <Levelup Level="21" Cost="17710" />
+  <Levelup Level="22" Cost="19270" />
+  <Levelup Level="23" Cost="20880" />
+  <Levelup Level="24" Cost="22540" />
+  <Levelup Level="25" Cost="24260" />
+  <Levelup Level="26" Cost="26030" />
+  <Levelup Level="27" Cost="27850" />
+  <Levelup Level="28" Cost="29730" />
+  <Levelup Level="29" Cost="31660" />
+  <Levelup Level="30" Cost="33630" />
+</config>

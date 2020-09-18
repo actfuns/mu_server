@@ -4,17 +4,17 @@ using GameDBServer.DB;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x020001AB RID: 427
+	
 	public class HuangDiTeQuanMgr
 	{
-		// Token: 0x0600090D RID: 2317 RVA: 0x000548EC File Offset: 0x00052AEC
+		
 		private static void AddToHuangDiToOtherRoleDict(int cmdID, int otherRoleID)
 		{
 			string key = string.Format("{0}_{1}", cmdID, otherRoleID);
 			HuangDiTeQuanMgr.HuangDiToOtherRoleDict[key] = DateTime.Now.DayOfYear;
 		}
 
-		// Token: 0x0600090E RID: 2318 RVA: 0x0005492C File Offset: 0x00052B2C
+		
 		public static bool FindHuangDiToOtherRoleDict(int cmdID, int otherRoleID)
 		{
 			string key = string.Format("{0}_{1}", cmdID, otherRoleID);
@@ -34,7 +34,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600090F RID: 2319 RVA: 0x000549B8 File Offset: 0x00052BB8
+		
 		public static void LoadHuangDiTeQuan(DBManager dbMgr)
 		{
 			HuangDiTeQuanMgr.MyHuangDiTeQuanItem = DBQuery.LoadHuangDiTeQuan(dbMgr);
@@ -56,13 +56,13 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000910 RID: 2320 RVA: 0x00054A38 File Offset: 0x00052C38
+		
 		public static HuangDiTeQuanItem GetHuangDiTeQuanItem()
 		{
 			return HuangDiTeQuanMgr.MyHuangDiTeQuanItem;
 		}
 
-		// Token: 0x06000911 RID: 2321 RVA: 0x00054A50 File Offset: 0x00052C50
+		
 		public static void ClearHuangDiTeQuan()
 		{
 			HuangDiTeQuanMgr.MyHuangDiTeQuanItem = new HuangDiTeQuanItem
@@ -80,7 +80,7 @@ namespace GameDBServer.Logic
 			};
 		}
 
-		// Token: 0x06000912 RID: 2322 RVA: 0x00054AB4 File Offset: 0x00052CB4
+		
 		public static bool CanExecuteHuangDiTeQuanNow(int cmdID)
 		{
 			long nowTicks = DateTime.Now.Ticks;
@@ -117,7 +117,7 @@ namespace GameDBServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000913 RID: 2323 RVA: 0x00054C38 File Offset: 0x00052E38
+		
 		public static bool AddHuanDiTeQuan(int cmdID, int otherRoleID)
 		{
 			long nowTicks = DateTime.Now.Ticks;
@@ -191,10 +191,10 @@ namespace GameDBServer.Logic
 			return false;
 		}
 
-		// Token: 0x040009BA RID: 2490
+		
 		private static HuangDiTeQuanItem MyHuangDiTeQuanItem = null;
 
-		// Token: 0x040009BB RID: 2491
+		
 		private static Dictionary<string, int> HuangDiToOtherRoleDict = new Dictionary<string, int>();
 	}
 }

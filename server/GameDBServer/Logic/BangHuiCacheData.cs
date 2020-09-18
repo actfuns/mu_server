@@ -4,10 +4,10 @@ using MySQLDriverCS;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000116 RID: 278
+	
 	public class BangHuiCacheData
 	{
-		// Token: 0x060004A1 RID: 1185 RVA: 0x00025C2C File Offset: 0x00023E2C
+		
 		public bool Query(int bhid)
 		{
 			this.BhId = bhid;
@@ -27,7 +27,7 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x060004A2 RID: 1186 RVA: 0x00025D00 File Offset: 0x00023F00
+		
 		public bool UpdateGVoicePrioritys(string prioritys)
 		{
 			this.GVoicePrioritys = prioritys;
@@ -40,13 +40,13 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x04000778 RID: 1912
+		
 		public int BhId;
 
-		// Token: 0x04000779 RID: 1913
+		
 		public long LeaderId;
 
-		// Token: 0x0400077A RID: 1914
+		
 		public string GVoicePrioritys;
 	}
 }

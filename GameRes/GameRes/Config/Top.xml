@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+	<Item ID="5" Name="等级排行榜" Title0="玩家名称" Title="等级" Description="该榜收录等级最高的前100名玩家" />
+	<Item ID="6" Name="财富排行榜" Title0="玩家名称" Title="铜钱" Description="该榜收录财富最高的前100名玩家" />
+	<Item ID="2" Name="经脉排行榜" Title0="玩家名称" Title="境界" Description="该榜收录经脉境界最高的前100名玩家" />
+	<Item ID="3" Name="武学修为榜" Title0="玩家名称" Title="修为" Description="该榜收录武学修为排名最高的前100名的玩家" />
+	<Item ID="8" Name="BOSS击杀榜" Title0="玩家名称" Title="总击杀" Description="该榜收录击杀BOSS数5个以上，排名最高的前100名玩家" />
+	<Item ID="9" Name="仙魔争霸榜" Title0="玩家名称" Title="称雄次数" Description="该榜收录仙魔争霸赛中积分排名前3次数累计前100名的玩家" />
+	<Item ID="11" Name="副本排行榜" Title0="玩家名称" Title="" Description="" />
+</Items>

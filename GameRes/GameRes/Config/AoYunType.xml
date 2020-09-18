@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <AoYunType ID="1" Name="比赛项目" />
+  <AoYunType ID="2" Name="奥运竞猜" />
+  <AoYunType ID="3" Name="奥运排行" />
+  <AoYunType ID="4" Name="奥运商城" />
+</Config>

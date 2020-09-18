@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Award ID="1" MinLucky="100" GoodsIDs="210005,5,0,0,1,0" Description="使用后可获得2000000经验。" />
+  <Award ID="2" MinLucky="300" GoodsIDs="210005,5,0,0,1,0" Description="使用后可获得2000000经验。" />
+  <Award ID="3" MinLucky="600" GoodsIDs="210005,5,0,0,1,0" Description="使用后可获得2000000经验。" />
+  <Award ID="4" MinLucky="1000" GoodsIDs="210005,5,0,0,1,0" Description="使用后可获得2000000经验。" />
+  <Award ID="5" MinLucky="1500" GoodsIDs="210005,5,0,0,1,0" Description="使用后可获得2000000经验。" />
+</Config>

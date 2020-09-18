@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Equip Categoriy="-1" Title="武器">
+    <Item SuitID="2" NeedJinBi="100" />
+    <Item SuitID="3" NeedJinBi="300" />
+    <Item SuitID="4" NeedJinBi="900" />
+    <Item SuitID="5" NeedJinBi="2700" />
+    <Item SuitID="6" NeedJinBi="8100" />
+    <Item SuitID="7" NeedJinBi="24300" />
+    <Item SuitID="8" NeedJinBi="72900" />
+    <Item SuitID="9" NeedJinBi="218700" />
+    <Item SuitID="10" NeedJinBi="656100" />
+  </Equip>
+  <Equip Categoriy="0" Title="头盔">
+    <Item SuitID="2" NeedJinBi="100" />
+    <Item SuitID="3" NeedJinBi="300" />
+    <Item SuitID="4" NeedJinBi="900" />
+    <Item SuitID="5" NeedJinBi="2700" />
+    <Item SuitID="6" NeedJinBi="8100" />
+    <Item SuitID="7" NeedJinBi="24300" />
+    <Item SuitID="8" NeedJinBi="72900" />
+    <Item SuitID="9" NeedJinBi="218700" />
+    <Item SuitID="10" NeedJinBi="656100" />
+  </Equip>
+  <Equip Categoriy="1" Title="铠甲">
+    <Item SuitID="2" NeedJinBi="100" />
+    <Item SuitID="3" NeedJinBi="300" />
+    <Item SuitID="4" NeedJinBi="900" />
+    <Item SuitID="5" NeedJinBi="2700" />
+    <Item SuitID="6" NeedJinBi="8100" />
+    <Item SuitID="7" NeedJinBi="24300" />
+    <Item SuitID="8" NeedJinBi="72900" />
+    <Item SuitID="9" NeedJinBi="218700" />
+    <Item SuitID="10" NeedJinBi="656100" />
+  </Equip>
+  <Equip Categoriy="2" Title="护手">
+    <Item SuitID="2" NeedJinBi="100" />
+    <Item SuitID="3" NeedJinBi="300" />
+    <Item SuitID="4" NeedJinBi="900" />
+    <Item SuitID="5" NeedJinBi="2700" />
+    <Item SuitID="6" NeedJinBi="8100" />
+    <Item SuitID="7" NeedJinBi="24300" />
+    <Item SuitID="8" NeedJinBi="72900" />
+    <Item SuitID="9" NeedJinBi="218700" />
+    <Item SuitID="10" NeedJinBi="656100" />
+  </Equip>
+  <Equip Categoriy="3" Title="护腿">
+    <Item SuitID="2" NeedJinBi="100" />
+    <Item SuitID="3" NeedJinBi="300" />
+    <Item SuitID="4" NeedJinBi="900" />
+    <Item SuitID="5" NeedJinBi="2700" />
+    <Item SuitID="6" NeedJinBi="8100" />
+    <Item SuitID="7" NeedJinBi="24300" />
+    <Item SuitID="8" NeedJinBi="72900" />
+    <Item SuitID="9" NeedJinBi="218700" />
+    <Item SuitID="10" NeedJinBi="656100" />
+  </Equip>
+  <Equip Categoriy="4" Title="靴子">
+    <Item SuitID="2" NeedJinBi="100" />
+    <Item SuitID="3" NeedJinBi="300" />
+    <Item SuitID="4" NeedJinBi="900" />
+    <Item SuitID="5" NeedJinBi="2700" />
+    <Item SuitID="6" NeedJinBi="8100" />
+    <Item SuitID="7" NeedJinBi="24300" />
+    <Item SuitID="8" NeedJinBi="72900" />
+    <Item SuitID="9" NeedJinBi="218700" />
+    <Item SuitID="10" NeedJinBi="656100" />
+  </Equip>
+  <Equip Categoriy="5" Title="项链">
+    <Item SuitID="2" NeedJinBi="100" />
+    <Item SuitID="3" NeedJinBi="300" />
+    <Item SuitID="4" NeedJinBi="900" />
+    <Item SuitID="5" NeedJinBi="2700" />
+    <Item SuitID="6" NeedJinBi="8100" />
+    <Item SuitID="7" NeedJinBi="24300" />
+    <Item SuitID="8" NeedJinBi="72900" />
+    <Item SuitID="9" NeedJinBi="218700" />
+    <Item SuitID="10" NeedJinBi="656100" />
+  </Equip>
+  <Equip Categoriy="6" Title="戒指">
+    <Item SuitID="2" NeedJinBi="100" />
+    <Item SuitID="3" NeedJinBi="300" />
+    <Item SuitID="4" NeedJinBi="900" />
+    <Item SuitID="5" NeedJinBi="2700" />
+    <Item SuitID="6" NeedJinBi="8100" />
+    <Item SuitID="7" NeedJinBi="24300" />
+    <Item SuitID="8" NeedJinBi="72900" />
+    <Item SuitID="9" NeedJinBi="218700" />
+    <Item SuitID="10" NeedJinBi="656100" />
+  </Equip>
+</Config>

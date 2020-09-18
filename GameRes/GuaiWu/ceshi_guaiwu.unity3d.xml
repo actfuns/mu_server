@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <!--UnitSpeed, 移动的速度(相对人的百分比);Tick 动作的帧率，单位毫秒-->
+  <SpeedConfig UnitSpeed="100" Tick="400,130,130,100,250,250,100,500,90,300,300,1000,100" />
+  <!--EachActionFrameRange, 各个动作每个方向的帧数;EachActionEffectiveFrame, 各个动作的起效帧，无则写-1-->
+  <FrameConfig EachActionFrameRange="3,3,0,3,0,0,3,0,0,0,0,1,3" EachActionEffectiveFrame="-1,-1,-1,1,0,0,1,-1,-1,-1,-1,-1,-1" />
+</Config>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}重生印记说明" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、对应选择属性的{17e43e}子印记{dac7ae}均等级{17e43e}每升5级时{dac7ae}，主印记可{17e43e}升1级。" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、重生印记可通过{17e43e}消耗钻石{dac7ae}进行重置，重置后{17e43e}返还所有印记点数{dac7ae}且重新选择印记。" Bold="0" />
+</Config>

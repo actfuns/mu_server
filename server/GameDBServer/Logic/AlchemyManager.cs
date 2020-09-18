@@ -9,16 +9,16 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000112 RID: 274
+	
 	public class AlchemyManager : SingletonTemplate<AlchemyManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x06000482 RID: 1154 RVA: 0x000247EC File Offset: 0x000229EC
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x06000483 RID: 1155 RVA: 0x00024800 File Offset: 0x00022A00
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(13097, SingletonTemplate<AlchemyManager>.Instance());
@@ -26,19 +26,19 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000484 RID: 1156 RVA: 0x00024840 File Offset: 0x00022A40
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000485 RID: 1157 RVA: 0x00024854 File Offset: 0x00022A54
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000486 RID: 1158 RVA: 0x00024868 File Offset: 0x00022A68
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			switch (nID)
@@ -52,7 +52,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000487 RID: 1159 RVA: 0x000248AC File Offset: 0x00022AAC
+		
 		public TCPProcessCmdResults ProcessUpdateAlchemyElement(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -129,7 +129,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000488 RID: 1160 RVA: 0x00024BD0 File Offset: 0x00022DD0
+		
 		private void AlchemyRollBack(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -175,7 +175,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000489 RID: 1161 RVA: 0x00024D58 File Offset: 0x00022F58
+		
 		private void AlchemyModify(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try

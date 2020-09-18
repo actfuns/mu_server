@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+<Teleports>
+	<Teleport Code="197" FrameNum="13" Tip="教团领地" Key="10"  To="93000" ToX="3450" ToY="7350" ToDirection="6" X="5250" Y="2450" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+	<Teleport Code="197" FrameNum="13" Tip="同盟领地" Key="11"  To="93001" ToX="5050" ToY="3050" ToDirection="6" X="3350" Y="7750" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+    <Teleport Code="197" FrameNum="13" Tip="勇者大陆" Key="12"  To="1" ToX="10050" ToY="10450" ToDirection="0" X="10750" Y="8050" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+</Teleports>
+</Map>

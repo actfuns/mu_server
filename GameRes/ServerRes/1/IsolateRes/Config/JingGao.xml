@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <JingGao ID="1" Operate="1" Time="30" Description="尊敬的玩家您好，系统监测到您近期存在{ff0000}大量钻石交易{ffffff}行为，我们在此向您发出提醒，如再出现钻石交易异常行为，我们将对您进行{ff0000}封号处理{ffffff}，请不要在线下进行大量钻石交易行为，为您带来的不便，敬请谅解！"/>
+  <JingGao ID="2" Operate="2" Time="30" Description="您的帐号由于二次涉嫌违规操作，已被系统{ff0000}封号24小时{ffffff}，如有疑问请联系客服{17e43f}QQ:4009933199{ffffff}咨询！"/>
+  <JingGao ID="3" Operate="3" Time="30" Description="您的帐号由于再次涉嫌违规操作，已被系统{ff0000}封号7天{ffffff}，如有疑问请联系客服{17e43f}QQ:4009933199{ffffff}咨询！"/>
+  <JingGao ID="4" Operate="4" Time="30" Description="您的帐号由于多次涉嫌违规操作，已被系统{ff0000}永久封停{ffffff}，如有疑问请联系客服{17e43f}QQ:4009933199{ffffff}咨询！"/>
+</config>

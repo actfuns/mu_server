@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+    <!--ID2 表示防止沉迷的链接地址-->
+    <Item ID="2" Link="" />
+    <!--ID3 表示官网的链接地址-->
+    <Item ID="3" Link="" />
+    <!--ID4 表示论坛的链接地址-->
+    <Item ID="4" Link="" />
+    <!--ID5 表示GM的链接地址-->
+    <Item ID="5" Link="" />
+</Config>

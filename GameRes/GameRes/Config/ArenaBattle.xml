@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Battle>
+	<!--MapCode, PK之王的地图编号, TimePoints PK之王开始的时间点, MinLevel, 最低要求的等级级别, MinRequestNum区里面要求的最低在线人数, MaxEnterNum可以进入PK之王场景的最多人数, FallGiftNum掉路的礼包个数,GiveGoodsIDs固定给的奖励的物品(例如药品类),NotifyBattleKilledNumSecs通知积分时间间隔20秒到100秒之间 PrepareSecs战斗准备时间配置1秒，别配置0秒-->
+	<Item ID="1" MapCode="10000" TimePoints="21:00" LineID="1" WaitingEnterSecs="180" PrepareSecs="1" FightingSecs="900" ClearRolesSecs="15" MinZhuanSheng="2" MinLevel="60" MinRequestNum="1" MaxEnterNum="100" Award="8001|8002" Image="9000|9001"
+ FallGiftNum="0" FallID="0" GiveGoodsIDs="" AddExpSecs="10" NotifyBattleKilledNumSecs="30"/>
+</Battle>

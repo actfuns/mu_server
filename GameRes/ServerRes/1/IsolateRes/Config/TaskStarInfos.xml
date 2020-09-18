@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <TaskStarInfos>
+    <Star ID="1" EXPXiShu="0.4" BindZhuanShiXiShu="0.5" XingHunXiShu="0.5" GaiLv="0.2" />
+    <Star ID="2" EXPXiShu="0.5" BindZhuanShiXiShu="0.75" XingHunXiShu="0.75" GaiLv="0.28" />
+    <Star ID="3" EXPXiShu="0.6" BindZhuanShiXiShu="1" XingHunXiShu="1" GaiLv="0.28" />
+    <Star ID="4" EXPXiShu="0.8" BindZhuanShiXiShu="1.5" XingHunXiShu="1.5" GaiLv="0.14" />
+    <Star ID="5" EXPXiShu="1" BindZhuanShiXiShu="2" XingHunXiShu="2" GaiLv="0.1" />
+  </TaskStarInfos>
+</Config>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}重生BOSS说明" Bold="1" />
+  <HelpIntro ID="2" Intro="{fac60d}刷新机制" Bold="1" />
+  <HelpIntro ID="3" Intro="{dac7ae}1、重生BOSS有5种，每种重生BOSS的{17e43e}弱点{-}不同，按{17e43e}循环顺序刷新" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}2、重生BOSS{17e43e}每天12:30|14:30|16:30|18:30|20:30{-}刷新（5条线同时刷新）" Bold="0" />
+  <HelpIntro ID="5" Intro="{fac60d}击杀奖励" Bold="1" />
+  <HelpIntro ID="6" Intro="{dac7ae}1、BOSS被击杀后，根据对BOSS造成{17e43e}伤害排名{-}领取奖励" Bold="0" />
+  <HelpIntro ID="7" Intro="{dac7ae}2、BOSS再次刷新仍未领取的奖励将被{ff0000}清空{-}，请注意及时领取奖励（每条线的奖励单独记录）" Bold="0" />
+  <HelpIntro ID="8" Intro="{dac7ae}3、一段时间不对BOSS造成伤害，则伤害记录会被{ff0000}清空" Bold="0" />
+</Config>

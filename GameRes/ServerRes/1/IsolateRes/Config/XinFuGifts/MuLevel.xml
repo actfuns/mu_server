@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="33" />
+  <GiftList Title="冲级狂人" Description="活动期间内达到相应转生级别可领取丰厚升级豪礼！">
+  <Award ID="1" MinZhuanSheng="4" MinLevel="1" GoodsOne="5050,7,1,0,0,0,0|2001,7,1,0,0,0,0|2002,5,1,0,0,0,0|2016,20,1,0,0,0,0" GoodsTwo="" Roles="20"/>
+  <Award ID="2" MinZhuanSheng="3" MinLevel="80" GoodsOne="5050,5,1,0,0,0,0|2001,5,1,0,0,0,0|2002,3,1,0,0,0,0|2016,15,1,0,0,0,0" GoodsTwo="" Roles="50"/>
+  <Award ID="3" MinZhuanSheng="3" MinLevel="1" GoodsOne="5050,3,1,0,0,0,0|2001,4,1,0,0,0,0|2002,2,1,0,0,0,0|2016,10,1,0,0,0,0" GoodsTwo="" Roles="100"/>
+  <Award ID="4" MinZhuanSheng="2" MinLevel="80" GoodsOne="5050,2,1,0,0,0,0|2001,3,1,0,0,0,0|2002,1,1,0,0,0,0|2016,5,1,0,0,0,0" GoodsTwo="" Roles="300"/>
+  <Award ID="5" MinZhuanSheng="1" MinLevel="80" GoodsOne="5050,1,1,0,0,0,0|2001,2,1,0,0,0,0|2016,2,1,0,0,0,0" GoodsTwo="" Roles="800"/>
+  </GiftList>
+</Config>

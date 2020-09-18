@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <JingLing ID="1" TeQuanID="24" DiTuID="1" GuaiWuID="191" />
+  <JingLing ID="2" TeQuanID="24" DiTuID="1" GuaiWuID="192" />
+  <JingLing ID="3" TeQuanID="24" DiTuID="1" GuaiWuID="193" />
+  <JingLing ID="4" TeQuanID="24" DiTuID="1" GuaiWuID="194" />
+  <JingLing ID="5" TeQuanID="24" DiTuID="1" GuaiWuID="195" />
+  <JingLing ID="6" TeQuanID="24" DiTuID="1" GuaiWuID="196" />
+  <JingLing ID="7" TeQuanID="24" DiTuID="1" GuaiWuID="197" />
+  <JingLing ID="8" TeQuanID="24" DiTuID="2" GuaiWuID="291" />
+  <JingLing ID="9" TeQuanID="24" DiTuID="2" GuaiWuID="292" />
+  <JingLing ID="10" TeQuanID="24" DiTuID="2" GuaiWuID="293" />
+  <JingLing ID="11" TeQuanID="24" DiTuID="2" GuaiWuID="294" />
+  <JingLing ID="12" TeQuanID="24" DiTuID="2" GuaiWuID="295" />
+  <JingLing ID="13" TeQuanID="24" DiTuID="2" GuaiWuID="296" />
+  <JingLing ID="14" TeQuanID="24" DiTuID="3" GuaiWuID="391" />
+  <JingLing ID="15" TeQuanID="24" DiTuID="3" GuaiWuID="392" />
+  <JingLing ID="16" TeQuanID="24" DiTuID="3" GuaiWuID="393" />
+  <JingLing ID="17" TeQuanID="24" DiTuID="3" GuaiWuID="394" />
+  <JingLing ID="18" TeQuanID="24" DiTuID="3" GuaiWuID="395" />
+  <JingLing ID="19" TeQuanID="24" DiTuID="3" GuaiWuID="396" />
+  <JingLing ID="20" TeQuanID="24" DiTuID="4" GuaiWuID="491" />
+  <JingLing ID="21" TeQuanID="24" DiTuID="4" GuaiWuID="492" />
+  <JingLing ID="22" TeQuanID="24" DiTuID="4" GuaiWuID="493" />
+  <JingLing ID="23" TeQuanID="24" DiTuID="4" GuaiWuID="494" />
+  <JingLing ID="24" TeQuanID="24" DiTuID="4" GuaiWuID="495" />
+  <JingLing ID="25" TeQuanID="24" DiTuID="4" GuaiWuID="496" />
+  <JingLing ID="26" TeQuanID="24" DiTuID="5" GuaiWuID="591" />
+  <JingLing ID="27" TeQuanID="24" DiTuID="5" GuaiWuID="592" />
+  <JingLing ID="28" TeQuanID="24" DiTuID="5" GuaiWuID="593" />
+  <JingLing ID="29" TeQuanID="24" DiTuID="5" GuaiWuID="594" />
+  <JingLing ID="30" TeQuanID="24" DiTuID="5" GuaiWuID="595" />
+  <JingLing ID="31" TeQuanID="24" DiTuID="6" GuaiWuID="691" />
+  <JingLing ID="32" TeQuanID="24" DiTuID="6" GuaiWuID="692" />
+  <JingLing ID="33" TeQuanID="24" DiTuID="6" GuaiWuID="693" />
+  <JingLing ID="34" TeQuanID="24" DiTuID="6" GuaiWuID="694" />
+  <JingLing ID="35" TeQuanID="24" DiTuID="6" GuaiWuID="695" />
+  <JingLing ID="36" TeQuanID="24" DiTuID="7" GuaiWuID="792" />
+  <JingLing ID="37" TeQuanID="24" DiTuID="7" GuaiWuID="793" />
+  <JingLing ID="38" TeQuanID="24" DiTuID="7" GuaiWuID="794" />
+  <JingLing ID="39" TeQuanID="24" DiTuID="7" GuaiWuID="795" />
+  <JingLing ID="40" TeQuanID="24" DiTuID="7" GuaiWuID="796" />
+</Config>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <GiftList Title="每日充值达到指定金额，即可领取丰厚奖励！" Description="" Image="">
+  <Award ID="1" ActivityTypeID="2" MinZhuanShi="300" GoodsOne="50160,1,1,0,0,0,0|5079,1,1,0,0,0,0" GoodsTwo="" />
+  <Award ID="2" ActivityTypeID="2" MinZhuanShi="500" GoodsOne="50160,1,1,0,0,0,0|2016,150,1,0,0,0,0" GoodsTwo="" />
+  <Award ID="3" ActivityTypeID="2" MinZhuanShi="1000" GoodsOne="50161,1,1,0,0,0,0|50017,5,1,0,0,0,0" GoodsTwo="" />
+  <Award ID="4" ActivityTypeID="2" MinZhuanShi="2000" GoodsOne="50161,1,1,0,0,0,0|2001,50,1,0,0,0,0" GoodsTwo="" />
+  <Award ID="5" ActivityTypeID="2" MinZhuanShi="3000" GoodsOne="50161,2,1,0,0,0,0|2003,100,1,0,0,0,0" GoodsTwo="" />
+  <Award ID="6" ActivityTypeID="2"  MinZhuanShi="5000" GoodsOne="50164,1,1,0,0,0,0|2017,50,1,0,0,0,0" GoodsTwo="" />
+  <Award ID="7" ActivityTypeID="2"  MinZhuanShi="8880" GoodsOne="50165,1,1,0,0,0,0|1030905,1,1,0,0,0,27525120" GoodsTwo="" />
+  </GiftList>
+</Config>

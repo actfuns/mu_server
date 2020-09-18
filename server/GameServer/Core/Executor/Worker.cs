@@ -4,16 +4,16 @@ using Server.Tools;
 
 namespace GameServer.Core.Executor
 {
-	// Token: 0x0200010D RID: 269
+	
 	internal class Worker
 	{
-		// Token: 0x0600041B RID: 1051 RVA: 0x0003E219 File Offset: 0x0003C419
+		
 		public Worker(ScheduleExecutor executor)
 		{
 			this.executor = executor;
 		}
 
-		// Token: 0x17000017 RID: 23
+		
 		
 		public Thread CurrentThread
 		{
@@ -23,7 +23,7 @@ namespace GameServer.Core.Executor
 			}
 		}
 
-		// Token: 0x0600041D RID: 1053 RVA: 0x0003E24C File Offset: 0x0003C44C
+		
 		private TaskWrapper getCanExecuteTask(long ticks)
 		{
 			TaskWrapper taskWrapper = this.executor.GetPreiodictTask(ticks);
@@ -69,7 +69,7 @@ namespace GameServer.Core.Executor
 			return result;
 		}
 
-		// Token: 0x0600041E RID: 1054 RVA: 0x0003E31C File Offset: 0x0003C51C
+		
 		public void work()
 		{
 			lock (Worker._lock)
@@ -127,19 +127,19 @@ namespace GameServer.Core.Executor
 			SysConOut.WriteLine(string.Format("ScheduleTask Worker{0}退出...", this.nThreadOrder));
 		}
 
-		// Token: 0x040005A0 RID: 1440
+		
 		private ScheduleExecutor executor = null;
 
-		// Token: 0x040005A1 RID: 1441
+		
 		private Thread currentThread = null;
 
-		// Token: 0x040005A2 RID: 1442
+		
 		private static int nThreadCount = 0;
 
-		// Token: 0x040005A3 RID: 1443
+		
 		private int nThreadOrder = 0;
 
-		// Token: 0x040005A4 RID: 1444
+		
 		private static object _lock = new object();
 	}
 }

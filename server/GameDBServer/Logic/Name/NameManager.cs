@@ -12,15 +12,15 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.Name
 {
-	// Token: 0x0200014F RID: 335
+	
 	public class NameManager : SingletonTemplate<NameManager>
 	{
-		// Token: 0x060005A8 RID: 1448 RVA: 0x00030310 File Offset: 0x0002E510
+		
 		private NameManager()
 		{
 		}
 
-		// Token: 0x060005A9 RID: 1449 RVA: 0x0003031C File Offset: 0x0002E51C
+		
 		public TCPProcessCmdResults ProcChangeName(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -250,7 +250,7 @@ namespace GameDBServer.Logic.Name
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060005AA RID: 1450 RVA: 0x00030B0C File Offset: 0x0002ED0C
+		
 		private void _OnChangeNameSuccess(DBManager dbMgr, int roleId, int zoneId, string oldName, string newName)
 		{
 			DBManager.getInstance().DBRoleMgr.OnChangeName(roleId, zoneId, oldName, newName);
@@ -264,7 +264,7 @@ namespace GameDBServer.Logic.Name
 			}
 		}
 
-		// Token: 0x060005AB RID: 1451 RVA: 0x00030B98 File Offset: 0x0002ED98
+		
 		private bool _Util_ExecNonQuery(DBManager dbMgr, string sql)
 		{
 			bool bRet = false;
@@ -297,7 +297,7 @@ namespace GameDBServer.Logic.Name
 			return bRet;
 		}
 
-		// Token: 0x060005AC RID: 1452 RVA: 0x00030C4C File Offset: 0x0002EE4C
+		
 		public TCPProcessCmdResults ProcQueryEachRoleInfo(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -366,7 +366,7 @@ namespace GameDBServer.Logic.Name
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060005AD RID: 1453 RVA: 0x00030ED0 File Offset: 0x0002F0D0
+		
 		private bool AddChangeNameDBRecord(DBManager dbMgr, int roleid, string oldName, string newName, ChangeNameType cnt, int costDiamond)
 		{
 			bool bRet = false;
@@ -386,7 +386,7 @@ namespace GameDBServer.Logic.Name
 			return bRet;
 		}
 
-		// Token: 0x060005AE RID: 1454 RVA: 0x00030F74 File Offset: 0x0002F174
+		
 		public bool IsNameCanUseInDb(DBManager dbMgr, string name)
 		{
 			bool result;
@@ -433,7 +433,7 @@ namespace GameDBServer.Logic.Name
 			return result;
 		}
 
-		// Token: 0x060005AF RID: 1455 RVA: 0x000310B8 File Offset: 0x0002F2B8
+		
 		public TCPProcessCmdResults ProcChangeBangHuiName(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -564,7 +564,7 @@ namespace GameDBServer.Logic.Name
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060005B0 RID: 1456 RVA: 0x00031538 File Offset: 0x0002F738
+		
 		public TCPProcessCmdResults ProcAddBangHuiChangeNameTimes(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;

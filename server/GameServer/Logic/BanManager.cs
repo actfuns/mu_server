@@ -4,10 +4,10 @@ using GameServer.Core.Executor;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020005C3 RID: 1475
+	
 	public class BanManager
 	{
-		// Token: 0x06001AC7 RID: 6855 RVA: 0x00198840 File Offset: 0x00196A40
+		
 		public static void BanRoleName(string roleName, int banMinutes, int reason = 1)
 		{
 			lock (BanManager._RoleNameDict)
@@ -27,7 +27,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001AC8 RID: 6856 RVA: 0x00198904 File Offset: 0x00196B04
+		
 		public static int IsBanRoleName(string roleName, out int leftSecs)
 		{
 			leftSecs = 0;
@@ -65,7 +65,7 @@ namespace GameServer.Logic
 			return reason;
 		}
 
-		// Token: 0x06001AC9 RID: 6857 RVA: 0x001989FC File Offset: 0x00196BFC
+		
 		public static void BanUserID2Memory(string userID)
 		{
 			int nCurrHour = Global.GetOffsetHour(TimeUtil.NowDateTime());
@@ -87,7 +87,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001ACA RID: 6858 RVA: 0x00198AB0 File Offset: 0x00196CB0
+		
 		public static void ClearBanMemory(int nHour)
 		{
 			int nCurrHour = Global.GetOffsetHour(TimeUtil.NowDateTime());
@@ -109,7 +109,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001ACB RID: 6859 RVA: 0x00198BD0 File Offset: 0x00196DD0
+		
 		public static void CheckBanMemory()
 		{
 			int nCurrHour = Global.GetOffsetHour(TimeUtil.NowDateTime());
@@ -136,7 +136,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001ACC RID: 6860 RVA: 0x00198D14 File Offset: 0x00196F14
+		
 		public static bool IsBanInMemory(string userID)
 		{
 			lock (BanManager.m_HourBanDictMutex)
@@ -152,7 +152,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001ACD RID: 6861 RVA: 0x00198DC0 File Offset: 0x00196FC0
+		
 		public static bool UnBanUserID2Memory(string userID)
 		{
 			lock (BanManager.m_HourBanDictMutex)
@@ -165,29 +165,29 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x04002978 RID: 10616
+		
 		private static Dictionary<string, int> _RoleNameDict = new Dictionary<string, int>();
 
-		// Token: 0x04002979 RID: 10617
+		
 		private static Dictionary<string, long> _RoleNameTicksDict = new Dictionary<string, long>();
 
-		// Token: 0x0400297A RID: 10618
+		
 		private static object m_HourBanDictMutex = new object();
 
-		// Token: 0x0400297B RID: 10619
+		
 		private static Dictionary<int, Dictionary<string, int>> m_HourBanDict = new Dictionary<int, Dictionary<string, int>>();
 
-		// Token: 0x0400297C RID: 10620
+		
 		private static int m_UpdateHour = Global.GetOffsetHour(TimeUtil.NowDateTime());
 
-		// Token: 0x020005C4 RID: 1476
+		
 		public enum BanReason
 		{
-			// Token: 0x0400297E RID: 10622
+			
 			UseSpeedSoftware = 1,
-			// Token: 0x0400297F RID: 10623
+			
 			RobotTask,
-			// Token: 0x04002980 RID: 10624
+			
 			TradeException
 		}
 	}

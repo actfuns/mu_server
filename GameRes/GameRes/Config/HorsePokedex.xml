@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HorsePokedex ID="1" Name="独角兽" ModRate="1" HorseGoods="990000" PokedexAttribute="AddAttack,10000|AddDefense,5000|MaxLifeV,30000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12001" />
+  <HorsePokedex ID="2" Name="彩云兽" ModRate="1" HorseGoods="990001" PokedexAttribute="AddAttack,10000|AddDefense,5000|MaxLifeV,30000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12101" />
+  <HorsePokedex ID="3" Name="黑王马" ModRate="1" HorseGoods="990002" PokedexAttribute="AddAttack,10000|AddDefense,5000|MaxLifeV,30000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12201" />
+  <HorsePokedex ID="4" Name="炎狼兽" ModRate="1" HorseGoods="990003" PokedexAttribute="AddAttack,10000|AddDefense,5000|MaxLifeV,30000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12301" />
+  <HorsePokedex ID="5" Name="犀牛王" ModRate="1" HorseGoods="990004" PokedexAttribute="AddAttack,12000|AddDefense,6000|MaxLifeV,40000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12401" />
+  <HorsePokedex ID="6" Name="魔蝎子" ModRate="1" HorseGoods="990005" PokedexAttribute="AddAttack,12000|AddDefense,6000|MaxLifeV,40000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12501" />
+  <HorsePokedex ID="7" Name="猛犸象" ModRate="1" HorseGoods="990006" PokedexAttribute="AddAttack,12000|AddDefense,6000|MaxLifeV,40000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12501" />
+  <HorsePokedex ID="8" Name="金狮子" ModRate="1" HorseGoods="990007" PokedexAttribute="AddAttack,12000|AddDefense,6000|MaxLifeV,40000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12501" />
+  <HorsePokedex ID="9" Name="黄金龙" ModRate="1" HorseGoods="990009" PokedexAttribute="AddAttack,16000|AddDefense,8000|MaxLifeV,50000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12601" />
+  <HorsePokedex ID="10" Name="星辰马" ModRate="1" HorseGoods="990010" PokedexAttribute="AddAttack,16000|AddDefense,8000|MaxLifeV,50000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12601" />
+  <HorsePokedex ID="11" Name="熊猫王" ModRate="1" HorseGoods="990011" PokedexAttribute="AddAttack,16000|AddDefense,8000|MaxLifeV,50000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12601" />
+  <HorsePokedex ID="12" Name="飞鱼兽" ModRate="1" HorseGoods="990012" PokedexAttribute="AddAttack,16000|AddDefense,8000|MaxLifeV,50000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12601" />
+  <HorsePokedex ID="13" Name="狮鹫兽" ModRate="1" HorseGoods="990013" PokedexAttribute="AddAttack,18000|AddDefense,10000|MaxLifeV,60000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12601" />
+  <HorsePokedex ID="14" Name="迅猛龙" ModRate="1" HorseGoods="990014" PokedexAttribute="AddAttack,18000|AddDefense,10000|MaxLifeV,60000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12601" />
+  <HorsePokedex ID="15" Name="野猪王" ModRate="1" HorseGoods="990015" PokedexAttribute="AddAttack,18000|AddDefense,10000|MaxLifeV,60000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12601" />
+  <HorsePokedex ID="16" Name="熔岩龟" ModRate="1" HorseGoods="990016" PokedexAttribute="AddAttack,18000|AddDefense,10000|MaxLifeV,60000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12601" />
+  <HorsePokedex ID="17" Name="战熊王" ModRate="1" HorseGoods="990018" PokedexAttribute="AddAttack,20000|AddDefense,12000|MaxLifeV,70000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12601" />
+  <HorsePokedex ID="18" Name="蝎狮兽" ModRate="1" HorseGoods="990019" PokedexAttribute="AddAttack,20000|AddDefense,12000|MaxLifeV,70000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12601" />
+  <HorsePokedex ID="19" Name="宝葫芦" ModRate="1" HorseGoods="990022" PokedexAttribute="AddAttack,20000|AddDefense,12000|MaxLifeV,70000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12601" />
+  <HorsePokedex ID="20" Name="红蝎子" ModRate="1" HorseGoods="990023" PokedexAttribute="AddAttack,20000|AddDefense,12000|MaxLifeV,70000" SuperiorAttributeID="105" HorseSpeed="0.85" SkillID="12601" />
+  <HorsePokedex ID="21" Name="凤凰神" ModRate="1" HorseGoods="990008" PokedexAttribute="AddAttack,22000|AddDefense,14000|MaxLifeV,80000" SuperiorAttributeID="105" HorseSpeed="0.9" SkillID="12601" />
+  <HorsePokedex ID="22" Name="白虎神" ModRate="1" HorseGoods="990017" PokedexAttribute="AddAttack,22000|AddDefense,14000|MaxLifeV,80000" SuperiorAttributeID="105" HorseSpeed="0.9" SkillID="12601" />
+  <HorsePokedex ID="23" Name="火龙神" ModRate="1" HorseGoods="990020" PokedexAttribute="AddAttack,22000|AddDefense,14000|MaxLifeV,80000" SuperiorAttributeID="105" HorseSpeed="0.9" SkillID="12601" />  
+  <HorsePokedex ID="24" Name="水母神" ModRate="1.2" HorseGoods="990021" PokedexAttribute="AddAttack,22000|AddDefense,14000|MaxLifeV,80000" SuperiorAttributeID="105" HorseSpeed="0.9" SkillID="12203" />
+  
+</Config>

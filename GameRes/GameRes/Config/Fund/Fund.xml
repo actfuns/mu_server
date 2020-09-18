@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <Fund ID="1" MainID="1" GoalType="1" GoalNum="1,0" RewardType="1" RewardCount="800" Tips="{9d8667}达到 1转 可领取" />
+  <Fund ID="2" MainID="1" GoalType="1" GoalNum="2,0" RewardType="0" RewardCount="160" Tips="{9d8667}达到 2转 可领取" />
+  <Fund ID="3" MainID="1" GoalType="1" GoalNum="3,0" RewardType="1" RewardCount="1000" Tips="{9d8667}达到 3转 可领取" />
+  <Fund ID="4" MainID="1" GoalType="1" GoalNum="4,0" RewardType="0" RewardCount="200" Tips="{9d8667}达到 4转 可领取" />
+  <Fund ID="5" MainID="1" GoalType="1" GoalNum="5,0" RewardType="1" RewardCount="1200" Tips="{9d8667}达到 5转 可领取" />
+  <Fund ID="6" MainID="1" GoalType="1" GoalNum="6,0" RewardType="0" RewardCount="240" Tips="{9d8667}达到 6转 可领取" />
+  <Fund ID="7" MainID="1" GoalType="1" GoalNum="7,0" RewardType="1" RewardCount="1400" Tips="{9d8667}达到 7转 可领取" />
+  <Fund ID="8" MainID="1" GoalType="1" GoalNum="8,0" RewardType="0" RewardCount="280" Tips="{9d8667}达到 8转 可领取" />
+  <Fund ID="9" MainID="1" GoalType="1" GoalNum="9,0" RewardType="1" RewardCount="1600" Tips="{9d8667}达到 9转 可领取" />
+  <Fund ID="10" MainID="1" GoalType="1" GoalNum="10,0" RewardType="0" RewardCount="320" Tips="{9d8667}达到 10转 可领取" />
+  <Fund ID="11" MainID="2" GoalType="2" GoalNum="1" RewardType="1" RewardCount="450" Tips="{9d8667}登录 第1天 可领取" />
+  <Fund ID="12" MainID="2" GoalType="2" GoalNum="2" RewardType="0" RewardCount="300" Tips="{9d8667}登录 第2天 可领取" />
+  <Fund ID="13" MainID="2" GoalType="2" GoalNum="3" RewardType="1" RewardCount="450" Tips="{9d8667}登录 第3天 可领取" />
+  <Fund ID="21" MainID="3" GoalType="2" GoalNum="1" RewardType="1" RewardCount="900" Tips="{9d8667}登录 第1天 可领取" />
+  <Fund ID="22" MainID="3" GoalType="2" GoalNum="2" RewardType="0" RewardCount="600" Tips="{9d8667}登录 第2天 可领取" />
+  <Fund ID="23" MainID="3" GoalType="2" GoalNum="3" RewardType="1" RewardCount="900" Tips="{9d8667}登录 第3天 可领取" />
+  <Fund ID="31" MainID="4" GoalType="2" GoalNum="1" RewardType="1" RewardCount="1800" Tips="{9d8667}登录 第1天 可领取" />
+  <Fund ID="32" MainID="4" GoalType="2" GoalNum="2" RewardType="0" RewardCount="900" Tips="{9d8667}登录 第2天 可领取" />
+  <Fund ID="33" MainID="4" GoalType="2" GoalNum="3" RewardType="1" RewardCount="1800" Tips="{9d8667}登录 第3天 可领取" />
+  <Fund ID="34" MainID="4" GoalType="2" GoalNum="4" RewardType="0" RewardCount="900" Tips="{9d8667}登录 第4天 可领取" />
+  <Fund ID="35" MainID="4" GoalType="2" GoalNum="5" RewardType="1" RewardCount="1800" Tips="{9d8667}登录 第5天 可领取" />
+  <Fund ID="41" MainID="5" GoalType="2" GoalNum="1" RewardType="1" RewardCount="2400" Tips="{9d8667}登录 第1天 可领取" />
+  <Fund ID="42" MainID="5" GoalType="2" GoalNum="2" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第2天 可领取" />
+  <Fund ID="43" MainID="5" GoalType="2" GoalNum="3" RewardType="1" RewardCount="2400" Tips="{9d8667}登录 第3天 可领取" />
+  <Fund ID="44" MainID="5" GoalType="2" GoalNum="4" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第4天 可领取" />
+  <Fund ID="45" MainID="5" GoalType="2" GoalNum="5" RewardType="1" RewardCount="2400" Tips="{9d8667}登录 第5天 可领取" />
+  <Fund ID="51" MainID="6" GoalType="2" GoalNum="1" RewardType="1" RewardCount="2700" Tips="{9d8667}登录 第1天 可领取" />
+  <Fund ID="52" MainID="6" GoalType="2" GoalNum="2" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第2天 可领取" />
+  <Fund ID="53" MainID="6" GoalType="2" GoalNum="3" RewardType="1" RewardCount="2700" Tips="{9d8667}登录 第3天 可领取" />
+  <Fund ID="54" MainID="6" GoalType="2" GoalNum="4" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第4天 可领取" />
+  <Fund ID="55" MainID="6" GoalType="2" GoalNum="5" RewardType="1" RewardCount="2700" Tips="{9d8667}登录 第5天 可领取" />
+  <Fund ID="56" MainID="6" GoalType="2" GoalNum="6" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第6天 可领取" />
+  <Fund ID="57" MainID="6" GoalType="2" GoalNum="7" RewardType="1" RewardCount="2700" Tips="{9d8667}登录 第7天 可领取" />
+  <Fund ID="61" MainID="7" GoalType="2" GoalNum="1" RewardType="1" RewardCount="2700" Tips="{9d8667}登录 第1天 可领取" />
+  <Fund ID="62" MainID="7" GoalType="2" GoalNum="2" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第2天 可领取" />
+  <Fund ID="63" MainID="7" GoalType="2" GoalNum="3" RewardType="1" RewardCount="2700" Tips="{9d8667}登录 第3天 可领取" />
+  <Fund ID="64" MainID="7" GoalType="2" GoalNum="4" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第4天 可领取" />
+  <Fund ID="65" MainID="7" GoalType="2" GoalNum="5" RewardType="1" RewardCount="2700" Tips="{9d8667}登录 第5天 可领取" />
+  <Fund ID="66" MainID="7" GoalType="2" GoalNum="6" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第6天 可领取" />
+  <Fund ID="67" MainID="7" GoalType="2" GoalNum="7" RewardType="1" RewardCount="2700" Tips="{9d8667}登录 第7天 可领取" />
+  <Fund ID="71" MainID="8" GoalType="2" GoalNum="1" RewardType="1" RewardCount="2700" Tips="{9d8667}登录 第1天 可领取" />
+  <Fund ID="72" MainID="8" GoalType="2" GoalNum="2" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第2天 可领取" />
+  <Fund ID="73" MainID="8" GoalType="2" GoalNum="3" RewardType="1" RewardCount="2700" Tips="{9d8667}登录 第3天 可领取" />
+  <Fund ID="74" MainID="8" GoalType="2" GoalNum="4" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第4天 可领取" />
+  <Fund ID="75" MainID="8" GoalType="2" GoalNum="5" RewardType="1" RewardCount="2700" Tips="{9d8667}登录 第5天 可领取" />
+  <Fund ID="76" MainID="8" GoalType="2" GoalNum="6" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第6天 可领取" />
+  <Fund ID="77" MainID="8" GoalType="2" GoalNum="7" RewardType="1" RewardCount="2700" Tips="{9d8667}登录 第7天 可领取" />
+  <Fund ID="81" MainID="9" GoalType="2" GoalNum="1" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第1天 可领取" />
+  <Fund ID="82" MainID="9" GoalType="2" GoalNum="2" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第2天 可领取" />
+  <Fund ID="83" MainID="9" GoalType="2" GoalNum="3" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第3天 可领取" />
+  <Fund ID="84" MainID="9" GoalType="2" GoalNum="4" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第4天 可领取" />
+  <Fund ID="85" MainID="9" GoalType="2" GoalNum="5" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第5天 可领取" />
+  <Fund ID="86" MainID="9" GoalType="2" GoalNum="6" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第6天 可领取" />
+  <Fund ID="87" MainID="9" GoalType="2" GoalNum="7" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第7天 可领取" />
+  <Fund ID="88" MainID="9" GoalType="2" GoalNum="8" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第8天 可领取" />
+  <Fund ID="89" MainID="9" GoalType="2" GoalNum="9" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第9天 可领取" />
+  <Fund ID="90" MainID="9" GoalType="2" GoalNum="10" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第10天 可领取" />
+  <Fund ID="91" MainID="10" GoalType="2" GoalNum="1" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第1天 可领取" />
+  <Fund ID="92" MainID="10" GoalType="2" GoalNum="2" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第2天 可领取" />
+  <Fund ID="93" MainID="10" GoalType="2" GoalNum="3" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第3天 可领取" />
+  <Fund ID="94" MainID="10" GoalType="2" GoalNum="4" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第4天 可领取" />
+  <Fund ID="95" MainID="10" GoalType="2" GoalNum="5" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第5天 可领取" />
+  <Fund ID="96" MainID="10" GoalType="2" GoalNum="6" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第6天 可领取" />
+  <Fund ID="97" MainID="10" GoalType="2" GoalNum="7" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第7天 可领取" />
+  <Fund ID="98" MainID="10" GoalType="2" GoalNum="8" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第8天 可领取" />
+  <Fund ID="99" MainID="10" GoalType="2" GoalNum="9" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第9天 可领取" />
+  <Fund ID="100" MainID="10" GoalType="2" GoalNum="10" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第10天 可领取" />
+  <Fund ID="101" MainID="11" GoalType="2" GoalNum="1" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第1天 可领取" />
+  <Fund ID="102" MainID="11" GoalType="2" GoalNum="2" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第2天 可领取" />
+  <Fund ID="103" MainID="11" GoalType="2" GoalNum="3" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第3天 可领取" />
+  <Fund ID="104" MainID="11" GoalType="2" GoalNum="4" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第4天 可领取" />
+  <Fund ID="105" MainID="11" GoalType="2" GoalNum="5" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第5天 可领取" />
+  <Fund ID="106" MainID="11" GoalType="2" GoalNum="6" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第6天 可领取" />
+  <Fund ID="107" MainID="11" GoalType="2" GoalNum="7" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第7天 可领取" />
+  <Fund ID="108" MainID="11" GoalType="2" GoalNum="8" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第8天 可领取" />
+  <Fund ID="109" MainID="11" GoalType="2" GoalNum="9" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第9天 可领取" />
+  <Fund ID="110" MainID="11" GoalType="2" GoalNum="10" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第10天 可领取" />
+  <Fund ID="111" MainID="12" GoalType="2" GoalNum="1" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第1天 可领取" />
+  <Fund ID="112" MainID="12" GoalType="2" GoalNum="2" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第2天 可领取" />
+  <Fund ID="113" MainID="12" GoalType="2" GoalNum="3" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第3天 可领取" />
+  <Fund ID="114" MainID="12" GoalType="2" GoalNum="4" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第4天 可领取" />
+  <Fund ID="115" MainID="12" GoalType="2" GoalNum="5" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第5天 可领取" />
+  <Fund ID="116" MainID="12" GoalType="2" GoalNum="6" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第6天 可领取" />
+  <Fund ID="117" MainID="12" GoalType="2" GoalNum="7" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第7天 可领取" />
+  <Fund ID="118" MainID="12" GoalType="2" GoalNum="8" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第8天 可领取" />
+  <Fund ID="119" MainID="12" GoalType="2" GoalNum="9" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第9天 可领取" />
+  <Fund ID="120" MainID="12" GoalType="2" GoalNum="10" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第10天 可领取" />
+  <Fund ID="121" MainID="13" GoalType="2" GoalNum="1" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第1天 可领取" />
+  <Fund ID="122" MainID="13" GoalType="2" GoalNum="2" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第2天 可领取" />
+  <Fund ID="123" MainID="13" GoalType="2" GoalNum="3" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第3天 可领取" />
+  <Fund ID="124" MainID="13" GoalType="2" GoalNum="4" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第4天 可领取" />
+  <Fund ID="125" MainID="13" GoalType="2" GoalNum="5" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第5天 可领取" />
+  <Fund ID="126" MainID="13" GoalType="2" GoalNum="6" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第6天 可领取" />
+  <Fund ID="127" MainID="13" GoalType="2" GoalNum="7" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第7天 可领取" />
+  <Fund ID="128" MainID="13" GoalType="2" GoalNum="8" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第8天 可领取" />
+  <Fund ID="129" MainID="13" GoalType="2" GoalNum="9" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第9天 可领取" />
+  <Fund ID="130" MainID="13" GoalType="2" GoalNum="10" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第10天 可领取" />
+  <Fund ID="131" MainID="14" GoalType="2" GoalNum="1" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第1天 可领取" />
+  <Fund ID="132" MainID="14" GoalType="2" GoalNum="2" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第2天 可领取" />
+  <Fund ID="133" MainID="14" GoalType="2" GoalNum="3" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第3天 可领取" />
+  <Fund ID="134" MainID="14" GoalType="2" GoalNum="4" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第4天 可领取" />
+  <Fund ID="135" MainID="14" GoalType="2" GoalNum="5" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第5天 可领取" />
+  <Fund ID="136" MainID="14" GoalType="2" GoalNum="6" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第6天 可领取" />
+  <Fund ID="137" MainID="14" GoalType="2" GoalNum="7" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第7天 可领取" />
+  <Fund ID="138" MainID="14" GoalType="2" GoalNum="8" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第8天 可领取" />
+  <Fund ID="139" MainID="14" GoalType="2" GoalNum="9" RewardType="1" RewardCount="3600" Tips="{9d8667}登录 第9天 可领取" />
+  <Fund ID="140" MainID="14" GoalType="2" GoalNum="10" RewardType="0" RewardCount="1200" Tips="{9d8667}登录 第10天 可领取" />
+  <Fund ID="141" MainID="15" GoalType="3" GoalNum="1000,1000" RewardType="1" RewardCount="4500" Tips="{9d8667}购买后充值、消费均达到 1000钻石" />
+  <Fund ID="142" MainID="15" GoalType="3" GoalNum="3000,3000" RewardType="0" RewardCount="1500" Tips="{9d8667}购买后充值、消费均达到 3000钻石" />
+  <Fund ID="143" MainID="15" GoalType="3" GoalNum="5000,5000" RewardType="1" RewardCount="4500" Tips="{9d8667}购买后充值、消费均达到 5000钻石" />
+  <Fund ID="144" MainID="15" GoalType="3" GoalNum="10000,10000" RewardType="0" RewardCount="1500" Tips="{9d8667}购买后充值、消费均达到 10000钻石" />
+  <Fund ID="145" MainID="15" GoalType="3" GoalNum="15000,15000" RewardType="1" RewardCount="4500" Tips="{9d8667}购买后充值、消费均达到 15000钻石" />
+  <Fund ID="146" MainID="15" GoalType="3" GoalNum="20000,20000" RewardType="1" RewardCount="4500" Tips="{9d8667}购买后充值、消费均达到 20000钻石" />
+  <Fund ID="147" MainID="15" GoalType="3" GoalNum="25000,25000" RewardType="1" RewardCount="4500" Tips="{9d8667}购买后充值、消费均达到 25000钻石" />
+  <Fund ID="148" MainID="15" GoalType="3" GoalNum="30000,30000" RewardType="1" RewardCount="4500" Tips="{9d8667}购买后充值、消费均达到 30000钻石" />
+</config>

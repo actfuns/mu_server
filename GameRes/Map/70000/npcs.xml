@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <NPCs>
+    <NPC Code="91000" X="3665" Y="1566" Dir="6" />
+	<NPC Code="91001" X="1182" Y="4125" Dir="6" />
+	<NPC Code="91002" X="3920" Y="6526" Dir="6" />
+	<NPC Code="91003" X="6720" Y="4108" Dir="6" />
+  </NPCs>
+</Map>

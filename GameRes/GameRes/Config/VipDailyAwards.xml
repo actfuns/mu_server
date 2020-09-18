@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Award AwardID="5001" Remark="开启随身仓库" VIPlev="3" DailyMaxUseTimes="-1" GoodsIDs="" ZuanShi="" BindZuanShi="" JinBi="" BindJinBi="" BufferGoods="" XiHongMing="" XiuLi="" CangKu="1" YaoDian="" />
+  <Award AwardID="4001" Remark="随身修理" VIPlev="0" DailyMaxUseTimes="-1" GoodsIDs="" ZuanShi="" BindZuanShi="" JinBi="" BindJinBi="" BufferGoods="" XiHongMing="" XiuLi="1" CangKu="" YaoDian="" />
+  <Award AwardID="6001" Remark="开启随身药店" VIPlev="0" DailyMaxUseTimes="-1" GoodsIDs="" ZuanShi="" BindZuanShi="" JinBi="" BindJinBi="" BufferGoods="" XiHongMing="" XiuLi="" CangKu="" YaoDian="1" />
+</Config>

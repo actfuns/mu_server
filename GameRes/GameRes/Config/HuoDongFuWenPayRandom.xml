@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <FuWen ID="25" GoodsID="940103" BeginNum="1" EndNum="5834" />
+  <FuWen ID="26" GoodsID="940203" BeginNum="5835" EndNum="11668" />
+  <FuWen ID="27" GoodsID="940303" BeginNum="11669" EndNum="17502" />
+  <FuWen ID="28" GoodsID="940403" BeginNum="17503" EndNum="23336" />
+  <FuWen ID="29" GoodsID="940503" BeginNum="23337" EndNum="29169" />
+  <FuWen ID="30" GoodsID="940603" BeginNum="29170" EndNum="35002" />
+  <FuWen ID="31" GoodsID="940703" BeginNum="35003" EndNum="40835" />
+  <FuWen ID="32" GoodsID="940803" BeginNum="40836" EndNum="46668" />
+  <FuWen ID="33" GoodsID="940903" BeginNum="46669" EndNum="52501" />
+  <FuWen ID="34" GoodsID="941003" BeginNum="52502" EndNum="58334" />
+  <FuWen ID="35" GoodsID="941103" BeginNum="58335" EndNum="64167" />
+  <FuWen ID="36" GoodsID="941203" BeginNum="64168" EndNum="70000" />
+  <FuWen ID="37" GoodsID="940104" BeginNum="70001" EndNum="71250" />
+  <FuWen ID="38" GoodsID="940107" BeginNum="71251" EndNum="72500" />
+  <FuWen ID="39" GoodsID="940204" BeginNum="72501" EndNum="73750" />
+  <FuWen ID="40" GoodsID="940207" BeginNum="73751" EndNum="75000" />
+  <FuWen ID="41" GoodsID="940304" BeginNum="75001" EndNum="76250" />
+  <FuWen ID="42" GoodsID="940307" BeginNum="76251" EndNum="77500" />
+  <FuWen ID="43" GoodsID="940404" BeginNum="77501" EndNum="78750" />
+  <FuWen ID="44" GoodsID="940407" BeginNum="78751" EndNum="80000" />
+  <FuWen ID="45" GoodsID="940504" BeginNum="80001" EndNum="81250" />
+  <FuWen ID="46" GoodsID="940507" BeginNum="81251" EndNum="82500" />
+  <FuWen ID="47" GoodsID="940604" BeginNum="82501" EndNum="83750" />
+  <FuWen ID="48" GoodsID="940607" BeginNum="83751" EndNum="85000" />
+  <FuWen ID="49" GoodsID="940704" BeginNum="85001" EndNum="86250" />
+  <FuWen ID="50" GoodsID="940707" BeginNum="86251" EndNum="87500" />
+  <FuWen ID="51" GoodsID="940804" BeginNum="87501" EndNum="88750" />
+  <FuWen ID="52" GoodsID="940807" BeginNum="88751" EndNum="90000" />
+  <FuWen ID="53" GoodsID="940904" BeginNum="90001" EndNum="91250" />
+  <FuWen ID="54" GoodsID="940907" BeginNum="91251" EndNum="92500" />
+  <FuWen ID="55" GoodsID="941004" BeginNum="92501" EndNum="93750" />
+  <FuWen ID="56" GoodsID="941007" BeginNum="93751" EndNum="95000" />
+  <FuWen ID="57" GoodsID="941104" BeginNum="95001" EndNum="96250" />
+  <FuWen ID="58" GoodsID="941107" BeginNum="96251" EndNum="97500" />
+  <FuWen ID="59" GoodsID="941204" BeginNum="97501" EndNum="98750" />
+  <FuWen ID="60" GoodsID="941207" BeginNum="98751" EndNum="100000" />
+</Config>

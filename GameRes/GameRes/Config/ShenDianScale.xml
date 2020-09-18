@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ShenDian Level="0" Scale="0.7,5,3,2,1|0.2,10,6,4,2|0.1,20,12,8,4" />
+  <ShenDian Level="1" Scale="0.7,5,3,2,1|0.2,10,6,4,2|0.1,20,12,8,4" />
+  <ShenDian Level="2" Scale="0.7,5,3,2,1|0.2,10,6,4,2|0.1,20,12,8,4" />
+  <ShenDian Level="3" Scale="0.7,5,3,2,1|0.2,10,6,4,2|0.1,20,12,8,4" />
+  <ShenDian Level="4" Scale="0.7,5,3,2,1|0.2,10,6,4,2|0.1,20,12,8,4" />
+</Config>

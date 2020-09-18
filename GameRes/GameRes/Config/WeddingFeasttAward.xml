@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <WeddingFeasttAward ID="1" Type="1" Name="普通婚宴" Icon="hunyan_01.png" Picture="5000" ConductBindJinBi="200000" SumNum="100" UseNum="5" BindJinBi="20000" EXPAward="50000" XingHunAward="500" ShengWangAward="50" GoodWillRatio="100000" GoodsAward="5140,1,1,0,0,0,0" />
+  <WeddingFeasttAward ID="2" Type="2" Name="豪华婚宴" Icon="hunyan_02.png" Picture="5001" ConductBindJinBi="1000000" SumNum="100" UseNum="5" BindJinBi="50000" EXPAward="120000" XingHunAward="1200" ShengWangAward="120" GoodWillRatio="100000" GoodsAward="5140,1,1,0,0,0,0" />
+  <WeddingFeasttAward ID="3" Type="3" Name="丰盛婚宴" Icon="hunyan_03.png" Picture="5002" ConductBindJinBi="5200000" SumNum="100" UseNum="5" BindJinBi="100000" EXPAward="200000" XingHunAward="2000" ShengWangAward="200" GoodWillRatio="100000" GoodsAward="5140,1,1,0,0,0,0" />
+</Config>

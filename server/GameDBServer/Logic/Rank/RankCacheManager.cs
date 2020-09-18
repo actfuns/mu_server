@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.Rank
 {
-	// Token: 0x02000162 RID: 354
+	
 	public class RankCacheManager
 	{
-		// Token: 0x06000604 RID: 1540 RVA: 0x00035BE4 File Offset: 0x00033DE4
+		
 		public void PrintfRankData()
 		{
 			LogManager.WriteLog(LogTypes.Error, "RankDataDict开始输出", null, true);
@@ -33,7 +33,7 @@ namespace GameDBServer.Logic.Rank
 			LogManager.WriteLog(LogTypes.Error, "RankDataDict结束输出", null, true);
 		}
 
-		// Token: 0x06000605 RID: 1541 RVA: 0x00035D48 File Offset: 0x00033F48
+		
 		public void OnUserDoSomething(int roleID, RankType rankType, int value)
 		{
 			DBManager dbMgr = DBManager.getInstance();
@@ -90,7 +90,7 @@ namespace GameDBServer.Logic.Rank
 			}
 		}
 
-		// Token: 0x06000606 RID: 1542 RVA: 0x0003602C File Offset: 0x0003422C
+		
 		public List<InputKingPaiHangData> GetRankDataList(RankData rankData)
 		{
 			List<InputKingPaiHangData> result;
@@ -102,7 +102,7 @@ namespace GameDBServer.Logic.Rank
 			return result;
 		}
 
-		// Token: 0x06000607 RID: 1543 RVA: 0x0003608C File Offset: 0x0003428C
+		
 		public RankData GetRankDataFromCache(RankDataKey key)
 		{
 			RankData tmpRankData = null;
@@ -116,7 +116,7 @@ namespace GameDBServer.Logic.Rank
 			return tmpRankData;
 		}
 
-		// Token: 0x06000608 RID: 1544 RVA: 0x00036108 File Offset: 0x00034308
+		
 		public RankData GetRankData(RankDataKey key, List<int> minGateValueList, int maxPaiHang)
 		{
 			DBManager dbMgr = DBManager.getInstance();
@@ -151,7 +151,7 @@ namespace GameDBServer.Logic.Rank
 			return result;
 		}
 
-		// Token: 0x06000609 RID: 1545 RVA: 0x000361EC File Offset: 0x000343EC
+		
 		public RankData InitRankData(RankDataKey key, List<int> minGateValueList, int maxPaiHang)
 		{
 			DBManager dbMgr = DBManager.getInstance();
@@ -176,7 +176,7 @@ namespace GameDBServer.Logic.Rank
 			return result;
 		}
 
-		// Token: 0x0600060A RID: 1546 RVA: 0x000362CC File Offset: 0x000344CC
+		
 		private void BuildRank(RankData rankData)
 		{
 			if (null != rankData)
@@ -224,7 +224,7 @@ namespace GameDBServer.Logic.Rank
 			}
 		}
 
-		// Token: 0x0600060B RID: 1547 RVA: 0x000363FC File Offset: 0x000345FC
+		
 		public RankData GetUserInputRank(DBManager dbMgr, string fromDate, string toDate, List<int> minGateValueList, int maxPaiHang)
 		{
 			double currTime = Global.GetOffsetSecond(DateTime.Now);
@@ -238,7 +238,7 @@ namespace GameDBServer.Logic.Rank
 			return tmpRankData;
 		}
 
-		// Token: 0x0600060C RID: 1548 RVA: 0x00036454 File Offset: 0x00034654
+		
 		public RankData GetUserConsumeRank(DBManager dbMgr, string fromDate, string toDate, List<int> minGateValueList, int maxPaiHang)
 		{
 			double currTime = Global.GetOffsetSecond(DateTime.Now);
@@ -252,10 +252,10 @@ namespace GameDBServer.Logic.Rank
 			return tmpRankData;
 		}
 
-		// Token: 0x04000873 RID: 2163
+		
 		private object RankDataDictLock = new object();
 
-		// Token: 0x04000874 RID: 2164
+		
 		private Dictionary<string, RankData> RankDataDict = new Dictionary<string, RankData>();
 	}
 }

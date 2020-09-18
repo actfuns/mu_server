@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DuanWei>
+  <DuanWei ID="1" Type="1" Level="5" NeedDuanWeiJiFen="0" WinJiFen="75" LoseJiFen="0" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="2" Type="1" Level="4" NeedDuanWeiJiFen="270" WinJiFen="90" LoseJiFen="0" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="3" Type="1" Level="3" NeedDuanWeiJiFen="520" WinJiFen="105" LoseJiFen="0" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="4" Type="1" Level="2" NeedDuanWeiJiFen="870" WinJiFen="120" LoseJiFen="0" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="5" Type="1" Level="1" NeedDuanWeiJiFen="1300" WinJiFen="210" LoseJiFen="0" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="6" Type="2" Level="5" NeedDuanWeiJiFen="4000" WinJiFen="300" LoseJiFen="-210" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="7" Type="2" Level="4" NeedDuanWeiJiFen="5800" WinJiFen="330" LoseJiFen="-240" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="8" Type="2" Level="3" NeedDuanWeiJiFen="8200" WinJiFen="390" LoseJiFen="-255" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="9" Type="2" Level="2" NeedDuanWeiJiFen="11000" WinJiFen="420" LoseJiFen="-270" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="10" Type="2" Level="1" NeedDuanWeiJiFen="14600" WinJiFen="630" LoseJiFen="-300" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="11" Type="3" Level="5" NeedDuanWeiJiFen="30000" WinJiFen="720" LoseJiFen="-480" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="12" Type="3" Level="4" NeedDuanWeiJiFen="39000" WinJiFen="810" LoseJiFen="-540" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="13" Type="3" Level="3" NeedDuanWeiJiFen="54000" WinJiFen="870" LoseJiFen="-570" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="14" Type="3" Level="2" NeedDuanWeiJiFen="66000" WinJiFen="900" LoseJiFen="-600" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="15" Type="3" Level="1" NeedDuanWeiJiFen="93000" WinJiFen="1200" LoseJiFen="-630" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="16" Type="4" Level="5" NeedDuanWeiJiFen="156000" WinJiFen="1290" LoseJiFen="-900" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="17" Type="4" Level="4" NeedDuanWeiJiFen="188000" WinJiFen="1440" LoseJiFen="-900" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="18" Type="4" Level="3" NeedDuanWeiJiFen="236000" WinJiFen="1500" LoseJiFen="-900" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="19" Type="4" Level="2" NeedDuanWeiJiFen="296000" WinJiFen="1650" LoseJiFen="-900" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="20" Type="4" Level="1" NeedDuanWeiJiFen="360000" WinJiFen="1980" LoseJiFen="-1200" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="21" Type="5" Level="5" NeedDuanWeiJiFen="550000" WinJiFen="2100" LoseJiFen="-1500" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="22" Type="5" Level="4" NeedDuanWeiJiFen="650000" WinJiFen="2400" LoseJiFen="-1500" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="23" Type="5" Level="3" NeedDuanWeiJiFen="750000" WinJiFen="2550" LoseJiFen="-1500" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="24" Type="5" Level="2" NeedDuanWeiJiFen="850000" WinJiFen="2700" LoseJiFen="-1500" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <DuanWei ID="25" Type="5" Level="1" NeedDuanWeiJiFen="950000" WinJiFen="2850" LoseJiFen="-1500" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+</DuanWei>

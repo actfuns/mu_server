@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CrusadeCrystalMonster ID="1" MonsterID="9620001" Type="1" Name=" 资源矿石（小）" GatherTime="10" FuHuoTime="180" Ore="100" JiFen="200" X="7750" Y="6450" />
+  <CrusadeCrystalMonster ID="2" MonsterID="9620001" Type="1" Name=" 资源矿石（小）" GatherTime="10" FuHuoTime="180" Ore="100" JiFen="200" X="7450" Y="6450" />
+  <CrusadeCrystalMonster ID="3" MonsterID="9620001" Type="1" Name=" 资源矿石（小）" GatherTime="10" FuHuoTime="180" Ore="100" JiFen="200" X="7150" Y="6450" />
+  <CrusadeCrystalMonster ID="4" MonsterID="9620001" Type="1" Name=" 资源矿石（小）" GatherTime="10" FuHuoTime="180" Ore="100" JiFen="200" X="7450" Y="6850" />
+  <CrusadeCrystalMonster ID="5" MonsterID="9620001" Type="1" Name=" 资源矿石（小）" GatherTime="10" FuHuoTime="180" Ore="100" JiFen="200" X="7150" Y="6850" />
+  <CrusadeCrystalMonster ID="6" MonsterID="9620001" Type="1" Name=" 资源矿石（小）" GatherTime="10" FuHuoTime="180" Ore="100" JiFen="200" X="6850" Y="6850" />
+  <CrusadeCrystalMonster ID="7" MonsterID="9620001" Type="1" Name=" 资源矿石（小）" GatherTime="10" FuHuoTime="180" Ore="100" JiFen="200" X="7750" Y="7250" />
+  <CrusadeCrystalMonster ID="8" MonsterID="9620001" Type="1" Name=" 资源矿石（小）" GatherTime="10" FuHuoTime="180" Ore="100" JiFen="200" X="7450" Y="7250" />
+  <CrusadeCrystalMonster ID="9" MonsterID="9620001" Type="1" Name=" 资源矿石（小）" GatherTime="10" FuHuoTime="180" Ore="100" JiFen="200" X="7150" Y="7250" />
+  <CrusadeCrystalMonster ID="10" MonsterID="9620001" Type="1" Name=" 资源矿石（小）" GatherTime="10" FuHuoTime="180" Ore="100" JiFen="200" X="3750" Y="6450" />
+  <CrusadeCrystalMonster ID="11" MonsterID="9620001" Type="1" Name=" 资源矿石（小）" GatherTime="10" FuHuoTime="180" Ore="100" JiFen="200" X="4050" Y="6450" />
+  <CrusadeCrystalMonster ID="12" MonsterID="9620001" Type="1" Name=" 资源矿石（小）" GatherTime="10" FuHuoTime="180" Ore="100" JiFen="200" X="4350" Y="6450" />
+  <CrusadeCrystalMonster ID="13" MonsterID="9620001" Type="1" Name=" 资源矿石（小）" GatherTime="10" FuHuoTime="180" Ore="100" JiFen="200" X="4050" Y="6850" />
+  <CrusadeCrystalMonster ID="14" MonsterID="9620001" Type="1" Name=" 资源矿石（小）" GatherTime="10" FuHuoTime="180" Ore="100" JiFen="200" X="4350" Y="6850" />
+  <CrusadeCrystalMonster ID="15" MonsterID="9620001" Type="1" Name=" 资源矿石（小）" GatherTime="10" FuHuoTime="180" Ore="100" JiFen="200" X="4650" Y="6850" />
+  <CrusadeCrystalMonster ID="16" MonsterID="9620001" Type="1" Name=" 资源矿石（小）" GatherTime="10" FuHuoTime="180" Ore="100" JiFen="200" X="3750" Y="7250" />
+  <CrusadeCrystalMonster ID="17" MonsterID="9620001" Type="1" Name=" 资源矿石（小）" GatherTime="10" FuHuoTime="180" Ore="100" JiFen="200" X="4050" Y="7250" />
+  <CrusadeCrystalMonster ID="18" MonsterID="9620001" Type="1" Name=" 资源矿石（小）" GatherTime="10" FuHuoTime="180" Ore="100" JiFen="200" X="4350" Y="7250" />
+  <CrusadeCrystalMonster ID="19" MonsterID="9620002" Type="2" Name=" 资源矿石（大）" GatherTime="20" FuHuoTime="300" Ore="400" JiFen="500" X="7750" Y="12250" />
+  <CrusadeCrystalMonster ID="20" MonsterID="9620002" Type="2" Name=" 资源矿石（大）" GatherTime="20" FuHuoTime="300" Ore="400" JiFen="500" X="7750" Y="12550" />
+  <CrusadeCrystalMonster ID="21" MonsterID="9620002" Type="2" Name=" 资源矿石（大）" GatherTime="20" FuHuoTime="300" Ore="400" JiFen="500" X="7450" Y="12550" />
+  <CrusadeCrystalMonster ID="22" MonsterID="9620002" Type="2" Name=" 资源矿石（大）" GatherTime="20" FuHuoTime="300" Ore="400" JiFen="500" X="4050" Y="12550" />
+  <CrusadeCrystalMonster ID="23" MonsterID="9620002" Type="2" Name=" 资源矿石（大）" GatherTime="20" FuHuoTime="300" Ore="400" JiFen="500" X="3750" Y="12550" />
+  <CrusadeCrystalMonster ID="24" MonsterID="9620002" Type="2" Name=" 资源矿石（大）" GatherTime="20" FuHuoTime="300" Ore="400" JiFen="500" X="3750" Y="12250" />
+</Config>

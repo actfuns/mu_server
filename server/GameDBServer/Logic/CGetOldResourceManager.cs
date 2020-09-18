@@ -10,10 +10,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000125 RID: 293
+	
 	internal class CGetOldResourceManager
 	{
-		// Token: 0x060004D8 RID: 1240 RVA: 0x00027D6C File Offset: 0x00025F6C
+		
 		public static TCPProcessCmdResults ProcessQueryGetResourceInfo(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -59,7 +59,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x060004D9 RID: 1241 RVA: 0x00027ED8 File Offset: 0x000260D8
+		
 		public static TCPProcessCmdResults ProcessUpdateGetResourceInfo(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;

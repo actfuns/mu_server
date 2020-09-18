@@ -17,10 +17,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000134 RID: 308
+	
 	public class GlobalServiceManager
 	{
-		// Token: 0x0600052E RID: 1326 RVA: 0x0002B178 File Offset: 0x00029378
+		
 		public static void initialize()
 		{
 			ZhanMengShiJianManager.getInstance().initialize();
@@ -59,7 +59,7 @@ namespace GameDBServer.Logic
 			BoCaiManager.getInstance().initialize();
 		}
 
-		// Token: 0x0600052F RID: 1327 RVA: 0x0002B2FC File Offset: 0x000294FC
+		
 		public static void startup()
 		{
 			ZhanMengShiJianManager.getInstance().startup();
@@ -96,7 +96,7 @@ namespace GameDBServer.Logic
 			SingletonTemplate<RebornEquip>.Instance().startup();
 		}
 
-		// Token: 0x06000530 RID: 1328 RVA: 0x0002B46C File Offset: 0x0002966C
+		
 		public static void showdown()
 		{
 			ZhanMengShiJianManager.getInstance().showdown();
@@ -126,7 +126,7 @@ namespace GameDBServer.Logic
 			BoCaiManager.getInstance().showdown();
 		}
 
-		// Token: 0x06000531 RID: 1329 RVA: 0x0002B590 File Offset: 0x00029790
+		
 		public static void destroy()
 		{
 			ZhanMengShiJianManager.getInstance().destroy();

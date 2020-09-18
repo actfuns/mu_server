@@ -11,15 +11,15 @@ using Tmsk.Contract.Data;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x020001B3 RID: 435
+	
 	public class ActivityManagerNew : SingletonTemplate<ActivityManagerNew>
 	{
-		// Token: 0x06000551 RID: 1361 RVA: 0x0004A921 File Offset: 0x00048B21
+		
 		private ActivityManagerNew()
 		{
 		}
 
-		// Token: 0x06000552 RID: 1362 RVA: 0x0004A92C File Offset: 0x00048B2C
+		
 		public TCPProcessCmdResults HandleClientQueryPlatChargeKing(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -68,7 +68,7 @@ namespace GameServer.Logic.ActivityNew
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000553 RID: 1363 RVA: 0x0004AACC File Offset: 0x00048CCC
+		
 		public TCPProcessCmdResults ProcessQueryJieRiMeiRiPlatChargeKingCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -119,7 +119,7 @@ namespace GameServer.Logic.ActivityNew
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000554 RID: 1364 RVA: 0x0004AC70 File Offset: 0x00048E70
+		
 		public TCPProcessCmdResults ProcessExecuteJieRiMeiRiPlatChargeKingCmd(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPRandKey tcpRandKey, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ThemeActivityZhuanSheng ID="1" MonstersID="9720000" MapID="95000" X="3250" Y="7050" MinLevel="0|1" MaxLevel="7|100" ZhanLi="1090000" GoodsList="5041,1,1,0,0,0,0|5031,1,1,0,0,0,0|7043,1,1,0,0,0,0" Scale="1" TimePoints="14:00-15:00" ReadyTime="300" FightSecs="3240" ClearRolesSecs="60" MaxEnterNum="50" />
+  <ThemeActivityZhuanSheng ID="2" MonstersID="9720001" MapID="95001" X="3250" Y="7050" MinLevel="8|1" MaxLevel="10|100" ZhanLi="2750000" GoodsList="5041,1,1,0,0,0,0|5031,1,1,0,0,0,0|7043,1,1,0,0,0,0" Scale="1" TimePoints="14:00-15:00" ReadyTime="300" FightSecs="3240" ClearRolesSecs="60" MaxEnterNum="50" />
+  <ThemeActivityZhuanSheng ID="3" MonstersID="9720002" MapID="95002" X="3250" Y="7050" MinLevel="11|1" MaxLevel="12|100" ZhanLi="3900000" GoodsList="5041,1,1,0,0,0,0|5031,1,1,0,0,0,0|7043,1,1,0,0,0,0" Scale="1" TimePoints="14:00-15:00" ReadyTime="300" FightSecs="3240" ClearRolesSecs="60" MaxEnterNum="50" />
+  <ThemeActivityZhuanSheng ID="4" MonstersID="9720003" MapID="95003" X="3250" Y="7050" MinLevel="13|1" MaxLevel="100|100" ZhanLi="8000000" GoodsList="5041,1,1,0,0,0,0|5031,1,1,0,0,0,0|7043,1,1,0,0,0,0" Scale="1" TimePoints="14:00-15:00" ReadyTime="300" FightSecs="3240" ClearRolesSecs="60" MaxEnterNum="50" />
+</Config>

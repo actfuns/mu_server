@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <TeamBattleBirthPoint ID="1" PosX="1050" PosY="4850" BirthRadius="1" />
+  <TeamBattleBirthPoint ID="2" PosX="4850" PosY="1050" BirthRadius="1" />
+</Config>

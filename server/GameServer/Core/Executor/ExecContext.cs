@@ -5,10 +5,10 @@ using Server.Tools;
 
 namespace GameServer.Core.Executor
 {
-	// Token: 0x020000CA RID: 202
+	
 	internal class ExecContext
 	{
-		// Token: 0x06000383 RID: 899 RVA: 0x0003C7B0 File Offset: 0x0003A9B0
+		
 		public ExecContext()
 		{
 			this.WorkThread = new Thread(new ThreadStart(this.ThreadProc));
@@ -16,7 +16,7 @@ namespace GameServer.Core.Executor
 			this.WorkThread.Start();
 		}
 
-		// Token: 0x06000384 RID: 900 RVA: 0x0003C80C File Offset: 0x0003AA0C
+		
 		private void ThreadProc()
 		{
 			Stack<ScheduleTask> stack = new Stack<ScheduleTask>();
@@ -63,7 +63,7 @@ namespace GameServer.Core.Executor
 			}
 		}
 
-		// Token: 0x06000385 RID: 901 RVA: 0x0003CA1C File Offset: 0x0003AC1C
+		
 		public void Add(ScheduleTask task, int periodic)
 		{
 			lock (this.Mutex)
@@ -76,16 +76,16 @@ namespace GameServer.Core.Executor
 			}
 		}
 
-		// Token: 0x040004D8 RID: 1240
+		
 		private ReaderWriterLockSlim Mutex = new ReaderWriterLockSlim();
 
-		// Token: 0x040004D9 RID: 1241
+		
 		private Thread WorkThread;
 
-		// Token: 0x040004DA RID: 1242
+		
 		public List<MyTaskContext> TaskList = new List<MyTaskContext>();
 
-		// Token: 0x040004DB RID: 1243
+		
 		private int CurrentIndex;
 	}
 }

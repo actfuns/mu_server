@@ -9,21 +9,21 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.Activity.SevenDay
 {
-	// Token: 0x02000109 RID: 265
+	
 	public class SevenDayActivityManager : SingletonTemplate<SevenDayActivityManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x06000471 RID: 1137 RVA: 0x00023F4C File Offset: 0x0002214C
+		
 		private SevenDayActivityManager()
 		{
 		}
 
-		// Token: 0x06000472 RID: 1138 RVA: 0x00023F58 File Offset: 0x00022158
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x06000473 RID: 1139 RVA: 0x00023F6C File Offset: 0x0002216C
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(13220, SingletonTemplate<SevenDayActivityManager>.Instance());
@@ -32,19 +32,19 @@ namespace GameDBServer.Logic.Activity.SevenDay
 			return true;
 		}
 
-		// Token: 0x06000474 RID: 1140 RVA: 0x00023FC0 File Offset: 0x000221C0
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000475 RID: 1141 RVA: 0x00023FD4 File Offset: 0x000221D4
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000476 RID: 1142 RVA: 0x00023FE8 File Offset: 0x000221E8
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			if (nID == 13220)
@@ -61,7 +61,7 @@ namespace GameDBServer.Logic.Activity.SevenDay
 			}
 		}
 
-		// Token: 0x06000477 RID: 1143 RVA: 0x00024054 File Offset: 0x00022254
+		
 		private void HandleQueryCharge(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			string cmdData = null;
@@ -103,7 +103,7 @@ namespace GameDBServer.Logic.Activity.SevenDay
 			}
 		}
 
-		// Token: 0x06000478 RID: 1144 RVA: 0x000241AC File Offset: 0x000223AC
+		
 		private Dictionary<string, int> _QueryEachDayChargeYB(DBManager dbMgr, string fromDate, string toDate, string userid, int zoneid)
 		{
 			Dictionary<string, int> result;
@@ -165,7 +165,7 @@ namespace GameDBServer.Logic.Activity.SevenDay
 			return result;
 		}
 
-		// Token: 0x06000479 RID: 1145 RVA: 0x00024350 File Offset: 0x00022550
+		
 		private void HandleClear(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			bool bResult = false;
@@ -196,7 +196,7 @@ namespace GameDBServer.Logic.Activity.SevenDay
 			client.sendCmd<bool>(nID, bResult);
 		}
 
-		// Token: 0x0600047A RID: 1146 RVA: 0x00024448 File Offset: 0x00022648
+		
 		private void HandleUpdate(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			bool bResult = false;
@@ -241,7 +241,7 @@ namespace GameDBServer.Logic.Activity.SevenDay
 			client.sendCmd<bool>(nID, bResult);
 		}
 
-		// Token: 0x0600047B RID: 1147 RVA: 0x00024610 File Offset: 0x00022810
+		
 		private bool ExecNonQuery(string sql)
 		{
 			bool bResult = false;

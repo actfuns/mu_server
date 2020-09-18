@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Type ID="27" LiuShuiID="1" Name="每日充值豪礼" PeiZhi="DayChongZhi.xml"/>
+  <Type ID="28" LiuShuiID="2" Name="冲级领取神装" PeiZhi="LevelAward.xml"/>
+  <Type ID="29" LiuShuiID="3" Name="神装激情回赠" PeiZhi="ShenZhuangAward.xml"/>
+  <Type ID="31" LiuShuiID="4" Name="幸运转盘" PeiZhi="NewDig1.xml"/>
+</Config>

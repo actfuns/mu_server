@@ -7,16 +7,16 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x020001D1 RID: 465
+	
 	public class LiPinMaManager
 	{
-		// Token: 0x060009C5 RID: 2501 RVA: 0x0005DDA3 File Offset: 0x0005BFA3
+		
 		public static void LoadLiPinMaDB(DBManager dbMgr)
 		{
 			LiPinMaManager._LiPinMaDict = DBQuery.QueryLiPinMaDict(dbMgr);
 		}
 
-		// Token: 0x060009C6 RID: 2502 RVA: 0x0005DDB4 File Offset: 0x0005BFB4
+		
 		public static void LoadLiPinMaFromFile(DBManager dbMgr, bool toAppend = false)
 		{
 			try
@@ -84,7 +84,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060009C7 RID: 2503 RVA: 0x0005E024 File Offset: 0x0005C224
+		
 		public static int GetLiPinMaPingTaiID(DBManager dbMgr, int songLiID, string liPinMa)
 		{
 			int result;
@@ -112,7 +112,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x060009C8 RID: 2504 RVA: 0x0005E0B4 File Offset: 0x0005C2B4
+		
 		public static int UseLiPinMa(DBManager dbMgr, int roleID, int songLiID, string liPinMa, bool insertLiPinMa = false)
 		{
 			int result;
@@ -158,7 +158,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x060009C9 RID: 2505 RVA: 0x0005E214 File Offset: 0x0005C414
+		
 		public static int GetLiPinMaPingTaiID2(DBManager dbMgr, int songLiID, string liPinMa, int roleZoneID)
 		{
 			liPinMa = liPinMa.ToUpper();
@@ -182,7 +182,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x060009CA RID: 2506 RVA: 0x0005E274 File Offset: 0x0005C474
+		
 		public static int GetLiPinMaPingTaiIDNX(DBManager dbMgr, int songLiID, string liPinMa, int roleZoneID)
 		{
 			liPinMa = liPinMa.ToUpper();
@@ -206,7 +206,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x060009CB RID: 2507 RVA: 0x0005E2D4 File Offset: 0x0005C4D4
+		
 		public static int UseLiPinMa2(DBManager dbMgr, int roleID, int songLiID, string liPinMa, int roleZoneID)
 		{
 			int result;
@@ -285,7 +285,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x060009CC RID: 2508 RVA: 0x0005E554 File Offset: 0x0005C754
+		
 		public static int UseLiPinMaNX(DBManager dbMgr, int roleID, int songLiID, string liPinMa, int roleZoneID)
 		{
 			int result;
@@ -364,10 +364,10 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x04000BF5 RID: 3061
+		
 		private static object Mutex = new object();
 
-		// Token: 0x04000BF6 RID: 3062
+		
 		private static Dictionary<string, LiPinMaItem> _LiPinMaDict = null;
 	}
 }

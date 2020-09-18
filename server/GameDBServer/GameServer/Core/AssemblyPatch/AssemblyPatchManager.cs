@@ -10,16 +10,16 @@ using Tmsk.Tools.Tools;
 
 namespace GameServer.Core.AssemblyPatch
 {
-	// Token: 0x02000008 RID: 8
+	
 	public class AssemblyPatchManager : IManager, IEventListener
 	{
-		// Token: 0x06000013 RID: 19 RVA: 0x0000241C File Offset: 0x0000061C
+		
 		public static AssemblyPatchManager getInstance()
 		{
 			return AssemblyPatchManager.instance;
 		}
 
-		// Token: 0x06000014 RID: 20 RVA: 0x00002434 File Offset: 0x00000634
+		
 		public bool initialize()
 		{
 			bool result;
@@ -44,25 +44,25 @@ namespace GameServer.Core.AssemblyPatch
 			return result;
 		}
 
-		// Token: 0x06000015 RID: 21 RVA: 0x00002514 File Offset: 0x00000714
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x06000016 RID: 22 RVA: 0x00002528 File Offset: 0x00000728
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000017 RID: 23 RVA: 0x0000253C File Offset: 0x0000073C
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000018 RID: 24 RVA: 0x00002550 File Offset: 0x00000750
+		
 		public bool InitConfig()
 		{
 			string fileName = "AssemblyPatch.xml";
@@ -118,7 +118,7 @@ namespace GameServer.Core.AssemblyPatch
 			return result;
 		}
 
-		// Token: 0x06000019 RID: 25 RVA: 0x00002768 File Offset: 0x00000968
+		
 		private bool CheckMethod(MethodConfig cfg)
 		{
 			bool result;
@@ -144,7 +144,7 @@ namespace GameServer.Core.AssemblyPatch
 			return result;
 		}
 
-		// Token: 0x0600001A RID: 26 RVA: 0x00002818 File Offset: 0x00000A18
+		
 		private AssemblyLoader GetAssemblyLoader(string AssemblyName)
 		{
 			AssemblyLoader result;
@@ -159,7 +159,7 @@ namespace GameServer.Core.AssemblyPatch
 			return result;
 		}
 
-		// Token: 0x0600001B RID: 27 RVA: 0x0000284C File Offset: 0x00000A4C
+		
 		private void AddAssemblyLoader(string AssemblyName, AssemblyLoader loader)
 		{
 			try
@@ -172,7 +172,7 @@ namespace GameServer.Core.AssemblyPatch
 			}
 		}
 
-		// Token: 0x0600001C RID: 28 RVA: 0x00002898 File Offset: 0x00000A98
+		
 		public void processEvent(EventObject eventObject)
 		{
 			List<MethodConfig> methodList = null;
@@ -212,13 +212,13 @@ namespace GameServer.Core.AssemblyPatch
 			}
 		}
 
-		// Token: 0x0600001D RID: 29 RVA: 0x00002A00 File Offset: 0x00000C00
+		
 		public bool IfNeedMonMsg()
 		{
 			return this.patchCfgDict.ContainsKey(EventTypes.BeforeProcessMsg);
 		}
 
-		// Token: 0x0600001E RID: 30 RVA: 0x00002A20 File Offset: 0x00000C20
+		
 		public TCPProcessCmdResults ProcessMsg(GameServerClient client, int nID, byte[] data, int count)
 		{
 			try
@@ -266,16 +266,16 @@ namespace GameServer.Core.AssemblyPatch
 			return TCPProcessCmdResults.RESUTL_CONTINUE;
 		}
 
-		// Token: 0x0400000E RID: 14
+		
 		private static AssemblyPatchManager instance = new AssemblyPatchManager();
 
-		// Token: 0x0400000F RID: 15
+		
 		private Dictionary<EventTypes, List<MethodConfig>> patchCfgDict = new Dictionary<EventTypes, List<MethodConfig>>();
 
-		// Token: 0x04000010 RID: 16
+		
 		private bool[] CmdRegisteredFlags = new bool[32768];
 
-		// Token: 0x04000011 RID: 17
+		
 		private Dictionary<string, AssemblyLoader> patchDict = new Dictionary<string, AssemblyLoader>();
 	}
 }

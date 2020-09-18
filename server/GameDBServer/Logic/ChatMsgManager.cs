@@ -9,10 +9,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x020001A9 RID: 425
+	
 	public class ChatMsgManager
 	{
-		// Token: 0x06000903 RID: 2307 RVA: 0x00053FD8 File Offset: 0x000521D8
+		
 		private static Queue<string> GetChatMsgQueue(int serverLineID)
 		{
 			Queue<string> msgQueue = null;
@@ -27,7 +27,7 @@ namespace GameDBServer.Logic
 			return msgQueue;
 		}
 
-		// Token: 0x06000904 RID: 2308 RVA: 0x00054050 File Offset: 0x00052250
+		
 		public static void AddGMCmdChatMsg(int serverLineID, string gmCmd)
 		{
 			string chatMsg = string.Format("{0}:{1}:{2}:{3}:{4}:{5}:{6}:{7}:{8}", new object[]
@@ -58,7 +58,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000905 RID: 2309 RVA: 0x0005414C File Offset: 0x0005234C
+		
 		public static void AddGMCmdChatMsgToOneClient(string gmCmd)
 		{
 			string chatMsg = string.Format("{0}:{1}:{2}:{3}:{4}:{5}:{6}:{7}:{8}", new object[]
@@ -87,7 +87,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000906 RID: 2310 RVA: 0x00054250 File Offset: 0x00052450
+		
 		public static void AddChatMsg(int serverLineID, string chatMsg)
 		{
 			LogManager.WriteLog(LogTypes.SQL, string.Format("AddChatMsg:LineID={0},Msg={1}", serverLineID, chatMsg), null, true);
@@ -159,7 +159,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000907 RID: 2311 RVA: 0x00054590 File Offset: 0x00052790
+		
 		public static TCPOutPacket GetWaitingChatMsg(TCPOutPacketPool pool, int cmdID, int serverLineID)
 		{
 			List<string> msgList = new List<string>();
@@ -174,7 +174,7 @@ namespace GameDBServer.Logic
 			return DataHelper.ObjectToTCPOutPacket<List<string>>(msgList, pool, cmdID);
 		}
 
-		// Token: 0x06000908 RID: 2312 RVA: 0x00054624 File Offset: 0x00052824
+		
 		public static void ScanGMMsgToGameServer(DBManager dbMgr)
 		{
 			try
@@ -250,10 +250,10 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x040009AD RID: 2477
+		
 		private static Dictionary<int, Queue<string>> ChatMsgDict = new Dictionary<int, Queue<string>>();
 
-		// Token: 0x040009AE RID: 2478
+		
 		private static long LastScanInputGMMsgTicks = DateTime.Now.Ticks / 10000L;
 	}
 }

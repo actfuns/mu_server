@@ -9,21 +9,21 @@ using GameDBServer.Server.CmdProcessor;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000197 RID: 407
+	
 	public class ZhanMengShiJianManager : ZhanMengShiJianConstants, ScheduleTask, IManager
 	{
-		// Token: 0x0600073C RID: 1852 RVA: 0x00042EB4 File Offset: 0x000410B4
+		
 		private ZhanMengShiJianManager()
 		{
 		}
 
-		// Token: 0x0600073D RID: 1853 RVA: 0x00042EE8 File Offset: 0x000410E8
+		
 		public static ZhanMengShiJianManager getInstance()
 		{
 			return ZhanMengShiJianManager.instance;
 		}
 
-		// Token: 0x0600073E RID: 1854 RVA: 0x00042F00 File Offset: 0x00041100
+		
 		public bool initialize()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(10138, ZhanMengShiJianCmdProcessor.getInstance());
@@ -54,7 +54,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600073F RID: 1855 RVA: 0x00042FF4 File Offset: 0x000411F4
+		
 		public bool startup()
 		{
 			this.executor.start();
@@ -62,7 +62,7 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000740 RID: 1856 RVA: 0x0004302C File Offset: 0x0004122C
+		
 		public bool showdown()
 		{
 			this.executor.stop();
@@ -70,7 +70,7 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000741 RID: 1857 RVA: 0x00043054 File Offset: 0x00041254
+		
 		public bool destroy()
 		{
 			this.executor = null;
@@ -92,7 +92,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000742 RID: 1858 RVA: 0x000430E8 File Offset: 0x000412E8
+		
 		public void run()
 		{
 			if (TimeUtil.NOW() > this.executeSaveTime)
@@ -102,7 +102,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000743 RID: 1859 RVA: 0x00043128 File Offset: 0x00041328
+		
 		public List<ZhanMengShiJianData> getDetailByPageIndex(int bhId, int pageIndex)
 		{
 			int maxPageNum = ZhanMengShiJianConstants.MaxCacheNum / ZhanMengShiJianConstants.PageShowNum;
@@ -146,7 +146,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000744 RID: 1860 RVA: 0x000431D0 File Offset: 0x000413D0
+		
 		private void deleteData()
 		{
 			foreach (int bhId in this.dataCache.Keys)
@@ -161,7 +161,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000745 RID: 1861 RVA: 0x0004327C File Offset: 0x0004147C
+		
 		public void onZhanMengJieSan(int bhId)
 		{
 			if (this.dataCache.Remove(bhId))
@@ -170,7 +170,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000746 RID: 1862 RVA: 0x000432AC File Offset: 0x000414AC
+		
 		public void onAddZhanMengShiJian(ZhanMengShiJianData data)
 		{
 			List<ZhanMengShiJianData> _dataList = null;
@@ -193,16 +193,16 @@ namespace GameDBServer.Logic
 			ZhanMengShiJianDBController.getInstance().insert(data);
 		}
 
-		// Token: 0x04000947 RID: 2375
+		
 		private static ZhanMengShiJianManager instance = new ZhanMengShiJianManager();
 
-		// Token: 0x04000948 RID: 2376
+		
 		private long executeSaveTime = TimeUtil.NOW() + ZhanMengShiJianConstants.deleteTime;
 
-		// Token: 0x04000949 RID: 2377
+		
 		private ScheduleExecutor executor = new ScheduleExecutor(1);
 
-		// Token: 0x0400094A RID: 2378
+		
 		private Dictionary<int, List<ZhanMengShiJianData>> dataCache = new Dictionary<int, List<ZhanMengShiJianData>>();
 	}
 }

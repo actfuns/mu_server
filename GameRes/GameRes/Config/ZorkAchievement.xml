@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ZorkAchievement ID="1" AchievementTarget="1" TargetNum="5" AchievementReward="2037,5,1,0,0,0,0" AchievementTitle="个人击杀敌方角色{0}次" />
+  <ZorkAchievement ID="2" AchievementTarget="1" TargetNum="10" AchievementReward="2037,8,1,0,0,0,0" AchievementTitle="个人击杀敌方角色{0}次" />
+  <ZorkAchievement ID="3" AchievementTarget="1" TargetNum="15" AchievementReward="2037,10,1,0,0,0,0" AchievementTitle="个人击杀敌方角色{0}次" />
+  <ZorkAchievement ID="4" AchievementTarget="1" TargetNum="20" AchievementReward="2037,12,1,0,0,0,0" AchievementTitle="个人击杀敌方角色{0}次" />
+  <ZorkAchievement ID="5" AchievementTarget="2" TargetNum="5" AchievementReward="2037,10,1,0,0,0,0" AchievementTitle="个人参与场数达到{0}场" />
+  <ZorkAchievement ID="6" AchievementTarget="2" TargetNum="10" AchievementReward="2037,20,1,0,0,0,0" AchievementTitle="个人参与场数达到{0}场" />
+  <ZorkAchievement ID="7" AchievementTarget="2" TargetNum="20" AchievementReward="2037,30,1,0,0,0,0" AchievementTitle="个人参与场数达到{0}场" />
+  <ZorkAchievement ID="8" AchievementTarget="3" TargetNum="10" AchievementReward="63238,6,1,0,0,0,0" AchievementTitle="个人击杀{0}个BUFF守卫" />
+  <ZorkAchievement ID="9" AchievementTarget="3" TargetNum="50" AchievementReward="63238,12,1,0,0,0,0" AchievementTitle="个人击杀{0}个BUFF守卫" />
+  <ZorkAchievement ID="10" AchievementTarget="3" TargetNum="100" AchievementReward="63238,18,1,0,0,0,0" AchievementTitle="个人击杀{0}个BUFF守卫" />
+  <ZorkAchievement ID="11" AchievementTarget="5" TargetNum="3" AchievementReward="5500,5,1,0,0,0,0" AchievementTitle="个人最大连胜{0}场" />
+  <ZorkAchievement ID="12" AchievementTarget="5" TargetNum="8" AchievementReward="5500,10,1,0,0,0,0" AchievementTitle="个人最大连胜{0}场" />
+  <ZorkAchievement ID="13" AchievementTarget="5" TargetNum="15" AchievementReward="5500,15,1,0,0,0,0" AchievementTitle="个人最大连胜{0}场" />
+  <ZorkAchievement ID="14" AchievementTarget="5" TargetNum="20" AchievementReward="5500,20,1,0,0,0,0" AchievementTitle="个人最大连胜{0}场" />
+  <ZorkAchievement ID="15" AchievementTarget="6" TargetNum="5" AchievementReward="5430,2,1,0,0,0,0" AchievementTitle="个人胜利场次达到{0}场" />
+  <ZorkAchievement ID="16" AchievementTarget="6" TargetNum="10" AchievementReward="5430,4,1,0,0,0,0" AchievementTitle="个人胜利场次达到{0}场" />
+  <ZorkAchievement ID="17" AchievementTarget="6" TargetNum="15" AchievementReward="5430,6,1,0,0,0,0" AchievementTitle="个人胜利场次达到{0}场" />
+  <ZorkAchievement ID="18" AchievementTarget="7" TargetNum="500000" AchievementReward="63238,10,1,0,0,0,0" AchievementTitle="个人对领主头领累积造成的伤害{0}亿" />
+  <ZorkAchievement ID="19" AchievementTarget="7" TargetNum="1000000" AchievementReward="63238,15,1,0,0,0,0" AchievementTitle="个人对领主头领累积造成的伤害{0}亿" />
+  <ZorkAchievement ID="20" AchievementTarget="7" TargetNum="2000000" AchievementReward="63238,20,1,0,0,0,0" AchievementTitle="个人对领主头领累积造成的伤害{0}亿" />
+</Config>

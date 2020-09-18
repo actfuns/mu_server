@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+      <Teleports>
+        <Teleport Code="197" FrameNum="13" Tip="仙踪林" Key="10"  To="2" ToX="13150" ToY="3650" ToDirection="0" X="1850" Y="13450" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+		<Teleport Code="197" FrameNum="13" Tip="卡伦特" Key="11"  To="50" ToX="17650" ToY="7350" ToDirection="0" X="1950" Y="2750" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+      </Teleports>
+</Map>

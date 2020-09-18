@@ -10,10 +10,10 @@ using Tmsk.Contract.Data;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x0200003F RID: 63
+	
 	public class JieriPlatChargeKingEveryDay : Activity
 	{
-		// Token: 0x060000AD RID: 173 RVA: 0x0000C57C File Offset: 0x0000A77C
+		
 		public bool Init()
 		{
 			try
@@ -133,7 +133,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x060000AE RID: 174 RVA: 0x0000C998 File Offset: 0x0000AB98
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client, int _params)
 		{
 			JieriPlatChargeKingEveryDay.ChargeItem ci = null;
@@ -165,7 +165,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060000AF RID: 175 RVA: 0x0000CA80 File Offset: 0x0000AC80
+		
 		public bool CanGetAnyAward(GameClient client)
 		{
 			bool result;
@@ -198,7 +198,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060000B0 RID: 176 RVA: 0x0000CB98 File Offset: 0x0000AD98
+		
 		public override bool CheckCondition(GameClient client, int extTag)
 		{
 			bool result;
@@ -264,7 +264,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060000B1 RID: 177 RVA: 0x0000CDF4 File Offset: 0x0000AFF4
+		
 		public override bool GiveAward(GameClient client, int _params)
 		{
 			DateTime startTime = DateTime.Parse(this.FromDate);
@@ -307,7 +307,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060000B2 RID: 178 RVA: 0x0000CF6C File Offset: 0x0000B16C
+		
 		public void HandleCenterPaiHang(int Day, List<InputKingPaiHangData> tmpRankList)
 		{
 			List<JieriPlatChargeKingEveryDay.ChargeItem> chargeItemList;
@@ -353,7 +353,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060000B3 RID: 179 RVA: 0x0000D0E0 File Offset: 0x0000B2E0
+		
 		public void Update()
 		{
 			if (!this.InActivityTime() && !this.InAwardTime())
@@ -390,7 +390,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060000B4 RID: 180 RVA: 0x0000D288 File Offset: 0x0000B488
+		
 		public JieriPlatChargeKingEverydayData BuildQueryDataForClient(GameClient client)
 		{
 			DateTime startTime = DateTime.Parse(this.FromDate);
@@ -421,52 +421,52 @@ namespace GameServer.Logic.ActivityNew
 			return myData;
 		}
 
-		// Token: 0x04000152 RID: 338
+		
 		private const int updateIntervalSec = 15;
 
-		// Token: 0x04000153 RID: 339
+		
 		private readonly string CfgFile = "Config/JieRiGifts/JieRiMeiRiChongZhiWang.xml";
 
-		// Token: 0x04000154 RID: 340
+		
 		private Dictionary<int, List<JieriPlatChargeKingEveryDay.ChargeItem>> DayVsChargeItemListDict = new Dictionary<int, List<JieriPlatChargeKingEveryDay.ChargeItem>>();
 
-		// Token: 0x04000155 RID: 341
+		
 		private Dictionary<int, JieriPlatChargeKingEveryDay.ChargeItem> IdVsChargeItemDict = new Dictionary<int, JieriPlatChargeKingEveryDay.ChargeItem>();
 
-		// Token: 0x04000156 RID: 342
+		
 		private object Mutex = new object();
 
-		// Token: 0x04000157 RID: 343
+		
 		private Dictionary<int, List<InputKingPaiHangData>> _realRankDict = new Dictionary<int, List<InputKingPaiHangData>>();
 
-		// Token: 0x04000158 RID: 344
+		
 		private Dictionary<int, InputKingPaiHangDataEx> _kfRankDict = new Dictionary<int, InputKingPaiHangDataEx>();
 
-		// Token: 0x04000159 RID: 345
+		
 		private DateTime lastUpdateTime = TimeUtil.NowDateTime().AddSeconds(-30.0);
 
-		// Token: 0x02000040 RID: 64
+		
 		private class ChargeItem
 		{
-			// Token: 0x0400015E RID: 350
+			
 			public int Id;
 
-			// Token: 0x0400015F RID: 351
+			
 			public int Rank;
 
-			// Token: 0x04000160 RID: 352
+			
 			public int Day;
 
-			// Token: 0x04000161 RID: 353
+			
 			public int NeedChargeYB;
 
-			// Token: 0x04000162 RID: 354
+			
 			public AwardItem allAwardGoodsOne;
 
-			// Token: 0x04000163 RID: 355
+			
 			public AwardItem occAwardGoodsTwo;
 
-			// Token: 0x04000164 RID: 356
+			
 			public AwardEffectTimeItem timeAwardGoodsThr;
 		}
 	}

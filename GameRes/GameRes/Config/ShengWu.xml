@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ShengWu ID="100" Name="黄金圣杯" Tyep="1" BuJianSuit="0" ResName="500" ExtraProperty="-1" />
+  <ShengWu ID="101" Name="黄金圣杯" Tyep="1" BuJianSuit="1" ResName="501" ExtraProperty="Potion,0.1" />
+  <ShengWu ID="102" Name="黄金圣杯" Tyep="1" BuJianSuit="2" ResName="502" ExtraProperty="Potion,0.2|Constitution,10" />
+  <ShengWu ID="103" Name="黄金圣杯" Tyep="1" BuJianSuit="3" ResName="503" ExtraProperty="Potion,0.3|Constitution,20" />
+  <ShengWu ID="104" Name="黄金圣杯" Tyep="1" BuJianSuit="4" ResName="504" ExtraProperty="Potion,0.5|Constitution,40|MaxLifePercent,0.02" />
+  <ShengWu ID="105" Name="黄金圣杯" Tyep="1" BuJianSuit="5" ResName="505" ExtraProperty="Potion,1|Constitution,80|MaxLifePercent,0.04" />
+  <ShengWu ID="106" Name="黄金圣杯" Tyep="1" BuJianSuit="6" ResName="506" ExtraProperty="Potion,1.6|Constitution,120|MaxLifePercent,0.08" />
+  <ShengWu ID="107" Name="黄金圣杯" Tyep="1" BuJianSuit="7" ResName="507" ExtraProperty="Potion,2.4|Constitution,160|MaxLifePercent,0.12" />
+  <ShengWu ID="108" Name="黄金圣杯" Tyep="1" BuJianSuit="8" ResName="508" ExtraProperty="Potion,3.2|Constitution,200|MaxLifePercent,0.16" />
+  <ShengWu ID="109" Name="黄金圣杯" Tyep="1" BuJianSuit="9" ResName="509" ExtraProperty="Potion,4|Constitution,300|MaxLifePercent,0.2" />
+  <ShengWu ID="200" Name="黄金圣冠" Tyep="2" BuJianSuit="0" ResName="520" ExtraProperty="-1" />
+  <ShengWu ID="201" Name="黄金圣冠" Tyep="2" BuJianSuit="1" ResName="521" ExtraProperty="HolyWater,0.05" />
+  <ShengWu ID="202" Name="黄金圣冠" Tyep="2" BuJianSuit="2" ResName="522" ExtraProperty="HolyWater,0.1|Dexterity,10" />
+  <ShengWu ID="203" Name="黄金圣冠" Tyep="2" BuJianSuit="3" ResName="523" ExtraProperty="HolyWater,0.15|Dexterity,20" />
+  <ShengWu ID="204" Name="黄金圣冠" Tyep="2" BuJianSuit="4" ResName="524" ExtraProperty="HolyWater,0.25|Dexterity,40|AddDefensePercent,0.01" />
+  <ShengWu ID="205" Name="黄金圣冠" Tyep="2" BuJianSuit="5" ResName="525" ExtraProperty="HolyWater,0.5|Dexterity,80|AddDefensePercent,0.02" />
+  <ShengWu ID="206" Name="黄金圣冠" Tyep="2" BuJianSuit="6" ResName="526" ExtraProperty="HolyWater,0.8|Dexterity,120|AddDefensePercent,0.04" />
+  <ShengWu ID="207" Name="黄金圣冠" Tyep="2" BuJianSuit="7" ResName="527" ExtraProperty="HolyWater,1.2|Dexterity,160|AddDefensePercent,0.06" />
+  <ShengWu ID="208" Name="黄金圣冠" Tyep="2" BuJianSuit="8" ResName="528" ExtraProperty="HolyWater,1.6|Dexterity,200|AddDefensePercent,0.08" />
+  <ShengWu ID="209" Name="黄金圣冠" Tyep="2" BuJianSuit="9" ResName="529" ExtraProperty="HolyWater,2|Dexterity,300|AddDefensePercent,0.1" />
+  <ShengWu ID="300" Name="黄金圣剑" Tyep="3" BuJianSuit="0" ResName="540" ExtraProperty="-1" />
+  <ShengWu ID="301" Name="黄金圣剑" Tyep="3" BuJianSuit="1" ResName="541" ExtraProperty="RecoverLifeV,0.05" />
+  <ShengWu ID="302" Name="黄金圣剑" Tyep="3" BuJianSuit="2" ResName="542" ExtraProperty="RecoverLifeV,0.1|Strength,10" />
+  <ShengWu ID="303" Name="黄金圣剑" Tyep="3" BuJianSuit="3" ResName="543" ExtraProperty="RecoverLifeV,0.15|Strength,20" />
+  <ShengWu ID="304" Name="黄金圣剑" Tyep="3" BuJianSuit="4" ResName="544" ExtraProperty="RecoverLifeV,0.25|Strength,40|AddAttackPercent,0.01" />
+  <ShengWu ID="305" Name="黄金圣剑" Tyep="3" BuJianSuit="5" ResName="545" ExtraProperty="RecoverLifeV,0.5|Strength,80|AddAttackPercent,0.02" />
+  <ShengWu ID="306" Name="黄金圣剑" Tyep="3" BuJianSuit="6" ResName="546" ExtraProperty="RecoverLifeV,0.8|Strength,120|AddAttackPercent,0.04" />
+  <ShengWu ID="307" Name="黄金圣剑" Tyep="3" BuJianSuit="7" ResName="547" ExtraProperty="RecoverLifeV,1.2|Strength,160|AddAttackPercent,0.06" />
+  <ShengWu ID="308" Name="黄金圣剑" Tyep="3" BuJianSuit="8" ResName="548" ExtraProperty="RecoverLifeV,1.6|Strength,200|AddAttackPercent,0.08" />
+  <ShengWu ID="309" Name="黄金圣剑" Tyep="3" BuJianSuit="9" ResName="549" ExtraProperty="RecoverLifeV,2|Strength,300|AddAttackPercent,0.1" />
+  <ShengWu ID="400" Name="黄金圣典" Tyep="4" BuJianSuit="0" ResName="560" ExtraProperty="-1" />
+  <ShengWu ID="401" Name="黄金圣典" Tyep="4" BuJianSuit="1" ResName="561" ExtraProperty="FatalHurt,0.05" />
+  <ShengWu ID="402" Name="黄金圣典" Tyep="4" BuJianSuit="2" ResName="562" ExtraProperty="FatalHurt,0.1|Intelligence,10" />
+  <ShengWu ID="403" Name="黄金圣典" Tyep="4" BuJianSuit="3" ResName="563" ExtraProperty="FatalHurt,0.15|Intelligence,20" />
+  <ShengWu ID="404" Name="黄金圣典" Tyep="4" BuJianSuit="4" ResName="564" ExtraProperty="FatalHurt,0.25|Intelligence,40|HitPercent,0.01" />
+  <ShengWu ID="405" Name="黄金圣典" Tyep="4" BuJianSuit="5" ResName="565" ExtraProperty="FatalHurt,0.5|Intelligence,80|HitPercent,0.02" />
+  <ShengWu ID="406" Name="黄金圣典" Tyep="4" BuJianSuit="6" ResName="566" ExtraProperty="FatalHurt,0.8|Intelligence,120|HitPercent,0.04" />
+  <ShengWu ID="407" Name="黄金圣典" Tyep="4" BuJianSuit="7" ResName="567" ExtraProperty="FatalHurt,1.2|Intelligence,160|HitPercent,0.06" />
+  <ShengWu ID="408" Name="黄金圣典" Tyep="4" BuJianSuit="8" ResName="568" ExtraProperty="FatalHurt,1.6|Intelligence,200|HitPercent,0.08" />
+  <ShengWu ID="409" Name="黄金圣典" Tyep="4" BuJianSuit="9" ResName="569" ExtraProperty="FatalHurt,2|Intelligence,300|HitPercent,0.1" />
+</Config>

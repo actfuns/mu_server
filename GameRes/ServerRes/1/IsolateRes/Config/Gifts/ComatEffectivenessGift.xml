@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Item ID="1" ComatEffectiveness="10000000" GoodsOne="9990002,200,1,0,0,0,0|9990003,200,1,0,0,0,0|9990004,200,1,0,0,0,0|9990005,200,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Item ID="2" ComatEffectiveness="20000000" GoodsOne="9990002,400,1,0,0,0,0|9990003,400,1,0,0,0,0|9990004,400,1,0,0,0,0|9990005,400,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Item ID="3" ComatEffectiveness="30000000" GoodsOne="9990002,600,1,0,0,0,0|9990003,600,1,0,0,0,0|9990004,600,1,0,0,0,0|9990005,600,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Item ID="4" ComatEffectiveness="40000000" GoodsOne="9990002,800,1,0,0,0,0|9990003,800,1,0,0,0,0|9990004,800,1,0,0,0,0|9990005,800,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Item ID="5" ComatEffectiveness="50000000" GoodsOne="9990002,1000,1,0,0,0,0|9990003,1000,1,0,0,0,0|9990004,1000,1,0,0,0,0|9990005,1000,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Item ID="6" ComatEffectiveness="60000000" GoodsOne="9990002,1200,1,0,0,0,0|9990003,1200,1,0,0,0,0|9990004,1200,1,0,0,0,0|9990005,1200,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Item ID="7" ComatEffectiveness="70000000" GoodsOne="9990002,1400,1,0,0,0,0|9990003,1400,1,0,0,0,0|9990004,1400,1,0,0,0,0|9990005,1400,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Item ID="8" ComatEffectiveness="80000000" GoodsOne="9990002,1600,1,0,0,0,0|9990003,1600,1,0,0,0,0|9990004,1600,1,0,0,0,0|9990005,1600,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Item ID="9" ComatEffectiveness="90000000" GoodsOne="9990002,1800,1,0,0,0,0|9990003,1800,1,0,0,0,0|9990004,1800,1,0,0,0,0|9990005,1800,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Item ID="10" ComatEffectiveness="100000000" GoodsOne="9990002,2000,1,0,0,0,0|9990003,2000,1,0,0,0,0|9990004,2000,1,0,0,0,0|9990005,2000,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+</Config>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <Monsters>
+    <Monster ID="1" Code="7000001" X="3400" Y="3700" Radius="1" Num="1" Timeslot="10800" PursuitRadius="800" BirthType="0" TimePoints="" BirthRate="1" />
+  </Monsters>
+</Map>

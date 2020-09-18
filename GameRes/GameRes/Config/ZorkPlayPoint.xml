@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ZorkPlayPoint ID="1" MapId="-1" MapTeamPoint="2100,4200" MapTeamRange="20" />
+  <ZorkPlayPoint ID="2" MapId="-1" MapTeamPoint="6400,8000" MapTeamRange="20" />
+  <ZorkPlayPoint ID="3" MapId="-1" MapTeamPoint="7600,1800" MapTeamRange="20" />
+</Config>

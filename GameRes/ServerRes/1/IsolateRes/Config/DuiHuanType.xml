@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <DuiHuan>
+    <Type ID="200" SaleType="0" Name="护身符" Description="超强属性护身符装备" Image="200" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+    <Type ID="201" SaleType="0" Name="脚印兑换" Description="魔晶兑换海量珍稀脚印" Image="201" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+    <Type ID="3000" SaleType="1" Name="大天使兑换" Description="大天使全属神兵" Image="3000" OccupCondition="0" PubStartTime="" PubEndTime="" />
+    <Type ID="3001" SaleType="1" Name="大天使兑换" Description="大天使全属神兵" Image="3001" OccupCondition="1" PubStartTime="" PubEndTime="" />
+    <Type ID="3002" SaleType="1" Name="大天使兑换" Description="大天使全属神兵" Image="3002" OccupCondition="2" PubStartTime="" PubEndTime="" />
+    <Type ID="3003" SaleType="1" Name="大天使兑换" Description="大天使全属神兵" Image="3000" OccupCondition="3" PubStartTime="" PubEndTime="" />
+    <Type ID="3005" SaleType="1" Name="大天使兑换" Description="大天使全属神兵" Image="3001" OccupCondition="5" PubStartTime="" PubEndTime="" />
+    <Type ID="3010" SaleType="1" Name="防御装备兑换" Description="战士防具" Image="3010" OccupCondition="0" PubStartTime="" PubEndTime="" />
+    <Type ID="3011" SaleType="1" Name="防御装备兑换" Description="法师防具" Image="3011" OccupCondition="1" PubStartTime="" PubEndTime="" />
+    <Type ID="3012" SaleType="1" Name="防御装备兑换" Description="弓箭防具" Image="3012" OccupCondition="2" PubStartTime="" PubEndTime="" />
+    <Type ID="3013" SaleType="1" Name="防御装备兑换" Description="魔剑防具" Image="3013" OccupCondition="3" PubStartTime="" PubEndTime="" />
+    <Type ID="3015" SaleType="1" Name="防御装备兑换" Description="召唤防具" Image="3015" OccupCondition="5" PubStartTime="" PubEndTime="" />
+    <Type ID="4000" SaleType="2" Name="精灵兑换" Description="召唤积分兑换稀有精灵" Image="601" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+    <Type ID="4001" SaleType="2" Name="道具兑换" Description="召唤积分兑换珍稀道具" Image="201" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+    <Type ID="5000" SaleType="3" Name="道具兑换" Description="战功兑换海量珍稀道具" Image="201" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+    <Type ID="6000" SaleType="4" Name="道具兑换" Description="荣耀兑换海量珍稀道具" Image="201" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+    <Type ID="7001" SaleType="5" Name="血钻商城" Description="血钻兑换海量珍惜道具" Image="8028" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+    <Type ID="7002" SaleType="5" Name="秘点商城" Description="秘境点数兑换海量道具" Image="8029" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+    <Type ID="8001" SaleType="6" Name="众神争霸商店" Description="争霸点数兑换海量道具" Image="8033" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+    <Type ID="9001" SaleType="7" Name="联赛竞猜商店" Description="竞猜积分兑换海量道具" Image="8034" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+    <Type ID="10001" SaleType="8" Name="坐骑猎取积分兑换" Description="猎取积分兑换极品坐骑" Image="8035" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+    <Type ID="11001" SaleType="9" Name="势力商店" Description="势力贡献兑换海量道具" Image="8036" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+    <Type ID="12001" SaleType="9" Name="白石城商店" Description="势力贡献兑换海量道具" Image="8036" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+    <Type ID="13001" SaleType="9" Name="黑火城商店" Description="势力贡献兑换海量道具" Image="8036" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+    <Type ID="14001" SaleType="9" Name="冰霜城商店" Description="势力贡献兑换海量道具" Image="8036" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+    <Type ID="15001" SaleType="9" Name="高地城商店" Description="势力贡献兑换海量道具" Image="8036" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+    <Type ID="16001" SaleType="9" Name="绿茵城商店" Description="势力贡献兑换海量道具" Image="8036" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+    <Type ID="17001" SaleType="9" Name="最强势力商店" Description="势力贡献兑换海量道具" Image="8036" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+    <Type ID="18000" SaleType="10" Name="道具兑换" Description="战队荣耀兑换海量珍稀道具" Image="8037" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+  </DuiHuan>
+</config>

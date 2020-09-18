@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item ID="1" BodyCode="1" PicCode="1" Lifev="600" CutLifeV="10" ResName="Monster_zhanqi_001.unity3d" Collide="0,1,0;1.93,4.09,2.25" />
+  <Item ID="2" BodyCode="2" PicCode="2" Lifev="1000" CutLifeV="10" ResName="Monster_zhanqi_002.unity3d" Collide="0,1,0;1.93,4.09,2.25" />
+  <Item ID="3" BodyCode="3" PicCode="3" Lifev="1500" CutLifeV="10" ResName="Monster_zhanqi_003.unity3d" Collide="0,1,0;1.93,4.09,2.25" />
+  <Item ID="4" BodyCode="4" PicCode="4" Lifev="2100" CutLifeV="10" ResName="Monster_zhanqi_004.unity3d" Collide="0,1,0;1.93,4.09,2.25" />
+  <Item ID="5" BodyCode="5" PicCode="5" Lifev="2800" CutLifeV="10" ResName="Monster_zhanqi_005.unity3d" Collide="0,1,0;1.93,4.09,2.25" />
+  <Item ID="6" BodyCode="5" PicCode="5" Lifev="2800" CutLifeV="10" ResName="Monster_zhanqi_005.unity3d" Collide="0,1,0;1.93,4.09,2.25" /> 
+  <Item ID="7" BodyCode="5" PicCode="5" Lifev="2800" CutLifeV="10" ResName="Monster_zhanqi_005.unity3d" Collide="0,1,0;1.93,4.09,2.25" />
+  <Item ID="8" BodyCode="5" PicCode="5" Lifev="2800" CutLifeV="10" ResName="Monster_zhanqi_005.unity3d" Collide="0,1,0;1.93,4.09,2.25" />
+  <Item ID="9" BodyCode="5" PicCode="5" Lifev="2800" CutLifeV="10" ResName="Monster_zhanqi_005.unity3d" Collide="0,1,0;1.93,4.09,2.25" />
+  <Item ID="10" BodyCode="5" PicCode="5" Lifev="2800" CutLifeV="10" ResName="Monster_zhanqi_005.unity3d" Collide="0,1,0;1.93,4.09,2.25" />
+  </Items>

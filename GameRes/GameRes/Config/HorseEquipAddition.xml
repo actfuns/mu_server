@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HorseEquipAddition ID="1" Type="1" NextID="2" NeedStrengthenLevel="20" NeedAdditionLevel="0" NeedOrderNum="0" AdditionProps="MaxLifePercent,0.04|ElementInjurePercent,0.02" />
+  <HorseEquipAddition ID="2" Type="1" NextID="3" NeedStrengthenLevel="40" NeedAdditionLevel="0" NeedOrderNum="0" AdditionProps="MaxLifePercent,0.08|ElementInjurePercent,0.04" />
+  <HorseEquipAddition ID="3" Type="1" NextID="4" NeedStrengthenLevel="60" NeedAdditionLevel="0" NeedOrderNum="0" AdditionProps="MaxLifePercent,0.12|ElementInjurePercent,0.06" />
+  <HorseEquipAddition ID="4" Type="1" NextID="5" NeedStrengthenLevel="80" NeedAdditionLevel="0" NeedOrderNum="0" AdditionProps="MaxLifePercent,0.16|ElementInjurePercent,0.08" />
+  <HorseEquipAddition ID="5" Type="1" NextID="6" NeedStrengthenLevel="100" NeedAdditionLevel="0" NeedOrderNum="0" AdditionProps="MaxLifePercent,0.2|ElementInjurePercent,0.1" />
+  <HorseEquipAddition ID="6" Type="1" NextID="-1" NeedStrengthenLevel="120" NeedAdditionLevel="0" NeedOrderNum="0" AdditionProps="MaxLifePercent,0.24|ElementInjurePercent,0.12" />
+  <HorseEquipAddition ID="7" Type="2" NextID="8" NeedStrengthenLevel="0" NeedAdditionLevel="80" NeedOrderNum="0" AdditionProps="MaxLifePercent,0.04|DoubleAttack,0.02" />
+  <HorseEquipAddition ID="8" Type="2" NextID="9" NeedStrengthenLevel="0" NeedAdditionLevel="160" NeedOrderNum="0" AdditionProps="MaxLifePercent,0.08|DoubleAttack,0.04" />
+  <HorseEquipAddition ID="9" Type="2" NextID="10" NeedStrengthenLevel="0" NeedAdditionLevel="240" NeedOrderNum="0" AdditionProps="MaxLifePercent,0.12|DoubleAttack,0.06" />
+  <HorseEquipAddition ID="10" Type="2" NextID="11" NeedStrengthenLevel="0" NeedAdditionLevel="320" NeedOrderNum="0" AdditionProps="MaxLifePercent,0.16|DoubleAttack,0.08" />
+  <HorseEquipAddition ID="11" Type="2" NextID="12" NeedStrengthenLevel="0" NeedAdditionLevel="360" NeedOrderNum="0" AdditionProps="MaxLifePercent,0.2|DoubleAttack,0.1" />
+  <HorseEquipAddition ID="12" Type="2" NextID="-1" NeedStrengthenLevel="0" NeedAdditionLevel="480" NeedOrderNum="0" AdditionProps="MaxLifePercent,0.24|DoubleAttack,0.12" />
+  <HorseEquipAddition ID="13" Type="3" NextID="14" NeedStrengthenLevel="0" NeedAdditionLevel="0" NeedOrderNum="12" AdditionProps="MaxLifePercent,0.04|DeDoubleAttack,0.02" />
+  <HorseEquipAddition ID="14" Type="3" NextID="15" NeedStrengthenLevel="0" NeedAdditionLevel="0" NeedOrderNum="18" AdditionProps="MaxLifePercent,0.08|DeDoubleAttack,0.04" />
+  <HorseEquipAddition ID="15" Type="3" NextID="16" NeedStrengthenLevel="0" NeedAdditionLevel="0" NeedOrderNum="24" AdditionProps="MaxLifePercent,0.12|DeDoubleAttack,0.06" />
+  <HorseEquipAddition ID="16" Type="3" NextID="17" NeedStrengthenLevel="0" NeedAdditionLevel="0" NeedOrderNum="30" AdditionProps="MaxLifePercent,0.16|DeDoubleAttack,0.08" />
+  <HorseEquipAddition ID="17" Type="3" NextID="18" NeedStrengthenLevel="0" NeedAdditionLevel="0" NeedOrderNum="36" AdditionProps="MaxLifePercent,0.2|DeDoubleAttack,0.1" />
+  <HorseEquipAddition ID="18" Type="3" NextID="-1" NeedStrengthenLevel="0" NeedAdditionLevel="0" NeedOrderNum="42" AdditionProps="MaxLifePercent,0.24|DeDoubleAttack,0.12" />
+</Config>

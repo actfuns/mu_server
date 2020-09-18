@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Comp CompID="1" CompName="神圣教团" MapCode="93000" MonstersID="9650014" JiaoTuanBirth="10350|6850|10" MengJunBirth="5050|3050|10" XieHuiBirth="3450|7350|10" MaxPlayer="500" MoBai="142" />
+  <Comp CompID="2" CompName="自由同盟" MapCode="93001" MonstersID="9651014" JiaoTuanBirth="3450|7350|10" MengJunBirth="10350|6850|10" XieHuiBirth="5050|3050|10" MaxPlayer="500" MoBai="143" />
+  <Comp CompID="3" CompName="织梦协会" MapCode="93002" MonstersID="9652014" JiaoTuanBirth="5050|3050|10" MengJunBirth="3450|7350|10" XieHuiBirth="10350|6850|10" MaxPlayer="500" MoBai="144" />
+</Config>

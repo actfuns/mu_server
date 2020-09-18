@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ForceStronghold ID="1" MapCode="86000" QiZhiID="9810000,9810001,9810002" Name="白石平原" QiZuoID="89000" QiZuoSite="4060|11470" Point="10" Rate="0.1" />
+  <ForceStronghold ID="2" MapCode="86000" QiZhiID="9810000,9810001,9810002" Name="白石低地" QiZuoID="89001" QiZuoSite="13290|9650" Point="10" Rate="0.1" />
+  <ForceStronghold ID="3" MapCode="86000" QiZhiID="9810000,9810001,9810002" Name="白石苔原" QiZuoID="89002" QiZuoSite="7320|2090" Point="10" Rate="0.1" />
+  <ForceStronghold ID="4" MapCode="86000" QiZhiID="9810003,9810004,9810005" Name="白石沼泽" QiZuoID="89003" QiZuoSite="5300|6090" Point="20" Rate="0.15" />
+  <ForceStronghold ID="5" MapCode="86000" QiZhiID="9810003,9810004,9810005" Name="白石高原" QiZuoID="89004" QiZuoSite="7700|11560" Point="20" Rate="0.15" />
+  <ForceStronghold ID="6" MapCode="86000" QiZhiID="9810003,9810004,9810005" Name="白石丘陵" QiZuoID="89005" QiZuoSite="11750|6460" Point="20" Rate="0.15" />
+  <ForceStronghold ID="7" MapCode="86000" QiZhiID="9810006,9810007,9810008" Name="白石戈壁" QiZuoID="89006" QiZuoSite="7810|7740" Point="30" Rate="0.25" />
+  <ForceStronghold ID="8" MapCode="86001" QiZhiID="9810009,9810010,9810011" Name="黑火平原" QiZuoID="89010" QiZuoSite="4060|11470" Point="10" Rate="0.1" />
+  <ForceStronghold ID="9" MapCode="86001" QiZhiID="9810009,9810010,9810011" Name="黑火低地" QiZuoID="89011" QiZuoSite="13290|9650" Point="10" Rate="0.1" />
+  <ForceStronghold ID="10" MapCode="86001" QiZhiID="9810009,9810010,9810011" Name="黑火苔原" QiZuoID="89012" QiZuoSite="7320|2090" Point="10" Rate="0.1" />
+  <ForceStronghold ID="11" MapCode="86001" QiZhiID="9810012,9810013,9810014" Name="黑火沼泽" QiZuoID="89013" QiZuoSite="5300|6090" Point="20" Rate="0.15" />
+  <ForceStronghold ID="12" MapCode="86001" QiZhiID="9810012,9810013,9810014" Name="黑火高原" QiZuoID="89014" QiZuoSite="7700|11560" Point="20" Rate="0.15" />
+  <ForceStronghold ID="13" MapCode="86001" QiZhiID="9810012,9810013,9810014" Name="黑火丘陵" QiZuoID="89015" QiZuoSite="11750|6460" Point="20" Rate="0.15" />
+  <ForceStronghold ID="14" MapCode="86001" QiZhiID="9810015,9810016,9810017" Name="黑火戈壁" QiZuoID="89016" QiZuoSite="7810|7740" Point="30" Rate="0.25" />
+  <ForceStronghold ID="15" MapCode="86002" QiZhiID="9810018,9810019,9810020" Name="冰霜平原" QiZuoID="89020" QiZuoSite="4060|11470" Point="10" Rate="0.1" />
+  <ForceStronghold ID="16" MapCode="86002" QiZhiID="9810018,9810019,9810020" Name="冰霜低地" QiZuoID="89021" QiZuoSite="13290|9650" Point="10" Rate="0.1" />
+  <ForceStronghold ID="17" MapCode="86002" QiZhiID="9810018,9810019,9810020" Name="冰霜苔原" QiZuoID="89022" QiZuoSite="7320|2090" Point="10" Rate="0.1" />
+  <ForceStronghold ID="18" MapCode="86002" QiZhiID="9810021,9810022,9810023" Name="冰霜沼泽" QiZuoID="89023" QiZuoSite="5300|6090" Point="20" Rate="0.15" />
+  <ForceStronghold ID="19" MapCode="86002" QiZhiID="9810021,9810022,9810023" Name="冰霜高原" QiZuoID="89024" QiZuoSite="7700|11560" Point="20" Rate="0.15" />
+  <ForceStronghold ID="20" MapCode="86002" QiZhiID="9810021,9810022,9810023" Name="冰霜丘陵" QiZuoID="89025" QiZuoSite="11750|6460" Point="20" Rate="0.15" />
+  <ForceStronghold ID="21" MapCode="86002" QiZhiID="9810024,9810025,9810026" Name="冰霜戈壁" QiZuoID="89026" QiZuoSite="7810|7740" Point="30" Rate="0.25" />
+  <ForceStronghold ID="22" MapCode="86003" QiZhiID="9810027,9810028,9810029" Name="高地平原" QiZuoID="89030" QiZuoSite="4060|11470" Point="10" Rate="0.1" />
+  <ForceStronghold ID="23" MapCode="86003" QiZhiID="9810027,9810028,9810029" Name="高地低地" QiZuoID="89031" QiZuoSite="13290|9650" Point="10" Rate="0.1" />
+  <ForceStronghold ID="24" MapCode="86003" QiZhiID="9810027,9810028,9810029" Name="高地苔原" QiZuoID="89032" QiZuoSite="7320|2090" Point="10" Rate="0.1" />
+  <ForceStronghold ID="25" MapCode="86003" QiZhiID="9810030,9810031,9810032" Name="高地沼泽" QiZuoID="89033" QiZuoSite="5300|6090" Point="20" Rate="0.15" />
+  <ForceStronghold ID="26" MapCode="86003" QiZhiID="9810030,9810031,9810032" Name="高地高原" QiZuoID="89034" QiZuoSite="7700|11560" Point="20" Rate="0.15" />
+  <ForceStronghold ID="27" MapCode="86003" QiZhiID="9810030,9810031,9810032" Name="高地丘陵" QiZuoID="89035" QiZuoSite="11750|6460" Point="20" Rate="0.15" />
+  <ForceStronghold ID="28" MapCode="86003" QiZhiID="9810033,9810034,9810035" Name="高地戈壁" QiZuoID="89036" QiZuoSite="7810|7740" Point="30" Rate="0.25" />
+  <ForceStronghold ID="29" MapCode="86004" QiZhiID="9810036,9810037,9810038" Name="绿茵平原" QiZuoID="89040" QiZuoSite="4060|11470" Point="10" Rate="0.1" />
+  <ForceStronghold ID="30" MapCode="86004" QiZhiID="9810036,9810037,9810038" Name="绿茵低地" QiZuoID="89041" QiZuoSite="13290|9650" Point="10" Rate="0.1" />
+  <ForceStronghold ID="31" MapCode="86004" QiZhiID="9810036,9810037,9810038" Name="绿茵苔原" QiZuoID="89042" QiZuoSite="7320|2090" Point="10" Rate="0.1" />
+  <ForceStronghold ID="32" MapCode="86004" QiZhiID="9810039,9810040,9810041" Name="绿茵沼泽" QiZuoID="89043" QiZuoSite="5300|6090" Point="20" Rate="0.15" />
+  <ForceStronghold ID="33" MapCode="86004" QiZhiID="9810039,9810040,9810041" Name="绿茵高原" QiZuoID="89044" QiZuoSite="7700|11560" Point="20" Rate="0.15" />
+  <ForceStronghold ID="34" MapCode="86004" QiZhiID="9810039,9810040,9810041" Name="绿茵丘陵" QiZuoID="89045" QiZuoSite="11750|6460" Point="20" Rate="0.15" />
+  <ForceStronghold ID="35" MapCode="86004" QiZhiID="9810042,9810043,9810044" Name="绿茵戈壁" QiZuoID="89046" QiZuoSite="7810|7740" Point="30" Rate="0.25" />
+</Config>

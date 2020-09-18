@@ -1,0 +1,773 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+    <!-- 配置文件中 Window的Tag属性非常重要，设置成OpenIntroduceWindow【打开介绍窗口】将意味着它是图标窗口，会显示在右上角，同时BindValue指定了需要打开的介绍窗口ID -->
+	<!-- 双倍经验图标窗口 -->
+	<Window ID="1" Name="双倍经验图标窗口" Left="-1" RightSpace="400" Top="80" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="2"
+		BodySource="Images/activity/shuangbeijingyan1.png" 
+		NewSource="Images/activity/shuangbeijingyan2.png"
+		TextColor="#FFFF0000" Text="" TipType="0" ImageSource="1" Tip="双倍经验活动进行中"></Item>
+		<Item Type="text" Left="3" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 双倍经验介绍窗口 -->
+	<Window ID="2" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300" 
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="147" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="双倍经验"></Item>
+		
+		<Item Type="text" Left="0" Top="26" Width="376" Height="80" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="   《全民奇迹》亲情回馈广大玩家，每日双倍经验大放送，活动时间内，玩家可享受杀怪双倍经验加成，可与双倍经验符、三倍经验符叠加使用，珍贵的双倍收益时间各位大大们可要好好把握。"></Item>
+		
+		<Item Type="button" Left="0" Top="90" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/shuangbeijingyan.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		<Item Type="text" Left="0" Top="182" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="活动时间：每日15:00-16:00"></Item>
+		<Item Type="text" Left="0" Top="199" Width="369" Height="15" Color="#00ff00" 
+		Underline="false" TextWrap="true" Tag="" Text="参与规则：全体玩家"></Item>
+		<Item Type="text" Left="0" Top="215" Width="369" Height="15" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="经验说明: 杀怪经验翻2倍，用【双倍经验卡】翻3倍|用【三倍经验卡】翻4倍"></Item>
+		<Item Type="text" Left="0" Top="247" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="推荐地图：高级地图|古墓秘境"></Item>
+	</Window>
+	
+	<!-- 双倍烤火图标窗口 -->
+	<Window ID="3" Name="双倍烤火图标窗口" Left="-1" RightSpace="300" Top="80" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="4"
+		BodySource="Images/activity/kaohuo1.png" 
+		NewSource="Images/activity/kaohuo2.png"
+		TextColor="#FFFF0000" Text="" TipType="0" ImageSource="1" Tip="烤火活动进行中"></Item>
+		<Item Type="text" Left="3" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 双倍烤火介绍窗口 -->
+	<Window ID="4" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300" 
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="147" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="双倍烤火"></Item>
+		
+		<Item Type="text" Left="0" Top="26" Width="363" Height="35" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="   《全民奇迹》亲情回馈广大玩家，每日双倍烤火经验大放送，活动时间内，玩家可享受双倍烤火经验加成，丰厚经验等您拿！。"></Item>
+		
+		<Item Type="button" Left="0" Top="59" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/kaohuo.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		
+		<Item Type="text" Left="0" Top="152" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="活动时间：11:30-12:30及18:00-19:00"></Item>
+		<Item Type="text" Left="0" Top="169" Width="369" Height="15" Color="#00ff00" 
+		Underline="false" TextWrap="true" Tag="" Text="参与规则：40级以上玩家"></Item>
+		<Item Type="text" Left="0" Top="187" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="烤火规则：玩家必须在龙城安全区内使用【二锅头】获取烤火时间才能获得烤火经验收益"></Item>
+		<Item Type="text" Left="0" Top="222" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="道具获取：玩家可用[绑定元宝]在商城中购买【二锅头】道具,每日限饮6瓶"></Item>
+		<Item Type="text" Left="0" Top="255" Width="369" Height="15" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="特殊说明：烤火经验不可被双倍及三倍经验类道具放大加成"></Item>
+
+	</Window>
+	
+	<!-- 烈焰魔窟图标窗口 -->
+	<Window ID="5" Name="烈焰魔窟图标窗口" Left="-1" RightSpace="500"  Top="80" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="6"
+		BodySource="Images/activity/penglai1.png" 
+		NewSource="Images/activity/penglai2.png"
+		TextColor="#FFFF0000" Text="" TipType="0" ImageSource="1" Tip="烈焰魔窟活动进行中"></Item>
+		<Item Type="text" Left="5" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 烈焰魔窟介绍窗口 -->
+	<Window ID="6" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300" 
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="147" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="烈焰魔窟"></Item>
+		
+		<Item Type="text" Left="0" Top="26" Width="363" Height="35" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="   传说中的[烈焰魔窟]大门神秘现世,魔窟内暗藏着威力强劲的魔族BOSS,神级装备满地爆，赶快行动吧！"></Item>
+		
+		<Item Type="button" Left="0" Top="59" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/penglai.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		<Item Type="text" Left="0" Top="152" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="入口开放：00:15|4:15|8:15|12:15|16:15|22:15"></Item>
+		<Item Type="text" Left="0" Top="169" Width="369" Height="15" Color="#00ff00" 
+		Underline="false" TextWrap="true" Tag="" Text="入口关闭：活动开启30分钟后"></Item>
+		<Item Type="text" Left="0" Top="187" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="一层BOSS掉落：疾风|玄雷|青云套装及苍穹|无相|初尘套装"></Item>
+		<Item Type="text" Left="0" Top="204" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="二层BOSS掉落：血饮战神|法皇|道尊套装"></Item>
+		<Item Type="text" Left="0" Top="221" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="三层BOSS掉落：天蚩战神|法皇|道尊套装及蕴神灵戒|真龙入神盔"></Item>
+
+		<Item Type="button" Left="135" Top="272" Width="81" Height="25" EnableHint="false" Tag="nowgo" BindValue="5"
+		BodySource="Images/Plate/btn21_normal.png" 
+		NewSource="Images/Plate/btn21_hover.png"
+		TextColor="#a2fdff" Text="立即参与"></Item>
+
+	</Window>
+	
+	<!-- 大战血饮图标窗口 -->
+	<Window ID="7" Name="大战血饮图标窗口" Left="-1" RightSpace="600"  Top="180" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="8"
+		BodySource="Images/activity/xueyin1.png" 
+		NewSource="Images/activity/xueyin2.png"
+		TextColor="#FFFF0000" Text="" TipType="0" ImageSource="1" Tip="大战血饮活动进行中"></Item>
+		<Item Type="text" Left="3" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 大战血饮介绍窗口 -->
+	<Window ID="8" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300" 
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="138" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="大战血饮"></Item>
+		
+		<Item Type="text" Left="0" Top="26" Width="363" Height="35" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="   挑战至高无上的[血饮天尊]获得[神器之魂],兑换[血饮神装],成就您霸业宏图之路！"></Item>
+		
+		<Item Type="button" Left="0" Top="59" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/xueyin.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		<Item Type="text" Left="0" Top="152" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="BOSS刷新：18:30"></Item>
+		<Item Type="text" Left="0" Top="169" Width="369" Height="15" Color="#00ff00" 
+		Underline="false" TextWrap="true" Tag="" Text="如何参与：从龙城NPC[神兵神甲·血饮]处传送进入血饮神殿"></Item>
+		<Item Type="text" Left="0" Top="187" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="BOSS掉落：【神器之魂】【强化石】【低级装备】"></Item>
+		<Item Type="text" Left="0" Top="204" Width="369" Height="15" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="特殊说明：血饮神殿地图为任意PK地图,死亡不掉落装备"></Item>
+
+		<Item Type="button"  Left="135" Top="267" Width="81" Height="25" EnableHint="false" Tag="nowgo" BindValue="7"
+		BodySource="Images/Plate/btn21_normal.png" 
+		NewSource="Images/Plate/btn21_hover.png"
+		TextColor="#a2fdff" Text="立即参与"></Item>
+
+	</Window>
+	
+	<!-- 血染龙城图标窗口 -->
+	<Window ID="9" Name="血染龙城图标窗口" Left="-1" RightSpace="400"  Top="80" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="10"
+		BodySource="Images/activity/longcheng1.png" 
+		NewSource="Images/activity/longcheng2.png"
+		TextColor="#FFFF0000" Text="" TipType="0" ImageSource="1" Tip="血染龙城活动进行中"></Item>
+		<Item Type="text" Left="3" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 血染龙城介绍窗口 -->
+	<Window ID="10" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300" 
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="147" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="血染龙城"></Item>
+		
+		<Item Type="text" Left="0" Top="35" Width="363" Height="35" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="   昔日的攻城死士死灰复燃，对龙城进行反攻,各路豪杰为守卫龙城,攻城死士一路弑杀，血染龙城!"></Item>
+		
+		<Item Type="button" Left="0" Top="74" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/longcheng.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		<Item Type="text" Left="0" Top="167" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="活动时间：9:30|13:30|15:30|22:30"></Item>
+		<Item Type="text" Left="0" Top="185" Width="369" Height="15" Color="#00ff00" 
+		Underline="false" TextWrap="true" Tag="" Text="怪物位置：龙城安全区附近"></Item>
+		<Item Type="text" Left="0" Top="203" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="怪物掉落：【高额经验】【丰厚铜钱】【大量强化石】【低级装备】"></Item>
+
+		<Item Type="button" Left="135" Top="267" Width="81" Height="25" EnableHint="false" Tag="nowgo" BindValue="9"
+		BodySource="Images/Plate/btn21_normal.png" 
+		NewSource="Images/Plate/btn21_hover.png"
+		TextColor="#a2fdff" Text="立即前往"></Item>
+
+	</Window>
+	
+	<!-- 天神入侵图标窗口 -->
+	<Window ID="11" Name="天神入侵图标窗口" Left="-1" RightSpace="400" Top="80" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="12"
+		BodySource="Images/activity/tianshen1.png" 
+		NewSource="Images/activity/tianshen2.png"
+		TextColor="#FFFF0000" Text="" TipType="0"  ImageSource="1" Tip="天神入侵进行中"></Item>
+		<Item Type="text" Left="3" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 天神入侵介绍窗口 -->
+	<Window ID="12" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300" 
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="147" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="天神入侵"></Item>
+		
+		<Item Type="text" Left="0" Top="35" Width="363" Height="35" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="   天蚩大帝带领大军攻占传奇之野，各路豪杰前往相助守卫传奇之野！"></Item>
+		
+		<Item Type="button" Left="0" Top="74" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/tianshen1.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		<Item Type="text" Left="0" Top="167" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="BOSS刷新：每日14:00"></Item>
+		<Item Type="text" Left="0" Top="185" Width="369" Height="15" Color="#00ff00" 
+		Underline="false" TextWrap="true" Tag="" Text="刷新地点：传奇之野安全区附近"></Item>
+		<Item Type="text" Left="0" Top="203" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="Boss掉落：破天|通天|弑天】套装,血饮系列装备,天蚩系列装备,天绝系列套装,神鬼断狱(战神,法皇,道尊),经脉装备等"></Item>
+
+		<Item Type="button" Left="135" Top="267" Width="81" Height="25" EnableHint="false" Tag="nowgo" BindValue="11"
+		BodySource="Images/Plate/btn21_normal.png" 
+		NewSource="Images/Plate/btn21_hover.png"
+		TextColor="#a2fdff" Text="立即前往"></Item>
+	</Window>
+	
+	<!-- 天神入侵图标窗口 -->
+	<Window ID="13" Name="天神入侵图标窗口" Left="-1" RightSpace="400" Top="80" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="14"
+		BodySource="Images/activity/tianshen1.png" 
+		NewSource="Images/activity/tianshen2.png"
+		TextColor="#FFFF0000" Text="" TipType="0"  ImageSource="1" Tip="天神入侵进行中"></Item>
+		<Item Type="text" Left="3" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 天神入侵介绍窗口 -->
+	<Window ID="14" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300"  
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="147" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="天神入侵"></Item>
+		
+		<Item Type="text" Left="0" Top="35" Width="363" Height="35" Color="#ffffff"  
+		Underline="false" TextWrap="true" Tag="" Text="   神帝创世带领大军攻占传奇之野，各路豪杰前往相助守卫传奇之野！"></Item>
+		
+		<Item Type="button" Left="0" Top="74" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/tianshen2.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		<Item Type="text" Left="0" Top="167" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="BOSS刷新：每日17:00"></Item>
+		<Item Type="text" Left="0" Top="185" Width="369" Height="15" Color="#00ff00" 
+		Underline="false" TextWrap="true" Tag="" Text="刷新地点：传奇之野安全区附近"></Item>
+		<Item Type="text" Left="0" Top="203" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="Boss掉落：血饮套装,天蚩套装,创世套装,天绝套装,神兵,经脉装备等"></Item>
+
+		<Item Type="button" Left="135" Top="267" Width="81" Height="25" EnableHint="false" Tag="nowgo" BindValue="13"
+		BodySource="Images/Plate/btn21_normal.png" 
+		NewSource="Images/Plate/btn21_hover.png"
+		TextColor="#a2fdff" Text="立即前往"></Item>
+	</Window>
+
+	<!-- 天神入侵图标窗口 -->
+	<Window ID="15" Name="天神入侵图标窗口" Left="-1" RightSpace="400" Top="80" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="16"
+		BodySource="Images/activity/tianshen1.png" 
+		NewSource="Images/activity/tianshen2.png"
+		TextColor="#FFFF0000" Text="" TipType="0"  ImageSource="1" Tip="天神入侵进行中"></Item>
+		<Item Type="text" Left="3" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 天神入侵介绍窗口 -->
+	<Window ID="16" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300" 
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="147" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="天神入侵"></Item>
+		
+		<Item Type="text" Left="0" Top="35" Width="363" Height="35" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="   末日天绝领大军攻占传奇之野，各路豪杰前往相助守卫传奇之野！"></Item>
+		
+		<Item Type="button" Left="0" Top="74" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/tianshen3.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		<Item Type="text" Left="0" Top="167" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="BOSS刷新：每日23:00"></Item>
+		<Item Type="text" Left="0" Top="185" Width="369" Height="15" Color="#00ff00" 
+		Underline="false" TextWrap="true" Tag="" Text="刷新地点：传奇之野安全区附近"></Item>
+		<Item Type="text" Left="0" Top="203" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="Boss掉落：天蚩套装,创世套装,天绝套装,轮回套装,神兵,经脉装备等"></Item>
+
+		<Item Type="button" Left="135" Top="267" Width="81" Height="25" EnableHint="false" Tag="nowgo" BindValue="15"
+		BodySource="Images/Plate/btn21_normal.png" 
+		NewSource="Images/Plate/btn21_hover.png"
+		TextColor="#a2fdff" Text="立即前往"></Item>
+	</Window>
+	
+	<!-- 血战地府图标窗口 -->
+	<Window ID="17" Name="血战地府图标窗口" Left="-1" RightSpace="400" Top="80" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="18"
+		BodySource="Images/activity/wudaodahui1.png" 
+		NewSource="Images/activity/wudaodahui2.png"
+		TextColor="#FFFF0000" Text="" TipType="0" ImageSource="1" Tip="血战地府进行中">
+		</Item>
+		<Item Type="text" Left="5" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 血战地府介绍窗口 -->
+	<Window ID="18" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300"
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="147" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="血战地府"></Item>
+		
+		<Item Type="text" Left="0" Top="26" Width="363" Height="35" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="   血性厮杀,地府谁能最终存活,才是最终的PK王者,获取[PK王]至尊荣耀！"></Item>
+		
+		<Item Type="button" Left="0" Top="59" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/wudaodahui.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		<Item Type="text" Left="0" Top="152" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="入口开放：每日13:00-13:10"></Item>
+		<Item Type="text" Left="0" Top="169" Width="369" Height="15" Color="#00ff00" 
+		Underline="false" TextWrap="true" Tag="" Text="战斗时间：13:10-14:00"></Item>
+		<Item Type="text" Left="0" Top="187" Width="369" Height="15" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="战斗规则：地府只剩一名玩家,PK王产生"></Item>
+		<Item Type="text" Left="0" Top="204" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="胜利奖励：物|魔|道攻击上限+300"></Item>
+		<Item Type="text" Left="0" Top="221" Width="369" Height="15" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="经验加成：经验加成1.5倍"></Item>
+
+		<Item Type="button" Left="135" Top="267" Width="158" Height="30" EnableHint="false" Tag="nowgo" BindValue="17"
+		BodySource="Images/Plate/btn21_normal.png" 
+		NewSource="Images/Plate/btn21_hover.png"
+		TextColor="#a2fdff" Text="立即参与"></Item>
+	</Window>
+		
+	<!-- 仙魔战场图标窗口 -->
+	<Window ID="19" Name="仙魔战场图标窗口" Left="-1" RightSpace="400" Top="80" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="20"
+		BodySource="Images/activity/xianmo1.png" 
+		NewSource="Images/activity/xianmo2.png"
+		TextColor="#FFFF0000" Text="" TipType="0" ImageSource="1" Tip="仙魔战场进行中">
+		</Item>
+		<Item Type="text" Left="5" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 仙魔战场介绍窗口 -->
+	<Window ID="20" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300"
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="147" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="仙魔战场"></Item>
+		
+		<Item Type="text" Left="0" Top="26" Width="363" Height="35" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="     为了成为新的统治者，仙魔大战，一场血的厮杀不可避免，谁能成为主宰三界的新势力，一切皆由您掌控！"></Item>
+		
+		<Item Type="button" Left="0" Top="59" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/xianmo.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		<Item Type="text" Left="0" Top="152" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="活动时间：19:00-19:30"></Item>
+		<Item Type="text" Left="0" Top="169" Width="369" Height="15" Color="#00ff00" 
+		Underline="false" TextWrap="true" Tag="" Text="参与规则：40级以上玩家"></Item>
+		<Item Type="text" Left="0" Top="187" Width="369" Height="15" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="积分获取：击杀敌对阵营玩家、战场怪物、战场BOSS即可获得相应的积分"></Item>
+		<Item Type="text" Left="0" Top="222" Width="369" Height="15" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="胜负判定：战场结束后根据双方积分的高低来评定胜负"></Item>
+		<Item Type="text" Left="0" Top="239" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="奖励设定：【巨额经验】|【绑定元宝】|【强化石】|【成就点】"></Item>
+
+		<Item Type="button" Left="135" Top="272" Width="158" Height="30" EnableHint="false" Tag="nowgo" BindValue="19"
+		BodySource="Images/Plate/btn21_normal.png" 
+		NewSource="Images/Plate/btn21_hover.png"
+		TextColor="#a2fdff" Text="立即参与"></Item>
+	</Window>
+
+	<!-- 王城争霸图标窗口 -->
+	<Window ID="21" Name="王城争霸图标窗口" Left="-1" RightSpace="400" Top="80" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="22"
+		BodySource="Images/activity/wangcheng1.png" 
+		NewSource="Images/activity/wangcheng2.png"
+		TextColor="#FFFF0000" Text="" TipType="0" ImageSource="1" Tip="王城争霸进行中">
+		</Item>
+		<Item Type="text" Left="5" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 王城争霸介绍窗口 -->
+	<Window ID="22" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300"
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="147" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="王城争霸"></Item>
+		
+		<Item Type="text" Left="0" Top="26" Width="363" Height="35" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="     血与泪的厮杀，团结作战，只为那王族至上荣耀，成为新的龙城主宰者！"></Item>
+		
+		<Item Type="button" Left="0" Top="59" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/wangcheng.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		<Item Type="text" Left="0" Top="152" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="活动时间：20:00-21:30"></Item>
+		<Item Type="text" Left="0" Top="169" Width="369" Height="15" Color="#00ff00" 
+		Underline="false" TextWrap="true" Tag="" Text="申请规则：帮主需携[攻城号角]才能申请王城争霸战"></Item>
+		<Item Type="text" Left="0" Top="186" Width="369" Height="15" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="地图设定：王城及皇宫地图不可原地复活|不可使用[随机传送石]"></Item>
+		<Item Type="text" Left="0" Top="204" Width="369" Height="15" Color="#ff0000" 
+		Underline="false" TextWrap="true" Tag="" Text="          死亡后掉落物品,请大家注意！"></Item>
+		<Item Type="text" Left="0" Top="221" Width="369" Height="15" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="占领王城：王城战役结束后,皇宫内只剩一个行会的成员"></Item>
+		<Item Type="text" Left="0" Top="238" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="奖励设定：王族帮会帮主每日可免费领取[元宝]*2000、[铜钱]*100万"></Item>
+
+		<Item Type="button" Left="135" Top="272" Width="158" Height="30" EnableHint="false" Tag="nowgo" BindValue="21"
+		BodySource="Images/Plate/btn21_normal.png" 
+		NewSource="Images/Plate/btn21_hover.png"
+		TextColor="#a2fdff" Text="立即参与"></Item>
+	</Window>
+	
+	<!-- 王城浩劫图标窗口 -->
+	<Window ID="23" Name="王城浩劫图标窗口" Left="-1" RightSpace="400" Top="80" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="24"
+		BodySource="Images/activity/haojie1.png" 
+		NewSource="Images/activity/haojie2.png"
+		TextColor="#FFFF0000" Text="" TipType="0" ImageSource="1" Tip="王城浩劫进行中">
+		</Item>
+		<Item Type="text" Left="5" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 王城浩劫介绍窗口 -->
+	<Window ID="24" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300"
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="147" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="王城浩劫"></Item>
+		
+		<Item Type="text" Left="0" Top="26" Width="363" Height="35" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="   异域魔王率领大军攻占王城，各路豪杰前往相助守卫王城！"></Item>
+		
+		<Item Type="button" Left="0" Top="59" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/haojie.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		<Item Type="text" Left="0" Top="167" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="BOSS刷新：每日21:45"></Item>
+		<Item Type="text" Left="0" Top="185" Width="369" Height="15" Color="#00ff00" 
+		Underline="false" TextWrap="true" Tag="" Text="刷新地点：王城地图"></Item>
+		<Item Type="text" Left="0" Top="203" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="Boss掉落：强化石,天蚩套装,创世套装,神兵,经脉装备等"></Item>
+		<Item Type="text" Left="0" Top="221" Width="369" Height="15" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="特殊注意：王城地图强制PK，死亡掉落物品地图"></Item>
+
+		<Item Type="button" Left="135" Top="272" Width="158" Height="30" EnableHint="false" Tag="nowgo" BindValue="23"
+		BodySource="Images/Plate/btn21_normal.png" 
+		NewSource="Images/Plate/btn21_hover.png"
+		TextColor="#a2fdff" Text="立即参与"></Item>
+	</Window>
+		
+	<!-- 蕴神仙尊图标窗口 -->
+	<Window ID="25" Name="蕴神仙尊图标窗口" Left="-1" RightSpace="400" Top="80" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="26"
+		BodySource="Images/activity/yunshen1.png" 
+		NewSource="Images/activity/yunshen2.png"
+		TextColor="#FFFF0000" Text="" TipType="0" ImageSource="1" Tip="蕴神仙尊进行中">
+		</Item>
+		<Item Type="text" Left="5" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 蕴神仙尊介绍窗口 -->
+	<Window ID="26" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300"
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="147" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="蕴神仙尊"></Item>
+		
+		<Item Type="text" Left="0" Top="26" Width="363" Height="35" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="   蕴神仙尊现身龙城，其身携极品戒指[蕴神灵戒]，请勇士速速前往击杀！"></Item>
+		
+		<Item Type="button" Left="0" Top="59" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/yunshen.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		<Item Type="text" Left="0" Top="167" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="BOSS刷新：新服开启两天后13:00(永久刷新一次)"></Item>
+		<Item Type="text" Left="0" Top="185" Width="369" Height="15" Color="#00ff00" 
+		Underline="false" TextWrap="true" Tag="" Text="刷新地点：龙城NPC[攻城御使]附近"></Item>
+		<Item Type="text" Left="0" Top="203" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="Boss掉落：必掉蕴神灵戒,一定几率掉落天蚩套装,创世套装等"></Item>
+		<Item Type="text" Left="0" Top="221" Width="369" Height="15" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="特殊注意：蕴神仙尊为掉落无归属BOSS"></Item>
+
+		<Item Type="button" Left="135" Top="272" Width="158" Height="30" EnableHint="false" Tag="nowgo" BindValue="25"
+		BodySource="Images/Plate/btn21_normal.png" 
+		NewSource="Images/Plate/btn21_hover.png"
+		TextColor="#a2fdff" Text="立即参与"></Item>
+	</Window>
+
+
+	<!-- 傲世狂魔图标窗口 -->
+	<Window ID="27" Name="傲世狂魔图标窗口" Left="-1" RightSpace="400" Top="80" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="28"
+		BodySource="Images/activity/jiriboss1.png" 
+		NewSource="Images/activity/jiriboss2.png"
+		TextColor="#FFFF0000" Text="" TipType="0" ImageSource="1" Tip="傲世狂魔攻城进行中">
+		</Item>
+		<Item Type="text" Left="5" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 傲世狂魔介绍窗口 -->
+	<Window ID="28" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300"
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="147" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="傲世狂魔"></Item>
+		
+		<Item Type="text" Left="0" Top="26" Width="363" Height="35" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="   节日活动BOSS-傲世狂魔现身龙城，其身携高级武器[傲世狂斩]，请勇士速速前往击杀！"></Item>
+		
+		<Item Type="button" Left="0" Top="59" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/jieriboss.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		<Item Type="text" Left="0" Top="167" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="刷新地点：龙城NPC[攻城御使]附近"></Item>
+		<Item Type="text" Left="0" Top="203" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="Boss掉落：必掉八品强化石,一定几率高级武器[傲世狂斩]"></Item>
+		<Item Type="text" Left="0" Top="221" Width="369" Height="15" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="特殊注意：傲世狂魔为掉落无归属BOSS"></Item>
+
+		<Item Type="button" Left="135" Top="272" Width="158" Height="30" EnableHint="false" Tag="nowgo" BindValue="27"
+		BodySource="Images/Plate/btn21_normal.png" 
+		NewSource="Images/Plate/btn21_hover.png"
+		TextColor="#a2fdff" Text="立即参与"></Item>
+	</Window>
+		
+	<!-- 蕴神仙尊图标窗口 -->
+	<Window ID="29" Name="蕴神仙尊图标窗口" Left="-1" RightSpace="400" Top="80" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="30"
+		BodySource="Images/activity/yunshen1.png" 
+		NewSource="Images/activity/yunshen2.png"
+		TextColor="#FFFF0000" Text="" TipType="0" ImageSource="1" Tip="蕴神仙尊进行中">
+		</Item>
+		<Item Type="text" Left="5" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 蕴神仙尊介绍窗口 -->
+	<Window ID="30" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300"
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="147" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="蕴神仙尊"></Item>
+		
+		<Item Type="text" Left="0" Top="26" Width="363" Height="35" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="   蕴神仙尊现身龙城，其身携极品戒指[蕴神灵戒]，请勇士速速前往击杀！"></Item>
+		
+		<Item Type="button" Left="0" Top="59" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/yunshen.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		<Item Type="text" Left="0" Top="167" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="BOSS刷新：合服后第2天13:00(永久刷新一次)"></Item>
+		<Item Type="text" Left="0" Top="185" Width="369" Height="15" Color="#00ff00" 
+		Underline="false" TextWrap="true" Tag="" Text="刷新地点：龙城NPC[攻城御使]附近"></Item>
+		<Item Type="text" Left="0" Top="203" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="Boss掉落：必掉蕴神灵戒,一定几率掉落天蚩套装,创世套装等"></Item>
+		<Item Type="text" Left="0" Top="221" Width="369" Height="15" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="特殊注意：蕴神仙尊为掉落无归属BOSS"></Item>
+
+		<Item Type="button" Left="135" Top="272" Width="158" Height="30" EnableHint="false" Tag="nowgo" BindValue="29"
+		BodySource="Images/Plate/btn21_normal.png" 
+		NewSource="Images/Plate/btn21_hover.png"
+		TextColor="#a2fdff" Text="立即参与"></Item>
+	</Window>
+		
+	<!-- 财神到图标窗口 -->
+	<Window ID="31" Name="财神道图标窗口" Left="-1" RightSpace="400" Top="80" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="32"
+		BodySource="Images/activity/caishen1.png" 
+		NewSource="Images/activity/caishen2.png"
+		TextColor="#FFFF0000" Text="" TipType="0" ImageSource="1" Tip="财神到进行中">
+		</Item>
+		<Item Type="text" Left="5" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 财神到介绍窗口 -->
+	<Window ID="32" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300"
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="147" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="财神到"></Item>
+		
+		<Item Type="text" Left="0" Top="26" Width="363" Height="35" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="   财神到疯狂献礼，身携巨额财富，等你来拿！"></Item>
+		
+		<Item Type="button" Left="0" Top="59" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/caishen.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		<Item Type="text" Left="0" Top="167" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="怪物刷新：每日10:30|14:30|17:30"></Item>
+		<Item Type="text" Left="0" Top="185" Width="369" Height="15" Color="#00ff00" 
+		Underline="false" TextWrap="true" Tag="" Text="刷新地点：龙城及传奇之野地图随机坐标刷新，请大家仔细寻找！"></Item>
+		<Item Type="text" Left="0" Top="203" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="怪物掉落：海量铜钱"></Item>
+		<Item Type="text" Left="0" Top="221" Width="369" Height="15" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="特殊注意：该怪物掉落为无归属状态"></Item>
+
+	</Window>
+
+			
+	<!-- 金矿洞图标窗口 -->
+	<Window ID="33" Name="金矿洞图标窗口" Left="-1" RightSpace="400" Top="80" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="34"
+		BodySource="Images/activity/kuangzhan1.png" 
+		NewSource="Images/activity/kuangzhan2.png"
+		TextColor="#FFFF0000" Text="" TipType="0" ImageSource="1" Tip="金矿洞大门打开中">
+		</Item>
+		<Item Type="text" Left="5" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 金矿洞介绍窗口 -->
+	<Window ID="34" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300"
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="147" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="金矿洞"></Item>
+		
+		<Item Type="text" Left="0" Top="26" Width="363" Height="35" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="   金矿大门打开，采集矿石必得金矿，赶快行动吧！"></Item>
+		
+		<Item Type="button" Left="0" Top="59" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/kuangzhan.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		<Item Type="text" Left="0" Top="167" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="开放时间：每日15:30-16:30"></Item>
+		<Item Type="text" Left="0" Top="185" Width="369" Height="15" Color="#00ff00" 
+		Underline="false" TextWrap="true" Tag="" Text="地图产出：采集矿石必得【金矿石】"></Item>
+		<Item Type="text" Left="0" Top="203" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="地图类型：强制PK地图"></Item>
+		<Item Type="text" Left="0" Top="221" Width="369" Height="15" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="特殊提醒：该地图死亡不掉落装备"></Item>
+
+		<Item Type="button" Left="135" Top="272" Width="158" Height="30" EnableHint="false" Tag="nowgo" BindValue="33"
+		BodySource="Images/Plate/btn21_normal.png" 
+		NewSource="Images/Plate/btn21_hover.png"
+		TextColor="#a2fdff" Text="立即参与"></Item>
+	</Window>
+
+	
+			
+	<!-- 帮旗战图标窗口 -->
+	<Window ID="35" Name="帮旗战图标窗口" Left="-1" RightSpace="400" Top="80" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="36"
+		BodySource="Images/activity/bangqi1.png" 
+		NewSource="Images/activity/bangqi2.png"
+		TextColor="#FFFF0000" Text="" TipType="0" ImageSource="1" Tip="帮旗战进行中">
+		</Item>
+		<Item Type="text" Left="5" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 帮旗战介绍窗口 -->
+	<Window ID="36" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300"
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="147" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="帮旗战"></Item>
+		
+		<Item Type="text" Left="0" Top="26" Width="363" Height="35" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="   用火焰般的赤热灵魂，打造帮会荣誉，勇士，您此刻是否已热血沸腾，渴望为了行会荣耀挥洒一腔热血，力斩敌军，取其上将首级，岂不快哉！"></Item>
+		
+		<Item Type="button" Left="0" Top="59" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/bangqi.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		<Item Type="text" Left="0" Top="167" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="开放时间：每周三、六16:30-17:30"></Item>
+		<Item Type="text" Left="0" Top="185" Width="369" Height="15" Color="#00ff00" 
+		Underline="false" TextWrap="true" Tag="" Text="地图产出：经验|荣耀"></Item>
+		<Item Type="text" Left="0" Top="203" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="地图类型：强制PK地图"></Item>
+		<Item Type="text" Left="0" Top="221" Width="369" Height="15" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="胜方奖励：荣耀+5000|经验+5000000"></Item>
+		<Item Type="text" Left="0" Top="239" Width="369" Height="15" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="负方奖励：荣耀+2500|经验+2500000"></Item>
+
+		<Item Type="button" Left="135" Top="272" Width="158" Height="30" EnableHint="false" Tag="nowgo" BindValue="35"
+		BodySource="Images/Plate/btn21_normal.png" 
+		NewSource="Images/Plate/btn21_hover.png"
+		TextColor="#a2fdff" Text="立即参与"></Item>
+	</Window>
+
+	<!-- 战魂神殿图标窗口 -->
+	<Window ID="37" Name="战魂神殿图标窗口" Left="-1" RightSpace="400" Top="80" BodyLeft="0" BodyTop="0" BodyWidth="61" BodyHeight="59" >
+		<Item Type="button" Left="0" Top="0" Width="61" Height="59" EnableHint="true" Tag="OpenIntroduceWindow" BindValue="38"
+		BodySource="Images/activity/zhanhun1.png" 
+		NewSource="Images/activity/zhanhun2.png"
+		TextColor="#FFFF0000" Text="" TipType="0" ImageSource="1" Tip="战魂神殿开放中">
+		</Item>
+		<Item Type="text" Left="5" Top="35" Width="144" Height="30" Color="#FF00FF00" 
+		Underline="false" TextWrap="false" Tag="" Text=""></Item>
+	</Window>
+	<!-- 战魂神殿介绍窗口 -->
+	<Window ID="38" Name="" Left="-1"
+	Top="96" BodyLeft="188" BodyTop="65" BodyWidth="361" BodyHeight="300"
+	WinBackgroundURL="Images/Plate/xiaoFeiYinDao_bak.png"
+	CloseButtonWidth="25" CloseButtonHeight="25" CloseButtonLeft="536" CloseButtonTop="52"
+	CloseButtonFill="Images/Plate/BtnClose_normal.png"
+	CloseButtonTransformFill="Images/Plate/BtnClose_hover.png">
+		<Item Type="text" Left="147" Top="0" Width="144" Height="30" Color="#FFFFFFFF" 
+		Underline="false" TextWrap="false" Tag="" FontSize="14" Text="战魂神殿"></Item>
+		
+		<Item Type="text" Left="0" Top="26" Width="363" Height="35" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="   战魂魔君死灰复燃，现身战魂神殿，将其击杀可获得海量战魂珠奖励！"></Item>
+		
+		<Item Type="button" Left="0" Top="59" Width="361" Height="87" EnableHint="false" Tag="" BindValue=""
+		BodySource="Images/activity/zhanhun.jpg" TextColor="#FFFF0000" ImageSource="1" Text=""></Item>
+		
+		<Item Type="text" Left="0" Top="167" Width="369" Height="15" Color="#feff01" 
+		Underline="false" TextWrap="true" Tag="" Text="刷新时间：每日19:40"></Item>
+		<Item Type="text" Left="0" Top="185" Width="369" Height="15" Color="#00ff00" 
+		Underline="false" TextWrap="true" Tag="" Text="地图产出：大量战魂及全服所有高级装备"></Item>
+		<Item Type="text" Left="0" Top="203" Width="369" Height="15" Color="#ffc804" 
+		Underline="false" TextWrap="true" Tag="" Text="地图类型：强制PK地图"></Item>
+		<Item Type="text" Left="0" Top="221" Width="369" Height="15" Color="#ffffff" 
+		Underline="false" TextWrap="true" Tag="" Text="特殊提醒：该地图死亡不掉落装备"></Item>
+
+		<Item Type="button" Left="135" Top="272" Width="158" Height="30" EnableHint="false" Tag="nowgo" BindValue="37"
+		BodySource="Images/Plate/btn21_normal.png" 
+		NewSource="Images/Plate/btn21_hover.png"
+		TextColor="#a2fdff" Text="立即参与"></Item>
+	</Window>
+</Config>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}势力争霸战说明" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、势力争霸战每{17e43e}周六19:00-19:30{dac7ae}进行。" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、活动时间内会同时开启{17e43e}5{dac7ae}个战场，可根据战场情况{17e43e}自由{dac7ae}选择进入，可随时{17e43e}切换战场{dac7ae}参与活动。" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、每个战场有{17e43e}7{dac7ae}个据点，每个据点代表一定的{17e43e}占领比例{dac7ae}，{17e43e}占领{dac7ae}据点获得相应的占领比例。" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4、在据点的{17e43e}旗座{dac7ae}上插上势力的{17e43e}旗帜{dac7ae}，代表本势力{17e43e}占领{dac7ae}了该据点。" Bold="0" />
+  <HelpIntro ID="6" Intro="{dac7ae}5、攻击其他势力的旗帜可以{17e43e}破坏{dac7ae}该旗帜，破坏后可以插上本势力的旗帜占领该据点。活动结束时据点的占领状态会{17e43e}一直保留{dac7ae}，下次活动时，根据{17e43e}上次活动{dac7ae}最后的占领状态开始活动。" Bold="0" />
+  <HelpIntro ID="7" Intro="{dac7ae}6、{17e43e}同一战场{dac7ae}内一个势力占领多个据点时，占领比例{17e43e}累加{dac7ae}，根据占领比例高低{17e43e}单个{dac7ae}战场内会对势力进行排行，活动结束时，排行{17e43e}第一{dac7ae}的势力获得战场占领权。" Bold="0" />
+  <HelpIntro ID="8" Intro="{dac7ae}7、在战场中击{17e43e}杀其他势力玩家{dac7ae}，{17e43e}攻击其他势力旗帜{dac7ae}都会获得积分，切换战场积分也会{17e43e}累加{dac7ae}，势力内会根据积分进行排名，排名越高战场的{17e43e}基础奖励{dac7ae}越好。" Bold="0" />
+  <HelpIntro ID="9" Intro="{dac7ae}8、{17e43e}周六19:30-周日23:55{dac7ae}领取战场奖励可获得{17e43e}势力军衔{dac7ae}奖励，{17e43e}周日23:56-周六19:00{dac7ae}领取奖励将{ff0000}不会{dac7ae}获得{17e43e}势力军衔{dac7ae}奖励。" Bold="0" />
+  <HelpIntro ID="10" Intro="{dac7ae}9、每个势力战场都对应一个{17e43e}专属的商店{dac7ae}，占领该战场，势力玩家可以在{17e43e}占领周期内{dac7ae}，在专属商店购物。势力争霸占领最多的势力还会有一个{17e43e}额外的{dac7ae}专属商店。" Bold="0" />
+</Config>

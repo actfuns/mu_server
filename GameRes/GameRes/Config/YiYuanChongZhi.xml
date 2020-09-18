@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <YiYuanChongZhi ID="1" BeginTime="2016-03-14 0:00:00" FinishTime="2016-03-28 23:59:59" UserList="YiYuanChongZhi.txt" MinZhuanShi="100" GoodsID1="50160,15,1,0,0,0,0|5203,15,1,0,0,0,0|63064,9,1,0,0,0,0|5150,9,1,0,0,0,0|5183,3,1,0,0,0,0" GoodsID2="" />
+</Config>

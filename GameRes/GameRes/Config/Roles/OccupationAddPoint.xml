@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ShuXings>
+    <ShuXing OccupationID="0" OccupationName="战士" JiaDian="5" />
+    <ShuXing OccupationID="11" OccupationName="狂战" JiaDian="5" />
+    <ShuXing OccupationID="12" OccupationName="狂战" JiaDian="6" />
+    <ShuXing OccupationID="13" OccupationName="战神" JiaDian="6" />
+    <ShuXing OccupationID="1" OccupationName="法师" JiaDian="5" />
+    <ShuXing OccupationID="21" OccupationName="幻法" JiaDian="5" />
+    <ShuXing OccupationID="22" OccupationName="幻法" JiaDian="6" />
+    <ShuXing OccupationID="23" OccupationName="法王" JiaDian="6" />
+    <ShuXing OccupationID="2" OccupationName="弓箭手" JiaDian="5" />
+    <ShuXing OccupationID="31" OccupationName="射手" JiaDian="5" />
+    <ShuXing OccupationID="32" OccupationName="射手" JiaDian="6" />
+    <ShuXing OccupationID="33" OccupationName="箭圣" JiaDian="6" />
+  </ShuXings>
+</Config>

@@ -9,16 +9,16 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000193 RID: 403
+	
 	public class YaoSaiBossManager : SingletonTemplate<YaoSaiBossManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x06000724 RID: 1828 RVA: 0x00041D84 File Offset: 0x0003FF84
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x06000725 RID: 1829 RVA: 0x00041D98 File Offset: 0x0003FF98
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(20306, SingletonTemplate<YaoSaiBossManager>.Instance());
@@ -29,19 +29,19 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000726 RID: 1830 RVA: 0x00041E14 File Offset: 0x00040014
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000727 RID: 1831 RVA: 0x00041E28 File Offset: 0x00040028
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000728 RID: 1832 RVA: 0x00041E3C File Offset: 0x0004003C
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			switch (nID)
@@ -64,7 +64,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000729 RID: 1833 RVA: 0x00041EB4 File Offset: 0x000400B4
+		
 		public void GetYaoSaiBossData(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -114,7 +114,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600072A RID: 1834 RVA: 0x0004208C File Offset: 0x0004028C
+		
 		public void GetYaoSaiBossFightLog(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -171,7 +171,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600072B RID: 1835 RVA: 0x0004229C File Offset: 0x0004049C
+		
 		public void SetYaoSaiBossData(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -218,7 +218,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600072C RID: 1836 RVA: 0x00042430 File Offset: 0x00040630
+		
 		public void SetYaoSaiBossFightLog(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -266,7 +266,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600072D RID: 1837 RVA: 0x000425C4 File Offset: 0x000407C4
+		
 		public void CleanYaoSaiBossFightData(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try

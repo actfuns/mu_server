@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HolyGrail ID="1" MonsterID="9000004" Time="4" GoodsID="2060001" Score="50" PosX="7175" PosY="7728" />
+  <HolyGrail ID="2" MonsterID="9000005" Time="4" GoodsID="2060002" Score="50" PosX="7845" PosY="7124" />
+  <HolyGrail ID="3" MonsterID="9000006" Time="4" GoodsID="2060003" Score="50" PosX="176" PosY="807" />
+  <HolyGrail ID="4" MonsterID="9000007" Time="4" GoodsID="2060004" Score="50" PosX="824" PosY="233" />
+</Config>

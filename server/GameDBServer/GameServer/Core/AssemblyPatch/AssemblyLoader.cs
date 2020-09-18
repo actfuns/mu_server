@@ -6,22 +6,22 @@ using Server.Tools;
 
 namespace GameServer.Core.AssemblyPatch
 {
-	// Token: 0x02000003 RID: 3
+	
 	internal class AssemblyLoader : MarshalByRefObject
 	{
-		// Token: 0x06000003 RID: 3 RVA: 0x00002071 File Offset: 0x00000271
+		
 		public void SetDomain(AppDomain arg_domain)
 		{
 			arg_domain.AssemblyResolve += AssemblyLoader.CurrentDomain_AssemblyResolve;
 		}
 
-		// Token: 0x06000004 RID: 4 RVA: 0x00002088 File Offset: 0x00000288
+		
 		private static Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
 		{
 			return null;
 		}
 
-		// Token: 0x17000001 RID: 1
+		
 		
 		public string FullName
 		{
@@ -31,7 +31,7 @@ namespace GameServer.Core.AssemblyPatch
 			}
 		}
 
-		// Token: 0x06000006 RID: 6 RVA: 0x000020BC File Offset: 0x000002BC
+		
 		public bool LoadAssembly(string assemblyName)
 		{
 			try
@@ -77,7 +77,7 @@ namespace GameServer.Core.AssemblyPatch
 			return null != this.assembly;
 		}
 
-		// Token: 0x06000007 RID: 7 RVA: 0x0000221C File Offset: 0x0000041C
+		
 		public MethodLoader FindMethod(string fullClassName, string methodName)
 		{
 			MethodLoader methodLoader = null;
@@ -94,7 +94,7 @@ namespace GameServer.Core.AssemblyPatch
 			return result;
 		}
 
-		// Token: 0x06000008 RID: 8 RVA: 0x00002258 File Offset: 0x00000458
+		
 		public void AddMethod(string fullClassName, string methodName, MethodLoader methodLoader)
 		{
 			try
@@ -108,7 +108,7 @@ namespace GameServer.Core.AssemblyPatch
 			}
 		}
 
-		// Token: 0x06000009 RID: 9 RVA: 0x000022B0 File Offset: 0x000004B0
+		
 		public bool LoadMethod(string fullClassName, string methodName)
 		{
 			try
@@ -144,7 +144,7 @@ namespace GameServer.Core.AssemblyPatch
 			return true;
 		}
 
-		// Token: 0x0600000A RID: 10 RVA: 0x00002398 File Offset: 0x00000598
+		
 		public object Invoke(string fullClassName, string methodName, object[] args)
 		{
 			MethodLoader methodLoader = null;
@@ -161,10 +161,10 @@ namespace GameServer.Core.AssemblyPatch
 			return result;
 		}
 
-		// Token: 0x04000004 RID: 4
+		
 		private Assembly assembly = null;
 
-		// Token: 0x04000005 RID: 5
+		
 		private Dictionary<string, MethodLoader> dictMethodLoader = new Dictionary<string, MethodLoader>();
 	}
 }

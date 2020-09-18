@@ -9,16 +9,16 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.FluorescentGem
 {
-    // Token: 0x0200012D RID: 301
+    
     public class FluorescentGemManager
     {
-        // Token: 0x060004F6 RID: 1270 RVA: 0x00028FC8 File Offset: 0x000271C8
+        
         public static FluorescentGemManager getInstance()
         {
             return FluorescentGemManager.instance;
         }
 
-        // Token: 0x060004F7 RID: 1271 RVA: 0x00028FE0 File Offset: 0x000271E0
+        
         public TCPProcessCmdResults ProcessResetBagDataCmd(DBManager dbMgr, GameServerClient client, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
         {
             tcpOutPacket = null;
@@ -26,7 +26,7 @@ namespace GameDBServer.Logic.FluorescentGem
             return TCPProcessCmdResults.RESULT_OK;
         }
 
-        // Token: 0x060004F8 RID: 1272 RVA: 0x00029000 File Offset: 0x00027200
+        
         public TCPProcessCmdResults ProcessModifyFluorescentPointCmd(DBManager dbMgr, GameServerClient client, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
         {
             tcpOutPacket = null;
@@ -79,7 +79,7 @@ namespace GameDBServer.Logic.FluorescentGem
             return TCPProcessCmdResults.RESULT_OK;
         }
 
-        // Token: 0x060004F9 RID: 1273 RVA: 0x000291D4 File Offset: 0x000273D4
+        
         public TCPProcessCmdResults ProcessUpdateFluorescentPointCmd(DBManager dbMgr, GameServerClient client, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
         {
             tcpOutPacket = null;
@@ -132,7 +132,7 @@ namespace GameDBServer.Logic.FluorescentGem
             return TCPProcessCmdResults.RESULT_OK;
         }
 
-        // Token: 0x060004FA RID: 1274 RVA: 0x00029378 File Offset: 0x00027578
+        
         public TCPProcessCmdResults ProcessEquipGemCmd(DBManager dbMgr, GameServerClient client, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
         {
             tcpOutPacket = null;
@@ -182,7 +182,7 @@ namespace GameDBServer.Logic.FluorescentGem
             return TCPProcessCmdResults.RESULT_OK;
         }
 
-        // Token: 0x060004FB RID: 1275 RVA: 0x0002953C File Offset: 0x0002773C
+        
         public TCPProcessCmdResults ProcessUnEquipGemCmd(DBManager dbMgr, GameServerClient client, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
         {
             tcpOutPacket = null;
@@ -227,20 +227,20 @@ namespace GameDBServer.Logic.FluorescentGem
             return TCPProcessCmdResults.RESULT_OK;
         }
 
-        // Token: 0x060004FC RID: 1276 RVA: 0x000296B4 File Offset: 0x000278B4
+        
         public void ParsePosAndType(int slot, out int pos, out int type)
         {
             pos = slot / 100;
             type = slot % 100;
         }
 
-        // Token: 0x060004FD RID: 1277 RVA: 0x000296C4 File Offset: 0x000278C4
+        
         public int GenerateBagIndex(int pos, int type)
         {
             return pos * 100 + type;
         }
 
-        // Token: 0x040007C6 RID: 1990
+        
         private static FluorescentGemManager instance = new FluorescentGemManager();
     }
 }

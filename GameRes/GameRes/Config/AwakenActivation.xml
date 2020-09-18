@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <AwakenActivation ID="1" Name="觉醒·毁灭（头盔）" Position="5" Icon="Awaken_101.png" Material="950000,1100" BaseProps="MinDefense,4358|MaxDefense,5448|MinMDefense,2972|MaxMDefense,3714|MaxLifeV,23223" />
+  <AwakenActivation ID="2" Name="觉醒·毁灭（铠甲）" Position="6" Icon="Awaken_102.png" Material="950001,900" BaseProps="MinDefense,2722|MaxDefense,3403|MinMDefense,1856|MaxMDefense,2321|MaxLifeV,29028" />
+  <AwakenActivation ID="3" Name="觉醒·毁灭（护手）" Position="7" Icon="Awaken_103.png" Material="950002,800" BaseProps="MinDefense,3265|MaxDefense,4085|MinMDefense,2226|MaxMDefense,2785|MaxLifeV,17417" />
+  <AwakenActivation ID="4" Name="觉醒·毁灭（护腿）" Position="8" Icon="Awaken_104.png" Material="950003,1200" BaseProps="MinDefense,4901|MaxDefense,6129|MinMDefense,3342|MaxMDefense,4179|MaxLifeV,26123" />
+  <AwakenActivation ID="5" Name="觉醒·毁灭（靴子）" Position="9" Icon="Awaken_105.png" Material="950004,900" BaseProps="MinDefense,3812|MaxDefense,4766|MinMDefense,2599|MaxMDefense,3250|MaxLifeV,20318" />
+  <AwakenActivation ID="6" Name="觉醒·生存（头盔）" Position="5" Icon="Awaken_106.png" Material="950005,1100" BaseProps="MinDefense,3170|MaxDefense,3962|MinMDefense,4160|MaxMDefense,5200|MaxLifeV,16720" />
+  <AwakenActivation ID="7" Name="觉醒·生存（铠甲）" Position="6" Icon="Awaken_107.png" Material="950006,900" BaseProps="MinDefense,1980|MaxDefense,2475|MinMDefense,2598|MaxMDefense,3249|MaxLifeV,20900" />
+  <AwakenActivation ID="8" Name="觉醒·生存（护手）" Position="7" Icon="Awaken_108.png" Material="950007,800" BaseProps="MinDefense,2374|MaxDefense,2971|MinMDefense,3116|MaxMDefense,3899|MaxLifeV,12540" />
+  <AwakenActivation ID="9" Name="觉醒·生存（护腿）" Position="8" Icon="Awaken_109.png" Material="950008,1200" BaseProps="MinDefense,3564|MaxDefense,4458|MinMDefense,4678|MaxMDefense,5851|MaxLifeV,18809" />
+  <AwakenActivation ID="10" Name="觉醒·生存（靴子）" Position="9" Icon="Awaken_110.png" Material="950009,900" BaseProps="MinDefense,2772|MaxDefense,3466|MinMDefense,3638|MaxMDefense,4550|MaxLifeV,14629" />
+  <AwakenActivation ID="11" Name="觉醒·利刃（武器）" Position="1" Icon="Awaken_116.png" Material="951000,2000" BaseProps="MinAttack,23839|MaxAttack,29803|MinMAttack,23839|MaxMAttack,29803" />
+  <AwakenActivation ID="12" Name="觉醒·利刃（项链）" Position="2" Icon="Awaken_117.png" Material="951001,900" BaseProps="MinAttack,10214|MaxAttack,12770|MinMAttack,10214|MaxMAttack,12770" />
+  <AwakenActivation ID="13" Name="觉醒·利刃（左戒指）" Position="3" Icon="Awaken_118.png" Material="951002,700" BaseProps="MinDefense,1980|MaxDefense,2475|MinMDefense,2598|MaxMDefense,3249|MaxLifeV,10449" />
+  <AwakenActivation ID="14" Name="觉醒·利刃（右戒指）" Position="4" Icon="Awaken_119.png" Material="951003,700" BaseProps="MinDefense,1980|MaxDefense,2475|MinMDefense,2598|MaxMDefense,3249|MaxLifeV,10449" />
+  <AwakenActivation ID="15" Name="觉醒·爆裂（武器）" Position="1" Icon="Awaken_120.png" Material="951004,2000" BaseProps="MinAttack,21672|MaxAttack,27094|MinMAttack,21672|MaxMAttack,27094" />
+  <AwakenActivation ID="16" Name="觉醒·爆裂（项链）" Position="2" Icon="Awaken_121.png" Material="951005,900" BaseProps="MinAttack,9286|MaxAttack,11610|MinMAttack,9286|MaxMAttack,11610" />
+  <AwakenActivation ID="17" Name="觉醒·爆裂（左戒指）" Position="3" Icon="Awaken_122.png" Material="951006,700" BaseProps="MinDefense,2351|MaxDefense,2939|MinMDefense,2227|MaxMDefense,2785|MaxLifeV,12190" />
+  <AwakenActivation ID="18" Name="觉醒·爆裂（右戒指）" Position="4" Icon="Awaken_123.png" Material="951007,700" BaseProps="MinDefense,2351|MaxDefense,2939|MinMDefense,2227|MaxMDefense,2785|MaxLifeV,12190" />
+</Config>

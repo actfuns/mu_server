@@ -12,10 +12,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020005E0 RID: 1504
+	
 	public class CGetOldResourceManager
 	{
-		// Token: 0x170000C6 RID: 198
+		
 		
 		public static XElement xmlData
 		{
@@ -47,7 +47,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000C7 RID: 199
+		
 		
 		public static double[] ExpGold
 		{
@@ -71,7 +71,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000C8 RID: 200
+		
 		
 		public static double[] BondGold
 		{
@@ -95,7 +95,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000C9 RID: 201
+		
 		
 		public static double[] MoJing
 		{
@@ -119,7 +119,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000CA RID: 202
+		
 		
 		public static double[] ShengWang
 		{
@@ -143,7 +143,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000CB RID: 203
+		
 		
 		public static double[] ChengJiu
 		{
@@ -167,7 +167,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000CC RID: 204
+		
 		
 		public static double[] ZhanGong
 		{
@@ -191,7 +191,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000CD RID: 205
+		
 		
 		public static double[] BangZuan
 		{
@@ -215,7 +215,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000CE RID: 206
+		
 		
 		public static double[] XingHun
 		{
@@ -239,7 +239,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000CF RID: 207
+		
 		
 		public static double[] YuanSuFenMo
 		{
@@ -263,7 +263,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C0A RID: 7178 RVA: 0x001A47E4 File Offset: 0x001A29E4
+		
 		public static double RoleChangelifeRate(int count)
 		{
 			try
@@ -285,7 +285,7 @@ namespace GameServer.Logic
 			return 1.0;
 		}
 
-		// Token: 0x06001C0B RID: 7179 RVA: 0x001A4888 File Offset: 0x001A2A88
+		
 		public static List<OldResourceInfo> GetOldResourceInfo(GameClient client)
 		{
 			List<OldResourceInfo> oldinfo = new List<OldResourceInfo>();
@@ -302,13 +302,13 @@ namespace GameServer.Logic
 			return oldinfo;
 		}
 
-		// Token: 0x06001C0C RID: 7180 RVA: 0x001A4928 File Offset: 0x001A2B28
+		
 		public static bool HasOldResource(GameClient client)
 		{
 			return CGetOldResourceManager.GetOldResourceInfo(client).Count > 0;
 		}
 
-		// Token: 0x06001C0D RID: 7181 RVA: 0x001A4954 File Offset: 0x001A2B54
+		
 		private static bool RoleCando(GameClient client, XElement item)
 		{
 			int type = (int)Global.GetSafeAttributeLong(item, "Type");
@@ -355,7 +355,7 @@ namespace GameServer.Logic
 			return condition && condition2;
 		}
 
-		// Token: 0x06001C0E RID: 7182 RVA: 0x001A4AD8 File Offset: 0x001A2CD8
+		
 		private static bool IsCanCalcOldResource(GameClient client)
 		{
 			bool result;
@@ -379,13 +379,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C0F RID: 7183 RVA: 0x001A4B40 File Offset: 0x001A2D40
+		
 		private static bool TaskHasDone(GameClient client, int taskID)
 		{
 			return client.ClientData.MainTaskID >= taskID;
 		}
 
-		// Token: 0x06001C10 RID: 7184 RVA: 0x001A4B64 File Offset: 0x001A2D64
+		
 		public static FuBenData GetOldFubenData(GameClient client, int fuBenID)
 		{
 			FuBenData result;
@@ -410,7 +410,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C11 RID: 7185 RVA: 0x001A4C28 File Offset: 0x001A2E28
+		
 		public static int GetVIPActiveNumByType(GameClient client, int activeId)
 		{
 			int nVipLev = client.ClientData.VipLevel;
@@ -434,7 +434,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06001C12 RID: 7186 RVA: 0x001A4CAC File Offset: 0x001A2EAC
+		
 		private static void CalcOldResourceInfo(int leftnum, CGetResData data, OldResourceInfo inInfo, out OldResourceInfo outInfo)
 		{
 			outInfo = inInfo;
@@ -468,7 +468,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C13 RID: 7187 RVA: 0x001A4E14 File Offset: 0x001A3014
+		
 		private static void CalcOldResourceInfo(int oldday, int oldnum, int total, CGetResData data, OldResourceInfo inInfo, out OldResourceInfo outInfo)
 		{
 			outInfo = inInfo;
@@ -489,7 +489,7 @@ namespace GameServer.Logic
 			CGetOldResourceManager.CalcOldResourceInfo(leftnum, data, inInfo, out outInfo);
 		}
 
-		// Token: 0x06001C14 RID: 7188 RVA: 0x001A4E88 File Offset: 0x001A3088
+		
 		private static void GetFubenResourceInfo(GameClient client, int copyId, int total, bool needFinish, CGetResData data, OldResourceInfo inInfo, out OldResourceInfo outInfo)
 		{
 			outInfo = inInfo;
@@ -512,7 +512,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C15 RID: 7189 RVA: 0x001A4EF0 File Offset: 0x001A30F0
+		
 		private static void ComputeResourceByType(GameClient client, int type, Dictionary<int, List<CGetResData>> getRestDataDict, out OldResourceInfo outInfo)
 		{
 			outInfo = null;
@@ -738,7 +738,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C16 RID: 7190 RVA: 0x001A56B8 File Offset: 0x001A38B8
+		
 		public static void InitRoleOldResourceInfo(GameClient client, bool isFirstLogin)
 		{
 			if (CGetOldResourceManager.IsCanCalcOldResource(client))
@@ -805,7 +805,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001C17 RID: 7191 RVA: 0x001A59D4 File Offset: 0x001A3BD4
+		
 		public static int GiveRoleOldResource(GameClient client, int actType, int goldorZuanshi, int getModel)
 		{
 			int ret = 0;
@@ -1123,7 +1123,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C18 RID: 7192 RVA: 0x001A6860 File Offset: 0x001A4A60
+		
 		public static void ReplaceDataToDB(GameClient client)
 		{
 			Dictionary<int, Dictionary<int, OldResourceInfo>> dict = new Dictionary<int, Dictionary<int, OldResourceInfo>>();
@@ -1131,7 +1131,7 @@ namespace GameServer.Logic
 			Global.sendToDB<int, byte[]>(10164, DataHelper.ObjectToBytes<Dictionary<int, Dictionary<int, OldResourceInfo>>>(dict), client.ServerId);
 		}
 
-		// Token: 0x06001C19 RID: 7193 RVA: 0x001A68A8 File Offset: 0x001A4AA8
+		
 		public static Dictionary<int, OldResourceInfo> ReadResourceGetfromDB(GameClient client)
 		{
 			Dictionary<int, OldResourceInfo> dict = new Dictionary<int, OldResourceInfo>();
@@ -1154,7 +1154,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001C1A RID: 7194 RVA: 0x001A6940 File Offset: 0x001A4B40
+		
 		public static TCPProcessCmdResults ProcessOldResourceCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -1224,70 +1224,70 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x04002A3A RID: 10810
+		
 		public static float GoldRate = 0.75f;
 
-		// Token: 0x04002A3B RID: 10811
+		
 		private static object _xmlDataMutex = new object();
 
-		// Token: 0x04002A3C RID: 10812
+		
 		private static XElement _xmlData = null;
 
-		// Token: 0x04002A3D RID: 10813
+		
 		private static double[] _Exp = null;
 
-		// Token: 0x04002A3E RID: 10814
+		
 		private static object _ExpMutex = new object();
 
-		// Token: 0x04002A3F RID: 10815
+		
 		private static double[] _BondGold = null;
 
-		// Token: 0x04002A40 RID: 10816
+		
 		private static object _BondGoldMutex = new object();
 
-		// Token: 0x04002A41 RID: 10817
+		
 		private static double[] _MoJing = null;
 
-		// Token: 0x04002A42 RID: 10818
+		
 		private static object _MoJingMutex = new object();
 
-		// Token: 0x04002A43 RID: 10819
+		
 		private static double[] _ShengWang = null;
 
-		// Token: 0x04002A44 RID: 10820
+		
 		private static object _ShengWangMutex = new object();
 
-		// Token: 0x04002A45 RID: 10821
+		
 		private static double[] _ChengJiu = null;
 
-		// Token: 0x04002A46 RID: 10822
+		
 		private static object _ChengJiuMutex = new object();
 
-		// Token: 0x04002A47 RID: 10823
+		
 		private static double[] _ZhanGong = null;
 
-		// Token: 0x04002A48 RID: 10824
+		
 		private static object _ZhanGongMutex = new object();
 
-		// Token: 0x04002A49 RID: 10825
+		
 		private static double[] _BangZuan = null;
 
-		// Token: 0x04002A4A RID: 10826
+		
 		private static object _BangZuanMutex = new object();
 
-		// Token: 0x04002A4B RID: 10827
+		
 		private static double[] _XingHun = null;
 
-		// Token: 0x04002A4C RID: 10828
+		
 		private static object _XingHunMutex = new object();
 
-		// Token: 0x04002A4D RID: 10829
+		
 		private static double[] _YuanSuFenMo = null;
 
-		// Token: 0x04002A4E RID: 10830
+		
 		private static object _YuanSuFenMoMutex = new object();
 
-		// Token: 0x04002A4F RID: 10831
+		
 		private static double[] _changelifeRate = null;
 	}
 }

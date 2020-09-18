@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RebornCombatForce>
+  <Rebornzhanli ID="1" LifeV="2.5" MagicV="100000000" MinDefenseV="12" MaxDefenseV="12" MinMDefenseV="12" MaxMDefenseV="12" MinAttackV="6" MaxAttackV="6" MinMAttackV="6" MaxMAttackV="6" HitV="60" Dodge="60" AddAttackInjure="6" DecreaseInjureValue="6" LifeSteal="3" AddAttack="3" AddDefense="6" FireAttack="6" WaterAttack="6" LightningAttack="6" SoilAttack="6" IceAttack="6" WindAttack="6" ArmorMax="1" HolyAttack="0.5" HolyDefense="0.5" ShadowAttack="0.5" ShadowDefense="0.5" NatureAttack="0.5" NatureDefense="0.5" ChaosAttack="0.5" ChaosDefense="0.5" IncubusAttack="0.5" IncubusDefense="0.5" />
+</RebornCombatForce>

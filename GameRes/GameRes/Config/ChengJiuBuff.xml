@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <ChengJiu ID="1" Select="1" ChengJiu="4500" NeedGoods="" NeedMoney="0" DayXiaoHao="0" />
+  <ChengJiu ID="2" Select="1" ChengJiu="23000" NeedGoods="" NeedMoney="0" DayXiaoHao="0" />
+  <ChengJiu ID="3" Select="1" ChengJiu="72000" NeedGoods="" NeedMoney="0" DayXiaoHao="0" />
+  <ChengJiu ID="4" Select="1" ChengJiu="175500" NeedGoods="" NeedMoney="0" DayXiaoHao="0" />
+  <ChengJiu ID="5" Select="1" ChengJiu="363000" NeedGoods="" NeedMoney="0" DayXiaoHao="0" />
+  <ChengJiu ID="6" Select="1" ChengJiu="672500" NeedGoods="" NeedMoney="0" DayXiaoHao="0" />
+  <ChengJiu ID="7" Select="1" ChengJiu="1147500" NeedGoods="" NeedMoney="0" DayXiaoHao="0" />
+  <ChengJiu ID="8" Select="1" ChengJiu="1837500" NeedGoods="" NeedMoney="0" DayXiaoHao="0" />
+  <ChengJiu ID="9" Select="1" ChengJiu="2800500" NeedGoods="" NeedMoney="0" DayXiaoHao="0" />
+  <ChengJiu ID="10" Select="1" ChengJiu="4100500" NeedGoods="" NeedMoney="0" DayXiaoHao="0" />
+  <ChengJiu ID="11" Select="1" ChengJiu="5807500" NeedGoods="" NeedMoney="0" DayXiaoHao="0" />
+  <ChengJiu ID="12" Select="1" ChengJiu="7998500" NeedGoods="" NeedMoney="0" DayXiaoHao="0" />
+  <ChengJiu ID="13" Select="1" ChengJiu="7998500" NeedGoods="2035,50" NeedMoney="0" DayXiaoHao="0" />
+  <ChengJiu ID="14" Select="1" ChengJiu="7998500" NeedGoods="2035,60" NeedMoney="0" DayXiaoHao="0" />
+  <ChengJiu ID="15" Select="1" ChengJiu="7998500" NeedGoods="2035,80" NeedMoney="0" DayXiaoHao="0" />
+  <ChengJiu ID="16" Select="1" ChengJiu="7998500" NeedGoods="2035,100" NeedMoney="0" DayXiaoHao="0" />
+</config>

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Box ID="1">
+    <Treasure ID="1" Type="3" Goods="1" BeginNum="1" EndNum="33558" />
+    <Treasure ID="2" Type="3" Goods="2" BeginNum="33559" EndNum="57048" />
+    <Treasure ID="3" Type="3" Goods="5" BeginNum="57049" EndNum="77183" />
+    <Treasure ID="4" Type="3" Goods="10" BeginNum="77184" EndNum="83895" />
+    <Treasure ID="5" Type="3" Goods="20" BeginNum="83896" EndNum="90607" />
+    <Treasure ID="6" Type="3" Goods="50" BeginNum="90608" EndNum="96648" />
+    <Treasure ID="7" Type="3" Goods="100" BeginNum="96649" EndNum="96650" />
+    <Treasure ID="8" Type="3" Goods="100" BeginNum="96651" EndNum="96652" />
+    <Treasure ID="9" Type="3" Goods="100" BeginNum="96653" EndNum="96654" />
+    <Treasure ID="10" Type="3" Goods="100" BeginNum="96655" EndNum="96656" />
+    <Treasure ID="11" Type="3" Goods="100" BeginNum="96657" EndNum="96658" />
+    <Treasure ID="12" Type="3" Goods="100" BeginNum="96659" EndNum="96660" />
+    <Treasure ID="13" Type="3" Goods="100" BeginNum="96661" EndNum="96662" />
+    <Treasure ID="14" Type="3" Goods="100" BeginNum="96663" EndNum="96664" />
+    <Treasure ID="15" Type="3" Goods="100" BeginNum="96665" EndNum="96666" />
+    <Treasure ID="16" Type="3" Goods="100" BeginNum="96667" EndNum="96668" />
+    <Treasure ID="17" Type="3" Goods="100" BeginNum="96669" EndNum="96670" />
+    <Treasure ID="18" Type="3" Goods="100" BeginNum="96671" EndNum="96672" />
+    <Treasure ID="19" Type="3" Goods="100" BeginNum="96673" EndNum="96674" />
+    <Treasure ID="20" Type="3" Goods="100" BeginNum="96675" EndNum="96676" />
+    <Treasure ID="21" Type="3" Goods="100" BeginNum="96677" EndNum="96678" />
+    <Treasure ID="22" Type="3" Goods="100" BeginNum="96679" EndNum="96680" />
+    <Treasure ID="23" Type="3" Goods="100" BeginNum="96681" EndNum="96682" />
+    <Treasure ID="24" Type="3" Goods="100" BeginNum="96683" EndNum="100000" />
+  </Box>
+  <Box ID="2">
+    <Treasure ID="1" Type="3" Goods="1" BeginNum="1" EndNum="28777" />
+    <Treasure ID="2" Type="3" Goods="2" BeginNum="28778" EndNum="43166" />
+    <Treasure ID="3" Type="3" Goods="5" BeginNum="43167" EndNum="57555" />
+    <Treasure ID="4" Type="3" Goods="10" BeginNum="57556" EndNum="71944" />
+    <Treasure ID="5" Type="3" Goods="20" BeginNum="71945" EndNum="93527" />
+    <Treasure ID="6" Type="3" Goods="50" BeginNum="93528" EndNum="99283" />
+    <Treasure ID="7" Type="3" Goods="100" BeginNum="99284" EndNum="99285" />
+    <Treasure ID="8" Type="3" Goods="100" BeginNum="99286" EndNum="99287" />
+    <Treasure ID="9" Type="3" Goods="100" BeginNum="99288" EndNum="99289" />
+    <Treasure ID="10" Type="3" Goods="100" BeginNum="99290" EndNum="99291" />
+    <Treasure ID="11" Type="3" Goods="100" BeginNum="99292" EndNum="99293" />
+    <Treasure ID="12" Type="3" Goods="100" BeginNum="99294" EndNum="99295" />
+    <Treasure ID="13" Type="3" Goods="100" BeginNum="99296" EndNum="99297" />
+    <Treasure ID="14" Type="3" Goods="100" BeginNum="99298" EndNum="99299" />
+    <Treasure ID="15" Type="3" Goods="100" BeginNum="99300" EndNum="99301" />
+    <Treasure ID="16" Type="3" Goods="100" BeginNum="99302" EndNum="99303" />
+    <Treasure ID="17" Type="3" Goods="100" BeginNum="99304" EndNum="99305" />
+    <Treasure ID="18" Type="3" Goods="100" BeginNum="99306" EndNum="99307" />
+    <Treasure ID="19" Type="3" Goods="100" BeginNum="99308" EndNum="99309" />
+    <Treasure ID="20" Type="3" Goods="100" BeginNum="99310" EndNum="99311" />
+    <Treasure ID="21" Type="3" Goods="100" BeginNum="99312" EndNum="99313" />
+    <Treasure ID="22" Type="3" Goods="100" BeginNum="99314" EndNum="99315" />
+    <Treasure ID="23" Type="3" Goods="100" BeginNum="99316" EndNum="99317" />
+    <Treasure ID="24" Type="3" Goods="100" BeginNum="99318" EndNum="100000" />
+  </Box>
+  <Box ID="3">
+    <Treasure ID="1" Type="2" Goods="15" BeginNum="1" EndNum="27410" />
+    <Treasure ID="2" Type="2" Goods="30" BeginNum="27411" EndNum="50000" />
+    <Treasure ID="3" Type="2" Goods="50" BeginNum="50001" EndNum="50753" />
+    <Treasure ID="4" Type="2" Goods="100" BeginNum="50754" EndNum="52636" />
+    <Treasure ID="5" Type="2" Goods="150" BeginNum="52637" EndNum="54519" />
+    <Treasure ID="6" Type="2" Goods="250" BeginNum="54520" EndNum="55649" />
+    <Treasure ID="7" Type="2" Goods="500" BeginNum="55650" EndNum="56214" />
+    <Treasure ID="8" Type="3" Goods="1" BeginNum="56215" EndNum="78804" />
+    <Treasure ID="9" Type="3" Goods="2" BeginNum="78805" EndNum="84452" />
+    <Treasure ID="10" Type="3" Goods="5" BeginNum="84453" EndNum="85205" />
+    <Treasure ID="11" Type="3" Goods="10" BeginNum="85206" EndNum="85582" />
+    <Treasure ID="12" Type="3" Goods="20" BeginNum="85583" EndNum="85959" />
+    <Treasure ID="13" Type="3" Goods="50" BeginNum="85960" EndNum="86336" />
+    <Treasure ID="14" Type="3" Goods="100" BeginNum="86337" EndNum="86411" />
+    <Treasure ID="15" Type="1" Goods="2019,1,1,0,0,0,0" BeginNum="86412" EndNum="86788" />
+    <Treasure ID="16" Type="1" Goods="50161,1,1,0,0,0,0" BeginNum="86789" EndNum="87541" />
+    <Treasure ID="17" Type="1" Goods="7004,1,1,0,0,0,0" BeginNum="87542" EndNum="87616" />
+    <Treasure ID="18" Type="1" Goods="7005,1,1,0,0,0,0" BeginNum="87617" EndNum="87691" />
+    <Treasure ID="19" Type="1" Goods="5150,1,1,0,0,0,0" BeginNum="87692" EndNum="87879" />
+    <Treasure ID="20" Type="1" Goods="5031,1,1,0,0,0,0" BeginNum="87880" EndNum="88256" />
+    <Treasure ID="21" Type="1" Goods="5041,1,1,0,0,0,0" BeginNum="88257" EndNum="88633" />
+    <Treasure ID="22" Type="1" Goods="2005,1,1,0,0,0,0" BeginNum="88634" EndNum="88708" />
+    <Treasure ID="23" Type="1" Goods="2030,2,1,0,0,0,0" BeginNum="88709" EndNum="94356" />
+    <Treasure ID="24" Type="1" Goods="2017,2,1,0,0,0,0" BeginNum="94357" EndNum="100000" />
+  </Box>
+  <Box ID="4">
+    <Treasure ID="1" Type="3" Goods="1" BeginNum="1" EndNum="28777" />
+    <Treasure ID="2" Type="3" Goods="2" BeginNum="28778" EndNum="43166" />
+    <Treasure ID="3" Type="3" Goods="5" BeginNum="43167" EndNum="57555" />
+    <Treasure ID="4" Type="3" Goods="10" BeginNum="57556" EndNum="71944" />
+    <Treasure ID="5" Type="3" Goods="20" BeginNum="71945" EndNum="93527" />
+    <Treasure ID="6" Type="3" Goods="50" BeginNum="93528" EndNum="99283" />
+    <Treasure ID="7" Type="3" Goods="100" BeginNum="99284" EndNum="99285" />
+    <Treasure ID="8" Type="3" Goods="100" BeginNum="99286" EndNum="99287" />
+    <Treasure ID="9" Type="3" Goods="100" BeginNum="99288" EndNum="99289" />
+    <Treasure ID="10" Type="3" Goods="100" BeginNum="99290" EndNum="99291" />
+    <Treasure ID="11" Type="3" Goods="100" BeginNum="99292" EndNum="99293" />
+    <Treasure ID="12" Type="3" Goods="100" BeginNum="99294" EndNum="99295" />
+    <Treasure ID="13" Type="3" Goods="100" BeginNum="99296" EndNum="99297" />
+    <Treasure ID="14" Type="3" Goods="100" BeginNum="99298" EndNum="99299" />
+    <Treasure ID="15" Type="3" Goods="100" BeginNum="99300" EndNum="99301" />
+    <Treasure ID="16" Type="3" Goods="100" BeginNum="99302" EndNum="99303" />
+    <Treasure ID="17" Type="3" Goods="100" BeginNum="99304" EndNum="99305" />
+    <Treasure ID="18" Type="3" Goods="100" BeginNum="99306" EndNum="99307" />
+    <Treasure ID="19" Type="3" Goods="100" BeginNum="99308" EndNum="99309" />
+    <Treasure ID="20" Type="3" Goods="100" BeginNum="99310" EndNum="99311" />
+    <Treasure ID="21" Type="3" Goods="100" BeginNum="99312" EndNum="99313" />
+    <Treasure ID="22" Type="3" Goods="100" BeginNum="99314" EndNum="99315" />
+    <Treasure ID="23" Type="3" Goods="100" BeginNum="99316" EndNum="99317" />
+    <Treasure ID="24" Type="3" Goods="100" BeginNum="99318" EndNum="100000" />
+  </Box>
+</Config>

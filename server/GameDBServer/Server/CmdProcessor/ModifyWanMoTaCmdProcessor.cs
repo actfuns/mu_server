@@ -5,21 +5,21 @@ using Server.Tools;
 
 namespace GameDBServer.Server.CmdProcessor
 {
-	// Token: 0x020001F8 RID: 504
+	
 	public class ModifyWanMoTaCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x06000A77 RID: 2679 RVA: 0x00062426 File Offset: 0x00060626
+		
 		private ModifyWanMoTaCmdProcessor()
 		{
 		}
 
-		// Token: 0x06000A78 RID: 2680 RVA: 0x00062434 File Offset: 0x00060634
+		
 		public static ModifyWanMoTaCmdProcessor getInstance()
 		{
 			return ModifyWanMoTaCmdProcessor.instance;
 		}
 
-		// Token: 0x06000A79 RID: 2681 RVA: 0x0006244C File Offset: 0x0006064C
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -93,7 +93,7 @@ namespace GameDBServer.Server.CmdProcessor
 			}
 		}
 
-		// Token: 0x04000C5A RID: 3162
+		
 		private static ModifyWanMoTaCmdProcessor instance = new ModifyWanMoTaCmdProcessor();
 	}
 }

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ZhuLing SuitID="1" PlainZhuLing="400" SeniorZhuLing="50" />
+  <ZhuLing SuitID="2" PlainZhuLing="400" SeniorZhuLing="50" />
+  <ZhuLing SuitID="3" PlainZhuLing="400" SeniorZhuLing="50" />
+  <ZhuLing SuitID="4" PlainZhuLing="400" SeniorZhuLing="50" />
+  <ZhuLing SuitID="5" PlainZhuLing="400" SeniorZhuLing="50" />
+  <ZhuLing SuitID="6" PlainZhuLing="400" SeniorZhuLing="50" />
+  <ZhuLing SuitID="7" PlainZhuLing="400" SeniorZhuLing="50" />
+  <ZhuLing SuitID="8" PlainZhuLing="400" SeniorZhuLing="50" />
+  <ZhuLing SuitID="9" PlainZhuLing="400" SeniorZhuLing="50" />
+  <ZhuLing SuitID="10" PlainZhuLing="400" SeniorZhuLing="50" />
+  <ZhuLing SuitID="11" PlainZhuLing="400" SeniorZhuLing="50" />
+  <ZhuLing SuitID="12" PlainZhuLing="400" SeniorZhuLing="50" />
+</Config>

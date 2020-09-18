@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <PetSkillGroupProperty ID="1000" Name="技能品质奇缘" SkillList="9002|9005|9008|9011|9014|9017|9020|9102|9105|9108|9111|9114|9117|9202|9205|9208|9211|9214|9217" SkillNum="3" NextID="1001" Property="ElementInjurePercent,0.02|MaxLifePercent,0.01" />
+  <PetSkillGroupProperty ID="1001" Name="技能品质奇缘" SkillList="9002|9005|9008|9011|9014|9017|9020|9102|9105|9108|9111|9114|9117|9202|9205|9208|9211|9214|9217" SkillNum="4" NextID="1002" Property="ElementInjurePercent,0.03|MaxLifePercent,0.02" />
+  <PetSkillGroupProperty ID="1002" Name="技能品质奇缘" SkillList="9002|9005|9008|9011|9014|9017|9020|9102|9105|9108|9111|9114|9117|9202|9205|9208|9211|9214|9217" SkillNum="5" NextID="1003" Property="ElementInjurePercent,0.04|MaxLifePercent,0.02" />
+  <PetSkillGroupProperty ID="1003" Name="技能品质奇缘" SkillList="9002|9005|9008|9011|9014|9017|9020|9102|9105|9108|9111|9114|9117|9202|9205|9208|9211|9214|9217" SkillNum="6" NextID="1004" Property="ElementInjurePercent,0.05|MaxLifePercent,0.03" />
+  <PetSkillGroupProperty ID="1004" Name="技能品质奇缘" SkillList="9002|9005|9008|9011|9014|9017|9020|9102|9105|9108|9111|9114|9117|9202|9205|9208|9211|9214|9217" SkillNum="7" NextID="1005" Property="ElementInjurePercent,0.06|MaxLifePercent,0.03" />
+  <PetSkillGroupProperty ID="1005" Name="技能品质奇缘" SkillList="9002|9005|9008|9011|9014|9017|9020|9102|9105|9108|9111|9114|9117|9202|9205|9208|9211|9214|9217" SkillNum="8" NextID="1006" Property="ElementInjurePercent,0.08|MaxLifePercent,0.04" />
+  <PetSkillGroupProperty ID="1006" Name="技能品质奇缘" SkillList="9002|9005|9008|9011|9014|9017|9020|9102|9105|9108|9111|9114|9117|9202|9205|9208|9211|9214|9217" SkillNum="9" NextID="1007" Property="ElementInjurePercent,0.10|MaxLifePercent,0.05" />
+  <PetSkillGroupProperty ID="1007" Name="技能品质奇缘" SkillList="9002|9005|9008|9011|9014|9017|9020|9102|9105|9108|9111|9114|9117|9202|9205|9208|9211|9214|9217" SkillNum="10" NextID="1008" Property="ElementInjurePercent,0.12|MaxLifePercent,0.06" />
+  <PetSkillGroupProperty ID="1008" Name="技能品质奇缘" SkillList="9002|9005|9008|9011|9014|9017|9020|9102|9105|9108|9111|9114|9117|9202|9205|9208|9211|9214|9217" SkillNum="11" NextID="1009" Property="ElementInjurePercent,0.14|MaxLifePercent,0.07" />
+  <PetSkillGroupProperty ID="1009" Name="技能品质奇缘" SkillList="9002|9005|9008|9011|9014|9017|9020|9102|9105|9108|9111|9114|9117|9202|9205|9208|9211|9214|9217" SkillNum="12" NextID="1010" Property="ElementInjurePercent,0.16|MaxLifePercent,0.08" />
+  <PetSkillGroupProperty ID="1010" Name="技能品质奇缘" SkillList="9002|9005|9008|9011|9014|9017|9020|9102|9105|9108|9111|9114|9117|9202|9205|9208|9211|9214|9217" SkillNum="13" NextID="1011" Property="ElementInjurePercent,0.20|MaxLifePercent,0.10" />
+  <PetSkillGroupProperty ID="1011" Name="技能品质奇缘" SkillList="9002|9005|9008|9011|9014|9017|9020|9102|9105|9108|9111|9114|9117|9202|9205|9208|9211|9214|9217" SkillNum="14" NextID="1012" Property="ElementInjurePercent,0.24|MaxLifePercent,0.12" />
+  <PetSkillGroupProperty ID="1012" Name="技能品质奇缘" SkillList="9002|9005|9008|9011|9014|9017|9020|9102|9105|9108|9111|9114|9117|9202|9205|9208|9211|9214|9217" SkillNum="15" NextID="1013" Property="ElementInjurePercent,0.30|MaxLifePercent,0.15" />
+  <PetSkillGroupProperty ID="1013" Name="技能品质奇缘" SkillList="9002|9005|9008|9011|9014|9017|9020|9102|9105|9108|9111|9114|9117|9202|9205|9208|9211|9214|9217" SkillNum="16" NextID="-1" Property="ElementInjurePercent,0.36|MaxLifePercent,0.18" />
+</Config>

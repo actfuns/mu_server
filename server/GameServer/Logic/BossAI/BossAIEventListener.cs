@@ -5,21 +5,21 @@ using GameServer.Core.GameEvent.EventOjectImpl;
 
 namespace GameServer.Logic.BossAI
 {
-	// Token: 0x020005D6 RID: 1494
+	
 	public class BossAIEventListener : IEventListener
 	{
-		// Token: 0x06001BD0 RID: 7120 RVA: 0x001A1BC4 File Offset: 0x0019FDC4
+		
 		private BossAIEventListener()
 		{
 		}
 
-		// Token: 0x06001BD1 RID: 7121 RVA: 0x001A1BD0 File Offset: 0x0019FDD0
+		
 		public static BossAIEventListener getInstance()
 		{
 			return BossAIEventListener.instance;
 		}
 
-		// Token: 0x06001BD2 RID: 7122 RVA: 0x001A1BE8 File Offset: 0x0019FDE8
+		
 		public void processEvent(EventObject eventObject)
 		{
 			Monster monster = null;
@@ -221,7 +221,7 @@ namespace GameServer.Logic.BossAI
 			}
 		}
 
-		// Token: 0x04002A10 RID: 10768
+		
 		private static BossAIEventListener instance = new BossAIEventListener();
 	}
 }

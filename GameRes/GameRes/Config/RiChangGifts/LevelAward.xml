@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="28" />
+  <GiftList Title="冲级领取神装" Description="只要在领奖名额满员之前，升级到50、55、60、65、70级即可在此领取丰厚的神装奖励。">
+  <Award ID="1" MinLevel="50" GoodsOne="30059,1,0,0,1,0" GoodsTwo="1003057,1,0,0,0,0|1103057,1,0,0,0,0|1203057,1,0,0,0,0" Roles="200"/>
+  <Award ID="2" MinLevel="55" GoodsOne="30062,1,0,0,1,0" GoodsTwo="1003062,1,0,0,0,0|1103062,1,0,0,0,0|1203062,1,0,0,0,0" Roles="100"/>
+  <Award ID="3" MinLevel="60" GoodsOne="30063,1,0,0,1,0" GoodsTwo="1003162,1,0,0,0,0|1103162,1,0,0,0,0|1203162,1,0,0,0,0" Roles="20"/>
+  <Award ID="4" MinLevel="65" GoodsOne="30064,1,0,0,1,0" GoodsTwo="1003066,1,0,0,0,0|1103066,1,0,0,0,0|1203066,1,0,0,0,0" Roles="5"/>
+  <Award ID="5" MinLevel="70" GoodsOne="30064,2,0,0,1,0" GoodsTwo="1003076,1,0,0,0,0|1103076,1,0,0,0,0|1203076,1,0,0,0,0" Roles="3"/>
+  </GiftList>
+</Config>

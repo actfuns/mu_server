@@ -10,10 +10,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000167 RID: 359
+	
 	public class RechargeRepayActiveMgr
 	{
-		// Token: 0x06000633 RID: 1587 RVA: 0x00037BA4 File Offset: 0x00035DA4
+		
 		private static bool GetCmdDataField(int nID, byte[] data, int count, out string[] fields)
 		{
 			string cmdData = null;
@@ -34,7 +34,7 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000634 RID: 1588 RVA: 0x00037C14 File Offset: 0x00035E14
+		
 		public static TCPProcessCmdResults ProcessQueryActiveInfo(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -268,7 +268,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000635 RID: 1589 RVA: 0x000384A4 File Offset: 0x000366A4
+		
 		public static TCPProcessCmdResults ProcessGetActiveAwards(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;

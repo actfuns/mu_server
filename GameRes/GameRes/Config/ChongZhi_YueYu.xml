@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <ChongZhi ID="10000" Icon="10000" RMB="45" ZuanShi="450" FirstBindZuanShi="0" productIdMOMO="com.wemomo.game.mu.9" productIdHaiMa="9" />
+  <ChongZhi ID="1" Icon="1" RMB="6" ZuanShi="60" FirstBindZuanShi="60" productIdMOMO="com.wemomo.game.mu.1" productIdHaiMa="1" />
+  <ChongZhi ID="2" Icon="2" RMB="30" ZuanShi="300" FirstBindZuanShi="300" productIdMOMO="com.wemomo.game.mu.2" productIdHaiMa="2" />
+  <ChongZhi ID="3" Icon="3" RMB="68" ZuanShi="680" FirstBindZuanShi="680" productIdMOMO="com.wemomo.game.mu.3" productIdHaiMa="3" />
+  <ChongZhi ID="4" Icon="4" RMB="128" ZuanShi="1280" FirstBindZuanShi="1280" productIdMOMO="com.wemomo.game.mu.4" productIdHaiMa="4" />
+  <ChongZhi ID="5" Icon="5" RMB="328" ZuanShi="3280" FirstBindZuanShi="3280" productIdMOMO="com.wemomo.game.mu.5" productIdHaiMa="5" />
+  <ChongZhi ID="6" Icon="6" RMB="648" ZuanShi="6480" FirstBindZuanShi="6480" productIdMOMO="com.wemomo.game.mu.6" productIdHaiMa="6" />
+  <ChongZhi ID="7" Icon="7" RMB="1248" ZuanShi="12480" FirstBindZuanShi="12480" productIdMOMO="com.wemomo.game.mu.7" productIdHaiMa="7" />
+  <ChongZhi ID="8" Icon="8" RMB="2998" ZuanShi="29980" FirstBindZuanShi="29980" productIdMOMO="com.wemomo.game.mu.8" productIdHaiMa="8" />
+</config>

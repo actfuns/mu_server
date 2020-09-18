@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+ <Activities ActivityType="1" FromDate="-1" ToDate="-1" AwardStartDate="-1" AwardEndDate="-1" />
+  <GiftList Title="首次充值" Description="" Image="">
+  <Award ID="1" GoodsOne="9880004,1,1,0,0,0,0|5101,100,1,0,0,0,0|5102,100,1,0,0,0,0|5103,100,1,0,0,0,0|5104,100,1,0,0,0,0|9990002,100,1,0,0,0,0|9990003,100,1,0,0,0,0|9990004,100,1,0,0,0,0|9990005,100,1,0,0,0,0" GoodsTwo="" />
+  </GiftList>
+</config>

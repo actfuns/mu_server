@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <GiftTime Title="充值送积分，免费换大礼" FromDate="-1" ToDate="-1"/>
+  <GiftList>
+  	<Item ID="1" Description="活动期间可用100积分兑换以下奖品：" NeedJiFen="100" GoodsIDs="35005,1,0,0,0,0|31013,1,0,0,0,0|30040,1,0,0,0,0"/>
+  	<Item ID="2" Description="活动期间可用300积分兑换以下奖品：" NeedJiFen="300" GoodsIDs="35006,1,0,0,0,0|35005,1,0,0,0,0|31013,1,0,0,0,0|30040,2,0,0,0,0"/>
+ 	<Item ID="3" Description="活动期间可用500积分兑换以下奖品：" NeedJiFen="500" GoodsIDs="35006,2,0,0,0,0|35005,2,0,0,0,0|31020,1,0,0,0,0|30040,4,0,0,0,0"/>
+ 	<Item ID="4" Description="活动期间可用1000积分兑换以下奖品：" NeedJiFen="1000" GoodsIDs="35007,1,0,0,0,0|35006,2,0,0,0,0|31020,2,0,0,0,0|30040,8,0,0,0,0"/>
+ 	<Item ID="5" Description="活动期间可用3000积分兑换以下奖品：" NeedJiFen="3000" GoodsIDs="35008,1,0,0,0,0|35007,2,0,0,0,0|31020,2,0,0,0,0|30040,12,0,0,0,0"/>
+ 	<Item ID="6" Description="活动期间可用5000积分兑换以下奖品：" NeedJiFen="5000" GoodsIDs="35008,2,0,0,0,0|35007,3,0,0,0,0|31020,3,0,0,0,0|30040,20,0,0,0,0"/>
+  </GiftList>
+  <OtherGifts>
+  	<Item ID="1" Description="1、活动期间充值的用户，可获得大奖兑换积分，每充值1元可获得1积分。"/>
+  	<Item ID="2" Description="2、大奖礼品领取时会扣除相应的积分，只要您的积分足够，可无限领取礼品。"/>
+  </OtherGifts>
+</config>

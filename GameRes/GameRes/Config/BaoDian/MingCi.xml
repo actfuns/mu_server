@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+	<Items>
+		<Item Description="（1）｛color=#ffffff00 uline=false tag= text=连斩｝：连续击杀不低于自己等级10级的怪物，每超过100次连续击杀即可获得连斩BUFF，可以对BOSS或精英怪造成多倍伤害，连斩层数越多，倍数也越高。"/>	
+		<Item Description="（2）｛color=#ffffff00 uline=false tag= text=称号-斗圣、斗尊、斗宗｝：在每天举行的隋唐战场中获得击杀积分最多的前三名，将获得此三个称号，称号附带PK时对对方的伤害加成，分别为20%，15%，10%"/>	
+		<Item Description="（3）｛color=#ffffff00 uline=false tag= text=称号-神兵利器｝：装备排行榜前十的角色将获得此称号。"/>	
+		<Item Description="（4）｛color=#ffffff00 uline=false tag= text=称号-绝世高手｝：等级排行榜前十的角色将获得此称号。"/>	
+		<Item Description="（5）｛color=#ffffff00 uline=false tag= text=称号-富甲天下｝：财富排行榜前十的角色将获得此称号。"/>	
+		<Item Description="（6）｛color=#ffffff00 uline=false tag= text=称号-经脉通玄｝：经脉排行榜前十的角色将获得此称号。"/>	
+		<Item Description="（7）｛color=#ffffff00 uline=false tag= text=称号-玄天仙骑｝：坐骑排行榜前十的角色将获得此称号。"/>	
+		<Item Description="（8）｛color=#ffffff00 uline=false tag= text=称号-浴血狂斩｝：连斩排行榜前十的角色将获得此称号。"/>	
+		<Item Description="（9）｛color=#ffffff00 uline=false tag= text=称号-武学宗师｝：武学境界榜前十的角色将获得此称号。"/>	
+		<Item Description="（10）｛color=#ffffff00 uline=false tag= text=打擂｝：副本英雄逐擂，通过扬州城副本管理员进入，每通过一层将获得相应称号，总共十三层，是您在游戏中的实力体现：【第一擂】江湖俊杰、【第二擂】声名鹊起、【第三】锋芒毕露、【第四擂】名震四方、【第五擂】如雷贯耳、【第六擂】威风八面、【第七擂】威震九洲、【第八擂】德高望重、【第九擂】万人敬仰、【第十擂】常胜将军、【第十一擂】战无不胜、【第十二擂】天下无敌、【第十三擂】独孤求败" />	
+		<Item Description="（11）｛color=#ffffff00 uline=false tag= text=爬楼｝：副本勇闯贾柳楼，通过扬州城副本管理员进入，总共二十四楼，通关可获得丰富奖励。"/>		
+	</Items>
+</Config>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ZhuanZhis>
+    <ZhuanZhi OccupationID="11" OccupationName="骑士" LuoMoID="001" MinChangeLife="1" Level="150" NeedJinBi="2000" NeedGoods="6006,1,0,0,0,0" Image="1" AwardShuXing="20" AwardGoods="7002,1,0,0,0,0" />
+    <ZhuanZhi OccupationID="12" OccupationName="圣骑士" LuoMoID="001" MinChangeLife="1" Level="220" NeedJinBi="6000" NeedGoods="6007,1,0,0,0,0" Image="1" AwardShuXing="0" AwardGoods="7003,1,0,0,0,0" />
+    <ZhuanZhi OccupationID="13" OccupationName="神骑士" LuoMoID="001" MinChangeLife="1" Level="400" NeedJinBi="18000" NeedGoods="6008,1,0,0,0,0" Image="1" AwardShuXing="70" AwardGoods="7004,1,0,0,0,0" />
+    <ZhuanZhi OccupationID="21" OccupationName="魔导士" LuoMoID="001" MinChangeLife="1" Level="150" NeedJinBi="2000" NeedGoods="6006,1,0,0,0,0" Image="1" AwardShuXing="20" AwardGoods="7002,1,0,0,0,0" />
+    <ZhuanZhi OccupationID="22" OccupationName="魔导师" LuoMoID="001" MinChangeLife="1" Level="220" NeedJinBi="6000" NeedGoods="6007,1,0,0,0,0" Image="1" AwardShuXing="0" AwardGoods="7003,1,0,0,0,0" />
+    <ZhuanZhi OccupationID="23" OccupationName="神导师" LuoMoID="001" MinChangeLife="1" Level="400" NeedJinBi="18000" NeedGoods="6008,1,0,0,0,0" Image="1" AwardShuXing="70" AwardGoods="7004,1,0,0,0,0" />
+    <ZhuanZhi OccupationID="31" OccupationName="射手" LuoMoID="001" MinChangeLife="1" Level="150" NeedJinBi="2000" NeedGoods="6006,1,0,0,0,0" Image="1" AwardShuXing="20" AwardGoods="7002,1,0,0,0,0" />
+    <ZhuanZhi OccupationID="32" OccupationName="圣射手" LuoMoID="001" MinChangeLife="1" Level="220" NeedJinBi="6000" NeedGoods="6007,1,0,0,0,0" Image="1" AwardShuXing="0" AwardGoods="7003,1,0,0,0,0" />
+    <ZhuanZhi OccupationID="33" OccupationName="神射手" LuoMoID="001" MinChangeLife="1" Level="400" NeedJinBi="18000" NeedGoods="6008,1,0,0,0,0" Image="1" AwardShuXing="70" AwardGoods="7004,1,0,0,0,0" />
+  </ZhuanZhis>
+</Config>

@@ -4,10 +4,10 @@ using Server.Tools;
 
 namespace GameServer.Core.GameEvent
 {
-	// Token: 0x02000103 RID: 259
+	
 	public abstract class EventSource
 	{
-		// Token: 0x060003F2 RID: 1010 RVA: 0x0003D860 File Offset: 0x0003BA60
+		
 		public void registerListener(int eventType, IEventListener listener)
 		{
 			lock (this.Mutex)
@@ -39,7 +39,7 @@ namespace GameServer.Core.GameEvent
 			}
 		}
 
-		// Token: 0x060003F3 RID: 1011 RVA: 0x0003D918 File Offset: 0x0003BB18
+		
 		public void removeListener(int eventType, IEventListener listener)
 		{
 			lock (this.Mutex)
@@ -69,7 +69,7 @@ namespace GameServer.Core.GameEvent
 			}
 		}
 
-		// Token: 0x060003F4 RID: 1012 RVA: 0x0003D9C4 File Offset: 0x0003BBC4
+		
 		public void fireEvent(EventObject eventObj)
 		{
 			if (null != eventObj)
@@ -86,7 +86,7 @@ namespace GameServer.Core.GameEvent
 			}
 		}
 
-		// Token: 0x060003F5 RID: 1013 RVA: 0x0003DA3C File Offset: 0x0003BC3C
+		
 		public void fireEventInternal(EventObject eventObj)
 		{
 			int eventType = eventObj.getEventType();
@@ -118,7 +118,7 @@ namespace GameServer.Core.GameEvent
 			}
 		}
 
-		// Token: 0x060003F6 RID: 1014 RVA: 0x0003DB2C File Offset: 0x0003BD2C
+		
 		private void dispatchEvent(EventObject eventObj, List<IEventListener> listenerList)
 		{
 			foreach (IEventListener listener in listenerList)
@@ -134,7 +134,7 @@ namespace GameServer.Core.GameEvent
 			}
 		}
 
-		// Token: 0x060003F7 RID: 1015 RVA: 0x0003DBB8 File Offset: 0x0003BDB8
+		
 		public void DispatchEventAsync()
 		{
 			for (;;)
@@ -155,16 +155,16 @@ namespace GameServer.Core.GameEvent
 			}
 		}
 
-		// Token: 0x04000589 RID: 1417
+		
 		protected object Mutex = new object();
 
-		// Token: 0x0400058A RID: 1418
+		
 		protected List<IEventListener>[] listenerArray = new List<IEventListener>[66];
 
-		// Token: 0x0400058B RID: 1419
+		
 		protected Dictionary<int, List<IEventListener>> listeners = new Dictionary<int, List<IEventListener>>();
 
-		// Token: 0x0400058C RID: 1420
+		
 		protected Queue<EventObject> AsyncEventQueue = new Queue<EventObject>();
 	}
 }

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CompMineLink ID="1" TargetSide="1050|1550" Supplies="0" End="0" />
+  <CompMineLink ID="2" TargetSide="1100|1900" Supplies="0" End="0" />
+  <CompMineLink ID="3" TargetSide="1150|2250" Supplies="0" End="0" />
+  <CompMineLink ID="4" TargetSide="1300|2550" Supplies="0" End="0" />
+  <CompMineLink ID="5" TargetSide="1450|2850" Supplies="0" End="0" />
+  <CompMineLink ID="6" TargetSide="1650|3150" Supplies="0" End="0" />
+  <CompMineLink ID="7" TargetSide="1850|3450" Supplies="0" End="0" />
+  <CompMineLink ID="8" TargetSide="2050|3750" Supplies="0" End="0" />
+  <CompMineLink ID="9" TargetSide="2250|4050" Supplies="0" End="0" />
+  <CompMineLink ID="10" TargetSide="2550|4250" Supplies="1" End="0" />
+  <CompMineLink ID="11" TargetSide="2850|4450" Supplies="0" End="0" />
+  <CompMineLink ID="12" TargetSide="3150|4650" Supplies="0" End="0" />
+  <CompMineLink ID="13" TargetSide="3450|4850" Supplies="0" End="0" />
+  <CompMineLink ID="14" TargetSide="3800|4950" Supplies="0" End="0" />
+  <CompMineLink ID="15" TargetSide="4150|5050" Supplies="0" End="0" />
+  <CompMineLink ID="16" TargetSide="4500|5000" Supplies="0" End="0" />
+  <CompMineLink ID="17" TargetSide="4850|4950" Supplies="0" End="0" />
+  <CompMineLink ID="18" TargetSide="5200|4850" Supplies="0" End="0" />
+  <CompMineLink ID="19" TargetSide="5550|4750" Supplies="1" End="0" />
+  <CompMineLink ID="20" TargetSide="5900|4800" Supplies="0" End="0" />
+  <CompMineLink ID="21" TargetSide="6250|4850" Supplies="0" End="0" />
+  <CompMineLink ID="22" TargetSide="6550|5000" Supplies="0" End="0" />
+  <CompMineLink ID="23" TargetSide="6850|5150" Supplies="0" End="0" />
+  <CompMineLink ID="24" TargetSide="7150|5350" Supplies="0" End="0" />
+  <CompMineLink ID="25" TargetSide="7450|5550" Supplies="0" End="0" />
+  <CompMineLink ID="26" TargetSide="7700|5800" Supplies="0" End="0" />
+  <CompMineLink ID="27" TargetSide="7950|6050" Supplies="0" End="0" />
+  <CompMineLink ID="28" TargetSide="8100|6350" Supplies="1" End="0" />
+  <CompMineLink ID="29" TargetSide="8250|6650" Supplies="0" End="0" />
+  <CompMineLink ID="30" TargetSide="8400|6950" Supplies="0" End="0" />
+  <CompMineLink ID="31" TargetSide="8550|7250" Supplies="0" End="0" />
+  <CompMineLink ID="32" TargetSide="8650|7600" Supplies="0" End="0" />
+  <CompMineLink ID="33" TargetSide="8750|7950" Supplies="0" End="0" />
+  <CompMineLink ID="34" TargetSide="8750|8300" Supplies="0" End="0" />
+  <CompMineLink ID="35" TargetSide="8750|8650" Supplies="0" End="0" />
+  <CompMineLink ID="36" TargetSide="8700|9000" Supplies="0" End="0" />
+  <CompMineLink ID="37" TargetSide="8650|9350" Supplies="0" End="1" />
+</Config>

@@ -8,16 +8,16 @@ using Server.Tools;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x02000047 RID: 71
+	
 	public class OneDollarBuyActivity : Activity, IEventListener
 	{
-		// Token: 0x060000D5 RID: 213 RVA: 0x0000F300 File Offset: 0x0000D500
+		
 		public void Dispose()
 		{
 			GlobalEventSource.getInstance().removeListener(36, this);
 		}
 
-		// Token: 0x060000D6 RID: 214 RVA: 0x0000F314 File Offset: 0x0000D514
+		
 		public bool Init()
 		{
 			try
@@ -85,7 +85,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x060000D7 RID: 215 RVA: 0x0000F5FC File Offset: 0x0000D7FC
+		
 		public void processEvent(EventObject eventObject)
 		{
 			if (eventObject.getEventType() == 36)
@@ -99,7 +99,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060000D8 RID: 216 RVA: 0x0000F664 File Offset: 0x0000D864
+		
 		public void OnRoleLogin(GameClient client)
 		{
 			if (!this.InActivityTime())
@@ -128,14 +128,14 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060000D9 RID: 217 RVA: 0x0000F724 File Offset: 0x0000D924
+		
 		public string BuildOneDollarBuyActInfoForClient(GameClient client)
 		{
 			int PurNum = UserMoneyMgr.getInstance().GetChargeItemPurchaseNum(client, this.OneDollarBuyConfigData.ZhiGouID);
 			return string.Format("{0}:{1}", this.OneDollarBuyConfigData.ID, PurNum);
 		}
 
-		// Token: 0x060000DA RID: 218 RVA: 0x0000F770 File Offset: 0x0000D970
+		
 		public bool CheckClientCanBuy(GameClient client)
 		{
 			bool result;
@@ -151,13 +151,13 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0400018A RID: 394
+		
 		protected const string OneDollarBuyActivityData_fileName = "Config/OneDollarBuy.xml";
 
-		// Token: 0x0400018B RID: 395
+		
 		protected OneDollarBuyConfig OneDollarBuyConfigData = new OneDollarBuyConfig();
 
-		// Token: 0x0400018C RID: 396
+		
 		protected int PlatformOpenStateVavle = 0;
 	}
 }

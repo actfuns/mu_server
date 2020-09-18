@@ -6,10 +6,10 @@ using Server.Data;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000132 RID: 306
+	
 	internal class FacebookManager
 	{
-		// Token: 0x06000528 RID: 1320 RVA: 0x0002AB50 File Offset: 0x00028D50
+		
 		public static void initFacebook(string[] fields)
 		{
 			FacebookManager._FacebookAwards = new Dictionary<int, FacebookAwardData>();
@@ -59,7 +59,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000529 RID: 1321 RVA: 0x0002AD04 File Offset: 0x00028F04
+		
 		private static FacebookAwardData getFacebookAward(int awardID)
 		{
 			FacebookAwardData result;
@@ -74,7 +74,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600052A RID: 1322 RVA: 0x0002AD38 File Offset: 0x00028F38
+		
 		public static void ScanLastGroup(DBManager dbMgr)
 		{
 			long nowTicks = DateTime.Now.Ticks / 10000L;
@@ -97,7 +97,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600052B RID: 1323 RVA: 0x0002AE3C File Offset: 0x0002903C
+		
 		public static int SendAward(DBManager dbMgr, int roleID, int awardID)
 		{
 			FacebookAwardData awardData = FacebookManager.getFacebookAward(awardID);
@@ -185,37 +185,37 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x040007D9 RID: 2009
+		
 		private static Dictionary<int, FacebookAwardData> _FacebookAwards = new Dictionary<int, FacebookAwardData>();
 
-		// Token: 0x040007DA RID: 2010
+		
 		private static bool _isInitFacebook = false;
 
-		// Token: 0x040007DB RID: 2011
+		
 		private static long LastScanTicks = DateTime.Now.Ticks / 10000L;
 
-		// Token: 0x02000133 RID: 307
+		
 		public enum FaceBookResultType
 		{
-			// Token: 0x040007DD RID: 2013
+			
 			Default,
-			// Token: 0x040007DE RID: 2014
+			
 			Success,
-			// Token: 0x040007DF RID: 2015
+			
 			EnoPara = -1,
-			// Token: 0x040007E0 RID: 2016
+			
 			EnoUser = -2,
-			// Token: 0x040007E1 RID: 2017
+			
 			EnoRole = -3,
-			// Token: 0x040007E2 RID: 2018
+			
 			EIp = -4,
-			// Token: 0x040007E3 RID: 2019
+			
 			ECountMax = -5,
-			// Token: 0x040007E4 RID: 2020
+			
 			EAware = -6,
-			// Token: 0x040007E5 RID: 2021
+			
 			EBag = -7,
-			// Token: 0x040007E6 RID: 2022
+			
 			Fail = -8
 		}
 	}

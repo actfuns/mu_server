@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <FundSet MainID="1" PageID="1" MinVip="0" NextID="0" Price="1200" Tips_1="6" Tips_2="{f0f0f0}1200钻石 购买转生基金" Tips_3="{f0f0f0}可获得{fac60d} 1200钻石、6000绑钻" />
+  <FundSet MainID="2" PageID="2" MinVip="0" NextID="3" Price="300" Tips_1="4" Tips_2="{f0f0f0}300 钻石 购买时光基金" Tips_3="{f0f0f0}可获得{fac60d} 300钻石、900绑钻" />
+  <FundSet MainID="3" PageID="2" MinVip="1" NextID="4" Price="600" Tips_1="4" Tips_2="{f0f0f0}600 钻石 购买时光基金" Tips_3="{f0f0f0}可获得{fac60d} 600钻石、1800绑钻" />
+  <FundSet MainID="4" PageID="2" MinVip="2" NextID="5" Price="1800" Tips_1="4" Tips_2="{f0f0f0}1800 钻石 购买时光基金" Tips_3="{f0f0f0}可获得{fac60d} 1800钻石、5400绑钻" />
+  <FundSet MainID="5" PageID="2" MinVip="3" NextID="6" Price="2400" Tips_1="4" Tips_2="{f0f0f0}2400 钻石 购买时光基金" Tips_3="{f0f0f0}可获得{fac60d} 2400钻石、7200绑钻" />
+  <FundSet MainID="6" PageID="2" MinVip="4" NextID="7" Price="3600" Tips_1="4" Tips_2="{f0f0f0}3600 钻石 购买时光基金" Tips_3="{f0f0f0}可获得{fac60d} 3600钻石、10800绑钻" />
+  <FundSet MainID="7" PageID="2" MinVip="5" NextID="8" Price="3600" Tips_1="4" Tips_2="{f0f0f0}3600 钻石 购买时光基金" Tips_3="{f0f0f0}可获得{fac60d} 3600钻石、10800绑钻" />
+  <FundSet MainID="8" PageID="2" MinVip="6" NextID="9" Price="3600" Tips_1="4" Tips_2="{f0f0f0}3600 钻石 购买时光基金" Tips_3="{f0f0f0}可获得{fac60d} 3600钻石、10800绑钻" />
+  <FundSet MainID="9" PageID="2" MinVip="7" NextID="10" Price="6000" Tips_1="4" Tips_2="{f0f0f0}6000 钻石 购买时光基金" Tips_3="{f0f0f0}可获得{fac60d} 6000钻石、18000绑钻" />
+  <FundSet MainID="10" PageID="2" MinVip="8" NextID="11" Price="6000" Tips_1="4" Tips_2="{f0f0f0}6000 钻石 购买时光基金" Tips_3="{f0f0f0}可获得{fac60d} 6000钻石、18000绑钻" />
+  <FundSet MainID="11" PageID="2" MinVip="9" NextID="12" Price="6000" Tips_1="4" Tips_2="{f0f0f0}6000 钻石 购买时光基金" Tips_3="{f0f0f0}可获得{fac60d} 6000钻石、18000绑钻" />
+  <FundSet MainID="12" PageID="2" MinVip="10" NextID="13" Price="6000" Tips_1="4" Tips_2="{f0f0f0}6000 钻石 购买时光基金" Tips_3="{f0f0f0}可获得{fac60d} 6000钻石、18000绑钻" />
+  <FundSet MainID="13" PageID="2" MinVip="11" NextID="14" Price="6000" Tips_1="4" Tips_2="{f0f0f0}6000 钻石 购买时光基金" Tips_3="{f0f0f0}可获得{fac60d} 6000钻石、18000绑钻" />
+  <FundSet MainID="14" PageID="2" MinVip="12" NextID="0" Price="6000" Tips_1="4" Tips_2="{f0f0f0}6000 钻石 购买时光基金" Tips_3="{f0f0f0}可获得{fac60d} 6000钻石、18000绑钻" />
+  <FundSet MainID="15" PageID="3" MinVip="7" NextID="15" Price="3000" Tips_1="10" Tips_2="{f0f0f0}3000 钻石 购买豪气基金" Tips_3="{f0f0f0}可获得{fac60d} 3000钻石、27000绑钻" />
+</config>

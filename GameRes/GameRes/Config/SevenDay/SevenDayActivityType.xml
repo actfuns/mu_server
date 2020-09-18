@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Config>
+    <ActivityType ActivityType="1" Name="登录福利" Tiptype="17001" XML="SevenDayLogin.xml"/>
+    <ActivityType ActivityType="2" Name="充值福利" Tiptype="17002" XML="SevenDayChongZhi.xml"/>
+    <ActivityType ActivityType="3" Name="七日目标" Tiptype="17003" XML="SevenDayGoal.xml"/>
+    <ActivityType ActivityType="4" Name="七日抢购" Tiptype="17004" XML="SevenDayQiangGou.xml"/>
+</Config>

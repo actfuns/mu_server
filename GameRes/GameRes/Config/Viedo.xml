@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <Viedo TalkID="296486" MinZhuanSheng="6" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" MinVip="3" MaxVip="100" PassWord="753951" ZhuanshengSift="6" LevelSift="1" VIPSift="5" />
+</config>

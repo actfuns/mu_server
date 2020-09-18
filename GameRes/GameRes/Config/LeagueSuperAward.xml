@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <LeagueSuperAward ID="1" Name="冠军" BeginNum="1" EndNum="1" GoodsOne="63144,20,1,0,0,0,0|63141,20,1,0,0,0,0|2103,200,1,0,0,0,0|2104,200,1,0,0,0,0" />
+  <LeagueSuperAward ID="2" Name="亚军" BeginNum="2" EndNum="2" GoodsOne="63144,16,1,0,0,0,0|63141,16,1,0,0,0,0|2103,160,1,0,0,0,0|2104,160,1,0,0,0,0" />
+  <LeagueSuperAward ID="3" Name="季军" BeginNum="3" EndNum="3" GoodsOne="63144,14,1,0,0,0,0|63141,14,1,0,0,0,0|2103,140,1,0,0,0,0|2104,140,1,0,0,0,0" />
+  <LeagueSuperAward ID="4" Name="第四名" BeginNum="4" EndNum="4" GoodsOne="63144,12,1,0,0,0,0|63141,12,1,0,0,0,0|2103,120,1,0,0,0,0|2104,120,1,0,0,0,0" />
+  <LeagueSuperAward ID="5" Name="第五名" BeginNum="5" EndNum="5" GoodsOne="63144,11,1,0,0,0,0|63141,11,1,0,0,0,0|2103,110,1,0,0,0,0|2104,110,1,0,0,0,0" />
+  <LeagueSuperAward ID="6" Name="第六名" BeginNum="6" EndNum="6" GoodsOne="63144,10,1,0,0,0,0|63141,10,1,0,0,0,0|2103,100,1,0,0,0,0|2104,100,1,0,0,0,0" />
+  <LeagueSuperAward ID="7" Name="第七名" BeginNum="7" EndNum="7" GoodsOne="63144,9,1,0,0,0,0|63141,9,1,0,0,0,0|2103,95,1,0,0,0,0|2104,95,1,0,0,0,0" />
+  <LeagueSuperAward ID="8" Name="第八名" BeginNum="8" EndNum="8" GoodsOne="63144,8,1,0,0,0,0|63141,8,1,0,0,0,0|2103,90,1,0,0,0,0|2104,90,1,0,0,0,0" />
+</Config>

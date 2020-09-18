@@ -5,10 +5,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x020001DE RID: 478
+	
 	public class UserOnlineManager
 	{
-		// Token: 0x06000A03 RID: 2563 RVA: 0x0006088C File Offset: 0x0005EA8C
+		
 		public static int GetUserOnlineState(string userID)
 		{
 			lock (UserOnlineManager._RegUserIDDict)
@@ -22,7 +22,7 @@ namespace GameDBServer.Logic
 			return 0;
 		}
 
-		// Token: 0x06000A04 RID: 2564 RVA: 0x00060908 File Offset: 0x0005EB08
+		
 		public static bool RegisterUserID(string userID, int serverLineID, int state)
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -68,7 +68,7 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000A05 RID: 2565 RVA: 0x00060A88 File Offset: 0x0005EC88
+		
 		public static void ClearUserIDsByServerLineID(int serverLineID)
 		{
 			lock (UserOnlineManager._RegUserIDDict)
@@ -88,22 +88,22 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x04000C2C RID: 3116
+		
 		public const long MaxActiveTicks = 600000L;
 
-		// Token: 0x04000C2D RID: 3117
+		
 		private static Dictionary<string, UserOnlineManager.UserOnlineData> _RegUserIDDict = new Dictionary<string, UserOnlineManager.UserOnlineData>();
 
-		// Token: 0x020001DF RID: 479
+		
 		private class UserOnlineData
 		{
-			// Token: 0x04000C2E RID: 3118
+			
 			public string UserId;
 
-			// Token: 0x04000C2F RID: 3119
+			
 			public int ServerId;
 
-			// Token: 0x04000C30 RID: 3120
+			
 			public long MaxActiveTicks;
 		}
 	}

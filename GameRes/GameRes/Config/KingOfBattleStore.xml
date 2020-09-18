@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Store ID="1" GoodsID="970000,1,1,0,0,0,0" WangZheJiFen="50" SinglePurchase="1" BeginNum="1" EndNum="50000" />
+  <Store ID="2" GoodsID="970000,1,1,0,0,0,0" WangZheJiFen="50" SinglePurchase="1" BeginNum="50001" EndNum="54000" />
+  <Store ID="3" GoodsID="970000,1,1,0,0,0,0" WangZheJiFen="50" SinglePurchase="1" BeginNum="54001" EndNum="57500" />
+  <Store ID="4" GoodsID="970000,1,1,0,0,0,0" WangZheJiFen="50" SinglePurchase="1" BeginNum="57501" EndNum="61000" />
+  <Store ID="5" GoodsID="970000,1,1,0,0,0,0" WangZheJiFen="50" SinglePurchase="1" BeginNum="61001" EndNum="64500" />
+  <Store ID="6" GoodsID="970000,1,1,0,0,0,0" WangZheJiFen="50" SinglePurchase="1" BeginNum="64501" EndNum="68000" />
+  <Store ID="7" GoodsID="970000,1,1,0,0,0,0" WangZheJiFen="50" SinglePurchase="1" BeginNum="68001" EndNum="71500" />
+  <Store ID="8" GoodsID="970000,1,1,0,0,0,0" WangZheJiFen="50" SinglePurchase="1" BeginNum="71501" EndNum="75000" />
+  <Store ID="9" GoodsID="970000,1,1,0,0,0,0" WangZheJiFen="50" SinglePurchase="1" BeginNum="75001" EndNum="78500" />
+  <Store ID="10" GoodsID="970000,1,1,0,0,0,0" WangZheJiFen="50" SinglePurchase="1" BeginNum="78501" EndNum="82000" />
+  <Store ID="11" GoodsID="970000,1,1,0,0,0,0" WangZheJiFen="50" SinglePurchase="1" BeginNum="82001" EndNum="84000" />
+  <Store ID="12" GoodsID="970000,1,1,0,0,0,0" WangZheJiFen="50" SinglePurchase="1" BeginNum="84001" EndNum="86000" />
+  <Store ID="13" GoodsID="970000,1,1,0,0,0,0" WangZheJiFen="50" SinglePurchase="1" BeginNum="86001" EndNum="88000" />
+  <Store ID="14" GoodsID="970000,1,1,0,0,0,0" WangZheJiFen="50" SinglePurchase="1" BeginNum="88001" EndNum="90000" />
+  <Store ID="15" GoodsID="970000,1,1,0,0,0,0" WangZheJiFen="50" SinglePurchase="1" BeginNum="90001" EndNum="92000" />
+  <Store ID="16" GoodsID="970000,1,1,0,0,0,0" WangZheJiFen="50" SinglePurchase="1" BeginNum="92001" EndNum="94000" />
+  <Store ID="17" GoodsID="970000,1,1,0,0,0,0" WangZheJiFen="50" SinglePurchase="1" BeginNum="94001" EndNum="96000" />
+  <Store ID="18" GoodsID="970000,1,1,0,0,0,0" WangZheJiFen="50" SinglePurchase="1" BeginNum="96001" EndNum="100000" />
+</Config>

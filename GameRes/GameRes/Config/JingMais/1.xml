@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <XingZuo ID="0" Title="白羊座">
+    <XingWei ID="0" EnglishName="HitV" PropName="命中" Property="7" XingHun="1000" NeedGoods="" LevelLimit="0,1" Succeed="0.1" />
+    <XingWei ID="1" EnglishName="HitV" PropName="命中" Property="9" XingHun="1500" NeedGoods="" LevelLimit="0,2" Succeed="0.1" />
+    <XingWei ID="2" EnglishName="HitV" PropName="命中" Property="12" XingHun="3000" NeedGoods="" LevelLimit="0,3" Succeed="0.1" />
+    <XingWei ID="3" EnglishName="HitV" PropName="命中" Property="16" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="4" EnglishName="HitV" PropName="命中" Property="21" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="5" EnglishName="HitV" PropName="命中" Property="28" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="6" EnglishName="HitV" PropName="命中" Property="37" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="7" EnglishName="HitV" PropName="命中" Property="48" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="8" EnglishName="HitV" PropName="命中" Property="63" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+    <XingWei ID="9" EnglishName="HitV" PropName="命中" Property="16" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="10" EnglishName="HitV" PropName="命中" Property="21" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="11" EnglishName="HitV" PropName="命中" Property="28" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="12" EnglishName="HitV" PropName="命中" Property="37" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="13" EnglishName="HitV" PropName="命中" Property="48" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="14" EnglishName="HitV" PropName="命中" Property="63" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+  </XingZuo>
+  <XingZuo ID="1" Title="金牛座">
+    <XingWei ID="0" EnglishName="DodgeV" PropName="闪避" Property="5" XingHun="1000" NeedGoods="" LevelLimit="0,1" Succeed="0.1" />
+    <XingWei ID="1" EnglishName="DodgeV" PropName="闪避" Property="6" XingHun="1500" NeedGoods="" LevelLimit="0,2" Succeed="0.1" />
+    <XingWei ID="2" EnglishName="DodgeV" PropName="闪避" Property="8" XingHun="3000" NeedGoods="" LevelLimit="0,3" Succeed="0.1" />
+    <XingWei ID="3" EnglishName="DodgeV" PropName="闪避" Property="10" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="4" EnglishName="DodgeV" PropName="闪避" Property="13" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="5" EnglishName="DodgeV" PropName="闪避" Property="18" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="6" EnglishName="DodgeV" PropName="闪避" Property="23" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="7" EnglishName="DodgeV" PropName="闪避" Property="30" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="8" EnglishName="DodgeV" PropName="闪避" Property="40" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+    <XingWei ID="9" EnglishName="DodgeV" PropName="闪避" Property="10" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="10" EnglishName="DodgeV" PropName="闪避" Property="13" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="11" EnglishName="DodgeV" PropName="闪避" Property="18" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="12" EnglishName="DodgeV" PropName="闪避" Property="23" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="13" EnglishName="DodgeV" PropName="闪避" Property="30" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="14" EnglishName="DodgeV" PropName="闪避" Property="40" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+  </XingZuo>
+  <XingZuo ID="2" Title="双子座">
+    <XingWei ID="0" EnglishName="MaxLifeV" PropName="生命上限" Property="7" XingHun="1000" NeedGoods="" LevelLimit="0,1" Succeed="0.1" />
+    <XingWei ID="1" EnglishName="MaxLifeV" PropName="生命上限" Property="9" XingHun="1500" NeedGoods="" LevelLimit="0,2" Succeed="0.1" />
+    <XingWei ID="2" EnglishName="MaxLifeV" PropName="生命上限" Property="12" XingHun="3000" NeedGoods="" LevelLimit="0,3" Succeed="0.1" />
+    <XingWei ID="3" EnglishName="MaxLifeV" PropName="生命上限" Property="16" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="4" EnglishName="MaxLifeV" PropName="生命上限" Property="21" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="5" EnglishName="MaxLifeV" PropName="生命上限" Property="28" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="6" EnglishName="MaxLifeV" PropName="生命上限" Property="37" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="7" EnglishName="MaxLifeV" PropName="生命上限" Property="48" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="8" EnglishName="MaxLifeV" PropName="生命上限" Property="63" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+    <XingWei ID="9" EnglishName="MaxLifeV" PropName="生命上限" Property="16" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="10" EnglishName="MaxLifeV" PropName="生命上限" Property="21" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="11" EnglishName="MaxLifeV" PropName="生命上限" Property="28" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="12" EnglishName="MaxLifeV" PropName="生命上限" Property="37" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="13" EnglishName="MaxLifeV" PropName="生命上限" Property="48" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="14" EnglishName="MaxLifeV" PropName="生命上限" Property="63" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+  </XingZuo>
+  <XingZuo ID="3" Title="巨蟹座">
+    <XingWei ID="0" EnglishName="MaxLifeV" PropName="生命上限" Property="11" XingHun="1000" NeedGoods="" LevelLimit="0,1" Succeed="0.1" />
+    <XingWei ID="1" EnglishName="MaxLifeV" PropName="生命上限" Property="15" XingHun="1500" NeedGoods="" LevelLimit="0,2" Succeed="0.1" />
+    <XingWei ID="2" EnglishName="MaxLifeV" PropName="生命上限" Property="20" XingHun="3000" NeedGoods="" LevelLimit="0,3" Succeed="0.1" />
+    <XingWei ID="3" EnglishName="MaxLifeV" PropName="生命上限" Property="26" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="4" EnglishName="MaxLifeV" PropName="生命上限" Property="34" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="5" EnglishName="MaxLifeV" PropName="生命上限" Property="44" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="6" EnglishName="MaxLifeV" PropName="生命上限" Property="58" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="7" EnglishName="MaxLifeV" PropName="生命上限" Property="76" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="8" EnglishName="MaxLifeV" PropName="生命上限" Property="100" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+    <XingWei ID="9" EnglishName="MaxLifeV" PropName="生命上限" Property="26" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="10" EnglishName="MaxLifeV" PropName="生命上限" Property="34" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="11" EnglishName="MaxLifeV" PropName="生命上限" Property="44" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="12" EnglishName="MaxLifeV" PropName="生命上限" Property="58" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="13" EnglishName="MaxLifeV" PropName="生命上限" Property="76" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="14" EnglishName="MaxLifeV" PropName="生命上限" Property="100" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+  </XingZuo>
+  <XingZuo ID="4" Title="狮子座">
+    <XingWei ID="0" EnglishName="PhyDefense" PropName="物理防御" Property="5-16" XingHun="1000" NeedGoods="" LevelLimit="0,1" Succeed="0.1" />
+    <XingWei ID="1" EnglishName="PhyDefense" PropName="物理防御" Property="5-17" XingHun="1500" NeedGoods="" LevelLimit="0,2" Succeed="0.1" />
+    <XingWei ID="2" EnglishName="PhyDefense" PropName="物理防御" Property="5-18" XingHun="3000" NeedGoods="" LevelLimit="0,3" Succeed="0.1" />
+    <XingWei ID="3" EnglishName="PhyDefense" PropName="物理防御" Property="5-19" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="4" EnglishName="PhyDefense" PropName="物理防御" Property="5-20" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="5" EnglishName="PhyDefense" PropName="物理防御" Property="5-21" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="6" EnglishName="PhyDefense" PropName="物理防御" Property="5-22" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="7" EnglishName="PhyDefense" PropName="物理防御" Property="5-23" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="8" EnglishName="PhyDefense" PropName="物理防御" Property="5-24" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+    <XingWei ID="9" EnglishName="PhyDefense" PropName="物理防御" Property="5-19" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="10" EnglishName="PhyDefense" PropName="物理防御" Property="5-20" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="11" EnglishName="PhyDefense" PropName="物理防御" Property="5-21" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="12" EnglishName="PhyDefense" PropName="物理防御" Property="5-22" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="13" EnglishName="PhyDefense" PropName="物理防御" Property="5-23" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="14" EnglishName="PhyDefense" PropName="物理防御" Property="5-24" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+  </XingZuo>
+  <XingZuo ID="5" Title="处女座">
+    <XingWei ID="0" EnglishName="MagicDefense" PropName="魔法防御" Property="5-16" XingHun="1000" NeedGoods="" LevelLimit="0,1" Succeed="0.1" />
+    <XingWei ID="1" EnglishName="MagicDefense" PropName="魔法防御" Property="5-17" XingHun="1500" NeedGoods="" LevelLimit="0,2" Succeed="0.1" />
+    <XingWei ID="2" EnglishName="MagicDefense" PropName="魔法防御" Property="5-18" XingHun="3000" NeedGoods="" LevelLimit="0,3" Succeed="0.1" />
+    <XingWei ID="3" EnglishName="MagicDefense" PropName="魔法防御" Property="5-19" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="4" EnglishName="MagicDefense" PropName="魔法防御" Property="5-20" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="5" EnglishName="MagicDefense" PropName="魔法防御" Property="5-21" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="6" EnglishName="MagicDefense" PropName="魔法防御" Property="5-22" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="7" EnglishName="MagicDefense" PropName="魔法防御" Property="5-23" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="8" EnglishName="MagicDefense" PropName="魔法防御" Property="5-24" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+    <XingWei ID="9" EnglishName="MagicDefense" PropName="魔法防御" Property="5-19" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="10" EnglishName="MagicDefense" PropName="魔法防御" Property="5-20" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="11" EnglishName="MagicDefense" PropName="魔法防御" Property="5-21" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="12" EnglishName="MagicDefense" PropName="魔法防御" Property="5-22" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="13" EnglishName="MagicDefense" PropName="魔法防御" Property="5-23" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="14" EnglishName="MagicDefense" PropName="魔法防御" Property="5-24" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+  </XingZuo>
+  <XingZuo ID="6" Title="天枰座">
+    <XingWei ID="0" EnglishName="MAttack" PropName="魔法攻击" Property="5-16" XingHun="1000" NeedGoods="" LevelLimit="0,1" Succeed="0.1" />
+    <XingWei ID="1" EnglishName="MAttack" PropName="魔法攻击" Property="5-17" XingHun="1500" NeedGoods="" LevelLimit="0,2" Succeed="0.1" />
+    <XingWei ID="2" EnglishName="MAttack" PropName="魔法攻击" Property="5-18" XingHun="3000" NeedGoods="" LevelLimit="0,3" Succeed="0.1" />
+    <XingWei ID="3" EnglishName="MAttack" PropName="魔法攻击" Property="5-19" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="4" EnglishName="MAttack" PropName="魔法攻击" Property="5-20" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="5" EnglishName="MAttack" PropName="魔法攻击" Property="5-21" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="6" EnglishName="MAttack" PropName="魔法攻击" Property="5-22" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="7" EnglishName="MAttack" PropName="魔法攻击" Property="5-23" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="8" EnglishName="MAttack" PropName="魔法攻击" Property="5-24" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+    <XingWei ID="9" EnglishName="MAttack" PropName="魔法攻击" Property="5-19" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="10" EnglishName="MAttack" PropName="魔法攻击" Property="5-20" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="11" EnglishName="MAttack" PropName="魔法攻击" Property="5-21" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="12" EnglishName="MAttack" PropName="魔法攻击" Property="5-22" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="13" EnglishName="MAttack" PropName="魔法攻击" Property="5-23" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="14" EnglishName="MAttack" PropName="魔法攻击" Property="5-24" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+  </XingZuo>
+  <XingZuo ID="7" Title="天蝎座">
+    <XingWei ID="0" EnglishName="MaxLifeV" PropName="生命上限" Property="50" XingHun="1000" NeedGoods="" LevelLimit="0,1" Succeed="0.1" />
+    <XingWei ID="1" EnglishName="MaxLifeV" PropName="生命上限" Property="66" XingHun="1500" NeedGoods="" LevelLimit="0,2" Succeed="0.1" />
+    <XingWei ID="2" EnglishName="MaxLifeV" PropName="生命上限" Property="87" XingHun="3000" NeedGoods="" LevelLimit="0,3" Succeed="0.1" />
+    <XingWei ID="3" EnglishName="MaxLifeV" PropName="生命上限" Property="114" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="4" EnglishName="MaxLifeV" PropName="生命上限" Property="149" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="5" EnglishName="MaxLifeV" PropName="生命上限" Property="196" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="6" EnglishName="MaxLifeV" PropName="生命上限" Property="256" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="7" EnglishName="MaxLifeV" PropName="生命上限" Property="336" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="8" EnglishName="MaxLifeV" PropName="生命上限" Property="441" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+    <XingWei ID="9" EnglishName="MaxLifeV" PropName="生命上限" Property="114" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="10" EnglishName="MaxLifeV" PropName="生命上限" Property="149" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="11" EnglishName="MaxLifeV" PropName="生命上限" Property="196" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="12" EnglishName="MaxLifeV" PropName="生命上限" Property="256" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="13" EnglishName="MaxLifeV" PropName="生命上限" Property="336" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="14" EnglishName="MaxLifeV" PropName="生命上限" Property="441" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+  </XingZuo>
+  <XingZuo ID="8" Title="射手座">
+    <XingWei ID="0" EnglishName="MaxLifeV" PropName="生命上限" Property="50" XingHun="1000" NeedGoods="" LevelLimit="0,1" Succeed="0.1" />
+    <XingWei ID="1" EnglishName="MaxLifeV" PropName="生命上限" Property="66" XingHun="1500" NeedGoods="" LevelLimit="0,2" Succeed="0.1" />
+    <XingWei ID="2" EnglishName="MaxLifeV" PropName="生命上限" Property="87" XingHun="3000" NeedGoods="" LevelLimit="0,3" Succeed="0.1" />
+    <XingWei ID="3" EnglishName="MaxLifeV" PropName="生命上限" Property="114" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="4" EnglishName="MaxLifeV" PropName="生命上限" Property="149" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="5" EnglishName="MaxLifeV" PropName="生命上限" Property="196" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="6" EnglishName="MaxLifeV" PropName="生命上限" Property="256" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="7" EnglishName="MaxLifeV" PropName="生命上限" Property="336" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="8" EnglishName="MaxLifeV" PropName="生命上限" Property="441" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+    <XingWei ID="9" EnglishName="MaxLifeV" PropName="生命上限" Property="114" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="10" EnglishName="MaxLifeV" PropName="生命上限" Property="149" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="11" EnglishName="MaxLifeV" PropName="生命上限" Property="196" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="12" EnglishName="MaxLifeV" PropName="生命上限" Property="256" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="13" EnglishName="MaxLifeV" PropName="生命上限" Property="336" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="14" EnglishName="MaxLifeV" PropName="生命上限" Property="441" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+  </XingZuo>
+  <XingZuo ID="9" Title="摩羯座">
+    <XingWei ID="0" EnglishName="MaxLifeV" PropName="生命上限" Property="50" XingHun="1000" NeedGoods="" LevelLimit="0,1" Succeed="0.1" />
+    <XingWei ID="1" EnglishName="MaxLifeV" PropName="生命上限" Property="66" XingHun="1500" NeedGoods="" LevelLimit="0,2" Succeed="0.1" />
+    <XingWei ID="2" EnglishName="MaxLifeV" PropName="生命上限" Property="87" XingHun="3000" NeedGoods="" LevelLimit="0,3" Succeed="0.1" />
+    <XingWei ID="3" EnglishName="MaxLifeV" PropName="生命上限" Property="114" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="4" EnglishName="MaxLifeV" PropName="生命上限" Property="149" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="5" EnglishName="MaxLifeV" PropName="生命上限" Property="196" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="6" EnglishName="MaxLifeV" PropName="生命上限" Property="256" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="7" EnglishName="MaxLifeV" PropName="生命上限" Property="336" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="8" EnglishName="MaxLifeV" PropName="生命上限" Property="441" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+    <XingWei ID="9" EnglishName="MaxLifeV" PropName="生命上限" Property="114" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="10" EnglishName="MaxLifeV" PropName="生命上限" Property="149" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="11" EnglishName="MaxLifeV" PropName="生命上限" Property="196" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="12" EnglishName="MaxLifeV" PropName="生命上限" Property="256" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="13" EnglishName="MaxLifeV" PropName="生命上限" Property="336" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="14" EnglishName="MaxLifeV" PropName="生命上限" Property="441" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+  </XingZuo>
+  <XingZuo ID="10" Title="水瓶座">
+    <XingWei ID="0" EnglishName="MaxLifeV" PropName="生命上限" Property="50" XingHun="1000" NeedGoods="" LevelLimit="0,1" Succeed="0.1" />
+    <XingWei ID="1" EnglishName="MaxLifeV" PropName="生命上限" Property="66" XingHun="1500" NeedGoods="" LevelLimit="0,2" Succeed="0.1" />
+    <XingWei ID="2" EnglishName="MaxLifeV" PropName="生命上限" Property="87" XingHun="3000" NeedGoods="" LevelLimit="0,3" Succeed="0.1" />
+    <XingWei ID="3" EnglishName="MaxLifeV" PropName="生命上限" Property="114" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="4" EnglishName="MaxLifeV" PropName="生命上限" Property="149" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="5" EnglishName="MaxLifeV" PropName="生命上限" Property="196" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="6" EnglishName="MaxLifeV" PropName="生命上限" Property="256" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="7" EnglishName="MaxLifeV" PropName="生命上限" Property="336" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="8" EnglishName="MaxLifeV" PropName="生命上限" Property="441" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+    <XingWei ID="9" EnglishName="MaxLifeV" PropName="生命上限" Property="114" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="10" EnglishName="MaxLifeV" PropName="生命上限" Property="149" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="11" EnglishName="MaxLifeV" PropName="生命上限" Property="196" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="12" EnglishName="MaxLifeV" PropName="生命上限" Property="256" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="13" EnglishName="MaxLifeV" PropName="生命上限" Property="336" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="14" EnglishName="MaxLifeV" PropName="生命上限" Property="441" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+  </XingZuo>
+  <XingZuo ID="11" Title="双鱼座">
+    <XingWei ID="0" EnglishName="MaxLifeV" PropName="生命上限" Property="50" XingHun="1000" NeedGoods="" LevelLimit="0,1" Succeed="0.1" />
+    <XingWei ID="1" EnglishName="MaxLifeV" PropName="生命上限" Property="66" XingHun="1500" NeedGoods="" LevelLimit="0,2" Succeed="0.1" />
+    <XingWei ID="2" EnglishName="MaxLifeV" PropName="生命上限" Property="87" XingHun="3000" NeedGoods="" LevelLimit="0,3" Succeed="0.1" />
+    <XingWei ID="3" EnglishName="MaxLifeV" PropName="生命上限" Property="114" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="4" EnglishName="MaxLifeV" PropName="生命上限" Property="149" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="5" EnglishName="MaxLifeV" PropName="生命上限" Property="196" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="6" EnglishName="MaxLifeV" PropName="生命上限" Property="256" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="7" EnglishName="MaxLifeV" PropName="生命上限" Property="336" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="8" EnglishName="MaxLifeV" PropName="生命上限" Property="441" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+    <XingWei ID="9" EnglishName="MaxLifeV" PropName="生命上限" Property="114" XingHun="6000" NeedGoods="" LevelLimit="0,4" Succeed="0.1" />
+    <XingWei ID="10" EnglishName="MaxLifeV" PropName="生命上限" Property="149" XingHun="9000" NeedGoods="" LevelLimit="0,5" Succeed="0.1" />
+    <XingWei ID="11" EnglishName="MaxLifeV" PropName="生命上限" Property="196" XingHun="12000" NeedGoods="" LevelLimit="0,6" Succeed="0.1" />
+    <XingWei ID="12" EnglishName="MaxLifeV" PropName="生命上限" Property="256" XingHun="18000" NeedGoods="" LevelLimit="0,7" Succeed="0.1" />
+    <XingWei ID="13" EnglishName="MaxLifeV" PropName="生命上限" Property="336" XingHun="24000" NeedGoods="" LevelLimit="0,8" Succeed="0.1" />
+    <XingWei ID="14" EnglishName="MaxLifeV" PropName="生命上限" Property="441" XingHun="30000" NeedGoods="" LevelLimit="0,9" Succeed="0.1" />
+  </XingZuo>
+</Config>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <FuWenCommend OccupationID="0" FuWenID="940108|940605|940908" ShenShiID="403|703|1103" />
+  <FuWenCommend OccupationID="1" FuWenID="940205|940505|940905" ShenShiID="602|903|1003" />
+  <FuWenCommend OccupationID="2" FuWenID="940305|940705|941205" ShenShiID="303|503|1203" />
+  <FuWenCommend OccupationID="3" FuWenID="940205|940605|940908" ShenShiID="602|803|1203" />
+  <FuWenCommend OccupationID="5" FuWenID="940408|940805|941105" ShenShiID="503|903|1003" />
+</Config>

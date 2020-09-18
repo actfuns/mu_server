@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ThemeActivityType ID="2" Type="151" Name="主题礼包" PeiZhi="ThemeActivityLiBao.xml" EndData="-1" />
+  <ThemeActivityType ID="5" Type="154" Name="主题兑换" PeiZhi="ThemeActivityDuiHuan.xml" EndData="-1" />
+  <ThemeActivityType ID="6" Type="155" Name="BOSS入侵" PeiZhi="ThemeActivityBOSS.xml" EndData="-1" />
+  <ThemeActivityType ID="7" Type="156" Name="魔域龙穴" PeiZhi="ThemeActivityMoYu.xml" EndData="-1" />
+  <ThemeActivityType ID="8" Type="157" Name="转生试练" PeiZhi="ThemeActivityZhuanSheng.xml" EndData="-1" />
+  
+</Config>

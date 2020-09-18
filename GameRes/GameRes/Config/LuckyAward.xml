@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Award ID="1" MinLucky="100" GoodsIDs="210005,1,0,0,1,0" Description="使用后可获得巨额经验值，助您快速升级" />
+  <Award ID="2" MinLucky="300" GoodsIDs="600009,1,0,0,1,0" Description="开启后可随机获得蕴藏大量灵力的道具" />
+  <Award ID="3" MinLucky="600" GoodsIDs="600010,1,0,0,1,0" Description="开启后可随机获得一件本职业的满天生装备" />
+  <Award ID="4" MinLucky="1000" GoodsIDs="600011,1,0,0,1,0" Description="开启后可随机获得6级以上宝石一颗" />
+  <Award ID="5" MinLucky="1500" GoodsIDs="600012,1,0,0,1,0" Description="开启后可随机获得三件本职业的满天生装备" />
+  <Award ID="6" MinLucky="2100" GoodsIDs="600013,1,0,0,1,0" Description="开启可随机获得加成坐骑幸运值的菩提子" />
+  <Award ID="7" MinLucky="2800" GoodsIDs="600014,1,0,0,1,0" Description="开启后可随机获得七品以上强化石一颗" />
+  <Award ID="8" MinLucky="3600" GoodsIDs="600015,1,0,0,1,0" Description="开启后可随机获得本职业御龙套装首饰一件" />
+</Config>

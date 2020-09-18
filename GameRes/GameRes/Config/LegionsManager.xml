@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <LegionsManager ID="1" Name="军团长" Manager="1" AppointLeader="1" AppointElite="1" Quit="0" Dissolution="1" BulletinCD="60" TalkLevel="0,1" TalkCD="5" />
+  <LegionsManager ID="2" Name="士官长" Manager="0" AppointLeader="0" AppointElite="1" Quit="1" Dissolution="0" BulletinCD="-1" TalkLevel="0,1" TalkCD="5" />
+  <LegionsManager ID="3" Name="军团精英" Manager="0" AppointLeader="0" AppointElite="0" Quit="0" Dissolution="0" BulletinCD="-1" TalkLevel="0,1" TalkCD="10" />
+  <LegionsManager ID="4" Name="普通成员" Manager="0" AppointLeader="0" AppointElite="0" Quit="0" Dissolution="0" BulletinCD="-1" TalkLevel="0,1" TalkCD="-1" />
+</Config>

@@ -5,10 +5,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.BossAI
 {
-	// Token: 0x020005D5 RID: 1493
+	
 	public static class BossAICachingMgr
 	{
-		// Token: 0x06001BCB RID: 7115 RVA: 0x001A17E4 File Offset: 0x0019F9E4
+		
 		public static List<BossAIItem> FindCachingItem(int AIID, int triggerType)
 		{
 			string key = string.Format("{0}_{1}", AIID, triggerType);
@@ -25,7 +25,7 @@ namespace GameServer.Logic.BossAI
 			return result;
 		}
 
-		// Token: 0x06001BCC RID: 7116 RVA: 0x001A1828 File Offset: 0x0019FA28
+		
 		private static ITriggerCondition ParseCondition(int ID, int triggerType, string condition)
 		{
 			ITriggerCondition triggerCondition = null;
@@ -101,7 +101,7 @@ namespace GameServer.Logic.BossAI
 			return triggerCondition;
 		}
 
-		// Token: 0x06001BCD RID: 7117 RVA: 0x001A1A10 File Offset: 0x0019FC10
+		
 		private static BossAIItem ParseBossAICachingItem(SystemXmlItem systemXmlItem)
 		{
 			BossAIItem bossAIItem = new BossAIItem
@@ -126,7 +126,7 @@ namespace GameServer.Logic.BossAI
 			return result;
 		}
 
-		// Token: 0x06001BCE RID: 7118 RVA: 0x001A1AD4 File Offset: 0x0019FCD4
+		
 		public static void LoadBossAICachingItems(SystemXmlItems systemBossAI)
 		{
 			Dictionary<string, List<BossAIItem>> bossAICachingDict = new Dictionary<string, List<BossAIItem>>();
@@ -149,7 +149,7 @@ namespace GameServer.Logic.BossAI
 			BossAICachingMgr._BossAICachingDict = bossAICachingDict;
 		}
 
-		// Token: 0x04002A0F RID: 10767
+		
 		private static Dictionary<string, List<BossAIItem>> _BossAICachingDict = new Dictionary<string, List<BossAIItem>>();
 	}
 }

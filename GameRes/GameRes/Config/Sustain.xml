@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <ZhiChi ID="1" Day="3" CostZhiChi="300000" MaxNum="8" WinAward="5230,2,1,0,0,0,0" FaillAward="5230,1,1,0,0,0,0" Group="1,2|3,4|5,6|7,8|9,10|11,12|13,14|15,16" BeginTime="16:30" EndTime="15:30" MinLevel="4,1" />
+  <ZhiChi ID="2" Day="4" CostZhiChi="600000" MaxNum="4" WinAward="5230,4,1,0,0,0,0" FaillAward="5230,2,1,0,0,0,0" Group="1,2,3,4|5,6,7,8|9,10,11,12|13,14,15,16" BeginTime="16:30" EndTime="15:30" MinLevel="4,1" />
+  <ZhiChi ID="3" Day="5" CostZhiChi="1500000" MaxNum="2" WinAward="5230,10,1,0,0,0,0" FaillAward="5230,5,1,0,0,0,0" Group="1,2,3,4,5,6,7,8|9,10,11,12,13,14,15,16" BeginTime="16:30" EndTime="15:30" MinLevel="4,1" />
+  <ZhiChi ID="4" Day="6" CostZhiChi="4000000" MaxNum="1" WinAward="5231,10,1,0,0,0,0" FaillAward="5231,5,1,0,0,0,0" Group="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16" BeginTime="16:30" EndTime="15:30" MinLevel="4,1" />
+</config>

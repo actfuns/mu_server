@@ -11,10 +11,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020005B8 RID: 1464
+	
 	public class AngelTempleManager
 	{
-		// Token: 0x06001A85 RID: 6789 RVA: 0x00195C70 File Offset: 0x00193E70
+		
 		public void InitAngelTemple()
 		{
 			Global.QueryDayActivityTotalPointInfoToDB(SpecialActivityTypes.AngelTemple);
@@ -72,7 +72,7 @@ namespace GameServer.Logic
 			this.m_AngelTempleData.BossPosY = ItemAngelTempleData.GetIntValue("BossPosY", -1);
 		}
 
-		// Token: 0x06001A86 RID: 6790 RVA: 0x00195F34 File Offset: 0x00194134
+		
 		public void GMSetHuoDongStartNow()
 		{
 			this.InitAngelTemple();
@@ -86,7 +86,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001A87 RID: 6791 RVA: 0x00195FBC File Offset: 0x001941BC
+		
 		public void OnLoadDynamicMonsters(Monster monster)
 		{
 			if (monster.MonsterInfo.ExtensionID == this.m_AngelTempleData.BossID)
@@ -108,14 +108,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001A88 RID: 6792 RVA: 0x001960AC File Offset: 0x001942AC
+		
 		public void SetTotalPointInfo(string sName, long nPoint)
 		{
 			this.m_sTotalDamageName = sName;
 			this.m_nTotalDamageValue = nPoint;
 		}
 
-		// Token: 0x06001A89 RID: 6793 RVA: 0x001960C0 File Offset: 0x001942C0
+		
 		public void SendTimeInfoToAll(long ticks)
 		{
 			int nRemainSecs;
@@ -128,7 +128,7 @@ namespace GameServer.Logic
 			GameManager.ClientMgr.NotifyAngelTempleMsg(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, this.m_AngelTempleData.MapCode, 570, null, nStatus, nRemainSecs, 0, 0, 0, 0.0);
 		}
 
-		// Token: 0x06001A8A RID: 6794 RVA: 0x00196168 File Offset: 0x00194368
+		
 		public void OnEnterScene(GameClient client)
 		{
 			this.SetLeaveFlag(client, false);
@@ -140,7 +140,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001A8B RID: 6795 RVA: 0x001961B0 File Offset: 0x001943B0
+		
 		public void SendTimeInfoToClient(GameClient client)
 		{
 			long ticks = TimeUtil.NOW();
@@ -155,7 +155,7 @@ namespace GameServer.Logic
 			client.sendCmd(570, strcmd, false);
 		}
 
-		// Token: 0x06001A8C RID: 6796 RVA: 0x00196248 File Offset: 0x00194448
+		
 		public bool ChangeToNextStatus(out AngelTempleStatus newStatus)
 		{
 			bool changed = false;
@@ -205,7 +205,7 @@ namespace GameServer.Logic
 			return changed;
 		}
 
-		// Token: 0x06001A8D RID: 6797 RVA: 0x00196448 File Offset: 0x00194648
+		
 		public void HeartBeatAngelTempleScene()
 		{
 			long ticks = TimeUtil.NOW();
@@ -306,7 +306,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001A8E RID: 6798 RVA: 0x001968E8 File Offset: 0x00194AE8
+		
 		public void NotifyInfoToAllClient(double nBossHP)
 		{
 			lock (this.m_PointDamageInfoMutex)
@@ -315,7 +315,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001A8F RID: 6799 RVA: 0x0019696C File Offset: 0x00194B6C
+		
 		public void NotifyInfoToClient(GameClient client)
 		{
 			string strName = Global.FormatRoleName(client, client.ClientData.RoleName);
@@ -324,7 +324,7 @@ namespace GameServer.Logic
 			GameManager.ClientMgr.SendToClient(client, strcmd, 573);
 		}
 
-		// Token: 0x06001A90 RID: 6800 RVA: 0x001969D4 File Offset: 0x00194BD4
+		
 		public void ProcessAttackBossInAngelTempleScene(GameClient client, Monster monster, int nDamage)
 		{
 			if (nDamage > 0)
@@ -391,7 +391,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001A91 RID: 6801 RVA: 0x00196C84 File Offset: 0x00194E84
+		
 		public void GiveAwardAngelTempleScene(bool bBossKilled)
 		{
 			List<object> objsList = GameManager.ClientMgr.GetMapClients(this.m_AngelTempleData.MapCode);
@@ -563,7 +563,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001A92 RID: 6802 RVA: 0x0019758C File Offset: 0x0019578C
+		
 		private void SendAngelTempleAwardMsg(GameClient client, int paiMing, int awardGold, int awardShengWang, string luckPaiMingName, string goodsString, bool success)
 		{
 			string strcmd;
@@ -593,7 +593,7 @@ namespace GameServer.Logic
 			GameManager.ClientMgr.SendToClient(client, strcmd, 571);
 		}
 
-		// Token: 0x06001A93 RID: 6803 RVA: 0x00197644 File Offset: 0x00195844
+		
 		private void SetLeaveFlag(GameClient client, bool leaveFlag)
 		{
 			AngelTemplePointInfo tmpInfo = null;
@@ -606,7 +606,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001A94 RID: 6804 RVA: 0x001976B4 File Offset: 0x001958B4
+		
 		public void LeaveAngelTempleScene(GameClient client, bool logout = false)
 		{
 			this.SetLeaveFlag(client, true);
@@ -623,7 +623,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001A95 RID: 6805 RVA: 0x00197768 File Offset: 0x00195968
+		
 		public bool CanEnterAngelTempleOnTime()
 		{
 			lock (this.m_AngelTempleScene)
@@ -657,7 +657,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001A96 RID: 6806 RVA: 0x00197894 File Offset: 0x00195A94
+		
 		public bool AddBuffer(GameClient client, BufferItemTypes buffID, double[] newParams, bool notifyPropsChanged)
 		{
 			if (buffID == BufferItemTypes.MU_ANGELTEMPLEBUFF1)
@@ -693,7 +693,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001A97 RID: 6807 RVA: 0x00197968 File Offset: 0x00195B68
+		
 		public void KillAngelBoss(GameClient client, Monster monster)
 		{
 			if (this.m_AngelTempleData.BossID == monster.MonsterInfo.ExtensionID)
@@ -720,7 +720,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001A98 RID: 6808 RVA: 0x00197B2C File Offset: 0x00195D2C
+		
 		private void AddRoleAuctionData(GameClient client, int nDamage)
 		{
 			try
@@ -747,7 +747,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001A99 RID: 6809 RVA: 0x00197BF8 File Offset: 0x00195DF8
+		
 		public void CleanUpAngelTempleScene()
 		{
 			this.m_RoleAuctionData.Clear();
@@ -765,7 +765,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001A9A RID: 6810 RVA: 0x00197C98 File Offset: 0x00195E98
+		
 		public void OnChangeName(int roleId, string oldName, string newName)
 		{
 			if (!string.IsNullOrEmpty(oldName) && !string.IsNullOrEmpty(newName))
@@ -777,82 +777,82 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0400292A RID: 10538
+		
 		private const int PaiHangArrayLength = 6;
 
-		// Token: 0x0400292B RID: 10539
+		
 		public AngelTempleSceneInfo m_AngelTempleScene = new AngelTempleSceneInfo();
 
-		// Token: 0x0400292C RID: 10540
+		
 		public AngelTempleData m_AngelTempleData = new AngelTempleData();
 
-		// Token: 0x0400292D RID: 10541
+		
 		public Dictionary<int, AngelTemplePointInfo> m_RoleDamageAngelValue = new Dictionary<int, AngelTemplePointInfo>();
 
-		// Token: 0x0400292E RID: 10542
+		
 		public Dictionary<int, AuctionRoleData> m_RoleAuctionData = new Dictionary<int, AuctionRoleData>();
 
-		// Token: 0x0400292F RID: 10543
+		
 		public object m_PointDamageInfoMutex = new object();
 
-		// Token: 0x04002930 RID: 10544
+		
 		private long LastMinDamage;
 
-		// Token: 0x04002931 RID: 10545
+		
 		public AngelTemplePointInfo[] m_PointInfoArray = new AngelTemplePointInfo[6];
 
-		// Token: 0x04002932 RID: 10546
+		
 		public Monster m_AngelTempleBoss = null;
 
-		// Token: 0x04002933 RID: 10547
+		
 		public bool bBossKilled = false;
 
-		// Token: 0x04002934 RID: 10548
+		
 		public long m_BossHP = 0L;
 
-		// Token: 0x04002935 RID: 10549
+		
 		public long m_nTotalDamageValue = -1L;
 
-		// Token: 0x04002936 RID: 10550
+		
 		public string m_sTotalDamageName = "";
 
-		// Token: 0x04002937 RID: 10551
+		
 		public int m_sKillBossRoleID = 0;
 
-		// Token: 0x04002938 RID: 10552
+		
 		public string m_sKillBossRoleName = "";
 
-		// Token: 0x04002939 RID: 10553
+		
 		public long m_NotifyInfoTickForAll = 0L;
 
-		// Token: 0x0400293A RID: 10554
+		
 		public long m_NotifyInfoTickForSingle = 0L;
 
-		// Token: 0x0400293B RID: 10555
+		
 		public int m_LastNotifyBossHPPercent = -1;
 
-		// Token: 0x0400293C RID: 10556
+		
 		public long m_NotifyInfoDelayTick = 3000L;
 
-		// Token: 0x0400293D RID: 10557
+		
 		public long AngelTempleMinHurt = 0L;
 
-		// Token: 0x0400293E RID: 10558
+		
 		private int AngelTempleBossUpgradeTime = 0;
 
-		// Token: 0x0400293F RID: 10559
+		
 		private double AngelTempleBossUpgradeParam1 = 0.0;
 
-		// Token: 0x04002940 RID: 10560
+		
 		private double AngelTempleBossUpgradeParam2 = 0.0;
 
-		// Token: 0x04002941 RID: 10561
+		
 		private double AngelTempleBossUpgradeParam3 = 0.0;
 
-		// Token: 0x04002942 RID: 10562
+		
 		private double AngelTempleMonsterUpgradePercent = 0.0;
 
-		// Token: 0x04002943 RID: 10563
+		
 		private double BossBaseHP = 0.0;
 	}
 }

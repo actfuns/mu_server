@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <MagicBook Level="1" Name="魔法书1" Mod="301" Icon="-1" Effect="9000" LuckyOne="-1" LuckyTwo="-1" LuckyTwoRate="-1" NeedGoods="-1" NeedZuanShi="-1" />
+  <MagicBook Level="2" Name="魔法书2" Mod="301" Icon="-1" Effect="9000" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+  <MagicBook Level="3" Name="魔法书3" Mod="302" Icon="-1" Effect="9001" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+  <MagicBook Level="4" Name="魔法书4" Mod="302" Icon="-1" Effect="9001" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+  <MagicBook Level="5" Name="魔法书5" Mod="303" Icon="-1" Effect="9002" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+  <MagicBook Level="6" Name="魔法书6" Mod="303" Icon="-1" Effect="9002" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+  <MagicBook Level="7" Name="魔法书7" Mod="304" Icon="-1" Effect="9003" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+  <MagicBook Level="8" Name="魔法书8" Mod="304" Icon="-1" Effect="9003" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+  <MagicBook Level="9" Name="魔法书9" Mod="305" Icon="-1" Effect="9004" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+  <MagicBook Level="10" Name="魔法书10" Mod="305" Icon="-1" Effect="9004" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+  <MagicBook Level="11" Name="魔法书11" Mod="306" Icon="-1" Effect="9005" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+  <MagicBook Level="12" Name="魔法书12" Mod="306" Icon="-1" Effect="9005" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+  <MagicBook Level="13" Name="魔法书13" Mod="307" Icon="-1" Effect="9006" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+  <MagicBook Level="14" Name="魔法书14" Mod="307" Icon="-1" Effect="9006" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+  <MagicBook Level="15" Name="魔法书15" Mod="308" Icon="-1" Effect="9007" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+  <MagicBook Level="16" Name="魔法书16" Mod="308" Icon="-1" Effect="9007" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+  <MagicBook Level="17" Name="魔法书17" Mod="309" Icon="-1" Effect="9008" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+  <MagicBook Level="18" Name="魔法书18" Mod="309" Icon="-1" Effect="9008" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+  <MagicBook Level="19" Name="魔法书19" Mod="310" Icon="-1" Effect="9009" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+  <MagicBook Level="20" Name="魔法书20" Mod="310" Icon="-1" Effect="9009" LuckyOne="109984" LuckyTwo="109985" LuckyTwoRate="1" NeedGoods="2101,100" NeedZuanShi="2000" />
+</Config>

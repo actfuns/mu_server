@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+ <Activities FromDate="2013-07-20 00:00:00" ToDate="2013-07-23 23:59:59" />
+<GiftList>
+  <Item ID="1" GoodsID="180700" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="1" EndValues="2" />
+  <Item ID="2" GoodsID="180725" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="3" EndValues="4" />
+  <Item ID="3" GoodsID="180710" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="5" EndValues="6" />
+  <Item ID="4" GoodsID="1303000" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="7" EndValues="8" />
+  <Item ID="5" GoodsID="1313000" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="9" EndValues="10" />
+  <Item ID="6" GoodsID="35009" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="11" EndValues="20" />
+  <Item ID="7" GoodsID="35008" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="21" EndValues="70" />
+  <Item ID="8" GoodsID="35007" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="71" EndValues="220" />
+  <Item ID="9" GoodsID="35030" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="221" EndValues="300" />
+  <Item ID="10" GoodsID="35025" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="301" EndValues="900" />
+  <Item ID="11" GoodsID="110332" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="901" EndValues="945" />
+  <Item ID="12" GoodsID="110333" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="946" EndValues="955" />
+  <Item ID="13" GoodsID="110334" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="956" EndValues="960" />
+  <Item ID="14" GoodsID="36021" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="961" EndValues="1460" />
+  <Item ID="15" GoodsID="36101" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="1461" EndValues="3260" />
+  <Item ID="16" GoodsID="31017" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="3261" EndValues="4140" />
+  <Item ID="17" GoodsID="30020" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="4141" EndValues="4540" />
+  <Item ID="18" GoodsID="31031" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="4541" EndValues="4600" />
+  <Item ID="19" GoodsID="31020" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="4601" EndValues="8100" />
+  <Item ID="20" GoodsID="36082" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="100000" MaxExp="400000" StartValues="8101" EndValues="10000" />
+  </GiftList>
+</config>

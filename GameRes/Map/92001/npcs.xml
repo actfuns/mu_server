@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <NPCs>
+    <NPC Code="87019" X="1713" Y="1887" Dir="1" />
+    <NPC Code="87020" X="1633" Y="2453" Dir="2" />
+    <NPC Code="87021" X="1917" Y="3003" Dir="3" />
+    <NPC Code="87022" X="2520" Y="3248" Dir="4" />
+    <NPC Code="87023" X="3066" Y="3011" Dir="5" />
+    <NPC Code="87024" X="3403" Y="2533" Dir="6" />
+    <NPC Code="87025" X="3265" Y="1915" Dir="6" />
+    <NPC Code="87026" X="2818" Y="1540" Dir="7" />
+    <NPC Code="87027" X="2203" Y="1539" Dir="8" />
+    <NPC Code="87028" X="2680" Y="2512" Dir="5" />
+    <NPC Code="87029" X="1995" Y="2386" Dir="1" />
+    <NPC Code="87030" X="2593" Y="1883" Dir="7" />
+  </NPCs>
+</Map>

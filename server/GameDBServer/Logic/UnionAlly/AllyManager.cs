@@ -7,16 +7,16 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.UnionAlly
 {
-	// Token: 0x02000181 RID: 385
+	
 	public class AllyManager : SingletonTemplate<AllyManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x060006BF RID: 1727 RVA: 0x0003E00C File Offset: 0x0003C20C
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x060006C0 RID: 1728 RVA: 0x0003E020 File Offset: 0x0003C220
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(13122, SingletonTemplate<AllyManager>.Instance());
@@ -24,19 +24,19 @@ namespace GameDBServer.Logic.UnionAlly
 			return true;
 		}
 
-		// Token: 0x060006C1 RID: 1729 RVA: 0x0003E060 File Offset: 0x0003C260
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x060006C2 RID: 1730 RVA: 0x0003E074 File Offset: 0x0003C274
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060006C3 RID: 1731 RVA: 0x0003E088 File Offset: 0x0003C288
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			switch (nID)
@@ -50,7 +50,7 @@ namespace GameDBServer.Logic.UnionAlly
 			}
 		}
 
-		// Token: 0x060006C4 RID: 1732 RVA: 0x0003E0CC File Offset: 0x0003C2CC
+		
 		private void GetAllyLogData(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			lock (this._lock)
@@ -69,7 +69,7 @@ namespace GameDBServer.Logic.UnionAlly
 			}
 		}
 
-		// Token: 0x060006C5 RID: 1733 RVA: 0x0003E16C File Offset: 0x0003C36C
+		
 		private List<AllyLogData> GetAllyLogData(int unionID)
 		{
 			List<AllyLogData> result;
@@ -98,7 +98,7 @@ namespace GameDBServer.Logic.UnionAlly
 			return result;
 		}
 
-		// Token: 0x060006C6 RID: 1734 RVA: 0x0003E2D8 File Offset: 0x0003C4D8
+		
 		private void AllyLogAdd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			bool bResult = false;
@@ -152,13 +152,13 @@ namespace GameDBServer.Logic.UnionAlly
 			}
 		}
 
-		// Token: 0x040008D8 RID: 2264
+		
 		private const int ALLY_LOG_COUNT_MAX = 20;
 
-		// Token: 0x040008D9 RID: 2265
+		
 		private object _lock = new object();
 
-		// Token: 0x040008DA RID: 2266
+		
 		private Dictionary<int, List<AllyLogData>> _allyLogDic = new Dictionary<int, List<AllyLogData>>();
 	}
 }

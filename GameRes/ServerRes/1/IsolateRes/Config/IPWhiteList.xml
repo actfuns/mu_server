@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <WhiteList ID="1" Name="天马时空" MinIP="192.168.0.1" MaxIP="192.168.0.100" />
+  <WhiteList ID="2" Name="中国电信" MinIP="192.168.0.1" MaxIP="192.168.0.100" />
+  <WhiteList ID="3" Name="天马时空" MinIP="124.127.243.74" MaxIP="124.127.243.78" />
+  <WhiteList ID="4" Name="凯英：" MinIP="116.226.113.113" MaxIP="116.226.113.113" />
+  <WhiteList ID="5" Name="凯英：" MinIP="116.226.115.51" MaxIP="116.226.115.51" />
+</config>

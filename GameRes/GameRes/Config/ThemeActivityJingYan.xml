@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ThemeActivityJingYan ID="1" Name="升级经验" TypeID="1" Depict="使用所需经验：所有角色等级提升所需要经验减少{17e43e}30%" Button="1" Function="0" Link="" />
+  <ThemeActivityJingYan ID="2" Name="世界等级经验" TypeID="1" Depict="世界等级加成：加成经验提高{17e43e}50%{-}，助您更快升级" Button="1" Function="0" Link="" />
+  <ThemeActivityJingYan ID="3" Name="怪物经验" TypeID="1" Depict="怪物经验：加成经验提高{17e43e}50%{-}，助您更快升级" Button="1" Function="0" Link="" />
+  <ThemeActivityJingYan ID="4" Name="任务经验" TypeID="1" Depict="任务经验：加成经验提高{17e43e}50%{-}，助您更快升级" Button="1" Function="0" Link="" />
+</Config>

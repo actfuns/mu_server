@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Award Number="1" Lucky="1" Exp="10000" />
+  <Award Number="2" Lucky="3" Exp="30000" />
+  <Award Number="3" Lucky="8" Exp="80000" />
+  <Award Number="4" Lucky="18" Exp="180000" />
+</Config>

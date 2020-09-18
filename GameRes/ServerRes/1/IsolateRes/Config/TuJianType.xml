@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <TuJian>
+    <Type ID="100" Name="勇者大陆图鉴" Description="激活图鉴可获得属性" KaiQiLevel="0,1" TuJianNum="9" ShuXiangJiaCheng="Attack,80-80|Mattack,80-80|Defense,32-32|Mdefense,32-32|HitV,20|Dodge,20|MaxLifeV,240" />
+    <Type ID="200" Name="仙踪林图鉴" Description="激活图鉴可获得属性" KaiQiLevel="0,20" TuJianNum="9" ShuXiangJiaCheng="Attack,120-120|Mattack,120-120|Defense,48-48|Mdefense,48-48|HitV,30|Dodge,30|MaxLifeV,360" />
+    <Type ID="300" Name="冰风谷图鉴" Description="激活图鉴可获得属性" KaiQiLevel="0,40" TuJianNum="7" ShuXiangJiaCheng="Attack,160-160|Mattack,160-160|Defense,64-64|Mdefense,64-64|HitV,40|Dodge,40|MaxLifeV,480" />
+    <Type ID="400" Name="地下城图鉴" Description="激活图鉴可获得属性" KaiQiLevel="0,80" TuJianNum="11" ShuXiangJiaCheng="Attack,200-200|Mattack,200-200|Defense,80-80|Mdefense,80-80|HitV,50|Dodge,50|MaxLifeV,600" />
+    <Type ID="500" Name="失落之塔图鉴" Description="激活图鉴可获得属性" KaiQiLevel="1,1" TuJianNum="7" ShuXiangJiaCheng="Attack,240-240|Mattack,240-240|Defense,96-96|Mdefense,96-96|HitV,60|Dodge,60|MaxLifeV,720" />
+    <Type ID="600" Name="亚特兰蒂斯图鉴" Description="激活图鉴可获得属性" KaiQiLevel="2,1" TuJianNum="7" ShuXiangJiaCheng="Attack,280-280|Mattack,280-280|Defense,112-112|Mdefense,112-112|HitV,70|Dodge,70|MaxLifeV,840" />
+    <Type ID="700" Name="死亡沙漠图鉴" Description="激活图鉴可获得属性" KaiQiLevel="3,1" TuJianNum="6" ShuXiangJiaCheng="Attack,320-320|Mattack,320-320|Defense,128-128|Mdefense,128-128|HitV,80|Dodge,80|MaxLifeV,960" />
+    <Type ID="800" Name="天空之城图鉴" Description="激活图鉴可获得属性" KaiQiLevel="4,1" TuJianNum="8" ShuXiangJiaCheng="Attack,360-360|Mattack,360-360|Defense,144-144|Mdefense,144-144|HitV,90|Dodge,90|MaxLifeV,1080" />
+    <Type ID="900" Name="幽暗森林图鉴" Description="激活图鉴可获得属性" KaiQiLevel="5,1" TuJianNum="6" ShuXiangJiaCheng="Attack,400-400|Mattack,400-400|Defense,160-160|Mdefense,160-160|HitV,100|Dodge,100|MaxLifeV,1200" />
+    <Type ID="1000" Name="坎特鲁废墟图鉴" Description="激活图鉴可获得属性" KaiQiLevel="6,1" TuJianNum="7" ShuXiangJiaCheng="Attack,440-440|Mattack,440-440|Defense,170-170|Mdefense,170-170|HitV,110|Dodge,110|MaxLifeV,1320" />
+    <Type ID="1100" Name="坎特鲁遗址图鉴" Description="激活图鉴可获得属性" KaiQiLevel="7,1" TuJianNum="6" ShuXiangJiaCheng="Attack,480-480|Mattack,480-480|Defense,192-192|Mdefense,192-192|HitV,120|Dodge,120|MaxLifeV,1440" />
+    <Type ID="1200" Name="冰霜之城图鉴" Description="激活图鉴可获得属性" KaiQiLevel="8,1" TuJianNum="6" ShuXiangJiaCheng="Attack,520-520|Mattack,520-520|Defense,208-208|Mdefense,208-208|HitV,130|Dodge,130|MaxLifeV,1560" />
+    <Type ID="1300" Name="安宁池图鉴" Description="激活图鉴可获得属性" KaiQiLevel="9,1" TuJianNum="10" ShuXiangJiaCheng="Attack,560-560|Mattack,560-560|Defense,224-224|Mdefense,224-224|HitV,140|Dodge,140|MaxLifeV,1680" />
+    <Type ID="1400" Name="卡伦特图鉴" Description="激活图鉴可获得属性" KaiQiLevel="10,1" TuJianNum="9" ShuXiangJiaCheng="Attack,600-600|Mattack,600-600|Defense,240-240|Mdefense,240-240|HitV,150|Dodge,150|MaxLifeV,1800" />
+    <Type ID="1500" Name="幻术园图鉴" Description="激活图鉴可获得属性" KaiQiLevel="11,1" TuJianNum="9" ShuXiangJiaCheng="Attack,640-640|Mattack,640-640|Defense,256-256|Mdefense,256-256|HitV,160|Dodge,160|MaxLifeV,1920" />
+    <Type ID="1600" Name="阿卡伦西图鉴" Description="激活图鉴可获得属性" KaiQiLevel="12,1" TuJianNum="7" ShuXiangJiaCheng="Attack,680-680|Mattack,680-680|Defense,272-272|Mdefense,272-272|HitV,170|Dodge,170|MaxLifeV,2040" />
+    <Type ID="1700" Name="阿卡伦东图鉴" Description="激活图鉴可获得属性" KaiQiLevel="13,1" TuJianNum="7" ShuXiangJiaCheng="Attack,720-720|Mattack,720-720|Defense,298-298|Mdefense,298-298|HitV,180|Dodge,180|MaxLifeV,2160" />
+    <Type ID="1800" Name="邪恶寺庙图鉴" Description="激活图鉴可获得属性" KaiQiLevel="14,1" TuJianNum="7" ShuXiangJiaCheng="Attack,760-760|Mattack,760-760|Defense,314-314|Mdefense,314-314|HitV,190|Dodge,190|MaxLifeV,2280" />
+    <Type ID="1900" Name="魅音迷窟图鉴" Description="激活图鉴可获得属性" KaiQiLevel="15,1" TuJianNum="7" ShuXiangJiaCheng="Attack,800-800|Mattack,800-800|Defense,330-330|Mdefense,330-330|HitV,200|Dodge,200|MaxLifeV,2400" />
+    <Type ID="2000" Name="迷踪遗迹图鉴" Description="激活图鉴可获得属性" KaiQiLevel="16,1" TuJianNum="6" ShuXiangJiaCheng="Attack,840-840|Mattack,840-840|Defense,346-346|Mdefense,346-346|HitV,210|Dodge,210|MaxLifeV,2520" />
+  </TuJian>
+</config>

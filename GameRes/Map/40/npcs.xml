@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <NPCs>
+    <NPC Code="4001" X="1650" Y="2650" Dir="4" />
+    <NPC Code="4002" X="5650" Y="2950" Dir="5" />
+    <NPC Code="4003" X="9250" Y="3850" Dir="4" />
+    <NPC Code="4004" X="10450" Y="5650" Dir="5" />
+    <NPC Code="4005" X="10250" Y="9750" Dir="5" />
+    <NPC Code="4006" X="8350" Y="12150" Dir="5" />
+    <NPC Code="4007" X="7450" Y="8850" Dir="6" />
+  </NPCs>
+</Map>

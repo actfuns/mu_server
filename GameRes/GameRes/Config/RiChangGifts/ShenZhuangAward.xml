@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="29" />
+  <GiftList Title="神装激情回赠" Description="服务器前10名通过龙城NPC·神兵神甲处购买任意血饮神装的玩家，即可在此处领取丰厚的奖品">
+  <Award GoodsIDs="110022,1,0,0,0,0|110026,1,0,0,1,0|30073,1,0,0,1,0|30074,1,0,0,1,0|30075,1,0,0,1,0" Roles="10"/>
+  </GiftList>
+</Config>

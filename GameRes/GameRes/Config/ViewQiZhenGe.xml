@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+    <item ID="1" Description="升级类" GoodsIDs="36021,36030,30020" />
+    <item ID="2" Description="属性及势力类" GoodsIDs="35007,35008,35009,35028,35029,35030
+" />
+    <item ID="3" Description="药品类" GoodsIDs="36012,36002,31017
+" />
+</Config>

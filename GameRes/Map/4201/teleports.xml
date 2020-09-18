@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+      <Teleports>
+        <Teleport Code="197" FrameNum="13" Tip="罗兰传送门" Key="10"  To="4202" ToX="1657" ToY="1776" ToDirection="4201" X="2146" Y="3255" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+        <Teleport Code="197" FrameNum="13" Tip="罗兰传送门" Key="11"  To="4201" ToX="1657" ToY="1776" ToDirection="4201" X="3135" Y="1771" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+        <Teleport Code="197" FrameNum="13" Tip="罗兰传送门" Key="12"  To="4201" ToX="1657" ToY="1776" ToDirection="4201" X="2157" Y="412" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+        <Teleport Code="197" FrameNum="13" Tip="罗兰传送门" Key="13"  To="4201" ToX="1657" ToY="1776" ToDirection="4201" X="520" Y="966" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+        <Teleport Code="197" FrameNum="13" Tip="罗兰传送门" Key="14"  To="4201" ToX="1657" ToY="1776" ToDirection="4201" X="569" Y="2744" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+      </Teleports>
+</Map>

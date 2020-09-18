@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Lingyu ID="1" Num="1" NeedSuit="2" Luck="0.02" DeLuck="" />
+  <Lingyu ID="2" Num="1" NeedSuit="3" Luck="0.05" DeLuck="" />
+  <Lingyu ID="3" Num="2" NeedSuit="4" Luck="0.08" DeLuck="0.05" />
+  <Lingyu ID="4" Num="2" NeedSuit="5" Luck="0.12" DeLuck="0.08" />
+  <Lingyu ID="5" Num="3" NeedSuit="6" Luck="0.16" DeLuck="0.12" />
+  <Lingyu ID="6" Num="4" NeedSuit="7" Luck="0.2" DeLuck="0.16" />
+  <Lingyu ID="7" Num="5" NeedSuit="8" Luck="0.25" DeLuck="0.2" />
+  <Lingyu ID="8" Num="6" NeedSuit="9" Luck="0.3" DeLuck="0.25" />
+</Config>

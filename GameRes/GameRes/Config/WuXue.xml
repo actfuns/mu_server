@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <WuXue ID="1" Select="1" LevelLimit="20" WuXing="2000" NeedMoney="0" DayXiaoHao="" />
+  <WuXue ID="2" Select="1" LevelLimit="30" WuXing="3000" NeedMoney="0" DayXiaoHao="" />
+  <WuXue ID="3" Select="1" LevelLimit="35" WuXing="5000" NeedMoney="0" DayXiaoHao="" />
+  <WuXue ID="4" Select="1" LevelLimit="40" WuXing="10000" NeedMoney="0" DayXiaoHao="" />
+  <WuXue ID="5" Select="1" LevelLimit="45" WuXing="20000" NeedMoney="0" DayXiaoHao="" />
+  <WuXue ID="6" Select="1" LevelLimit="50" WuXing="30000" NeedMoney="0" DayXiaoHao="" />
+  <WuXue ID="7" Select="1" LevelLimit="50" WuXing="40000" NeedMoney="0" DayXiaoHao="" />
+  <WuXue ID="8" Select="1" LevelLimit="55" WuXing="60000" NeedMoney="0" DayXiaoHao="" />
+  <WuXue ID="9" Select="1" LevelLimit="55" WuXing="80000" NeedMoney="0" DayXiaoHao="" />
+  <WuXue ID="10" Select="1" LevelLimit="60" WuXing="100000" NeedMoney="0" DayXiaoHao="" />
+  <WuXue ID="11" Select="0" LevelLimit="60" WuXing="100000" NeedMoney="0" DayXiaoHao="0.01" />
+  <WuXue ID="12" Select="0" LevelLimit="65" WuXing="200000" NeedMoney="0" DayXiaoHao="0.01" />
+</config>

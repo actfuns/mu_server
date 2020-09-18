@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <NPCs>
+    <NPC Code="601" X="1433" Y="8309" Dir="5" />
+    <NPC Code="602" X="4750" Y="9950" Dir="3" />
+    <NPC Code="603" X="1750" Y="7350" Dir="5" />
+    <NPC Code="604" X="6850" Y="13250" Dir="3" />
+    <NPC Code="605" X="12978" Y="3478" Dir="6" />
+    <NPC Code="606" X="6950" Y="8450" Dir="6" />
+    <NPC Code="607" X="10523" Y="9182" Dir="5" />
+    <NPC Code="608" X="7850" Y="2150" Dir="3" />
+    <NPC Code="609" X="2350" Y="7750" Dir="5" />
+  </NPCs>
+</Map>

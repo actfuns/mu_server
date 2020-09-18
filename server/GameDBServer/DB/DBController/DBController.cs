@@ -9,16 +9,16 @@ using Server.Tools;
 
 namespace GameDBServer.DB.DBController
 {
-	// Token: 0x020000E0 RID: 224
+	
 	public abstract class DBController<T>
 	{
-		// Token: 0x060001D3 RID: 467 RVA: 0x000097FB File Offset: 0x000079FB
+		
 		protected DBController()
 		{
 			this.mapper = new DBMapper(typeof(T));
 		}
 
-		// Token: 0x060001D4 RID: 468 RVA: 0x00009830 File Offset: 0x00007A30
+		
 		protected T queryForObject(string sql)
 		{
 			MySQLConnection conn = null;
@@ -62,7 +62,7 @@ namespace GameDBServer.DB.DBController
 			return obj;
 		}
 
-		// Token: 0x060001D5 RID: 469 RVA: 0x00009974 File Offset: 0x00007B74
+		
 		protected List<T> queryForList(string sql)
 		{
 			MySQLConnection conn = null;
@@ -113,7 +113,7 @@ namespace GameDBServer.DB.DBController
 			return list;
 		}
 
-		// Token: 0x060001D6 RID: 470 RVA: 0x00009AFC File Offset: 0x00007CFC
+		
 		protected Dictionary<object, T> queryForDictionary(string sql, string keyName)
 		{
 			MySQLConnection conn = null;
@@ -172,7 +172,7 @@ namespace GameDBServer.DB.DBController
 			return objDictionary;
 		}
 
-		// Token: 0x060001D7 RID: 471 RVA: 0x00009CD4 File Offset: 0x00007ED4
+		
 		private void setValue(object obj, string columnName, object columnValue)
 		{
 			MemberInfo member = this.mapper.getMemberInfo(columnName);
@@ -240,7 +240,7 @@ namespace GameDBServer.DB.DBController
 			}
 		}
 
-		// Token: 0x060001D8 RID: 472 RVA: 0x0000A044 File Offset: 0x00008244
+		
 		protected int insert(string sql)
 		{
 			MySQLConnection conn = null;
@@ -271,7 +271,7 @@ namespace GameDBServer.DB.DBController
 			return resultCount;
 		}
 
-		// Token: 0x060001D9 RID: 473 RVA: 0x0000A100 File Offset: 0x00008300
+		
 		protected int update(string sql)
 		{
 			MySQLConnection conn = null;
@@ -302,7 +302,7 @@ namespace GameDBServer.DB.DBController
 			return resultCount;
 		}
 
-		// Token: 0x060001DA RID: 474 RVA: 0x0000A1B8 File Offset: 0x000083B8
+		
 		protected int delete(string sql)
 		{
 			MySQLConnection conn = null;
@@ -333,7 +333,7 @@ namespace GameDBServer.DB.DBController
 			return resultCount;
 		}
 
-		// Token: 0x060001DB RID: 475 RVA: 0x0000A270 File Offset: 0x00008470
+		
 		protected int delete(string sql, object[] param)
 		{
 			MySQLConnection conn = null;
@@ -367,10 +367,10 @@ namespace GameDBServer.DB.DBController
 			return resultCount;
 		}
 
-		// Token: 0x0400061A RID: 1562
+		
 		protected DBManager dbMgr = DBManager.getInstance();
 
-		// Token: 0x0400061B RID: 1563
+		
 		private DBMapper mapper = null;
 	}
 }

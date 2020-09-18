@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <LeagueWar ID="1" QiZuoID="85000" QiZuoSite="8387|3805" RebirthSite="-1" RebirthRadius="1" ProduceTime="10" ProduceNum="10" />
+  <LeagueWar ID="2" QiZuoID="85001" QiZuoSite="3985|4193" RebirthSite="-1" RebirthRadius="1" ProduceTime="10" ProduceNum="10" />
+  <LeagueWar ID="3" QiZuoID="85002" QiZuoSite="3602|8590" RebirthSite="-1" RebirthRadius="1" ProduceTime="10" ProduceNum="10" />
+  <LeagueWar ID="4" QiZuoID="85003" QiZuoSite="7987|8177" RebirthSite="-1" RebirthRadius="1" ProduceTime="10" ProduceNum="10" />
+</Config>

@@ -4,10 +4,10 @@ using GameServer.Core.Executor;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020005D8 RID: 1496
+	
 	public class BossHomeManager
 	{
-		// Token: 0x06001BDB RID: 7131 RVA: 0x001A25AC File Offset: 0x001A07AC
+		
 		public void HeartBeatBossHomeScene()
 		{
 			int nRoleNum = GameManager.ClientMgr.GetMapClientsCount(Data.BosshomeData.MapID);
@@ -31,7 +31,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001BDC RID: 7132 RVA: 0x001A265C File Offset: 0x001A085C
+		
 		public void SubDiamond(GameClient client)
 		{
 			if (0 != Data.BosshomeData.OneMinuteNeedDiamond)
@@ -48,7 +48,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001BDD RID: 7133 RVA: 0x001A26F0 File Offset: 0x001A08F0
+		
 		public void KickOutScene(GameClient client)
 		{
 			int toMapCode = GameManager.MainMapCode;
@@ -70,10 +70,10 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04002A12 RID: 10770
+		
 		public int m_SubMoneyInterval = 60000;
 
-		// Token: 0x04002A13 RID: 10771
+		
 		public long m_SubMoneyTick = 0L;
 	}
 }

@@ -5,10 +5,10 @@ using Server.Data;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x020001A6 RID: 422
+	
 	public class BangHuiNumLevelMgr
 	{
-		// Token: 0x060008F4 RID: 2292 RVA: 0x00053954 File Offset: 0x00051B54
+		
 		public static void RecalcBangHuiNumLevel(DBManager dbMgr)
 		{
 			long ticks = DateTime.Now.Ticks;
@@ -44,10 +44,10 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x040009A8 RID: 2472
+		
 		public static long MaxQueryTimeSlotTicks = 600000000L;
 
-		// Token: 0x040009A9 RID: 2473
+		
 		private static long LastQueryTimeTicks = 0L;
 	}
 }

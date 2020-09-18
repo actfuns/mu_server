@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CompMineWar ID="1" Name="教团迷雾矿洞" MapCode="87000" TimePoints="5,19:00-19:30" MaxEnterNum="100" EnterCD="60" PrepareSecs="180" FightingSecs="1560" ClearRolesSecs="60" Exp="1000000" BandJinBi="3000000" ShowGoods="8002|8012|63195" />
+  <CompMineWar ID="2" Name="同盟迷雾矿洞" MapCode="87001" TimePoints="5,19:00-19:30" MaxEnterNum="100" EnterCD="60" PrepareSecs="180" FightingSecs="1560" ClearRolesSecs="60" Exp="1000000" BandJinBi="3000000" ShowGoods="8002|8012|63195" />
+  <CompMineWar ID="3" Name="协会迷雾矿洞" MapCode="87002" TimePoints="5,19:00-19:30" MaxEnterNum="100" EnterCD="60" PrepareSecs="180" FightingSecs="1560" ClearRolesSecs="60" Exp="1000000" BandJinBi="3000000" ShowGoods="8002|8012|63195" />
+</Config>

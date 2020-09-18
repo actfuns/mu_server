@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <Types>
+        <Type ID="601" Title="翅膀合成" NPCs="" MinLevel="" MaxLevel="" SexCondition="" OccupCondition="" />
+     	<Type ID="701" Title="时装合成" NPCs="" MinLevel="" MaxLevel="" SexCondition="" OccupCondition="" />
+    	<Type ID="501" Title="脚印合成" NPCs="" MinLevel="" MaxLevel="" SexCondition="" OccupCondition="" />
+	    <Type ID="801" Title="神宠合成" NPCs="" MinLevel="" MaxLevel="" SexCondition="" OccupCondition="" />
+        <Type ID="401" Title="坐骑合成" NPCs="" MinLevel="" MaxLevel="" SexCondition="" OccupCondition="" />
+  </Types>
+</config>

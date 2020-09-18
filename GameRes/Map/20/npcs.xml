@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <NPCs>
+    <NPC Code="2001" X="6350" Y="12050" Dir="6" />
+    <NPC Code="2002" X="5650" Y="12050" Dir="4" />
+    <NPC Code="2003" X="6250" Y="11250" Dir="5" />
+    <NPC Code="2004" X="6650" Y="5050" Dir="5" />
+    <NPC Code="2005" X="10250" Y="4250" Dir="6" />
+    <NPC Code="2006" X="10250" Y="3650" Dir="6" />
+    <NPC Code="2007" X="9150" Y="11150" Dir="4" />
+    <NPC Code="2008" X="9850" Y="11550" Dir="4" />
+    <NPC Code="2009" X="6350" Y="7750" Dir="6" />
+    <NPC Code="2010" X="10350" Y="7950" Dir="4" />
+  </NPCs>
+</Map>

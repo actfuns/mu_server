@@ -10,10 +10,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000157 RID: 343
+	
 	internal class NewZoneActiveMgr
 	{
-		// Token: 0x060005D8 RID: 1496 RVA: 0x00033058 File Offset: 0x00031258
+		
 		private static List<PaiHangItemData> GetActiveKingTypeRanklist(DBManager dbMgr, List<int> minGateValueList, int activityType, string midDate, int maxPaiHang = 10)
 		{
 			List<HuoDongPaiHangData> listPaiHangReal = DBQuery.GetActivityPaiHangListNearMidTime(dbMgr, activityType, midDate, maxPaiHang);
@@ -65,7 +65,7 @@ namespace GameDBServer.Logic
 			return listPaiHang;
 		}
 
-		// Token: 0x060005D9 RID: 1497 RVA: 0x000331D8 File Offset: 0x000313D8
+		
 		private static List<PaiHangItemData> GetRankListByActiveLimit(DBManager dbMgr, string fromDate, string toDate, List<int> minGateValueList, int activeId, int maxPaiHang = 3)
 		{
 			List<InputKingPaiHangData> listPaiHangReal = new List<InputKingPaiHangData>();
@@ -172,7 +172,7 @@ namespace GameDBServer.Logic
 			return ranklist;
 		}
 
-		// Token: 0x060005DA RID: 1498 RVA: 0x0003356C File Offset: 0x0003176C
+		
 		public static TCPProcessCmdResults ProcessQueryActiveInfo(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -273,7 +273,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060005DB RID: 1499 RVA: 0x000338A8 File Offset: 0x00031AA8
+		
 		private static TCPProcessCmdResults GetBossKillAward(DBManager dbMgr, TCPOutPacketPool pool, int nID, int roleID, int activeid, string fromDate, string toDate, List<int> minGateValueList, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -340,7 +340,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060005DC RID: 1500 RVA: 0x00033B68 File Offset: 0x00031D68
+		
 		private static TCPProcessCmdResults GetConsumeKingAward(DBManager dbMgr, TCPOutPacketPool pool, int nID, int roleID, int activeid, string fromDate, string toDate, List<int> minGateValueList, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -410,7 +410,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060005DD RID: 1501 RVA: 0x00033E4C File Offset: 0x0003204C
+		
 		private static TCPProcessCmdResults GetRechargeKingAward(DBManager dbMgr, TCPOutPacketPool pool, int nID, int roleID, int activeid, string fromDate, string toDate, List<int> minGateValueList, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -486,7 +486,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060005DE RID: 1502 RVA: 0x0003416C File Offset: 0x0003236C
+		
 		private static TCPProcessCmdResults GetNewFanliAward(DBManager dbMgr, TCPOutPacketPool pool, int nID, int roleID, int activeid, string fromDate, string todate, List<int> minGateValueList, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -531,7 +531,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060005DF RID: 1503 RVA: 0x00034398 File Offset: 0x00032598
+		
 		private static int ComputNewFanLiValue(DBManager dbMgr, DBRoleInfo roleInfo, int activeid, string fromdate, string todate, List<int> minGateValueList)
 		{
 			int retvalue = 0;
@@ -554,7 +554,7 @@ namespace GameDBServer.Logic
 			return retvalue;
 		}
 
-		// Token: 0x060005E0 RID: 1504 RVA: 0x0003444C File Offset: 0x0003264C
+		
 		private static int ComputTotalFanliValue(DBManager dbMgr, DBRoleInfo roleInfo, int activeid, string fromDate, string todate, List<int> minGateValueList)
 		{
 			DateTime now = DateTime.Now;
@@ -594,7 +594,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x060005E1 RID: 1505 RVA: 0x000345B8 File Offset: 0x000327B8
+		
 		public static TCPProcessCmdResults ProcessGetNewzoneActiveAward(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -657,7 +657,7 @@ namespace GameDBServer.Logic
 			return ret;
 		}
 
-		// Token: 0x04000854 RID: 2132
+		
 		public static NewZoneActiveData NewZoneFanli = null;
 	}
 }

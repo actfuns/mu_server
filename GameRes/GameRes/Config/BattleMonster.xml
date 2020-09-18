@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Monster ID="1" CodeID="80000" MonsterID="8310000" Name="战争之王" X="6695" Y="5650" Time="120000" />
+  <Monster ID="2" CodeID="80000" MonsterID="8310000" Name="战争之王" X="6695" Y="5650" Time="720000" />
+  <Monster ID="3" CodeID="80000" MonsterID="8310000" Name="战争之王" X="6695" Y="5650" Time="1320000" />
+  <Monster ID="4" CodeID="80001" MonsterID="8310001" Name="战争之王" X="6695" Y="5650" Time="120000" />
+  <Monster ID="5" CodeID="80001" MonsterID="8310001" Name="战争之王" X="6695" Y="5650" Time="720000" />
+  <Monster ID="6" CodeID="80001" MonsterID="8310001" Name="战争之王" X="6695" Y="5650" Time="1320000" />
+  <Monster ID="7" CodeID="80002" MonsterID="8310002" Name="战争之王" X="6695" Y="5650" Time="120000" />
+  <Monster ID="8" CodeID="80002" MonsterID="8310002" Name="战争之王" X="6695" Y="5650" Time="720000" />
+  <Monster ID="9" CodeID="80002" MonsterID="8310002" Name="战争之王" X="6695" Y="5650" Time="1320000" />
+  <Monster ID="10" CodeID="80003" MonsterID="8310003" Name="战争之王" X="6695" Y="5650" Time="120000" />
+  <Monster ID="11" CodeID="80003" MonsterID="8310003" Name="战争之王" X="6695" Y="5650" Time="720000" />
+  <Monster ID="12" CodeID="80003" MonsterID="8310003" Name="战争之王" X="6695" Y="5650" Time="1320000" />
+  <Monster ID="13" CodeID="80004" MonsterID="8310004" Name="战争之王" X="6695" Y="5650" Time="120000" />
+  <Monster ID="14" CodeID="80004" MonsterID="8310004" Name="战争之王" X="6695" Y="5650" Time="720000" />
+  <Monster ID="15" CodeID="80004" MonsterID="8310004" Name="战争之王" X="6695" Y="5650" Time="1320000" />
+  <Monster ID="16" CodeID="80005" MonsterID="8310005" Name="战争之王" X="6695" Y="5650" Time="120000" />
+  <Monster ID="17" CodeID="80005" MonsterID="8310005" Name="战争之王" X="6695" Y="5650" Time="720000" />
+  <Monster ID="18" CodeID="80005" MonsterID="8310005" Name="战争之王" X="6695" Y="5650" Time="1320000" />
+  <Monster ID="19" CodeID="80006" MonsterID="8310006" Name="战争之王" X="6695" Y="5650" Time="120000" />
+  <Monster ID="20" CodeID="80006" MonsterID="8310006" Name="战争之王" X="6695" Y="5650" Time="720000" />
+  <Monster ID="21" CodeID="80006" MonsterID="8310006" Name="战争之王" X="6695" Y="5650" Time="1320000" />
+  <Monster ID="22" CodeID="80007" MonsterID="8310007" Name="战争之王" X="6695" Y="5650" Time="120000" />
+  <Monster ID="23" CodeID="80007" MonsterID="8310007" Name="战争之王" X="6695" Y="5650" Time="720000" />
+  <Monster ID="24" CodeID="80007" MonsterID="8310007" Name="战争之王" X="6695" Y="5650" Time="1320000" />
+  <Monster ID="25" CodeID="80008" MonsterID="8310008" Name="战争之王" X="6695" Y="5650" Time="120000" />
+  <Monster ID="26" CodeID="80008" MonsterID="8310008" Name="战争之王" X="6695" Y="5650" Time="720000" />
+  <Monster ID="27" CodeID="80008" MonsterID="8310008" Name="战争之王" X="6695" Y="5650" Time="1320000" />
+  <Monster ID="28" CodeID="80009" MonsterID="8310009" Name="战争之王" X="6695" Y="5650" Time="120000" />
+  <Monster ID="29" CodeID="80009" MonsterID="8310009" Name="战争之王" X="6695" Y="5650" Time="720000" />
+  <Monster ID="30" CodeID="80009" MonsterID="8310009" Name="战争之王" X="6695" Y="5650" Time="1320000" />
+  <Monster ID="31" CodeID="80010" MonsterID="8310010" Name="战争之王" X="6695" Y="5650" Time="120000" />
+  <Monster ID="32" CodeID="80010" MonsterID="8310010" Name="战争之王" X="6695" Y="5650" Time="720000" />
+  <Monster ID="33" CodeID="80010" MonsterID="8310010" Name="战争之王" X="6695" Y="5650" Time="1320000" />
+  <Monster ID="34" CodeID="80011" MonsterID="8310011" Name="战争之王" X="6695" Y="5650" Time="120000" />
+  <Monster ID="35" CodeID="80011" MonsterID="8310011" Name="战争之王" X="6695" Y="5650" Time="720000" />
+  <Monster ID="36" CodeID="80011" MonsterID="8310011" Name="战争之王" X="6695" Y="5650" Time="1320000" />
+</Config>

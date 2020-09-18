@@ -10,10 +10,10 @@ using Server.Tools;
 
 namespace GameDBServer.DB
 {
-	// Token: 0x02000222 RID: 546
+	
 	public class DBRoleMgr
 	{
-		// Token: 0x06000CDE RID: 3294 RVA: 0x000A2EE4 File Offset: 0x000A10E4
+		
 		public int GetRoleInfoCount()
 		{
 			int count;
@@ -24,7 +24,7 @@ namespace GameDBServer.DB
 			return count;
 		}
 
-		// Token: 0x06000CDF RID: 3295 RVA: 0x000A2F38 File Offset: 0x000A1138
+		
 		public DBRoleInfo FindDBRoleInfo(ref int roleID)
 		{
 			if (roleID < 200000)
@@ -66,7 +66,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x06000CE0 RID: 3296 RVA: 0x000A3074 File Offset: 0x000A1274
+		
 		public int FindDBRoleID(string roleName)
 		{
 			int roleID = -1;
@@ -82,7 +82,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x06000CE1 RID: 3297 RVA: 0x000A30A0 File Offset: 0x000A12A0
+		
 		public DBRoleInfo AddDBRoleInfo(DBRoleInfo dbRoleInfo)
 		{
 			MyWeakReference weakRef = null;
@@ -110,7 +110,7 @@ namespace GameDBServer.DB
 			return dbRoleInfo;
 		}
 
-		// Token: 0x06000CE2 RID: 3298 RVA: 0x000A31A8 File Offset: 0x000A13A8
+		
 		public void RemoveDBRoleInfo(int roleID)
 		{
 			string formatedRoleName = null;
@@ -132,7 +132,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000CE3 RID: 3299 RVA: 0x000A3278 File Offset: 0x000A1478
+		
 		public void ClearAllDBroleInfo()
 		{
 			lock (this.DictRoleInfos)
@@ -145,7 +145,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000CE4 RID: 3300 RVA: 0x000A330C File Offset: 0x000A150C
+		
 		public List<DBRoleInfo> GetCachingDBRoleInfoListByFaction(int faction)
 		{
 			List<DBRoleInfo> dbRoleInfoList = new List<DBRoleInfo>();
@@ -164,7 +164,7 @@ namespace GameDBServer.DB
 			return dbRoleInfoList;
 		}
 
-		// Token: 0x06000CE5 RID: 3301 RVA: 0x000A33F0 File Offset: 0x000A15F0
+		
 		public void ReleaseIdleDBRoleInfos(int ticksSlot)
 		{
 			long nowTicks = DateTime.Now.Ticks / 10000L;
@@ -228,7 +228,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000CE6 RID: 3302 RVA: 0x000A3770 File Offset: 0x000A1970
+		
 		public void ReleaseDBRoleInfoByID(int roleID)
 		{
 			DBRoleInfo dbRoleInfo = this.FindDBRoleInfo(ref roleID);
@@ -240,12 +240,12 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000CE7 RID: 3303 RVA: 0x000A37D0 File Offset: 0x000A19D0
+		
 		public void LoadDBRoleInfos(DBManager dbMgr, MySQLConnection conn)
 		{
 		}
 
-		// Token: 0x06000CE8 RID: 3304 RVA: 0x000A37D4 File Offset: 0x000A19D4
+		
 		public void OnChangeName(int roleId, int zoneId, string oldName, string newName)
 		{
 			lock (this.DictRoleName2ID)
@@ -260,10 +260,10 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x04001245 RID: 4677
+		
 		private Dictionary<int, MyWeakReference> DictRoleInfos = new Dictionary<int, MyWeakReference>(10000);
 
-		// Token: 0x04001246 RID: 4678
+		
 		private Dictionary<string, int> DictRoleName2ID = new Dictionary<string, int>(10000);
 	}
 }

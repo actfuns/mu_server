@@ -10,22 +10,22 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020001FA RID: 506
+	
 	public class BianShenManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener
 	{
-		// Token: 0x0600065E RID: 1630 RVA: 0x00058C24 File Offset: 0x00056E24
+		
 		public static BianShenManager getInstance()
 		{
 			return BianShenManager.instance;
 		}
 
-		// Token: 0x0600065F RID: 1631 RVA: 0x00058C3C File Offset: 0x00056E3C
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x06000660 RID: 1632 RVA: 0x00058C60 File Offset: 0x00056E60
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int nID = eventObject.getEventType();
@@ -65,7 +65,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000661 RID: 1633 RVA: 0x00058D18 File Offset: 0x00056F18
+		
 		public bool InitConfig()
 		{
 			bool success = true;
@@ -119,7 +119,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x06000662 RID: 1634 RVA: 0x00059074 File Offset: 0x00057274
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1448, 1, 1, BianShenManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -130,7 +130,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000663 RID: 1635 RVA: 0x000590F0 File Offset: 0x000572F0
+		
 		public bool showdown()
 		{
 			GlobalEventSource.getInstance().removeListener(28, BianShenManager.getInstance());
@@ -139,19 +139,19 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000664 RID: 1636 RVA: 0x0005913C File Offset: 0x0005733C
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000665 RID: 1637 RVA: 0x00059150 File Offset: 0x00057350
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06000666 RID: 1638 RVA: 0x00059164 File Offset: 0x00057364
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -170,13 +170,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000667 RID: 1639 RVA: 0x000591AC File Offset: 0x000573AC
+		
 		private bool IsGongNengOpened(GameClient client)
 		{
 			return this.RuntimeData.IsGongNengOpend && GlobalNew.IsGongNengOpened(client, GongNengIDs.BianShen, false);
 		}
 
-		// Token: 0x06000668 RID: 1640 RVA: 0x000591E8 File Offset: 0x000573E8
+		
 		private bool ProcessBianShenStarUpCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			int result = 0;
@@ -266,7 +266,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000669 RID: 1641 RVA: 0x0005953C File Offset: 0x0005773C
+		
 		private bool ProcessExecuteBianShenCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			int result = 0;
@@ -410,14 +410,14 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600066A RID: 1642 RVA: 0x00059A78 File Offset: 0x00057C78
+		
 		public bool CanBianShenByMap(GameClient client)
 		{
 			MapSettingItem item;
 			return Data.SettingsDict.Value.TryGetValue(client.ClientData.MapCode, out item) && item.Transfiguration > 0;
 		}
 
-		// Token: 0x0600066B RID: 1643 RVA: 0x00059AC4 File Offset: 0x00057CC4
+		
 		private void OnStartPlayGame(GameClient client)
 		{
 			if (!this.CanBianShenByMap(client))
@@ -429,7 +429,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600066C RID: 1644 RVA: 0x00059B00 File Offset: 0x00057D00
+		
 		public void ClearBianShen(GameClient client)
 		{
 			ExtData extData = ExtDataManager.GetClientExtData(client);
@@ -443,7 +443,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600066D RID: 1645 RVA: 0x00059B60 File Offset: 0x00057D60
+		
 		public bool CanUseMagic(GameClient client, int skillID)
 		{
 			ExtData extData = ExtDataManager.GetClientExtData(client);
@@ -462,7 +462,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600066E RID: 1646 RVA: 0x00059BCC File Offset: 0x00057DCC
+		
 		public void OnInitGame(GameClient client)
 		{
 			RoleBianShenData BianShenData = client.ClientData.BianShenData;
@@ -525,7 +525,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600066F RID: 1647 RVA: 0x00059DEC File Offset: 0x00057FEC
+		
 		public void InitDataByTask(GameClient client)
 		{
 			if (client.ClientData.BianShenData.BianShen <= 0)
@@ -537,7 +537,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000670 RID: 1648 RVA: 0x00059E34 File Offset: 0x00058034
+		
 		public void OnBianShenStateChange(GameClient client, bool active, int level = 0, int keepSecs = 0, double[] props = null)
 		{
 			if (active)
@@ -580,7 +580,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000671 RID: 1649 RVA: 0x00059F24 File Offset: 0x00058124
+		
 		public int GetBianShenLevel(GameClient client)
 		{
 			int result;
@@ -595,10 +595,10 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x04000B3B RID: 2875
+		
 		private static BianShenManager instance = new BianShenManager();
 
-		// Token: 0x04000B3C RID: 2876
+		
 		private BianShenManagerData RuntimeData = new BianShenManagerData();
 	}
 }

@@ -6,15 +6,15 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.Name
 {
-	// Token: 0x0200014B RID: 331
+	
 	public class NameUsedMgr : SingletonTemplate<NameUsedMgr>
 	{
-		// Token: 0x060005A2 RID: 1442 RVA: 0x0002FE54 File Offset: 0x0002E054
+		
 		private NameUsedMgr()
 		{
 		}
 
-		// Token: 0x060005A3 RID: 1443 RVA: 0x0002FE78 File Offset: 0x0002E078
+		
 		public void LoadFromDatabase(DBManager dbMgr)
 		{
 			MySQLConnection conn = null;
@@ -92,7 +92,7 @@ namespace GameDBServer.Logic.Name
 			}
 		}
 
-		// Token: 0x060005A4 RID: 1444 RVA: 0x00030100 File Offset: 0x0002E300
+		
 		public bool AddCannotUse_Ex(string name)
 		{
 			bool result;
@@ -115,7 +115,7 @@ namespace GameDBServer.Logic.Name
 			return result;
 		}
 
-		// Token: 0x060005A5 RID: 1445 RVA: 0x00030184 File Offset: 0x0002E384
+		
 		public bool DelCannotUse_Ex(string name)
 		{
 			bool result;
@@ -138,7 +138,7 @@ namespace GameDBServer.Logic.Name
 			return result;
 		}
 
-		// Token: 0x060005A6 RID: 1446 RVA: 0x00030208 File Offset: 0x0002E408
+		
 		public bool AddCannotUse_BangHui_Ex(string name)
 		{
 			bool result;
@@ -161,7 +161,7 @@ namespace GameDBServer.Logic.Name
 			return result;
 		}
 
-		// Token: 0x060005A7 RID: 1447 RVA: 0x0003028C File Offset: 0x0002E48C
+		
 		public bool DelCannotUse_BangHui_Ex(string name)
 		{
 			bool result;
@@ -184,10 +184,10 @@ namespace GameDBServer.Logic.Name
 			return result;
 		}
 
-		// Token: 0x04000829 RID: 2089
+		
 		private HashSet<string> cannotUse = new HashSet<string>();
 
-		// Token: 0x0400082A RID: 2090
+		
 		private HashSet<string> cannotUse_BangHui = new HashSet<string>();
 	}
 }

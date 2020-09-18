@@ -11,21 +11,21 @@ using Server.Tools;
 
 namespace GameDBServer.Server.CmdProcessor
 {
-	// Token: 0x020001FC RID: 508
+	
 	public class TianTiDbCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x06000A7D RID: 2685 RVA: 0x00062784 File Offset: 0x00060984
+		
 		private TianTiDbCmdProcessor()
 		{
 		}
 
-		// Token: 0x06000A7E RID: 2686 RVA: 0x000627E8 File Offset: 0x000609E8
+		
 		public static TianTiDbCmdProcessor getInstance()
 		{
 			return TianTiDbCmdProcessor.instance;
 		}
 
-		// Token: 0x06000A7F RID: 2687 RVA: 0x00062800 File Offset: 0x00060A00
+		
 		public void registerProcessor()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(10200, TianTiDbCmdProcessor.getInstance());
@@ -44,7 +44,7 @@ namespace GameDBServer.Server.CmdProcessor
 			TCPCmdDispatcher.getInstance().registerProcessor(3723, TianTiDbCmdProcessor.getInstance());
 		}
 
-		// Token: 0x06000A80 RID: 2688 RVA: 0x00062928 File Offset: 0x00060B28
+		
 		public bool LoadZhanDuiData()
 		{
 			bool result = false;
@@ -95,7 +95,7 @@ namespace GameDBServer.Server.CmdProcessor
 			return result;
 		}
 
-		// Token: 0x06000A81 RID: 2689 RVA: 0x00062D0C File Offset: 0x00060F0C
+		
 		public int ZhanDuiDataCompare(TianTi5v5ZhanDuiData x, TianTi5v5ZhanDuiData y)
 		{
 			int result;
@@ -123,7 +123,7 @@ namespace GameDBServer.Server.CmdProcessor
 			return result;
 		}
 
-		// Token: 0x06000A82 RID: 2690 RVA: 0x00062DD4 File Offset: 0x00060FD4
+		
 		public bool QueryZhanDuiRoleInfo(TianTi5v5ZhanDuiData data)
 		{
 			bool modify = false;
@@ -164,7 +164,7 @@ namespace GameDBServer.Server.CmdProcessor
 			return modify;
 		}
 
-		// Token: 0x06000A83 RID: 2691 RVA: 0x00062FD0 File Offset: 0x000611D0
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			DBManager dbMgr = DBManager.getInstance();
@@ -692,37 +692,37 @@ namespace GameDBServer.Server.CmdProcessor
 			}
 		}
 
-		// Token: 0x04000C60 RID: 3168
+		
 		private const int MaxCacheLogItemCount = 100;
 
-		// Token: 0x04000C61 RID: 3169
+		
 		private static TianTiDbCmdProcessor instance = new TianTiDbCmdProcessor();
 
-		// Token: 0x04000C62 RID: 3170
+		
 		private object Mutex = new object();
 
-		// Token: 0x04000C63 RID: 3171
+		
 		private Dictionary<int, TianTiRoleLogData> TianTiRoleLogDataDict = new Dictionary<int, TianTiRoleLogData>();
 
-		// Token: 0x04000C64 RID: 3172
+		
 		private Dictionary<int, KF5V5RoleLogData> KF5V5RoleLogDataDict = new Dictionary<int, KF5V5RoleLogData>();
 
-		// Token: 0x04000C65 RID: 3173
+		
 		private Queue<TianTiLogItemData> TianTiRoleItemLogCacheQueue = new Queue<TianTiLogItemData>();
 
-		// Token: 0x04000C66 RID: 3174
+		
 		private Queue<TianTiLogItemData> TianTiRoleItemLogWriteQueue = new Queue<TianTiLogItemData>();
 
-		// Token: 0x04000C67 RID: 3175
+		
 		private bool ZhanDuiDataListNeedUpdate;
 
-		// Token: 0x04000C68 RID: 3176
+		
 		private Dictionary<int, AgeDataT<TianTi5v5ZhanDuiData>> ZhanDuiDataDict = new Dictionary<int, AgeDataT<TianTi5v5ZhanDuiData>>();
 
-		// Token: 0x04000C69 RID: 3177
+		
 		private AgeDataT<List<TianTi5v5ZhanDuiData>> ZhanDuiDataList = new AgeDataT<List<TianTi5v5ZhanDuiData>>();
 
-		// Token: 0x04000C6A RID: 3178
+		
 		private DateTime MonthStartDateTime;
 	}
 }

@@ -5,10 +5,10 @@ using System.Reflection;
 
 namespace DotNetDetour
 {
-	// Token: 0x02000012 RID: 18
+	
 	public class Monitor
 	{
-		// Token: 0x06000042 RID: 66 RVA: 0x00003E30 File Offset: 0x00002030
+		
 		public static void InstallEx(params Assembly[] assemblies)
 		{
 			lock (Monitor.Mutex)
@@ -81,7 +81,7 @@ namespace DotNetDetour
 			}
 		}
 
-		// Token: 0x06000043 RID: 67 RVA: 0x000041D4 File Offset: 0x000023D4
+		
 		private static void InstallInternalEx(List<DestAndOri> destAndOris)
 		{
 			foreach (DestAndOri destAndOri in destAndOris)
@@ -94,15 +94,15 @@ namespace DotNetDetour
 			}
 		}
 
-		// Token: 0x06000044 RID: 68 RVA: 0x00004250 File Offset: 0x00002450
+		
 		private static void CurrentDomain_AssemblyLoad(object sender, AssemblyLoadEventArgs args)
 		{
 		}
 
-		// Token: 0x04000038 RID: 56
+		
 		private static object Mutex = new object();
 
-		// Token: 0x04000039 RID: 57
+		
 		private static Dictionary<MethodInfo, List<DestAndOri>> destAndOrisDict = new Dictionary<MethodInfo, List<DestAndOri>>();
 	}
 }

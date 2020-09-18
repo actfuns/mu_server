@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <PassiveEffect ID="100" Name="元素爆裂" Description="攻击有概率触发元素伤害加成+100%" Type="4" Rate="10" MagicScripts="MU_ADD_OWN_ELEMENT_DAMAGE(1)" />
+  <PassiveEffect ID="101" Name="元素驾驭" Description="攻击有概率触发无视对方元素抵抗" Type="4" Rate="10" MagicScripts="MU_REDUCE_TARGET_ELEMENT_REDUCTION(1)" />
+  <PassiveEffect ID="102" Name="伤害反弹" Description="被攻击有概率触发反弹伤害+50%" Type="5" Rate="8" MagicScripts="MU_ADD_OWN_DAMAGE_REBOUND(0.5)" />
+  <PassiveEffect ID="103" Name="元素减免" Description="血量低于30%，自身元素伤害减免+50%" Type="5" Rate="100" MagicScripts="MU_ADD_OWN_ELEMENT_REDUCTION(0.3,0.5)" />
+</Config>

@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x02000438 RID: 1080
+	
 	public class ThemeDaLiBaoActivity : Activity
 	{
-		// Token: 0x060013E9 RID: 5097 RVA: 0x00139EC0 File Offset: 0x001380C0
+		
 		public override bool GiveAward(GameClient client, int _params)
 		{
 			bool result2;
@@ -42,7 +42,7 @@ namespace GameServer.Logic.ActivityNew
 			return result2;
 		}
 
-		// Token: 0x060013EA RID: 5098 RVA: 0x00139F68 File Offset: 0x00138168
+		
 		public AwardItem GetOccAward(int _params)
 		{
 			AwardItem myOccAward = null;
@@ -53,7 +53,7 @@ namespace GameServer.Logic.ActivityNew
 			return myOccAward;
 		}
 
-		// Token: 0x060013EB RID: 5099 RVA: 0x00139FA0 File Offset: 0x001381A0
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client)
 		{
 			bool result;
@@ -70,7 +70,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060013EC RID: 5100 RVA: 0x0013A01C File Offset: 0x0013821C
+		
 		public bool Init()
 		{
 			try
@@ -164,10 +164,10 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x04001D2D RID: 7469
+		
 		public AwardItem MyAwardItem = new AwardItem();
 
-		// Token: 0x04001D2E RID: 7470
+		
 		public Dictionary<int, AwardItem> OccAwardItemDict = new Dictionary<int, AwardItem>();
 	}
 }

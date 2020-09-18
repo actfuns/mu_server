@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Item ID="1" Show="1" Path="Scene/Non-Barrier/72_guangmu_01 (1)" Pos="2423,5124,3827" ZuDang="2058_3677,1387_2998" Description="" />
+  <Item ID="2" Show="1" Path="Scene/Non-Barrier/72_guangmu_01" Pos="4000,5124,2250" ZuDang="3635_2098,2967_1421" Description="" />
+</Config>

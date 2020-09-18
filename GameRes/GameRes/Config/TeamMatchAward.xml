@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <TeamMatchAward ID="1" Name="冠军" Rank="1" Award="5352,100,1,0,0,0,0|5223,20,1,0,0,0,0|50160,50,1,0,0,0,0" TeamPoint="40" />
+  <TeamMatchAward ID="2" Name="亚军" Rank="2" Award="5352,80,1,0,0,0,0|5223,15,1,0,0,0,0|50160,40,1,0,0,0,0" TeamPoint="20" />
+  <TeamMatchAward ID="3" Name="4强" Rank="4" Award="5352,60,1,0,0,0,0|5223,10,1,0,0,0,0|50160,30,1,0,0,0,0" TeamPoint="10" />
+  <TeamMatchAward ID="4" Name="8强" Rank="8" Award="5352,40,1,0,0,0,0|5223,8,1,0,0,0,0|50160,24,1,0,0,0,0" TeamPoint="0" />
+  <TeamMatchAward ID="5" Name="16强" Rank="16" Award="5352,30,1,0,0,0,0|5223,5,1,0,0,0,0|50160,18,1,0,0,0,0" TeamPoint="0" />
+  <TeamMatchAward ID="6" Name="32强" Rank="32" Award="5352,20,1,0,0,0,0|5223,2,1,0,0,0,0|50160,10,1,0,0,0,0" TeamPoint="0" />
+  <TeamMatchAward ID="7" Name="64强" Rank="64" Award="5352,10,1,0,0,0,0|5223,1,1,0,0,0,0|50160,5,1,0,0,0,0" TeamPoint="0" />
+</Config>

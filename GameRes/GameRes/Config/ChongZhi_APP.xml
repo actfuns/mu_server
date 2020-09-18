@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <ChongZhi ID="10000" Icon="3" RMB="45" ZuanShi="450" FirstBindZuanShi="450" productId="com.tianma.qmqj.diamond450d" /> 
+  <ChongZhi ID="1" Icon="1" RMB="6" ZuanShi="60" FirstBindZuanShi="60" productId="com.tianma.qmqj.diamond60" />
+  <ChongZhi ID="2" Icon="2" RMB="18" ZuanShi="180" FirstBindZuanShi="180" productId="com.tianma.qmqj.diamond180" />
+  <ChongZhi ID="3" Icon="3" RMB="30" ZuanShi="300" FirstBindZuanShi="300" productId="com.tianma.qmqj.diamond300" />
+  <ChongZhi ID="4" Icon="4" RMB="68" ZuanShi="680" FirstBindZuanShi="680" productId="com.tianma.qmqj.diamond680" />
+  <ChongZhi ID="5" Icon="5" RMB="98" ZuanShi="980" FirstBindZuanShi="980" productId="com.tianma.qmqj.diamond980" />
+  <ChongZhi ID="6" Icon="6" RMB="128" ZuanShi="1280" FirstBindZuanShi="1280" productId="com.tianma.qmqj.diamond1280" />
+  <ChongZhi ID="7" Icon="7" RMB="188" ZuanShi="1880" FirstBindZuanShi="1880" productId="com.tianma.qmqj.diamond1880" />
+  <ChongZhi ID="8" Icon="8" RMB="258" ZuanShi="2580" FirstBindZuanShi="2580" productId="com.tianma.qmqj.diamond2580" />
+  <ChongZhi ID="9" Icon="9" RMB="328" ZuanShi="3280" FirstBindZuanShi="3280" productId="com.tianma.qmqj.diamond3280" />
+  <ChongZhi ID="10" Icon="9" RMB="648" ZuanShi="6480" FirstBindZuanShi="6480" productId="com.tianma.qmqj.diamond6480a" />
+</config>

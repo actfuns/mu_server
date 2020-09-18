@@ -6,16 +6,16 @@ using Server.Data;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x0200012E RID: 302
+	
 	internal class FuMoMailManager : IManager
 	{
-		// Token: 0x06000500 RID: 1280 RVA: 0x000296F0 File Offset: 0x000278F0
+		
 		public static FuMoMailManager getInstance()
 		{
 			return FuMoMailManager.instance;
 		}
 
-		// Token: 0x06000501 RID: 1281 RVA: 0x00029708 File Offset: 0x00027908
+		
 		public static string GetTodayGiveList(int rid, int time)
 		{
 			Dictionary<int, FuMoMailTemp> value = null;
@@ -30,7 +30,7 @@ namespace GameDBServer.Logic
 			return null;
 		}
 
-		// Token: 0x06000502 RID: 1282 RVA: 0x00029774 File Offset: 0x00027974
+		
 		public static void LoadCurrUserFuMoMailList()
 		{
 			foreach (KeyValuePair<int, FuMoMailData> it in FuMoMailManager.FuMoMailDatas)
@@ -50,7 +50,7 @@ namespace GameDBServer.Logic
 			FuMoMailManager.FuMoMailDatas.Clear();
 		}
 
-		// Token: 0x06000503 RID: 1283 RVA: 0x00029888 File Offset: 0x00027A88
+		
 		public Dictionary<int, List<FuMoMailData>> GetFuMoMailItemDataListFromCached(int rid)
 		{
 			Dictionary<int, List<FuMoMailData>> dict = new Dictionary<int, List<FuMoMailData>>();
@@ -62,7 +62,7 @@ namespace GameDBServer.Logic
 			return dict;
 		}
 
-		// Token: 0x06000504 RID: 1284 RVA: 0x000298C4 File Offset: 0x00027AC4
+		
 		public Dictionary<int, FuMoMailTemp> GetFuMoTempDataListFromCached(int nDate, int rid)
 		{
 			Dictionary<int, FuMoMailTemp> data = null;
@@ -77,7 +77,7 @@ namespace GameDBServer.Logic
 			return null;
 		}
 
-		// Token: 0x06000505 RID: 1285 RVA: 0x00029908 File Offset: 0x00027B08
+		
 		public int GetFuMoTempDataAcceptFromCached(int nDate, int rid)
 		{
 			Dictionary<int, FuMoMailTemp> data = null;
@@ -92,7 +92,7 @@ namespace GameDBServer.Logic
 			return -1;
 		}
 
-		// Token: 0x06000506 RID: 1286 RVA: 0x00029950 File Offset: 0x00027B50
+		
 		public bool UpdataReadStateCached(int rid, int mailid, string today)
 		{
 			List<FuMoMailData> temp = null;
@@ -111,7 +111,7 @@ namespace GameDBServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000507 RID: 1287 RVA: 0x000299E4 File Offset: 0x00027BE4
+		
 		public bool UpdataRemoveMailListCached(string[] mailidList, int rid)
 		{
 			List<FuMoMailData> data = null;
@@ -143,7 +143,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000508 RID: 1288 RVA: 0x00029AE0 File Offset: 0x00027CE0
+		
 		public bool UpdataRemoveMailListCached(int mailid, int rid)
 		{
 			List<FuMoMailData> data = null;
@@ -163,7 +163,7 @@ namespace GameDBServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000509 RID: 1289 RVA: 0x00029B80 File Offset: 0x00027D80
+		
 		public bool UpdateGiveAndListCached(int roleid, int give, int nDate, string recid_list)
 		{
 			Dictionary<int, FuMoMailTemp> data = null;
@@ -180,7 +180,7 @@ namespace GameDBServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600050A RID: 1290 RVA: 0x00029BF4 File Offset: 0x00027DF4
+		
 		public bool UpdateAcceptCached(int roleid, int accept, int nDate)
 		{
 			Dictionary<int, FuMoMailTemp> data = null;
@@ -196,7 +196,7 @@ namespace GameDBServer.Logic
 			return false;
 		}
 
-		// Token: 0x0600050B RID: 1291 RVA: 0x00029C50 File Offset: 0x00027E50
+		
 		public bool InsertAcceptMapCached(int sendid, string recrid_list, int nDate, int accept, int give)
 		{
 			Dictionary<int, FuMoMailTemp> addData = new Dictionary<int, FuMoMailTemp>();
@@ -226,7 +226,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600050C RID: 1292 RVA: 0x00029D14 File Offset: 0x00027F14
+		
 		public bool InsertFuMoMailCached(DBManager dbMgr, int sendid, string sendname, int sendjob, int recid, int num, string content, string today)
 		{
 			FuMoMailData data = new FuMoMailData
@@ -268,7 +268,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600050D RID: 1293 RVA: 0x00029E24 File Offset: 0x00028024
+		
 		public int MaxLimitContorl(int rid)
 		{
 			List<FuMoMailData> data;
@@ -282,7 +282,7 @@ namespace GameDBServer.Logic
 			return 0;
 		}
 
-		// Token: 0x0600050E RID: 1294 RVA: 0x00029E6C File Offset: 0x0002806C
+		
 		public string MakeDelListSQL(string[] mailidList)
 		{
 			string parem = null;
@@ -307,7 +307,7 @@ namespace GameDBServer.Logic
 			return parem;
 		}
 
-		// Token: 0x0600050F RID: 1295 RVA: 0x00029EF8 File Offset: 0x000280F8
+		
 		public int DelFuMoMailFromLimitContorl(DBManager dbMgr, int roleid, int num)
 		{
 			int result;
@@ -355,7 +355,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000510 RID: 1296 RVA: 0x0002A030 File Offset: 0x00028230
+		
 		public void LoadFuMoInfoFromDB(DBManager dbMgr)
 		{
 			FuMoMailManager.FuMoMailDatas = DBQuery.GetFuMoMailCached(dbMgr);
@@ -364,43 +364,43 @@ namespace GameDBServer.Logic
 			FuMoMailManager.LoadCurrUserFuMoMailList();
 		}
 
-		// Token: 0x06000511 RID: 1297 RVA: 0x0002A05C File Offset: 0x0002825C
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x06000512 RID: 1298 RVA: 0x0002A070 File Offset: 0x00028270
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x06000513 RID: 1299 RVA: 0x0002A084 File Offset: 0x00028284
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000514 RID: 1300 RVA: 0x0002A098 File Offset: 0x00028298
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x040007C7 RID: 1991
+		
 		public static int MaxMailID = 0;
 
-		// Token: 0x040007C8 RID: 1992
+		
 		public static Dictionary<int, FuMoMailData> FuMoMailDatas = new Dictionary<int, FuMoMailData>();
 
-		// Token: 0x040007C9 RID: 1993
+		
 		public static Dictionary<int, Dictionary<int, FuMoMailTemp>> FuMoMailTemps = new Dictionary<int, Dictionary<int, FuMoMailTemp>>();
 
-		// Token: 0x040007CA RID: 1994
+		
 		public static Dictionary<int, List<FuMoMailData>> CurrUserMailDatas = new Dictionary<int, List<FuMoMailData>>();
 
-		// Token: 0x040007CB RID: 1995
+		
 		private static FuMoMailManager instance = new FuMoMailManager();
 	}
 }

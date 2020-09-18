@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ZhuLing ID="1" TypeID="1" Occupation="0" MaxAttackV="60" MaxMAttackV="0" MaxDefenseV="40" MaxMDefenseV="40" LifeV="100" HitV="10" DodgeV="10" AllAttribute="0" />
+  <ZhuLing ID="2" TypeID="1" Occupation="1" MaxAttackV="0" MaxMAttackV="60" MaxDefenseV="40" MaxMDefenseV="40" LifeV="100" HitV="10" DodgeV="10" AllAttribute="0" />
+  <ZhuLing ID="3" TypeID="1" Occupation="2" MaxAttackV="60" MaxMAttackV="0" MaxDefenseV="40" MaxMDefenseV="40" LifeV="100" HitV="10" DodgeV="10" AllAttribute="0" />
+  <ZhuLing ID="4" TypeID="1" Occupation="3" MaxAttackV="60" MaxMAttackV="60" MaxDefenseV="40" MaxMDefenseV="40" LifeV="100" HitV="10" DodgeV="10" AllAttribute="0" />
+  <ZhuLing ID="5" TypeID="1" Occupation="5" MaxAttackV="0" MaxMAttackV="60" MaxDefenseV="40" MaxMDefenseV="40" LifeV="100" HitV="10" DodgeV="10" AllAttribute="0" />
+  <ZhuLing ID="6" TypeID="2" Occupation="0" MaxAttackV="0" MaxMAttackV="0" MaxDefenseV="0" MaxMDefenseV="0" LifeV="0" HitV="0" DodgeV="0" AllAttribute="0.02" />
+  <ZhuLing ID="7" TypeID="2" Occupation="1" MaxAttackV="0" MaxMAttackV="0" MaxDefenseV="0" MaxMDefenseV="0" LifeV="0" HitV="0" DodgeV="0" AllAttribute="0.02" />
+  <ZhuLing ID="8" TypeID="2" Occupation="2" MaxAttackV="0" MaxMAttackV="0" MaxDefenseV="0" MaxMDefenseV="0" LifeV="0" HitV="0" DodgeV="0" AllAttribute="0.02" />
+  <ZhuLing ID="9" TypeID="2" Occupation="3" MaxAttackV="0" MaxMAttackV="0" MaxDefenseV="0" MaxMDefenseV="0" LifeV="0" HitV="0" DodgeV="0" AllAttribute="0.02" />
+  <ZhuLing ID="10" TypeID="2" Occupation="5" MaxAttackV="0" MaxMAttackV="0" MaxDefenseV="0" MaxMDefenseV="0" LifeV="0" HitV="0" DodgeV="0" AllAttribute="0.02" />
+</Config>

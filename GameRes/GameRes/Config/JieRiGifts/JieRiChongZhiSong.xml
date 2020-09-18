@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="12"  FromDate="2013-08-11 00:00:00" ToDate="2013-08-17 23:59:59" AwardStartDate="2013-08-11 00:00:00"  AwardEndDate="2013-08-17 23:59:59" />
+  <GiftList Description="活动期间内，只需您充值18888元宝，即可免费领取超强BOSS召唤卷轴，装备措手可得。">
+  <Award GoodsIDs="30075,1,0,0,1,0|31080,1,0,0,1,0|50005,1,0,0,1,0|36002,1,0,0,1,0|30063,1,0,0,1,0" MinYuanBao="18888" />
+  </GiftList>
+</Config>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="12" FromDate="2019-05-19 00:00:00" ToDate="2020-12-31 23:59:59" AwardStartDate="2019-05-19 00:00:00" AwardEndDate="2020-12-31 23:59:59" />
+  <GiftList Description="活动期间，每日达成充值额度即可领取丰厚奖励。">
+    <Award ID="1" MinYuanBao="200000"  GoodsOne="51161,5,1,0,0,0,0|2037,50,1,0,0,0,0|63144,5,1,0,0,0,0|63141,5,1,0,0,0,0|5203,50,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="2" MinYuanBao="600000"  GoodsOne="51161,10,1,0,0,0,0|2037,100,1,0,0,0,0|63144,10,1,0,0,0,0|63141,10,1,0,0,0,0|5203,100,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="3" MinYuanBao="1000000" GoodsOne="51161,10,1,0,0,0,0|2037,100,1,0,0,0,0|63144,10,1,0,0,0,0|63141,10,1,0,0,0,0|5203,100,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="4" MinYuanBao="2000000" GoodsOne="51161,20,1,0,0,0,0|2037,200,1,0,0,0,0|63144,20,1,0,0,0,0|63141,20,1,0,0,0,0|5203,200,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="5" MinYuanBao="3000000" GoodsOne="51161,20,1,0,0,0,0|2037,200,1,0,0,0,0|63144,20,1,0,0,0,0|63141,20,1,0,0,0,0||5203,200,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="6" MinYuanBao="4000000" GoodsOne="51161,35,1,0,0,0,0|2037,350,1,0,0,0,0|63144,35,1,0,0,0,0|63141,35,1,0,0,0,0|5203,350,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+
+	</GiftList>
+</Config>

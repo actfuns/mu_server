@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}重生装备进阶说明" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、低阶的重生装备可以通过{17e43e}重生装备进阶功能{dac7ae}进阶为高阶重生装备。消耗{17e43e}淬炼点{dac7ae}、{17e43e}锻造点{dac7ae}、{17e43e}涅槃点{dac7ae}。" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、进阶时除了要有低阶重生装备，还消耗{17e43e}淬炼点{dac7ae}、{17e43e}锻造点{dac7ae}、{17e43e}涅槃点{dac7ae}。" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、进阶有{17e43e}成功率{dac7ae}，成功则获得{17e43e}高一阶{dac7ae}重生装备，失败不会{17e43e}损毁{dac7ae}原重生装备。" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4、原装备上镶嵌的{17e43e}宝石{dac7ae}会继承到进阶后的高阶装备上。" Bold="0" />
+  <HelpIntro ID="6" Intro="{dac7ae}5、进阶后，不管原装备{17e43e}是否绑定{dac7ae}，不管{17e43e}成功与否{dac7ae}，生成的装备都为{17e43e}绑定{dac7ae}属性。" Bold="0" />
+</Config>

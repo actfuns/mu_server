@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <NPCs>
+    <NPC Code="211" X="2750" Y="6350" Dir="5" />
+    <NPC Code="207" X="4450" Y="2850" Dir="4" />
+    <NPC Code="203" X="7150" Y="6750" Dir="5" />
+    <NPC Code="202" X="6350" Y="4950" Dir="6" />
+    <NPC Code="204" X="6050" Y="8050" Dir="5" />
+    <NPC Code="212" X="4050" Y="8850" Dir="5" />
+    <NPC Code="208" X="5750" Y="10650" Dir="5" />
+    <NPC Code="213" X="3150" Y="13650" Dir="4" />
+    <NPC Code="214" X="9250" Y="8650" Dir="5" />
+    <NPC Code="205" X="5250" Y="4150" Dir="6" />
+    <NPC Code="201" X="4250" Y="5350" Dir="4" />
+    <NPC Code="209" X="7850" Y="4850" Dir="4" />
+    <NPC Code="215" X="12250" Y="10050" Dir="5" />
+  </NPCs>
+</Map>

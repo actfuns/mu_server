@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HuanLeDaiBi ID="1" ZhongWenMingCheng="祈福系统 " XiTongMingCheng="QiFuXiTong" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="2" ZhongWenMingCheng="精灵猎取" XiTongMingCheng="JingLingLieQu" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="3" ZhongWenMingCheng="坐骑捕捉" XiTongMingCheng="ZuoQiBuHuo" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="4" ZhongWenMingCheng="荧光石抽取" XiTongMingCheng="YingGuanShiChouQu" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="5" ZhongWenMingCheng="符文抽取" XiTongMingCheng="FuWenChouQu" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="6" ZhongWenMingCheng="翅膀升星" XiTongMingCheng="ChiBangShengXing" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="7" ZhongWenMingCheng="翅膀进阶" XiTongMingCheng="ChiBangShengJie" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="8" ZhongWenMingCheng="神器系统" XiTongMingCheng="ShenQiXiTong" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="9" ZhongWenMingCheng="翎羽升星" XiTongMingCheng="LingYuShengXing" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="10" ZhongWenMingCheng="翎羽升阶" XiTongMingCheng="LingYuShengJie" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="11" ZhongWenMingCheng="成就符文" XiTongMingCheng="ChengJieFuWen" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="12" ZhongWenMingCheng="声望印记" XiTongMingCheng="ShengWangYinJi" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="13" ZhongWenMingCheng="梅林之书" XiTongMingCheng="MeiLingZhiShu" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="14" ZhongWenMingCheng="冥想多倍" XiTongMingCheng="MingXiangDuoBei" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="15" ZhongWenMingCheng="恶魔多倍" XiTongMingCheng="EMoDuoBei" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="16" ZhongWenMingCheng="钻石鼓舞" XiTongMingCheng="ZuanShiGuWu" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="17" ZhongWenMingCheng="装备培养" XiTongMingCheng="ZhuangBeiPeiYang" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="18" ZhongWenMingCheng="装备传承" XiTongMingCheng="ZhuangBeiChuanCheng" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="19" ZhongWenMingCheng="精灵技能传承" XiTongMingCheng="JingLingJiNengChuanCheng" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="20" ZhongWenMingCheng="天赋洗点" XiTongMingCheng="TianFuXiDian" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="21" ZhongWenMingCheng="属性洗点" XiTongMingCheng="ShuXingXiDian" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="22" ZhongWenMingCheng="精灵要塞召唤Boss" XiTongMingCheng="JingLingYaoSaiZhaoHuanBoss" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="23" ZhongWenMingCheng="精灵要塞刷新" XiTongMingCheng="JingLingYaoSaiShuaXin" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="24" ZhongWenMingCheng="精灵要塞普通召唤" XiTongMingCheng="JingLingYaoSaiPuTongZhaoHuan" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="25" ZhongWenMingCheng="一件完成日常任务 " XiTongMingCheng="YiJianWanChengRiChang" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="26" ZhongWenMingCheng="徽记升星 " XiTongMingCheng="HuiJiShengXing" DaiBiKaiGuan="1" />
+  <HuanLeDaiBi ID="27" ZhongWenMingCheng="徽记升阶" XiTongMingCheng="HuiJiShengJie" DaiBiKaiGuan="1" />
+</Config>

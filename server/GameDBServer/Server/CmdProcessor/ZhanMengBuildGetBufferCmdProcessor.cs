@@ -6,22 +6,22 @@ using Server.Tools;
 
 namespace GameDBServer.Server.CmdProcessor
 {
-	// Token: 0x020001FD RID: 509
+	
 	public class ZhanMengBuildGetBufferCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x06000A86 RID: 2694 RVA: 0x00064980 File Offset: 0x00062B80
+		
 		private ZhanMengBuildGetBufferCmdProcessor()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(602, this);
 		}
 
-		// Token: 0x06000A87 RID: 2695 RVA: 0x0006499C File Offset: 0x00062B9C
+		
 		public static ZhanMengBuildGetBufferCmdProcessor getInstance()
 		{
 			return ZhanMengBuildGetBufferCmdProcessor.instance;
 		}
 
-		// Token: 0x06000A88 RID: 2696 RVA: 0x000649B4 File Offset: 0x00062BB4
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			string cmdData = null;
@@ -124,7 +124,7 @@ namespace GameDBServer.Server.CmdProcessor
 			}
 		}
 
-		// Token: 0x04000C6C RID: 3180
+		
 		private static ZhanMengBuildGetBufferCmdProcessor instance = new ZhanMengBuildGetBufferCmdProcessor();
 	}
 }

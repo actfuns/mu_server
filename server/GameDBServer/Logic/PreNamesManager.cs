@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x020001D4 RID: 468
+	
 	public class PreNamesManager
 	{
-		// Token: 0x060009D4 RID: 2516 RVA: 0x0005E924 File Offset: 0x0005CB24
+		
 		public static void AddPreNameItem(string name, int sex, int used)
 		{
 			PreNameItem preNameItem = new PreNameItem
@@ -33,7 +33,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060009D5 RID: 2517 RVA: 0x0005E9C0 File Offset: 0x0005CBC0
+		
 		public static string GetRandomName(int Sex)
 		{
 			string preName = "";
@@ -65,7 +65,7 @@ namespace GameDBServer.Logic
 			return preName;
 		}
 
-		// Token: 0x060009D6 RID: 2518 RVA: 0x0005EA9C File Offset: 0x0005CC9C
+		
 		public static bool SetUsedPreName(string name)
 		{
 			lock (PreNamesManager._Mutex)
@@ -84,7 +84,7 @@ namespace GameDBServer.Logic
 			return false;
 		}
 
-		// Token: 0x060009D7 RID: 2519 RVA: 0x0005EB2C File Offset: 0x0005CD2C
+		
 		public static void ClearUsedPreNames()
 		{
 			lock (PreNamesManager._Mutex)
@@ -109,7 +109,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060009D8 RID: 2520 RVA: 0x0005EBF8 File Offset: 0x0005CDF8
+		
 		private static List<string> LoadListFromFileByName(string fileName)
 		{
 			List<string> strList = new List<string>();
@@ -143,7 +143,7 @@ namespace GameDBServer.Logic
 			return strList;
 		}
 
-		// Token: 0x060009D9 RID: 2521 RVA: 0x0005ECBC File Offset: 0x0005CEBC
+		
 		public static void LoadFromFiles(DBManager dbMgr)
 		{
 			try
@@ -186,28 +186,28 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060009DA RID: 2522 RVA: 0x0005EE2C File Offset: 0x0005D02C
+		
 		public static void LoadPremNamesFromDB(DBManager dbMgr)
 		{
 			DBQuery.QueryPreNames(dbMgr, PreNamesManager._PreNamesDict, PreNamesManager._MalePreNamesList, PreNamesManager._FemalePreNamesList);
 		}
 
-		// Token: 0x04000BFC RID: 3068
+		
 		private static object _Mutex = new object();
 
-		// Token: 0x04000BFD RID: 3069
+		
 		private static Random rand = new Random();
 
-		// Token: 0x04000BFE RID: 3070
+		
 		private static Dictionary<string, PreNameItem> _PreNamesDict = new Dictionary<string, PreNameItem>(200000);
 
-		// Token: 0x04000BFF RID: 3071
+		
 		private static List<PreNameItem> _MalePreNamesList = new List<PreNameItem>(100000);
 
-		// Token: 0x04000C00 RID: 3072
+		
 		private static List<PreNameItem> _FemalePreNamesList = new List<PreNameItem>(100000);
 
-		// Token: 0x04000C01 RID: 3073
+		
 		private static Queue<PreNameItem> _UsedPreNamesQueue = new Queue<PreNameItem>(5000);
 	}
 }

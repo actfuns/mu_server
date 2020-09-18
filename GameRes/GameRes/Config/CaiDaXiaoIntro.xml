@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、活动开启时，{17e43e}每5分钟开奖1次" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、数字总和是{17e43e}3或18时{dac7ae}为{17e43e}豹子，{dac7ae}4到10为{17e43e}小，{dac7ae}11到17为{17e43e}大" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、开奖前{17e43e}30秒停止下注" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4、单人每期购买总注数{17e43e}有上限。" Bold="0" />
+  <HelpIntro ID="6" Intro="{dac7ae}5、中奖方可平均获得{17e43e}本期所有押注{dac7ae}的欢乐代币" Bold="0" />
+</Config>

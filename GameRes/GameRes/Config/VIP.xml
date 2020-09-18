@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Item GetID="5001" Type="6" Description="9、开启随身仓库功能" />
+  <Item GetID="5001" Type="7" Description="9、开启随身仓库功能" />
+  <Item GetID="5001" Type="8" Description="9、开启随身仓库功能" />
+  <Item GetID="5001" Type="9" Description="9、开启随身仓库功能" />
+  <Item GetID="5001" Type="10" Description="9、开启随身仓库功能" />
+  <Item GetID="5001" Type="11" Description="9、开启随身仓库功能" />
+  <Item GetID="5001" Type="12" Description="9、开启随身仓库功能" />
+</Config>

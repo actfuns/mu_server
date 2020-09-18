@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}纪元活动说明" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、每个纪元分为{17e43e}4{dac7ae}个阶段，每个阶段包含{17e43e}若干{dac7ae}纪元任务" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、纪元任务都为{17e43e}道具捐献类{dac7ae}任务，{17e43e}军团成员{dac7ae}可捐献任务道具" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、{17e43e}整个军团{dac7ae}累积的任务道具达到任务要求后，就可以完成纪元任务" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4、完成纪元任务会奖励相应纪元阶段的{17e43e}纪元进度{dac7ae}，当进度达到100%的时候，完成当前阶段，开启纪元的{17e43e}下一阶段" Bold="0" />
+  <HelpIntro ID="6" Intro="{dac7ae}5、纪元每个阶段都有{17e43e}阶段奖励{dac7ae}，完成阶段后军团成员都可领取阶段奖励，但有{ff0000}贡献度{dac7ae}限制" Bold="0" />
+  <HelpIntro ID="7" Intro="{dac7ae}6、捐献纪元道具个人可以获得{17e43e}贡献度{dac7ae}，贡献度达到要求可以领取相应的{17e43e}贡献度奖励{dac7ae}" Bold="0" />
+  <HelpIntro ID="8" Intro="{dac7ae}7、根据纪元进度快慢，军团间会有纪元进度排行，纪元活动{17e43e}结束后{dac7ae}，根据排行军团成员可以获得{17e43e}排行奖励{dac7ae}" Bold="0" />
+</Config>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <Monsters>
+    <!--1 是骷髅， 2 是神兽-->
+	<Monster ID="1" Code="1000000" />
+	<Monster ID="2" Code="1000001" />
+	<Monster ID="3" Code="41001" />
+	<Monster ID="4" Code="22" />
+	<Monster ID="5" Code="60" />
+	<Monster ID="6" Code="61" />
+	<Monster ID="7" Code="62" />
+	<Monster ID="8" Code="41000" />
+	<Monster ID="9" Code="46000" />
+  </Monsters>
+</Map>

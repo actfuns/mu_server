@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="10" FromDate="2019-12-09 00:00:00" ToDate="2019-12-16 23:59:59" AwardStartDate="2019-12-09 00:00:00" AwardEndDate="2019-12-16 23:59:59" />
+  <GiftList Description="活动期间，累计登录达到相应天数即可免费领取超值好礼！">
+    <Award TimeOl="1" GoodsOne="63262,50,1,0,0,0,0|9990001,200,1,0,0,0,0|64022,10000,1,0,0,0,0|63129,1,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award TimeOl="2" GoodsOne="63262,50,1,0,0,0,0|9990001,200,1,0,0,0,0|64022,10000,1,0,0,0,0|63129,1,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award TimeOl="3" GoodsOne="63262,50,1,0,0,0,0|9990001,200,1,0,0,0,0|64022,10000,1,0,0,0,0|63129,1,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award TimeOl="4" GoodsOne="63262,50,1,0,0,0,0|9990001,200,1,0,0,0,0|64022,10000,1,0,0,0,0|63129,1,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award TimeOl="5" GoodsOne="63262,50,1,0,0,0,0|9990001,200,1,0,0,0,0|64022,10000,1,0,0,0,0|63129,1,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award TimeOl="6" GoodsOne="63262,50,1,0,0,0,0|9990001,200,1,0,0,0,0|64022,10000,1,0,0,0,0|63129,1,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award TimeOl="7" GoodsOne="63262,50,1,0,0,0,0|9990001,200,1,0,0,0,0|64022,10000,1,0,0,0,0|63129,1,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  </GiftList>
+</Config>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <Monsters>
+    <Monster ID="1" Code="1900" X="3450" Y="4550" Radius="1" Num="1" Timeslot="10800" PursuitRadius="12000" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="2" Code="1901" X="3050" Y="4850" Radius="1" Num="1" Timeslot="3" PursuitRadius="800" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="3" Code="1901" X="3050" Y="4650" Radius="1" Num="1" Timeslot="3" PursuitRadius="800" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="4" Code="1901" X="3050" Y="4450" Radius="1" Num="1" Timeslot="3" PursuitRadius="800" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="5" Code="1901" X="3050" Y="4250" Radius="1" Num="1" Timeslot="3" PursuitRadius="800" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="6" Code="1901" X="3950" Y="4850" Radius="1" Num="1" Timeslot="3" PursuitRadius="800" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="7" Code="1901" X="3950" Y="4650" Radius="1" Num="1" Timeslot="3" PursuitRadius="800" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="8" Code="1901" X="3950" Y="4450" Radius="1" Num="1" Timeslot="3" PursuitRadius="800" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="9" Code="1901" X="3950" Y="4250" Radius="1" Num="1" Timeslot="3" PursuitRadius="800" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="10" Code="1902" X="3850" Y="2450" Radius="1" Num="1" Timeslot="3" PursuitRadius="0" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="11" Code="1902" X="3150" Y="2450" Radius="1" Num="1" Timeslot="3" PursuitRadius="0" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="12" Code="1902" X="3850" Y="2850" Radius="1" Num="1" Timeslot="3" PursuitRadius="0" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="13" Code="1902" X="3150" Y="2850" Radius="1" Num="1" Timeslot="3" PursuitRadius="0" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="14" Code="1902" X="3850" Y="3350" Radius="1" Num="1" Timeslot="3" PursuitRadius="0" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="15" Code="1902" X="3150" Y="3350" Radius="1" Num="1" Timeslot="3" PursuitRadius="0" BirthType="0" TimePoints="" BirthRate="1" />
+  </Monsters>
+</Map>

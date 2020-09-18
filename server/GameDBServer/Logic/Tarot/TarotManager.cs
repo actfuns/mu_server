@@ -9,10 +9,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.Tarot
 {
-    // Token: 0x0200017B RID: 379
+    
     public class TarotManager
     {
-        // Token: 0x060006AD RID: 1709 RVA: 0x0003CFBC File Offset: 0x0003B1BC
+        
         public static TCPProcessCmdResults ProcessUpdateTarotDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
         {
             tcpOutPacket = null;

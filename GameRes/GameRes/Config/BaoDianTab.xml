@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BaoDianTab>
+  <BaoDian ID="0" Name="提升等级" Show="1" />
+  <BaoDian ID="1" Name="提升战力" Show="1" />
+  <BaoDian ID="2" Name="获得金币" Show="1" />
+  <BaoDian ID="3" Name="获得装备" Show="1" /> 
+  <BaoDian ID="4" Name="获得晶石" Show="1" />
+  <BaoDian ID="5" Name="钻石" Show="0" />
+  <BaoDian ID="6" Name="套装展示" Show="0" />
+  <BaoDian ID="100" Name="系统公告" Show="1" />
+</BaoDianTab>

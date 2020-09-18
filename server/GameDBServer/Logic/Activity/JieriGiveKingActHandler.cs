@@ -10,15 +10,15 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.Activity
 {
-	// Token: 0x02000104 RID: 260
+	
 	public class JieriGiveKingActHandler : SingletonTemplate<JieriGiveKingActHandler>
 	{
-		// Token: 0x06000459 RID: 1113 RVA: 0x0002214A File Offset: 0x0002034A
+		
 		private JieriGiveKingActHandler()
 		{
 		}
 
-		// Token: 0x0600045A RID: 1114 RVA: 0x00022158 File Offset: 0x00020358
+		
 		public TCPProcessCmdResults ProcLoadJieriGiveKingRank(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -68,7 +68,7 @@ namespace GameDBServer.Logic.Activity
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x0600045B RID: 1115 RVA: 0x00022348 File Offset: 0x00020548
+		
 		public TCPProcessCmdResults ProcLoadRoleJieriGiveKing(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -133,7 +133,7 @@ namespace GameDBServer.Logic.Activity
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x0600045C RID: 1116 RVA: 0x00022574 File Offset: 0x00020774
+		
 		public TCPProcessCmdResults ProcGetJieriGiveKingAward(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -190,7 +190,7 @@ namespace GameDBServer.Logic.Activity
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x0600045D RID: 1117 RVA: 0x000227C8 File Offset: 0x000209C8
+		
 		public static List<JieriGiveKingItemData> QueryJieriGiveKingRank(DBManager dbMgr, string fromDate, string toDate, int rankCnt)
 		{
 			List<JieriGiveKingItemData> result = new List<JieriGiveKingItemData>();
@@ -228,7 +228,7 @@ namespace GameDBServer.Logic.Activity
 			return result;
 		}
 
-		// Token: 0x0600045E RID: 1118 RVA: 0x00022928 File Offset: 0x00020B28
+		
 		private JieriGiveKingItemData QueryRoleJieriGiveKing(DBManager dbMgr, string fromDate, string toDate, int roleID)
 		{
 			JieriGiveKingItemData result = null;

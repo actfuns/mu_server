@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CompMineAward ID="1" Rank="1" RankRate="-1" CompHonor="100000" CompFeast="200000" GoodsOne="50033,50,1,0,0,0,0|63195,3,1,0,0,0,0" GoodsTwo="" />
+  <CompMineAward ID="2" Rank="2" RankRate="-1" CompHonor="80000" CompFeast="160000" GoodsOne="50033,45,1,0,0,0,0|63195,2,1,0,0,0,0" GoodsTwo="" />
+  <CompMineAward ID="3" Rank="3" RankRate="-1" CompHonor="70000" CompFeast="140000" GoodsOne="50033,40,1,0,0,0,0|63195,2,1,0,0,0,0" GoodsTwo="" />
+  <CompMineAward ID="4" Rank="4" RankRate="-1" CompHonor="60000" CompFeast="120000" GoodsOne="50033,35,1,0,0,0,0|63195,1,1,0,0,0,0" GoodsTwo="" />
+  <CompMineAward ID="5" Rank="5" RankRate="-1" CompHonor="50000" CompFeast="100000" GoodsOne="50033,30,1,0,0,0,0|63195,1,1,0,0,0,0" GoodsTwo="" />
+  <CompMineAward ID="6" Rank="-1" RankRate="0.1" CompHonor="42500" CompFeast="85000" GoodsOne="50033,28,1,0,0,0,0|50159,12,1,0,0,0,0" GoodsTwo="" />
+  <CompMineAward ID="7" Rank="-1" RankRate="0.2" CompHonor="40000" CompFeast="80000" GoodsOne="50033,25,1,0,0,0,0|50159,11,1,0,0,0,0" GoodsTwo="" />
+  <CompMineAward ID="8" Rank="-1" RankRate="0.3" CompHonor="37500" CompFeast="75000" GoodsOne="50033,20,1,0,0,0,0|50159,10,1,0,0,0,0" GoodsTwo="" />
+  <CompMineAward ID="9" Rank="-1" RankRate="0.4" CompHonor="35000" CompFeast="70000" GoodsOne="50033,18,1,0,0,0,0|50159,9,1,0,0,0,0" GoodsTwo="" />
+  <CompMineAward ID="10" Rank="-1" RankRate="0.5" CompHonor="32500" CompFeast="65000" GoodsOne="50033,15,1,0,0,0,0|50159,8,1,0,0,0,0" GoodsTwo="" />
+  <CompMineAward ID="11" Rank="-1" RankRate="0.6" CompHonor="30000" CompFeast="60000" GoodsOne="50033,14,1,0,0,0,0|50159,7,1,0,0,0,0" GoodsTwo="" />
+  <CompMineAward ID="12" Rank="-1" RankRate="0.7" CompHonor="27500" CompFeast="55000" GoodsOne="50033,13,1,0,0,0,0|50159,6,1,0,0,0,0" GoodsTwo="" />
+  <CompMineAward ID="13" Rank="-1" RankRate="0.8" CompHonor="25000" CompFeast="50000" GoodsOne="50033,12,1,0,0,0,0|50159,5,1,0,0,0,0" GoodsTwo="" />
+  <CompMineAward ID="14" Rank="-1" RankRate="0.9" CompHonor="22500" CompFeast="45000" GoodsOne="50033,11,1,0,0,0,0|50159,4,1,0,0,0,0" GoodsTwo="" />
+  <CompMineAward ID="15" Rank="-1" RankRate="1" CompHonor="20000" CompFeast="40000" GoodsOne="50033,10,1,0,0,0,0|50159,2,1,0,0,0,0" GoodsTwo="" />
+</Config>

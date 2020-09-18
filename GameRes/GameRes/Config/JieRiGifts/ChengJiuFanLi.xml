@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="56" FromDate="2018-02-12 00:00:00" ToDate="2018-02-26 23:59:59" AwardStartDate="2018-02-12 00:00:00" AwardEndDate="2018-02-26 23:59:59" />
+  <GiftList Description="活动期间，成就称号等级达到指定要求可领取丰厚大礼！">
+    <Award ID="1" ChengJiuLevel="5" GoodsOne="50017,4,1,0,0,0,0|5203,2,1,0,0,0,0|5031,2,1,0,0,0,0|51104,3,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="2" ChengJiuLevel="6" GoodsOne="50017,8,1,0,0,0,0|5203,4,1,0,0,0,0|5031,2,1,0,0,0,0|63094,2,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="3" ChengJiuLevel="7" GoodsOne="50017,12,1,0,0,0,0|5203,6,1,0,0,0,0|5031,3,1,0,0,0,0|63094,2,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="4" ChengJiuLevel="8" GoodsOne="50017,16,1,0,0,0,0|5203,8,1,0,0,0,0|5031,4,1,0,0,0,0|63094,3,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="5" ChengJiuLevel="9" GoodsOne="50017,20,1,0,0,0,0|5203,10,1,0,0,0,0|5031,5,1,0,0,0,0|63094,4,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="6" ChengJiuLevel="10" GoodsOne="50017,24,1,0,0,0,0|5203,12,1,0,0,0,0|5031,6,1,0,0,0,0|63124,1,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="7" ChengJiuLevel="11" GoodsOne="50017,32,1,0,0,0,0|5203,16,1,0,0,0,0|5031,8,1,0,0,0,0|63094,5,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="8" ChengJiuLevel="12" GoodsOne="50017,40,1,0,0,0,0|5203,16,1,0,0,0,0|2035,5,1,0,0,0,0|63094,5,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="9" ChengJiuLevel="13" GoodsOne="50017,48,1,0,0,0,0|5203,16,1,0,0,0,0|2035,5,1,0,0,0,0|63094,5,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="10" ChengJiuLevel="14" GoodsOne="50017,56,1,0,0,0,0|5203,16,1,0,0,0,0|2035,5,1,0,0,0,0|63094,5,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="11" ChengJiuLevel="15" GoodsOne="50017,64,1,0,0,0,0|5203,16,1,0,0,0,0|2005,10,1,0,0,0,0|1034118,1,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  </GiftList>
+</Config>

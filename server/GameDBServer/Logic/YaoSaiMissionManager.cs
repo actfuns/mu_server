@@ -9,16 +9,16 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000195 RID: 405
+	
 	public class YaoSaiMissionManager : SingletonTemplate<YaoSaiMissionManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x06000730 RID: 1840 RVA: 0x00042788 File Offset: 0x00040988
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x06000731 RID: 1841 RVA: 0x0004279C File Offset: 0x0004099C
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(20311, SingletonTemplate<YaoSaiMissionManager>.Instance());
@@ -27,19 +27,19 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000732 RID: 1842 RVA: 0x000427F0 File Offset: 0x000409F0
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000733 RID: 1843 RVA: 0x00042804 File Offset: 0x00040A04
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000734 RID: 1844 RVA: 0x00042818 File Offset: 0x00040A18
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			switch (nID)
@@ -56,7 +56,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000735 RID: 1845 RVA: 0x0004286C File Offset: 0x00040A6C
+		
 		public List<YaoSaiMissionData> GetYaoSaiMissionDataByRid(int rid)
 		{
 			try
@@ -108,7 +108,7 @@ namespace GameDBServer.Logic
 			return null;
 		}
 
-		// Token: 0x06000736 RID: 1846 RVA: 0x00042A50 File Offset: 0x00040C50
+		
 		public void GetYaoSaiMissionData(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -131,7 +131,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000737 RID: 1847 RVA: 0x00042B0C File Offset: 0x00040D0C
+		
 		public void SetYaoSaiMissionData(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -165,7 +165,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000738 RID: 1848 RVA: 0x00042CE4 File Offset: 0x00040EE4
+		
 		public void DelYaoSaiMissionData(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -191,7 +191,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0400093A RID: 2362
+		
 		public Dictionary<int, List<YaoSaiMissionData>> RoleMissionDict = new Dictionary<int, List<YaoSaiMissionData>>();
 	}
 }

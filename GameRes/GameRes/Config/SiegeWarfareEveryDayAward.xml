@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <DayAward ID="1" Status="1" ImageID="8019,8002,5112" DayZhanGong="300" DayExp="600000" DayGoods="5112,1,1,0,0,0,0" />
+  <DayAward ID="2" Status="2" ImageID="8019,8002,5111" DayZhanGong="200" DayExp="400000" DayGoods="5111,1,1,0,0,0,0" />
+  <DayAward ID="3" Status="3" ImageID="8019,8002,5111" DayZhanGong="150" DayExp="300000" DayGoods="5111,1,1,0,0,0,0" />
+  <DayAward ID="4" Status="4" ImageID="8019,8002,5111" DayZhanGong="150" DayExp="300000" DayGoods="5111,1,1,0,0,0,0" />
+  <DayAward ID="5" Status="0" ImageID="8019,8002,5110" DayZhanGong="120" DayExp="240000" DayGoods="5110,1,1,0,0,0,0" />
+</config>

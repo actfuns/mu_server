@@ -8,10 +8,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000236 RID: 566
+	
 	public class CaiJiLogic
 	{
-		// Token: 0x060007C7 RID: 1991 RVA: 0x00075FD0 File Offset: 0x000741D0
+		
 		public static bool LoadConfig()
 		{
 			CaiJiLogic.DailyNum = (int)GameManager.systemParamsList.GetParamValueIntByName("MuKuangNum", -1);
@@ -59,7 +59,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060007C8 RID: 1992 RVA: 0x00076150 File Offset: 0x00074350
+		
 		public static int JugeDateTimeInTimeRange(DateTime dateTime, DateTimeRange[] dateTimeRangeArray, bool equalEndTime = true)
 		{
 			int result;
@@ -93,7 +93,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060007C9 RID: 1993 RVA: 0x00076214 File Offset: 0x00074414
+		
 		public static int ReqStartCaiJi(GameClient client, int monsterId, out int GatherTime)
 		{
 			GatherTime = 0;
@@ -249,7 +249,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060007CA RID: 1994 RVA: 0x00076718 File Offset: 0x00074918
+		
 		public static int ReqFinishCaiJi(GameClient client, int monsterId)
 		{
 			int result;
@@ -461,7 +461,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060007CB RID: 1995 RVA: 0x00076E30 File Offset: 0x00075030
+		
 		public static int CancelCaiJiState(GameClient client)
 		{
 			if (null != client)
@@ -478,7 +478,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x060007CC RID: 1996 RVA: 0x00076EA4 File Offset: 0x000750A4
+		
 		public static int SetCaiJiState(GameClient client, int monsterId, long goodsID = 0L, long uniqueId = 0L)
 		{
 			if (null != client)
@@ -491,13 +491,13 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x060007CD RID: 1997 RVA: 0x00076EF8 File Offset: 0x000750F8
+		
 		public static bool IsCaiJiState(GameClient client)
 		{
 			return null != client && ((client.ClientData.CaiJiStartTick > 0U && (client.ClientData.CaijTargetId > 0 || client.ClientData.CaijGoodsDBId > 0L)) || client.ClientData.gatherNpcID > 0);
 		}
 
-		// Token: 0x060007CE RID: 1998 RVA: 0x00076F74 File Offset: 0x00075174
+		
 		public static int NotifyCollectLastNum(GameClient client, int HuodongType, int lastnum)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}", 0, HuodongType, lastnum);
@@ -505,7 +505,7 @@ namespace GameServer.Logic
 			return 0;
 		}
 
-		// Token: 0x060007CF RID: 1999 RVA: 0x00076FB4 File Offset: 0x000751B4
+		
 		public static int ReqCaiJiLastNum(GameClient client, int huodongType, out int lastnum)
 		{
 			lastnum = 0;
@@ -522,7 +522,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060007D0 RID: 2000 RVA: 0x00076FF0 File Offset: 0x000751F0
+		
 		public static void UpdateCaiJiData(GameClient client)
 		{
 			client.ClientData.DailyCrystalCollectNum++;
@@ -535,7 +535,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060007D1 RID: 2001 RVA: 0x00077080 File Offset: 0x00075280
+		
 		public static void InitRoleDailyCaiJiData(GameClient client, bool isLogin, bool isNewday)
 		{
 			if (GlobalNew.IsGongNengOpened(client, GongNengIDs.CrystalCollect, false))
@@ -575,22 +575,22 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060007D2 RID: 2002 RVA: 0x000771FC File Offset: 0x000753FC
+		
 		public static bool HasLeftnum(GameClient client)
 		{
 			return GlobalNew.IsGongNengOpened(client, GongNengIDs.CrystalCollect, false) && client.ClientData.DailyCrystalCollectNum < CaiJiLogic.DailyNum;
 		}
 
-		// Token: 0x04000D4A RID: 3402
+		
 		public static CaiJiDateTimeRange[] dateTimeRangeArray = null;
 
-		// Token: 0x04000D4B RID: 3403
+		
 		public static int DailyNum = 0;
 
-		// Token: 0x04000D4C RID: 3404
+		
 		public static int DeadReliveTime = 0;
 
-		// Token: 0x04000D4D RID: 3405
+		
 		public static int GatherTimePer = 100;
 	}
 }

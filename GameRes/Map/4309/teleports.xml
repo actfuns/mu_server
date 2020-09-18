@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+      <Teleports>
+        <Teleport Code="0" FrameNum="13" Tip="龙城" Key="10" To="2" ToX="6263" ToY="2744" ToDirection="7" X="2890" Y="4150" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="120"/>
+      </Teleports>
+</Map>

@@ -8,16 +8,16 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace DotNetDetour
 {
-    // Token: 0x02000009 RID: 9
+    
     public static class AssemblyUtil
     {
-        // Token: 0x06000021 RID: 33 RVA: 0x00002C14 File Offset: 0x00000E14
+        
         public static T CreateInstance<T>(string type)
         {
             return AssemblyUtil.CreateInstance<T>(type, new object[0]);
         }
 
-        // Token: 0x06000022 RID: 34 RVA: 0x00002C34 File Offset: 0x00000E34
+        
         public static T CreateInstance<T>(string type, object[] parameters)
         {
             T result = default(T);
@@ -36,7 +36,7 @@ namespace DotNetDetour
             return result2;
         }
 
-        // Token: 0x06000023 RID: 35 RVA: 0x00002C88 File Offset: 0x00000E88
+        
         public static T CreateInstance<T>(string assembleName, string type)
         {
             Type instanceType = null;
@@ -72,7 +72,7 @@ namespace DotNetDetour
             return result2;
         }
 
-        // Token: 0x06000024 RID: 36 RVA: 0x00002D74 File Offset: 0x00000F74
+        
         public static T CreateInstance<T>(string assembleName, string type, object[] parameters)
         {
             Type instanceType = null;
@@ -108,7 +108,7 @@ namespace DotNetDetour
             return result2;
         }
 
-        // Token: 0x06000025 RID: 37 RVA: 0x00002E94 File Offset: 0x00001094
+        
         public static IEnumerable<Type> GetImplementTypes<TBaseType>(this Assembly assembly)
         {
             return from t in assembly.GetExportedTypes()
@@ -116,13 +116,13 @@ namespace DotNetDetour
                    select t;
         }
 
-        // Token: 0x06000026 RID: 38 RVA: 0x00002EC0 File Offset: 0x000010C0
+        
         public static IEnumerable<TBaseInterface> GetImplementedObjectsByInterface<TBaseInterface>(this Assembly assembly) where TBaseInterface : class
         {
             return assembly.GetImplementedObjectsByInterface<TBaseInterface>(typeof(TBaseInterface));
         }
 
-        // Token: 0x06000027 RID: 39 RVA: 0x00002EE4 File Offset: 0x000010E4
+        
         public static IEnumerable<TBaseInterface> GetImplementedObjectsByInterface<TBaseInterface>(this Assembly assembly, Type targetType) where TBaseInterface : class
         {
             Type[] arrType = assembly.GetExportedTypes();
@@ -140,7 +140,7 @@ namespace DotNetDetour
             return result;
         }
 
-        // Token: 0x06000028 RID: 40 RVA: 0x00002F54 File Offset: 0x00001154
+        
         public static T BinaryClone<T>(this T target)
         {
             BinaryFormatter formatter = new BinaryFormatter();
@@ -154,7 +154,7 @@ namespace DotNetDetour
             return result;
         }
 
-        // Token: 0x06000029 RID: 41 RVA: 0x00002FD0 File Offset: 0x000011D0
+        
         public static T CopyPropertiesTo<T>(this T source, T target)
         {
             PropertyInfo[] properties = source.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.GetProperty);
@@ -183,7 +183,7 @@ namespace DotNetDetour
             return target;
         }
 
-        // Token: 0x0600002A RID: 42 RVA: 0x000030B8 File Offset: 0x000012B8
+        
         public static IEnumerable<Assembly> GetAssembliesFromString(string assemblyDef)
         {
             return AssemblyUtil.GetAssembliesFromStrings(assemblyDef.Split(new char[]
@@ -193,7 +193,7 @@ namespace DotNetDetour
             }, StringSplitOptions.RemoveEmptyEntries));
         }
 
-        // Token: 0x0600002B RID: 43 RVA: 0x000030E8 File Offset: 0x000012E8
+        
         public static IEnumerable<Assembly> GetAssembliesFromStrings(string[] assemblies)
         {
             List<Assembly> result = new List<Assembly>(assemblies.Length);
@@ -204,7 +204,7 @@ namespace DotNetDetour
             return result;
         }
 
-        // Token: 0x0600002C RID: 44 RVA: 0x00003134 File Offset: 0x00001334
+        
         public static string GetAssembleVer(string filePath)
         {
             FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(filePath);
@@ -217,7 +217,7 @@ namespace DotNetDetour
             });
         }
 
-        // Token: 0x04000012 RID: 18
+        
         private static object[] m_EmptyObjectArray = new object[0];
     }
 }

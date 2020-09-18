@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <Monsters>
+	<Monster ID="1" Code="8600000" />
+	<Monster ID="2" Code="8610000" />
+	<Monster ID="3" Code="8610001" />
+	<Monster ID="4" Code="8610002" />
+	<Monster ID="5" Code="8610003" />
+	<Monster ID="6" Code="8620000" />
+	<Monster ID="7" Code="8620001" />
+	<Monster ID="8" Code="8620002" />
+	<Monster ID="9" Code="8620003" />
+	<Monster ID="10" Code="8620004" />
+	<Monster ID="11" Code="8630000" />
+	<Monster ID="12" Code="8630001" />
+	<Monster ID="13" Code="8630002" />
+	<Monster ID="14" Code="8630003" />
+	<Monster ID="15" Code="8640000" />
+	<Monster ID="16" Code="8640001" />
+	<Monster ID="17" Code="8640002" />
+	<Monster ID="18" Code="8640003" />
+	<Monster ID="19" Code="8640004" />
+	<Monster ID="20" Code="8650000" />
+	<Monster ID="21" Code="8650001" />
+	<Monster ID="22" Code="8650002" />
+	<Monster ID="23" Code="8650003" />
+	<Monster ID="24" Code="8660000" />
+	<Monster ID="25" Code="8660001" />
+	<Monster ID="26" Code="8660002" />
+	<Monster ID="27" Code="8660003" />
+	<Monster ID="28" Code="8660004" />
+  </Monsters>
+</Map>

@@ -7,21 +7,21 @@ using Server.Data;
 
 namespace GameDBServer.Logic.BaiTan
 {
-	// Token: 0x02000115 RID: 277
+	
 	public class BaiTanManager : ScheduleTask, IManager
 	{
-		// Token: 0x06000496 RID: 1174 RVA: 0x00025688 File Offset: 0x00023888
+		
 		private BaiTanManager()
 		{
 		}
 
-		// Token: 0x06000497 RID: 1175 RVA: 0x000256BC File Offset: 0x000238BC
+		
 		public static BaiTanManager getInstance()
 		{
 			return BaiTanManager.instance;
 		}
 
-		// Token: 0x06000498 RID: 1176 RVA: 0x000256D4 File Offset: 0x000238D4
+		
 		public bool initialize()
 		{
 			List<BaiTanLogItemData> dataList = BaiTanLogDBController.getInstance().getBaiTanLogItemDataList();
@@ -59,7 +59,7 @@ namespace GameDBServer.Logic.BaiTan
 			return result;
 		}
 
-		// Token: 0x06000499 RID: 1177 RVA: 0x000257F4 File Offset: 0x000239F4
+		
 		public bool startup()
 		{
 			this.executor.start();
@@ -67,7 +67,7 @@ namespace GameDBServer.Logic.BaiTan
 			return true;
 		}
 
-		// Token: 0x0600049A RID: 1178 RVA: 0x0002582C File Offset: 0x00023A2C
+		
 		public bool showdown()
 		{
 			this.executor.stop();
@@ -75,7 +75,7 @@ namespace GameDBServer.Logic.BaiTan
 			return true;
 		}
 
-		// Token: 0x0600049B RID: 1179 RVA: 0x00025854 File Offset: 0x00023A54
+		
 		public bool destroy()
 		{
 			this.executor = null;
@@ -97,7 +97,7 @@ namespace GameDBServer.Logic.BaiTan
 			return result;
 		}
 
-		// Token: 0x0600049C RID: 1180 RVA: 0x000258E8 File Offset: 0x00023AE8
+		
 		public void run()
 		{
 			if (TimeUtil.NOW() > this.executeSaveTime)
@@ -107,7 +107,7 @@ namespace GameDBServer.Logic.BaiTan
 			}
 		}
 
-		// Token: 0x0600049D RID: 1181 RVA: 0x00025928 File Offset: 0x00023B28
+		
 		public List<BaiTanLogItemData> getDetailByPageIndex(int bhId, int pageIndex)
 		{
 			int maxPageNum = BaiTanManager.MaxCacheNum / BaiTanManager.PageShowNum;
@@ -151,7 +151,7 @@ namespace GameDBServer.Logic.BaiTan
 			return result;
 		}
 
-		// Token: 0x0600049E RID: 1182 RVA: 0x000259D0 File Offset: 0x00023BD0
+		
 		private void deleteData()
 		{
 			foreach (int rid in this.dataCache.Keys)
@@ -166,7 +166,7 @@ namespace GameDBServer.Logic.BaiTan
 			}
 		}
 
-		// Token: 0x0600049F RID: 1183 RVA: 0x00025A7C File Offset: 0x00023C7C
+		
 		public void onAddBaiTanLog(BaiTanLogItemData data)
 		{
 			List<BaiTanLogItemData> _dataList = null;
@@ -203,25 +203,25 @@ namespace GameDBServer.Logic.BaiTan
 			BaiTanLogDBController.getInstance().insert(data);
 		}
 
-		// Token: 0x04000771 RID: 1905
+		
 		public static readonly int PageShowNum = 10;
 
-		// Token: 0x04000772 RID: 1906
+		
 		public static readonly int MaxCacheNum = 100;
 
-		// Token: 0x04000773 RID: 1907
+		
 		public static readonly long deleteTime = 3600000L;
 
-		// Token: 0x04000774 RID: 1908
+		
 		private static BaiTanManager instance = new BaiTanManager();
 
-		// Token: 0x04000775 RID: 1909
+		
 		private long executeSaveTime = TimeUtil.NOW() + BaiTanManager.deleteTime;
 
-		// Token: 0x04000776 RID: 1910
+		
 		private ScheduleExecutor executor = new ScheduleExecutor(1);
 
-		// Token: 0x04000777 RID: 1911
+		
 		private Dictionary<int, List<BaiTanLogItemData>> dataCache = new Dictionary<int, List<BaiTanLogItemData>>();
 	}
 }

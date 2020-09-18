@@ -10,15 +10,15 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.Activity
 {
-	// Token: 0x02000107 RID: 263
+	
 	public class JieriRecvKingActHandler : SingletonTemplate<JieriRecvKingActHandler>
 	{
-		// Token: 0x0600046A RID: 1130 RVA: 0x00023640 File Offset: 0x00021840
+		
 		private JieriRecvKingActHandler()
 		{
 		}
 
-		// Token: 0x0600046B RID: 1131 RVA: 0x0002364C File Offset: 0x0002184C
+		
 		public TCPProcessCmdResults ProcLoadJieriRecvKingRank(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -68,7 +68,7 @@ namespace GameDBServer.Logic.Activity
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x0600046C RID: 1132 RVA: 0x0002383C File Offset: 0x00021A3C
+		
 		public TCPProcessCmdResults ProcLoadRoleJieriRecvKing(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -133,7 +133,7 @@ namespace GameDBServer.Logic.Activity
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x0600046D RID: 1133 RVA: 0x00023A68 File Offset: 0x00021C68
+		
 		public TCPProcessCmdResults ProcGetJieriRecvKingAward(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -189,7 +189,7 @@ namespace GameDBServer.Logic.Activity
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x0600046E RID: 1134 RVA: 0x00023CB8 File Offset: 0x00021EB8
+		
 		public static List<JieriRecvKingItemData> QueryJieriRecvKingRank(DBManager dbMgr, string fromDate, string toDate, int rankCnt)
 		{
 			List<JieriRecvKingItemData> result = new List<JieriRecvKingItemData>();
@@ -227,7 +227,7 @@ namespace GameDBServer.Logic.Activity
 			return result;
 		}
 
-		// Token: 0x0600046F RID: 1135 RVA: 0x00023E18 File Offset: 0x00022018
+		
 		private JieriRecvKingItemData QueryRoleJieriRecvKing(DBManager dbMgr, string fromDate, string toDate, int roleID)
 		{
 			JieriRecvKingItemData result = null;

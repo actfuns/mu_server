@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Battle>
+    <!--MapCode, 地图编号, TimePoints 开始、结束时间点, WaitingEnterSecs 等待时间，FightingSecs 活动时间，ClearRolesSecs 清场时间，Award奖励物品,Image 活动图片-->
+    <Item ID="20001" MapCode="14000" TimePoints="10:00-23:59" WaitingEnterSecs="30" FightingSecs="300" ClearRolesSecs="15" Award="8001|8002|5050" Image="8000|8001" />
+    <Item ID="20001" MapCode="14001" TimePoints="10:00-23:59" WaitingEnterSecs="30" FightingSecs="300" ClearRolesSecs="15" Award="8001|8002|5050" Image="8000|8001" />
+    <Item ID="20001" MapCode="14002" TimePoints="10:00-23:59" WaitingEnterSecs="30" FightingSecs="300" ClearRolesSecs="15" Award="8001|8002|5050" Image="8000|8001" />
+    <Item ID="20001" MapCode="14003" TimePoints="10:00-23:59" WaitingEnterSecs="30" FightingSecs="300" ClearRolesSecs="15" Award="8001|8002|5050" Image="8000|8001" />
+</Battle>

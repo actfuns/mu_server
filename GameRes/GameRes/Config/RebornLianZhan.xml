@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <RebornLianZhan ID="1" Num="10" RebornExp="0.02" Time="1800" GoodsID="4700" />
+  <RebornLianZhan ID="2" Num="20" RebornExp="0.04" Time="1800" GoodsID="4701" />
+  <RebornLianZhan ID="3" Num="30" RebornExp="0.06" Time="1800" GoodsID="4702" />
+  <RebornLianZhan ID="4" Num="50" RebornExp="0.08" Time="1800" GoodsID="4703" />
+  <RebornLianZhan ID="5" Num="100" RebornExp="0.1" Time="1800" GoodsID="4704" />
+  <RebornLianZhan ID="6" Num="200" RebornExp="0.15" Time="1800" GoodsID="4705" />
+  <RebornLianZhan ID="7" Num="300" RebornExp="0.2" Time="1800" GoodsID="4706" />
+  <RebornLianZhan ID="8" Num="500" RebornExp="0.25" Time="1800" GoodsID="4707" />
+  <RebornLianZhan ID="9" Num="999" RebornExp="0.3" Time="1800" GoodsID="4708" />
+</Config>

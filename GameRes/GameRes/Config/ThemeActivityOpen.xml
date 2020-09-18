@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+	<!--主题服活动开关，若为主题服，则配置1；若不是主题服则配置0-->
+	<!--主题服美术资源替换，Open为0显示默认资源，不配置显示默认资源-->
+	<!--Logo美术资源路径：StreamingAssets\NetImages\GameRes\Images\Plate-->
+	<!--HuanYing美术资源路径：StreamingAssets\NetImages\GameRes\Images\Plate-->
+	<!--Loading美术资源路径：StreamingAssets\LoadGame-->
+	<!--主题服礼包Title美术资源路径：StreamingAssets\NetImages\GameRes\Images-->
+	<ThemeActivityOpen ID="1" Open="1" Logo="ZhuTiIcon_40.png.qj" HuanYing="" Loading="" Title="ZhuTi_40.jpg.qj"/>
+</Config>

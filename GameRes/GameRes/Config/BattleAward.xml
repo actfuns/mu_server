@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <Range ID="1" MinJiFen="0" MaxJiFen="1000000" ExpXiShu="11050" MoJingXiShu="700000" ChengJiuXiShu="700000" MinExp="0" MaxExp="1105920" MinMoJing="30000000" MaxMoJing="60000000" MinChengJiu="1500000" MaxChengJiu="3000000" />
+</config>

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <Item ID="1" MapCode="3000" TimePoints="15:00" PrepareSecs="180" WaitingEnterSecs="1" FightingSecs="600" ClearRolesSecs="30" MinZhuanSheng="2" MinLevel="20" BossID="300000" BossPosX="3250" BossPosY="7050" BossPos="200" MinRequestNum="1"
+MaxEnterNum="1000" Award="8016|2016|2017" Image="10000|10001|10002" />
+</config>

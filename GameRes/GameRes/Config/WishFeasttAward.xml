@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <WishFeasttAward ID="1" Name="庆祝宴会" Picture="6000" SumNum="10000" UseNum="1" BindJinBi="100000" EXPAward="520000" XingHunAward="52000" ShengWangAward="5200" />
+</Config>

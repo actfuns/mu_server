@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="25" />
+  <GiftList Title="合服王城战" Description="合服后5天内连续占领王城3天的帮会，该帮会帮主可在此处领取丰厚的奖励！">
+  <Award GoodsIDs="1304000,1,0,0,0,0|35006,1,0,0,1,0|50004,1,0,0,1,0|31025,1,0,0,1,0|30063,1,0,0,1,0" />
+  </GiftList>
+</Config>

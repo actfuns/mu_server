@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LuoLanFaZhen>
+  <FuBen ID="1" MapID="4201" ChuanSongMenID="10|11|12|13|14" MuDidiID="4202,211|4201,210|4201,210|4201,210|4201,210" TeShuMapID="4206|1657|1064" />
+  <FuBen ID="2" MapID="4202" ChuanSongMenID="10|11|12|13|14" MuDidiID="4203,211|4202,210|4202,210|4201,210|4201,210" TeShuMapID="4206|1657|1064" />
+  <FuBen ID="3" MapID="4203" ChuanSongMenID="10|11|12|13|14" MuDidiID="4204,211|4203,210|4202,210|4201,210|4202,210" TeShuMapID="4206|1657|1064" />
+  <FuBen ID="4" MapID="4204" ChuanSongMenID="10|11|12|13|14" MuDidiID="4205,211|4204,210|4203,210|4202,210|4201,210" TeShuMapID="4206|1657|1064" />
+  <FuBen ID="5" MapID="4205" ChuanSongMenID="10" MuDidiID="4201" TeShuMapID="4206|1657|1064" />
+  <FuBen ID="6" MapID="4206" ChuanSongMenID="10" MuDidiID="4201" TeShuMapID="" />
+</LuoLanFaZhen>

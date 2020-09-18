@@ -8,16 +8,16 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x0200019B RID: 411
+	
 	public class ZuoQiManager : SingletonTemplate<ZuoQiManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x06000758 RID: 1880 RVA: 0x000446A4 File Offset: 0x000428A4
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x06000759 RID: 1881 RVA: 0x000446B8 File Offset: 0x000428B8
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(20319, SingletonTemplate<ZuoQiManager>.Instance());
@@ -26,19 +26,19 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600075A RID: 1882 RVA: 0x0004470C File Offset: 0x0004290C
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x0600075B RID: 1883 RVA: 0x00044720 File Offset: 0x00042920
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600075C RID: 1884 RVA: 0x00044734 File Offset: 0x00042934
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			if (nID == 20319)
@@ -55,7 +55,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600075D RID: 1885 RVA: 0x000447A0 File Offset: 0x000429A0
+		
 		private void GetRoleZuoQiData(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -80,7 +80,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600075E RID: 1886 RVA: 0x00044878 File Offset: 0x00042A78
+		
 		private void SetRoleZuoQiData(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -135,7 +135,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600075F RID: 1887 RVA: 0x00044A7C File Offset: 0x00042C7C
+		
 		private void CheckRoleZuoQiData(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try

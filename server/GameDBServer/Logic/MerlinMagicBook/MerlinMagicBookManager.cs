@@ -8,16 +8,16 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.MerlinMagicBook
 {
-	// Token: 0x02000153 RID: 339
+	
 	public class MerlinMagicBookManager
 	{
-		// Token: 0x060005B7 RID: 1463 RVA: 0x00031E78 File Offset: 0x00030078
+		
 		public static MerlinMagicBookManager getInstance()
 		{
 			return MerlinMagicBookManager.instance;
 		}
 
-		// Token: 0x060005B8 RID: 1464 RVA: 0x00031E90 File Offset: 0x00030090
+		
 		public TCPProcessCmdResults ProcessInsertMerlinDataCmd(DBManager dbMgr, GameServerClient client, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -84,7 +84,7 @@ namespace GameDBServer.Logic.MerlinMagicBook
 			return TCPProcessCmdResults.RESULT_OK;
 		}
 
-		// Token: 0x060005B9 RID: 1465 RVA: 0x00032110 File Offset: 0x00030310
+		
 		public TCPProcessCmdResults ProcessUpdateMerlinDataCmd(DBManager dbMgr, GameServerClient client, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -202,7 +202,7 @@ namespace GameDBServer.Logic.MerlinMagicBook
 			return TCPProcessCmdResults.RESULT_OK;
 		}
 
-		// Token: 0x060005BA RID: 1466 RVA: 0x00032640 File Offset: 0x00030840
+		
 		public TCPProcessCmdResults ProcessQueryMerlinDataCmd(DBManager dbMgr, TCPOutPacketPool pool, GameServerClient client, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -256,7 +256,7 @@ namespace GameDBServer.Logic.MerlinMagicBook
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x0400084C RID: 2124
+		
 		private static MerlinMagicBookManager instance = new MerlinMagicBookManager();
 	}
 }

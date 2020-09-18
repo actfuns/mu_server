@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HorseSuperiorType ID="1" Name="生命上限加成" Type="MaxLifePercent" Parameter="350,0.33|450,0.34|550,0.33" />
+  <HorseSuperiorType ID="2" Name="元素伤害加成" Type="ElementInjurePercent" Parameter="60,0.33|90,0.34|120,0.33" />
+  <HorseSuperiorType ID="3" Name="元素伤害减免" Type="ElementAttackInjurePercent" Parameter="60,0.33|90,0.34|120,0.33" />
+  <HorseSuperiorType ID="4" Name="卓越一击几率" Type="FatalAttack" Parameter="100,0.33|150,0.34|200,0.33" />
+  <HorseSuperiorType ID="5" Name="抵抗卓越一击" Type="DeFatalAttack" Parameter="100,0.33|150,0.34|200,0.33" />
+  <HorseSuperiorType ID="6" Name="伤害加成" Type="AddAttackInjurePercent" Parameter="120,0.33|180,0.34|240,0.33" />
+  <HorseSuperiorType ID="7" Name="生命上限加成" Type="MaxLifePercent" Parameter="560,0.33|660,0.34|760,0.33" />
+  <HorseSuperiorType ID="8" Name="元素伤害加成" Type="ElementInjurePercent" Parameter="112,0.33|132,0.34|152,0.33" />
+  <HorseSuperiorType ID="9" Name="元素伤害减免" Type="ElementAttackInjurePercent" Parameter="112,0.33|132,0.34|152,0.33" />
+  <HorseSuperiorType ID="10" Name="抵抗卓越一击" Type="DeFatalAttack" Parameter="170,0.33|220,0.34|270,0.33" />
+  <HorseSuperiorType ID="11" Name="伤害加成" Type="AddAttackInjurePercent" Parameter="204,0.33|264,0.34|324,0.33" />
+  <HorseSuperiorType ID="12" Name="抵抗致命一击" Type="DeDoubleAttack" Parameter="85,0.33|110,0.34|135,0.33" />
+  <HorseSuperiorType ID="13" Name="伤害吸收" Type="SubAttackInjurePercent" Parameter="24,0.33|44,0.34|64,0.33" />
+  <HorseSuperiorType ID="14" Name="卓越一击几率" Type="FatalAttack" Parameter="170,0.33|220,0.34|270,0.33" />
+  <HorseSuperiorType ID="15" Name="致命一击几率" Type="DoubleAttack" Parameter="85,0.33|110,0.34|135,0.33" />
+  <HorseSuperiorType ID="16" Name="伤害穿刺" Type="InjurePenetrationPercent" Parameter="24,0.33|44,0.34|64,0.33" />
+  <HorseSuperiorType ID="17" Name="生命上限加成" Type="MaxLifePercent" Parameter="800,0.33|900,0.34|1000,0.33" />
+  <HorseSuperiorType ID="18" Name="元素伤害加成" Type="ElementInjurePercent" Parameter="150,0.33|180,0.34|210,0.33" />
+  <HorseSuperiorType ID="19" Name="元素伤害减免" Type="ElementAttackInjurePercent" Parameter="150,0.33|180,0.34|210,0.33" />
+  <HorseSuperiorType ID="20" Name="卓越一击几率" Type="FatalAttack" Parameter="250,0.33|300,0.34|350,0.33" />
+  <HorseSuperiorType ID="21" Name="抵抗卓越一击" Type="DeFatalAttack" Parameter="250,0.33|300,0.34|350,0.33" />
+  <HorseSuperiorType ID="22" Name="伤害加成" Type="AddAttackInjurePercent" Parameter="300,0.33|360,0.34|420,0.33" />
+  <HorseSuperiorType ID="23" Name="致命一击几率" Type="DoubleAttack" Parameter="120,0.33|150,0.34|180,0.33" />
+  <HorseSuperiorType ID="24" Name="抵抗致命一击" Type="DeDoubleAttack" Parameter="120,0.33|150,0.34|180,0.33" />
+  <HorseSuperiorType ID="25" Name="伤害吸收" Type="SubAttackInjurePercent" Parameter="50,0.33|60,0.34|70,0.33" />
+  <HorseSuperiorType ID="26" Name="伤害穿刺" Type="InjurePenetrationPercent" Parameter="50,0.33|60,0.34|70,0.33" />
+  <HorseSuperiorType ID="27" Name="生命上限加成" Type="MaxLifePercent" Parameter="850,0.33|950,0.34|1050,0.33" />
+  <HorseSuperiorType ID="28" Name="元素伤害加成" Type="ElementInjurePercent" Parameter="160,0.33|190,0.34|220,0.33" />
+  <HorseSuperiorType ID="29" Name="元素伤害减免" Type="ElementAttackInjurePercent" Parameter="160,0.33|190,0.34|220,0.33" />
+  <HorseSuperiorType ID="30" Name="卓越一击几率" Type="FatalAttack" Parameter="270,0.33|320,0.34|370,0.33" />
+  <HorseSuperiorType ID="31" Name="抵抗卓越一击" Type="DeFatalAttack" Parameter="270,0.33|320,0.34|370,0.33" />
+  <HorseSuperiorType ID="32" Name="伤害加成" Type="AddAttackInjurePercent" Parameter="330,0.33|390,0.34|450,0.33" />
+  <HorseSuperiorType ID="33" Name="致命一击几率" Type="DoubleAttack" Parameter="130,0.33|160,0.34|190,0.33" />
+  <HorseSuperiorType ID="34" Name="抵抗致命一击" Type="DeDoubleAttack" Parameter="130,0.33|160,0.34|190,0.33" />
+  <HorseSuperiorType ID="35" Name="伤害吸收" Type="SubAttackInjurePercent" Parameter="60,0.33|70,0.34|80,0.33" />
+  <HorseSuperiorType ID="36" Name="伤害穿刺" Type="InjurePenetrationPercent" Parameter="60,0.33|70,0.34|80,0.33" />
+</Config>

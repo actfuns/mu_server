@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+      <Teleports>
+        <Teleport Code="212" FrameNum="13" Tip="幻影寺院" Key="11"  To="13000" ToX="6517" ToY="5027" ToDirection="13000" X="6097" Y="6983" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+        <Teleport Code="213" FrameNum="13" Tip="幻影寺院" Key="12"  To="13000" ToX="5095" ToY="6396" ToDirection="13000" X="7095" Y="6046" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+        <Teleport Code="212" FrameNum="13" Tip="幻影寺院" Key="13"  To="13000" ToX="6155" ToY="7471" ToDirection="13000" X="6532" Y="5542" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+        <Teleport Code="213" FrameNum="13" Tip="幻影寺院" Key="14"  To="13000" ToX="7665" ToY="6039" ToDirection="13000" X="5577" Y="6391" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+        <Teleport Code="212" FrameNum="13" Tip="幻影寺院" Key="15"  To="13000" ToX="1822" ToY="476" ToDirection="13000" X="1483" Y="2419" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+        <Teleport Code="213" FrameNum="13" Tip="幻影寺院" Key="16"  To="13000" ToX="349" ToY="1914" ToDirection="13000" X="2379" Y="1579" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+        <Teleport Code="212" FrameNum="13" Tip="幻影寺院" Key="17"  To="13000" ToX="1501" ToY="2919" ToDirection="13000" X="1870" Y="962" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+        <Teleport Code="213" FrameNum="13" Tip="幻影寺院" Key="18"  To="13000" ToX="2853" ToY="1568" ToDirection="13000" X="904" Y="1925" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+      </Teleports>
+</Map>

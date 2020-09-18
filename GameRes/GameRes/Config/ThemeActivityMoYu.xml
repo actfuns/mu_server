@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ThemeActivityMoYu ID="1" MonstersID="9700000" MapId="94000" X="2950" Y="3050" Radius="400" NpcID="88000" Chengjiu="40000" Shengwang="40000" HurtMin="20000" />
+  <ThemeActivityMoYu ID="2" MonstersID="9700001" MapId="94000" X="10250" Y="3250" Radius="400" NpcID="88001" Chengjiu="40000" Shengwang="40000" HurtMin="20000" />
+  <ThemeActivityMoYu ID="3" MonstersID="9700002" MapId="94000" X="1850" Y="6350" Radius="400" NpcID="88002" Chengjiu="40000" Shengwang="40000" HurtMin="20000" />
+  <ThemeActivityMoYu ID="4" MonstersID="9700003" MapId="94000" X="11050" Y="6350" Radius="400" NpcID="88003" Chengjiu="40000" Shengwang="40000" HurtMin="20000" />
+  <ThemeActivityMoYu ID="5" MonstersID="9700004" MapId="94000" X="4950" Y="6450" Radius="400" NpcID="88004" Chengjiu="40000" Shengwang="40000" HurtMin="20000" />
+  <ThemeActivityMoYu ID="6" MonstersID="9700005" MapId="94000" X="8350" Y="6450" Radius="400" NpcID="88005" Chengjiu="40000" Shengwang="40000" HurtMin="20000" />
+  <ThemeActivityMoYu ID="7" MonstersID="9700006" MapId="94000" X="6750" Y="4850" Radius="400" NpcID="88006" Chengjiu="40000" Shengwang="40000" HurtMin="20000" />
+  <ThemeActivityMoYu ID="8" MonstersID="9700007" MapId="94000" X="6650" Y="8050" Radius="400" NpcID="88007" Chengjiu="40000" Shengwang="40000" HurtMin="20000" />
+  <ThemeActivityMoYu ID="9" MonstersID="9700008" MapId="94000" X="3150" Y="9550" Radius="400" NpcID="88008" Chengjiu="40000" Shengwang="40000" HurtMin="20000" />
+  <ThemeActivityMoYu ID="10" MonstersID="9700009" MapId="94000" X="10550" Y="9650" Radius="400" NpcID="88009" Chengjiu="40000" Shengwang="40000" HurtMin="20000" />
+  <ThemeActivityMoYu ID="11" MonstersID="9700010" MapId="94000" X="6650" Y="10850" Radius="400" NpcID="88010" Chengjiu="40000" Shengwang="40000" HurtMin="20000" />
+</Config>

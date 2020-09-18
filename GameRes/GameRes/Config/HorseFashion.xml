@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HorseFashion ID="1" GoodsID="970000" Name="熊猫坐骑时装" MOD="Horse_009.unity3d" level="0" NeedGoods="970000,0" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.02|FatalAttack,0.01|DoubleAttack,0.01|ElementInjurePercent,0.02" Time="-1" />
+  <HorseFashion ID="2" GoodsID="970000" Name="熊猫坐骑时装" MOD="Horse_009.unity3d" level="1" NeedGoods="970000,1" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.03|FatalAttack,0.01|DoubleAttack,0.01|ElementInjurePercent,0.03" Time="-1" />
+  <HorseFashion ID="3" GoodsID="970000" Name="熊猫坐骑时装" MOD="Horse_009.unity3d" level="2" NeedGoods="970000,2" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.03|FatalAttack,0.02|DoubleAttack,0.02|ElementInjurePercent,0.03" Time="-1" />
+  <HorseFashion ID="4" GoodsID="970000" Name="熊猫坐骑时装" MOD="Horse_009.unity3d" level="3" NeedGoods="970000,2" ProPerty="MaxLifePercent,0.18|AddAttackInjurePercent,0.04|FatalAttack,0.02|DoubleAttack,0.02|ElementInjurePercent,0.04" Time="-1" />
+  <HorseFashion ID="5" GoodsID="970000" Name="熊猫坐骑时装" MOD="Horse_009.unity3d" level="4" NeedGoods="970000,3" ProPerty="MaxLifePercent,0.18|AddAttackInjurePercent,0.04|FatalAttack,0.03|DoubleAttack,0.03|ElementInjurePercent,0.04" Time="-1" />
+  <HorseFashion ID="6" GoodsID="970000" Name="熊猫坐骑时装" MOD="Horse_009.unity3d" level="5" NeedGoods="970000,3" ProPerty="MaxLifePercent,0.21|AddAttackInjurePercent,0.05|FatalAttack,0.03|DoubleAttack,0.03|ElementInjurePercent,0.05" Time="-1" />
+  <HorseFashion ID="7" GoodsID="970000" Name="熊猫坐骑时装" MOD="Horse_009.unity3d" level="6" NeedGoods="970000,3" ProPerty="MaxLifePercent,0.21|AddAttackInjurePercent,0.05|FatalAttack,0.04|DoubleAttack,0.04|ElementInjurePercent,0.05" Time="-1" />
+  <HorseFashion ID="8" GoodsID="970000" Name="熊猫坐骑时装" MOD="Horse_009.unity3d" level="7" NeedGoods="970000,4" ProPerty="MaxLifePercent,0.24|AddAttackInjurePercent,0.06|FatalAttack,0.04|DoubleAttack,0.04|ElementInjurePercent,0.06" Time="-1" />
+  <HorseFashion ID="9" GoodsID="970000" Name="熊猫坐骑时装" MOD="Horse_009.unity3d" level="8" NeedGoods="970000,4" ProPerty="MaxLifePercent,0.24|AddAttackInjurePercent,0.06|FatalAttack,0.05|DoubleAttack,0.05|ElementInjurePercent,0.06" Time="-1" />
+  <HorseFashion ID="10" GoodsID="970000" Name="熊猫坐骑时装" MOD="Horse_009.unity3d" level="9" NeedGoods="970000,4" ProPerty="MaxLifePercent,0.27|AddAttackInjurePercent,0.07|FatalAttack,0.05|DoubleAttack,0.05|ElementInjurePercent,0.07" Time="-1" />
+  <HorseFashion ID="11" GoodsID="970000" Name="熊猫坐骑时装" MOD="Horse_009.unity3d" level="10" NeedGoods="970000,4" ProPerty="MaxLifePercent,0.27|AddAttackInjurePercent,0.07|FatalAttack,0.06|DoubleAttack,0.06|ElementInjurePercent,0.07" Time="-1" />
+  <HorseFashion ID="12" GoodsID="970001" Name="野猪坐骑时装" MOD="Horse_015.unity3d" level="0" NeedGoods="970001,0" ProPerty="MaxLifePercent,0.06|AddAttackInjurePercent,0.01|DeDoubleAttack,0.01|ElementInjurePercent,0.01" Time="-1" />
+  <HorseFashion ID="13" GoodsID="970001" Name="野猪坐骑时装" MOD="Horse_015.unity3d" level="1" NeedGoods="970001,1" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.01|DeDoubleAttack,0.01|ElementInjurePercent,0.01" Time="-1" />
+  <HorseFashion ID="14" GoodsID="970001" Name="野猪坐骑时装" MOD="Horse_015.unity3d" level="2" NeedGoods="970001,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeDoubleAttack,0.01|ElementInjurePercent,0.01" Time="-1" />
+  <HorseFashion ID="15" GoodsID="970001" Name="野猪坐骑时装" MOD="Horse_015.unity3d" level="3" NeedGoods="970001,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeDoubleAttack,0.01|ElementInjurePercent,0.02" Time="-1" />
+  <HorseFashion ID="16" GoodsID="970001" Name="野猪坐骑时装" MOD="Horse_015.unity3d" level="4" NeedGoods="970001,3" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeDoubleAttack,0.02|ElementInjurePercent,0.02" Time="-1" />
+  <HorseFashion ID="17" GoodsID="970001" Name="野猪坐骑时装" MOD="Horse_015.unity3d" level="5" NeedGoods="970001,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.02|DeDoubleAttack,0.02|ElementInjurePercent,0.02" Time="-1" />
+  <HorseFashion ID="18" GoodsID="970001" Name="野猪坐骑时装" MOD="Horse_015.unity3d" level="6" NeedGoods="970001,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeDoubleAttack,0.02|ElementInjurePercent,0.02" Time="-1" />
+  <HorseFashion ID="19" GoodsID="970001" Name="野猪坐骑时装" MOD="Horse_015.unity3d" level="7" NeedGoods="970001,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeDoubleAttack,0.02|ElementInjurePercent,0.03" Time="-1" />
+  <HorseFashion ID="20" GoodsID="970001" Name="野猪坐骑时装" MOD="Horse_015.unity3d" level="8" NeedGoods="970001,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeDoubleAttack,0.03|ElementInjurePercent,0.03" Time="-1" />
+  <HorseFashion ID="21" GoodsID="970001" Name="野猪坐骑时装" MOD="Horse_015.unity3d" level="9" NeedGoods="970001,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.03|DeDoubleAttack,0.03|ElementInjurePercent,0.03" Time="-1" />
+  <HorseFashion ID="22" GoodsID="970001" Name="野猪坐骑时装" MOD="Horse_015.unity3d" level="10" NeedGoods="970001,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.04|DeDoubleAttack,0.03|ElementInjurePercent,0.03" Time="-1" />
+  <HorseFashion ID="23" GoodsID="970002" Name="蝎狮兽坐骑时装" MOD="Horse_020.unity3d" level="0" NeedGoods="970002,0" ProPerty="MaxLifePercent,0.06|AddAttackInjurePercent,0.01|DeFatalAttack,0.01|DoubleAttack,0.01|ElementInjurePercent,0.02" Time="-1" />
+  <HorseFashion ID="24" GoodsID="970002" Name="蝎狮兽坐骑时装" MOD="Horse_020.unity3d" level="1" NeedGoods="970002,1" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.01|DeFatalAttack,0.01|DoubleAttack,0.01|ElementInjurePercent,0.02" Time="-1" />
+  <HorseFashion ID="25" GoodsID="970002" Name="蝎狮兽坐骑时装" MOD="Horse_020.unity3d" level="2" NeedGoods="970002,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.01|DoubleAttack,0.01|ElementInjurePercent,0.02" Time="-1" />
+  <HorseFashion ID="26" GoodsID="970002" Name="蝎狮兽坐骑时装" MOD="Horse_020.unity3d" level="3" NeedGoods="970002,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.01|DoubleAttack,0.01|ElementInjurePercent,0.04" Time="-1" />
+  <HorseFashion ID="27" GoodsID="970002" Name="蝎狮兽坐骑时装" MOD="Horse_020.unity3d" level="4" NeedGoods="970002,3" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DoubleAttack,0.02|ElementInjurePercent,0.04" Time="-1" />
+  <HorseFashion ID="28" GoodsID="970002" Name="蝎狮兽坐骑时装" MOD="Horse_020.unity3d" level="5" NeedGoods="970002,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DoubleAttack,0.02|ElementInjurePercent,0.04" Time="-1" />
+  <HorseFashion ID="29" GoodsID="970002" Name="蝎狮兽坐骑时装" MOD="Horse_020.unity3d" level="6" NeedGoods="970002,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.02|DoubleAttack,0.02|ElementInjurePercent,0.04" Time="-1" />
+  <HorseFashion ID="30" GoodsID="970002" Name="蝎狮兽坐骑时装" MOD="Horse_020.unity3d" level="7" NeedGoods="970002,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.02|DoubleAttack,0.02|ElementInjurePercent,0.06" Time="-1" />
+  <HorseFashion ID="31" GoodsID="970002" Name="蝎狮兽坐骑时装" MOD="Horse_020.unity3d" level="8" NeedGoods="970002,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DoubleAttack,0.03|ElementInjurePercent,0.06" Time="-1" />
+  <HorseFashion ID="32" GoodsID="970002" Name="蝎狮兽坐骑时装" MOD="Horse_020.unity3d" level="9" NeedGoods="970002,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DoubleAttack,0.03|ElementInjurePercent,0.06" Time="-1" />
+  <HorseFashion ID="33" GoodsID="970002" Name="蝎狮兽坐骑时装" MOD="Horse_020.unity3d" level="10" NeedGoods="970002,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.04|DeFatalAttack,0.03|DoubleAttack,0.03|ElementInjurePercent,0.06" Time="-1" />
+  <HorseFashion ID="34" GoodsID="970003" Name="狮鹫坐骑时装" MOD="Horse_017.unity3d" level="0" NeedGoods="970003,0" ProPerty="MaxLifePercent,0.06|AddAttackInjurePercent,0.01|FatalAttack,0.01|DoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="35" GoodsID="970003" Name="狮鹫坐骑时装" MOD="Horse_017.unity3d" level="1" NeedGoods="970003,1" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.01|FatalAttack,0.01|DoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="36" GoodsID="970003" Name="狮鹫坐骑时装" MOD="Horse_017.unity3d" level="2" NeedGoods="970003,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|FatalAttack,0.01|DoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="37" GoodsID="970003" Name="狮鹫坐骑时装" MOD="Horse_017.unity3d" level="3" NeedGoods="970003,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|FatalAttack,0.02|DoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="38" GoodsID="970003" Name="狮鹫坐骑时装" MOD="Horse_017.unity3d" level="4" NeedGoods="970003,3" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|FatalAttack,0.02|DoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="39" GoodsID="970003" Name="狮鹫坐骑时装" MOD="Horse_017.unity3d" level="5" NeedGoods="970003,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.02|FatalAttack,0.02|DoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="40" GoodsID="970003" Name="狮鹫坐骑时装" MOD="Horse_017.unity3d" level="6" NeedGoods="970003,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|FatalAttack,0.02|DoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="41" GoodsID="970003" Name="狮鹫坐骑时装" MOD="Horse_017.unity3d" level="7" NeedGoods="970003,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|FatalAttack,0.03|DoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="42" GoodsID="970003" Name="狮鹫坐骑时装" MOD="Horse_017.unity3d" level="8" NeedGoods="970003,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|FatalAttack,0.03|DoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="43" GoodsID="970003" Name="狮鹫坐骑时装" MOD="Horse_017.unity3d" level="9" NeedGoods="970003,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.03|FatalAttack,0.03|DoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="44" GoodsID="970003" Name="狮鹫坐骑时装" MOD="Horse_017.unity3d" level="10" NeedGoods="970003,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.04|FatalAttack,0.03|DoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="45" GoodsID="970004" Name="熔岩龟坐骑时装" MOD="Horse_014.unity3d" level="0" NeedGoods="970004,0" ProPerty="MaxLifePercent,0.06|AddAttackInjurePercent,0.01|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="46" GoodsID="970004" Name="熔岩龟坐骑时装" MOD="Horse_014.unity3d" level="1" NeedGoods="970004,1" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.01|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="47" GoodsID="970004" Name="熔岩龟坐骑时装" MOD="Horse_014.unity3d" level="2" NeedGoods="970004,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="48" GoodsID="970004" Name="熔岩龟坐骑时装" MOD="Horse_014.unity3d" level="3" NeedGoods="970004,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="49" GoodsID="970004" Name="熔岩龟坐骑时装" MOD="Horse_014.unity3d" level="4" NeedGoods="970004,3" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="50" GoodsID="970004" Name="熔岩龟坐骑时装" MOD="Horse_014.unity3d" level="5" NeedGoods="970004,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="51" GoodsID="970004" Name="熔岩龟坐骑时装" MOD="Horse_014.unity3d" level="6" NeedGoods="970004,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="52" GoodsID="970004" Name="熔岩龟坐骑时装" MOD="Horse_014.unity3d" level="7" NeedGoods="970004,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="53" GoodsID="970004" Name="熔岩龟坐骑时装" MOD="Horse_014.unity3d" level="8" NeedGoods="970004,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="54" GoodsID="970004" Name="熔岩龟坐骑时装" MOD="Horse_014.unity3d" level="9" NeedGoods="970004,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="55" GoodsID="970004" Name="熔岩龟坐骑时装" MOD="Horse_014.unity3d" level="10" NeedGoods="970004,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.04|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="56" GoodsID="970005" Name="黄金龙坐骑时装" MOD="Horse_007.unity3d" level="0" NeedGoods="970005,0" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.04|FatalAttack,0.01|DoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="57" GoodsID="970005" Name="黄金龙坐骑时装" MOD="Horse_007.unity3d" level="1" NeedGoods="970005,1" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.06|FatalAttack,0.01|DoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="58" GoodsID="970005" Name="黄金龙坐骑时装" MOD="Horse_007.unity3d" level="2" NeedGoods="970005,2" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.06|FatalAttack,0.02|DoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="59" GoodsID="970005" Name="黄金龙坐骑时装" MOD="Horse_007.unity3d" level="3" NeedGoods="970005,2" ProPerty="MaxLifePercent,0.18|AddAttackInjurePercent,0.08|FatalAttack,0.02|DoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="60" GoodsID="970005" Name="黄金龙坐骑时装" MOD="Horse_007.unity3d" level="4" NeedGoods="970005,3" ProPerty="MaxLifePercent,0.18|AddAttackInjurePercent,0.08|FatalAttack,0.03|DoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="61" GoodsID="970005" Name="黄金龙坐骑时装" MOD="Horse_007.unity3d" level="5" NeedGoods="970005,3" ProPerty="MaxLifePercent,0.21|AddAttackInjurePercent,0.1|FatalAttack,0.03|DoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="62" GoodsID="970005" Name="黄金龙坐骑时装" MOD="Horse_007.unity3d" level="6" NeedGoods="970005,3" ProPerty="MaxLifePercent,0.21|AddAttackInjurePercent,0.1|FatalAttack,0.04|DoubleAttack,0.04" Time="-1" />
+  <HorseFashion ID="63" GoodsID="970005" Name="黄金龙坐骑时装" MOD="Horse_007.unity3d" level="7" NeedGoods="970005,4" ProPerty="MaxLifePercent,0.24|AddAttackInjurePercent,0.12|FatalAttack,0.04|DoubleAttack,0.04" Time="-1" />
+  <HorseFashion ID="64" GoodsID="970005" Name="黄金龙坐骑时装" MOD="Horse_007.unity3d" level="8" NeedGoods="970005,4" ProPerty="MaxLifePercent,0.24|AddAttackInjurePercent,0.12|FatalAttack,0.05|DoubleAttack,0.05" Time="-1" />
+  <HorseFashion ID="65" GoodsID="970005" Name="黄金龙坐骑时装" MOD="Horse_007.unity3d" level="9" NeedGoods="970005,4" ProPerty="MaxLifePercent,0.27|AddAttackInjurePercent,0.14|FatalAttack,0.05|DoubleAttack,0.05" Time="-1" />
+  <HorseFashion ID="66" GoodsID="970005" Name="黄金龙坐骑时装" MOD="Horse_007.unity3d" level="10" NeedGoods="970005,4" ProPerty="MaxLifePercent,0.27|AddAttackInjurePercent,0.14|FatalAttack,0.06|DoubleAttack,0.06" Time="-1" />
+  <HorseFashion ID="67" GoodsID="970006" Name="星辰马坐骑时装" MOD="Horse_008.unity3d" level="0" NeedGoods="970006,0" ProPerty="MaxLifePercent,0.08|AddAttackInjurePercent,0.04|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="68" GoodsID="970006" Name="星辰马坐骑时装" MOD="Horse_008.unity3d" level="1" NeedGoods="970006,1" ProPerty="MaxLifePercent,0.1|AddAttackInjurePercent,0.06|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="69" GoodsID="970006" Name="星辰马坐骑时装" MOD="Horse_008.unity3d" level="2" NeedGoods="970006,2" ProPerty="MaxLifePercent,0.1|AddAttackInjurePercent,0.06|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="70" GoodsID="970006" Name="星辰马坐骑时装" MOD="Horse_008.unity3d" level="3" NeedGoods="970006,2" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.08|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="71" GoodsID="970006" Name="星辰马坐骑时装" MOD="Horse_008.unity3d" level="4" NeedGoods="970006,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.08|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="72" GoodsID="970006" Name="星辰马坐骑时装" MOD="Horse_008.unity3d" level="5" NeedGoods="970006,3" ProPerty="MaxLifePercent,0.14|AddAttackInjurePercent,0.1|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="73" GoodsID="970006" Name="星辰马坐骑时装" MOD="Horse_008.unity3d" level="6" NeedGoods="970006,3" ProPerty="MaxLifePercent,0.14|AddAttackInjurePercent,0.1|DeFatalAttack,0.04|DeDoubleAttack,0.04" Time="-1" />
+  <HorseFashion ID="74" GoodsID="970006" Name="星辰马坐骑时装" MOD="Horse_008.unity3d" level="7" NeedGoods="970006,4" ProPerty="MaxLifePercent,0.16|AddAttackInjurePercent,0.12|DeFatalAttack,0.04|DeDoubleAttack,0.04" Time="-1" />
+  <HorseFashion ID="75" GoodsID="970006" Name="星辰马坐骑时装" MOD="Horse_008.unity3d" level="8" NeedGoods="970006,4" ProPerty="MaxLifePercent,0.16|AddAttackInjurePercent,0.12|DeFatalAttack,0.05|DeDoubleAttack,0.05" Time="-1" />
+  <HorseFashion ID="76" GoodsID="970006" Name="星辰马坐骑时装" MOD="Horse_008.unity3d" level="9" NeedGoods="970006,4" ProPerty="MaxLifePercent,0.18|AddAttackInjurePercent,0.14|DeFatalAttack,0.05|DeDoubleAttack,0.05" Time="-1" />
+  <HorseFashion ID="77" GoodsID="970006" Name="星辰马坐骑时装" MOD="Horse_008.unity3d" level="10" NeedGoods="970006,4" ProPerty="MaxLifePercent,0.18|AddAttackInjurePercent,0.14|DeFatalAttack,0.06|DeDoubleAttack,0.06" Time="-1" />
+  <HorseFashion ID="78" GoodsID="970007" Name="猛犸巨象坐骑时装" MOD="Horse_021.unity3d" level="0" NeedGoods="970007,0" ProPerty="MaxLifePercent,0.08|AddAttackInjurePercent,0.04|DeFatalAttack,0.01|DoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="79" GoodsID="970007" Name="猛犸巨象坐骑时装" MOD="Horse_021.unity3d" level="1" NeedGoods="970007,1" ProPerty="MaxLifePercent,0.1|AddAttackInjurePercent,0.06|DeFatalAttack,0.01|DoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="80" GoodsID="970007" Name="猛犸巨象坐骑时装" MOD="Horse_021.unity3d" level="2" NeedGoods="970007,2" ProPerty="MaxLifePercent,0.1|AddAttackInjurePercent,0.06|DeFatalAttack,0.02|DoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="81" GoodsID="970007" Name="猛犸巨象坐骑时装" MOD="Horse_021.unity3d" level="3" NeedGoods="970007,2" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.08|DeFatalAttack,0.02|DoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="82" GoodsID="970007" Name="猛犸巨象坐骑时装" MOD="Horse_021.unity3d" level="4" NeedGoods="970007,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.08|DeFatalAttack,0.03|DoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="83" GoodsID="970007" Name="猛犸巨象坐骑时装" MOD="Horse_021.unity3d" level="5" NeedGoods="970007,3" ProPerty="MaxLifePercent,0.14|AddAttackInjurePercent,0.1|DeFatalAttack,0.03|DoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="84" GoodsID="970007" Name="猛犸巨象坐骑时装" MOD="Horse_021.unity3d" level="6" NeedGoods="970007,3" ProPerty="MaxLifePercent,0.14|AddAttackInjurePercent,0.1|DeFatalAttack,0.04|DoubleAttack,0.04" Time="-1" />
+  <HorseFashion ID="85" GoodsID="970007" Name="猛犸巨象坐骑时装" MOD="Horse_021.unity3d" level="7" NeedGoods="970007,4" ProPerty="MaxLifePercent,0.16|AddAttackInjurePercent,0.12|DeFatalAttack,0.04|DoubleAttack,0.04" Time="-1" />
+  <HorseFashion ID="86" GoodsID="970007" Name="猛犸巨象坐骑时装" MOD="Horse_021.unity3d" level="8" NeedGoods="970007,4" ProPerty="MaxLifePercent,0.16|AddAttackInjurePercent,0.12|DeFatalAttack,0.05|DoubleAttack,0.05" Time="-1" />
+  <HorseFashion ID="87" GoodsID="970007" Name="猛犸巨象坐骑时装" MOD="Horse_021.unity3d" level="9" NeedGoods="970007,4" ProPerty="MaxLifePercent,0.18|AddAttackInjurePercent,0.14|DeFatalAttack,0.05|DoubleAttack,0.05" Time="-1" />
+  <HorseFashion ID="88" GoodsID="970007" Name="猛犸巨象坐骑时装" MOD="Horse_021.unity3d" level="10" NeedGoods="970007,4" ProPerty="MaxLifePercent,0.18|AddAttackInjurePercent,0.14|DeFatalAttack,0.06|DoubleAttack,0.06" Time="-1" />
+  <HorseFashion ID="89" GoodsID="970008" Name="飞鱼坐骑时装" MOD="horse_010.unity3d" level="0" NeedGoods="970008,0" ProPerty="MaxLifePercent,0.06|AddAttackInjurePercent,0.01|DeDoubleAttack,0.01|ElementInjurePercent,0.01" Time="-1" />
+  <HorseFashion ID="90" GoodsID="970008" Name="飞鱼坐骑时装" MOD="horse_010.unity3d" level="1" NeedGoods="970008,1" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.01|DeDoubleAttack,0.01|ElementInjurePercent,0.01" Time="-1" />
+  <HorseFashion ID="91" GoodsID="970008" Name="飞鱼坐骑时装" MOD="horse_010.unity3d" level="2" NeedGoods="970008,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeDoubleAttack,0.01|ElementInjurePercent,0.01" Time="-1" />
+  <HorseFashion ID="92" GoodsID="970008" Name="飞鱼坐骑时装" MOD="horse_010.unity3d" level="3" NeedGoods="970008,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeDoubleAttack,0.01|ElementInjurePercent,0.02" Time="-1" />
+  <HorseFashion ID="93" GoodsID="970008" Name="飞鱼坐骑时装" MOD="horse_010.unity3d" level="4" NeedGoods="970008,3" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeDoubleAttack,0.02|ElementInjurePercent,0.02" Time="-1" />
+  <HorseFashion ID="94" GoodsID="970008" Name="飞鱼坐骑时装" MOD="horse_010.unity3d" level="5" NeedGoods="970008,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.02|DeDoubleAttack,0.02|ElementInjurePercent,0.02" Time="-1" />
+  <HorseFashion ID="95" GoodsID="970008" Name="飞鱼坐骑时装" MOD="horse_010.unity3d" level="6" NeedGoods="970008,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeDoubleAttack,0.02|ElementInjurePercent,0.02" Time="-1" />
+  <HorseFashion ID="96" GoodsID="970008" Name="飞鱼坐骑时装" MOD="horse_010.unity3d" level="7" NeedGoods="970008,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeDoubleAttack,0.02|ElementInjurePercent,0.03" Time="-1" />
+  <HorseFashion ID="97" GoodsID="970008" Name="飞鱼坐骑时装" MOD="horse_010.unity3d" level="8" NeedGoods="970008,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeDoubleAttack,0.03|ElementInjurePercent,0.03" Time="-1" />
+  <HorseFashion ID="98" GoodsID="970008" Name="飞鱼坐骑时装" MOD="horse_010.unity3d" level="9" NeedGoods="970008,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.03|DeDoubleAttack,0.03|ElementInjurePercent,0.03" Time="-1" />
+  <HorseFashion ID="99" GoodsID="970008" Name="飞鱼坐骑时装" MOD="horse_010.unity3d" level="10" NeedGoods="970008,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.04|DeDoubleAttack,0.03|ElementInjurePercent,0.03" Time="-1" />
+  <HorseFashion ID="100" GoodsID="970009" Name="鸭嘴兽坐骑时装" MOD="Horse_022.unity3d" level="0" NeedGoods="970009,0" ProPerty="MaxLifePercent,0.06|AddAttackInjurePercent,0.01|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="101" GoodsID="970009" Name="鸭嘴兽坐骑时装" MOD="Horse_022.unity3d" level="1" NeedGoods="970009,1" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.01|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="102" GoodsID="970009" Name="鸭嘴兽坐骑时装" MOD="Horse_022.unity3d" level="2" NeedGoods="970009,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="103" GoodsID="970009" Name="鸭嘴兽坐骑时装" MOD="Horse_022.unity3d" level="3" NeedGoods="970009,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="104" GoodsID="970009" Name="鸭嘴兽坐骑时装" MOD="Horse_022.unity3d" level="4" NeedGoods="970009,3" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="105" GoodsID="970009" Name="鸭嘴兽坐骑时装" MOD="Horse_022.unity3d" level="5" NeedGoods="970009,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="106" GoodsID="970009" Name="鸭嘴兽坐骑时装" MOD="Horse_022.unity3d" level="6" NeedGoods="970009,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="107" GoodsID="970009" Name="鸭嘴兽坐骑时装" MOD="Horse_022.unity3d" level="7" NeedGoods="970009,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="108" GoodsID="970009" Name="鸭嘴兽坐骑时装" MOD="Horse_022.unity3d" level="8" NeedGoods="970009,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="109" GoodsID="970009" Name="鸭嘴兽坐骑时装" MOD="Horse_022.unity3d" level="9" NeedGoods="970009,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="110" GoodsID="970009" Name="鸭嘴兽坐骑时装" MOD="Horse_022.unity3d" level="10" NeedGoods="970009,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.04|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="111" GoodsID="970010" Name="精灵鸟坐骑时装" MOD="Horse_013.unity3d" level="0" NeedGoods="970010,0" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.04|FatalAttack,0.01|DoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="112" GoodsID="970010" Name="精灵鸟坐骑时装" MOD="Horse_013.unity3d" level="1" NeedGoods="970010,1" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.06|FatalAttack,0.01|DoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="113" GoodsID="970010" Name="精灵鸟坐骑时装" MOD="Horse_013.unity3d" level="2" NeedGoods="970010,2" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.06|FatalAttack,0.02|DoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="114" GoodsID="970010" Name="精灵鸟坐骑时装" MOD="Horse_013.unity3d" level="3" NeedGoods="970010,2" ProPerty="MaxLifePercent,0.18|AddAttackInjurePercent,0.08|FatalAttack,0.02|DoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="115" GoodsID="970010" Name="精灵鸟坐骑时装" MOD="Horse_013.unity3d" level="4" NeedGoods="970010,3" ProPerty="MaxLifePercent,0.18|AddAttackInjurePercent,0.08|FatalAttack,0.03|DoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="116" GoodsID="970010" Name="精灵鸟坐骑时装" MOD="Horse_013.unity3d" level="5" NeedGoods="970010,3" ProPerty="MaxLifePercent,0.21|AddAttackInjurePercent,0.1|FatalAttack,0.03|DoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="117" GoodsID="970010" Name="精灵鸟坐骑时装" MOD="Horse_013.unity3d" level="6" NeedGoods="970010,3" ProPerty="MaxLifePercent,0.21|AddAttackInjurePercent,0.1|FatalAttack,0.04|DoubleAttack,0.04" Time="-1" />
+  <HorseFashion ID="118" GoodsID="970010" Name="精灵鸟坐骑时装" MOD="Horse_013.unity3d" level="7" NeedGoods="970010,4" ProPerty="MaxLifePercent,0.24|AddAttackInjurePercent,0.12|FatalAttack,0.04|DoubleAttack,0.04" Time="-1" />
+  <HorseFashion ID="119" GoodsID="970010" Name="精灵鸟坐骑时装" MOD="Horse_013.unity3d" level="8" NeedGoods="970010,4" ProPerty="MaxLifePercent,0.24|AddAttackInjurePercent,0.12|FatalAttack,0.05|DoubleAttack,0.05" Time="-1" />
+  <HorseFashion ID="120" GoodsID="970010" Name="精灵鸟坐骑时装" MOD="Horse_013.unity3d" level="9" NeedGoods="970010,4" ProPerty="MaxLifePercent,0.27|AddAttackInjurePercent,0.14|FatalAttack,0.05|DoubleAttack,0.05" Time="-1" />
+  <HorseFashion ID="121" GoodsID="970010" Name="精灵鸟坐骑时装" MOD="Horse_013.unity3d" level="10" NeedGoods="970010,4" ProPerty="MaxLifePercent,0.27|AddAttackInjurePercent,0.14|FatalAttack,0.06|DoubleAttack,0.06" Time="-1" />
+  <HorseFashion ID="122" GoodsID="970011" Name="秋田犬坐骑时装" MOD="Horse_027.unity3d" level="0" NeedGoods="970011,0" ProPerty="MaxLifePercent,0.08|AddAttackInjurePercent,0.04|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="123" GoodsID="970011" Name="秋田犬坐骑时装" MOD="Horse_027.unity3d" level="1" NeedGoods="970011,1" ProPerty="MaxLifePercent,0.1|AddAttackInjurePercent,0.06|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="124" GoodsID="970011" Name="秋田犬坐骑时装" MOD="Horse_027.unity3d" level="2" NeedGoods="970011,2" ProPerty="MaxLifePercent,0.1|AddAttackInjurePercent,0.06|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="125" GoodsID="970011" Name="秋田犬坐骑时装" MOD="Horse_027.unity3d" level="3" NeedGoods="970011,2" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.08|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="126" GoodsID="970011" Name="秋田犬坐骑时装" MOD="Horse_027.unity3d" level="4" NeedGoods="970011,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.08|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="127" GoodsID="970011" Name="秋田犬坐骑时装" MOD="Horse_027.unity3d" level="5" NeedGoods="970011,3" ProPerty="MaxLifePercent,0.14|AddAttackInjurePercent,0.1|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="128" GoodsID="970011" Name="秋田犬坐骑时装" MOD="Horse_027.unity3d" level="6" NeedGoods="970011,3" ProPerty="MaxLifePercent,0.14|AddAttackInjurePercent,0.1|DeFatalAttack,0.04|DeDoubleAttack,0.04" Time="-1" />
+  <HorseFashion ID="129" GoodsID="970011" Name="秋田犬坐骑时装" MOD="Horse_027.unity3d" level="7" NeedGoods="970011,4" ProPerty="MaxLifePercent,0.16|AddAttackInjurePercent,0.12|DeFatalAttack,0.04|DeDoubleAttack,0.04" Time="-1" />
+  <HorseFashion ID="130" GoodsID="970011" Name="秋田犬坐骑时装" MOD="Horse_027.unity3d" level="8" NeedGoods="970011,4" ProPerty="MaxLifePercent,0.16|AddAttackInjurePercent,0.12|DeFatalAttack,0.05|DeDoubleAttack,0.05" Time="-1" />
+  <HorseFashion ID="131" GoodsID="970011" Name="秋田犬坐骑时装" MOD="Horse_027.unity3d" level="9" NeedGoods="970011,4" ProPerty="MaxLifePercent,0.18|AddAttackInjurePercent,0.14|DeFatalAttack,0.05|DeDoubleAttack,0.05" Time="-1" />
+  <HorseFashion ID="132" GoodsID="970011" Name="秋田犬坐骑时装" MOD="Horse_027.unity3d" level="10" NeedGoods="970011,4" ProPerty="MaxLifePercent,0.18|AddAttackInjurePercent,0.14|DeFatalAttack,0.06|DeDoubleAttack,0.06" Time="-1" />
+  <HorseFashion ID="133" GoodsID="970012" Name="哈士奇坐骑时装" MOD="Horse_026.unity3d" level="0" NeedGoods="970012,0" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.04|FatalAttack,0.01|DoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="134" GoodsID="970012" Name="哈士奇坐骑时装" MOD="Horse_026.unity3d" level="1" NeedGoods="970012,1" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.06|FatalAttack,0.01|DoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="135" GoodsID="970012" Name="哈士奇坐骑时装" MOD="Horse_026.unity3d" level="2" NeedGoods="970012,2" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.06|FatalAttack,0.02|DoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="136" GoodsID="970012" Name="哈士奇坐骑时装" MOD="Horse_026.unity3d" level="3" NeedGoods="970012,2" ProPerty="MaxLifePercent,0.18|AddAttackInjurePercent,0.08|FatalAttack,0.02|DoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="137" GoodsID="970012" Name="哈士奇坐骑时装" MOD="Horse_026.unity3d" level="4" NeedGoods="970012,3" ProPerty="MaxLifePercent,0.18|AddAttackInjurePercent,0.08|FatalAttack,0.03|DoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="138" GoodsID="970012" Name="哈士奇坐骑时装" MOD="Horse_026.unity3d" level="5" NeedGoods="970012,3" ProPerty="MaxLifePercent,0.21|AddAttackInjurePercent,0.1|FatalAttack,0.03|DoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="139" GoodsID="970012" Name="哈士奇坐骑时装" MOD="Horse_026.unity3d" level="6" NeedGoods="970012,3" ProPerty="MaxLifePercent,0.21|AddAttackInjurePercent,0.1|FatalAttack,0.04|DoubleAttack,0.04" Time="-1" />
+  <HorseFashion ID="140" GoodsID="970012" Name="哈士奇坐骑时装" MOD="Horse_026.unity3d" level="7" NeedGoods="970012,4" ProPerty="MaxLifePercent,0.24|AddAttackInjurePercent,0.12|FatalAttack,0.04|DoubleAttack,0.04" Time="-1" />
+  <HorseFashion ID="141" GoodsID="970012" Name="哈士奇坐骑时装" MOD="Horse_026.unity3d" level="8" NeedGoods="970012,4" ProPerty="MaxLifePercent,0.24|AddAttackInjurePercent,0.12|FatalAttack,0.05|DoubleAttack,0.05" Time="-1" />
+  <HorseFashion ID="142" GoodsID="970012" Name="哈士奇坐骑时装" MOD="Horse_026.unity3d" level="9" NeedGoods="970012,4" ProPerty="MaxLifePercent,0.27|AddAttackInjurePercent,0.14|FatalAttack,0.05|DoubleAttack,0.05" Time="-1" />
+  <HorseFashion ID="143" GoodsID="970012" Name="哈士奇坐骑时装" MOD="Horse_026.unity3d" level="10" NeedGoods="970012,4" ProPerty="MaxLifePercent,0.27|AddAttackInjurePercent,0.14|FatalAttack,0.06|DoubleAttack,0.06" Time="-1" />
+  <HorseFashion ID="144" GoodsID="970013" Name="麒麟狮坐骑时装" MOD="Horse_025.unity3d" level="0" NeedGoods="970013,0" ProPerty="MaxLifePercent,0.06|AddAttackInjurePercent,0.01|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="145" GoodsID="970013" Name="麒麟狮坐骑时装" MOD="Horse_025.unity3d" level="1" NeedGoods="970013,1" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.01|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="146" GoodsID="970013" Name="麒麟狮坐骑时装" MOD="Horse_025.unity3d" level="2" NeedGoods="970013,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="147" GoodsID="970013" Name="麒麟狮坐骑时装" MOD="Horse_025.unity3d" level="3" NeedGoods="970013,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="148" GoodsID="970013" Name="麒麟狮坐骑时装" MOD="Horse_025.unity3d" level="4" NeedGoods="970013,3" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="149" GoodsID="970013" Name="麒麟狮坐骑时装" MOD="Horse_025.unity3d" level="5" NeedGoods="970013,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="150" GoodsID="970013" Name="麒麟狮坐骑时装" MOD="Horse_025.unity3d" level="6" NeedGoods="970013,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="151" GoodsID="970013" Name="麒麟狮坐骑时装" MOD="Horse_025.unity3d" level="7" NeedGoods="970013,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="152" GoodsID="970013" Name="麒麟狮坐骑时装" MOD="Horse_025.unity3d" level="8" NeedGoods="970013,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="153" GoodsID="970013" Name="麒麟狮坐骑时装" MOD="Horse_025.unity3d" level="9" NeedGoods="970013,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="154" GoodsID="970013" Name="麒麟狮坐骑时装" MOD="Horse_025.unity3d" level="10" NeedGoods="970013,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.04|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="155" GoodsID="970014" Name="藏羚羊坐骑时装" MOD="Horse_028.unity3d" level="0" NeedGoods="970014,0" ProPerty="MaxLifePercent,0.06|AddAttackInjurePercent,0.01|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="156" GoodsID="970014" Name="藏羚羊坐骑时装" MOD="Horse_028.unity3d" level="1" NeedGoods="970014,1" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.01|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="157" GoodsID="970014" Name="藏羚羊坐骑时装" MOD="Horse_028.unity3d" level="2" NeedGoods="970014,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="158" GoodsID="970014" Name="藏羚羊坐骑时装" MOD="Horse_028.unity3d" level="3" NeedGoods="970014,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="159" GoodsID="970014" Name="藏羚羊坐骑时装" MOD="Horse_028.unity3d" level="4" NeedGoods="970014,3" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="160" GoodsID="970014" Name="藏羚羊坐骑时装" MOD="Horse_028.unity3d" level="5" NeedGoods="970014,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="161" GoodsID="970014" Name="藏羚羊坐骑时装" MOD="Horse_028.unity3d" level="6" NeedGoods="970014,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="162" GoodsID="970014" Name="藏羚羊坐骑时装" MOD="Horse_028.unity3d" level="7" NeedGoods="970014,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="163" GoodsID="970014" Name="藏羚羊坐骑时装" MOD="Horse_028.unity3d" level="8" NeedGoods="970014,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="164" GoodsID="970014" Name="藏羚羊坐骑时装" MOD="Horse_028.unity3d" level="9" NeedGoods="970014,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="165" GoodsID="970014" Name="藏羚羊坐骑时装" MOD="Horse_028.unity3d" level="10" NeedGoods="970014,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.04|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="255" GoodsID="970015" Name="宝葫芦坐骑时装" MOD="Horse_030.unity3d" level="0" NeedGoods="970015,0" ProPerty="MaxLifePercent,0.06|AddAttackInjurePercent,0.01|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="256" GoodsID="970015" Name="宝葫芦坐骑时装" MOD="Horse_030.unity3d" level="1" NeedGoods="970015,1" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.01|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="257" GoodsID="970015" Name="宝葫芦坐骑时装" MOD="Horse_030.unity3d" level="2" NeedGoods="970015,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="258" GoodsID="970015" Name="宝葫芦坐骑时装" MOD="Horse_030.unity3d" level="3" NeedGoods="970015,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="259" GoodsID="970015" Name="宝葫芦坐骑时装" MOD="Horse_030.unity3d" level="4" NeedGoods="970015,3" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="260" GoodsID="970015" Name="宝葫芦坐骑时装" MOD="Horse_030.unity3d" level="5" NeedGoods="970015,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="261" GoodsID="970015" Name="宝葫芦坐骑时装" MOD="Horse_030.unity3d" level="6" NeedGoods="970015,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="262" GoodsID="970015" Name="宝葫芦坐骑时装" MOD="Horse_030.unity3d" level="7" NeedGoods="970015,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="263" GoodsID="970015" Name="宝葫芦坐骑时装" MOD="Horse_030.unity3d" level="8" NeedGoods="970015,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="264" GoodsID="970015" Name="宝葫芦坐骑时装" MOD="Horse_030.unity3d" level="9" NeedGoods="970015,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="265" GoodsID="970015" Name="宝葫芦坐骑时装" MOD="Horse_030.unity3d" level="10" NeedGoods="970015,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.04|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  
+  <HorseFashion ID="266" GoodsID="970016" Name="宝葫芦坐骑时装" MOD="Horse_032.unity3d" level="0" NeedGoods="970016,0" ProPerty="MaxLifePercent,0.06|AddAttackInjurePercent,0.01|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="267" GoodsID="970016" Name="宝葫芦坐骑时装" MOD="Horse_032.unity3d" level="1" NeedGoods="970016,1" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.01|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="268" GoodsID="970016" Name="宝葫芦坐骑时装" MOD="Horse_032.unity3d" level="2" NeedGoods="970016,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="269" GoodsID="970016" Name="宝葫芦坐骑时装" MOD="Horse_032.unity3d" level="3" NeedGoods="970016,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="270" GoodsID="970016" Name="宝葫芦坐骑时装" MOD="Horse_032.unity3d" level="4" NeedGoods="970016,3" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="271" GoodsID="970016" Name="宝葫芦坐骑时装" MOD="Horse_032.unity3d" level="5" NeedGoods="970016,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="272" GoodsID="970016" Name="宝葫芦坐骑时装" MOD="Horse_032.unity3d" level="6" NeedGoods="970016,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="273" GoodsID="970016" Name="宝葫芦坐骑时装" MOD="Horse_032.unity3d" level="7" NeedGoods="970016,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="274" GoodsID="970016" Name="宝葫芦坐骑时装" MOD="Horse_032.unity3d" level="8" NeedGoods="970016,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="275" GoodsID="970016" Name="宝葫芦坐骑时装" MOD="Horse_032.unity3d" level="9" NeedGoods="970016,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="276" GoodsID="970016" Name="宝葫芦坐骑时装" MOD="Horse_032.unity3d" level="10" NeedGoods="970016,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.04|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  
+  <HorseFashion ID="277" GoodsID="970017" Name="宝葫芦坐骑时装" MOD="Horse_024.unity3d" level="0" NeedGoods="970017,0" ProPerty="MaxLifePercent,0.06|AddAttackInjurePercent,0.01|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="278" GoodsID="970017" Name="宝葫芦坐骑时装" MOD="Horse_024.unity3d" level="1" NeedGoods="970017,1" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.01|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="279" GoodsID="970017" Name="宝葫芦坐骑时装" MOD="Horse_024.unity3d" level="2" NeedGoods="970017,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.01|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="280" GoodsID="970017" Name="宝葫芦坐骑时装" MOD="Horse_024.unity3d" level="3" NeedGoods="970017,2" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.01" Time="-1" />
+  <HorseFashion ID="281" GoodsID="970017" Name="宝葫芦坐骑时装" MOD="Horse_024.unity3d" level="4" NeedGoods="970017,3" ProPerty="MaxLifePercent,0.09|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="282" GoodsID="970017" Name="宝葫芦坐骑时装" MOD="Horse_024.unity3d" level="5" NeedGoods="970017,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.02|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="283" GoodsID="970017" Name="宝葫芦坐骑时装" MOD="Horse_024.unity3d" level="6" NeedGoods="970017,3" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.02|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="284" GoodsID="970017" Name="宝葫芦坐骑时装" MOD="Horse_024.unity3d" level="7" NeedGoods="970017,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.02" Time="-1" />
+  <HorseFashion ID="285" GoodsID="970017" Name="宝葫芦坐骑时装" MOD="Horse_024.unity3d" level="8" NeedGoods="970017,4" ProPerty="MaxLifePercent,0.12|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="286" GoodsID="970017" Name="宝葫芦坐骑时装" MOD="Horse_024.unity3d" level="9" NeedGoods="970017,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.03|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  <HorseFashion ID="287" GoodsID="970017" Name="宝葫芦坐骑时装" MOD="Horse_024.unity3d" level="10" NeedGoods="970017,4" ProPerty="MaxLifePercent,0.15|AddAttackInjurePercent,0.04|DeFatalAttack,0.03|DeDoubleAttack,0.03" Time="-1" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</Config>

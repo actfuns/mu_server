@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <WeaponMaster ID="1" Type="1" Name="泰坦之力" WeaponType1="17" WeaponType2="17" WeaponMasterProps="DeDoubleAttack,0.06" />
+  <WeaponMaster ID="2" Type="1" Name="泰坦之力" WeaponType1="17,11" WeaponType2="18" WeaponMasterProps="ElementInjurePercent,0.06" />
+  <WeaponMaster ID="3" Type="1" Name="泰坦之力" WeaponType1="15" WeaponType2="21" WeaponMasterProps="DoubleAttack,0.06" />
+  <WeaponMaster ID="4" Type="1" Name="泰坦之力" WeaponType1="11" WeaponType2="11" WeaponMasterProps="WeaponEffect,0.4" />
+  <WeaponMaster ID="5" Type="1" Name="泰坦之力" WeaponType1="17,14,13" WeaponType2="-1" WeaponMasterProps="AddAttackPercent,0.08" />
+  <WeaponMaster ID="6" Type="1" Name="泰坦之力" WeaponType1="11,19,12,16" WeaponType2="-1" WeaponMasterProps="AddAttackPercent,0.08" />
+  <WeaponMaster ID="7" Type="2" Name="宙斯之力" WeaponType1="17" WeaponType2="17" WeaponMasterProps="ElementAttackInjurePercent,0.06" />
+  <WeaponMaster ID="8" Type="2" Name="宙斯之力" WeaponType1="17,11" WeaponType2="18" WeaponMasterProps="WeaponEffect,0.55" />
+  <WeaponMaster ID="9" Type="2" Name="宙斯之力" WeaponType1="15" WeaponType2="21" WeaponMasterProps="AddAttackPercent,0.08" />
+  <WeaponMaster ID="10" Type="2" Name="宙斯之力" WeaponType1="11" WeaponType2="11" WeaponMasterProps="DoubleAttack,0.06" />
+  <WeaponMaster ID="11" Type="2" Name="宙斯之力" WeaponType1="17,14,13" WeaponType2="-1" WeaponMasterProps="ElementInjurePercent,0.06" />
+  <WeaponMaster ID="12" Type="2" Name="宙斯之力" WeaponType1="11,19,12,16" WeaponType2="-1" WeaponMasterProps="ElementInjurePercent,0.06" />
+</Config>

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item ID="1" PosX="1450" PosY="3550" BirthRadius="1" />
+  <Item ID="2" PosX="3450" PosY="1550" BirthRadius="1" />
+</Items>

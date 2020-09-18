@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Copy TabID="1" FuBenType="0" Name="骷髅王殿" Preview="100" RewardExplain="5,2|4,2" />
+  <Copy TabID="2" FuBenType="0" Name="仙踪秘境" Preview="200" RewardExplain="5,2|4,2" />
+  <Copy TabID="3" FuBenType="0" Name="冰后大殿" Preview="300" RewardExplain="5,3|4,3" />
+  <Copy TabID="4" FuBenType="0" Name="戈登王殿" Preview="400" RewardExplain="5,3|4,3" />
+  <Copy TabID="5" FuBenType="0" Name="巴洛克王室" Preview="500" RewardExplain="5,4|4,4" />
+  <Copy TabID="6" FuBenType="0" Name="海魔水域" Preview="600" RewardExplain="5,4|4,4" />
+  <Copy TabID="7" FuBenType="0" Name="炽炎窟" Preview="700" RewardExplain="5,5|4,5" />
+  <Copy TabID="8" FuBenType="0" Name="天魔圣殿" Preview="800" RewardExplain="5,5|4,5" />
+  <Copy TabID="9" FuBenType="0" Name="静谧林地" Preview="900" RewardExplain="5,5|4,5" />
+  <Copy TabID="10" FuBenType="0" Name="遗迹海岸" Preview="1000" RewardExplain="5,5|4,5" />
+  <Copy TabID="11" FuBenType="0" Name="能源之心" Preview="1100" RewardExplain="5,5|4,5" />
+  <Copy TabID="12" FuBenType="0" Name="孵化之地" Preview="1200" RewardExplain="5,5|4,5" />
+  <Copy TabID="13" FuBenType="0" Name="藏宝洞穴" Preview="1300" RewardExplain="5,5|4,5" />
+  <Copy TabID="500" FuBenType="2" Name="经验副本" Preview="50000" RewardExplain="1,5" />
+  <Copy TabID="600" FuBenType="3" Name="万魔塔" Preview="10000" RewardExplain="1,5|4,5" />
+  <Copy TabID="501" FuBenType="2" Name="金币副本" Preview="50100" RewardExplain="9,5" />
+  <Copy TabID="700" FuBenType="4" Name="情侣副本" Preview="70000" RewardExplain="5,5|4,5" />
+  <Copy TabID="701" FuBenType="9" Name="卡利玛神庙" Preview="100000" RewardExplain="1,5" />
+  <Copy TabID="800" FuBenType="9" Name="末日审判" Preview="80000" RewardExplain="1,5" />
+  <Copy TabID="801" FuBenType="9" Name="元素试练" Preview="80100" RewardExplain="1,5" />
+  <Copy TabID="802" FuBenType="9" Name="狼魂要塞" Preview="80200" RewardExplain="1,5" />
+  <Copy TabID="803" FuBenType="9" Name="万魔峡谷" Preview="80300" RewardExplain="1,5" />
+</Config>

@@ -10,10 +10,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x020001CE RID: 462
+	
 	public class SpecialActivity : Activity, IEventListener
 	{
-		// Token: 0x060005B8 RID: 1464 RVA: 0x00050278 File Offset: 0x0004E478
+		
 		public void processEvent(EventObject eventObject)
 		{
 			if (eventObject.getEventType() == 36)
@@ -44,7 +44,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060005B9 RID: 1465 RVA: 0x000503A0 File Offset: 0x0004E5A0
+		
 		public void OnMoneyChargeEventOnLine(GameClient client, int addMoney)
 		{
 			int GroupID = this.GenerateSpecActGroupID();
@@ -63,7 +63,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060005BA RID: 1466 RVA: 0x00050440 File Offset: 0x0004E640
+		
 		public void OnMoneyChargeEventOffLine(string userid, int roleid, int addMoney)
 		{
 			int GroupID = this.GenerateSpecActGroupID();
@@ -76,7 +76,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060005BB RID: 1467 RVA: 0x000504A8 File Offset: 0x0004E6A8
+		
 		protected void OnMoneyChargeEvent(string userid, int roleid, int addMoney, string FromActDate, string ToActDate)
 		{
 			string strYuanbaoToJiFen = GameManager.systemParamsList.GetParamValueByName("SpecialChongZhiDuiHuan");
@@ -106,7 +106,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060005BC RID: 1468 RVA: 0x0005058C File Offset: 0x0004E78C
+		
 		public void MoneyConst(GameClient client, int moneyCost)
 		{
 			if (client.ClientData.SpecActInfoDict != null && client.ClientData.SpecActInfoDict.Count != 0)
@@ -134,7 +134,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060005BD RID: 1469 RVA: 0x00050694 File Offset: 0x0004E894
+		
 		public bool CheckIconState(GameClient client)
 		{
 			bool bFlush = false;
@@ -160,14 +160,14 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060005BE RID: 1470 RVA: 0x00050758 File Offset: 0x0004E958
+		
 		public void OnRoleLogin(GameClient client, bool isLogin)
 		{
 			this.GenerateSpecActGroup(client);
 			this.NotifyActivityState(client);
 		}
 
-		// Token: 0x060005BF RID: 1471 RVA: 0x0005076C File Offset: 0x0004E96C
+		
 		public SpecialActivityData GetSpecialActivityDataForClient(GameClient client)
 		{
 			SpecialActivityData mySpecActData = new SpecialActivityData();
@@ -218,7 +218,7 @@ namespace GameServer.Logic.ActivityNew
 			return mySpecActData;
 		}
 
-		// Token: 0x060005C0 RID: 1472 RVA: 0x00050994 File Offset: 0x0004EB94
+		
 		public int SpecActCheckCondition(GameClient client, int ActID, bool CheckCost = true)
 		{
 			SpecActInfoDB mySaveData = null;
@@ -291,7 +291,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060005C1 RID: 1473 RVA: 0x00050BA8 File Offset: 0x0004EDA8
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client, int ActID)
 		{
 			SpecActInfoDB mySaveData = null;
@@ -339,7 +339,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060005C2 RID: 1474 RVA: 0x00050D34 File Offset: 0x0004EF34
+		
 		public int SpecActGiveAward(GameClient client, int ActID)
 		{
 			SpecActInfoDB mySaveData = null;
@@ -417,7 +417,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060005C3 RID: 1475 RVA: 0x00050FC0 File Offset: 0x0004F1C0
+		
 		public string BuildFetchSpecActAwardCmd(GameClient client, int ErrCode, int actID)
 		{
 			int roleID = client.ClientData.RoleID;
@@ -470,7 +470,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060005C4 RID: 1476 RVA: 0x0005114C File Offset: 0x0004F34C
+		
 		private int GenerateSpecActGroupID()
 		{
 			DateTime kaifuTm = Global.GetKaiFuTime();
@@ -489,7 +489,7 @@ namespace GameServer.Logic.ActivityNew
 			return -1;
 		}
 
-		// Token: 0x060005C5 RID: 1477 RVA: 0x0005121C File Offset: 0x0004F41C
+		
 		private int GetCurrentSpecActJiFen(GameClient client, SpecialActivityConfig myActConfig)
 		{
 			SpecialActivityTimeConfig timeConfig = null;
@@ -516,7 +516,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060005C6 RID: 1478 RVA: 0x000512E0 File Offset: 0x0004F4E0
+		
 		private bool SubSpecActJiFen(GameClient client, SpecialActivityConfig myActConfig)
 		{
 			SpecialActivityTimeConfig timeConfig = null;
@@ -550,7 +550,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060005C7 RID: 1479 RVA: 0x000513E4 File Offset: 0x0004F5E4
+		
 		private HashSet<int> GetClientSpecActGroupIDSet(GameClient client)
 		{
 			HashSet<int> groupIDSet = new HashSet<int>();
@@ -570,7 +570,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060005C8 RID: 1480 RVA: 0x0005148C File Offset: 0x0004F68C
+		
 		private int GetClientSpecActGroupID(GameClient client)
 		{
 			int GroupID = -1;
@@ -594,7 +594,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060005C9 RID: 1481 RVA: 0x0005152C File Offset: 0x0004F72C
+		
 		private SpecActInfoDB CreatNewSpecAct(GameClient client, SpecialActivityConfig myActConfig)
 		{
 			SpecActInfoDB SpecActData = new SpecActInfoDB
@@ -613,7 +613,7 @@ namespace GameServer.Logic.ActivityNew
 			return SpecActData;
 		}
 
-		// Token: 0x060005CA RID: 1482 RVA: 0x00051584 File Offset: 0x0004F784
+		
 		private void GenerateSpecActGroup(GameClient client)
 		{
 			int GroupID = this.GenerateSpecActGroupID();
@@ -669,13 +669,13 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060005CB RID: 1483 RVA: 0x00051870 File Offset: 0x0004FA70
+		
 		private bool CheckFirstSecondCondition(int FirstValue, int SecondValue, SpecActLimitData Limit)
 		{
 			return FirstValue >= Limit.MinFirst && (FirstValue != Limit.MinFirst || SecondValue >= Limit.MinSecond) && FirstValue <= Limit.MaxFirst && (FirstValue != Limit.MaxFirst || SecondValue <= Limit.MaxSecond);
 		}
 
-		// Token: 0x060005CC RID: 1484 RVA: 0x000518E0 File Offset: 0x0004FAE0
+		
 		private bool CheckNeedCondition(GameClient client, SpecialActivityConfig myActConfig)
 		{
 			if (myActConfig.LevLimit.IfValid())
@@ -781,7 +781,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x060005CD RID: 1485 RVA: 0x00051D44 File Offset: 0x0004FF44
+		
 		private SpecActGoalData GetCurrentGoalNum(GameClient client, SpecActInfoDB mySaveData, SpecialActivityConfig myActConfig)
 		{
 			SpecActGoalData GoalNum = new SpecActGoalData();
@@ -856,7 +856,7 @@ namespace GameServer.Logic.ActivityNew
 			return GoalNum;
 		}
 
-		// Token: 0x060005CE RID: 1486 RVA: 0x00052020 File Offset: 0x00050220
+		
 		private int CalMyGuardStatueLevel(GameClient client)
 		{
 			GuardStatueData data = client.ClientData.MyGuardStatueDetail.GuardStatue;
@@ -872,14 +872,14 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060005CF RID: 1487 RVA: 0x00052084 File Offset: 0x00050284
+		
 		private void DeleteClientSpecActData(GameClient client, int GroupID = 0)
 		{
 			string strcmd = string.Format("{0}:{1}", client.ClientData.RoleID, GroupID);
 			Global.ExecuteDBCmd(13161, strcmd, client.ServerId);
 		}
 
-		// Token: 0x060005D0 RID: 1488 RVA: 0x000520C8 File Offset: 0x000502C8
+		
 		private void UpdateClientSpecActData(GameClient client, SpecActInfoDB SpecActData)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}:{5}", new object[]
@@ -894,7 +894,7 @@ namespace GameServer.Logic.ActivityNew
 			Global.ExecuteDBCmd(13160, strcmd, client.ServerId);
 		}
 
-		// Token: 0x060005D1 RID: 1489 RVA: 0x00052154 File Offset: 0x00050354
+		
 		public void NotifyActivityState(GameClient client)
 		{
 			bool bNotifyOpen = false;
@@ -935,13 +935,13 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060005D2 RID: 1490 RVA: 0x000522AC File Offset: 0x000504AC
+		
 		public void Dispose()
 		{
 			GlobalEventSource.getInstance().removeListener(36, this);
 		}
 
-		// Token: 0x060005D3 RID: 1491 RVA: 0x000522C0 File Offset: 0x000504C0
+		
 		public bool Init()
 		{
 			try
@@ -970,7 +970,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x060005D4 RID: 1492 RVA: 0x00052374 File Offset: 0x00050574
+		
 		private bool ParseSpecActLimitData(SpecActLimitData LevLimit, string Value)
 		{
 			bool result;
@@ -1020,7 +1020,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060005D5 RID: 1493 RVA: 0x000524A0 File Offset: 0x000506A0
+		
 		private bool ParseSpecActDay(int groupID, string Day, SpecialActivityConfig myData)
 		{
 			SpecialActivityTimeConfig timeConfig = null;
@@ -1059,7 +1059,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060005D6 RID: 1494 RVA: 0x000525CC File Offset: 0x000507CC
+		
 		public bool LoadSpecialActivityData()
 		{
 			try
@@ -1202,7 +1202,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x060005D7 RID: 1495 RVA: 0x00052CDC File Offset: 0x00050EDC
+		
 		public bool LoadSpecialActivityTimeData()
 		{
 			try
@@ -1268,19 +1268,19 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x04000A44 RID: 2628
+		
 		protected const string SpecialChongZhiDuiHuan = "SpecialChongZhiDuiHuan";
 
-		// Token: 0x04000A45 RID: 2629
+		
 		public const string SpecialActivityData_fileName = "Config/SpecialActivity/SpecialActivity.xml";
 
-		// Token: 0x04000A46 RID: 2630
+		
 		public const string SpecialActivityTimeData_fileName = "Config/SpecialActivity/SpecialActivityTime.xml";
 
-		// Token: 0x04000A47 RID: 2631
+		
 		protected Dictionary<int, SpecialActivityTimeConfig> SpecialActTimeDict = new Dictionary<int, SpecialActivityTimeConfig>();
 
-		// Token: 0x04000A48 RID: 2632
+		
 		protected Dictionary<int, SpecialActivityConfig> SpecialActDict = new Dictionary<int, SpecialActivityConfig>();
 	}
 }

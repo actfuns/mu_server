@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <LegionTasks ID="1001" CompleteType="1" TypeID="5090,6090,7090,8090,9090,10090,11090" NumInterval="18" Name="跨服BOSS" Describtion="击杀跨服BOSS{0}次" Exp="20000000" ZhanGong="2000" Item="" Score="10000" />
+  <LegionTasks ID="1002" CompleteType="1" TypeID="5009,5010,5011,6009,6010,6011,7007,7008,7009,8007,8008,8009,9007,9008,9009,10007,10008,10009,11006,11007,11008" NumInterval="240" Name="跨服精英" Describtion="击杀跨服精英{0}次" Exp="20000000" ZhanGong="2000" Item="" Score="10000" />
+  <LegionTasks ID="1003" CompleteType="2" TypeID="39" NumInterval="150" Name="王者荣耀" Describtion="参加王者战场{0}次" Exp="20000000" ZhanGong="2000" Item="" Score="10000" />
+  <LegionTasks ID="1004" CompleteType="2" TypeID="27" NumInterval="150" Name="勇者无敌" Describtion="参加勇者战场{0}次" Exp="20000000" ZhanGong="2000" Item="" Score="10000" />
+  <LegionTasks ID="1005" CompleteType="3" TypeID="0" NumInterval="500" Name="天梯制霸" Describtion="天梯获胜{0}次" Exp="20000000" ZhanGong="2000" Item="" Score="10000" />
+  <LegionTasks ID="1006" CompleteType="1" TypeID="9300000,9300001,9300002,9300003,9300008,9300009,9300010,9300011" NumInterval="10000" Name="领地魔物" Describtion="击杀军团领地怪物{0}次" Exp="20000000" ZhanGong="2000" Item="" Score="10000" />
+  <LegionTasks ID="1007" CompleteType="4" TypeID="43" NumInterval="200" Name="领地清剿" Describtion="军团领地击杀玩家{0}次" Exp="20000000" ZhanGong="2000" Item="" Score="10000" />
+  <LegionTasks ID="1008" CompleteType="5" TypeID="70000,70100,70200,70300" NumInterval="650" Name="跨服副本" Describtion="完成跨服副本{0}次" Exp="20000000" ZhanGong="2000" Item="" Score="10000" />
+  <LegionTasks ID="1009" CompleteType="1" TypeID="5090,6090,7090,8090,9090,10090,11090" NumInterval="30" Name="跨服BOSS（进阶）" Describtion="击杀跨服BOSS{0}次" Exp="20000000" ZhanGong="2000" Item="" Score="10000" />
+  <LegionTasks ID="1010" CompleteType="1" TypeID="5090,6090,7090,8090,9090,10090,11090" NumInterval="42" Name="跨服BOSS（终极）" Describtion="击杀跨服BOSS{0}次" Exp="20000000" ZhanGong="2000" Item="" Score="10000" />
+  <LegionTasks ID="1011" CompleteType="1" TypeID="5009,5010,5011,6009,6010,6011,7007,7008,7009,8007,8008,8009,9007,9008,9009,10007,10008,10009,11006,11007,11008" NumInterval="360" Name="跨服精英（进阶）" Describtion="击杀跨服精英{0}次" Exp="20000000" ZhanGong="2000" Item="" Score="10000" />
+  <LegionTasks ID="1012" CompleteType="1" TypeID="5090,6090,7090,8090,9090,10090,11090" NumInterval="60" Name="跨服BOSS（究极）" Describtion="击杀跨服BOSS{0}次" Exp="20000000" ZhanGong="2000" Item="" Score="10000" />
+  <LegionTasks ID="1013" CompleteType="1" TypeID="5009,5010,5011,6009,6010,6011,7007,7008,7009,8007,8008,8009,9007,9008,9009,10007,10008,10009,11006,11007,11008" NumInterval="720" Name="跨服精英（终极）" Describtion="击杀跨服精英{0}次" Exp="20000000" ZhanGong="2000" Item="" Score="10000" />
+</Config>

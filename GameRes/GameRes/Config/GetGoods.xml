@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <GetGoods ID="1" Name="绑定金币" Goods="64015" />
+  <GetGoods ID="8" Name="金币" Goods="64016" />
+  <GetGoods ID="13" Name="魔晶" Goods="64003" />
+  <GetGoods ID="40" Name="钻石" Goods="64017" />
+  <GetGoods ID="50" Name="绑定钻石" Goods="64018" />
+  <GetGoods ID="95" Name="战功" Goods="64010" />
+  <GetGoods ID="99" Name="狼魂粉末" Goods="64011" />
+  <GetGoods ID="101" Name="再造点数" Goods="64006" />
+  <GetGoods ID="102" Name="荣耀点数" Goods="64008" />
+  <GetGoods ID="103" Name="星魂" Goods="64002" />
+  <GetGoods ID="104" Name="声望" Goods="64001" />
+  <GetGoods ID="105" Name="成就" Goods="64000" />
+  <GetGoods ID="106" Name="灵晶" Goods="64005" />
+  <GetGoods ID="107" Name="元素粉末" Goods="64004" />
+  <GetGoods ID="108" Name="守护点数" Goods="64009" />
+  <GetGoods ID="112" Name="王者点数" Goods="64013" />
+  <GetGoods ID="117" Name="争霸点数" Goods="64012" />
+  <GetGoods ID="119" Name="魅力点数" Goods="64014" />
+  <GetGoods ID="120" Name="神力精华" Goods="64019" />
+</Config>

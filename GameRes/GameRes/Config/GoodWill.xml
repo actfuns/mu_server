@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <GoodWill Type="1" Title="1阶">
+  <GoodWill ID="1" NeedGoodWill="30" />
+  <GoodWill ID="2" NeedGoodWill="40" />
+  <GoodWill ID="3" NeedGoodWill="50" />
+  <GoodWill ID="4" NeedGoodWill="70" />
+  <GoodWill ID="5" NeedGoodWill="90" />
+  <GoodWill ID="6" NeedGoodWill="100" />
+  <GoodWill ID="7" NeedGoodWill="130" />
+  <GoodWill ID="8" NeedGoodWill="150" />
+  <GoodWill ID="9" NeedGoodWill="170" />
+  <GoodWill ID="10" NeedGoodWill="190" />
+  </GoodWill>
+  <GoodWill Type="2" Title="2阶">
+  <GoodWill ID="1" NeedGoodWill="400" />
+  <GoodWill ID="2" NeedGoodWill="230" />
+  <GoodWill ID="3" NeedGoodWill="260" />
+  <GoodWill ID="4" NeedGoodWill="290" />
+  <GoodWill ID="5" NeedGoodWill="330" />
+  <GoodWill ID="6" NeedGoodWill="370" />
+  <GoodWill ID="7" NeedGoodWill="400" />
+  <GoodWill ID="8" NeedGoodWill="450" />
+  <GoodWill ID="9" NeedGoodWill="490" />
+  <GoodWill ID="10" NeedGoodWill="530" />
+  </GoodWill>
+  <GoodWill Type="3" Title="3阶">
+  <GoodWill ID="1" NeedGoodWill="1200" />
+  <GoodWill ID="2" NeedGoodWill="630" />
+  <GoodWill ID="3" NeedGoodWill="680" />
+  <GoodWill ID="4" NeedGoodWill="730" />
+  <GoodWill ID="5" NeedGoodWill="790" />
+  <GoodWill ID="6" NeedGoodWill="850" />
+  <GoodWill ID="7" NeedGoodWill="900" />
+  <GoodWill ID="8" NeedGoodWill="970" />
+  <GoodWill ID="9" NeedGoodWill="1030" />
+  <GoodWill ID="10" NeedGoodWill="1100" />
+  </GoodWill>
+  <GoodWill Type="4" Title="4阶">
+  <GoodWill ID="1" NeedGoodWill="2400" />
+  <GoodWill ID="2" NeedGoodWill="1230" />
+  <GoodWill ID="3" NeedGoodWill="1314" />
+  <GoodWill ID="4" NeedGoodWill="1314" />
+  <GoodWill ID="5" NeedGoodWill="1314" />
+  <GoodWill ID="6" NeedGoodWill="1314" />
+  <GoodWill ID="7" NeedGoodWill="1314" />
+  <GoodWill ID="8" NeedGoodWill="1314" />
+  <GoodWill ID="9" NeedGoodWill="1314" />
+  <GoodWill ID="10" NeedGoodWill="1314" />
+  </GoodWill>
+  <GoodWill Type="5" Title="5阶">
+  <GoodWill ID="1" NeedGoodWill="3399" />
+  <GoodWill ID="2" NeedGoodWill="1314" />
+  <GoodWill ID="3" NeedGoodWill="1314" />
+  <GoodWill ID="4" NeedGoodWill="1314" />
+  <GoodWill ID="5" NeedGoodWill="1314" />
+  <GoodWill ID="6" NeedGoodWill="1314" />
+  <GoodWill ID="7" NeedGoodWill="1314" />
+  <GoodWill ID="8" NeedGoodWill="1314" />
+  <GoodWill ID="9" NeedGoodWill="1314" />
+  <GoodWill ID="10" NeedGoodWill="1314" />
+  </GoodWill>
+  <GoodWill Type="6" Title="6阶">
+  <GoodWill ID="1" NeedGoodWill="3399" />
+  <GoodWill ID="2" NeedGoodWill="1314" />
+  <GoodWill ID="3" NeedGoodWill="1314" />
+  <GoodWill ID="4" NeedGoodWill="1314" />
+  <GoodWill ID="5" NeedGoodWill="1314" />
+  <GoodWill ID="6" NeedGoodWill="1314" />
+  <GoodWill ID="7" NeedGoodWill="1314" />
+  <GoodWill ID="8" NeedGoodWill="1314" />
+  <GoodWill ID="9" NeedGoodWill="1314" />
+  <GoodWill ID="10" NeedGoodWill="1314" />
+  </GoodWill>
+  <GoodWill Type="7" Title="7阶">
+  <GoodWill ID="1" NeedGoodWill="3399" />
+  <GoodWill ID="2" NeedGoodWill="1314" />
+  <GoodWill ID="3" NeedGoodWill="1314" />
+  <GoodWill ID="4" NeedGoodWill="1314" />
+  <GoodWill ID="5" NeedGoodWill="1314" />
+  <GoodWill ID="6" NeedGoodWill="1314" />
+  <GoodWill ID="7" NeedGoodWill="1314" />
+  <GoodWill ID="8" NeedGoodWill="1314" />
+  <GoodWill ID="9" NeedGoodWill="1314" />
+  <GoodWill ID="10" NeedGoodWill="1314" />
+  </GoodWill>
+  <GoodWill Type="8" Title="8阶">
+  <GoodWill ID="1" NeedGoodWill="3399" />
+  <GoodWill ID="2" NeedGoodWill="1314" />
+  <GoodWill ID="3" NeedGoodWill="1314" />
+  <GoodWill ID="4" NeedGoodWill="1314" />
+  <GoodWill ID="5" NeedGoodWill="1314" />
+  <GoodWill ID="6" NeedGoodWill="1314" />
+  <GoodWill ID="7" NeedGoodWill="1314" />
+  <GoodWill ID="8" NeedGoodWill="1314" />
+  <GoodWill ID="9" NeedGoodWill="1314" />
+  <GoodWill ID="10" NeedGoodWill="1314" />
+  </GoodWill>
+  <GoodWill Type="9" Title="9阶">
+  <GoodWill ID="1" NeedGoodWill="3399" />
+  <GoodWill ID="2" NeedGoodWill="1314" />
+  <GoodWill ID="3" NeedGoodWill="1314" />
+  <GoodWill ID="4" NeedGoodWill="1314" />
+  <GoodWill ID="5" NeedGoodWill="1314" />
+  <GoodWill ID="6" NeedGoodWill="1314" />
+  <GoodWill ID="7" NeedGoodWill="1314" />
+  <GoodWill ID="8" NeedGoodWill="1314" />
+  <GoodWill ID="9" NeedGoodWill="1314" />
+  <GoodWill ID="10" NeedGoodWill="1314" />
+  </GoodWill>
+  <GoodWill Type="10" Title="10阶">
+  <GoodWill ID="1" NeedGoodWill="3399" />
+  <GoodWill ID="2" NeedGoodWill="1314" />
+  <GoodWill ID="3" NeedGoodWill="1314" />
+  <GoodWill ID="4" NeedGoodWill="1314" />
+  <GoodWill ID="5" NeedGoodWill="1314" />
+  <GoodWill ID="6" NeedGoodWill="1314" />
+  <GoodWill ID="7" NeedGoodWill="1314" />
+  <GoodWill ID="8" NeedGoodWill="1314" />
+  <GoodWill ID="9" NeedGoodWill="1314" />
+  <GoodWill ID="10" NeedGoodWill="1314" />
+  </GoodWill>
+</Config>

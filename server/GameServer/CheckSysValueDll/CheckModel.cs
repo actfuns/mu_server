@@ -12,10 +12,10 @@ using Microsoft.CSharp.RuntimeBinder;
 
 namespace CheckSysValueDll
 {
-    // Token: 0x020008E9 RID: 2281
+    
     public class CheckModel
     {
-        // Token: 0x060041E2 RID: 16866 RVA: 0x003C3044 File Offset: 0x003C1244
+        
         private static List<SeachData> CopySeachList(List<SeachData> data)
         {
             List<SeachData> tempList = new List<SeachData>();
@@ -23,31 +23,31 @@ namespace CheckSysValueDll
             return tempList;
         }
 
-        // Token: 0x060041E3 RID: 16867 RVA: 0x003C3068 File Offset: 0x003C1268
+        
         private static bool IsIEnumerable(object model)
         {
             return model is IEnumerable<object>;
         }
 
-        // Token: 0x060041E4 RID: 16868 RVA: 0x003C3084 File Offset: 0x003C1284
+        
         private static bool IsList(object model)
         {
             return model.GetType().Name.Equals(typeof(List<object>).Name);
         }
 
-        // Token: 0x060041E5 RID: 16869 RVA: 0x003C30B8 File Offset: 0x003C12B8
+        
         private static bool IsArray(object model)
         {
             return model.GetType().Name.IndexOf("[]") > -1;
         }
 
-        // Token: 0x060041E6 RID: 16870 RVA: 0x003C30E4 File Offset: 0x003C12E4
+        
         private static bool IsDict(object model)
         {
             return typeof(Dictionary<object, object>).Name.Equals(model.GetType().Name);
         }
 
-        // Token: 0x060041E7 RID: 16871 RVA: 0x003C3118 File Offset: 0x003C1318
+        
         public static string Data2Json(object model)
         {
             string strJson = "err";
@@ -70,7 +70,7 @@ namespace CheckSysValueDll
             return strJson;
         }
 
-        // Token: 0x060041E8 RID: 16872 RVA: 0x003C31B0 File Offset: 0x003C13B0
+        
         private static string Data2Json1(object model)
         {
             string strJson = "err";
@@ -86,7 +86,7 @@ namespace CheckSysValueDll
             return strJson;
         }
 
-        // Token: 0x060041E9 RID: 16873 RVA: 0x003C31F8 File Offset: 0x003C13F8
+        
         public static CheckValueResult GetValue(GetValueModel model, Assembly assembly, bool isFirst = false)
         {
             CheckValueResult resultData = new CheckValueResult();
@@ -107,7 +107,7 @@ namespace CheckSysValueDll
             return resultData;
         }
 
-        // Token: 0x060041EA RID: 16874 RVA: 0x003C3294 File Offset: 0x003C1494
+        
         private static bool _comparer(string d1, string d2, SeachValueType type)
         {
             bool result;
@@ -130,7 +130,7 @@ namespace CheckSysValueDll
             return result;
         }
 
-        // Token: 0x060041EB RID: 16875 RVA: 0x003C3310 File Offset: 0x003C1510
+        
         private static bool _canAdd(object data, string[] files, ref CheckValueResult resultData)
         {
             bool result;
@@ -203,7 +203,7 @@ namespace CheckSysValueDll
             return result;
         }
 
-        // Token: 0x060041EC RID: 16876 RVA: 0x003C357C File Offset: 0x003C177C
+        
         private static void _checkList(dynamic objData, ref CheckValueResult resultData, string[] files, string _strResultKey, List<SeachData> SeachList)
         {
             FieldInfo info = objData.GetType().GetField("_items", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
@@ -244,7 +244,7 @@ namespace CheckSysValueDll
             }
         }
 
-        // Token: 0x060041ED RID: 16877 RVA: 0x003C36F0 File Offset: 0x003C18F0
+        
         private static void _checkDict(dynamic objData, ref CheckValueResult resultData, string[] files, string _strResultKey, List<SeachData> SeachList)
         {
             FieldInfo info = objData.GetType().GetField("count", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
@@ -282,7 +282,7 @@ namespace CheckSysValueDll
             }
         }
 
-        // Token: 0x060041EE RID: 16878 RVA: 0x003C3CD4 File Offset: 0x003C1ED4
+        
         private static void _checkEnumerable(object objData, ref CheckValueResult resultData, string[] files, string _strResultKey, List<SeachData> SeachList)
         {
             foreach (object item in (objData as IEnumerable<object>))
@@ -301,13 +301,13 @@ namespace CheckSysValueDll
             }
         }
 
-        // Token: 0x060041EF RID: 16879 RVA: 0x003C3D6C File Offset: 0x003C1F6C
+        
         private static void _checkArray(object objData, ref CheckValueResult resultData, string[] files, string _strResultKey, List<SeachData> SeachList)
         {
             resultData.AddData(CheckModel.Data2Json(objData), _strResultKey);
         }
 
-        // Token: 0x060041F0 RID: 16880 RVA: 0x003C3D80 File Offset: 0x003C1F80
+        
         private static void _getValueData(object objData, List<SeachData> SeachList, string _strResultKey, ref CheckValueResult resultData, bool isFirst = false)
         {
             if (null == objData)

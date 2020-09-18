@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <TianSheng ID="1" MinBorn="1" MaxBorn="30" />
+  <TianSheng ID="2" MinBorn="1" MaxBorn="50" />
+</Config>

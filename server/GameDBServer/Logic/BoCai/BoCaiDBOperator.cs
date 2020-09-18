@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.BoCai
 {
-	// Token: 0x02000119 RID: 281
+	
 	public class BoCaiDBOperator
 	{
-		// Token: 0x060004AE RID: 1198 RVA: 0x000262E4 File Offset: 0x000244E4
+		
 		public static bool ReplaceOpenLottery(OpenLottery data)
 		{
 			int ret = -1;
@@ -39,7 +39,7 @@ namespace GameDBServer.Logic.BoCai
 			return ret > -1;
 		}
 
-		// Token: 0x060004AF RID: 1199 RVA: 0x000263E8 File Offset: 0x000245E8
+		
 		public static long GetMaxData(int BoCaiType)
 		{
 			long ret = -1L;
@@ -80,7 +80,7 @@ namespace GameDBServer.Logic.BoCai
 			return result;
 		}
 
-		// Token: 0x060004B0 RID: 1200 RVA: 0x00026504 File Offset: 0x00024704
+		
 		public static void SelectOpenLottery(int bocaiType, out List<OpenLottery> dList)
 		{
 			MySQLConnection conn = null;
@@ -123,7 +123,7 @@ namespace GameDBServer.Logic.BoCai
 			}
 		}
 
-		// Token: 0x060004B1 RID: 1201 RVA: 0x000266C4 File Offset: 0x000248C4
+		
 		public static bool ReplaceBuyBoCai(BuyBoCai2SDB data)
 		{
 			int ret = -1;
@@ -156,7 +156,7 @@ namespace GameDBServer.Logic.BoCai
 			return ret > -1;
 		}
 
-		// Token: 0x060004B2 RID: 1202 RVA: 0x0002680C File Offset: 0x00024A0C
+		
 		public static void SelectBuyBoCai(int bocaiType, long DataPeriods, out List<BuyBoCai2SDB> dList, bool isNoSend)
 		{
 			MySQLConnection conn = null;
@@ -211,7 +211,7 @@ namespace GameDBServer.Logic.BoCai
 			}
 		}
 
-		// Token: 0x060004B3 RID: 1203 RVA: 0x00026A64 File Offset: 0x00024C64
+		
 		public static bool ReplaceBoCaiShop(BoCaiShopDB data)
 		{
 			int ret = -1;
@@ -237,7 +237,7 @@ namespace GameDBServer.Logic.BoCai
 			return ret > -1;
 		}
 
-		// Token: 0x060004B4 RID: 1204 RVA: 0x00026B40 File Offset: 0x00024D40
+		
 		public static void SelectBoCaiShop(string Periods, out List<BoCaiShopDB> dList)
 		{
 			dList = null;
@@ -266,7 +266,7 @@ namespace GameDBServer.Logic.BoCai
 			}
 		}
 
-		// Token: 0x060004B5 RID: 1205 RVA: 0x00026C6C File Offset: 0x00024E6C
+		
 		public static bool DelData(string table, string Sql)
 		{
 			int ret = -1;

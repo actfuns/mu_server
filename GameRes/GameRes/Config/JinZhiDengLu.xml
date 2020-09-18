@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <JinDeng ID="1" Description="您的账号存在{ff0000}异常情况{ffffff}，不能登录，如有疑问请联系客服{17e43f}QQ:4009933199{ffffff}咨询！"/>
+  <JinDeng ID="2" Description="您的账号为{ff0000}黑名单账户{ffffff}，不能登录，如有疑问请联系客服{17e43f}QQ:4009933199{ffffff}咨询！"/>
+  <JinDeng ID="3" Description="您的账号处于{ff0000}封号状态{ffffff}，不能登录，如有疑问请联系客服{17e43f}QQ:4009933199{ffffff}咨询！"/>
+  <JinDeng ID="4" Description="您的账号已被{ff0000}永久封停{ffffff}，不能登录，如有疑问请联系客服{17e43f}QQ:4009933199{ffffff}咨询！"/>
+</config>

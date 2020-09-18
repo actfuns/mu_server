@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BossList>
+  <Boss Type="0" ID="190" Level="0,20" Description="" NpcID="-1" ZhanLi="2000" GoodsList="9999001|1005091|1015091|1025591|20814|20899|50055" Scale="1.1" Show="0" />
+  <Boss Type="0" ID="290" Level="0,45" Description="" NpcID="-1" ZhanLi="7200" GoodsList="9999001|1005091|1015091|1025591|20814|20899|50055" Scale="0.8" Show="0" />
+  <Boss Type="0" ID="390" Level="0,70" Description="" NpcID="-1" ZhanLi="22000" GoodsList="9999001|1005091|1015091|1025591|20814|20899|50055" Scale="0.9" Show="0" />
+  <Boss Type="0" ID="490" Level="0,100" Description="" NpcID="-1" ZhanLi="36000" GoodsList="9999001|1005091|1015091|1025591|20814|20899|50055" Scale="0.8" Show="0" />
+  <Boss Type="0" ID="590" Level="1,100" Description="" NpcID="-1" ZhanLi="49000" GoodsList="9999001|1005091|1015091|1025591|20814|20899|50055" Scale="0.9" Show="0" />
+  <Boss Type="0" ID="690" Level="2,100" Description="" NpcID="-1" ZhanLi="130000" GoodsList="9999001|1005091|1015091|1025591|20814|20899|50055" Scale="0.5" Show="0" />
+  <Boss Type="0" ID="791" Level="3,100" Description="" NpcID="-1" ZhanLi="230000" GoodsList="9999001|1005092|1015092|1025592|20815|20899|50056" Scale="1.1" Show="0" />
+  <Boss Type="0" ID="890" Level="4,100" Description="" NpcID="-1" ZhanLi="390000" GoodsList="9999001|1005092|1015092|1025592|20815|20899|50056" Scale="0.8" Show="0" />
+  <Boss Type="0" ID="990" Level="5,100" Description="" NpcID="-1" ZhanLi="680000" GoodsList="9999001|1005092|1015092|1025592|20815|20899|50056" Scale="1" Show="0" />
+  <Boss Type="0" ID="1090" Level="6,100" Description="" NpcID="-1" ZhanLi="1090000" GoodsList="9999001|1005092|1015092|1025592|20815|20899|50056" Scale="0.6" Show="0" />
+  <Boss Type="0" ID="2090" Level="7,100" Description="" NpcID="-1" ZhanLi="1650000" GoodsList="9999001|1005092|1015092|1025592|20815|20899|50056" Scale="1" Show="0" />
+  <Boss Type="0" ID="3090" Level="8,100" Description="" NpcID="-1" ZhanLi="2310000" GoodsList="9999001|1005092|1015092|1025592|20815|20899|50056" Scale="0.8" Show="0" />
+  <Boss Type="0" ID="4090" Level="9,100" Description="" NpcID="-1" ZhanLi="2750000" GoodsList="9999001|1005092|1015092|1025592|20815|20899|50056" Scale="0.8" Show="0" />
+  <Boss Type="0" ID="5090" Level="10,1" Description="" NpcID="-1" ZhanLi="3250000" GoodsList="9999002|1005093|1015093|1025593|20816|20899|50056" Scale="0.5" Show="1" />
+  <Boss Type="0" ID="6090" Level="11,1" Description="" NpcID="-1" ZhanLi="3900000" GoodsList="9999002|1005093|1015093|1025593|20816|20899|50056" Scale="0.6" Show="1" />
+  <Boss Type="0" ID="7090" Level="12,1" Description="" NpcID="-1" ZhanLi="4200000" GoodsList="9999002|1005093|1015093|1025593|20816|20899|50056" Scale="0.6" Show="1" />
+  <Boss Type="0" ID="8090" Level="13,1" Description="" NpcID="-1" ZhanLi="5800000" GoodsList="9999002|1005094|1015093|1025593|20817|20899|50056" Scale="0.45" Show="1" />
+  <Boss Type="0" ID="9090" Level="14,1" Description="" NpcID="-1" ZhanLi="8000000" GoodsList="9999002|1005094|1015093|1025593|20817|20899|50056" Scale="1" Show="1" />
+  <Boss Type="0" ID="10090" Level="15,1" Description="" NpcID="-1" ZhanLi="16000000" GoodsList="9999002|1005094|1015093|1025593|20817|20899|50056" Scale="0.8" Show="1" />
+  <Boss Type="0" ID="11090" Level="16,1" Description="" NpcID="-1" ZhanLi="18000000" GoodsList="9999002|1005094|1015093|1025593|20817|20899|50056" Scale="0.5" Show="1" />
+</BossList>

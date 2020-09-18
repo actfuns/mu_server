@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Item ID="1" Show="1" Path="Scene/Non-Barrier/ZuDang_luolanchengzhan_guangmu_6" Pos="2352,58,-877" ZuDang="3822_4309,4295_4309" Description="" />
+  <Item ID="2" Show="1" Path="Scene/Non-Barrier/ZuDang_luolanchengzhan_guangmu_7" Pos="3434,23,-869" ZuDang="5500_4316,6277_4316" Description="" />
+  <Item ID="3" Show="1" Path="Scene/Non-Barrier/ZuDang_luolanchengzhan_guangmu_8" Pos="5981,56,-864" ZuDang="7456_4322,7927_4322" Description="" />
+  <Item ID="4" Show="1" Path="Scene/Non-Barrier/ZuDang_luolanchengzhan_guangmu_1" Pos="285,-79,-3429" ZuDang="5034_1751,6768_1751" Description="" />
+  <Item ID="5" Show="1" Path="Scene/Non-Barrier/ZuDang_luolanchengzhan_guangmu_2" Pos="-1322,-79,-3429" ZuDang="3243_1751,4874_1751" Description="" />
+  <Item ID="6" Show="1" Path="Scene/Non-Barrier/ZuDang_luolanchengzhan_guangmu_3" Pos="2595,-79,-3429" ZuDang="6920_1751,8507_1751" Description="" />
+  <Item ID="7" Show="1" Path="Scene/Non-Barrier/ZuDang_luolanchengzhan_guangmu_4" Pos="2039,565,4858" ZuDang="3507_10043,4020_10043" Description="" />
+  <Item ID="8" Show="1" Path="Scene/Non-Barrier/ZuDang_luolanchengzhan_guangmu_5" Pos="6318,565,4858" ZuDang="7773_10043,8282_10043" Description="" />
+</Config>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="25" />
+  <GiftList Title="为战而生" Description="合服后5天内战场双倍奖励，野外经验双倍！">
+  <Award ActivitiesIDs="3|4" Override="2" SpecialTimeID="3"/>
+  </GiftList>
+</Config>

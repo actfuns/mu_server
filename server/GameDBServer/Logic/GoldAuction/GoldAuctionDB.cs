@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.GoldAuction
 {
-	// Token: 0x0200013D RID: 317
+	
 	public class GoldAuctionDB
 	{
-		// Token: 0x06000545 RID: 1349 RVA: 0x0002C090 File Offset: 0x0002A290
+		
 		public static bool Insert(GoldAuctionDBItem Item)
 		{
 			int ret = -1;
@@ -50,7 +50,7 @@ namespace GameDBServer.Logic.GoldAuction
 			return ret > -1;
 		}
 
-		// Token: 0x06000546 RID: 1350 RVA: 0x0002C228 File Offset: 0x0002A428
+		
 		public static bool Update(GoldAuctionDBItem Item)
 		{
 			int ret = -1;
@@ -85,7 +85,7 @@ namespace GameDBServer.Logic.GoldAuction
 			return ret > -1;
 		}
 
-		// Token: 0x06000547 RID: 1351 RVA: 0x0002C35C File Offset: 0x0002A55C
+		
 		public static bool DelData(string Sql)
 		{
 			int ret = -1;
@@ -110,7 +110,7 @@ namespace GameDBServer.Logic.GoldAuction
 			return ret > -1;
 		}
 
-		// Token: 0x06000548 RID: 1352 RVA: 0x0002C418 File Offset: 0x0002A618
+		
 		public static bool Select(out List<GoldAuctionDBItem> dList, int type)
 		{
 			MySQLConnection conn = null;
@@ -176,7 +176,7 @@ namespace GameDBServer.Logic.GoldAuction
 			return true;
 		}
 
-		// Token: 0x04000808 RID: 2056
+		
 		private const string strTime = "yyyy-MM-dd HH:mm:ss";
 	}
 }

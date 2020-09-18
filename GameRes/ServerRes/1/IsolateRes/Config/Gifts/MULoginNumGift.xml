@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Item ID="1" LoginTime="1" ShowGoods="2001,2002,50018,4000,5051" FallID="1001000" />
+  <Item ID="2" LoginTime="2" ShowGoods="2002,2000,4042,2016,5052" FallID="1001001" />
+  <Item ID="3" LoginTime="3" ShowGoods="2000,2004,2003,2002,5053" FallID="1001002" />
+  <Item ID="4" LoginTime="4" ShowGoods="2017,2000,2001,2016,2003" FallID="1001003" />
+  <Item ID="5" LoginTime="5" ShowGoods="5057,5030,2002,2016,2002" FallID="1001004" />
+  <Item ID="6" LoginTime="6" ShowGoods="5040,2004,2001,2016,2004" FallID="1001005" />
+  <Item ID="7" LoginTime="7" ShowGoods="5030,2002,4000,2016,2002" FallID="1001006" />
+</Config>

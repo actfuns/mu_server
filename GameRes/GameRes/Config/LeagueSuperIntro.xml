@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}活动规则" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、每周六、日 {17e43e}20:30-21:00{dac7ae}，每赛季共七轮" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、拥有黄金超级联赛资格的战盟可参加，{17e43e}无需报名" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、超级黄金联赛为{17e43e}循环赛{dac7ae}，每个赛季两个战盟只能相遇1次" Bold="0" />
+  <HelpIntro ID="5" Intro="{fac60d}排名规则" Bold="1" />
+  <HelpIntro ID="6" Intro="{dac7ae}1、根据{17e43e}胜场数{dac7ae}排名，胜场数相同则按相互间{17e43e}胜负关系{dac7ae}排名" Bold="0" />
+  <HelpIntro ID="7" Intro="{dac7ae}2、排名靠后的两个战盟将{ff0000}降级{dac7ae}，无法参加下赛季的超级黄金联赛" Bold="0" />
+  <HelpIntro ID="8" Intro="{dac7ae}3、赛季结束可领取{17e43e}赛季奖励" Bold="0" />
+</Config>

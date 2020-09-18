@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Pet ID="1030901" Name="小恶魔" Habitus="1" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1030902" Name="小天使" Habitus="1" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1030903" Name="强化恶魔" Habitus="1" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1030904" Name="强化天使" Habitus="1" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1030905" Name="角鹰" Habitus="1.8" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1030906" Name="女妖" Habitus="1.4" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1030907" Name="灵龙" Habitus="1.5" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1030908" Name="骨龙" Habitus="1.3" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1030909" Name="远祖" Habitus="1.6" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1030910" Name="燃蹄" Habitus="1.3" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1030911" Name="圣华" Habitus="1.3" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1030912" Name="星辰" Habitus="1.2" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1030913" Name="霜华" Habitus="1.2" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1030914" Name="雷泽" Habitus="1.3" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1030915" Name="天灼" Habitus="1.2" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1030916" Name="仓焰" Habitus="1.5" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1031001" Name="小熊猫" Habitus="0.8" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1031002" Name="黄金幼龙" Habitus="0.6" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1031003" Name="灵灵狗" Habitus="0.8" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1031004" Name="人鱼" Habitus="0.8" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1031005" Name="烈火金刚" Habitus="0.6" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1031006" Name="雪狼之灵" Habitus="1" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1031007" Name="金猴" Habitus="1" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1031008" Name="萌萌雪" Habitus="1.5" XPoint="0" YPoint="166" ZPoint="0" />
+  <Pet ID="1031009" Name="鸡蛋宝宝" Habitus="1" XPoint="0" YPoint="166" ZPoint="0" />
+  <Pet ID="1031010" Name="驯鹿宝宝" Habitus="1.5" XPoint="0" YPoint="166" ZPoint="0" />
+  <Pet ID="1031011" Name="灵魂收割者" Habitus="1" XPoint="0" YPoint="166" ZPoint="0" />
+  <Pet ID="1031012" Name="魔王巴洛克" Habitus="1" XPoint="0" YPoint="166" ZPoint="0" />
+  <Pet ID="1031013" Name="冰后" Habitus="1" XPoint="0" YPoint="166" ZPoint="0" />
+  <Pet ID="1031014" Name="骷髅王" Habitus="1" XPoint="0" YPoint="166" ZPoint="0" />
+  <Pet ID="1031015" Name="海魔希特拉" Habitus="1" XPoint="0" YPoint="166" ZPoint="0" />
+  <Pet ID="1031016" Name="魔王扎坎" Habitus="1" XPoint="0" YPoint="166" ZPoint="0" />
+  <Pet ID="1031017" Name="青龙" Habitus="1" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1031018" Name="白虎" Habitus="1" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1031019" Name="朱雀" Habitus="1" XPoint="0" YPoint="139" ZPoint="0" />
+  <Pet ID="1031020" Name="玄武" Habitus="1" XPoint="0" YPoint="139" ZPoint="0" />
+</Config>

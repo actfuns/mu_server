@@ -7,35 +7,35 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000171 RID: 369
+	
 	public class HuiJiManager : SingletonTemplate<HuiJiManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x0600067C RID: 1660 RVA: 0x0003B938 File Offset: 0x00039B38
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x0600067D RID: 1661 RVA: 0x0003B94C File Offset: 0x00039B4C
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(1446, SingletonTemplate<HuiJiManager>.Instance());
 			return true;
 		}
 
-		// Token: 0x0600067E RID: 1662 RVA: 0x0003B974 File Offset: 0x00039B74
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x0600067F RID: 1663 RVA: 0x0003B988 File Offset: 0x00039B88
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000680 RID: 1664 RVA: 0x0003B99C File Offset: 0x00039B9C
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			if (nID == 1446)
@@ -44,7 +44,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000681 RID: 1665 RVA: 0x0003B9C8 File Offset: 0x00039BC8
+		
 		private void ProcessHuiJiLevelStarUpCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			int ret = 0;
@@ -70,7 +70,7 @@ namespace GameDBServer.Logic
 			client.sendCmd(nID, string.Format("{0}", ret));
 		}
 
-		// Token: 0x0400089C RID: 2204
+		
 		private object Mutex = new object();
 	}
 }

@@ -7,22 +7,22 @@ using Server.Tools;
 
 namespace GameDBServer.Server.CmdProcessor
 {
-	// Token: 0x020001FE RID: 510
+	
 	public class ZhanMengBuildUpLevelCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x06000A8A RID: 2698 RVA: 0x00064CE4 File Offset: 0x00062EE4
+		
 		private ZhanMengBuildUpLevelCmdProcessor()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(601, this);
 		}
 
-		// Token: 0x06000A8B RID: 2699 RVA: 0x00064D00 File Offset: 0x00062F00
+		
 		public static ZhanMengBuildUpLevelCmdProcessor getInstance()
 		{
 			return ZhanMengBuildUpLevelCmdProcessor.instance;
 		}
 
-		// Token: 0x06000A8C RID: 2700 RVA: 0x00064D18 File Offset: 0x00062F18
+		
 		private bool CheckHaveUpGradeItem(string strReqItem, DBManager dbMgr, int nBangHuiID, int nRoleID, int nToLevel)
 		{
 			BangHuiBagData dataBangHuiBag = DBQuery.QueryBangHuiBagDataByID(dbMgr, nBangHuiID);
@@ -75,7 +75,7 @@ namespace GameDBServer.Server.CmdProcessor
 			return result;
 		}
 
-		// Token: 0x06000A8D RID: 2701 RVA: 0x00064E58 File Offset: 0x00063058
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			string cmdData = null;
@@ -230,7 +230,7 @@ namespace GameDBServer.Server.CmdProcessor
 			}
 		}
 
-		// Token: 0x04000C6D RID: 3181
+		
 		private static ZhanMengBuildUpLevelCmdProcessor instance = new ZhanMengBuildUpLevelCmdProcessor();
 	}
 }

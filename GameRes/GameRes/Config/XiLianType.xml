@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <XiLian ID="1" Color="白色" ShuXingNum="4" Text="无卓越属性" Multiplying="0" />
+  <XiLian ID="2" Color="绿色" ShuXingNum="4" Text="1-2条卓越属性" Multiplying="3" />
+  <XiLian ID="3" Color="蓝色" ShuXingNum="4" Text="3-4条卓越属性" Multiplying="4" />
+  <XiLian ID="4" Color="紫色" ShuXingNum="4" Text="5-6条卓越属性" Multiplying="5" />
+  <XiLian ID="5" Color="橙色" ShuXingNum="4" Text="7条以上卓越属性" Multiplying="6" />
+</Config>

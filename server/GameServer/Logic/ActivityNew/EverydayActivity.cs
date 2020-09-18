@@ -11,10 +11,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x0200003E RID: 62
+	
 	public class EverydayActivity : Activity, IEventListener
 	{
-		// Token: 0x06000087 RID: 135 RVA: 0x00009184 File Offset: 0x00007384
+		
 		public void processEvent(EventObject eventObject)
 		{
 			if (eventObject.getEventType() == 36)
@@ -42,7 +42,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x06000088 RID: 136 RVA: 0x00009294 File Offset: 0x00007494
+		
 		public void OnMoneyChargeEvent(string userid, int roleid, int addMoney)
 		{
 			string strYuanbaoToJiFen = GameManager.systemParamsList.GetParamValueByName("EveryDayChongZhiDuiHuan");
@@ -75,7 +75,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x06000089 RID: 137 RVA: 0x000093D8 File Offset: 0x000075D8
+		
 		public bool CheckValidChargeItem(int zhigouID)
 		{
 			List<EverydayActGroupInfoDB> ActGroupInfoList = null;
@@ -105,7 +105,7 @@ namespace GameServer.Logic.ActivityNew
 			return false;
 		}
 
-		// Token: 0x0600008A RID: 138 RVA: 0x0000951C File Offset: 0x0000771C
+		
 		public void MoneyConst(GameClient client, int moneyCost)
 		{
 			if (client.ClientData.EverydayActInfoDict != null && client.ClientData.EverydayActInfoDict.Count != 0)
@@ -130,7 +130,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x0600008B RID: 139 RVA: 0x00009614 File Offset: 0x00007814
+		
 		public bool CheckIconState(GameClient client)
 		{
 			bool bFlush = false;
@@ -156,14 +156,14 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0600008C RID: 140 RVA: 0x000096D8 File Offset: 0x000078D8
+		
 		public void OnRoleLogin(GameClient client)
 		{
 			this.GenerateEverydayActivity(client);
 			this.NotifyActivityState(client);
 		}
 
-		// Token: 0x0600008D RID: 141 RVA: 0x000096EC File Offset: 0x000078EC
+		
 		public EverydayActivityData GetEverydayActivityDataForClient(GameClient client)
 		{
 			EverydayActivityData myActData = new EverydayActivityData();
@@ -219,7 +219,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0600008E RID: 142 RVA: 0x0000990C File Offset: 0x00007B0C
+		
 		public int EverydayActCheckCondition(GameClient client, int ActID, bool CheckCost = true)
 		{
 			EverydayActInfoDB mySaveData = null;
@@ -280,7 +280,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0600008F RID: 143 RVA: 0x00009AC8 File Offset: 0x00007CC8
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client, int ActID)
 		{
 			EverydayActInfoDB mySaveData = null;
@@ -324,7 +324,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000090 RID: 144 RVA: 0x00009C3C File Offset: 0x00007E3C
+		
 		public int EverydayActGiveAward(GameClient client, int ActID)
 		{
 			EverydayActInfoDB mySaveData = null;
@@ -382,7 +382,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000091 RID: 145 RVA: 0x00009DD0 File Offset: 0x00007FD0
+		
 		public string BuildFetchEverydayActAwardCmd(GameClient client, int ErrCode, int actID)
 		{
 			int roleID = client.ClientData.RoleID;
@@ -435,7 +435,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000092 RID: 146 RVA: 0x00009F5C File Offset: 0x0000815C
+		
 		public void NotifyActivityState(GameClient client)
 		{
 			bool bNotifyOpen = false;
@@ -469,7 +469,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x06000093 RID: 147 RVA: 0x0000A058 File Offset: 0x00008258
+		
 		public void ShowActiveConditionInfoGM(GameClient client)
 		{
 			for (int loop = 0; loop < 23; loop++)
@@ -531,7 +531,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x06000094 RID: 148 RVA: 0x0000A394 File Offset: 0x00008594
+		
 		public void CacheNeedCondition(EverydayActNeedType type, PaiHangData paiHangData)
 		{
 			EveryActActiveData myActiveData = new EveryActActiveData();
@@ -594,7 +594,7 @@ namespace GameServer.Logic.ActivityNew
 			this.ActiveConditionDict[(int)type] = myActiveData;
 		}
 
-		// Token: 0x06000095 RID: 149 RVA: 0x0000A634 File Offset: 0x00008834
+		
 		private bool CheckNeedCondition(EverydayActivityGroupConfig myActGroupConfig)
 		{
 			EveryActActiveData myActiveData = null;
@@ -605,14 +605,14 @@ namespace GameServer.Logic.ActivityNew
 			return this.CheckFirstSecondCondition((int)myActiveData.NumOne, (int)myActiveData.NumTwo, myActGroupConfig.NeedNum);
 		}
 
-		// Token: 0x06000096 RID: 150 RVA: 0x0000A6B4 File Offset: 0x000088B4
+		
 		private void CleanUpActGroupInfo(List<EverydayActGroupInfoDB> ActGroupInfoList, int CleanDayNum)
 		{
 			int NowDay = Global.GetOffsetDay(TimeUtil.NowDateTime());
 			ActGroupInfoList.RemoveAll((EverydayActGroupInfoDB x) => NowDay - x.ActiveDay > CleanDayNum);
 		}
 
-		// Token: 0x06000097 RID: 151 RVA: 0x0000A6F4 File Offset: 0x000088F4
+		
 		private List<EverydayActGroupInfoDB> GetCurrentActGroupInfo()
 		{
 			List<EverydayActGroupInfoDB> ActGroupInfoList = new List<EverydayActGroupInfoDB>();
@@ -643,7 +643,7 @@ namespace GameServer.Logic.ActivityNew
 			return ActGroupInfoList;
 		}
 
-		// Token: 0x06000098 RID: 152 RVA: 0x0000A7D4 File Offset: 0x000089D4
+		
 		private void SaveCurrentActGroupInfo(List<EverydayActGroupInfoDB> ActGroupInfoList)
 		{
 			string strResult = "";
@@ -659,7 +659,7 @@ namespace GameServer.Logic.ActivityNew
 			Global.UpdateDBGameConfigg("everydayact", strResult);
 		}
 
-		// Token: 0x06000099 RID: 153 RVA: 0x0000A8FC File Offset: 0x00008AFC
+		
 		private List<int> FilterValidGroupIDList(List<int> GroupIDList, int TypeID)
 		{
 			List<int> copyGroupIDList = new List<int>(GroupIDList);
@@ -671,7 +671,7 @@ namespace GameServer.Logic.ActivityNew
 			return copyGroupIDList;
 		}
 
-		// Token: 0x0600009A RID: 154 RVA: 0x0000A9E4 File Offset: 0x00008BE4
+		
 		private HashSet<int> FilterValidTypeIDSet(HashSet<int> TypeIDSet, List<EverydayActGroupInfoDB> ActGroupInfoList)
 		{
 			HashSet<int> copyTypeIDSet = new HashSet<int>(TypeIDSet);
@@ -695,7 +695,7 @@ namespace GameServer.Logic.ActivityNew
 			return copyTypeIDSet;
 		}
 
-		// Token: 0x0600009B RID: 155 RVA: 0x0000AA28 File Offset: 0x00008C28
+		
 		private void GenerateEverydayActGroupID(List<EverydayActGroupInfoDB> ActGroupInfoList)
 		{
 			int NowDay = Global.GetOffsetDay(TimeUtil.NowDateTime());
@@ -783,7 +783,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x0600009C RID: 156 RVA: 0x0000ADA8 File Offset: 0x00008FA8
+		
 		private void GenerateEverydayActivity(GameClient client)
 		{
 			if (this.PlatformOpenStateVavle == 1 && !client.ClientSocket.IsKuaFuLogin)
@@ -864,7 +864,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x0600009D RID: 157 RVA: 0x0000B1EC File Offset: 0x000093EC
+		
 		private EverydayActNeedType ConvertPaiHangTypesToActNeedType(PaiHangTypes type)
 		{
 			EverydayActNeedType NeedType = EverydayActNeedType.EANT_Null;
@@ -904,14 +904,14 @@ namespace GameServer.Logic.ActivityNew
 			return NeedType;
 		}
 
-		// Token: 0x0600009E RID: 158 RVA: 0x0000B284 File Offset: 0x00009484
+		
 		private void DeleteClientEverydayActData(GameClient client, int GroupID, int ActID = 0)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}", client.ClientData.RoleID, GroupID, ActID);
 			Global.ExecuteDBCmd(13171, strcmd, client.ServerId);
 		}
 
-		// Token: 0x0600009F RID: 159 RVA: 0x0000B2CC File Offset: 0x000094CC
+		
 		private void UpdateClientEverydayActData(GameClient client, EverydayActInfoDB EverydayActData)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}:{5}", new object[]
@@ -926,7 +926,7 @@ namespace GameServer.Logic.ActivityNew
 			Global.ExecuteDBCmd(13170, strcmd, client.ServerId);
 		}
 
-		// Token: 0x060000A0 RID: 160 RVA: 0x0000B358 File Offset: 0x00009558
+		
 		private bool CheckFirstSecondCondition(int FirstValue, int SecondValue, EveryActLimitData Limit)
 		{
 			if (Limit.MinFirst != -1)
@@ -946,7 +946,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x060000A1 RID: 161 RVA: 0x0000B3F8 File Offset: 0x000095F8
+		
 		private int CalMyGuardStatueLevel(GameClient client)
 		{
 			GuardStatueData data = client.ClientData.MyGuardStatueDetail.GuardStatue;
@@ -962,7 +962,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060000A2 RID: 162 RVA: 0x0000B45C File Offset: 0x0000965C
+		
 		private int GetCurrentEverydayActJiFen(GameClient client, EverydayActivityConfig myActConfig)
 		{
 			DateTime nowDateTime = TimeUtil.NowDateTime();
@@ -982,7 +982,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060000A3 RID: 163 RVA: 0x0000B538 File Offset: 0x00009738
+		
 		private bool SubEverydayActJiFen(GameClient client, EverydayActivityConfig myActConfig)
 		{
 			DateTime nowDateTime = TimeUtil.NowDateTime();
@@ -1009,7 +1009,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060000A4 RID: 164 RVA: 0x0000B658 File Offset: 0x00009858
+		
 		private EveryActGoalData GetCurrentGoalNum(GameClient client, EverydayActInfoDB mySaveData, EverydayActivityConfig myActConfig)
 		{
 			EveryActGoalData GoalNum = new EveryActGoalData();
@@ -1084,13 +1084,13 @@ namespace GameServer.Logic.ActivityNew
 			return GoalNum;
 		}
 
-		// Token: 0x060000A5 RID: 165 RVA: 0x0000B934 File Offset: 0x00009B34
+		
 		public void Dispose()
 		{
 			GlobalEventSource.getInstance().removeListener(36, this);
 		}
 
-		// Token: 0x060000A6 RID: 166 RVA: 0x0000B948 File Offset: 0x00009B48
+		
 		public bool Init()
 		{
 			try
@@ -1145,7 +1145,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x060000A7 RID: 167 RVA: 0x0000BAE8 File Offset: 0x00009CE8
+		
 		private void CheckEverydayConfigFileLogic()
 		{
 			foreach (EverydayActivityGroupConfig groupItem in this.ActivityGroupConfigDict.Values)
@@ -1166,7 +1166,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060000A8 RID: 168 RVA: 0x0000BC1C File Offset: 0x00009E1C
+		
 		private bool ParseEverydayActLimitData(EveryActLimitData LevLimit, string Value)
 		{
 			bool result;
@@ -1216,7 +1216,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060000A9 RID: 169 RVA: 0x0000BD48 File Offset: 0x00009F48
+		
 		public bool LoadEverydayActivityTypeData()
 		{
 			try
@@ -1266,7 +1266,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x060000AA RID: 170 RVA: 0x0000BF38 File Offset: 0x0000A138
+		
 		public bool LoadEverydayActivityGroupData()
 		{
 			try
@@ -1314,7 +1314,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x060000AB RID: 171 RVA: 0x0000C12C File Offset: 0x0000A32C
+		
 		public bool LoadEverydayActivityData()
 		{
 			try
@@ -1408,40 +1408,40 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x04000146 RID: 326
+		
 		protected const string EveryDayChongZhiDuiHuan = "EveryDayChongZhiDuiHuan";
 
-		// Token: 0x04000147 RID: 327
+		
 		protected const string EveryDayActivityOpen = "EveryDayActivityOpen";
 
-		// Token: 0x04000148 RID: 328
+		
 		public const string EverydayActivityTypeData_fileName = "Config/EveryDayActivity/EveryDayActivityType.xml";
 
-		// Token: 0x04000149 RID: 329
+		
 		public const string EverydayActivityGroupData_fileName = "Config/EveryDayActivity/EveryDayActivityGroup.xml";
 
-		// Token: 0x0400014A RID: 330
+		
 		public const string EverydayActivityData_fileName = "Config/EveryDayActivity/EveryDayActivity.xml";
 
-		// Token: 0x0400014B RID: 331
+		
 		public const int MaxActiveConditionDataNum = 100;
 
-		// Token: 0x0400014C RID: 332
+		
 		public object Mutex = new object();
 
-		// Token: 0x0400014D RID: 333
+		
 		protected int PlatformOpenStateVavle = 0;
 
-		// Token: 0x0400014E RID: 334
+		
 		protected Dictionary<int, EverydayActivityTypeConfig> ActivityTypeConfigDict = new Dictionary<int, EverydayActivityTypeConfig>();
 
-		// Token: 0x0400014F RID: 335
+		
 		protected Dictionary<int, EverydayActivityGroupConfig> ActivityGroupConfigDict = new Dictionary<int, EverydayActivityGroupConfig>();
 
-		// Token: 0x04000150 RID: 336
+		
 		protected Dictionary<int, EverydayActivityConfig> ActivityConfigDict = new Dictionary<int, EverydayActivityConfig>();
 
-		// Token: 0x04000151 RID: 337
+		
 		protected Dictionary<int, EveryActActiveData> ActiveConditionDict = new Dictionary<int, EveryActActiveData>();
 	}
 }

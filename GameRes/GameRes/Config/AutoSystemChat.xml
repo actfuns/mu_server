@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Item ID="1" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="2" MaxLevel="100" Content="提示：挑战剧情副本可获得各种晶石和装备" />
+  <Item ID="2" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="2" MaxLevel="100" Content="提示：挂机时可点击角色头顶的状态文字，打开挂机设置页面" />
+  <Item ID="3" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="2" MaxLevel="100" Content="提示：冥想修炼可自动储存最大12小时的经验，支持离线" />
+  <Item ID="4" MinZhuanSheng="0" MinLevel="5" MaxZhuanSheng="2" MaxLevel="100" Content="提示：升级技能可提高技能效果" />
+  <Item ID="5" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="2" MaxLevel="100" Content="提示：激活成就称号可永久增加角色战斗力" />
+  <Item ID="6" MinZhuanSheng="0" MinLevel="11" MaxZhuanSheng="2" MaxLevel="100" Content="提示：提升翅膀星级与等阶，可大幅提高战斗力" />
+  <Item ID="7" MinZhuanSheng="0" MinLevel="61" MaxZhuanSheng="2" MaxLevel="100" Content="提示：强化可为装备带来华丽的流光效果与属性提升" />
+  <Item ID="8" MinZhuanSheng="0" MinLevel="85" MaxZhuanSheng="2" MaxLevel="100" Content="提示：祈福可获得大量强力装备与海量珍贵道具" />
+  <Item ID="9" MinZhuanSheng="0" MinLevel="85" MaxZhuanSheng="100" MaxLevel="100" Content="提示：每36小时可免费祈福一次" />
+  <Item ID="10" MinZhuanSheng="0" MinLevel="88" MaxZhuanSheng="2" MaxLevel="100" Content="提示：激活星座可为角色永久增加战斗力" />
+  <Item ID="11" MinZhuanSheng="1" MinLevel="50" MaxZhuanSheng="2" MaxLevel="100" Content="提示：完成日常任务可获得大量经验与星魂" />
+  <Item ID="12" MinZhuanSheng="1" MinLevel="44" MaxZhuanSheng="2" MaxLevel="100" Content="提示：追加可为装备带来额外的附加属性" />
+  <Item ID="13" MinZhuanSheng="1" MinLevel="61" MaxZhuanSheng="2" MaxLevel="100" Content="提示：激活竞技军衔可永久提升角色战斗力" />
+  <Item ID="14" MinZhuanSheng="1" MinLevel="67" MaxZhuanSheng="2" MaxLevel="100" Content="提示：挑战经验副本可轻松获得大量经验" />
+  <Item ID="15" MinZhuanSheng="1" MinLevel="72" MaxZhuanSheng="2" MaxLevel="100" Content="提示：击杀金币副本中搬运金币的怪物可掉落大量绑金" />
+  <Item ID="16" MinZhuanSheng="1" MinLevel="90" MaxZhuanSheng="100" MaxLevel="100" Content="提示：召集队友挑战组队副本，创造晶石等你拿" />
+  <Item ID="17" MinZhuanSheng="1" MinLevel="93" MaxZhuanSheng="100" MaxLevel="100" Content="提示：挑战万魔塔是获得羽毛、神鹰火种的主要途径" />
+  <Item ID="18" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：主线地图每隔30分钟会刷新精英怪物" />
+  <Item ID="19" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="2" MaxLevel="100" Content="提示：按住技能框向外滑动可执行技能切换操作" />
+  <Item ID="20" MinZhuanSheng="0" MinLevel="90" MaxZhuanSheng="2" MaxLevel="100" Content="提示：等级达到100级可到勇者大陆[转生·雷萨德]处进行转生" />
+  <Item ID="21" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="2" MaxLevel="100" Content="提示：勇者大陆的老板娘莱雅会出售【生命药剂】与【法力药剂】" />
+  <Item ID="22" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：你可以在【角色】-【货币】页面查看所有货币值与消耗途径" />
+  <Item ID="23" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：世界BOSS与活动BOSS会掉落不绑定的装备" />
+  <Item ID="24" MinZhuanSheng="1" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：交易市场中成功出售物品会收取5%的交易税" />
+  <Item ID="25" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：将不需要的装备回收为魔晶，可以兑换其他珍贵道具" />
+  <Item ID="26" MinZhuanSheng="2" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：经验印章在古战场中使用会事半功倍" />
+  <Item ID="27" MinZhuanSheng="1" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：账号内拥有任意一个3转1级的角色就可以创建魔剑士角色了" />
+  <Item ID="28" MinZhuanSheng="1" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：魔剑士不仅拥有自己的专属装备，还可以穿戴剑士、魔法师的装备" />
+  <Item ID="29" MinZhuanSheng="2" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：魔剑士可以佩戴两把单手杖" />
+  <Item ID="30" MinZhuanSheng="2" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：魔剑士可通过分配力量、智力属性高低，成为力量魔剑士或智力魔剑士" />
+  <Item ID="31" MinZhuanSheng="2" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：魔剑士佩戴物理伤害武器时只能选择力量魔剑士技能" />
+  <Item ID="32" MinZhuanSheng="2" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：魔剑士佩戴魔法伤害武器时只能选择智力魔剑士技能" />
+  <Item ID="33" MinZhuanSheng="3" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：定情信物增加的属性只有在角色已婚时生效" />
+  <Item ID="34" MinZhuanSheng="3" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：培养定情信物不仅可提高自身属性，信物的30%属性还会增加给伴侣" />
+  <Item ID="35" MinZhuanSheng="3" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：结婚后每日可在婚姻页面中挑战情侣副本获取鲜花" />
+  <Item ID="36" MinZhuanSheng="3" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：结婚后可摆放婚宴，婚宴结束后会将收取的金币转换为奉献度" />
+  <Item ID="37" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：入库精灵的等级、天赋达到指定要求可激活特殊加成增加额外属性" />
+  <Item ID="38" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：购买月卡后可连续30天每天领取珍贵奖励" />
+  <Item ID="39" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：成就达到【讨伐者】后可开启成就符文系统" />
+  <Item ID="40" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：军衔达到【军士】后可开启军衔勋章系统" />
+  <Item ID="41" MinZhuanSheng="3" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" Content="提示：跨服活动幻影寺院，每天前1次胜利可获得30倍奖励" />
+</Config>

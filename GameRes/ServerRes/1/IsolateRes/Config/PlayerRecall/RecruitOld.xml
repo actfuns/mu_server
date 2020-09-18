@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <RecruitOld ID="1" MinLevel="3,0" MinVip="" RecruitNum="8" Description="召回8个3转以上玩家" GoodsID1="50160,15,1,0,0,0,0|5200,30,1,0,0,0,0|5110,20,1,0,0,0,0|5171,10,1,0,0,0,0|5150,3,1,0,0,0,0" GoodsID2="" />
+  <RecruitOld ID="2" MinLevel="" MinVip="2" RecruitNum="5" Description="召回5个VIP2以上玩家" GoodsID1="50160,15,1,0,0,0,0|5160,20,1,0,0,0,0|5120,30,1,0,0,0,0|7050,40,1,0,0,0,0|5141,30,1,0,0,0,0" GoodsID2="" />
+  <RecruitOld ID="3" MinLevel="5,0" MinVip="" RecruitNum="5" Description="召回5个5转以上玩家" GoodsID1="50160,20,1,0,0,0,0|5200,40,1,0,0,0,0|5110,25,1,0,0,0,0|5171,15,1,0,0,0,0|5150,4,1,0,0,0,0" GoodsID2="" />
+  <RecruitOld ID="4" MinLevel="" MinVip="4" RecruitNum="4" Description="召回4个VIP4以上玩家" GoodsID1="50160,20,1,0,0,0,0|5160,30,1,0,0,0,0|5120,40,1,0,0,0,0|7050,60,1,0,0,0,0|5141,40,1,0,0,0,0" GoodsID2="" />
+  <RecruitOld ID="5" MinLevel="7,0" MinVip="" RecruitNum="3" Description="召回3个7转以上玩家" GoodsID1="50160,25,1,0,0,0,0|5200,50,1,0,0,0,0|5110,30,1,0,0,0,0|5171,20,1,0,0,0,0|5150,5,1,0,0,0,0" GoodsID2="" />
+  <RecruitOld ID="6" MinLevel="" MinVip="6" RecruitNum="3" Description="召回3个VIP6以上玩家" GoodsID1="50160,25,1,0,0,0,0|5160,40,1,0,0,0,0|5120,50,1,0,0,0,0|7050,80,1,0,0,0,0|5141,50,1,0,0,0,0" GoodsID2="" />
+</Config>

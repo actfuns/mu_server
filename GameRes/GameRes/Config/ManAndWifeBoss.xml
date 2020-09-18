@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <BOSS ID="1" MonsterID="8000000" Need="1" GoodsID="2000808" />
+  <BOSS ID="2" MonsterID="8000001" Need="2" GoodsID="2000808" />
+</Config>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+  <Waiting>
+    <Item Code="0" Name="旋转等待" Interval="100" EndFrame="14" BodyWidth="128" BodyHeight="128" CenterX="64" CenterY="64"/>
+  </Waiting>
+</Config>

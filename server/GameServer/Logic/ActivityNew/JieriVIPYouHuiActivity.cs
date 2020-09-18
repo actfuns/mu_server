@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x02000044 RID: 68
+	
 	public class JieriVIPYouHuiActivity : Activity
 	{
-		// Token: 0x060000C8 RID: 200 RVA: 0x0000E710 File Offset: 0x0000C910
+		
 		public bool Init()
 		{
 			try
@@ -81,7 +81,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x060000C9 RID: 201 RVA: 0x0000EA08 File Offset: 0x0000CC08
+		
 		public int GetSinglePurchase(GameClient client, int extTag)
 		{
 			string[] strlist = null;
@@ -114,7 +114,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060000CA RID: 202 RVA: 0x0000EAD4 File Offset: 0x0000CCD4
+		
 		public int GetFullPurchase(GameClient client, int extTag)
 		{
 			string[] strlist = null;
@@ -148,7 +148,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060000CB RID: 203 RVA: 0x0000EBC8 File Offset: 0x0000CDC8
+		
 		protected void UpdateSinglePurchase(GameClient client, int extTag)
 		{
 			string strs = Global.GetRoleParamByName(client, "35");
@@ -198,7 +198,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060000CC RID: 204 RVA: 0x0000ED1C File Offset: 0x0000CF1C
+		
 		protected void UpdateFullPurchase(GameClient client, int extTag)
 		{
 			string strs = GameManager.GameConfigMgr.GetGameConfigItemStr("vip_fullpurchase", "");
@@ -249,7 +249,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060000CD RID: 205 RVA: 0x0000EE88 File Offset: 0x0000D088
+		
 		public string BuildQueryVIPYouHuiActivityCmd(GameClient client)
 		{
 			this.GetFullPurchase(client, 0);
@@ -275,7 +275,7 @@ namespace GameServer.Logic.ActivityNew
 			return retstring;
 		}
 
-		// Token: 0x060000CE RID: 206 RVA: 0x0000EF70 File Offset: 0x0000D170
+		
 		public override bool CheckCondition(GameClient client, int extTag)
 		{
 			bool result;
@@ -291,7 +291,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060000CF RID: 207 RVA: 0x0000F028 File Offset: 0x0000D228
+		
 		public override bool GiveAward(GameClient client, int _params)
 		{
 			bool result;
@@ -330,7 +330,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060000D0 RID: 208 RVA: 0x0000F114 File Offset: 0x0000D314
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client, int id)
 		{
 			JieriVIPYouHuiActivityConfig configData = null;
@@ -366,7 +366,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060000D1 RID: 209 RVA: 0x0000F25C File Offset: 0x0000D45C
+		
 		public bool CanGetAnyAward(GameClient client)
 		{
 			foreach (KeyValuePair<int, JieriVIPYouHuiActivityConfig> item in this.VIPYouHuiCofigDict)
@@ -379,10 +379,10 @@ namespace GameServer.Logic.ActivityNew
 			return false;
 		}
 
-		// Token: 0x0400017A RID: 378
+		
 		public const string VIPYouHuiActivityData_fileName = "Config/JieRiGifts/VIPYouHuiLiBao.xml";
 
-		// Token: 0x0400017B RID: 379
+		
 		protected Dictionary<int, JieriVIPYouHuiActivityConfig> VIPYouHuiCofigDict = new Dictionary<int, JieriVIPYouHuiActivityConfig>();
 	}
 }

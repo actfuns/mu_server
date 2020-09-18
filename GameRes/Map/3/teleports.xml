@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+      <Teleports>
+	<Teleport Code="197" FrameNum="13" Tip="勇者大陆" Key="10"  To="1" ToX="4650" ToY="17950" ToDirection="7" X="2350" Y="1050" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+	<Teleport Code="197" FrameNum="13" Tip="失落之塔" Key="11"  To="5" ToX="5050" ToY="7750" ToDirection="7" X="14750" Y="14450" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+	<Teleport Code="197" FrameNum="13" Tip="冰霜之城" Key="12"  To="30" ToX="13039" ToY="10260" ToDirection="4" X="9150" Y="15250" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+      </Teleports>
+</Map>

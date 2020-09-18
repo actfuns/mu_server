@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <LegionTasks ID="1" Title="PK之王" Describtion="PK之王活动中，存活到最后才可以获得的称号，该称号象征着极强的战斗力" BuffID="39" IconCode="SpecialTitle_01.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="2" Title="众神之王" Describtion="全服三十二强通过层层筛选，最终决出的最强王者，该称号代表着世界顶点的实力" BuffID="111" IconCode="SpecialTitle_02.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="3" Title="圣域城主" Describtion="能打到圣域10级城池的盟主都是圣域中的传说" BuffID="10013" IconCode="SpecialTitle_03.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="4" Title="圣域贵族" Describtion="圣域贵族是一群帮助传说称霸圣域的人" BuffID="103" IconCode="SpecialTitle_04.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="5" Title="罗兰城主" Describtion="经受了黑暗之潮的考验，在罗兰城战中最终获胜的盟主，才会获得如此荣耀的称号" BuffID="10012" IconCode="SpecialTitle_05.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="6" Title="罗兰贵族" Describtion="他们齐心协力在罗兰城战中获得了最终的胜利" BuffID="10011" IconCode="SpecialTitle_06.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="7" Title="地宫领主" Describtion="带领着军团征服阿卡伦西战场的勇者" BuffID="10010" IconCode="SpecialTitle_07.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="8" Title="地宫臣民" Describtion="拥有这个称号的人预示着你在阿卡伦地宫中将会高人一等" BuffID="10009" IconCode="SpecialTitle_08.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="9" Title="荒漠领主" Describtion="带领着军团征服阿卡伦东战场的勇者" BuffID="10008" IconCode="SpecialTitle_09.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="10" Title="荒漠臣民" Describtion="拥有这个称号的人预示着你在阿卡伦荒漠中将会高人一等" BuffID="10007" IconCode="SpecialTitle_10.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="11" Title="黄金霸主" Describtion="带领战盟勇夺超级黄金联赛冠军的王者，站在战盟联赛顶端的帝王！" BuffID="10001" IconCode="SpecialTitle_11.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="12" Title="黄金贵族" Describtion="众志成城，披荆斩棘，将战盟的荣誉推向巅峰的勇者！" BuffID="10002" IconCode="SpecialTitle_12.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="13" Title="新星盟主" Describtion="带领战盟勇夺潜力新星赛冠军的强者，下一代天选之人正摩拳擦掌！" BuffID="10003" IconCode="SpecialTitle_13.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="14" Title="新星贵族" Describtion="奋勇拼搏，无所畏惧，为战盟的未来绽放所有的斗士！" BuffID="10004" IconCode="SpecialTitle_14.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="15" Title="蛮荒霸主" Describtion="弱肉强势，优胜劣汰，只有站在顶点，才能享受最美的风景！" BuffID="10020" IconCode="SpecialTitle_15.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="16" Title="蛮荒贵族" Describtion="弱肉强势，优胜劣汰，只有站在顶点，才能享受最美的风景！" BuffID="10022" IconCode="SpecialTitle_16.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="17" Title="掠夺先锋" Describtion="潜藏危险，充满挑战，荒蛮战场正是绽放热血的舞台！" BuffID="10023" IconCode="SpecialTitle_17.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="18" Title="屠魔勇士" Describtion="再强的魔物也只能成为屠魔勇士的猎物" BuffID="9000" IconCode="SpecialTitle_18.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="19" Title="屠魔勇士" Describtion="再强的魔物也只能成为屠魔勇士的猎物" BuffID="9001" IconCode="SpecialTitle_19.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="20" Title="屠魔勇士" Describtion="再强的魔物也只能成为屠魔勇士的猎物" BuffID="9002" IconCode="SpecialTitle_20.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="21" Title="教团大领主" Describtion="神圣教团的掌舵人，神圣力量所垂青的王者，必将带领教团走向巅峰！" BuffID="9003" IconCode="SpecialTitle_21.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="22" Title="教团元帅" Describtion="神圣教团的元帅，神圣之力永远祝福您，赞美您的丰功伟绩！" BuffID="9004" IconCode="SpecialTitle_22.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="23" Title="教团督军" Describtion="神圣教团的督军，神圣之力永远祝福您，赞美您的丰功伟绩！" BuffID="9005" IconCode="SpecialTitle_23.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="24" Title="同盟大领主" Describtion="自由同盟的掌舵人，自由信仰为指引的王者，必将带领同盟走向巅峰！" BuffID="9006" IconCode="SpecialTitle_24.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="25" Title="同盟元帅" Describtion="自由同盟的元帅，自由的信仰永不妥协，您的道路必将被传颂！" BuffID="9007" IconCode="SpecialTitle_25.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="26" Title="同盟督军" Describtion="自由同盟的督军，自由的信仰永不妥协，您的道路必将被传颂！" BuffID="9008" IconCode="SpecialTitle_26.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="27" Title="协会大领主" Describtion="织梦协会的掌舵人，神秘梦境所庇佑的王者，必将带领协会走向巅峰！" BuffID="9009" IconCode="SpecialTitle_27.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="28" Title="协会元帅" Describtion="织梦协会的元帅，梦想的执剑人，您的身影永远在人们的梦中！" BuffID="9010" IconCode="SpecialTitle_28.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="29" Title="协会督军" Describtion="织梦协会的督军，梦想的执剑人，您的身影永远在人们的梦中！" BuffID="9011" IconCode="SpecialTitle_29.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="30" Title="最强战队" Describtion="魔域战斗，最强战队，神魔大陆的主宰！" BuffID="9051" IconCode="SpecialTitle_30.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="31" Title="魔域王者" Describtion="魔域勇者，奋勇杀敌，宝藏猎人！" BuffID="9052" IconCode="SpecialTitle_31.png" GoodsID="-1" KaiGuan="0" />
+  <LegionTasks ID="32" Title="荣耀之王" Describtion="王者争霸，冠军荣耀！" BuffID="20001" IconCode="SpecialTitle_32.png" GoodsID="710954" KaiGuan="1" />
+</Config>

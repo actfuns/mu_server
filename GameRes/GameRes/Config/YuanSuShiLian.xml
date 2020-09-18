@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <YuanSuShiLian ID="1" Num="5" MonstersID="8201000|8201001|8201002" UpOne="60" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="2" Num="10" MonstersID="8202000|8202001|8202002|8202003" UpOne="60" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="3" Num="15" MonstersID="8203000|8203001|8203002|8203003|8203004" UpOne="60" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="4" Num="5" MonstersID="8201001|8201002|8201003" UpOne="60" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="5" Num="10" MonstersID="8202001|8202002|8202003|8202004" UpOne="60" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="6" Num="15" MonstersID="8203001|8203002|8203003|8203004|8203005" UpOne="50" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="7" Num="5" MonstersID="8201002|8201003|8201004" UpOne="50" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="8" Num="10" MonstersID="8202002|8202003|8202004|8202005" UpOne="50" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="9" Num="15" MonstersID="8203002|8203003|8203004|8203005|8203006" UpOne="50" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="10" Num="5" MonstersID="8201003|8201004|8201005" UpOne="50" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="11" Num="10" MonstersID="8202003|8202004|8202005|8202006" UpOne="40" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="12" Num="15" MonstersID="8203003|8203004|8203005|8203006|8203007" UpOne="40" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="13" Num="5" MonstersID="8201004|8201005|8201006" UpOne="40" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="14" Num="10" MonstersID="8202004|8202005|8202006|8202007" UpOne="40" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="15" Num="15" MonstersID="8203004|8203005|8203006|8203007|8203008" UpOne="40" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="16" Num="5" MonstersID="8201005|8201006|8201007" UpOne="30" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="17" Num="10" MonstersID="8202005|8202006|8202007|8202008" UpOne="30" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="18" Num="15" MonstersID="8203005|8203006|8203007|8203008|8203009" UpOne="30" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="19" Num="5" MonstersID="8201006|8201007|8201008" UpOne="30" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="20" Num="10" MonstersID="8202006|8202007|8202008|8202009" UpOne="30" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="21" Num="15" MonstersID="8203006|8203007|8203008|8203009|8203010" UpOne="30" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="22" Num="5" MonstersID="8201007|8201008|8201009" UpOne="30" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="23" Num="10" MonstersID="8202007|8202008|8202009|8202010" UpOne="30" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="24" Num="15" MonstersID="8203007|8203008|8203009|8203010|8203011" UpOne="30" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="25" Num="5" MonstersID="8201008|8201009|8201010" UpOne="30" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="26" Num="10" MonstersID="8202008|8202009|8202010|8202011" UpOne="30" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="27" Num="15" MonstersID="8203008|8203009|8203010|8203011|8203012" UpOne="30" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="28" Num="5" MonstersID="8201009|8201010|8201011" UpOne="30" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="29" Num="10" MonstersID="8202009|8202010|8202011|8202012" UpOne="30" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+  <YuanSuShiLian ID="30" Num="15" MonstersID="8203009|8203010|8203011|8203012|8203013" UpOne="30" UpTwo="20" UpThree="15" UpFour="10" X="2150" Y="2250" Radius="800" />
+</Config>

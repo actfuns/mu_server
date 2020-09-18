@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CoupleDuanWei ID="1" Type="1" Level="1" NeedCoupleDuanWeiJiFen="0" WinJiFen="200" LoseJiFen="0" WeekRongYaoNum="10" WinRongYu="200" LoseRongYu="140" UpLevelNeedJiFen="520" />
+  <CoupleDuanWei ID="2" Type="2" Level="1" NeedCoupleDuanWeiJiFen="520" WinJiFen="200" LoseJiFen="-60" WeekRongYaoNum="10" WinRongYu="200" LoseRongYu="140" UpLevelNeedJiFen="1314" />
+  <CoupleDuanWei ID="3" Type="3" Level="1" NeedCoupleDuanWeiJiFen="1314" WinJiFen="200" LoseJiFen="-80" WeekRongYaoNum="10" WinRongYu="200" LoseRongYu="140" UpLevelNeedJiFen="2627" />
+  <CoupleDuanWei ID="4" Type="4" Level="1" NeedCoupleDuanWeiJiFen="2627" WinJiFen="200" LoseJiFen="-100" WeekRongYaoNum="10" WinRongYu="200" LoseRongYu="140" UpLevelNeedJiFen="4980" />
+  <CoupleDuanWei ID="5" Type="5" Level="1" NeedCoupleDuanWeiJiFen="4980" WinJiFen="200" LoseJiFen="-120" WeekRongYaoNum="10" WinRongYu="200" LoseRongYu="140" UpLevelNeedJiFen="7731" />
+  <CoupleDuanWei ID="6" Type="6" Level="1" NeedCoupleDuanWeiJiFen="7731" WinJiFen="200" LoseJiFen="-140" WeekRongYaoNum="10" WinRongYu="200" LoseRongYu="140" UpLevelNeedJiFen="9999" />
+  <CoupleDuanWei ID="7" Type="7" Level="1" NeedCoupleDuanWeiJiFen="9999" WinJiFen="200" LoseJiFen="-160" WeekRongYaoNum="10" WinRongYu="200" LoseRongYu="140" UpLevelNeedJiFen="999999" />
+</Config>

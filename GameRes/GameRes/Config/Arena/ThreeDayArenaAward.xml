@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Goods MinRank="1" MaxRank="50" Exp="1000" Reputation="1000" GoodsID="" />
+  <Goods MinRank="51" MaxRank="100" Exp="1000" Reputation="1000" GoodsID="" />
+  <Goods MinRank="101" MaxRank="200" Exp="1000" Reputation="1000" GoodsID="" />
+  <Goods MinRank="201" MaxRank="300" Exp="1000" Reputation="1000" GoodsID="" />
+  <Goods MinRank="301" MaxRank="400" Exp="1000" Reputation="1000" GoodsID="" />
+  <Goods MinRank="401" MaxRank="500" Exp="1000" Reputation="1000" GoodsID="" />
+  <Goods MinRank="501" MaxRank="600" Exp="1000" Reputation="1000" GoodsID="" />
+  <Goods MinRank="601" MaxRank="700" Exp="1000" Reputation="1000" GoodsID="" />
+  <Goods MinRank="701" MaxRank="800" Exp="1000" Reputation="1000" GoodsID="" />
+  <Goods MinRank="801" MaxRank="900" Exp="1000" Reputation="1000" GoodsID="" />
+  <Goods MinRank="901" MaxRank="1000" Exp="1000" Reputation="1000" GoodsID="" />
+  <Goods MinRank="1001" MaxRank="-1" Exp="1000" Reputation="1000" GoodsID="" />
+</Config>

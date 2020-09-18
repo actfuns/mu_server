@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <WanMoXiaGu ID="1" MonstersID="9640001|9640002|9640003" MonstersNum="3" BeginNum="1" EndNum="16667" Props="IncreasePhyDefense,3" Intro="恢复生命，物防x3倍" RecoverTime="1" RecoverNum="99200" Site="2650,2650|1450,2250|2250,1450" Decorations="15166" />
+  <WanMoXiaGu ID="2" MonstersID="9640004|9640005|9640006" MonstersNum="3" BeginNum="16668" EndNum="33334" Props="IncreaseMagDefense,3" Intro="恢复生命，魔防x3倍" RecoverTime="1" RecoverNum="99200" Site="2650,2650|1450,2250|2250,1450" Decorations="15167" />
+  <WanMoXiaGu ID="3" MonstersID="9640007|9640008|9640009" MonstersNum="3" BeginNum="33335" EndNum="50001" Props="IncreasePhyDefense,5" Intro="恢复生命，物防x5倍" RecoverTime="1" RecoverNum="198400" Site="2650,2650|1450,2250|2250,1450" Decorations="15166" />
+  <WanMoXiaGu ID="4" MonstersID="9640010|9640011|9640012" MonstersNum="3" BeginNum="50002" EndNum="66668" Props="IncreaseMagDefense,5" Intro="恢复生命，魔防x5倍" RecoverTime="1" RecoverNum="198400" Site="2650,2650|1450,2250|2250,1450" Decorations="15167" />
+  <WanMoXiaGu ID="5" MonstersID="9640013|9640014|9640015" MonstersNum="3" BeginNum="66669" EndNum="83335" Props="IncreasePhyAttack,10" Intro="恢复生命，伤害x10倍" RecoverTime="1" RecoverNum="297600" Site="2650,2650|1450,2250|2250,1450" Decorations="15168" />
+  <WanMoXiaGu ID="6" MonstersID="9640016|9640017|9640018" MonstersNum="3" BeginNum="83336" EndNum="100000" Props="IncreasePhyAttack,10" Intro="恢复生命，伤害x10倍" RecoverTime="1" RecoverNum="297600" Site="2650,2650|1450,2250|2250,1450" Decorations="15169" />
+</Config>

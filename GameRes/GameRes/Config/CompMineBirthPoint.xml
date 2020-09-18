@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <BirthPoint ID="1" MapCode="87000" JiaoTuanBirth="1450|650|5" MengJunBirth="2250|7850|5" XieHuiBirth="7850|2250|5" />
+  <BirthPoint ID="2" MapCode="87001" JiaoTuanBirth="7850|2250|5" MengJunBirth="1450|650|5" XieHuiBirth="2250|7850|5" />
+  <BirthPoint ID="3" MapCode="87002" JiaoTuanBirth="2250|7850|5" MengJunBirth="7850|2250|5" XieHuiBirth="1450|650|5" />
+</Config>

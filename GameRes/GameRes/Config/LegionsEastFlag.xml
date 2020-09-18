@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <LegionsEastFlag ID="1" Name="激昂战意" MonsterID="9500000" Site="7750|8250" BeginTime="200" RefreshCD="10" CollectTime="5" HandInNum="100" HoldTme="120" Icon="2080012" Decorations="613" />
+</Config>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="62" FromDate="2018-02-28 00:00:00" ToDate="2018-03-05 23:59:59" AwardStartDate="2018-02-28 00:00:00" AwardEndDate="2018-03-05 23:59:59" />
+  <GiftList Description="活动期间，已婚用户的奉献度达到指定要求即可领取丰厚奖励！">
+    <Award ID="1" GoodWillSuit="5" GoodsOne="5270,10,1,0,0,0,0|5041,2,1,0,0,0,0|50160,3,1,0,0,0,0|63064,4,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="2" GoodWillSuit="6" GoodsOne="5270,15,1,0,0,0,0|5041,2,1,0,0,0,0|50160,4,1,0,0,0,0|63064,6,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="3" GoodWillSuit="7" GoodsOne="5270,20,1,0,0,0,0|5041,3,1,0,0,0,0|50160,5,1,0,0,0,0|63064,8,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="4" GoodWillSuit="8" GoodsOne="5270,25,1,0,0,0,0|5041,4,1,0,0,0,0|50160,6,1,0,0,0,0|2005,6,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="5" GoodWillSuit="9" GoodsOne="63124,1,1,0,0,0,0|5041,5,1,0,0,0,0|50160,8,1,0,0,0,0|2005,8,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  </GiftList>
+</Config>

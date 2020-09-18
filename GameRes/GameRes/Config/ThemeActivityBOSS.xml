@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ThemeActivityBOSS ID="1" MonstersID="9710000" MaxLevel="7|100" ZhanLi="1090000" GoodsList="90021,1,0,0,0,0,0|90022,1,0,0,0,0,0|90023,1,0,0,0,0,0" Scale="1.1" MapCode="1" X="9450" Y="4750" Radius="10" Num="1" TimePoints="12:00-13:00|18:00-19:00" />
+  <ThemeActivityBOSS ID="2" MonstersID="9710001" MaxLevel="8|100" ZhanLi="1650000" GoodsList="90024,1,0,0,0,0,0|90025,1,0,0,0,0,0|90026,1,0,0,0,0,0" Scale="0.8" MapCode="1" X="9450" Y="4750" Radius="10" Num="1" TimePoints="12:00-13:00|18:00-19:00" />
+  <ThemeActivityBOSS ID="3" MonstersID="9710002" MaxLevel="9|100" ZhanLi="2310000" GoodsList="90024,1,0,0,0,0,0|90025,1,0,0,0,0,0|90026,1,0,0,0,0,0" Scale="0.9" MapCode="1" X="9450" Y="4750" Radius="10" Num="1" TimePoints="12:00-13:00|18:00-19:00" />
+  <ThemeActivityBOSS ID="4" MonstersID="9710003" MaxLevel="10|100" ZhanLi="2750000" GoodsList="90024,1,0,0,0,0,0|90025,1,0,0,0,0,0|90026,1,0,0,0,0,0" Scale="0.8" MapCode="1" X="9450" Y="4750" Radius="10" Num="1" TimePoints="12:00-13:00|18:00-19:00" />
+  <ThemeActivityBOSS ID="5" MonstersID="9710004" MaxLevel="11|100" ZhanLi="3250000" GoodsList="90024,1,0,0,0,0,0|90025,1,0,0,0,0,0|90026,1,0,0,0,0,0" Scale="0.9" MapCode="1" X="9450" Y="4750" Radius="10" Num="1" TimePoints="12:00-13:00|18:00-19:00" />
+  <ThemeActivityBOSS ID="6" MonstersID="9710005" MaxLevel="12|100" ZhanLi="3900000" GoodsList="90024,1,0,0,0,0,0|90025,1,0,0,0,0,0|90026,1,0,0,0,0,0" Scale="1.1" MapCode="1" X="9450" Y="4750" Radius="10" Num="1" TimePoints="12:00-13:00|18:00-19:00" />
+  <ThemeActivityBOSS ID="7" MonstersID="9710006" MaxLevel="13|100" ZhanLi="4200000" GoodsList="90024,1,0,0,0,0,0|90025,1,0,0,0,0,0|90026,1,0,0,0,0,0" Scale="0.8" MapCode="1" X="9450" Y="4750" Radius="10" Num="1" TimePoints="12:00-13:00|18:00-19:00" />
+  <ThemeActivityBOSS ID="8" MonstersID="9710007" MaxLevel="14|100" ZhanLi="5800000" GoodsList="90024,1,0,0,0,0,0|90025,1,0,0,0,0,0|90026,1,0,0,0,0,0" Scale="1" MapCode="1" X="9450" Y="4750" Radius="10" Num="1" TimePoints="12:00-13:00|18:00-19:00" />
+  <ThemeActivityBOSS ID="9" MonstersID="9710008" MaxLevel="100|100" ZhanLi="8000000" GoodsList="90024,1,0,0,0,0,0|90025,1,0,0,0,0,0|90026,1,0,0,0,0,0" Scale="0.6" MapCode="1" X="9450" Y="4750" Radius="10" Num="1" TimePoints="12:00-13:00|18:00-19:00" />
+</Config>

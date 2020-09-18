@@ -9,10 +9,10 @@ using Tmsk.Contract.Data;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x020001C1 RID: 449
+	
 	public class JieriPlatChargeKing : Activity
 	{
-		// Token: 0x1700001A RID: 26
+		
 		
 		
 		public List<InputKingPaiHangData> RealRankList
@@ -35,7 +35,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x06000593 RID: 1427 RVA: 0x0004EB20 File Offset: 0x0004CD20
+		
 		public bool Init()
 		{
 			try
@@ -97,7 +97,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x06000594 RID: 1428 RVA: 0x0004ED58 File Offset: 0x0004CF58
+		
 		public void Update()
 		{
 			if (this.InActivityTime() || this.InAwardTime())
@@ -159,31 +159,31 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x040009F5 RID: 2549
+		
 		private const int updateIntervalSec = 15;
 
-		// Token: 0x040009F6 RID: 2550
+		
 		private readonly string CfgFile = "Config/JieRiGifts/PingTaiChongZhiKing.xml";
 
-		// Token: 0x040009F7 RID: 2551
+		
 		private List<JieriPlatChargeKing.ChargeItem> chargeItemList = new List<JieriPlatChargeKing.ChargeItem>();
 
-		// Token: 0x040009F8 RID: 2552
+		
 		private object Mutex = new object();
 
-		// Token: 0x040009F9 RID: 2553
+		
 		private List<InputKingPaiHangData> _realRankList = null;
 
-		// Token: 0x040009FA RID: 2554
+		
 		private DateTime lastUpdateTime = TimeUtil.NowDateTime().AddSeconds(-30.0);
 
-		// Token: 0x020001C2 RID: 450
+		
 		private class ChargeItem
 		{
-			// Token: 0x040009FE RID: 2558
+			
 			public int Rank;
 
-			// Token: 0x040009FF RID: 2559
+			
 			public int NeedChargeYB;
 		}
 	}

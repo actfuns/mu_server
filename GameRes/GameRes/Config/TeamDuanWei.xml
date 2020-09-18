@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <TeamDuanWei ID="1" Type="1" Level="5" TypeName="青铜" NeedDuanWeiJiFen="0" WinJiFen="100" LoseJiFen="0" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="2" Type="1" Level="4" TypeName="青铜" NeedDuanWeiJiFen="270" WinJiFen="190" LoseJiFen="0" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="3" Type="1" Level="3" TypeName="青铜" NeedDuanWeiJiFen="520" WinJiFen="320" LoseJiFen="0" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="4" Type="1" Level="2" TypeName="青铜" NeedDuanWeiJiFen="870" WinJiFen="380" LoseJiFen="0" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="5" Type="1" Level="1" TypeName="青铜" NeedDuanWeiJiFen="1300" WinJiFen="440" LoseJiFen="0" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="6" Type="2" Level="5" TypeName="白银" NeedDuanWeiJiFen="4000" WinJiFen="1000" LoseJiFen="-670" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="7" Type="2" Level="4" TypeName="白银" NeedDuanWeiJiFen="5800" WinJiFen="1100" LoseJiFen="-760" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="8" Type="2" Level="3" TypeName="白银" NeedDuanWeiJiFen="8200" WinJiFen="1300" LoseJiFen="-820" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="9" Type="2" Level="2" TypeName="白银" NeedDuanWeiJiFen="11000" WinJiFen="1400" LoseJiFen="-920" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="10" Type="2" Level="1" TypeName="白银" NeedDuanWeiJiFen="14600" WinJiFen="1500" LoseJiFen="-1000" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="11" Type="3" Level="5" TypeName="黄金" NeedDuanWeiJiFen="30000" WinJiFen="2400" LoseJiFen="-1600" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="12" Type="3" Level="4" TypeName="黄金" NeedDuanWeiJiFen="39000" WinJiFen="2700" LoseJiFen="-1800" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="13" Type="3" Level="3" TypeName="黄金" NeedDuanWeiJiFen="54000" WinJiFen="2900" LoseJiFen="-1900" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="14" Type="3" Level="2" TypeName="黄金" NeedDuanWeiJiFen="66000" WinJiFen="3000" LoseJiFen="-2000" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="15" Type="3" Level="1" TypeName="黄金" NeedDuanWeiJiFen="93000" WinJiFen="3200" LoseJiFen="-2100" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="16" Type="4" Level="5" TypeName="铂金" NeedDuanWeiJiFen="156000" WinJiFen="4300" LoseJiFen="-3000" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="17" Type="4" Level="4" TypeName="铂金" NeedDuanWeiJiFen="188000" WinJiFen="4800" LoseJiFen="-3000" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="18" Type="4" Level="3" TypeName="铂金" NeedDuanWeiJiFen="236000" WinJiFen="5000" LoseJiFen="-3000" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="19" Type="4" Level="2" TypeName="铂金" NeedDuanWeiJiFen="296000" WinJiFen="5000" LoseJiFen="-3000" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="20" Type="4" Level="1" TypeName="铂金" NeedDuanWeiJiFen="360000" WinJiFen="6000" LoseJiFen="-4000" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="21" Type="5" Level="5" TypeName="钻石" NeedDuanWeiJiFen="550000" WinJiFen="7000" LoseJiFen="-5000" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="22" Type="5" Level="4" TypeName="钻石" NeedDuanWeiJiFen="650000" WinJiFen="8000" LoseJiFen="-5000" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="23" Type="5" Level="3" TypeName="钻石" NeedDuanWeiJiFen="750000" WinJiFen="8000" LoseJiFen="-5000" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="24" Type="5" Level="2" TypeName="钻石" NeedDuanWeiJiFen="850000" WinJiFen="8000" LoseJiFen="-5000" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+  <TeamDuanWei ID="25" Type="5" Level="1" TypeName="钻石" NeedDuanWeiJiFen="950000" WinJiFen="8000" LoseJiFen="-5000" RongYaoNum="5" WinRongYu="100" LoseRongYu="35" />
+</Config>

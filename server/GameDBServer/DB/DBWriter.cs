@@ -11,10 +11,10 @@ using Server.Tools;
 
 namespace GameDBServer.DB
 {
-	// Token: 0x020001A1 RID: 417
+	
 	public class DBWriter
 	{
-		// Token: 0x170000D0 RID: 208
+		
 		
 		public static string CurrentGoodsBakTableName
 		{
@@ -24,7 +24,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060007C9 RID: 1993 RVA: 0x00047DB8 File Offset: 0x00045FB8
+		
 		public static int ExecuteSQLNoQuery(DBManager dbMgr, string sqlText, MySQLConnection conn = null)
 		{
 			int result = 0;
@@ -70,7 +70,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x060007CA RID: 1994 RVA: 0x00047EA8 File Offset: 0x000460A8
+		
 		public static bool CheckRoleCountFull(DBManager dbMgr)
 		{
 			bool bFull = true;
@@ -113,7 +113,7 @@ namespace GameDBServer.DB
 			return bFull;
 		}
 
-		// Token: 0x060007CB RID: 1995 RVA: 0x00047FDC File Offset: 0x000461DC
+		
 		public static int CreateRole(DBManager dbMgr, string userID, string userName, int sex, int occup, string roleName, int zoneID, int bagnum, int isflashplayer, int nMagicSwordParam, int rebornbagnum)
 		{
 			string today = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -154,7 +154,7 @@ namespace GameDBServer.DB
 			return roleID;
 		}
 
-		// Token: 0x060007CC RID: 1996 RVA: 0x00048108 File Offset: 0x00046308
+		
 		public static bool UnPreRemoveRole(DBManager dbMgr, int roleID)
 		{
 			bool ret = false;
@@ -166,7 +166,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007CD RID: 1997 RVA: 0x00048168 File Offset: 0x00046368
+		
 		public static bool PreRemoveRole(DBManager dbMgr, int roleID, DateTime Now)
 		{
 			bool ret = false;
@@ -179,7 +179,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007CE RID: 1998 RVA: 0x000481D8 File Offset: 0x000463D8
+		
 		public static bool RemoveRole(DBManager dbMgr, int roleID)
 		{
 			bool ret = false;
@@ -192,7 +192,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007CF RID: 1999 RVA: 0x0004824C File Offset: 0x0004644C
+		
 		public static bool RemoveRoleByName(DBManager dbMgr, string roleName)
 		{
 			bool ret = false;
@@ -204,7 +204,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007D0 RID: 2000 RVA: 0x000482A4 File Offset: 0x000464A4
+		
 		public static bool UnRemoveRole(DBManager dbMgr, string roleName)
 		{
 			bool ret = false;
@@ -216,7 +216,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007D1 RID: 2001 RVA: 0x000482FC File Offset: 0x000464FC
+		
 		public static bool UnRemoveRoleByID(DBManager dbMgr, int rid)
 		{
 			bool ret = false;
@@ -228,7 +228,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007D2 RID: 2002 RVA: 0x0004835C File Offset: 0x0004655C
+		
 		public static bool UpdateRoleLoginInfo(DBManager dbMgr, int roleID, int loginNum, int loginDayID, int loginDayNum, string userid, int zoneid, string ip)
 		{
 			bool ret = false;
@@ -261,7 +261,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007D3 RID: 2003 RVA: 0x00048468 File Offset: 0x00046668
+		
 		public static bool UpdateRoleLogOff(DBManager dbMgr, int roleID, string userid, int zoneid, string ip, int onlineSecs)
 		{
 			bool ret = false;
@@ -289,7 +289,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007D4 RID: 2004 RVA: 0x00048550 File Offset: 0x00046750
+		
 		public static bool UpdateRoleOnlineSecs(DBManager dbMgr, int roleID, int totalOnlineSecs, int antiAddictionSecs)
 		{
 			bool ret = false;
@@ -301,7 +301,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007D5 RID: 2005 RVA: 0x000485BC File Offset: 0x000467BC
+		
 		public static bool UpdateRoleBiGuanTime(DBManager dbMgr, int roleID, long biguanTime)
 		{
 			bool ret = false;
@@ -314,7 +314,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007D6 RID: 2006 RVA: 0x00048638 File Offset: 0x00046838
+		
 		public static bool UpdateRoleBattleNameInfo(DBManager dbMgr, int roleID, long startTime, int nameIndex)
 		{
 			bool ret = false;
@@ -326,7 +326,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007D7 RID: 2007 RVA: 0x000486A4 File Offset: 0x000468A4
+		
 		public static bool UpdateRoleCZTaskID(DBManager dbMgr, int roleID, int czTaskID)
 		{
 			bool ret = false;
@@ -338,7 +338,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007D8 RID: 2008 RVA: 0x00048708 File Offset: 0x00046908
+		
 		public static bool UpdateRoleOnceAwardFlag(DBManager dbMgr, int roleID, long onceawardflag)
 		{
 			bool ret = false;
@@ -350,7 +350,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007D9 RID: 2009 RVA: 0x0004876C File Offset: 0x0004696C
+		
 		public static bool UpdateRoleBanProps(DBManager dbMgr, int roleID, string colName, long value)
 		{
 			bool ret = false;
@@ -362,7 +362,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007DA RID: 2010 RVA: 0x000487D0 File Offset: 0x000469D0
+		
 		public static bool UpdateRoleBangHuiInfo(DBManager dbMgr, int roleID, int faction, string bhName, int bhZhiWu)
 		{
 			bool ret = false;
@@ -380,7 +380,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007DB RID: 2011 RVA: 0x00048858 File Offset: 0x00046A58
+		
 		public static bool UpdateRoleJunTuanInfo(DBManager dbMgr, int roleID, int junTuanZhiWu)
 		{
 			bool ret = false;
@@ -392,7 +392,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007DC RID: 2012 RVA: 0x000488BC File Offset: 0x00046ABC
+		
 		public static bool UpdateAllRoleBangHuiName(DBManager dbMgr, int bhid, string newName)
 		{
 			bool ret = false;
@@ -404,7 +404,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007DD RID: 2013 RVA: 0x0004891C File Offset: 0x00046B1C
+		
 		public static bool ClearAllRoleBangHuiInfo(DBManager dbMgr, int bhid)
 		{
 			bool ret = false;
@@ -416,7 +416,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007DE RID: 2014 RVA: 0x0004897C File Offset: 0x00046B7C
+		
 		public static bool ClearLastBangHuiInfoByRoleID(DBManager dbMgr, int roleID)
 		{
 			bool ret = false;
@@ -428,7 +428,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007DF RID: 2015 RVA: 0x000489DC File Offset: 0x00046BDC
+		
 		public static bool UpdateRoleBangHuiVerify(DBManager dbMgr, int roleID, int toVerify)
 		{
 			bool ret = false;
@@ -440,7 +440,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007E0 RID: 2016 RVA: 0x00048A40 File Offset: 0x00046C40
+		
 		public static bool UpdateBHMatchSupportFlagData(DBManager dbMgr, BHMatchSupportData cmdData)
 		{
 			bool ret = false;
@@ -461,7 +461,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007E1 RID: 2017 RVA: 0x00048B0C File Offset: 0x00046D0C
+		
 		public static int NewTask(DBManager dbMgr, int roleID, int npcID, int taskID, string addtime, int focus, int nStarLevel)
 		{
 			int ret = -1;
@@ -488,7 +488,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007E2 RID: 2018 RVA: 0x00048BE0 File Offset: 0x00046DE0
+		
 		public static bool UpdateRolePosition(DBManager dbMgr, int roleID, string position)
 		{
 			bool ret = false;
@@ -500,7 +500,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007E3 RID: 2019 RVA: 0x00048C40 File Offset: 0x00046E40
+		
 		public static bool UpdateRoleExpLevel(DBManager dbMgr, int roleID, int level, long experience)
 		{
 			bool ret = false;
@@ -512,7 +512,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007E4 RID: 2020 RVA: 0x00048CAC File Offset: 0x00046EAC
+		
 		public static bool UpdateRoleInterPower(DBManager dbMgr, int roleID, int interPower)
 		{
 			bool ret = false;
@@ -524,7 +524,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007E5 RID: 2021 RVA: 0x00048D10 File Offset: 0x00046F10
+		
 		public static bool UpdateRoleMoney1(DBManager dbMgr, int roleID, int money)
 		{
 			bool ret = false;
@@ -536,7 +536,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007E6 RID: 2022 RVA: 0x00048D74 File Offset: 0x00046F74
+		
 		public static bool UpdateRoleYinLiang(DBManager dbMgr, int roleID, int yinLiang)
 		{
 			bool ret = false;
@@ -548,7 +548,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007E7 RID: 2023 RVA: 0x00048DD8 File Offset: 0x00046FD8
+		
 		public static bool UpdateRoleGold(DBManager dbMgr, int roleID, int gold)
 		{
 			bool ret = false;
@@ -560,7 +560,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007E8 RID: 2024 RVA: 0x00048E3C File Offset: 0x0004703C
+		
 		public static bool UpdateRoleStoreYinLiang(DBManager dbMgr, int roleID, long yinLiang)
 		{
 			bool ret = false;
@@ -572,7 +572,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007E9 RID: 2025 RVA: 0x00048EA0 File Offset: 0x000470A0
+		
 		public static bool UpdateRoleStoreMoney(DBManager dbMgr, int roleID, long money)
 		{
 			bool ret = false;
@@ -584,7 +584,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007EA RID: 2026 RVA: 0x00048F04 File Offset: 0x00047104
+		
 		public static bool UpdateRoleOccupationBranch(DBManager dbMgr, int nRoleID, int nMagicSwordParam)
 		{
 			bool ret = false;
@@ -596,7 +596,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007EB RID: 2027 RVA: 0x00048F68 File Offset: 0x00047168
+		
 		public static bool UpdateRoleBangGong(DBManager dbMgr, int roleID, int bgDayID1, int bgMoney, int bgDayID2, int bgGoods, int bangGong)
 		{
 			bool ret = false;
@@ -616,7 +616,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007EC RID: 2028 RVA: 0x00049008 File Offset: 0x00047208
+		
 		public static bool UpdateUserInfo(DBManager dbMgr, DBUserInfo dbUserInfo)
 		{
 			string userID = dbUserInfo.UserID;
@@ -647,7 +647,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007ED RID: 2029 RVA: 0x00049104 File Offset: 0x00047304
+		
 		public static bool UpdateUserSpecJiFen(DBManager dbMgr, string userID, int specjifen)
 		{
 			bool ret = false;
@@ -659,7 +659,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007EE RID: 2030 RVA: 0x00049168 File Offset: 0x00047368
+		
 		public static bool UpdateUserEveryJiFen(DBManager dbMgr, string userID, int specjifen)
 		{
 			bool ret = false;
@@ -671,7 +671,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007EF RID: 2031 RVA: 0x000491CC File Offset: 0x000473CC
+		
 		public static bool UpdateUserInputPoints(DBManager dbMgr, string userID, int ipoints)
 		{
 			bool ret = false;
@@ -683,7 +683,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007F0 RID: 2032 RVA: 0x00049230 File Offset: 0x00047430
+		
 		public static bool UpdateUserGiftJiFen(DBManager dbMgr, string userID, int giftJiFen)
 		{
 			bool ret = false;
@@ -695,7 +695,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007F1 RID: 2033 RVA: 0x00049294 File Offset: 0x00047494
+		
 		public static bool UpdateRoleDefSkillID(DBManager dbMgr, int roleID, int defSkillID)
 		{
 			bool ret = false;
@@ -707,7 +707,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007F2 RID: 2034 RVA: 0x000492F8 File Offset: 0x000474F8
+		
 		public static bool UpdateRoleJieBiaoInfo(DBManager dbMgr, int roleID, int jieBiaoDayID, int jieBiaoDayNum)
 		{
 			bool ret = false;
@@ -719,7 +719,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007F3 RID: 2035 RVA: 0x00049364 File Offset: 0x00047564
+		
 		public static bool UpdateRoleAutoDrink(DBManager dbMgr, int roleID, int autoLifeV, int autoMagicV)
 		{
 			bool ret = false;
@@ -731,7 +731,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007F4 RID: 2036 RVA: 0x000493D0 File Offset: 0x000475D0
+		
 		public static int MoveGoods(DBManager dbMgr, int roleID, int goodsDbID, int oldRid, int site = 0)
 		{
 			int ret = -10;
@@ -749,7 +749,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007F5 RID: 2037 RVA: 0x0004945C File Offset: 0x0004765C
+		
 		public static int NewGoods(DBManager dbMgr, int roleID, int goodsID, int goodsNum, int quality, string props, int forgeLevel, int binding, int site, string jewelList, int bagindex, string startTime, string endTime, int addPropIndex, int bornIndex, int lucky, int strong, int ExcellenceProperty, int nAppendPropLev, int nEquipChangeLife)
 		{
 			int ret = -1;
@@ -794,7 +794,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007F6 RID: 2038 RVA: 0x000495D8 File Offset: 0x000477D8
+		
 		public static string FormatUpdateSQL(int id, string[] fields, int startIndex, string[] fieldNames, string tableName, byte[] fieldTypes, string idName = "Id")
 		{
 			StringBuilder sb = new StringBuilder(256);
@@ -829,7 +829,7 @@ namespace GameDBServer.DB
 			return sb.ToString();
 		}
 
-		// Token: 0x060007F7 RID: 2039 RVA: 0x0004974C File Offset: 0x0004794C
+		
 		public static int UpdateGoods(DBManager dbMgr, int id, string[] fields, int startIndex)
 		{
 			int ret = -1;
@@ -842,7 +842,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007F8 RID: 2040 RVA: 0x000497CC File Offset: 0x000479CC
+		
 		public static int RemoveGoods(DBManager dbMgr, int id)
 		{
 			int ret = -1;
@@ -854,7 +854,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007F9 RID: 2041 RVA: 0x0004982C File Offset: 0x00047A2C
+		
 		public static int MoveGoodsDataToBackupTable(DBManager dbMgr, int id)
 		{
 			int ret = -1;
@@ -868,7 +868,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007FA RID: 2042 RVA: 0x000498A8 File Offset: 0x00047AA8
+		
 		public static int SwitchGoodsBackupTable(DBManager dbMgr)
 		{
 			MySQLConnection conn = null;
@@ -914,7 +914,7 @@ namespace GameDBServer.DB
 			return 0;
 		}
 
-		// Token: 0x060007FB RID: 2043 RVA: 0x000499F0 File Offset: 0x00047BF0
+		
 		public static bool WirterAutoCompletionTaskByTaskID(DBManager dbMgr, int roleID, List<int> taskIDList)
 		{
 			bool ret = false;
@@ -930,7 +930,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007FC RID: 2044 RVA: 0x00049A78 File Offset: 0x00047C78
+		
 		public static int UpdateTask(DBManager dbMgr, int dbID, string[] fields, int startIndex)
 		{
 			int ret = -1;
@@ -942,7 +942,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007FD RID: 2045 RVA: 0x00049AE4 File Offset: 0x00047CE4
+		
 		public static bool CompleteTask(DBManager dbMgr, int roleID, int npcID, int taskID, int dbID, int isMainTask)
 		{
 			bool ret = false;
@@ -960,7 +960,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007FE RID: 2046 RVA: 0x00049B74 File Offset: 0x00047D74
+		
 		public static bool DeleteTask(DBManager dbMgr, int roleID, int taskID, int dbID)
 		{
 			bool ret = false;
@@ -972,7 +972,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060007FF RID: 2047 RVA: 0x00049BD4 File Offset: 0x00047DD4
+		
 		public static bool GMSetTask(DBManager dbMgr, int roleID, int taskID, List<int> taskIDList)
 		{
 			bool ret = false;
@@ -988,7 +988,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000800 RID: 2048 RVA: 0x00049C5C File Offset: 0x00047E5C
+		
 		public static int AddFriend(DBManager dbMgr, int dbID, int roleID, int otherID, int friendType)
 		{
 			int ret = dbID;
@@ -1016,7 +1016,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000801 RID: 2049 RVA: 0x00049D44 File Offset: 0x00047F44
+		
 		public static bool RemoveFriend(DBManager dbMgr, int dbID, int roleID)
 		{
 			bool ret = false;
@@ -1028,7 +1028,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000802 RID: 2050 RVA: 0x00049DA4 File Offset: 0x00047FA4
+		
 		public static bool UpdatePKMode(DBManager dbMgr, int roleID, int pkMode)
 		{
 			bool ret = false;
@@ -1040,7 +1040,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000803 RID: 2051 RVA: 0x00049E08 File Offset: 0x00048008
+		
 		public static bool UpdatePKValues(DBManager dbMgr, int roleID, int pkValue, int pkPoint)
 		{
 			bool ret = false;
@@ -1052,7 +1052,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000804 RID: 2052 RVA: 0x00049E74 File Offset: 0x00048074
+		
 		public static bool UpdateLianZhan(DBManager dbMgr, int roleID, int lianzhan)
 		{
 			bool ret = false;
@@ -1064,7 +1064,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000805 RID: 2053 RVA: 0x00049ED8 File Offset: 0x000480D8
+		
 		public static bool UpdateKillBoss(DBManager dbMgr, int roleID, int killBoss)
 		{
 			bool ret = false;
@@ -1076,7 +1076,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000806 RID: 2054 RVA: 0x00049F3C File Offset: 0x0004813C
+		
 		public static bool UpdateBattleNum(DBManager dbMgr, int roleID, int battleNum)
 		{
 			bool ret = false;
@@ -1088,7 +1088,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000807 RID: 2055 RVA: 0x00049FA0 File Offset: 0x000481A0
+		
 		public static bool UpdateHeroIndex(DBManager dbMgr, int roleID, int heroIndex)
 		{
 			bool ret = false;
@@ -1100,7 +1100,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000808 RID: 2056 RVA: 0x0004A004 File Offset: 0x00048204
+		
 		public static bool UpdateRoleStat(DBManager dbMgr, int roleID, int equipJiFen, int xueWeiNum, int skillLearnedNum, int horseJiFen)
 		{
 			bool ret = false;
@@ -1119,7 +1119,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000809 RID: 2057 RVA: 0x0004A09C File Offset: 0x0004829C
+		
 		public static bool UpdateRoleKeys(DBManager dbMgr, int roleID, int type, string keys)
 		{
 			bool ret = false;
@@ -1139,7 +1139,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600080A RID: 2058 RVA: 0x0004A124 File Offset: 0x00048324
+		
 		public static bool UpdateRoleLeftFightSecs(DBManager dbMgr, int roleID, int leftFightSecs)
 		{
 			bool ret = false;
@@ -1151,7 +1151,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600080B RID: 2059 RVA: 0x0004A188 File Offset: 0x00048388
+		
 		public static int NewHorse(DBManager dbMgr, int roleID, int horseID, int bodyID, string addtime)
 		{
 			int ret = -1;
@@ -1186,7 +1186,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600080C RID: 2060 RVA: 0x0004A274 File Offset: 0x00048474
+		
 		public static int NewPet(DBManager dbMgr, int roleID, int petID, string petName, int petType, string props, string addtime)
 		{
 			int ret = -1;
@@ -1221,7 +1221,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600080D RID: 2061 RVA: 0x0004A374 File Offset: 0x00048574
+		
 		public static int UpdateHorse(DBManager dbMgr, int id, string[] fields, int startIndex)
 		{
 			int ret = -1;
@@ -1257,7 +1257,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600080E RID: 2062 RVA: 0x0004A44C File Offset: 0x0004864C
+		
 		public static bool UpdateRoleHorse(DBManager dbMgr, int roleID, int horseDbID)
 		{
 			bool ret = false;
@@ -1277,7 +1277,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600080F RID: 2063 RVA: 0x0004A4E4 File Offset: 0x000486E4
+		
 		public static int UpdatePet(DBManager dbMgr, int id, string[] fields, int startIndex)
 		{
 			int ret = -1;
@@ -1289,7 +1289,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000810 RID: 2064 RVA: 0x0004A550 File Offset: 0x00048750
+		
 		public static bool UpdateRolePet(DBManager dbMgr, int roleID, int petDbID)
 		{
 			bool ret = false;
@@ -1301,7 +1301,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000811 RID: 2065 RVA: 0x0004A5B4 File Offset: 0x000487B4
+		
 		public static int AddRoleDJPoint(DBManager dbMgr, int dbID, int roleID, int djPoint)
 		{
 			int ret = -1;
@@ -1347,7 +1347,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000812 RID: 2066 RVA: 0x0004A6D0 File Offset: 0x000488D0
+		
 		public static int UpRoleJingMai(DBManager dbMgr, int roleID, int dbID, int jingMaiBodyLevel, int jingMaiID, int jingMaiLevel)
 		{
 			int ret = -1;
@@ -1393,7 +1393,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000813 RID: 2067 RVA: 0x0004A7DC File Offset: 0x000489DC
+		
 		public static int NewBulletinText(DBManager dbMgr, string msgID, string fromDate, string toDate, int interval, string bulletinText)
 		{
 			string today = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -1414,7 +1414,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000814 RID: 2068 RVA: 0x0004A878 File Offset: 0x00048A78
+		
 		public static int RemoveBulletinText(DBManager dbMgr, string msgID)
 		{
 			int ret = -1;
@@ -1426,7 +1426,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000815 RID: 2069 RVA: 0x0004A8D0 File Offset: 0x00048AD0
+		
 		public static int UpdateGameConfig(DBManager dbMgr, string paramName, string paramValue)
 		{
 			int ret = -1;
@@ -1438,7 +1438,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000816 RID: 2070 RVA: 0x0004A92C File Offset: 0x00048B2C
+		
 		public static int AddSkill(DBManager dbMgr, int roleID, int skillID, int skillLevel)
 		{
 			int ret = -1;
@@ -1461,7 +1461,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000817 RID: 2071 RVA: 0x0004A9D0 File Offset: 0x00048BD0
+		
 		public static bool UpdateSkillInfo(DBManager dbMgr, int skillDbID, int skillLevel, int usedNum)
 		{
 			bool ret = false;
@@ -1473,7 +1473,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000818 RID: 2072 RVA: 0x0004AA3C File Offset: 0x00048C3C
+		
 		public static bool UpdateJingMaiExp(DBManager dbMgr, int roleID, int jingMaiExpNum, int totalJingMaiExp)
 		{
 			bool ret = false;
@@ -1485,7 +1485,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000819 RID: 2073 RVA: 0x0004AAA8 File Offset: 0x00048CA8
+		
 		public static int UpdateRoleBufferItem(DBManager dbMgr, int roleID, int bufferID, long startTime, int bufferSecs, long bufferVal)
 		{
 			int ret = -1;
@@ -1509,7 +1509,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600081A RID: 2074 RVA: 0x0004AB74 File Offset: 0x00048D74
+		
 		public static int UpdateRoleDailyTaskData(DBManager dbMgr, int roleID, int huanID, string rectime, int recnum, int taskClass, int extDayID, int extNum)
 		{
 			int ret = -1;
@@ -1530,7 +1530,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600081B RID: 2075 RVA: 0x0004AC1C File Offset: 0x00048E1C
+		
 		public static int UpdateRoleDailyJingMaiData(DBManager dbMgr, int roleID, string jmTime, int jmNum)
 		{
 			int ret = -1;
@@ -1549,7 +1549,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600081C RID: 2076 RVA: 0x0004ACA8 File Offset: 0x00048EA8
+		
 		public static bool UpdateRoleNumSkillID(DBManager dbMgr, int roleID, int numSkillID)
 		{
 			bool ret = false;
@@ -1561,7 +1561,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600081D RID: 2077 RVA: 0x0004AD0C File Offset: 0x00048F0C
+		
 		public static bool UpdateRoleMainTaskID(DBManager dbMgr, int roleID, int mainTaskID)
 		{
 			bool ret = false;
@@ -1573,7 +1573,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600081E RID: 2078 RVA: 0x0004AD70 File Offset: 0x00048F70
+		
 		public static int UpdateRolePBInfo(DBManager dbMgr, int roleID, int extGridNum)
 		{
 			int ret = -1;
@@ -1585,7 +1585,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600081F RID: 2079 RVA: 0x0004ADDC File Offset: 0x00048FDC
+		
 		public static int UpdateRoleRebornStorageInfo(DBManager dbMgr, int roleID, int extGridNum)
 		{
 			int ret = -1;
@@ -1597,7 +1597,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000820 RID: 2080 RVA: 0x0004AE48 File Offset: 0x00049048
+		
 		public static int UpdateRoleBagNum(DBManager dbMgr, int roleID, int bagNum)
 		{
 			int ret = -1;
@@ -1609,7 +1609,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000821 RID: 2081 RVA: 0x0004AEAC File Offset: 0x000490AC
+		
 		public static int UpdateRoleRebornBagNum(DBManager dbMgr, int roleID, int bagNum)
 		{
 			int ret = -1;
@@ -1621,7 +1621,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000822 RID: 2082 RVA: 0x0004AF10 File Offset: 0x00049110
+		
 		public static int UpdateRoleRebornShowEquip(DBManager dbMgr, int roleID, int bagNum)
 		{
 			int ret = -1;
@@ -1633,7 +1633,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000823 RID: 2083 RVA: 0x0004AF74 File Offset: 0x00049174
+		
 		public static int UpdateRoleRebornShowModel(DBManager dbMgr, int roleID, int bagNum)
 		{
 			int ret = -1;
@@ -1645,7 +1645,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000824 RID: 2084 RVA: 0x0004AFD8 File Offset: 0x000491D8
+		
 		public static void CreateHuoDong(DBManager dbMgr, int roleID)
 		{
 			string today = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -1670,7 +1670,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000825 RID: 2085 RVA: 0x0004B0BC File Offset: 0x000492BC
+		
 		public static int UpdateHuoDong(DBManager dbMgr, int id, string[] fields, int startIndex)
 		{
 			int ret = -1;
@@ -1682,7 +1682,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000826 RID: 2086 RVA: 0x0004B128 File Offset: 0x00049328
+		
 		public static int ClearAllLiPinMa(DBManager dbMgr)
 		{
 			int ret = -1;
@@ -1694,7 +1694,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000827 RID: 2087 RVA: 0x0004B188 File Offset: 0x00049388
+		
 		public static int InsertNewLiPinMa(DBManager dbMgr, string liPinMa, string songLiID, string maxNum, string ptid, string ptRepeat, string usedNum = "0")
 		{
 			int ret = -1;
@@ -1714,7 +1714,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000828 RID: 2088 RVA: 0x0004B20C File Offset: 0x0004940C
+		
 		public static int UpdateLiPinMaUsedNum(DBManager dbMgr, string liPinMa, int usedNum)
 		{
 			int ret = -1;
@@ -1726,7 +1726,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000829 RID: 2089 RVA: 0x0004B26C File Offset: 0x0004946C
+		
 		public static int DeleteSpecialActivityData(DBManager dbMgr, int roleID, int groupID)
 		{
 			int ret = -1;
@@ -1746,7 +1746,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600082A RID: 2090 RVA: 0x0004B2FC File Offset: 0x000494FC
+		
 		public static int DeleteSpecialPriorityActivityData(DBManager dbMgr, int roleID, int tequanID)
 		{
 			int ret = -1;
@@ -1766,7 +1766,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600082B RID: 2091 RVA: 0x0004B38C File Offset: 0x0004958C
+		
 		public static int DeleteEverydayActivityData(DBManager dbMgr, int roleID, int groupID, int actID)
 		{
 			int ret = -1;
@@ -1790,7 +1790,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600082C RID: 2092 RVA: 0x0004B460 File Offset: 0x00049660
+		
 		public static int UpdateSpecialActivityData(DBManager dbMgr, int roleID, SpecActInfoDB SpecAct)
 		{
 			int ret = -1;
@@ -1810,7 +1810,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600082D RID: 2093 RVA: 0x0004B518 File Offset: 0x00049718
+		
 		public static int UpdateSpecialPriorityActivityData(DBManager dbMgr, int roleID, SpecPriorityActInfoDB SpecAct)
 		{
 			int ret = -1;
@@ -1829,7 +1829,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600082E RID: 2094 RVA: 0x0004B5C0 File Offset: 0x000497C0
+		
 		public static int UpdateEverydayActivityData(DBManager dbMgr, int roleID, EverydayActInfoDB EveryAct)
 		{
 			int ret = -1;
@@ -1849,7 +1849,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600082F RID: 2095 RVA: 0x0004B678 File Offset: 0x00049878
+		
 		public static int UpdateFuBenData(DBManager dbMgr, int roleID, int fuBenID, int dayID, int enterNum, int nQuickPassTimeSec, int nFinishNum)
 		{
 			int ret = -1;
@@ -1869,7 +1869,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000830 RID: 2096 RVA: 0x0004B718 File Offset: 0x00049918
+		
 		public static int InsertNewPreName(DBManager dbMgr, string preName, int sex)
 		{
 			int ret = -1;
@@ -1881,7 +1881,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000831 RID: 2097 RVA: 0x0004B77C File Offset: 0x0004997C
+		
 		public static int UpdatePreNameUsedState(DBManager dbMgr, string preName, int used)
 		{
 			int ret = -1;
@@ -1893,7 +1893,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000832 RID: 2098 RVA: 0x0004B7DC File Offset: 0x000499DC
+		
 		public static int InsertNewFuBenHist(DBManager dbMgr, int fuBenID, int roleID, string roleName, int usedSecs)
 		{
 			int ret = -1;
@@ -1914,7 +1914,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000833 RID: 2099 RVA: 0x0004B87C File Offset: 0x00049A7C
+		
 		public static int UpdateRoleDailyData(DBManager dbMgr, int roleID, int expDayID, int todayExp, int lingLiDayID, int todayLingLi, int killBossDayID, int todayKillBoss, int fuBenDayID, int todayFuBenNum, int wuXingDayID, int wuXingNum, int rebornExpDayID, int rebornExpMonster, int rebornExpSale)
 		{
 			int ret = -1;
@@ -1942,7 +1942,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000834 RID: 2100 RVA: 0x0004B97C File Offset: 0x00049B7C
+		
 		public static int UpdateYaBiaoData(DBManager dbMgr, int roleID, int yaBiaoID, long startTime, int state, int lineID, int touBao, int yaBiaoDayID, int yaBiaoNum, int takeGoods)
 		{
 			int ret = -1;
@@ -1970,7 +1970,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000835 RID: 2101 RVA: 0x0004BA70 File Offset: 0x00049C70
+		
 		public static int UpdateYaBiaoDataState(DBManager dbMgr, int roleID, int state)
 		{
 			int ret = -1;
@@ -1982,7 +1982,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000836 RID: 2102 RVA: 0x0004BAD4 File Offset: 0x00049CD4
+		
 		public static int AddNewMallBuyItem(DBManager dbMgr, int roleID, int goodsID, int goodsNum, int totalPrice, int leftMoney)
 		{
 			int ret = -1;
@@ -2003,7 +2003,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000837 RID: 2103 RVA: 0x0004BB84 File Offset: 0x00049D84
+		
 		public static int AddNewQiZhenGeBuyItem(DBManager dbMgr, int roleID, int goodsID, int goodsNum, int totalPrice, int leftMoney)
 		{
 			int ret = -1;
@@ -2024,7 +2024,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000838 RID: 2104 RVA: 0x0004BC34 File Offset: 0x00049E34
+		
 		public static int AddNewShengXiaoGuessHistory(DBManager dbMgr, int roleID, string roleName, int zoneID, int guessKey, int mortgage, int resultKey, int gainNum, int leftMortgage)
 		{
 			int ret = -1;
@@ -2048,7 +2048,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000839 RID: 2105 RVA: 0x0004BD04 File Offset: 0x00049F04
+		
 		public static int AddNewYinPiaoBuyItem(DBManager dbMgr, int roleID, int goodsID, int goodsNum, int totalPrice, int leftYinPiaoNum)
 		{
 			int ret = -1;
@@ -2069,7 +2069,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600083A RID: 2106 RVA: 0x0004BDB4 File Offset: 0x00049FB4
+		
 		public static int AddNewOnlineNumItem(DBManager dbMgr, int totalNum, DateTime dateTime, string strMapOnlineInfo)
 		{
 			int ret = -1;
@@ -2082,7 +2082,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600083B RID: 2107 RVA: 0x0004BE24 File Offset: 0x0004A024
+		
 		public static int CreateBangHui(DBManager dbMgr, int roleID, int zoneID, int totalLevel, string bhName, string bhBulletin, int nMoney = 0)
 		{
 			int bhid = -1;
@@ -2167,7 +2167,7 @@ namespace GameDBServer.DB
 			return bhid;
 		}
 
-		// Token: 0x0600083C RID: 2108 RVA: 0x0004C088 File Offset: 0x0004A288
+		
 		public static void DeleteBangHui(DBManager dbMgr, int bhid)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2177,7 +2177,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600083D RID: 2109 RVA: 0x0004C0DC File Offset: 0x0004A2DC
+		
 		public static void UpdateZhengDuoUsedTime(DBManager dbMgr, int bhid, int weekDay, int usedTime)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2187,7 +2187,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600083E RID: 2110 RVA: 0x0004C13C File Offset: 0x0004A33C
+		
 		public static void UpdateBangHuiBulletin(DBManager dbMgr, int bhid, string bhBulletinMsg)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2197,7 +2197,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600083F RID: 2111 RVA: 0x0004C194 File Offset: 0x0004A394
+		
 		public static void UpdateBangHuiVerify(DBManager dbMgr, int roleID, int bhid, int isVerify)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2207,7 +2207,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000840 RID: 2112 RVA: 0x0004C1F4 File Offset: 0x0004A3F4
+		
 		public static void UpdateBangHuiRoleID(DBManager dbMgr, int roleID, int bhid)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2217,7 +2217,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000841 RID: 2113 RVA: 0x0004C250 File Offset: 0x0004A450
+		
 		public static void ClearBangHuiMemberZhiWu(DBManager dbMgr, int bhid, int zhiWu)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2227,7 +2227,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000842 RID: 2114 RVA: 0x0004C2AC File Offset: 0x0004A4AC
+		
 		public static void ChangeJunTuanZhiWuList(DBManager dbMgr, int bhid, int zhiwu, List<int> list)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2242,7 +2242,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000843 RID: 2115 RVA: 0x0004C338 File Offset: 0x0004A538
+		
 		public static void ClearBangHuiZhiWuNotInList(DBManager dbMgr, int bhid, List<int> list)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2257,7 +2257,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000844 RID: 2116 RVA: 0x0004C3BC File Offset: 0x0004A5BC
+		
 		public static void UpdateBangHuiMemberZhiWu(DBManager dbMgr, int bhid, int otherRoleID, int zhiWu)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2267,7 +2267,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000845 RID: 2117 RVA: 0x0004C41C File Offset: 0x0004A61C
+		
 		public static void UpdateBangHuiMemberChengHao(DBManager dbMgr, int bhid, int otherRoleID, string chengHao)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2277,7 +2277,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000846 RID: 2118 RVA: 0x0004C478 File Offset: 0x0004A678
+		
 		public static void UpdateBangHuiBangGong(DBManager dbMgr, int bhid, int goods1Num, int goods2Num, int goods3Num, int goods4Num, int goods5Num, int tongQian)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2296,7 +2296,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000847 RID: 2119 RVA: 0x0004C514 File Offset: 0x0004A714
+		
 		public static void AddBangGongHistItem(DBManager dbMgr, int roleID, int bhid, int goods1Num, int goods2Num, int goods3Num, int goods4Num, int goods5Num, int tongQian, int banggong)
 		{
 			string today = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -2319,7 +2319,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000848 RID: 2120 RVA: 0x0004C5E8 File Offset: 0x0004A7E8
+		
 		public static void UpdateBangHuiQiName(DBManager dbMgr, int bhid, string qiName, int needMoney)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2329,7 +2329,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000849 RID: 2121 RVA: 0x0004C644 File Offset: 0x0004A844
+		
 		public static void UpdateBangHuiQiLevel(DBManager dbMgr, int bhid, int toLevel, int goods1Num, int goods2Num, int goods3Num, int goods4Num, int goods5Num, int needMoney)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2349,7 +2349,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600084A RID: 2122 RVA: 0x0004C6E8 File Offset: 0x0004A8E8
+		
 		public static void UpdateOnePieceTreasureLog(DBManager dbMgr, string KeyTime, int LogType, int addValue)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2376,7 +2376,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600084B RID: 2123 RVA: 0x0004C7B0 File Offset: 0x0004A9B0
+		
 		public static void UpdateBuildingLog(DBManager dbMgr, string KeyTime, BuildingLogType LogType)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2415,7 +2415,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600084C RID: 2124 RVA: 0x0004C8B4 File Offset: 0x0004AAB4
+		
 		public static void UpdateBuildingData(DBManager dbMgr, int rid, BuildingData myBuildData)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2436,7 +2436,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600084D RID: 2125 RVA: 0x0004C980 File Offset: 0x0004AB80
+		
 		public static void UpdateOramentData(DBManager dbMgr, OrnamentUpdateDbData myOrnamentData)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2452,7 +2452,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600084E RID: 2126 RVA: 0x0004CA20 File Offset: 0x0004AC20
+		
 		public static void UpdateZhanMengBuildLevel(DBManager dbMgr, int bhid, int toLevel, int needMoney, string fieldName)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2468,7 +2468,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600084F RID: 2127 RVA: 0x0004CA98 File Offset: 0x0004AC98
+		
 		public static void AddBangHuiTongQian(DBManager dbMgr, int bhid, int addMoney)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2478,7 +2478,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000850 RID: 2128 RVA: 0x0004CAF4 File Offset: 0x0004ACF4
+		
 		public static void SubBangHuiTongQian(DBManager dbMgr, int bhid, int subMoney)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2488,7 +2488,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000851 RID: 2129 RVA: 0x0004CB50 File Offset: 0x0004AD50
+		
 		public static void UpdateBangHuiSumData(DBManager dbMgr)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2498,7 +2498,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000852 RID: 2130 RVA: 0x0004CB9C File Offset: 0x0004AD9C
+		
 		public static void UpdateBangHuiNumLevel(DBManager dbMgr, int bhid, int totalNum, int totalLevel, int TotalCombatForce)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2514,7 +2514,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000853 RID: 2131 RVA: 0x0004CC18 File Offset: 0x0004AE18
+		
 		public static void UpdateBHLingDi(DBManager dbMgr, BangHuiLingDiInfoData bangHuiLingDiInfoData)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2537,7 +2537,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000854 RID: 2132 RVA: 0x0004CD08 File Offset: 0x0004AF08
+		
 		public static void ClearBHLingDiByID(DBManager dbMgr, int bhid)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2547,7 +2547,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000855 RID: 2133 RVA: 0x0004CD5C File Offset: 0x0004AF5C
+		
 		public static void ClearBHLingDiTotalTaxByID(DBManager dbMgr, int lingDiID)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2557,7 +2557,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000856 RID: 2134 RVA: 0x0004CDB0 File Offset: 0x0004AFB0
+		
 		public static void SubBangHuiTongQianByQiLevel(DBManager dbMgr, int moneyPerLevel)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2567,7 +2567,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000857 RID: 2135 RVA: 0x0004CE04 File Offset: 0x0004B004
+		
 		public static void UpdateBangHuiFuBen(DBManager dbMgr, int bhid, int fubenid, int state, int openday, string killers)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2584,7 +2584,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000858 RID: 2136 RVA: 0x0004CE84 File Offset: 0x0004B084
+		
 		public static void UpdateRoleToHuangFei(DBManager dbMgr, int roleID, int huangHou)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2594,7 +2594,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000859 RID: 2137 RVA: 0x0004CEE0 File Offset: 0x0004B0E0
+		
 		public static void UpdateHuangDiTeQuan(DBManager dbMgr, HuangDiTeQuanItem hangDiTeQuanItem)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2613,7 +2613,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600085A RID: 2138 RVA: 0x0004CF98 File Offset: 0x0004B198
+		
 		public static void AddRefreshQiZhenGeRec(DBManager dbMgr, int roleID, int oldUserMoney, int leftUserMoney)
 		{
 			string today = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -2630,7 +2630,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600085B RID: 2139 RVA: 0x0004D028 File Offset: 0x0004B228
+		
 		public static void AddUsedLiPinMa(DBManager dbMgr, int huodongID, string lipinMa, int pingTaiID, int roleID)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2646,7 +2646,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600085C RID: 2140 RVA: 0x0004D0A0 File Offset: 0x0004B2A0
+		
 		public static void AddMoneyWarning(DBManager dbMgr, int roleID, int usedMoney, int goodsMoney)
 		{
 			string today = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -2663,7 +2663,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600085D RID: 2141 RVA: 0x0004D130 File Offset: 0x0004B330
+		
 		public static int AddNewBuyItemFromNpc(DBManager dbMgr, int roleID, int goodsID, int goodsNum, int totalPrice, int leftMoney, int moneyType)
 		{
 			int result;
@@ -2694,7 +2694,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x0600085E RID: 2142 RVA: 0x0004D204 File Offset: 0x0004B404
+		
 		public static int AddNewYinLiangBuyItem(DBManager dbMgr, int roleID, int goodsID, int goodsNum, int totalPrice, int leftYinLiang)
 		{
 			int ret = -1;
@@ -2715,7 +2715,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600085F RID: 2143 RVA: 0x0004D2B4 File Offset: 0x0004B4B4
+		
 		public static int AddNewGoldBuyItem(DBManager dbMgr, int roleID, int goodsID, int goodsNum, int totalPrice, int leftGold)
 		{
 			int ret = -1;
@@ -2736,7 +2736,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000860 RID: 2144 RVA: 0x0004D364 File Offset: 0x0004B564
+		
 		public static int AddNewBangGongBuyItem(DBManager dbMgr, int roleID, int goodsID, int goodsNum, int totalPrice, int leftBangGong)
 		{
 			int ret = -1;
@@ -2757,7 +2757,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000861 RID: 2145 RVA: 0x0004D414 File Offset: 0x0004B614
+		
 		public static void UpdateLastScanInputLogID(DBManager dbMgr, int lastid)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2767,7 +2767,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000862 RID: 2146 RVA: 0x0004D468 File Offset: 0x0004B668
+		
 		public static void UpdateMailHasReadFlag(DBManager dbMgr, int mailID, int rid)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2777,7 +2777,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000863 RID: 2147 RVA: 0x0004D4C4 File Offset: 0x0004B6C4
+		
 		public static bool UpdateMailHasFetchGoodsFlag(DBManager dbMgr, int mailID, int rid)
 		{
 			bool ret = true;
@@ -2789,7 +2789,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000864 RID: 2148 RVA: 0x0004D528 File Offset: 0x0004B728
+		
 		public static bool DeleteMailDataItemExcludeGoodsList(DBManager dbMgr, int mailID, int rid)
 		{
 			bool ret = true;
@@ -2801,7 +2801,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000865 RID: 2149 RVA: 0x0004D58C File Offset: 0x0004B78C
+		
 		public static void DeleteMailGoodsList(DBManager dbMgr, int mailID)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2811,7 +2811,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000866 RID: 2150 RVA: 0x0004D5E0 File Offset: 0x0004B7E0
+		
 		public static int AddMailBody(DBManager dbMgr, int senderrid, string senderrname, int receiverrid, string reveiverrname, string subject, string content, int yinliang, int tongqian, int yuanbao)
 		{
 			string today = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -2853,7 +2853,7 @@ namespace GameDBServer.DB
 			return mailID;
 		}
 
-		// Token: 0x06000867 RID: 2151 RVA: 0x0004D71C File Offset: 0x0004B91C
+		
 		public static bool AddMailGoodsDataItem(DBManager dbMgr, int mailID, int goodsid, int forge_level, int quality, string Props, int gcount, int origholenum, int rmbholenum, string jewellist, int addpropindex, int binding, int bornindex, int lucky, int strong, int ExcellenceInfo, int nAppendPropLev, int nEquipChangeLife)
 		{
 			bool ret = true;
@@ -2884,7 +2884,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000868 RID: 2152 RVA: 0x0004D83C File Offset: 0x0004BA3C
+		
 		public static void UpdateLastScanMailID(DBManager dbMgr, int roleID, int mailID)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2894,7 +2894,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000869 RID: 2153 RVA: 0x0004D898 File Offset: 0x0004BA98
+		
 		public static void ClearOverdueMails(DBManager dbMgr, DateTime overdueTime)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2908,7 +2908,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600086A RID: 2154 RVA: 0x0004D920 File Offset: 0x0004BB20
+		
 		public static void DeleteLastScanMailIDs(DBManager dbMgr, Dictionary<int, int> lastMailDict)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2931,7 +2931,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600086B RID: 2155 RVA: 0x0004DA0C File Offset: 0x0004BC0C
+		
 		public static void DeleteMailIDInMailTemp(DBManager dbMgr, int mailID)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -2941,7 +2941,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600086C RID: 2156 RVA: 0x0004DA60 File Offset: 0x0004BC60
+		
 		public static bool UpdateRoleLastMail(DBManager dbMgr, int roleID, int mailID)
 		{
 			bool ret = false;
@@ -2953,7 +2953,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600086D RID: 2157 RVA: 0x0004DAC4 File Offset: 0x0004BCC4
+		
 		public static int AddHongDongPaiHangRecord(DBManager dbMgr, int rid, string rname, int zoneid, int huoDongType, int paihang, string paihangtime, int phvalue)
 		{
 			int ret = -1;
@@ -2974,7 +2974,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600086E RID: 2158 RVA: 0x0004DB68 File Offset: 0x0004BD68
+		
 		public static int AddHongDongAwardRecordForRole(DBManager dbMgr, int rid, int zoneid, int activitytype, string keystr, int hasgettimes, string lastgettime)
 		{
 			int ret = -1;
@@ -2994,7 +2994,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600086F RID: 2159 RVA: 0x0004DC00 File Offset: 0x0004BE00
+		
 		public static int AddHongDongAwardRecordForUser(DBManager dbMgr, string userid, int activitytype, string keystr, long hasgettimes, string lastgettime)
 		{
 			int ret = -1;
@@ -3013,7 +3013,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000870 RID: 2160 RVA: 0x0004DC88 File Offset: 0x0004BE88
+		
 		public static int AddRegressHongDongAwardRecordForUser(DBManager dbMgr, string userid, int activitytype, string keystr, long hasgettimes, string lastgettime, string activedata, string stage)
 		{
 			int ret = -1;
@@ -3034,7 +3034,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000871 RID: 2161 RVA: 0x0004DD1C File Offset: 0x0004BF1C
+		
 		public static int UpdateRegressHongDongAwardRecordForUser(DBManager dbMgr, string userid, int activitytype, string keystr, long hasgettimes, string lastgettime, string activedata, string stage)
 		{
 			int ret = -1;
@@ -3054,7 +3054,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000872 RID: 2162 RVA: 0x0004DDA4 File Offset: 0x0004BFA4
+		
 		public static int UpdateHongDongAwardRecordForRole(DBManager dbMgr, int rid, int zoneid, int activitytype, string keystr, int hasgettimes, string lastgettime)
 		{
 			int ret = -1;
@@ -3075,7 +3075,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000873 RID: 2163 RVA: 0x0004DE50 File Offset: 0x0004C050
+		
 		public static int UpdateHongDongAwardRecordForUser(DBManager dbMgr, string userid, int activitytype, string keystr, long hasgettimes, string lastgettime)
 		{
 			int ret = -1;
@@ -3095,7 +3095,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000874 RID: 2164 RVA: 0x0004DEEC File Offset: 0x0004C0EC
+		
 		public static int AddLimitGoodsBuyItem(DBManager dbMgr, int roleID, int goodsID, int dayID, int usedNum)
 		{
 			int ret = -1;
@@ -3113,7 +3113,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000875 RID: 2165 RVA: 0x0004DF78 File Offset: 0x0004C178
+		
 		public static int AddVipDailyData(DBManager dbMgr, int roleID, int priorityType, int dayID, int usedTimes)
 		{
 			int ret = -1;
@@ -3131,7 +3131,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000876 RID: 2166 RVA: 0x0004E004 File Offset: 0x0004C204
+		
 		public static int AddYangGongBKDailyJiFenData(DBManager dbMgr, int roleID, int jifen, int dayID, long awardhistory)
 		{
 			int ret = -1;
@@ -3149,7 +3149,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000877 RID: 2167 RVA: 0x0004E090 File Offset: 0x0004C290
+		
 		public static int ChangeTablesAutoIncrementValue(DBManager dbMgr, string sTableName, int nAutoIncrementValue)
 		{
 			int result;
@@ -3162,7 +3162,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x06000878 RID: 2168 RVA: 0x0004E0E8 File Offset: 0x0004C2E8
+		
 		public static bool UpdateGoodsLimit(DBManager dbMgr, int roleID, int goodsID, int dayID, int usedNum)
 		{
 			bool result;
@@ -3180,7 +3180,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x06000879 RID: 2169 RVA: 0x0004E168 File Offset: 0x0004C368
+		
 		public static bool UpdateRoleParams(DBManager dbMgr, int roleID, string name, string value, RoleParamType roleParamType = null)
 		{
 			if (roleParamType == null)
@@ -3204,7 +3204,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x0600087A RID: 2170 RVA: 0x0004E214 File Offset: 0x0004C414
+		
 		public static string GetRoleParams(int roleID, string name)
 		{
 			RoleParamType roleParamType = RoleParamNameInfo.GetRoleParamType(name, null);
@@ -3224,7 +3224,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x0600087B RID: 2171 RVA: 0x0004E2C0 File Offset: 0x0004C4C0
+		
 		public static bool UpdateWebOldPlayer(string roleID, string chouJiangType, string addDay)
 		{
 			bool result;
@@ -3236,7 +3236,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x0600087C RID: 2172 RVA: 0x0004E314 File Offset: 0x0004C514
+		
 		public static int AddNewQiangGouBuyItem(DBManager dbMgr, int roleID, int goodsID, int goodsNum, int totalPrice, int leftMoney, int qiangGouId, int actStartDay)
 		{
 			int ret = -1;
@@ -3259,7 +3259,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600087D RID: 2173 RVA: 0x0004E3DC File Offset: 0x0004C5DC
+		
 		public static int AddNewQiangGouItem(DBManager dbMgr, int group, int random, int itemid, int goodsid, int origprice, int price, int singlepurchase, int fullpurchase, int daystime)
 		{
 			int ret = -1;
@@ -3297,7 +3297,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600087E RID: 2174 RVA: 0x0004E504 File Offset: 0x0004C704
+		
 		public static bool UpdateQiangGouItemTimeOverFlag(DBManager dbMgr, int qiangGouId)
 		{
 			bool ret = false;
@@ -3310,7 +3310,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600087F RID: 2175 RVA: 0x0004E578 File Offset: 0x0004C778
+		
 		public static int AddNewZaJinDanHistory(DBManager dbMgr, int roleID, string roleName, int zoneID, int timesselected, int usedyuanbao, int usedjindan, int gaingoodsid, int gaingoodsnum, int gaingold, int gainyinliang, int gainexp, string srtProp)
 		{
 			int ret = -1;
@@ -3338,7 +3338,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000880 RID: 2176 RVA: 0x0004E670 File Offset: 0x0004C870
+		
 		public static int AddKaiFuOnlineAward(DBManager dbMgr, int rid, int dayID, int yuanBao, int totalRoleNum, int zoneID)
 		{
 			int ret = -1;
@@ -3357,7 +3357,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000881 RID: 2177 RVA: 0x0004E708 File Offset: 0x0004C908
+		
 		public static int AddSystemGiveUserMoney(DBManager dbMgr, int rid, int yuanBao, string giveType)
 		{
 			int ret = -1;
@@ -3376,7 +3376,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000882 RID: 2178 RVA: 0x0004E7A0 File Offset: 0x0004C9A0
+		
 		public static int AddExchange1Item(DBManager dbMgr, int rid, int goodsid, int goodsnum, int leftgoodsnum, int otherroleid, string result)
 		{
 			int ret = -1;
@@ -3398,7 +3398,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000883 RID: 2179 RVA: 0x0004E858 File Offset: 0x0004CA58
+		
 		public static int AddExchange2Item(DBManager dbMgr, int rid, int yinliang, int leftyinliang, int otherroleid)
 		{
 			int ret = -1;
@@ -3418,7 +3418,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000884 RID: 2180 RVA: 0x0004E900 File Offset: 0x0004CB00
+		
 		public static int AddExchange3Item(DBManager dbMgr, int rid, int yuanbao, int leftyuanbao, int otherroleid)
 		{
 			int ret = -1;
@@ -3438,7 +3438,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000885 RID: 2181 RVA: 0x0004E9A8 File Offset: 0x0004CBA8
+		
 		public static int AddFallGoodsItem(DBManager dbMgr, int rid, int autoid, int goodsdbid, int goodsid, int goodsnum, int binding, int quality, int forgelevel, string jewellist, string mapname, string goodsgrid, string fromname)
 		{
 			int ret = -1;
@@ -3466,7 +3466,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000886 RID: 2182 RVA: 0x0004EA98 File Offset: 0x0004CC98
+		
 		public static int AddNewYueDuChouJiangHistory(DBManager dbMgr, int roleID, string roleName, int zoneID, int gaingoodsid, int gaingoodsnum, int gaingold, int gainyinliang, int gainexp)
 		{
 			int ret = -1;
@@ -3490,7 +3490,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000887 RID: 2183 RVA: 0x0004EB68 File Offset: 0x0004CD68
+		
 		public static bool UpdateRoleOccupation(DBManager dbMgr, int roleID, int nOccu)
 		{
 			bool ret = false;
@@ -3502,7 +3502,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000888 RID: 2184 RVA: 0x0004EBCC File Offset: 0x0004CDCC
+		
 		public static bool UpdateBloodCastleEnterCount(DBManager dbMgr, int nRoleID, int nDate, int nType, int nCount, string lastgettime)
 		{
 			bool bRet = false;
@@ -3521,7 +3521,7 @@ namespace GameDBServer.DB
 			return bRet;
 		}
 
-		// Token: 0x06000889 RID: 2185 RVA: 0x0004EC5C File Offset: 0x0004CE5C
+		
 		public static bool UpdateRoleInfoForFlashPlayerFlag(DBManager dbMgr, int nRoleID, int isflashplayer)
 		{
 			bool bRet = false;
@@ -3533,7 +3533,7 @@ namespace GameDBServer.DB
 			return bRet;
 		}
 
-		// Token: 0x0600088A RID: 2186 RVA: 0x0004ECC0 File Offset: 0x0004CEC0
+		
 		public static bool UpdateRoleExpForFlashPlayerWhenLogOut(DBManager dbMgr, int nRoleID)
 		{
 			bool bRet = false;
@@ -3546,7 +3546,7 @@ namespace GameDBServer.DB
 			return bRet;
 		}
 
-		// Token: 0x0600088B RID: 2187 RVA: 0x0004ED2C File Offset: 0x0004CF2C
+		
 		public static bool UpdateRoleLevForFlashPlayerWhenLogOut(DBManager dbMgr, int nRoleID)
 		{
 			bool bRet = false;
@@ -3558,7 +3558,7 @@ namespace GameDBServer.DB
 			return bRet;
 		}
 
-		// Token: 0x0600088C RID: 2188 RVA: 0x0004ED90 File Offset: 0x0004CF90
+		
 		public static bool UpdateRoleGoodsForFlashPlayerWhenLogOut(DBManager dbMgr, int nRoleID)
 		{
 			bool bRet = false;
@@ -3570,7 +3570,7 @@ namespace GameDBServer.DB
 			return bRet;
 		}
 
-		// Token: 0x0600088D RID: 2189 RVA: 0x0004EDF0 File Offset: 0x0004CFF0
+		
 		public static bool UpdateRoleTasksForFlashPlayerWhenLogOut(DBManager dbMgr, int nRoleID)
 		{
 			bool bRet = false;
@@ -3585,7 +3585,7 @@ namespace GameDBServer.DB
 			return bRet;
 		}
 
-		// Token: 0x0600088E RID: 2190 RVA: 0x0004EE6C File Offset: 0x0004D06C
+		
 		public static bool UpdateRoleTasksStarLevel(DBManager dbMgr, int nRoleID, int taskid, int StarLevel)
 		{
 			bool bRet = false;
@@ -3597,7 +3597,7 @@ namespace GameDBServer.DB
 			return bRet;
 		}
 
-		// Token: 0x0600088F RID: 2191 RVA: 0x0004EED8 File Offset: 0x0004D0D8
+		
 		public static bool UpdateRoleChangeLifeInfo(DBManager dbMgr, int nRoleID, int ChangeCount)
 		{
 			bool bRet = false;
@@ -3609,7 +3609,7 @@ namespace GameDBServer.DB
 			return bRet;
 		}
 
-		// Token: 0x06000890 RID: 2192 RVA: 0x0004EF3C File Offset: 0x0004D13C
+		
 		public static bool UpdateRoleAdmiredInfo1(DBManager dbMgr, int nRoleID, int nCount)
 		{
 			bool bRet = false;
@@ -3621,7 +3621,7 @@ namespace GameDBServer.DB
 			return bRet;
 		}
 
-		// Token: 0x06000891 RID: 2193 RVA: 0x0004EFA0 File Offset: 0x0004D1A0
+		
 		public static bool UpdateRoleAdmiredInfo2(DBManager dbMgr, int nRoleID1, int nRoleID2, int nDate)
 		{
 			bool bRet = false;
@@ -3633,7 +3633,7 @@ namespace GameDBServer.DB
 			return bRet;
 		}
 
-		// Token: 0x06000892 RID: 2194 RVA: 0x0004F00C File Offset: 0x0004D20C
+		
 		public static bool UpdateRoleCombatForce(DBManager dbMgr, int roleID, int CombatForce)
 		{
 			bool ret = false;
@@ -3645,7 +3645,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000893 RID: 2195 RVA: 0x0004F070 File Offset: 0x0004D270
+		
 		public static bool UpdateRoleLevel(DBManager dbMgr, int nRoleID, int lev)
 		{
 			bool bRet = false;
@@ -3657,7 +3657,7 @@ namespace GameDBServer.DB
 			return bRet;
 		}
 
-		// Token: 0x06000894 RID: 2196 RVA: 0x0004F0D4 File Offset: 0x0004D2D4
+		
 		public static bool UpdateRoleDayActivityPoint(DBManager dbMgr, int nRoleID, int nDate, int nType, int nCount, long nValue)
 		{
 			bool bRet = false;
@@ -3677,7 +3677,7 @@ namespace GameDBServer.DB
 			return bRet;
 		}
 
-		// Token: 0x06000895 RID: 2197 RVA: 0x0004F180 File Offset: 0x0004D380
+		
 		public static bool DeleteRoleDayActivityInfo(DBManager dbMgr, int roleID, int activityid)
 		{
 			bool ret = false;
@@ -3689,7 +3689,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000896 RID: 2198 RVA: 0x0004F1E4 File Offset: 0x0004D3E4
+		
 		public static int SetRoleAutoAssignPropertyPoint(DBManager dbMgr, int roleID, int nFlag)
 		{
 			int ret = 0;
@@ -3701,7 +3701,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000897 RID: 2199 RVA: 0x0004F250 File Offset: 0x0004D450
+		
 		public static int SetUserPushMessageID(DBManager dbMgr, string strUser, string strPushMegID)
 		{
 			int ret = 0;
@@ -3714,7 +3714,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000898 RID: 2200 RVA: 0x0004F2C8 File Offset: 0x0004D4C8
+		
 		public static int NewWing(DBManager dbMgr, int roleID, int wingID, int forgeLevel, string addtime, string strRoleName, int nOccupation)
 		{
 			int ret = -1;
@@ -3750,7 +3750,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x06000899 RID: 2201 RVA: 0x0004F3D0 File Offset: 0x0004D5D0
+		
 		public static int UpdateWing(DBManager dbMgr, int id, string[] fields, int startIndex)
 		{
 			int ret = -1;
@@ -3762,7 +3762,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600089A RID: 2202 RVA: 0x0004F43C File Offset: 0x0004D63C
+		
 		public static int UpdateLingYu(DBManager dbMgr, int roleID, int type, int level, int suit)
 		{
 			int ret = -1;
@@ -3780,7 +3780,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600089B RID: 2203 RVA: 0x0004F4C8 File Offset: 0x0004D6C8
+		
 		public static int UpdateRoleReferPictureJudgeInfo(DBManager dbMgr, int roleid, int nPictureJudgeID, int nNum)
 		{
 			int ret = 0;
@@ -3792,7 +3792,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600089C RID: 2204 RVA: 0x0004F534 File Offset: 0x0004D734
+		
 		public static int UpdateMoJingExchangeDict(DBManager dbMgr, int nRoleid, int nExchangeid, int nDayID, int nNum)
 		{
 			int ret = 0;
@@ -3810,7 +3810,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600089D RID: 2205 RVA: 0x0004F5C0 File Offset: 0x0004D7C0
+		
 		public static int UpdateResourceGetInfo(DBManager dbMgr, int nRoleid, int type, OldResourceInfo info)
 		{
 			int ret = 0;
@@ -3860,7 +3860,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x0600089E RID: 2206 RVA: 0x0004F7A8 File Offset: 0x0004D9A8
+		
 		public static int UpdateGoods2(DBManager dbMgr, int roleID, GoodsData gd, UpdateGoodsArgs args)
 		{
 			int result = -1;
@@ -3922,7 +3922,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x0600089F RID: 2207 RVA: 0x0004F9F0 File Offset: 0x0004DBF0
+		
 		public static void AppendSQLForGoodsProps(StringBuilder sb, int index, object value, string[] fieldNames, byte[] fieldTypes, bool hasAppend)
 		{
 			if (hasAppend)
@@ -3947,7 +3947,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060008A0 RID: 2208 RVA: 0x0004FAAC File Offset: 0x0004DCAC
+		
 		public static int UpdateRoleStarConstellationInfo(DBManager dbMgr, int roleid, int nStarSite, int nStarSlot)
 		{
 			int ret = 0;
@@ -3959,7 +3959,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008A1 RID: 2209 RVA: 0x0004FB18 File Offset: 0x0004DD18
+		
 		public static int SaveConsumeLog(DBManager dbMgr, int roleid, string cdate, int amount)
 		{
 			int ret = -1;
@@ -3971,7 +3971,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008A2 RID: 2210 RVA: 0x0004FB7C File Offset: 0x0004DD7C
+		
 		public static bool UpdateVipLevelAwardFlagInfo(DBManager dbMgr, string strUserid, int nFlag, int nZoneID)
 		{
 			bool ret = false;
@@ -3983,7 +3983,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008A3 RID: 2211 RVA: 0x0004FBE0 File Offset: 0x0004DDE0
+		
 		public static bool UpdateVipLevelAwardFlagInfoByRoleID(DBManager dbMgr, int nRoleid, int nFlag, int nZoneID)
 		{
 			bool ret = false;
@@ -3995,7 +3995,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008A4 RID: 2212 RVA: 0x0004FC4C File Offset: 0x0004DE4C
+		
 		public static int ExecuteSQLReadInt(DBManager dbMgr, string sqlText, MySQLConnection conn = null)
 		{
 			int result = 0;
@@ -4046,7 +4046,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x060008A5 RID: 2213 RVA: 0x0004FD6C File Offset: 0x0004DF6C
+		
 		public static int ValidateDatabase(DBManager dbMgr, string dbName)
 		{
 			MySQLConnection conn = null;
@@ -4141,7 +4141,7 @@ namespace GameDBServer.DB
 			return 1;
 		}
 
-		// Token: 0x060008A6 RID: 2214 RVA: 0x000500C8 File Offset: 0x0004E2C8
+		
 		private static bool CheckTableColumn(DBManager dbMgr, string dbName, string tableName, string columnName, MySQLConnection conn = null)
 		{
 			string sqlText = string.Format("SELECT COUNT(*) FROM information_schema.columns WHERE table_schema='{0}' AND table_name = '{1}' AND column_name='{2}' limit 1;", dbName, tableName, columnName);
@@ -4149,7 +4149,7 @@ namespace GameDBServer.DB
 			return result > 0;
 		}
 
-		// Token: 0x060008A7 RID: 2215 RVA: 0x000500F8 File Offset: 0x0004E2F8
+		
 		public static bool CheckMoneyCC(DBManager dbMgr, string dbName, MySQLConnection conn = null)
 		{
 			if (!DBWriter.CheckTableColumn(dbMgr, dbName, "t_money", "cc", conn))
@@ -4200,7 +4200,7 @@ namespace GameDBServer.DB
 			return true;
 		}
 
-		// Token: 0x060008A8 RID: 2216 RVA: 0x00050338 File Offset: 0x0004E538
+		
 		public static int ClearUnusedGoodsData(DBManager dbMgr, bool clearAll = false)
 		{
 			int maxGoodsDBID = -1;
@@ -4329,7 +4329,7 @@ namespace GameDBServer.DB
 			return 1;
 		}
 
-		// Token: 0x060008A9 RID: 2217 RVA: 0x000506DC File Offset: 0x0004E8DC
+		
 		public static int ClearBigTable_NameCheck(DBManager dbMgr)
 		{
 			int ret = -1;
@@ -4341,7 +4341,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008AA RID: 2218 RVA: 0x0005073C File Offset: 0x0004E93C
+		
 		public static int insertItemLog(DBManager dbMgr, string[] fields)
 		{
 			int ret = -1;
@@ -4367,7 +4367,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008AB RID: 2219 RVA: 0x000507F4 File Offset: 0x0004E9F4
+		
 		public static int UpdateRoleKuaFuDayLog(DBManager dbMgr, RoleKuaFuDayLogData data)
 		{
 			int ret = -1;
@@ -4389,7 +4389,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008AC RID: 2220 RVA: 0x000508C8 File Offset: 0x0004EAC8
+		
 		public static int InsertTianTiItemLog(DBManager dbMgr, TianTiLogItemData data)
 		{
 			int ret = -1;
@@ -4414,7 +4414,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008AD RID: 2221 RVA: 0x000509BC File Offset: 0x0004EBBC
+		
 		public static int InsertKF5v5ItemLog(DBManager dbMgr, TianTiLogItemData data)
 		{
 			int ret = -1;
@@ -4439,7 +4439,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008AE RID: 2222 RVA: 0x00050AB0 File Offset: 0x0004ECB0
+		
 		public static int ClearOverdueTianTiItemLog(DBManager dbMgr, DateTime minTime)
 		{
 			int ret = -1;
@@ -4451,7 +4451,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008AF RID: 2223 RVA: 0x00050B14 File Offset: 0x0004ED14
+		
 		public static int UpdateTianTiRoleData(DBManager dbMgr, RoleTianTiData data)
 		{
 			int result;
@@ -4477,7 +4477,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x060008B0 RID: 2224 RVA: 0x00050C20 File Offset: 0x0004EE20
+		
 		public static int UpdateTianTiRoleRongYao(DBManager dbMgr, int rid, int rongYao)
 		{
 			int ret = -1;
@@ -4489,7 +4489,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008B1 RID: 2225 RVA: 0x00050C84 File Offset: 0x0004EE84
+		
 		public static void InsertCityInfo(DBManager dbMgr, string ip, string userid)
 		{
 			IPInfo ipInfo = CityNameManager.ParseIP(ip);
@@ -4516,7 +4516,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060008B2 RID: 2226 RVA: 0x00050D60 File Offset: 0x0004EF60
+		
 		public static void UpdateCityInfoItem(DBManager dbMgr, string ip, string userid, string fieldName, int addVal)
 		{
 			IPInfo ipInfo = CityNameManager.ParseIP(ip);
@@ -4545,7 +4545,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060008B3 RID: 2227 RVA: 0x00050E54 File Offset: 0x0004F054
+		
 		public static void UpdateCityInfoLogoutTime(DBManager dbMgr, string ip, string userid, int onlineSecs, int activeVal)
 		{
 			IPInfo ipInfo = CityNameManager.ParseIP(ip);
@@ -4574,7 +4574,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060008B4 RID: 2228 RVA: 0x00050F44 File Offset: 0x0004F144
+		
 		public static bool UpdateUsrSecondPassword(DBManager dbMgr, string usrid, string secPwd)
 		{
 			bool result;
@@ -4603,7 +4603,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x060008B5 RID: 2229 RVA: 0x00050FD8 File Offset: 0x0004F1D8
+		
 		public static bool UpdateMarriageData(DBManager dbMgr, int nRoleID, int nSpouseID, sbyte byMarrytype, int nRingID, int nGoodwillexp, sbyte byGoodwillStar, sbyte byGoodwilllevel, int nGivenrose, string strLovemessage, sbyte byAutoReject, string changtime)
 		{
 			bool ret = false;
@@ -4628,7 +4628,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008B6 RID: 2230 RVA: 0x000510A8 File Offset: 0x0004F2A8
+		
 		public static bool AddMarryParty(DBManager dbMgr, int roleID, int partyType, string startTime, int husbandRoleID, int wifeRoleID)
 		{
 			bool ret = false;
@@ -4648,7 +4648,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008B7 RID: 2231 RVA: 0x00051144 File Offset: 0x0004F344
+		
 		public static bool RemoveMarryParty(DBManager dbMgr, int roleID)
 		{
 			bool ret = false;
@@ -4660,7 +4660,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008B8 RID: 2232 RVA: 0x000511A4 File Offset: 0x0004F3A4
+		
 		public static bool IncMarryPartyJoin(DBManager dbMgr, int roleID, int joinerID, int joinCount)
 		{
 			bool ret = false;
@@ -4680,7 +4680,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008B9 RID: 2233 RVA: 0x0005123C File Offset: 0x0004F43C
+		
 		public static bool ClearMarryPartyJoin(DBManager dbMgr, int roleID)
 		{
 			bool ret = false;
@@ -4700,7 +4700,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008BA RID: 2234 RVA: 0x000512BC File Offset: 0x0004F4BC
+		
 		public static bool DeleteChargeItemInfo(DBManager dbMgr, int id, byte isDel)
 		{
 			bool ret = false;
@@ -4712,7 +4712,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008BB RID: 2235 RVA: 0x00051320 File Offset: 0x0004F520
+		
 		public static int ModifyGMailRecord(DBManager dbMgr, int roleID, int gmailID, int mailID)
 		{
 			int ret = -1;
@@ -4731,7 +4731,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008BC RID: 2236 RVA: 0x000513AC File Offset: 0x0004F5AC
+		
 		public static bool UpdateHolyItemData(DBManager dbMgr, int nRoleID, sbyte sShengwu_type, sbyte sPart_slot, sbyte sPart_suit, int nPart_slice, int nFail_count)
 		{
 			bool ret = false;
@@ -4751,7 +4751,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008BD RID: 2237 RVA: 0x0005144C File Offset: 0x0004F64C
+		
 		public static bool UpdateTarotData(DBManager dbMgr, int nRoleID, string tarotInfo, string kingInfo)
 		{
 			bool ret = false;
@@ -4763,7 +4763,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008BE RID: 2238 RVA: 0x000514AC File Offset: 0x0004F6AC
+		
 		public static bool UpdateTenState(DBManager dbMgr, int id, int state)
 		{
 			bool ret = false;
@@ -4775,7 +4775,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008BF RID: 2239 RVA: 0x00051510 File Offset: 0x0004F710
+		
 		public static bool ActivateStateSet(DBManager dbMgr, int zoneID, string userID, int roleID)
 		{
 			bool ret = false;
@@ -4793,7 +4793,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008C0 RID: 2240 RVA: 0x000515A4 File Offset: 0x0004F7A4
+		
 		public static bool UpdateGiftCodeState(DBManager dbMgr, int id, int mailid, string time)
 		{
 			bool ret = false;
@@ -4805,7 +4805,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008C1 RID: 2241 RVA: 0x00051608 File Offset: 0x0004F808
+		
 		public static int InsertChargeTempItem(DBManager dbMgr, string UserID, int chargeRoleID, int addUserMoney, int zhigouID, string chargeTm)
 		{
 			int ret = -1;
@@ -4824,7 +4824,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008C2 RID: 2242 RVA: 0x00051694 File Offset: 0x0004F894
+		
 		public static bool Insert2OrderNo(DBManager dbMgr, string order_no)
 		{
 			MySQLConnection conn = null;
@@ -4857,7 +4857,7 @@ namespace GameDBServer.DB
 			return error;
 		}
 
-		// Token: 0x060008C3 RID: 2243 RVA: 0x00051754 File Offset: 0x0004F954
+		
 		public static bool Insert2InputLog(DBManager dbMgr, RechargeData rechargeData)
 		{
 			bool result;
@@ -4915,7 +4915,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x060008C4 RID: 2244 RVA: 0x00051904 File Offset: 0x0004FB04
+		
 		public static bool Insert2TempMoney(DBManager dbMgr, TempMoneyInfo info)
 		{
 			MySQLConnection conn = null;
@@ -4957,7 +4957,7 @@ namespace GameDBServer.DB
 			return error;
 		}
 
-		// Token: 0x060008C5 RID: 2245 RVA: 0x00051A24 File Offset: 0x0004FC24
+		
 		public static bool UpdateFacebookState(DBManager dbMgr, int id, int state)
 		{
 			bool ret = false;
@@ -4990,7 +4990,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008C6 RID: 2246 RVA: 0x00051AEC File Offset: 0x0004FCEC
+		
 		public static bool InsertFoMoMailData(DBManager dbMgr, int sendid, string sendername, int sendjob, int recrid, int num, string content, string today)
 		{
 			MySQLConnection conn = null;
@@ -5034,7 +5034,7 @@ namespace GameDBServer.DB
 			return error;
 		}
 
-		// Token: 0x060008C7 RID: 2247 RVA: 0x00051C04 File Offset: 0x0004FE04
+		
 		public static bool UpdateIsReadFoMoMailData(DBManager dbMgr, int mailid, string today)
 		{
 			MySQLConnection conn = null;
@@ -5067,7 +5067,7 @@ namespace GameDBServer.DB
 			return error;
 		}
 
-		// Token: 0x060008C8 RID: 2248 RVA: 0x00051CD0 File Offset: 0x0004FED0
+		
 		public static bool InsertFoMoMailDataTemp(DBManager dbMgr, int sendid, string recrid_list, int nDate, int accept, int give)
 		{
 			MySQLConnection conn = null;
@@ -5107,7 +5107,7 @@ namespace GameDBServer.DB
 			return error;
 		}
 
-		// Token: 0x060008C9 RID: 2249 RVA: 0x00051DC8 File Offset: 0x0004FFC8
+		
 		public static bool UpdateRoleStoreFuMoMoneyAcceptNum(DBManager dbMgr, int roleID, int nDate, int acceptnum)
 		{
 			bool ret = false;
@@ -5119,7 +5119,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008CA RID: 2250 RVA: 0x00051E34 File Offset: 0x00050034
+		
 		public static bool UpdateRoleStoreFuMoMoneyGiveNum(DBManager dbMgr, int roleID, int givenum, int nDate, string recid_list)
 		{
 			bool ret = false;
@@ -5137,7 +5137,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008CB RID: 2251 RVA: 0x00051EBC File Offset: 0x000500BC
+		
 		public static bool DeleteMailFuMoByMailID(DBManager dbMgr, int mailID)
 		{
 			bool ret = false;
@@ -5149,7 +5149,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008CC RID: 2252 RVA: 0x00051F1C File Offset: 0x0005011C
+		
 		public static bool DeleteMailFuMoByMailIDList(DBManager dbMgr, int rid, string mailIDList)
 		{
 			bool ret = false;
@@ -5161,7 +5161,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008CD RID: 2253 RVA: 0x00051F7C File Offset: 0x0005017C
+		
 		public static bool UpdateRebornYinJiInfo(int RoleID, string StampInfo, int ResetNum, int UsePoint)
 		{
 			bool ret = false;
@@ -5179,7 +5179,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008CE RID: 2254 RVA: 0x00052000 File Offset: 0x00050200
+		
 		public static bool InsertRebornYinJiInfo(int RoleID, string StampInfo, int ResetNum, int UsePoint)
 		{
 			bool ret = false;
@@ -5197,7 +5197,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008CF RID: 2255 RVA: 0x00052084 File Offset: 0x00050284
+		
 		public static int AddUserLimitGoodsBuyItem(DBManager dbMgr, string UserID, int goodsID, int dayID, int usedNum, string stage)
 		{
 			int ret = -1;
@@ -5216,7 +5216,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008D0 RID: 2256 RVA: 0x00052110 File Offset: 0x00050310
+		
 		public static List<string> GetUserZoneID(DBManager dbMgr, int roleID)
 		{
 			MySQLConnection conn = null;
@@ -5261,7 +5261,7 @@ namespace GameDBServer.DB
 			return lData;
 		}
 
-		// Token: 0x060008D1 RID: 2257 RVA: 0x00052234 File Offset: 0x00050434
+		
 		public static bool InsertRebornEquipHoleInfo(int RoleID, int HoleID, int Level, int Able)
 		{
 			bool ret = false;
@@ -5279,7 +5279,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008D2 RID: 2258 RVA: 0x000522C0 File Offset: 0x000504C0
+		
 		public static bool UpdateRebornEquipHoleInfo(int RoleID, int HoleID, int Level, int Able)
 		{
 			bool ret = false;
@@ -5297,7 +5297,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008D3 RID: 2259 RVA: 0x0005234C File Offset: 0x0005054C
+		
 		public static bool InsertMazingerStoreInfo(int RoleID, int TypeID, int Stage, int Level, int Exp)
 		{
 			bool ret = false;
@@ -5316,7 +5316,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008D4 RID: 2260 RVA: 0x000523E0 File Offset: 0x000505E0
+		
 		public static bool UpdateMazingerStoreInfo(int RoleID, int TypeID, int Stage, int Level, int Exp)
 		{
 			bool ret = false;
@@ -5335,7 +5335,7 @@ namespace GameDBServer.DB
 			return ret;
 		}
 
-		// Token: 0x060008D6 RID: 2262 RVA: 0x000524C8 File Offset: 0x000506C8
+		
 		// Note: this type is marked as 'beforefieldinit'.
 		static DBWriter()
 		{
@@ -5480,13 +5480,13 @@ namespace GameDBServer.DB
 			};
 		}
 
-		// Token: 0x0400098A RID: 2442
+		
 		private const string RoleExtIdKey = "role_ext_auto_increment";
 
-		// Token: 0x0400098B RID: 2443
+		
 		private const int RoleExtIdValidStart = 1500000000;
 
-		// Token: 0x0400098C RID: 2444
+		
 		private static readonly string[][] ValidateDatabaseTables = new string[][]
 		{
 			new string[]
@@ -5531,7 +5531,7 @@ namespace GameDBServer.DB
 			}
 		};
 
-		// Token: 0x0400098D RID: 2445
+		
 		private static readonly string[][] ValidateDatabaseTableRows = new string[][]
 		{
 			new string[]
@@ -5542,7 +5542,7 @@ namespace GameDBServer.DB
 			}
 		};
 
-		// Token: 0x0400098E RID: 2446
+		
 		private static readonly string[][] ValidateDatabaseTableIndexes = new string[][]
 		{
 			new string[]
@@ -5552,7 +5552,7 @@ namespace GameDBServer.DB
 			}
 		};
 
-		// Token: 0x0400098F RID: 2447
+		
 		private static readonly string[] _UpdateGoods_fieldNames = new string[]
 		{
 			"isusing",
@@ -5578,7 +5578,7 @@ namespace GameDBServer.DB
 			"equipchangelife"
 		};
 
-		// Token: 0x04000990 RID: 2448
+		
 		private static readonly byte[] _UpdateGoods_fieldTypes = new byte[]
 		{
 			0,
@@ -5604,7 +5604,7 @@ namespace GameDBServer.DB
 			0
 		};
 
-		// Token: 0x04000991 RID: 2449
+		
 		private static readonly string[] _UpdateTask_fieldNames = new string[]
 		{
 			"focus",
@@ -5612,40 +5612,40 @@ namespace GameDBServer.DB
 			"value2"
 		};
 
-		// Token: 0x04000992 RID: 2450
+		
 		private static readonly byte[] _UpdateTask_fieldTypes;
 
-		// Token: 0x04000993 RID: 2451
+		
 		private static readonly string[] _UpdatePet_fieldNames;
 
-		// Token: 0x04000994 RID: 2452
+		
 		private static readonly byte[] _UpdatePet_fieldTypes;
 
-		// Token: 0x04000995 RID: 2453
+		
 		private static readonly string[] _UpdateActivity_fieldNames;
 
-		// Token: 0x04000996 RID: 2454
+		
 		private static readonly byte[] _UpdateActivity_fieldTypes;
 
-		// Token: 0x04000997 RID: 2455
+		
 		private static readonly string[] _UpdateWing_fieldNames;
 
-		// Token: 0x04000998 RID: 2456
+		
 		private static readonly byte[] _UpdateWing_fieldTypes;
 
-		// Token: 0x04000999 RID: 2457
+		
 		private static readonly string[] _UpdateGoods2_fieldNames;
 
-		// Token: 0x0400099A RID: 2458
+		
 		private static readonly byte[] _UpdateGoods2_fieldTypes;
 
-		// Token: 0x0400099B RID: 2459
+		
 		private static object GoodsBakTableMutex;
 
-		// Token: 0x0400099C RID: 2460
+		
 		private static int GoodsBakTableIndex;
 
-		// Token: 0x0400099D RID: 2461
+		
 		private static readonly string[] GoodsBakTableNames;
 	}
 }

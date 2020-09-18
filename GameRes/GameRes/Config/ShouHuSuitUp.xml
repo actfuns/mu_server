@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <DiaoXiang ID="1" NeedGoods="2032,0" Model="201" />
+  <DiaoXiang ID="2" NeedGoods="2032,20" Model="202" />
+  <DiaoXiang ID="3" NeedGoods="2032,50" Model="203" />
+  <DiaoXiang ID="4" NeedGoods="2032,160" Model="204" />
+  <DiaoXiang ID="5" NeedGoods="2032,320" Model="205" />
+  <DiaoXiang ID="6" NeedGoods="2032,480" Model="206" />
+  <DiaoXiang ID="7" NeedGoods="2032,600" Model="207" />
+  <DiaoXiang ID="8" NeedGoods="2032,660" Model="208" />
+  <DiaoXiang ID="9" NeedGoods="2032,720" Model="209" />
+  <DiaoXiang ID="10" NeedGoods="2032,780" Model="210" />
+</Config>

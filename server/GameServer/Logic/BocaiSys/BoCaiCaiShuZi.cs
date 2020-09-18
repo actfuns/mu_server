@@ -9,21 +9,21 @@ using Tmsk.Contract.KuaFuData;
 
 namespace GameServer.Logic.BocaiSys
 {
-    // Token: 0x02000076 RID: 118
+    
     public class BoCaiCaiShuZi
     {
-        // Token: 0x0600019F RID: 415 RVA: 0x0001B064 File Offset: 0x00019264
+        
         private BoCaiCaiShuZi()
         {
         }
 
-        // Token: 0x060001A0 RID: 416 RVA: 0x0001B10C File Offset: 0x0001930C
+        
         public static BoCaiCaiShuZi GetInstance()
         {
             return BoCaiCaiShuZi.instance;
         }
 
-        // Token: 0x060001A1 RID: 417 RVA: 0x0001B124 File Offset: 0x00019324
+        
         private bool GetOpenLotteryData(bool init = false)
         {
             try
@@ -43,7 +43,7 @@ namespace GameServer.Logic.BocaiSys
             return false;
         }
 
-        // Token: 0x060001A2 RID: 418 RVA: 0x0001B218 File Offset: 0x00019418
+        
         private void GetRank()
         {
             try
@@ -141,7 +141,7 @@ namespace GameServer.Logic.BocaiSys
             }
         }
 
-        // Token: 0x060001A3 RID: 419 RVA: 0x0001B6F4 File Offset: 0x000198F4
+        
         public bool LoadBuyList(long DataPeriods)
         {
             try
@@ -196,7 +196,7 @@ namespace GameServer.Logic.BocaiSys
             return false;
         }
 
-        // Token: 0x060001A4 RID: 420 RVA: 0x0001B97C File Offset: 0x00019B7C
+        
         private bool GetStageData()
         {
             try
@@ -216,7 +216,7 @@ namespace GameServer.Logic.BocaiSys
             return false;
         }
 
-        // Token: 0x060001A5 RID: 421 RVA: 0x0001B9F4 File Offset: 0x00019BF4
+        
         private void startNewGame(OpenLottery OpenData = null, bool init = false)
         {
             try
@@ -258,7 +258,7 @@ namespace GameServer.Logic.BocaiSys
             }
         }
 
-        // Token: 0x060001A6 RID: 422 RVA: 0x0001BB30 File Offset: 0x00019D30
+        
         public void Init()
         {
             try
@@ -302,7 +302,7 @@ namespace GameServer.Logic.BocaiSys
             }
         }
 
-        // Token: 0x060001A7 RID: 423 RVA: 0x0001BD48 File Offset: 0x00019F48
+        
         private void CheckStageData(DateTime _time, bool isReload)
         {
             try
@@ -366,7 +366,7 @@ namespace GameServer.Logic.BocaiSys
             }
         }
 
-        // Token: 0x060001A8 RID: 424 RVA: 0x0001C03C File Offset: 0x0001A23C
+        
         public void BigTimeUpData(bool reload = false)
         {
             try
@@ -405,7 +405,7 @@ namespace GameServer.Logic.BocaiSys
             }
         }
 
-        // Token: 0x060001A9 RID: 425 RVA: 0x0001C234 File Offset: 0x0001A434
+        
         private void OpenLotterySetWin()
         {
             try
@@ -485,7 +485,7 @@ namespace GameServer.Logic.BocaiSys
             }
         }
 
-        // Token: 0x060001AA RID: 426 RVA: 0x0001C658 File Offset: 0x0001A858
+        
         public bool SetStageData(KFStageData data, bool isKF = true)
         {
             try
@@ -534,7 +534,7 @@ namespace GameServer.Logic.BocaiSys
             return false;
         }
 
-        // Token: 0x060001AB RID: 427 RVA: 0x0001C834 File Offset: 0x0001AA34
+        
         public bool SetOpenLotteryData(OpenLottery OpenData, bool init = false, bool isKF = false)
         {
             try
@@ -605,7 +605,7 @@ namespace GameServer.Logic.BocaiSys
             return false;
         }
 
-        // Token: 0x060001AC RID: 428 RVA: 0x0001CAC4 File Offset: 0x0001ACC4
+        
         public bool IsCanBuy()
         {
             bool result;
@@ -616,7 +616,7 @@ namespace GameServer.Logic.BocaiSys
             return result;
         }
 
-        // Token: 0x060001AD RID: 429 RVA: 0x0001CB90 File Offset: 0x0001AD90
+        
         public BuyBoCai2SDB BuyBocai(GameClient client, int buyNum, string BuyVal, ref int allNum)
         {
             BuyBoCai2SDB DbData = null;
@@ -683,7 +683,7 @@ namespace GameServer.Logic.BocaiSys
             return DbData;
         }
 
-        // Token: 0x060001AE RID: 430 RVA: 0x0001CE7C File Offset: 0x0001B07C
+        
         public void OpenGetBoCai(int roleid, ref GetBoCaiResult mgsData)
         {
             try
@@ -727,7 +727,7 @@ namespace GameServer.Logic.BocaiSys
             }
         }
 
-        // Token: 0x060001AF RID: 431 RVA: 0x0001D0DC File Offset: 0x0001B2DC
+        
         public void UpdateBoCai()
         {
             try
@@ -756,7 +756,7 @@ namespace GameServer.Logic.BocaiSys
             }
         }
 
-        // Token: 0x060001B0 RID: 432 RVA: 0x0001D250 File Offset: 0x0001B450
+        
         public void CopyBuyList(out List<BoCaiBuyItem> itemList, int roleID)
         {
             itemList = new List<BoCaiBuyItem>();
@@ -786,7 +786,7 @@ namespace GameServer.Logic.BocaiSys
             }
         }
 
-        // Token: 0x060001B1 RID: 433 RVA: 0x0001D3BC File Offset: 0x0001B5BC
+        
         public void CopyBuyHistoryList(ref List<BoCaiBuyItem> itemList, int roleID)
         {
             try
@@ -817,7 +817,7 @@ namespace GameServer.Logic.BocaiSys
             }
         }
 
-        // Token: 0x060001B2 RID: 434 RVA: 0x0001D570 File Offset: 0x0001B770
+        
         public int GetXiaoHaoDaiBi()
         {
             int xiaoHaoDaiBi;
@@ -828,7 +828,7 @@ namespace GameServer.Logic.BocaiSys
             return xiaoHaoDaiBi;
         }
 
-        // Token: 0x060001B3 RID: 435 RVA: 0x0001D5C4 File Offset: 0x0001B7C4
+        
         public long GetDataPeriods()
         {
             long dataPeriods;
@@ -839,7 +839,7 @@ namespace GameServer.Logic.BocaiSys
             return dataPeriods;
         }
 
-        // Token: 0x060001B4 RID: 436 RVA: 0x0001D618 File Offset: 0x0001B818
+        
         public void PriorityActivity(GameClient client = null)
         {
             try
@@ -872,55 +872,55 @@ namespace GameServer.Logic.BocaiSys
             }
         }
 
-        // Token: 0x040002B0 RID: 688
+        
         private static BoCaiCaiShuZi instance = new BoCaiCaiShuZi();
 
-        // Token: 0x040002B1 RID: 689
+        
         private bool IsStart;
 
-        // Token: 0x040002B2 RID: 690
+        
         private bool RankResult = false;
 
-        // Token: 0x040002B3 RID: 691
+        
         private int UpStageTime = 1800;
 
-        // Token: 0x040002B4 RID: 692
+        
         private int UpAllBalanceTime = 660;
 
-        // Token: 0x040002B5 RID: 693
+        
         private object mutex = new object();
 
-        // Token: 0x040002B6 RID: 694
+        
         private int BoCaiType = 2;
 
-        // Token: 0x040002B7 RID: 695
+        
         private KFStageData StageData = new KFStageData();
 
-        // Token: 0x040002B8 RID: 696
+        
         private OpenLottery ServerOpenData = new OpenLottery();
 
-        // Token: 0x040002B9 RID: 697
+        
         private long FirstDataPeriods = 0L;
 
-        // Token: 0x040002BA RID: 698
+        
         private OpenLottery StartServerOpenData = null;
 
-        // Token: 0x040002BB RID: 699
+        
         private BoCaiStageEnum StartServerStage = BoCaiStageEnum.Stage_Err;
 
-        // Token: 0x040002BC RID: 700
+        
         private CenterServerCaiShuZi ServerData = new CenterServerCaiShuZi();
 
-        // Token: 0x040002BD RID: 701
+        
         private List<OpenLottery> OpenHistory = new List<OpenLottery>();
 
-        // Token: 0x040002BE RID: 702
+        
         private List<KFBoCaoHistoryData> WinHistory = new List<KFBoCaoHistoryData>();
 
-        // Token: 0x040002BF RID: 703
+        
         private List<PlayerBuyBoCaiData> BoCaiBaseList = new List<PlayerBuyBoCaiData>();
 
-        // Token: 0x040002C0 RID: 704
+        
         private Dictionary<long, List<RoleBuyHistory>> BuyItemHistoryDict = new Dictionary<long, List<RoleBuyHistory>>();
     }
 }

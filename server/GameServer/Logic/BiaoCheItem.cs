@@ -7,16 +7,16 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020005C9 RID: 1481
+	
 	public class BiaoCheItem : IObject
 	{
-		// Token: 0x06001B1D RID: 6941 RVA: 0x0019BAC8 File Offset: 0x00199CC8
+		
 		public BiaoCheData GetBiaoCheData()
 		{
 			return this._MyBiaoCheData;
 		}
 
-		// Token: 0x17000092 RID: 146
+		
 		
 		
 		public int OwnerRoleID
@@ -39,7 +39,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x17000093 RID: 147
+		
 		
 		
 		public int BiaoCheID
@@ -62,7 +62,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x17000094 RID: 148
+		
 		
 		
 		public string BiaoCheName
@@ -85,7 +85,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x17000095 RID: 149
+		
 		
 		
 		public int YaBiaoID
@@ -108,7 +108,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x17000096 RID: 150
+		
 		
 		
 		public int MapCode
@@ -131,7 +131,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x17000097 RID: 151
+		
 		
 		
 		public int PosX
@@ -154,7 +154,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x17000098 RID: 152
+		
 		
 		
 		public int PosY
@@ -177,7 +177,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x17000099 RID: 153
+		
 		
 		
 		public int Direction
@@ -200,7 +200,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x1700009A RID: 154
+		
 		
 		
 		public int LifeV
@@ -223,7 +223,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x1700009B RID: 155
+		
 		
 		
 		public int CutLifeV
@@ -246,7 +246,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x1700009C RID: 156
+		
 		
 		
 		public long StartTime
@@ -269,7 +269,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x1700009D RID: 157
+		
 		
 		
 		public int BodyCode
@@ -292,7 +292,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x1700009E RID: 158
+		
 		
 		
 		public int PicCode
@@ -315,7 +315,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x1700009F RID: 159
+		
 		
 		
 		public string OwnerRoleName
@@ -338,7 +338,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000A0 RID: 160
+		
 		
 		
 		public long ReportPosTicks
@@ -361,7 +361,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000A1 RID: 161
+		
 		
 		
 		public int CurrentAction
@@ -387,7 +387,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000A2 RID: 162
+		
 		
 		
 		public int CopyMapID
@@ -410,7 +410,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000A3 RID: 163
+		
 		
 		
 		public int CurrentLifeV
@@ -433,7 +433,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000A4 RID: 164
+		
 		
 		
 		public int AttackedRoleID
@@ -465,7 +465,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000A5 RID: 165
+		
 		
 		
 		public int CurrentGridX
@@ -488,7 +488,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000A6 RID: 166
+		
 		
 		
 		public int CurrentGridY
@@ -511,7 +511,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000A7 RID: 167
+		
 		
 		
 		public Dictionary<string, bool> CurrentObjsDict
@@ -534,7 +534,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000A8 RID: 168
+		
 		
 		
 		public Dictionary<string, bool> CurrentGridsDict
@@ -557,7 +557,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000A9 RID: 169
+		
 		
 		
 		public bool HandledDead
@@ -580,7 +580,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000AA RID: 170
+		
 		
 		
 		public long BiaoCheDeadTicks
@@ -603,7 +603,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000AB RID: 171
+		
 		
 		
 		public int DestNPC
@@ -626,7 +626,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000AC RID: 172
+		
 		
 		
 		public int MinLevel
@@ -649,7 +649,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000AD RID: 173
+		
 		
 		
 		public int MaxLevel
@@ -672,7 +672,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000AE RID: 174
+		
 		
 		public ObjectTypes ObjectType
 		{
@@ -682,13 +682,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B57 RID: 6999 RVA: 0x0019CC64 File Offset: 0x0019AE64
+		
 		public int GetObjectID()
 		{
 			return this.BiaoCheID;
 		}
 
-		// Token: 0x170000AF RID: 175
+		
 		
 		
 		public long LastLifeMagicTick
@@ -703,7 +703,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000B0 RID: 176
+		
 		
 		
 		public Point CurrentGrid
@@ -721,7 +721,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000B1 RID: 177
+		
 		
 		
 		public Point CurrentPos
@@ -737,7 +737,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000B2 RID: 178
+		
 		
 		public int CurrentMapCode
 		{
@@ -747,7 +747,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000B3 RID: 179
+		
 		
 		public int CurrentCopyMapID
 		{
@@ -757,7 +757,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000B4 RID: 180
+		
 		
 		
 		public Dircetions CurrentDir
@@ -772,69 +772,69 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x170000B5 RID: 181
+		
 		
 		
 		public List<int> PassiveEffectList { get; set; }
 
-		// Token: 0x06001B64 RID: 7012 RVA: 0x0019CE10 File Offset: 0x0019B010
+		
 		public T GetExtComponent<T>(ExtComponentTypes type) where T : class
 		{
 			return default(T);
 		}
 
-		// Token: 0x040029CE RID: 10702
+		
 		private object Mutex = new object();
 
-		// Token: 0x040029CF RID: 10703
+		
 		private BiaoCheData _MyBiaoCheData = new BiaoCheData();
 
-		// Token: 0x040029D0 RID: 10704
+		
 		private long _ReportPosTicks = 0L;
 
-		// Token: 0x040029D1 RID: 10705
+		
 		private int _CurrentAction = 0;
 
-		// Token: 0x040029D2 RID: 10706
+		
 		private int _CopyMapID = -1;
 
-		// Token: 0x040029D3 RID: 10707
+		
 		private int _CurrentLifeV;
 
-		// Token: 0x040029D4 RID: 10708
+		
 		private int _AttackedRoleID;
 
-		// Token: 0x040029D5 RID: 10709
+		
 		private long _LastAttackedTick = 0L;
 
-		// Token: 0x040029D6 RID: 10710
+		
 		private int _CurrentGridX = -1;
 
-		// Token: 0x040029D7 RID: 10711
+		
 		private int _CurrentGridY = -1;
 
-		// Token: 0x040029D8 RID: 10712
+		
 		private Dictionary<string, bool> _CurrentObjsDict = null;
 
-		// Token: 0x040029D9 RID: 10713
+		
 		private Dictionary<string, bool> _CurrentGridsDict = null;
 
-		// Token: 0x040029DA RID: 10714
+		
 		public bool _HandledDead = false;
 
-		// Token: 0x040029DB RID: 10715
+		
 		private long _BiaoCheDeadTicks = 0L;
 
-		// Token: 0x040029DC RID: 10716
+		
 		private int _DestNPC = 0;
 
-		// Token: 0x040029DD RID: 10717
+		
 		private int _MinLevel = 0;
 
-		// Token: 0x040029DE RID: 10718
+		
 		private int _MaxLevel = 0;
 
-		// Token: 0x040029DF RID: 10719
+		
 		private long _LastLifeMagicTick = TimeUtil.NOW();
 	}
 }

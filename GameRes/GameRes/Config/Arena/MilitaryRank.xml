@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Goods MilitaryRankLevel="0" Name="兵士" NeedReputation="" ConsumptionReputation="0.1" BuffID="" />
+  <Goods MilitaryRankLevel="1" Name="中士" NeedReputation="" ConsumptionReputation="0.15" BuffID="" />
+  <Goods MilitaryRankLevel="2" Name="中士长" NeedReputation="" ConsumptionReputation="0.2" BuffID="" />
+  <Goods MilitaryRankLevel="3" Name="军士" NeedReputation="" ConsumptionReputation="0.25" BuffID="" />
+  <Goods MilitaryRankLevel="4" Name="军士长" NeedReputation="" ConsumptionReputation="0.3" BuffID="" />
+  <Goods MilitaryRankLevel="5" Name="卫士" NeedReputation="" ConsumptionReputation="0.35" BuffID="" />
+  <Goods MilitaryRankLevel="6" Name="卫士长" NeedReputation="" ConsumptionReputation="0.4" BuffID="" />
+  <Goods MilitaryRankLevel="7" Name="百夫长" NeedReputation="" ConsumptionReputation="0.45" BuffID="" />
+  <Goods MilitaryRankLevel="8" Name="千夫长" NeedReputation="" ConsumptionReputation="0.5" BuffID="" />
+  <Goods MilitaryRankLevel="9" Name="勇士" NeedReputation="" ConsumptionReputation="0.55" BuffID="" />
+  <Goods MilitaryRankLevel="10" Name="中将" NeedReputation="" ConsumptionReputation="0.6" BuffID="" />
+  <Goods MilitaryRankLevel="11" Name="将军" NeedReputation="" ConsumptionReputation="0.65" BuffID="" />
+</Config>

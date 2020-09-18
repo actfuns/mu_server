@@ -3,10 +3,10 @@ using DotNetDetour.DetourWays;
 
 namespace DotNetDetour
 {
-	// Token: 0x0200000A RID: 10
+	
 	public class DetourFactory
 	{
-		// Token: 0x06000030 RID: 48 RVA: 0x000031A8 File Offset: 0x000013A8
+		
 		public static IDetour CreateDetourEngine()
 		{
 			IDetour result;

@@ -1,0 +1,2415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Levels level="强化等级">
+    <WuGong PropVal="属性加成" SucceedRate="成功率" HanTie="炼器寒铁" UseLingLi="灵力" UseMoney="银两" />
+    <MoGong PropVal="属性加成" SucceedRate="成功率" HanTie="炼器寒铁" UseLingLi="灵力" UseMoney="银两" />
+    <WuFang PropVal="属性加成" SucceedRate="成功率" HanTie="炼器寒铁" UseLingLi="灵力" UseMoney="银两" />
+    <MoFang PropVal="属性加成" SucceedRate="成功率" HanTie="炼器寒铁" UseLingLi="灵力" UseMoney="银两" />
+    <BaoJi PropVal="属性加成" SucceedRate="成功率" HanTie="炼器寒铁" UseLingLi="灵力" UseMoney="银两" />
+    <KangBao PropVal="属性加成" SucceedRate="成功率" HanTie="炼器寒铁" UseLingLi="灵力" UseMoney="银两" />
+    <MingZong PropVal="属性加成" SucceedRate="成功率" HanTie="炼器寒铁" UseLingLi="灵力" UseMoney="银两" />
+    <ShanBi PropVal="属性加成" SucceedRate="成功率" HanTie="炼器寒铁" UseLingLi="灵力" UseMoney="银两" />
+    <ShengL PropVal="属性加成" SucceedRate="成功率" HanTie="炼器寒铁" UseLingLi="灵力" UseMoney="银两" />
+    <MoFaL PropVal="属性加成" SucceedRate="成功率" HanTie="炼器寒铁" UseLingLi="灵力" UseMoney="银两" />
+  </Levels>
+  <Levels level="1">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="2">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="3">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="4">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="5">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="6">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="7">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="8">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="9">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="10">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="11">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="12">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="13">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="14">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="15">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="16">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="17">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="18">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="19">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="20">
+    <WuGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoGong PropVal="6" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <WuFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFang PropVal="12" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <BaoJi PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <KangBao PropVal="5" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MingZong PropVal="3" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShanBi PropVal="2" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <ShengL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+    <MoFaL PropVal="30" SucceedRate="100" HanTie="1" UseLingLi="0" UseMoney="1000" />
+  </Levels>
+  <Levels level="21">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="22">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="23">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="24">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="25">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="26">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="27">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="28">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="29">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="30">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="31">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="32">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="33">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="34">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="35">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="36">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="37">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="38">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="39">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="40">
+    <WuGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoGong PropVal="9" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <WuFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFang PropVal="19" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <BaoJi PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <KangBao PropVal="7" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MingZong PropVal="5" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShanBi PropVal="3" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <ShengL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+    <MoFaL PropVal="47" SucceedRate="100" HanTie="2" UseLingLi="0" UseMoney="2000" />
+  </Levels>
+  <Levels level="41">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="42">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="43">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="44">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="45">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="46">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="47">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="48">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="49">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="50">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="51">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="52">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="53">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="54">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="55">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="56">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="57">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="58">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="59">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="60">
+    <WuGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoGong PropVal="15" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <WuFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFang PropVal="30" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <BaoJi PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <KangBao PropVal="12" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MingZong PropVal="7" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShanBi PropVal="5" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <ShengL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+    <MoFaL PropVal="75" SucceedRate="100" HanTie="4" UseLingLi="0" UseMoney="3000" />
+  </Levels>
+  <Levels level="61">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="62">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="63">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="64">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="65">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="66">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="67">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="68">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="69">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="70">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="71">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="72">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="73">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="74">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="75">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="76">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="77">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="78">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="79">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="80">
+    <WuGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoGong PropVal="24" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <WuFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFang PropVal="47" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <BaoJi PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <KangBao PropVal="19" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MingZong PropVal="12" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShanBi PropVal="7" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <ShengL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+    <MoFaL PropVal="118" SucceedRate="100" HanTie="8" UseLingLi="0" UseMoney="4000" />
+  </Levels>
+  <Levels level="81">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="82">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="83">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="84">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="85">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="86">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="87">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="88">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="89">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="90">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="91">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="92">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="93">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="94">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="95">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="96">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="97">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="98">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="99">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="100">
+    <WuGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoGong PropVal="37" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <WuFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFang PropVal="74" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <BaoJi PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <KangBao PropVal="29" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MingZong PropVal="19" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShanBi PropVal="12" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <ShengL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+    <MoFaL PropVal="186" SucceedRate="100" HanTie="16" UseLingLi="0" UseMoney="5000" />
+  </Levels>
+  <Levels level="101">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="102">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="103">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="104">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="105">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="106">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="107">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="108">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="109">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="110">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="111">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="112">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="113">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="114">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="115">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="116">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="117">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="118">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="119">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="120">
+    <WuGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoGong PropVal="59" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <WuFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFang PropVal="117" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <BaoJi PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <KangBao PropVal="46" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MingZong PropVal="29" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShanBi PropVal="19" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <ShengL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+    <MoFaL PropVal="293" SucceedRate="100" HanTie="32" UseLingLi="0" UseMoney="6000" />
+  </Levels>
+  <Levels level="121">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="122">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="123">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="124">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="125">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="126">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="127">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="128">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="129">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="130">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="131">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="132">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="133">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="134">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="135">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="136">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="137">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="138">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="139">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="140">
+    <WuGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoGong PropVal="93" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <WuFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFang PropVal="185" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <BaoJi PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <KangBao PropVal="73" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MingZong PropVal="46" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShanBi PropVal="29" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <ShengL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+    <MoFaL PropVal="463" SucceedRate="100" HanTie="64" UseLingLi="0" UseMoney="7000" />
+  </Levels>
+  <Levels level="141">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="142">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="143">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="144">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="145">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="146">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="147">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="148">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="149">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="150">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="151">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="152">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="153">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="154">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="155">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="156">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="157">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="158">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="159">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="160">
+    <WuGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoGong PropVal="146" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <WuFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFang PropVal="292" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <BaoJi PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <KangBao PropVal="116" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MingZong PropVal="73" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShanBi PropVal="46" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <ShengL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+    <MoFaL PropVal="730" SucceedRate="100" HanTie="128" UseLingLi="0" UseMoney="8000" />
+  </Levels>
+  <Levels level="161">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="162">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="163">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="164">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="165">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="166">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="167">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="168">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="169">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="170">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="171">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="172">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="173">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="174">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="175">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="176">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="177">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="178">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="179">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="180">
+    <WuGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoGong PropVal="230" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <WuFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFang PropVal="461" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <BaoJi PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <KangBao PropVal="182" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MingZong PropVal="115" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShanBi PropVal="73" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <ShengL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+    <MoFaL PropVal="1151" SucceedRate="100" HanTie="256" UseLingLi="0" UseMoney="9000" />
+  </Levels>
+  <Levels level="181">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="182">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="183">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="184">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="185">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="186">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="187">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="188">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="189">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="190">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="191">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="192">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="193">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="194">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="195">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="196">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="197">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="198">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="199">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+  <Levels level="200">
+    <WuGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoGong PropVal="363" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <WuFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFang PropVal="727" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <BaoJi PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <KangBao PropVal="288" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MingZong PropVal="182" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShanBi PropVal="115" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <ShengL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+    <MoFaL PropVal="1817" SucceedRate="100" HanTie="512" UseLingLi="0" UseMoney="10000" />
+  </Levels>
+</Config>

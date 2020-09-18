@@ -5,16 +5,16 @@ using GameDBServer.DB;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000166 RID: 358
+	
 	internal class RebornStampManager
 	{
-		// Token: 0x0600062C RID: 1580 RVA: 0x00037994 File Offset: 0x00035B94
+		
 		public static void InitRebornYinJi(DBManager dbMgr)
 		{
 			RebornStampManager.UserRebornData = DBQuery.GetRebornYinJiCached(dbMgr);
 		}
 
-		// Token: 0x0600062D RID: 1581 RVA: 0x000379A4 File Offset: 0x00035BA4
+		
 		public static List<int> UnMakeYinJiUpdateInfo(string UpdateInfo)
 		{
 			List<int> list = new List<int>();
@@ -50,7 +50,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600062E RID: 1582 RVA: 0x00037A94 File Offset: 0x00035C94
+		
 		public static RebornStampData GetUserRebornInfoFromCached(int RoleID)
 		{
 			RebornStampData result;
@@ -65,7 +65,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600062F RID: 1583 RVA: 0x00037AC8 File Offset: 0x00035CC8
+		
 		public static bool UpdateUserRebornInfo(int RoleID, string StampInfo, int ResetNum, int UsePoint)
 		{
 			bool result;
@@ -84,7 +84,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000630 RID: 1584 RVA: 0x00037B30 File Offset: 0x00035D30
+		
 		public static bool InsertUserRebornInfo(int RoleID, string StampInfo, int ResetNum, int UsePoint)
 		{
 			bool result;
@@ -105,7 +105,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0400087F RID: 2175
+		
 		public static Dictionary<int, RebornStampData> UserRebornData = new Dictionary<int, RebornStampData>();
 	}
 }

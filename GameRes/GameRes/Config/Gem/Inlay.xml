@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Inlay ID="1" Name="头盔" GemType1="1" GemType2="2" GemType3="3" />
+  <Inlay ID="2" Name="铠甲" GemType1="1" GemType2="2" GemType3="3" />
+  <Inlay ID="3" Name="护腿" GemType1="1" GemType2="2" GemType3="3" />
+  <Inlay ID="4" Name="护手" GemType1="1" GemType2="2" GemType3="3" />
+  <Inlay ID="5" Name="鞋子" GemType1="1" GemType2="2" GemType3="3" />
+  <Inlay ID="6" Name="左手武器" GemType1="1" GemType2="2" GemType3="3" />
+  <Inlay ID="7" Name="右手武器" GemType1="1" GemType2="2" GemType3="3" />
+  <Inlay ID="8" Name="项链" GemType1="1" GemType2="2" GemType3="3" />
+  <Inlay ID="9" Name="左手戒指" GemType1="1" GemType2="2" GemType3="3" />
+  <Inlay ID="10" Name="右手戒指" GemType1="1" GemType2="2" GemType3="3" />
+</Config>

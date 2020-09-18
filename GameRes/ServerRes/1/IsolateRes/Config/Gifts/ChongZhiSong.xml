@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="3" Title="充值加送" FromDate="" ToDate="" AwardStartDate="" 
+  AwardEndDate="" IsNeedCode="1"/>
+  <GiftList Description="新服开启前7天，只要您累计充值达到10000元宝，便可领取至尊宝箱及大量珍惜道具。">
+  <Award YuanBao="-1" GoodsIDs="110000,1,0,0,0,0" MinYuanBao="10000" />
+  </GiftList>
+</Config>

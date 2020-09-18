@@ -5,17 +5,17 @@ using Nhiredis;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000127 RID: 295
+	
 	public static class CityNameManager
 	{
-		// Token: 0x060004DC RID: 1244 RVA: 0x00028038 File Offset: 0x00026238
+		
 		public static string unicode_js_1(string str)
 		{
 			Regex reg = new Regex("(?i)\\\\u([0-9a-f]{4})");
 			return reg.Replace(str, (Match m1) => ((char)Convert.ToInt32(m1.Groups[1].Value, 16)).ToString());
 		}
 
-		// Token: 0x060004DD RID: 1245 RVA: 0x00028084 File Offset: 0x00026284
+		
 		private static void ParseIPInfo(string text, out string region, out string cityName)
 		{
 			region = "";
@@ -43,7 +43,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060004DE RID: 1246 RVA: 0x00028144 File Offset: 0x00026344
+		
 		public static IPInfo ParseIP(string ip)
 		{
 			string country = null;
@@ -58,7 +58,7 @@ namespace GameDBServer.Logic
 			return info;
 		}
 
-		// Token: 0x040007B3 RID: 1971
+		
 		public static Dictionary<string, IPInfo> CachingIPInfoDict = new Dictionary<string, IPInfo>();
 	}
 }

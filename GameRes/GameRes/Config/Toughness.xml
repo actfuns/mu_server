@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Toughness ID="1" Toughness="100" DeLucky="0.01" DeFatalAttack="0.01" DeDoubleAttack="0.01" DeSavagePercent="0.01" DeColdPercent="0.01" DeRuthlessPercent="0.01" DeFrozenPercent="0.01" DePalsyPercent="0.01" DeSpeedDownPercent="0.01" DeBlowPercent="0.01" />
+  <Toughness ID="2" Toughness="350" DeLucky="0.02" DeFatalAttack="0.02" DeDoubleAttack="0.02" DeSavagePercent="0.02" DeColdPercent="0.02" DeRuthlessPercent="0.02" DeFrozenPercent="0.02" DePalsyPercent="0.02" DeSpeedDownPercent="0.02" DeBlowPercent="0.02" />
+  <Toughness ID="3" Toughness="780" DeLucky="0.03" DeFatalAttack="0.03" DeDoubleAttack="0.03" DeSavagePercent="0.03" DeColdPercent="0.03" DeRuthlessPercent="0.03" DeFrozenPercent="0.03" DePalsyPercent="0.03" DeSpeedDownPercent="0.03" DeBlowPercent="0.03" />
+  <Toughness ID="4" Toughness="1400" DeLucky="0.04" DeFatalAttack="0.04" DeDoubleAttack="0.04" DeSavagePercent="0.04" DeColdPercent="0.04" DeRuthlessPercent="0.04" DeFrozenPercent="0.04" DePalsyPercent="0.04" DeSpeedDownPercent="0.04" DeBlowPercent="0.04" />
+  <Toughness ID="5" Toughness="2230" DeLucky="0.05" DeFatalAttack="0.05" DeDoubleAttack="0.05" DeSavagePercent="0.05" DeColdPercent="0.05" DeRuthlessPercent="0.05" DeFrozenPercent="0.05" DePalsyPercent="0.05" DeSpeedDownPercent="0.05" DeBlowPercent="0.05" />
+  <Toughness ID="6" Toughness="3290" DeLucky="0.06" DeFatalAttack="0.06" DeDoubleAttack="0.06" DeSavagePercent="0.06" DeColdPercent="0.06" DeRuthlessPercent="0.06" DeFrozenPercent="0.06" DePalsyPercent="0.06" DeSpeedDownPercent="0.06" DeBlowPercent="0.06" />
+  <Toughness ID="7" Toughness="4590" DeLucky="0.07" DeFatalAttack="0.07" DeDoubleAttack="0.07" DeSavagePercent="0.07" DeColdPercent="0.07" DeRuthlessPercent="0.07" DeFrozenPercent="0.07" DePalsyPercent="0.07" DeSpeedDownPercent="0.07" DeBlowPercent="0.07" />
+  <Toughness ID="8" Toughness="6140" DeLucky="0.08" DeFatalAttack="0.08" DeDoubleAttack="0.08" DeSavagePercent="0.08" DeColdPercent="0.08" DeRuthlessPercent="0.08" DeFrozenPercent="0.08" DePalsyPercent="0.08" DeSpeedDownPercent="0.08" DeBlowPercent="0.08" />
+  <Toughness ID="9" Toughness="7950" DeLucky="0.09" DeFatalAttack="0.09" DeDoubleAttack="0.09" DeSavagePercent="0.09" DeColdPercent="0.09" DeRuthlessPercent="0.09" DeFrozenPercent="0.09" DePalsyPercent="0.09" DeSpeedDownPercent="0.09" DeBlowPercent="0.09" />
+  <Toughness ID="10" Toughness="10020" DeLucky="0.1" DeFatalAttack="0.1" DeDoubleAttack="0.1" DeSavagePercent="0.1" DeColdPercent="0.1" DeRuthlessPercent="0.1" DeFrozenPercent="0.1" DePalsyPercent="0.1" DeSpeedDownPercent="0.1" DeBlowPercent="0.1" />
+  <Toughness ID="11" Toughness="12370" DeLucky="0.11" DeFatalAttack="0.11" DeDoubleAttack="0.11" DeSavagePercent="0.11" DeColdPercent="0.11" DeRuthlessPercent="0.11" DeFrozenPercent="0.11" DePalsyPercent="0.11" DeSpeedDownPercent="0.11" DeBlowPercent="0.11" />
+  <Toughness ID="12" Toughness="15000" DeLucky="0.12" DeFatalAttack="0.12" DeDoubleAttack="0.12" DeSavagePercent="0.12" DeColdPercent="0.12" DeRuthlessPercent="0.12" DeFrozenPercent="0.12" DePalsyPercent="0.12" DeSpeedDownPercent="0.12" DeBlowPercent="0.12" />
+</Config>

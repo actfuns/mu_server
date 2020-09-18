@@ -10,23 +10,23 @@ using Server.Tools;
 
 namespace GameServer.Logic.AoYunDaTi
 {
-	// Token: 0x02000207 RID: 519
+	
 	public class AoYunDaTiManager : IManager, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x06000681 RID: 1665 RVA: 0x0005A190 File Offset: 0x00058390
+		
 		public static AoYunDaTiManager getInstance()
 		{
 			return AoYunDaTiManager.instance;
 		}
 
-		// Token: 0x06000682 RID: 1666 RVA: 0x0005A1A8 File Offset: 0x000583A8
+		
 		public bool initialize()
 		{
 			this.LoadConfig();
 			return true;
 		}
 
-		// Token: 0x06000683 RID: 1667 RVA: 0x0005A1C4 File Offset: 0x000583C4
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(20200, 1, 1, AoYunDaTiManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -38,19 +38,19 @@ namespace GameServer.Logic.AoYunDaTi
 			return true;
 		}
 
-		// Token: 0x06000684 RID: 1668 RVA: 0x0005A268 File Offset: 0x00058468
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000685 RID: 1669 RVA: 0x0005A27C File Offset: 0x0005847C
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000686 RID: 1670 RVA: 0x0005A290 File Offset: 0x00058490
+		
 		public bool LoadConfig()
 		{
 			this.Destory_Work();
@@ -98,13 +98,13 @@ namespace GameServer.Logic.AoYunDaTi
 			return true;
 		}
 
-		// Token: 0x06000687 RID: 1671 RVA: 0x0005A4B8 File Offset: 0x000586B8
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06000688 RID: 1672 RVA: 0x0005A4CC File Offset: 0x000586CC
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -142,7 +142,7 @@ namespace GameServer.Logic.AoYunDaTi
 			return result;
 		}
 
-		// Token: 0x06000689 RID: 1673 RVA: 0x0005A5A0 File Offset: 0x000587A0
+		
 		public bool ProcessAoYunInfoCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -226,7 +226,7 @@ namespace GameServer.Logic.AoYunDaTi
 			return false;
 		}
 
-		// Token: 0x0600068A RID: 1674 RVA: 0x0005A8E0 File Offset: 0x00058AE0
+		
 		public bool ProcessGetQuestionCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -248,7 +248,7 @@ namespace GameServer.Logic.AoYunDaTi
 			return false;
 		}
 
-		// Token: 0x0600068B RID: 1675 RVA: 0x0005A964 File Offset: 0x00058B64
+		
 		public bool ProcessAnswerQuestionCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -307,7 +307,7 @@ namespace GameServer.Logic.AoYunDaTi
 			return false;
 		}
 
-		// Token: 0x0600068C RID: 1676 RVA: 0x0005AB88 File Offset: 0x00058D88
+		
 		public bool ProcessGetPaiHangAwardCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -327,7 +327,7 @@ namespace GameServer.Logic.AoYunDaTi
 			return false;
 		}
 
-		// Token: 0x0600068D RID: 1677 RVA: 0x0005ABF0 File Offset: 0x00058DF0
+		
 		public bool ProcessRecPaiHangAwardCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -413,7 +413,7 @@ namespace GameServer.Logic.AoYunDaTi
 			return false;
 		}
 
-		// Token: 0x0600068E RID: 1678 RVA: 0x0005AED0 File Offset: 0x000590D0
+		
 		public bool ProcessUseGoodsCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -522,7 +522,7 @@ namespace GameServer.Logic.AoYunDaTi
 			return false;
 		}
 
-		// Token: 0x0600068F RID: 1679 RVA: 0x0005B284 File Offset: 0x00059484
+		
 		public bool ProcessBuyGoodsCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -589,7 +589,7 @@ namespace GameServer.Logic.AoYunDaTi
 			return false;
 		}
 
-		// Token: 0x06000690 RID: 1680 RVA: 0x0005B520 File Offset: 0x00059720
+		
 		private void SetCurrentQuestionTimeItem(DateTime time)
 		{
 			for (int i = 0; i < AoYunDaTiManager.XmlQuestionTimeList.Count; i++)
@@ -616,7 +616,7 @@ namespace GameServer.Logic.AoYunDaTi
 			LogManager.WriteLog(LogTypes.Error, string.Format("获取奥运答题时间配置出错，没有存在比当前时间还晚的活动", new object[0]), null, true);
 		}
 
-		// Token: 0x06000691 RID: 1681 RVA: 0x0005B668 File Offset: 0x00059868
+		
 		private void SetCurrentQuestionList(DateTime time)
 		{
 			int questionBegin = 0;
@@ -717,7 +717,7 @@ namespace GameServer.Logic.AoYunDaTi
 			}
 		}
 
-		// Token: 0x06000692 RID: 1682 RVA: 0x0005B9E4 File Offset: 0x00059BE4
+		
 		private void SetCurrentQuestionNum(DateTime now)
 		{
 			AoyunQuestionTimeItem currentQuestionTime = AoYunDaTiManager.GetCurrentQuestionTimeItem();
@@ -769,7 +769,7 @@ namespace GameServer.Logic.AoYunDaTi
 			}
 		}
 
-		// Token: 0x06000693 RID: 1683 RVA: 0x0005BC44 File Offset: 0x00059E44
+		
 		private static void LoadQuestionTime()
 		{
 			string fileName = "";
@@ -805,7 +805,7 @@ namespace GameServer.Logic.AoYunDaTi
 			}
 		}
 
-		// Token: 0x06000694 RID: 1684 RVA: 0x0005BE78 File Offset: 0x0005A078
+		
 		private static void LoadQuestionBank()
 		{
 			string fileName = "";
@@ -887,7 +887,7 @@ namespace GameServer.Logic.AoYunDaTi
 			}
 		}
 
-		// Token: 0x06000695 RID: 1685 RVA: 0x0005C260 File Offset: 0x0005A460
+		
 		private static void LoadPaiHangAwad()
 		{
 			string fileName = "";
@@ -922,7 +922,7 @@ namespace GameServer.Logic.AoYunDaTi
 			}
 		}
 
-		// Token: 0x06000696 RID: 1686 RVA: 0x0005C3F0 File Offset: 0x0005A5F0
+		
 		private static void LoadAoYunDaTi()
 		{
 			try
@@ -952,7 +952,7 @@ namespace GameServer.Logic.AoYunDaTi
 			}
 		}
 
-		// Token: 0x06000697 RID: 1687 RVA: 0x0005C4E8 File Offset: 0x0005A6E8
+		
 		private static void UpdateQuestion(DateTime now)
 		{
 			lock (AoYunDaTiManager.AoyunRunTimeData.Mutex)
@@ -971,7 +971,7 @@ namespace GameServer.Logic.AoYunDaTi
 			}
 		}
 
-		// Token: 0x06000698 RID: 1688 RVA: 0x0005C5C0 File Offset: 0x0005A7C0
+		
 		private static void SendQuestionToAll(DateTime now)
 		{
 			AoyunQuestionBankItem currentQuestion = AoYunDaTiManager.GetCurrentQuestionBank();
@@ -990,7 +990,7 @@ namespace GameServer.Logic.AoYunDaTi
 			}
 		}
 
-		// Token: 0x06000699 RID: 1689 RVA: 0x0005C628 File Offset: 0x0005A828
+		
 		private static void SendAnswerOverToAll()
 		{
 			int index = 0;
@@ -1010,7 +1010,7 @@ namespace GameServer.Logic.AoYunDaTi
 			}
 		}
 
-		// Token: 0x0600069A RID: 1690 RVA: 0x0005C6AC File Offset: 0x0005A8AC
+		
 		private static void SendAnswerToAll(DateTime now)
 		{
 			try
@@ -1171,7 +1171,7 @@ namespace GameServer.Logic.AoYunDaTi
 			}
 		}
 
-		// Token: 0x0600069B RID: 1691 RVA: 0x0005CF14 File Offset: 0x0005B114
+		
 		private static void InitAoyunRank()
 		{
 			List<AoyunPaiHangRoleData> lastRank = AoYunDaTiManager.GetAoyunRoleListFromDB();
@@ -1182,7 +1182,7 @@ namespace GameServer.Logic.AoYunDaTi
 			AoYunDaTiManager.UpdateRankList();
 		}
 
-		// Token: 0x0600069C RID: 1692 RVA: 0x0005CF78 File Offset: 0x0005B178
+		
 		private static void InitLastAoyunRank()
 		{
 			Dictionary<int, int> aoyunRoleDic = AoYunDaTiManager.GetLastAoyunRoleDicFromDB();
@@ -1192,7 +1192,7 @@ namespace GameServer.Logic.AoYunDaTi
 			}
 		}
 
-		// Token: 0x0600069D RID: 1693 RVA: 0x0005CFD4 File Offset: 0x0005B1D4
+		
 		private void UpdateCurrentQuestionTimeItem(DateTime time)
 		{
 			try
@@ -1226,7 +1226,7 @@ namespace GameServer.Logic.AoYunDaTi
 			}
 		}
 
-		// Token: 0x0600069E RID: 1694 RVA: 0x0005D178 File Offset: 0x0005B378
+		
 		private static AoyunQuestionTimeItem GetCurrentQuestionTimeItem()
 		{
 			int key = AoYunDaTiManager.QuestionDataTimer.CurrentQuestionTimeKey;
@@ -1242,7 +1242,7 @@ namespace GameServer.Logic.AoYunDaTi
 			return result;
 		}
 
-		// Token: 0x0600069F RID: 1695 RVA: 0x0005D1C0 File Offset: 0x0005B3C0
+		
 		private static AoyunQuestionBankItem GetCurrentQuestionBank()
 		{
 			int num = AoYunDaTiManager.QuestionDataTimer.CurrentQuestionNum;
@@ -1267,7 +1267,7 @@ namespace GameServer.Logic.AoYunDaTi
 			return result;
 		}
 
-		// Token: 0x060006A0 RID: 1696 RVA: 0x0005D230 File Offset: 0x0005B430
+		
 		private static AoyunQuestionItemData GetRoleQuestionFromDB(GameClient client, DateTime now)
 		{
 			AoyunQuestionItemData result;
@@ -1340,7 +1340,7 @@ namespace GameServer.Logic.AoYunDaTi
 			return result;
 		}
 
-		// Token: 0x060006A1 RID: 1697 RVA: 0x0005D4F8 File Offset: 0x0005B6F8
+		
 		private static void UpdateRankList()
 		{
 			try
@@ -1396,7 +1396,7 @@ namespace GameServer.Logic.AoYunDaTi
 			}
 		}
 
-		// Token: 0x060006A2 RID: 1698 RVA: 0x0005D798 File Offset: 0x0005B998
+		
 		private static List<AoyunPaiHangRoleData> GetAoyunRoleListFromDB()
 		{
 			List<AoyunPaiHangRoleData> list = Global.sendToDB<List<AoyunPaiHangRoleData>, int>(20300, 0, 0);
@@ -1407,7 +1407,7 @@ namespace GameServer.Logic.AoYunDaTi
 			return list;
 		}
 
-		// Token: 0x060006A3 RID: 1699 RVA: 0x0005D7CC File Offset: 0x0005B9CC
+		
 		private static Dictionary<int, int> GetLastAoyunRoleDicFromDB()
 		{
 			Dictionary<int, int> dic = Global.sendToDB<Dictionary<int, int>, int>(20301, 0, 0);
@@ -1418,7 +1418,7 @@ namespace GameServer.Logic.AoYunDaTi
 			return dic;
 		}
 
-		// Token: 0x060006A4 RID: 1700 RVA: 0x0005D800 File Offset: 0x0005BA00
+		
 		private static void GiveGoodsAward(GameClient client, string goods)
 		{
 			string[] goodList = goods.Split(new char[]
@@ -1482,7 +1482,7 @@ namespace GameServer.Logic.AoYunDaTi
 			}
 		}
 
-		// Token: 0x060006A5 RID: 1701 RVA: 0x0005DAE4 File Offset: 0x0005BCE4
+		
 		private static bool CheckAoYunDaTiOpen(DateTime now)
 		{
 			bool result;
@@ -1515,7 +1515,7 @@ namespace GameServer.Logic.AoYunDaTi
 			return result;
 		}
 
-		// Token: 0x060006A6 RID: 1702 RVA: 0x0005DC90 File Offset: 0x0005BE90
+		
 		public void NotifyActivityState(GameClient client)
 		{
 			if (AoYunDaTiManager.AoyunRunTimeData.GongNengOpen)
@@ -1546,7 +1546,7 @@ namespace GameServer.Logic.AoYunDaTi
 			client._IconStateMgr.SendIconStateToClient(client);
 		}
 
-		// Token: 0x060006A7 RID: 1703 RVA: 0x0005DD78 File Offset: 0x0005BF78
+		
 		private static void CheckActivityIcon(bool show)
 		{
 			int index = 0;
@@ -1558,13 +1558,13 @@ namespace GameServer.Logic.AoYunDaTi
 			}
 		}
 
-		// Token: 0x060006A8 RID: 1704 RVA: 0x0005DDC6 File Offset: 0x0005BFC6
+		
 		public void AddGrade(GameClient client, int grade)
 		{
 			Global.SaveRoleParamsInt32ValueToDB(client, "20008", grade, true);
 		}
 
-		// Token: 0x060006A9 RID: 1705 RVA: 0x0005DDD8 File Offset: 0x0005BFD8
+		
 		public void AoyunDaTiTimer_Work()
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -1651,7 +1651,7 @@ namespace GameServer.Logic.AoYunDaTi
 			}
 		}
 
-		// Token: 0x060006AA RID: 1706 RVA: 0x0005E208 File Offset: 0x0005C408
+		
 		private void Destory_Work()
 		{
 			lock (AoYunDaTiManager.QuestionDataTimer.Mutex)
@@ -1669,25 +1669,25 @@ namespace GameServer.Logic.AoYunDaTi
 			}
 		}
 
-		// Token: 0x04000B88 RID: 2952
+		
 		public static AoyunData AoyunRunTimeData = new AoyunData();
 
-		// Token: 0x04000B89 RID: 2953
+		
 		private static QuestionData QuestionDataTimer = new QuestionData();
 
-		// Token: 0x04000B8A RID: 2954
+		
 		private static AoYunDaTiManager instance = new AoYunDaTiManager();
 
-		// Token: 0x04000B8B RID: 2955
+		
 		private static List<AoyunQuestionTimeItem> XmlQuestionTimeList = new List<AoyunQuestionTimeItem>();
 
-		// Token: 0x04000B8C RID: 2956
+		
 		private static Dictionary<int, AoyunQuestionBankItem> XmlQuestionBankDic = new Dictionary<int, AoyunQuestionBankItem>();
 
-		// Token: 0x04000B8D RID: 2957
+		
 		private static List<AoyunDaTiPaiHangAwardXml> XmlPaiHangAward = new List<AoyunDaTiPaiHangAwardXml>();
 
-		// Token: 0x04000B8E RID: 2958
+		
 		private static AoyunDaTiOpenXml XmlAoyunDaTiOpen = null;
 	}
 }

@@ -8,10 +8,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x020001BD RID: 445
+	
 	public class JieriLianXuChargeActivity : Activity
 	{
-		// Token: 0x06000584 RID: 1412 RVA: 0x0004DB38 File Offset: 0x0004BD38
+		
 		public bool Init()
 		{
 			try
@@ -103,7 +103,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x06000585 RID: 1413 RVA: 0x0004DEA4 File Offset: 0x0004C0A4
+		
 		public string QueryMyActInfo(GameClient client)
 		{
 			string result;
@@ -134,7 +134,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000586 RID: 1414 RVA: 0x0004E044 File Offset: 0x0004C244
+		
 		public JieriLianXuChargeErrorCode HandleGetAward(GameClient client, int awardId, int day)
 		{
 			JieriLianXuChargeErrorCode result;
@@ -208,7 +208,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000587 RID: 1415 RVA: 0x0004E2C0 File Offset: 0x0004C4C0
+		
 		private bool _UpdateAwardFlag2DB(GameClient client, int awardId, int awardFlag)
 		{
 			bool result;
@@ -232,7 +232,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000588 RID: 1416 RVA: 0x0004E37C File Offset: 0x0004C57C
+		
 		private List<JieriLianXuChargeActivity._AwardInfo> _GetMyActInfoFromDB(GameClient client)
 		{
 			List<JieriLianXuChargeActivity._AwardInfo> result2;
@@ -284,7 +284,7 @@ namespace GameServer.Logic.ActivityNew
 			return result2;
 		}
 
-		// Token: 0x06000589 RID: 1417 RVA: 0x0004E594 File Offset: 0x0004C794
+		
 		private int _CalcLianXuChargeDay(int[] eachDayChargeArray, int atLeastCharge)
 		{
 			int result;
@@ -307,7 +307,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0600058A RID: 1418 RVA: 0x0004E5E4 File Offset: 0x0004C7E4
+		
 		private Dictionary<int, int> _ParseAwardFlagOfEachLvl(string strAwardIdAndFlag)
 		{
 			Dictionary<int, int> result = new Dictionary<int, int>();
@@ -334,7 +334,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0600058B RID: 1419 RVA: 0x0004E694 File Offset: 0x0004C894
+		
 		private int[] _ParseEachDayCharge(string strMoneyOfDays)
 		{
 			int[] result;
@@ -401,7 +401,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0600058C RID: 1420 RVA: 0x0004E88C File Offset: 0x0004CA8C
+		
 		public bool CanGetAnyAward(GameClient client)
 		{
 			bool result;
@@ -443,45 +443,45 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x040009EB RID: 2539
+		
 		private readonly string CfgFile = "Config/JieRiGifts/JieRiLianXu.xml";
 
-		// Token: 0x040009EC RID: 2540
+		
 		private List<JieriLianXuChargeActivity._ChargeLvl> chargeLvlList = new List<JieriLianXuChargeActivity._ChargeLvl>();
 
-		// Token: 0x020001BE RID: 446
+		
 		private class _AwardInfo
 		{
-			// Token: 0x040009ED RID: 2541
+			
 			public int AwardId;
 
-			// Token: 0x040009EE RID: 2542
+			
 			public int LianXuDay;
 
-			// Token: 0x040009EF RID: 2543
+			
 			public int AwardFlag;
 		}
 
-		// Token: 0x020001BF RID: 447
+		
 		private class _DayAward
 		{
-			// Token: 0x040009F0 RID: 2544
+			
 			public int LianXuDay;
 
-			// Token: 0x040009F1 RID: 2545
+			
 			public AwardItem AwardGoods = new AwardItem();
 		}
 
-		// Token: 0x020001C0 RID: 448
+		
 		private class _ChargeLvl
 		{
-			// Token: 0x040009F2 RID: 2546
+			
 			public int Id;
 
-			// Token: 0x040009F3 RID: 2547
+			
 			public int NeedCharge;
 
-			// Token: 0x040009F4 RID: 2548
+			
 			public List<JieriLianXuChargeActivity._DayAward> AwardList = new List<JieriLianXuChargeActivity._DayAward>();
 		}
 	}

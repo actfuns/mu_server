@@ -5,10 +5,10 @@ using Server.Data;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x0200012B RID: 299
+	
 	public class DayRechargeRankManager
 	{
-		// Token: 0x060004EE RID: 1262 RVA: 0x00028AF8 File Offset: 0x00026CF8
+		
 		public List<InputKingPaiHangData> GetRankByDay(DBManager dbMgr, int day)
 		{
 			List<InputKingPaiHangData> ranklist = null;
@@ -60,7 +60,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x060004EF RID: 1263 RVA: 0x00028CF4 File Offset: 0x00026EF4
+		
 		public int GetRoleRankByDay(DBManager dbMgr, string userid, int day)
 		{
 			List<InputKingPaiHangData> ranklist = this.GetRankByDay(dbMgr, day);
@@ -85,10 +85,10 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x040007C4 RID: 1988
+		
 		private const int HeFuRankCount = 4;
 
-		// Token: 0x040007C5 RID: 1989
+		
 		private Dictionary<int, List<InputKingPaiHangData>> RechargeRankDict = new Dictionary<int, List<InputKingPaiHangData>>();
 	}
 }

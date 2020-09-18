@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <XingZuo>
+    <Type ID="0" Name="白羊座" KaiQiLevel="0,40" ShuXiangJiaCheng="Defense,3-5|MDefense,3-5" />
+    <Type ID="1" Name="金牛座" KaiQiLevel="1,1" ShuXiangJiaCheng="Defense,3-5|MDefense,3-6" />
+    <Type ID="2" Name="双子座" KaiQiLevel="1,1" ShuXiangJiaCheng="Defense,3-5|MDefense,3-7" />
+    <Type ID="3" Name="巨蟹座" KaiQiLevel="1,1" ShuXiangJiaCheng="Defense,3-5|MDefense,3-8" />
+    <Type ID="4" Name="狮子座" KaiQiLevel="1,1" ShuXiangJiaCheng="Defense,3-5|MDefense,3-9" />
+    <Type ID="5" Name="处女座" KaiQiLevel="1,1" ShuXiangJiaCheng="Defense,3-5|MDefense,3-10" />
+    <Type ID="6" Name="天枰座" KaiQiLevel="1,1" ShuXiangJiaCheng="Defense,3-5|MDefense,3-11" />
+    <Type ID="7" Name="天蝎座" KaiQiLevel="1,1" ShuXiangJiaCheng="Defense,3-5|MDefense,3-12" />
+    <Type ID="8" Name="射手座" KaiQiLevel="1,1" ShuXiangJiaCheng="Defense,3-5|MDefense,3-13" />
+    <Type ID="9" Name="摩羯座" KaiQiLevel="1,1" ShuXiangJiaCheng="Defense,3-5|MDefense,3-14" />
+    <Type ID="10" Name="水瓶座" KaiQiLevel="1,1" ShuXiangJiaCheng="Defense,3-5|MDefense,3-15" />
+    <Type ID="11" Name="双鱼座" KaiQiLevel="1,1" ShuXiangJiaCheng="Defense,3-5|MDefense,3-16" />
+  </XingZuo>
+</config>

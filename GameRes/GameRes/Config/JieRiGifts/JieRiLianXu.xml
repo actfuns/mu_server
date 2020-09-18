@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="61" FromDate="2019-12-09 00:00:00" ToDate="2019-12-16 23:59:59" AwardStartDate="2019-12-09 00:00:00" AwardEndDate="2019-12-16	 23:59:59" />
+  <GiftList Description="活动期间，累计充值对应钻石达到天数，即可领取珍贵道具！">
+  <LianXu ID="1" Group="1" NeedZuanShi="4000000" Day="1" GoodsOne="9990004,100,1,0,0,0,0" GoodsTwo="" />
+  <LianXu ID="2" Group="1" NeedZuanShi="4000000" Day="2" GoodsOne="9990002,100,1,0,0,0,0" GoodsTwo="" />
+  <LianXu ID="3" Group="1" NeedZuanShi="4000000" Day="3" GoodsOne="9990003,100,1,0,0,0,0" GoodsTwo="" />
+  <LianXu ID="4" Group="1" NeedZuanShi="4000000" Day="4" GoodsOne="9990005,100,1,0,0,0,0" GoodsTwo="" />
+  
+  <LianXu ID="5" Group="2" NeedZuanShi="6000000" Day="1" GoodsOne="9990004,200,1,0,0,0,0" GoodsTwo="" />
+  <LianXu ID="6" Group="2" NeedZuanShi="6000000" Day="2" GoodsOne="9990002,200,1,0,0,0,0" GoodsTwo="" />
+  <LianXu ID="7" Group="2" NeedZuanShi="6000000" Day="3" GoodsOne="9990003,200,1,0,0,0,0" GoodsTwo="" />
+  <LianXu ID="8" Group="2" NeedZuanShi="6000000" Day="4" GoodsOne="9990005,200,1,0,0,0,0" GoodsTwo="" />
+  
+  <LianXu ID="9" Group="3" NeedZuanShi="10000000" Day="1" GoodsOne="9990004,500,1,0,0,0,0" GoodsTwo="" />
+  <LianXu ID="10" Group="3" NeedZuanShi="10000000" Day="2" GoodsOne="9990002,500,1,0,0,0,0" GoodsTwo="" />
+  <LianXu ID="11" Group="3" NeedZuanShi="10000000" Day="3" GoodsOne="9990003,500,1,0,0,0,0" GoodsTwo="" />
+  <LianXu ID="12" Group="3" NeedZuanShi="10000000" Day="4" GoodsOne="9880021,50,1,0,0,0,0" GoodsTwo="" />
+  
+  
+  </GiftList>
+</Config>

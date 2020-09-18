@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <TeQuanChouJiang ID="1" TeQuanID="7" ChouJiangLeiXing="TeQuanQiFu" TuBiaoTips="特权激活后将开启豪华祈福" />
+  <TeQuanChouJiang ID="2" TeQuanID="14" ChouJiangLeiXing="TeQuanShouLie" TuBiaoTips="特权激活后将开启豪华坐骑狩猎" />
+  <TeQuanChouJiang ID="3" TeQuanID="21" ChouJiangLeiXing="TeQuanBuHuo" TuBiaoTips="特权激活后将开启豪华精灵捕获" />
+  <TeQuanChouJiang ID="4" TeQuanID="28" ChouJiangLeiXing="TeQuanQiFu,TeQuanShouLie" TuBiaoTips="特权激活后将开启豪华祈福、坐骑狩猎" />
+  <TeQuanChouJiang ID="5" TeQuanID="35" ChouJiangLeiXing="TeQuanQiFu,TeQuanBuHuo" TuBiaoTips="特权激活后将开启豪华祈福、坐骑捕获" />
+  <TeQuanChouJiang ID="6" TeQuanID="42" ChouJiangLeiXing="TeQuanShouLie,TeQuanBuHuo" TuBiaoTips="特权激活后将开启坐骑狩猎、坐骑捕获" />
+  <TeQuanChouJiang ID="7" TeQuanID="49" ChouJiangLeiXing="TeQuanQiFu,TeQuanShouLie,TeQuanBuHuo" TuBiaoTips="特权激活后将开启豪华祈福、坐骑狩猎、坐骑捕获" />
+  <TeQuanChouJiang ID="8" TeQuanID="56" ChouJiangLeiXing="TeQuanQiFu,TeQuanShouLie,TeQuanBuHuo" TuBiaoTips="特权激活后将开启豪华祈福、坐骑狩猎、坐骑捕获" />
+  <TeQuanChouJiang ID="9" TeQuanID="63" ChouJiangLeiXing="TeQuanQiFu,TeQuanShouLie,TeQuanBuHuo" TuBiaoTips="特权激活后将开启豪华祈福、坐骑狩猎、坐骑捕获" />
+  <TeQuanChouJiang ID="10" TeQuanID="70" ChouJiangLeiXing="TeQuanQiFu,TeQuanShouLie,TeQuanBuHuo" TuBiaoTips="特权激活后将开启豪华祈福、坐骑狩猎、坐骑捕获" />
+</Config>

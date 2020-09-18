@@ -15,10 +15,10 @@ using Tmsk.Contract.KuaFuData;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x02000055 RID: 85
+	
 	public class SpecPriorityActivity : Activity, IEventListener
 	{
-		// Token: 0x06000106 RID: 262 RVA: 0x00010A78 File Offset: 0x0000EC78
+		
 		public void processEvent(EventObject eventObject)
 		{
 			if (eventObject.getEventType() == 36)
@@ -47,13 +47,13 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x06000107 RID: 263 RVA: 0x00010BFC File Offset: 0x0000EDFC
+		
 		public void Dispose()
 		{
 			GlobalEventSource.getInstance().removeListener(36, this);
 		}
 
-		// Token: 0x06000108 RID: 264 RVA: 0x00010C10 File Offset: 0x0000EE10
+		
 		public void OnMoneyChargeEvent(string userid, int roleid, int addMoney)
 		{
 			int yuanbao = Global.TransMoneyToYuanBao(addMoney);
@@ -63,14 +63,14 @@ namespace GameServer.Logic.ActivityNew
 			this.ConditionNumTrigger(userid, roleid, SpecPConditionType.SPCT_ChargeKF, yuanbao, null);
 		}
 
-		// Token: 0x06000109 RID: 265 RVA: 0x00010C55 File Offset: 0x0000EE55
+		
 		public void MoneyConst(GameClient client, int YuanBaoCost)
 		{
 			this.ConditionNumTrigger(client.strUserID, client.ClientData.RoleID, SpecPConditionType.SPCT_Consume, YuanBaoCost, client);
 			this.ConditionNumTrigger(client.strUserID, client.ClientData.RoleID, SpecPConditionType.SPCT_ConsumeKF, YuanBaoCost, client);
 		}
 
-		// Token: 0x0600010A RID: 266 RVA: 0x00010C90 File Offset: 0x0000EE90
+		
 		public bool IsMultiOpen(SpecPActivityBuffType type, out SpecPActivityConfig proto)
 		{
 			proto = null;
@@ -109,7 +109,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0600010B RID: 267 RVA: 0x00010DD8 File Offset: 0x0000EFD8
+		
 		public double GetMult(SpecPActivityBuffType type)
 		{
 			SpecPActivityConfig actProto;
@@ -125,13 +125,13 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0600010C RID: 268 RVA: 0x00010E0C File Offset: 0x0000F00C
+		
 		public string MackHongBaoActivityKeyStr(DateTime FromDate, DateTime ToDate)
 		{
 			return string.Format("SP_{0}_{1}", FromDate.ToString("yyyy-MM-dd HH$mm$ss"), ToDate.ToString("yyyy-MM-dd HH$mm$ss"));
 		}
 
-		// Token: 0x0600010D RID: 269 RVA: 0x00010E40 File Offset: 0x0000F040
+		
 		public HongBaoListQueryData QueryHongBaoList()
 		{
 			DateTime nowDateTm = TimeUtil.NowDateTime();
@@ -161,7 +161,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0600010E RID: 270 RVA: 0x00010EE4 File Offset: 0x0000F0E4
+		
 		public List<HongBaoSendData> SendHongBaoProc(DateTime now, Dictionary<int, HongBaoSendData> dict)
 		{
 			List<HongBaoSendData> result;
@@ -238,7 +238,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0600010F RID: 271 RVA: 0x00011240 File Offset: 0x0000F440
+		
 		public bool CanGetHongBao(GameClient client, HongBaoSendData hongBaoData)
 		{
 			bool ret = false;
@@ -261,7 +261,7 @@ namespace GameServer.Logic.ActivityNew
 			return ret;
 		}
 
-		// Token: 0x06000110 RID: 272 RVA: 0x0001133C File Offset: 0x0000F53C
+		
 		public bool OnRecvHongBao(GameClient client, HongBaoSendData hongBaoData)
 		{
 			bool ret = false;
@@ -286,7 +286,7 @@ namespace GameServer.Logic.ActivityNew
 			return ret;
 		}
 
-		// Token: 0x06000111 RID: 273 RVA: 0x00011438 File Offset: 0x0000F638
+		
 		public int OpenHongBao(int id)
 		{
 			DateTime nowDateTm = TimeUtil.NowDateTime();
@@ -326,7 +326,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000112 RID: 274 RVA: 0x000115F0 File Offset: 0x0000F7F0
+		
 		public bool IsChouJiangOpen(SpecPActivityChouJiangType type)
 		{
 			DateTime nowDateTm = TimeUtil.NowDateTime();
@@ -363,7 +363,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000113 RID: 275 RVA: 0x00011738 File Offset: 0x0000F938
+		
 		public bool CheckIconState(GameClient client)
 		{
 			bool bFlush = false;
@@ -393,7 +393,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000114 RID: 276 RVA: 0x00011830 File Offset: 0x0000FA30
+		
 		public void OnRoleLogin(GameClient client, bool isLogin)
 		{
 			this.GenerateSpecialPriorityActivity(client);
@@ -401,7 +401,7 @@ namespace GameServer.Logic.ActivityNew
 			this.AutoGiveSpecialAward(client, isLogin);
 		}
 
-		// Token: 0x06000115 RID: 277 RVA: 0x0001184C File Offset: 0x0000FA4C
+		
 		public void AutoGiveSpecialAward(GameClient client, bool isLogin = false)
 		{
 			if (null != client.ClientData.SpecPriorityActInfoDict)
@@ -433,7 +433,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x06000116 RID: 278 RVA: 0x00011A0C File Offset: 0x0000FC0C
+		
 		public int Donate(GameClient client, int groupID, int useMoney)
 		{
 			DateTime nowDateTm = TimeUtil.NowDateTime();
@@ -537,7 +537,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000117 RID: 279 RVA: 0x00011E38 File Offset: 0x00010038
+		
 		public SpecPriorityActivityData GetSpecPriorityActivityDataForClient(GameClient client)
 		{
 			SpecPriorityActivityData myActData = new SpecPriorityActivityData();
@@ -609,7 +609,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000118 RID: 280 RVA: 0x0001212C File Offset: 0x0001032C
+		
 		public bool CanActiveTeQuanID(int groupID, int tequanID)
 		{
 			int conditionNum = 0;
@@ -628,7 +628,7 @@ namespace GameServer.Logic.ActivityNew
 			return conditionNum >= activeConfig.ConditonNum;
 		}
 
-		// Token: 0x06000119 RID: 281 RVA: 0x000121FC File Offset: 0x000103FC
+		
 		public void GenerateSpecialPriorityActivity(GameClient client)
 		{
 			if (!client.ClientSocket.IsKuaFuLogin)
@@ -720,7 +720,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x0600011A RID: 282 RVA: 0x0001258C File Offset: 0x0001078C
+		
 		public void NotifyActivityState(GameClient client)
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -760,7 +760,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x0600011B RID: 283 RVA: 0x00012690 File Offset: 0x00010890
+		
 		public int SpecActCheckCondition(GameClient client, int TeQuanID, int ActID, int PurNum, bool CheckCost = true)
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -829,7 +829,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0600011C RID: 284 RVA: 0x00012854 File Offset: 0x00010A54
+		
 		public bool HasEnoughBagSpaceForAwardGoods(GameClient client, int TeQuanID, int ActID, int PurNum)
 		{
 			KeyValuePair<int, int> kvpKey = new KeyValuePair<int, int>(TeQuanID, ActID);
@@ -882,7 +882,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0600011D RID: 285 RVA: 0x00012A3C File Offset: 0x00010C3C
+		
 		public int SpecActGiveAward(GameClient client, int TeQuanID, int ActID, int PurNum)
 		{
 			KeyValuePair<int, int> kvpKey = new KeyValuePair<int, int>(TeQuanID, ActID);
@@ -962,7 +962,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0600011E RID: 286 RVA: 0x00012DA4 File Offset: 0x00010FA4
+		
 		public string BuildFetchSpecActAwardCmd(GameClient client, int ErrCode, int tequanID, int actID)
 		{
 			int roleID = client.ClientData.RoleID;
@@ -1034,7 +1034,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0600011F RID: 287 RVA: 0x00012FEC File Offset: 0x000111EC
+		
 		public void ModifySpecialPriorityActConitionInfo(int key, int add)
 		{
 			lock (SpecPriorityActivity.Mutex)
@@ -1053,13 +1053,13 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x06000120 RID: 288 RVA: 0x000130AC File Offset: 0x000112AC
+		
 		public List<SpecPConditionConfig> CalSpecPConditionListByNow(DateTime now)
 		{
 			return this.SpecPConditionList.FindAll((SpecPConditionConfig x) => x.FromDate <= now && now <= x.ToDate);
 		}
 
-		// Token: 0x06000121 RID: 289 RVA: 0x000130E4 File Offset: 0x000112E4
+		
 		public void OnConditionNumChangeBefore()
 		{
 			lock (SpecPriorityActivity.Mutex)
@@ -1068,7 +1068,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x06000122 RID: 290 RVA: 0x0001316C File Offset: 0x0001136C
+		
 		public void OnConditionNumChangeAfter()
 		{
 			bool tryActive = false;
@@ -1135,7 +1135,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x06000123 RID: 291 RVA: 0x00013360 File Offset: 0x00011560
+		
 		public bool CheckValidChargeItem(int zhigouID)
 		{
 			bool result;
@@ -1172,7 +1172,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000124 RID: 292 RVA: 0x000134D0 File Offset: 0x000116D0
+		
 		private SpecPActivityConfig GetSpecPActivityConfig(int tequanID, int actID)
 		{
 			SpecPActivityConfig myActConfig = null;
@@ -1190,7 +1190,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000125 RID: 293 RVA: 0x00013520 File Offset: 0x00011720
+		
 		private List<SpecPActivityConfig> GetSpecPActivityListByTequanID(int tequanID)
 		{
 			List<SpecPActivityConfig> actList = null;
@@ -1206,7 +1206,7 @@ namespace GameServer.Logic.ActivityNew
 			return actList;
 		}
 
-		// Token: 0x06000126 RID: 294 RVA: 0x000135AC File Offset: 0x000117AC
+		
 		private void TryRefreshBoss(SpecPActiveConfig activeConfig)
 		{
 			List<SpecPActivityConfig> myActConfigList = null;
@@ -1230,7 +1230,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x06000127 RID: 295 RVA: 0x000136B4 File Offset: 0x000118B4
+		
 		private bool ConditionNumCountAlreadyUser(string userid, int roleid, SpecPConditionType type, SpecPConditionConfig condition)
 		{
 			string beginStr = condition.FromDate.ToString("yyyy-MM-dd HH:mm:ss").Replace(':', '$');
@@ -1257,7 +1257,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000128 RID: 296 RVA: 0x00013798 File Offset: 0x00011998
+		
 		private void CoditionNumCountUser(string userid, int roleid, SpecPConditionType type, SpecPConditionConfig condition)
 		{
 			string beginStr = condition.FromDate.ToString("yyyy-MM-dd HH:mm:ss").Replace(':', '$');
@@ -1274,7 +1274,7 @@ namespace GameServer.Logic.ActivityNew
 			Global.ExecuteDBCmd(10222, strcmd, 0);
 		}
 
-		// Token: 0x06000129 RID: 297 RVA: 0x00013850 File Offset: 0x00011A50
+		
 		public List<int> GetSpecPRoleInfo(GameClient client)
 		{
 			List<int> countList = Global.GetRoleParamsIntListFromDB(client, "153");
@@ -1295,13 +1295,13 @@ namespace GameServer.Logic.ActivityNew
 			return countList;
 		}
 
-		// Token: 0x0600012A RID: 298 RVA: 0x000138D7 File Offset: 0x00011AD7
+		
 		public void SaveSpecPRoleInfo(GameClient client, List<int> countList)
 		{
 			Global.SaveRoleParamsIntListToDB(client, countList, "153", true);
 		}
 
-		// Token: 0x0600012B RID: 299 RVA: 0x00013910 File Offset: 0x00011B10
+		
 		private void ConditionNumTrigger(string userid, int roleid, SpecPConditionType type, int param, GameClient client = null)
 		{
 			DateTime nowDateTm = TimeUtil.NowDateTime();
@@ -1419,14 +1419,14 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x0600012C RID: 300 RVA: 0x00013DC8 File Offset: 0x00011FC8
+		
 		private void DeleteClientSpecPriorityActData(GameClient client, int TeQuanID = 0)
 		{
 			string strcmd = string.Format("{0}:{1}", client.ClientData.RoleID, TeQuanID);
 			Global.ExecuteDBCmd(13176, strcmd, client.ServerId);
 		}
 
-		// Token: 0x0600012D RID: 301 RVA: 0x00013E0C File Offset: 0x0001200C
+		
 		private void UpdateClientSpecPriorityActData(GameClient client, SpecPriorityActInfoDB SpecPActData)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}:{3}:{4}", new object[]
@@ -1440,7 +1440,7 @@ namespace GameServer.Logic.ActivityNew
 			Global.ExecuteDBCmd(13175, strcmd, client.ServerId);
 		}
 
-		// Token: 0x0600012E RID: 302 RVA: 0x00013EBC File Offset: 0x000120BC
+		
 		private void InitPriorityActConditionInfo(DateTime now, bool launch = false)
 		{
 			lock (SpecPriorityActivity.Mutex)
@@ -1506,7 +1506,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x0600012F RID: 303 RVA: 0x00014168 File Offset: 0x00012368
+		
 		private void SaveSpecialPriorityActConitionInfo()
 		{
 			lock (SpecPriorityActivity.Mutex)
@@ -1525,7 +1525,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x06000130 RID: 304 RVA: 0x000142B0 File Offset: 0x000124B0
+		
 		public void TimerProc()
 		{
 			try
@@ -1592,13 +1592,13 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x06000131 RID: 305 RVA: 0x000144C8 File Offset: 0x000126C8
+		
 		public bool IfKFConditonType(SpecPConditionType ConditionType)
 		{
 			return SpecPConditionType.SPCT_SingleChargeKF == ConditionType || SpecPConditionType.SPCT_ZhiGouKF == ConditionType || SpecPConditionType.SPCT_DonateKF == ConditionType || SpecPConditionType.SPCT_ChargeKF == ConditionType || SpecPConditionType.SPCT_ConsumeKF == ConditionType;
 		}
 
-		// Token: 0x06000132 RID: 306 RVA: 0x00014500 File Offset: 0x00012700
+		
 		public bool Init()
 		{
 			try
@@ -1659,7 +1659,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x06000133 RID: 307 RVA: 0x0001466C File Offset: 0x0001286C
+		
 		public bool LoadSpecPriorityConditionData()
 		{
 			try
@@ -1785,7 +1785,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x06000134 RID: 308 RVA: 0x00014AB8 File Offset: 0x00012CB8
+		
 		public bool LoadSpecPriorityActiveData()
 		{
 			try
@@ -1817,7 +1817,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x06000135 RID: 309 RVA: 0x00014BEC File Offset: 0x00012DEC
+		
 		public bool LoadSpecPriorityBossData()
 		{
 			try
@@ -1857,7 +1857,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x06000136 RID: 310 RVA: 0x00014D88 File Offset: 0x00012F88
+		
 		public bool LoadSpecPriorityAwardData()
 		{
 			try
@@ -1910,7 +1910,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x06000137 RID: 311 RVA: 0x00014F7C File Offset: 0x0001317C
+		
 		public bool LoadSpecPriorityZhiGouData()
 		{
 			try
@@ -1964,7 +1964,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x06000138 RID: 312 RVA: 0x000151C8 File Offset: 0x000133C8
+		
 		public bool LoadSpecPriorityMallData()
 		{
 			try
@@ -2017,7 +2017,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x06000139 RID: 313 RVA: 0x000153C8 File Offset: 0x000135C8
+		
 		public bool LoadSpecPriorityBuffData()
 		{
 			try
@@ -2057,7 +2057,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x0600013A RID: 314 RVA: 0x00015564 File Offset: 0x00013764
+		
 		public bool LoadSpecPriorityHongBaoData()
 		{
 			try
@@ -2097,7 +2097,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x0600013B RID: 315 RVA: 0x00015704 File Offset: 0x00013904
+		
 		public bool LoadSpecPriorityChouJiangData()
 		{
 			try
@@ -2158,61 +2158,61 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x040001CC RID: 460
+		
 		public const string SpecPCondition_fileName = "Config/TeQuanTiaoJian.xml";
 
-		// Token: 0x040001CD RID: 461
+		
 		public const string SpecPActive_fileName = "Config/TeQuanJiHuo.xml";
 
-		// Token: 0x040001CE RID: 462
+		
 		public const string SpecPBoss_fileName = "Config/TeQuanBoss.xml";
 
-		// Token: 0x040001CF RID: 463
+		
 		public const string SpecPAward_fileName = "Config/TeQuanJiangLi.xml";
 
-		// Token: 0x040001D0 RID: 464
+		
 		public const string SpecPZhiGou_fileName = "Config/TeQuanZhiGou.xml";
 
-		// Token: 0x040001D1 RID: 465
+		
 		public const string SpecPMall_fileName = "Config/TeQuanShangCheng.xml";
 
-		// Token: 0x040001D2 RID: 466
+		
 		public const string SpecPBuff_fileName = "Config/TeQuanBuff.xml";
 
-		// Token: 0x040001D3 RID: 467
+		
 		public const string SpecPHongBao_fileName = "Config/TeQuanHongBao.xml";
 
-		// Token: 0x040001D4 RID: 468
+		
 		public const string SpecPChouJiang_fileName = "Config/TeQuanChouJiang.xml";
 
-		// Token: 0x040001D5 RID: 469
+		
 		public static object Mutex = new object();
 
-		// Token: 0x040001D6 RID: 470
+		
 		public List<SpecPConditionConfig> SpecPConditionList = new List<SpecPConditionConfig>();
 
-		// Token: 0x040001D7 RID: 471
+		
 		public Dictionary<int, SpecPActiveConfig> SpecPActiveDict = new Dictionary<int, SpecPActiveConfig>();
 
-		// Token: 0x040001D8 RID: 472
+		
 		public Dictionary<int, List<SpecPActivityConfig>> SpecPActivityDict = new Dictionary<int, List<SpecPActivityConfig>>();
 
-		// Token: 0x040001D9 RID: 473
+		
 		public Dictionary<int, int> ActConditionInfoDict = new Dictionary<int, int>();
 
-		// Token: 0x040001DA RID: 474
+		
 		public Dictionary<int, int> ActConditionInfoDictOld = new Dictionary<int, int>();
 
-		// Token: 0x040001DB RID: 475
+		
 		public HashSet<int> ActZhiGouIDSet = new HashSet<int>();
 
-		// Token: 0x040001DC RID: 476
+		
 		private HashSet<int> HongBaoIdSended = new HashSet<int>();
 
-		// Token: 0x040001DD RID: 477
+		
 		private string RedPacketsTeQuanMessage;
 
-		// Token: 0x040001DE RID: 478
+		
 		private int LastUpdateDayID;
 	}
 }

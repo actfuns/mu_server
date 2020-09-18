@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="37"/>
+  <GiftList Title="劲爆返利" Description="活动期间内排名越高返利越高,次日0点统计昨日累计的返利！">
+  <Award ID="1" FanLi="0.2" />
+  <Award ID="2" FanLi="0.1" />
+  <Award ID="3" FanLi="0.08" />
+  <Award ID="4" FanLi="0.05" />
+  <Award ID="5" FanLi="0.03" />
+  </GiftList>
+</Config>

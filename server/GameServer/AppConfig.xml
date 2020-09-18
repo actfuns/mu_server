@@ -14,7 +14,7 @@
   <!--GoodsIDs不为空，则自动给予新角色一堆物品-->
   <Goods GoodsIDs="92213,1,1,0,0,0,0" />
   <!--Path GameRes资源所在的目录-->
-  <Resource Path="C:\Users\admin\Desktop\新建文件夹 (2)\mu_server\server\GameRes" />
+  <Resource Path="D:\MU_Server\MU_Server2\GameRes" />
   <!--DBLogEnable 是否启用记录日志功能1启用，0关闭-->
   <DBLog DBLogEnable="0" Path="D:\mulog\GameServer\" />
   <!--内存缓冲配置 size,num|size,num|size,num-->

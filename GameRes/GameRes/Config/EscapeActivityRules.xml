@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <EscapeActivityRules ID="1" Name="魔界大逃杀地图" MapCode="97004" TimePoints="2,13:30:00-15:30:00|4,13:30:00-15:30:00|6,13:30:00-15:30:00" BattleSignSecs="300" SignCondition="5,1" MatchTeamNum="2" EnterBattleNum="2" PrepareSecs="60" SafeSecs="60" ClearRolesSecs="60" FanaticismStartNum="4" BattleEndTime="720" RankRefreshTime="180" RewardView="2016|2017|63257|63260" />
+</Config>

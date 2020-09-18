@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ShengYinTaoZhuang ID="1" Name="怒血狂暴" LeiXing="1" TaoZhuangShuXingTwo="MaxLifeV,100000" TaoZhuangShuXingFour="AddAttack,20000|AddDefense,10000" TaoZhuangShuXingSix="MaxLifePercent,0.2|AddAttackInjurePercent,0.15|LifeSteal,2000" />
+  <ShengYinTaoZhuang ID="2" Name="雷霆灭世" LeiXing="2" TaoZhuangShuXingTwo="MaxLifeV,100000" TaoZhuangShuXingFour="AddAttack,20000|AddDefense,10000" TaoZhuangShuXingSix="MaxLifePercent,0.2|AddAttackInjurePercent,0.15|LifeSteal,2000" />
+  <ShengYinTaoZhuang ID="3" Name="暗夜幽冥" LeiXing="3" TaoZhuangShuXingTwo="MaxLifeV,100000" TaoZhuangShuXingFour="AddAttack,20000|AddDefense,10000" TaoZhuangShuXingSix="MaxLifePercent,0.2|AddAttackInjurePercent,0.15|LifeSteal,2000" />
+</Config>

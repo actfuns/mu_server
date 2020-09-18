@@ -1,0 +1,1870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+	<Params>
+		<!--MU非翅膀强化属性加成攻击里上下限数值,必须16项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="ForgeLevelAddAttackRates" Value="0,0.05,0.1,0.15,0.2,0.25,0.3,0.4,0.5,0.65,0.8,1,1.2,1.45,1.7,2,2.3,2.6,2.9,3.2,3.5"/>
+		<!--MU非翅膀强化属性加成防御力上下限数值,必须16项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="ForgeLevelAddDefenseRates" Value="0,0.05,0.1,0.15,0.2,0.25,0.3,0.4,0.5,0.65,0.8,1,1.2,1.45,1.7,2,2.3,2.6,2.9,3.2,3.5"/>
+		<!--MU非翅膀强化属性加成生命上限数值,必须16项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="ForgeLevelAddMaxLifeVRates" Value="0,0.05,0.1,0.15,0.2,0.25,0.3,0.4,0.5,0.65,0.8,1,1.2,1.45,1.7,2,2.3,2.6,2.9,3.2,3.5"/>
+		<!--MU翅膀强化属性加成防御上限数值,必须16项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="WingForgeLevelAddDefenseRates" Value="0,0.05,0.1,0.15,0.2,0.25,0.3,0.4,0.5,0.65,0.8,1,1.2,1.45,1.7,2"/>
+		<!--MU翅膀强化属性加成伤害提升,必须16项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="WingForgeLevelAddShangHaiJiaCheng" Value="0,0.02,0.04,0.06,0.08,0.1,0.12,0.15,0.18,0.22,0.26,0.31,0.36,0.42,0.48,0.55"/>		
+		<!--MU翅膀强化属性加成伤害吸收,必须16项，该项运算比较复杂，读取 翅膀基础伤害吸收值*1000/(1-翅膀基础伤害吸收值),通过运算得出的值计算对应强化级别的提升，再将值换算为比例值-->
+		<Param Name="WingForgeLevelAddShangHaiXiShou" Value="0,0.02,0.04,0.06,0.08,0.1,0.12,0.15,0.18,0.22,0.26,0.31,0.36,0.42,0.48,0.55"/>			
+		<!--MU强化所需必备物品ID,必须16项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="ForgeNeedGoodsIDs" Value="0|2001|2001|2001|2001|2001|2001|2001,2002|2001,2002|2001,2002|2000,2001,2002|2000,2001,2002|2000,2001,2002|2000,2001,2002|2000,2001,2002|2000,2001,2002|2000,2001,2002|2000,2001,2002|2000,2001,2002|2000,2001,2002|2000,2001,2002"/>
+		<!--MU强化所需必备物品数量,必须16项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="ForgeNeedGoodsNum" Value="0|1|1|1|1|1|1|1,1|2,2|3,3|1,4,4|1,5,5|1,6,6|1,7,7|1,8,8|1,9,9|1,10,10|1,10,10|1,10,10|1,15,15|1,20,20"/>
+		<!--MU强化所需神佑晶石,装备强化+8及以上需求，使用后强化失败后等级最多只降低1级，配置对应强化对应等级，必须为16项,道具ID,数量|道具ID,数量-->	
+		<Param Name="ForgeProtectStoneGoodsIDS" Value="0,0|0,0|0,0|0,0|0,0|0,0|0,0|2005,1|2005,1|2005,2|2005,3|2005,4|2005,5|2005,6|2005,7|2005,8|0,0|2005,10|2005,10|2005,15|2005,20"/>
+		<!--MU强化成功率,必须16项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="ForgeGoodsRate" Value="0,100,100,90,80,70,60,50,45,45,40,40,35,35,30,30,30,20,20,15,15"/>
+		<!--MU强化消耗金币,必须16项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="ForgeLevelNeedYinLiang" Value="0,10000,20000,40000,80000,160000,320000,480000,720000,1080000,1620000,2430000,3645000,4374000,5248000,6297000,6297000,6297000,6297000,6297000,6297000"/>
+		<!--MU非翅膀追加属性加成的攻击力上限数值,必须80项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="ZhuiJiaLevelAddAttackRates" Value="0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.85,0.9,0.95,1,1.05,1.1,1.15,1.2,1.25,1.3,1.35,1.4,1.45,1.5,1.55,1.6,1.65,1.7,1.75,1.8,1.85,1.9,1.95,2,2.05,2.1,2.15,2.2,2.25,2.3,2.35,2.4,2.45,2.5,2.55,2.6,2.65,2.7,2.75,2.8,2.85,2.9,2.95,3,3.05,3.1,3.15,3.2,3.25,3.3,3.35,3.4,3.45,3.5,3.55,3.6,3.65,3.7,3.75,3.8,3.85,3.9,3.95,4"/>
+		<!--MU非翅膀追加属性加成的生命上限数值,必须80项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="ZhuiJiaLevelAddDefenseRates" Value="0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.85,0.9,0.95,1,1.05,1.1,1.15,1.2,1.25,1.3,1.35,1.4,1.45,1.5,1.55,1.6,1.65,1.7,1.75,1.8,1.85,1.9,1.95,2,2.05,2.1,2.15,2.2,2.25,2.3,2.35,2.4,2.45,2.5,2.55,2.6,2.65,2.7,2.75,2.8,2.85,2.9,2.95,3,3.05,3.1,3.15,3.2,3.25,3.3,3.35,3.4,3.45,3.5,3.55,3.6,3.65,3.7,3.75,3.8,3.85,3.9,3.95,4"/>
+		<!--MU翅膀追加属性加成的防御力上下限数值,必须80项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="WingZhuiJiaLevelAddDefenseRates" Value="0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.85,0.9,0.95,1,1.05,1.1,1.15,1.2,1.25,1.3,1.35,1.4,1.45,1.5,1.55,1.6,1.65,1.7,1.75,1.8,1.85,1.9,1.95,2,2.05,2.1,2.15,2.2,2.25,2.3,2.35,2.4,2.45,2.5,2.55,2.6,2.65,2.7,2.75,2.8,2.85,2.9,2.95,3,3.05,3.1,3.15,3.2,3.25,3.3,3.35,3.4,3.45,3.5,3.55,3.6,3.65,3.7,3.75,3.8,3.85,3.9,3.95,4"/>
+		<!--MU追加所需必备物品ID,必须80项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="ZhuiJiaForgeGoodsIDs" Value="0,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003,2003"/>	
+		<!--MU追加所需必备物品数量,必须80项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="ZhuiJiaForgeGoodsNum" Value="0,1,1,1,1,1,1,1,1,1,2,2,2,3,4,4,5,6,7,8,9,10,12,13,15,16,18,20,23,25,28,30,33,36,39,43,46,50,54,59,63,68,73,78,83,89,95,101,107,114,121,128,135,143,151,160,168,177,187,196,206,217,227,238,250,261,273,286,298,311,325,339,353,368,383,399,414,431,448,465,482"/>
+		<!--MU追加所需神佑晶石ID-->	
+		<Param Name="ZhuiJiaForgeLuckyGoodsIDs" Value="2005"/>	 
+		<!--MU追加成功率,必须80项，第一个为0, 1级对应第二个开始，依次类推；100为百分之百-->
+		<Param Name="ZhuiJiaGoodsRate" Value="0,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100"/>
+		<!--MU追加消耗金币,必须80项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="ZhuiJiaXiaoHaoJinBi" Value="0,5000,10000,15000,20000,25000,30000,35000,40000,45000,50000,60000,70000,80000,90000,100000,110000,120000,130000,140000,150000,165000,180000,195000,210000,225000,240000,255000,270000,285000,300000,320000,340000,360000,380000,400000,420000,440000,460000,480000,500000,525000,550000,575000,600000,625000,650000,675000,700000,725000,750000,780000,810000,840000,870000,900000,930000,960000,990000,1020000,1050000,1085000,1120000,1155000,1190000,1225000,1260000,1295000,1330000,1365000,1400000,1440000,1480000,1520000,1560000,1600000,1640000,1680000,1720000,1760000,1800000,1845000,1890000,1935000,1980000,2025000,2070000,2115000,2160000,2205000,2250000,2300000,2350000,2400000,2450000,2500000,2550000,2600000,2650000,2700000,2750000"/>
+		<!--MU强化传承成功率，必须21位（对应20个强化等级），第一个为0，1级对应第二个开始，依次类推；100为百分之百-->
+		<Param Name="ChuanChengGoodsRate" Value="0,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100"/>
+		<!--MU强化传承消耗金币,必须21位（对应20个强化等级），第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="ChuanChengXiaoHaoJinBi" Value="0,10000,40000,90000,160000,250000,360000,490000,640000,810000,1000000,1210000,1440000,1690000,1960000,2250000,2540000,2830000,3120000,3410000,3700000"/>
+		<!--MU强化传承消耗钻石,必须21位（对应20个强化等级），第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="ChuanChengXiaoHaoZhuanShi" Value="0,1,2,4,8,12,18,24,32,40,50,60,72,84,98,112,126,140,154,168,182"/>
+		<!--MU追加传承成功率,必须81项（对应80个追加等级），第一个为0, 1级对应第二个开始，依次类推；100为百分之百-->
+		<Param Name="ZhuiJiaChuanChengGoodsRate" Value="0,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100"/>
+		<!--MU追加传承消耗金币,必须81项（对应80个追加等级），第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="ZhuiJiaChuanChengXiaoHaoJinBi" Value="0,500,1500,3000,5000,7500,10500,14000,18000,22500,27500,33500,40500,48500,57500,67500,78500,90500,103500,117500,132500,149000,167000,186500,207500,230000,254000,279500,306500,335000,365000,397000,431000,467000,505000,545000,587000,631000,677000,725000,775000,827500,882500,940000,1000000,1062500,1127500,1195000,1265000,1337500,1412500,1490500,1571500,1655500,1742500,1832500,1925500,2021500,2120500,2222500,2327500,2436000,2548000,2663500,2782500,2905000,3031000,3160500,3293500,3430000,3570000,3714000,3862000,4014000,4170000,4330000,4494000,4662000,4834000,5010000,5190000"/>
+		<!--MU追加传承消耗钻石,必须81项（对应80个追加等级），第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="ZhuiJiaChuanChengXiaoHaoZhuanShi" Value="0,1,1,1,1,2,2,2,3,3,3,4,4,4,5,5,6,6,7,7,8,8,9,9,10,11,12,14,15,16,18,19,21,23,25,27,29,31,33,36,38,41,44,47,50,53,56,59,63,66,70,74,78,82,87,91,96,101,106,111,116,121,127,133,139,145,151,158,164,171,178,185,193,200,208,216,224,233,241,250,259"/>
+		<!--MU培养传承成功率；100为百分之百-->
+		<Param Name="XiLianChuanChengGoodsRate" Value="100"/>
+		<!--MU培养传承消耗金币-->
+		<Param Name="XiLianChuanChengXiaoHaoJinBi" Value="100000"/>
+		<!--MU培养传承消耗钻石-->
+		<Param Name="XiLianChuanChengXiaoHaoZhuanShi" Value="3"/>
+		<!--MU装备聚魂传承成功率，必须11位（对应10个聚魂阶数），第一个为0,1级对应第二个开启，依次类推；100为百分之百-->
+		<Param Name="JuHunChuanChengGoodsRate" Value="0,100,100,100,100,100,100,100,100,100,100"/>
+		<!--MU装备聚魂传承消耗金币，必须11位（对应10个聚魂阶数），第一个为0,1级对应第二个开启，依次类推-->
+		<Param Name="JuHunChuanChengXiaoHaoJinBi" Value="0,800000,800000,800000,800000,800000,800000,800000,800000,800000,800000"/>
+		<!--MU装备聚魂传承消耗钻石，必须11位（对应10个聚魂阶数），第一个为0,1级对应第二个开启，依次类推-->
+		<Param Name="JuHunChuanChengXiaoHaoZhuanShi" Value="0,80,80,80,80,80,80,80,80,80,80"/>
+		<!--MU卓越装备基础属性加成攻击力上下限提升比例值，分别对应绿色、蓝色、紫色、橙色，配置为绿色比例值，蓝色比例值，紫色比例值，橙色比例值-->
+		<Param Name="ZhuoYueAddAttackRates" Value="0.2,0.5,1,1.5"/>
+		<!--MU卓越装备基础属性加成防御力上下限提升比例值，分别对应绿色、蓝色、紫色、橙色，配置为绿色比例值，蓝色比例值，紫色比例值，橙色比例值-->
+		<Param Name="ZhuoYueAddDefenseRates" Value="0.2,0.5,1,1.5"/>
+		<!--MU装备转生所需消耗道具,必须为11项，道具ID,道具ID-->
+		<Param Name="EquipZhuanShengNeedGoods" Value="0,2050,2051,2052,2053,2054,2055,2056,2057,2058,2059"/>
+		<!--MU装备转生所需消耗魔晶,必须为11项-->
+		<Param Name="EquipZhuanShengNeedMoJing" Value="0,100,200,300,400,500,600,700,800,900,1000"/>
+		<!--MU装备转生成功概率,必须为11项-->
+		<Param Name="EquipZhuanShengRate" Value="0,80,75,70,65,55,45,45,45,50,50"/>
+		<!--MU装备转生提升攻击力上下限加成,必须为11项-->
+		<Param Name="EquipZhuanShengAddAttackRates" Value="0,0.2,0.4,0.6,0.8,1,1.2,1.5,1.8,2.3,3"/>
+		<!--MU装备转生提升防御力上下限加成,必须为11项-->
+		<Param Name="EquipZhuanShengAddDefenseRates" Value="0,0.2,0.4,0.6,0.8,1,1.2,1.5,1.8,2.3,3"/>
+		<!--MU装备转生剥离消耗金币,必须为11项，从第一个0转装备开始,依此类推-->
+		<Param Name="EquipZhuanShengBoLiJinBi" Value="0,10000,30000,90000,270000,810000,2430000,4860000,9720000,19440000,38880000"/>
+		<!--MU装备转生剥离消耗钻石,必须为11项，从第一个0转装备开始,依此类推-->
+		<Param Name="EquipZhuanShengBoLiZhuanShi" Value="0,2,6,18,54,162,486,972,1944,3888,7776"/>
+		<!--MU装备转生剥离概率,必须为11项，从第一个0转装备开始,依此类推-->
+		<Param Name="EquipZhuanShengBoLiRates" Value="0,80,75,70,65,55,45,45,45,50,50"/>
+		<!--MU装备还魂消耗,道具ID,金币消耗-->
+		<Param Name="EquipHuanHun" Value="80001,100000"/>
+		<!--MU装备器之魂有效时间,单位分钟-->
+		<Param Name="EquipHuanHunTime" Value="360"/>
+		<!--MU日常任务段说明，最小转生等级，最小人物级别,最大转生等级，最大人物级别,起始任务id，结束任务id|最小转生等级，最小人物级别,最大转生等级，最大人物级别,起始任务id，结束任务id...-->
+		<Param Name="DailyCircleTaskInfo" Value="0,30,0,100,20000,20020|1,1,1,100,20021,20038|2,1,2,100,20039,20060|3,1,3,40,20061,20078|3,41,3,70,20079,20096|3,71,3,100,20097,20116|4,1,4,100,20117,20137|5,1,5,100,20200,20220|6,1,6,100,20300,20323|7,1,7,100,20400,20419|8,1,8,100,20500,20519|9,1,9,100,20600,20619|10,1,10,100,20700,20719|11,1,11,100,20800,20819|12,1,12,100,20900,20919|13,1,13,100,21000,21019|14,1,14,100,21100,21119|15,1,15,100,21200,21219|16,1,16,100,21300,21319"/>
+		<!--MU日常任务说明，一键完成每环消耗钻石数量-->
+		<Param Name="CompleteTaskNeedYuanBao" Value="10"/>
+		<!--MU日常任务说明，双倍经验所需钻石-->
+		<Param Name="DoubleExp" Value="5"/>
+		<!--MU日常任务段说明，金币刷星费用-->
+		<Param Name="TaskStarInfosNeedJinBi" Value="50000"/>
+		<!--MU讨伐任务段说明，最小转生等级，最小人物级别,最大转生等级，最大人物级别,起始任务id，结束任务id|最小转生等级，最小人物级别,最大转生等级，最大人物级别,起始任务id，结束任务id...-->
+		<Param Name="PriceTaskInfo" Value="2,1,2,100,40000,40009|3,1,3,100,40100,40109|4,1,4,100,40200,40209|5,1,5,100,40300,40309|6,1,6,100,40400,40409|7,1,7,100,40500,40509|8,1,8,100,40600,40609|9,1,9,100,40700,40709|10,1,10,100,40800,40809|11,1,11,100,40900,40909|12,1,12,100,41000,41010|13,1,13,100,41100,41110|14,1,14,100,41200,41210|15,1,15,100,41300,41310|16,1,16,100,41400,41410"/>
+		<!--MU讨伐任务每日最大数量-->
+		<Param Name="PriceTaskNum" Value="0"/>	
+		<!--MU讨伐任务5环奖励-->
+		<Param Name="PriceTaskAward" Value="0"/>	
+		<!--MU钻石对应VIP经验比例，比例-->
+		<Param Name="ZuanshiVIPExp" Value="1"/>
+		<!--钻皇buffer的物品ID列表-->
+		<Param Name="ZhuanhuangBufferGoodsIDs" Value="0,2000200,2000201,2000202,2000203,2000204,2000205,2000206,2000207,2000208,2000209,2000210,2000211,2000212,2000213,2000214"/>
+		<!--MU-VIP标示，最小开启等级-->
+		<Param Name="VIPBiaoShi" Value="1"/>	
+		<!--MU-VIP区域传送，最小开启等级-->
+		<Param Name="VIPChuanSong" Value="2"/>	
+		<!--MU-VIP世界BOSS传送，最小开启等级-->
+		<Param Name="VIPBossChuanSong" Value="4"/>	
+		<!--MU-VIP离线摆摊开启，最小开启等级-->
+		<Param Name="VIPLiXianBaiTan" Value="3"/>	
+		<!--MU-VIP副本一键扫荡功能开启，最小开启等级-->
+		<Param Name="VIPSaoDang" Value="0"/>
+		<!--MU-VIPBOSS圣殿开启，最小开启等级-->
+		<Param Name="VIPBOSSShengDian" Value="3"/>
+		<!--MU-VIP黄金神殿开启，最小开启等级-->
+		<Param Name="VIPHuangJinShenDian" Value="6"/>
+		<!--MU-VIP冥想2倍收益，最小开启等级-->
+		<Param Name="VIPMingXiang2Times" Value="2"/>
+		<!--MU-VIP冥想4倍收益，最小开启等级-->
+		<Param Name="VIPMingXiang4Times" Value="5"/>
+		<!--MU-VIP提升金币炼制次数，VIP0，VIP1...VIP10-->
+		<Param Name="VIPJinBiLianZhi" Value="0,1,2,3,4,5,6,7,8,9,10,12,15,18,20,25"/>
+		<!--MU-VIP提升绑定炼制次数，VIP0，VIP1...VIP10-->
+		<Param Name="VIPBangZuanLianZhi" Value="0,1,2,3,4,5,6,7,8,9,10,12,15,18,20,25"/>	
+		<!--MU-VIP提升钻石炼制次数，VIP0，VIP1...VIP10-->
+		<Param Name="VIPZuanShiLianZhi" Value="0,1,3,5,7,9,11,13,15,17,19,21,23,25,27,29"/>		
+		<!--MU-IP日常任务一键完成功能开启，最小开启等级-->
+		<Param Name="VIPRiChangYiJianWanCheng" Value="3"/>			
+		<!--MU-VIP强化提高成功率，VIP0提高值，VIP1提高值...-->
+		<Param Name="VIPQiangHuaAdd" Value="0,1,1,1,2,2,2,3,3,3,4,20,30,40,50,60"/>	
+		<!--MU-VIP追加提高成功率，VIP0提高值，VIP1提高值...-->
+		<Param Name="VIPZhuiJiaAdd" Value="0,0,0,0,0,0,0,0,0,0,0,20,30,40,50,60"/>
+		<!--MU-VIP极品果实每日使用次数，VIP0提高值，VIP1提高值...-->
+		<Param Name="VIPJiPinGuoShiAdd" Value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
+		<!--MU-VIP金条每日使用次数，VIP0提高值，VIP1提高值...-->
+		<Param Name="VIPJinTiaoAdd" Value="0,0,0,0,5,7,10,15,20,25,35,45,60,65,70,75"/>
+		<!--MU-Vip每日购买竞技场挑战次,从0级开始计算,共计13项，VIP12级设定-->
+		<Param Name="VIPJingJi" Value="0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75"/>
+		<!--MU-Vip购买挑战次数消耗钻石-->
+		<Param Name="VIPGouMaiJingJi" Value="10"/> 
+		<!--MU-Vip每日购买经验副本进入次数,从0级开始计算,共计13项，VIP12级设定-->
+		<Param Name="VIPJinYanFuBenNum" Value="0,0,0,1,1,1,2,2,2,3,3,10,10,10,10,10"/> 
+		<!--MU-Vip每日购买金币副本进入次数,从0级开始计算,共计13项，VIP12级设定-->
+		<Param Name="VIPJinBiFuBenNum" Value="0,0,0,0,0,0,0,0,0,0,0,10,10,10,10,10"/>
+		<!--MU-VIP每日免费复活次数，VIP0次数，VIP1次数...-->
+		<Param Name="VIPResurrectionAdd" Value="0,1,2,2,3,3,5,5,7,7,10,10,15,20,25,30"/>
+		<!--MU-VIP血色城堡进入次数，VIP0提高值，VIP1提高值...-->
+		<Param Name="VIPEnterBloodCastleCountAddValue" Value="0,0,0,1,1,1,2,2,2,3,3,3,3,3,3,3"/>
+		<!--MU-VIP恶魔广场进入次数，VIP0提高值，VIP1提高值...-->
+		<Param Name="VIPEnterDaimonSquareCountAddValue" Value="0,0,0,1,1,1,2,2,2,3,3,3,3,3,3,3"/>
+		<!--MU-VIP完成活跃额外奖励活跃数，VIP0提高值，VIP1提高值...-->
+		<Param Name="VIPHuoYueAdd" Value="0,1,2,2,3,3,5,5,7,7,10,10,15,15,15,15"/>
+		<!--MU-VIP增加金币捐献战功每日上限，VIP0提高值，VIP1提高值...-->
+		<Param Name="VIPJinBiJuanZeng" Value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
+		<!--MU-VIP增加钻石捐献战功每日上限，VIP0提高值，VIP1提高值...-->
+		<Param Name="VIPZuanShiJuanZeng" Value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
+		<!--MU-VIP玩家每日增加膜拜次数，从0级开始，总共13项到VIP12级…-->
+		<Param Name="VIPMoBaiNum" Value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
+		<!--MU-VIP竞技场免CD，开启等级-->
+		<Param Name="VIPJingJiCD" Value="1"/>
+		<!--装备卓越属性,竖线左边为装备属性id列表，右边为左边属性对应的值，其中2、3、7、8为动态的值，其它的为静态的值 -->
+		<Param Name="ZhuangbeiZhuoyue" Value="37,8,10,11,12,1,24,25,14,16,26,31,19,39,38,30,20,21|10,20,20,2,2,7,8,8,4,4,4,5,10,40,5,3,5,5"/>
+		<!--锻造用的幸运符的ID 列表，原来只有一个id，name后面没有s-->
+		<Param Name="ForgeLuckyGoodsIDs" Value="35020,35021,35022,35023,35024,35025,35026,35027,35028,35029,35030"/>
+		<!--锻造用的幸运符的幸运概率 列表, 原来这儿只有一个值5，name后面没有s-->
+		<Param Name="ForgeLuckyGoodsRate" Value="5,10,20,30,40,50,60,70,80,90,100"/>
+		<!--天生洗炼消耗的铜钱-->
+		<Param Name="TianshengXilianMoney" Value="2100000000"/>
+		<!--洗炼的需要的物品ID,必须2项，第一个为天生激活石, 第二个是天缘石-->
+		<Param Name="TianshengJihuoGoodsID" Value="1,2"/>
+		<!--传承消耗铜钱-->
+		<Param Name="ChuanchengXiaohaoMoney" Value="1000,3000,9000,27000,54000,108000,216000,432000,864000,1728000"/>
+		<!--传承掉级率-->
+		<Param Name="ChuanchengDiaojilv" Value="80,80,80,80,80,80,80,80,80,80"/>
+		<!--传承用的神佑符ID-->
+		<Param Name="ShenyoufuGoodsIDs" Value="36010,36011,36012,36013"/>
+		<!--神佑符ID对应的可强化等级-->
+		<Param Name="ShengyoufuQianghuaDengji" Value="6,8,10,12"/>
+		<!--强化石分离时消耗的铜钱-->
+		<Param Name="QianghuashiFenliMoney" Value="1000,2000,4000,8000,16000,32000,64000,128000,256000,512000"/>
+		<!--精炼石ID-->
+		<Param Name="ZhuangbeiJinglianGoodsID" Value=""/>
+		<!--提品使用的提品石的ID列表-->
+		<Param Name="EnchanceGoodsIDs" Value=""/>
+		<!--提品使用的幸运符的ID-->
+		<Param Name="EnchanceLuckyGoodsID" Value=""/>
+		<!--提品使用的幸运符的幸运概率-->
+		<Param Name="EnchanceLuckyGoodsRate" Value=""/>
+		<!--进阶用的玄铁的ID-->
+		<Param Name="JinjieIronGoodsID" Value=""/>
+		<!--进阶用的精金的ID-->
+		<Param Name="JinjieGoldGoodsID" Value=""/>
+		<!--进阶使用的幸运符的ID-->
+		<Param Name="JinjieLuckyGoodsID" Value=""/>
+		<!--进阶使用的幸运符的幸运概率-->
+		<Param Name="JinjieLuckyGoodsRate" Value=""/>
+		<!--镶嵌的宝石的起始ID-->
+		<Param Name="XiangqianRockStartID" Value=""/>
+		<!--镶嵌的宝石的结束ID-->
+		<Param Name="XiangqianRockEndID" Value=""/>
+		<!--领取双倍的闭关经验的闭关令牌ID-->
+		<Param Name="BigGuanLingPaiID" Value=""/>
+		<!--坐骑强化需要的辅助物品ID-->
+		<Param Name="HorseEnchancseGoodsID" Value=""/>
+		<!--自动补血的物品ID列表，从大到小补充生命药品-->
+		<Param Name="AutoAddLifeVGoodsIDs" Value="1010,1013,1012,1011,1014"/>
+		<!--自动补蓝的物品ID列表，从大到小补充魔法药品-->
+		<Param Name="AutoAddMagicVGoodsIDs" Value="1110,1113,1112,1111"/>
+		<!--Buffer项的Goods图标列表-->
+		<Param Name="BufferItemsGoodsIDs" Value=""/>
+		<!--第一个任务的ID-->
+		<Param Name="FirstMainTaskID" Value="1000"/>
+		<!--第一个任务的NPC的ID-->
+		<Param Name="FirstNaviNPCID" Value="100"/>
+		<!--新手村地图ID-->
+		<Param Name="FirstMapID" Value="1"/>
+		<!--引导回城购买药品的配置项, 两个参数, 逗号分隔，一个是地图编号，一个是NPC编号-->
+		<Param Name="NaviBuyDrugsItems" Value="2,221"/>
+		<!--技能书的ID列表-->
+		<Param Name="SkillBooksGoodsIDs" Value="40000,40001,40002"/>
+		<!--坐骑卡的ID列表-->
+		<Param Name="HorseCardGoodsIDs" Value=""/>
+		<!--宠物卡的ID列表-->
+		<Param Name="PetCardGoodsIDs" Value=""/>
+		<!--地图传送卷轴-->
+		<Param Name="MapChuanSong" Value=""/>
+		<!--补充灵力的物品ID列表-->
+		<Param Name="AddLingLiVGoodsIDs" Value=""/>
+		<!--可以直接获取坐骑的卡-->
+		<Param Name="GetHorseCardGoodsID" Value=""/>
+		<!--普通宠物粮的物品ID-->
+		<Param Name="NoramlPetFeedGoodsID" Value=""/>
+		<!--高级宠物粮的物品ID-->
+		<Param Name="AdvancePetFeedGoodsID" Value=""/>
+		<!--普通宠物还阳丹的物品ID-->
+		<Param Name="NoramlPetRealiveGoodsID" Value=""/>
+		<!--高级宠物还阳丹的物品ID-->
+		<Param Name="AdvancePetRealiveGoodsID" Value=""/>
+		<!--高级宠物卡的物品ID-->
+		<Param Name="AdvancePetCardGoodsID" Value=""/>
+		<!--高级宠物扩充格子物品ID列表-->
+		<Param Name="PetAddGridGoodsIDs" Value=""/>
+		<!--生命储备物品ID列表-->
+		<Param Name="LifeReserveGoodsIDs" Value=""/>
+		<!--魔法储备物品ID列表-->
+		<Param Name="MagicReserveGoodsIDs" Value=""/>
+		<!--双倍经验卡物品ID列表-->
+		<Param Name="DoubleExpGoodsIDs" Value=""/>
+		<!--双倍灵力卡物品ID列表-->
+		<Param Name="DoubleLingLiGoodsIDs" Value=""/>
+		<!--双倍铜钱卡物品ID列表-->
+		<Param Name="DoubleTongQianGoodsIDs" Value=""/>
+		<!--日跑环任务阶段最大次数-->
+		<Param Name="DailyTaskMaxNum0" Value="10"/>
+		<!--日跑环任务阶段最大次数-->
+		<Param Name="DailyTaskMaxNum1" Value="10"/>
+		<!--日跑环任务阶段最大次数-->
+		<Param Name="DailyTaskMaxNum2" Value="10"/>
+		<!--日跑环任务阶段最大次数-->
+		<Param Name="DailyTaskMaxNum3" Value="10"/>
+		<!--日跑环任务阶段最大次数-->
+		<Param Name="DailyTaskMaxNum4" Value="10"/>
+		<!--日跑环任务阶段最大次数-->
+		<Param Name="DailyTaskMaxNum5" Value="10"/>
+		<!--日跑环任务阶段最大次数-->
+		<Param Name="DailyTaskMaxNum6" Value="10"/>
+		<!--日跑环任务阶段最大次数-->
+		<Param Name="DailyTaskMaxNum7" Value="10"/>
+		<!--日跑环任务阶段最大次数-->
+		<Param Name="DailyTaskMaxNum8" Value="10"/>
+		<!--日跑环任务阶段最大次数-->
+		<Param Name="DailyTaskMaxNum9" Value="10"/>
+		<!--日跑环任务阶段最大次数-->
+		<Param Name="DailyTaskMaxNum10" Value="10"/>
+		<!--自动战斗时优先使用的技能-->
+		<Param Name="AutoFightSkillIDs" Value="102,201,301,10001,10101,11006"/>
+		<!--经脉冲穴后，身上加挂的经脉特效的ID列表-->
+		<Param Name="JingMaiLevelDecoIDs" Value=""/>
+		<!--银票的ID-->
+		<Param Name="YinPiaoGoodsID" Value=""/>
+		<!--增加每日冲穴次数的物品的ID-->
+		<Param Name="DailyChongXueGoodsID" Value=""/>
+		<!--坐骑随机变色所需道具-->
+		<Param Name="RandColor" Value=""/>
+		<!--挖宝的藏宝图的ID-->
+		<Param Name="WaBaoGoodsID" Value=""/>
+		<!--坐骑的名称-->
+		<Param Name="HorseNames" Value=""/>
+		<!--灵力丹的ID列表-->
+		<Param Name="LingLiDanGoodsIDs" Value=""/>
+		<!--牢房的地图ID-->
+		<Param Name="LaoFangMapCode" Value=""/>
+		<!--押镖令的ID-->
+		<Param Name="YaBiaoLingGoodsID" Value=""/>
+		<!--藏宝僧的ID-->
+		<Param Name="CangBaoSengNPCID" Value=""/>
+		<!--刷新功能ID-->
+		<Param Name="ReloadMonsterID" Value=""/>
+		<!--灵符的ID-->
+		<Param Name="LingFuGoodsID" Value=""/>
+		<!--世界聊天小喇叭的ID-->
+		<Param Name="XiaoLaBaGoodsID" Value=""/>
+		<!--福丹ID列表-->
+		<Param Name="AllHorseLuckyGoodsIDs" Value=""/>
+		<!--福丹ID对应点数列表-->
+		<Param Name="AllHorseLuckyGoodsIDsToLucky" Value=""/>
+		<!--角斗场的地图ID-->
+		<Param Name="BattleMapCode" Value="8000"/>
+		<!--首充大礼包的ID-->
+		<Param Name="ShouChongDaLiID" Value="1500,1501,1502"/>
+		<!--每日充值大礼包ID-->
+		<Param Name="MeiriChongHaoliID" Value="1540"/>
+		<!--提示的充值支线任务ID-->
+		<Param Name="ChongZhiSecondTaskID" Value="20005"/>
+		<!--提示的支线任务ID最低级别要求-->
+		<Param Name="ChongZhiSecondTaskMinLevel" Value="1"/>
+		<!--提示的支线任务ID最高级别要求-->
+		<Param Name="ChongZhiSecondTaskMaxLevel" Value="80"/>
+		<!--千年灵芝ID-->
+		<Param Name="LingZhiGoodsID" Value=""/>
+		<!--英雄逐擂地图编号-->
+		<Param Name="HeroMapCodes" Value=""/>
+		<!--坐骑临时积分的保留时间-->
+		<Param Name="HorseTempJiFenTime" Value=""/>
+		<!--建帮令ID,MU版本已注释掉此字段-->
+		<Param Name="CreateBangHuiGoodsID" Value=""/>
+		<!--帮派库存物品ID-->
+		<Param Name="BangHuiGoodsIDs" Value="37002,37005,37004,37006,37007"/>
+		<!--MU创建战盟所需条件：需求转生等级限制|需求等级|所需金币|所需道具-->
+		<Param Name="ZhanMengNeed" Value="0|50|500000|-1"/>	
+		<!--举行领地战和皇城战的线路ID-->
+		<Param Name="BangHuiFightingLineID" Value="1"/>
+		<!--领地战的举行的周日期-->
+		<Param Name="LingDiZhanWeekDays" Value="7"/>
+		<!--领地战的举行的时间段-->
+		<Param Name="LingDiZhanFightingDayTimes" Value="16:30-17:30"/>
+		<!--领地战开始多长时间后，可以判断结束的时间段-->
+		<Param Name="LingDiZhanEndDayTimes" Value="17:29-17:30"/>
+		<!--皇城战的举行的周日期-->
+		<Param Name="HuangChengZhanWeekDays" Value="-1"/>
+		<!--皇城战的时间段-->
+		<Param Name="HuangChengZhanFightingDayTimes" Value="20:00-21:30"/>
+		<!--王城战的举行的周日期-->
+		<Param Name="WangChengZhanWeekDays" Value="-1"/>
+		<!--王城争夺战的时间段-->
+		<Param Name="WangChengZhanFightingDayTimes" Value="20:00-21:30"/>
+		<!--成功占领皇宫决定胜负的最长时间(秒数)-->
+		<Param Name="MaxHavingSheLiZhiYuanSecs" Value="5"/>
+		<!--成功占领皇宫决定胜负的最长时间(秒数)-->
+		<Param Name="MaxTakingHuangGongSecs" Value="5"/>
+		<!--领地ID对应的地图编号 只需要配置皇宫，而且是配置在第6个位置!!用于王城争霸-->
+		<Param Name="LingDiIDs2MapCodes" Value="0,0,4700,0,0,4401"/>
+		<!--舍利之源的NPC编号-->
+		<Param Name="SheLiZhiYuanNPCID" Value=""/>
+		<!--杨公秘典物品ID-->
+		<Param Name="YangGongMiDianGoodsID" Value=""/>
+		<!--幻影阵旗物品ID-->
+		<Param Name="HuanYingZhenQiGoodsID" Value=""/>
+		<!--杨公宝库掉落ID1-->
+		<Param Name="YangGongFallID1" Value=""/>
+		<!--杨公宝库掉落ID2-->
+		<Param Name="YangGongFallID2" Value=""/>
+		<!--杨公宝库掉落ID3-->
+		<Param Name="YangGongFallID3" Value=""/>
+		<!--杨公宝库掉落ID4-->
+		<Param Name="YangGongFallID4" Value=""/>
+		<!--杨公宝库掉落ID5-->
+		<Param Name="YangGongFallID5" Value=""/>
+		<!--杨公宝库掉落ID6-->
+		<Param Name="YangGongFallID6" Value=""/>
+		<!--杨公宝库掉落ID7-->
+		<Param Name="YangGongFallID7" Value=""/>
+		<!--杨公宝库掉落ID8-->
+		<Param Name="YangGongFallID8" Value=""/>
+		<!--经脉神通丹ID-->
+		<Param Name="JingMaiShenTongDanGoodsIDs" Value=""/>
+		<!--十一星神锻锤ID-->
+		<Param Name="ShenDuanChui11GoodsID" Value=""/>
+		<!--十二星神锻锤ID-->
+		<Param Name="ShenDuanChui12GoodsID" Value=""/>
+		<!--十三星神锻锤ID-->
+		<Param Name="ShenDuanChui13GoodsID" Value=""/>
+		<!--十四星神锻锤ID-->
+		<Param Name="ShenDuanChui14GoodsID" Value=""/>
+		<!--十五星神锻锤ID-->
+		<Param Name="ShenDuanChui15GoodsID" Value=""/>
+		<!--无暇紫色提品石ID-->
+		<Param Name="WuXiaZiSeTiPinGoodsID" Value=""/>
+		<!--无暇金色提品石ID-->
+		<Param Name="WuXiaJinSeTiPinGoodsID" Value=""/>
+		<!--超级炼骨寒铁ID-->
+		<Param Name="ChaoJiLianGuGoodsID" Value=""/>
+		<!--册封皇妃使用的如意佩的物品ID-->
+		<Param Name="RuYiPeiGoodsID" Value=""/>
+		<!--军旗动画ID列表-->
+		<Param Name="JunQiDecoIDs" Value=""/>
+		<!--皇城的地图编号 ==>现在的皇宫地图编号-->
+		<Param Name="HuangChengMapCode" Value="-1000"/>
+		<!--王城地图编号-->
+		<Param Name="WangChengMapCode" Value="-1000"/>
+		<!--天山雪莲的物品编号-->
+		<Param Name="AddLifeNormalGoodsIDs" Value=""/>
+		<!--连斩延时丹物品ID-->
+		<Param Name="LianZhanYanShiDanGoodsID" Value=""/>
+		<!--副本令的物品ID-->
+		<Param Name="FuBenLingGoodsID" Value=""/>
+		<!--提品的成功概率,必须5项，第一个为白色, 绿色对应第二个开始，依次类推-->
+		<Param Name="EnchanceLevelRocksPercent" Value=""/>
+		<!--提品属性加成比例,必须5项，第一个为白色, 绿色对应第二个开始，依次类推-->
+		<Param Name="EnchanceLevelAddRates" Value=""/>
+		<!--提品的需要的银两,必须5项，第一个为白色, 绿色对应第二个开始，依次类推-->
+		<Param Name="EnchanceLevelNeedYinLiang" Value=""/>
+		<!--生命储备的恢复量-->
+		<Param Name="LifeRecoverNum" Value="10000"/>
+		<!--魔法储备的恢复量-->
+		<Param Name="MagicRecoverNum" Value="10000"/>
+		<!--聚灵珠(空)物品ID-->
+		<Param Name="JuLingZhuKongGoodsID" Value=""/>
+		<!--聚灵珠(满)物品ID-->
+		<Param Name="JuLingZhuManGoodsID" Value=""/>
+		<!--玄天鼎物品ID-->
+		<Param Name="XuanTianDingGoodsID" Value=""/>
+		<!--自动接受的任务ID列表-->
+		<Param Name="AutoTaskIDs" Value=""/>
+		<!--自动接受的任务的对应级别-->
+		<Param Name="AutoTaskLevels" Value=""/>
+		<!--特殊的普通地图寻路辅助-->
+		<Param Name="SpecialMapCodes" Value="4400,4401,4402,4403,4404,4405,4406,103"/>
+		<!--铜钱包ID列表-->
+		<Param Name="TongQianBaoGoodsIDs" Value="607025,607026,607027"/>
+		<!--坐骑增加的速度值-->
+		<Param Name="HorseSpeedList" Value="0.10,0.15,0.20,0.25,0.32,0.39,0.46,0.56,0.66,0.76"/>
+		<!--无量秘藏窗口中显示的图标-->
+		<Param Name="WuLiangGoodsIDs" Value="501004,450013,317310,317304,203003,317306,450011,320007"/>
+		<!--VIP月卡的GoodID-->
+		<Param Name="VIPGoodsID" Value="30000,30001,30002"/>
+		<!--需要定位到奇珍阁购买的商品的物品ID列表-->
+		<Param Name="ToQiZhenGeGoodsIDs" Value=""/>
+		<!--装备增幅需要的物品ID|数量|银两,必须11项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="SubForgeGoodsIDs" Value=""/>
+		<!--进行世界聊天的最小级别,必须大于等于该级别才能世界聊天,后台配置，此处只配置1即可-->
+		<Param Name="MinLevelForSendWorldMessage" Value="1"/>
+		<!--进行世界聊天的最小时间间隔，单位秒，两次聊天间隔必须大于该值-->
+		<Param Name="MinIntervalSecsForSendWorldMessage" Value="5"/>
+		<!--发邮件收取的邮资-->
+		<Param Name="EmailMoney" Value="100"/>
+		<!--邮件带附件收取的邮资-->
+		<Param Name="EmailMoneyWithAttachment" Value="500" />
+		<!--邮件标题最大长度 10 到 49-->
+		<Param Name="MaxSubjectLen" Value="40" />
+		<!--邮件内容最大长度 150 到 10000 -->
+		<Param Name="MaxContentLen" Value="500" />
+		<!--神装兑换商店-->
+		<Param Name="TianDiJingYuanGoodsID" Value="460920" />
+		<!--怪物减伤所需参数，减伤比例,怪物类型ID|受伤比例,怪物类型ID-->
+		<Param Name="MonsterSubInjures" Value="0.5,101|0.5,301|0.25,401" />
+		<!--新的杨公宝库需要使用的昆仑镜物品ID-->
+		<Param Name="KunLunJingGoodsID" Value="460919" />
+		<!--新的杨公宝库需要使用渐进概率-->
+		<Param Name="YangGongBKNumPercents" Value="0.10,0.20,0.50,1.0" />
+		<!--发送邮件的最小等级限制-->
+		<Param Name="MinLevelForMailSend" Value="20" />
+		<!--试练塔经验副本IDs-->
+		<Param Name="JingYanTaFuBenIDs" Value="1,2,3,4,5,6,7,8,9,10,11" />
+		<!--试练令的物品ID-->
+		<Param Name="ShiLianLingGoodsID" Value="31002" />
+		<!--昆仑镜物品ID-->
+		<Param Name="KunLunJingGoodsID" Value="460919"/>
+		<!--高级灵力丹物品ID-->
+		<Param Name="GaoJiLingLiDanGoodsID" Value="202318" />
+		<!--是否显示微端大礼包图标，0为不显示，非0为显示-->
+		<Param Name="ShowWeiDuanIcon" Value="1"/>
+		<!--微端下载地址-->
+		<Param Name="ExeUrl" Value="http://cdn.nz.9377.com/dl/9377《怒斩》一秒安装包.exe" />
+		<!--微端大礼包的ID-->
+		<Param Name="TinyClientDaLiID" Value="1510,1511,1512"/>
+		<!--生肖竞猜相关产生配置各个部分逗号隔开 地图编号,等待所有玩家下注时间,注码物品ID,单个注码物品对应的元宝数量,单个竞猜关键字的最大注码数量,系统广播条件【最小金币数量】-->
+		<Param Name="ShengXiaoGuessParams" Value="5000,30,460924,100,99,1000"/>
+		<!--生肖竞猜线路配置各个部分逗号隔开 1,2,3 -->
+		<Param Name="ShengXiaoGuessLines" Value="1"/>
+		<!--MU祈福预览列表配置的奖励物品，道具ID,特效ID,强化级别,追加级别,是否幸运,卓越属性|道具ID.... -->
+		<Param Name="BaoKuJiangLi" Value="1005005,-1,0,0,1,235|1015005,-1,0,0,1,235|1025405,-1,0,0,1,235|1005099,-1,0,0,1,235|1015099,-1,0,0,1,235|1025599,-1,0,0,1,235|1020105,-1,0,0,1,16128|1010105,-1,0,0,1,16128|1000105,-1,0,0,1,16128|8011,-1,0,0,0,0|8002,-1,0,0,0,0|8003,-1,0,0,0,0"/>
+		<!--MU祈福获取物品要显示在列表中的物品ID，道具ID,道具ID,道具ID-->
+		<Param Name="QiFuGoods" Value="2000,2001,2002,2003,2004,5001"/>
+		<!--MU首次祈福各职业获取物品，战士道具|法师道具|弓箭手道具|魔剑士道具|占位|召唤师道具，物品的参数项设定为道具ID,是否绑定,强化级别,追加级别,是否幸运,卓越属性-->
+		<Param Name="FirstQiFuGoods" Value="1005102,1,0,0,1,235|1015102,1,0,0,1,235|1025502,1,0,0,1,235|5079,1,0,0,0,0|5079,1,0,0,0,0|5079,1,0,0,0,0"/>
+		<!--MU祈福免费间隔时间,单位分钟-->
+		<Param Name="QiFuTime" Value="2160"/>
+		<!--MU祈福十连抽第十个道具-->
+		<Param Name="QiFuTen" Value="2001,2,0,0,0,0,0|2002,2,0,0,0,0,0|2003,10,0,0,0,0,0|5201,1,0,0,0,0,0|5202,1,0,0,0,0,0"/>
+		<!--新区大礼、首充大礼、VIP、幸运砸蛋、微端大礼这5个图标分别显示的最小级别，用逗号分隔依次显示 -->
+		<Param Name="IconMinLevel" Value="1,1,20,1,25"/>
+		<!--坐骑进阶符ID-->
+		<Param Name="ZuoQiJinJieGoodsID" Value="320006"/>
+		<!-- 仓库、包裹相关参数：总仓库格数，仓库初始价格，初始免费仓库格数，总背包格数，背包初始价格，初始免费背包格数 -->
+		<Param Name="BagGridParams" Value="216,5,60,100,10,100"/>
+		<!--额外仓库格数及价格（无法用时间开启）：起始格数，价格（单位钻石，固定不变）-->
+		<Param Name="ExtraStoragePrice" Value="121,100"/>
+		<!--竞技场的地图ID 仅仅客户端需要-->
+		<Param Name="ArenaMapCode" Value="4500"/>
+		<!--皇城王族工会领取元宝银两奖励额度 如果不配置，程序内部默认值是 2000,2000000-->
+		<Param Name="KingBangHuiAward" Value="2000,2000000"/>
+		<!--王城争霸申请所需物品id 和 数量-->
+		<Param Name="WarRequestGoods" Value="37003,1"/>
+		<!--成就buffer的物品ID列表-->
+		<Param Name="ChengJiuBufferGoodsIDs" Value="2000000,2000001,2000002,2000003,2000004,2000005,2000006,2000007,2000008,2000009,2000010,2000011,2000012,2000013,2000014,2000015"/>
+		<!--军衔Buffer的物品ID列表-->
+		<Param Name="JunXianBufferGoodsIDs" Value="2000100,2000101,2000102,2000103,2000104,2000105,2000106,2000107,2000108,2000109,2000110,2000111,2000112,2000113,2000114,2000115"/>
+		<!--MU翎羽阶数上限，格式：数值（阶数上限）-->
+		<Param Name="LingYuMax" Value="9"/>
+		<!--MU守护神阶数上限，格式：数值（阶数上限）-->
+		<Param Name="ShouHuShenMax" Value="10"/>
+		<!--MU圣物阶数上限，格式：数值（阶数上限）-->
+		<Param Name="ShengWuMax" Value="10"/>
+		<!--经脉Buffer的物品ID列表-->
+		<Param Name="JingMaiBufferGoodsIDs" Value="0"/>
+		<!--武学buffer的物品ID列表-->
+		<Param Name="WuXueBufferGoodsIDs" Value="0"/>
+		<!--战魂buffer的物品ID列表-->
+		<Param Name="ZhanhunBufferGoodsIDs" Value="0"/>
+		<!--荣耀buffer的物品ID列表-->
+		<Param Name="RongyaoBufferGoodsIDs" Value="0"/>
+		<!--军旗buffer的物品ID列表-->
+		<Param Name="JunQiBufferGoodsIDs" Value="180600,180601,180602,180603"/>
+		<!--物品精元置换参数 依次是装备最小等级，普通装备的经验系数[精元值乘10000]-->
+		<Param Name="JingYuanExchange" Value="40,10000"/>
+		<!--徽章兑换得到的猎杀值最低百分比,90表示最低得到90%的猎杀值，最高百分百-->
+		<Param Name="HuiZhangExchange" Value="90"/>
+		<!--战魂兑换得到的战魂值最低百分比,90表示最低得到90%的猎杀值，最高百分百-->
+		<Param Name="HunqiExchange" Value="90"/>
+		<!--经脉等级对应的物品列表-->
+		<Param Name="JingMaiLevelGoodsList" Value="180030,180031,180032,180033,180034,180035,180036,180037,180038,180039"/>
+		<!--绑定快捷键的物品列表(新手传送石和其绑定的快捷键)-->
+		<Param Name="BindQuickKeyGoodsList" Value="32003,Q"/>
+		<!--MU古战场等级和地图编号映射 逗号隔开的每一项都是 最小转生_最大转生_对应地图-->
+		<Param Name="GuMuLevelMapList" Value="1_99_5316"/>
+		<!--MU古战场限时，普通玩家30分钟，vip30分钟,等级必须达到1级-->
+		<Param Name="GuMuTimeLimitAward" Value="11,480,1440"/>
+		<!--MU点击聊天界面副本队伍链接可加入队伍的地图配置，地图ID-->
+		<Param Name="AccessibleMap" Value="1,2,3,4,5,6,7,8,9,10,20,30,40"/>
+		<!--MU水晶幻境双倍收益时间，开始时间，结束时间，收益倍率-->
+		<Param Name="MuKuangDoubleAward" Value="12:00,13:00,2|22:00,23:00,2"/>
+		<!--MU水晶幻境每日采集次数-->
+		<Param Name="MuKuangNum" Value="60"/>
+		<!--MU水晶幻境复活时间，复活时间（秒） -->
+		<Param Name="CrystalDeadTime" Value="15"/>
+		<!--MU领地采集每周采集次数-->
+		<Param Name="ManorCollectNum" Value="30"/>
+		<!--MU领地采集双倍收益时间可开启时间段，开始时间，结束时间，持续时间(秒)，收益倍率，每周可开启次数-->
+		<Param Name="ManorCollectDoubleAward" Value="12:00,21:00,3600,2,2"/>
+		<!--MU领地采集双倍收益默认时间，第一次开始时间，结束时间，周几|第二次开始时间，结束时间，周几-->
+		<Param Name="ManorCollectDoubleAwardDefault" Value="12:00,13:00,3|12:00,13:00,6"/>
+		<!--军团领地进入最低等级限制，格式：转生，等级-->
+		<Param Name="ManorMinLevel" Value="6,85"/>
+		<!--军团领地进入人数上限，格式：人数上限-->
+		<Param Name="ManorMaxPlayer" Value="500"/>		
+		<!--军团领地守卫招募，复活消耗和复活时间，格式：招募消耗数，复活消耗数，复活时间-->
+		<Param Name="GuardCost" Value="8000,120,7200"/>
+		<!--军团领地守加速采集BUFF，格式：BUFFID，缩减百分比参数-->
+		<Param Name="ManorBuffID" Value="2000813,20"/>		
+		<!--MU军团任务开始时间段，开始周几，开始时间-结束周几，结束时间-->
+		<Param Name="LegionTasksTime" Value="0,00:00:00-5,23:59:59"/>
+		<!--Mu军团创建条件，格式：战盟等级-->
+		<Param Name="LegionsNeed" Value="6"/>
+		<!--Mu军团创建提示（仅客户端用），值需与军团创建相同 -->
+		<Param Name="LastUseShengQingTime" Value="6"/>
+		<!--Mu军团创建消耗钻石-->
+		<Param Name="LegionsCastZuanShi" Value="2000"/>
+		<!--Mu军团创建CD时间，单位，小时-->
+		<Param Name="LegionsCreateCD" Value="1"/>
+		<!--Mu军团加入CD时间，单位，分钟-->
+		<Param Name="LegionsJionCD" Value="1"/>
+		<!--Mu军团中每个战盟的最大军团精英上限，不包括军团战、士官长-->
+		<Param Name="LegionsEliteNum" Value="25"/>
+		<!--Mu军团繁荣度相关，格式：军团创建初始繁荣度,军团每日扣除繁荣度,军团繁荣度报警值,繁荣度解散值-->
+		<Param Name="LegionProsperityCost" Value="100000,3000,10000,0"/>
+		<!--古墓挂机VIP经验加成-->
+		<Param Name="GuMuVipExpMultiple" Value=""/>
+		<!--冥界限时地图列表，每次使用冥界令牌可以停留一定时间，重复使用直接进行时间覆盖 多个用逗号隔开-->
+		<Param Name="MingJieMapList" Value=""/>
+		<!--Boss副本ID列表-->
+		<Param Name="BossFuBenIDs" Value="50,51,52,53,54,55,56,57,58,59"/>
+		<!--二锅头物品ID列表-->
+		<Param Name="ErGuoTouList" Value="31022,31032,31033,31034"/>
+		<!--角色掉落身上装备的概率(整数)-->
+		<Param Name="MaxFallRoleUsingRate" Value="0"/>
+		<!--角色掉落背包中物品概率(整数)-->
+		<Param Name="MaxFallRoleBagRate" Value="0"/>
+
+		<!--角色红名后掉落身上装备的概率(整数)-->
+		<Param Name="MaxFallRedRoleUsingRate" Value="300"/>
+		<!--角色红名后掉落背包装备的概率(整数)-->
+		<Param Name="MaxFallRedRoleBagRate" Value="500"/>
+
+		<!--角色红名被杀后曝装备的真实概率,会从Value的1-1000中随机选择一个数字，如果这个数字小于上面配置的概率如300,500，则红名就会爆装备-->
+		<Param Name="RealFallRedRole" Value="1,1000"/>
+		<!--角色红名被杀后最大掉落的物品数-->
+		<Param Name="RedRoleDropGoodsNum" Value="1"/>
+	    <!--白名角色被杀后是否爆装备，1爆0不爆-->
+		<Param Name="OrdinaryRole" Value="1"/>
+
+		<!--角色红名后对应的debuff属性，攻击力下降比例,防御力下降比例,生命上限下降比例,映射道具ID-->
+		<Param Name="HongMingDebuff" Value="0.01,0.01,0.01,2021012"/>
+		<!--怪物掉落的铜钱包ID-->
+		<Param Name="FallTongQianGoodsID" Value="50000"/>
+		<!--护身符有效天数(整数)-->
+		<Param Name="DecorateLimitDays" Value="7"/>
+		<!--当前角色等级在以下级别时，活动按钮上显示特效-->
+		<Param Name="HuodongIconEffectNeedRoleLevel" Value="20,30,40,45"/>
+		<!--不同类型怪物攻击待机的时间间隔-->
+		<Param Name="MonsterPreAttackTicks" Value="2000,2000,2000,2000,1000,2000,2000,2000,2000,2000,500,2000,800,1000,1000,2000"/>
+		<!--死亡后回城就在本地图复活的地图id列表 6 传奇之野， 1新手村, 2 主城-->
+		<Param Name="MainReliveCity" Value="1,2,6"/>
+		<!--皇宫地图ID-->
+		<Param Name="PalaceMapCode" Value="-1000"/>
+		<!--用于祈福时默认扣除包裹中道具代替钻石-->
+		<Param Name="JinDan" Value="999999"/>
+		<!--用于精灵召唤时默认扣除包裹中道具代替钻石-->
+		<Param Name="ZhaoHuan" Value="7005"/>
+		<!--挂机逃命时的物品ID列表-->
+		<Param Name="GuaJiGoAwayGoodsIDs" Value="32010,32001"/>
+		<!--限制时间掉落表的持续天数-->
+		<Param Name="LimitTimeFallDays" Value="6"/>
+		<!--每天限制免费传送的次数-->
+		<Param Name="FreeCSMaxTimes" Value="30"/>
+		<!--元宝完成任务需要的元宝数-->
+		<Param Name="YuanBaoCompleteTask" Value="50"/>
+		<!--绑定铜钱提交任务领取3倍奖励需要的铜钱数-->
+		<Param Name="BindTongQianTask3Awards" Value="2100000000"/>
+		<!--绑定铜钱提交任务领取2倍奖励需要的铜钱数-->
+		<Param Name="BindTongQianTask2Awards" Value="50000"/>
+		<!--绑定铜钱符-->
+		<Param Name="BindTongQianGoodsID" Value="50020"/>
+		<!--不同Vip等级可以每日使用的绑定铜钱符的次数-->
+		<Param Name="VipUseBindTongQianGoodsIDNum" Value="20,30,40,50"/>
+		<!--道士召唤的骷髅的怪物ID-->
+		<Param Name="DSMonsterKuLouID" Value="9200000"/>
+		<!--MU召唤师的召唤兽怪物根据玩家等级相关的属性系数:物理防御,魔法防御,最小攻击,最大攻击,血量,命中,闪避等共18条属性-->
+		<Param Name="DSMonsterKuLouProps" Value="0.2,0.3,0.6,0.6,4,0.3,0.3,0,0,0,0,0,0,0,0,0,0,0"/>
+		<!--MU召唤师的召唤兽怪物根据玩家属性相关的属性系数:物理防御,魔法防御,最小攻击,最大攻击,血量,命中,闪避-->
+		<Param Name="DSMonsterKuLouPropsTwo" Value="0.8,0.8,0.3,0.3,0.6,0.6,0.6,0.75,1,1,1,1,1,1,1,1,1,1"/>
+		<!--道士召唤的神兽的怪物ID-->
+		<Param Name="DSMonsterShenShouID" Value="0"/>
+		<!--道士召唤的神兽的基础成长属性:物理防御,魔法防御,最小攻击,最大攻击,血量-->
+		<Param Name="DSMonsterShenShouProps" Value="0,0,0,0,0"/>
+		<!--不允许摧毁和出售的物品ID列表-->
+		<Param Name="NoSaleOutGoodsIDs" Value=""/>
+		<!--创建角色后，自动给予的物品，分职业-->
+		<Param Name="AutoGiveGoodsIDList" Value=""/>
+		<!--幸运大转盘，每充值x元宝可获得免费抽奖1次-->
+		<Param Name="ChongzhiNumByXinyunDazhuanpan" Value="500000000"/>
+		<!--幸运大转盘的奖励物品 -->
+		<Param Name="XinyunDazhuanpan" Value="35009,542|36101,543|31017,543|1005163,542|31020,543|36090,543|1103067,542|30020,543|36000,543|1005076,542|35007,543|1004073,543|31031,542|36082,543|36021,543|35008,542|36050,543|1004069,543|1302000,547|1306000,547"/>
+		<!--月度大转盘，每充值x元宝可获得免费抽奖1次-->
+		<Param Name="ChongzhiNumByYueduDazhuanpan" Value="500000000"/>
+		<!--月度大转盘的奖励物品 -->
+		<Param Name="YueduDazhuanpan" Value="1005084,542|31017,543|30020,543|180710,542|1013092,543|35007,543|1004073,542|36101,543|31031,543|35009,542|36021,543|36082,543|1313000,542|1206083,543|1003094,543|1303000,542|35008,543|31020,543|180700,547|180725,547"/>
+		<!--青龙星宿BUFF加成数值-伤害反弹比例,必须8项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="QingLongXingXiuBuff" Value="0,0.02,0.03,0.05,0.07,0.1,0.15,0.25"/>
+		<!--朱雀星宿BUFF加成数值-双倍一击概率,必须8项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="ZhuQueXingXiuBuff" Value="0,0.02,0.03,0.05,0.07,0.1,0.15,0.25"/>
+		<!--白虎星宿BUFF加成数值-吸血比例,必须8项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="BaiHuXingXiuBuff" Value="0,0.02,0.03,0.05,0.07,0.1,0.15,0.25"/>
+		<!--玄武星宿BUFF加成数值-无视伤害概率,必须8项，第一个为0, 1级对应第二个开始，依次类推-->
+		<Param Name="XuanWuXingXiuBuff" Value="0,0.02,0.03,0.05,0.07,0.1,0.15,0.25"/>
+		<!--神装除魂消耗，需要铜钱数,物品ID,物品数量-->
+		<Param Name="shenqichunhun" Value="500000,36005,1"/>
+		<!--灵魂保护符的goodsid-->
+		<Param Name="LinghunBaohufuGoodsID" Value="36008"/>
+		<!--万兽谷弓箭手总数量限制-->
+		<Param Name="WanShouGuGongJianShouNum" Value="16"/>
+		<!--万兽谷赠送弓箭手道具的ID和数量-->
+		<Param Name="WanShouGuGongJianShouGoodsIDAndNum" Value="ID,SHUXIANG"/>
+		<!--血色城堡活动地图ID列表-->
+		<Param Name="BloodCastleMapCodeID" Value="6000,6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6011,6012,6013,6014,6015,6016"/>
+		<!--恶魔广场活动地图ID列表-->
+		<Param Name="DemonMapCodeIds" Value="7000,7001,7002,7003,7004,7005,7006,7007,7008,7009,7010,7011,7012,7013,7014,7015,7016"/>
+		<!--血色城堡活动副本ID列表-->
+		<Param Name="BloodCastleCopyMapCodeID" Value="31000,31001,31002,31003,31004,31005,31006,31007,31008,31009,31010,31011,31012,31013,31014,31015,31016"/>
+		<!--恶魔广场活动副本ID列表-->
+		<Param Name="DemonCopyMapCodeIds" Value="30000,30001,30002,30003,30004,30005,30006,30007,30008,30009,30010,30011,30012,30013,30014,30015,30016"/>
+		<!--阵营战地图ID列表-->
+		<Param Name="BattleMapCodeIds" Value="8000"/>
+		<!--副本评分需求填充副本ID-->
+		<Param Name="CopyScoreDataMapInfo" Value="1,2,3,11,12,13,21,22,23,31,32,33,41,42,43,51,52,53,61,62,63,71,72,73,81,82,83,91,92,93,101,102,103,201,202,203,301,302,303,401,402,403,4000,4001,4002,5000,5001,5002,5003,5004,5005,5006,5007,5008,5009,5010,5011,5012,5013,5014,5015,5016,4100,40000,40001,40002,40003,40004,40005,40006,4201,50000,70000,70100,70200,90000,90001,90002,90003,90004,90005,90006,90007,90008,90009,90010"/>
+		<!--可执行怪物复活刷新的副本地图ID-->
+		<Param Name="SpecialCopySceneToMonsterRealive" Value="6090"/>
+		<!--新手场景的副本ID-->
+		<Param Name="FreshPlayerSceneID" Value="3000"/>
+		<!--单机血色副本触发完成的任务ID-->
+		<Param Name="FinishFreshPlayerTaskID" Value="106"/>
+		<!--翅膀合成时需要的晶石对应表，一代所需|二代所需|三代所需-->
+		<Param Name="ZhiYeHeChengJingShi" Value="2007,2008,2009|2007,2008,2009|2007,2008,2009"/>
+		<!--翅膀合成时需要的翅膀ID，一代翅膀|二代翅膀-->
+		<Param Name="HeChengChiBang" Value="1000801,1010801,1020801|1000802,1010802,1020802"/>
+		<!--合成后对应的一代翅膀|二代翅膀|三代翅膀-->
+		<Param Name="WingMergeCreatedID" Value="1000801,1010801,1020801|1000802,1010802,1020802|1000803,1010803,1020803"/>
+		<!--合成三代翅膀分别对应的卓越属性掉落ID-->
+		<Param Name="WingMergeExcellencePropertyRandomID" Value="1000,1001,1002"/>
+		<!--版本对应的转生最高计数-->
+		<Param Name="ChangeLifeMaxValue" Value="16"/>
+		<!--版本对应的转职最高计数-->
+		<Param Name="OccupMaxValue" Value="0,1,2,3,5"/>
+		<!--物品获取提示窗口，渐隐消失,道具ID,道具ID-->
+		<Param Name="TiShiGoodsID" Value="1100,1001,1101,1002,1102,5101,5102,5103,5104,5105,5106,5107,5108,5030,5031,5040,5041,5042,5043,5044,5045,5046,5047,5048,5050,5051,5052,5053,5054,5055,5056,5057,5058,5059,5060,5061,5062,5063,5064,5065,5066,5067,5068,5069,5070,5071,5072,5073,5074,5075,5076,5077,5078,5079,5080,5081,5082,5083,5084,5085,5086,5087,5088,5089,5090,5091,5092,5093,5094,5095,5096,5097,5098,5099,5049,5110,5111,5112,5113,5120,5121,5122,5130,5131,5132,5133,5140,5141,5150,5160,5161,5170,5171,5172,5173,5174,5190,5200,5201,5202,5203,5210,5211,5220,5221,5222,5223,5230,5231,5232,5233,5234,5240,5250,5251,5252,5260,5261,5262,5263,5264,5270,5271,5272,5273,5274,5280,5281,5282,5283,5284,5285,5290,5291,5300,5301,5302,5303,5310,5311,5312,5313,5320,5330,5331,5332,5333,5334,5340,5341,5350,5351,5352,5353,5354,7040,7041,7042,7043,7050,7051,7052,7053,7054,50014,50015,50016,50017,50018,50019,50020,50021,50022,50023,50024,50025,50028,50029,50030,50031,50032,50033,50150,50151,50152,50153,50154,50155,50156,50157,50158,50159,50160,50161,50162,50163,50164,50165,50166,50300,50301,50302,50303,50304,50305,50306,63011,63012,63013,63014,63015,63141,63142,63143,63144"/>
+		<!--物品获取提示窗口显示时间，装备类显示时间,非装备类显示时间-->
+		<Param Name="XianShiTime" Value="3,5"/>
+		<!--MU血色城堡动态城门障碍设定ID，城门ID,城门ID-->
+		<Param Name="ChengMeng" Value="600006,600106,600206,600306,600406,609006"/>
+		<!--MU血色城堡动态灵棺障碍设定ID，城门ID,城门ID-->
+		<Param Name="LingGuan" Value="600007,600107,600207,600307,600407,609007"/>
+		<!--MU挂机相关BUFF技能列表，战士、法师、弓箭手、魔剑士、空位、召唤师顺次排列，没有配置0,0，配置结构为，技能ID,怪物ID|技能ID,BUFFid-->
+		<Param Name="BuffMagic" Value="104,81|205,83|304,84|10099,102|0,0|11099,104"/>
+		<!--MU挂机相关召唤兽技能列表，战士、法师、弓箭手、魔剑士、空位、召唤师顺次排列，没有配置0,0，配置结构为，技能ID,怪物ID|技能ID,BUFFid-->
+		<Param Name="CallMagic" Value="0,0|0,0|0,0|0,0|0,0|11007,9200000"/>
+		<!--MU挂机技能设定相关，战士、法师、弓箭手、魔剑士、空位、召唤师顺次排列，配置结构为，技能ID,技能ID|技能ID,技能ID|技能ID-->
+		<Param Name="SheZhiMagic" Value="100,102,120,105,106|200,203,204,206,220|300,307,305,301,306|10000,10006,10004,10001,10007,10100,10106,10104,10101,10107|0,0|11006,11004,11001,11088"/>
+		<!--MU挂机道具拾取相关物品ID列表，宝石列表|羽毛列表|药品列表|金币列表|门票列表，配置结构为，道具ID,道具ID|道具ID,道具ID...-->
+		<Param Name="ShiQuGoodsList" Value="2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015|2016,2017|1000,1100,1001,1101,1002,1102,1010,1011,1012,1013,1014,1110,1111,1112,1113|50000|6000,6001,6002,6003,6004,6005"/>
+		<!--新手场景Buffer的物品ID列表-->
+		<Param Name="FreshPlayerBufferGoodsIDs" Value="2000700"/>	
+		<!--卓越装备兑换魔晶对应的系数,必须6项，依次对应为1条,2条,3条对应的魔晶系数，依次类推-->
+		<Param Name="ZhuoYueHuiShouXiShu" Value="5,10,20,35,55,80"/>
+		<!--卓越装备兑换再造点数对应的系数,必须6项，依次对应为1条,2条,3条对应的魔晶系数，依次类推-->
+		<Param Name="ZhuoYueHuiShouZaiZaoXiShu" Value="1,2,3,4,80,100"/>
+		<!--冥想经验相应倍率每分钟收益需消耗的货币数值，2倍金币消耗基数,4倍钻石消耗基数-->
+		<Param Name="MingXiangLingQu" Value="3000,0.15"/>
+		<!--世界地图传送金币消耗，地图ID,消耗金币|地图ID,消耗金币-->
+		<Param Name="ShiJieChuanSong" Value="84000,0|1,2000|2,3000|3,4000|4,5000|5,6000|6,7000|7,8000|8,9000|9,10000|10,11000|20,12000|30,13000|40,14000|50,15000|60,16000|70,17000|80,18000|90,19000|100,20000|110,21000"/>
+		<!--MU战盟战旗BUFF，1级BuffID,2级BuffID-->
+		<Param Name="ZhanMengZhanQiBUFF" Value="2000300,2000301,2000302,2000303,2000304,2000305,2000306,2000307,2000308,2000309"/>
+		<!--MU战盟祭坛BUFF，1级BuffID,2级BuffID-->
+		<Param Name="ZhanMengJiTanBUFF" Value="2000400,2000401,2000402,2000403,2000404,2000405,2000406,2000407,2000408,2000409"/>	
+		<!--MU战盟军械BUFF，1级BuffID,2级BuffID-->
+		<Param Name="ZhanMengJunXieBUFF" Value="2000500,2000501,2000502,2000503,2000504,2000505,2000506,2000507,2000508,2000509"/>	
+		<!--MU战盟光环BUFF，1级BuffID,2级BuffID-->
+		<Param Name="ZhanMengGuangHuanBUFF" Value="2000600,2000601,2000602,2000603,2000604,2000605,2000606,2000607,2000608,2000609"/>
+		<!--MU战盟每次捐赠金币数量，获得战功数量，获得资金数量, 每日金币捐赠每日最大战功上限-->
+		<Param Name="ZhanMengJinBiJuanZeng" Value="0,100,10000,1000"/> 
+		<!--MU战盟道具,道具ID，道具ID...-->
+		<Param Name="ZhanMengGoods" Value="2060,2061,2062,2063"/>
+		<!--MU战盟道具捐献获得，获得战功，获得战盟资金，每日道具捐赠每日最大战功上限...-->
+		<Param Name="ZhanMengGoodsJuanZeng" Value="10,100,2000"/>
+		<!--MU战盟初始战盟资金，周维护战盟资金消耗-->
+		<Param Name="ZhanMengZiJin" Value="20000,10000"/>
+		<!--MU血色城堡双倍经验所需钻石，三倍经验所需钻石-->
+		<Param Name="BloodCastleExp" Value="30,50"/>
+		<!--MU恶魔广场双倍经验所需钻石，三倍经验所需钻石-->
+		<Param Name="DemonExp" Value="30,50"/>
+		<!--MU剧情副本开启条件，TabID，任务ID| TabID，任务ID -->
+		<Param Name="FuBenNeed" Value="1,1150|2,1293|3,1460|4,1950|5,2220|6,2460|7,2710|8,2950|9,3490|10,4040|11,4520|12,5080|13,5080|500,1361|501,2041|701,1791|800,2880|801,2040|802,3740|803,2371"/>
+		<!--MU任务剧情副本特殊页面显示条件，TabID，任务ID| TabID，任务ID -->
+		<Param Name="RenWuFuBenNeed" Value="1,1280|2,1500|3,1690"/>		
+		<!--MU日常副本开启条件，TabID，任务ID| TabID，任务ID -->
+		<Param Name="RiChangFuBenNeed" Value=""/>
+		<!--MU日常活动开启条件，活动ID，转生等级，角色等级| 活动ID，转生等级，角色等级-->
+		<Param Name="HuoDongNeed" Value="1,1,50|2,0,40|3,0,1|4,2,50|5,2,60|6,2,20"/>
+		<!--购买离线摆摊1小时消耗金币-->
+		<Param Name="LiXianNeedJinBi" Value="50000"/>
+		<!--全身任意8件装备强化指定级别激活BUFF效果配置值, 强化级别,生命上限加成比例值,伤害加成比例值|强化级别,生命上限加成比例值,伤害加成比例值-->
+		<Param Name="QiangHuaBuff" Value="7,0.03,0.03|9,0.06,0.06|11,0.09,0.09|13,0.12,0.12|15,0.15,0.15|18,0.21,0.18|20,0.28,0.21"/>
+		<!--全身指定件数的卓越装备激活BUFF效果配置值, 对应卓越装备的绿、蓝、紫，属性提升比例|属性提升比例-->
+		<Param Name="ZhuoYueBuff" Value="0.03,0.05,0.08"/>
+		<!--战士神兵基础属性及形象关联道具ID,道具ID-->
+		<Param Name="ZhanShiShenBing" Value="2000900,2000901,2000902,2000903,2000904,2000905,2000906,2000907,2000908,2000909,2000910,2000911"/>
+		<!--法师神兵基础属性及形象关联道具ID,道具ID-->
+		<Param Name="ZhanShiShenBing" Value="2010900,2010901,2010902,2010903,2010904,2010905,2010906,2010907,2010908,2010909,2010910,2010911"/>
+		<!--弓箭手神兵基础属性及形象关联道具ID,道具ID-->
+		<Param Name="ZhanShiShenBing" Value="2020900,2020901,2020902,2020903,2020904,2020905,2020906,2020907,2020908,2020909,2020910,2020911"/>
+		<!--战士神兵附体Buff属性关联道具ID,道具ID-->
+		<Param Name="ZhanShiShenBingFuTi" Value="2001000,2001001,2001002,2001003,2001004,2001005,2001006,2001007,2001008,2001009,2001010,2001011"/>
+		<!--法师神兵附体Buff属性关联道具ID,道具ID-->
+		<Param Name="ZhanShiShenBingFuTi" Value="2011000,2011001,2011002,2011003,2011004,2011005,2011006,2011007,2011008,2011009,2011010,2011011"/>
+		<!--弓箭手神兵附体Buff属性关联道具ID,道具ID-->
+		<Param Name="ZhanShiShenBingFuTi" Value="2021000,2021001,2021002,2021003,2021004,2021005,2021006,2021007,2021008,2021009,2021010,2021011"/>
+		<!--神兵注魂相关设定值，1次注魂消耗值,10次注魂消耗值,注魂成功基础经验,小暴击触发概率,小暴击经验倍率,大暴击触发概率,大暴击经验倍率-->
+		<Param Name="ZhuHunSheDing" Value="10,90,100,0.05,2,0.01,5"/>
+		<!--翅膀升星设定值，道具提升暴击触发概率,钻石提升暴击触发概率,暴击经验倍率-->
+		<Param Name="WingShengXing" Value="1,1,10"/>
+		<!--MU膜拜，膜拜开启等级-->
+		<Param Name="MoBaiLevel" Value="50"/> 
+		<!--MU膜拜，每日膜拜次数-->
+		<Param Name="MoBaiNumber" Value="1"/>
+		<!--MU膜拜，金币膜拜消耗，基础奖励经验值,声望-->
+		<Param Name="JiBiMoBai" Value="200000,691200,500"/> 
+		<!--MU膜拜，钻石膜拜消耗，基础奖励经验值,声望-->
+		<Param Name="ZuanShiMoBai" Value="40,1382400,2000"/> 
+		<!--MU排行榜崇拜，基础奖励经验值*转生经验倍率-->
+		<Param Name="PaiHangChongBai" Value="46080"/>
+		<!--MUPK之王额外膜拜次数-->
+		<Param Name="PkKingMoBaiNum" Value="1"/>
+		<!--MU膜拜，罗兰膜拜每日次数-->
+		<Param Name="LuoLanMoBaiNumber" Value="1"/>
+		<!--MU膜拜，金币膜拜消耗，基础奖励经验值,声望-->
+		<Param Name="LuoLanJiBiMoBai" Value="200000,691200,500"/> 
+		<!--MU膜拜，钻石膜拜消耗，基础奖励经验值,声望-->
+		<Param Name="LuoLanZuanShiMoBai" Value="40,1382400,2000"/>
+		<!--MU罗兰城主额外膜拜次数-->
+		<Param Name="LuoLanKingMoBaiNum" Value="1"/>
+		<!--MUPK之王成就奖励系数1，系数2，系数3|经验奖励系数1，系数2，系数3-->
+		<Param Name="PkAward" Value="200000,26700,15000|691200,50,9216"/>
+		<!--MUPK之王冠军BUFFID-->
+		<Param Name="PkKingBuff" Value="2000800"/>
+		<!--MU成就及活跃项击杀BOSSID-->
+		<Param Name="BossStaticDataIDForChengJiu" Value="190,290,390,490,590,690,790,791,890,990,1090,2090,3090,4090,5090,6090,7090,8090,9090,10090,11090,9830000,9830001,9830002,9830003,9830004"/>
+		<!--黄金BOSSID-->
+		<Param Name="HuangJinBossIDs" Value="180,181,182,185,186,187,280,281,282,380,381,382,480,481,482,680,681,682,780,781,782"/>
+		<!--MU竞技场镜像玩家附加BUFF-->
+		<Param Name="JingJiBuff" Value="2000900"/>
+		<!--MU天使神殿金币鼓舞价格，BUFFID，持续时间（秒）-->
+		<Param Name="AngelTempleGoldBuff" Value="200000,2000802,120"/>
+		<!--MU天使神殿钻石鼓舞价格，BUFFID，持续时间（秒）-->
+		<Param Name="AngelTempleZuanshiBuff" Value="5,2000803,120"/>
+		<!--MU天使神殿鼓舞关联道具,金币鼓舞,钻石鼓舞-->
+		<Param Name="AngelTempleGoldBuffGoodsID" Value="2000802,2000803"/>
+		<!--MU天使神殿钻石复活-->
+		<Param Name="AngelTempleZuanshiRevive" Value="2"/>
+		<!--MU天使神殿最低伤害-->
+		<Param Name="AngelTempleMinHurt" Value="10000"/> 
+		<!--MU天使神殿BOSS血量提高所需击杀时间，血量提高系数，攻击提高系数，防御提高系数-->
+		<Param Name="AngelTempleBossUpgrade" Value="180,0.1,0.1,0.1"/>
+		<!--MU经验副本对应的地图ID -->
+		<Param Name="ExperienceCopyMapCodeIds" Value="5000,5001,5002,5003,5004,5005,5006,5007,5008,5009,5010,5011,5012,5013,5014,5015,5016"/>
+		<!--MU战盟初始资金-->
+		<Param Name="ZhanMengChuShiZiJin" Value="50000"/> 
+		<!--MU战盟维护费用系数-->
+		<Param Name="ZhanMengWeiHuFeiYong" Value="10000"/>
+		<!--竞技场副本ID-->
+		<Param Name="JingJiFuBenID" Value="9000"/>
+		<!--MU竞技场消除CD1秒花费钻石-->
+		<Param Name="CDXiaoHaoZhuanShi" Value="0.1"/>
+		<!--MU仓库放置物品，交任务编号|物品-->
+		<Param Name="CangKuAward" Value="1100|50016,1,1,0,0,0,0"/> 
+		<!--MU免费洗点系统对应转生数-->
+		<Param Name="MianFeiXiDian" Value="2"/> 
+		<!--MU经验副本页面开启条件-->
+		<Param Name="JingYanFuBenNeed" Value=""/> 
+		<!--MU黄金bossID-->
+		<Param Name="HuangJinBoss" Value="180,185,280,380,480,680,780"/>
+		<!--MU-万魔塔扫荡次数-->
+		<Param Name="WanMoTaSaoDang" Value="1"/>
+		<!--MU-万魔塔分组，组号，起始ID，结束ID|组号，起始ID，结束ID-->
+		<Param Name="WanMoTaFenZu" Value="1,20000,20009|2,20010,20019|3,20020,20029|4,20030,20039|5,20040,20049|6,20050,20059|7,20060,20069|8,20070,20079|9,20080,20089|10,20090,20099|11,20100,20109|12,20110,20119|13,20120,20129|14,20130,20139|15,20140,20149"/>
+		<!--MU社交动作需要VIP等级，VIP等级1，VIP等级2...-->
+		<Param Name="VIPSocialAct" Value="1,1,2,2,3,3,4,4,5,5,5"/> 
+		<!--MU每日首次分享奖励，道具ID,数量,绑定,强化,追加,幸运,卓越|道具ID，数量...-->
+		<Param Name="ShareAward" Value="50019,1,1,0,0,0,0|2017,1,1,0,0,0,0|50160,1,1,0,0,0,0"/> 
+		<!--MU经验各项产出根据转生对应的经验系数,0转系数,1转系数,2转系数,3转系数...-->
+		<Param Name="ZhuanShengExpXiShu" Value="1,2,4,7,11,16,22,29,37,46,56,56,56,56,56,56,56,56,56,56"/>
+		<!--MU资源找回经验,金币系数，钻石系数...-->
+		<Param Name="ZiYuanZhaoHuiExp" Value="1,20000"/>
+		<!--MU资源找回绑金,金币系数，钻石系数...-->
+		<Param Name="ZiYuanZhaoHuiBandGold" Value="5,100000"/>
+		<!--MU资源找回魔晶,金币系数，钻石系数...-->
+		<Param Name="ZiYuanZhaoHuiMoJing" Value="0.1,2000"/> 
+		<!--MU资源找回声望,金币系数，钻石系数...-->
+		<Param Name="ZiYuanZhaoHuiShengWang" Value="0.01,200"/> 
+		<!--MU资源找回成就,金币系数，钻石系数...-->
+		<Param Name="ZiYuanZhaoHuiChengJiu" Value="0.02,400"/>
+		<!--MU资源找回战功,金币系数，钻石系数...-->
+		<Param Name="ZiYuanZhaoHuiZhanGong" Value="0.02,400"/>
+		<!--MU资源找回绑钻,金币系数，钻石系数...-->
+		<Param Name="ZiYuanZhaoHuiBindZuan" Value="0.0005,10"/>
+		<!--MU资源找回星魂,金币系数，钻石系数...-->
+		<Param Name="ZiYuanZhaoHuiXingHun" Value="0.05,1000"/>
+		<!--MU资源找回元素粉末,金币系数，钻石系数...-->
+		<Param Name="ZiYuanZhaoHuiYuanSuFenMo" Value="0.02,400"/>
+		<!--MU恶魔来袭副本失败所需怪物数量-->
+		<Param Name="BaoWeiZhan" Value="10"/> 
+		<!--MU交易市场物品上架最大数量-->
+		<Param Name="ShangJiaNumber" Value="16"/> 
+		<!--MU交易市场物品上架最大时间-->
+		<Param Name="ShangJiaTime" Value="43200"/>
+		<!--需要统计在线人数的地图ID...-->
+		<Param Name="CountOnlineMapID" Value="1,2,3"/>
+		<!--MU进入剧情副本任务编号，用于特殊剧情副本任务窗口显示，任务编号|任务编号...-->
+		<Param Name="JuQingFuBen" Value="1061,1|1150,1.2|1261,1|1293,0.9|1401,1|1460,1|1481,1|1950,0.8|2220,1|2460,0.5|2710,1.1|2950,0.5"/>
+		<!--MU进入剧情副本地图编号...-->
+		<Param Name="storycopymapid" Value="11,12,13,21,22,23,31,32,33,41,42,43,51,52,53,61,62,63,71,72,73,81,82,83,91,92,93,19,29,39,18,49,59,69,78,79,89,185,91,92,93,101,102,103,201,202,203,301,302,303,401,402,403,50000"/>
+		<!--MU剧情副本普通扫荡时间（秒）-->
+		<Param Name="FuBenSaoDangTime" Value="60"/> 
+		<!--MU剧情副本一键扫荡时间（秒）-->
+		<Param Name="FuBenVIPSaoDangTime" Value="5"/>
+		<!--MU道具品质 1=绿色 2=蓝色 3=紫色 4=紫色闪光，GoodsID,流光ID|GoodsID,流光ID...-->
+		<Param Name="ItemQuality" Value=""/>
+		<!--MU贵重物品列表-->
+		<Param Name="valuables" Value=""/>
+		<!--MU物品使用开启条件，GoodsID,开启ID|GoodsID,开启ID-->
+		<Param Name="ItemUse" Value="2000,6|2001,6|2002,6|2003,6|2004,6|2005,6|2016,19|2017,19|2030,31|70000,33|70001,33|70002,33|70003,33|70004,33|70005,33|70006,33|70007,33|70090,33|70100,33|70101,33|70102,33|70103,33|70104,33|70105,33|70106,33|70107,33|70190,33|70200,33|70201,33|70202,33|70203,33|70204,33|70205,33|70290,33|70300,33|70301,33|70302,33|70303,33|70304,33|70305,33|70306,33|70307,33|70308,33|70309,33|70390,33|70400,33|70401,33|70402,33|70403,33|70404,33|70405,33|70490,33|70500,33|70501,33|70502,33|70503,33|70504,33|70505,33|70590,33|70600,33|70601,33|70602,33|70603,33|70604,33|70690,33|70700,33|70701,33|70702,33|70703,33|70704,33|70705,33|70706,33|70790,33|70800,33|70801,33|70802,33|70803,33|70804,33|70890,33|70900,33|70901,33|70902,33|70903,33|70904,33|70905,33|70990,33|71000,33|71001,33|71002,33|71003,33|71004,33|71090,33|7004,1|7005,45|5150,62|7006,59|2100,61|2101,61|2102,61|2032,60|5160,60|5161,60|5170,68|5171,68|7050,67|7051,67|7052,67|7053,67|7054,67|5220,73|5221,73|5222,73|5223,73|703000,79|704001,79|704002,79|704003,79|704004,79|704005,79|704006,79|704007,79|704008,79|704009,79|704010,79|704011,79|704012,79|704013,79|704014,79|704015,79|2103,89|2104,89|7007,87|2037,116"/> 
+		<!--MU交易市场交易税，金币税收，钻石税收-->
+		<Param Name="JiaoYiShui" Value="0.05,0.05"/> 
+		<!--MU金币炼制兑换经验，绑定金币值，经验值，每日初始次数-->
+		<Param Name="JinBiLianZhi" Value="200000,184320,3"/> 
+		<!--MU绑钻炼制兑换星魂，绑钻值，星魂值，每日初始次数-->
+		<Param Name="BangZuanLianZhi" Value="10,10000,3"/>
+		<!--MU钻石炼制兑换经验、星魂、绑定金币，钻石值，经验值，星魂值，金币值，每日初始次数-->
+		<Param Name="ZuanShiLianZhi" Value="20,276480,10000,200000,5"/>
+		<!--MU手动使用药品种类，ID，ID...-->
+		<Param Name="UseYaoPin" Value="1010,1011,1012,1013,1110,1111"/>
+		<!--MU不参与组队分配的物品，ID，ID...-->
+		<Param Name="ProhibitRoll" Value="50000,1010,1011,1012,1013,1110,1111"/> 
+		<!--MU不参与记录掉落日志的物品，ID，ID...-->
+		<Param Name="LogGoods" Value="1032301,1032302,1032303,1032304,1032305,1032306,1032307,1032308,1032309,1032310,2000000,2000001,2000002,2000003,2000004,2000005,2000006,2000007,2000008,2000009,2000010,2000011,2000100,2000101,2000102,2000103,2000104,2000105,2000106,2000107,2000108,2000109,2000110,2000111,2000200,2000201,2000202,2000203,2000204,2000205,2000206,2000207,2000208,2000209,2000210,2000211,2000300,2000301,2000302,2000303,2000304,2000400,2000401,2000402,2000403,2000404,2000500,2000501,2000502,2000503,2000504,2000600,2000601,2000602,2000603,2000604,2000700,2000800,2000801,2000802,2000803,2000804,2000805,2000806,2000807,2000808,2000809,2060001,2060002,2060003,2060004,2070000,2070001,2070002,2070003,2070004,2070005,2000900,2000901,2000902,2000903,2000904,2000905,2000906,2000907,2000908,2000909,2000910,2000911,2010900,2010901,2010902,2010903,2010904,2010905,2010906,2010907,2010908,2010909,2010910,2010911,2020900,2020901,2020902,2020903,2020904,2020905,2020906,2020907,2020908,2020909,2020910,2020911,2001000,2001001,2001002,2001003,2001004,2001005,2001006,2001007,2001008,2001009,2001010,2001011,2011000,2011001,2011002,2011003,2011004,2011005,2011006,2011007,2011008,2011009,2011010,2011011,2021000,2021001,2021002,2021003,2021004,2021005,2021006,2021007,2021008,2021009,2021010,2021011,2021012,2030000,2030001,2030002,2030003,2030004,2030005,2030006,2030007,2030008,2030009,2030010,2030011,2030012,1000,1100,1001,1101,1002,1102,1010,1011,1012,1013,1014,1110,1111,1112,1113,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2050,2051,2052,2053,2054,2055,2056,2057,2058,2059,4100,4101,4102,4103,4200,6001,6002,6004,6005,6006,6007,6008,6009,6050,7000,7001,7002,7003,7020,7030,7031,7032,7033,7034,7035,7036,8000,8001,8002,8003,8004,8005,8006,8007,8008,8009,8010,8011,8012,8013,8014,8015,8016,8017,8018,8019,8020,8021,8022,8023,8024,8025,8026,8027,8031,8032,9000,9001,9002,9500,9501,9502,9503,9504,9505,9506,9507,9508,9509,9510,9511,9512,9513,9514,9515,9516,9517,9518,9519,9520,9521,9522,9523,9524,9525,9526,9527,9528,9529,9530,9531,9532,9533,9534,9535,9536,9537,9538,9539,9540,9541,9542,9543,9544,9545,9546,9547,9548,9549,9550,9551,9552,9553,50000,50200,60000,60001,60002,60003,60004,60005,60006,60007,60008,60009,60010,60011,61000,61001,61002,61003,61004,61005,61006,61007,61008,61009,61010,62000,62001,62002,62003,62004,62005,62006,62007,62008,62009,62010,63000,63001,63002,63003,63004,63005,63006,63007,63008,63009,63010,63049,63050,63051,63052,63053,63054,60100,60101,60102,60103,60104,60105,60106,60107,60200,70000,70001,70002,70003,70004,70005,70006,70007,70100,70101,70102,70103,70104,70105,70106,70107,70200,70201,70202,70203,70204,70205,70300,70301,70302,70303,70304,70305,70306,70307,70308,70309,70400,70401,70402,70403,70404,70405,70500,70501,70502,70503,70504,70505,70600,70601,70602,70603,70604,70700,70701,70702,70703,70704,70705,70706,70800,70801,70802,70803,70804,70900,70901,70902,70903,70904,70905,71000,71001,71002,71003,71004,72000,72001,72002,72003,72004,72100,72101,72102,72103,72104,72105,72106,72107,72108,90000,90001,90002,90003,90004,90005,90006,90007,90008,90009,90010,90011,90012,90013,90014,90015,90016,90017,90018,90019,90020,90021,90022,90023,90024,90025,90026,90027,90028,90029,90050,90051,90052"/>
+		<!--MU万魔塔扫荡每10层等级限制，最小转生，最小等级，最大转生，最大等级|最小转生，最小等级，最大转生，最大等级...-->
+		<Param Name="WanMoTaSaoDangLevel" Value="0,1,15,100|0,1,15,100|0,1,15,100|0,1,15,100|0,1,15,100|0,1,15,100|0,1,15,100|0,1,15,100|0,1,15,100|0,1,15,100|0,1,15,100|0,1,15,100|0,1,15,100|0,1,15,100|0,1,15,100"/>
+		<!--MU公告显示时间，最小时间年-月-日 时：分：秒，最大时间年-月-日 时：分：秒-->
+		<Param Name="GongGaoTime" Value="2014-10-24 00:00:00,2014-10-24 23:59:59"/>
+		<!--MU野外精英怪物，怪物ID，怪物ID...-->
+		<Param Name="EliteMonster" Value="108,109,110,208,209,210,306,307,308,412,413,414,507,508,509,606,607,608,705,706,707,807,808,809,906,907,908,1007,1008,1009,2006,2007,2008,3006,3007,3008,4010,4011,4012,5009,5010,5011,6009,6010,6011,7007,7008,7009,8007,8008,8009,9007,9008,9009,10007,10008,10009,11006,11007,11008,9832001,9832002,9832003,9832004,9832005"/>
+		<!--MU世界等级系数配置-->
+		<Param Name="WorldLevel" Value="1"/>
+		<!--MU罗兰宴会金币兑换钻石比例-->
+		<Param Name="LuoLanYanHuiAward" Value="100000:1"/>
+		<!--MU罗兰法阵特殊BOSS奖励，怪物ID，地图ID，奖励提高倍率，副本编号，进入特殊地图概率-->
+		<Param Name="LuoLanFaZhen" Value="5200002,4206,2,4201,10"/>
+		<!--MU罗兰城战龙塔占领所需时间-->
+		<Param Name="LuoLanHoldTime" Value="5"/>
+		<!--MU世界加成BUFF图标ID-->
+		<Param Name="WorldLevelGoodsIDs" Value="2000804"/>
+		<!--MU召唤精灵1次消耗钻石，10次消耗钻石-->
+		<Param Name="CallPet" Value="200,1800"/>
+		<!--MU召唤精灵1次免费时间（小时）-->
+		<Param Name="FreeCallPet" Value="36"/>
+		<!--MU召唤精灵耗费1钻石获得积分值，积分值-->
+		<Param Name="ConsumeCallPetJiFen" Value="0.1"/>
+		<!--MU精灵强化属性系数，属性在Goods中的位置(从0开始)，系数|...-->
+		<Param Name="PetQiangHuaProps" Value="3,0.2|4,0.2|5,0.2|6,0.2|7,0.2|8,0.2|9,0.2|10,0.2|13,0.2|14,0.02|18,0.2|19,0.2|24,0.02|26,0.02|69,0.2|70,0.2|71,0.2|72,0.2|73,0.2|74,0.2|75,0.02|76,0.02|77,0.02|78,0.02|79,0.02|80,0.02|81,0.02|82,0.02|83,0.02|84,0.02|85,0.02|86,0.02|90,0.02|94,0.02"/>
+		<!--MU特殊元素之心经验配置，ID，经验|ID，经验-->
+		<Param Name="SpecialElementsHeart" Value="100001,300000|100002,300000|100003,300000|100004,300000"/>
+		<!--MU元素之心槽位开启的钻石消耗：槽位编号，钻石值|槽位编号，钻石值-->
+		<Param Name="ElementsHeartSlots" Value="9,100|10,200"/>
+		<!--MU战盟BOSS全民奖励战功，副本ID，战功值|副本ID，战功值-->
+		<Param Name="ZhanMengCodeAward" Value="40000,400|40001,600|40002,800|40003,1000|40004,1000|40005,1000|40006,1000"/>
+		<!--MU幻影寺院等级裆划分，最小转生，最小等级，最大转生，最大转生|最小转生，最小等级，最大转生，最大转生|...-->
+		<Param Name="TempleMirageLevel" Value="2,1,2,80|2,81,3,80|3,81,4,80|4,81,5,80|5,81,6,80|6,81,7,80|7,81,8,80|8,81,9,80|9,81,10,80|10,81,11,80|11,81,12,80|12,81,13,80|13,81,14,80|14,81,15,80|15,81,16,80|16,81,100,100"/>
+		<!--MU幻影寺院胜利积分-->
+		<Param Name="TempleMirageWin" Value="1000"/>
+		<!--MU幻影寺院图标-->
+		<Param Name="TempleMirageIcon" Value="8002,8001,8018"/>
+		<!--MU幻影寺院采集物配置，怪物ID，采集时间，获得BUFF，搬运成功奖励积分-->
+		<Param Name="TempleMirageCaiJi" Value="4100000,5,2000808,20"/>
+		<!--MU幻影寺院PK配置，击杀获得积分-->
+		<Param Name="TempleMiragePK" Value="8"/>
+		<!--MU幻影寺院胜利奖励，成就点数，声望点数-->
+		<Param Name="TempleMirageAward" Value="400,800"/>
+		<!--MU幻影寺院首胜道具奖励-->
+		<Param Name="TempleMirageGoodsAward" Value="63197,1,1,0,0,0,0"/>
+		<!--MU幻影寺院胜利奖励，经验系数-->
+		<Param Name="TempleMirageEXPAward" Value="10000"/>
+		<!--MU幻影寺院多倍胜利次数，倍率-->
+		<Param Name="TempleMirageWinNum" Value="1,30"/>
+		<!--MU幻影寺院连杀排行榜上榜最低积分-->
+		<Param Name="TempleMirageRankMinNum" Value="10"/>
+		<!--MU幻影寺院最低获奖积分，分数-->
+		<Param Name="TempleMirageMinJiFen" Value="1"/>
+		<!--MU苹果平台礼品兑换标签显示控制，0=不显示，1=显示 -->
+		<Param Name="LiPinDuiHuan_APP" Value="0"/>
+		<!--MU越狱平台礼品兑换标签显示控制，0=不显示，1=显示 -->
+		<Param Name="LiPinDuiHuan_YueYu" Value="1"/>
+		<!--MU安卓平台礼品兑换标签显示控制，0=不显示，1=显示 -->
+		<Param Name="LiPinDuiHuan_Andrid" Value="1"/>
+		<!--MU苹果平台指定NPC功能强制不显示配置，NPC编号,功能编号.....功能编号,功能编号|NPC编号,功能编号-->
+		<Param Name="NpcLiPinDuiHuan_APP" Value="115,4000"/>
+		<!--MU越狱平台指定NPC功能强制不显示配置，NPC编号,功能编号|NPC编号,功能编号-->
+		<Param Name="NpcLiPinDuiHuan_YueYu" Value=""/>
+		<!--MU安卓平台指定NPC功能强制不显示配置，NPC编号,功能编号|NPC编号,功能编号-->
+		<Param Name="NpcLiPinDuiHuan_Andrid" Value=""/>
+		<!--设备可获得平板设备经验加成的列表，多个设备用|分隔，不区分字母大小写 -->
+		<Param Name="SheBeiExp" Value="MI PAD|iPad1Gen|iPad2Gen|iPad3Gen|iPad4Gen|iPad5Gen|iPadUnknown|iPad6Gen|iPadMini1Gen|iPadMini2Gen|iPadMini3Gen|iPadAir2|iPadPro1Gen|iPadMini4Gen"/>
+		<!--MU平板设备经验加成BUFF，GoodsID，加成百分比 -->
+		<Param Name="PingBanBuff" Value="2000809,50"/>
+		<!--MU鼓舞BUFF可生效的地图，地图-->
+		<Param Name="GuWuMap" Value="11,12,13,18,21,22,23,31,32,33,41,42,43,51,52,53,61,62,63,71,72,73,81,82,83,91,92,93,101,102,103,201,202,203,301,302,303,401,402,403,3000,4000,4100,4201,4202,4203,4204,4205,4206,5000,5001,5002,5003,5004,5005,5006,5007,5008,5009,5010,5011,5012,5013,5014,5015,5016,5100,6000,6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6011,6012,6013,6014,6015,6016,7000,7001,7002,7003,7004,7005,7006,7007,7008,7009,7010,7011,7012,7013,7014,7015,7016,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,20021,20022,20023,20024,20025,20026,20027,20028,20029,20030,20031,20032,20033,20034,20035,20036,20037,20038,20039,20040,20041,20042,20043,20044,20045,20046,20047,20048,20049,20050,20051,20052,20053,20054,20055,20056,20057,20058,20059,20060,20061,20062,20063,20064,20065,20066,20067,20068,20069,20070,20071,20072,20073,20074,20075,20076,20077,20078,20079,20080,20081,20082,20083,20084,20085,20086,20087,20088,20089,20090,20091,20092,20093,20094,20095,20096,20097,20098,20099,20100,20101,20102,20103,20104,20105,20106,20107,20108,20109,20110,20111,20112,20113,20114,20115,20116,20117,20118,20119,20120,20121,20122,20123,20124,20125,20126,20127,20128,20129,20130,20131,20132,20133,20134,20135,20136,20137,20138,20139,20140,20141,20142,20143,20144,20145,20146,20147,20148,20149,40000,40001,40002,40003,40004,40005,40006,70000,70100,70200,70300,81000,81001,81002,81003,81004,81005,81006,81007,81008,81009,81010,81011,82000,82001"/>
+		<!--MU求婚CD，CD时间（秒）-->
+		<Param Name="QiuHuiCD" Value="1800"/>
+		<!--Mu不记录屠魔勇士数量的BOSSID，BOSSID-->
+		<Param Name="NotTuMo" Value="7000000,7000001,7000002,7000003,7000004"/>	
+		<!--MU结婚费用，消耗钻石-->
+		<Param Name="JieHunCost" Value="137"/>
+		<!--MU对方婚戒加成比例，比例值-->
+		<Param Name="BanLvXiShu" Value="0.3"/>
+		<!--MU自由离婚离婚金币费用-->
+		<Param Name="DivorceJinBiCost" Value="555555"/>
+		<!--MU强制离婚离婚钻石费用-->
+		<Param Name="DivorceZuanShiCost" Value="333"/>
+		<!--MU婚宴NPC配置，地图ID，NPCID，X坐标，Y坐标，方向-->
+		<Param Name="HunYanNPC" Value="1,70010,10447,9883,6"/>
+		<!--MU婚宴每人每日最大使用次数，次数-->
+		<Param Name="HunYanUseMaxNum" Value="20"/>
+		<!--MU好感度加成系数-->
+		<Param Name="GoodWillXiShu" Value="0.1"/>
+		<!--MU-玩家每日赠送鲜花耗费，钻石，钻石-->
+		<Param Name="XianHuaCost" Value="0,0,0,0,0,0,10,20,30,40,50,60,70,80,90,100"/>
+		<!--MU灵羽属性系数-->
+		<Param Name="LingYuLevel" Value="10"/>
+		<!--Mu成就符文、声望勋章点亮标志所需百分比,百分比x100-->
+		<Param Name="DianLiangBiaoZhi" Value="16,32,48,64,80,100"/>
+		<!--Mu每日成就符文强化次数消耗钻石 -->
+		<Param Name="ChengJiuFuWenZuanShi" Value="0,0,0,0,0,10,20,30,40,50,60,70,80,90,100"/>
+		<!--Mu每日声望勋章强化次数消耗钻石 -->
+		<Param Name="ShengWangXunZhangZuanShi" Value="0,0,0,0,0,10,20,30,40,50,60,70,80,90,100"/>	
+		<!--Mu羽毛、神鹰火种对应钻石-->
+		<Param Name="WinCaiLiaoZuanShi" Value="2016,5|2017,20|2005,20"/>
+		<!--Mu神器再造100%成功条件，失败次数值-->
+		<Param Name="ZaiZaoBaoDi" Value="4"/>	
+		<!--Mu神器再造界面显示，可神器再造装备阶数-->
+		<Param Name="ZaiZaoSuitID" Value="10,11,12,13,14,15,16,17,18,19,20"/>	
+		<!--Mu魔剑士初始的设定，初始任务编号|任务NPC|上个任务ID|初始地图|出生转生等级|初始等级-->
+		<Param Name="MJSChuShi" Value="2281|601|2280|6|3,50"/>
+		<!--Mu力量魔剑士初始属性，力量，智力，敏捷，体力-->
+		<Param Name="LiMJS" Value="1087,0,434,653"/>
+		<!--Mu智力魔剑士初始属性，力量，智力，敏捷，体力-->
+		<Param Name="ZhiMJS" Value="0,1087,434,653"/>
+		<!--Mu力量魔剑士初始装备，ID，数量，绑定，强化，追加，幸运，卓越|ID，数量，绑定，强化，追加，幸运，卓越-->
+		<Param Name="LiMJSZhuangBei" Value="1030005,1,1,0,0,0,3840|1030105,1,1,0,0,0,3840|1030205,1,1,0,0,0,3840|1030305,1,1,0,0,0,3840|1030405,1,1,0,0,0,3840|1030505,1,1,0,0,0,43|1030605,1,1,0,0,0,3840|1030605,1,1,0,0,0,3840|1035105,1,1,0,0,0,43"/>
+		<!--Mu智力魔剑士初始装备，ID，数量，绑定，强化，追加，幸运，卓越|ID，数量，绑定，强化，追加，幸运，卓越-->
+		<Param Name="ZhiMJSZhuangBei" Value="1040005,1,1,0,0,0,3840|1040105,1,1,0,0,0,3840|1040205,1,1,0,0,0,3840|1040305,1,1,0,0,0,3840|1040405,1,1,0,0,0,3840|1040505,1,1,0,0,0,43|1040605,1,1,0,0,0,3840|1040605,1,1,0,0,0,3840|1045105,1,1,0,0,0,43"/>
+		<!--Mu召回V4以上用户奖励，GoodsID-->
+		<Param Name="V4ZhaoHuiAward" Value="63045,1,1,0,0,0,0"/>
+		<!--Mu首领精魄ID，GoodsID，GoodsID-->
+		<Param Name="BossJingPoID" Value="70090,70190,70290,70390,70490,70590,70690,70790,70890,70990,71090,72090,72190,72290,72390,72490,72590,72690,72790,72890"/>
+		<!--Mu圣水道具ID，GoodsID，GoodsID -->
+		<Param Name="ShengShuiGoodsID" Value="1000,1001,1002,1100,1101,1102"/>
+		<!--Mu药水道具ID，GoodsID，GoodsID -->
+		<Param Name="YaoShuiGoodsID" Value="1010、1011、1012、1013、1110、1111、1112、1113"/>
+		<!--Mu神水道具ID，GoodsID，GoodsID -->
+		<Param Name="ShenShuiGoodsID" Value="4001,4002,4003,4004,4005,4006,4007,4008,4009,4010,4011,4012,4013,4014,4015,4016,4017,4018,4019,4020,4021"/>
+		<!--Mu力量魔剑士大天使武器，GoodsID，GoodsID-->
+		<Param Name="LiMJSDaTianShi" Value="1005090,1005091,1005092,1005093,1005094,1005095,1005096,1005097,1005098,1005099"/>
+		<!--Mu智力魔剑士大天使武器，GoodsID，GoodsID-->
+		<Param Name="ZhiMJSDaTianShi" Value="1015090,1015091,1015092,1015093,1015094,1015095,1015096,1015097,1015098,1015099"/>
+		<!--Mu大天使武器汇总，GoodsID，GoodsID-->
+		<Param Name="DaTianShi" Value="1005090,1005091,1005092,1005093,1005094,1005095,1005096,1005097,1005098,1005099,1015090,1015091,1015092,1015093,1015094,1015095,1015096,1015097,1015098,1015099,1025590,1025591,1025592,1025593,1025594,1025595,1025596,1025597,1025598,1025599"/>
+		<!--Mu智魔剑士普通攻击技能ID-->
+		<Param Name="ZhiMJSAttackSkill" Value="10100"/>
+		<!--Mu力魔剑士普通攻击技能ID-->
+		<Param Name="LiMJSAttackSkill" Value="10000"/>
+		<!--Mu二级密码生效时间，秒-->
+		<Param Name="SecondPasswordTime" Value="900"/>
+		<!--Mu祈福价格，抽一次，抽十次-->
+		<Param Name="QiFuMoney" Value="200,1800"/>
+		<!--Mu结婚、离婚提示等待时间，秒-->
+		<Param Name="MarriageTipsTime" Value="15"/>
+		<!--Mu梅林的魔法书，魔法秘语攻击属性每项最大值-->
+		<Param Name="MagicWordMax" Value="10"/>
+		<!--Mu梅林的魔法书，魔法秘语重置激活持续时间，单位分钟-->
+		<Param Name="MagicWordTime" Value="4200"/>
+		<!--Mu梅林的魔法书，重生可生效的地图，地图-->
+		<Param Name="ChongShengMap" Value="1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100,110,11,12,13,18,21,22,23,31,32,33,41,42,43,51,52,53,61,62,63,71,72,73,81,82,83,91,92,93,101,102,103,201,202,203,301,302,303,401,402,403,3000,4000,4100,4201,4202,4203,4204,4205,4206,5000,5001,5002,5003,5004,5005,5006,5007,5008,5009,5010,5011,5012,5013,5014,5015,5100,6000,6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6011,6012,6013,6014,6015,7000,7001,7002,7003,7004,7005,7006,7007,7008,7009,7010,7011,7012,7013,7014,7015,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,20021,20022,20023,20024,20025,20026,20027,20028,20029,20030,20031,20032,20033,20034,20035,20036,20037,20038,20039,20040,20041,20042,20043,20044,20045,20046,20047,20048,20049,20050,20051,20052,20053,20054,20055,20056,20057,20058,20059,20060,20061,20062,20063,20064,20065,20066,20067,20068,20069,20070,20071,20072,20073,20074,20075,20076,20077,20078,20079,20080,20081,20082,20083,20084,20085,20086,20087,20088,20089,20090,20091,20092,20093,20094,20095,20096,20097,20098,20099,20100,20101,20102,20103,20104,20105,20106,20107,20108,20109,20110,20111,20112,20113,20114,20115,20116,20117,20118,20119,20120,20121,20122,20123,20124,20125,20126,20127,20128,20129,20130,20131,20132,20133,20134,20135,20136,20137,20138,20139,20140,20141,20142,20143,20144,20145,20146,20147,20148,20149,40000,40001,40002,40003,40004,40005,40006,70000,70100,70200,70300,93000,93001,93002,96000"/>
+		<!--Mu梅林的魔法书，重生内置CD，单位秒-->
+		<Param Name="ChongShengCD" Value="60"/>
+		<!--Mu梅林的魔法书，最大阶数、星数-->
+		<Param Name="MagicBookLevel" Value="20,10"/>
+		<!--MU苹果平台月卡标签显示控制，0=不显示，1=显示 -->
+		<Param Name="YueKa_APP" Value="1"/>
+		<!--MU越狱平台月卡标签显示控制，0=不显示，1=显示 -->
+		<Param Name="YueKa_YueYu" Value="1"/>
+		<!--MU安卓平台月卡标签显示控制，0=不显示，1=显示 -->
+		<Param Name="YueKa_Andrid" Value="1"/>
+		<!--MU时装标签显示控制，0=不显示，1=显示 -->
+		<Param Name="ShiZhuangXianShi" Value="1"/>
+		<!--Mu天赋系统重置1点天赋耗费钻石，耗费钻石值，最大上限-->
+		<Param Name="ResettingTianFuCostZuanShi" Value="20,300"/>
+		<!--Mu天赋系统重置天赋代替钻石道具，道具ID,数量-->
+		<Param Name="ResettingTianFuCostGoods" Value="7006,1"/>
+		<!--Mu可申请参与天梯赛的地图，地图ID，地图ID...-->
+		<Param Name="TianTiMap" Value="1,2,3,4,5,6,7,8,9,10,20,30,40"/>
+		<!--Mu天梯赛每日获取积分上限，上限值...-->
+		<Param Name="MaxTianTiJiFen" Value="600000"/>
+		<!--Mu守护之灵激活数量与守护之灵槽位，槽位位置，需要激活守护之灵数量|槽位位置，需要激活守护之灵数量-->
+		<Param Name="ShouHuDiaoXiang" Value="1,1|2,4|3,7|4,10|5,13|6,16"/>
+		<!--Mu守护点数回收最大上限，激活守护之灵数量，上限|激活守护之灵数量，上限-->
+		<Param Name="ShouHuMax" Value="1,520|2,620|3,840|4,1080|5,1360|6,1620|7,1920|8,2220|9,2640|10,3140|11,3360|12,3360|13,3360|14,3360"/>
+		<!--Mu守护雕像升阶属性系数，系数值-->
+		<Param Name="ShouHuSuit" Value="0.45"/>
+		<!--Mu守护雕像升级属性系数，系数值-->
+		<Param Name="ShouHuLevel" Value="0.05"/>
+		<!--Mu模拟器外挂检测配置-->
+		<!--Mu通用外挂、脚本检测配置-->
+		<Param Name="TimeOutType" Value="81"/>
+		<Param Name="TimeOutCount" Value="3"/>
+		<Param Name="DecryptType" Value="90"/>
+		<Param Name="DecryptCount" Value="5"/>
+		<Param Name="BanLevelLimit" Value="401"/>
+		<Param Name="MultiType" Value="70"/>
+		<Param Name="MultiCount" Value="2"/>
+		<Param Name="BanVipLimit" Value="1"/>
+		<Param Name="BanRateNum" Value="1"/>
+		<Param Name="BanLogCountLimit" Value="1,2,10,2,11,2,30,2,40,2,50,2,60,2,70,2,80,2,90,2,110,2,120,2"/>
+		<Param Name="DeviceNullType" Value="40"/>
+		<Param Name="SpecialApp" Value="apps,bash,SpringBoard"/>
+		<Param Name="SpecialAppType" Value="50"/>
+		<Param Name="AppCount" Value="15"/>
+		<Param Name="AppCountType" Value="60"/>
+		<Param Name="AppVmType" Value="30"/>
+		<Param Name="CancelApp" Value="com.apple.Mobile,AGXCompilerServi,MTLCompilerServi,xpcd"/>
+		<Param Name="VmType" Value="110"/>
+		<Param Name="VmSignType" Value="120"/>
+		<Param Name="CheckRobotMaxCount" Value="5"/>
+		<!--Mu服务器用外挂配置1-->
+		<Param Name="RobotMaxRepeatLogLen" Value="0"/>
+		<!--Mu服务器用外挂配置2-->
+		<Param Name="RobotMaxRepeatLogCount" Value = "2000"/>
+		<!--Mu被强制踢出账号不允许再次登录时间，单位分钟-->
+		<Param Name="RobotBanMinutes" Value="10,1440,-1"/>
+		<!--Mu受到掉率降低影响的怪物类型，怪物类型|怪物类型...-->
+		<Param Name="DropRateDownMonsterType" Value="101"/>
+		<!--Mu外挂检测超时是否踢人-->
+		<Param Name="TimeOutKick" Value="0"/>
+		<!--反外挂总开关，平台类型：1-苹果，2=越狱，3=安卓，4=应用宝，是否开放：0=不开放，1=开放  value=平台类型，是否开放，平台类型，是否开放，平台类型，是否开放（四个平台必须全部配置）  -->
+		<Param Name="BanOpenPlayform" Value="1,1,2,1,3,1,4,1"/>
+		<!--Mu苹果外挂、脚本检测配置-->
+		<!--Mu苹果平台侦测到脚本、外挂是否强制踢出，0=不提，1=踢出-->
+		<Param Name="JiaoBenKick_APP" Value="1"/>
+		<!--Mu苹果平台检测到脚本后对应地图掉率降低控制，地图ID，产出率-->
+		<Param Name="JiaoBenDropRateDown_APP" Value="5300,0.1|5301,0.1|5302,0.1|5303,0.1|5304,0.1|7000,0.1|7001,0.1|7002,0.1|7003,0.1|7004,0.1|1,0.1|2,0.1|3,0.1|4,0.1|5,0.1|6,0.1|7,0.1|8,0.1"/>
+		<!--Mu安卓外挂、脚本检测配置-->
+		<!--Mu安卓平台每个IP同时运行模拟器的最大数量，数量-->
+		<Param Name="RobotMaxVirtual_Android" Value="9999999"/>
+		<!--Mu安卓平台侦测到外挂是否强制踢出，0=不提，1=踢出-->
+		<Param Name="RobotKick_Android" Value="1"/>
+		<!--Mu安卓平台侦测到脚本、外挂是否强制踢出，0=不提，1=踢出-->
+		<Param Name="JiaoBenKick_Android" Value="1"/>
+		<!--Mu安卓平台检测到模拟器后对应地图掉率降低控制，地图ID，产出率-->
+		<Param Name="RobotDropRateDown_Android" Value="5300,0.1|5301,0.1|5302,0.1|5303,0.1|5304,0.1|7000,0.1|7001,0.1|7002,0.1|7003,0.1|7004,0.1|1,0.1|2,0.1|3,0.1|4,0.1|5,0.1|6,0.1|7,0.1|8,0.1"/>
+		<!--Mu安卓平台检测到脚本后对应地图掉率降低控制，地图ID，产出率-->
+		<Param Name="JiaoBenDropRateDown_Android" Value="5300,0.1|5301,0.1|5302,0.1|5303,0.1|5304,0.1|7000,0.1|7001,0.1|7002,0.1|7003,0.1|7004,0.1|1,0.1|2,0.1|3,0.1|4,0.1|5,0.1|6,0.1|7,0.1|8,0.1"/>
+		<!--Mu改名所需钻石数量，钻石数量-->
+		<Param Name="ModName" Value="300000,400000"/>
+		<!--Mu天赋最大点数限制-->
+		<Param Name="MaxTianFu" Value="150"/>
+		<!--Mu跨服副本时间配置，单位秒。格式：排队时间，自动取消时间，惩罚时间-->
+		<Param Name="KuaFuFuBenTime" Value="60,15,0"/>
+		<!--Mu跨服副本-末日审判，4层BUFF对应的4个特效ID，格式：特效1,特效2,特效3,特效4-->
+		<Param Name="MoRiShenPanEffect" Value="11062,11063,11064,11065"/>
+		<!--Mu跨服副本-末日审判，4层BUFF对应的奖励系数，格式：系数1,系数2,系数3,系数4-->
+		<Param Name="MoRiShenPanAward" Value="2,4,6,10"/>
+		<!--Mu跨服副本-元素试练，每波奖励的荧光粉末数量，由0开始，共31个-->
+		<Param Name="YuanSuShiLianAward" Value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
+		<!--Mu跨服副本-元素试练，每波奖励的元素粉末数量，由0开始，共31个-->
+		<Param Name="YuanSuShiLianAward2" Value="60,80,100,120,140,160,180,200,220,240,260,280,300,320,340,360,380,400,420,440,460,480,500,520,540,560,580,600,620,640,660"/>
+		<!--Mu服务器非VIP排队设定，起始排队人数，最大上限人数,最大排队人数-->
+		<Param Name="MaxServerNum" Value="700,900,1000"/>
+		<!--Mu服务器VIP排队设定，起始排队人数，最大上限人数,最大排队人数-->
+		<Param Name="MaxServerNum" Value="1000,1000,1000"/>
+		<!--Mu可进入勇士战场地图，地图ID,地图ID,地图ID,-->
+		<Param Name="WarriorBattleEnterMap" Value="1,2,3,4,5,6,7,8,9,10,20,30,40"/>
+		<!--Mu勇士战场BOSS积分，造成伤害百分比，获得积分-->
+		<Param Name="WarriorBattleBossAttack" Value="0.001,20"/>
+		<!--Mu勇士战场BOSS最后一击奖励积分，积分值-->
+		<Param Name="WarriorBattleBOssLastAttack" Value="2000"/>
+		<!--Mu勇士战场被杀获得积分，积分值-->
+		<Param Name="WarriorBattleDie" Value="5"/>
+		<!--Mu勇士战场连杀积分，格式：基础值,系数,最小值,最大值-->
+		<Param Name="WarriorBattleUltraKill" Value="27,3,30,75"/>
+		<!--Mu勇士战场终结对方连杀积分，格式：基础值,系数,,最小值,最大值-->
+		<Param Name="WarriorBattleShutDown" Value="-10,5,0,100"/>
+		<!--Mu勇士战场最低积分要求，积分值-->
+		<Param Name="WarriorBattleLowestJiFen" Value="100"/>
+		<!--Mu安卓版本推广员功能，1=开启，0=关闭-->
+		<Param Name="TuiGuang_Android" Value="1"/>
+		<!--Mu苹果版本推广员功能，1=开启，0=关闭-->
+		<Param Name="TuiGuang_APP" Value="1"/>
+		<!--Mu越狱版本推广员功能，1=开启，0=关闭-->
+		<Param Name="TuiGuang_YueYu" Value="1"/>
+		<!--Mu推广员系统新账户判断时间-->
+		<Param Name="TuiGuangCreatData" Value="2018-09-30 00:00:00"/>
+		<!--Mu推广员VIP奖励最大领取次数-->
+		<Param Name="TuiGuangVIPRewardNum" Value="50"/>
+		<!--Mu推广员等级奖励最大领取次数-->
+		<Param Name="TuiGuangLevelRewardNum" Value="50"/>
+		<!--Mu领地系统免费队列个数-->
+		<Param Name="ManorFreeQueueNum" Value="1"/>
+		<!--Mu领地系统付费队列个数-->
+		<Param Name="ManorQueueNum" Value="1"/>
+		<!--Mu领地系统付费队列价格-->
+		<Param Name="ManorQueuePrice" Value="50"/>
+		<!--Mu领地系统立即完成每钻石抵换时间系数，不足该时间计1钻石，单位秒-->
+		<Param Name="ManorQuickFinishNum" Value="60"/>
+		<!--Mu领地系统每次刷新开发花费钻石-->
+		<Param Name="ManorRandomTaskPrice" Value="60"/>
+		<!--Mu充值兑换节日活动比例，钻石数：充值点数-->
+		<Param Name="JieRiChongZhiDuiHuan" Value="20000:1"/>
+		<!--Mu开启强化上限20开关，配置：0为不开启，1则永久开放，2为按时间开启并配置时间段，-->
+		<Param Name="ForgeMaxOpen" Value="2,2018-07-01 00:00:00,2020-12-21 23:59:59"/>
+		<!--Mu强化15升16等级保护功能开关，0为不开启，1为开启-->
+		<Param Name="ForgeProtectOpen" Value="1"/>
+		<!--Mu周末充值时间，开启时间，终止时间，1至7代表周一至周日-->
+		<Param Name="ZhouMoChongZhiTime" Value="6,00:00:00|7,23:59:59"/>
+		<!--MU 安卓版本VIP专属客服功能配置；格式：开关,所需充值金额；0为不开启，1为开启，充值单位：钻石-->
+		<Param Name="VIPKeFu_Android" Value="0"/>
+		<!--MU 苹果版本VIP专属客服功能配置；格式：开关,所需充值金额；0为不开启，1为开启，充值单位：钻石-->
+		<Param Name="VIPKeFu_APP" Value="0"/>
+		<!--MU 越狱版本VIP专属客服功能配置；格式：开关,所需充值金额；0为不开启，1为开启，充值单位：钻石-->
+		<Param Name="VIPKeFu_YueYu" Value="0"/>
+		<!--MU VIP专属客服显示验证奖励配置；格式：道具ID,数量,绑定,强化,追加,幸运,卓越|道具ID,数量,绑定,强化,追加,幸运,卓越....-->
+		<Param Name="VIPKeFuAward" Value="8013,1,0,0,0,0,0|2005,1,1,0,0,0,0|2001,1,1,0,0,0,0|2002,1,1,0,0,0,0"/>
+		<!--MU VIP专属客服显示描述文字-->
+		<Param Name="VIPKeFuIntro" Value="卖萌萝莉、气质御姐、气场女王，   &#xA;百科全书般的万能MU女友带你走上 &#xA;奇迹巅峰(•̀ㅂ•́)و 认证更有专属豪 &#xA;礼相赠哦！详情请扫右边二维码→   &#xA;或直接添加QQ:2880622628         "/>
+		<!--MU VIP专属客服关联网址-->
+		<Param Name="VIPKeFuUrl" Value="http://qm.qq.com/cgi-bin/qm/qr?k=vB2weDfdSAj1WxuhfqGaaSvvEB8QeJp1"/>
+		<!--Mu应用包活动邀请礼包ID，填-1为不开启-->
+		<Param Name="TenAwardInvite" Value="-1"/>
+		<!--Mu应用包活动邀请礼包需邀请人数-->
+		<Param Name="TenAwardInviteNum" Value="3"/>
+		<!--Mu不支持多线程的手机型号-->
+		<Param Name="NoSupportThread" Value="Mi-4c|Nexus 5X|LG-F500S"/>
+		<!--统计交易频率的道具-->
+		<Param Name="LogTradeFreqGoods" Value="2000,2001,2002,2003,2004,2016,2017,2030,5101,5102,5103,5104"/>
+		<!--安卓渠道视频开启控制，0=关闭，1=开启|companyid|Access Secret|App Key-->
+		<Param Name="AndroidViedo" Value="0|tianma|f62016b43c9b4fb4b5ff2468ed7c136a|c7dd5423-7272-4d40-b366-3c8e7a199640"/>
+		<!--苹果渠道视频开启控制，0=关闭，1=开启|companyid|Access Secret|App Key-->
+		<Param Name="APPViedo" Value="0|tianma|f62016b43c9b4fb4b5ff2468ed7c136a|c7dd5423-7272-4d40-b366-3c8e7a199640"/>
+		<!--越狱渠道视频开启控制，0=关闭，1=开启|companyid|Access Secret|App Key-->
+		<Param Name="YueYuViedo" Value="0|tianma|f62016b43c9b4fb4b5ff2468ed7c136a|c7dd5423-7272-4d40-b366-3c8e7a199640"/>
+		<!--Mu狼魂要塞调用怪物、坐标，格式：怪物ID,X坐标,Y坐标-->
+		<Param Name="LangHunYaoSaiMonsters" Value="8600000,6191,7976"/>
+		<!--Mu狼魂要塞怪物对要塞伤害（每次），格式：怪物ID,伤害|怪物ID,伤害-->
+		<Param Name="LangHunYaoSaiMonstersHurt" Value="8610000,5|8610001,5|8610002,20|8610003,100|8620000,5|8620001,5|8620002,20|8620003,100|8620004,20|8630000,5|8630001,5|8630002,20|8630003,100|8640000,5|8640001,5|8640002,20|8640003,100|8640004,20|8650000,5|8650001,5|8650002,20|8650003,100|8660000,5|8660001,5|8660002,20|8660003,100|8660004,20"/>
+		<!--Mu狼魂要塞积分，时间系数-->
+		<Param Name="LangHunYaoSaiTimeNum" Value="100"/>
+		<!--Mu狼魂要塞积分，血量系数-->
+		<Param Name="LangHunYaoSaiLifeNum" Value="30"/>
+		<!--Mu藏宝密境普通骰子概率控制，格式：步数,概率|步数,概率-->
+		<Param Name="TreasureDice" Value="1,0.09|2,0.09|3,0.1|4,0.27|5,0.27|6,0.18"/>
+		<!--Mu藏宝密境每日免费次数，格式：普通骰子次数,奇迹骰子次数-->
+		<Param Name="TreasureFreeNum" Value="5,0"/>
+		<!--Mu藏宝密普通骰子单价，单位钻石-->
+		<Param Name="TreasurePrice" Value="40"/>
+		<!--Mu藏宝密境奇迹骰子价格，单位钻石-->
+		<Param Name="TreasureSuperPrice" Value="80"/>
+		<!--Mu狼魂圣战所需战盟等级-->
+		<Param Name="ShengZhanNeedZhanMengLevel" Value="5"/>
+		<!--Mu狼魂领域玩家对军旗伤害（每次）-->
+		<Param Name="CityCutJunQi" Value="10"/>
+		<!--Mu输出对BOSS造成伤害日志，格式：怪物ID,怪物ID......-->
+		<Param Name="LogAttackBoss" Value="5009,5010,5011,6009,6010,6011,7007,7008,7009,8007,8008,8009,2090,3090,4090,5090,6090,7090,8090,300000,807,808,809,18600,700006,700106,700206,700306,700406,700506,700606,700706,700806,700906,701006,701106,701206,701306,701406,701506,9830000,9830001,9830002,9830003,9830004,9832001,9832002,9832003,9832004,9832005"/>
+		<!--Mu安卓大分辨率适配开关，0为关，1为开-->
+		<Param Name="ScreenResClamp" Value="1"/>
+		<!--Mu魂石阵开启等级，格式：第一魂阵转生,等级|第二魂阵转生,等级|第三魂阵转生,等级-->
+		<Param Name="HunShiOpen" Value="6,1|9,1|12,1"/>
+		<!--MU特殊魂石经验配置，只针对不能升级的类型为910的魂石，格式：ID,经验|ID,经验-->
+		<Param Name="HunShiExp" Value="910000,3000000|910001,3000000"/>
+		<!--MU圣域奖励所需加入战盟时间，小时-->
+		<Param Name="JiaRuTime" Value="24"/>
+		<!--MU战盟神殿每日战功消耗，第一次消耗战功,第二次消耗战功...-->
+		<Param Name="ZhanMengShenDian" Value="100,100,200,200,200,400,400,400,800,800,800,1200,1200,1200,1200,1600,1600,1600,1600,2000"/>
+		<!--MU精灵技能槽位开启所需等级，格式：技能槽位，精灵等级|技能槽位，精灵等级...-->
+		<Param Name="PatSkillCostLevel" Value="1,30|2,40|3,50|4,60"/>
+		<!--MU精灵技能领悟消耗灵晶，格式：第一次消耗，第二次消耗......达到最大值后保持不变-->
+		<Param Name="PatSkillCostLingJing" Value="20,20,30,30,40,40,50,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250,260,270,280,290,300"/>
+		<!--MU精灵锁定技能领悟消耗钻石，格式：锁定1个技能,消耗钻石|锁定2个技能，总共消耗钻石-->
+		<Param Name="PatSkillCostZuanShi" Value="1,50|2,200"/>
+		<!--MU设备号限制创建角色数量-->
+		<Param Name="DeviceIDRestrict" Value="-1"/>
+		<!--MUIP地址限制创建角色数量-->
+		<Param Name="IPRestrict" Value="13"/>
+		<!--MU线上战斗力采集触发记录参数，格式：触发记录需战力达到,变化比例-->
+		<Param Name="ZhanDouLiAlertLog" Value="2000000,0.3"/>
+		<!--MU众神争霸点赞、贬最低等级限制，格式：转生，等级-->
+		<Param Name="ZhongShenZhengBaPraiseMinLevel" Value="4,1"/>
+		<!--MU防恶意操作，删除角色所需时间，单位：分钟-->
+		<Param Name="DeleteRoleNeedTime" Value="120"/>	
+		<!--MU防恶意操作，背包整理CD，单位毫秒-->
+		<Param Name="BagClearUpCD" Value="1000"/>
+		<!--MU防恶意操作，交易市场刷新CD，单位毫秒-->
+		<Param Name="RefreshBourseCD" Value="1000"/>
+		<!--MU防恶意操作，添加不存在的好友、仇人、黑名单、战盟成员CD，单位毫秒-->
+		<Param Name="AddFriendCD" Value="1000"/>
+		<!--MU防恶意操作，精灵出战CD，单位毫秒-->
+		<Param Name="SpiritPutOnCD" Value="1000"/>
+		<!--MU专享活动充值兑换比例，钻石数：专享点数-->
+		<Param Name="SpecialChongZhiDuiHuan" Value="1:1"/>
+		<!--MU苹果版本绑定手机奖励-->
+		<Param Name="App_BindPhoneAward" Value="2001,20,1,0,0,0,0|2002,10,1,0,0,0,0|2000,10,1,0,0,0,0|50160,1,1,0,0,0,0|4000,10,1,0,0,0,0"/>
+		<!--安卓渠道衣柜开启控制，0=关闭，1=开启-->
+		<Param Name="AndroidShiZhuang" Value="0"/>
+		<!--苹果渠道衣柜开启控制，0=关闭，1=开启-->
+		<Param Name="APPShiZhuang" Value="0"/>
+		<!--越狱渠道衣柜开启控制，0=关闭，1=开启-->
+		<Param Name="YueYuShiZhuang" Value="0"/> 
+		<!--Mu夫妻竞技场勇气祝福对真爱祝福的额外伤害加成-->
+		<Param Name="CoupleBuffSpecificHurt" Value="0.2"/> 
+		<!--Mu夫妻竞技场获胜所需持有真爱祝福时间-->
+		<Param Name="CoupleVictoryNeedTime" Value="60"/>
+		<!--Mu战盟结盟需要战盟等级-->
+		<Param Name="AlignZhanMengLevel" Value="5"/>
+		<!--Mu战盟最大盟友数量-->
+		<Param Name="AlignNum" Value="5"/> 
+		<!--Mu战盟发起结盟消耗战盟资金-->
+		<Param Name="AlignCostMoney" Value="100000"/> 
+		<!--Mu战盟盟友生效地图-->
+		<Param Name="AlignMap" Value="1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100,110"/> 
+		<!--Mu夫妻祝福排行榜特效奖励上限，格式：绑金上限、绑钻上限、经验上限-->
+		<Param Name="WishEffectAwardMax" Value="2000000,500,20000000"/>
+		<!--Mu夫妻祝福宴会NPC配置，格式：地图ID,NPCID,X,Y,方向-->
+		<Param Name="WishHunYanNPC" Value="1,70020,9542,9883,6"/>
+		<!--Mu夫妻祝福奖励可生效地图，地图ID,地图ID,地图ID,-->
+		<Param Name="WishEffectAwardMap" Value="1,2,3,4,5,6,7,8,9,10,20,30,40"/>
+		<!--Mu可进入王者战场地图，地图ID,地图ID,地图ID,-->
+		<Param Name="KingOfBattleEnterMap" Value="1,2,3,4,5,6,7,8,9,10,20,30,40"/>
+		<!--Mu王者战场被杀获得积分，积分值-->
+		<Param Name="KingOfBattleDie" Value="5"/>
+		<!--Mu王者战场连杀积分，格式：基础值,系数,最小值,最大值-->
+		<Param Name="KingOfBattleUltraKill" Value="27,3,30,75"/>
+		<!--Mu王者战场终结对方连杀积分，格式：基础值,系数,,最小值,最大值-->
+		<Param Name="KingOfBattleShutDown" Value="-10,5,0,100"/>
+		<!--Mu王者战场最低积分要求，积分值-->
+		<Param Name="KingOfBattleLowestJiFen" Value="100"/>
+		<!--Mu王者战场对军旗、箭塔、主基地固定伤害，格式：对战旗固定伤害，对箭塔固定伤害,对主基地固定伤害-->
+		<Param Name="KingOfBattleAttackBuild" Value="10,10,10"/>
+		<!--Mu王者战场商店相关，格式：刷新时间（单位，小时），每次刷新道具个数，刷新价格（钻石）-->
+		<Param Name="KingOfBattleStore" Value="12,6,5000"/>
+		<!--Mu塔罗牌系统，国王特权消耗道具数量，格式：道具ID，数量，持续时间（单位，分钟）-->
+		<Param Name="TarotKingCost" Value="703000,1,1440"/>
+		<!--Mu塔罗牌系统，国王特权随机数，随机数组中一个数，概率平均-->
+		<Param Name="TarotKingNum" Value="5,5,5,5,5,6,6,6,6,6,6,7,7,7,8,8,9,10,11,12"/>
+		<!--Mu玩家聊天可发的色值，配置空为不做限制，格式：色值,色值,色值,色值-->
+		<Param Name="TalkColor" Value="fdf7dd,b266ff,3681f3,f9f702,17e34e,ff08ff,0099ff,00ff00"/>
+		<!--Mu打日志包含角色名，韩国所需配置，大陆不开启，格式：0为关闭，1为开启-->
+		<Param Name="LogWithRname" Value="0" />
+		<!--Mu开启副职业所需钻石，格式：第一个副职业价格，第二个副职业价格.....（单位，钻石）-->
+		<Param Name="PurchaseOccupation" Value="750,1500,3000,4500,6000" />
+		<!--Mu副职业个数限制-->
+		<Param Name="PurchaseOccupationNum" Value="5" />
+		<!--Mu转换主、副职业不能共享的装备类型-->
+		<Param Name="OccupationUnshareCategoriy" Value="0,1,2,3,4,5,6,11,12,13,14,15,16,17,18,19,20,21" />
+		<!--Mu2.1.0礼包兑换开关，格式：0为关闭（使用老功能），1为开启-->
+		<Param Name="ActiveCodeIsOpen" Value="1" />
+		<!--Mu2.1.0礼包兑换链接地址-->
+		<Param Name="HttpTask" Value="http://gift.3dcq.com/validate.aspx" />
+		<!--节日活动超级直购开关，格式：平台类型,开关|平台类型,开关...，平台类型：1-苹果，2=越狱，3=安卓，4=应用宝，是否开放：0=不开放，1=开放-->
+		<Param Name="JieRiChongZhiQiangGou" Value="1,1|2,1|3,1|4,1"/>
+		<!--奥运活动时间,格式：2016-05-20 00:00:00,2016-05-26 23:59:59-->
+		<Param Name="AoYunTime" Value="2016-08-06 00:00:00,2016-08-25 23:59:59"/>
+		<!--奥运活动，射门进球概率-->
+		<Param Name="AoYunGoalOdds" Value="0.7"/>
+		<!--奥运活动发奖时间-->
+		<Param Name="AoYunAwardTime" Value="2016-08-26 00:00:00,2016-08-31 23:59:59"/>
+		<!--奥运答题，天使（恶魔）帮帮忙价格与数量上限。格式：价格（钻石）,数量上限|价格（钻石）,数量上限-->
+		<Param Name="QuestionItem" Value="50,20|50,20"/>
+		<!--Mu争夺之地可领取奖励最小造成伤害-->
+		<Param Name="PlunderLandsLowest" Value="1000"/>
+		<!--Mu可进入争夺之地的地图，地图ID,地图ID,地图ID,-->
+		<Param Name="PlunderLandsEnterMap" Value="1,2,3,4,5,6,7,8,9,10,20,30,40"/>
+		<!--饰品槽开启所需总饰品槽等级，格式：槽序号，开启总等级|槽序号，开启总等级-->
+		<Param Name="OrnamentSiteOpen" Value="1,0|2,5|3,20|4,40|5,70"/>
+		<!--聊天系统语音转文字响应时间，单位秒-->
+		<Param Name="VoiceChangeIntro" Value="4"/>
+		<!--服务器防外挂加速开关，0为关闭，1为开启，暂时关闭，待程序功能运行正常时再开启-->
+		<Param Name="CheckTimeBoost" Value="0"/>
+		<Param Name="CheckPositionCheat" Value="0"/>
+		<!--用户sdk角色信息上传，0为关闭，1为开启，默认为关闭-->
+		<Param Name="uploadRoldInfo" Value="0"/>
+		<!--苹果1元直购开关，格式：平台类型,开关|...，平台类型：1-苹果，2=越狱，3=安卓，4=应用宝，开关：0=关，1=开-->
+		<Param Name="OneDollarBuyOpen" Value="1,1|2,0|3,0|4,0"/>
+		<!--腾讯幸运1元首充开关，格式：平台类型,开关|...，平台类型：1-苹果，2=越狱，3=安卓，4=应用宝，开关：0=关，1=开-->
+		<Param Name="YiYuanChongZhiOpen" Value="1,0|2,0|3,0|4,1"/>
+		<!--Mu召唤师初始的设定，初始任务编号|任务NPC|上个任务ID|初始地图|出生转生等级|初始等级-->
+		<Param Name="ZHSChuShi" Value="2281|601|2280|6|3,50"/>
+		<!--Mu召唤师初始属性，力量，智力，敏捷，体力-->
+		<Param Name="ZHSShuXing" Value="0,1087,434,653"/>
+		<!--Mu召唤师初始装备，ID，数量，绑定，强化，追加，幸运，卓越|...-->
+		<Param Name="ZHSZhuangBei" Value="1050005,1,1,0,0,0,3840|1050105,1,1,0,0,0,3840|1050205,1,1,0,0,0,3840|1050305,1,1,0,0,0,3840|1050405,1,1,0,0,0,3840|1050505,1,1,0,0,0,43|1050605,1,1,0,0,0,3840|1050605,1,1,0,0,0,3840|1055105,1,1,0,0,0,43"/>
+		<!--Mu召唤师大天使武器，GoodsID，GoodsID-->
+		<Param Name="ZHSDaTianShi" Value="1015090,1015091,1015092,1015093,1015094,1015095,1015096,1015097,1015098,1015099"/>
+		<!--Mu召唤师普通攻击技能ID-->
+		<Param Name="ZHSAttackSkill" Value="11000"/>
+		<!--Mu日常任务自动完成开关，参数值：0关闭，1开启-->
+		<Param Name="RiChangOpen" Value="1"/>
+		<!--Mu创建召唤师职业所需道具（有3转1以上账号则可省去）-->
+		<Param Name="PurchaseOccupationGoods" Value="8035" />
+		<!--Mu可使用创建召唤师道具的地图，地图ID,地图ID,地图ID,-->
+		<Param Name="ZHSCreateMap" Value="1,2,3,4,5,6,7,8,9,10,20,30,40"/>
+		<!--Mu转盘抽取耗费，金币抽取类，绑钻抽取类，钻石抽取类，格式：货币类型,数值|货币类型,数值|货币类型,数值--> 
+		<Param Name="ZhuanPanCost" Value="-1,-1|50,1000|163,288" /> 
+		<!--Mu转盘免费抽取倒计时，钻石免费计时（小时）-->
+		<Param Name="ZhuanPanFree" Value="-1"/>
+		<!--Mu转盘钻石抽取X次必定随机高级奖励,X-->
+		<Param Name="ZhuanPanZuanShiFuLi" Value="10"/>
+		<!--Mu转盘活动开启时间,格式：2016-05-20 00:00:00,2019-05-26 23:59:59-->
+		<Param Name="ZhuanPanTime" Value="2018-07-01 00:00:00,2020-12-21 23:59:59"/>
+		<!--商城商品单次购买最大购买数，最大购买数-->
+		<Param Name="MaxPurchase" Value="999"/>
+		<!--Mu军团领地争夺可接受到弹窗提示、可进入战场的地图ID-->
+		<Param Name="LegionsWarEnterMap" Value="1,2,3,4,5,6,7,8,9,10,20,30,40"/>
+		<!--Mu阿卡轮西受到伤害为固定伤害的配置，格式：怪物ID,固定伤害|怪物ID,固定伤害…… -->
+		<Param Name="LegionsWest" Value="9400000,10|9400001,10|9400002,10|9400003,10|9400004,10"/>
+		<!--Mu双倍新服活动时间配置 -->
+		<Param Name="DoubleXinFu" Value="2016-12-09 00:00:00|2020-12-15 23:59:59"/>
+		<!--Mu双倍新服活动项 -->
+		<Param Name="DoubleXinFuID" Value="33,34,35,36"/>
+		<!--Mu超级充值返利活动时间配置 -->
+		<Param Name="SuperChongZhiFanLi" Value="2016-12-09 00:00:00|2016-12-15 23:59:59"/>
+		<!--Mu超级充值按平台开启，格式：平台类型,开关|平台类型,开关...，平台类型：1-苹果，2=越狱，3=安卓，4=应用宝，是否开放：0=不开放，1=开放 -->
+		<Param Name="SuperChongZhiFanLiOpen" Value="1,1|2,0|3,0|4,0"/>
+		<!--玩家生命恢复日志开关，格式：平台类型,开关……平台类型：1-苹果，2=越狱，3=安卓，4=应用宝，是否开放：0=不开放，1=开放-->
+		<Param Name="LogLifeRecoverOpen" Value="1,1|2,1|3,0|4,0"/>
+		<!--玩家生命恢复记录最小值，格式：最小值,生命上限百分比-->
+		<Param Name="LogLifeRecoverNum" Value="100000,0.2"/>
+		<!--玩家生命恢复记录地图，格式：地图ID, 地图ID….-->
+		<Param Name="LogLifeRecoverMap" Value="10000"/>
+		<!--Mu每日征服次数及钻石价格，格式：每日次数，首次价格，二次价格…之后价格以最后一次价格-->
+		<Param Name="ManorCatch" Value="10,20,20,30,30,40,40,60,60,80,80,100"/>
+		<!--Mu每日解救次数及钻石价格，格式：每日次数，首次价格，二次价格…之后价格以最后一次价格-->
+		<Param Name="ManorHelp" Value="10,20,20,30,30,40,40,60,60,80,80,100"/>
+		<!--Mu每日俘虏互动次数及俘虏可获得奖励次数，格式：互动次数，俘虏获得奖励次数,互动耗时（单位分钟） -->
+		<Param Name="ManorCommandAward" Value="10,10,5"/>
+		<!--Mu反抗CD，格式：CD时间单位分钟，清除CD消耗钻石-->
+		<Param Name="ManorCommandAgainst" Value="10,20"/>
+		<!--Mu每次搜索消耗绑金 -->
+		<Param Name="ManorSearchCost" Value="20000"/>
+		<!--Mu精灵神迹符文重置1点耗费钻石，格式：道具ID，每点耗费钻石，最大上限-->
+		<Param Name="ResettingShenJiFuWen" Value="5320,20,300"/>
+		<!--Mu要塞BOSS召唤配置，格式：免费召唤每日召唤次数，钻石召唤消耗，讨伐上限-->
+		<Param Name="ManorBossCall" Value="1,100,10"/>
+		<!--Mu要塞BOSS战斗次数配置，格式：召唤者战斗次数，协助者战斗次数，协助战斗领奖次数，第1次额外战斗耗钻，第2次额外战斗耗钻…之后价格以最后一次价格-->
+		<Param Name="ManorBossFight" Value="3,1,10,20,20,20,30,30,30,40,40,50"/>
+		<!--Mu要塞任务完成次数，免费刷新CD配置,格式：个数，CD时间（秒）-->
+		<Param Name="PetMissionMax" Value="10,7200"/>
+		<!--Mu要塞任务失败奖励百分比系数，格式：数值(百分比)-->
+		<Param Name="FailAwardRate" Value="50"/>
+		<!--Mu要塞任务刷新消耗钻石配置，格式：数值-->
+		<Param Name="RefreshMissionCost" Value="60"/>
+		<!--Mu战盟红包过期时间配置，格式：时长（时）-->
+		<Param Name="RedPacketsTime" Value="8"/>
+		<!--Mu战盟红包我抢的红包，我发的红包和红包总览上限配置，格式：我抢的红包,我发的红包,红包总览-->
+		<Param Name="RedPacketsInfomationLimit" Value="20,20,20"/>
+		<!--Mu战盟红包红包数量和金额上下限配置，格式：红包数量下限，红包数量上限，红包金额下限，红包金额上限-->
+		<Param Name="RedPacketsLimit" Value="1,50,20,10000000"/>
+		<!--Mu每小时每个玩家发红包数量上限配置，格式：红包上限-->
+		<Param Name="RedPacketsNumMax" Value="20"/>
+		<!--Mu战盟红包默认留言配置，格式：留言（文字）-->
+		<Param Name="RedPacketsMessage" Value="恭喜发财，大吉大利"/>
+		<!--Mu全民红包默认留言配置，格式：留言（文字）-->
+		<Param Name="RedPacketsQuanMinMessage" Value="金鸡报晓，紫燕衔春"/>
+		<!--Mu充值红包默认留言配置，格式：留言（文字）-->
+		<Param Name="RedPacketsChongZhiMessage" Value="招财进宝，金玉满堂"/>
+		<!--Mu特权红包默认留言配置，格式：留言（文字）-->
+		<Param Name="RedPacketsTeQuanMessage" Value="恭喜发财，大吉大利"/>
+		<!--Mu小额违规账号发红包限制配置，格式：0为关闭，1为开启-->
+		<Param Name="RedPacketsRight" Value="1"/>
+		<!--Mu红包记录界面客户端请求间隔配置，格式：数值（秒）-->
+		<Param Name="RedPacketsRequest" Value="5"/>		
+		<!--Mu系统红包记录上限配置，格式：记录上限-->
+		<Param Name="RedPacketsAutomaticRecordMax" Value="100"/>
+		<!--Mu战盟红包记录上限配置，格式：记录上限-->
+		<Param Name="RedPacketsAsuramRecordMax" Value="100"/>
+		<!--MU每日活动充值兑换比例，钻石数：每日点数-->
+		<Param Name="EveryDayChongZhiDuiHuan" Value="20000:1"/>
+		<!--MU每日活动各平台开启，格式：平台类型,开关|平台类型,开关...，平台类型：1-苹果，2=越狱，3=安卓，4=应用宝，是否开放：0=不开放，1=开放-->
+		<Param Name="EveryDayActivityOpen" Value="1,1|2,1|3,1|4,1"/>
+		<!--Mu精灵要塞派驻精灵上限配置，格式：派驻上限-->
+		<Param Name="ManorPetMax" Value="15"/>
+		<!--Mu老玩家召回分享网址-->
+		<Param Name="OldHttp" Value="http://www.tmsk.cn/zhaohui/"/>
+		<!--Mu徽记护体开关，格式：平台类型,开关……平台类型：1-苹果，2=越狱，3=安卓，4=应用宝，是否开放：0=不开放，1=开放-->
+		<Param Name="EmblemOpen" Value="1,1|2,1|3,1|4,1"/>	
+		<!--Mu徽记使用时间，单位秒，格式：持续时间，CD时间-->
+		<Param Name="EmblemTime" Value="4,40"/>
+		<!--Mu徽记护体是清除、免疫状态特效-->
+		<Param Name="EmblemEffect" Value="300,301,29"/>
+		<!--Mu徽记护体状态获得属性提升（必须为二级属性），格式：道具ID-->
+		<Param Name="EmblemProp" Value="8037"/>
+		<!--Mu徽记升星设定值，道具提升暴击触发概率,钻石提升暴击触发概率,暴击经验倍率-->
+		<Param Name="EmblemShengXing" Value="1,1,100000"/>
+		<!--Mu神圣护盾升星设定值，道具提升暴击触发概率,钻石提升暴击触发概率,暴击经验倍率-->
+		<Param Name="HudunBaoji" Value="1,1,100000"/>
+		<!--Mu魔神秘宝升星设定值，道具提升暴击触发概率暴击经验倍率-->
+		<Param Name="MibaoBaoji" Value="1,5"/>
+		<!--Mu控制效果递减规则开关，格式：平台类型,开关……平台类型：1-苹果，2=越狱，3=安卓，4=应用宝，是否开放：0=不开放，1=开放-->
+		<Param Name="DeControlOpen" Value="1,1|2,1|3,1|4,1"/>
+		<!--Mu精灵要塞好友列表是否更新奴役状态转生等级要求，格式：转生，等级-->
+		<Param Name="ManorFriendListOpen" Value="10,1"/>
+		<!--Mu精灵要塞召唤BOSS一键五星消耗，格式：道具ID，个数 | 钻石数-->
+		<Param Name="ManorSuperBoss" Value="7008,1|800"/>
+		<!--Mu精灵要塞精灵要塞俘虏劳动随机道具奖励，类似掉落个数位置配置几率，每个道具|隔开，每个道具概率独立，格式：道具7位|道具7位 -->
+		<Param Name="ManorWorkAward" Value="7008,0.05,1,0,0,0,0"/>
+		<!--Mu炼金升级需要元素值配置，格式：炼金需要元素值-->
+		<Param Name="AlchemyLevelUp" Value="2000"/>
+		<!--Mu炼金属性提升配置，格式：生命上限，攻击力，防御力，命中，闪避，附加伤害，抵挡伤害，击中恢复，反弹伤害-->
+		<Param Name="AlchemyProperty" Value="100,20,20,25,25,16,16,12,16"/>
+		<!--Mu炼金属性随机限制配置，格式：次数差值-->
+		<Param Name="AlchemyRandomLimit" Value="10"/>
+		<!--Mu语音信息发送限制，转生等级，角色等级，VIP等级-->
+		<Param Name="VoiceMessage" Value="3,1,0"/>
+		<!--Mu语战盟实时语音频道，房间用|隔开，地图用,隔开-->
+		<Param Name="ZhanMengVoice" Value="11000,11001|11100,11101|11102,11103|11104,11105|11106,11107|82000|82001|85000,85001"/>
+		<!--Mu军团实时语音频道地图,地图ID-->
+		<Param Name="JunTuanVoice" Value="83002|83003"/>
+		<!--Mu语音系统开关，格式：平台类型,开关……平台类型：1-苹果，2=越狱，3=安卓，4=应用宝，是否开放：0=不开放，1=开放-->
+		<Param Name="VoiceOpen" Value="1,1|2,1|3,1|4,1"/>	
+		<!--Mu语音系统模拟器开关，格式：0=不开放，1=开放-->
+		<Param Name="VoiceSimulatorOpen" Value="1"/>
+		<!--Mu语音系统可分配权限人数，格式：战盟人数，军团人数-->
+		<Param Name="VoicePowerNum" Value="6,8"/>		
+		<!--Mu神识系统-符文免费抽，CD时间，单位秒-->
+		<Param Name="FuWenFreeRandom" Value="86400"/>
+		<!--Mu神识系统-神识符文大厅抽符文消耗钻石，格式：抽一次，抽十次-->
+		<Param Name="FuWenPay" Value="-1,-1"/>
+		<!--Mu神识系统-可激活神识的技能ID-->
+		<Param Name="FuWenMagic" Value="120,102,105,106,204,203,206,220,301,307,305,306,10006,10004,10001,10007,10104,10106,10101,10107,11006,11004,11001"/>
+		<!--Mu神识系统-符文页购买, 未配置不能购买，格式：免费符文页个数,第一需要购买的符文页价格，第二个……-->
+		<Param Name="FuWenList" Value="2,150,300,450"/>
+		<!--Mu战盟联赛-潜力新星赛积分系数，格式：胜利积分系数,失败积分系数-->
+		<Param Name="LeagueNewNum" Value="300,100"/>
+		<!--Mu战盟联赛-升降级战盟个数-->
+		<Param Name="LeagueUp" Value="2"/>
+		<!--Mu战盟联赛-黄金之翼道具ID……-->
+		<Param Name="LeagueWing" Value="1090804"/>
+		<!--Mu战盟联赛神殿中伤害周期，单位秒-->
+		<Param Name="LeagueHurtTime" Value="5"/>
+		<!--Mu战盟联赛神殿伤害（百分比），达到最后一个不再增加，格式：第一次伤害、第二次伤害…….-->
+		<Param Name="LeagueHurt" Value="0.09,0.092,0.094,0.096,0.098,0.1,0.102,0.104,0.106,0.108,0.11,0.112,0.114,0.116,0.118,0.12,0.122,0.124,0.126,0.128,0.13"/>
+		<!--Mu战盟联赛神殿抵抗BUFF数值，格式：神殿占领，旗帜占领-->
+		<Param Name="LeagueDeHurt" Value="0.15,0.05"/>
+		<!--Mu战盟联赛旗帜固定伤害，格式：怪物ID,固定伤害|怪物ID,固定伤害…… -->
+		<Param Name="LeagueQiZhi" Value="9610000,10|9610001,10"/>
+		<!--Mu战盟联赛神殿胜利积分产出，格式：产出CD，产出量 -->
+		<Param Name="LeagueShenDian" Value="10,40"/>
+		<!--Mu战盟联赛MVP值系数，格式：击杀系数，对旗帜造成伤害系数，占领或夺得神殿-->
+		<Param Name="LeagueMvpNum" Value="100,5,300"/>
+		<!--Mu徽记护体特殊地图满能量，格式：功能是否开启（0关闭，1开启），地图1ID，地图2ID，地图3ID，地图4ID-->
+		<Param Name="EmblemFull" Value="1,16000,15000,14000,14001,14002,14003"/>
+		<!--Mu解决线上生命较低时的卡顿问题开关，开启配4，关闭配100-->
+		<Param Name="OpChangeLifeCount" Value="4"/>
+		<!--Mu跨服掠夺每个赛季有多少轮-->
+		<Param Name="CrusadeSeason" Value="13"/>
+		<!--Mu跨服掠夺服务器资源数值，格式：每轮获得资源，资源上限-->
+		<Param Name="CrusadeOre" Value="5000,10000"/>
+		<!--Mu跨服掠夺最小竞价单位-->
+		<Param Name="CrusadeMinApply" Value="100000"/>
+		<!--Mu跨服掠夺竞价CD时间，单位秒-->
+		<Param Name="CrusadeApplyCD" Value="90"/>
+		<!--Mu跨服掠夺活动参与次数，格式：每轮补充次数，次数上限-->
+		<Param Name="CrusadeEnterTime" Value="30,60"/>
+		<!--Mu跨服掠夺购买参与次数钻石价格，达到最后一位不再增长，格式：第一次，第二次……-->
+		<Param Name="CrusadeEnterPrice" Value="10,20,30,40,50,80,100"/>
+		<!--Mu跨服掠夺达成征服要掠夺的资源量，100%为1-->
+		<Param Name="CrusadePerfect" Value="0.8"/>
+		<!--Mu跨服掠夺商城刷新CD，单位秒-->
+		<Param Name="CrusadeStoreCD" Value="86400"/>
+		<!--Mu跨服掠夺商城刷新花费钻石-->
+		<Param Name="CrusadeStorePrice" Value="100"/>
+		<!--Mu跨服掠夺商城中随机商品个数-->
+		<Param Name="CrusadeStoreRandomNum" Value="4"/>
+		<!--Mu跨服掠夺前置小资源区分配比例和上限，格式：比例，上限-->
+		<Param Name="CrusadeOrePercent" Value="0.6,10000"/>
+		<!--Mu跨服掠夺采集积分参数，格式：小资源，大资源-->
+		<Param Name="CrusadeCrystalMonster" Value="100,400"/>
+		<!--Mu跨服掠夺连杀积分参数，格式：基础值，系数，最小值，最大值-->
+		<Param Name="CrusadeUltraKill" Value="50,50,0,300"/>
+		<!--Mu跨服掠夺终结连杀积分参数，格式：基础值，系数，最小值，最大值-->
+		<Param Name="CrusadeShutDown" Value="-30,30,0,180"/>
+		<!--Mu跨服掠夺进攻方觉醒点奖励分配相关系数，格式：比例系数，最大积分占有资源，最小保底占有资源，最终结果可占有最大资源-->
+		<Param Name="CrusadeAwardAttacker" Value="0.75,50,12,88"/>
+		<!--Mu跨服掠夺防守方觉醒点奖励分配相关系数，格式：比例系数，最大积分占有资源，最小保底占有资源，最终结果可占有最大资源-->
+		<Param Name="CrusadeAwardDefender" Value="0.75,50,3,50"/>
+		<!--Mu可进入跨服掠夺的地图，弹出指引提示的地图ID，格式：地图ID,地图ID,地图ID,-->
+		<Param Name="CrusadeEnterMap" Value="1,2,3,4,5,6,7,8,9,10,20,30,40"/>
+		<!--Mu跨服掠夺每个服务器最大可竞价成功战盟个数，最大值为3-->
+		<Param Name="CrusadeAttackerNum" Value="3"/>
+		<!--MU跨服掠夺世界地图区域配置、速度-->
+		<Param Name="CrusadeMap" Value="8900,7000,1210,2080,20,5"/>
+		<!--Mu战士霹雳回旋斩减少效果，格式：1层、2层、3层……超过最大层按最大层处理 -->
+		<Param Name="ZSPLHXZAttackInjurePercent" Value="0.10,0.12,0.13,0.14,0.15"/>
+		<!--Mu自动下载设定，0=关闭 1=开启 -->
+		<Param Name="AutoDown" Value="1"/>
+		<!--MU精灵技能传承成功率；100为百分之百-->
+		<Param Name="JingLingChuanChengGoodsRate" Value="100"/>
+		<!--MU精灵技能传承消耗金币-->
+		<Param Name="JingLingChuanChengXiaoHaoJinBi" Value="80000000"/>
+		<!--MU精灵技能传承消耗钻石-->
+		<Param Name="JingLingChuanChengXiaoHaoZhuanShi" Value="3000"/>
+		<!--MU觉醒魔化开关，格式：0=关闭 1=开启-->
+		<Param Name="AwakenLevelUpOpen" Value="1"/>
+		<!--MU觉醒生效条件配置，格式：装备阶数，装备卓越属性条数-->
+		<Param Name="AwakenCondition" Value="7,5"/>
+		<!--Mu万魔峡谷BOSS召唤助阵坐骑时血量百分，格式：怪物ID,血量-->
+		<Param Name="WanMoXiaGuCall" Value="9640000,0.4"/>
+		<!--Mu万魔峡谷奖励，单位秒，格式：用时,个数|用时,个数|用时,个数…….-->
+		<Param Name="WanMoXiaGuAward" Value="3600,1"/>
+		<!--Mu坐骑免费抽取参数，格式：CD时间（秒）-->
+		<Param Name="HorseFreeRandom" Value="86400"/>
+		<!--Mu坐骑钻石抽取钻石消耗参数，格式：抽一次消耗钻石，抽十次消耗钻石-->
+		<Param Name="HorsePay" Value="200,1800"/>
+		<!--Mu坐骑装备开关参数，格式：开关（0，关闭；1，开启） -->
+		<Param Name="HorseEquipOpen" Value="1"/>
+		<!--Mu坐骑猎取展示参数，格式：坐骑1GoodsID，坐骑2GoodsID... -->
+		<Param Name="HorseShow" Value="990004,990005,990000,990001,990002,990003,990004,990005"/>
+		<!--Mu坐骑猎取展示参数，格式：坐骑1GoodsID，坐骑2GoodsID... -->
+		<Param Name="TeQuanHorseShow" Value="990004,990005,990000,990001,990002,990003,990004,990005"/>		
+		<!--Mu坐骑积分商店开关参数，格式：开关（0，关闭；1，开启） -->
+		<Param Name="HorseShopOpen" Value="1"/>
+		<!--MU猎取坐骑耗费1钻石获得积分值，积分值-->
+		<Param Name="ConsumeHuntHorseJiFen" Value="0.1"/>
+		<!--Mu坐骑装备槽位开启参数，格式：马鞭是否开启，防具是否开启，缰绳是否开启，马鞍是否开启，马刺是否开启，马掌是否开启 -->
+		<Param Name="HorseEquipBarOpen" Value="1,1,1,1,1,1"/>
+		<!--Mu坐骑装备熔炼开启参数，格式：强化是否开启，追加是否开启，强化传承是否开启，装备转生是否开启，转生剥离是否开启，进阶是否开启，追加传承是否开启，装备培养是否开启，培养传承是否开启，神器再造是否开启，神器聚魂传承是否开启，神器聚魂是否开启，宠物技能传承是否开启，装备附魔是否开启，附魔传承是否开启 -->
+		<Param Name="HorseEquipMeltingOpen" Value="1,1,1,0,0,1,1,1,1,1,0,0,0,0,0"/>
+		<!--Mu坐骑强20、徽记特效高度、人物头顶名称配置参数，格式：坐骑1ID，强20高度比例，徽记高度比例，名称高度比例|坐骑2ID，强20高度比例，徽记高度比例，名称高度比例|坐骑3ID，强20高度比例，徽记高度比例，名称高度比例... -->
+        <Param Name="HorseDecorations" Value="990000,1.1,1,0.9|990001,1.4,1,0.4|990002,1,1,1.2|990003,0.8,1,0.6|990004,1,1,1.5|990005,0.7,1,0.6|990008,1.4,1,-0.5|990017,0.8,1,1.2|970000,0.7,0.3,1.5|970001,0.9,0.6,1.1|970002,0.9,0.6,1.1|970003,0.9,0.6,0.9|970004,0.9,0.6,1.9|970005,0.9,0.6,1.3|970006,0.9,0.6,0|970007,0.9,0.6,1.9|970008,0.9,0.6,2.2|970009,0.9,0.6,0.7|970010,0.9,0.6,0.7|970011,0.9,0.6,0.8|970012,0.9,0.6,1.1"/>	
+		<!--Mu坐骑重生印记特效高度配置参数，格式：坐骑1ID，高度比例|坐骑2ID，高度比例|坐骑3ID，高度比例... -->
+		<Param Name="HorseYinJiDecorations" Value="990000,1|990001,1|990002,1|990003,1|990004,1|990005,1"/>	
+		<!--Mu坐骑等级上限参数，格式：人物转身，人物等级，坐骑等级上限|人物转身，人物等级，坐骑等级上限|...-->
+		<Param Name="HorseLevelMax" Value="1,1,10|2,1,20|3,1,30|4,1,40|5,1,50|6,1,60|7,1,70|8,1,80"/>
+		<!--Mu坐骑时装开关参数，格式：开关（0，关闭；1，开启） -->
+		<Param Name="HorseFashionOpen" Value="1"/>
+		<!--Mu坐骑一键回收限制配置，格式：卓越属性条数...--> 
+		<Param Name="HorseRecoveryLimit" Value="5"/> 
+		<!--Mu坐骑公告配置，格式：坐骑1ID，坐骑2ID ，坐骑3ID ...-->
+		<Param Name="HorseNotice" Value="990003,990004,990005"/>
+		<!--Mu坐骑装备神器再造阶数配置，格式：阶数1，阶数2，阶数3 ...-->
+		<Param Name="HorseZaiZaoSuitID" Value="7,8,9,10,11,12,13,14,15,16,17,18,19,20"/>
+		<!--Mu势力争霸推荐势力奖励道具-->
+		<Param Name="CompRecommend" Value="5341,1,1,0,0,0,0"/>
+		<!--Mu势力争霸推荐势力所需比例-->
+		<Param Name="CompRecommendRatio" Value="0.5"/>
+		<!--Mu势力争霸更换势力当前势力贡献，当前势力军衔-->
+		<Param Name="CompReplaceAmerce" Value="0.8"/>
+		<!--Mu势力争霸更换势力消耗钻石-->
+		<Param Name="CompReplaceNeed" Value="800"/>
+		<!--Mu势力争霸繁荣度每日扣除，格式：扣除值，最低值-->
+		<Param Name="CompNumEveryDay" Value="35000,40000"/>
+		<!--Mu势力争霸任务上限，按类型排序，不配置则为0，格式：次数,次数……-->
+		<Param Name="CompTaskNum" Value="3,2,2,2,2,1"/>
+		<!--Mu势力争霸任务起始ID，格式：类型,教团ID,同盟ID,协会ID|类型……-->
+		<Param Name="CompTaskBegin" Value="100,80000,81000,82000|101,80100,81100,82100|102,80200,81200,82200|103,80300,81300,82300|104,80400,81400,82400|105,80500,81500,82500"/>
+		<!--Mu势力争霸屠地图守卫补充时间，单位秒，格式：繁荣度第一名，第二名，第三名-->
+		<Param Name="CompSolderCD" Value="600,900,1200"/>
+		<!--Mu势力争霸BOSS繁荣度，格式：伤害繁荣度系数，单个BOSS获得繁荣度上限-->
+		<Param Name="CompBossCompNum" Value="375000,40000"/>
+		<!--Mu势力争霸BOSS奖励，格式：伤害势力贡献系数、伤害势力军衔系数，单个BOSS获得贡献上限，单个BOSS获得军衔上限-->
+		<Param Name="CompBossCompHonor" Value="187500,187500,8000,8000"/>
+		<!--Mu势力争霸BOSS显示刷新时间-->
+		<Param Name="CompBossTime" Value="16:00"/>
+		<!--Mu势力争霸BOSS血量，格式：击杀时间（单位秒），比例系数-->
+		<Param Name="CompBossRealive" Value="300,0.0015"/>
+		<!--Mu势力争霸敌对势力对应的BUFF道具ID，格式：教团，同盟，协会-->
+		<Param Name="CompEnemy" Value="2000814,2000815,2000816"/>
+		<!--Mu势力争霸敌对势力伤害提升，0.05即5%-->
+		<Param Name="CompEnemyHurtNum" Value="0.05"/>
+		<!--Mu势力争霸商城个数调整，格式：繁荣度,倍数|繁荣度,倍数|繁荣度,倍数….-->
+		<Param Name="CompShop" Value="0,1|10000,2|20000,4|40000,6|80000,8"/>
+		<!--Mu显示冥想修炼弹窗参数，格式：时长（分钟）... -->
+		<Param Name="OfflineRW_Auto" Value="480"/>
+		<!--Mu显示冥想修炼道具上限，格式：数量上限... -->
+		<Param Name="OfflineRW_ItemLimit" Value="24"/>
+		<!--配置格式: 平台数字类型1,隐藏的排行类型1[,隐藏的排行类型2...]|平台数字类型2,隐藏的排行类型1[,隐藏的排行类型2...]-->
+		<!--平台类型: app:1,yueyu:2,android:3,yyb:4; 排行类型: 征服榜:0, 掠夺榜:2,击杀榜:4-->
+		<!--禁用越狱角色击杀排行显示: 2,4-->
+		<Param Name="KuaFuLueDuoHideRankList" Value=""/>
+		<!--Mu道具红点提示参数，格式：道具1ID，道具2ID，道具3ID... -->
+		<Param Name="UseGoodsID" Value="5000,5030,5040,5132,5252,7010,7037,41000,41300,63025,63026,63027,63028,63082"/>
+		<!--Mu节日活动符文抽取界面提示描述，配置文本，支持文字颜色变化-->
+		<Param Name="JieRiFuWenIntro" Value="十连抽必得一个3级以上的符文"/>
+		<!--Mu 获得装备自动穿戴等级，格式：转生|等级 -->
+		<Param Name="AutoEquipLevel" Value="1|100"/>
+		<!--Mu节日活动祈福界面提示描述，配置文本，支持文字颜色变化-->
+		<Param Name="JieRiQiFuIntro" Value="可使用【祈福代券】抽取道具"/>
+		<!--脚印时装开启关闭，开启1、关闭-1-->
+		<Param Name="JiaoYinShiZhuangMainGame" Value="1"/>		
+		<!--武器时装开启关闭，开启1、关闭-1-->
+		<Param Name="WuQiShiZhuangMainGame" Value="1"/>	
+		<!--Mu拍卖行货币开关，参数值： 0关闭，1开启-->
+		<Param Name="paimaihangjinbi" Value="1"/>
+		<Param Name="paimaihangzuanshi" Value="1"/>
+		<Param Name="paimaihangmobi" Value="0"/>
+		<!--Mu商城货币显示，参数值： 0关闭，1开启-->
+		<Param Name="bangzuan" Value="1"/>
+		<Param Name="zuanshi" Value="1"/>
+		<Param Name="mobi" Value="0"/>
+		<!--Mu符文等级7+客户端选项卡、合成开关，0为关闭，1为开启--> 
+		<Param Name="FuWenSevenOpen" Value="0"/>
+		<!--Mu是否开启在Loading界面重新下载有误资源。默认开启，如果出现突发情况时关闭  1=开 0=不开--> 
+		<Param Name="IsDoReDownLoadMap" Value="1"/>
+		<!--Mu是否开启主界面新版提示，1=开 0=不开-->
+		<Param Name="IsMainHintOpen" Value="1"/>
+		<!--Mu开启主界面新版提示等级，格式：转生,等级-->
+		<Param Name="IsMainHintOpenLevel" Value="0,50"/>
+		<!--Mu开启是否强制关闭其他玩家的武器强化特效，如果不关闭，特效根据设置界面的其他玩家特效设置，格式：0为关闭，1为开启-->
+		<Param Name="AutoHideWeaponEffect" Value="0"/>
+		<!--Mu其他玩家不显示的技能特效(Decorations.xml的Code)，格式：特效ID,特效ID-->
+		<Param Name="NoShowMagicEffectID" Value="45,18,26,10381,3119,14001,14002,14003,14004,14005,14006"/>
+		<!--Mu是否屏蔽显示其他玩家强化20的特效，格式：0为不屏蔽，1为屏蔽-->
+		<Param Name="IsOpenQiangHua20Effect" Value="1"/>
+		<!--Mu是否屏蔽显示其他玩家精灵外显特效，格式：0为不屏蔽，1为屏蔽-->
+		<Param Name="IsOpenJinglingwaixianEffect" Value="0"/>
+		<!--Mu召唤师噬魂咒吸血飞行特效-->
+		<Param Name="ZHSFlyDecoration" Value="3221"/>
+		<!--Mu主题服活动转生试炼，公告道具列表，格式：道具ID,道具ID,道具ID….-->
+		<Param Name="ThemeActivityZhuanShengGoods" Value="51304,51305,51306"/>
+		<!--Mu主题服活动魔域龙穴，公告道具列表，格式：道具ID,道具ID,道具ID….-->
+		<Param Name="ThemeActivityMoYuGoods" Value="51304,51305,51306"/>
+		<!--Mu主题服活动魔域龙穴界面展示道具-->
+		<Param Name="ThemeActivityMoYuShowGoods" Value="8054,90024,90025,90026"/>
+		<!--Mu势力争霸战斗奖励预览配置，格式：奖励道具1，奖励道具2...-->
+		<Param Name="CraftReward" Value="63195,50033"/>
+		<!--Mu势力争霸个人积分配置，格式：击杀一个敌对势力玩家积分-->
+		<Param Name="CraftSingleIntegral" Value="50"/>
+		<!--Mu势力争霸旗子每次受伤掉血配置，格式：被攻击一次掉血数值 -->
+		<Param Name="FlagDamage" Value="10"/>
+		<!--Mu争霸战获胜场次奖励放大，格式：胜1场比例，胜2场比例，胜3场比例，胜4场比例，胜5场比例-->
+		<Param Name="CraftRewardRate" Value="1,1,1,1,1"/> 
+		<!--Mu势力商店和争霸战最强商店配置，格式：势力商店类型ID，争霸战最强商店类型ID-->
+		<Param Name="CraftStore" Value="11001,17001"/> 
+		<!--名字长度限制，最小字数，最大字数-->	
+		<Param Name="NameLengthRange" Value="2,7"/>
+		<!--Mu神魂附体道具配置，格式：道具ID,数量-->
+		<Param Name="TransfigurationGoods" Value="2301,1"/>
+		<!--Mu神魂附体CD配置，格式：CD时间（秒）-->
+		<Param Name="TransfigurationCD" Value="120"/>
+		<!--Mu神魂附体高度配置，格式：强20特效高度,徽记特效高度，头顶名称高度-->
+		<Param Name="TransfigurationDecorations" Value="1.5,1.5,1"/>
+		<!--Mu神魂附体时装高度配置，格式：时装1ID，强20特效高度,徽记特效高度,头顶名称高度|时装2ID，强20特效高度,徽记特效高度,头顶名称高度...-->
+		<Param Name="TransfigurationDecorations" Value="2200000,1.5,1.5,1|2200001,1.5,1.5,1"/>
+		<!--Mu变身自动战斗配置，格式：变身时装1ID，最优先技能ID，次优先技能ID，末优先技能ID|变身时装2ID，最优先技能ID，次优先技能ID，末优先技能ID... -->
+		<Param Name="TransfigurationAuto" Value="1,305,307,301|2,206,203,204"/>
+		<!--Mu变身每日免费次数，格式：次数-->
+		<Param Name="TransfigurationFree" Value="3"/>
+		<!--Mu变身Buff配置，格式：道具ID-->
+		<Param Name="TransfigurationBuff" Value="2000850"/>
+		<!--Mu迷雾矿洞争夺防守连杀，格式：基础值，系数，最小值，最大值-->
+		<Param Name="CompMineDefenseKill" Value="27,3,30,75"/>
+		<!--Mu迷雾矿洞争夺防守终结连杀，格式：基础值，系数，最小值，最大值-->
+		<Param Name="CompMineDefenseShutDown" Value="-10,5,0,100"/>
+		<!--Mu迷雾矿洞争夺进攻连杀，格式：基础值，系数，最小值，最大值-->
+		<Param Name="CompMineAttackKill" Value="27,3,30,75"/>
+		<!--Mu迷雾矿洞争夺进攻终结连杀，格式：基础值，系数，最小值，最大值-->
+		<Param Name="CompMineAttackShutDown" Value="-10,5,0,100"/>
+		<!--Mu迷雾矿洞争夺被杀获得积分，积分值-->
+		<Param Name="CompMineDie" Value="5"/>
+		<!--Mu迷雾矿洞争夺资源排名奖励翻倍，格式：第一倍数|第二倍数|第三倍数-->
+		<Param Name="CompMineAwardNum" Value="1.2|1|1"/>
+		<!--Mu附魔随机属性条数概率，格式：1条概率，2条概率-->
+		<Param Name="EnchantmentRandomNum" Value="0.3,0.7"/>
+		<!--Mu附魔消耗，格式：消耗货币值-->
+		<Param Name="EnchantmentCost" Value="1"/>
+		<!--Mu附魔传承消耗，格式：消耗金币数量，消耗钻石数量...-->
+		<Param Name="EnchantmentInheritCost" Value="5000000,100"/>
+		<!--Mu附魔赠送货币数量，格式：单次赠送货币值-->
+		<Param Name="EnchantmentGiveNum" Value="1"/>
+		<!--Mu附魔赠送限制，格式：每日赠送次数，每日收取次数-->
+		<Param Name="EnchantmentGiveLimit" Value="15,15"/>
+		<!--Mu每日活跃值需要达到数量，格式：每日活跃值-->
+		<Param Name="FuMoHuoyue" Value="80"/>
+		<!--Mu阿里游戏特权礼包道具配置，格式：ID，数量，绑定，强化，追加，幸运，卓越|...-->
+		<Param Name="AliGifts" Value="50153,1,1,0,0,0,0|5066,5,1,0,0,0,0|50015,1,1,0,0,0,0"/>
+		<!--Mu阿里游戏特权礼包开关配置，格式：0关闭，1开启-->
+		<Param Name="AliGiftsSwitch" Value="1"/>
+		<!--Mu天梯匹配成功后取消惩罚，冷却时间（秒）-->
+		<Param Name="TianTiCD" Value="1800"/>
+		<!--Mu重生地图连连斩间隔时间，单位秒，格式：连斩数,时间|连斩数,时间…-->
+		<Param Name="RebornLianZhan" Value="10,20|20,20|30,20|50,20|100,20|200,20|300,20|500,20|999,20"/>
+		<!--Mu重生地图连斩，可获得连斩数的地图，格式：地图ID|地图ID-->
+		<Param Name="RebornLianZhanMap" Value="96000"/>
+		<!--Mu重生地图各线路是否支持非和平PK模式，格式：线路1，线路2，线路3，线路4，线路5（0不支持，1支持）-->
+		<Param Name="RebornMapPK" Value="0,0,1,1,1"/>
+		<!--Mu重生印记重置消耗钻石，钻石数量-->
+		<Param Name="ChongShengYinJiChongZhi" Value="0,10,20,40,60,80,100,120,150,200"/>
+		<!--Mu选区界面是否显示公告、清理按钮，0不显示，1显示-->
+		<Param Name="GongGaoQingLiOpen" Value="1"/>
+		<!--Mu重生印记描述对应主印记类型，描述说明-->
+		<Param Name="ChongShengYinJiMiaoShu" Value="{dac7ae}效果：激活{17e43e}神圣印记{dac7ae}攻击时会携带{17e43e}神圣属性@{dac7ae}克制：针对{17e43e}暗影属性{dac7ae}可提高额外{17e43e}伤害吸收|{dac7ae}效果：激活{17e43e}暗影印记{dac7ae}攻击时会携带{17e43e}暗影属性@{dac7ae}克制：针对{17e43e}自然属性{dac7ae}可提高额外{17e43e}伤害吸收|{dac7ae}效果：激活{17e43e}自然印记{dac7ae}攻击时会携带{17e43e}自然属性@{dac7ae}克制：针对{17e43e}混沌属性{dac7ae}可提高额外{17e43e}伤害吸收|{dac7ae}效果：激活{17e43e}混沌印记{dac7ae}攻击时会携带{17e43e}混沌属性@{dac7ae}克制：针对{17e43e}梦魇属性{dac7ae}可提高额外{17e43e}伤害吸收|{dac7ae}效果：激活{17e43e}梦魇印记{dac7ae}攻击时会携带{17e43e}梦魇属性@{dac7ae}克制：针对{17e43e}神圣属性{dac7ae}可提高额外{17e43e}伤害吸收"/>
+		<!--Mu重生排行榜膜拜可获得重生经验，格式：等级，精英，BOSS，连杀-->
+		<Param Name="EveryDayMaxRebornExp" Value="150000,150000,150000,150000"/>
+		<!--Mu重生地图重生BOSS伤害记录清空时间，单位：秒-->
+		<Param Name="RebornBossResumeTime" Value="120"/>
+		<!--Mu重生装备打孔属性对应扩大镶嵌在该孔内宝石属性，格式：孔的品质、属性加成-->
+		<Param Name="DaKongShuXing" Value="5,2|4,1.5|3,1"/>
+		<!--MU重生装备基础属性品质加成提升比例值，分别对应蓝色、紫色、紫闪、橙色，配置为蓝色比例值，紫色比例值，紫闪比值，橙色比例值-->
+		<Param Name="RebornZhuoYueAddRates" Value="0.2,0.5,1,1.5"/>
+		<!--MU重生进阶后初始装备-->
+		<Param Name="RebornInitialEquip" Value="2300000,1,1,0,0,0,501|2300100,1,1,0,0,0,501|2300200,1,1,0,0,0,501|2300300,1,1,0,0,0,501|2300400,1,1,0,0,0,501|2300500,1,1,0,0,0,500|2300600,1,1,0,0,0,500|2300600,1,1,0,0,0,500|2300700,1,1,0,0,0,500|2300800,1,1,0,0,0,500"/>
+		<!--MU重生仓库、背包开启消耗钻石，参数：仓库初始价格，背包初始价格，仓库单个最大价格，背包单个最大价格 -->
+		<Param Name="RebornBagGridParams" Value="5,10,100,100"/>
+		<!--Mu组队竞技可进行地图配置，格式：地图1ID，地图2ID，地图3ID -->
+		<Param Name="TeamBattleMap" Value="1,2,3,4,5,6,7,8,9,10,20,30,40"/>
+		<!--Mu创建战队消耗钻石配置，格式：钻石数量 -->
+		<Param Name="TeamNeedZuan" Value="500"/>
+		<!--Mu战队匹配确认时间配置，格式：时间（秒） -->
+		<Param Name="TeamConfirmTime" Value="30"/>
+		<!--Mu战队等级限制配置，格式：转生，等级 -->
+		<Param Name="TeamLevelLimit" Value="5,1"/>
+		<!--Mu战队竞技排行榜奖励限制配置，格式：战斗场数 -->
+		<Param Name="TeamAwardLimit" Value="4"/>
+		<!--Mu战队竞技观战点坐标配置，格式：X坐标，Y坐标 -->
+		<Param Name="TeamBattleWatch" Value="2950,2950"/>
+		<!--Mu战队竞技参与人数限制 -->
+		<Param Name="MinConfirmFightTeamCnt" Value="3"/>
+		<!--Mu战队竞技战队名字长度限制，最小字数，最大字数-->	
+		<Param Name="TeamBattleNameRange" Value="2,5"/>		
+		<!--Mu坐骑圣印解锁，对应圣印槽位和解锁等级，格式：1,0|2,10|3,20 -->
+		<Param Name="ShengYinJieSuo" Value="1,0|2,5|3,10|4,18|5,26|6,35"/>				
+		<!--Mu罗兰城主、PK之王登录跑马灯公告最小间隔时间，单位：秒-->
+		<Param Name="LuoLanKingGongGaoCD" Value="1800"/>	
+		<!--欢乐代币，道具ID-->
+		<Param Name="HuanLeDaiBi" Value="5440,1,1,0,0,0,0"/>			
+		<!--Mu天神神殿金团掉落参与分配最小伤害-->
+		<Param Name="AngelTempleAuction" Value="100"/>
+		<!--Mu天神神殿金团奖励展示-->
+		<Param Name="AngelTempleAuctionShow" Value="63270"/>
+		<!--Mu天神神殿金团最小分得钻石-->
+		<Param Name="AngelTempleAuctionMin" Value="10"/>
+		<!--Mu金团拍卖行-战盟是否开启，0为关闭，1为开启-->
+		<Param Name="AuctionZhanMengOpen" Value="1"/>
+		<!--Mu装备灌注免费次数，单位：次数 -->
+		<Param Name="EquipQuenchingFreeNum" Value="2"/>
+		<!--Mu战队争霸荣誉之王称号，格式：称号ID，有效时间 -->
+		<Param Name="TeamBattleName" Value="32,20160"/>
+		<!--Mu战队邀请可接受到弹窗提示、可进入战场的地图ID-->
+		<Param Name="TeamApply" Value="1,2,3,4,5,6,7,8,9,10,20,30,40"/>
+		<!--Mu魔界大逃杀战队入场地图ID-->
+		<Param Name="TeamEnterMap" Value="97003"/>
+		<!--Mu魔界大逃杀，购买每层狂热消耗钻石-->
+		<Param Name="BuyDevilLossDiamonds" Value="5"/>
+		<!--Mu魔界大逃杀，击杀1人获得生命回复参数-->
+		<Param Name="KillReplyHp" Value="50000"/>
+		<!--Mu魔界大逃杀，天使庇护和魔神狂热最大层数，格式：天使上限|魔神上限-->
+		<Param Name="BuffMaxLayerNum" Value="20|20"/>
+		<!--Mu魔界大逃杀魔神初始或复活获得层数，格式：层数次数-->
+ 		<Param Name="DevilLossNum" Value="1"/>
+		<!--Mu魔界大逃杀，天使庇护和魔神狂热影响的属性占比，格式：公式系数-->
+		<Param Name="BuffAttributeProportion" Value="0.1|0.1"/>
+		<!--Mu魔界大逃杀，天使庇护和魔神狂热影响的属性类型，二级属性ID-->
+		<Param Name="BuffAttributeType" Value="3,4,5,6,7,8,9,10,13,18,19"/>
+		<!--Mu魔界大逃杀采集生命种子获得复活次数，格式：需要采集数|复活次数-->
+		<Param Name="LifeSeedNum" Value="5,1|15,1|30,1"/>
+		<!--Mu魔界大逃杀最大可获得复活次数，格式：最大复活次数-->
+		<Param Name="MaxLifeNum" Value="3"/>
+		<!--Mu魔界大逃杀邀请队友时间间隔-->
+		<Param Name="MailTime" Value="10"/>
+		<!--Mu魔界大逃杀战场关联BuffID，格式：天神庇佑ID，魔神狂热ID-->
+		<Param Name="EscapeBuffID" Value="2000851,2000852"/>
+ 		<!--Mu魔界大逃杀成就饰品，格式：饰品ID-->
+		<Param Name="EscapeOrnamentsID" Value="1034129"/>
+		<!--Mu魔界大逃杀可接受到弹窗提示、可进入战场的地图ID-->
+		<Param Name="EscapeTeamApply" Value="1,2,3,4,5,6,7,8,9,10,20,30,40"/>
+		<!--Mu魔界大逃杀伤害加成修成，属性ID和修正数值，格式：属性ID,修正数值|属性ID,修正数值-->
+		<Param Name="EscapeAttribute" Value="14,0.01|26,0.01"/>
+		<!--Mu魔域夺宝，BOSS伤害时间清空-->
+		<Param Name="BossHurtCleanTime" Value="13"/>
+ 		<!--Mu魔域夺宝，连杀积分，格式：基础值,系数,最小值,最大值-->
+		<Param Name="ZorkBattleUltraKill" Value="4,1,4,20"/>
+		<!--Mu魔域夺宝，终结对方连杀积分，格式：基础值,系数,最小值,最大值-->
+		<Param Name="ZorkBattleShutDown" Value="4,2,4,20"/>
+		<!--Mu魔域夺宝，邀请可接受到弹窗提示、可进入战场的地图ID-->
+		<Param Name="ZorkWarEnterMap" Value="1,2,3,4,5,6,7,8,9,10,20,30,40"/> 
+		<!--Mu魔域夺宝，活动开启时间，格式：年月日-->
+		<Param Name="ZorkStartTime" Value="2018-07-14"/>
+		<!--Mu魔界大逃杀，活动开启时间，格式：年月日-->
+		<Param Name="EscapeStartTime" Value="2018-07-14"/>
+		<!--Mu魔域夺宝，不足人数-->
+		<Param Name="ZorkEnterPlayNum" Value="3"/>
+		<!--Mu欢乐代币兑换商城，格式1开启、-1关闭-->
+		<Param Name="HuanLeDuiHuan" Value="1"/> 
+		<!--Mu坐骑重置返还道具系数，不得大于1，若大于1则按1处理-->
+		<Param Name="HorseReturnNum" Value="0.8"/>
+		<!--Mu重生装备回收返还系数，不得大于1，若大于1则按1处理-->
+		<Param Name="ChongShengReturnNum" Value="0.8"/>
+		<!--防加速功能相关配置-->
+		<Param Name="CHEAT_STARTMOVE" Value="0.5"/> 
+		<Param Name="CHECK_STARTMOVE_COUNT" Value="5"/>
+	</Params>
+</Config>

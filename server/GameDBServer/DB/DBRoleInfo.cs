@@ -13,405 +13,405 @@ using Server.Tools;
 
 namespace GameDBServer.DB
 {
-	// Token: 0x020000EC RID: 236
+	
 	public class DBRoleInfo
 	{
-		// Token: 0x1700002F RID: 47
+		
 		
 		
 		public int RoleID { get; set; }
 
-		// Token: 0x17000030 RID: 48
+		
 		
 		
 		public string UserID { get; set; }
 
-		// Token: 0x17000031 RID: 49
+		
 		
 		
 		public string RoleName { get; set; }
 
-		// Token: 0x17000032 RID: 50
+		
 		
 		
 		public int RoleSex { get; set; }
 
-		// Token: 0x17000033 RID: 51
+		
 		
 		
 		public int Occupation { get; set; }
 
-		// Token: 0x17000034 RID: 52
+		
 		
 		
 		public int Level { get; set; }
 
-		// Token: 0x17000035 RID: 53
+		
 		
 		
 		public int RolePic { get; set; }
 
-		// Token: 0x17000036 RID: 54
+		
 		
 		
 		public int Faction { get; set; }
 
-		// Token: 0x17000037 RID: 55
+		
 		
 		
 		public int Money1 { get; set; }
 
-		// Token: 0x17000038 RID: 56
+		
 		
 		
 		public int Money2 { get; set; }
 
-		// Token: 0x17000039 RID: 57
+		
 		
 		
 		public long Experience { get; set; }
 
-		// Token: 0x1700003A RID: 58
+		
 		
 		
 		public int PKMode { get; set; }
 
-		// Token: 0x1700003B RID: 59
+		
 		
 		
 		public int PKValue { get; set; }
 
-		// Token: 0x1700003C RID: 60
+		
 		
 		
 		public string Position { get; set; }
 
-		// Token: 0x1700003D RID: 61
+		
 		
 		
 		public string RegTime { get; set; }
 
-		// Token: 0x1700003E RID: 62
+		
 		
 		
 		public long LastTime { get; set; }
 
-		// Token: 0x1700003F RID: 63
+		
 		
 		
 		public int BagNum { get; set; }
 
-		// Token: 0x17000040 RID: 64
+		
 		
 		
 		public int RebornBagNum { get; set; }
 
-		// Token: 0x17000041 RID: 65
+		
 		
 		
 		public string OtherName { get; set; }
 
-		// Token: 0x17000042 RID: 66
+		
 		
 		
 		public string MainQuickBarKeys { get; set; }
 
-		// Token: 0x17000043 RID: 67
+		
 		
 		
 		public string OtherQuickBarKeys { get; set; }
 
-		// Token: 0x17000044 RID: 68
+		
 		
 		
 		public int LoginNum { get; set; }
 
-		// Token: 0x17000045 RID: 69
+		
 		
 		
 		public int LeftFightSeconds { get; set; }
 
-		// Token: 0x17000046 RID: 70
+		
 		
 		
 		public int ServerLineID { get; set; }
 
-		// Token: 0x17000047 RID: 71
+		
 		
 		
 		public int HorseDbID { get; set; }
 
-		// Token: 0x17000048 RID: 72
+		
 		
 		
 		public int PetDbID { get; set; }
 
-		// Token: 0x17000049 RID: 73
+		
 		
 		
 		public int InterPower { get; set; }
 
-		// Token: 0x1700004A RID: 74
+		
 		
 		
 		public int TotalOnlineSecs { get; set; }
 
-		// Token: 0x1700004B RID: 75
+		
 		
 		
 		public int AntiAddictionSecs { get; set; }
 
-		// Token: 0x1700004C RID: 76
+		
 		
 		
 		public long LogOffTime { get; set; }
 
-		// Token: 0x1700004D RID: 77
+		
 		
 		
 		public long BiGuanTime { get; set; }
 
-		// Token: 0x1700004E RID: 78
+		
 		
 		
 		public int YinLiang { get; set; }
 
-		// Token: 0x1700004F RID: 79
+		
 		
 		
 		public int TotalJingMaiExp { get; set; }
 
-		// Token: 0x17000050 RID: 80
+		
 		
 		
 		public int JingMaiExpNum { get; set; }
 
-		// Token: 0x17000051 RID: 81
+		
 		
 		
 		public int LastHorseID { get; set; }
 
-		// Token: 0x17000052 RID: 82
+		
 		
 		
 		public int DefaultSkillID { get; set; }
 
-		// Token: 0x17000053 RID: 83
+		
 		
 		
 		public int AutoLifeV { get; set; }
 
-		// Token: 0x17000054 RID: 84
+		
 		
 		
 		public int AutoMagicV { get; set; }
 
-		// Token: 0x17000055 RID: 85
+		
 		
 		
 		public int NumSkillID { get; set; }
 
-		// Token: 0x17000056 RID: 86
+		
 		
 		
 		public int MainTaskID { get; set; }
 
-		// Token: 0x17000057 RID: 87
+		
 		
 		
 		public int PKPoint { get; set; }
 
-		// Token: 0x17000058 RID: 88
+		
 		
 		
 		public int LianZhan { get; set; }
 
-		// Token: 0x17000059 RID: 89
+		
 		
 		
 		public int KillBoss { get; set; }
 
-		// Token: 0x1700005A RID: 90
+		
 		
 		
 		public long BattleNameStart { get; set; }
 
-		// Token: 0x1700005B RID: 91
+		
 		
 		
 		public int BattleNameIndex { get; set; }
 
-		// Token: 0x1700005C RID: 92
+		
 		
 		
 		public int CZTaskID { get; set; }
 
-		// Token: 0x1700005D RID: 93
+		
 		
 		
 		public int BattleNum { get; set; }
 
-		// Token: 0x1700005E RID: 94
+		
 		
 		
 		public int HeroIndex { get; set; }
 
-		// Token: 0x1700005F RID: 95
+		
 		
 		
 		public int LoginDayID { get; set; }
 
-		// Token: 0x17000060 RID: 96
+		
 		
 		
 		public int LoginDayNum { get; set; }
 
-		// Token: 0x17000061 RID: 97
+		
 		
 		
 		public int ZoneID { get; set; }
 
-		// Token: 0x17000062 RID: 98
+		
 		
 		
 		public string BHName { get; set; }
 
-		// Token: 0x17000063 RID: 99
+		
 		
 		
 		public int BHVerify { get; set; }
 
-		// Token: 0x17000064 RID: 100
+		
 		
 		
 		public int BHZhiWu { get; set; }
 
-		// Token: 0x17000065 RID: 101
+		
 		
 		
 		public int BGDayID1 { get; set; }
 
-		// Token: 0x17000066 RID: 102
+		
 		
 		
 		public int BGMoney { get; set; }
 
-		// Token: 0x17000067 RID: 103
+		
 		
 		
 		public int BGDayID2 { get; set; }
 
-		// Token: 0x17000068 RID: 104
+		
 		
 		
 		public int BGGoods { get; set; }
 
-		// Token: 0x17000069 RID: 105
+		
 		
 		
 		public int BangGong { get; set; }
 
-		// Token: 0x1700006A RID: 106
+		
 		
 		
 		public int HuangHou { get; set; }
 
-		// Token: 0x1700006B RID: 107
+		
 		
 		
 		public int JieBiaoDayID { get; set; }
 
-		// Token: 0x1700006C RID: 108
+		
 		
 		
 		public int JieBiaoDayNum { get; set; }
 
-		// Token: 0x1700006D RID: 109
+		
 		
 		
 		public string UserName { get; set; }
 
-		// Token: 0x1700006E RID: 110
+		
 		
 		
 		public int LastMailID { get; set; }
 
-		// Token: 0x1700006F RID: 111
+		
 		
 		
 		public long OnceAwardFlag { get; set; }
 
-		// Token: 0x17000070 RID: 112
+		
 		
 		
 		public int Gold { get; set; }
 
-		// Token: 0x17000071 RID: 113
+		
 		
 		
 		public int BanChat { get; set; }
 
-		// Token: 0x17000072 RID: 114
+		
 		
 		
 		public int BanLogin { get; set; }
 
-		// Token: 0x17000073 RID: 115
+		
 		
 		
 		public int IsFlashPlayer { get; set; }
 
-		// Token: 0x17000074 RID: 116
+		
 		
 		
 		public int ChangeLifeCount { get; set; }
 
-		// Token: 0x17000075 RID: 117
+		
 		
 		
 		public int AdmiredCount { get; set; }
 
-		// Token: 0x17000076 RID: 118
+		
 		
 		
 		public int CombatForce { get; set; }
 
-		// Token: 0x17000077 RID: 119
+		
 		
 		
 		public int AutoAssignPropertyPoint { get; set; }
 
-		// Token: 0x17000078 RID: 120
+		
 		
 		
 		public string PushMsgID { get; set; }
 
-		// Token: 0x17000079 RID: 121
+		
 		
 		
 		public int VipAwardFlag { get; set; }
 
-		// Token: 0x1700007A RID: 122
+		
 		
 		
 		public int VIPLevel { get; set; }
 
-		// Token: 0x1700007B RID: 123
+		
 		
 		
 		public long store_yinliang { get; set; }
 
-		// Token: 0x1700007C RID: 124
+		
 		
 		
 		public long store_money { get; set; }
 
-		// Token: 0x1700007D RID: 125
+		
 		
 		
 		public int MagicSwordParam { get; set; }
 
-		// Token: 0x1700007E RID: 126
+		
 		
 		
 		public UserRankValueCache RankValue
@@ -426,157 +426,157 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x1700007F RID: 127
+		
 		
 		
 		public long UpdateDBPositionTicks { get; set; }
 
-		// Token: 0x17000080 RID: 128
+		
 		
 		
 		public long UpdateDBTimeTicks { get; set; }
 
-		// Token: 0x17000081 RID: 129
+		
 		
 		
 		public long UpdateDBInterPowerTimeTicks { get; set; }
 
-		// Token: 0x17000082 RID: 130
+		
 		
 		
 		public List<OldTaskData> OldTasks { get; set; }
 
-		// Token: 0x17000083 RID: 131
+		
 		
 		
 		public List<TaskData> DoingTaskList { get; set; }
 
-		// Token: 0x17000084 RID: 132
+		
 		
 		
 		public List<GoodsData> GoodsDataList { get; set; }
 
-		// Token: 0x17000085 RID: 133
+		
 		
 		
 		public List<GoodsData> RebornGoodsDataList { get; set; }
 
-		// Token: 0x17000086 RID: 134
+		
 		
 		
 		public List<GoodsLimitData> GoodsLimitDataList { get; set; }
 
-		// Token: 0x17000087 RID: 135
+		
 		
 		
 		public List<FriendData> FriendDataList { get; set; }
 
-		// Token: 0x17000088 RID: 136
+		
 		
 		
 		public List<HorseData> HorsesDataList { get; set; }
 
-		// Token: 0x17000089 RID: 137
+		
 		
 		
 		public List<PetData> PetsDataList { get; set; }
 
-		// Token: 0x1700008A RID: 138
+		
 		
 		
 		public long LastDJPointDataTikcs { get; set; }
 
-		// Token: 0x1700008B RID: 139
+		
 		
 		
 		public DJPointData RoleDJPointData { get; set; }
 
-		// Token: 0x1700008C RID: 140
+		
 		
 		
 		public List<JingMaiData> JingMaiDataList { get; set; }
 
-		// Token: 0x1700008D RID: 141
+		
 		
 		
 		public List<SkillData> SkillDataList { get; set; }
 
-		// Token: 0x1700008E RID: 142
+		
 		
 		
 		public List<BufferData> BufferDataList { get; set; }
 
-		// Token: 0x1700008F RID: 143
+		
 		
 		
 		public List<DailyTaskData> MyDailyTaskDataList { get; set; }
 
-		// Token: 0x17000090 RID: 144
+		
 		
 		
 		public DailyJingMaiData MyDailyJingMaiData { get; set; }
 
-		// Token: 0x17000091 RID: 145
+		
 		
 		
 		public PortableBagData MyPortableBagData { get; set; }
 
-		// Token: 0x17000092 RID: 146
+		
 		
 		
 		public RebornPortableBagData RebornGirdData { get; set; }
 
-		// Token: 0x17000093 RID: 147
+		
 		
 		
 		public int RebornShowEquip { get; set; }
 
-		// Token: 0x17000094 RID: 148
+		
 		
 		
 		public int RebornShowModel { get; set; }
 
-		// Token: 0x17000095 RID: 149
+		
 		
 		
 		public bool ExistsMyHuodongData { get; set; }
 
-		// Token: 0x17000096 RID: 150
+		
 		
 		
 		public HuodongData MyHuodongData { get; set; }
 
-		// Token: 0x17000097 RID: 151
+		
 		
 		
 		public List<FuBenData> FuBenDataList { get; set; }
 
-		// Token: 0x17000098 RID: 152
+		
 		
 		
 		public MarriageData MyMarriageData { get; set; }
 
-		// Token: 0x17000099 RID: 153
+		
 		
 		
 		public Dictionary<int, int> MyMarryPartyJoinList { get; set; }
 
-		// Token: 0x1700009A RID: 154
+		
 		
 		
 		public Dictionary<sbyte, HolyItemData> MyHolyItemDataDic { get; set; }
 
-		// Token: 0x1700009B RID: 155
+		
 		
 		
 		public RoleDailyData MyRoleDailyData { get; set; }
 
-		// Token: 0x1700009C RID: 156
+		
 		
 		
 		public YaBiaoData MyYaBiaoData { get; set; }
 
-		// Token: 0x1700009D RID: 157
+		
 		
 		
 		public long LastReferenceTicks
@@ -591,147 +591,147 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x1700009E RID: 158
+		
 		
 		
 		public Dictionary<int, int> PaiHangPosDict { get; set; }
 
-		// Token: 0x1700009F RID: 159
+		
 		
 		
 		public List<VipDailyData> VipDailyDataList { get; set; }
 
-		// Token: 0x170000A0 RID: 160
+		
 		
 		
 		public YangGongBKDailyJiFenData YangGongBKDailyJiFen { get; set; }
 
-		// Token: 0x170000A1 RID: 161
+		
 		
 		
 		public WingData MyWingData { get; set; }
 
-		// Token: 0x170000A2 RID: 162
+		
 		
 		
 		public Dictionary<int, int> PictureJudgeReferInfo { get; set; }
 
-		// Token: 0x170000A3 RID: 163
+		
 		
 		
 		public Dictionary<int, int> StarConstellationInfo { get; set; }
 
-		// Token: 0x170000A4 RID: 164
+		
 		
 		
 		public Dictionary<int, LingYuData> LingYuDict { get; set; }
 
-		// Token: 0x170000A5 RID: 165
+		
 		
 		
 		public GuardStatueDetail MyGuardStatueDetail { get; set; }
 
-		// Token: 0x170000A6 RID: 166
+		
 		
 		
 		public TalentData MyTalentData { get; set; }
 
-		// Token: 0x170000A7 RID: 167
+		
 		
 		
 		public string LastIP { get; set; }
 
-		// Token: 0x170000A8 RID: 168
+		
 		
 		
 		public List<int> GroupMailRecordList { get; set; }
 
-		// Token: 0x170000A9 RID: 169
+		
 		
 		
 		public MerlinGrowthSaveDBData MerlinData { get; set; }
 
-		// Token: 0x170000AA RID: 170
+		
 		
 		
 		public FluorescentGemData FluorescentGemData { get; set; }
 
-		// Token: 0x170000AB RID: 171
+		
 		
 		
 		public int FluorescentPoint { get; set; }
 
-		// Token: 0x170000AC RID: 172
+		
 		
 		
 		public List<BuildingData> BuildingDataList { get; set; }
 
-		// Token: 0x170000AD RID: 173
+		
 		
 		
 		public Dictionary<int, OrnamentData> OrnamentDataDict { get; set; }
 
-		// Token: 0x170000AE RID: 174
+		
 		
 		
 		public Dictionary<int, Dictionary<int, SevenDayItemData>> SevenDayActDict { get; set; }
 
-		// Token: 0x170000AF RID: 175
+		
 		
 		
 		public long BanTradeToTicks { get; set; }
 
-		// Token: 0x170000B0 RID: 176
+		
 		
 		
 		public Dictionary<int, SpecActInfoDB> SpecActInfoDict { get; set; }
 
-		// Token: 0x170000B1 RID: 177
+		
 		
 		
 		public Dictionary<int, EverydayActInfoDB> EverydayActInfoDict { get; set; }
 
-		// Token: 0x170000B2 RID: 178
+		
 		
 		
 		public Dictionary<KeyValuePair<int, int>, SpecPriorityActInfoDB> SpecPriorityActInfoDict { get; set; }
 
-		// Token: 0x170000B3 RID: 179
+		
 		
 		
 		public AlchemyDataDB AlchemyInfo { get; set; }
 
-		// Token: 0x170000B4 RID: 180
+		
 		
 		
 		public Dictionary<int, ShenJiFuWenData> ShenJiDict { get; set; }
 
-		// Token: 0x170000B5 RID: 181
+		
 		
 		
 		public TarotSystemData TarotData { get; set; }
 
-		// Token: 0x170000B6 RID: 182
+		
 		
 		
 		public List<FuWenTabData> FuWenTabList { get; set; }
 
-		// Token: 0x170000B7 RID: 183
+		
 		
 		
 		public List<TaoZhuangData> JueXingTaoZhuangList { get; set; }
 
-		// Token: 0x170000B8 RID: 184
+		
 		
 		
 		public List<MountData> MountList { get; set; }
 
-		// Token: 0x170000B9 RID: 185
+		
 		
 		
 		public RebornStampData RebornYinJi { get; set; }
 
-		// Token: 0x060003D4 RID: 980 RVA: 0x00017DF8 File Offset: 0x00015FF8
+		
 		public static void DBTableRow2RoleInfo(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd, int index)
 		{
 			dbRoleInfo.RoleID = Convert.ToInt32(cmd.Table.Rows[index]["rid"]);
@@ -824,7 +824,7 @@ namespace GameDBServer.DB
 			dbRoleInfo.ZhanDuiZhiWu = Convert.ToInt32(cmd.Table.Rows[index]["zhanduizhiwu"]);
 		}
 
-		// Token: 0x060003D5 RID: 981 RVA: 0x00018C84 File Offset: 0x00016E84
+		
 		public static void DBTableRow2RoleInfo_Params(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd, bool normalOnly)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -846,7 +846,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003D6 RID: 982 RVA: 0x00018D7C File Offset: 0x00016F7C
+		
 		public static void DBTableRow2RoleInfo_ParamsEx(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -874,7 +874,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003D7 RID: 983 RVA: 0x00018EA4 File Offset: 0x000170A4
+		
 		public static void InitFromRoleParams(DBRoleInfo dbRoleInfo)
 		{
 			string str = Global.GetRoleParamByName(dbRoleInfo, "20017");
@@ -904,7 +904,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003D8 RID: 984 RVA: 0x00018F8C File Offset: 0x0001718C
+		
 		public static void DBTableRow2RoleInfo_OldTasks(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -922,7 +922,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003D9 RID: 985 RVA: 0x00019060 File Offset: 0x00017260
+		
 		public static void DBTableRow2RoleInfo_DoingTasks(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -944,7 +944,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003DA RID: 986 RVA: 0x00019200 File Offset: 0x00017400
+		
 		public static void DBTableRow2RoleInfo_Goods(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1008,7 +1008,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003DB RID: 987 RVA: 0x00019748 File Offset: 0x00017948
+		
 		public static void DBTableRow2RoleInfo_GoodsLimit(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1026,7 +1026,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003DC RID: 988 RVA: 0x0001983C File Offset: 0x00017A3C
+		
 		public static void DBTableRow2RoleInfo_Friends(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1044,7 +1044,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003DD RID: 989 RVA: 0x00019930 File Offset: 0x00017B30
+		
 		public static void DBTableRow2RoleInfo_Horses(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1069,7 +1069,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003DE RID: 990 RVA: 0x00019B48 File Offset: 0x00017D48
+		
 		public static void DBTableRow2RoleInfo_Pets(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1093,7 +1093,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003DF RID: 991 RVA: 0x00019D34 File Offset: 0x00017F34
+		
 		public static void DBTableRow2RoleInfo_JingMais(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1112,7 +1112,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003E0 RID: 992 RVA: 0x00019E54 File Offset: 0x00018054
+		
 		public static void DBTableRow2RoleInfo_Skills(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1131,7 +1131,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003E1 RID: 993 RVA: 0x00019F74 File Offset: 0x00018174
+		
 		public static void DBTableRow2RoleInfo_Buffers(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1151,7 +1151,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003E2 RID: 994 RVA: 0x0001A09C File Offset: 0x0001829C
+		
 		public static void DBTableRow2RoleInfo_DailyTasks(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (null == dbRoleInfo.MyDailyTaskDataList)
@@ -1173,7 +1173,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003E3 RID: 995 RVA: 0x0001A204 File Offset: 0x00018404
+		
 		public static void DBTableRow2RoleInfo_DailyJingMai(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1186,7 +1186,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003E4 RID: 996 RVA: 0x0001A290 File Offset: 0x00018490
+		
 		public static void DBTableRow2RoleInfo_PortableBag(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			dbRoleInfo.MyPortableBagData = new PortableBagData
@@ -1199,7 +1199,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003E5 RID: 997 RVA: 0x0001A300 File Offset: 0x00018500
+		
 		public static void DBTableRow2RoleInfo_RebornPortableBag(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			dbRoleInfo.RebornGirdData = new RebornPortableBagData
@@ -1212,7 +1212,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003E6 RID: 998 RVA: 0x0001A370 File Offset: 0x00018570
+		
 		public static void DBTableRow2RoleInfo_HuodongData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			dbRoleInfo.ExistsMyHuodongData = false;
@@ -1244,7 +1244,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003E7 RID: 999 RVA: 0x0001A790 File Offset: 0x00018990
+		
 		public static void DBTableRow2RoleInfo_FuBenData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1264,7 +1264,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003E8 RID: 1000 RVA: 0x0001A8DC File Offset: 0x00018ADC
+		
 		public static void DBTableRow2RoleInfo_HolyItemData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			dbRoleInfo.MyHolyItemDataDic = new Dictionary<sbyte, HolyItemData>();
@@ -1297,7 +1297,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003E9 RID: 1001 RVA: 0x0001AA50 File Offset: 0x00018C50
+		
 		public static void DBTableRow2RoleInfo_TarotData(MySQLConnection connection, DBRoleInfo dbRoleInfo, int roleId)
 		{
 			dbRoleInfo.TarotData = new TarotSystemData();
@@ -1330,7 +1330,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003EA RID: 1002 RVA: 0x0001AB90 File Offset: 0x00018D90
+		
 		public static void DBTableRow2RoleInfo_MarriageData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1355,7 +1355,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003EB RID: 1003 RVA: 0x0001AD80 File Offset: 0x00018F80
+		
 		public static void DBTableRow2RoleInfo_MarryPartyJoinList(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			dbRoleInfo.MyMarryPartyJoinList = new Dictionary<int, int>();
@@ -1368,7 +1368,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003EC RID: 1004 RVA: 0x0001AE30 File Offset: 0x00019030
+		
 		public static void DBTableRow2RoleInfo_DailyData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1392,7 +1392,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003ED RID: 1005 RVA: 0x0001B09C File Offset: 0x0001929C
+		
 		public static void DBTableRow2RoleInfo_YaBiaoData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1411,7 +1411,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003EE RID: 1006 RVA: 0x0001B230 File Offset: 0x00019430
+		
 		public static void DBTableRow2RoleInfo_VipDailyData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1429,7 +1429,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003EF RID: 1007 RVA: 0x0001B324 File Offset: 0x00019524
+		
 		public static void DBTableRow2RoleInfo_YangGongBKDailyJiFenData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1443,7 +1443,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003F0 RID: 1008 RVA: 0x0001B3E0 File Offset: 0x000195E0
+		
 		public static void DBTableRow2RoleInfo_Wings(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1463,7 +1463,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003F1 RID: 1009 RVA: 0x0001B5A0 File Offset: 0x000197A0
+		
 		public static void DBTableRow2RoleInfo_picturejudgeinfo(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1479,7 +1479,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003F2 RID: 1010 RVA: 0x0001B66C File Offset: 0x0001986C
+		
 		public static void DBTableRow2RoleInfo_starconstellationinfo(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1495,7 +1495,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003F3 RID: 1011 RVA: 0x0001B738 File Offset: 0x00019938
+		
 		public static void DBTableRow2RoleInfo_LingYuInfo(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			dbRoleInfo.LingYuDict = new Dictionary<int, LingYuData>();
@@ -1509,7 +1509,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003F4 RID: 1012 RVA: 0x0001B814 File Offset: 0x00019A14
+		
 		public static void DBTableRow2RoleInfo_GuardStatue(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1528,7 +1528,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003F5 RID: 1013 RVA: 0x0001B99C File Offset: 0x00019B9C
+		
 		public static void DBTableRow2RoleInfo_GuardSoul(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1549,7 +1549,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003F6 RID: 1014 RVA: 0x0001BACC File Offset: 0x00019CCC
+		
 		public static int QueryRoleID_ByRolename(MySQLConnection conn, string strRoleName)
 		{
 			List<Tuple<int, string>> idList = DBRoleInfo.QueryRoleIdList_ByRolename_IgnoreDbCmp(conn, strRoleName);
@@ -1562,7 +1562,7 @@ namespace GameDBServer.DB
 			return roleId;
 		}
 
-		// Token: 0x060003F7 RID: 1015 RVA: 0x0001BB38 File Offset: 0x00019D38
+		
 		public static List<Tuple<int, string>> QueryRoleIdList_ByRolename_IgnoreDbCmp(MySQLConnection conn, string rolename)
 		{
 			List<Tuple<int, string>> resultList = new List<Tuple<int, string>>();
@@ -1580,7 +1580,7 @@ namespace GameDBServer.DB
 			return resultList;
 		}
 
-		// Token: 0x060003F8 RID: 1016 RVA: 0x0001BBD8 File Offset: 0x00019DD8
+		
 		public static void DBTableRow2RoleInfo_GMailInfo(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1593,7 +1593,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003F9 RID: 1017 RVA: 0x0001BC60 File Offset: 0x00019E60
+		
 		public static void DBTableRow2RoleInfo_TalentBase(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1611,7 +1611,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003FA RID: 1018 RVA: 0x0001BD08 File Offset: 0x00019F08
+		
 		public static void DBTableRow2RoleInfo_TalentEffects(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			Dictionary<int, int> countList = new Dictionary<int, int>();
@@ -1641,7 +1641,7 @@ namespace GameDBServer.DB
 			dbRoleInfo.MyTalentData.CountList = countList;
 		}
 
-		// Token: 0x060003FB RID: 1019 RVA: 0x0001BE78 File Offset: 0x0001A078
+		
 		public static void DBTableRow2RoleInfo_TianTiData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			RoleTianTiData roleTianTiData = new RoleTianTiData
@@ -1665,7 +1665,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003FC RID: 1020 RVA: 0x0001C09C File Offset: 0x0001A29C
+		
 		public static void DBTableRow2RoleInfo_MerlinData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (null == dbRoleInfo.MerlinData)
@@ -1699,7 +1699,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003FD RID: 1021 RVA: 0x0001C4D8 File Offset: 0x0001A6D8
+		
 		public static void DBTableRow2RoleInfo_FluorescentGemData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (null == dbRoleInfo.FluorescentGemData)
@@ -1745,7 +1745,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003FE RID: 1022 RVA: 0x0001C760 File Offset: 0x0001A960
+		
 		public static void DBTableRow2RoleInfo_BuildingData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1767,7 +1767,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060003FF RID: 1023 RVA: 0x0001C928 File Offset: 0x0001AB28
+		
 		public static void DBTableRow2RoleInfo_OrnamentData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1784,7 +1784,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000400 RID: 1024 RVA: 0x0001CA24 File Offset: 0x0001AC24
+		
 		public static void DBTableRow2RoleInfo_SevenDayActData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			dbRoleInfo.SevenDayActDict = new Dictionary<int, Dictionary<int, SevenDayItemData>>();
@@ -1810,7 +1810,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000401 RID: 1025 RVA: 0x0001CBBC File Offset: 0x0001ADBC
+		
 		public static void DBTableRow2RoleInfo_SpecialActivityData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1829,7 +1829,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000402 RID: 1026 RVA: 0x0001CD0C File Offset: 0x0001AF0C
+		
 		public static void DBTableRow2RoleInfo_SpecialPriorityActivityData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1848,7 +1848,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000403 RID: 1027 RVA: 0x0001CE40 File Offset: 0x0001B040
+		
 		public static void DBTableRow2RoleInfo_EverydayActivityData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1867,7 +1867,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000404 RID: 1028 RVA: 0x0001CF90 File Offset: 0x0001B190
+		
 		public static void DBTableRow2RoleInfo_AlchemyData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -1937,7 +1937,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000405 RID: 1029 RVA: 0x0001D2A8 File Offset: 0x0001B4A8
+		
 		public static void DBTableRow2RoleInfo_ShenJiData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			dbRoleInfo.ShenJiDict = new Dictionary<int, ShenJiFuWenData>();
@@ -1953,7 +1953,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000406 RID: 1030 RVA: 0x0001D3A4 File Offset: 0x0001B5A4
+		
 		public static void DBTableRow2RoleInfo_FuWenData(MySQLConnection connection, DBRoleInfo dbRoleInfo, int rid)
 		{
 			dbRoleInfo.FuWenTabList = new List<FuWenTabData>();
@@ -2010,7 +2010,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000407 RID: 1031 RVA: 0x0001D5B0 File Offset: 0x0001B7B0
+		
 		public static void DBTableRow2RoleInfo_JueXingData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			dbRoleInfo.JueXingTaoZhuangList = new List<TaoZhuangData>();
@@ -2030,7 +2030,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000408 RID: 1032 RVA: 0x0001D6B0 File Offset: 0x0001B8B0
+		
 		public static void DBTableRow2RoleInfo_ZuoQiData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			dbRoleInfo.MountList = new List<MountData>();
@@ -2047,7 +2047,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000409 RID: 1033 RVA: 0x0001D77C File Offset: 0x0001B97C
+		
 		public static void DBTableRow2RoleInfo_JingLingYuanSuJueXingData(DBRoleInfo dbRoleInfo, MySQLSelectCommand cmd)
 		{
 			if (cmd.Table.Rows.Count > 0)
@@ -2075,7 +2075,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600040A RID: 1034 RVA: 0x0001D898 File Offset: 0x0001BA98
+		
 		public bool Query(MySQLConnection conn, int roleID, bool bUseIsdel = true, int tempRoleID = 0)
 		{
 			LogManager.WriteLog(LogTypes.Info, string.Format("从数据库加载角色数据: {0}", roleID), null, true);
@@ -3257,55 +3257,55 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x04000632 RID: 1586
+		
 		public int PTID;
 
-		// Token: 0x04000633 RID: 1587
+		
 		public string WorldRoleID;
 
-		// Token: 0x04000634 RID: 1588
+		
 		public string Channel;
 
-		// Token: 0x04000635 RID: 1589
+		
 		public int SubOccupation;
 
-		// Token: 0x04000636 RID: 1590
+		
 		public int ZhanDuiID;
 
-		// Token: 0x04000637 RID: 1591
+		
 		public int ZhanDuiZhiWu;
 
-		// Token: 0x04000638 RID: 1592
+		
 		public int JunTuanZhiWu;
 
-		// Token: 0x04000639 RID: 1593
+		
 		public RoleHuiJiData HuiJiData = new RoleHuiJiData();
 
-		// Token: 0x0400063A RID: 1594
+		
 		public RoleBianShenData BianShenData = new RoleBianShenData();
 
-		// Token: 0x0400063B RID: 1595
+		
 		public RoleArmorData ArmorData = new RoleArmorData();
 
-		// Token: 0x0400063C RID: 1596
+		
 		public List<int> OccupationList = new List<int>();
 
-		// Token: 0x0400063D RID: 1597
+		
 		public RoleCustomData roleCustomData;
 
-		// Token: 0x0400063E RID: 1598
+		
 		private UserRankValueCache rankValue = new UserRankValueCache();
 
-		// Token: 0x0400063F RID: 1599
+		
 		public Dictionary<string, RoleParamsData> RoleParamsDict = new Dictionary<string, RoleParamsData>();
 
-		// Token: 0x04000640 RID: 1600
+		
 		private long _LastReferenceTicks = DateTime.Now.Ticks / 10000L;
 
-		// Token: 0x04000641 RID: 1601
+		
 		public RoleTianTiData TianTiData;
 
-		// Token: 0x04000642 RID: 1602
+		
 		public JingLingYuanSuJueXingData JingLingYuanSuJueXingData;
 	}
 }

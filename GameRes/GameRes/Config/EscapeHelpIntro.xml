@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}魔界大逃杀活动说明" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、由战队队长报名，同时队长等级需达到{17e43e}5{-}转{17e43e}1{-}级，才可报名参与活动{dac7ae}。" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、每周二、周四{17e43e}13:30-15:30{-}开启活动{dac7ae}。" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、战队成员人数&lt;{17e43e}3{-}人无法进入魔界大逃杀战场{dac7ae}。" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4、活动开启后，首次战斗胜利可获得首胜奖励{dac7ae}。" Bold="0" />
+  <HelpIntro ID="6" Intro="{dac7ae}5、赛季结束后，按照战队积分排名领取赛季排名奖励{dac7ae}。" Bold="0" />
+  <HelpIntro ID="7" Intro="{dac7ae}6、在活动开启后，完成个人累积击杀敌人数量可获得饰品奖励{dac7ae}。" Bold="0" />
+  <HelpIntro ID="8" Intro="{dac7ae}7、战队各自进入战场后，战队间相互厮杀，存活的队伍为同一队伍时获得战场胜利{dac7ae}。" Bold="0" />
+  <HelpIntro ID="9" Intro="{dac7ae}8、进入魔界大逃杀战场后，所有战队成员附加的生命上限加成和伤害加成降至到1%{dac7ae}。" Bold="0" />
+  <HelpIntro ID="10" Intro="{dac7ae}9、战场阶段战场分为安全阶段、杀戮阶段、狂热阶段三个阶段{dac7ae}" Bold="0" />
+  <HelpIntro ID="11" Intro="{dac7ae}   安全阶段：场景中出现生命种子采集物，各战队收集采集物，采集的数量越多战队成员复活次数越多，{17e43e}1{-}分钟后采集物将消失{dac7ae}。" Bold="0" />
+  <HelpIntro ID="12" Intro="{dac7ae}   杀戮阶段：战场中出现两种增益效果，分别为魔神狂热和天神庇佑，两种效果最高可堆叠{17e43e}20{-}层{dac7ae}。" Bold="0" />
+  <HelpIntro ID="13" Intro="{dac7ae}   狂热阶段：战场中总人数&lt;{17e43e}4{-}人时，战场进入到狂热阶段，狂热阶段将开启魔神契约，通过魔神契约消耗钻石购买魔神狂热增益效果{dac7ae}。" Bold="0" />
+  <HelpIntro ID="14" Intro="{ff0000}   魔神狂热{-}每名成员可获得{17e43e}1{-}层魔神狂热增益效果，击杀其他战队成员来获得额外魔神狂热效果{dac7ae}。" Bold="0" />
+  <HelpIntro ID="15" Intro="{fac60d}   天神庇佑{-}通过采集天神庇佑来获得增益效果，采集数量越多增益效果越高{dac7ae}。" Bold="0" />
+  <HelpIntro ID="16" Intro="{dac7ae}10、杀戮阶段中，战场出现天神怒焰区域，天神怒焰区域会造成生命伤害，天神怒焰会在一定时间后会逐渐扩散{dac7ae}。" Bold="0" />
+  <HelpIntro ID="17" Intro="{dac7ae}11、战场积分规则：{dac7ae}" Bold="0" />
+  <HelpIntro ID="18" Intro="{dac7ae}           战斗胜利，战队存活成员人数&lt;=2可获的20积分{dac7ae}。" Bold="0" />
+  <HelpIntro ID="19" Intro="{dac7ae}           战斗胜利，战队存活成员人数=3可获的22积分{dac7ae}。" Bold="0" />
+  <HelpIntro ID="20" Intro="{dac7ae}           战斗胜利，战队存活成员人数=4可获的25积分{dac7ae}。" Bold="0" />
+  <HelpIntro ID="21" Intro="{dac7ae}           战斗胜利，战队存活成员人数=5可获的30积分{dac7ae}。" Bold="0" />
+  <HelpIntro ID="22" Intro="{dac7ae}           战斗失败，第1只被淘汰的战队扣除20积分{dac7ae}。" Bold="0" />
+  <HelpIntro ID="23" Intro="{dac7ae}           战斗失败，第2只被淘汰的战队扣除10积分{dac7ae}。" Bold="0" />
+</Config>

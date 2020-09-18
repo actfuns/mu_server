@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Level ID="1" MinDay="1" MaxDay="2" AwardYuanBao="8888" />
+  <Level ID="2" MinDay="3" MaxDay="5" AwardYuanBao="4888" />
+  <Level ID="3" MinDay="6" MaxDay="7" AwardYuanBao="2888" />
+  <Level ID="4" MinDay="8" MaxDay="15" AwardYuanBao="1888" />
+</Config>

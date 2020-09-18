@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HuiGuiLoginNumGift ID="1" HuoDongLevel="1" TimeOl="1" GoodsID1="50162,1,1,0,0,0,0|5330,1,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="2" HuoDongLevel="1" TimeOl="2" GoodsID1="50162,1,1,0,0,0,0|5330,1,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="3" HuoDongLevel="1" TimeOl="3" GoodsID1="50162,1,1,0,0,0,0|5330,3,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="4" HuoDongLevel="1" TimeOl="4" GoodsID1="50162,1,1,0,0,0,0|5330,3,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="5" HuoDongLevel="1" TimeOl="5" GoodsID1="50162,1,1,0,0,0,0|5330,5,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="6" HuoDongLevel="1" TimeOl="6" GoodsID1="50162,1,1,0,0,0,0|5330,5,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="7" HuoDongLevel="1" TimeOl="7" GoodsID1="50162,1,1,0,0,0,0|5330,8,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="8" HuoDongLevel="2" TimeOl="1" GoodsID1="50162,1,1,0,0,0,0|5330,1,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="9" HuoDongLevel="2" TimeOl="2" GoodsID1="50162,1,1,0,0,0,0|5330,1,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="10" HuoDongLevel="2" TimeOl="3" GoodsID1="50162,1,1,0,0,0,0|5330,3,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="11" HuoDongLevel="2" TimeOl="4" GoodsID1="50162,1,1,0,0,0,0|5330,3,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="12" HuoDongLevel="2" TimeOl="5" GoodsID1="50162,1,1,0,0,0,0|5330,5,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="13" HuoDongLevel="2" TimeOl="6" GoodsID1="50162,1,1,0,0,0,0|5330,5,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="14" HuoDongLevel="2" TimeOl="7" GoodsID1="50162,1,1,0,0,0,0|5330,8,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="15" HuoDongLevel="3" TimeOl="1" GoodsID1="50162,1,1,0,0,0,0|5330,1,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="16" HuoDongLevel="3" TimeOl="2" GoodsID1="50162,1,1,0,0,0,0|5330,1,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="17" HuoDongLevel="3" TimeOl="3" GoodsID1="50162,1,1,0,0,0,0|5330,3,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="18" HuoDongLevel="3" TimeOl="4" GoodsID1="50162,1,1,0,0,0,0|5330,3,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="19" HuoDongLevel="3" TimeOl="5" GoodsID1="50162,1,1,0,0,0,0|5330,5,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="20" HuoDongLevel="3" TimeOl="6" GoodsID1="50162,1,1,0,0,0,0|5330,5,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+  <HuiGuiLoginNumGift ID="21" HuoDongLevel="3" TimeOl="7" GoodsID1="50162,1,1,0,0,0,0|5330,8,1,0,0,0,0|5380,1,1,0,0,0,0" GoodsID2="" />
+</Config>

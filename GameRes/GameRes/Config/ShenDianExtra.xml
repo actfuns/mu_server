@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ShenDian StatueLevel="1" ZhanMengLevel="1" MaxLifePercent="0.08" />
+  <ShenDian StatueLevel="2" ZhanMengLevel="3" MaxLifePercent="0.16" />
+  <ShenDian StatueLevel="3" ZhanMengLevel="5" MaxLifePercent="0.24" />
+  <ShenDian StatueLevel="4" ZhanMengLevel="7" MaxLifePercent="0.32" />
+  <ShenDian StatueLevel="5" ZhanMengLevel="9" MaxLifePercent="0.4" />
+</Config>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <NPCs>
+    <NPC Code="9001" X="8950" Y="8850" Dir="5" />
+    <NPC Code="9002" X="7850" Y="7850" Dir="1" />
+    <NPC Code="9003" X="5350" Y="5550" Dir="1" />
+    <NPC Code="9004" X="8750" Y="4650" Dir="6" />
+    <NPC Code="9005" X="5350" Y="1050" Dir="7" />
+    <NPC Code="9006" X="4950" Y="3850" Dir="8" />
+    <NPC Code="9007" X="3650" Y="3350" Dir="5" />
+    <NPC Code="9008" X="3150" Y="5650" Dir="6" />
+  </NPCs>
+</Map>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <ZhanHun ID="1" LevelLimit="10" ZhanHun="8128" />
+  <ZhanHun ID="2" LevelLimit="20" ZhanHun="12190" />
+  <ZhanHun ID="3" LevelLimit="30" ZhanHun="28444" />
+  <ZhanHun ID="4" LevelLimit="40" ZhanHun="48762" />
+  <ZhanHun ID="5" LevelLimit="45" ZhanHun="97524" />
+  <ZhanHun ID="6" LevelLimit="50" ZhanHun="195046" />
+  <ZhanHun ID="7" LevelLimit="50" ZhanHun="390094" />
+  <ZhanHun ID="8" LevelLimit="55" ZhanHun="780188" />
+  <ZhanHun ID="9" LevelLimit="5" ZhanHun="1872449" />
+  <ZhanHun ID="10" LevelLimit="60" ZhanHun="3432825" />
+  <ZhanHun ID="11" LevelLimit="60" ZhanHun="8738100" />
+  <ZhanHun ID="12" LevelLimit="65" ZhanHun="15603750" />
+</config>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BossList>
+  <Boss ID="180" Level="0,20" Description="" NpcID="-1" ZhanLi="66900" GoodsList="2000|2001|2002|2003|2004|8003" Scale="0.6" />
+  <Boss ID="280" Level="0,45" Description="" NpcID="-1" ZhanLi="66900" GoodsList="2000|2001|2002|2003|2004|8003" Scale="0.8" />
+  <Boss ID="380" Level="0,100" Description="" NpcID="-1" ZhanLi="66900" GoodsList="2000|2001|2002|2003|2004|8003" Scale="1" />
+  <Boss ID="480" Level="1,100" Description="" NpcID="-1" ZhanLi="66900" GoodsList="2000|2001|2002|2003|2004|8003" Scale="1" />
+  <Boss ID="680" Level="2,100" Description="" NpcID="-1" ZhanLi="66900" GoodsList="2000|2001|2002|2003|2004|8003" Scale="1" />
+  <Boss ID="780" Level="3,100" Description="" NpcID="-1" ZhanLi="66900" GoodsList="2000|2001|2002|2003|2004|8003" Scale="0.8" />
+</BossList>

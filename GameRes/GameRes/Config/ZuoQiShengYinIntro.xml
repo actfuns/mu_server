@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、坐骑圣印有{17e43e}三种品质{dac7ae}紫闪、蓝、绿" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、圣印的{17e43e}品质不同{dac7ae}，获得{17e43e}卓越属性{dac7ae}的条数不同。" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、紫闪品质的圣印可以通过{17e43e}升级获得{dac7ae}更多的{17e43e}卓越属性" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4、卓越属性为{17e43e}随机，{dac7ae}不可通过其他方式{17e43e}更改卓越属性" Bold="0" />
+  <HelpIntro ID="6" Intro="{dac7ae}5、圣印可通过{17e43e}吞噬{dac7ae}其他圣印或吞噬指定道具进行升级" Bold="0" />
+</Config>

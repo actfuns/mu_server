@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}魔域龙穴玩法说明" Bold="1" />
+  <HelpIntro ID="2" Intro="1、活动场景中有11个BOSS，BOSS{17e43e}每天19:00{-}刷新" Bold="0" />
+  <HelpIntro ID="3" Intro="2、每个BOSS单独按战盟记录伤害并排名，战盟总输出{17e43e}排名前五{-}且个人输出{17e43e}达到20000{-}的玩家可获得{17e43e}大量成就、声望{-}奖励" Bold="0" />
+  <HelpIntro ID="4" Intro="3、{17e43e}排名第一{-}的战盟中，对BOSS{17e43e}伤害最高{-}的玩家获得BOSS掉落的奖励" Bold="0" />
+  <HelpIntro ID="5" Intro="4、玩家{ff0000}无战盟{-}，对BOSS造成伤害不会计入排行榜" Bold="0" />
+</Config>

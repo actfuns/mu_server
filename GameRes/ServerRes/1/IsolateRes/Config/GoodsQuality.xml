@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Goods ID="1" Quality="0|1|0|0|0" />
+  <Goods ID="2" Quality="0|0|1|0|0" />
+  <Goods ID="3" Quality="0|0|0|1|0" />
+  <Goods ID="4" Quality="0|0|0|0|1" />
+  <Goods ID="5" Quality="0|1|0|0|0" />
+  <Goods ID="6" Quality="0|0|1|0|0" />
+  <Goods ID="7" Quality="0|0|0|1|0" />
+  <Goods ID="8" Quality="0|0|0|0|1" />
+</Config>

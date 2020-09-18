@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <BirthPoint ID="1" Type="0" MapCode="11000" BirthPosX="3766" BirthPosY="11115" BirthRangeX="4" BirthRangeY="4" />
+  <BirthPoint ID="2" Type="0" MapCode="11000" BirthPosX="8031" BirthPosY="11115" BirthRangeX="4" BirthRangeY="4" /> 
+  <BirthPoint ID="3" Type="1" MapCode="11000" BirthPosX="4021" BirthPosY="1075" BirthRangeX="4" BirthRangeY="4" /> 
+  <BirthPoint ID="4" Type="2" MapCode="11000" BirthPosX="5945" BirthPosY="1177" BirthRangeX="4" BirthRangeY="4" /> 
+  <BirthPoint ID="5" Type="3" MapCode="11000" BirthPosX="7718" BirthPosY="1075" BirthRangeX="4" BirthRangeY="4" /> 
+</Items>

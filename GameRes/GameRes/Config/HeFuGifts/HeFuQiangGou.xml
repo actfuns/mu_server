@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Xiangou>
+  <Goods Group="1001" Random="0" ID="300000" GoodsID="2030" OrigPrice="40" Price="10" SinglePurchase="3" FullPurchase="888" DaysTime="1" />
+  <Goods Group="1001" Random="0" ID="300010" GoodsID="2001" OrigPrice="50" Price="28" SinglePurchase="3" FullPurchase="588" DaysTime="1" />
+  <Goods Group="1001" Random="0" ID="300020" GoodsID="2004" OrigPrice="30" Price="10" SinglePurchase="3" FullPurchase="588" DaysTime="1" />
+  <Goods Group="1001" Random="0" ID="300030" GoodsID="2000" OrigPrice="20" Price="8" SinglePurchase="3" FullPurchase="588" DaysTime="1" />
+  <Goods Group="1002" Random="0" ID="300040" GoodsID="2030" OrigPrice="40" Price="10" SinglePurchase="3" FullPurchase="888" DaysTime="1" />
+  <Goods Group="1002" Random="0" ID="300050" GoodsID="2003" OrigPrice="10" Price="6" SinglePurchase="3" FullPurchase="588" DaysTime="1" />
+  <Goods Group="1002" Random="0" ID="300060" GoodsID="2002" OrigPrice="100" Price="68" SinglePurchase="3" FullPurchase="588" DaysTime="1" />
+  <Goods Group="1002" Random="0" ID="300070" GoodsID="2017" OrigPrice="20" Price="8" SinglePurchase="3" FullPurchase="588" DaysTime="1" />
+  <Goods Group="1003" Random="0" ID="300080" GoodsID="2030" OrigPrice="40" Price="10" SinglePurchase="3" FullPurchase="888" DaysTime="1" />
+  <Goods Group="1003" Random="0" ID="300090" GoodsID="2001" OrigPrice="50" Price="28" SinglePurchase="3" FullPurchase="588" DaysTime="1" />
+  <Goods Group="1003" Random="0" ID="300100" GoodsID="5031" OrigPrice="288" Price="88" SinglePurchase="1" FullPurchase="288" DaysTime="1" />
+  <Goods Group="1003" Random="0" ID="300110" GoodsID="5041" OrigPrice="288" Price="88" SinglePurchase="1" FullPurchase="288" DaysTime="1" />
+  <Goods Group="1004" Random="0" ID="300120" GoodsID="2030" OrigPrice="40" Price="10" SinglePurchase="3" FullPurchase="888" DaysTime="1" />
+  <Goods Group="1004" Random="0" ID="300130" GoodsID="2004" OrigPrice="30" Price="10" SinglePurchase="3" FullPurchase="588" DaysTime="1" />
+  <Goods Group="1004" Random="0" ID="300140" GoodsID="2000" OrigPrice="20" Price="8" SinglePurchase="3" FullPurchase="588" DaysTime="1" />
+  <Goods Group="1004" Random="0" ID="300150" GoodsID="5041" OrigPrice="288" Price="88" SinglePurchase="1" FullPurchase="288" DaysTime="1" />
+  <Goods Group="1005" Random="0" ID="300160" GoodsID="2030" OrigPrice="40" Price="10" SinglePurchase="3" FullPurchase="888" DaysTime="1" />
+  <Goods Group="1005" Random="0" ID="300170" GoodsID="2003" OrigPrice="10" Price="6" SinglePurchase="3" FullPurchase="588" DaysTime="1" />
+  <Goods Group="1005" Random="0" ID="300180" GoodsID="2002" OrigPrice="100" Price="68" SinglePurchase="3" FullPurchase="588" DaysTime="1" />
+  <Goods Group="1005" Random="0" ID="300190" GoodsID="5031" OrigPrice="288" Price="88" SinglePurchase="1" FullPurchase="288" DaysTime="1" />
+</Xiangou>

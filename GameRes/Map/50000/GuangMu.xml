@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+<Item ID="1" Show="1" Path="Scene/Non-Barrier/ZuDang_xingfuhuayuan_01" Pos="1741,5105,2432" ZuDang="1418_2269,2004_2688,1478_2179,2065_2598" Description=""/>
+<Item ID="2" Show="1" Path="Scene/Non-Barrier/ZuDang_xingfuhuayuan_02" Pos="2666,5105,1703" ZuDang="2553_1512,2716_2070,2657_1480,2819_2038" Description=""/>
+<Item ID="3" Show="1" Path="Scene/Non-Barrier/ZuDang_xingfuhuayuan_03" Pos="2339,5199,2374" ZuDang="2118_2519,2485_2138,2202_2595,2569_2215" Description=""/>
+</Config>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HuoDongList>
+  <HuoDong ID="1" Name="战盟BOSS" />
+  <HuoDong ID="2" Name="罗兰城战" />
+  <HuoDong ID="3" Name="圣域争霸" />
+  <HuoDong ID="4" Name="争夺之地" />
+  <HuoDong ID="5" Name="战盟联赛" />
+</HuoDongList>

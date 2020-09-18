@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}天使神殿金团奖励" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、BOSS被击杀后额外掉落进入金团拍卖行" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、竞拍成功后，会将竞拍{17e43e}钻石分配{-}给参与活动的玩家（奖励与伤害多少有关）" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、若无人竞拍，则拍品会以邮件的形式给予{17e43e}伤害最高的玩家{-}" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4、若竞拍价格低于参与活动人数（每人分得钻石小于1），则无奖励" Bold="0" />
+</Config>

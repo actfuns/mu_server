@@ -6,16 +6,16 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000177 RID: 375
+	
 	public class ShenShiManager : SingletonTemplate<ShenShiManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x06000697 RID: 1687 RVA: 0x0003C110 File Offset: 0x0003A310
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x06000698 RID: 1688 RVA: 0x0003C124 File Offset: 0x0003A324
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(20315, SingletonTemplate<ShenShiManager>.Instance());
@@ -23,19 +23,19 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000699 RID: 1689 RVA: 0x0003C164 File Offset: 0x0003A364
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x0600069A RID: 1690 RVA: 0x0003C178 File Offset: 0x0003A378
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600069B RID: 1691 RVA: 0x0003C18C File Offset: 0x0003A38C
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			if (nID == 20315)
@@ -48,7 +48,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600069C RID: 1692 RVA: 0x0003C1D8 File Offset: 0x0003A3D8
+		
 		private void AddRoleFuWenTab(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -101,7 +101,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600069D RID: 1693 RVA: 0x0003C3FC File Offset: 0x0003A5FC
+		
 		private void UpdateRoleFuWenTab(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try

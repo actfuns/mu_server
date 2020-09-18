@@ -6,16 +6,16 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x0200002E RID: 46
+	
 	public class JieRiHongBaoActivity : JieRiActivity
 	{
-		// Token: 0x06000064 RID: 100 RVA: 0x000078C4 File Offset: 0x00005AC4
+		
 		public static JieRiHongBaoActivity getInstance()
 		{
 			return JieRiHongBaoActivity.instance;
 		}
 
-		// Token: 0x06000065 RID: 101 RVA: 0x000078DC File Offset: 0x00005ADC
+		
 		public bool Init()
 		{
 			try
@@ -70,7 +70,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x06000066 RID: 102 RVA: 0x00007BA0 File Offset: 0x00005DA0
+		
 		public HongBaoListQueryData QueryHongBaoList()
 		{
 			try
@@ -88,7 +88,7 @@ namespace GameServer.Logic.ActivityNew
 			return null;
 		}
 
-		// Token: 0x06000067 RID: 103 RVA: 0x00007BFC File Offset: 0x00005DFC
+		
 		public List<HongBaoSendData> SendHongBaoProc(DateTime now, Dictionary<int, HongBaoSendData> dict)
 		{
 			List<HongBaoSendData> result;
@@ -143,7 +143,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000068 RID: 104 RVA: 0x00007E80 File Offset: 0x00006080
+		
 		public int OpenHongBao(int id)
 		{
 			lock (this.Mutex)
@@ -160,22 +160,22 @@ namespace GameServer.Logic.ActivityNew
 			return 0;
 		}
 
-		// Token: 0x040000F5 RID: 245
+		
 		private const string CfgFile = "Config/JieRiGifts/JieRiQuanMinHongBao.xml";
 
-		// Token: 0x040000F6 RID: 246
+		
 		private object Mutex = new object();
 
-		// Token: 0x040000F7 RID: 247
+		
 		private string RedPacketsQuanMinMessage;
 
-		// Token: 0x040000F8 RID: 248
+		
 		private SortedDictionary<int, RedPacketPeopleItem> HongBaoDict = new SortedDictionary<int, RedPacketPeopleItem>();
 
-		// Token: 0x040000F9 RID: 249
+		
 		private HashSet<int> HongBaoIdSended = new HashSet<int>();
 
-		// Token: 0x040000FA RID: 250
+		
 		private static JieRiHongBaoActivity instance = new JieRiHongBaoActivity();
 	}
 }

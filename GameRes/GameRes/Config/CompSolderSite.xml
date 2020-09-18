@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CompSolderSite ID="1" Site="6350|7350" RefreshTime="12:00:00-18:00:00" />
+  <CompSolderSite ID="2" Site="6550|6750" RefreshTime="12:00:00-18:00:00" />
+  <CompSolderSite ID="3" Site="6350|8350" RefreshTime="12:00:00-18:00:00" />
+  <CompSolderSite ID="4" Site="7550|8250" RefreshTime="12:00:00-18:00:00" />
+  <CompSolderSite ID="5" Site="6950|8250" RefreshTime="12:00:00-18:00:00" />
+  <CompSolderSite ID="6" Site="7350|5450" RefreshTime="12:00:00-18:00:00" />
+  <CompSolderSite ID="7" Site="7750|9350" RefreshTime="12:00:00-18:00:00" />
+  <CompSolderSite ID="8" Site="7750|11050" RefreshTime="12:00:00-18:00:00" />
+  <CompSolderSite ID="9" Site="6150|10850" RefreshTime="12:00:00-18:00:00" />
+  <CompSolderSite ID="10" Site="6150|9450" RefreshTime="12:00:00-18:00:00" />
+</Config>

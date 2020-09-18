@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HuoDongList>
+  <HuoDong ID="20000" Name="幻影寺院" Preview="20000" RewardExplain="1,4|4,5" GLXml="TempleMirage.xml" />
+  <HuoDong ID="20001" Name="跨服竞技" Preview="20001" RewardExplain="1,4|4,5" GLXml="TianTi.xml" />
+  <HuoDong ID="20002" Name="勇者战场" Preview="20002" RewardExplain="1,4|4,5" GLXml="ThroughServiceBattle.xml" />
+  <HuoDong ID="20003" Name="魔炼之地" Preview="20003" RewardExplain="1,4|4,5" GLXml="ThroughServiceBoss.xml" />
+  <HuoDong ID="20004" Name="众神争霸" Preview="20004" RewardExplain="1,4|4,5" GLXml="Match.xml" />
+  <HuoDong ID="20005" Name="情侣竞技" Preview="20005" RewardExplain="1,4|4,5" GLXml="CoupleWar.xml" />
+  <HuoDong ID="20006" Name="王者战场" Preview="20006" RewardExplain="1,4|4,5" GLXml="KingOfBattle.xml" />
+  <HuoDong ID="20007" Name="领地采集" Preview="20007" RewardExplain="1,4|4,5" GLXml="ManorCollectMonster.xml" />
+  <HuoDong ID="20008" Name="战盟联赛" Preview="20008" RewardExplain="1,4|4,5" GLXml="LeagueMatch.xml" />
+  <HuoDong ID="20009" Name="跨服掠夺" Preview="20009" RewardExplain="1,4|4,5" GLXml="CrusadeWar.xml" />
+</HuoDongList>

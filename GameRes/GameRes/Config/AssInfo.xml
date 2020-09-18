@@ -1,0 +1,45 @@
+<RobotInfoList>
+  <RobotCPU ID="atom"/>
+  <RobotCPU ID="arm"/>
+  <RobotCPU ID="aarch"/>
+  <RobotPhone ID="imsi|46000"/>
+  <RobotPhone ID="imsi|46001"/>
+  <RobotPhone ID="imsi|46002"/>
+  <RobotPhone ID="imsi|46003"/>
+  <RobotBuild ID="TianTian,MANUFACTURER|TiantianVM,PRODUCT"/>
+  <RobotBuild ID="Genymotion,PRODUCT|vbox86tp,SDK"/>
+  <RobotBuild ID="vbox86,DEVICE"/>
+  <RobotBuild ID="Microvirt,PRODUCT|MEmu"/>
+  <RobotBuild ID="iToolsAVM"/>
+  <RobotBuild ID="XXEmulator"/>
+  <RobotBuild ID="rk30sdk"/>
+  <RobotBuild ID="N70-S"/>
+  <RobotBuild ID="NoxW"/>
+  <RobotSign ID="*0|1"/>
+  <RobotSign ID="*1|1"/>
+  <YueYuDev ID="iPhone5"/>
+  <YueYuDev ID="iPhone5C"/>
+  <YueYuDev ID="iPhone5S"/>
+  <YueYuDev ID="iPhone4"/>
+  <YueYuDev ID="iPhone4S"/>
+  <YueYuDev ID="iPadAir2"/>
+  <YueYuDev ID="iPhone6"/>
+  <YueYuDev ID="iPhone6S"/>
+  <YueYuDev ID="iPhone6Plus"/>
+  <YueYuDev ID="iPhone6SPlus"/>
+  <YueYuDev ID="iPhoneUnknown"/>
+  <YueYuDev ID="iPad2Gen"/>
+  <YueYuDev ID="iPad3Gen"/>
+  <YueYuDev ID="iPad4Gen"/>
+  <YueYuDev ID="iPad5Gen"/>
+  <YueYuDev ID="iPadMini1Gen"/>
+  <YueYuDev ID="iPadMini2Gen"/>
+  <YueYuDev ID="iPadUnknown"/>
+  <YueYuDev ID="iPodTouch4Gen"/>
+  <YueYuDev ID="iPodTouch5Gen"/>
+  <YueYuDev ID="iPodTouchUnknown"/>
+  <YueYuDev ID="Unknown"/>
+  <YueYuOSVer ID="iPhoneOS7."/>
+  <YueYuOSVer ID="iPhoneOS8."/>
+  <NoYueYuDev ID="iPhone4" OS="iPhoneOS7.1.2" />
+</RobotInfoList>

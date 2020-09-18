@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <Build ID="1" Name="战神塔" Icon="" Pic="1,Build_ZhanShenTa_1|5,Build_ZhanShenTa_2|10,Build_ZhanShenTa_3|15,Build_ZhanShenTa_4" MaxLevel="20" Award="-1" FreeRandomTask="-1" RandomTask="-1" />
+  <Build ID="2" Name="魔法之塔" Icon="" Pic="1,Build_MoFaZhiTa_1|5,Build_MoFaZhiTa_2|10,Build_MoFaZhiTa_3|15,Build_MoFaZhiTa_4" MaxLevel="20" Award="-1" FreeRandomTask="-1" RandomTask="-1" />
+  <Build ID="3" Name="占星台" Icon="" Pic="1,Build_ZhanXingTai_1|5,Build_ZhanXingTai_2|10,Build_ZhanXingTai_3|15,Build_ZhanXingTai_4" MaxLevel="20" Award="-1" FreeRandomTask="-1" RandomTask="-1" />
+  <Build ID="4" Name="试炼之门" Icon="" Pic="1,Build_ShiLianZhiMen_1|5,Build_ShiLianZhiMen_2|10,Build_ShiLianZhiMen_3|15,Build_ShiLianZhiMen_4" MaxLevel="20" Award="-1" FreeRandomTask="-1" RandomTask="-1" />
+  <Build ID="5" Name="世界战役" Icon="" Pic="1,Build_WordBattle_1" MaxLevel="1" Award="-1" FreeRandomTask="-1" RandomTask="-1" />
+  <Build ID="6" Name="神迹" Icon="" Pic="1,Build_ShenJiBuild_1" MaxLevel="1" Award="-1" FreeRandomTask="-1" RandomTask="-1" />
+  <Build ID="7" Name="牢房" Icon="" Pic="1,Build_LaoFangTask_1" MaxLevel="1" Award="-1" FreeRandomTask="-1" RandomTask="-1" />
+</config>

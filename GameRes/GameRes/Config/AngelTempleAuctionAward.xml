@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <AngelTempleAuctionAward ID="1" Name="神羽宝匣II" GoodsID="63270,1,1,0,0,0,0" StartValues="1" EndValues="100000" />
+</Config>

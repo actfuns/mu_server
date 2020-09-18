@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <NPCs>
+    <NPC Code="501" X="5250" Y="4150" Dir="5" />
+    <NPC Code="502" X="5450" Y="3550" Dir="6" />
+    <NPC Code="503" X="6950" Y="5750" Dir="5" />
+    <NPC Code="504" X="6950" Y="1550" Dir="5" />
+    <NPC Code="505" X="8550" Y="5050" Dir="6" />
+    <NPC Code="506" X="1550" Y="2250" Dir="0" />
+    <NPC Code="507" X="8550" Y="1150" Dir="6" />
+    <NPC Code="508" X="3350" Y="1050" Dir="0" />
+    <NPC Code="509" X="1550" Y="5750" Dir="4" />
+  </NPCs>
+</Map>

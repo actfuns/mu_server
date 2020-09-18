@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <Item ID="1" SelfRoleExp="55400" OthersRoleExp="5540" />
+  <Item ID="2" SelfRoleExp="110800" OthersRoleExp="11080" />
+  <Item ID="3" SelfRoleExp="221600" OthersRoleExp="22160" />
+  <Item ID="4" SelfRoleExp="443200" OthersRoleExp="44320" />
+  <Item ID="5" SelfRoleExp="664800" OthersRoleExp="66480" />
+  <Item ID="6" SelfRoleExp="797760" OthersRoleExp="79776" />
+  <Item ID="7" SelfRoleExp="957312" OthersRoleExp="95731" />
+  <Item ID="8" SelfRoleExp="1148774" OthersRoleExp="114877" />
+  <Item ID="9" SelfRoleExp="1378528" OthersRoleExp="137852" />
+</config>

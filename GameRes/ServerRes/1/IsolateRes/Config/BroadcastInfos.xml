@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Infos>
+    <Info ID="1" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="1" Times="09:00" OnlineNotice="" Text="勇者大陆、地下城、死亡沙漠、坎特鲁废墟、安宁池的世界BOSS重新复活了，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="2" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="1" Times="15:00" OnlineNotice="" Text="勇者大陆、地下城、死亡沙漠、坎特鲁废墟、安宁池的世界BOSS重新复活了，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="3" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="1" Times="18:00" OnlineNotice="" Text="勇者大陆、地下城、死亡沙漠、坎特鲁废墟、安宁池的世界BOSS重新复活了，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="4" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="1" Times="20:00" OnlineNotice="" Text="勇者大陆、地下城、死亡沙漠、坎特鲁废墟、安宁池的世界BOSS重新复活了，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="5" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="1" Times="23:00" OnlineNotice="" Text="勇者大陆、地下城、死亡沙漠、坎特鲁废墟、安宁池的世界BOSS重新复活了，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="6" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="1" Times="10:00" OnlineNotice="" Text="仙踪林、失落之塔、天空之城、坎特鲁遗迹的世界BOSS重新复活了，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="7" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="1" Times="16:00" OnlineNotice="" Text="仙踪林、失落之塔、天空之城、坎特鲁遗迹的世界BOSS重新复活了，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="8" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="1" Times="19:00" OnlineNotice="" Text="仙踪林、失落之塔、天空之城、坎特鲁遗迹的世界BOSS重新复活了，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="9" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="1" Times="21:00" OnlineNotice="" Text="仙踪林、失落之塔、天空之城、坎特鲁遗迹的世界BOSS重新复活了，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="10" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="1" Times="22:00" OnlineNotice="" Text="仙踪林、失落之塔、天空之城、坎特鲁遗迹的世界BOSS重新复活了，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="11" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="1" Times="11:00" OnlineNotice="" Text="冰风谷、亚特兰蒂斯、幽暗森林、冰霜之城的世界BOSS重新复活了，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="12" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="1" Times="14:00" OnlineNotice="" Text="冰风谷、亚特兰蒂斯、幽暗森林、冰霜之城的世界BOSS重新复活了，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="13" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="1" Times="17:00" OnlineNotice="" Text="冰风谷、亚特兰蒂斯、幽暗森林、冰霜之城的世界BOSS重新复活了，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="14" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="1" Times="20:30" OnlineNotice="" Text="冰风谷、亚特兰蒂斯、幽暗森林、冰霜之城的世界BOSS重新复活了，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="15" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="1" Times="22:30" OnlineNotice="" Text="冰风谷、亚特兰蒂斯、幽暗森林、冰霜之城的世界BOSS重新复活了，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="16" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="10" MinLevel="1" Times="12:00" OnlineNotice="" Text="卡伦特、幻术园、阿卡伦西、阿卡伦东、邪恶寺庙的跨服世界BOSS重新复活了，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="17" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="10" MinLevel="1" Times="19:00" OnlineNotice="" Text="卡伦特、幻术园、阿卡伦西、阿卡伦东、邪恶寺庙的跨服世界BOSS重新复活了，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="18" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="50" Times="00:15|00:45|01:15|01:45|02:15|02:45|03:15|03:45|04:15|04:45|05:15|05:45|06:15|06:45|07:15|07:45|08:15|08:45|09:15|09:45|10:15|10:45|11:15|11:45|12:15|12:45|13:15|13:45|14:15|14:45|15:15|15:45|16:15|16:45|17:15|17:45|18:15|18:45|19:15|19:45|20:15|20:45|21:15|21:45|22:15|22:45|23:15|23:45" OnlineNotice="" Text="恶魔广场的大门已经打开，请各位勇士尽快前往消灭虎视眈眈的恶魔。" />
+    <Info ID="19" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="1" MinLevel="54" Times="00:00|00:30|01:00|01:30|02:00|02:30|03:00|03:30|04:00|04:30|05:00|05:30|06:00|06:30|07:00|07:30|08:00|08:30|09:00|09:30|10:00|10:30|11:00|11:30|12:00|12:30|13:00|13:30|14:00|14:30|15:00|15:30|16:00|16:30|17:00|17:30|18:00|18:30|19:00|19:30|20:00|20:30|21:00|21:30|22:00|22:30|23:00|23:30" OnlineNotice="" Text="血色城堡的大门再次开启，天使们正在等待各位勇士的帮助。" />
+    <Info ID="20" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="1" MinLevel="55" Times="19:30" OnlineNotice="" Text="阵营战活动已开启，如果勇士想证明自己的强大，那就赶快参加吧。" />
+    <Info ID="21" InfoClass="1" HintErrID="" WeekDays="1" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="10" Times="12:00" OnlineNotice="" Text="黄金部队出现在勇者大陆、亚特兰蒂斯，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="22" InfoClass="1" HintErrID="" WeekDays="2" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="20" Times="12:00" OnlineNotice="" Text="黄金部队出现在仙踪林，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="23" InfoClass="1" HintErrID="" WeekDays="3" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="45" Times="12:00" OnlineNotice="" Text="黄金部队出现在勇者大陆、冰风谷，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="24" InfoClass="1" HintErrID="" WeekDays="4" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="0" MinLevel="70" Times="12:00" OnlineNotice="" Text="黄金部队出现在地下城，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="25" InfoClass="1" HintErrID="" WeekDays="5" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="1" MinLevel="1" Times="12:00" OnlineNotice="" Text="黄金部队出现在死亡沙漠，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="26" InfoClass="1" HintErrID="" WeekDays="2" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="2" MinLevel="1" Times="20:00" OnlineNotice="" Text="黄金部队出现在亚特兰蒂斯，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="27" InfoClass="1" HintErrID="" WeekDays="3" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="3" MinLevel="1" Times="20:00" OnlineNotice="" Text="黄金部队出现在勇者大陆，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="28" InfoClass="1" HintErrID="" WeekDays="4" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="4" MinLevel="1" Times="20:00" OnlineNotice="" Text="黄金部队出现在仙踪林，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="29" InfoClass="1" HintErrID="" WeekDays="5" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="5" MinLevel="1" Times="20:00" OnlineNotice="" Text="黄金部队出现在冰风谷，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="30" InfoClass="1" HintErrID="" WeekDays="6" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="6" MinLevel="1" Times="20:00" OnlineNotice="" Text="黄金部队出现在地下城，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="31" InfoClass="1" HintErrID="" WeekDays="7" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="7" MinLevel="1" Times="20:00" OnlineNotice="" Text="黄金部队出现在勇者大陆，正在大肆破坏，请各位勇士前往消灭。" />
+    <Info ID="32" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="1" MinLevel="60" Times="21:00" OnlineNotice="" Text="PK之王活动已开启，夺取冠军不但可获得称号，还可在主城竖立雕像，荣耀只属于真正的勇士。" />
+    <Info ID="33" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="1" MinLevel="40" Times="15:00" OnlineNotice="" Text="天使神殿活动已开启，谁能击败强大的恶魔，拯救堕落的灵魂，让我们拭目以待。" />
+    <Info ID="34" InfoClass="1" HintErrID="" WeekDays="" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="3" MinLevel="1" Times="12:00|16:00|22:00" OnlineNotice="" Text="幻影寺院争夺战已开启，还没拿到每日首胜的各位勇士快来参加吧！" />
+    <Info ID="35" InfoClass="1" HintErrID="" WeekDays="2" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="5" MinLevel="1" Times="21:00" OnlineNotice="" Text="勇者战场，百人征战报名已开启，各位勇士快来参加吧！" />
+    <Info ID="36" InfoClass="1" HintErrID="" WeekDays="5" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="5" MinLevel="1" Times="21:00" OnlineNotice="" Text="勇者战场，百人征战报名已开启，各位勇士快来参加吧！" />
+    <Info ID="37" InfoClass="1" HintErrID="" WeekDays="6" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="4" MinLevel="1" Times="14:00|18:00" OnlineNotice="" Text="魔炼之地，征讨群魔报名已开启，各位勇士快来参加吧！" />
+    <Info ID="38" InfoClass="1" HintErrID="" WeekDays="7" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="4" MinLevel="1" Times="14:00|18:00" OnlineNotice="" Text="魔炼之地，征讨群魔报名已开启，各位勇士快来参加吧！" />
+    <Info ID="39" InfoClass="1" HintErrID="" WeekDays="5" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="5" MinLevel="70" Times="13:30" OnlineNotice="" Text="情侣竞技场已开启，请各位勇士携爱侣快来笑傲赛场吧！" />
+    <Info ID="40" InfoClass="1" HintErrID="" WeekDays="6" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="5" MinLevel="70" Times="13:30" OnlineNotice="" Text="情侣竞技场已开启，请各位勇士携爱侣快来笑傲赛场吧！" />
+    <Info ID="41" InfoClass="1" HintErrID="" WeekDays="1" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="6" MinLevel="1" Times="21:00" OnlineNotice="" Text="王者战场，群龙对决20VS20战场报名已开启，各位勇士快来参加吧！" />
+    <Info ID="42" InfoClass="1" HintErrID="" WeekDays="4" TimeType="" StartDay="" ShowType="-1" MinZhuanSheng="6" MinLevel="1" Times="21:00" OnlineNotice="" Text="王者战场，群龙对决20VS20战场报名已开启，各位勇士快来参加吧！" />
+  </Infos>
+</Config>

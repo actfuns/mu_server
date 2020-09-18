@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ChengJiuFuWen ID="1" Name="先锋符文" Picture="shouhufuwen.png" LifeV="180" AddAttack="50" AddDefense="70" Dodge="30" QiangHua="1,180,50,70,30" CostChengJiu="20000" />
+  <ChengJiuFuWen ID="2" Name="讨伐符文" Picture="xianfengfuwen.png" LifeV="1620" AddAttack="490" AddDefense="650" Dodge="270" QiangHua="1,1620,490,650,270" CostChengJiu="20000" />
+  <ChengJiuFuWen ID="3" Name="至高符文" Picture="wuweifuwen.png" LifeV="4800" AddAttack="1440" AddDefense="1920" Dodge="800" QiangHua="1,4800,1440,1920,800" CostChengJiu="20000" />
+  <ChengJiuFuWen ID="4" Name="终结符文" Picture="taofafuwen.png" LifeV="10800" AddAttack="3240" AddDefense="4320" Dodge="1800" QiangHua="1,10800,3240,4320,1800" CostChengJiu="20000" />
+  <ChengJiuFuWen ID="5" Name="征服符文" Picture="bubaifuwen.png" LifeV="16200" AddAttack="4860" AddDefense="6480" Dodge="2700" QiangHua="1,16200,4860,6480,2700" CostChengJiu="20000" />
+  <ChengJiuFuWen ID="6" Name="救世主符文" Picture="zhigaofuwen.png" LifeV="26400" AddAttack="7920" AddDefense="10560" Dodge="4400" QiangHua="1,26400,7920,10560,4400" CostChengJiu="20000" />
+</Config>

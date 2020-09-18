@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ZhuanShengs>
+    <ZhuanSheng ChangeLifeID="1" Level="100" NeedJinBi="0" NeedMoJing="0" NeedGoods="" Image="" AwardShuXing="Mattack,360-600|Defense,80-134|Mdefense,126-211|HitV,120|Dodge,120|MaxLifeV,1224" AwardGoods="" ExpProportion="2" />
+    <ZhuanSheng ChangeLifeID="2" Level="100" NeedJinBi="0" NeedMoJing="0" NeedGoods="" Image="" AwardShuXing="Mattack,432-720|Defense,96-161|Mdefense,151-253|HitV,144|Dodge,144|MaxLifeV,1468" AwardGoods="" ExpProportion="11" />
+    <ZhuanSheng ChangeLifeID="3" Level="100" NeedJinBi="0" NeedMoJing="0" NeedGoods="" Image="" AwardShuXing="Mattack,504-840|Defense,112-188|Mdefense,177-295|HitV,168|Dodge,168|MaxLifeV,1713" AwardGoods="" ExpProportion="49" />
+    <ZhuanSheng ChangeLifeID="4" Level="100" NeedJinBi="0" NeedMoJing="0" NeedGoods="" Image="" AwardShuXing="Mattack,576-960|Defense,129-215|Mdefense,202-337|HitV,192|Dodge,192|MaxLifeV,1958" AwardGoods="" ExpProportion="231" />
+    <ZhuanSheng ChangeLifeID="5" Level="100" NeedJinBi="0" NeedMoJing="0" NeedGoods="" Image="" AwardShuXing="Mattack,648-1080|Defense,144-241|Mdefense,228-380|HitV,216|Dodge,216|MaxLifeV,2203" AwardGoods="" ExpProportion="672" />
+    <ZhuanSheng ChangeLifeID="6" Level="100" NeedJinBi="0" NeedMoJing="0" NeedGoods="" Image="" AwardShuXing="Mattack,720-1200|Defense,160-268|Mdefense,253-422|HitV,240|Dodge,240|MaxLifeV,2448" AwardGoods="" ExpProportion="924" />
+    <ZhuanSheng ChangeLifeID="7" Level="100" NeedJinBi="0" NeedMoJing="0" NeedGoods="" Image="" AwardShuXing="Mattack,792-1320|Defense,177-295|Mdefense,278-464|HitV,264|Dodge,264|MaxLifeV,2692" AwardGoods="" ExpProportion="1218" />
+    <ZhuanSheng ChangeLifeID="8" Level="100" NeedJinBi="0" NeedMoJing="0" NeedGoods="" Image="" AwardShuXing="Mattack,864-1440|Defense,193-322|Mdefense,303-506|HitV,288|Dodge,288|MaxLifeV,2937" AwardGoods="" ExpProportion="3159" />
+    <ZhuanSheng ChangeLifeID="9" Level="100" NeedJinBi="0" NeedMoJing="0" NeedGoods="" Image="" AwardShuXing="Mattack,936-1560|Defense,209-349|Mdefense,329-549|HitV,312|Dodge,312|MaxLifeV,3182" AwardGoods="" ExpProportion="3928" />
+    <ZhuanSheng ChangeLifeID="10" Level="100" NeedJinBi="0" NeedMoJing="0" NeedGoods="" Image="" AwardShuXing="Mattack,1008-1680|Defense,225-376|Mdefense,354-591|HitV,336|Dodge,336|MaxLifeV,3427" AwardGoods="" ExpProportion="6832" />
+    <ZhuanSheng ChangeLifeID="11" Level="100" NeedJinBi="0" NeedMoJing="0" NeedGoods="" Image="" AwardShuXing="Mattack,1008-1680|Defense,225-376|Mdefense,354-591|HitV,336|Dodge,336|MaxLifeV,3427" AwardGoods="" ExpProportion="8174" />
+    <ZhuanSheng ChangeLifeID="12" Level="100" NeedJinBi="0" NeedMoJing="0" NeedGoods="" Image="" AwardShuXing="Mattack,1008-1680|Defense,225-376|Mdefense,354-591|HitV,336|Dodge,336|MaxLifeV,3427" AwardGoods="" ExpProportion="9638" />
+    <ZhuanSheng ChangeLifeID="13" Level="100" NeedJinBi="0" NeedMoJing="0" NeedGoods="" Image="" AwardShuXing="Mattack,1008-1680|Defense,225-376|Mdefense,354-591|HitV,336|Dodge,336|MaxLifeV,3427" AwardGoods="" ExpProportion="11224" />
+    <ZhuanSheng ChangeLifeID="14" Level="100" NeedJinBi="0" NeedMoJing="0" NeedGoods="" Image="" AwardShuXing="Mattack,1008-1680|Defense,225-376|Mdefense,354-591|HitV,336|Dodge,336|MaxLifeV,3427" AwardGoods="" ExpProportion="12932" />
+    <ZhuanSheng ChangeLifeID="15" Level="100" NeedJinBi="0" NeedMoJing="0" NeedGoods="" Image="" AwardShuXing="Mattack,1008-1680|Defense,225-376|Mdefense,354-591|HitV,336|Dodge,336|MaxLifeV,3427" AwardGoods="" ExpProportion="14762" />
+    <ZhuanSheng ChangeLifeID="16" Level="100" NeedJinBi="0" NeedMoJing="0" NeedGoods="" Image="" AwardShuXing="Mattack,1008-1680|Defense,225-376|Mdefense,354-591|HitV,336|Dodge,336|MaxLifeV,3427" AwardGoods="" ExpProportion="16850" />
+  </ZhuanShengs>
+</Config>

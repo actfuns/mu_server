@@ -10,10 +10,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020005CA RID: 1482
+	
 	public class BiaoCheManager
 	{
-		// Token: 0x06001B66 RID: 7014 RVA: 0x0019CEC0 File Offset: 0x0019B0C0
+		
 		private static BiaoCheItem AddBiaoChe(GameClient client, int yaBiaoID)
 		{
 			SystemXmlItem systemYaBiaoItem = null;
@@ -58,7 +58,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001B67 RID: 7015 RVA: 0x0019D0E8 File Offset: 0x0019B2E8
+		
 		public static BiaoCheItem FindBiaoCheByRoleID(int roleID)
 		{
 			BiaoCheItem biaoCheItem = null;
@@ -69,7 +69,7 @@ namespace GameServer.Logic
 			return biaoCheItem;
 		}
 
-		// Token: 0x06001B68 RID: 7016 RVA: 0x0019D144 File Offset: 0x0019B344
+		
 		public static BiaoCheItem FindBiaoCheByID(int biaoCheID)
 		{
 			BiaoCheItem biaoCheItem = null;
@@ -80,7 +80,7 @@ namespace GameServer.Logic
 			return biaoCheItem;
 		}
 
-		// Token: 0x06001B69 RID: 7017 RVA: 0x0019D1A0 File Offset: 0x0019B3A0
+		
 		private static void RemoveBiaoChe(int biaoCheID)
 		{
 			BiaoCheItem biaoCheItem = null;
@@ -101,7 +101,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B6A RID: 7018 RVA: 0x0019D264 File Offset: 0x0019B464
+		
 		public static void ProcessNewBiaoChe(SocketListener sl, TCPOutPacketPool pool, GameClient client, int yaBiaoID)
 		{
 			BiaoCheItem biaoCheItem = BiaoCheManager.AddBiaoChe(client, yaBiaoID);
@@ -115,7 +115,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B6B RID: 7019 RVA: 0x0019D2E8 File Offset: 0x0019B4E8
+		
 		public static void ProcessDelBiaoChe(SocketListener sl, TCPOutPacketPool pool, int biaoCheID)
 		{
 			BiaoCheItem biaoCheItem = BiaoCheManager.FindBiaoCheByID(biaoCheID);
@@ -126,7 +126,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B6C RID: 7020 RVA: 0x0019D330 File Offset: 0x0019B530
+		
 		public static void NotifyOthersShowBiaoChe(SocketListener sl, TCPOutPacketPool pool, BiaoCheItem biaoCheItem)
 		{
 			if (null != biaoCheItem)
@@ -135,7 +135,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B6D RID: 7021 RVA: 0x0019D378 File Offset: 0x0019B578
+		
 		public static void NotifyOthersHideBiaoChe(SocketListener sl, TCPOutPacketPool pool, BiaoCheItem biaoCheItem)
 		{
 			if (null != biaoCheItem)
@@ -144,7 +144,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B6E RID: 7022 RVA: 0x0019D3B0 File Offset: 0x0019B5B0
+		
 		private static bool ProcessBiaoCheOverTime(SocketListener sl, TCPOutPacketPool pool, long nowTicks, BiaoCheItem biaoCheItem)
 		{
 			bool result;
@@ -160,7 +160,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001B6F RID: 7023 RVA: 0x0019D3F0 File Offset: 0x0019B5F0
+		
 		private static bool ProcessBiaoCheDead(SocketListener sl, TCPOutPacketPool pool, long nowTicks, BiaoCheItem biaoCheItem)
 		{
 			bool result;
@@ -184,7 +184,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001B70 RID: 7024 RVA: 0x0019D444 File Offset: 0x0019B644
+		
 		private static void ProcessBiaoCheAddLife(SocketListener sl, TCPOutPacketPool pool, long nowTicks, BiaoCheItem biaoCheItem)
 		{
 			long subTicks = nowTicks - biaoCheItem.LastLifeMagicTick;
@@ -208,7 +208,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B71 RID: 7025 RVA: 0x0019D4FC File Offset: 0x0019B6FC
+		
 		public static void ProcessAllBiaoCheItems(SocketListener sl, TCPOutPacketPool pool)
 		{
 			List<BiaoCheItem> biaoCheItemList = new List<BiaoCheItem>();
@@ -233,7 +233,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B72 RID: 7026 RVA: 0x0019D600 File Offset: 0x0019B800
+		
 		public static void SendMySelfBiaoCheItems(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList)
 		{
 			if (null != objsList)
@@ -252,7 +252,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B73 RID: 7027 RVA: 0x0019D684 File Offset: 0x0019B884
+		
 		public static void DelMySelfBiaoCheItems(SocketListener sl, TCPOutPacketPool pool, GameClient client, List<object> objsList)
 		{
 			if (null != objsList)
@@ -268,7 +268,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B74 RID: 7028 RVA: 0x0019D6F0 File Offset: 0x0019B8F0
+		
 		public static void LookupEnemiesInCircle(GameClient client, int mapCode, int toX, int toY, int radius, List<int> enemiesList)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -296,7 +296,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B75 RID: 7029 RVA: 0x0019D820 File Offset: 0x0019BA20
+		
 		public static void LookupEnemiesInCircleByAngle(GameClient client, int direction, int mapCode, int toX, int toY, int radius, List<BiaoCheItem> enemiesList, double angle)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[mapCode];
@@ -327,7 +327,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B76 RID: 7030 RVA: 0x0019D980 File Offset: 0x0019BB80
+		
 		public static void LookupEnemiesAtGridXY(IObject attacker, int gridX, int gridY, List<object> enemiesList)
 		{
 			int mapCode = attacker.CurrentMapCode;
@@ -348,7 +348,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B77 RID: 7031 RVA: 0x0019DA28 File Offset: 0x0019BC28
+		
 		public static void LookupAttackEnemies(IObject attacker, int direction, List<object> enemiesList)
 		{
 			int mapCode = attacker.CurrentMapCode;
@@ -360,7 +360,7 @@ namespace GameServer.Logic
 			BiaoCheManager.LookupEnemiesAtGridXY(attacker, (int)p.X, (int)p.Y, enemiesList);
 		}
 
-		// Token: 0x06001B78 RID: 7032 RVA: 0x0019DA8C File Offset: 0x0019BC8C
+		
 		public static void LookupAttackEnemyIDs(IObject attacker, int direction, List<int> enemiesList)
 		{
 			List<object> objList = new List<object>();
@@ -371,7 +371,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B79 RID: 7033 RVA: 0x0019DAD8 File Offset: 0x0019BCD8
+		
 		public static void LookupRangeAttackEnemies(IObject obj, int toX, int toY, int direction, string rangeMode, List<object> enemiesList)
 		{
 			MapGrid mapGrid = GameManager.MapGridMgr.DictGrids[obj.CurrentMapCode];
@@ -387,7 +387,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B7A RID: 7034 RVA: 0x0019DB78 File Offset: 0x0019BD78
+		
 		public static bool CanAttack(GameClient client, BiaoCheItem enemy)
 		{
 			bool result;
@@ -407,7 +407,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001B7B RID: 7035 RVA: 0x0019DBE4 File Offset: 0x0019BDE4
+		
 		public static int NotifyInjured(SocketListener sl, TCPOutPacketPool pool, GameClient client, BiaoCheItem enemy, int burst, int injure, double injurePercent, int attackType, bool forceBurst, int addInjure, double attackPercent, int addAttackMin, int addAttackMax, double baseRate = 1.0, int addVlue = 0, int nHitFlyDistance = 0)
 		{
 			int ret = 0;
@@ -447,7 +447,7 @@ namespace GameServer.Logic
 			return ret;
 		}
 
-		// Token: 0x06001B7C RID: 7036 RVA: 0x0019DE84 File Offset: 0x0019C084
+		
 		public static void NotifyInjured(SocketListener sl, TCPOutPacketPool pool, GameClient client, int roleID, int enemy, int enemyX, int enemyY, int burst, int injure, double attackPercent, int addAttack, double baseRate = 1.0, int addVlue = 0, int nHitFlyDistance = 0)
 		{
 			object obj = BiaoCheManager.FindBiaoCheByID(enemy);
@@ -487,7 +487,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B7D RID: 7037 RVA: 0x0019E124 File Offset: 0x0019C324
+		
 		private static void ProcessBiaoCheDead(SocketListener sl, TCPOutPacketPool pool, GameClient client, BiaoCheItem biaoCheItem)
 		{
 			if (!biaoCheItem.HandledDead)
@@ -556,13 +556,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x040029E1 RID: 10721
+		
 		public static int NotAttackYaBiaoID = -1;
 
-		// Token: 0x040029E2 RID: 10722
+		
 		private static Dictionary<int, BiaoCheItem> _RoleID2BiaoCheDict = new Dictionary<int, BiaoCheItem>();
 
-		// Token: 0x040029E3 RID: 10723
+		
 		private static Dictionary<int, BiaoCheItem> _ID2BiaoCheDict = new Dictionary<int, BiaoCheItem>();
 	}
 }

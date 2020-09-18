@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ZhuanPan ID="1" Name="成就勋章" GoodsID="2035,1,0,0,0,0,0" AwardLevel="2" GongGao="1" />
+  <ZhuanPan ID="2" Name="招财猫" GoodsID="1035042,1,1,0,0,0,0" AwardLevel="3" GongGao="1" />
+  <ZhuanPan ID="3" Name="天赐符文宝箱" GoodsID="63156,1,1,0,0,0,0" AwardLevel="2" GongGao="0" />
+  <ZhuanPan ID="4" Name="1000神力精华" GoodsID="5284,5,1,0,0,0,0" AwardLevel="1" GongGao="0" />
+  <ZhuanPan ID="5" Name="翅膀宝箱碎片" GoodsID="51330,1,1,0,0,0,0" AwardLevel="2" GongGao="0" />
+  <ZhuanPan ID="6" Name="军衔勋章" GoodsID="2036,1,0,0,0,0,0" AwardLevel="2" GongGao="1" />
+  <ZhuanPan ID="7" Name="高级称号宝箱I" GoodsID="63216,1,1,0,0,0,0" AwardLevel="2" GongGao="0" />
+  <ZhuanPan ID="8" Name="1000神迹积分" GoodsID="5313,10,1,0,0,0,0" AwardLevel="1" GongGao="0" />
+  <ZhuanPan ID="9" Name="闪耀坐骑装备宝箱" GoodsID="63194,1,0,0,0,0,0" AwardLevel="2" GongGao="1" />
+  <ZhuanPan ID="10" Name="华丽之翼" GoodsID="1035045,1,1,0,0,0,0" AwardLevel="3" GongGao="1" />
+  <ZhuanPan ID="11" Name="称号宝箱I" GoodsID="63215,1,1,0,0,0,0" AwardLevel="2" GongGao="0" />
+  <ZhuanPan ID="12" Name="徽记守护" GoodsID="2104,100,1,0,0,0,0" AwardLevel="1" GongGao="0" />
+  <ZhuanPan ID="13" Name="神佑晶石" GoodsID="2005,88,1,0,0,0,0" AwardLevel="2" GongGao="0" />
+  <ZhuanPan ID="14" Name="精致坐骑装备宝箱" GoodsID="63179,1,0,0,0,0,0" AwardLevel="2" GongGao="1" />
+  <ZhuanPan ID="15" Name="100符文之尘" GoodsID="5331,1,1,0,0,0,0" AwardLevel="1" GongGao="0" />
+  <ZhuanPan ID="16" Name="徽记之光" GoodsID="2103,100,1,0,0,0,0" AwardLevel="1" GongGao="0" />
+</Config>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+	<Items>
+		<Item Description="1.｛color=#ffffff00 uline=false tag= text=日常活动｝：梦隋唐中有丰富的日常活动可以参与，并获得各类道具或装备，具体可查看｛color=#ff00ff00 uline=false tag= text=【活动副本】｝。"/>	
+		<Item Description="2.｛color=#ffffff00 uline=false tag= text=野外BOSS｝：同时游戏中每日有上百数量的野外BOSS定点刷新，通过对野外BOSS的击杀，您可以获得｛color=#ff00ff00 uline=false tag= text=各等级装备｝、｛color=#ff00ff00 uline=false tag= text=强化石｝、｛color=#ff00ff00 uline=false tag= text=宝石｝及｛color=#ff00ff00 uline=false tag= text=其他丰富道具｝。"/>	
+		<Item Description="3.｛color=#ffffff00 uline=false tag= text=领土争夺｝：每#周一｝和#周三晚上八点｝，是各势力之间的领土战争，通过对领土的占领，可以获得相应地图的｛color=#ff00ff00 uline=false tag= text=额外经验加成｝，具体加成效果与本势力军旗等级相对应，同时势力在获得自己的领地之后，即拥有在自己领地军贡商店购买商城道具｛color=#ff00ff00 uline=false tag= text=免税收｝，并且拥有｛color=#ff00ff00 uline=false tag= text=攻打皇城｝的资格。"/>	
+		<Item Description="4.｛color=#ffffff00 uline=false tag= text=皇城争夺｝每周五是皇城争夺战，所有｛color=#ff00ff00 uline=false tag= text=拥有领地｝的势力首领可以齐聚皇城，争夺邪帝舍利并获得该区皇帝，拥有独一无二的｛color=#ff00ff00 uline=false tag= text=皇帝BUFF｝及｛color=#ff00ff00 uline=false tag= text=无上尊贵特权｝。"/>	
+	</Items>
+</Config>

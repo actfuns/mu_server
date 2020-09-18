@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}活动规则" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、每周一、二 {17e43e}20:30-21:00{dac7ae}，每赛季共八轮" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、潜力新星赛需报名，每轮活动开始前30分钟截止报名，每赛季{17e43e}只需报名一次{dac7ae}，赛季开始和中途均可报名" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、潜力新星赛{17e43e}随机匹配战斗{dac7ae}，积分相近的两个战盟有更大概率匹配到一起" Bold="0" />
+  <HelpIntro ID="5" Intro="{fac60d}排名规则" Bold="1" />
+  <HelpIntro ID="6" Intro="{dac7ae}1、每轮比赛根据胜负、战场情况可获得一定{17e43e}排行积分" Bold="0" />
+  <HelpIntro ID="7" Intro="{dac7ae}2、根据{17e43e}排行积分{dac7ae}排名" Bold="0" />
+  <HelpIntro ID="8" Intro="{dac7ae}3、首届潜力新星赛最终前八名，将全部{17e43e}晋级下赛季的超级黄金联赛" Bold="0" />
+  <HelpIntro ID="9" Intro="{dac7ae}4、其他赛季冠、亚军战盟将自动{17e43e}晋级下赛季超级黄金联赛" Bold="0" />
+  <HelpIntro ID="10" Intro="{dac7ae}5、赛季结束可领取{17e43e}赛季奖励" Bold="0" />
+</Config>

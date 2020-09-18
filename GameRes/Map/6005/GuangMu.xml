@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+<Item ID="1" Show="1" Path="Scene/Non-Barrier/ZuDang_xuesechengbao_0" Pos="0,0,0" ZuDang="2500_6100,2500_6500,2500_6100,2500_6500" Animation="" Description=""/>
+<Item ID="2" Show="1" Path="Scene/Non-Barrier/ZuDang_xuesechengbao_1" Pos="0,0,0" ZuDang="7200_6100,7200_6500,7200_6100,7200_6500" Animation="" Description=""/>
+<Item ID="21" Show="0" Path="/Sprites/Monster_chenbaomen" Pos="0,0,0" ZuDang="" Animation="" Description=""/>
+<Item ID="22" Show="1" Path="Scene/Model/animation/19_xscb_common_diaoqiao_001" Pos="0,0,0" ZuDang="" Animation="diaoqiao" Description=""/>
+<Item ID="3" Show="1" Path="Scene/Non-Barrier/19_xscb_diaoqiao_zudang2" Pos="0,0,0" ZuDang="8200_6100,8200_6500,8200_6100,8200_6500" Animation="" Description=""/>
+<Item ID="31" Show="0" Path="/Sprites/19_xscb_common_shuijinguancai_001" Pos="0,0,0" ZuDang="" Animation="" Description=""/>
+</Config>

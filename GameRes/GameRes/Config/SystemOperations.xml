@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+	<Operations>
+		<Operation ID="1" Title="绑定金币购买" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="2" Title="装备强化" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="3" Title="装备精炼" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="5" Title="宝石镶嵌" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="6" Title="物品合成" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="7" Title="装备进阶" MinLevel="100" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="8" Title="金币购买" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="9" Title="副本传送" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="10" Title="日常运镖" MinZhuanSheng="0" MinLevel="40" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="1" TimeLimits="16:00-17:20|21:00-22:20"/>
+		<Operation ID="11" Title="交付镖银" MinZhuanSheng="0" MinLevel="40" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="2" TimeLimits=""/>
+		<Operation ID="12" Title="取走镖银" MinZhuanSheng="0" MinLevel="40" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="3" TimeLimits="16:00-18:00|21:00-23:00"/>
+		<Operation ID="13" Title="魔晶兑换" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="14" Title="军功商店" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="15" Title="领取经验" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="16" Title="运程投注" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="20" Title="兑换徽章" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="30" Title="血饮积分" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="40" Title="装备修理" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="50" Title="物品出售" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="60" Title="仓库服务" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="70" Title="装备回收" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="80" Title="徽章回收" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="90" Title="兑换魂器" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="100" Title="魂器回收" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+	    <Operation ID="1000" Title="转职" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="1010" Title="转生" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="2000" Title="血色城堡" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="2010" Title="恶魔广场" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="3000" Title="魔晶兑换" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="4000" Title="礼品兑换" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="5000" Title="罗兰普通宴会" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="5001" Title="罗兰丰盛宴会" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="5002" Title="罗兰豪华宴会" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="5100" Title="婚礼宴会" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Operation ID="5200" Title="祝福宴会" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+	</Operations>
+</Config>

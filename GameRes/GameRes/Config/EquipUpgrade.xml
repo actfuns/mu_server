@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Equip Categoriy="10" Title="神武">
+    <Item SuitID="2" NeedGoodsID="36030" GoodsNum="1" JiFen="2000" Succeed="10" />
+    <Item SuitID="3" NeedGoodsID="36030" GoodsNum="1" JiFen="4000" Succeed="10" />
+    <Item SuitID="4" NeedGoodsID="36030" GoodsNum="1" JiFen="4000" Succeed="10" />
+    <Item SuitID="5" NeedGoodsID="36030" GoodsNum="1" JiFen="6000" Succeed="5" />
+  </Equip>
+  <Equip Categoriy="11" Title="神衣">
+    <Item SuitID="2" NeedGoodsID="36030" GoodsNum="1" JiFen="1000" Succeed="25" />
+    <Item SuitID="3" NeedGoodsID="36030" GoodsNum="1" JiFen="2000" Succeed="20" />
+    <Item SuitID="4" NeedGoodsID="36030" GoodsNum="1" JiFen="2000" Succeed="20" />
+    <Item SuitID="5" NeedGoodsID="36030" GoodsNum="1" JiFen="3000" Succeed="10" />
+  </Equip>
+</Config>

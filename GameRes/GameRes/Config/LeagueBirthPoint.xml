@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <LeagueBirthPoint ID="1" Name="A" PosX="1658" PosY="10558" BirthRadius="1" />
+  <LeagueBirthPoint ID="2" Name="B" PosX="10225" PosY="1971" BirthRadius="1" />
+</Config>

@@ -5,28 +5,28 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000028 RID: 40
+	
 	public class Activity
 	{
-		// Token: 0x0600003C RID: 60 RVA: 0x00006174 File Offset: 0x00004374
+		
 		public bool IsHeFuActivity(int type)
 		{
 			return type >= 20 && type <= 25;
 		}
 
-		// Token: 0x0600003D RID: 61 RVA: 0x00006198 File Offset: 0x00004398
+		
 		public bool IsThemeActivity(int type)
 		{
 			return type >= 150 && type <= 157;
 		}
 
-		// Token: 0x0600003E RID: 62 RVA: 0x000061C4 File Offset: 0x000043C4
+		
 		public bool IsJieRiActivity(int type)
 		{
 			return type == 9 || type == 10 || type == 12 || type == 13 || type == 14 || type == 15 || type == 16 || type == 17 || type == 40 || type == 41 || type == 42 || type == 53 || type == 54 || type == 55 || type == 56 || type == 57 || type == 58 || type == 59 || type == 60 || type == 62 || type == 50 || type == 51 || type == 52 || type == 61 || type == 64 || type == 66 || type == 67 || type == 68 || type == 69 || type == 70 || type == 75 || type == 76 || type == 77;
 		}
 
-		// Token: 0x0600003F RID: 63 RVA: 0x00006294 File Offset: 0x00004494
+		
 		public virtual bool InActivityTime()
 		{
 			if (this.IsHeFuActivity(this.ActivityType))
@@ -84,7 +84,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000040 RID: 64 RVA: 0x00006434 File Offset: 0x00004634
+		
 		public virtual bool InAwardTime()
 		{
 			if (this.IsHeFuActivity(this.ActivityType))
@@ -133,7 +133,7 @@ namespace GameServer.Logic
 			return TimeUtil.NowDateTime() >= startTime && TimeUtil.NowDateTime() <= endTime;
 		}
 
-		// Token: 0x06000041 RID: 65 RVA: 0x000065A8 File Offset: 0x000047A8
+		
 		public bool CanGiveAward()
 		{
 			try
@@ -150,25 +150,25 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000042 RID: 66 RVA: 0x000065E8 File Offset: 0x000047E8
+		
 		public virtual string GetAwardMinConditionValues()
 		{
 			return null;
 		}
 
-		// Token: 0x06000043 RID: 67 RVA: 0x000065FC File Offset: 0x000047FC
+		
 		public virtual List<int> GetAwardMinConditionlist()
 		{
 			return null;
 		}
 
-		// Token: 0x06000044 RID: 68 RVA: 0x00006610 File Offset: 0x00004810
+		
 		public virtual bool CanGiveAward(GameClient client, int index, int totalMoney)
 		{
 			return true;
 		}
 
-		// Token: 0x06000045 RID: 69 RVA: 0x00006624 File Offset: 0x00004824
+		
 		public virtual int GetParamsValidateCode()
 		{
 			int result;
@@ -217,37 +217,37 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000046 RID: 70 RVA: 0x00006780 File Offset: 0x00004980
+		
 		public virtual bool HasEnoughBagSpaceForAwardGoods(GameClient client)
 		{
 			return true;
 		}
 
-		// Token: 0x06000047 RID: 71 RVA: 0x00006794 File Offset: 0x00004994
+		
 		public virtual bool HasEnoughBagSpaceForAwardGoods(GameClient client, int _params1)
 		{
 			return true;
 		}
 
-		// Token: 0x06000048 RID: 72 RVA: 0x000067A8 File Offset: 0x000049A8
+		
 		public virtual bool GiveAward(GameClient client, int _params)
 		{
 			return true;
 		}
 
-		// Token: 0x06000049 RID: 73 RVA: 0x000067BC File Offset: 0x000049BC
+		
 		public virtual bool GiveAward(GameClient client, int _params1, int _params2)
 		{
 			return true;
 		}
 
-		// Token: 0x0600004A RID: 74 RVA: 0x000067D0 File Offset: 0x000049D0
+		
 		public virtual bool GiveAward(GameClient client)
 		{
 			return true;
 		}
 
-		// Token: 0x0600004B RID: 75 RVA: 0x000067E4 File Offset: 0x000049E4
+		
 		protected bool GiveAward(GameClient client, AwardItem myAwardItem)
 		{
 			bool result;
@@ -284,7 +284,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600004C RID: 76 RVA: 0x00006AA4 File Offset: 0x00004CA4
+		
 		protected bool GiveEffectiveTimeAward(GameClient client, AwardItem myAwardItem)
 		{
 			bool result;
@@ -320,43 +320,43 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600004D RID: 77 RVA: 0x00006D64 File Offset: 0x00004F64
+		
 		public virtual List<int> GetAwardIDList()
 		{
 			return null;
 		}
 
-		// Token: 0x0600004E RID: 78 RVA: 0x00006D78 File Offset: 0x00004F78
+		
 		public virtual AwardItem GetAward(GameClient client)
 		{
 			return null;
 		}
 
-		// Token: 0x0600004F RID: 79 RVA: 0x00006D8C File Offset: 0x00004F8C
+		
 		public virtual AwardItem GetAward(int _params)
 		{
 			return null;
 		}
 
-		// Token: 0x06000050 RID: 80 RVA: 0x00006DA0 File Offset: 0x00004FA0
+		
 		public virtual AwardItem GetAward(GameClient client, int _params = 0)
 		{
 			return null;
 		}
 
-		// Token: 0x06000051 RID: 81 RVA: 0x00006DB4 File Offset: 0x00004FB4
+		
 		public virtual AwardItem GetAward(GameClient client, int _params1 = 0, int _params2 = 0)
 		{
 			return null;
 		}
 
-		// Token: 0x06000052 RID: 82 RVA: 0x00006DC8 File Offset: 0x00004FC8
+		
 		public virtual AwardItem GetAward(GameClient client, int _params1 = 0, int _params2 = 0, int _params3 = 0)
 		{
 			return null;
 		}
 
-		// Token: 0x06000053 RID: 83 RVA: 0x00006DDC File Offset: 0x00004FDC
+		
 		public static string GetActivityChineseName(ActivityTypes type)
 		{
 			string activityName = type.ToString();
@@ -565,7 +565,7 @@ namespace GameServer.Logic
 			return activityName;
 		}
 
-		// Token: 0x06000054 RID: 84 RVA: 0x000071D0 File Offset: 0x000053D0
+		
 		public void PredealDateTime()
 		{
 			if (this.FromDate.CompareTo("-1") == 0 && 0 == this.ToDate.CompareTo("-1"))
@@ -589,37 +589,37 @@ namespace GameServer.Logic
 			this.ActivityKeyStr = string.Format("{0}_{1}", this.FromDate, this.ToDate).Replace(':', '$');
 		}
 
-		// Token: 0x06000055 RID: 85 RVA: 0x000072E4 File Offset: 0x000054E4
+		
 		public virtual bool CheckCondition(GameClient client, int extTag)
 		{
 			return true;
 		}
 
-		// Token: 0x040000DE RID: 222
+		
 		public string FromDate = "";
 
-		// Token: 0x040000DF RID: 223
+		
 		public string ToDate = "";
 
-		// Token: 0x040000E0 RID: 224
+		
 		public string AwardStartDate = "";
 
-		// Token: 0x040000E1 RID: 225
+		
 		public string AwardEndDate = "";
 
-		// Token: 0x040000E2 RID: 226
+		
 		public int ActivityType = -1;
 
-		// Token: 0x040000E3 RID: 227
+		
 		protected int CodeForParamsValidate = 0;
 
-		// Token: 0x040000E4 RID: 228
+		
 		public string ActivityKeyStr;
 
-		// Token: 0x040000E5 RID: 229
+		
 		public DateTime StartTime;
 
-		// Token: 0x040000E6 RID: 230
+		
 		public DateTime EndTime;
 	}
 }

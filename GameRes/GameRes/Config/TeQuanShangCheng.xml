@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <JingLing ID="1" TeQuanID="23" WuPinID="63239,1,0,0,0,0,0" JiaGe="38" GouMaiCiShu="3" />
+  <JingLing ID="2" TeQuanID="23" WuPinID="63239,1,0,0,0,0,0" JiaGe="68" GouMaiCiShu="9999" />
+  <JingLing ID="3" TeQuanID="23" WuPinID="63239,1,0,0,0,0,0" JiaGe="68" GouMaiCiShu="9999" />
+  <JingLing ID="4" TeQuanID="23" WuPinID="63268,1,1,0,0,0,0" JiaGe="66" GouMaiCiShu="3" />
+  <JingLing ID="5" TeQuanID="23" WuPinID="63268,1,1,0,0,0,0" JiaGe="88" GouMaiCiShu="9999" />
+  <JingLing ID="6" TeQuanID="23" WuPinID="63268,1,1,0,0,0,0" JiaGe="88" GouMaiCiShu="9999" />
+</Config>

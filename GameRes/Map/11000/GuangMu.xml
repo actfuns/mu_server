@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+<Item ID="1" Show="1" Path="Scene/Non-Barrier/zuo" Pos="0,0,0" ZuDang="3708_4439,4352_4439,3708_4365,4352_4365" Description=""/>
+<Item ID="2" Show="1" Path="Scene/Non-Barrier/zhong" Pos="0,0,0" ZuDang="5515_4476,6261_4447,5515_4371,6261_4371" Description=""/>
+<Item ID="3" Show="1" Path="Scene/Non-Barrier/you" Pos="0,0,0" ZuDang="7404_4457,8047_4457,7404_4356,8047_4356" Description=""/>
+</Config>

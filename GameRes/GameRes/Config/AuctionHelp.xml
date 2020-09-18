@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}金团拍卖规则" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、活动产出的奖励会自动进入{17e43e}金团拍卖行{-}" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、竞价采取提前扣费的方式，当竞价被他人超过时，花费会以邮件的形式返还" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、使用{17e43e}一口价{-}可直接购买下拍品" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4、竞拍成功后，会将竞拍{17e43e}钻石分配{-}给参与活动的玩家（奖励与活动参与情况有关）" Bold="0" />
+  <HelpIntro ID="6" Intro="{dac7ae}5、若竞拍价格低于参与活动人数（每人分得钻石小于1），则所有玩家无奖励" Bold="0" />
+  <HelpIntro ID="7" Intro="{dac7ae}6、若无人竞拍，则无奖励" Bold="0" />
+  <HelpIntro ID="8" Intro="{fac60d}天使神殿金团奖励" Bold="1" />
+  <HelpIntro ID="9" Intro="{dac7ae}1、BOSS被击杀后增加额外掉落进入金团拍卖行" Bold="0" />
+</Config>

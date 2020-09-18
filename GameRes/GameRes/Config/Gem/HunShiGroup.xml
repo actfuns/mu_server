@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HunShiGroup ID="1" Name="火+光" HunShiGoodsType="911,917" GroupProperty="FirePenetration,0.02|AddAttackInjurePercent,0.01|BlowPercent,0.01" />
+  <HunShiGroup ID="2" Name="光+热" HunShiGoodsType="917,922" GroupProperty="FirePenetration,0.01|MaxLifePercent,0.06|PalsyPercent,0.01" />
+  <HunShiGroup ID="3" Name="热+爆" HunShiGoodsType="922,923" GroupProperty="FirePenetration,0.01|BlowPercent,0.02" />
+  <HunShiGroup ID="4" Name="爆+赤" HunShiGoodsType="923,928" GroupProperty="FirePenetration,0.01|AddAttackInjurePercent,0.02|BlowPercent,0.01" />
+  <HunShiGroup ID="5" Name="赤+火" HunShiGoodsType="928,911" GroupProperty="FirePenetration,0.02|MaxLifePercent,0.04|BlowPercent,0.01" />
+  <HunShiGroup ID="6" Name="雷+光" HunShiGoodsType="912,917" GroupProperty="LightningPenetration,0.02|AddAttackInjurePercent,0.01|PalsyPercent,0.01" />
+  <HunShiGroup ID="7" Name="光+电" HunShiGoodsType="917,918" GroupProperty="LightningPenetration,0.01|AddAttackInjurePercent,0.02|PalsyPercent,0.01" />
+  <HunShiGroup ID="8" Name="电+爆" HunShiGoodsType="918,923" GroupProperty="LightningPenetration,0.01|PalsyPercent,0.02" />
+  <HunShiGroup ID="9" Name="爆+云" HunShiGoodsType="923,924" GroupProperty="LightningPenetration,0.01|MaxLifePercent,0.06|SpeedDownPercent,0.01" />
+  <HunShiGroup ID="10" Name="云+雷" HunShiGoodsType="924,912" GroupProperty="LightningPenetration,0.02|MaxLifePercent,0.04|PalsyPercent,0.01" />
+  <HunShiGroup ID="11" Name="风+电" HunShiGoodsType="913,918" GroupProperty="WindPenetration,0.02|AddAttackInjurePercent,0.01|SpeedDownPercent,0.01" />
+  <HunShiGroup ID="12" Name="电+极" HunShiGoodsType="918,919" GroupProperty="WindPenetration,0.01|MaxLifePercent,0.06|FrozenPercent,0.01" />
+  <HunShiGroup ID="13" Name="极+云" HunShiGoodsType="919,924" GroupProperty="WindPenetration,0.01|SpeedDownPercent,0.02" />
+  <HunShiGroup ID="14" Name="云+漫" HunShiGoodsType="924,925" GroupProperty="WindPenetration,0.01|AddAttackInjurePercent,0.02|SpeedDownPercent,0.01" />
+  <HunShiGroup ID="15" Name="漫+风" HunShiGoodsType="925,913" GroupProperty="WindPenetration,0.02|MaxLifePercent,0.04|SpeedDownPercent,0.01" />
+  <HunShiGroup ID="16" Name="水+极" HunShiGoodsType="914,919" GroupProperty="WaterPenetration,0.02|AddAttackInjurePercent,0.01|SpeedDownPercent,0.01" />
+  <HunShiGroup ID="17" Name="极+冷" HunShiGoodsType="919,920" GroupProperty="WaterPenetration,0.01|AddAttackInjurePercent,0.02|FrozenPercent,0.01" />
+  <HunShiGroup ID="18" Name="冷+漫" HunShiGoodsType="920,925" GroupProperty="WaterPenetration,0.01|SpeedDownPercent,0.02" />
+  <HunShiGroup ID="19" Name="漫+雪" HunShiGoodsType="925,926" GroupProperty="WaterPenetration,0.01|MaxLifePercent,0.06|FrozenPercent,0.01" />
+  <HunShiGroup ID="20" Name="雪+水" HunShiGoodsType="926,914" GroupProperty="WaterPenetration,0.02|MaxLifePercent,0.04|FrozenPercent,0.01" />
+  <HunShiGroup ID="21" Name="冰+冷" HunShiGoodsType="915,920" GroupProperty="IcePenetration,0.02|AddAttackInjurePercent,0.01|FrozenPercent,0.01" />
+  <HunShiGroup ID="22" Name="冷+霜" HunShiGoodsType="920,921" GroupProperty="IcePenetration,0.01|MaxLifePercent,0.06|BlowPercent,0.01" />
+  <HunShiGroup ID="23" Name="霜+雪" HunShiGoodsType="921,926" GroupProperty="IcePenetration,0.01|FrozenPercent,0.02" />
+  <HunShiGroup ID="24" Name="雪+封" HunShiGoodsType="926,927" GroupProperty="IcePenetration,0.01|AddAttackInjurePercent,0.02|FrozenPercent,0.01" />
+  <HunShiGroup ID="25" Name="封+冰" HunShiGoodsType="927,915" GroupProperty="IcePenetration,0.02|MaxLifePercent,0.04|FrozenPercent,0.01" />
+  <HunShiGroup ID="26" Name="土+霜" HunShiGoodsType="916,921" GroupProperty="SoilPenetration,0.02|AddAttackInjurePercent,0.01|BlowPercent,0.01" />
+  <HunShiGroup ID="27" Name="霜+热" HunShiGoodsType="921,922" GroupProperty="SoilPenetration,0.01|AddAttackInjurePercent,0.02|PalsyPercent,0.01" />
+  <HunShiGroup ID="28" Name="热+封" HunShiGoodsType="922,927" GroupProperty="SoilPenetration,0.01|BlowPercent,0.02" />
+  <HunShiGroup ID="29" Name="封+赤" HunShiGoodsType="927,928" GroupProperty="SoilPenetration,0.01|MaxLifePercent,0.06|PalsyPercent,0.01" />
+  <HunShiGroup ID="30" Name="赤+土" HunShiGoodsType="928,916" GroupProperty="SoilPenetration,0.02|MaxLifePercent,0.04|PalsyPercent,0.01" />
+</Config>

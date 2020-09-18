@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <Monsters>
+    <Monster ID="1" Code="3902" X="3950" Y="2350" Radius="500" Num="5" Timeslot="3" PursuitRadius="1000" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="2" Code="3902" X="2950" Y="2350" Radius="500" Num="5" Timeslot="3" PursuitRadius="1000" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="3" Code="3901" X="3650" Y="3950" Radius="1" Num="1" Timeslot="3" PursuitRadius="0" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="4" Code="3901" X="3050" Y="3950" Radius="1" Num="1" Timeslot="3" PursuitRadius="0" BirthType="0" TimePoints="" BirthRate="1" />
+    <Monster ID="5" Code="3900" X="3350" Y="5750" Radius="1" Num="1" Timeslot="10800" PursuitRadius="10000" BirthType="0" TimePoints="" BirthRate="1" />
+  </Monsters>
+</Map>

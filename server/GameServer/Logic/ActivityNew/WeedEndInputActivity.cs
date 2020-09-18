@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x020001D1 RID: 465
+	
 	public class WeedEndInputActivity : Activity
 	{
-		// Token: 0x060005DB RID: 1499 RVA: 0x00052F7C File Offset: 0x0005117C
+		
 		public override bool InActivityTime()
 		{
 			bool result;
@@ -72,19 +72,19 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060005DC RID: 1500 RVA: 0x00053100 File Offset: 0x00051300
+		
 		public override bool InAwardTime()
 		{
 			return !string.IsNullOrEmpty(this.FromDate) && !string.IsNullOrEmpty(this.ToDate) && this.InActivityTime();
 		}
 
-		// Token: 0x060005DD RID: 1501 RVA: 0x00053140 File Offset: 0x00051340
+		
 		public override int GetParamsValidateCode()
 		{
 			return 1;
 		}
 
-		// Token: 0x060005DE RID: 1502 RVA: 0x00053154 File Offset: 0x00051354
+		
 		public void OnRoleLogin(GameClient client, bool isLogin)
 		{
 			if (this.InActivityTime())
@@ -117,7 +117,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060005DF RID: 1503 RVA: 0x00053228 File Offset: 0x00051428
+		
 		public void SyncWeekEndInputData(GameClient client)
 		{
 			string strcmd = "";
@@ -141,7 +141,7 @@ namespace GameServer.Logic.ActivityNew
 			client.sendCmd(1501, strcmd, false);
 		}
 
-		// Token: 0x060005E0 RID: 1504 RVA: 0x000532C0 File Offset: 0x000514C0
+		
 		public int GetWeekEndInputOpenDay(GameClient client)
 		{
 			int OpenDay = 0;
@@ -154,7 +154,7 @@ namespace GameServer.Logic.ActivityNew
 			return OpenDay;
 		}
 
-		// Token: 0x060005E1 RID: 1505 RVA: 0x000532F8 File Offset: 0x000514F8
+		
 		public void UpdateWeekEndInputOpenDay(GameClient client)
 		{
 			if (this.InAwardTime())
@@ -165,7 +165,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060005E2 RID: 1506 RVA: 0x00053334 File Offset: 0x00051534
+		
 		public override bool GiveAward(GameClient client, int NeedYuanBao)
 		{
 			bool result;
@@ -234,7 +234,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060005E3 RID: 1507 RVA: 0x000534D4 File Offset: 0x000516D4
+		
 		public int GetNeedGoodsSpace(GameClient client, int NeedYuanBao)
 		{
 			int result;
@@ -287,7 +287,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060005E4 RID: 1508 RVA: 0x000535E4 File Offset: 0x000517E4
+		
 		public string BuildRandAwardData(GameClient client)
 		{
 			string strResult = "";
@@ -373,7 +373,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060005E5 RID: 1509 RVA: 0x000539F4 File Offset: 0x00051BF4
+		
 		public bool ParseActivityTime(string ZhouMoChongZhiTime)
 		{
 			string[] TimeActivity = ZhouMoChongZhiTime.Split(new char[]
@@ -411,7 +411,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060005E6 RID: 1510 RVA: 0x00053AD4 File Offset: 0x00051CD4
+		
 		public bool Init()
 		{
 			try
@@ -495,10 +495,10 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x04000A54 RID: 2644
+		
 		protected Dictionary<int, WeekEndInputTypeData> InputTypeDict = new Dictionary<int, WeekEndInputTypeData>();
 
-		// Token: 0x04000A55 RID: 2645
+		
 		protected Dictionary<int, List<WeekEndInputAwardData>> AwardItemDict = new Dictionary<int, List<WeekEndInputAwardData>>();
 	}
 }

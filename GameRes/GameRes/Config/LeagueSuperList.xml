@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <LeagueSuperList ID="1" Name="第一轮" Match1="1|3" Match2="2|4" Match3="5|7" Match4="6|8" />
+  <LeagueSuperList ID="2" Name="第二轮" Match1="1|8" Match2="2|7" Match3="3|6" Match4="4|5" />
+  <LeagueSuperList ID="3" Name="第三轮" Match1="1|4" Match2="2|6" Match3="3|7" Match4="5|8" />
+  <LeagueSuperList ID="4" Name="第四轮" Match1="1|7" Match2="2|8" Match3="3|5" Match4="4|6" />
+  <LeagueSuperList ID="5" Name="第五轮" Match1="1|6" Match2="2|5" Match3="3|8" Match4="4|7" />
+  <LeagueSuperList ID="6" Name="第六轮" Match1="1|5" Match2="2|3" Match3="4|8" Match4="6|7" />
+  <LeagueSuperList ID="7" Name="第七轮" Match1="1|2" Match2="3|4" Match3="5|6" Match4="7|8" />
+</Config>

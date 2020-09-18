@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}神殿占领规则" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、神殿初始状态为{17e43e}未被占领{dac7ae}，任意一方进入神殿{17e43e}立刻占领神殿" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、神殿中一直有两方角色，则神殿占领状态不变" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、神殿中只有非占领方角色，神殿占领状态{17e43e}立刻变更{dac7ae}为该方" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4、神殿中无角色，神殿状态{17e43e}立刻变更{dac7ae}为未被占领状态" Bold="0" />
+  <HelpIntro ID="6" Intro="{dac7ae}5、神殿中没有传送门离开神殿" Bold="0" />
+  <HelpIntro ID="7" Intro="{fac60d}神罚闪电规则" Bold="1" />
+  <HelpIntro ID="8" Intro="{dac7ae}1、在神殿中每隔5秒，地图中所有角色受到{ff0000}一次伤害" Bold="0" />
+  <HelpIntro ID="9" Intro="{dac7ae}2、伤害随着角色在神殿中停留时间的增长有{ff0000}略微提高" Bold="0" />
+  <HelpIntro ID="10" Intro="{dac7ae}3、占领神殿、诸神之野旗帜可获得{17e43e}降低神罚闪电伤害的BUFF" Bold="0" />
+  <HelpIntro ID="11" Intro="{dac7ae}4、占领神殿、诸神之野旗帜可获{17e43e}战场积分" Bold="0" />
+  <HelpIntro ID="12" Intro="{fac60d}胜利结算" Bold="1" />
+  <HelpIntro ID="13" Intro="{dac7ae}1、活动结束时，占领神殿的一方{17e43e}胜利" Bold="0" />
+  <HelpIntro ID="14" Intro="{dac7ae}2、若双方均未占领神殿，获得战场积分高的一方{17e43e}胜利" Bold="0" />
+  <HelpIntro ID="15" Intro="{dac7ae}3、胜利一方将根据{17e43e}击杀数{dac7ae}、{17e43e}占领神殿{dac7ae}、{17e43e}占领旗帜{dac7ae}等，综合评定出{17e43e}本场MVP" Bold="0" />
+</Config>

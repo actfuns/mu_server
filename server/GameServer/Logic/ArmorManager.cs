@@ -9,22 +9,22 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020001F5 RID: 501
+	
 	public class ArmorManager : IManager, ICmdProcessorEx, ICmdProcessor, IEventListener
 	{
-		// Token: 0x06000648 RID: 1608 RVA: 0x00057D8C File Offset: 0x00055F8C
+		
 		public static ArmorManager getInstance()
 		{
 			return ArmorManager.instance;
 		}
 
-		// Token: 0x06000649 RID: 1609 RVA: 0x00057DA4 File Offset: 0x00055FA4
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x0600064A RID: 1610 RVA: 0x00057DC8 File Offset: 0x00055FC8
+		
 		public void processEvent(EventObject eventObject)
 		{
 			int nID = eventObject.getEventType();
@@ -50,7 +50,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x0600064B RID: 1611 RVA: 0x00057E38 File Offset: 0x00056038
+		
 		public bool InitConfig()
 		{
 			bool success = true;
@@ -95,7 +95,7 @@ namespace GameServer.Logic
 			return success;
 		}
 
-		// Token: 0x0600064C RID: 1612 RVA: 0x000580BC File Offset: 0x000562BC
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1447, 1, 1, ArmorManager.getInstance(), TCPCmdFlags.IsBinaryStreamParams);
@@ -104,7 +104,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600064D RID: 1613 RVA: 0x0005810C File Offset: 0x0005630C
+		
 		public bool showdown()
 		{
 			GlobalEventSource.getInstance().removeListener(10, ArmorManager.getInstance());
@@ -112,31 +112,31 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600064E RID: 1614 RVA: 0x00058144 File Offset: 0x00056344
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600064F RID: 1615 RVA: 0x00058158 File Offset: 0x00056358
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06000650 RID: 1616 RVA: 0x0005816C File Offset: 0x0005636C
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			return nID != 1447 || this.ProcessArmorStarUpCmd(client, nID, bytes, cmdParams);
 		}
 
-		// Token: 0x06000651 RID: 1617 RVA: 0x0005819C File Offset: 0x0005639C
+		
 		private bool IsGongNengOpened(GameClient client)
 		{
 			return GlobalNew.IsGongNengOpened(client, GongNengIDs.Armor, false);
 		}
 
-		// Token: 0x06000652 RID: 1618 RVA: 0x000581C4 File Offset: 0x000563C4
+		
 		private bool ProcessArmorStarUpCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			int result = 0;
@@ -311,7 +311,7 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000653 RID: 1619 RVA: 0x00058840 File Offset: 0x00056A40
+		
 		public void ResetArmor(GameClient client, bool reset = true)
 		{
 			if (client.ClientData.ArmorData.Armor > 0)
@@ -352,13 +352,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000654 RID: 1620 RVA: 0x000589FC File Offset: 0x00056BFC
+		
 		public void OnRoleDead(GameClient client)
 		{
 			this.ResetArmor(client, true);
 		}
 
-		// Token: 0x06000655 RID: 1621 RVA: 0x00058A08 File Offset: 0x00056C08
+		
 		public void OnInitGame(GameClient client)
 		{
 			if (client.ClientData.ArmorData == null)
@@ -369,7 +369,7 @@ namespace GameServer.Logic
 			this.ResetArmor(client, true);
 		}
 
-		// Token: 0x06000656 RID: 1622 RVA: 0x00058A50 File Offset: 0x00056C50
+		
 		public void InitDataByTask(GameClient client)
 		{
 			if (client.ClientData.ArmorData.Armor <= 0)
@@ -382,7 +382,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000657 RID: 1623 RVA: 0x00058AA4 File Offset: 0x00056CA4
+		
 		public void OnTimer(TimerEventObject eventObj)
 		{
 			GameClient client = eventObj.Client;
@@ -403,10 +403,10 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04000B17 RID: 2839
+		
 		private static ArmorManager instance = new ArmorManager();
 
-		// Token: 0x04000B18 RID: 2840
+		
 		private ArmorManagerData RuntimeData = new ArmorManagerData();
 	}
 }

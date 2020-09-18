@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Battle>
+  <!--MapCode, 角斗场的地图编号, TimePoints 角斗赛开始的时间点, MinLevel, 最低要求的转生等级, MinRequestNum区里面要求的最低在线人数, MaxEnterNum可以进入角斗赛场景的最多人数,Award奖励物品,FallGiftNum掉路的礼包个数,GiveGoodsIDs固定给的奖励的物品(例如药品类),NotifyBattleKilledNumSecs通知积分时间间隔20秒到 100秒之间-->
+  <Item ID="1" MapCode1="11000" MapCode2="11001" MaxZhanMengNum="4" KaiFuDay="5" ApplyZhangMengZiJin="10000" BidZhangMengZiJin="1000" EnrollTime="2100" WeekPoints="3|6" TimePoints="21:30" LineID="1" WaitingEnterSecs="180" PrepareSecs="1" FightingSecs="1800" ClearRolesSecs="60" MinZhuanSheng="0" MinLevel="30" MinRequestNum="1" MaxEnterNum="1000" ExpAward="150000" ZhanGongAward="50" ZiJin="30000" DayZhanGong="10" DayExp="50000" DayGoods="4030,1,1,0,0,0,0" />
+</Battle>

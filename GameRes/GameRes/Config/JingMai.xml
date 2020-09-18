@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <JinMai ID="1" LevelLimit="10" ZhenQi="0" BindMoney="100000" NeedGoods="" />
+  <JinMai ID="2" LevelLimit="20" ZhenQi="500" BindMoney="0" NeedGoods="" />
+  <JinMai ID="3" LevelLimit="30" ZhenQi="2000" BindMoney="0" NeedGoods="" />
+  <JinMai ID="4" LevelLimit="35" ZhenQi="5000" BindMoney="0" NeedGoods="" />
+  <JinMai ID="5" LevelLimit="40" ZhenQi="10000" BindMoney="0" NeedGoods="20100,1" />
+  <JinMai ID="6" LevelLimit="45" ZhenQi="20000" BindMoney="0" NeedGoods="36030,1" />
+  <JinMai ID="7" LevelLimit="50" ZhenQi="30000" BindMoney="0" NeedGoods="36021,1" />
+  <JinMai ID="8" LevelLimit="55" ZhenQi="40000" BindMoney="0" NeedGoods="36021,1" />
+  <JinMai ID="9" LevelLimit="60" ZhenQi="50000" BindMoney="0" NeedGoods="36021,2" />
+  <JinMai ID="10" LevelLimit="65" ZhenQi="50000" BindMoney="0" NeedGoods="36021,3" />
+  <JinMai ID="11" LevelLimit="65" ZhenQi="250000" BindMoney="0" NeedGoods="36021,4" />
+  <JinMai ID="12" LevelLimit="70" ZhenQi="550000" BindMoney="0" NeedGoods="36021,5" />
+</config>

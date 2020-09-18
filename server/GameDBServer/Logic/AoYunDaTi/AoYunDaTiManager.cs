@@ -8,16 +8,16 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.AoYunDaTi
 {
-	// Token: 0x02000114 RID: 276
+	
 	public class AoYunDaTiManager : SingletonTemplate<AoYunDaTiManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x0600048C RID: 1164 RVA: 0x00024F84 File Offset: 0x00023184
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x0600048D RID: 1165 RVA: 0x00024F98 File Offset: 0x00023198
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(20300, SingletonTemplate<AoYunDaTiManager>.Instance());
@@ -27,19 +27,19 @@ namespace GameDBServer.Logic.AoYunDaTi
 			return true;
 		}
 
-		// Token: 0x0600048E RID: 1166 RVA: 0x00025000 File Offset: 0x00023200
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x0600048F RID: 1167 RVA: 0x00025014 File Offset: 0x00023214
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000490 RID: 1168 RVA: 0x00025028 File Offset: 0x00023228
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			if (nID == 20300)
@@ -60,7 +60,7 @@ namespace GameDBServer.Logic.AoYunDaTi
 			}
 		}
 
-		// Token: 0x06000491 RID: 1169 RVA: 0x000250B0 File Offset: 0x000232B0
+		
 		private void GetAoyunDaTiRoleList(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			List<AoyunPaiHangRoleData> roleList = new List<AoyunPaiHangRoleData>();
@@ -114,7 +114,7 @@ namespace GameDBServer.Logic.AoYunDaTi
 			client.sendCmd<List<AoyunPaiHangRoleData>>(nID, roleList);
 		}
 
-		// Token: 0x06000492 RID: 1170 RVA: 0x0002529C File Offset: 0x0002349C
+		
 		private void GetAoyunLastRankDic(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			Dictionary<int, int> rankDic = new Dictionary<int, int>();
@@ -152,7 +152,7 @@ namespace GameDBServer.Logic.AoYunDaTi
 			client.sendCmd<Dictionary<int, int>>(nID, rankDic);
 		}
 
-		// Token: 0x06000493 RID: 1171 RVA: 0x000253D4 File Offset: 0x000235D4
+		
 		private void SetAoyunLastRankDic(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			MySQLConnection conn = null;
@@ -194,7 +194,7 @@ namespace GameDBServer.Logic.AoYunDaTi
 			client.sendCmd<int>(nID, 1);
 		}
 
-		// Token: 0x06000494 RID: 1172 RVA: 0x000255AC File Offset: 0x000237AC
+		
 		private void CleanAoyunPoint(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			MySQLConnection conn = null;

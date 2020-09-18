@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MeiRiBiZuoTab>
+  <MeiRiBiZuo ID="1" Name="经验"/>
+  <MeiRiBiZuo ID="2" Name="绑金"/>
+  <MeiRiBiZuo ID="3" Name="魔晶"/>
+  <MeiRiBiZuo ID="4" Name="装备"/> 
+  <MeiRiBiZuo ID="5" Name="晶石"/>
+  <MeiRiBiZuo ID="6" Name="羽毛"/>
+  <MeiRiBiZuo ID="7" Name="成就"/>
+  <MeiRiBiZuo ID="8" Name="声望"/>
+  <MeiRiBiZuo ID="9" Name="绑钻"/>
+  <MeiRiBiZuo ID="10" Name="元素粉末"/>
+</MeiRiBiZuoTab> 

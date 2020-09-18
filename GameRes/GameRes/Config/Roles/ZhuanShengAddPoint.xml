@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ShuXings>
+    <ShuXing ZhuanShengLevel="0" JiaDian="5" Strength="10000" Intelligence="10000" Constitution="10000" Dexterity="10000" />
+    <ShuXing ZhuanShengLevel="1" JiaDian="6" Strength="22000" Intelligence="22000" Constitution="22000" Dexterity="22000" />
+    <ShuXing ZhuanShengLevel="2" JiaDian="7" Strength="36000" Intelligence="36000" Constitution="36000" Dexterity="36000" />
+    <ShuXing ZhuanShengLevel="3" JiaDian="8" Strength="52000" Intelligence="52000" Constitution="52000" Dexterity="52000" />
+    <ShuXing ZhuanShengLevel="4" JiaDian="9" Strength="70000" Intelligence="70000" Constitution="70000" Dexterity="70000" />
+    <ShuXing ZhuanShengLevel="5" JiaDian="10" Strength="90000" Intelligence="90000" Constitution="90000" Dexterity="90000" />
+    <ShuXing ZhuanShengLevel="6" JiaDian="11" Strength="112000" Intelligence="112000" Constitution="112000" Dexterity="112000" />
+    <ShuXing ZhuanShengLevel="7" JiaDian="12" Strength="136000" Intelligence="136000" Constitution="136000" Dexterity="136000" />
+    <ShuXing ZhuanShengLevel="8" JiaDian="13" Strength="162000" Intelligence="162000" Constitution="162000" Dexterity="162000" />
+    <ShuXing ZhuanShengLevel="9" JiaDian="14" Strength="190000" Intelligence="190000" Constitution="190000" Dexterity="190000" />
+    <ShuXing ZhuanShengLevel="10" JiaDian="15" Strength="220000" Intelligence="220000" Constitution="220000" Dexterity="220000" />
+    <ShuXing ZhuanShengLevel="11" JiaDian="16" Strength="252000" Intelligence="252000" Constitution="252000" Dexterity="252000" />
+    <ShuXing ZhuanShengLevel="12" JiaDian="17" Strength="286000" Intelligence="286000" Constitution="286000" Dexterity="286000" />
+    <ShuXing ZhuanShengLevel="13" JiaDian="18" Strength="322000" Intelligence="322000" Constitution="322000" Dexterity="322000" />
+    <ShuXing ZhuanShengLevel="14" JiaDian="19" Strength="360000" Intelligence="360000" Constitution="360000" Dexterity="360000" />
+    <ShuXing ZhuanShengLevel="15" JiaDian="20" Strength="400000" Intelligence="400000" Constitution="400000" Dexterity="400000" />
+    <ShuXing ZhuanShengLevel="16" JiaDian="21" Strength="450000" Intelligence="450000" Constitution="450000" Dexterity="450000" />
+  </ShuXings>
+</Config>

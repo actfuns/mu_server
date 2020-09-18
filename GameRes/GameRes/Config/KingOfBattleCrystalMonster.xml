@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CrystalAward ID="1" MonsterID="8800000" Name="战斗物资" GatherTime="3" FuHuoTime="100" BattleJiFen="500" X="9600" Y="6250" GoodsID="2080001" Time="200" />
+  <CrystalAward ID="2" MonsterID="8800000" Name="战斗物资" GatherTime="3" FuHuoTime="100" BattleJiFen="500" X="9400" Y="6450" GoodsID="2080001" Time="200" />
+  <CrystalAward ID="3" MonsterID="8800000" Name="战斗物资" GatherTime="3" FuHuoTime="100" BattleJiFen="500" X="9600" Y="6450" GoodsID="2080001" Time="200" />
+  <CrystalAward ID="4" MonsterID="8800000" Name="战斗物资" GatherTime="3" FuHuoTime="100" BattleJiFen="500" X="6450" Y="9600" GoodsID="2080001" Time="200" />
+  <CrystalAward ID="5" MonsterID="8800000" Name="战斗物资" GatherTime="3" FuHuoTime="100" BattleJiFen="500" X="6250" Y="9600" GoodsID="2080001" Time="200" />
+  <CrystalAward ID="6" MonsterID="8800000" Name="战斗物资" GatherTime="3" FuHuoTime="100" BattleJiFen="500" X="6250" Y="9800" GoodsID="2080001" Time="200" />
+</Config>

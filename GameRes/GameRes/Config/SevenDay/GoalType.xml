@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Config>
+    <GoalType TypeID="1" Name="等级" Day="1" />
+    <GoalType TypeID="2" Name="魔晶" Day="1" />
+    <GoalType TypeID="3" Name="竞技场" Day="2" />
+    <GoalType TypeID="4" Name="基础装备" Day="2" />
+    <GoalType TypeID="5" Name="副本" Day="3" />
+    <GoalType TypeID="6" Name="合成转换" Day="3" />
+    <GoalType TypeID="7" Name="祝福晶石" Day="4" />
+    <GoalType TypeID="8" Name="装备强化" Day="4" />
+    <GoalType TypeID="9" Name="生命晶石" Day="5" />
+    <GoalType TypeID="10" Name="装备追加" Day="5" />
+    <GoalType TypeID="11" Name="神鹰火种" Day="6" />
+    <GoalType TypeID="12" Name="翅膀" Day="6" />
+    <GoalType TypeID="13" Name="图鉴精魄" Day="7" />
+    <GoalType TypeID="14" Name="装备进阶" Day="7" />
+</Config>

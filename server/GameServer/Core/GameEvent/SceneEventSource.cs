@@ -5,10 +5,10 @@ using Tmsk.Contract;
 
 namespace GameServer.Core.GameEvent
 {
-	// Token: 0x02000105 RID: 261
+	
 	public abstract class SceneEventSource : ISceneEventSource
 	{
-		// Token: 0x060003FC RID: 1020 RVA: 0x0003DCA4 File Offset: 0x0003BEA4
+		
 		public void registerListener(int eventType, int sceneType, IEventListenerEx listener)
 		{
 			lock (this.Event2Scenelisteners)
@@ -29,7 +29,7 @@ namespace GameServer.Core.GameEvent
 			}
 		}
 
-		// Token: 0x060003FD RID: 1021 RVA: 0x0003DD40 File Offset: 0x0003BF40
+		
 		public void removeListener(int eventType, int sceneType, IEventListenerEx listener)
 		{
 			lock (this.Event2Scenelisteners)
@@ -48,7 +48,7 @@ namespace GameServer.Core.GameEvent
 			}
 		}
 
-		// Token: 0x060003FE RID: 1022 RVA: 0x0003DDD0 File Offset: 0x0003BFD0
+		
 		public bool fireEvent(EventObjectEx eventObj, int sceneType)
 		{
 			int eventType;
@@ -80,7 +80,7 @@ namespace GameServer.Core.GameEvent
 			return result;
 		}
 
-		// Token: 0x060003FF RID: 1023 RVA: 0x0003DEA8 File Offset: 0x0003C0A8
+		
 		public void dispatchEvent(EventObjectEx eventObj, List<IEventListenerEx> listenerList)
 		{
 			foreach (IEventListenerEx listener in listenerList)
@@ -100,7 +100,7 @@ namespace GameServer.Core.GameEvent
 			}
 		}
 
-		// Token: 0x0400058E RID: 1422
+		
 		protected Dictionary<int, Dictionary<int, List<IEventListenerEx>>> Event2Scenelisteners = new Dictionary<int, Dictionary<int, List<IEventListenerEx>>>();
 	}
 }

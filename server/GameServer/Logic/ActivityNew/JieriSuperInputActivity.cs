@@ -10,10 +10,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x02000042 RID: 66
+	
 	public class JieriSuperInputActivity : Activity
 	{
-		// Token: 0x060000BB RID: 187 RVA: 0x0000D4BC File Offset: 0x0000B6BC
+		
 		public bool Init()
 		{
 			try
@@ -123,7 +123,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x060000BC RID: 188 RVA: 0x0000D960 File Offset: 0x0000BB60
+		
 		public void SaveFullPurchaseList(List<int> countList)
 		{
 			lock (JieriSuperInputActivity._SuperInputMutex)
@@ -134,7 +134,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060000BD RID: 189 RVA: 0x0000D9D4 File Offset: 0x0000BBD4
+		
 		public List<int> GetFullPurchaseList(DateTime now)
 		{
 			List<int> result;
@@ -188,7 +188,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060000BE RID: 190 RVA: 0x0000DBD8 File Offset: 0x0000BDD8
+		
 		public void OnRoleLogin(GameClient client)
 		{
 			if (!this.InActivityTime())
@@ -217,7 +217,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060000BF RID: 191 RVA: 0x0000DD28 File Offset: 0x0000BF28
+		
 		private JieriSuperInputData GetJieriSuperInputDataByNowDateTime(DateTime now, bool skipBegin = false)
 		{
 			JieriSuperInputData configData = null;
@@ -266,7 +266,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060000C0 RID: 192 RVA: 0x0000DE50 File Offset: 0x0000C050
+		
 		public string ExecuteSuperInput(GameClient client)
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -351,7 +351,7 @@ namespace GameServer.Logic.ActivityNew
 			});
 		}
 
-		// Token: 0x060000C1 RID: 193 RVA: 0x0000E170 File Offset: 0x0000C370
+		
 		public string BuildSuperInputFanLiActInfoForClient(GameClient client)
 		{
 			string cmdData = "";
@@ -415,7 +415,7 @@ namespace GameServer.Logic.ActivityNew
 			return result2;
 		}
 
-		// Token: 0x060000C2 RID: 194 RVA: 0x0000E3D4 File Offset: 0x0000C5D4
+		
 		public void FilterSingleChargeData(SingleChargeData data)
 		{
 			if (null != data)
@@ -437,7 +437,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060000C3 RID: 195 RVA: 0x0000E4A4 File Offset: 0x0000C6A4
+		
 		public void OnMoneyChargeEvent(string userid, int roleid, int addMoney, int superInputFanLi)
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -482,16 +482,16 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x0400016D RID: 365
+		
 		protected const string JieriSuperInputActivityData_fileName = "Config/MU_ChongZhiFanLi.xml";
 
-		// Token: 0x0400016E RID: 366
+		
 		private static object _SuperInputMutex = new object();
 
-		// Token: 0x0400016F RID: 367
+		
 		protected Dictionary<int, JieriSuperInputData> JieriSuperInputDict = new Dictionary<int, JieriSuperInputData>();
 
-		// Token: 0x04000170 RID: 368
+		
 		public int PlatformOpenStateVavle = 0;
 	}
 }

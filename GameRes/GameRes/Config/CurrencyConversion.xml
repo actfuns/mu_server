@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CurrencyConversion ID="1" Type="1" Name="魔晶" Unit="60000" Element="30" Limit="18000000" />
+  <CurrencyConversion ID="2" Type="2" Name="成就" Unit="1500" Element="30" Limit="450000" />
+  <CurrencyConversion ID="3" Type="3" Name="声望" Unit="3000" Element="30" Limit="2700000" />
+  <CurrencyConversion ID="4" Type="4" Name="星魂" Unit="15000" Element="30" Limit="4500000" />
+  <CurrencyConversion ID="5" Type="8" Name="守护点数" Unit="100" Element="30" Limit="30000" />
+  <CurrencyConversion ID="6" Type="13" Name="战功" Unit="300" Element="30" Limit="90000" />
+  <CurrencyConversion ID="7" Type="9" Name="荣耀点数" Unit="30" Element="30" Limit="45000" />
+  <CurrencyConversion ID="8" Type="2016" Name="羽毛" Unit="6" Element="30" Limit="3600" />
+  <CurrencyConversion ID="9" Type="2017" Name="神鹰火种" Unit="3" Element="60" Limit="900" />
+</Config>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="11"  FromDate="2013-08-11 00:00:00" ToDate="2013-08-17 23:59:59" AwardStartDate="2013-08-11 00:00:00"  AwardEndDate="2013-08-17 23:59:59" />
+  <GiftList Description="活动期间内，只需您是VIP玩家即可额外免费领取以下大奖，如此超值的诱惑，赶快行动吧！">
+  <Award GoodsIDs="110200,1,0,0,1,0|35004,1,0,0,1,0|31020,1,0,0,1,0|31017,1,0,0,1,0|30061,1,0,0,1,0" />
+  </GiftList>
+</Config>

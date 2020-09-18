@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <EveryDayActivityType TypeID="1" Name="转生等级" OpenLevel="0|1" CloseLevel="100|100" />
+  <EveryDayActivityType TypeID="2" Name="翅膀" OpenLevel="2|1" CloseLevel="100|100" />
+  <EveryDayActivityType TypeID="3" Name="成就" OpenLevel="2|1" CloseLevel="100|100" />
+  <EveryDayActivityType TypeID="5" Name="军衔" OpenLevel="3|1" CloseLevel="100|100" />
+  <EveryDayActivityType TypeID="6" Name="梅林之书" OpenLevel="5|1" CloseLevel="100|100" />
+  <EveryDayActivityType TypeID="7" Name="圣物等级" OpenLevel="5|1" CloseLevel="100|100" />
+  <EveryDayActivityType TypeID="8" Name="婚戒" OpenLevel="3|1" CloseLevel="100|100" />
+  <EveryDayActivityType TypeID="9" Name="守护神" OpenLevel="3|1" CloseLevel="100|100" />
+  <EveryDayActivityType TypeID="10" Name="充值" OpenLevel="2|1" CloseLevel="100|100" />
+</Config>

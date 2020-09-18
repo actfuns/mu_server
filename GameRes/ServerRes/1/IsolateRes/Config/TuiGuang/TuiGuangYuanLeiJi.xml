@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <TuiGuangYuanLeiJi/>
+  <GiftList>
+  <Award ID="1" MinNum="2" GoodsOne="5056,1,1,0,0,0,0" GoodsTwo="" />
+  <Award ID="2" MinNum="5" GoodsOne="5057,1,1,0,0,0,0" GoodsTwo="" />
+  <Award ID="3" MinNum="10" GoodsOne="5076,1,1,0,0,0,0" GoodsTwo="" />
+  <Award ID="4" MinNum="20" GoodsOne="5079,1,1,0,0,0,0" GoodsTwo="" />
+  <Award ID="5" MinNum="30" GoodsOne="5079,1,1,0,0,0,0" GoodsTwo="" />
+  <Award ID="6" MinNum="50" GoodsOne="5079,1,1,0,0,0,0" GoodsTwo="" />
+  </GiftList>
+</Config>

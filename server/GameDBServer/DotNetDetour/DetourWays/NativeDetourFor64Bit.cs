@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 
 namespace DotNetDetour.DetourWays
 {
-	// Token: 0x0200000D RID: 13
+	
 	public class NativeDetourFor64Bit : NativeDetourFor32Bit
 	{
-		// Token: 0x06000038 RID: 56 RVA: 0x00003430 File Offset: 0x00001630
+		
 		protected unsafe override void CreateOriginalMethod(MethodInfo method)
 		{
 			uint needSize = LDasm.SizeofMin5Byte((void*)this.srcPtr);
@@ -33,7 +33,7 @@ namespace DotNetDetour.DetourWays
 			*(long*)((byte*)method.MethodHandle.Value.ToPointer() + 8) = (long)ptr;
 		}
 
-		// Token: 0x04000016 RID: 22
+		
 		private byte[] jmp_inst = new byte[]
 		{
 			80,

@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x020001CA RID: 458
+	
 	public class GameConfig
 	{
-		// Token: 0x06000938 RID: 2360 RVA: 0x00058EF4 File Offset: 0x000570F4
+		
 		public void InitGameDBManagerFlags(bool init = false)
 		{
 			GameDBManager.Flag_t_goods_delete_immediately = (GameDBManager.GameConfigMgr.GetGameConfigItemInt("flag_t_goods_delete_immediately", 1) > 0);
@@ -44,7 +44,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000939 RID: 2361 RVA: 0x0005908C File Offset: 0x0005728C
+		
 		public bool IsPaiHangKey(string key)
 		{
 			bool result;
@@ -62,7 +62,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600093A RID: 2362 RVA: 0x000590F0 File Offset: 0x000572F0
+		
 		public void LoadGameConfigFromDB(DBManager dbMgr)
 		{
 			this._GameConfigDict = DBQuery.QueryGameConfigDict(dbMgr);
@@ -77,7 +77,7 @@ namespace GameDBServer.Logic
 			this.InitGameDBManagerFlags(false);
 		}
 
-		// Token: 0x0600093B RID: 2363 RVA: 0x00059160 File Offset: 0x00057360
+		
 		public void UpdateGameConfigItem(string paramName, string paramValue)
 		{
 			lock (this._GameConfigDict)
@@ -87,7 +87,7 @@ namespace GameDBServer.Logic
 			this.InitGameDBManagerFlags(false);
 		}
 
-		// Token: 0x0600093C RID: 2364 RVA: 0x000591BC File Offset: 0x000573BC
+		
 		public string GetGameConifgItem(string paramName)
 		{
 			string paramValue = null;
@@ -101,7 +101,7 @@ namespace GameDBServer.Logic
 			return paramValue;
 		}
 
-		// Token: 0x0600093D RID: 2365 RVA: 0x00059224 File Offset: 0x00057424
+		
 		public string GetGameConfigItemStr(string paramName, string defVal)
 		{
 			string ret = this.GetGameConifgItem(paramName);
@@ -117,7 +117,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600093E RID: 2366 RVA: 0x00059254 File Offset: 0x00057454
+		
 		public int GetGameConfigItemInt(string paramName, int defVal)
 		{
 			string str = this.GetGameConifgItem(paramName);
@@ -142,7 +142,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600093F RID: 2367 RVA: 0x000592A8 File Offset: 0x000574A8
+		
 		public double GetGameConfigItemInt(string paramName, double defVal)
 		{
 			string str = this.GetGameConifgItem(paramName);
@@ -167,7 +167,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000940 RID: 2368 RVA: 0x00059304 File Offset: 0x00057504
+		
 		public TCPOutPacket GetGameConfigDictTCPOutPacket(TCPOutPacketPool pool, int cmdID)
 		{
 			TCPOutPacket tcpOutPacket = null;
@@ -178,13 +178,13 @@ namespace GameDBServer.Logic
 			return tcpOutPacket;
 		}
 
-		// Token: 0x04000BBA RID: 3002
+		
 		private Dictionary<string, string> _GameConfigDict = new Dictionary<string, string>();
 
-		// Token: 0x04000BBB RID: 3003
+		
 		private bool Initialized = false;
 
-		// Token: 0x04000BBC RID: 3004
+		
 		private HashSet<string> RolePaiHangKeys = new HashSet<string>();
 	}
 }

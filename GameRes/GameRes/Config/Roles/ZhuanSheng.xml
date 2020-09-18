@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ZhuanShengs>
+    <ZhuanSheng ChangeLifeID="1" Level="100" NeedJinBi="0" NeedMoJing="0" NeedGoods="" Image="" AwardShuXing="100" AwardGoods="" ExpProportion="6" />
+    <ZhuanSheng ChangeLifeID="2" Level="100" NeedJinBi="2000000" NeedMoJing="50000" NeedGoods="" Image="" AwardShuXing="120" AwardGoods="" ExpProportion="28" />
+    <ZhuanSheng ChangeLifeID="3" Level="100" NeedJinBi="4000000" NeedMoJing="100000" NeedGoods="" Image="" AwardShuXing="140" AwardGoods="" ExpProportion="91" />
+    <ZhuanSheng ChangeLifeID="4" Level="100" NeedJinBi="8000000" NeedMoJing="200000" NeedGoods="" Image="" AwardShuXing="160" AwardGoods="" ExpProportion="231" />
+    <ZhuanSheng ChangeLifeID="5" Level="100" NeedJinBi="12000000" NeedMoJing="300000" NeedGoods="" Image="" AwardShuXing="180" AwardGoods="" ExpProportion="496" />
+    <ZhuanSheng ChangeLifeID="6" Level="100" NeedJinBi="18000000" NeedMoJing="450000" NeedGoods="" Image="" AwardShuXing="200" AwardGoods="" ExpProportion="682" />
+    <ZhuanSheng ChangeLifeID="7" Level="100" NeedJinBi="27000000" NeedMoJing="675000" NeedGoods="" Image="" AwardShuXing="220" AwardGoods="" ExpProportion="899" />
+    <ZhuanSheng ChangeLifeID="8" Level="100" NeedJinBi="37000000" NeedMoJing="800000" NeedGoods="" Image="" AwardShuXing="240" AwardGoods="" ExpProportion="1147" />
+    <ZhuanSheng ChangeLifeID="9" Level="100" NeedJinBi="57000000" NeedMoJing="800000" NeedGoods="" Image="" AwardShuXing="260" AwardGoods="" ExpProportion="1426" />
+    <ZhuanSheng ChangeLifeID="10" Level="100" NeedJinBi="77000000" NeedMoJing="800000" NeedGoods="" Image="" AwardShuXing="280" AwardGoods="" ExpProportion="1736" />
+  </ZhuanShengs>
+</Config>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <YanHui ID="1" NPCID="70000" MapCode="1" X="10450" Y="8071" Direction="4" ProhibitedTime="3,20:00,22:03|6,20:00,22:03" BeginTime="20:00:00" OverTime="21:00:00" FunctionID="5000" Picture="5000" ConductBindJinBi="5000000" SumNum="1000" UseNum="10" BindJinBi="10000" EXPAward="10000" XingHunAward="1000" ZhanGongAward="20" ZuanShiRatio="100000" />
+  <YanHui ID="2" NPCID="70001" MapCode="1" X="10450" Y="8071" Direction="4" ProhibitedTime="3,20:00,22:03|6,20:00,22:03" BeginTime="20:00:00" OverTime="21:00:00" FunctionID="5001" Picture="5001" ConductBindJinBi="20000000" SumNum="2000" UseNum="10" BindJinBi="15000" EXPAward="30000" XingHunAward="3000" ZhanGongAward="25" ZuanShiRatio="100000" />
+  <YanHui ID="3" NPCID="70002" MapCode="1" X="10450" Y="8071" Direction="4" ProhibitedTime="3,20:00,22:03|6,20:00,22:03" BeginTime="20:00:00" OverTime="21:00:00" FunctionID="5002" Picture="5002" ConductBindJinBi="50000000" SumNum="3000" UseNum="10" BindJinBi="20000" EXPAward="80000" XingHunAward="5000" ZhanGongAward="30" ZuanShiRatio="100000" />
+</Config>

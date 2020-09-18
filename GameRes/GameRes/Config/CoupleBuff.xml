@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CoupleBuff TypeID="1" Name="真爱祝福" Icon="2080010" Decorations="15000" Site="2500,2550,0" Time="0" Property="MaxLifeV,2000" MonstersID="8900000" />
+  <CoupleBuff TypeID="2" Name="勇气祝福" Icon="2080011" Decorations="15001" Site="3350,3350,10|1950,1950,10" Time="60|120" Property="" MonstersID="8900001" />
+</Config>

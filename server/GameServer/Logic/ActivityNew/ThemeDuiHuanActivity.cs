@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x02000446 RID: 1094
+	
 	public class ThemeDuiHuanActivity : Activity
 	{
-		// Token: 0x060013FC RID: 5116 RVA: 0x0013A508 File Offset: 0x00138708
+		
 		public List<int> GetIndexAll()
 		{
 			List<int> IndexList = new List<int>();
@@ -20,7 +20,7 @@ namespace GameServer.Logic.ActivityNew
 			return IndexList;
 		}
 
-		// Token: 0x060013FD RID: 5117 RVA: 0x0013A578 File Offset: 0x00138778
+		
 		public ThemeDuiHuan GetAwardConfig(int id)
 		{
 			ThemeDuiHuan config = null;
@@ -31,21 +31,21 @@ namespace GameServer.Logic.ActivityNew
 			return config;
 		}
 
-		// Token: 0x060013FE RID: 5118 RVA: 0x0013A5B0 File Offset: 0x001387B0
+		
 		public override bool GiveAward(GameClient client, int _params)
 		{
 			ThemeDuiHuan config = this.GetAwardConfig(_params);
 			return null != config && base.GiveAward(client, config.MyAwardItem);
 		}
 
-		// Token: 0x060013FF RID: 5119 RVA: 0x0013A5E8 File Offset: 0x001387E8
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client, int _params)
 		{
 			ThemeDuiHuan config = this.GetAwardConfig(_params);
 			return null != config && null != config.MyAwardItem && (config.MyAwardItem.GoodsDataList.Count <= 0 || Global.CanAddGoodsDataList(client, config.MyAwardItem.GoodsDataList));
 		}
 
-		// Token: 0x06001400 RID: 5120 RVA: 0x0013A654 File Offset: 0x00138854
+		
 		public int GetThemeDHTodayLeftMergeNum(GameClient client, int index)
 		{
 			ThemeDuiHuan config = this.GetAwardConfig(index);
@@ -85,7 +85,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06001401 RID: 5121 RVA: 0x0013A728 File Offset: 0x00138928
+		
 		public int ModifyThemeTodayLeftMergeNum(GameClient client, int index, int addNum = 1)
 		{
 			int currday = Global.GetOffsetDay(TimeUtil.NowDateTime());
@@ -119,7 +119,7 @@ namespace GameServer.Logic.ActivityNew
 			return count;
 		}
 
-		// Token: 0x06001402 RID: 5122 RVA: 0x0013A800 File Offset: 0x00138A00
+		
 		public string MergeGoods(GameClient client, int index)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}", 0, client.ClientData.RoleID, 154);
@@ -202,7 +202,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06001403 RID: 5123 RVA: 0x0013ABEC File Offset: 0x00138DEC
+		
 		public bool Init()
 		{
 			try
@@ -275,7 +275,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x04001D85 RID: 7557
+		
 		public Dictionary<int, ThemeDuiHuan> ThemeDuiHuanDict = new Dictionary<int, ThemeDuiHuan>();
 	}
 }

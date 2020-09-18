@@ -7,15 +7,15 @@ using Server.Tools;
 
 namespace GameDBServer.DB
 {
-	// Token: 0x0200019F RID: 415
+	
 	public class DBUserInfo
 	{
-		// Token: 0x170000BD RID: 189
+		
 		
 		
 		public string UserID { get; set; }
 
-		// Token: 0x170000BE RID: 190
+		
 		
 		public List<int> ListRoleIDs
 		{
@@ -25,7 +25,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x170000BF RID: 191
+		
 		
 		public List<int> ListRoleSexes
 		{
@@ -35,7 +35,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x170000C0 RID: 192
+		
 		
 		public List<int> ListRoleOccups
 		{
@@ -45,7 +45,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x170000C1 RID: 193
+		
 		
 		public List<string> ListRoleNames
 		{
@@ -55,7 +55,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x170000C2 RID: 194
+		
 		
 		public List<int> ListRoleLevels
 		{
@@ -65,7 +65,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x170000C3 RID: 195
+		
 		
 		public List<int> ListRoleZoneIDs
 		{
@@ -75,7 +75,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x170000C4 RID: 196
+		
 		
 		public List<int> ListRoleChangeLifeCount
 		{
@@ -85,7 +85,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x170000C5 RID: 197
+		
 		
 		public List<string> ListRolePreRemoveTime
 		{
@@ -95,52 +95,52 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x170000C6 RID: 198
+		
 		
 		
 		public string SecPwd { get; set; }
 
-		// Token: 0x170000C7 RID: 199
+		
 		
 		
 		public int Money { get; set; }
 
-		// Token: 0x170000C8 RID: 200
+		
 		
 		
 		public int RealMoney { get; set; }
 
-		// Token: 0x170000C9 RID: 201
+		
 		
 		
 		public int GiftID { get; set; }
 
-		// Token: 0x170000CA RID: 202
+		
 		
 		
 		public int GiftJiFen { get; set; }
 
-		// Token: 0x170000CB RID: 203
+		
 		
 		
 		public int InputPoints { get; set; }
 
-		// Token: 0x170000CC RID: 204
+		
 		
 		
 		public int SpecJiFen { get; set; }
 
-		// Token: 0x170000CD RID: 205
+		
 		
 		
 		public int EveryJiFen { get; set; }
 
-		// Token: 0x170000CE RID: 206
+		
 		
 		
 		public string PushMessageID { get; set; }
 
-		// Token: 0x170000CF RID: 207
+		
 		
 		
 		public long LastReferenceTicks
@@ -155,7 +155,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060007BF RID: 1983 RVA: 0x00046E64 File Offset: 0x00045064
+		
 		public bool Query(MySQLConnection conn, string userID)
 		{
 			LogManager.WriteLog(LogTypes.Info, string.Format("从数据库加载用户数据: {0}", userID), null, true);
@@ -284,7 +284,7 @@ namespace GameDBServer.DB
 			return true;
 		}
 
-		// Token: 0x060007C0 RID: 1984 RVA: 0x00047524 File Offset: 0x00045724
+		
 		public UserMiniData GetUserMiniData(string userId, int roleId, int OnlyZoneId)
 		{
 			UserMiniData userMimiData = new UserMiniData();
@@ -368,34 +368,34 @@ namespace GameDBServer.DB
 			return userMimiData;
 		}
 
-		// Token: 0x04000975 RID: 2421
+		
 		private List<int> _ListRoleIDs = new List<int>();
 
-		// Token: 0x04000976 RID: 2422
+		
 		private List<int> _ListRoleSexes = new List<int>();
 
-		// Token: 0x04000977 RID: 2423
+		
 		private List<int> _ListRoleOccups = new List<int>();
 
-		// Token: 0x04000978 RID: 2424
+		
 		private List<string> _ListRoleNames = new List<string>();
 
-		// Token: 0x04000979 RID: 2425
+		
 		private List<int> _ListRoleLevels = new List<int>();
 
-		// Token: 0x0400097A RID: 2426
+		
 		private List<int> _ListRoleZoneIDs = new List<int>();
 
-		// Token: 0x0400097B RID: 2427
+		
 		private List<int> _ListRoleChangeLifeCount = new List<int>();
 
-		// Token: 0x0400097C RID: 2428
+		
 		private List<string> _ListRolePreRemoveTime = new List<string>();
 
-		// Token: 0x0400097D RID: 2429
+		
 		private long _LastReferenceTicks = DateTime.Now.Ticks / 10000L;
 
-		// Token: 0x0400097E RID: 2430
+		
 		public long LogoutServerTicks = 0L;
 	}
 }

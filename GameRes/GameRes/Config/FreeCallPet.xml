@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <Item ID="1" GoodsID="1030901" Num="1" QiangHuaFallID="-1" ZhuiJiaFallID="-1" LckyProbability="" ZhuoYueFallID="11001" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="" MaxExp="" StartValues="1" EndValues="30000" />
+  <Item ID="2" GoodsID="1030902" Num="1" QiangHuaFallID="-1" ZhuiJiaFallID="-1" LckyProbability="" ZhuoYueFallID="11002" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="" MaxExp="" StartValues="30001" EndValues="60000" />
+  <Item ID="3" GoodsID="1030903" Num="1" QiangHuaFallID="-1" ZhuiJiaFallID="-1" LckyProbability="" ZhuoYueFallID="11003" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="" MaxExp="" StartValues="60001" EndValues="72500" />
+  <Item ID="4" GoodsID="1030904" Num="1" QiangHuaFallID="-1" ZhuiJiaFallID="-1" LckyProbability="" ZhuoYueFallID="11004" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="" MaxExp="" StartValues="72501" EndValues="85000" />
+  <Item ID="5" GoodsID="1030905" Num="1" QiangHuaFallID="-1" ZhuiJiaFallID="-1" LckyProbability="" ZhuoYueFallID="11005" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="" MaxExp="" StartValues="85001" EndValues="90000" />
+  <Item ID="6" GoodsID="1030906" Num="1" QiangHuaFallID="-1" ZhuiJiaFallID="-1" LckyProbability="" ZhuoYueFallID="11006" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="" MaxExp="" StartValues="90001" EndValues="95000" />
+  <Item ID="7" GoodsID="1030907" Num="1" QiangHuaFallID="-1" ZhuiJiaFallID="-1" LckyProbability="" ZhuoYueFallID="11007" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="" MaxExp="" StartValues="95001" EndValues="96000" />
+  <Item ID="8" GoodsID="1030908" Num="1" QiangHuaFallID="-1" ZhuiJiaFallID="-1" LckyProbability="" ZhuoYueFallID="11008" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="" MaxExp="" StartValues="96001" EndValues="97000" />
+  <Item ID="9" GoodsID="1030909" Num="1" QiangHuaFallID="-1" ZhuiJiaFallID="-1" LckyProbability="" ZhuoYueFallID="11009" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="" MaxExp="" StartValues="97001" EndValues="98000" />
+  <Item ID="10" GoodsID="1030910" Num="1" QiangHuaFallID="-1" ZhuiJiaFallID="-1" LckyProbability="" ZhuoYueFallID="11010" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="" MaxExp="" StartValues="98001" EndValues="98200" />
+  <Item ID="11" GoodsID="1030911" Num="1" QiangHuaFallID="-1" ZhuiJiaFallID="-1" LckyProbability="" ZhuoYueFallID="11011" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="" MaxExp="" StartValues="98201" EndValues="98400" />
+  <Item ID="12" GoodsID="1030912" Num="1" QiangHuaFallID="-1" ZhuiJiaFallID="-1" LckyProbability="" ZhuoYueFallID="11012" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="" MaxExp="" StartValues="98401" EndValues="98600" />
+  <Item ID="13" GoodsID="1030913" Num="1" QiangHuaFallID="-1" ZhuiJiaFallID="-1" LckyProbability="" ZhuoYueFallID="11013" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="" MaxExp="" StartValues="98601" EndValues="98800" />
+  <Item ID="14" GoodsID="1031002" Num="1" QiangHuaFallID="-1" ZhuiJiaFallID="-1" LckyProbability="" ZhuoYueFallID="11018" MinMoney="" MaxMoney="" MinBindYuanBao="" MaxBindYuanBao="" MinExp="" MaxExp="" StartValues="98801" EndValues="100000" />
+</config>

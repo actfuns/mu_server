@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <KaiFu Day="1" MinTime="2" MinLevel="40" AwardYuanBao="3888" Description="新服第1天累计在线2小时以上且40级以上的玩家，都将成为新服第2天12:00参与抽奖的玩家" />
+  <KaiFu Day="2" MinTime="12" MinLevel="45" AwardYuanBao="5888" Description="新服前2天累计在线12小时以上且45级以上的玩家，都将成为新服第3天12:00参与抽奖的玩家" />
+  <KaiFu Day="3" MinTime="24" MinLevel="48" AwardYuanBao="9888" Description="新服前3天累计在线24小时以上且48级以上的玩家，都将成为新服第4天12:00参与抽奖的玩家" />
+  <KaiFu Day="4" MinTime="48" MinLevel="48" AwardYuanBao="14888" Description="新服前4天累计在线48小时以上且48级以上的玩家，都将成为新服第5天12:00参与抽奖的玩家" />
+  <KaiFu Day="5" MinTime="60" MinLevel="48" AwardYuanBao="19888" Description="新服前5天累计在线60小时以上且48级以上的玩家，都将成为新服第6天12:00参与抽奖的玩家" />
+  <KaiFu Day="6" MinTime="72" MinLevel="50" AwardYuanBao="24888" Description="新服前6天累计在线72小时以上且50级以上的玩家，都将成为新服第7天12:00参与抽奖的玩家" />
+  <KaiFu Day="7" MinTime="96" MinLevel="50" AwardYuanBao="29888" Description="新服前7天累计在线96小时以上且50级以上的玩家，都将成为新服第8天12:00参与抽奖的玩家" />
+</Config>

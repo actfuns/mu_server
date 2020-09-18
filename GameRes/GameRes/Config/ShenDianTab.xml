@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShenDianTab>
+  <ShenDian Type="1" Name="勇气守护" />
+  <ShenDian Type="2" Name="友情守护" />
+  <ShenDian Type="3" Name="爱心守护" />
+  <ShenDian Type="4" Name="知识守护" /> 
+  <ShenDian Type="5" Name="诚实守护" />
+  <ShenDian Type="6" Name="纯真守护" />
+  <ShenDian Type="7" Name="希望守护" />
+  <ShenDian Type="8" Name="光明守护" /> 
+</ShenDianTab>

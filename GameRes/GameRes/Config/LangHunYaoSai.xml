@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <LangHunYaoSaiMonsters ID="1" MonstersID="8610000,16|8610001,4" NextTime="180" Site="6200,2900,10|2350,4830,10|10250,4830,10" Intro="第一波敌人已经攻过来了！" />
+  <LangHunYaoSaiMonsters ID="2" MonstersID="8610000,8|8610001,12" NextTime="180" Site="6200,2900,10|2350,4830,10|10250,4830,10" Intro="第二波敌人已经攻过来了！" />
+  <LangHunYaoSaiMonsters ID="3" MonstersID="8610000,8|8610001,8|8610002,2" NextTime="180" Site="6200,2900,10|2350,4830,10|10250,4830,10" Intro="第三波敌人已经攻过来了！" />
+  <LangHunYaoSaiMonsters ID="4" MonstersID="8610000,12|8610001,4|8610003,2" NextTime="180" Site="6200,2900,10|2350,4830,10|10250,4830,10" Intro="第四波敌人已经攻过来了！" />
+  <LangHunYaoSaiMonsters ID="5" MonstersID="8620000,8|8620001,4|8620002,2|8620003,2|8620004,1" NextTime="180" Site="6200,2900,10" Intro="第五波敌人已经攻过来了！" />
+  <LangHunYaoSaiMonsters ID="6" MonstersID="8630000,16|8630001,4" NextTime="180" Site="6200,2900,10|2350,4830,10|10250,4830,10" Intro="第六波敌人已经攻过来了！" />
+  <LangHunYaoSaiMonsters ID="7" MonstersID="8630000,8|8630001,12" NextTime="180" Site="6200,2900,10|2350,4830,10|10250,4830,10" Intro="第七波敌人已经攻过来了！" />
+  <LangHunYaoSaiMonsters ID="8" MonstersID="8630000,8|8630001,8|8630002,2" NextTime="180" Site="6200,2900,10|2350,4830,10|10250,4830,10" Intro="第八波敌人已经攻过来了！" />
+  <LangHunYaoSaiMonsters ID="9" MonstersID="8630000,12|8630001,4|8630003,2" NextTime="180" Site="6200,2900,10|2350,4830,10|10250,4830,10" Intro="第九波敌人已经攻过来了！" />
+  <LangHunYaoSaiMonsters ID="10" MonstersID="8640000,8|8640001,4|8640002,2|8640003,2|8640004,1" NextTime="180" Site="6200,2900,10" Intro="第十波敌人已经攻过来了！" />
+  <LangHunYaoSaiMonsters ID="11" MonstersID="8650000,16|8650001,4" NextTime="180" Site="6200,2900,10|2350,4830,10|10250,4830,10" Intro="第十一波敌人已经攻过来了！" />
+  <LangHunYaoSaiMonsters ID="12" MonstersID="8650000,8|8650001,12" NextTime="180" Site="6200,2900,10|2350,4830,10|10250,4830,10" Intro="第十二波敌人已经攻过来了！" />
+  <LangHunYaoSaiMonsters ID="13" MonstersID="8650000,8|8650001,8|8650002,2" NextTime="180" Site="6200,2900,10|2350,4830,10|10250,4830,10" Intro="第十三波敌人已经攻过来了！" />
+  <LangHunYaoSaiMonsters ID="14" MonstersID="8650000,12|8650001,4|8650003,2" NextTime="180" Site="6200,2900,10|2350,4830,10|10250,4830,10" Intro="第十四波敌人已经攻过来了！" />
+  <LangHunYaoSaiMonsters ID="15" MonstersID="8660000,8|8660001,4|8660002,2|8660003,2|8660004,1" NextTime="-1" Site="6200,2900,10" Intro="第十五波敌人已经攻过来了！" />
+</Config>

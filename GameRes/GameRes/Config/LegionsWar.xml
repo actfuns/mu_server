@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <LegionsWar ID="1" Name="阿卡轮-东" MapCode="83002" TimePoints="0,20:00:00-20:30:00" LegionsMax="4" MaxEnterNum="60" EnterCD="10" PrepareSecs="180" FightingSecs="1620" ClearRolesSecs="60" Exp="30000000" BandJinBi="1000000" WinGoods="5281,50,1,0,0,0,0|5220,10,1,0,0,0,0" LoseGoods="5281,30,1,0,0,0,0|5220,8,1,0,0,0,0" />
+  <LegionsWar ID="2" Name="阿卡轮-西" MapCode="83003" TimePoints="0,20:00:00-20:30:00" LegionsMax="4" MaxEnterNum="60" EnterCD="10" PrepareSecs="180" FightingSecs="1620" ClearRolesSecs="60" Exp="30000000" BandJinBi="1000000" WinGoods="5281,50,1,0,0,0,0|5220,10,1,0,0,0,0" LoseGoods="5281,30,1,0,0,0,0|5220,8,1,0,0,0,0" />
+</Config>

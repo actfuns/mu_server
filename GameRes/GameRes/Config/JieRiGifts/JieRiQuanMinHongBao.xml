@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="72" FromDate="2017-02-27 00:00:00" ToDate="2017-03-05 23:59:59" AwardStartDate="2017-02-27 00:00:00" AwardEndDate="2017-03-05 23:59:59" />
+  <GiftList Description="活动期间，每日特定时间全服会发放绑钻红包！">
+  <RedPacketPeople ID="1" Day="1" Time="12:00" RedPacketSize="15000" Interval="1,60" DurationTime="28800" />
+  <RedPacketPeople ID="2" Day="1" Time="20:00" RedPacketSize="15000" Interval="30,60" DurationTime="14400" />
+  <RedPacketPeople ID="3" Day="2" Time="12:00" RedPacketSize="15000" Interval="1,60" DurationTime="21600" />
+  <RedPacketPeople ID="4" Day="2" Time="18:00" RedPacketSize="15000" Interval="30,60" DurationTime="7200" />
+  <RedPacketPeople ID="5" Day="2" Time="20:00" RedPacketSize="15000" Interval="30,60" DurationTime="7200" />
+  <RedPacketPeople ID="6" Day="2" Time="22:00" RedPacketSize="15000" Interval="30,60" DurationTime="7200" />
+  <RedPacketPeople ID="7" Day="3" Time="0:00" RedPacketSize="90000" Interval="50,100" DurationTime="43200" />
+  <RedPacketPeople ID="8" Day="3" Time="12:00" RedPacketSize="15000" Interval="1,60" DurationTime="21600" />
+  <RedPacketPeople ID="9" Day="3" Time="18:00" RedPacketSize="15000" Interval="30,60" DurationTime="7200" />
+  <RedPacketPeople ID="10" Day="3" Time="20:00" RedPacketSize="15000" Interval="30,60" DurationTime="7200" />
+  <RedPacketPeople ID="11" Day="3" Time="22:00" RedPacketSize="15000" Interval="30,60" DurationTime="7200" />
+  <RedPacketPeople ID="12" Day="4" Time="12:00" RedPacketSize="15000" Interval="1,60" DurationTime="28800" />
+  <RedPacketPeople ID="13" Day="4" Time="20:00" RedPacketSize="15000" Interval="30,60" DurationTime="14400" />
+  <RedPacketPeople ID="14" Day="5" Time="12:00" RedPacketSize="15000" Interval="1,60" DurationTime="28800" />
+  <RedPacketPeople ID="15" Day="5" Time="20:00" RedPacketSize="15000" Interval="30,60" DurationTime="14400" />
+  <RedPacketPeople ID="16" Day="6" Time="12:00" RedPacketSize="15000" Interval="1,60" DurationTime="28800" />
+  <RedPacketPeople ID="17" Day="6" Time="20:00" RedPacketSize="15000" Interval="30,60" DurationTime="14400" />
+  <RedPacketPeople ID="18" Day="7" Time="12:00" RedPacketSize="15000" Interval="1,60" DurationTime="28800" />
+  <RedPacketPeople ID="19" Day="7" Time="20:00" RedPacketSize="15000" Interval="30,60" DurationTime="14400" />
+  </GiftList>
+</Config>

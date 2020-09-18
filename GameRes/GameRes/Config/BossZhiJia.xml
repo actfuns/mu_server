@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <BossZhiJias>
+    <BossZhiJia MapCode="30000" Name="Boss之家" KaiQiVipLevel="3" MinChangeLife="0" MinLevel="40" MaxChangeLife="100" MaxLevel="100" ZhanLi="10000" Award="9990001|20814|20815|20899|8022|8023|8024" Image="30000" EnterNeedZuanShi="10" MapTimeNeedZuanShi="10" />
+  </BossZhiJias>
+</Config>

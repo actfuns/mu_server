@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="8" Title="经脉王" FromDate="2013-03-14 00:00:00" ToDate="2013-03-21 07:10:00" AwardStartDate="2013-03-21 07:10:00" 
+  AwardEndDate="2013-03-24 23:59:59" IsNeedCode="1"/>
+  <GiftList Description="活动期间内，经脉排行榜排名前3的玩家，可领取丰厚的经脉通玄王奖励，免费领取高价值商城道具奖励！">
+  <Award Ranking="1" YuanBao="-1" GoodsIDs="36050,5,0,0,1,0" MinJingMai="5" />
+  <Award Ranking="2" YuanBao="-1" GoodsIDs="36050,3,0,0,1,0" MinJingMai="3" />
+  <Award Ranking="3" YuanBao="-1" GoodsIDs="36050,2,0,0,1,0" MinJingMai="2" />
+  </GiftList>
+</Config>

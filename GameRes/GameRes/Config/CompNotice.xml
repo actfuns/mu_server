@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CompNotice ID="1" Intro="卫士发现#1潜入本方势力 #0" Type="1" Goal="1" CDTime="30" Range="0" CompMapOpen="0|1|1" OriginalMapOpen="0|0" />
+  <CompNotice ID="2" Intro="#1正在盗采势力水晶 #0" Type="2" Goal="1" CDTime="10" Range="0" CompMapOpen="0|1|1" OriginalMapOpen="0|0" />
+  <CompNotice ID="3" Intro="#1正在己方势力地图大开杀戒 #0" Type="3" Goal="5" CDTime="10" Range="0" CompMapOpen="0|1|1" OriginalMapOpen="0|0" />
+  <CompNotice ID="4" Intro="#1击杀大领主#2 大家快前往援助 #0" Type="4" Goal="1" CDTime="20" Range="0" CompMapOpen="0|1|1" OriginalMapOpen="0|0" />
+  <CompNotice ID="5" Intro="#1正在攻击本方势力BOSS #0" Type="5" Goal="1" CDTime="10" Range="0" CompMapOpen="0|1|1" OriginalMapOpen="0|0" />
+  <CompNotice ID="6" Intro="#1成功击杀敌对势力大领主#2" Type="6" Goal="1" CDTime="20" Range="0" CompMapOpen="0|1|1" OriginalMapOpen="0|0" />
+  <CompNotice ID="7" Intro="#1势力BOSS已被击杀 #0" Type="7" Goal="1" CDTime="1" Range="1" CompMapOpen="0|1|1" OriginalMapOpen="1|1" />
+</Config>

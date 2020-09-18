@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Battle>
+	<!--MapCode, 角斗场的地图编号, TimePoints 角斗赛开始的时间点, MinLevel, 最低要求的转生等级, MinRequestNum区里面要求的最低在线人数, MaxEnterNum可以进入角斗赛场景的最多人数,Award奖励物品,FallGiftNum掉路的礼包个数,GiveGoodsIDs固定给的奖励的物品(例如药品类),NotifyBattleKilledNumSecs通知积分时间间隔20秒到 100秒之间-->
+	<Item ID="1" MapCode="8000" TimePoints="19:30" LineID="1" WaitingEnterSecs="1" PrepareSecs="1" FightingSecs="900" ClearRolesSecs="15" MinZhuanSheng="2" MinLevel="50" MinRequestNum="1" MaxEnterNum="220" Award="8001|8002|5050" Image="8000|8001" FallGiftNum="0" FallID="" GiveGoodsIDs="" AddExpSecs="10" NotifyBattleKilledNumSecs=""/>
+</Battle>

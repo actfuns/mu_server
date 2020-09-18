@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <RebornEquipEvolution ID="1" Name="无畏天使之盔" NewEquitID="2300001" NeedEquitID="2300000" NeedCuiLian="4000" NeedDuanZao="0" NeedNiePan="0" SuccessRate="1" />
+  <RebornEquipEvolution ID="2" Name="无畏天使之铠" NewEquitID="2300101" NeedEquitID="2300100" NeedCuiLian="2700" NeedDuanZao="0" NeedNiePan="0" SuccessRate="1" />
+  <RebornEquipEvolution ID="3" Name="无畏天使护手" NewEquitID="2300201" NeedEquitID="2300200" NeedCuiLian="2800" NeedDuanZao="0" NeedNiePan="0" SuccessRate="1" />
+  <RebornEquipEvolution ID="4" Name="无畏天使护腿" NewEquitID="2300301" NeedEquitID="2300300" NeedCuiLian="3400" NeedDuanZao="0" NeedNiePan="0" SuccessRate="1" />
+  <RebornEquipEvolution ID="5" Name="无畏天使之靴" NewEquitID="2300401" NeedEquitID="2300400" NeedCuiLian="2800" NeedDuanZao="0" NeedNiePan="0" SuccessRate="1" />
+  <RebornEquipEvolution ID="6" Name="无畏天使项链" NewEquitID="2300501" NeedEquitID="2300500" NeedCuiLian="4250" NeedDuanZao="0" NeedNiePan="0" SuccessRate="1" />
+  <RebornEquipEvolution ID="7" Name="无畏天使戒指" NewEquitID="2300601" NeedEquitID="2300600" NeedCuiLian="3200" NeedDuanZao="0" NeedNiePan="0" SuccessRate="1" />
+  <RebornEquipEvolution ID="8" Name="无畏天使圣物" NewEquitID="2300701" NeedEquitID="2300700" NeedCuiLian="6400" NeedDuanZao="0" NeedNiePan="0" SuccessRate="1" />
+  <RebornEquipEvolution ID="9" Name="无畏天使圣器" NewEquitID="2300801" NeedEquitID="2300800" NeedCuiLian="4250" NeedDuanZao="0" NeedNiePan="0" SuccessRate="1" />
+  <RebornEquipEvolution ID="10" Name="先锋天使之盔" NewEquitID="2300002" NeedEquitID="2300001" NeedCuiLian="4800" NeedDuanZao="350" NeedNiePan="0" SuccessRate="1" />
+  <RebornEquipEvolution ID="11" Name="先锋天使之铠" NewEquitID="2300102" NeedEquitID="2300101" NeedCuiLian="3200" NeedDuanZao="275" NeedNiePan="0" SuccessRate="1" />
+  <RebornEquipEvolution ID="12" Name="先锋天使护手" NewEquitID="2300202" NeedEquitID="2300201" NeedCuiLian="3350" NeedDuanZao="225" NeedNiePan="0" SuccessRate="1" />
+  <RebornEquipEvolution ID="13" Name="先锋天使护腿" NewEquitID="2300302" NeedEquitID="2300301" NeedCuiLian="4050" NeedDuanZao="350" NeedNiePan="0" SuccessRate="1" />
+  <RebornEquipEvolution ID="14" Name="先锋天使之靴" NewEquitID="2300402" NeedEquitID="2300401" NeedCuiLian="3350" NeedDuanZao="225" NeedNiePan="0" SuccessRate="1" />
+  <RebornEquipEvolution ID="15" Name="先锋天使项链" NewEquitID="2300502" NeedEquitID="2300501" NeedCuiLian="5100" NeedDuanZao="450" NeedNiePan="0" SuccessRate="1" />
+  <RebornEquipEvolution ID="16" Name="先锋天使戒指" NewEquitID="2300602" NeedEquitID="2300601" NeedCuiLian="3800" NeedDuanZao="350" NeedNiePan="0" SuccessRate="1" />
+  <RebornEquipEvolution ID="17" Name="先锋天使圣物" NewEquitID="2300702" NeedEquitID="2300701" NeedCuiLian="7650" NeedDuanZao="675" NeedNiePan="0" SuccessRate="1" />
+  <RebornEquipEvolution ID="18" Name="先锋天使圣器" NewEquitID="2300802" NeedEquitID="2300801" NeedCuiLian="5100" NeedDuanZao="450" NeedNiePan="0" SuccessRate="1" />
+</Config>

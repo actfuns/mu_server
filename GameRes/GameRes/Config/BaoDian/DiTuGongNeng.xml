@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+	<Items>
+		<Item Description="1.｛color=#ffffff00 uline=false tag= text=【扬州城】｝：游戏中唯一的安全地图，也是梦隋唐的中心，复活点，几乎所有主要的功能NPC都在这里，查看地图即可快速找到NPC。"/>	
+		<Item Description="（1.1）｛color=#ffffff00 uline=false tag= text=【扬州府】｝：双龙BOSS｛color=#ff00ff00 uline=false tag= text=寇仲｝、｛color=#ff00ff00 uline=false tag= text=徐子陵｝所在地。"/>	
+		<Item Description="（2）｛color=#ffffff00 uline=false tag= text=【龙泉村】｝：新手村，怪物等级1-8"/>	
+		<Item Description="（3）｛color=#ffffff00 uline=false tag= text=【清风山】｝：怪物等级8-20"/>	
+		<Item Description="（4）｛color=#ffffff00 uline=false tag= text=【五龙潭】｝：怪物等级20-30"/>	
+		<Item Description="（4.1）｛color=#ffffff00 uline=false tag= text=【高丽雪原】｝：怪物等级75（精英），80级BOSS｛color=#ff00ff00 uline=false tag= text=傅君婥｝所在地"/>	
+		<Item Description="（5）｛color=#ffffff00 uline=false tag= text=【临潼山】｝：怪物等级30-35"/>	
+		<Item Description="（6）｛color=#ffffff00 uline=false tag= text=【潞州】｝：怪物等级35-40"/>	
+		<Item Description="（6.1）｛color=#ffffff00 uline=false tag= text=【潞州码头】｝：35级BOSS｛color=#ff00ff00 uline=false tag= text=宇文智及｝所在地"/>	
+		<Item Description="（7）｛color=#ffffff00 uline=false tag= text=【二贤庄】｝：怪物等级40-45，38级BOSS｛color=#ff00ff00 uline=false tag= text=尤鸟倦｝所在地"/>	
+		<Item Description="（7.1）｛color=#ffffff00 uline=false tag= text=【二贤庄大堂】｝：45级BOSS｛color=#ff00ff00 uline=false tag= text=单雄信｝所在地"/>	
+		<Item Description="（8）｛color=#ffffff00 uline=false tag= text=【顺义村】｝：怪物等级45-55，48级BOSS｛color=#ff00ff00 uline=false tag= text=左游仙｝所在地"/>	
+		<Item Description="（9）｛color=#ffffff00 uline=false tag= text=【幽州军营】｝：怪物等级45-55"/>	
+		<Item Description="（9.1）｛color=#ffffff00 uline=false tag= text=【军营重地】｝：50级BOSS｛color=#ff00ff00 uline=false tag= text=罗成｝所在地"/>	
+		<Item Description="（10）｛color=#ffffff00 uline=false tag= text=【小孤山】｝：怪物等级55-60，58级BOSS｛color=#ff00ff00 uline=false tag= text=妖师辟尘｝所在地"/>	
+		<Item Description="（10.1）｛color=#ffffff00 uline=false tag= text=【长叶林】｝：55级BOSS｛color=#ff00ff00 uline=false tag= text=尤俊达｝所在地"/>
+		<Item Description="（11）｛color=#ffffff00 uline=false tag= text=【雁门关】｝：怪物等级60-65，68级BOSS｛color=#ff00ff00 uline=false tag= text=贾安隆｝所在地"/>	
+		<Item Description="（11.1）｛color=#ffffff00 uline=false tag= text=【劼利营帐】｝：60级BOSS｛color=#ff00ff00 uline=false tag= text=劼利可汗｝所在地"/>
+		<Item Description="（12）｛color=#ffffff00 uline=false tag= text=【太原府】｝：75级BOSS｛color=#ff00ff00 uline=false tag= text=李世民｝所在地"/>
+		<Item Description="（12.1）｛color=#ffffff00 uline=false tag= text=【太原擂台】｝：60级BOSS｛color=#ff00ff00 uline=false tag= text=李元霸｝所在地"/>
+		<Item Description="（13）｛color=#ffffff00 uline=false tag= text=【太原战场】｝：怪物等级65-70，65级BOSS｛color=#ff00ff00 uline=false tag= text=尉迟恭｝所在地"/>
+		<Item Description="（13.1）｛color=#ffffff00 uline=false tag= text=【刘黑闼营地】｝：65级BOSS｛color=#ff00ff00 uline=false tag= text=刘黑闼｝所在地"/>
+		<Item Description="（14）｛color=#ffffff00 uline=false tag= text=【黑石关】｝：怪物等级70-75，78级BOSS｛color=#ff00ff00 uline=false tag= text=天君席应｝所在地"/>
+		<Item Description="（14.1）｛color=#ffffff00 uline=false tag= text=【洛口仓-洛口深仓】｝：75级BOSS｛color=#ff00ff00 uline=false tag= text=张须陀｝所在地"/>
+		<Item Description="（15）｛color=#ffffff00 uline=false tag= text=【瓦岗】｝：怪物等级75-80，88级BOSS｛color=#ff00ff00 uline=false tag= text=赵德言｝所在地"/>
+		<Item Description="（15.1）｛color=#ffffff00 uline=false tag= text=【王世充营帐】｝：70级BOSS｛color=#ff00ff00 uline=false tag= text=王世充｝所在地"/>
+		<Item Description="（16）｛color=#ffffff00 uline=false tag= text=【童山】｝：怪物等级75-80，97级BOSS｛color=#ff00ff00 uline=false tag= text=祝玉妍｝所在地"/>
+		<Item Description="（16.1）｛color=#ffffff00 uline=false tag= text=【童山幽境】｝：75级BOSS｛color=#ff00ff00 uline=false tag= text=宇文成都｝所在地"/>
+		<Item Description="（17）｛color=#ffffff00 uline=false tag= text=【绝情炼狱】｝：100级BOSS｛color=#ff00ff00 uline=false tag= text=石之轩｝所在地"/>	
+	</Items>
+</Config>

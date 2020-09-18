@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}势力职务" Bold="1" />
+  <HelpIntro ID="2" Intro="1、每周势力排行榜{17e43e}前三名{-}分别获得：势力大首领、势力元帅、势力督军" Bold="0" />
+  <HelpIntro ID="3" Intro="2、势力军衔{17e43e}每周一0点{-}会{ff0000}清空{-}（势力贡献不会清空）" Bold="0" />
+  <HelpIntro ID="4" Intro="{fac60d}敌对势力" Bold="1" />
+  <HelpIntro ID="5" Intro="1、势力大首领有权限选择{ff0000}敌对势力{-}，在势力地图中对敌对势力{ff0000}伤害提高{-}" Bold="0" />
+  <HelpIntro ID="6" Intro="2、选择敌对势力后{ff0000}次日生效{-}，不修改敌对势力则一直延续" Bold="0" />
+  <HelpIntro ID="7" Intro="{fac60d}转换势力" Bold="1" />
+  <HelpIntro ID="8" Intro="1、转换势力时，势力贡献、势力军衔{ff0000}只保留一部分{-}" Bold="0" />
+  <HelpIntro ID="9" Intro="2、转换势力时，不会立刻进入势力排行榜，需等待排行榜刷新" Bold="0" />
+</Config>

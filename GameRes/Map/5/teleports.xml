@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+      <Teleports>
+	<Teleport Code="197" FrameNum="13" Tip="冰风谷" Key="10"  To="3" ToX="14350" ToY="14050" ToDirection="7" X="4250" Y="7750" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+	<Teleport Code="197" FrameNum="13" Tip="天空之城" Key="11"  To="8" ToX="3721" ToY="5638" ToDirection="7" X="750" Y="6050" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+      </Teleports>
+</Map>

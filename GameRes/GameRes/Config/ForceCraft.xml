@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ForceCraft ID="1" Name="白石城" MapCode="86000" TimePoints="6,19:00:00-19:30:00" ForceMax="3" MaxEnterNum="100" EnterCD="10" PrepareSecs="180" FightingSecs="1560" ClearRolesSecs="60" Reward="2200,1,1,0,0,0,0|7007,1,1,0,0,0,0|7004,1,1,0,0,0,0" DuiHuanType="12001" />
+  <ForceCraft ID="2" Name="黑火城" MapCode="86001" TimePoints="6,19:00:00-19:30:00" ForceMax="3" MaxEnterNum="100" EnterCD="10" PrepareSecs="180" FightingSecs="1560" ClearRolesSecs="60" Reward="2202,1,1,0,0,0,0|2002,1,1,0,0,0,0|2005,1,1,0,0,0,0" DuiHuanType="13001" />
+  <ForceCraft ID="3" Name="冰霜城" MapCode="86002" TimePoints="6,19:00:00-19:30:00" ForceMax="3" MaxEnterNum="100" EnterCD="10" PrepareSecs="180" FightingSecs="1560" ClearRolesSecs="60" Reward="2201,1,1,0,0,0,0|2103,1,1,0,0,0,0|63156,1,1,0,0,0,0" DuiHuanType="14001" />
+  <ForceCraft ID="4" Name="高地城" MapCode="86003" TimePoints="6,19:00:00-19:30:00" ForceMax="3" MaxEnterNum="100" EnterCD="10" PrepareSecs="180" FightingSecs="1560" ClearRolesSecs="60" Reward="2017,1,1,0,0,0,0|2100,1,1,0,0,0,0|2101,1,1,0,0,0,0" DuiHuanType="15001" />
+  <ForceCraft ID="5" Name="绿茵城" MapCode="86004" TimePoints="6,19:00:00-19:30:00" ForceMax="3" MaxEnterNum="100" EnterCD="10" PrepareSecs="180" FightingSecs="1560" ClearRolesSecs="60" Reward="5360,1,1,0,0,0,0|2002,1,1,0,0,0,0|2005,1,1,0,0,0,0" DuiHuanType="16001" />
+</Config>

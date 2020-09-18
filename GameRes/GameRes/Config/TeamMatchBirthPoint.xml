@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <TeamMatchBirthPoint ID="1" PosX="1000" PosY="4900" BirthRadius="20" />
+  <TeamMatchBirthPoint ID="2" PosX="4800" PosY="1100" BirthRadius="20" />
+</Config>

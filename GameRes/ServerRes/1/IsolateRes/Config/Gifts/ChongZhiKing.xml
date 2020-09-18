@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="4" Title="充值王" ActivityID="1" FromDate="2013-03-14 00:00:00" ToDate="2013-03-16 23:59:59" AwardStartDate="2013-03-17 00:00:00" 
+  AwardEndDate="2013-03-20 23:59:59" IsNeedCode="1"/>
+  <GiftList Description="活动期间内，累计充值排名前3的玩家，可领取丰厚的充值王奖励，获取高级经脉装备。">
+  <Award Ranking="1" YuanBao="-1" GoodsIDs="1304000,1,0,0,0,0|35008,1,0,0,0,0" MinYuanBao="300000" />
+  <Award Ranking="2" YuanBao="-1" GoodsIDs="1305000,1,0,0,0,0|35007,1,0,0,0,0" MinYuanBao="100000" />
+  <Award Ranking="3" YuanBao="-1" GoodsIDs="110010,1,0,0,0,0|35006,1,0,0,0,0" MinYuanBao="50000" />
+  </GiftList>
+</Config>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ZorkActivityRules ID="1" Name="魔域夺宝" MapCode="97002" TimePoints="1,13:30-14:30|3,13:30:00-14:30:00|5,13:30:00-14:30:00" BattleSignSecs="120" SignCondition="2|3" MaxEnterNum="3" PrepareSecs="30" FightingSecs="420" ClearRolesSecs="30" SeasonFightDay="4" />
+</Config>

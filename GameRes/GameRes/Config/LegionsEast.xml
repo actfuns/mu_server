@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <LegionsEast ID="1" NPCID="83000" NPCSite="10250|10750|500" ProduceTime="5" ProduceNum="10" OccupyTime="5" />
+  <LegionsEast ID="2" NPCID="83001" NPCSite="5250|5750|500" ProduceTime="5" ProduceNum="10" OccupyTime="5" />
+  <LegionsEast ID="3" NPCID="83002" NPCSite="5250|10750|500" ProduceTime="5" ProduceNum="10" OccupyTime="5" />
+  <LegionsEast ID="4" NPCID="83003" NPCSite="10250|5750|500" ProduceTime="5" ProduceNum="10" OccupyTime="5" />
+</Config>

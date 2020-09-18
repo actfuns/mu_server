@@ -6,21 +6,21 @@ using Tmsk.Contract.KuaFuData;
 
 namespace GameServer.Logic.BocaiSys
 {
-	// Token: 0x0200007E RID: 126
+	
 	public class BoCaiShopManager
 	{
-		// Token: 0x060001E2 RID: 482 RVA: 0x00020628 File Offset: 0x0001E828
+		
 		private BoCaiShopManager()
 		{
 		}
 
-		// Token: 0x060001E3 RID: 483 RVA: 0x00020640 File Offset: 0x0001E840
+		
 		public static BoCaiShopManager GetInstance()
 		{
 			return BoCaiShopManager.instance;
 		}
 
-		// Token: 0x060001E4 RID: 484 RVA: 0x00020658 File Offset: 0x0001E858
+		
 		public void Init()
 		{
 			try
@@ -49,7 +49,7 @@ namespace GameServer.Logic.BocaiSys
 			}
 		}
 
-		// Token: 0x060001E5 RID: 485 RVA: 0x00020744 File Offset: 0x0001E944
+		
 		public void Update()
 		{
 			try
@@ -69,7 +69,7 @@ namespace GameServer.Logic.BocaiSys
 			}
 		}
 
-		// Token: 0x060001E6 RID: 486 RVA: 0x000207FC File Offset: 0x0001E9FC
+		
 		public void InsertBocaiShop(KFBoCaiShopDB data)
 		{
 			try
@@ -85,7 +85,7 @@ namespace GameServer.Logic.BocaiSys
 			}
 		}
 
-		// Token: 0x060001E7 RID: 487 RVA: 0x00020870 File Offset: 0x0001EA70
+		
 		public void GetSelfBuyData(int roleID, ref BoCaiShopInfo msgData)
 		{
 			try
@@ -112,7 +112,7 @@ namespace GameServer.Logic.BocaiSys
 			}
 		}
 
-		// Token: 0x060001E8 RID: 488 RVA: 0x000209E4 File Offset: 0x0001EBE4
+		
 		public bool CanBuyItem(KFBoCaiShopDB Item, int maxNum)
 		{
 			try
@@ -145,16 +145,16 @@ namespace GameServer.Logic.BocaiSys
 			return false;
 		}
 
-		// Token: 0x040002DB RID: 731
+		
 		private static BoCaiShopManager instance = new BoCaiShopManager();
 
-		// Token: 0x040002DC RID: 732
+		
 		private DateTime StartTime;
 
-		// Token: 0x040002DD RID: 733
+		
 		private object mutex = new object();
 
-		// Token: 0x040002DE RID: 734
+		
 		private List<KFBoCaiShopDB> DBShopList;
 	}
 }

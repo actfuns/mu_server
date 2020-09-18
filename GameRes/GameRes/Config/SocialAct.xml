@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ACT ID="1" Type="1" Name="问好" FileName="wenhao" VIP="0" />
+  <ACT ID="2" Type="1" Name="跟我来" FileName="guolai" VIP="0" />
+  <ACT ID="3" Type="1" Name="鼓掌" FileName="guzhang" VIP="0" />
+  <ACT ID="4" Type="1" Name="欢呼" FileName="huanhu" VIP="0" />
+  <ACT ID="5" Type="1" Name="沮丧" FileName="jushang" VIP="0" />
+  <ACT ID="6" Type="1" Name=" 行礼" FileName="xingli" VIP="0" />
+  <ACT ID="7" Type="1" Name="冲锋" FileName="chongfeng" VIP="0" />
+  <ACT ID="8" Type="1" Name="膜拜" FileName="mobai" VIP="0" />
+  <ACT ID="9" Type="1" Name="挑衅" FileName="tiaoxin" VIP="0" />
+  <ACT ID="10" Type="1" Name="坐下" FileName="zuoxia" VIP="0" />
+  <ACT ID="11" Type="1" Name="睡觉" FileName="shuijiao" VIP="0" />
+</Config>

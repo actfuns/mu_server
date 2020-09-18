@@ -8,16 +8,16 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.UserReturn
 {
-	// Token: 0x0200018A RID: 394
+	
 	public class UserReturnManager : SingletonTemplate<UserReturnManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x060006D6 RID: 1750 RVA: 0x0003FD1C File Offset: 0x0003DF1C
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x060006D7 RID: 1751 RVA: 0x0003FD30 File Offset: 0x0003DF30
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(13100, SingletonTemplate<UserReturnManager>.Instance());
@@ -31,19 +31,19 @@ namespace GameDBServer.Logic.UserReturn
 			return true;
 		}
 
-		// Token: 0x060006D8 RID: 1752 RVA: 0x0003FDEC File Offset: 0x0003DFEC
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x060006D9 RID: 1753 RVA: 0x0003FE00 File Offset: 0x0003E000
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060006DA RID: 1754 RVA: 0x0003FE14 File Offset: 0x0003E014
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			switch (nID)
@@ -75,7 +75,7 @@ namespace GameDBServer.Logic.UserReturn
 			}
 		}
 
-		// Token: 0x060006DB RID: 1755 RVA: 0x0003FEC4 File Offset: 0x0003E0C4
+		
 		public void UserReturnIsOpen(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			lock (UserReturnManager.Mutex)
@@ -86,7 +86,7 @@ namespace GameDBServer.Logic.UserReturn
 			client.sendCmd<int>(nID, 1);
 		}
 
-		// Token: 0x060006DC RID: 1756 RVA: 0x0003FF30 File Offset: 0x0003E130
+		
 		public void UserReturnDataGet(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			ReturnData result = null;
@@ -110,7 +110,7 @@ namespace GameDBServer.Logic.UserReturn
 			client.sendCmd<ReturnData>(nID, result);
 		}
 
-		// Token: 0x060006DD RID: 1757 RVA: 0x0003FFB0 File Offset: 0x0003E1B0
+		
 		public void UserReturnDataList(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			List<ReturnData> result = new List<ReturnData>();
@@ -164,7 +164,7 @@ namespace GameDBServer.Logic.UserReturn
 			client.sendCmd<List<ReturnData>>(nID, result);
 		}
 
-		// Token: 0x060006DE RID: 1758 RVA: 0x00040250 File Offset: 0x0003E450
+		
 		public void UserReturnDataUpdate(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			bool result = false;
@@ -180,7 +180,7 @@ namespace GameDBServer.Logic.UserReturn
 			client.sendCmd<bool>(nID, result);
 		}
 
-		// Token: 0x060006DF RID: 1759 RVA: 0x000402A4 File Offset: 0x0003E4A4
+		
 		public void UserReturnDataDel(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			bool result = false;
@@ -196,7 +196,7 @@ namespace GameDBServer.Logic.UserReturn
 			client.sendCmd<bool>(nID, result);
 		}
 
-		// Token: 0x060006E0 RID: 1760 RVA: 0x000402FC File Offset: 0x0003E4FC
+		
 		public void UserReturnAwardList(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			Dictionary<int, int[]> result = new Dictionary<int, int[]>();
@@ -242,7 +242,7 @@ namespace GameDBServer.Logic.UserReturn
 			client.sendCmd<Dictionary<int, int[]>>(nID, result);
 		}
 
-		// Token: 0x060006E1 RID: 1761 RVA: 0x0004049C File Offset: 0x0003E69C
+		
 		public void UserReturnAwardUpdate(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			bool result = false;
@@ -282,7 +282,7 @@ namespace GameDBServer.Logic.UserReturn
 			client.sendCmd<bool>(nID, result);
 		}
 
-		// Token: 0x060006E2 RID: 1762 RVA: 0x000405B4 File Offset: 0x0003E7B4
+		
 		public void UserReturnCheck(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			int isOldUser = 0;
@@ -351,7 +351,7 @@ namespace GameDBServer.Logic.UserReturn
 			client.sendCmd<int>(nID, 1);
 		}
 
-		// Token: 0x060006E3 RID: 1763 RVA: 0x00040864 File Offset: 0x0003EA64
+		
 		public ReturnData GetUserReturnData(string userID, int zoneID)
 		{
 			ReturnData result = null;
@@ -386,7 +386,7 @@ namespace GameDBServer.Logic.UserReturn
 			return result;
 		}
 
-		// Token: 0x060006E4 RID: 1764 RVA: 0x000409DC File Offset: 0x0003EBDC
+		
 		public bool UpdateUserReturnData(ReturnData data)
 		{
 			bool result;
@@ -411,7 +411,7 @@ namespace GameDBServer.Logic.UserReturn
 			return result;
 		}
 
-		// Token: 0x060006E5 RID: 1765 RVA: 0x00040ACC File Offset: 0x0003ECCC
+		
 		public bool DelUserReturnData(int id)
 		{
 			bool result;
@@ -423,12 +423,12 @@ namespace GameDBServer.Logic.UserReturn
 			return result;
 		}
 
-		// Token: 0x060006E6 RID: 1766 RVA: 0x00040B20 File Offset: 0x0003ED20
+		
 		public void ScanLastUserReturn(DBManager dbMgr)
 		{
 		}
 
-		// Token: 0x060006E7 RID: 1767 RVA: 0x00040B24 File Offset: 0x0003ED24
+		
 		public List<ReturnData> ReturnList()
 		{
 			List<ReturnData> list = new List<ReturnData>();
@@ -458,7 +458,7 @@ namespace GameDBServer.Logic.UserReturn
 			return list;
 		}
 
-		// Token: 0x060006E8 RID: 1768 RVA: 0x00040D0C File Offset: 0x0003EF0C
+		
 		public bool ReturnDel(int dbID)
 		{
 			bool result;
@@ -470,19 +470,19 @@ namespace GameDBServer.Logic.UserReturn
 			return result;
 		}
 
-		// Token: 0x0400091B RID: 2331
+		
 		private static object Mutex = new object();
 
-		// Token: 0x0400091C RID: 2332
+		
 		private static bool _userReturnIsOpen = false;
 
-		// Token: 0x0400091D RID: 2333
+		
 		private static ReturnActivity _activityInfo = new ReturnActivity
 		{
 			IsOpen = false
 		};
 
-		// Token: 0x0400091E RID: 2334
+		
 		private long LastScanTicks = DateTime.Now.Ticks / 10000L;
 	}
 }

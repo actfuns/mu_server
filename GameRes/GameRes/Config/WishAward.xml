@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <WishAward ID="1" StarNum="1" EndNum="1" Name="第1名" GoodsOne="7050,2000,1,0,0,0,0|8054,20,1,0,0,0,0" GoodsTwo="" MinWishNum="10000" />
+  <WishAward ID="2" StarNum="2" EndNum="2" Name="第2名" GoodsOne="7050,1000,1,0,0,0,0|8054,10,1,0,0,0,0" GoodsTwo="" MinWishNum="10000" />
+  <WishAward ID="3" StarNum="3" EndNum="3" Name="第3名" GoodsOne="7050,90,1,0,0,0,0|8054,9,1,0,0,0,0" GoodsTwo="" MinWishNum="10000" />
+  <WishAward ID="4" StarNum="4" EndNum="4" Name="第4名" GoodsOne="7050,80,1,0,0,0,0|8054,8,1,0,0,0,0" GoodsTwo="" MinWishNum="5000" />
+  <WishAward ID="5" StarNum="5" EndNum="5" Name="第5名" GoodsOne="7050,50,1,0,0,0,0|8054,5,1,0,0,0,0" GoodsTwo="" MinWishNum="5000" />
+  <WishAward ID="6" StarNum="6" EndNum="6" Name="第6名" GoodsOne="7050,50,1,0,0,0,0|8054,5,1,0,0,0,0" GoodsTwo="" MinWishNum="1000" />
+  <WishAward ID="7" StarNum="7" EndNum="7" Name="第7名" GoodsOne="7050,50,1,0,0,0,0|8054,5,1,0,0,0,0" GoodsTwo="" MinWishNum="1000" />
+  <WishAward ID="8" StarNum="8" EndNum="8" Name="第8名" GoodsOne="7050,50,1,0,0,0,0|8054,5,1,0,0,0,0" GoodsTwo="" MinWishNum="1000" />
+  <WishAward ID="9" StarNum="9" EndNum="9" Name="第9名" GoodsOne="7050,50,1,0,0,0,0|8054,5,1,0,0,0,0" GoodsTwo="" MinWishNum="1000" />
+  <WishAward ID="10" StarNum="10" EndNum="10" Name="第10名" GoodsOne="7050,10,1,0,0,0,0|8054,5,1,0,0,0,0" GoodsTwo="" MinWishNum="1000" />
+</Config>

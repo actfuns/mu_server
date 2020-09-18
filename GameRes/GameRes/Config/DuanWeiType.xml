@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DuanWeiType>
+  <DuanWeiType TypeID="1" Name="青铜"  />
+  <DuanWeiType TypeID="2" Name="白银"  />
+  <DuanWeiType TypeID="3" Name="黄金"  />
+  <DuanWeiType TypeID="4" Name="白金"  />
+  <DuanWeiType TypeID="5" Name="钻石"  />
+</DuanWeiType>

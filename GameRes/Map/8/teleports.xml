@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+      <Teleports>
+	<Teleport Code="197" FrameNum="13" Tip="失落之塔" Key="10"  To="5" ToX="750" ToY="5550" ToDirection="7" X="2741" Y="5713" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+      </Teleports>
+</Map>

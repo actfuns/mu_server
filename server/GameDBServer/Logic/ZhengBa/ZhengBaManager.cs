@@ -9,21 +9,21 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.ZhengBa
 {
-	// Token: 0x02000198 RID: 408
+	
 	public class ZhengBaManager : SingletonTemplate<ZhengBaManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x06000748 RID: 1864 RVA: 0x000433A4 File Offset: 0x000415A4
+		
 		private ZhengBaManager()
 		{
 		}
 
-		// Token: 0x06000749 RID: 1865 RVA: 0x000433B0 File Offset: 0x000415B0
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x0600074A RID: 1866 RVA: 0x000433C4 File Offset: 0x000415C4
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(14014, SingletonTemplate<ZhengBaManager>.Instance());
@@ -36,19 +36,19 @@ namespace GameDBServer.Logic.ZhengBa
 			return true;
 		}
 
-		// Token: 0x0600074B RID: 1867 RVA: 0x0004346C File Offset: 0x0004166C
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x0600074C RID: 1868 RVA: 0x00043480 File Offset: 0x00041680
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600074D RID: 1869 RVA: 0x00043494 File Offset: 0x00041694
+		
 		private bool ExecNonQuery(string sql)
 		{
 			bool bResult = false;
@@ -59,7 +59,7 @@ namespace GameDBServer.Logic.ZhengBa
 			return bResult;
 		}
 
-		// Token: 0x0600074E RID: 1870 RVA: 0x000434E0 File Offset: 0x000416E0
+		
 		private MySQLDataReader ExecSelect(string sql)
 		{
 			MySQLConnection conn = null;
@@ -88,7 +88,7 @@ namespace GameDBServer.Logic.ZhengBa
 			return result;
 		}
 
-		// Token: 0x0600074F RID: 1871 RVA: 0x00043588 File Offset: 0x00041788
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			if (nID == 14014)
@@ -121,7 +121,7 @@ namespace GameDBServer.Logic.ZhengBa
 			}
 		}
 
-		// Token: 0x06000750 RID: 1872 RVA: 0x00043668 File Offset: 0x00041868
+		
 		private void HandleSetYaZhuAward(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -173,7 +173,7 @@ namespace GameDBServer.Logic.ZhengBa
 			}
 		}
 
-		// Token: 0x06000751 RID: 1873 RVA: 0x000437F8 File Offset: 0x000419F8
+		
 		private void HandleLoadWaitAwardYaZhu(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -225,7 +225,7 @@ namespace GameDBServer.Logic.ZhengBa
 			}
 		}
 
-		// Token: 0x06000752 RID: 1874 RVA: 0x000439E8 File Offset: 0x00041BE8
+		
 		private void HandleSaveSupportLog(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -277,7 +277,7 @@ namespace GameDBServer.Logic.ZhengBa
 			}
 		}
 
-		// Token: 0x06000753 RID: 1875 RVA: 0x00043BE8 File Offset: 0x00041DE8
+		
 		private void HandleSavePkLog(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -316,7 +316,7 @@ namespace GameDBServer.Logic.ZhengBa
 			}
 		}
 
-		// Token: 0x06000754 RID: 1876 RVA: 0x00043D90 File Offset: 0x00041F90
+		
 		private void HandleLoadSupportFlag(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			string cmdData = null;
@@ -388,7 +388,7 @@ namespace GameDBServer.Logic.ZhengBa
 			}
 		}
 
-		// Token: 0x06000755 RID: 1877 RVA: 0x00044018 File Offset: 0x00042218
+		
 		private void HandleLoadSupportLog(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			string cmdData = null;
@@ -458,7 +458,7 @@ namespace GameDBServer.Logic.ZhengBa
 			}
 		}
 
-		// Token: 0x06000756 RID: 1878 RVA: 0x000443B8 File Offset: 0x000425B8
+		
 		private void HandleLoadPkLog(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			string cmdData = null;
@@ -513,16 +513,16 @@ namespace GameDBServer.Logic.ZhengBa
 			}
 		}
 
-		// Token: 0x02000199 RID: 409
+		
 		private enum EZhengBaSupport
 		{
-			// Token: 0x0400094C RID: 2380
+			
 			Invalid,
-			// Token: 0x0400094D RID: 2381
+			
 			Support,
-			// Token: 0x0400094E RID: 2382
+			
 			Oppose,
-			// Token: 0x0400094F RID: 2383
+			
 			YaZhu
 		}
 	}

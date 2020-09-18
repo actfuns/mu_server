@@ -8,10 +8,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x02000049 RID: 73
+	
 	public class OneDollarChongZhi : Activity
 	{
-		// Token: 0x060000DD RID: 221 RVA: 0x0000F830 File Offset: 0x0000DA30
+		
 		public bool Init()
 		{
 			try
@@ -105,7 +105,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x060000DE RID: 222 RVA: 0x0000FBC0 File Offset: 0x0000DDC0
+		
 		public void OnRoleLogin(GameClient client)
 		{
 			if (null != this.OneDollarChongZhiData)
@@ -138,7 +138,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060000DF RID: 223 RVA: 0x0000FCB8 File Offset: 0x0000DEB8
+		
 		public override bool CanGiveAward(GameClient client, int index, int totalMoney)
 		{
 			bool result;
@@ -158,7 +158,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060000E0 RID: 224 RVA: 0x0000FD14 File Offset: 0x0000DF14
+		
 		public override bool GiveAward(GameClient client)
 		{
 			AwardItem myAwardItem = new AwardItem();
@@ -169,7 +169,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x060000E1 RID: 225 RVA: 0x0000FD64 File Offset: 0x0000DF64
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client)
 		{
 			bool result;
@@ -199,7 +199,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060000E2 RID: 226 RVA: 0x0000FE58 File Offset: 0x0000E058
+		
 		public override List<int> GetAwardMinConditionlist()
 		{
 			List<int> cons = new List<int>();
@@ -216,13 +216,13 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x04000195 RID: 405
+		
 		protected const string OneDollarChongZhiData_fileName = "Config/YiYuanChongZhi.xml";
 
-		// Token: 0x04000196 RID: 406
+		
 		protected OneDollarChongZhiConfig OneDollarChongZhiData = new OneDollarChongZhiConfig();
 
-		// Token: 0x04000197 RID: 407
+		
 		protected int PlatformOpenStateVavle = 0;
 	}
 }

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+      <Teleports>
+        <Teleport Code="197" FrameNum="13" Tip="前往矿洞中段" Key="10"  To="87000" ToX="4850" ToY="4950" ToDirection="0" X="1750" Y="1150" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+        <Teleport Code="197" FrameNum="13" Tip="前往矿洞深处" Key="11"  To="87000" ToX="1450" ToY="650" ToDirection="0" X="4550" Y="4550" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+        <Teleport Code="197" FrameNum="13" Tip="前往矿洞出口" Key="12"  To="87000" ToX="8150" ToY="9050" ToDirection="0" X="5150" Y="5350" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+		<Teleport Code="197" FrameNum="13" Tip="前往矿洞中段" Key="13"  To="87000" ToX="4850" ToY="4950" ToDirection="0" X="7950" Y="8750" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+      </Teleports>
+</Map>

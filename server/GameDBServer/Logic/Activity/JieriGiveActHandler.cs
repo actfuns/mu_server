@@ -8,15 +8,15 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.Activity
 {
-	// Token: 0x02000103 RID: 259
+	
 	public class JieriGiveActHandler : SingletonTemplate<JieriGiveActHandler>
 	{
-		// Token: 0x06000452 RID: 1106 RVA: 0x00021837 File Offset: 0x0001FA37
+		
 		private JieriGiveActHandler()
 		{
 		}
 
-		// Token: 0x06000453 RID: 1107 RVA: 0x00021844 File Offset: 0x0001FA44
+		
 		public static bool GetTotalGiveAndRecv(DBManager dbMgr, int roleid, string fromDate, string toDate, out int totalGive, out int totalRecv)
 		{
 			totalGive = 0;
@@ -58,7 +58,7 @@ namespace GameDBServer.Logic.Activity
 			return bSuccess;
 		}
 
-		// Token: 0x06000454 RID: 1108 RVA: 0x00021984 File Offset: 0x0001FB84
+		
 		public bool AddJieriGiveRecord(DBManager dbMgr, int sender, int receiver, int goods, int cnt)
 		{
 			bool bSuccess = false;
@@ -80,7 +80,7 @@ namespace GameDBServer.Logic.Activity
 			return bSuccess;
 		}
 
-		// Token: 0x06000455 RID: 1109 RVA: 0x00021A38 File Offset: 0x0001FC38
+		
 		public TCPProcessCmdResults ProcQueryJieriGiveInfo(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -136,7 +136,7 @@ namespace GameDBServer.Logic.Activity
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000456 RID: 1110 RVA: 0x00021C38 File Offset: 0x0001FE38
+		
 		public TCPProcessCmdResults ProcRoleJieriGiveToOther(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -189,7 +189,7 @@ namespace GameDBServer.Logic.Activity
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000457 RID: 1111 RVA: 0x00021E04 File Offset: 0x00020004
+		
 		public TCPProcessCmdResults ProcessGetJieriGiveAward(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -265,7 +265,7 @@ namespace GameDBServer.Logic.Activity
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000458 RID: 1112 RVA: 0x00022120 File Offset: 0x00020320
+		
 		private string _GetAwardKey_Ext_DayIdxInPeriod(string fromDate, string toDate, int todayIdxInActPeriod)
 		{
 			return Global.GetHuoDongKeyString(fromDate, toDate) + "_" + todayIdxInActPeriod.ToString();

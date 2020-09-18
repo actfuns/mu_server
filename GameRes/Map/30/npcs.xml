@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <NPCs>
+    <NPC Code="3001" X="6450" Y="12850" Dir="4" />
+    <NPC Code="3002" X="11950" Y="11550" Dir="5" />
+    <NPC Code="3003" X="4115" Y="7585" Dir="4" />
+    <NPC Code="3004" X="3450" Y="10350" Dir="4" />
+    <NPC Code="3005" X="6350" Y="8050" Dir="6" />
+    <NPC Code="3006" X="11950" Y="7250" Dir="5" />
+    <NPC Code="3007" X="8250" Y="4350" Dir="5" />
+    <NPC Code="3008" X="3950" Y="3750" Dir="5" />
+  </NPCs>
+</Map>

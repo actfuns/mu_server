@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ForceCraftBirth ID="1" MapCode="86000" ForceID="1" PosX="11520" PosY="1870" BirthRadius="10" />
+  <ForceCraftBirth ID="2" MapCode="86000" ForceID="2" PosX="1026" PosY="8067" BirthRadius="10" />
+  <ForceCraftBirth ID="3" MapCode="86000" ForceID="3" PosX="11610" PosY="13400" BirthRadius="10" />
+  <ForceCraftBirth ID="4" MapCode="86001" ForceID="1" PosX="11520" PosY="1870" BirthRadius="10" />
+  <ForceCraftBirth ID="5" MapCode="86001" ForceID="2" PosX="1026" PosY="8067" BirthRadius="10" />
+  <ForceCraftBirth ID="6" MapCode="86001" ForceID="3" PosX="11610" PosY="13400" BirthRadius="10" />
+  <ForceCraftBirth ID="7" MapCode="86002" ForceID="1" PosX="11520" PosY="1870" BirthRadius="10" />
+  <ForceCraftBirth ID="8" MapCode="86002" ForceID="2" PosX="1026" PosY="8067" BirthRadius="10" />
+  <ForceCraftBirth ID="9" MapCode="86002" ForceID="3" PosX="11610" PosY="13400" BirthRadius="10" />
+  <ForceCraftBirth ID="10" MapCode="86003" ForceID="1" PosX="11520" PosY="1870" BirthRadius="10" />
+  <ForceCraftBirth ID="11" MapCode="86003" ForceID="2" PosX="1026" PosY="8067" BirthRadius="10" />
+  <ForceCraftBirth ID="12" MapCode="86003" ForceID="3" PosX="11610" PosY="13400" BirthRadius="10" />
+  <ForceCraftBirth ID="13" MapCode="86004" ForceID="1" PosX="11520" PosY="1870" BirthRadius="10" />
+  <ForceCraftBirth ID="14" MapCode="86004" ForceID="2" PosX="1026" PosY="8067" BirthRadius="10" />
+  <ForceCraftBirth ID="15" MapCode="86004" ForceID="3" PosX="11610" PosY="13400" BirthRadius="10" />
+</Config>

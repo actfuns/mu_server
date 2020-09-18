@@ -2,22 +2,22 @@
 
 namespace DotNetDetour
 {
-    // Token: 0x0200000F RID: 15
+    
     public class LDasm
     {
-        // Token: 0x0600003A RID: 58 RVA: 0x00003550 File Offset: 0x00001750
+        
         private static byte cflags(byte op)
         {
             return LDasm.flags_table[(int)op];
         }
 
-        // Token: 0x0600003B RID: 59 RVA: 0x0000356C File Offset: 0x0000176C
+        
         private static byte cflags_ex(byte op)
         {
             return LDasm.flags_table_ex[(int)op];
         }
 
-        // Token: 0x0600003C RID: 60 RVA: 0x00003588 File Offset: 0x00001788
+        
         public unsafe static uint SizeofMin5Byte(void* code)
         {
             uint Result = 0U;
@@ -43,7 +43,7 @@ namespace DotNetDetour
             return Result;
         }
 
-        // Token: 0x0600003D RID: 61 RVA: 0x00003608 File Offset: 0x00001808
+        
         private unsafe static uint ldasm(void* code, LDasm.ldasm_data ld, bool is64)
         {
             byte* p = (byte*)code;
@@ -231,61 +231,61 @@ namespace DotNetDetour
             return result;
         }
 
-        // Token: 0x04000017 RID: 23
+        
         private const int F_INVALID = 1;
 
-        // Token: 0x04000018 RID: 24
+        
         private const int F_PREFIX = 2;
 
-        // Token: 0x04000019 RID: 25
+        
         private const int F_REX = 4;
 
-        // Token: 0x0400001A RID: 26
+        
         private const int F_MODRM = 8;
 
-        // Token: 0x0400001B RID: 27
+        
         private const int F_SIB = 16;
 
-        // Token: 0x0400001C RID: 28
+        
         private const int F_DISP = 32;
 
-        // Token: 0x0400001D RID: 29
+        
         private const int F_IMM = 64;
 
-        // Token: 0x0400001E RID: 30
+        
         private const int F_RELATIVE = 128;
 
-        // Token: 0x0400001F RID: 31
+        
         private const int OP_NONE = 0;
 
-        // Token: 0x04000020 RID: 32
+        
         private const int OP_INVALID = 128;
 
-        // Token: 0x04000021 RID: 33
+        
         private const int OP_DATA_I8 = 1;
 
-        // Token: 0x04000022 RID: 34
+        
         private const int OP_DATA_I16 = 2;
 
-        // Token: 0x04000023 RID: 35
+        
         private const int OP_DATA_I16_I32 = 4;
 
-        // Token: 0x04000024 RID: 36
+        
         private const int OP_DATA_I16_I32_I64 = 8;
 
-        // Token: 0x04000025 RID: 37
+        
         private const int OP_EXTENDED = 16;
 
-        // Token: 0x04000026 RID: 38
+        
         private const int OP_RELATIVE = 32;
 
-        // Token: 0x04000027 RID: 39
+        
         private const int OP_MODRM = 64;
 
-        // Token: 0x04000028 RID: 40
+        
         private const int OP_PREFIX = 128;
 
-        // Token: 0x04000029 RID: 41
+        
         private static byte[] flags_table = new byte[]
         {
             64,
@@ -546,7 +546,7 @@ namespace DotNetDetour
             64
         };
 
-        // Token: 0x0400002A RID: 42
+        
         private static byte[] flags_table_ex = new byte[]
         {
             64,
@@ -807,37 +807,37 @@ namespace DotNetDetour
             128
         };
 
-        // Token: 0x02000010 RID: 16
+        
         private struct ldasm_data
         {
-            // Token: 0x0400002B RID: 43
+            
             public byte flags;
 
-            // Token: 0x0400002C RID: 44
+            
             public byte rex;
 
-            // Token: 0x0400002D RID: 45
+            
             public byte modrm;
 
-            // Token: 0x0400002E RID: 46
+            
             public byte sib;
 
-            // Token: 0x0400002F RID: 47
+            
             public byte opcd_offset;
 
-            // Token: 0x04000030 RID: 48
+            
             public byte opcd_size;
 
-            // Token: 0x04000031 RID: 49
+            
             public byte disp_offset;
 
-            // Token: 0x04000032 RID: 50
+            
             public byte disp_size;
 
-            // Token: 0x04000033 RID: 51
+            
             public byte imm_offset;
 
-            // Token: 0x04000034 RID: 52
+            
             public byte imm_size;
         }
     }

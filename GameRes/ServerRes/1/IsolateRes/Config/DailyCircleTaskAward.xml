@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Reward>
+  <Reward Id="1" MinzhuanshengLevel="0" MinLevel="30" MaxzhuanshengLevel="0" MaxLevel="100" EXP="1152000" XingHun="5000" GoodsIDs="4030,1,1,0,0,0,0" />
+  <Reward Id="2" MinzhuanshengLevel="1" MinLevel="1" MaxzhuanshengLevel="1" MaxLevel="100" EXP="1152000" XingHun="5000" GoodsIDs="4030,1,1,0,0,0,0" />
+  <Reward Id="3" MinzhuanshengLevel="2" MinLevel="1" MaxzhuanshengLevel="2" MaxLevel="100" EXP="1382400" XingHun="5000" GoodsIDs="4030,1,1,0,0,0,0" />
+  <Reward Id="4" MinzhuanshengLevel="3" MinLevel="1" MaxzhuanshengLevel="3" MaxLevel="40" EXP="1382400" XingHun="5000" GoodsIDs="4030,1,1,0,0,0,0" />
+  <Reward Id="5" MinzhuanshengLevel="3" MinLevel="41" MaxzhuanshengLevel="3" MaxLevel="70" EXP="1612800" XingHun="5000" GoodsIDs="4030,1,1,0,0,0,0" />
+  <Reward Id="6" MinzhuanshengLevel="3" MinLevel="71" MaxzhuanshengLevel="3" MaxLevel="100" EXP="1843200" XingHun="5000" GoodsIDs="4030,1,1,0,0,0,0" />
+  <Reward Id="7" MinzhuanshengLevel="4" MinLevel="1" MaxzhuanshengLevel="4" MaxLevel="100" EXP="2534400" XingHun="5000" GoodsIDs="4030,1,1,0,0,0,0" />
+  <Reward Id="8" MinzhuanshengLevel="5" MinLevel="1" MaxzhuanshengLevel="5" MaxLevel="100" EXP="3686400" XingHun="5000" GoodsIDs="4030,1,1,0,0,0,0" />
+  <Reward Id="9" MinzhuanshengLevel="6" MinLevel="1" MaxzhuanshengLevel="6" MaxLevel="100" EXP="5068800" XingHun="5000" GoodsIDs="4030,1,1,0,0,0,0" />
+  <Reward Id="10" MinzhuanshengLevel="7" MinLevel="1" MaxzhuanshengLevel="7" MaxLevel="100" EXP="6681600" XingHun="5000" GoodsIDs="4030,1,1,0,0,0,0" />
+  <Reward Id="11" MinzhuanshengLevel="8" MinLevel="1" MaxzhuanshengLevel="8" MaxLevel="100" EXP="8524800" XingHun="5000" GoodsIDs="4030,1,1,0,0,0,0" />
+  <Reward Id="12" MinzhuanshengLevel="9" MinLevel="1" MaxzhuanshengLevel="9" MaxLevel="100" EXP="10598400" XingHun="5000" GoodsIDs="4031,1,1,0,0,0,0" />
+  <Reward Id="13" MinzhuanshengLevel="10" MinLevel="1" MaxzhuanshengLevel="10" MaxLevel="100" EXP="12902400" XingHun="5000" GoodsIDs="4031,1,1,0,0,0,0" />
+  <Reward Id="14" MinzhuanshengLevel="11" MinLevel="1" MaxzhuanshengLevel="11" MaxLevel="100" EXP="15436800" XingHun="5000" GoodsIDs="4031,1,1,0,0,0,0" />
+  <Reward Id="15" MinzhuanshengLevel="12" MinLevel="1" MaxzhuanshengLevel="12" MaxLevel="100" EXP="15436800" XingHun="5000" GoodsIDs="4031,1,1,0,0,0,0" />
+  <Reward Id="16" MinzhuanshengLevel="13" MinLevel="1" MaxzhuanshengLevel="13" MaxLevel="100" EXP="15436800" XingHun="5000" GoodsIDs="4031,1,1,0,0,0,0" />
+  <Reward Id="17" MinzhuanshengLevel="14" MinLevel="1" MaxzhuanshengLevel="14" MaxLevel="100" EXP="15436800" XingHun="5000" GoodsIDs="4031,1,1,0,0,0,0" />
+  <Reward Id="18" MinzhuanshengLevel="15" MinLevel="1" MaxzhuanshengLevel="15" MaxLevel="100" EXP="15436800" XingHun="5000" GoodsIDs="4031,1,1,0,0,0,0" />
+  <Reward Id="19" MinzhuanshengLevel="16" MinLevel="1" MaxzhuanshengLevel="16" MaxLevel="100" EXP="15436800" XingHun="5000" GoodsIDs="4031,1,1,0,0,0,0" />
+  <Reward Id="20" MinzhuanshengLevel="17" MinLevel="1" MaxzhuanshengLevel="17" MaxLevel="100" EXP="15436800" XingHun="5000" GoodsIDs="4031,1,1,0,0,0,0" />
+  <Reward Id="21" MinzhuanshengLevel="18" MinLevel="1" MaxzhuanshengLevel="18" MaxLevel="100" EXP="15436800" XingHun="5000" GoodsIDs="4031,1,1,0,0,0,0" />
+  <Reward Id="22" MinzhuanshengLevel="19" MinLevel="1" MaxzhuanshengLevel="19" MaxLevel="100" EXP="15436800" XingHun="5000" GoodsIDs="4031,1,1,0,0,0,0" />
+  <Reward Id="23" MinzhuanshengLevel="20" MinLevel="1" MaxzhuanshengLevel="20" MaxLevel="100" EXP="15436800" XingHun="5000" GoodsIDs="4031,1,1,0,0,0,0" />
+</Reward>

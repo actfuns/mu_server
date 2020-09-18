@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ReplaceGoods ID="1" ToType="WingSuit" ToTypeProperty="3" OldGoods="2016" NewGoods="40000" />
+  <ReplaceGoods ID="2" ToType="WingSuit" ToTypeProperty="12" OldGoods="2016" NewGoods="40001" />
+  <ReplaceGoods ID="3" ToType="WingSuit" ToTypeProperty="3" OldGoods="2017" NewGoods="40002" />
+  <ReplaceGoods ID="4" ToType="WingSuit" ToTypeProperty="12" OldGoods="2017" NewGoods="40003" />
+  <ReplaceGoods ID="5" ToType="EquipSuit" ToTypeProperty="3" OldGoods="2001" NewGoods="40004" />
+  <ReplaceGoods ID="6" ToType="EquipSuit" ToTypeProperty="11" OldGoods="2001" NewGoods="40005" />
+  <ReplaceGoods ID="7" ToType="QiangHuaLevel" ToTypeProperty="3" OldGoods="2001" NewGoods="40006" />
+  <ReplaceGoods ID="8" ToType="QiangHuaLevel" ToTypeProperty="15" OldGoods="2001" NewGoods="40007" />
+  <ReplaceGoods ID="9" ToType="EquipSuit" ToTypeProperty="3" OldGoods="2002" NewGoods="40008" />
+  <ReplaceGoods ID="10" ToType="EquipSuit" ToTypeProperty="11" OldGoods="2002" NewGoods="40009" />
+  <ReplaceGoods ID="11" ToType="QiangHuaLevel" ToTypeProperty="3" OldGoods="2002" NewGoods="40010" />
+  <ReplaceGoods ID="12" ToType="QiangHuaLevel" ToTypeProperty="15" OldGoods="2002" NewGoods="40011" />
+  <ReplaceGoods ID="13" ToType="EquipSuit" ToTypeProperty="3" OldGoods="2000" NewGoods="40012" />
+  <ReplaceGoods ID="14" ToType="EquipSuit" ToTypeProperty="11" OldGoods="2000" NewGoods="40013" />
+  <ReplaceGoods ID="15" ToType="QiangHuaLevel" ToTypeProperty="3" OldGoods="2000" NewGoods="40014" />
+  <ReplaceGoods ID="16" ToType="QiangHuaLevel" ToTypeProperty="15" OldGoods="2000" NewGoods="40015" />
+  <ReplaceGoods ID="17" ToType="EquipSuit" ToTypeProperty="3" OldGoods="2005" NewGoods="40016" />
+  <ReplaceGoods ID="18" ToType="EquipSuit" ToTypeProperty="11" OldGoods="2005" NewGoods="40017" />
+  <ReplaceGoods ID="19" ToType="QiangHuaLevel" ToTypeProperty="3" OldGoods="2005" NewGoods="40018" />
+  <ReplaceGoods ID="20" ToType="QiangHuaLevel" ToTypeProperty="15" OldGoods="2005" NewGoods="40019" />
+  <ReplaceGoods ID="21" ToType="EquipSuit" ToTypeProperty="3" OldGoods="2003" NewGoods="40020" />
+  <ReplaceGoods ID="22" ToType="EquipSuit" ToTypeProperty="11" OldGoods="2003" NewGoods="40021" />
+  <ReplaceGoods ID="23" ToType="ZhuiJiaLevel" ToTypeProperty="3" OldGoods="2003" NewGoods="40022" />
+  <ReplaceGoods ID="24" ToType="ZhuiJiaLevel" ToTypeProperty="80" OldGoods="2003" NewGoods="40023" />
+  <ReplaceGoods ID="25" ToType="EquipSuit" ToTypeProperty="3" OldGoods="2030" NewGoods="40024" />
+  <ReplaceGoods ID="26" ToType="EquipSuit" ToTypeProperty="11" OldGoods="2030" NewGoods="40025" />
+  <ReplaceGoods ID="27" ToType="WingSuit" ToTypeProperty="7" OldGoods="2017" NewGoods="40026" />
+  <ReplaceGoods ID="28" ToType="WingSuit" ToTypeProperty="9" OldGoods="2017" NewGoods="40027" />
+  <ReplaceGoods ID="29" ToType="WingSuit" ToTypeProperty="11" OldGoods="2017" NewGoods="40028" />
+  <ReplaceGoods ID="30" ToType="JuHun" ToTypeProperty="3" OldGoods="2033" NewGoods="40029" />
+  <ReplaceGoods ID="31" ToType="JuHun" ToTypeProperty="3" OldGoods="2034" NewGoods="40030" />
+</Config>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <AwakenSuit ID="1" Type="2" Name="觉醒·毁灭" Icon="Awaken_128.png" SpecialEffect="15149" AwakenID="1,2,3,4,5" TaoZhuangProps1Num="3" TaoZhuangProps1="DeDoubleAttack,0.02" TaoZhuangProps2Num="5" TaoZhuangProps2="MaxLifePercent,0.30|DamageThornPercent,0.03" TaoZhuangProps3Num="" TaoZhuangProps3="" WeaponMaster="0" Magic="" PassiveEffect="5,102" />
+  <AwakenSuit ID="2" Type="2" Name="觉醒·生存" Icon="Awaken_129.png" SpecialEffect="15150" AwakenID="6,7,8,9,10" TaoZhuangProps1Num="3" TaoZhuangProps1="DeDoubleAttack,0.02" TaoZhuangProps2Num="5" TaoZhuangProps2="MaxLifePercent,0.30|ElementAttackInjurePercent,0.08" TaoZhuangProps3Num="" TaoZhuangProps3="" WeaponMaster="0" Magic="" PassiveEffect="5,103" />
+  <AwakenSuit ID="3" Type="1" Name="觉醒·利刃" Icon="Awaken_131.png" SpecialEffect="15152" AwakenID="11,12,13,14" TaoZhuangProps1Num="3" TaoZhuangProps1="DoubleAttack,0.03|InjurePenetrationPercent,0.05" TaoZhuangProps2Num="4" TaoZhuangProps2="AddAttackPercent,0.1|ElementPenetration,0.1" TaoZhuangProps3Num="" TaoZhuangProps3="" WeaponMaster="4,1" Magic="" PassiveEffect="" />
+  <AwakenSuit ID="4" Type="1" Name="觉醒·爆裂" Icon="Awaken_132.png" SpecialEffect="15153" AwakenID="15,16,17,18" TaoZhuangProps1Num="3" TaoZhuangProps1="DoubleAttack,0.03|InjurePenetrationPercent,0.05" TaoZhuangProps2Num="4" TaoZhuangProps2="AddAttackPercent,0.1" TaoZhuangProps3Num="" TaoZhuangProps3="" WeaponMaster="4,2" Magic="" PassiveEffect="4,100" />
+</Config>

@@ -9,10 +9,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.Talent
 {
-	// Token: 0x02000179 RID: 377
+	
 	public class TalentManager
 	{
-		// Token: 0x060006A2 RID: 1698 RVA: 0x0003C7D4 File Offset: 0x0003A9D4
+		
 		public static TCPProcessCmdResults ProcTalentModify(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -43,7 +43,7 @@ namespace GameDBServer.Logic.Talent
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060006A3 RID: 1699 RVA: 0x0003C8BC File Offset: 0x0003AABC
+		
 		public static TCPProcessCmdResults ProcTalentEffectModify(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -73,7 +73,7 @@ namespace GameDBServer.Logic.Talent
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060006A4 RID: 1700 RVA: 0x0003C998 File Offset: 0x0003AB98
+		
 		public static TCPProcessCmdResults ProcTalentEffectClear(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -100,7 +100,7 @@ namespace GameDBServer.Logic.Talent
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060006A5 RID: 1701 RVA: 0x0003CA4C File Offset: 0x0003AC4C
+		
 		public static string TalentInfoModify(DBManager dbMgr, int roleID, int totalCount, long exp, long expAdd, int isUp, int zoneID)
 		{
 			int result = 1;
@@ -128,7 +128,7 @@ namespace GameDBServer.Logic.Talent
 			return result.ToString();
 		}
 
-		// Token: 0x060006A6 RID: 1702 RVA: 0x0003CB24 File Offset: 0x0003AD24
+		
 		public static void TalentLogAdd(DBManager dbMgr, int zoneID, int roleID, int logType, long logValue)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -145,7 +145,7 @@ namespace GameDBServer.Logic.Talent
 			}
 		}
 
-		// Token: 0x060006A7 RID: 1703 RVA: 0x0003CBB8 File Offset: 0x0003ADB8
+		
 		public static string TalentEffectModify(DBManager dbMgr, int roleID, int talentType, int effectID, int effectLevel, int zoneID)
 		{
 			int result = 1;
@@ -169,7 +169,7 @@ namespace GameDBServer.Logic.Talent
 			return result.ToString();
 		}
 
-		// Token: 0x060006A8 RID: 1704 RVA: 0x0003CC74 File Offset: 0x0003AE74
+		
 		public static string TalentEffectClear(DBManager dbMgr, int roleID, int zoneID)
 		{
 			int result = 1;
@@ -187,7 +187,7 @@ namespace GameDBServer.Logic.Talent
 			return result.ToString();
 		}
 
-		// Token: 0x060006A9 RID: 1705 RVA: 0x0003CD00 File Offset: 0x0003AF00
+		
 		private static void DbUpdateTalent(DBManager dbMgr, int roleID, int totalCount, long exp)
 		{
 			DBRoleInfo dbRoleInfo = dbMgr.DBRoleMgr.FindDBRoleInfo(ref roleID);
@@ -201,7 +201,7 @@ namespace GameDBServer.Logic.Talent
 			}
 		}
 
-		// Token: 0x060006AA RID: 1706 RVA: 0x0003CD74 File Offset: 0x0003AF74
+		
 		private static void DbUpdateTalentEffect(DBManager dbMgr, int roleID, int talentType, int effectID, int effectLevel)
 		{
 			DBRoleInfo dbRoleInfo = dbMgr.DBRoleMgr.FindDBRoleInfo(ref roleID);
@@ -241,7 +241,7 @@ namespace GameDBServer.Logic.Talent
 			}
 		}
 
-		// Token: 0x060006AB RID: 1707 RVA: 0x0003CEC0 File Offset: 0x0003B0C0
+		
 		private static void DbTalentClear(DBManager dbMgr, int roleID)
 		{
 			DBRoleInfo dbRoleInfo = dbMgr.DBRoleMgr.FindDBRoleInfo(ref roleID);
@@ -257,14 +257,14 @@ namespace GameDBServer.Logic.Talent
 			}
 		}
 
-		// Token: 0x0200017A RID: 378
+		
 		private enum TalentLogType
 		{
-			// Token: 0x040008AB RID: 2219
+			
 			Exp = 1,
-			// Token: 0x040008AC RID: 2220
+			
 			Talent,
-			// Token: 0x040008AD RID: 2221
+			
 			Wash
 		}
 	}

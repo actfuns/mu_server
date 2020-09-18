@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <TransfigurationFashionEffect ID="101" Name="惩戒1级" Level="1" MagicIcon="9109" Description="变身后伤害吸收+8%，攻击力+10%，元素伤害+10%" ProPerty="SubAttackInjurePercent,0.08|AddAttackPercent,0.1|ElementInjurePercent,0.1" />
+  <TransfigurationFashionEffect ID="102" Name="惩戒2级" Level="2" MagicIcon="9109" Description="变身后伤害吸收+8.5%，攻击力+11%，元素伤害+11%" ProPerty="SubAttackInjurePercent,0.085|AddAttackPercent,0.11|ElementInjurePercent,0.11" />
+  <TransfigurationFashionEffect ID="103" Name="惩戒3级" Level="3" MagicIcon="9109" Description="变身后伤害吸收+9%，攻击力+12%，元素伤害+12%" ProPerty="SubAttackInjurePercent,0.09|AddAttackPercent,0.12|ElementInjurePercent,0.12" />
+  <TransfigurationFashionEffect ID="104" Name="惩戒4级" Level="4" MagicIcon="9109" Description="变身后伤害吸收+9.5%，攻击力+13%，元素伤害+13%" ProPerty="SubAttackInjurePercent,0.095|AddAttackPercent,0.13|ElementInjurePercent,0.13" />
+  <TransfigurationFashionEffect ID="105" Name="惩戒5级" Level="5" MagicIcon="9109" Description="变身后伤害吸收+10%，攻击力+14%，元素伤害+14%" ProPerty="SubAttackInjurePercent,0.1|AddAttackPercent,0.14|ElementInjurePercent,0.14" />
+  <TransfigurationFashionEffect ID="106" Name="惩戒6级" Level="6" MagicIcon="9109" Description="变身后伤害吸收+10.5%，攻击力+15%，元素伤害+15%" ProPerty="SubAttackInjurePercent,0.105|AddAttackPercent,0.15|ElementInjurePercent,0.15" />
+  <TransfigurationFashionEffect ID="107" Name="惩戒7级" Level="7" MagicIcon="9109" Description="变身后伤害吸收+11%，攻击力+16%，元素伤害+16%" ProPerty="SubAttackInjurePercent,0.11|AddAttackPercent,0.16|ElementInjurePercent,0.16" />
+  <TransfigurationFashionEffect ID="108" Name="惩戒8级" Level="8" MagicIcon="9109" Description="变身后伤害吸收+11.5%，攻击力+17%，元素伤害+17%" ProPerty="SubAttackInjurePercent,0.115|AddAttackPercent,0.17|ElementInjurePercent,0.17" />
+  <TransfigurationFashionEffect ID="109" Name="惩戒9级" Level="9" MagicIcon="9109" Description="变身后伤害吸收+12%，攻击力+18%，元素伤害+18%" ProPerty="SubAttackInjurePercent,0.12|AddAttackPercent,0.18|ElementInjurePercent,0.18" />
+  <TransfigurationFashionEffect ID="110" Name="惩戒10级" Level="10" MagicIcon="9109" Description="变身后伤害吸收+12.5%，攻击力+19%，元素伤害+19%" ProPerty="SubAttackInjurePercent,0.125|AddAttackPercent,0.19|ElementInjurePercent,0.19" />
+  <TransfigurationFashionEffect ID="111" Name="惩戒11级" Level="11" MagicIcon="9109" Description="变身后伤害吸收+13%，攻击力+20%，元素伤害+20%" ProPerty="SubAttackInjurePercent,0.13|AddAttackPercent,0.2|ElementInjurePercent,0.2" />
+  <TransfigurationFashionEffect ID="201" Name="卓越1级" Level="1" MagicIcon="9112" Description="变身后伤害吸收+5%，生命值上限+20%，元素伤害+10%" ProPerty="SubAttackInjurePercent,0.05|MaxLifePercent,0.2|ElementInjurePercent,0.1" />
+  <TransfigurationFashionEffect ID="202" Name="卓越2级" Level="2" MagicIcon="9112" Description="变身后伤害吸收+5.5%，生命值上限+22%，元素伤害+11%" ProPerty="SubAttackInjurePercent,0.055|MaxLifePercent,0.22|ElementInjurePercent,0.11" />
+  <TransfigurationFashionEffect ID="203" Name="卓越3级" Level="3" MagicIcon="9112" Description="变身后伤害吸收+6%，生命值上限+24%，元素伤害+12%" ProPerty="SubAttackInjurePercent,0.06|MaxLifePercent,0.24|ElementInjurePercent,0.12" />
+  <TransfigurationFashionEffect ID="204" Name="卓越4级" Level="4" MagicIcon="9112" Description="变身后伤害吸收+6.5%，生命值上限+26%，元素伤害+13%" ProPerty="SubAttackInjurePercent,0.065|MaxLifePercent,0.26|ElementInjurePercent,0.13" />
+  <TransfigurationFashionEffect ID="205" Name="卓越5级" Level="5" MagicIcon="9112" Description="变身后伤害吸收+7%，生命值上限+28%，元素伤害+14%" ProPerty="SubAttackInjurePercent,0.07|MaxLifePercent,0.28|ElementInjurePercent,0.14" />
+  <TransfigurationFashionEffect ID="206" Name="卓越6级" Level="6" MagicIcon="9112" Description="变身后伤害吸收+7.5%，生命值上限+30%，元素伤害+15%" ProPerty="SubAttackInjurePercent,0.075|MaxLifePercent,0.3|ElementInjurePercent,0.15" />
+  <TransfigurationFashionEffect ID="207" Name="卓越7级" Level="7" MagicIcon="9112" Description="变身后伤害吸收+8%，生命值上限+32%，元素伤害+16%" ProPerty="SubAttackInjurePercent,0.08|MaxLifePercent,0.32|ElementInjurePercent,0.16" />
+  <TransfigurationFashionEffect ID="208" Name="卓越8级" Level="8" MagicIcon="9112" Description="变身后伤害吸收+8.5%，生命值上限+34%，元素伤害+17%" ProPerty="SubAttackInjurePercent,0.085|MaxLifePercent,0.34|ElementInjurePercent,0.17" />
+  <TransfigurationFashionEffect ID="209" Name="卓越9级" Level="9" MagicIcon="9112" Description="变身后伤害吸收+9%，生命值上限+36%，元素伤害+18%" ProPerty="SubAttackInjurePercent,0.09|MaxLifePercent,0.36|ElementInjurePercent,0.18" />
+  <TransfigurationFashionEffect ID="210" Name="卓越10级" Level="10" MagicIcon="9112" Description="变身后伤害吸收+9.5%，生命值上限+38%，元素伤害+19%" ProPerty="SubAttackInjurePercent,0.095|MaxLifePercent,0.38|ElementInjurePercent,0.19" />
+  <TransfigurationFashionEffect ID="211" Name="卓越11级" Level="11" MagicIcon="9112" Description="变身后伤害吸收+10%，生命值上限+40%，元素伤害+20%" ProPerty="SubAttackInjurePercent,0.1|MaxLifePercent,0.4|ElementInjurePercent,0.2" />
+</Config>

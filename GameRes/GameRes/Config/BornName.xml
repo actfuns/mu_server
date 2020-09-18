@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <Item ID="1" MinProportion="0" MaxProportion="0.29" Name="普通" />
+  <Item ID="2" MinProportion="0.3" MaxProportion="0.59" Name="良好" />
+  <Item ID="3" MinProportion="0.6" MaxProportion="0.79" Name="优秀" />
+  <Item ID="4" MinProportion="0.8" MaxProportion="0.99" Name="完美" />
+  <Item ID="5" MinProportion="1" MaxProportion="1" Name="无双" />
+</config>

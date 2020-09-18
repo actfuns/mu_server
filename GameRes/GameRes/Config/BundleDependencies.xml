@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="gb2312"?>
+<ArrayOfDependency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Dependency Res="Monster_001" Depd="Monster_001_share" />
+  <Dependency Res="Monster_100" Depd="Monster_001_share" />
+  <Dependency Res="Monster_080" Depd="Monster_080_share" />
+  <Dependency Res="Monster_081" Depd="Monster_080_share" />
+  <Dependency Res="Monster_082" Depd="Monster_080_share" />
+  <Dependency Res="Monster_083" Depd="Monster_080_share" />
+  <Dependency Res="Monster_084" Depd="Monster_080_share" />
+</ArrayOfDependency>

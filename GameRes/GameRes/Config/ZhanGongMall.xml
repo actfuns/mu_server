@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ZhaoHui ID="110" Type="10000" ZhanMengLevel="1" Name="精华治疗药水" Goods="1010,1,1,0,0,0,0" NeedZhanGong="500" SinglePurchase="-1" />
+  <ZhaoHui ID="120" Type="10000" ZhanMengLevel="1" Name="精华魔力药水" Goods="1110,1,1,0,0,0,0" NeedZhanGong="500" SinglePurchase="-1" />
+  <ZhaoHui ID="130" Type="10000" ZhanMengLevel="1" Name="玛雅晶石" Goods="2000,1,1,0,0,0,0" NeedZhanGong="10000" SinglePurchase="10" />
+  <ZhaoHui ID="140" Type="10000" ZhanMengLevel="1" Name="祝福晶石" Goods="2001,1,1,0,0,0,0" NeedZhanGong="50000" SinglePurchase="10" />
+  <ZhaoHui ID="150" Type="10000" ZhanMengLevel="1" Name="灵魂晶石" Goods="2002,1,1,0,0,0,0" NeedZhanGong="100000" SinglePurchase="10" />
+  <ZhaoHui ID="160" Type="10000" ZhanMengLevel="1" Name="生命晶石" Goods="2003,1,1,0,0,0,0" NeedZhanGong="10000" SinglePurchase="20" />
+  <ZhaoHui ID="170" Type="10000" ZhanMengLevel="1" Name="进化晶石" Goods="2030,1,1,0,0,0,0" NeedZhanGong="2000" SinglePurchase="5" />
+  <ZhaoHui ID="180" Type="10000" ZhanMengLevel="1" Name="羽毛" Goods="2016,1,1,0,0,0,0" NeedZhanGong="5000" SinglePurchase="20" />
+  <ZhaoHui ID="190" Type="10000" ZhanMengLevel="1" Name="神鹰火种" Goods="2017,1,1,0,0,0,0" NeedZhanGong="20000" SinglePurchase="3" />
+  <ZhaoHui ID="200" Type="10000" ZhanMengLevel="1" Name="3倍经验印章" Goods="4030,1,1,0,0,0,0" NeedZhanGong="20000" SinglePurchase="2" />
+  <ZhaoHui ID="210" Type="10000" ZhanMengLevel="1" Name="复活石" Goods="4000,1,1,0,0,0,0" NeedZhanGong="10000" SinglePurchase="10" />
+  <ZhaoHui ID="220" Type="10000" ZhanMengLevel="1" Name="力量神水" Goods="4001,1,1,0,0,0,0" NeedZhanGong="20000" SinglePurchase="1" />
+  <ZhaoHui ID="230" Type="10000" ZhanMengLevel="1" Name="敏捷神水" Goods="4002,1,1,0,0,0,0" NeedZhanGong="20000" SinglePurchase="1" />
+  <ZhaoHui ID="240" Type="10000" ZhanMengLevel="1" Name="体力神水" Goods="4003,1,1,0,0,0,0" NeedZhanGong="20000" SinglePurchase="1" />
+  <ZhaoHui ID="250" Type="10000" ZhanMengLevel="1" Name="智力神水" Goods="4004,1,1,0,0,0,0" NeedZhanGong="20000" SinglePurchase="1" />
+  <ZhaoHui ID="260" Type="10000" ZhanMengLevel="1" Name="卓越神水" Goods="4005,1,1,0,0,0,0" NeedZhanGong="20000" SinglePurchase="1" />
+  <ZhaoHui ID="270" Type="10000" ZhanMengLevel="1" Name="幸运神水" Goods="4006,1,1,0,0,0,0" NeedZhanGong="20000" SinglePurchase="1" />
+</Config>

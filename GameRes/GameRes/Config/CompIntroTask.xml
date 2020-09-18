@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}势力任务" Bold="1" />
+  <HelpIntro ID="2" Intro="1、势力任务{17e43e}每周一0点{-}重置，重置时未完成的任务计数{ff0000}不保留" Bold="0" />
+  <HelpIntro ID="3" Intro="2、势力任务奖励{17e43e}势力贡献{-}、{17e43e}势力军衔" Bold="0" />
+  <HelpIntro ID="4" Intro="3、势力贡献可用于势力商城{17e43e}兑换珍贵道具" Bold="0" />
+  <HelpIntro ID="5" Intro="4、势力军衔用于军衔排行榜排名，势力排行榜{17e43e}每周一0点{-}截止排名顺序，并{ff0000}清空{-}排行榜开始下一周的排名" Bold="0" />
+</Config>

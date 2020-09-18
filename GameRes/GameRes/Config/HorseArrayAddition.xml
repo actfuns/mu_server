@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HorseArrayAddition ID="1" Type="1" NextID="2" NeedLevel="20" NeedSuperiorNum="0" NeedOrderNum="0" AdditionProps="MaxLifePercent,0.10|AddAttackPercent,0.05" />
+  <HorseArrayAddition ID="2" Type="1" NextID="3" NeedLevel="40" NeedSuperiorNum="0" NeedOrderNum="0" AdditionProps="MaxLifePercent,0.20|AddAttackPercent,0.10" />
+  <HorseArrayAddition ID="3" Type="1" NextID="4" NeedLevel="60" NeedSuperiorNum="0" NeedOrderNum="0" AdditionProps="MaxLifePercent,0.30|AddAttackPercent,0.15" />
+  <HorseArrayAddition ID="4" Type="1" NextID="-1" NeedLevel="80" NeedSuperiorNum="0" NeedOrderNum="0" AdditionProps="MaxLifePercent,0.50|AddAttackPercent,0.25" />
+  <HorseArrayAddition ID="5" Type="2" NextID="6" NeedLevel="0" NeedSuperiorNum="10" NeedOrderNum="0" AdditionProps="MaxLifeV,20000|SubAttackInjurePercent,0.01" />
+  <HorseArrayAddition ID="6" Type="2" NextID="7" NeedLevel="0" NeedSuperiorNum="20" NeedOrderNum="0" AdditionProps="MaxLifeV,30000|SubAttackInjurePercent,0.01" />
+  <HorseArrayAddition ID="7" Type="2" NextID="8" NeedLevel="0" NeedSuperiorNum="30" NeedOrderNum="0" AdditionProps="MaxLifeV,40000|SubAttackInjurePercent,0.02" />
+  <HorseArrayAddition ID="8" Type="2" NextID="-1" NeedLevel="0" NeedSuperiorNum="40" NeedOrderNum="0" AdditionProps="MaxLifeV,50000|SubAttackInjurePercent,0.03" />
+  <HorseArrayAddition ID="9" Type="3" NextID="10" NeedLevel="0" NeedSuperiorNum="0" NeedOrderNum="10" AdditionProps="InjurePenetrationPercent,0.01|AddAttackInjure,5000|MaxLifePercent,0.05" />
+  <HorseArrayAddition ID="10" Type="3" NextID="11" NeedLevel="0" NeedSuperiorNum="0" NeedOrderNum="15" AdditionProps="InjurePenetrationPercent,0.01|AddAttackInjure,6000|MaxLifePercent,0.08" />
+  <HorseArrayAddition ID="11" Type="3" NextID="12" NeedLevel="0" NeedSuperiorNum="0" NeedOrderNum="20" AdditionProps="InjurePenetrationPercent,0.01|AddAttackInjure,7500|MaxLifePercent,0.10" />
+  <HorseArrayAddition ID="12" Type="3" NextID="13" NeedLevel="0" NeedSuperiorNum="0" NeedOrderNum="25" AdditionProps="InjurePenetrationPercent,0.02|AddAttackInjure,9000|MaxLifePercent,0.12" />
+  <HorseArrayAddition ID="13" Type="3" NextID="14" NeedLevel="0" NeedSuperiorNum="0" NeedOrderNum="30" AdditionProps="InjurePenetrationPercent,0.02|AddAttackInjure,10000|MaxLifePercent,0.15" />
+  <HorseArrayAddition ID="14" Type="3" NextID="15" NeedLevel="0" NeedSuperiorNum="0" NeedOrderNum="35" AdditionProps="InjurePenetrationPercent,0.02|AddAttackInjure,11000|MaxLifePercent,0.18" />
+  <HorseArrayAddition ID="15" Type="3" NextID="-1" NeedLevel="0" NeedSuperiorNum="0" NeedOrderNum="40" AdditionProps="InjurePenetrationPercent,0.03|AddAttackInjure,12500|MaxLifePercent,0.20" />
+</Config>

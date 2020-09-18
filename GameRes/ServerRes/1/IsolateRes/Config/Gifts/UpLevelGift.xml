@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Item ID="1" Occupation="0" ToZhuanSheng="10" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="1500" MoJing="10000" />
+  <Item ID="2" Occupation="0" ToZhuanSheng="11" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="2000" MoJing="10000" />
+  <Item ID="3" Occupation="0" ToZhuanSheng="12" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="2500" MoJing="10000" />
+  <Item ID="4" Occupation="0" ToZhuanSheng="13" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="5000" MoJing="10000" />
+  <Item ID="5" Occupation="0" ToZhuanSheng="14" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="10000" MoJing="10000" />
+  <Item ID="6" Occupation="0" ToZhuanSheng="15" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="20000" MoJing="10000" />
+  <Item ID="7" Occupation="0" ToZhuanSheng="16" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="50000" MoJing="10000" />
+
+  <Item ID="8" Occupation="1" ToZhuanSheng="10" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="1500" MoJing="10000" />
+  <Item ID="30" Occupation="1" ToZhuanSheng="11" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="2000" MoJing="10000" />
+  <Item ID="31" Occupation="1" ToZhuanSheng="12" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="2500" MoJing="10000" />
+  <Item ID="32" Occupation="1" ToZhuanSheng="13" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="5000" MoJing="10000" />
+  <Item ID="33" Occupation="1" ToZhuanSheng="14" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="10000" MoJing="10000" />
+  <Item ID="34" Occupation="1" ToZhuanSheng="15" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="20000" MoJing="10000" />
+  <Item ID="35" Occupation="1" ToZhuanSheng="16" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="50000" MoJing="10000" />
+
+  <Item ID="60" Occupation="2" ToZhuanSheng="10" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="1500" MoJing="10000" />
+  <Item ID="61" Occupation="2" ToZhuanSheng="11" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="2000" MoJing="10000" />
+  <Item ID="62" Occupation="2" ToZhuanSheng="12" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="2500" MoJing="10000" />
+  <Item ID="63" Occupation="2" ToZhuanSheng="13" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="5000" MoJing="10000" />
+  <Item ID="64" Occupation="2" ToZhuanSheng="14" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="10000" MoJing="10000" />
+  <Item ID="65" Occupation="2" ToZhuanSheng="15" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="20000" MoJing="10000" />
+  <Item ID="66" Occupation="2" ToZhuanSheng="16" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="50000" MoJing="10000" />
+
+  <Item ID="90" Occupation="3" ToZhuanSheng="10" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="1500" MoJing="10000" />
+  <Item ID="91" Occupation="3" ToZhuanSheng="11" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="2000" MoJing="10000" />
+  <Item ID="92" Occupation="3" ToZhuanSheng="12" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="2500" MoJing="10000" />
+  <Item ID="93" Occupation="3" ToZhuanSheng="13" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="5000" MoJing="10000" />
+  <Item ID="94" Occupation="3" ToZhuanSheng="14" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="10000" MoJing="10000" />
+  <Item ID="95" Occupation="3" ToZhuanSheng="15" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="20000" MoJing="10000" />
+  <Item ID="96" Occupation="3" ToZhuanSheng="16" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="50000" MoJing="10000" />
+
+  <Item ID="120" Occupation="5" ToZhuanSheng="10" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="1500" MoJing="10000" />
+  <Item ID="121" Occupation="5" ToZhuanSheng="11" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="2000" MoJing="10000" />
+  <Item ID="122" Occupation="5" ToZhuanSheng="12" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="2500" MoJing="10000" />
+  <Item ID="123" Occupation="5" ToZhuanSheng="13" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="5000" MoJing="10000" />
+  <Item ID="124" Occupation="5" ToZhuanSheng="14" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="10000" MoJing="10000" />
+  <Item ID="125" Occupation="5" ToZhuanSheng="15" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="20000" MoJing="10000" />
+  <Item ID="126" Occupation="5" ToZhuanSheng="16" ToLevel="1" GoodsIDs="2001,100,1,0,0,0,0|2002,50,1,0,0,0,0|2003,200,1,0,0,0,0" BindMoney="50000" MoJing="10000" />
+</Config>

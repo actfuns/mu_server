@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ManorCommand ID="1" Name="扫厕所" Award="1|0.4|0.4" />
+  <ManorCommand ID="2" Name="暖被窝" Award="2|0.3|0.3" />
+  <ManorCommand ID="3" Name="捡肥皂" Award="3|0.06|0.06" />
+</Config>

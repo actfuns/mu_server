@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Goods ID="1" TimeOl="2" GoodsIDs="20050,1,0,0,1,0|20040,1,0,0,1,0" />
+  <Goods ID="2" TimeOl="4" GoodsIDs="31010,1,0,0,1,0|32030,1,0,0,1,0" />
+  <Goods ID="3" TimeOl="7" GoodsIDs="31024,1,0,0,1,0|20042,1,0,0,1,0|30030,1,0,0,1,0" />
+</Config>

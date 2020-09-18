@@ -8,10 +8,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x020001A4 RID: 420
+	
 	public class BangHuiLingDiManager
 	{
-		// Token: 0x060008E2 RID: 2274 RVA: 0x00052CF0 File Offset: 0x00050EF0
+		
 		public void LoadBangHuiLingDiItemsDictFromDB(DBManager dbMgr)
 		{
 			DBQuery.QueryBHLingDiInfoDict(dbMgr, this._BangHuiLingDiItemsDict);
@@ -37,7 +37,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060008E3 RID: 2275 RVA: 0x00052D98 File Offset: 0x00050F98
+		
 		public BangHuiLingDiInfoData FindBangHuiLingDiByID(int lingDiID)
 		{
 			BangHuiLingDiInfoData BangHuiLingDiInfoData = null;
@@ -51,7 +51,7 @@ namespace GameDBServer.Logic
 			return BangHuiLingDiInfoData;
 		}
 
-		// Token: 0x060008E4 RID: 2276 RVA: 0x00052E00 File Offset: 0x00051000
+		
 		public void ClearBangHuiLingDi(int bhid)
 		{
 			lock (this._BangHuiLingDiItemsDict)
@@ -75,7 +75,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060008E5 RID: 2277 RVA: 0x00052EF0 File Offset: 0x000510F0
+		
 		public void OnChangeBangHuiName(int bhid, string oldName, string newName)
 		{
 			lock (this._BangHuiLingDiItemsDict)
@@ -90,7 +90,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060008E6 RID: 2278 RVA: 0x00052F9C File Offset: 0x0005119C
+		
 		public void ClearBangHuiLingDiByID(int lingDiID)
 		{
 			lock (this._BangHuiLingDiItemsDict)
@@ -106,7 +106,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060008E7 RID: 2279 RVA: 0x00053048 File Offset: 0x00051248
+		
 		public BangHuiLingDiInfoData ClearLingDiBangHuiInfo(int lingDiID)
 		{
 			BangHuiLingDiInfoData bangHuiLingDiInfoData = null;
@@ -130,7 +130,7 @@ namespace GameDBServer.Logic
 			return bangHuiLingDiInfoData;
 		}
 
-		// Token: 0x060008E8 RID: 2280 RVA: 0x000530FC File Offset: 0x000512FC
+		
 		public BangHuiLingDiInfoData AddBangHuiLingDi(int bhid, int zoneID, string bhName, int lingDiID)
 		{
 			BangHuiLingDiInfoData BangHuiLingDiInfoData = null;
@@ -175,7 +175,7 @@ namespace GameDBServer.Logic
 			return BangHuiLingDiInfoData;
 		}
 
-		// Token: 0x060008E9 RID: 2281 RVA: 0x00053234 File Offset: 0x00051434
+		
 		public BangHuiLingDiInfoData UpdateBangHuiLingDiTax(int bhid, int lingDiID, int tax)
 		{
 			BangHuiLingDiInfoData bangHuiLingDiInfoData = null;
@@ -194,7 +194,7 @@ namespace GameDBServer.Logic
 			return bangHuiLingDiInfoData;
 		}
 
-		// Token: 0x060008EA RID: 2282 RVA: 0x000532B8 File Offset: 0x000514B8
+		
 		public BangHuiLingDiInfoData UpdateBangHuiLingDiWarRequest(int lingDiID, string warRequest)
 		{
 			BangHuiLingDiInfoData bangHuiLingDiInfoData = null;
@@ -209,7 +209,7 @@ namespace GameDBServer.Logic
 			return bangHuiLingDiInfoData;
 		}
 
-		// Token: 0x060008EB RID: 2283 RVA: 0x00053328 File Offset: 0x00051528
+		
 		public BangHuiLingDiInfoData AddLingDiTaxMoney(int bhid, int lingDiID, int addMoney)
 		{
 			int dayID = DateTime.Now.DayOfYear;
@@ -239,7 +239,7 @@ namespace GameDBServer.Logic
 			return bangHuiLingDiInfoData;
 		}
 
-		// Token: 0x060008EC RID: 2284 RVA: 0x00053404 File Offset: 0x00051604
+		
 		public BangHuiLingDiInfoData TakeLingDiTaxMoney(int bhid, int lingDiID, int takeMoney)
 		{
 			int dayID = DateTime.Now.DayOfYear;
@@ -272,7 +272,7 @@ namespace GameDBServer.Logic
 			return bangHuiLingDiInfoData;
 		}
 
-		// Token: 0x060008ED RID: 2285 RVA: 0x00053504 File Offset: 0x00051704
+		
 		public BangHuiLingDiInfoData TakeLingDiDailyAward(int bhid, int lingDiID)
 		{
 			int dayID = DateTime.Now.DayOfYear;
@@ -296,7 +296,7 @@ namespace GameDBServer.Logic
 			return bangHuiLingDiInfoData;
 		}
 
-		// Token: 0x060008EE RID: 2286 RVA: 0x000535B0 File Offset: 0x000517B0
+		
 		public TCPOutPacket GetBangHuiLingDiItemsDictTCPOutPacket(TCPOutPacketPool pool, int cmdID)
 		{
 			Dictionary<int, BangHuiLingDiItemData> bangHuiLingDiItemDataDict = new Dictionary<int, BangHuiLingDiItemData>();
@@ -320,7 +320,7 @@ namespace GameDBServer.Logic
 			return DataHelper.ObjectToTCPOutPacket<Dictionary<int, BangHuiLingDiItemData>>(bangHuiLingDiItemDataDict, pool, cmdID);
 		}
 
-		// Token: 0x060008EF RID: 2287 RVA: 0x000536D4 File Offset: 0x000518D4
+		
 		public TCPOutPacket GetBangHuiLingDiInfosDictTCPOutPacket(TCPOutPacketPool pool, int bhid, int cmdID)
 		{
 			Dictionary<int, BangHuiLingDiInfoData> bangHuiLingDiInfoDataDict = new Dictionary<int, BangHuiLingDiInfoData>();
@@ -351,14 +351,14 @@ namespace GameDBServer.Logic
 			return DataHelper.ObjectToTCPOutPacket<Dictionary<int, BangHuiLingDiInfoData>>(bangHuiLingDiInfoDataDict, pool, cmdID);
 		}
 
-		// Token: 0x060008F0 RID: 2288 RVA: 0x00053858 File Offset: 0x00051A58
+		
 		private static int WeekOfYear()
 		{
 			GregorianCalendar gc = new GregorianCalendar();
 			return gc.GetWeekOfYear(DateTime.Now, CalendarWeekRule.FirstDay, DayOfWeek.Monday);
 		}
 
-		// Token: 0x060008F1 RID: 2289 RVA: 0x00053880 File Offset: 0x00051A80
+		
 		public void ProcessClearYangZhouTotalTax(DBManager dbMgr)
 		{
 			long nowTicks = DateTime.Now.Ticks;
@@ -375,13 +375,13 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x040009A1 RID: 2465
+		
 		private Dictionary<int, BangHuiLingDiInfoData> _BangHuiLingDiItemsDict = new Dictionary<int, BangHuiLingDiInfoData>();
 
-		// Token: 0x040009A2 RID: 2466
+		
 		private int ThisWeekID = BangHuiLingDiManager.WeekOfYear();
 
-		// Token: 0x040009A3 RID: 2467
+		
 		private long LastClearYangZhouTotalTaxTicks = DateTime.Now.Ticks;
 	}
 }

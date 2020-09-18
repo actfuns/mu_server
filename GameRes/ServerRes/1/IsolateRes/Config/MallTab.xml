@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Mall>
+    <Tab ID="100000" Name="抢购类" />  
+	<Tab ID="10000" Name="常用物品" />
+	<Tab ID="20000" Name="特殊物品" />
+    <Tab ID="30000" Name="高级物品" />	
+    <Tab ID="40000" Name="图鉴直购" />	
+    <Tab ID="50000" Name="特殊类" />	
+	
+  </Mall>
+</Config>

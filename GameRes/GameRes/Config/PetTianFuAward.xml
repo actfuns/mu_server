@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <PetTianFuAward ID="1" TianFuNum="8" ShuXing="AddAttackInjure,400|MaxLifeV,1200" />
+  <PetTianFuAward ID="2" TianFuNum="9" ShuXing="AddAttackInjure,520|MaxLifeV,1560" />
+  <PetTianFuAward ID="3" TianFuNum="10" ShuXing="AddAttackInjure,680|MaxLifeV,2040" />
+  <PetTianFuAward ID="4" TianFuNum="11" ShuXing="AddAttackInjure,880|MaxLifeV,2640" />
+  <PetTianFuAward ID="5" TianFuNum="12" ShuXing="AddAttackInjure,1120|MaxLifeV,3360" />
+  <PetTianFuAward ID="6" TianFuNum="13" ShuXing="AddAttackInjure,1400|MaxLifeV,4200|DecreaseInjureValue,400" />
+  <PetTianFuAward ID="7" TianFuNum="14" ShuXing="AddAttackInjure,1720|MaxLifeV,5160|DecreaseInjureValue,520" />
+  <PetTianFuAward ID="8" TianFuNum="15" ShuXing="AddAttackInjure,2080|MaxLifeV,6240|DecreaseInjureValue,680" />
+  <PetTianFuAward ID="9" TianFuNum="16" ShuXing="AddAttackInjure,2480|MaxLifeV,7440|DecreaseInjureValue,880" />
+  <PetTianFuAward ID="10" TianFuNum="17" ShuXing="AddAttackInjure,2920|MaxLifeV,8760|DecreaseInjureValue,1120" />
+  <PetTianFuAward ID="11" TianFuNum="18" ShuXing="AddAttackInjure,3400|MaxLifeV,10200|DecreaseInjureValue,1400" />
+  <PetTianFuAward ID="12" TianFuNum="19" ShuXing="AddAttackInjure,3920|MaxLifeV,11760|DecreaseInjureValue,1720" />
+  <PetTianFuAward ID="13" TianFuNum="20" ShuXing="AddAttackInjure,4480|MaxLifeV,13440|DecreaseInjureValue,2080" />
+  <PetTianFuAward ID="14" TianFuNum="21" ShuXing="AddAttackInjure,5080|MaxLifeV,15240|DecreaseInjureValue,2480" />
+  <PetTianFuAward ID="15" TianFuNum="22" ShuXing="AddAttackInjure,5720|MaxLifeV,17160|DecreaseInjureValue,2920" />
+  <PetTianFuAward ID="16" TianFuNum="23" ShuXing="AddAttackInjure,6420|MaxLifeV,19260|DecreaseInjureValue,3400" />
+  <PetTianFuAward ID="17" TianFuNum="24" ShuXing="AddAttackInjure,7180|MaxLifeV,21540|DecreaseInjureValue,3920" />
+</Config>

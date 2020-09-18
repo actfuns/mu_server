@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item NPCID="80000" UseAuthority="1,2,3,4,5" PosX="5888" PosY="7747" BufferID="2000805" MapCode="11000" />
+  <Item NPCID="80001" UseAuthority="1,2,3,4,5" PosX="6830" PosY="6896" BufferID="2000806" MapCode="11000" />
+  <Item NPCID="80002" UseAuthority="1,2,3,4,5" PosX="5021" PosY="6896" BufferID="2000807" MapCode="11000" />
+</Items>

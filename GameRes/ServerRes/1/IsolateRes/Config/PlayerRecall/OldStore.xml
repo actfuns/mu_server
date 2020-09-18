@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <OldStore ID="1" GoodsID="63077,1,1,0,0,0,0" OrigPrice="800" Price="80" SinglePurchase="3" />
+  <OldStore ID="2" GoodsID="50164,1,1,0,0,0,0" OrigPrice="1000" Price="100" SinglePurchase="3" />
+  <OldStore ID="3" GoodsID="5183,1,1,0,0,0,0" OrigPrice="1600" Price="80" SinglePurchase="3" />
+  <OldStore ID="4" GoodsID="63021,1,1,0,0,0,0" OrigPrice="1250" Price="125" SinglePurchase="3" />
+  <OldStore ID="5" GoodsID="63023,1,1,0,0,0,0" OrigPrice="1500" Price="150" SinglePurchase="3" />
+  <OldStore ID="6" GoodsID="63081,1,1,0,0,0,0" OrigPrice="400" Price="40" SinglePurchase="3" />
+  <OldStore ID="7" GoodsID="63063,1,1,0,0,0,0" OrigPrice="800" Price="80" SinglePurchase="3" />
+  <OldStore ID="8" GoodsID="63022,1,1,0,0,0,0" OrigPrice="1500" Price="150" SinglePurchase="3" />
+  <OldStore ID="9" GoodsID="63078,1,1,0,0,0,0" OrigPrice="500" Price="50" SinglePurchase="3" />
+  <OldStore ID="10" GoodsID="63064,1,1,0,0,0,0" OrigPrice="600" Price="60" SinglePurchase="3" />
+  <OldStore ID="11" GoodsID="63079,1,1,0,0,0,0" OrigPrice="800" Price="80" SinglePurchase="3" />
+  <OldStore ID="12" GoodsID="63080,1,1,0,0,0,0" OrigPrice="800" Price="80" SinglePurchase="3" />
+  <OldStore ID="13" GoodsID="63156,1,1,0,0,0,0" OrigPrice="3800" Price="388" SinglePurchase="1" />
+  <OldStore ID="14" GoodsID="63146,1,1,0,0,0,0" OrigPrice="1200" Price="88" SinglePurchase="3" />
+  <OldStore ID="15" GoodsID="63158,1,1,0,0,0,0" OrigPrice="1200" Price="88" SinglePurchase="3" />
+</Config>

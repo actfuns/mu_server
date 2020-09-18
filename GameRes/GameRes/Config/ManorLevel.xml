@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ManorLevel ID="1" Name="2转" MinLevel="2|1" MaxLevel="2|100" />
+  <ManorLevel ID="2" Name="3转" MinLevel="3|1" MaxLevel="3|100" />
+  <ManorLevel ID="3" Name="4转" MinLevel="4|1" MaxLevel="4|100" />
+  <ManorLevel ID="4" Name="5转" MinLevel="5|1" MaxLevel="5|100" />
+  <ManorLevel ID="5" Name="6转" MinLevel="6|1" MaxLevel="6|100" />
+  <ManorLevel ID="6" Name="7转" MinLevel="7|1" MaxLevel="7|100" />
+  <ManorLevel ID="7" Name="8转" MinLevel="8|1" MaxLevel="8|100" />
+  <ManorLevel ID="8" Name="9转" MinLevel="9|1" MaxLevel="9|100" />
+  <ManorLevel ID="9" Name="10转" MinLevel="10|1" MaxLevel="10|100" />
+  <ManorLevel ID="10" Name="11转" MinLevel="11|1" MaxLevel="11|100" />
+  <ManorLevel ID="11" Name="12转" MinLevel="12|1" MaxLevel="12|100" />
+  <ManorLevel ID="12" Name="13转" MinLevel="13|1" MaxLevel="13|100" />
+  <ManorLevel ID="13" Name="14转" MinLevel="14|1" MaxLevel="14|100" />
+  <ManorLevel ID="14" Name="15转" MinLevel="15|1" MaxLevel="15|100" />
+  <ManorLevel ID="15" Name="16转" MinLevel="16|1" MaxLevel="16|100" />
+</Config>

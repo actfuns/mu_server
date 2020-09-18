@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EMOLAIXI>
+  <FuBen ID="1" WaveID="1" PathID="1,2" Num="28" Delay1="2" Delay2="20" MonsterList="5000000,20|5000002,8" />
+  <FuBen ID="2" WaveID="1" PathID="3,4" Num="28" Delay1="2" Delay2="20" MonsterList="5000001,20|5000002,8" />
+  <FuBen ID="3" WaveID="2" PathID="1,3" Num="30" Delay1="2" Delay2="20" MonsterList="5000001,14|5100001,1|5000000,14|5100000,1" />
+  <FuBen ID="4" WaveID="2" PathID="2,4" Num="30" Delay1="2" Delay2="20" MonsterList="5000000,14|5100000,1|5000001,14|5100001,1" />
+  <FuBen ID="5" WaveID="3" PathID="1" Num="32" Delay1="2" Delay2="20" MonsterList="5000001,8|5100000,1|5000002,8|5100001,1|5000000,8|5100002,1|5000002,5" />
+  <FuBen ID="6" WaveID="3" PathID="2" Num="32" Delay1="2" Delay2="20" MonsterList="5000000,8|5100000,1|5000002,8|5100001,1|5000001,8|5100002,1|5000002,5" />
+  <FuBen ID="7" WaveID="3" PathID="3" Num="32" Delay1="2" Delay2="20" MonsterList="5000001,8|5100000,1|5000002,8|5100001,1|5000000,8|5100002,1|5000002,5" />
+  <FuBen ID="8" WaveID="3" PathID="4" Num="32" Delay1="2" Delay2="20" MonsterList="5000000,8|5100000,1|5000002,8|5100001,1|5000001,8|5100002,1|5000002,5" />
+</EMOLAIXI>

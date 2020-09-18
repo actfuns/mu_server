@@ -12,10 +12,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x020001DD RID: 477
+	
 	public class UserMoneyMgr
 	{
-		// Token: 0x060009F6 RID: 2550 RVA: 0x0005F87C File Offset: 0x0005DA7C
+		
 		public static void UpdateUsersMoney(DBManager dbMgr)
 		{
 			long nowTicks = DateTime.Now.Ticks / 10000L;
@@ -79,13 +79,13 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060009F7 RID: 2551 RVA: 0x0005FAE5 File Offset: 0x0005DCE5
+		
 		private static void _ProcessBuyItem(DBManager dbMgr, DBUserInfo dbUserInfo, int chargeRoleID, int addUserMoney, int zhigouID, string chargeTm)
 		{
 			DBWriter.InsertChargeTempItem(dbMgr, dbUserInfo.UserID, chargeRoleID, addUserMoney, zhigouID, chargeTm);
 		}
 
-		// Token: 0x060009F8 RID: 2552 RVA: 0x0005FAFC File Offset: 0x0005DCFC
+		
 		private static JieriSuperInputData GetJieriSuperInputDataByChargeTm(SingleChargeData chargeData, string chargeTm)
 		{
 			JieriSuperInputData configData = null;
@@ -101,7 +101,7 @@ namespace GameDBServer.Logic
 			return configData;
 		}
 
-		// Token: 0x060009F9 RID: 2553 RVA: 0x0005FB94 File Offset: 0x0005DD94
+		
 		private static int _ProcessSuperInputFanLi(DBManager dbMgr, DBUserInfo dbUserInfo, SingleChargeData chargeData, int addUserMoney, int ChargeID, string chargeTm)
 		{
 			try
@@ -156,7 +156,7 @@ namespace GameDBServer.Logic
 			return 0;
 		}
 
-		// Token: 0x060009FA RID: 2554 RVA: 0x0005FD68 File Offset: 0x0005DF68
+		
 		private static void _ProcessBuyYueKa(DBManager dbMgr, DBUserInfo dbUserInfo)
 		{
 			int rid = DBQuery.LastLoginRole(dbMgr, dbUserInfo.UserID);
@@ -165,7 +165,7 @@ namespace GameDBServer.Logic
 			ChatMsgManager.AddGMCmdChatMsg(-1, gmCmdData);
 		}
 
-		// Token: 0x060009FB RID: 2555 RVA: 0x0005FDC4 File Offset: 0x0005DFC4
+		
 		private static void _ProcessCharge(DBManager dbMgr, DBUserInfo dbUserInfo, int chargeRoleID, int addUserMoney, int zhigouID, string chargeTm, SingleChargeData chargeData, bool bZhiGouFail = false)
 		{
 			int currentGiftID = GameDBManager.GameConfigMgr.GetGameConfigItemInt("big_award_id", 0);
@@ -252,7 +252,7 @@ namespace GameDBServer.Logic
 			LogManager.WriteLog(LogTypes.Error, string.Format("处理充值成功 UID={0}，money={1}，itemid={2}", dbUserInfo.UserID, addUserMoney, zhigouID), null, true);
 		}
 
-		// Token: 0x060009FC RID: 2556 RVA: 0x00060164 File Offset: 0x0005E364
+		
 		public static void ScanInputLogToDBLog(DBManager dbMgr)
 		{
 			long nowTicks = DateTime.Now.Ticks / 10000L;
@@ -272,7 +272,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060009FD RID: 2557 RVA: 0x000601F0 File Offset: 0x0005E3F0
+		
 		public static void GMAddCharge(string userid, string money, string rid, string itemid, string time)
 		{
 			if (string.IsNullOrEmpty(time))
@@ -314,7 +314,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060009FE RID: 2558 RVA: 0x0006032C File Offset: 0x0005E52C
+		
 		public static void QueryTotalUserMoney()
 		{
 			if (GameDBManager.Flag_Query_Total_UserMoney_Minute >= 5)
@@ -338,7 +338,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060009FF RID: 2559 RVA: 0x000603E8 File Offset: 0x0005E5E8
+		
 		public static TCPProcessCmdResults ProcessGetChargeItemData(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -387,7 +387,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000A00 RID: 2560 RVA: 0x00060584 File Offset: 0x0005E784
+		
 		public static TCPProcessCmdResults ProcessDelChargeItemData(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -464,19 +464,19 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x04000C27 RID: 3111
+		
 		private static long LastUpdateUserMoneyTicks = 0L;
 
-		// Token: 0x04000C28 RID: 3112
+		
 		private static bool ChargeDataLogState = false;
 
-		// Token: 0x04000C29 RID: 3113
+		
 		private static long LastScanInputLogTicks = DateTime.Now.Ticks / 10000L;
 
-		// Token: 0x04000C2A RID: 3114
+		
 		private static int LastScanID = -1;
 
-		// Token: 0x04000C2B RID: 3115
+		
 		private static DateTime LastLastQueryServerTotalUserMoneyTime = DateTime.MinValue;
 	}
 }

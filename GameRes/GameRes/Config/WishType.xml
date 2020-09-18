@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <WishType ID="1" Name="心心相印" ItemNum="-1" ZhuanShi="20000" WishNum="10" WishIntro="0" Effect="0" EffectCD="0" />
+  <WishType ID="2" Name="百年好合" ItemNum="-1" ZhuanShi="100000" WishNum="50" WishIntro="0" Effect="0" EffectCD="0" />
+  <WishType ID="3" Name="天长地久" ItemNum="-1" ZhuanShi="200000" WishNum="100" WishIntro="0" Effect="0" EffectCD="0" />
+  <WishType ID="4" Name="一生一世" ItemNum="-1" ZhuanShi="200000" WishNum="100" WishIntro="1" Effect="1" EffectCD="5" />
+</Config>

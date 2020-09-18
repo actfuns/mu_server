@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <JingLing ID="1" TeQuanID="22" ZhiGouJiaGe="1|14|6515" DaoJuJiangLi="63269,1088,1,0,0,0,0|5380,1,1,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="999" ZhiGouPinZhi="4" />
+  <JingLing ID="2" TeQuanID="22" ZhiGouJiaGe="1|16|6516" DaoJuJiangLi="1035008,1,1,0,0,0,0|51382,1,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="3" TeQuanID="22" ZhiGouJiaGe="1|16|6517" DaoJuJiangLi="1035009,1,1,0,0,0,0|51382,1,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="4" TeQuanID="22" ZhiGouJiaGe="1|16|6518" DaoJuJiangLi="1035010,1,1,0,0,0,0|51382,1,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="5" TeQuanID="22" ZhiGouJiaGe="1|19|6519" DaoJuJiangLi="1035005,1,1,0,0,0,0|51382,3,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="6" TeQuanID="22" ZhiGouJiaGe="1|19|6520" DaoJuJiangLi="1035014,1,1,0,0,0,0|51382,3,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="7" TeQuanID="22" ZhiGouJiaGe="1|20|6521" DaoJuJiangLi="1035003,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="8" TeQuanID="22" ZhiGouJiaGe="1|20|6522" DaoJuJiangLi="1035004,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="9" TeQuanID="22" ZhiGouJiaGe="1|20|6523" DaoJuJiangLi="1035006,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="10" TeQuanID="22" ZhiGouJiaGe="1|20|6524" DaoJuJiangLi="1035007,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="11" TeQuanID="22" ZhiGouJiaGe="1|20|6525" DaoJuJiangLi="1035013,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="12" TeQuanID="22" ZhiGouJiaGe="1|20|6526" DaoJuJiangLi="1035015,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="13" TeQuanID="22" ZhiGouJiaGe="1|20|6527" DaoJuJiangLi="1035016,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="14" TeQuanID="22" ZhiGouJiaGe="1|20|6528" DaoJuJiangLi="1035017,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="15" TeQuanID="22" ZhiGouJiaGe="1|20|6529" DaoJuJiangLi="1035018,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="16" TeQuanID="22" ZhiGouJiaGe="1|20|6530" DaoJuJiangLi="1035021,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="17" TeQuanID="22" ZhiGouJiaGe="1|20|6531" DaoJuJiangLi="1035022,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="18" TeQuanID="22" ZhiGouJiaGe="1|20|6532" DaoJuJiangLi="1035024,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="19" TeQuanID="22" ZhiGouJiaGe="1|20|6533" DaoJuJiangLi="1035026,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="20" TeQuanID="22" ZhiGouJiaGe="1|20|6534" DaoJuJiangLi="1035027,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="21" TeQuanID="22" ZhiGouJiaGe="1|20|6535" DaoJuJiangLi="1035028,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="22" TeQuanID="22" ZhiGouJiaGe="1|20|6536" DaoJuJiangLi="1033240,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="23" TeQuanID="22" ZhiGouJiaGe="1|20|6537" DaoJuJiangLi="1033300,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="24" TeQuanID="22" ZhiGouJiaGe="1|20|6538" DaoJuJiangLi="1033330,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="25" TeQuanID="22" ZhiGouJiaGe="1|20|6539" DaoJuJiangLi="1033270,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="26" TeQuanID="22" ZhiGouJiaGe="1|20|6540" DaoJuJiangLi="1033360,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="27" TeQuanID="22" ZhiGouJiaGe="1|20|6541" DaoJuJiangLi="1033390,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="28" TeQuanID="22" ZhiGouJiaGe="1|20|6542" DaoJuJiangLi="1033420,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+  <JingLing ID="29" TeQuanID="22" ZhiGouJiaGe="1|20|6543" DaoJuJiangLi="970002,1,1,0,0,0,0|51382,6,0,0,0,0,0" FenZhiYeJiangLi="" XianShiJiangLi="" CanShu="" GouMaiCiShu="30" ZhiGouPinZhi="4" />
+</Config>

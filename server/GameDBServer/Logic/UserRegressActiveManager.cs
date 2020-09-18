@@ -8,10 +8,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000187 RID: 391
+	
 	public class UserRegressActiveManager
 	{
-		// Token: 0x060006CA RID: 1738 RVA: 0x0003E5B4 File Offset: 0x0003C7B4
+		
 		public static TCPProcessCmdResults ProcessGetRegressActiveMinTime(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -73,7 +73,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060006CB RID: 1739 RVA: 0x0003E7FC File Offset: 0x0003C9FC
+		
 		public static TCPProcessCmdResults ProcessUpdateEverySignCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -135,7 +135,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060006CC RID: 1740 RVA: 0x0003EA68 File Offset: 0x0003CC68
+		
 		public static TCPProcessCmdResults ProcessSprQueryDayUserActivityInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -237,7 +237,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060006CD RID: 1741 RVA: 0x0003EEFC File Offset: 0x0003D0FC
+		
 		public static TCPProcessCmdResults ProcessUpdateSprQueryDayUserActivityInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -318,7 +318,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060006CE RID: 1742 RVA: 0x0003F240 File Offset: 0x0003D440
+		
 		public static TCPProcessCmdResults ProcessSprQueryUserActivityInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -372,7 +372,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060006CF RID: 1743 RVA: 0x0003F410 File Offset: 0x0003D610
+		
 		public static TCPProcessCmdResults ProcessDBUpdateUserLimitGoodsUsedNumCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -433,7 +433,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060006D0 RID: 1744 RVA: 0x0003F644 File Offset: 0x0003D844
+		
 		public static TCPProcessCmdResults ProcessDBQueryLimitGoodsUsedNumCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -506,7 +506,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060006D1 RID: 1745 RVA: 0x0003F8BC File Offset: 0x0003DABC
+		
 		public static TCPProcessCmdResults ProcessDBQueryUserAllLimitGoodsUsedNumInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -561,7 +561,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060006D2 RID: 1746 RVA: 0x0003FAAC File Offset: 0x0003DCAC
+		
 		public static TCPProcessCmdResults ProcessRergressQueryUserInputMoneyCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;

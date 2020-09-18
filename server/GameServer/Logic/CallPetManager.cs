@@ -12,10 +12,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200023A RID: 570
+	
 	internal class CallPetManager
 	{
-		// Token: 0x060007D7 RID: 2007 RVA: 0x00077264 File Offset: 0x00075464
+		
 		public static void LoadCallPetType()
 		{
 			try
@@ -52,7 +52,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060007D8 RID: 2008 RVA: 0x00077418 File Offset: 0x00075618
+		
 		public static void LoadCallPetConfig()
 		{
 			try
@@ -195,7 +195,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060007D9 RID: 2009 RVA: 0x00077C1C File Offset: 0x00075E1C
+		
 		public static void LoadCallPetSystem()
 		{
 			lock (CallPetManager._CallPetMutex)
@@ -240,7 +240,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060007DA RID: 2010 RVA: 0x00077DAC File Offset: 0x00075FAC
+		
 		public static CallPetType GetCallPetType(int type = 1)
 		{
 			CallPetType config = null;
@@ -254,7 +254,7 @@ namespace GameServer.Logic
 			return config;
 		}
 
-		// Token: 0x060007DB RID: 2011 RVA: 0x00077E1C File Offset: 0x0007601C
+		
 		public static List<CallPetConfig> GetCallPetConfigList(bool freeCall)
 		{
 			List<CallPetConfig> result;
@@ -289,7 +289,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060007DC RID: 2012 RVA: 0x00077ED4 File Offset: 0x000760D4
+		
 		public static int GetCallPetPrice(int times)
 		{
 			int price = -1;
@@ -303,7 +303,7 @@ namespace GameServer.Logic
 			return price;
 		}
 
-		// Token: 0x060007DD RID: 2013 RVA: 0x00077F44 File Offset: 0x00076144
+		
 		public static GoodsData GetPetByDbID(GameClient client, int id)
 		{
 			if (null != client.ClientData.PetList)
@@ -319,7 +319,7 @@ namespace GameServer.Logic
 			return null;
 		}
 
-		// Token: 0x060007DE RID: 2014 RVA: 0x00077FC4 File Offset: 0x000761C4
+		
 		public static void AddPetData(GameClient client, GoodsData goodsData)
 		{
 			if (goodsData.Site == 4000)
@@ -335,7 +335,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060007DF RID: 2015 RVA: 0x0007805C File Offset: 0x0007625C
+		
 		public static GoodsData AddPetData(GameClient client, int id, int goodsID, int forgeLevel, int quality, int goodsNum, int binding, int site, string jewelList, int idelBagIndex, string endTime, int addPropIndex, int bornIndex, int lucky, int strong, int ExcellenceProperty, int nAppendPropLev, int nEquipChangeLife)
 		{
 			GoodsData gd = new GoodsData
@@ -365,7 +365,7 @@ namespace GameServer.Logic
 			return gd;
 		}
 
-		// Token: 0x060007E0 RID: 2016 RVA: 0x00078124 File Offset: 0x00076324
+		
 		public static void RemovePetGoodsData(GameClient client, GoodsData goodsData)
 		{
 			lock (client.ClientData.PetList)
@@ -377,7 +377,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x060007E1 RID: 2017 RVA: 0x00078194 File Offset: 0x00076394
+		
 		public static int GetIdleSlotOfBag(GameClient client)
 		{
 			int idelPos = -1;
@@ -408,7 +408,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060007E2 RID: 2018 RVA: 0x0007826C File Offset: 0x0007646C
+		
 		public static int GetPetListCount(GameClient client)
 		{
 			int result;
@@ -423,13 +423,13 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060007E3 RID: 2019 RVA: 0x000782A8 File Offset: 0x000764A8
+		
 		public static int GetMaxPetCount()
 		{
 			return CallPetManager.MaxPetGridNum;
 		}
 
-		// Token: 0x060007E4 RID: 2020 RVA: 0x000782C0 File Offset: 0x000764C0
+		
 		public static long getFreeSec(GameClient client)
 		{
 			double currSec = Global.GetOffsetSecond(TimeUtil.NowDateTime());
@@ -438,7 +438,7 @@ namespace GameServer.Logic
 			return (long)Global.GMax(0.0, lastSec + nIntSec - currSec);
 		}
 
-		// Token: 0x060007E5 RID: 2021 RVA: 0x0007833C File Offset: 0x0007653C
+		
 		public static void ResetPetBagAllGoods(GameClient client)
 		{
 			if (null != client.ClientData.PetList)
@@ -527,7 +527,7 @@ namespace GameServer.Logic
 			Global._TCPManager.MySocketListener.SendData(client.ClientSocket, tcpOutPacket, true);
 		}
 
-		// Token: 0x060007E6 RID: 2022 RVA: 0x000787F0 File Offset: 0x000769F0
+		
 		public static CallSpriteResult CallPet(GameClient client, int times, out string strGetGoods)
 		{
 			strGetGoods = "";
@@ -682,7 +682,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060007E7 RID: 2023 RVA: 0x00078CCC File Offset: 0x00076ECC
+		
 		public static CallSpriteResult MovePet(GameClient client, int dbid)
 		{
 			GoodsData goodsData = CallPetManager.GetPetByDbID(client, dbid);
@@ -744,7 +744,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x060007E8 RID: 2024 RVA: 0x00078EA4 File Offset: 0x000770A4
+		
 		public static TCPProcessCmdResults ProcessGetPetList(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -787,7 +787,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060007E9 RID: 2025 RVA: 0x0007900C File Offset: 0x0007720C
+		
 		public static TCPProcessCmdResults ProcessGetPetUIInfo(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -829,7 +829,7 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060007EA RID: 2026 RVA: 0x0007917C File Offset: 0x0007737C
+		
 		public static TCPProcessCmdResults ProcessCallPetCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -894,14 +894,14 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x060007EB RID: 2027 RVA: 0x000793AC File Offset: 0x000775AC
+		
 		public static TCPProcessCmdResults ProcessMovePetCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
 			return TCPProcessCmdResults.RESULT_OK;
 		}
 
-		// Token: 0x060007EC RID: 2028 RVA: 0x000793C8 File Offset: 0x000775C8
+		
 		public static TCPProcessCmdResults ProcessResetPetBagCMD(TCPManager tcpMgr, TMSKSocket socket, TCPClientPool tcpClientPool, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -943,37 +943,37 @@ namespace GameServer.Logic
 			return TCPProcessCmdResults.RESULT_FAILED;
 		}
 
-		// Token: 0x04000D6C RID: 3436
+		
 		private static object _CallPetMutex = new object();
 
-		// Token: 0x04000D6D RID: 3437
+		
 		private static Dictionary<int, CallPetType> CallPetTypeDict = new Dictionary<int, CallPetType>();
 
-		// Token: 0x04000D6E RID: 3438
+		
 		private static List<CallPetConfig> CallPetConfigList = new List<CallPetConfig>();
 
-		// Token: 0x04000D6F RID: 3439
+		
 		private static List<CallPetConfig> FreeCallPetConfigList = new List<CallPetConfig>();
 
-		// Token: 0x04000D70 RID: 3440
+		
 		private static List<CallPetConfig> HuoDongCallPetConfigList = new List<CallPetConfig>();
 
-		// Token: 0x04000D71 RID: 3441
+		
 		private static List<CallPetConfig> TeQuanCallPetConfigList = new List<CallPetConfig>();
 
-		// Token: 0x04000D72 RID: 3442
+		
 		private static double CallPetFreeHour = 60.0;
 
-		// Token: 0x04000D73 RID: 3443
+		
 		private static Dictionary<int, int> CallPetPriceDict = new Dictionary<int, int>();
 
-		// Token: 0x04000D74 RID: 3444
+		
 		private static double ConsumeCallPetJiFen = 0.1;
 
-		// Token: 0x04000D75 RID: 3445
+		
 		private static int CallPetGoodsID = 0;
 
-		// Token: 0x04000D76 RID: 3446
+		
 		public static int MaxPetGridNum = 240;
 	}
 }

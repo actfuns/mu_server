@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="17" FromDate="2019-05-19 00:00:00" ToDate="2020-12-31 23:59:59" AwardStartDate="2019-05-19 00:00:00" AwardEndDate="2020-12-31 23:59:59" />
+  <GiftList Description="节日期间额外出现的稀有BOSS，勇士们一定不可错过！">
+    <Award MonsterID="6100000" ZhanLi="50000000" GoodsIDs="50056,1,0,0,0,0,0" BossTime="1|6|13:00" />
+  </GiftList>
+</Config>

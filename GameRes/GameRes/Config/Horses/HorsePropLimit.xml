@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Level ID="1" AttackV="600" MAttackV="600" DefenseV="1200" MDefenseV="1200" BurstV="300" BurstPercent="475" HitV="300" DodgeV="189" MaxLifeV="3000" MaxMagicV="3000" />
+  <Level ID="2" AttackV="947" MAttackV="947" DefenseV="1893" MDefenseV="1893" BurstV="473" BurstPercent="749" HitV="473" DodgeV="299" MaxLifeV="4733" MaxMagicV="4733" />
+  <Level ID="3" AttackV="1493" MAttackV="1493" DefenseV="2987" MDefenseV="2987" BurstV="747" BurstPercent="1182" HitV="747" DodgeV="472" MaxLifeV="7467" MaxMagicV="7467" />
+  <Level ID="4" AttackV="2356" MAttackV="2356" DefenseV="4712" MDefenseV="4712" BurstV="1178" BurstPercent="1865" HitV="1178" DodgeV="744" MaxLifeV="11781" MaxMagicV="11781" />
+  <Level ID="5" AttackV="3717" MAttackV="3717" DefenseV="7435" MDefenseV="7435" BurstV="1859" BurstPercent="2943" HitV="1859" DodgeV="1174" MaxLifeV="18586" MaxMagicV="18586" />
+  <Level ID="6" AttackV="5865" MAttackV="5865" DefenseV="11729" MDefenseV="11729" BurstV="2932" BurstPercent="4643" HitV="2932" DodgeV="1852" MaxLifeV="29323" MaxMagicV="29323" />
+  <Level ID="7" AttackV="9252" MAttackV="9252" DefenseV="18505" MDefenseV="18505" BurstV="4626" BurstPercent="7325" HitV="4626" DodgeV="2922" MaxLifeV="46262" MaxMagicV="46262" />
+  <Level ID="8" AttackV="14597" MAttackV="14597" DefenseV="29195" MDefenseV="29195" BurstV="7299" BurstPercent="11556" HitV="7299" DodgeV="4610" MaxLifeV="72987" MaxMagicV="72987" />
+  <Level ID="9" AttackV="23030" MAttackV="23030" DefenseV="46060" MDefenseV="46060" BurstV="11515" BurstPercent="18232" HitV="11515" DodgeV="7273" MaxLifeV="115150" MaxMagicV="115150" />
+  <Level ID="10" AttackV="36334" MAttackV="36334" DefenseV="72668" MDefenseV="72668" BurstV="18167" BurstPercent="28764" HitV="18167" DodgeV="11474" MaxLifeV="181669" MaxMagicV="181669" />
+</Config>

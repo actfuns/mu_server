@@ -8,10 +8,10 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic.ActivityNew.SevenDay
 {
-	// Token: 0x020001AF RID: 431
+	
 	public class SevenDayLoginAct
 	{
-		// Token: 0x06000530 RID: 1328 RVA: 0x00049150 File Offset: 0x00047350
+		
 		public void LoadConfig()
 		{
 			Dictionary<int, SevenDayLoginAct._DayAward> tmpDict = new Dictionary<int, SevenDayLoginAct._DayAward>();
@@ -70,7 +70,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000531 RID: 1329 RVA: 0x000493CC File Offset: 0x000475CC
+		
 		public ESevenDayActErrorCode HandleGetAward(GameClient client, int day)
 		{
 			int currDay;
@@ -159,7 +159,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return result;
 		}
 
-		// Token: 0x06000532 RID: 1330 RVA: 0x000496EC File Offset: 0x000478EC
+		
 		public bool HasAnyAwardCanGet(GameClient client)
 		{
 			bool result;
@@ -197,7 +197,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return result;
 		}
 
-		// Token: 0x06000533 RID: 1331 RVA: 0x000497F4 File Offset: 0x000479F4
+		
 		public void Update(GameClient client)
 		{
 			if (client != null)
@@ -223,22 +223,22 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x040009B1 RID: 2481
+		
 		private Dictionary<int, SevenDayLoginAct._DayAward> DayAwardDict = null;
 
-		// Token: 0x040009B2 RID: 2482
+		
 		private object ConfigMutex = new object();
 
-		// Token: 0x020001B0 RID: 432
+		
 		private class _DayAward
 		{
-			// Token: 0x040009B3 RID: 2483
+			
 			public AwardItem AllAward = new AwardItem();
 
-			// Token: 0x040009B4 RID: 2484
+			
 			public AwardItem OccAward = new AwardItem();
 
-			// Token: 0x040009B5 RID: 2485
+			
 			public AwardEffectTimeItem TimeAward = new AwardEffectTimeItem();
 		}
 	}

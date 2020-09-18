@@ -11,10 +11,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000123 RID: 291
+	
 	internal class CFirstChargeMgr
 	{
-		// Token: 0x170000BB RID: 187
+		
 		
 		
 		public static SingleChargeData ChargeData
@@ -37,7 +37,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060004CF RID: 1231 RVA: 0x0002751C File Offset: 0x0002571C
+		
 		public static TCPProcessCmdResults FirstChargeConfig(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -55,7 +55,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x060004D0 RID: 1232 RVA: 0x00027584 File Offset: 0x00025784
+		
 		private static bool HasGetFirstbindMoney(int money, string[] binddatalist)
 		{
 			bool result;
@@ -78,7 +78,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x060004D1 RID: 1233 RVA: 0x000275D8 File Offset: 0x000257D8
+		
 		private static List<int> MuiltchargeGetBindmoney(int addMoney, int nPlatfromID, string[] binddatalist, CFirstChargeMgr.ChargeType eChargeType, SingleChargeData chargeData)
 		{
 			List<int> templist = new List<int>();
@@ -153,7 +153,7 @@ namespace GameDBServer.Logic
 			return templist;
 		}
 
-		// Token: 0x060004D2 RID: 1234 RVA: 0x000277DC File Offset: 0x000259DC
+		
 		public static void SendToRolebindgold(DBManager dbMgr, string uid, int rid, int addMoney, SingleChargeData chargeData)
 		{
 			if (chargeData == null)
@@ -236,7 +236,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060004D3 RID: 1235 RVA: 0x00027A44 File Offset: 0x00025C44
+		
 		public static string GetFirstChargeInfo(DBManager dbMgr, string uid)
 		{
 			string resoult = "-1";
@@ -277,7 +277,7 @@ namespace GameDBServer.Logic
 			return resoult;
 		}
 
-		// Token: 0x060004D4 RID: 1236 RVA: 0x00027B4C File Offset: 0x00025D4C
+		
 		public static bool UpdateFirstCharge(DBManager dbMgr, string userId, string chargeinfo, int notget = 0)
 		{
 			bool ret = false;
@@ -289,7 +289,7 @@ namespace GameDBServer.Logic
 			return ret;
 		}
 
-		// Token: 0x060004D5 RID: 1237 RVA: 0x00027BB4 File Offset: 0x00025DB4
+		
 		public static TCPProcessCmdResults ProcessQueryUserFirstCharge(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -343,20 +343,20 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x040007AB RID: 1963
+		
 		private static SingleChargeData _ChargeData = null;
 
-		// Token: 0x040007AC RID: 1964
+		
 		private static object SingleChargeDataMutex = new object();
 
-		// Token: 0x02000124 RID: 292
+		
 		private enum ChargeType
 		{
-			// Token: 0x040007AE RID: 1966
+			
 			Normal,
-			// Token: 0x040007AF RID: 1967
+			
 			YingYongBao,
-			// Token: 0x040007B0 RID: 1968
+			
 			GangAoTai
 		}
 	}

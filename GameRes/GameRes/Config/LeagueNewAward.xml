@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <LeagueNewAward ID="1" Name="冠军" BeginNum="1" EndNum="1" GoodsOne="63143,10,1,0,0,0,0|63142,8,1,0,0,0,0|2104,80,1,0,0,0,0|50017,80,1,0,0,0,0" />
+  <LeagueNewAward ID="2" Name="亚军" BeginNum="2" EndNum="2" GoodsOne="63143,9,1,0,0,0,0|63142,7,1,0,0,0,0|2104,64,1,0,0,0,0|50017,64,1,0,0,0,0" />
+  <LeagueNewAward ID="3" Name="季军" BeginNum="3" EndNum="3" GoodsOne="63143,8,1,0,0,0,0|63142,6,1,0,0,0,0|2104,56,1,0,0,0,0|50017,56,1,0,0,0,0" />
+  <LeagueNewAward ID="4" Name="殿军" BeginNum="4" EndNum="4" GoodsOne="63143,7,1,0,0,0,0|63142,5,1,0,0,0,0|2104,48,1,0,0,0,0|50017,48,1,0,0,0,0" />
+  <LeagueNewAward ID="5" Name="第5-6名" BeginNum="5" EndNum="6" GoodsOne="63143,7,1,0,0,0,0|63142,4,1,0,0,0,0|2104,44,1,0,0,0,0|50017,44,1,0,0,0,0" />
+  <LeagueNewAward ID="6" Name="7-10名" BeginNum="7" EndNum="10" GoodsOne="63143,6,1,0,0,0,0|63142,3,1,0,0,0,0|2104,40,1,0,0,0,0|50017,40,1,0,0,0,0" />
+  <LeagueNewAward ID="7" Name="11-20名" BeginNum="11" EndNum="20" GoodsOne="63143,6,1,0,0,0,0|2104,36,1,0,0,0,0|50017,36,1,0,0,0,0" />
+  <LeagueNewAward ID="8" Name="21-30名" BeginNum="21" EndNum="30" GoodsOne="63143,5,1,0,0,0,0|2104,32,1,0,0,0,0|50017,32,1,0,0,0,0" />
+  <LeagueNewAward ID="9" Name="31-40名" BeginNum="31" EndNum="40" GoodsOne="63143,4,1,0,0,0,0|2104,28,1,0,0,0,0|50017,28,1,0,0,0,0" />
+  <LeagueNewAward ID="10" Name="41-50名" BeginNum="41" EndNum="50" GoodsOne="63143,3,1,0,0,0,0|2104,24,1,0,0,0,0|50017,24,1,0,0,0,0" />
+  <LeagueNewAward ID="11" Name="51名以上" BeginNum="51" EndNum="-1" GoodsOne="63143,2,1,0,0,0,0|2104,20,1,0,0,0,0|50017,20,1,0,0,0,0" />
+</Config>

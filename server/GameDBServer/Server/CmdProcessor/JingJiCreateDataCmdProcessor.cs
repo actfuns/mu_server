@@ -5,21 +5,21 @@ using Server.Tools;
 
 namespace GameDBServer.Server.CmdProcessor
 {
-	// Token: 0x020001EF RID: 495
+	
 	public class JingJiCreateDataCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x06000A53 RID: 2643 RVA: 0x00062035 File Offset: 0x00060235
+		
 		private JingJiCreateDataCmdProcessor()
 		{
 		}
 
-		// Token: 0x06000A54 RID: 2644 RVA: 0x00062040 File Offset: 0x00060240
+		
 		public static JingJiCreateDataCmdProcessor getInstance()
 		{
 			return JingJiCreateDataCmdProcessor.instance;
 		}
 
-		// Token: 0x06000A55 RID: 2645 RVA: 0x00062058 File Offset: 0x00060258
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			PlayerJingJiData data = DataHelper.BytesToObject<PlayerJingJiData>(cmdParams, 0, count);
@@ -37,7 +37,7 @@ namespace GameDBServer.Server.CmdProcessor
 			client.sendCmd<byte>(10142, 0);
 		}
 
-		// Token: 0x04000C51 RID: 3153
+		
 		private static JingJiCreateDataCmdProcessor instance = new JingJiCreateDataCmdProcessor();
 	}
 }

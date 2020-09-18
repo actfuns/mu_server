@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <WhiteList ID="1" Name="产品1" UserID="CP11" PinTai="app" />
+  <WhiteList ID="2" Name="产品2" UserID="CP12" PinTai="android" />
+  <WhiteList ID="3" Name="产皮3" UserID="CP13" PinTai="yueyu" />
+  <WhiteList ID="4" Name="产品4" UserID="CP14" PinTai="yyb" />
+</config>

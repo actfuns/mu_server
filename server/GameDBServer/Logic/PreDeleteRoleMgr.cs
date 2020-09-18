@@ -6,16 +6,16 @@ using Server.Data;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x0200015E RID: 350
+	
 	public class PreDeleteRoleMgr
 	{
-		// Token: 0x060005F5 RID: 1525 RVA: 0x00035082 File Offset: 0x00033282
+		
 		public void LoadPreDeleteRoleFromDB(DBManager dbMgr)
 		{
 			DBQuery.QueryPreDeleteRoleDict(dbMgr, this._PreDeleteRoleDict);
 		}
 
-		// Token: 0x060005F6 RID: 1526 RVA: 0x00035094 File Offset: 0x00033294
+		
 		public void AddPreDeleteRole(int rid, DateTime tm)
 		{
 			lock (this._PreDeleteRoleDict)
@@ -24,7 +24,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060005F7 RID: 1527 RVA: 0x000350E8 File Offset: 0x000332E8
+		
 		public bool RemovePreDeleteRole(DBUserInfo dbUserInfo, DBRoleInfo dbRoleInfo)
 		{
 			bool result;
@@ -60,7 +60,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x060005F8 RID: 1528 RVA: 0x00035200 File Offset: 0x00033400
+		
 		public bool IfInPreDeleteState(int rid)
 		{
 			bool result;
@@ -71,7 +71,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x060005F9 RID: 1529 RVA: 0x00035254 File Offset: 0x00033454
+		
 		public int CalcPreDeleteRoleLeftSeconds(string PreRemoveTime)
 		{
 			int PreDelLeftSeconds = -1;
@@ -93,7 +93,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x060005FA RID: 1530 RVA: 0x000352AC File Offset: 0x000334AC
+		
 		public void UpdatePreDeleteRole()
 		{
 			lock (this._PreDeleteRoleDict)
@@ -136,7 +136,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060005FB RID: 1531 RVA: 0x000354E0 File Offset: 0x000336E0
+		
 		public void HandleDeleteRole(DBUserInfo dbUserInfo, DBRoleInfo dbRoleInfo)
 		{
 			DBManager dbMgr = DBManager.getInstance();
@@ -241,7 +241,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x04000865 RID: 2149
+		
 		private Dictionary<int, DateTime> _PreDeleteRoleDict = new Dictionary<int, DateTime>();
 	}
 }

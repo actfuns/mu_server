@@ -8,16 +8,16 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.Fund
 {
-	// Token: 0x02000130 RID: 304
+	
 	public class FundManager : SingletonTemplate<FundManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x0600051A RID: 1306 RVA: 0x0002A148 File Offset: 0x00028348
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x0600051B RID: 1307 RVA: 0x0002A15C File Offset: 0x0002835C
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(13116, SingletonTemplate<FundManager>.Instance());
@@ -27,19 +27,19 @@ namespace GameDBServer.Logic.Fund
 			return true;
 		}
 
-		// Token: 0x0600051C RID: 1308 RVA: 0x0002A1C4 File Offset: 0x000283C4
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x0600051D RID: 1309 RVA: 0x0002A1D8 File Offset: 0x000283D8
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600051E RID: 1310 RVA: 0x0002A1EC File Offset: 0x000283EC
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			if (nID == 13116)
@@ -60,7 +60,7 @@ namespace GameDBServer.Logic.Fund
 			}
 		}
 
-		// Token: 0x0600051F RID: 1311 RVA: 0x0002A274 File Offset: 0x00028474
+		
 		private void FundInfo(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			List<FundDBItem> list = new List<FundDBItem>();
@@ -105,7 +105,7 @@ namespace GameDBServer.Logic.Fund
 			client.sendCmd<List<FundDBItem>>(nID, list);
 		}
 
-		// Token: 0x06000520 RID: 1312 RVA: 0x0002A4A8 File Offset: 0x000286A8
+		
 		private void FundBuy(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			bool bResult = false;
@@ -154,7 +154,7 @@ namespace GameDBServer.Logic.Fund
 			client.sendCmd<bool>(nID, bResult);
 		}
 
-		// Token: 0x06000521 RID: 1313 RVA: 0x0002A668 File Offset: 0x00028868
+		
 		private void FundAward(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			bool bResult = false;
@@ -176,7 +176,7 @@ namespace GameDBServer.Logic.Fund
 			client.sendCmd<bool>(nID, bResult);
 		}
 
-		// Token: 0x06000522 RID: 1314 RVA: 0x0002A73C File Offset: 0x0002893C
+		
 		private void FundMoney(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			bool bResult = false;
@@ -192,7 +192,7 @@ namespace GameDBServer.Logic.Fund
 			client.sendCmd<bool>(nID, bResult);
 		}
 
-		// Token: 0x06000523 RID: 1315 RVA: 0x0002A7A4 File Offset: 0x000289A4
+		
 		public bool FundAddMoney(string userID, int moneyAdd, int roleID, int moneyCost = 0)
 		{
 			bool result = false;

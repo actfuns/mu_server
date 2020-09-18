@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <Monsters>
+    <Monster ID="1" Code="8408001" X="3219" Y="9634" Radius="1" Num="0" Timeslot="1" PursuitRadius="1600" BirthType="0" TimePoints="6,14:30-15:00|6,18:30-19:00|7,14:30-15:00|7,18:30-19:00" BirthRate="1" />
+    <Monster ID="2" Code="8408003" X="10520" Y="9591" Radius="1" Num="0" Timeslot="1" PursuitRadius="1600" BirthType="0" TimePoints="6,14:30-15:00|6,18:30-19:00|7,14:30-15:00|7,18:30-19:00" BirthRate="1" />
+    <Monster ID="3" Code="8408005" X="10252" Y="3218" Radius="1" Num="0" Timeslot="1" PursuitRadius="1600" BirthType="0" TimePoints="6,14:30-15:00|6,18:30-19:00|7,14:30-15:00|7,18:30-19:00" BirthRate="1" />
+    <Monster ID="4" Code="8408007" X="3015" Y="3030" Radius="1" Num="0" Timeslot="1" PursuitRadius="1600" BirthType="0" TimePoints="6,14:30-15:00|6,18:30-19:00|7,14:30-15:00|7,18:30-19:00" BirthRate="1" />
+    <Monster ID="5" Code="8408009" X="6736" Y="6467" Radius="1" Num="0" Timeslot="1" PursuitRadius="1600" BirthType="0" TimePoints="6,14:30-15:00|6,18:30-19:00|7,14:30-15:00|7,18:30-19:00" BirthRate="1" />
+  </Monsters>
+</Map>

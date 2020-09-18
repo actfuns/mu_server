@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Equip Categoriy="4" Title="头盔">
+    <Item ShouShiSuitID="1" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="1" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="1" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="5" />
+    <Item ShouShiSuitID="10" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="90" />
+    <Item ShouShiSuitID="10" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="70" />
+    <Item ShouShiSuitID="10" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="50" />
+    <Item ShouShiSuitID="11" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="70" />
+    <Item ShouShiSuitID="11" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="50" />
+    <Item ShouShiSuitID="11" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="30" />
+    <Item ShouShiSuitID="12" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="50" />
+    <Item ShouShiSuitID="12" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="30" />
+    <Item ShouShiSuitID="12" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="13" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="30" />
+    <Item ShouShiSuitID="13" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="13" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="14" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="14" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="14" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="5" />
+    <Item ShouShiSuitID="15" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="15" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="15" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="5" />
+  </Equip>
+  <Equip Categoriy="2" Title="腰带">
+    <Item ShouShiSuitID="2" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="2" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="2" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="5" />
+    <Item ShouShiSuitID="10" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="90" />
+    <Item ShouShiSuitID="10" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="70" />
+    <Item ShouShiSuitID="10" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="50" />
+    <Item ShouShiSuitID="11" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="70" />
+    <Item ShouShiSuitID="11" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="50" />
+    <Item ShouShiSuitID="11" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="30" />
+    <Item ShouShiSuitID="12" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="50" />
+    <Item ShouShiSuitID="12" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="30" />
+    <Item ShouShiSuitID="12" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="13" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="30" />
+    <Item ShouShiSuitID="13" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="13" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="14" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="14" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="14" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="5" />
+    <Item ShouShiSuitID="15" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="15" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="15" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="5" />
+  </Equip>
+  <Equip Categoriy="13" Title="靴子">
+    <Item ShouShiSuitID="3" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="3" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="3" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="5" />
+    <Item ShouShiSuitID="10" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="90" />
+    <Item ShouShiSuitID="10" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="70" />
+    <Item ShouShiSuitID="10" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="50" />
+    <Item ShouShiSuitID="11" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="70" />
+    <Item ShouShiSuitID="11" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="50" />
+    <Item ShouShiSuitID="11" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="30" />
+    <Item ShouShiSuitID="12" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="50" />
+    <Item ShouShiSuitID="12" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="30" />
+    <Item ShouShiSuitID="12" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="13" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="30" />
+    <Item ShouShiSuitID="13" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="13" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="14" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="14" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="14" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="5" />
+    <Item ShouShiSuitID="15" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="15" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="15" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="5" />
+  </Equip>
+  <Equip Categoriy="6" Title="项链">
+    <Item ShouShiSuitID="4" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="4" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="4" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="5" />
+    <Item ShouShiSuitID="10" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="90" />
+    <Item ShouShiSuitID="10" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="70" />
+    <Item ShouShiSuitID="10" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="50" />
+    <Item ShouShiSuitID="11" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="70" />
+    <Item ShouShiSuitID="11" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="50" />
+    <Item ShouShiSuitID="11" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="30" />
+    <Item ShouShiSuitID="12" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="50" />
+    <Item ShouShiSuitID="12" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="30" />
+    <Item ShouShiSuitID="12" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="13" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="30" />
+    <Item ShouShiSuitID="13" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="13" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="14" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="14" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="14" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="5" />
+    <Item ShouShiSuitID="15" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="15" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="15" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="5" />
+  </Equip>
+  <Equip Categoriy="3" Title="手镯">
+    <Item ShouShiSuitID="5" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="5" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="5" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="5" />
+    <Item ShouShiSuitID="10" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="90" />
+    <Item ShouShiSuitID="10" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="70" />
+    <Item ShouShiSuitID="10" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="50" />
+    <Item ShouShiSuitID="11" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="70" />
+    <Item ShouShiSuitID="11" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="50" />
+    <Item ShouShiSuitID="11" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="30" />
+    <Item ShouShiSuitID="12" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="50" />
+    <Item ShouShiSuitID="12" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="30" />
+    <Item ShouShiSuitID="12" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="13" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="30" />
+    <Item ShouShiSuitID="13" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="13" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="14" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="14" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="14" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="5" />
+    <Item ShouShiSuitID="15" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="15" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="15" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="5" />
+  </Equip>
+  <Equip Categoriy="5" Title="戒指">
+    <Item ShouShiSuitID="6" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="6" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="6" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="5" />
+    <Item ShouShiSuitID="10" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="90" />
+    <Item ShouShiSuitID="10" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="70" />
+    <Item ShouShiSuitID="10" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="50" />
+    <Item ShouShiSuitID="11" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="70" />
+    <Item ShouShiSuitID="11" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="50" />
+    <Item ShouShiSuitID="11" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="30" />
+    <Item ShouShiSuitID="12" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="50" />
+    <Item ShouShiSuitID="12" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="30" />
+    <Item ShouShiSuitID="12" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="13" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="30" />
+    <Item ShouShiSuitID="13" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="13" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="14" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="14" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="14" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="5" />
+    <Item ShouShiSuitID="15" QualityID="1" NeedGoodsID="35040" GoodsNum="1" Money="20000" JingYuan="" Succeed="20" />
+    <Item ShouShiSuitID="15" QualityID="2" NeedGoodsID="35041" GoodsNum="1" Money="30000" JingYuan="" Succeed="10" />
+    <Item ShouShiSuitID="15" QualityID="3" NeedGoodsID="35042" GoodsNum="1" Money="50000" JingYuan="" Succeed="5" />
+  </Equip>
+</Config>

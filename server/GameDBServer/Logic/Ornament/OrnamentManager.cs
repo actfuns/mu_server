@@ -8,10 +8,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.Ornament
 {
-	// Token: 0x0200015C RID: 348
+	
 	public class OrnamentManager
 	{
-		// Token: 0x060005F2 RID: 1522 RVA: 0x00034F18 File Offset: 0x00033118
+		
 		public static TCPProcessCmdResults ProcessUpdateOrnamentDataCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;

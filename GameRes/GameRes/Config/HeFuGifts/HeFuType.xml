@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Type ID="20" Name="登录豪礼" PeiZhi="HeFuLiBao.xml"/>
+  <Type ID="21" Name="累计登录" PeiZhi="HeFuDengLu.xml "/>
+  <Type ID="23" Name="充值返利" PeiZhi="HeFuFanLi.xml"/>
+  <Type ID="24" Name="战场之神" PeiZhi="PKJiangLi.xml "/>
+  <Type ID="26" Name="BOSS之战" PeiZhi="HeFuBOSS.xml "/>
+  <Type ID="27" Name="罗兰争霸" PeiZhi="HeFuLuoLan.xml"/>
+  <Type ID="25" Name="为战而生" PeiZhi="HeFuZhanChang.xml"/>
+  <Type ID="22" Name="商店限购" PeiZhi="HeFuXianGou.xml"/>
+</Config>

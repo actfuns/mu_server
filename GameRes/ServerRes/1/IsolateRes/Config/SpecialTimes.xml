@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item ID="1" Name="双倍经验" TimeLimits="00:00-23:59" />
+  <Item ID="2" Name="双倍烤火" TimeLimits="" />
+  <Item ID="3" Name="合服双倍" TimeLimits="00:00-23:59" />
+</Items>

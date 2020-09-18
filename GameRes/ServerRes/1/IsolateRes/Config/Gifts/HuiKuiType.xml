@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Type ID="" Name="首次充值" PeiZhi="FirstCharge.xml" image=""/>
+  <Type ID="" Name="每日充值" PeiZhi="DayChongZhi.xml" image=""/>
+  <Type ID="" Name="累计充值" PeiZhi="LeiJiChongZhi.xml" image=""/>
+  <Type ID="" Name="累计消费" PeiZhi="LeiJiXiaoFei.xml" image=""/>
+</Config>

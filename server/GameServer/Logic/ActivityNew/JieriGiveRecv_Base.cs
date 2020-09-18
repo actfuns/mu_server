@@ -8,41 +8,41 @@ using Server.Tools;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x020001B5 RID: 437
+	
 	public class JieriGiveRecv_Base : Activity
 	{
-		// Token: 0x06000555 RID: 1365 RVA: 0x0004AF9C File Offset: 0x0004919C
+		
 		public virtual string GetConfigFile()
 		{
 			throw new Exception("GetConfigFile未实现");
 		}
 
-		// Token: 0x06000556 RID: 1366 RVA: 0x0004AFA9 File Offset: 0x000491A9
+		
 		public virtual string QueryActInfo(GameClient client)
 		{
 			throw new Exception("QueryActInfo未实现");
 		}
 
-		// Token: 0x06000557 RID: 1367 RVA: 0x0004AFB6 File Offset: 0x000491B6
+		
 		public virtual void FlushIcon(GameClient client)
 		{
 			throw new Exception("OnGetAwardSuccess未实现");
 		}
 
-		// Token: 0x06000558 RID: 1368 RVA: 0x0004AFC3 File Offset: 0x000491C3
+		
 		public virtual bool IsReachConition(RoleGiveRecvInfo info, int condValue)
 		{
 			throw new Exception("IsReachConition未实现");
 		}
 
-		// Token: 0x06000559 RID: 1369 RVA: 0x0004AFD0 File Offset: 0x000491D0
+		
 		protected RoleGiveRecvInfo GetRoleGiveRecvInfo(int roleid)
 		{
 			bool _bLoadFromDb;
 			return this.GetRoleGiveRecvInfo(roleid, out _bLoadFromDb);
 		}
 
-		// Token: 0x0600055A RID: 1370 RVA: 0x0004AFEC File Offset: 0x000491EC
+		
 		protected RoleGiveRecvInfo GetRoleGiveRecvInfo(int roleid, out bool bLoadFromDb)
 		{
 			bLoadFromDb = false;
@@ -95,7 +95,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0600055B RID: 1371 RVA: 0x0004B238 File Offset: 0x00049438
+		
 		public bool Init()
 		{
 			string CfgFile = this.GetConfigFile();
@@ -187,7 +187,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x0600055C RID: 1372 RVA: 0x0004B590 File Offset: 0x00049790
+		
 		public string ProcRoleGetAward(GameClient client, int awardid)
 		{
 			JieriGiveErrorCode ec;
@@ -251,7 +251,7 @@ namespace GameServer.Logic.ActivityNew
 			return string.Format("{0}:{1}", (int)ec, awardid);
 		}
 
-		// Token: 0x0600055D RID: 1373 RVA: 0x0004B7F0 File Offset: 0x000499F0
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client, int id)
 		{
 			AwardItem allItem = null;
@@ -276,7 +276,7 @@ namespace GameServer.Logic.ActivityNew
 			return Global.CanAddGoodsNum(client, awardCnt);
 		}
 
-		// Token: 0x0600055E RID: 1374 RVA: 0x0004B8D0 File Offset: 0x00049AD0
+		
 		protected bool IsGiveGoodsID(int goodsID)
 		{
 			foreach (KeyValuePair<int, AwardItem> kvp in this.allAwardDict)
@@ -296,7 +296,7 @@ namespace GameServer.Logic.ActivityNew
 			return false;
 		}
 
-		// Token: 0x0600055F RID: 1375 RVA: 0x0004B9A0 File Offset: 0x00049BA0
+		
 		public bool CanGetAnyAward(GameClient client)
 		{
 			bool result;
@@ -325,7 +325,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000560 RID: 1376 RVA: 0x0004BA7C File Offset: 0x00049C7C
+		
 		public void UpdateNewDay(GameClient client)
 		{
 			if (client != null)
@@ -346,16 +346,16 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x040009C8 RID: 2504
+		
 		private Dictionary<int, AwardItem> allAwardDict = new Dictionary<int, AwardItem>();
 
-		// Token: 0x040009C9 RID: 2505
+		
 		private Dictionary<int, AwardItem> occAwardDict = new Dictionary<int, AwardItem>();
 
-		// Token: 0x040009CA RID: 2506
+		
 		private Dictionary<int, AwardEffectTimeItem> timeAwardDict = new Dictionary<int, AwardEffectTimeItem>();
 
-		// Token: 0x040009CB RID: 2507
+		
 		private Dictionary<int, RoleGiveRecvInfo> roleGiveRecvDict_dont_use_directly = new Dictionary<int, RoleGiveRecvInfo>();
 	}
 }

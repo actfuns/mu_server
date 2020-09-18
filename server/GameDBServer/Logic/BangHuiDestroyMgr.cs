@@ -5,10 +5,10 @@ using Tmsk.Tools.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000118 RID: 280
+	
 	public class BangHuiDestroyMgr
 	{
-		// Token: 0x060004A8 RID: 1192 RVA: 0x00025F64 File Offset: 0x00024164
+		
 		public static void ProcessDestroyBangHui(DBManager dbMgr)
 		{
 			DateTime dateTime = DateTime.Now;
@@ -28,7 +28,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060004A9 RID: 1193 RVA: 0x00026018 File Offset: 0x00024218
+		
 		private static void HandleDestroyBangHuis(DBManager dbMgr)
 		{
 			int moneyPerLevel = GameDBManager.GameConfigMgr.GetGameConfigItemInt("money-per-qilevel", 10000);
@@ -52,7 +52,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060004AA RID: 1194 RVA: 0x00026110 File Offset: 0x00024310
+		
 		public static void DoDestroyBangHui(DBManager dbMgr, int bhid)
 		{
 			lock (Global.BangHuiMutex)
@@ -78,7 +78,7 @@ namespace GameDBServer.Logic
 			ChatMsgManager.AddGMCmdChatMsg(-1, gmCmdData);
 		}
 
-		// Token: 0x060004AB RID: 1195 RVA: 0x00026210 File Offset: 0x00024410
+		
 		public static void ClearBangHuiLingDi(DBManager dbMgr, int bhid)
 		{
 			lock (Global.BangHuiMutex)
@@ -91,13 +91,13 @@ namespace GameDBServer.Logic
 			ChatMsgManager.AddGMCmdChatMsg(-1, gmCmdData);
 		}
 
-		// Token: 0x0400077E RID: 1918
+		
 		private static int LastCheckDestroyDayID = DateTime.Now.DayOfYear;
 
-		// Token: 0x0400077F RID: 1919
+		
 		private static int LastCheckDestroyTimer = DateTime.Now.Hour * 60 + DateTime.Now.Minute;
 
-		// Token: 0x04000780 RID: 1920
+		
 		private static int DestroyTimer = 21;
 	}
 }

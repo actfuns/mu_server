@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HuangJinShengDians>
+    <HuangJinShengDian MapCode="35000" Name="黄金圣殿" KaiQiVipLevel="6" MinChangeLife="0" MinLevel="60" MaxChangeLife="100" MaxLevel="100" ZhanLi="15000" Award="8003|2000|2001|2002|2003|2004" Image="35000" EnterNeedZuanShi="10" MapTimeNeedZuanShi="0" />
+  </HuangJinShengDians>
+</Config>

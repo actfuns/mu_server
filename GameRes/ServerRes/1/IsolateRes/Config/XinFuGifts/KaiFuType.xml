@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Type ID="28" Name="冲级狂人" PeiZhi="MuLevel.xml" image=""/>
+  <Type ID="6" Name="屠魔勇士" PeiZhi="MuBoss.xml" image=""/>
+  <Type ID="4" Name="充值达人" PeiZhi="MuChongZhi.xml" image=""/>
+  <Type ID="15" Name="消费达人" PeiZhi="MuXiaoFei.xml" image=""/>
+  <Type ID="30" Name="劲爆返利" PeiZhi="MuFanLi.xml" image=""/>
+</Config>

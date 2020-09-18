@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Lucky ID="1" Interval="0-&gt;1" Addition="1" Reduce="0" Constant="0" />
+  <Lucky ID="2" Interval="1-&gt;2" Addition="1" Reduce="0" Constant="0" />
+  <Lucky ID="3" Interval="2-&gt;3" Addition="1" Reduce="0" Constant="0" />
+  <Lucky ID="4" Interval="3-&gt;4" Addition="0.02" Reduce="0.35" Constant="0.63" />
+  <Lucky ID="5" Interval="4-&gt;5" Addition="0.005" Reduce="0.45" Constant="0.545" />
+  <Lucky ID="6" Interval="5-&gt;6" Addition="0.002" Reduce="0.65" Constant="0.348" />
+  <Lucky ID="7" Interval="6-&gt;7" Addition="0.001" Reduce="0.95" Constant="0.049" />
+  <Lucky ID="8" Interval="7-&gt;8" Addition="0.0005" Reduce="0.45" Constant="0.5495" />
+  <Lucky ID="9" Interval="8-&gt;9" Addition="0.0002" Reduce="0.65" Constant="0.3498" />
+  <Lucky ID="10" Interval="9-&gt;10" Addition="0.0001" Reduce="0.95" Constant="0.0499000000000001" />
+</Config>

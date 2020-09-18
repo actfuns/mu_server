@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CombatForceInfo>
+  <ZhanLi ID="1" LifeV="2.5" MagicV="100000000" MinDefenseV="1" MaxDefenseV="1" MinMDefenseV="1" MaxMDefenseV="1" MinAttackV="0.5" MaxAttackV="0.5" MinMAttackV="0.5" MaxMAttackV="0.5" HitV="5" Dodge="5" AddAttackInjure="0.5" DecreaseInjureValue="0.5" LifeSteal="0.25" AddAttack="0.25" AddDefense="0.5" FireAttack="0.5" WaterAttack="0.5" LightningAttack="0.5" SoilAttack="0.5" IceAttack="0.5" WindAttack="0.5" ArmorMax="1" HolyAttack="5" HolyDefense="5" ShadowAttack="5" ShadowDefense="5" NatureAttack="5" NatureDefense="5" ChaosAttack="5" ChaosDefense="5" IncubusAttack="5" IncubusDefense="5" />
+</CombatForceInfo>

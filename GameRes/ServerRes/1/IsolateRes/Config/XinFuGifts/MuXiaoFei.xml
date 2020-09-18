@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="35" FromDate="-1" ToDate="-1" AwardStartDate="-1" AwardEndDate="-1"  />
+  <GiftList Title="消费达人" Description="活动期间内消费排名前XXX名可领取丰厚豪礼!" Image="">
+  <Award ID="1" GoodsOne="5041,20,1,0,0,0,0|2002,10,1,0,0,0,0|2003,10,1,0,0,0,0|5050,10,1,0,0,0,0" GoodsTwo="" MinYuanBao="30000" />
+  <Award ID="2" GoodsOne="5041,10,1,0,0,0,0|2002,8,1,0,0,0,0|2003,8,1,0,0,0,0|5050,7,1,0,0,0,0" GoodsTwo="" MinYuanBao="10000" />
+  <Award ID="3" GoodsOne="5041,5,1,0,0,0,0|2002,5,1,0,0,0,0|2003,5,1,0,0,0,0|5050,4,1,0,0,0,0" GoodsTwo="" MinYuanBao="5000" />
+  <Award ID="4" GoodsOne="5041,3,1,0,0,0,0|2002,3,1,0,0,0,0|2003,3,1,0,0,0,0|5050,2,1,0,0,0,0" GoodsTwo="" MinYuanBao="1000" />
+  <Award ID="5" GoodsOne="5041,1,1,0,0,0,0|2002,1,1,0,0,0,0|2003,1,1,0,0,0,0|5050,1,1,0,0,0,0" GoodsTwo="" MinYuanBao="10" />
+  <Award ID="6" GoodsOne="5041,1,1,0,0,0,0|2002,1,1,0,0,0,0|2003,1,1,0,0,0,0|5050,1,1,0,0,0,0" GoodsTwo="" MinYuanBao="10" />
+  <Award ID="7" GoodsOne="5041,1,1,0,0,0,0|2002,1,1,0,0,0,0|2003,1,1,0,0,0,0|5050,1,1,0,0,0,0" GoodsTwo="" MinYuanBao="10" />
+  <Award ID="8" GoodsOne="5041,1,1,0,0,0,0|2002,1,1,0,0,0,0|2003,1,1,0,0,0,0|5050,1,1,0,0,0,0" GoodsTwo="" MinYuanBao="10" />
+  <Award ID="9" GoodsOne="5041,1,1,0,0,0,0|2002,1,1,0,0,0,0|2003,1,1,0,0,0,0|5050,1,1,0,0,0,0" GoodsTwo="" MinYuanBao="10" />
+  <Award ID="10" GoodsOne="5041,1,1,0,0,0,0|2002,1,1,0,0,0,0|2003,1,1,0,0,0,0|5050,1,1,0,0,0,0" GoodsTwo="" MinYuanBao="10" />
+  </GiftList>
+</Config>

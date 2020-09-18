@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、活动期间每日开奖{17e43e}1次" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、数字可{17e43e}重复购买，{dac7ae}对应个、十、百、千、万" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、5个数字对应各位置与开奖数字全部相同，获得{17e43e}1等奖" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4、4个数字对应各位置与开奖数相同，获得{17e43e}2等奖" Bold="0" />
+  <HelpIntro ID="6" Intro="{dac7ae}5、3个数字对应各位置与开奖数相同，获得{17e43e}3等奖" Bold="0" />
+  <HelpIntro ID="7" Intro="{dac7ae}6、1等奖可获得奖池{17e43e}总金额的50%÷中1等奖的注数" Bold="0" />
+  <HelpIntro ID="8" Intro="{dac7ae}7、2等奖可获得奖池{17e43e}总金额的30%÷中2等奖的注数" Bold="0" />
+  <HelpIntro ID="9" Intro="{dac7ae}8、3等奖可获得奖池{17e43e}总金额的20%÷中3等奖的注数" Bold="0" />
+</Config>

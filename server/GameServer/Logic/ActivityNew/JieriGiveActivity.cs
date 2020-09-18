@@ -2,16 +2,16 @@
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x020001B6 RID: 438
+	
 	public class JieriGiveActivity : JieriGiveRecv_Base
 	{
-		// Token: 0x06000562 RID: 1378 RVA: 0x0004BB54 File Offset: 0x00049D54
+		
 		public override string GetConfigFile()
 		{
 			return "Config/JieRiGifts/JieRiZengSong.xml";
 		}
 
-		// Token: 0x06000563 RID: 1379 RVA: 0x0004BB6C File Offset: 0x00049D6C
+		
 		public override string QueryActInfo(GameClient client)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000564 RID: 1380 RVA: 0x0004BC14 File Offset: 0x00049E14
+		
 		public override void FlushIcon(GameClient client)
 		{
 			if (client != null && client._IconStateMgr.CheckJieriGive(client))
@@ -40,13 +40,13 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x06000565 RID: 1381 RVA: 0x0004BC68 File Offset: 0x00049E68
+		
 		public override bool IsReachConition(RoleGiveRecvInfo info, int condValue)
 		{
 			return info != null && info.TotalGive >= condValue;
 		}
 
-		// Token: 0x06000566 RID: 1382 RVA: 0x0004BC98 File Offset: 0x00049E98
+		
 		public string ProcRoleGiveToOther(GameClient client, string receiverRolename, int goodsID, int goodsCnt)
 		{
 			int receiverRoleid = -1;

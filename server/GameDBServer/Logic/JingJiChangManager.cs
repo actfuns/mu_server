@@ -10,21 +10,21 @@ using Server.Data;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000143 RID: 323
+	
 	public class JingJiChangManager : JingJiChangConstants, IManager
 	{
-		// Token: 0x0600055D RID: 1373 RVA: 0x0002D554 File Offset: 0x0002B754
+		
 		private JingJiChangManager()
 		{
 		}
 
-		// Token: 0x0600055E RID: 1374 RVA: 0x0002D5A4 File Offset: 0x0002B7A4
+		
 		public static JingJiChangManager getInstance()
 		{
 			return JingJiChangManager.instance;
 		}
 
-		// Token: 0x0600055F RID: 1375 RVA: 0x0002D5BC File Offset: 0x0002B7BC
+		
 		public bool initialize()
 		{
 			this.initCmdProcessor();
@@ -33,7 +33,7 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000560 RID: 1376 RVA: 0x0002D5E4 File Offset: 0x0002B7E4
+		
 		private void initCmdProcessor()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(10140, JingJiGetDataCmdProcessor.getInstance());
@@ -48,7 +48,7 @@ namespace GameDBServer.Logic
 			TCPCmdDispatcher.getInstance().registerProcessor(10149, JingJiUpdateNextRewardTimeCmdProcessor.getInstance());
 		}
 
-		// Token: 0x06000561 RID: 1377 RVA: 0x0002D6C4 File Offset: 0x0002B8C4
+		
 		private void initData()
 		{
 			List<PlayerJingJiData> playerJingJiDataList = JingJiChangDBController.getInstance().getPlayerJingJiDataList();
@@ -71,21 +71,21 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000562 RID: 1378 RVA: 0x0002D7D8 File Offset: 0x0002B9D8
+		
 		private void initListener()
 		{
 			GlobalEventSource.getInstance().registerListener(0, JingJiChangPlayerLoginEventListener.getInstnace());
 			GlobalEventSource.getInstance().registerListener(1, JingJiChangPlayerLogoutEventListener.getInstnace());
 		}
 
-		// Token: 0x06000563 RID: 1379 RVA: 0x0002D7FD File Offset: 0x0002B9FD
+		
 		private void removeListener()
 		{
 			GlobalEventSource.getInstance().removeListener(0, JingJiChangPlayerLoginEventListener.getInstnace());
 			GlobalEventSource.getInstance().removeListener(1, JingJiChangPlayerLogoutEventListener.getInstnace());
 		}
 
-		// Token: 0x06000564 RID: 1380 RVA: 0x0002D824 File Offset: 0x0002BA24
+		
 		private void removeData()
 		{
 			if (null != this.playerJingJiDatas)
@@ -110,19 +110,19 @@ namespace GameDBServer.Logic
 			this.challengeInfos = null;
 		}
 
-		// Token: 0x06000565 RID: 1381 RVA: 0x0002D8BC File Offset: 0x0002BABC
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x06000566 RID: 1382 RVA: 0x0002D8D0 File Offset: 0x0002BAD0
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000567 RID: 1383 RVA: 0x0002D8E4 File Offset: 0x0002BAE4
+		
 		public bool destroy()
 		{
 			this.removeListener();
@@ -130,7 +130,7 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000568 RID: 1384 RVA: 0x0002D908 File Offset: 0x0002BB08
+		
 		public bool createRobotData(PlayerJingJiData data)
 		{
 			lock (this.changeRankingLock)
@@ -155,7 +155,7 @@ namespace GameDBServer.Logic
 			return JingJiChangDBController.getInstance().insertJingJiData(data);
 		}
 
-		// Token: 0x06000569 RID: 1385 RVA: 0x0002D9F8 File Offset: 0x0002BBF8
+		
 		public void onPlayerLogin(int roleId)
 		{
 			PlayerJingJiData data = null;
@@ -191,7 +191,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600056A RID: 1386 RVA: 0x0002DAF4 File Offset: 0x0002BCF4
+		
 		public void onPlayerLogout(int roleId)
 		{
 			PlayerJingJiData data = null;
@@ -210,7 +210,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600056B RID: 1387 RVA: 0x0002DBA0 File Offset: 0x0002BDA0
+		
 		public void getRankingAndNextRewardTimeById(int roleId, out int ranking, out long nextRewardTime)
 		{
 			ranking = -2;
@@ -223,7 +223,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600056C RID: 1388 RVA: 0x0002DBD8 File Offset: 0x0002BDD8
+		
 		public bool updateNextRewardTime(int roleId, long nextRewardTime)
 		{
 			PlayerJingJiData data = null;
@@ -244,7 +244,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600056D RID: 1389 RVA: 0x0002DC58 File Offset: 0x0002BE58
+		
 		public PlayerJingJiData getPlayerJingJiDataById(int roleId)
 		{
 			PlayerJingJiData robotData = null;
@@ -263,7 +263,7 @@ namespace GameDBServer.Logic
 			return robotData;
 		}
 
-		// Token: 0x0600056E RID: 1390 RVA: 0x0002DCE8 File Offset: 0x0002BEE8
+		
 		public bool removeCD(int roleId)
 		{
 			PlayerJingJiData data = null;
@@ -278,7 +278,7 @@ namespace GameDBServer.Logic
 			return JingJiChangDBController.getInstance().updateNextChallengeTime(roleId, 0L);
 		}
 
-		// Token: 0x0600056F RID: 1391 RVA: 0x0002DD68 File Offset: 0x0002BF68
+		
 		public JingJiBeChallengeData requestChallenge(int challengerId, int beChallengerId, int beChallengerRanking)
 		{
 			JingJiBeChallengeData data = new JingJiBeChallengeData();
@@ -343,7 +343,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000570 RID: 1392 RVA: 0x0002DF4C File Offset: 0x0002C14C
+		
 		public int onChallengeEnd(JingJiChallengeResultData result)
 		{
 			PlayerJingJiData challenger = null;
@@ -393,7 +393,7 @@ namespace GameDBServer.Logic
 			return ranking;
 		}
 
-		// Token: 0x06000571 RID: 1393 RVA: 0x0002E138 File Offset: 0x0002C338
+		
 		private void createChallengeWinChallengeInfoData(PlayerJingJiData challengePlayer, PlayerJingJiData beChallengePlayer, out JingJiChallengeInfoData playerZhanBaoData, out JingJiChallengeInfoData robotZhanBaoData)
 		{
 			playerZhanBaoData = new JingJiChallengeInfoData();
@@ -410,7 +410,7 @@ namespace GameDBServer.Logic
 			robotZhanBaoData.createTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 		}
 
-		// Token: 0x06000572 RID: 1394 RVA: 0x0002E1F4 File Offset: 0x0002C3F4
+		
 		private void createChallengeFailedChallengeInfoData(PlayerJingJiData challengePlayer, PlayerJingJiData beChallengePlayer, out JingJiChallengeInfoData playerZhanBaoData, out JingJiChallengeInfoData robotZhanBaoData)
 		{
 			playerZhanBaoData = new JingJiChallengeInfoData();
@@ -427,7 +427,7 @@ namespace GameDBServer.Logic
 			robotZhanBaoData.createTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 		}
 
-		// Token: 0x06000573 RID: 1395 RVA: 0x0002E2B0 File Offset: 0x0002C4B0
+		
 		private void createLianShengChallengeInfo(PlayerJingJiData challengePlayer, out JingJiChallengeInfoData playerZhanBaoData)
 		{
 			playerZhanBaoData = new JingJiChallengeInfoData();
@@ -438,7 +438,7 @@ namespace GameDBServer.Logic
 			playerZhanBaoData.createTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 		}
 
-		// Token: 0x06000574 RID: 1396 RVA: 0x0002E310 File Offset: 0x0002C510
+		
 		public void saveData(JingJiSaveData data, out int winCount)
 		{
 			winCount = 0;
@@ -572,7 +572,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000575 RID: 1397 RVA: 0x0002E834 File Offset: 0x0002CA34
+		
 		public List<PlayerJingJiMiniData> getChallengeData(int[] challengeRankings)
 		{
 			List<PlayerJingJiMiniData> miniDataList = new List<PlayerJingJiMiniData>();
@@ -629,7 +629,7 @@ namespace GameDBServer.Logic
 			return miniDataList;
 		}
 
-		// Token: 0x06000576 RID: 1398 RVA: 0x0002EA50 File Offset: 0x0002CC50
+		
 		public List<JingJiChallengeInfoData> getChallengeInfoDataList(int roleId, int pageIndex)
 		{
 			List<JingJiChallengeInfoData> result;
@@ -672,7 +672,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000577 RID: 1399 RVA: 0x0002EAE8 File Offset: 0x0002CCE8
+		
 		public List<PaiHangItemData> getRankingList(int pageIndex)
 		{
 			int maxIndex = JingJiChangConstants.RankingList_PageShowNum;
@@ -691,7 +691,7 @@ namespace GameDBServer.Logic
 			return _rankingDatas;
 		}
 
-		// Token: 0x06000578 RID: 1400 RVA: 0x0002EB98 File Offset: 0x0002CD98
+		
 		public void OnChangeName(int roleId, string oldName, string newName)
 		{
 			if (!string.IsNullOrEmpty(oldName) && !string.IsNullOrEmpty(newName))
@@ -716,22 +716,22 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0400081D RID: 2077
+		
 		private static JingJiChangManager instance = new JingJiChangManager();
 
-		// Token: 0x0400081E RID: 2078
+		
 		private List<PlayerJingJiRankingData> rankingDatas = new List<PlayerJingJiRankingData>();
 
-		// Token: 0x0400081F RID: 2079
+		
 		private Dictionary<int, PlayerJingJiData> playerJingJiDatas = new Dictionary<int, PlayerJingJiData>();
 
-		// Token: 0x04000820 RID: 2080
+		
 		private Dictionary<int, BeChallengerCount> lockPlayerJingJiDatas = new Dictionary<int, BeChallengerCount>();
 
-		// Token: 0x04000821 RID: 2081
+		
 		private object changeRankingLock = new object();
 
-		// Token: 0x04000822 RID: 2082
+		
 		private Dictionary<int, List<JingJiChallengeInfoData>> challengeInfos = new Dictionary<int, List<JingJiChallengeInfoData>>();
 	}
 }

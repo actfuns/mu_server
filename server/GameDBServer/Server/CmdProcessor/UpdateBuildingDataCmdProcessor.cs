@@ -8,21 +8,21 @@ using Server.Tools;
 
 namespace GameDBServer.Server.CmdProcessor
 {
-	// Token: 0x020001EB RID: 491
+	
 	public class UpdateBuildingDataCmdProcessor : ICmdProcessor
 	{
-		// Token: 0x06000A3C RID: 2620 RVA: 0x00061AB0 File Offset: 0x0005FCB0
+		
 		private UpdateBuildingDataCmdProcessor()
 		{
 		}
 
-		// Token: 0x06000A3D RID: 2621 RVA: 0x00061ABC File Offset: 0x0005FCBC
+		
 		public static UpdateBuildingDataCmdProcessor getInstance()
 		{
 			return UpdateBuildingDataCmdProcessor.instance;
 		}
 
-		// Token: 0x06000A3E RID: 2622 RVA: 0x00061AD4 File Offset: 0x0005FCD4
+		
 		public void processCmdUpdateBuildLog(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			string cmdData = null;
@@ -56,7 +56,7 @@ namespace GameDBServer.Server.CmdProcessor
 			}
 		}
 
-		// Token: 0x06000A3F RID: 2623 RVA: 0x00061BD0 File Offset: 0x0005FDD0
+		
 		public void processCmdUpdateBuildData(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			string cmdData = null;
@@ -115,7 +115,7 @@ namespace GameDBServer.Server.CmdProcessor
 			}
 		}
 
-		// Token: 0x06000A40 RID: 2624 RVA: 0x00061E00 File Offset: 0x00060000
+		
 		public bool UpdateBuildData(List<BuildingData> BuildingDataList, BuildingData myBuildData)
 		{
 			bool bRet = false;
@@ -135,7 +135,7 @@ namespace GameDBServer.Server.CmdProcessor
 			return true;
 		}
 
-		// Token: 0x06000A41 RID: 2625 RVA: 0x00061E64 File Offset: 0x00060064
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			switch (nID)
@@ -149,7 +149,7 @@ namespace GameDBServer.Server.CmdProcessor
 			}
 		}
 
-		// Token: 0x04000C4C RID: 3148
+		
 		private static UpdateBuildingDataCmdProcessor instance = new UpdateBuildingDataCmdProcessor();
 	}
 }

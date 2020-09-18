@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MonstersSite>
+  <Monsters ID="8700000" PosX="5888" PosY="7747" FixedDirection="4" />
+  <Monsters ID="8700001" PosX="6830" PosY="6896" FixedDirection="4" />
+  <Monsters ID="8700002" PosX="5021" PosY="6896" FixedDirection="4" />
+  <Monsters ID="9400000" PosX="9650" PosY="10150" FixedDirection="4" />
+  <Monsters ID="9400001" PosX="5650" PosY="6150" FixedDirection="4" />
+  <Monsters ID="9400002" PosX="5650" PosY="10150" FixedDirection="4" />
+  <Monsters ID="9400003" PosX="9350" PosY="5850" FixedDirection="4" />
+  <Monsters ID="9400004" PosX="7650" PosY="8150" FixedDirection="4" />
+  <Monsters ID="9500000" PosX="7730" PosY="8200" FixedDirection="4" />
+  <Monsters ID="9620000" PosX="5850" PosY="7550" FixedDirection="4" />
+</MonstersSite>

@@ -4,10 +4,10 @@ using Server.Tools;
 
 namespace GameDBServer.Core.GameEvent
 {
-	// Token: 0x02000022 RID: 34
+	
 	public abstract class EventSource
 	{
-		// Token: 0x0600007D RID: 125 RVA: 0x00004B24 File Offset: 0x00002D24
+		
 		public void registerListener(int eventType, IEventListener listener)
 		{
 			lock (this.listeners)
@@ -22,7 +22,7 @@ namespace GameDBServer.Core.GameEvent
 			}
 		}
 
-		// Token: 0x0600007E RID: 126 RVA: 0x00004B9C File Offset: 0x00002D9C
+		
 		public void removeListener(int eventType, IEventListener listener)
 		{
 			lock (this.listeners)
@@ -35,7 +35,7 @@ namespace GameDBServer.Core.GameEvent
 			}
 		}
 
-		// Token: 0x0600007F RID: 127 RVA: 0x00004C04 File Offset: 0x00002E04
+		
 		public void fireEvent(EventObject eventObj)
 		{
 			if (eventObj != null && eventObj.getEventType() != -1)
@@ -48,7 +48,7 @@ namespace GameDBServer.Core.GameEvent
 			}
 		}
 
-		// Token: 0x06000080 RID: 128 RVA: 0x00004C50 File Offset: 0x00002E50
+		
 		private void dispatchEvent(EventObject eventObj, List<IEventListener> listenerList)
 		{
 			foreach (IEventListener listener in listenerList)
@@ -64,7 +64,7 @@ namespace GameDBServer.Core.GameEvent
 			}
 		}
 
-		// Token: 0x0400005E RID: 94
+		
 		protected Dictionary<int, List<IEventListener>> listeners = new Dictionary<int, List<IEventListener>>();
 	}
 }

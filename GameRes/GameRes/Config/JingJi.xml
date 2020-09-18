@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <JingJi ID="1" MinRank="1" MaxRank="1" CD="60" Coefficient="1" ExpCoefficient1="23040" ShengWang1="500" ExpCoefficient2="5000000" ShengWang2="2000" GoodsID="2000,5,1,0,0,0,0" />
+  <JingJi ID="2" MinRank="2" MaxRank="3" CD="60" Coefficient="1" ExpCoefficient1="23040" ShengWang1="500" ExpCoefficient2="4500000" ShengWang2="1800" GoodsID="2000,4,1,0,0,0,0" />
+  <JingJi ID="3" MinRank="4" MaxRank="10" CD="60" Coefficient="1" ExpCoefficient1="23040" ShengWang1="500" ExpCoefficient2="4000000" ShengWang2="1600" GoodsID="2000,3,1,0,0,0,0" />
+  <JingJi ID="4" MinRank="11" MaxRank="50" CD="60" Coefficient="1" ExpCoefficient1="23040" ShengWang1="500" ExpCoefficient2="3500000" ShengWang2="1400" GoodsID="2000,2,1,0,0,0,0" />
+  <JingJi ID="5" MinRank="51" MaxRank="100" CD="60" Coefficient="2" ExpCoefficient1="23040" ShengWang1="500" ExpCoefficient2="3000000" ShengWang2="1200" GoodsID="2000,1,1,0,0,0,0" />
+  <JingJi ID="6" MinRank="101" MaxRank="300" CD="60" Coefficient="8" ExpCoefficient1="23040" ShengWang1="500" ExpCoefficient2="2500000" ShengWang2="1000" GoodsID="2000,1,1,0,0,0,0" />
+  <JingJi ID="7" MinRank="301" MaxRank="500" CD="0" Coefficient="9" ExpCoefficient1="23040" ShengWang1="500" ExpCoefficient2="2000000" ShengWang2="800" GoodsID="2000,1,1,0,0,0,0" />
+  <JingJi ID="8" MinRank="501" MaxRank="1000" CD="0" Coefficient="24" ExpCoefficient1="23040" ShengWang1="500" ExpCoefficient2="1500000" ShengWang2="600" GoodsID="2000,1,1,0,0,0,0" />
+  <JingJi ID="9" MinRank="1001" MaxRank="2000" CD="0" Coefficient="56" ExpCoefficient1="23040" ShengWang1="500" ExpCoefficient2="1500000" ShengWang2="600" GoodsID="2000,1,1,0,0,0,0" />
+  <JingJi ID="10" MinRank="2001" MaxRank="3000" CD="0" Coefficient="67" ExpCoefficient1="23040" ShengWang1="500" ExpCoefficient2="1500000" ShengWang2="600" GoodsID="2000,1,1,0,0,0,0" />
+  <JingJi ID="11" MinRank="3001" MaxRank="4000" CD="0" Coefficient="84" ExpCoefficient1="23040" ShengWang1="500" ExpCoefficient2="1500000" ShengWang2="600" GoodsID="2000,1,1,0,0,0,0" />
+  <JingJi ID="12" MinRank="4001" MaxRank="5000" CD="0" Coefficient="100" ExpCoefficient1="23040" ShengWang1="500" ExpCoefficient2="1500000" ShengWang2="600" GoodsID="2000,1,1,0,0,0,0" />
+  <JingJi ID="13" MinRank="5001" MaxRank="" CD="0" Coefficient="125" ExpCoefficient1="23040" ShengWang1="500" ExpCoefficient2="1500000" ShengWang2="600" GoodsID="2000,1,1,0,0,0,0" />
+</Config>

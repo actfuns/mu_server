@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Item ID="1" Show="1" Path="Scene/Non-Barrier/71_guangmu_01" Pos="2672,5381,8259" ZuDang="2679_9179,2650_7305" Description="" />
+  <Item ID="2" Show="1" Path="Scene/Non-Barrier/71_guangmu_01 (1)" Pos="12860,5381,8259" ZuDang="12852_7309,12883_9180" Description="" />
+  <Item ID="3" Show="1" Path="Scene/Non-Barrier/71_guangmu_01 (2)" Pos="7830,5381,13119" ZuDang="7052_13116,8655_13116" Description="" />
+  <Item ID="4" Show="1" Path="Scene/Non-Barrier/71_guangmu_01 (3)" Pos="7830,5381,3272" ZuDang="8655_3268,7052_3268" Description="" />
+</Config>

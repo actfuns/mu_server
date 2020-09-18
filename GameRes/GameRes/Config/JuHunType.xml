@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <JuHunType TypeID="1" Name="魂炎初聚 1阶" />
+  <JuHunType TypeID="2" Name="魂炎融合 2阶" />
+  <JuHunType TypeID="3" Name="灵炎初聚 3阶" />
+  <JuHunType TypeID="4" Name="灵炎同调 4阶" />
+  <JuHunType TypeID="5" Name="苍炎初聚 5阶" />
+  <JuHunType TypeID="6" Name="苍炎升华 6阶" />
+  <JuHunType TypeID="7" Name="灭炎初聚 7阶" />
+  <JuHunType TypeID="8" Name="灭炎绽放 8阶" />
+  <JuHunType TypeID="9" Name="赤炎初聚 9阶" />
+  <JuHunType TypeID="10" Name="赤炎合一10阶" />
+</Config>

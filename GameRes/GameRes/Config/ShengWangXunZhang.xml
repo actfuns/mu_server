@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ShengWangXunZhang ID="1" Name="守护勋章" ModID="101" LifeV="90" AddAttack="110" AddDefense="30" HitV="30" QiangHua="0.7,200,300,100,100|0.2,800,800,300,200|0.100,1500,1700,500,400" CostShengWang="2000" />
+  <ShengWangXunZhang ID="2" Name="先锋勋章" ModID="102" LifeV="810" AddAttack="970" AddDefense="330" HitV="270" QiangHua="0.7,200,300,100,100|0.2,800,800,300,200|0.1,1500,1700,500,400" CostShengWang="2000" />
+  <ShengWangXunZhang ID="3" Name="无畏勋章" ModID="103" LifeV="2400" AddAttack="2880" AddDefense="960" HitV="800" QiangHua="0.7,2000,3000,1000,1000|0.2,8000,8000,3000,2000|0.1,15000,17000,5000,4000" CostShengWang="2000" />
+  <ShengWangXunZhang ID="4" Name="讨伐勋章" ModID="104" LifeV="5400" AddAttack="6480" AddDefense="2160" HitV="1800" QiangHua="0.7,2000,3000,1000,1000|0.2,8000,8000,3000,2000|0.1,15000,17000,5000,4000" CostShengWang="2000" />
+  <ShengWangXunZhang ID="5" Name="不败勋章" ModID="105" LifeV="8100" AddAttack="9720" AddDefense="3240" HitV="2700" QiangHua="0.7,2000,3000,1000,1000|0.2,8000,8000,3000,2000|0.1,15000,17000,5000,4000" CostShengWang="2000" />
+  <ShengWangXunZhang ID="6" Name="至高勋章" ModID="106" LifeV="13200" AddAttack="15840" AddDefense="5280" HitV="4400" QiangHua="0.7,2000,3000,1000,1000|0.2,8000,8000,3000,2000|0.1,15000,17000,5000,4000" CostShengWang="2000" />
+</Config>

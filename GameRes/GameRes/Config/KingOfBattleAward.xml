@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Award MapCode="1" Name="王者战场" MinZhuanSheng="5" MinLevel="0" MaxZhuanSheng="5" MaxLevel="100" Exp="608256000" BandJinBi="600000" WinGoods="" LoseGoods="" />
+  <Award MapCode="2" Name="王者战场" MinZhuanSheng="6" MinLevel="0" MaxZhuanSheng="6" MaxLevel="100" Exp="801792000" BandJinBi="700000" WinGoods="" LoseGoods="" />
+  <Award MapCode="3" Name="王者战场" MinZhuanSheng="7" MinLevel="0" MaxZhuanSheng="7" MaxLevel="100" Exp="1022976000" BandJinBi="800000" WinGoods="" LoseGoods="" />
+  <Award MapCode="4" Name="王者战场" MinZhuanSheng="8" MinLevel="0" MaxZhuanSheng="8" MaxLevel="100" Exp="1271808000" BandJinBi="900000" WinGoods="" LoseGoods="" />
+  <Award MapCode="5" Name="王者战场" MinZhuanSheng="9" MinLevel="0" MaxZhuanSheng="9" MaxLevel="100" Exp="1548288000" BandJinBi="1000000" WinGoods="" LoseGoods="" />
+  <Award MapCode="6" Name="王者战场" MinZhuanSheng="10" MinLevel="0" MaxZhuanSheng="10" MaxLevel="100" Exp="1852416000" BandJinBi="1100000" WinGoods="" LoseGoods="" />
+  <Award MapCode="7" Name="王者战场" MinZhuanSheng="11" MinLevel="0" MaxZhuanSheng="11" MaxLevel="100" Exp="2000000000" BandJinBi="1200000" WinGoods="" LoseGoods="" />
+  <Award MapCode="8" Name="王者战场" MinZhuanSheng="12" MinLevel="0" MaxZhuanSheng="12" MaxLevel="100" Exp="2000000000" BandJinBi="1300000" WinGoods="" LoseGoods="" />
+  <Award MapCode="9" Name="王者战场" MinZhuanSheng="13" MinLevel="0" MaxZhuanSheng="13" MaxLevel="100" Exp="2000000000" BandJinBi="1400000" WinGoods="" LoseGoods="" />
+  <Award MapCode="10" Name="王者战场" MinZhuanSheng="14" MinLevel="0" MaxZhuanSheng="14" MaxLevel="100" Exp="2000000000" BandJinBi="1500000" WinGoods="" LoseGoods="" />
+  <Award MapCode="11" Name="王者战场" MinZhuanSheng="15" MinLevel="0" MaxZhuanSheng="15" MaxLevel="100" Exp="2000000000" BandJinBi="1600000" WinGoods="" LoseGoods="" />
+  <Award MapCode="12" Name="王者战场" MinZhuanSheng="16" MinLevel="0" MaxZhuanSheng="100" MaxLevel="100" Exp="2000000000" BandJinBi="1700000" WinGoods="" LoseGoods="" />
+</Config>

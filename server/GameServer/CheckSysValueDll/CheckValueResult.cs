@@ -5,18 +5,18 @@ using ProtoBuf;
 
 namespace CheckSysValueDll
 {
-	// Token: 0x020008EC RID: 2284
+	
 	[ProtoContract]
 	public class CheckValueResult
 	{
-		// Token: 0x060041FD RID: 16893 RVA: 0x003C541A File Offset: 0x003C361A
+		
 		public CheckValueResult()
 		{
 			this.Info = "";
 			this.ResultDict = new Dictionary<string, List<CheckValueResultItem>>();
 		}
 
-		// Token: 0x060041FE RID: 16894 RVA: 0x003C543C File Offset: 0x003C363C
+		
 		public void AddData(object obj, string StrSeach)
 		{
 			CheckValueResultItem data = new CheckValueResultItem();
@@ -44,7 +44,7 @@ namespace CheckSysValueDll
 			}
 		}
 
-		// Token: 0x060041FF RID: 16895 RVA: 0x003C54E4 File Offset: 0x003C36E4
+		
 		private static void Data2String(ref CheckValueResultItem model)
 		{
 			model.Childs = new List<string>();
@@ -64,11 +64,11 @@ namespace CheckSysValueDll
 			}
 		}
 
-		// Token: 0x04004FFE RID: 20478
+		
 		[ProtoMember(1)]
 		public Dictionary<string, List<CheckValueResultItem>> ResultDict;
 
-		// Token: 0x04004FFF RID: 20479
+		
 		[ProtoMember(2)]
 		public string Info;
 	}

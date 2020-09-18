@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameDBServer.DB
 {
-	// Token: 0x020000E3 RID: 227
+	
 	public class DBConnections
 	{
-		// Token: 0x060001E6 RID: 486 RVA: 0x0000A658 File Offset: 0x00008858
+		
 		public void BuidConnections(MySQLConnectionString connStr, int maxCount)
 		{
 			lock (this.DBConns)
@@ -29,7 +29,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060001E7 RID: 487 RVA: 0x0000A700 File Offset: 0x00008900
+		
 		private MySQLConnection CreateAConnection()
 		{
 			try
@@ -59,7 +59,7 @@ namespace GameDBServer.DB
 			return null;
 		}
 
-		// Token: 0x060001E8 RID: 488 RVA: 0x0000A810 File Offset: 0x00008A10
+		
 		public bool SupplyConnections()
 		{
 			bool result = false;
@@ -76,7 +76,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x060001E9 RID: 489 RVA: 0x0000A890 File Offset: 0x00008A90
+		
 		public int GetDBConnsCount()
 		{
 			int count;
@@ -87,7 +87,7 @@ namespace GameDBServer.DB
 			return count;
 		}
 
-		// Token: 0x060001EA RID: 490 RVA: 0x0000A8E4 File Offset: 0x00008AE4
+		
 		private void ReleaseConn()
 		{
 			DBConnections.ConcurrentCount--;
@@ -97,7 +97,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060001EB RID: 491 RVA: 0x0000A92C File Offset: 0x00008B2C
+		
 		public MySQLConnection PopDBConnection()
 		{
 			MySQLConnection conn = null;
@@ -173,7 +173,7 @@ namespace GameDBServer.DB
 			return conn;
 		}
 
-		// Token: 0x060001EC RID: 492 RVA: 0x0000AB60 File Offset: 0x00008D60
+		
 		public void PushDBConnection(MySQLConnection conn)
 		{
 			if (null != conn)
@@ -187,29 +187,29 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0400061E RID: 1566
+		
 		public static string dbNames = "";
 
-		// Token: 0x0400061F RID: 1567
+		
 		private Semaphore SemaphoreClients = null;
 
-		// Token: 0x04000620 RID: 1568
+		
 		private Queue<MySQLConnection> DBConns = new Queue<MySQLConnection>(100);
 
-		// Token: 0x04000621 RID: 1569
+		
 		private string ConnectionString;
 
-		// Token: 0x04000622 RID: 1570
+		
 		private int CurrentCount;
 
-		// Token: 0x04000623 RID: 1571
+		
 		private int MaxCount;
 
-		// Token: 0x04000624 RID: 1572
+		
 		[ThreadStatic]
 		private static int ConcurrentCount;
 
-		// Token: 0x04000625 RID: 1573
+		
 		private int ConcurrentThreadId;
 	}
 }

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="41" FromDate="2018-02-28 00:00:00" ToDate="2018-03-05 23:59:59" AwardStartDate="2018-02-28 00:00:00" AwardEndDate="2018-03-05 23:59:59" />
+  <GiftList Description="活动期间，以下时间内参与可获得多倍收益！">
+    <JieRiDuoBei ID="10" Name="祈福获取积分" TypeID="10" Depict="祈福获取积分x" Multiplying="2" Effective="1" AwardStartDate="00:00:00" AwardEndDate="23:59:59" Link="400" />
+    <JieRiDuoBei ID="1" Name="天使神殿奖励" TypeID="1" Depict="天使神殿活动奖励x" Multiplying="2" Effective="0" AwardStartDate="00:00:00" AwardEndDate="23:59:59" Link="1002" />
+    <JieRiDuoBei ID="2" Name="阵营战奖励" TypeID="2" Depict="阵营战活动奖励x" Multiplying="2" Effective="1" AwardStartDate="00:00:00" AwardEndDate="23:59:59" Link="1001" />
+    <JieRiDuoBei ID="3" Name="PK之王奖励" TypeID="3" Depict="PK之王活动奖励x" Multiplying="2" Effective="0" AwardStartDate="00:00:00" AwardEndDate="23:59:59" Link="105" />
+    <JieRiDuoBei ID="4" Name="古战场时间" TypeID="4" Depict="古战场每日进入时间x" Multiplying="2" Effective="0" AwardStartDate="00:00:00" AwardEndDate="23:59:59" Link="1000" />
+    <JieRiDuoBei ID="5" Name="组队副本奖励" TypeID="5" Depict="组队副本通关奖励x" Multiplying="2" Effective="0" AwardStartDate="00:00:00" AwardEndDate="23:59:59" Link="407" />
+    <JieRiDuoBei ID="6" Name="转换次数" TypeID="6" Depict="转换次数x" Multiplying="2" Effective="0" AwardStartDate="00:00:00" AwardEndDate="23:59:59" Link="1320" />
+    <JieRiDuoBei ID="7" Name="转换获得奖励" TypeID="9" Depict="转换获得奖励x" Multiplying="2" Effective="1" AwardStartDate="00:00:00" AwardEndDate="23:59:59" Link="1320" />
+    <JieRiDuoBei ID="8" Name="雕像膜拜次数" TypeID="12" Depict="雕像膜拜次数x" Multiplying="2" Effective="1" AwardStartDate="00:00:00" AwardEndDate="23:59:59" Link="1310" />
+    <JieRiDuoBei ID="9" Name="合成果实概率" TypeID="13" Depict="合成果实成功率x" Multiplying="2" Effective="0" AwardStartDate="00:00:00" AwardEndDate="23:59:59" Link="203" />
+    <JieRiDuoBei ID="10" Name="要塞BOSS奖励" TypeID="14" Depict="要塞BOSS奖励x" Multiplying="2" Effective="0" AwardStartDate="00:00:00" AwardEndDate="23:59:59" Link="1497" />
+  </GiftList>
+</Config>

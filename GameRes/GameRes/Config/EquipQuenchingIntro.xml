@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}重生装备灌注规则" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、重生装备需要灌注，每次灌注消耗{17e43e}道具{dac7ae}。" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、进行重生装备灌注会提升成功率{dac7ae}。" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、成功率到达10%，装备可进行淬炼升级，升级成功后属性提升{dac7ae}。" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4、重生装备淬炼失败会降低成功率{dac7ae}。" Bold="0" />
+</Config>

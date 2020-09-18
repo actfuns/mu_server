@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <OldHuoDongChongZhiGift ID="1" MinYuanBao="300" GoodsID1="50160,30,1,0,0,0,0|5110,50,1,0,0,0,0|5171,60,1,0,0,0,0|63150,1,1,0,0,0,0" GoodsID2="" />
+  <OldHuoDongChongZhiGift ID="2" MinYuanBao="1000" GoodsID1="50160,30,1,0,0,0,0|7005,30,1,0,0,0,0|5220,20,1,0,0,0,0|2005,10,1,0,0,0,0" GoodsID2="" />
+  <OldHuoDongChongZhiGift ID="3" MinYuanBao="2000" GoodsID1="50160,40,1,0,0,0,0|5220,30,1,0,0,0,0|5171,80,1,0,0,0,0|63129,1,1,0,0,0,0" GoodsID2="" />
+  <OldHuoDongChongZhiGift ID="4" MinYuanBao="5000" GoodsID1="50160,40,1,0,0,0,0|5220,40,1,0,0,0,0|5171,100,1,0,0,0,0|2005,15,1,0,0,0,0" GoodsID2="" />
+  <OldHuoDongChongZhiGift ID="5" MinYuanBao="10000" GoodsID1="50160,50,1,0,0,0,0|5220,50,1,0,0,0,0|7005,25,1,0,0,0,0|63152,1,1,0,0,0,0" GoodsID2="" />
+  <OldHuoDongChongZhiGift ID="6" MinYuanBao="20000" GoodsID1="50160,50,1,0,0,0,0|5220,60,1,0,0,0,0|5171,120,1,0,0,0,0|2005,20,1,0,0,0,0" GoodsID2="" />
+  <OldHuoDongChongZhiGift ID="7" MinYuanBao="50000" GoodsID1="50160,60,1,0,0,0,0|5220,60,1,0,0,0,0|5171,120,1,0,0,0,0|63153,1,1,0,0,0,0" GoodsID2="" />
+</config>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+	<Scripts>
+		<Script ID="1" Title="离开【阵营地图】" ExecMagic="GOTO_LAST_MAP" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+        <Script ID="2" Title="参与【阵营战】" ExecMagic="GOTO_BATTLEMAP" MinZhuanSheng="0" MinLevel="50" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>  
+        <Script ID="10" Title="离开副本" ExecMagic="GOTO_LAST_MAP" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="11" Title="进入下一层" ExecMagic="GOTO_NEXTMAP" MinZhuanSheng="0" MinLevel="1" MaxLevel="300" SexCondition="-1" OccupCondition="-1" FilterID="1" TimeLimits=""/>
+		<Script ID="12" Title="领取奖励" ExecMagic="GET_AWARD" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="2" TimeLimits=""/>
+		<Script ID="20" Title="前往勇者大陆" ExecMagic="GOTO_MAP(1)" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="100" Title="进入血色城堡" ExecMagic="GOTO_BLOODCASTLE" MinZhuanSheng="0" MinLevel="45" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="300" Title="进入恶魔广场" ExecMagic="GOTO_DAIMONSQUARE" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="400" Title="PK之王" ExecMagic="GOTO_ARENABATTLEMAP" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="500" Title="天使神殿" ExecMagic="GOTO_ANGELTEMPLE" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="600" Title="Boos之家" ExecMagic="GOTO_BOOSZHIJIA" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="700" Title="黄金圣殿" ExecMagic="GOTO_HUANGJINSHENGDIAN" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="800" Title="进入古战场" ExecMagic="GOTO_GUMUMAP" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="1000" Title="交付大天使武器" ExecMagic="GET_AWARD_BLOODCASTLE" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="2000" Title="进入水晶幻境" ExecMagic="GOTO_MAP(12000)" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="10001" Title="进入经验场一层（升级打怪掉落钻石和兑换卷）" ExecMagic="GOTO_MAP(5318)" MinZhuanSheng="0" MinLevel="50" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="10002" Title="进入经验场二层（升级打怪掉落钻石和兑换卷）" ExecMagic="GOTO_MAP(5319)" MinZhuanSheng="0" MinLevel="50" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="10003" Title="进入经验场三层（升级打怪掉落钻石和兑换卷）" ExecMagic="GOTO_MAP(5320)" MinZhuanSheng="0" MinLevel="50" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="10004" Title="进入装备场一层(小怪11阶碎片BOSS死亡后1小时刷新掉落14阶碎片)" ExecMagic="GOTO_MAP(60012)" MinZhuanSheng="0" MinLevel="50" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="10005" Title="进入装备场二层(小怪12阶碎片BOSS死亡后1小时刷新掉落15阶碎片)" ExecMagic="GOTO_MAP(60013)" MinZhuanSheng="0" MinLevel="50" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="10006" Title="进入装备场三层(小怪13阶碎片BOSS死亡后1小时刷新掉落16阶碎片)" ExecMagic="GOTO_MAP(60014)" MinZhuanSheng="0" MinLevel="50" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="10007" Title="骑宠乐园一层(BOSS死亡后2小时刷新掉落成品坐骑小怪掉落碎片及相关材料)" ExecMagic="GOTO_MAP(97005)" MinZhuanSheng="0" MinLevel="50" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="10008" Title="骑宠乐园二层(BOSS死亡后2小时刷新掉落成品坐骑小怪掉落碎片及相关材料)" ExecMagic="GOTO_MAP(97006)" MinZhuanSheng="0" MinLevel="50" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+		<Script ID="10009" Title="骑宠乐园三层(BOSS死亡后2小时刷新掉落成品坐骑小怪掉落碎片及相关材料)" ExecMagic="GOTO_MAP(97007)" MinZhuanSheng="0" MinLevel="50" MaxZhuanSheng="100" MaxLevel="400" SexCondition="-1" OccupCondition="-1" FilterID="0" TimeLimits=""/>
+
+		</Scripts>
+</Config>

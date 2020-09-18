@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <QiFuType ID="1" Name="低品质，高几率升级" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" RefineCost="20" ZuanShiCost="0" SuccessRate="0.5" RefineLevel="2" />
+  <QiFuType ID="2" Name="较低品质，中几率升级" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" RefineCost="30" ZuanShiCost="0" SuccessRate="0.4" RefineLevel="3" />
+  <QiFuType ID="3" Name="一般品质，较低几率升级" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" RefineCost="40" ZuanShiCost="0" SuccessRate="0.2" RefineLevel="4" />
+  <QiFuType ID="4" Name="较高品质，低几率升级" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" RefineCost="60" ZuanShiCost="0" SuccessRate="0.33" RefineLevel="5" />
+  <QiFuType ID="5" Name="高品质，极低几率停留" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" RefineCost="80" ZuanShiCost="0" SuccessRate="0.01" RefineLevel="5" />
+  <QiFuType ID="6" Name="提升至4档，并抽取元素精华" MinZhuanSheng="0" MinLevel="1" MaxZhuanSheng="100" MaxLevel="100" RefineCost="0" ZuanShiCost="100" SuccessRate="1" RefineLevel="4" />
+</Config>

@@ -7,34 +7,34 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.GoldAuction
 {
-	// Token: 0x0200013C RID: 316
+	
 	internal class GlodAuctionMsgProcess : IManager, ICmdProcessor
 	{
-		// Token: 0x0600053A RID: 1338 RVA: 0x0002BA04 File Offset: 0x00029C04
+		
 		public static GlodAuctionMsgProcess getInstance()
 		{
 			return GlodAuctionMsgProcess.instance;
 		}
 
-		// Token: 0x0600053B RID: 1339 RVA: 0x0002BA1C File Offset: 0x00029C1C
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x0600053C RID: 1340 RVA: 0x0002BA30 File Offset: 0x00029C30
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600053D RID: 1341 RVA: 0x0002BA44 File Offset: 0x00029C44
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x0600053E RID: 1342 RVA: 0x0002BA58 File Offset: 0x00029C58
+		
 		public bool startup()
 		{
 			lock (this.AuctionMsgMutex)
@@ -45,7 +45,7 @@ namespace GameDBServer.Logic.GoldAuction
 			return true;
 		}
 
-		// Token: 0x0600053F RID: 1343 RVA: 0x0002BACC File Offset: 0x00029CCC
+		
 		public void LoadDataFromDB(DBManager DBMgr)
 		{
 			try
@@ -75,7 +75,7 @@ namespace GameDBServer.Logic.GoldAuction
 			}
 		}
 
-		// Token: 0x06000540 RID: 1344 RVA: 0x0002BC10 File Offset: 0x00029E10
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -102,7 +102,7 @@ namespace GameDBServer.Logic.GoldAuction
 			}
 		}
 
-		// Token: 0x06000541 RID: 1345 RVA: 0x0002BCE0 File Offset: 0x00029EE0
+		
 		private void GetGlodAuction(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			GetAuctionDBData msgData = new GetAuctionDBData();
@@ -140,7 +140,7 @@ namespace GameDBServer.Logic.GoldAuction
 			client.sendCmd<GetAuctionDBData>(nID, msgData);
 		}
 
-		// Token: 0x06000542 RID: 1346 RVA: 0x0002BE48 File Offset: 0x0002A048
+		
 		private void SetGlodAuction(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			string msgStr = "false";
@@ -187,13 +187,13 @@ namespace GameDBServer.Logic.GoldAuction
 			}
 		}
 
-		// Token: 0x04000805 RID: 2053
+		
 		private static GlodAuctionMsgProcess instance = new GlodAuctionMsgProcess();
 
-		// Token: 0x04000806 RID: 2054
+		
 		private object AuctionMsgMutex = new object();
 
-		// Token: 0x04000807 RID: 2055
+		
 		private Dictionary<int, List<GoldAuctionDBItem>> AuctionDict = new Dictionary<int, List<GoldAuctionDBItem>>();
 	}
 }

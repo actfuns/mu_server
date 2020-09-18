@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CompMineTruck ID="1" MonstersID="9820000" TimePoints="30" Speed="4" MaxHurt="10" AddLIfe="1500|2000|2500" FinishNum="900|0|10000" BrokenNum="0.15|0|100000" CompNum="20000" CompMineNum="1500" />
+  <CompMineTruck ID="2" MonstersID="9820001" TimePoints="30" Speed="4" MaxHurt="10" AddLIfe="800|1200|1600" FinishNum="900|0|10000" BrokenNum="0.1|0|100000" CompNum="20000" CompMineNum="2000" />
+  <CompMineTruck ID="3" MonstersID="9820002" TimePoints="30" Speed="3" MaxHurt="10" AddLIfe="640|1000|1280" FinishNum="900|0|10000" BrokenNum="0.08|0|100000" CompNum="20000" CompMineNum="2500" />
+  <CompMineTruck ID="4" MonstersID="9820003" TimePoints="30" Speed="2" MaxHurt="10" AddLIfe="700|1000|1300" FinishNum="900|0|10000" BrokenNum="0.06|0|100000" CompNum="20000" CompMineNum="3000" />
+  <CompMineTruck ID="5" MonstersID="9820004" TimePoints="30" Speed="2" MaxHurt="10" AddLIfe="500|800|1000" FinishNum="900|0|10000" BrokenNum="0.05|0|100000" CompNum="20000" CompMineNum="4000" />
+</Config>

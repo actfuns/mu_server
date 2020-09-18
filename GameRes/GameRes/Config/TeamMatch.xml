@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <TeamMatch ID="1" Name="32强赛" MapCode="97001" TimePoints="9,14:00:00-14:15:00" EnterCD="10" PrepareSecs="60" FightingSecs="780" ClearRolesSecs="60" LotteryTime="1,03:00:00|9,13:59:59" LotteryMoney="1000000" />
+  <TeamMatch ID="2" Name="16强赛" MapCode="97001" TimePoints="9,14:20:00-14:35:00" EnterCD="10" PrepareSecs="60" FightingSecs="780" ClearRolesSecs="60" LotteryTime="1,03:00:00|9,13:59:59" LotteryMoney="1000000" />
+  <TeamMatch ID="3" Name="8强赛" MapCode="97001" TimePoints="9,14:40:00-14:55:00" EnterCD="10" PrepareSecs="60" FightingSecs="780" ClearRolesSecs="60" LotteryTime="1,03:00:00|9,13:59:59" LotteryMoney="1000000" />
+  <TeamMatch ID="4" Name="4强赛" MapCode="97001" TimePoints="9,15:00:00-15:15:00" EnterCD="10" PrepareSecs="60" FightingSecs="780" ClearRolesSecs="60" LotteryTime="1,03:00:00|9,13:59:59" LotteryMoney="1000000" />
+  <TeamMatch ID="5" Name="半决赛" MapCode="97001" TimePoints="9,15:20:00-15:35:00" EnterCD="10" PrepareSecs="60" FightingSecs="780" ClearRolesSecs="60" LotteryTime="1,03:00:00|9,13:59:59" LotteryMoney="1000000" />
+  <TeamMatch ID="6" Name="决赛" MapCode="97001" TimePoints="9,15:40:00-15:55:00" EnterCD="10" PrepareSecs="60" FightingSecs="780" ClearRolesSecs="60" LotteryTime="1,03:00:00|9,13:59:59" LotteryMoney="1000000" />
+</Config>

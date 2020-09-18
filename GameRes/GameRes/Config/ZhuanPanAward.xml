@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <AwardLevel TypeID="1">
+  </AwardLevel>
+  <AwardLevel TypeID="2">
+  <Award ID="3" StarValue="1" EndValue="7000" />
+  <Award ID="4" StarValue="7001" EndValue="26000" />
+  <Award ID="8" StarValue="26001" EndValue="45000" />
+  <Award ID="15" StarValue="45001" EndValue="68000" />
+  <Award ID="16" StarValue="68001" EndValue="93000" />
+  <Award ID="12" StarValue="93001" EndValue="100000" />
+  </AwardLevel>
+  <AwardLevel TypeID="3">
+  <Award ID="2" StarValue="1" EndValue="100" />
+  <Award ID="10" StarValue="101" EndValue="600" />
+  <Award ID="1" StarValue="601" EndValue="11600" />
+  <Award ID="6" StarValue="11601" EndValue="22600" />
+  <Award ID="9" StarValue="22601" EndValue="25100" />
+  <Award ID="14" StarValue="25101" EndValue="31600" />
+  <Award ID="13" StarValue="31601" EndValue="33100" />
+  <Award ID="3" StarValue="33101" EndValue="43100" />
+  <Award ID="5" StarValue="43101" EndValue="48100" />
+  <Award ID="7" StarValue="48101" EndValue="48600" />
+  <Award ID="11" StarValue="48601" EndValue="49600" />
+  <Award ID="4" StarValue="49601" EndValue="58850" />
+  <Award ID="8" StarValue="58851" EndValue="68100" />
+  <Award ID="15" StarValue="68101" EndValue="80100" />
+  <Award ID="16" StarValue="80101" EndValue="96100" />
+  <Award ID="12" StarValue="96101" EndValue="100000" />
+  </AwardLevel>
+  <AwardLevel TypeID="4">
+  <Award ID="1" StarValue="1" EndValue="25000" />
+  <Award ID="6" StarValue="25001" EndValue="50000" />
+  <Award ID="9" StarValue="50001" EndValue="75000" />
+  <Award ID="14" StarValue="75001" EndValue="100000" />
+  </AwardLevel>
+</Config>

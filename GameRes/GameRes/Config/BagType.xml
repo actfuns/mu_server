@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <BagTayp ID="1" BagType="3000" BagName="元素之心背包" GoodsType="800,801,802,803,804,805,806,807,808,809,810,811,812,813,814,815" BangdingType="1" />
+  <BagTayp ID="2" BagType="7000" BagName="荧光宝石背包" GoodsType="901" BangdingType="0" />
+  <BagTayp ID="3" BagType="8000" BagName="魂石背包" GoodsType="910,911,912,913,914,915,916,917,918,919,920,921,922,923,924,925,926,927,928" BangdingType="0" />
+  <BagTayp ID="4" BagType="11000" BagName="符文背包" GoodsType="940" BangdingType="1" />
+  <BagTayp ID="5" BagType="16000" BagName="坐骑圣印" GoodsType="980,981" BangdingType="0" />
+</Config>

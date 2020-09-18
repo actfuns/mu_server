@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <AwakenRecovery ID="1" GoodsID="950000" AwakenNum="10" />
+  <AwakenRecovery ID="2" GoodsID="950001" AwakenNum="10" />
+  <AwakenRecovery ID="3" GoodsID="950002" AwakenNum="10" />
+  <AwakenRecovery ID="4" GoodsID="950003" AwakenNum="10" />
+  <AwakenRecovery ID="5" GoodsID="950004" AwakenNum="10" />
+  <AwakenRecovery ID="6" GoodsID="950005" AwakenNum="10" />
+  <AwakenRecovery ID="7" GoodsID="950006" AwakenNum="10" />
+  <AwakenRecovery ID="8" GoodsID="950007" AwakenNum="10" />
+  <AwakenRecovery ID="9" GoodsID="950008" AwakenNum="10" />
+  <AwakenRecovery ID="10" GoodsID="950009" AwakenNum="10" />
+  <AwakenRecovery ID="11" GoodsID="950010" AwakenNum="10" />
+  <AwakenRecovery ID="12" GoodsID="950011" AwakenNum="10" />
+  <AwakenRecovery ID="13" GoodsID="950012" AwakenNum="10" />
+  <AwakenRecovery ID="14" GoodsID="950013" AwakenNum="10" />
+  <AwakenRecovery ID="15" GoodsID="950014" AwakenNum="10" />
+  <AwakenRecovery ID="16" GoodsID="951000" AwakenNum="10" />
+  <AwakenRecovery ID="17" GoodsID="951001" AwakenNum="10" />
+  <AwakenRecovery ID="18" GoodsID="951002" AwakenNum="10" />
+  <AwakenRecovery ID="19" GoodsID="951003" AwakenNum="10" />
+  <AwakenRecovery ID="20" GoodsID="951004" AwakenNum="10" />
+  <AwakenRecovery ID="21" GoodsID="951005" AwakenNum="10" />
+  <AwakenRecovery ID="22" GoodsID="951006" AwakenNum="10" />
+  <AwakenRecovery ID="23" GoodsID="951007" AwakenNum="10" />
+  <AwakenRecovery ID="24" GoodsID="951008" AwakenNum="10" />
+  <AwakenRecovery ID="25" GoodsID="951009" AwakenNum="10" />
+  <AwakenRecovery ID="26" GoodsID="951010" AwakenNum="10" />
+  <AwakenRecovery ID="27" GoodsID="951011" AwakenNum="10" />
+</Config>

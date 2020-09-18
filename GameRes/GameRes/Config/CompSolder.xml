@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CompSolder ID="1" CompID="1" Level="1" MonstersID="9650003" AlarmTime="10" />
+  <CompSolder ID="2" CompID="1" Level="2" MonstersID="9650003" AlarmTime="6" />
+  <CompSolder ID="3" CompID="1" Level="3" MonstersID="9650003" AlarmTime="3" />
+  <CompSolder ID="4" CompID="2" Level="1" MonstersID="9651003" AlarmTime="10" />
+  <CompSolder ID="5" CompID="2" Level="2" MonstersID="9651003" AlarmTime="6" />
+  <CompSolder ID="6" CompID="2" Level="3" MonstersID="9651003" AlarmTime="3" />
+  <CompSolder ID="7" CompID="3" Level="1" MonstersID="9652003" AlarmTime="10" />
+  <CompSolder ID="8" CompID="3" Level="2" MonstersID="9652003" AlarmTime="6" />
+  <CompSolder ID="9" CompID="3" Level="3" MonstersID="9652003" AlarmTime="3" />
+</Config>

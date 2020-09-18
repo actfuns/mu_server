@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <EscapePlayPoint ID="1" MapId="-1" MapTeamPoint="1700,4400" MapTeamRange="20" />
+  <EscapePlayPoint ID="2" MapId="-1" MapTeamPoint="7700,9700" MapTeamRange="20" />
+  <EscapePlayPoint ID="3" MapId="-1" MapTeamPoint="7900,1100" MapTeamRange="20" />
+</Config>

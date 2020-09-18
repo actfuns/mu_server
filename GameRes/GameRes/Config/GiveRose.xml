@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Rose ID="1" GoodsID="6051" Name="红粉初恋" GoodWill="2" MultiplyingPower="1,0.3|2,0.3|3,0.2|10,0.2" />
+  <Rose ID="2" GoodsID="6052" Name="香槟玫瑰" GoodWill="4" MultiplyingPower="1,0.34|2,0.3|3,0.18|10,0.18" />
+  <Rose ID="3" GoodsID="6053" Name="蓝色妖姬" GoodWill="6" MultiplyingPower="1,0.38|2,0.3|3,0.16|10,0.16" />
+  <Rose ID="4" GoodsID="6054" Name="幸福捧花" GoodWill="8" MultiplyingPower="1,0.4|2,0.3|3,0.15|10,0.15" />
+  <Rose ID="5" GoodsID="6055" Name="至臻花语" GoodWill="10" MultiplyingPower="1,0.46|2,0.26|3,0.14|10,0.14" />
+</Config>

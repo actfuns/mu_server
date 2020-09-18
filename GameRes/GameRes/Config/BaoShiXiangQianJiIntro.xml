@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1.可对{17e43e}有孔{dac7ae}的装备进行宝石{17e43e}镶嵌" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2.同一颗重生宝石镶嵌在{17e43e}攻击装备{dac7ae}和{17e43e}防御装备{dac7ae}产生的{17e43e}属性不同" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3.镶嵌后可随意进行卸载" Bold="0" />
+</Config>

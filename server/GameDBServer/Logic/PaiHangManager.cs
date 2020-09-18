@@ -9,10 +9,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x020001AD RID: 429
+	
 	public class PaiHangManager
 	{
-		// Token: 0x0600091A RID: 2330 RVA: 0x00054FBC File Offset: 0x000531BC
+		
 		private static void LoadPaiHangLists(DBManager dbMgr)
 		{
 			PaiHangManager.RoleEquipPaiHangList = DBQuery.GetRoleEquipPaiHang(dbMgr);
@@ -41,7 +41,7 @@ namespace GameDBServer.Logic
 			PaiHangManager.StorePaiHangForHuoDong(dbMgr);
 		}
 
-		// Token: 0x0600091B RID: 2331 RVA: 0x000550D8 File Offset: 0x000532D8
+		
 		public static void ProcessPaiHang(DBManager dbMgr, bool force = false)
 		{
 			if (force)
@@ -70,7 +70,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600091C RID: 2332 RVA: 0x0005516C File Offset: 0x0005336C
+		
 		public static PaiHangData GetPaiHangData(int paiHangType, int pageShowNum = -1)
 		{
 			List<PaiHangItemData> paiHangItemList = null;
@@ -150,7 +150,7 @@ namespace GameDBServer.Logic
 			};
 		}
 
-		// Token: 0x0600091D RID: 2333 RVA: 0x00055324 File Offset: 0x00053524
+		
 		protected static void StorePaiHangForHuoDong(DBManager dbMgr)
 		{
 			PaiHangManager.StorePaiHangPos(dbMgr, 5, 5, 10);
@@ -161,7 +161,7 @@ namespace GameDBServer.Logic
 			PaiHangManager.StorePaiHangPos(dbMgr, 5, 33, 10);
 		}
 
-		// Token: 0x0600091E RID: 2334 RVA: 0x00055378 File Offset: 0x00053578
+		
 		protected static void StorePaiHangPos(DBManager dbMgr, int paiHangType, int huoDongType, int maxPaiHang = 10)
 		{
 			List<PaiHangItemData> paiHangItemList = null;
@@ -221,7 +221,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600091F RID: 2335 RVA: 0x000554E0 File Offset: 0x000536E0
+		
 		public static int GetPaiHangPosByRoleID(int paiHangType, int roleID)
 		{
 			List<PaiHangItemData> paiHangItemList = null;
@@ -297,7 +297,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000920 RID: 2336 RVA: 0x0005565C File Offset: 0x0005385C
+		
 		public static Dictionary<int, int> CalcPaiHangPosDictRoleID(int roleID)
 		{
 			Dictionary<int, int> dict = new Dictionary<int, int>();
@@ -308,7 +308,7 @@ namespace GameDBServer.Logic
 			return dict;
 		}
 
-		// Token: 0x06000921 RID: 2337 RVA: 0x0005576C File Offset: 0x0005396C
+		
 		public static void OnChangeName(int roleid, string oldName, string newName)
 		{
 			if (!string.IsNullOrEmpty(oldName) && !string.IsNullOrEmpty(newName))
@@ -356,7 +356,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000922 RID: 2338 RVA: 0x000558F4 File Offset: 0x00053AF4
+		
 		private static void _UpdateName_t_huodongpaihang(int roleid, string oldName, string newName)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -369,70 +369,70 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x040009BE RID: 2494
+		
 		private const long UpdatePaiHangIntervalTimer = 1800000L;
 
-		// Token: 0x040009BF RID: 2495
+		
 		private static int LastCheckPaiHangDayID = DateTime.Now.DayOfYear;
 
-		// Token: 0x040009C0 RID: 2496
+		
 		private static int LastCheckPaiHangTimer = DateTime.Now.Hour * 60 + DateTime.Now.Minute;
 
-		// Token: 0x040009C1 RID: 2497
+		
 		private static int PaiHangTimer = 420;
 
-		// Token: 0x040009C2 RID: 2498
+		
 		private static long LastUpdatePaiHangTickTimer = 0L;
 
-		// Token: 0x040009C3 RID: 2499
+		
 		private static List<PaiHangItemData> RoleEquipPaiHangList = null;
 
-		// Token: 0x040009C4 RID: 2500
+		
 		private static List<PaiHangItemData> RoleXueWeiNumPaiHangList = null;
 
-		// Token: 0x040009C5 RID: 2501
+		
 		private static List<PaiHangItemData> RoleSkillLevelPaiHangList = null;
 
-		// Token: 0x040009C6 RID: 2502
+		
 		private static List<PaiHangItemData> RoleHorseJiFenPaiHangList = null;
 
-		// Token: 0x040009C7 RID: 2503
+		
 		private static List<PaiHangItemData> RoleLevelPaiHangList = null;
 
-		// Token: 0x040009C8 RID: 2504
+		
 		private static List<PaiHangItemData> RoleYinLiangPaiHangList = null;
 
-		// Token: 0x040009C9 RID: 2505
+		
 		private static List<PaiHangItemData> RoleLianZhanPaiHangList = null;
 
-		// Token: 0x040009CA RID: 2506
+		
 		private static List<PaiHangItemData> RoleKillBossPaiHangList = null;
 
-		// Token: 0x040009CB RID: 2507
+		
 		private static List<PaiHangItemData> RoleBattleNumPaiHangList = null;
 
-		// Token: 0x040009CC RID: 2508
+		
 		private static List<PaiHangItemData> RoleHeroIndexPaiHangList = null;
 
-		// Token: 0x040009CD RID: 2509
+		
 		private static List<PaiHangItemData> RoleGoldPaiHangList = null;
 
-		// Token: 0x040009CE RID: 2510
+		
 		private static List<PaiHangItemData> UserMoneyPaiHangList = null;
 
-		// Token: 0x040009CF RID: 2511
+		
 		private static List<PaiHangItemData> RoleChengJiuPaiHangList = null;
 
-		// Token: 0x040009D0 RID: 2512
+		
 		private static List<PaiHangItemData> RoleShengWangPaiHangList = null;
 
-		// Token: 0x040009D1 RID: 2513
+		
 		private static List<PaiHangItemData> RoleGuardStatuePaiHangList = null;
 
-		// Token: 0x040009D2 RID: 2514
+		
 		private static List<PaiHangItemData> RoleHolyItemPaiHangList = null;
 
-		// Token: 0x040009D3 RID: 2515
+		
 		private static List<PaiHangItemData> CombatForcePaiHangList = null;
 	}
 }

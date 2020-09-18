@@ -9,16 +9,16 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000147 RID: 327
+	
 	public class JueXingManager : SingletonTemplate<JueXingManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x06000583 RID: 1411 RVA: 0x0002ED3C File Offset: 0x0002CF3C
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x06000584 RID: 1412 RVA: 0x0002ED50 File Offset: 0x0002CF50
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(20317, SingletonTemplate<JueXingManager>.Instance());
@@ -26,19 +26,19 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000585 RID: 1413 RVA: 0x0002ED90 File Offset: 0x0002CF90
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000586 RID: 1414 RVA: 0x0002EDA4 File Offset: 0x0002CFA4
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000587 RID: 1415 RVA: 0x0002EDB8 File Offset: 0x0002CFB8
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			if (nID == 20317)
@@ -51,7 +51,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000588 RID: 1416 RVA: 0x0002EE04 File Offset: 0x0002D004
+		
 		private void GetRoleJueXingData(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -76,7 +76,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000589 RID: 1417 RVA: 0x0002EEF4 File Offset: 0x0002D0F4
+		
 		private void UpdateRoleJueXingData(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try

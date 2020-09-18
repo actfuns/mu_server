@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x020001BB RID: 443
+	
 	public class JieriIPointsExchgActivity : Activity
 	{
-		// Token: 0x06000579 RID: 1401 RVA: 0x0004CF5C File Offset: 0x0004B15C
+		
 		public void OnMoneyChargeEvent(string userid, int roleid, int addMoney)
 		{
 			if (this.InActivityTime())
@@ -42,7 +42,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x0600057A RID: 1402 RVA: 0x0004D058 File Offset: 0x0004B258
+		
 		public override bool CheckCondition(GameClient client, int extTag)
 		{
 			IPointsExchgData ipointsExchgData;
@@ -64,7 +64,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0600057B RID: 1403 RVA: 0x0004D124 File Offset: 0x0004B324
+		
 		public void NotifyInputPointsInfo(GameClient client, bool bPointsOnly = false)
 		{
 			string strcmd = string.Format("{0}:{1}:{2}", client.ClientData.RoleID, this.FromDate.Replace(':', '$'), this.ToDate.Replace(':', '$'));
@@ -85,7 +85,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x0600057C RID: 1404 RVA: 0x0004D1E8 File Offset: 0x0004B3E8
+		
 		public override bool GiveAward(GameClient client, int _params)
 		{
 			IPointsExchgData ipointsExchgData;
@@ -136,7 +136,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0600057D RID: 1405 RVA: 0x0004D378 File Offset: 0x0004B578
+		
 		public bool Init()
 		{
 			try
@@ -203,7 +203,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x0600057E RID: 1406 RVA: 0x0004D5FC File Offset: 0x0004B7FC
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client, int id)
 		{
 			IPointsExchgData allItem = null;
@@ -216,7 +216,7 @@ namespace GameServer.Logic.ActivityNew
 			return Global.CanAddGoodsNum(client, awardCnt);
 		}
 
-		// Token: 0x0600057F RID: 1407 RVA: 0x0004D64C File Offset: 0x0004B84C
+		
 		public bool CanGetAnyAward(GameClient client)
 		{
 			bool result;
@@ -266,7 +266,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000580 RID: 1408 RVA: 0x0004D7C0 File Offset: 0x0004B9C0
+		
 		public void BuildInputPointsDataCmdForClient(GameClient client, string strCmdDB, out string strCmdClient)
 		{
 			strCmdClient = strCmdDB;
@@ -304,7 +304,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x06000581 RID: 1409 RVA: 0x0004D94C File Offset: 0x0004BB4C
+		
 		public int GetIPointsLeftMergeNum(GameClient client, int index)
 		{
 			JieriIPointsExchgActivity instance = HuodongCachingMgr.GetJieriIPointsExchgActivity();
@@ -354,7 +354,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x06000582 RID: 1410 RVA: 0x0004DA48 File Offset: 0x0004BC48
+		
 		public int ModifyIPointsLeftMergeNum(GameClient client, int index, int addNum = 1)
 		{
 			DateTime startTime = DateTime.Parse(this.FromDate);
@@ -390,7 +390,7 @@ namespace GameServer.Logic.ActivityNew
 			return count;
 		}
 
-		// Token: 0x040009E1 RID: 2529
+		
 		protected Dictionary<int, IPointsExchgData> AwardItemDict = new Dictionary<int, IPointsExchgData>();
 	}
 }

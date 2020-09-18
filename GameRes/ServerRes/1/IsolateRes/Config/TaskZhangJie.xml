@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Task>
+  <ZhangJie ID="1" ZhangJieName="奇迹第一章" ZhangJieMiaoShu="魔界之王的封印松动了，勇者大陆在黑暗力量的影响下魔物滋生！你作为正义的反抗军的一员，将从勇者大陆开始你的战斗之旅。" EndTaskID="1150" NeedTaskNum="" GlGoodsID="2030000" />
+  <ZhangJie ID="2" ZhangJieName="奇迹第二章" ZhangJieMiaoShu="黑暗力量开始向仙踪林蔓延，为了挽救美丽的森林和善良的精灵们，你义不容辞地踏上了保卫仙踪林的旅途。" EndTaskID="1311" NeedTaskNum="" GlGoodsID="2030001" />
+  <ZhangJie ID="3" ZhangJieName="奇迹第三章" ZhangJieMiaoShu="魔族占领了冰风谷，把无辜的少女变成了邪恶的魔王，去拯救在那里惨遭迫害的同胞，释放那些渴望自由的灵魂。" EndTaskID="1461" NeedTaskNum="" GlGoodsID="2030002" />
+  <ZhangJie ID="4" ZhangJieName="奇迹第四章" ZhangJieMiaoShu="城外出现了神秘的地下宝窟，人们称之为地下城，无数的淘金者为了满足私欲蜂拥而至，结果却一去不返……" EndTaskID="1980" NeedTaskNum="" GlGoodsID="2030003" />
+  <ZhangJie ID="5" ZhangJieName="奇迹第五章" ZhangJieMiaoShu="死神戈登献祭了自己的生命和无数的亡魂，最终复活了魔王巴洛克，现在巴洛克和他的手下盘踞在失落之塔，盘算着邪恶的计划。" EndTaskID="2240" NeedTaskNum="" GlGoodsID="2030004" />
+  <ZhangJie ID="6" ZhangJieName="奇迹第六章" ZhangJieMiaoShu="魔族出现在沉没的亚特兰蒂斯，意图用古老的坎特鲁文明实现他们统治世界的愿望，临海的仙踪林感受到巨大的威胁，请跟随精灵们前往深海屠魔。" EndTaskID="2490" NeedTaskNum="" GlGoodsID="2030005" />
+  <ZhangJie ID="7" ZhangJieName="奇迹第七章" ZhangJieMiaoShu="被黑暗魔法侵蚀的死亡沙漠，是传说中坎特鲁人的实验场所，为了能赶在魔族之前找到开启坎特鲁文明终极存在的钥匙，反抗军们毅然决战黄沙。" EndTaskID="2740" NeedTaskNum="" GlGoodsID="2030006" />
+  <ZhangJie ID="8" ZhangJieName="奇迹第八章" ZhangJieMiaoShu="一把不起眼的钥匙，却能释放出无尽的苦厄和灾难，想销毁它就必须前往被誉为空中囚牢的天空之城，取得天魔菲妮斯的火焰！" EndTaskID="3000" NeedTaskNum="" GlGoodsID="2030007" />
+  <ZhangJie ID="9" ZhangJieName="奇迹第九章" ZhangJieMiaoShu="在昆顿之影的影响下，幽暗森林被黑暗的力量席卷，一向与世无争的生灵开始嗜血杀戮，随时都有可能对人类世界造成威胁。" EndTaskID="3520" NeedTaskNum="" GlGoodsID="2030008" />
+  <ZhangJie ID="10" ZhangJieName="奇迹第十章" ZhangJieMiaoShu="在沙漠与海岸线之间是坎特鲁废墟，偶尔隐现的高科技遗物还在诉说着坎特鲁往昔的辉煌。缔造者统治这里的科技造物酝酿着毁灭人类的风暴，想要避开这场风暴，唯有终结缔造者的统治。" EndTaskID="4060" NeedTaskNum="" GlGoodsID="2030009" />
+  <ZhangJie ID="11" ZhangJieName="奇迹第十一章" ZhangJieMiaoShu="坎特鲁遗址深处，魔族妄图利用咒怨魔王体内的玛雅魔石解除昆顿的封印，若想终结这场灾难，就必须要将咒怨魔王和他体内的玛雅魔石一起摧毁才行。" EndTaskID="4570" NeedTaskNum="" GlGoodsID="2030010" />
+  <ZhangJie ID="12" ZhangJieName="奇迹第十二章" ZhangJieMiaoShu="冰霜之城在魔族的掌控下日益沦陷，吞噬了魔盒的冰霜巨蛛成为了令人闻风丧胆的强敌，只有真正的勇士才能将它和它制造的噩梦一起送进地狱！" EndTaskID="5090" NeedTaskNum="" GlGoodsID="2030011" />
+  <ZhangJie ID="13" ZhangJieName="奇迹第十三章" ZhangJieMiaoShu="遥远的神秘海域，幽暗而诡谲的禁地，关于那座洞穴的恐怖传闻一直在安宁池静谧的土地上盘旋不散，传说中邪恶与力量并存的不凡之物静静地等待着它的主人。" EndTaskID="5560" NeedTaskNum="" GlGoodsID="2030012" />
+  <ZhangJie ID="14" ZhangJieName="奇迹第十四章" ZhangJieMiaoShu="幽暗森林层层环抱之下的卡伦特旧址，生活着热爱自然的远古精灵，如今这些远古精灵居住的环境产生了可怕的异变，快去拯救那些美丽的精灵吧。" EndTaskID="6120" NeedTaskNum="" GlGoodsID="2030013" />
+  <ZhangJie ID="15" ZhangJieName="奇迹第十五章" ZhangJieMiaoShu="神秘的幻术园中生活着艾贝村的遗孤，随着封印渐渐消除，这个古老的族群将再次回到世界舞台上，让我们一起迎接他们的到来吧！" EndTaskID="6800" NeedTaskNum="" GlGoodsID="2030014" />
+  <ZhangJie ID="16" ZhangJieName="奇迹第十六章" ZhangJieMiaoShu="古老的精灵部落跨越重山大海，选择了阿卡伦作为新的栖息之所，围绕着生命之树，延续着精灵一族最纯正的血脉。" EndTaskID="7370" NeedTaskNum="" GlGoodsID="2030015" />
+  <ZhangJie ID="17" ZhangJieName="奇迹第十七章" ZhangJieMiaoShu="一种神秘的黑暗能量席卷了阿卡伦东部，人们发现这就是导致生命之树逐渐枯竭的主要原因，必须赶在生命之树枯萎前，把连同恶魔诺姆在内的所有魔军赶出阿卡伦！" EndTaskID="7577" NeedTaskNum="" GlGoodsID="2030016" />
+  <ZhangJie ID="18" ZhangJieName="奇迹第十八章" ZhangJieMiaoShu="在阳光照射不到的地方，矗立着一座巍峨的神庙，古老的传说渐渐揭开面纱，曾经的太阳神庙究竟隐藏着怎样的奥秘，等待着你去发掘！" EndTaskID="7809" NeedTaskNum="" GlGoodsID="2030017" />
+  <ZhangJie ID="19" ZhangJieName="奇迹第十九章" ZhangJieMiaoShu="阿卡伦岸边的奇异洞穴总是传来美妙的声音，但是去一探究竟的人都有去无回，为了探索魔窟里的秘密，你踏上了新的征程。" EndTaskID="8055" NeedTaskNum="" GlGoodsID="2030018" />
+  <ZhangJie ID="20" ZhangJieName="奇迹第二十章" ZhangJieMiaoShu="曾经的文明之地被发现，但先遣队成员的消息却突然消失，寻找失去联系的先遣队员，探访传送中的文明之地。" EndTaskID="8230" NeedTaskNum="" GlGoodsID="2030019" />
+</Task>

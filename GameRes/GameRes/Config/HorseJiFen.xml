@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Level ID="1" AttackV="5" MAttackV="5" DefenseV="20" MDefenseV="20" BurstV="36" BurstPercent="3" HitV="3" DodgeV="36" MaxLifeV="50" MaxMagicV="50" />
+</Config>

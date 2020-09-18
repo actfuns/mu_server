@@ -7,16 +7,16 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.MerlinMagicBook
 {
-	// Token: 0x02000154 RID: 340
+	
 	public class MerlinRankManager : IManager
 	{
-		// Token: 0x060005BD RID: 1469 RVA: 0x000327E8 File Offset: 0x000309E8
+		
 		public static MerlinRankManager getInstance()
 		{
 			return MerlinRankManager.instance;
 		}
 
-		// Token: 0x060005BE RID: 1470 RVA: 0x00032800 File Offset: 0x00030A00
+		
 		public bool initialize()
 		{
 			this.initCmdProcessor();
@@ -25,12 +25,12 @@ namespace GameDBServer.Logic.MerlinMagicBook
 			return true;
 		}
 
-		// Token: 0x060005BF RID: 1471 RVA: 0x00032828 File Offset: 0x00030A28
+		
 		private void initCmdProcessor()
 		{
 		}
 
-		// Token: 0x060005C0 RID: 1472 RVA: 0x0003282C File Offset: 0x00030A2C
+		
 		private void initData()
 		{
 			List<MerlinRankingInfo> playerMerlinDataList = MerlinRankDBController.getInstance().getPlayerMerlinDataList();
@@ -44,38 +44,38 @@ namespace GameDBServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x060005C1 RID: 1473 RVA: 0x000328B8 File Offset: 0x00030AB8
+		
 		private void initListener()
 		{
 			GlobalEventSource.getInstance().registerListener(0, MerlinPlayerLoginEventListener.getInstnace());
 			GlobalEventSource.getInstance().registerListener(1, MerlinPlayerLogoutEventListener.getInstnace());
 		}
 
-		// Token: 0x060005C2 RID: 1474 RVA: 0x000328DD File Offset: 0x00030ADD
+		
 		private void removeListener()
 		{
 			GlobalEventSource.getInstance().removeListener(0, MerlinPlayerLoginEventListener.getInstnace());
 			GlobalEventSource.getInstance().removeListener(1, MerlinPlayerLogoutEventListener.getInstnace());
 		}
 
-		// Token: 0x060005C3 RID: 1475 RVA: 0x00032902 File Offset: 0x00030B02
+		
 		private void removeData()
 		{
 		}
 
-		// Token: 0x060005C4 RID: 1476 RVA: 0x00032908 File Offset: 0x00030B08
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x060005C5 RID: 1477 RVA: 0x0003291C File Offset: 0x00030B1C
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x060005C6 RID: 1478 RVA: 0x00032930 File Offset: 0x00030B30
+		
 		public bool destroy()
 		{
 			this.removeListener();
@@ -83,7 +83,7 @@ namespace GameDBServer.Logic.MerlinMagicBook
 			return true;
 		}
 
-		// Token: 0x060005C7 RID: 1479 RVA: 0x00032954 File Offset: 0x00030B54
+		
 		public List<PaiHangItemData> getRankingList(int pageIndex, int pageShowNum = -1)
 		{
 			int maxIndex = Math.Max(pageShowNum, MerlinRankManager.RankingList_PageShowNum);
@@ -102,7 +102,7 @@ namespace GameDBServer.Logic.MerlinMagicBook
 			return _rankingDatas;
 		}
 
-		// Token: 0x060005C8 RID: 1480 RVA: 0x00032A38 File Offset: 0x00030C38
+		
 		public void ModifyMerlinRankData(MerlinRankingInfo data, bool bIsLogin)
 		{
 			if (null != data)
@@ -146,7 +146,7 @@ namespace GameDBServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x060005C9 RID: 1481 RVA: 0x00032C50 File Offset: 0x00030E50
+		
 		public int createMerlinData(int nRoleID)
 		{
 			MerlinRankingInfo data = null;
@@ -169,7 +169,7 @@ namespace GameDBServer.Logic.MerlinMagicBook
 			return 1;
 		}
 
-		// Token: 0x060005CA RID: 1482 RVA: 0x00032CF4 File Offset: 0x00030EF4
+		
 		public MerlinRankingInfo getMerlinData(int nRoleID)
 		{
 			MerlinRankingInfo data = null;
@@ -183,7 +183,7 @@ namespace GameDBServer.Logic.MerlinMagicBook
 			return MerlinRankDBController.getInstance().getMerlinDataByRoleID(nRoleID);
 		}
 
-		// Token: 0x060005CB RID: 1483 RVA: 0x00032D6C File Offset: 0x00030F6C
+		
 		public void onPlayerLogin(int roleId, string strRoleName)
 		{
 			MerlinRankingInfo data = null;
@@ -208,7 +208,7 @@ namespace GameDBServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x060005CC RID: 1484 RVA: 0x00032E4C File Offset: 0x0003104C
+		
 		public void onPlayerLogout(int roleId)
 		{
 			MerlinRankingInfo data = null;
@@ -222,7 +222,7 @@ namespace GameDBServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x060005CD RID: 1485 RVA: 0x00032EBC File Offset: 0x000310BC
+		
 		public void OnChangeName(int roleId, string oldName, string newName)
 		{
 			if (!string.IsNullOrEmpty(oldName) && !string.IsNullOrEmpty(newName))
@@ -238,19 +238,19 @@ namespace GameDBServer.Logic.MerlinMagicBook
 			}
 		}
 
-		// Token: 0x0400084D RID: 2125
+		
 		private static MerlinRankManager instance = new MerlinRankManager();
 
-		// Token: 0x0400084E RID: 2126
+		
 		public static readonly int RankingList_Max_Num = 100;
 
-		// Token: 0x0400084F RID: 2127
+		
 		public static readonly int RankingList_PageShowNum = 30;
 
-		// Token: 0x04000850 RID: 2128
+		
 		private List<PlayerMerlinRankingData> rankingDatas = new List<PlayerMerlinRankingData>();
 
-		// Token: 0x04000851 RID: 2129
+		
 		private Dictionary<int, MerlinRankingInfo> playerMerlinDatas = new Dictionary<int, MerlinRankingInfo>();
 	}
 }

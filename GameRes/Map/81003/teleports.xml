@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+      <Teleports>
+        <Teleport Code="197" FrameNum="13" Tip="支援法阵" Key="12"  To="81003" ToX="6600" ToY="8200" ToDirection="81003" X="1600" Y="7550" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+        <Teleport Code="197" FrameNum="13" Tip="支援法阵" Key="11"  To="81003" ToX="9000" ToY="8200" ToDirection="81003" X="14000" Y="7550" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+      </Teleports>
+</Map>

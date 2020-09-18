@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+	<Tips>
+		<!--主菜单控制栏-->
+		<Tip ID="MainMenu_roleAttrib" Description="人物属性｛color=#FFFF0000 uline=false tag= text=(C)｝$｛color=#FF00FF00 uline=false tag= text=查看自身属性、装备｝"/>
+		<Tip ID="MainMenu_SkillBtn" Description="技能列表｛color=#FFFF0000 uline=false tag= text=(V)｝$｛color=#FF00FF00 uline=false tag= text=可查看当前已学会的技能｝$｛color=#FF00FF00 uline=false tag= text=将技能图标放到快捷栏上可以绑定使用｝"/>
+		<Tip ID="MainMenu_ParcelBtn" Description="随身包裹｛color=#FFFF0000 uline=false tag= text=(B)｝$｛color=#FF00FF00 uline=false tag= text=点击进入包裹界面，查看自己的装备和物品｝"/>
+		<Tip ID="MainMenu_TasksBtn" Description="任务信息｛color=#FFFF0000 uline=false tag= text=(L)｝$｛color=#FF00FF00 uline=false tag= text=可查看自身当前已接的任务和可接任务｝"/>
+		<Tip ID="MainMenu_WuxueBtn" Description="武学境界 $｛color=#FF00FF00 uline=false tag= text=查看自身武学境界信息｝"/>
+		<Tip ID="MainMenu_JingmaiBtn" Description="经脉境界 $｛color=#FF00FF00 uline=false tag= text=查看自身经脉属性｝"/>
+		<Tip ID="MainMenu_LianluBtn" Description="炼炉 $｛color=#FF00FF00 uline=false tag= text=提升装备属性、增强自身实力的重要途径｝"/>
+		<Tip ID="MainMenu_WanbaogeBtn" Description="万宝阁 $｛color=#FF00FF00 uline=false tag= text=可刷出意想不到的稀有物品｝"/>
+		<Tip ID="MainMenu_TeamBtn" Description="组队信息｛color=#FFFF0000 uline=false tag= text=(T)｝$｛color=#FF00FF00 uline=false tag= text=可以创建队伍，管理自己队伍的成员。｝$｛color=#FF00FF00 uline=false tag= text=可以要求其他玩家入队或者加入其他的队伍｝"/>
+		<Tip ID="MainMenu_FamliyBtn" Description="帮会管理$｛color=#FF00FF00 uline=false tag= text=可以查看当前游戏中的帮会列表｝$｛color=#FF00FF00 uline=false tag= text=管理自己的帮会，加入其他帮会等｝"/>
+		<Tip ID="MainMenu_FriendsBtn" Description="好友列表｛color=#FFFF0000 uline=false tag= text=(F)｝$｛color=#FF00FF00 uline=false tag= text=可添加删除好友，管理黑名单和仇人列表｝"/>
+		<Tip ID="MainMenu_SysSettingsBtn" Description="系统设置$｛color=#FF00FF00 uline=false tag= text=各种游戏参数的设定｝$｛color=#FF00FF00 uline=false tag= text=游戏中常用快捷键的查看｝"/>
+		<Tip ID="MainMenu_SysSyntesizeBtn" Description="强化石及材料合成$｛color=#FF00FF00 uline=false tag= text=可以用初级材料合成更高级的物品｝"/>
+		<Tip ID="MainMenu_JianmianYouli" Description="每隔几分种，您就能领取到丰厚的奖品"/>
+		<!--雷达按钮-->
+		<Tip ID="Radar_PaiHangBtn" Description="查看排行榜｛color=#FFFF0000 uline=false tag= text=(K)｝$｛color=#FF00FF00 uline=false tag= text=可以查看游戏中的等级、金钱、经脉、武学等各项排名｝"/>
+		<Tip ID="Radar_MallBtn" Description="打开商城窗口｛color=#FFFF0000 uline=false tag= text=(O)｝$｛color=#FF00FF00 uline=false tag= text=使用充值的元宝可在商城中购买物品｝"/>
+		<Tip ID="Radar_MapBtn" Description="打开地图窗口｛color=#FFFF0000 uline=false tag= text=(M)｝$｛color=#FF00FF00 uline=false tag= text=进入后可查看当前地图和世界地图｝"/>
+		<Tip ID="Radar_GiftBtn" Description="打开系统送礼窗口$｛color=#FF00FF00 uline=false tag= text=系统送大礼，机会莫错过！打开看看吧！｝"/>
+                <Tip ID="Radar_GM" Description="联系GM$｛color=#FF00FF00 uline=false tag= text=咨询游戏问题｝"/>
+		<Tip ID="Radar_Mail" Description="邮件管理$｛color=#FF00FF00 uline=false tag= text=点击可以收发邮件｝"/>
+		<Tip ID="Radar_DailyTasks" Description="活动$｛color=#FF00FF00 uline=false tag= text=查看各种任务、活动、Boss信息｝"/>
+		<Tip ID="Radar_ChongZhi" Description="充值$｛color=#FF00FF00 uline=false tag= text=立即充值｝"/>
+		<Tip ID="Radar_VIPBtn" Description="VIP$｛color=#FF00FF00 uline=false tag= text=立即成为VIP｝$｛color=#FF00FF00 uline=false tag= text=查看VIP的各种福利｝"/>
+		<!--主角按钮-->
+		<Tip ID="Role_AutoPlayBtn" Description="挂机设置$｛color=#FF00FF00 uline=false tag= text=可以设置挂机的选项｝"/>
+		<!--快捷栏按钮-->
+		<Tip ID="Quick_ShowHideRoleIconBtn" Description="显示/隐藏其它玩家角色$｛color=#FF00FF00 uline=false tag= text=可以屏蔽其它玩家造型，方便您点击NPC｝"/>
+		<!--其他按钮-->
+		<Tip ID="PlaySoundBtn" Description="点击“开始”或者“关闭”背景音乐$｛color=#FF00FF00 uline=false tag= text=使用快捷键Y单独“开/关”背景音乐｝$｛color=#FF00FF00 uline=false tag= text=使用快捷键CTRL+Y单独“开/关”动作音效｝"/>
+		<Tip ID="GetPutGoodsBtn" Description="点击“存取物品”按钮$｛color=#FF00FF00 uline=false tag= text=选中包裹中要存取的物品｝$｛color=#FF00FF00 uline=false tag= text=单击该物品，物品将自动存放到仓库中｝"/>
+	</Tips>
+</Config>

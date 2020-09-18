@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <LingYuSuit TypeID="1">
+  <LingyuSuitUp SuitID="1" MinAttackV="23" MaxAttackV="29" MinMAttackV="15" MaxMAttackV="19" MinDefenseV="5" MaxDefenseV="7" MinMDefenseV="8" MaxMDefenseV="11" HitV="9" LifeV="39" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="2" MinAttackV="66" MaxAttackV="83" MinMAttackV="44" MaxMAttackV="55" MinDefenseV="16" MaxDefenseV="21" MinMDefenseV="26" MaxMDefenseV="33" HitV="27" LifeV="112" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="3" MinAttackV="133" MaxAttackV="167" MinMAttackV="88" MaxMAttackV="111" MinDefenseV="34" MaxDefenseV="43" MinMDefenseV="53" MaxMDefenseV="67" HitV="55" LifeV="224" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="4" MinAttackV="228" MaxAttackV="285" MinMAttackV="151" MaxMAttackV="189" MinDefenseV="59" MaxDefenseV="74" MinMDefenseV="91" MaxMDefenseV="114" HitV="94" LifeV="381" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="5" MinAttackV="352" MaxAttackV="440" MinMAttackV="233" MaxMAttackV="292" MinDefenseV="92" MaxDefenseV="115" MinMDefenseV="140" MaxMDefenseV="175" HitV="145" LifeV="588" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="6" MinAttackV="508" MaxAttackV="636" MinMAttackV="337" MaxMAttackV="422" MinDefenseV="133" MaxDefenseV="167" MinMDefenseV="202" MaxMDefenseV="253" HitV="210" LifeV="849" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="7" MinAttackV="700" MaxAttackV="875" MinMAttackV="464" MaxMAttackV="581" MinDefenseV="184" MaxDefenseV="230" MinMDefenseV="278" MaxMDefenseV="348" HitV="289" LifeV="1168" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="8" MinAttackV="928" MaxAttackV="1161" MinMAttackV="616" MaxMAttackV="771" MinDefenseV="244" MaxDefenseV="306" MinMDefenseV="369" MaxMDefenseV="462" HitV="384" LifeV="1549" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="9" MinAttackV="1196" MaxAttackV="1496" MinMAttackV="795" MaxMAttackV="994" MinDefenseV="316" MaxDefenseV="395" MinMDefenseV="476" MaxMDefenseV="595" HitV="495" LifeV="1995" GoodsCost="2017,1" JinBiCost="0" />
+  </LingYuSuit>
+  <LingYuSuit TypeID="2">
+  <LingyuSuitUp SuitID="1" MinAttackV="19" MaxAttackV="24" MinMAttackV="23" MaxMAttackV="29" MinDefenseV="5" MaxDefenseV="7" MinMDefenseV="8" MaxMDefenseV="11" HitV="9" LifeV="31" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="2" MinAttackV="55" MaxAttackV="69" MinMAttackV="66" MaxMAttackV="83" MinDefenseV="16" MaxDefenseV="21" MinMDefenseV="26" MaxMDefenseV="33" HitV="27" LifeV="89" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="3" MinAttackV="111" MaxAttackV="139" MinMAttackV="133" MaxMAttackV="167" MinDefenseV="34" MaxDefenseV="43" MinMDefenseV="53" MaxMDefenseV="67" HitV="55" LifeV="179" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="4" MinAttackV="189" MaxAttackV="237" MinMAttackV="228" MaxMAttackV="285" MinDefenseV="59" MaxDefenseV="74" MinMDefenseV="91" MaxMDefenseV="114" HitV="94" LifeV="305" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="5" MinAttackV="292" MaxAttackV="366" MinMAttackV="352" MaxMAttackV="440" MinDefenseV="92" MaxDefenseV="115" MinMDefenseV="140" MaxMDefenseV="175" HitV="145" LifeV="471" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="6" MinAttackV="423" MaxAttackV="529" MinMAttackV="508" MaxMAttackV="636" MinDefenseV="133" MaxDefenseV="167" MinMDefenseV="202" MaxMDefenseV="253" HitV="210" LifeV="680" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="7" MinAttackV="582" MaxAttackV="728" MinMAttackV="700" MaxMAttackV="875" MinDefenseV="184" MaxDefenseV="230" MinMDefenseV="278" MaxMDefenseV="348" HitV="289" LifeV="935" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="8" MinAttackV="772" MaxAttackV="966" MinMAttackV="928" MaxMAttackV="1161" MinDefenseV="244" MaxDefenseV="306" MinMDefenseV="369" MaxMDefenseV="462" HitV="384" LifeV="1240" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="9" MinAttackV="996" MaxAttackV="1245" MinMAttackV="1196" MaxMAttackV="1496" MinDefenseV="316" MaxDefenseV="395" MinMDefenseV="476" MaxMDefenseV="595" HitV="495" LifeV="1597" GoodsCost="2017,1" JinBiCost="0" />
+  </LingYuSuit>
+  <LingYuSuit TypeID="3">
+  <LingyuSuitUp SuitID="1" MinAttackV="23" MaxAttackV="29" MinMAttackV="15" MaxMAttackV="19" MinDefenseV="7" MaxDefenseV="9" MinMDefenseV="5" MaxMDefenseV="7" HitV="9" LifeV="47" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="2" MinAttackV="66" MaxAttackV="83" MinMAttackV="44" MaxMAttackV="55" MinDefenseV="21" MaxDefenseV="27" MinMDefenseV="16" MaxMDefenseV="21" HitV="27" LifeV="135" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="3" MinAttackV="133" MaxAttackV="167" MinMAttackV="88" MaxMAttackV="111" MinDefenseV="44" MaxDefenseV="55" MinMDefenseV="34" MaxMDefenseV="43" HitV="55" LifeV="269" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="4" MinAttackV="228" MaxAttackV="285" MinMAttackV="151" MaxMAttackV="189" MinDefenseV="75" MaxDefenseV="94" MinMDefenseV="59" MaxMDefenseV="74" HitV="94" LifeV="457" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="5" MinAttackV="352" MaxAttackV="440" MinMAttackV="233" MaxMAttackV="292" MinDefenseV="116" MaxDefenseV="145" MinMDefenseV="92" MaxMDefenseV="115" HitV="145" LifeV="705" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="6" MinAttackV="508" MaxAttackV="636" MinMAttackV="337" MaxMAttackV="422" MinDefenseV="168" MaxDefenseV="210" MinMDefenseV="133" MaxMDefenseV="167" HitV="210" LifeV="1018" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="7" MinAttackV="700" MaxAttackV="875" MinMAttackV="464" MaxMAttackV="581" MinDefenseV="231" MaxDefenseV="289" MinMDefenseV="184" MaxMDefenseV="230" HitV="289" LifeV="1401" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="8" MinAttackV="928" MaxAttackV="1161" MinMAttackV="616" MaxMAttackV="771" MinDefenseV="307" MaxDefenseV="384" MinMDefenseV="244" MaxMDefenseV="306" HitV="384" LifeV="1858" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="9" MinAttackV="1196" MaxAttackV="1496" MinMAttackV="795" MaxMAttackV="994" MinDefenseV="396" MaxDefenseV="495" MinMDefenseV="316" MaxMDefenseV="395" HitV="495" LifeV="2393" GoodsCost="2017,1" JinBiCost="0" />
+  </LingYuSuit>
+  <LingYuSuit TypeID="4">
+  <LingyuSuitUp SuitID="1" MinAttackV="15" MaxAttackV="19" MinMAttackV="23" MaxMAttackV="29" MinDefenseV="5" MaxDefenseV="7" MinMDefenseV="7" MaxMDefenseV="9" HitV="9" LifeV="47" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="2" MinAttackV="44" MaxAttackV="55" MinMAttackV="66" MaxMAttackV="83" MinDefenseV="16" MaxDefenseV="21" MinMDefenseV="21" MaxMDefenseV="27" HitV="27" LifeV="135" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="3" MinAttackV="88" MaxAttackV="111" MinMAttackV="133" MaxMAttackV="167" MinDefenseV="34" MaxDefenseV="43" MinMDefenseV="44" MaxMDefenseV="55" HitV="55" LifeV="269" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="4" MinAttackV="151" MaxAttackV="189" MinMAttackV="228" MaxMAttackV="285" MinDefenseV="59" MaxDefenseV="74" MinMDefenseV="75" MaxMDefenseV="94" HitV="94" LifeV="457" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="5" MinAttackV="233" MaxAttackV="292" MinMAttackV="352" MaxMAttackV="440" MinDefenseV="92" MaxDefenseV="115" MinMDefenseV="116" MaxMDefenseV="145" HitV="145" LifeV="705" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="6" MinAttackV="337" MaxAttackV="422" MinMAttackV="508" MaxMAttackV="636" MinDefenseV="133" MaxDefenseV="167" MinMDefenseV="168" MaxMDefenseV="210" HitV="210" LifeV="1018" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="7" MinAttackV="464" MaxAttackV="581" MinMAttackV="700" MaxMAttackV="875" MinDefenseV="184" MaxDefenseV="230" MinMDefenseV="231" MaxMDefenseV="289" HitV="289" LifeV="1401" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="8" MinAttackV="616" MaxAttackV="771" MinMAttackV="928" MaxMAttackV="1161" MinDefenseV="244" MaxDefenseV="306" MinMDefenseV="307" MaxMDefenseV="384" HitV="384" LifeV="1858" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="9" MinAttackV="795" MaxAttackV="994" MinMAttackV="1196" MaxMAttackV="1496" MinDefenseV="316" MaxDefenseV="395" MinMDefenseV="396" MaxMDefenseV="495" HitV="495" LifeV="2393" GoodsCost="2017,1" JinBiCost="0" />
+  </LingYuSuit>
+  <LingYuSuit TypeID="5">
+  <LingyuSuitUp SuitID="1" MinAttackV="23" MaxAttackV="29" MinMAttackV="19" MaxMAttackV="24" MinDefenseV="8" MaxDefenseV="11" MinMDefenseV="5" MaxMDefenseV="7" HitV="9" LifeV="31" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="2" MinAttackV="66" MaxAttackV="83" MinMAttackV="55" MaxMAttackV="69" MinDefenseV="26" MaxDefenseV="33" MinMDefenseV="16" MaxMDefenseV="21" HitV="27" LifeV="89" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="3" MinAttackV="133" MaxAttackV="167" MinMAttackV="111" MaxMAttackV="139" MinDefenseV="53" MaxDefenseV="67" MinMDefenseV="34" MaxMDefenseV="43" HitV="55" LifeV="179" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="4" MinAttackV="228" MaxAttackV="285" MinMAttackV="189" MaxMAttackV="237" MinDefenseV="91" MaxDefenseV="114" MinMDefenseV="59" MaxMDefenseV="74" HitV="94" LifeV="305" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="5" MinAttackV="352" MaxAttackV="440" MinMAttackV="292" MaxMAttackV="366" MinDefenseV="140" MaxDefenseV="175" MinMDefenseV="92" MaxMDefenseV="115" HitV="145" LifeV="471" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="6" MinAttackV="508" MaxAttackV="636" MinMAttackV="423" MaxMAttackV="529" MinDefenseV="202" MaxDefenseV="253" MinMDefenseV="133" MaxMDefenseV="167" HitV="210" LifeV="680" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="7" MinAttackV="700" MaxAttackV="875" MinMAttackV="582" MaxMAttackV="728" MinDefenseV="278" MaxDefenseV="348" MinMDefenseV="184" MaxMDefenseV="230" HitV="289" LifeV="935" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="8" MinAttackV="928" MaxAttackV="1161" MinMAttackV="772" MaxMAttackV="966" MinDefenseV="369" MaxDefenseV="462" MinMDefenseV="244" MaxMDefenseV="306" HitV="384" LifeV="1240" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="9" MinAttackV="1196" MaxAttackV="1496" MinMAttackV="996" MaxMAttackV="1245" MinDefenseV="476" MaxDefenseV="595" MinMDefenseV="316" MaxMDefenseV="395" HitV="495" LifeV="1597" GoodsCost="2017,1" JinBiCost="0" />
+  </LingYuSuit>
+  <LingYuSuit TypeID="6">
+  <LingyuSuitUp SuitID="1" MinAttackV="15" MaxAttackV="19" MinMAttackV="23" MaxMAttackV="29" MinDefenseV="8" MaxDefenseV="11" MinMDefenseV="5" MaxMDefenseV="7" HitV="9" LifeV="39" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="2" MinAttackV="44" MaxAttackV="55" MinMAttackV="66" MaxMAttackV="83" MinDefenseV="26" MaxDefenseV="33" MinMDefenseV="16" MaxMDefenseV="21" HitV="27" LifeV="112" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="3" MinAttackV="88" MaxAttackV="111" MinMAttackV="133" MaxMAttackV="167" MinDefenseV="53" MaxDefenseV="67" MinMDefenseV="34" MaxMDefenseV="43" HitV="55" LifeV="224" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="4" MinAttackV="151" MaxAttackV="189" MinMAttackV="228" MaxMAttackV="285" MinDefenseV="91" MaxDefenseV="114" MinMDefenseV="59" MaxMDefenseV="74" HitV="94" LifeV="381" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="5" MinAttackV="233" MaxAttackV="292" MinMAttackV="352" MaxMAttackV="440" MinDefenseV="140" MaxDefenseV="175" MinMDefenseV="92" MaxMDefenseV="115" HitV="145" LifeV="588" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="6" MinAttackV="337" MaxAttackV="422" MinMAttackV="508" MaxMAttackV="636" MinDefenseV="202" MaxDefenseV="253" MinMDefenseV="133" MaxMDefenseV="167" HitV="210" LifeV="849" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="7" MinAttackV="464" MaxAttackV="581" MinMAttackV="700" MaxMAttackV="875" MinDefenseV="278" MaxDefenseV="348" MinMDefenseV="184" MaxMDefenseV="230" HitV="289" LifeV="1168" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="8" MinAttackV="616" MaxAttackV="771" MinMAttackV="928" MaxMAttackV="1161" MinDefenseV="369" MaxDefenseV="462" MinMDefenseV="244" MaxMDefenseV="306" HitV="384" LifeV="1549" GoodsCost="2017,1" JinBiCost="0" />
+  <LingyuSuitUp SuitID="9" MinAttackV="795" MaxAttackV="994" MinMAttackV="1196" MaxMAttackV="1496" MinDefenseV="476" MaxDefenseV="595" MinMDefenseV="316" MaxMDefenseV="395" HitV="495" LifeV="1995" GoodsCost="2017,1" JinBiCost="0" />
+  </LingYuSuit>
+</Config>

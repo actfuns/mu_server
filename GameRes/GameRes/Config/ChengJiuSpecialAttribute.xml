@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ChengJiuSpecialAttribute ID="1" NeedFuWen="1" ZhuoYueYiJi="0.01" DiKangZhuoYueYiJi="0" />
+  <ChengJiuSpecialAttribute ID="2" NeedFuWen="2" ZhuoYueYiJi="0.03" DiKangZhuoYueYiJi="0.02" />
+  <ChengJiuSpecialAttribute ID="3" NeedFuWen="3" ZhuoYueYiJi="0.06" DiKangZhuoYueYiJi="0.04" />
+  <ChengJiuSpecialAttribute ID="4" NeedFuWen="4" ZhuoYueYiJi="0.1" DiKangZhuoYueYiJi="0.07" />
+  <ChengJiuSpecialAttribute ID="5" NeedFuWen="5" ZhuoYueYiJi="0.15" DiKangZhuoYueYiJi="0.1" />
+  <ChengJiuSpecialAttribute ID="6" NeedFuWen="6" ZhuoYueYiJi="0.2" DiKangZhuoYueYiJi="0.15" />
+</Config>

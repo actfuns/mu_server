@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <RebornBoss ID="1" MapID="96000" MonstersID="9830000" RebornLevel="1" ZhanLi="8000000" Scale="0.55" Site="1750|8150" Radius="5" Num="1" PursuitRadius="800" Time="12:30|14:30|16:30|18:30|20:30" EffectiveTime="0:00-23:59" />
+  <RebornBoss ID="2" MapID="96000" MonstersID="9830001" RebornLevel="1" ZhanLi="8000000" Scale="0.55" Site="1750|8150" Radius="5" Num="1" PursuitRadius="800" Time="12:30|14:30|16:30|18:30|20:30" EffectiveTime="0:00-23:59" />
+  <RebornBoss ID="3" MapID="96000" MonstersID="9830002" RebornLevel="1" ZhanLi="8000000" Scale="0.55" Site="1750|8150" Radius="5" Num="1" PursuitRadius="800" Time="12:30|14:30|16:30|18:30|20:30" EffectiveTime="0:00-23:59" />
+  <RebornBoss ID="4" MapID="96000" MonstersID="9830003" RebornLevel="1" ZhanLi="8000000" Scale="0.55" Site="1750|8150" Radius="5" Num="1" PursuitRadius="800" Time="12:30|14:30|16:30|18:30|20:30" EffectiveTime="0:00-23:59" />
+  <RebornBoss ID="5" MapID="96000" MonstersID="9830004" RebornLevel="1" ZhanLi="8000000" Scale="0.55" Site="1750|8150" Radius="5" Num="1" PursuitRadius="800" Time="12:30|14:30|16:30|18:30|20:30" EffectiveTime="0:00-23:59" />
+</Config>

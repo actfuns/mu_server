@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ZorkScene BuffAreID="1" BuffArePlace="8800,5300|1000" ArmyType="2" ArmyRefreshRange="0.5" ArmyGroupRound="25|25|25|25" GuardGroupID="1|2|3|4" FirstArmyTime="0" NextArmyRefresTime="100" />
+  <ZorkScene BuffAreID="2" BuffArePlace="8800,5300|1000" ArmyType="1" ArmyRefreshRange="0.5" ArmyGroupRound="20|20|20|20|20" GuardGroupID="5|6|7|8|9" FirstArmyTime="0" NextArmyRefresTime="100" />
+  <ZorkScene BuffAreID="3" BuffArePlace="3800,6700|1000" ArmyType="2" ArmyRefreshRange="0.5" ArmyGroupRound="25|25|25|25" GuardGroupID="1|2|3|4" FirstArmyTime="0" NextArmyRefresTime="100" />
+  <ZorkScene BuffAreID="4" BuffArePlace="3800,6700|1000" ArmyType="1" ArmyRefreshRange="0.5" ArmyGroupRound="20|20|20|20|20" GuardGroupID="5|6|7|8|9" FirstArmyTime="0" NextArmyRefresTime="100" />
+  <ZorkScene BuffAreID="5" BuffArePlace="3900,1800|1000" ArmyType="2" ArmyRefreshRange="0.5" ArmyGroupRound="25|25|25|25" GuardGroupID="1|2|3|4" FirstArmyTime="0" NextArmyRefresTime="100" />
+  <ZorkScene BuffAreID="6" BuffArePlace="3900,1800|1000" ArmyType="1" ArmyRefreshRange="0.5" ArmyGroupRound="20|20|20|20|20" GuardGroupID="5|6|7|8|9" FirstArmyTime="0" NextArmyRefresTime="100" />
+  <ZorkScene BuffAreID="7" BuffArePlace="5400,4800|1000" ArmyType="3" ArmyRefreshRange="0.5" ArmyGroupRound="100" GuardGroupID="10" FirstArmyTime="300" NextArmyRefresTime="-1" />
+</Config>

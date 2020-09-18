@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <!--PKMode, 0普通地图表示由用户的pk模式决定(加PK值), 1战斗地图表示强制PK模式(不加PK值), 2安全地图表示不允许PK; NotLostEquip是否不丢失装备，默认0丢失, 1不丢失; IsolatedMap地图类型 0, 常规地图; 1, 普通副本; 2, 点将台副本; 3,灵兽峰副本-->
+  <Settings PKMode="2" NotLostEquip="1" IsolatedMap="1" HoldNPC="0" HoldMonster="0" HoldRole="0" RealiveMode="0" RealiveTime="0"/>
+  <!--Limits 地图限制, 时间限制为时间段列表可以多个; 物品使用限制，填写限制使用的物品ID; Buffer的ID限制, 参见相关配置; 挂机限制, 填写0或者1; HelpHint 填写禁止的提示的ID -->
+  <Limits DayLimitSecs="" Times="00:00-23:59" MinZhuanSheng="0" MinLevel="1" GoodsIDs="" BufferIDs="" MagicIDs="" AutoFight="1" HelpHint=""/>
+  <!--SaleRegions 安全区列表, 一个地图最好只配置一个安全区节省判断消耗的字眼-->
+  <SaleRegions>
+  </SaleRegions>
+</config>

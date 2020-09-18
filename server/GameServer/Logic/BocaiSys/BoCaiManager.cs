@@ -12,34 +12,34 @@ using Tmsk.Contract.KuaFuData;
 
 namespace GameServer.Logic.BocaiSys
 {
-	// Token: 0x0200007A RID: 122
+	
 	internal class BoCaiManager : IManager, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x060001C7 RID: 455 RVA: 0x0001E650 File Offset: 0x0001C850
+		
 		public static BoCaiManager getInstance()
 		{
 			return BoCaiManager.instance;
 		}
 
-		// Token: 0x060001C8 RID: 456 RVA: 0x0001E668 File Offset: 0x0001C868
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x060001C9 RID: 457 RVA: 0x0001E67C File Offset: 0x0001C87C
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060001CA RID: 458 RVA: 0x0001E690 File Offset: 0x0001C890
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x060001CB RID: 459 RVA: 0x0001E6A4 File Offset: 0x0001C8A4
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(2082, 4, 4, BoCaiManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -66,7 +66,7 @@ namespace GameServer.Logic.BocaiSys
 			return true;
 		}
 
-		// Token: 0x060001CC RID: 460 RVA: 0x0001E7C8 File Offset: 0x0001C9C8
+		
 		public bool KFCallMsgFunc(KFCallMsg msg)
 		{
 			try
@@ -124,7 +124,7 @@ namespace GameServer.Logic.BocaiSys
 			return true;
 		}
 
-		// Token: 0x060001CD RID: 461 RVA: 0x0001E934 File Offset: 0x0001CB34
+		
 		public bool showdown()
 		{
 			KFCallManager.MsgSource.removeListener(10039, this.NotifyEnterHandler1);
@@ -132,7 +132,7 @@ namespace GameServer.Logic.BocaiSys
 			return true;
 		}
 
-		// Token: 0x060001CE RID: 462 RVA: 0x0001E974 File Offset: 0x0001CB74
+		
 		public List<OpenLottery> GetNewOpenLottery10(int type)
 		{
 			try
@@ -150,7 +150,7 @@ namespace GameServer.Logic.BocaiSys
 			return null;
 		}
 
-		// Token: 0x060001CF RID: 463 RVA: 0x0001E9E0 File Offset: 0x0001CBE0
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -198,7 +198,7 @@ namespace GameServer.Logic.BocaiSys
 			return true;
 		}
 
-		// Token: 0x060001D0 RID: 464 RVA: 0x0001EB48 File Offset: 0x0001CD48
+		
 		private void BuyCaiShuzi(GameClient client, int BuyNum, string strBuyVal, ref BuyBoCaiResult mgsData)
 		{
 			try
@@ -305,7 +305,7 @@ namespace GameServer.Logic.BocaiSys
 			}
 		}
 
-		// Token: 0x060001D1 RID: 465 RVA: 0x0001EE98 File Offset: 0x0001D098
+		
 		private void BuyCaiDaXiao(GameClient client, int BuyNum, string strBuyVal, ref BuyBoCaiResult mgsData)
 		{
 			try
@@ -396,7 +396,7 @@ namespace GameServer.Logic.BocaiSys
 			}
 		}
 
-		// Token: 0x060001D2 RID: 466 RVA: 0x0001F1A8 File Offset: 0x0001D3A8
+		
 		private void GetBoCai(GameClient client, int nID, string[] cmdParams, ref GetBoCaiResult mgsData)
 		{
 			try
@@ -426,7 +426,7 @@ namespace GameServer.Logic.BocaiSys
 			}
 		}
 
-		// Token: 0x060001D3 RID: 467 RVA: 0x0001F298 File Offset: 0x0001D498
+		
 		private string BuyItem(GameClient client, int nID, string[] cmdParams)
 		{
 			string msgInfo = "";
@@ -497,7 +497,7 @@ namespace GameServer.Logic.BocaiSys
 			return string.Format("{0}{1}", msgInfo, 100);
 		}
 
-		// Token: 0x060001D4 RID: 468 RVA: 0x0001F5E0 File Offset: 0x0001D7E0
+		
 		private void GetShopInfo(GameClient client, int nID, int roleID)
 		{
 			BoCaiShopInfo msgData = new BoCaiShopInfo();
@@ -514,7 +514,7 @@ namespace GameServer.Logic.BocaiSys
 			client.sendCmd<BoCaiShopInfo>(nID, msgData, false);
 		}
 
-		// Token: 0x060001D5 RID: 469 RVA: 0x0001F654 File Offset: 0x0001D854
+		
 		public bool GetBuyList2DB(int type, long DataPeriods, out List<BuyBoCai2SDB> ItemList, int msgType = 1)
 		{
 			ItemList = new List<BuyBoCai2SDB>();
@@ -540,7 +540,7 @@ namespace GameServer.Logic.BocaiSys
 			return false;
 		}
 
-		// Token: 0x060001D6 RID: 470 RVA: 0x0001F738 File Offset: 0x0001D938
+		
 		public bool GetOpenList2DB(int type, out GetOpenList DBData)
 		{
 			DBData = new GetOpenList();
@@ -565,7 +565,7 @@ namespace GameServer.Logic.BocaiSys
 			return false;
 		}
 
-		// Token: 0x060001D7 RID: 471 RVA: 0x0001F808 File Offset: 0x0001DA08
+		
 		private bool ReturnItem(OpenLottery data, BuyBoCai2SDB buyItem)
 		{
 			try
@@ -597,7 +597,7 @@ namespace GameServer.Logic.BocaiSys
 			return false;
 		}
 
-		// Token: 0x060001D8 RID: 472 RVA: 0x0001F924 File Offset: 0x0001DB24
+		
 		public bool SendWinItem(OpenLottery data, BuyBoCai2SDB buyItem, double Rate, bool isSendMail, string winType)
 		{
 			try
@@ -660,7 +660,7 @@ namespace GameServer.Logic.BocaiSys
 			return false;
 		}
 
-		// Token: 0x060001D9 RID: 473 RVA: 0x0001FBF0 File Offset: 0x0001DDF0
+		
 		public bool SendWinItem(OpenLottery data, BuyBoCai2SDB buyItem)
 		{
 			try
@@ -746,7 +746,7 @@ namespace GameServer.Logic.BocaiSys
 			return false;
 		}
 
-		// Token: 0x060001DA RID: 474 RVA: 0x0001FEEC File Offset: 0x0001E0EC
+		
 		private bool SendMail(BuyBoCai2SDB buyItem, List<GoodsData> goodsData, string strTitle, string strIntro, int ItemNum, bool send = true)
 		{
 			try
@@ -782,7 +782,7 @@ namespace GameServer.Logic.BocaiSys
 			return false;
 		}
 
-		// Token: 0x060001DB RID: 475 RVA: 0x00020074 File Offset: 0x0001E274
+		
 		public void OldtterySet(int BoCaiType, long DataPeriods)
 		{
 			try
@@ -910,29 +910,29 @@ namespace GameServer.Logic.BocaiSys
 			}
 		}
 
-		// Token: 0x060001DC RID: 476 RVA: 0x000205D0 File Offset: 0x0001E7D0
+		
 		public void BoCaiPriorityActivity(GameClient client)
 		{
 			BoCaiCaiShuZi.GetInstance().PriorityActivity(client);
 			BoCaiCaiDaXiao.GetInstance().PriorityActivity(client);
 		}
 
-		// Token: 0x040002CE RID: 718
+		
 		private const int MaxCaiNum = 9;
 
-		// Token: 0x040002CF RID: 719
+		
 		private const int MinCaiNum = 0;
 
-		// Token: 0x040002D0 RID: 720
+		
 		public const string msgFlag = "True";
 
-		// Token: 0x040002D1 RID: 721
+		
 		private static BoCaiManager instance = new BoCaiManager();
 
-		// Token: 0x040002D2 RID: 722
+		
 		private EventSourceEx<KFCallMsg>.HandlerData NotifyEnterHandler1 = null;
 
-		// Token: 0x040002D3 RID: 723
+		
 		private EventSourceEx<KFCallMsg>.HandlerData NotifyEnterHandler2 = null;
 	}
 }

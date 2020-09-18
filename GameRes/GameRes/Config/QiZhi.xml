@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item ID="1" Type="1" ResName="" MapID="1030" UseAuthority="1,2,3,4,5" PosX="1586" PosY="1259" BuffID="2000805" LoseLife="10" />
+  <item ID="2" Type="1" ResName="" MapID="1030" UseAuthority="1,2,3,4,5" PosX="1586" PosY="1259" BuffID="2000806" LoseLife="10" /> 
+  <item ID="3" Type="1" ResName="" MapID="1030" UseAuthority="1,2,3,4,5" PosX="1586" PosY="1259" BuffID="2000807" LoseLife="10" /> 
+</Items>

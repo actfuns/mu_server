@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="24" />
+  <GiftList Title="合服PK王" Description="合服后5天内连续3天成为怒斩·PK王的玩家，该玩家可在此处领取丰厚的奖励！">
+  <Award GoodsIDOne="2030,30,1,0,0,0,0|2002,10,1,0,0,0,0|2005,3,1,0,0,0,0|60300,1,1,0,0,0,0|5080,2,1,0,0,0,0|5098,2,1,0,0,0,0|50165,1,1,0,0,0,0" GoodsIDTwo=""/>
+  </GiftList>
+</Config>

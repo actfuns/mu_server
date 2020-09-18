@@ -8,21 +8,21 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000180 RID: 384
+	
 	public class TradeBlackManager : SingletonTemplate<TradeBlackManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x060006B7 RID: 1719 RVA: 0x0003DAEA File Offset: 0x0003BCEA
+		
 		private TradeBlackManager()
 		{
 		}
 
-		// Token: 0x060006B8 RID: 1720 RVA: 0x0003DAF8 File Offset: 0x0003BCF8
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x060006B9 RID: 1721 RVA: 0x0003DB0C File Offset: 0x0003BD0C
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(14007, SingletonTemplate<TradeBlackManager>.Instance());
@@ -30,19 +30,19 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x060006BA RID: 1722 RVA: 0x0003DB4C File Offset: 0x0003BD4C
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x060006BB RID: 1723 RVA: 0x0003DB60 File Offset: 0x0003BD60
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060006BC RID: 1724 RVA: 0x0003DB74 File Offset: 0x0003BD74
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			if (nID == 14007)
@@ -55,7 +55,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060006BD RID: 1725 RVA: 0x0003DBC0 File Offset: 0x0003BDC0
+		
 		private void HandleLoad(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			List<TradeBlackHourItem> items = null;
@@ -112,7 +112,7 @@ namespace GameDBServer.Logic
 			client.sendCmd<List<TradeBlackHourItem>>(nID, items);
 		}
 
-		// Token: 0x060006BE RID: 1726 RVA: 0x0003DE40 File Offset: 0x0003C040
+		
 		private void handleSave(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			bool bResult = false;

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <EraDropLimit ID="1" DropID="5001" DropLimit="100000000" />
+  <EraDropLimit ID="2" DropID="5002" DropLimit="100000000" />
+  <EraDropLimit ID="3" DropID="5003" DropLimit="100000000" />
+  <EraDropLimit ID="4" DropID="5004" DropLimit="100000000" />
+  <EraDropLimit ID="5" DropID="5005" DropLimit="100000000" />
+  <EraDropLimit ID="6" DropID="5006" DropLimit="100000000" />
+  <EraDropLimit ID="7" DropID="5007" DropLimit="100000000" />
+  <EraDropLimit ID="8" DropID="5008" DropLimit="100000000" />
+  <EraDropLimit ID="9" DropID="6001" DropLimit="100000000" />
+  <EraDropLimit ID="10" DropID="6002" DropLimit="100000000" />
+  <EraDropLimit ID="11" DropID="6003" DropLimit="100000000" />
+  <EraDropLimit ID="12" DropID="6004" DropLimit="100000000" />
+  <EraDropLimit ID="13" DropID="6005" DropLimit="100000000" />
+  <EraDropLimit ID="14" DropID="6006" DropLimit="100000000" />
+  <EraDropLimit ID="15" DropID="6007" DropLimit="100000000" />
+  <EraDropLimit ID="16" DropID="6008" DropLimit="100000000" />
+  <EraDropLimit ID="17" DropID="7001" DropLimit="100000000" />
+  <EraDropLimit ID="18" DropID="7002" DropLimit="100000000" />
+  <EraDropLimit ID="19" DropID="7003" DropLimit="100000000" />
+  <EraDropLimit ID="20" DropID="7004" DropLimit="100000000" />
+  <EraDropLimit ID="21" DropID="7005" DropLimit="100000000" />
+  <EraDropLimit ID="22" DropID="7006" DropLimit="100000000" />
+</Config>

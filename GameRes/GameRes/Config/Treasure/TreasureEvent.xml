@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <TreasureEvent ID="1001" Type="1" NewGoods="7050,3,1,0,0,0,0" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="" Descriptio="" Intro="黄金圣物大宝箱*3" />
+  <TreasureEvent ID="1002" Type="1" NewGoods="5110,1,1,0,0,0,0" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="" Descriptio="" Intro="100元素粉末" />
+  <TreasureEvent ID="1003" Type="1" NewGoods="5120,1,1,0,0,0,0" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="" Descriptio="" Intro="30灵晶" />
+  <TreasureEvent ID="1004" Type="1" NewGoods="2017,1,1,0,0,0,0" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="" Descriptio="" Intro="神鹰火种" />
+  <TreasureEvent ID="1005" Type="1" NewGoods="2030,1,1,0,0,0,0" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="" Descriptio="" Intro="进化晶石" />
+  <TreasureEvent ID="1101" Type="1" NewGoods="" NewValue="" NewDiec="1" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="" Descriptio="" Intro="普通骰子*1" />
+  <TreasureEvent ID="1102" Type="1" NewGoods="" NewValue="" NewDiec="2" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="" Descriptio="" Intro="普通骰子*2" />
+  <TreasureEvent ID="1103" Type="1" NewGoods="" NewValue="" NewDiec="3" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="" Descriptio="" Intro="普通骰子*3" />
+  <TreasureEvent ID="1201" Type="1" NewGoods="" NewValue="" NewDiec="" NewSuperDiec="1" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="" Descriptio="" Intro="奇迹骰子*1" />
+  <TreasureEvent ID="1202" Type="1" NewGoods="" NewValue="" NewDiec="" NewSuperDiec="2" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="" Descriptio="" Intro="奇迹骰子*2" />
+  <TreasureEvent ID="1301" Type="1" NewGoods="" NewValue="111,1" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="" Descriptio="" Intro="血钻*1" />
+  <TreasureEvent ID="1302" Type="1" NewGoods="" NewValue="111,2" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="" Descriptio="" Intro="血钻*2" />
+  <TreasureEvent ID="1303" Type="1" NewGoods="" NewValue="111,5" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="" Descriptio="" Intro="血钻*5" />
+  <TreasureEvent ID="1304" Type="1" NewGoods="" NewValue="111,10" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="" Descriptio="" Intro="血钻*10" />
+  <TreasureEvent ID="1401" Type="1" NewGoods="" NewValue="110,10" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="" Descriptio="" Intro="秘宝点数*10" />
+  <TreasureEvent ID="1402" Type="1" NewGoods="" NewValue="110,20" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="" Descriptio="" Intro="秘宝点数*20" />
+  <TreasureEvent ID="1403" Type="1" NewGoods="" NewValue="110,50" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="" Descriptio="" Intro="秘宝点数*50" />
+  <TreasureEvent ID="2001" Type="2" NewGoods="2005,1,1,0,0,0,0" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="111,15" Move="" FuBenID="" Box="" Descriptio="{fac60d}交易：花费 {17e43e}15 {fac60d}血钻获得 {17e43e}神佑晶石" Intro="血钻兑换神佑晶石" />
+  <TreasureEvent ID="2002" Type="2" NewGoods="5031,1,1,0,0,0,0" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="111,8" Move="" FuBenID="" Box="" Descriptio="{fac60d}交易：花费 {17e43e}8 {fac60d}血钻获得 {17e43e}高级成就印记" Intro="血钻兑换高级成就印记" />
+  <TreasureEvent ID="2003" Type="2" NewGoods="5041,1,1,0,0,0,0" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="111,8" Move="" FuBenID="" Box="" Descriptio="{fac60d}交易：花费 {17e43e}8 {fac60d}血钻获得 {17e43e}高级声望印记" Intro="血钻兑换高级声望印记" />
+  <TreasureEvent ID="2004" Type="2" NewGoods="7004,1,1,0,0,0,0" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="111,8" Move="" FuBenID="" Box="" Descriptio="{fac60d}交易：花费 {17e43e}8 {fac60d}血钻获得 {17e43e}祈福代劵" Intro="血钻兑换祈福代劵" />
+  <TreasureEvent ID="2005" Type="2" NewGoods="7005,1,1,0,0,0,0" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="111,8" Move="" FuBenID="" Box="" Descriptio="{fac60d}交易：花费 {17e43e}8 {fac60d}血钻获得 {17e43e}召唤代劵" Intro="血钻兑换召唤代劵" />
+  <TreasureEvent ID="2006" Type="2" NewGoods="5150,1,1,0,0,0,0" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="111,8" Move="" FuBenID="" Box="" Descriptio="{fac60d}交易：花费 {17e43e}8 {fac60d}血钻获得 {17e43e}荣耀勋章" Intro="血钻兑换荣耀勋章" />
+  <TreasureEvent ID="2101" Type="2" NewGoods="2005,1,1,0,0,0,0" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="110,240" Move="" FuBenID="" Box="" Descriptio="{fac60d}交易：花费 {17e43e}240 {fac60d}秘境点数获得 {17e43e}神佑晶石" Intro="积分兑换神佑晶石" />
+  <TreasureEvent ID="2102" Type="2" NewGoods="5031,1,1,0,0,0,0" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="110,150" Move="" FuBenID="" Box="" Descriptio="{fac60d}交易：花费 {17e43e}150 {fac60d}秘境点数获得 {17e43e}高级成就印记" Intro="积分兑换高级成就印记" />
+  <TreasureEvent ID="2103" Type="2" NewGoods="5041,1,1,0,0,0,0" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="110,150" Move="" FuBenID="" Box="" Descriptio="{fac60d}交易：花费 {17e43e}150 {fac60d}秘境点数获得 {17e43e}高级声望印记" Intro="积分兑换高级声望印记" />
+  <TreasureEvent ID="2104" Type="2" NewGoods="7004,1,1,0,0,0,0" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="110,150" Move="" FuBenID="" Box="" Descriptio="{fac60d}交易：花费 {17e43e}150 {fac60d}秘境点数获得 {17e43e}祈福代劵" Intro="积分兑换祈福代劵" />
+  <TreasureEvent ID="2105" Type="2" NewGoods="7005,1,1,0,0,0,0" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="110,150" Move="" FuBenID="" Box="" Descriptio="{fac60d}交易：花费 {17e43e}150 {fac60d}秘境点数获得 {17e43e}召唤代劵" Intro="积分兑换召唤代劵" />
+  <TreasureEvent ID="2106" Type="2" NewGoods="5150,1,1,0,0,0,0" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="110,150" Move="" FuBenID="" Box="" Descriptio="{fac60d}交易：花费 {17e43e}150 {fac60d}秘境点数获得 {17e43e}荣耀勋章" Intro="积分兑换荣耀勋章" />
+  <TreasureEvent ID="4001" Type="4" NewGoods="" NewValue="110,50" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="90000" Box="" Descriptio="{fac60d}遭遇BOSS-{f0f0f0}秘境之王{fac60d}，勇士你准备好了吗？" Intro="第一层战斗副本" />
+  <TreasureEvent ID="4002" Type="4" NewGoods="" NewValue="110,50" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="90001" Box="" Descriptio="{fac60d}遭遇BOSS-{f0f0f0}秘境魔王{fac60d}，勇士你准备好了吗？" Intro="第二层战斗副本" />
+  <TreasureEvent ID="4003" Type="4" NewGoods="" NewValue="110,50" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="90002" Box="" Descriptio="{fac60d}遭遇BOSS-{f0f0f0}秘境冰后{fac60d}，勇士你准备好了吗？" Intro="第三层战斗副本" />
+  <TreasureEvent ID="4004" Type="4" NewGoods="" NewValue="110,50" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="90003" Box="" Descriptio="{fac60d}遭遇BOSS-{f0f0f0}秘境戈登{fac60d}，勇士你准备好了吗？" Intro="第四层战斗副本" />
+  <TreasureEvent ID="4005" Type="4" NewGoods="" NewValue="110,50" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="90004" Box="" Descriptio="{fac60d}遭遇BOSS-{f0f0f0}秘境巴洛克{fac60d}，勇士你准备好了吗？" Intro="第五层战斗副本" />
+  <TreasureEvent ID="4006" Type="4" NewGoods="" NewValue="110,50" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="90005" Box="" Descriptio="{fac60d}遭遇BOSS-{f0f0f0}秘境炽炎魔{fac60d}，勇士你准备好了吗？" Intro="第六层战斗副本" />
+  <TreasureEvent ID="4007" Type="4" NewGoods="" NewValue="110,50" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="90006" Box="" Descriptio="{fac60d}遭遇BOSS-{f0f0f0}秘境扎坎{fac60d}，勇士你准备好了吗？" Intro="第七层战斗副本" />
+  <TreasureEvent ID="4008" Type="4" NewGoods="" NewValue="110,50" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="90007" Box="" Descriptio="{fac60d}遭遇BOSS-{f0f0f0}秘境召唤者{fac60d}，勇士你准备好了吗？" Intro="第八层战斗副本" />
+  <TreasureEvent ID="4009" Type="4" NewGoods="" NewValue="110,50" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="90008" Box="" Descriptio="{fac60d}遭遇BOSS-{f0f0f0}秘境领主{fac60d}，勇士你准备好了吗？" Intro="第九层战斗副本" />
+  <TreasureEvent ID="4010" Type="4" NewGoods="" NewValue="110,50" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="90009" Box="" Descriptio="{fac60d}遭遇BOSS-{f0f0f0}秘境怨灵{fac60d}，勇士你准备好了吗？" Intro="第十层战斗副本" />
+  <TreasureEvent ID="5001" Type="5" NewGoods="" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="3,1|1,1" Descriptio="" Intro="第一层终点宝箱" />
+  <TreasureEvent ID="5002" Type="5" NewGoods="" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="1,1|3,1" Descriptio="" Intro="第二层终点宝箱" />
+  <TreasureEvent ID="5003" Type="5" NewGoods="" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="1,1|3,1" Descriptio="" Intro="第三层终点宝箱" />
+  <TreasureEvent ID="5004" Type="5" NewGoods="" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="3,1|1,1" Descriptio="" Intro="第四层终点宝箱" />
+  <TreasureEvent ID="5005" Type="5" NewGoods="" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="1,1|3,1" Descriptio="" Intro="第五层终点宝箱" />
+  <TreasureEvent ID="5006" Type="5" NewGoods="" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="1,1|3,1" Descriptio="" Intro="第六层终点宝箱" />
+  <TreasureEvent ID="5007" Type="5" NewGoods="" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="3,1|1,1" Descriptio="" Intro="第七层终点宝箱" />
+  <TreasureEvent ID="5008" Type="5" NewGoods="" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="1,1|3,1" Descriptio="" Intro="第八层终点宝箱" />
+  <TreasureEvent ID="5009" Type="5" NewGoods="" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="1,1|3,1" Descriptio="" Intro="第九层终点宝箱" />
+  <TreasureEvent ID="5010" Type="5" NewGoods="" NewValue="" NewDiec="" NewSuperDiec="" NeedGoods="" NeedValue="" Move="" FuBenID="" Box="3,2|2,1|3,2" Descriptio="" Intro="第十层终点宝箱" />
+</Config>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CompLevel ID="1" CompID="1" Level="1" Name="教团大领主" ChatName="领主" Enemy="1" Buff="9003" TalkCD="1" CraftSelfBuffID="2000820" CraftBuffID="2000835" ModEnlarge="1.3" />
+  <CompLevel ID="2" CompID="1" Level="2" Name="教团元帅" ChatName="元帅" Enemy="0" Buff="9004" TalkCD="1" CraftSelfBuffID="2000821" CraftBuffID="2000836" ModEnlarge="1.25" />
+  <CompLevel ID="3" CompID="1" Level="3" Name="教团督军" ChatName="督军" Enemy="0" Buff="9005" TalkCD="1" CraftSelfBuffID="2000822" CraftBuffID="2000837" ModEnlarge="1.2" />
+  <CompLevel ID="4" CompID="1" Level="4" Name="教团统领" ChatName="统领" Enemy="0" Buff="" TalkCD="1" CraftSelfBuffID="2000823" CraftBuffID="2000838" ModEnlarge="1.15" />
+  <CompLevel ID="5" CompID="1" Level="5" Name="教团先锋" ChatName="先锋" Enemy="0" Buff="" TalkCD="1" CraftSelfBuffID="2000824" CraftBuffID="2000839" ModEnlarge="1.1" />
+  <CompLevel ID="6" CompID="1" Level="0" Name="普通成员" ChatName="" Enemy="0" Buff="" TalkCD="5" CraftSelfBuffID="" CraftBuffID="" ModEnlarge="1" />
+  <CompLevel ID="7" CompID="2" Level="1" Name="同盟大领主" ChatName="领主" Enemy="1" Buff="9006" TalkCD="1" CraftSelfBuffID="2000825" CraftBuffID="2000840" ModEnlarge="1.3" />
+  <CompLevel ID="8" CompID="2" Level="2" Name="同盟元帅" ChatName="元帅" Enemy="0" Buff="9007" TalkCD="1" CraftSelfBuffID="2000826" CraftBuffID="2000841" ModEnlarge="1.25" />
+  <CompLevel ID="9" CompID="2" Level="3" Name="同盟督军" ChatName="督军" Enemy="0" Buff="9008" TalkCD="1" CraftSelfBuffID="2000827" CraftBuffID="2000842" ModEnlarge="1.2" />
+  <CompLevel ID="10" CompID="2" Level="4" Name="同盟统领" ChatName="统领" Enemy="0" Buff="" TalkCD="1" CraftSelfBuffID="2000828" CraftBuffID="2000843" ModEnlarge="1.15" />
+  <CompLevel ID="11" CompID="2" Level="5" Name="同盟先锋" ChatName="先锋" Enemy="0" Buff="" TalkCD="1" CraftSelfBuffID="2000829" CraftBuffID="2000844" ModEnlarge="1.1" />
+  <CompLevel ID="12" CompID="2" Level="0" Name="普通成员" ChatName="" Enemy="0" Buff="" TalkCD="5" CraftSelfBuffID="" CraftBuffID="" ModEnlarge="1" />
+  <CompLevel ID="13" CompID="3" Level="1" Name="协会大领主" ChatName="领主" Enemy="1" Buff="9009" TalkCD="1" CraftSelfBuffID="2000830" CraftBuffID="2000845" ModEnlarge="1.3" />
+  <CompLevel ID="14" CompID="3" Level="2" Name="协会元帅" ChatName="元帅" Enemy="0" Buff="9010" TalkCD="1" CraftSelfBuffID="2000831" CraftBuffID="2000846" ModEnlarge="1.25" />
+  <CompLevel ID="15" CompID="3" Level="3" Name="协会督军" ChatName="督军" Enemy="0" Buff="9011" TalkCD="1" CraftSelfBuffID="2000832" CraftBuffID="2000847" ModEnlarge="1.2" />
+  <CompLevel ID="16" CompID="3" Level="4" Name="协会统领" ChatName="统领" Enemy="0" Buff="" TalkCD="1" CraftSelfBuffID="2000833" CraftBuffID="2000848" ModEnlarge="1.15" />
+  <CompLevel ID="17" CompID="3" Level="5" Name="协会先锋" ChatName="先锋" Enemy="0" Buff="" TalkCD="1" CraftSelfBuffID="2000834" CraftBuffID="2000849" ModEnlarge="1.1" />
+  <CompLevel ID="18" CompID="3" Level="0" Name="普通成员" ChatName="" Enemy="0" Buff="" TalkCD="5" CraftSelfBuffID="" CraftBuffID="" ModEnlarge="1" />
+</Config>

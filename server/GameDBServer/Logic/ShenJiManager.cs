@@ -7,16 +7,16 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000174 RID: 372
+	
 	public class ShenJiManager : SingletonTemplate<ShenJiManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x0600068D RID: 1677 RVA: 0x0003BD38 File Offset: 0x00039F38
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x0600068E RID: 1678 RVA: 0x0003BD4C File Offset: 0x00039F4C
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(13095, SingletonTemplate<ShenJiManager>.Instance());
@@ -24,19 +24,19 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600068F RID: 1679 RVA: 0x0003BD8C File Offset: 0x00039F8C
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000690 RID: 1680 RVA: 0x0003BDA0 File Offset: 0x00039FA0
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000691 RID: 1681 RVA: 0x0003BDB4 File Offset: 0x00039FB4
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			switch (nID)
@@ -50,7 +50,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000692 RID: 1682 RVA: 0x0003BDF8 File Offset: 0x00039FF8
+		
 		private void ShenJiModify(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			string[] fields = null;
@@ -100,7 +100,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000693 RID: 1683 RVA: 0x0003BF98 File Offset: 0x0003A198
+		
 		private void ShenJiClear(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			string[] fields = null;

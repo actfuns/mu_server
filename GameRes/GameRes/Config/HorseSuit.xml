@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HorseSuit ID="15" Name="至尊青龙+至尊玄武+至尊朱雀" HorseID="990020,990021,990008" HorseSuitProps="IgnorePhyAttackPercent,0.05|AddAttackInjurePercent,0.20|AutoRevivePercent,0.05" />
+  <HorseSuit ID="16" Name="至尊青龙+至尊玄武+至尊白虎" HorseID="990020,990021,990017" HorseSuitProps="IgnoreMagyAttackPercent,0.05|AddAttackInjurePercent,0.20|SpeedDownPercent,0.05" />
+  <HorseSuit ID="17" Name="至尊青龙+至尊朱雀+至尊白虎" HorseID="990020,990008,990017" HorseSuitProps="DeSavagePercent,0.1|AddAttackInjurePercent,0.20|FrozenPercent,0.05" />
+  <HorseSuit ID="18" Name="至尊玄武+至尊朱雀+至尊白虎" HorseID="990021,990008,990017" HorseSuitProps="DeColdPercent,0.1|AddAttackInjurePercent,0.20|PalsyPercent,0.05" />
+  <HorseSuit ID="19" Name="至尊青龙+至尊玄武+至尊朱雀+至尊白虎" HorseID="990020,990021,990008,990017" HorseSuitProps="InjurePenetrationPercent,0.10|AddAttackInjurePercent,0.20|BlowPercent,0.05" />
+
+  <HorseSuit ID="20" Name="至尊青龙+至尊玄武+至尊朱雀" HorseID="990020,990021,990008" HorseSuitProps="MaxLifePercent,0.2|ElementInjurePercent,0.1|DoubleAttack,0.1" />
+  <HorseSuit ID="21" Name="至尊青龙+至尊玄武+至尊白虎" HorseID="990020,990021,990017" HorseSuitProps="MaxLifePercent,0.2|ElementInjurePercent,0.1|DoubleAttack,0.1" />
+  <HorseSuit ID="22" Name="至尊青龙+至尊朱雀+至尊白虎" HorseID="990020,990008,990017" HorseSuitProps="MaxLifePercent,0.2|ElementInjurePercent,0.1|DeDoubleAttack,0.1" />
+  <HorseSuit ID="23" Name="至尊玄武+至尊朱雀+至尊白虎" HorseID="990021,990008,990017" HorseSuitProps="MaxLifePercent,0.2|ElementInjurePercent,0.1|DeDoubleAttack,0.1" />
+
+
+  <HorseSuit ID="1" Name="组合1" HorseID="990001,990005,990004,990003" HorseSuitProps="MaxLifePercent,0.15|AddAttackInjurePercent,0.1|DoubleAttack,0.07" />
+  <HorseSuit ID="2" Name="组合2" HorseID="990000,990002,990001,990003" HorseSuitProps="AddAttackInjurePercent,0.1|ElementInjurePercent,0.05|DeDoubleAttack,0.05" />
+  <HorseSuit ID="3" Name="组合3" HorseID="990000,990002,990001,990004" HorseSuitProps="MaxLifePercent,0.15|ElementInjurePercent,0.05|DeDoubleAttack,0.05" />
+  <HorseSuit ID="4" Name="组合4" HorseID="990000,990002,990001,990005" HorseSuitProps="MaxLifePercent,0.15|AddAttackInjurePercent,0.1|DoubleAttack,0.05" />
+  <HorseSuit ID="5" Name="组合5" HorseID="990002,990001,990005,990004" HorseSuitProps="MaxLifePercent,0.15|AddAttackInjurePercent,0.1|ElementInjurePercent,0.07" />
+  <HorseSuit ID="6" Name="组合6" HorseID="990002,990001,990005,990003" HorseSuitProps="MaxLifePercent,0.15|AddAttackInjurePercent,0.1|ElementAttackInjurePercent,0.07" />
+  <HorseSuit ID="7" Name="组合7" HorseID="990002,990001,990004,990003" HorseSuitProps="MaxLifePercent,0.15|AddAttackInjurePercent,0.1|DoubleAttack,0.06" />
+  <HorseSuit ID="8" Name="组合8" HorseID="990003,990004,990005,990008" HorseSuitProps="MaxLifePercent,0.15|AddAttackInjurePercent,0.1|DoubleAttack,0.09" />
+  <HorseSuit ID="9" Name="组合9" HorseID="990017,990001,990002,990000" HorseSuitProps="MaxLifePercent,0.15|AddAttackInjurePercent,0.1|DoubleAttack,0.03" />
+</Config>

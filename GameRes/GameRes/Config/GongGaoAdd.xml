@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>	
+<Config>
+     <GongGaoAdd ID="1" PingTai="GongGaoAdd_Android" Name="安卓公告地址" Add="http://mu.xy.com/innermu/index?t=3" Open="1" />
+     <GongGaoAdd ID="2" PingTai="GongGaoAdd_YueYu" Name="越狱公告地址" Add="http://mu.xy.com/innermu/index?t=2" Open="1" />
+     <GongGaoAdd ID="3" PingTai="GongGaoAdd_APP" Name="苹果公告地址" Add="http://iosmu.com/innermu/index?t=1" Open="1" />
+</Config>

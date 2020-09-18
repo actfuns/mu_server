@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ThemeActivityFuLi ID="1" Name="首次充值" TypeID="1" Depict="：奖励大放送，精灵伴你行！" Button="1" Function="0" Link="1525" />
+  <ThemeActivityFuLi ID="2" Name="七日充值" TypeID="2" Depict="：新兵专属大礼，绝对物超所值！" Button="1" Function="0" Link="-1" />
+  <ThemeActivityFuLi ID="3" Name="七日抢购" TypeID="3" Depict="：经验翻翻翻，助您平步青云！" Button="1" Function="0" Link="-1" />
+  <ThemeActivityFuLi ID="4" Name="专属称号" TypeID="4" Depict="：主题专属称号，霸气王者再临！" Button="1" Function="0" Link="-1" />
+  <ThemeActivityFuLi ID="5" Name="融火之翼" TypeID="5" Depict="：绚丽融火之翼，众神降临世间！" Button="1" Function="0" Link="-1" />
+</Config>

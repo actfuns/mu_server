@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="52" FromDate="2019-12-09 00:00:00" ToDate="2019-12-15 23:59:59" AwardStartDate="2019-12-16 00:00:00" AwardEndDate="2019-12-16 23:59:59" />
+  <GiftList Description="活动期间，收礼前10名的玩家可领取丰厚大礼！">
+    <Award Ranking="1" GoodsOne="5313,400,1,0,0,0,0|9990004,300,1,0,0,0,0|2005,12,1,0,0,0,0|63129,5,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" MinYuanBao="300" />
+    <Award Ranking="2" GoodsOne="5313,240,1,0,0,0,0|9990004,200,1,0,0,0,0|2005,8,1,0,0,0,0|63129,3,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" MinYuanBao="240" />
+    <Award Ranking="3" GoodsOne="5313,180,1,0,0,0,0|9990004,100,1,0,0,0,0|2005,6,1,0,0,0,0|63129,2,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" MinYuanBao="180" />
+    <Award Ranking="4" GoodsOne="5313,120,1,0,0,0,0|9990004,50,1,0,0,0,0|2005,5,1,0,0,0,0|63129,1,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" MinYuanBao="150" />
+    <Award Ranking="5" GoodsOne="5313,120,1,0,0,0,0|9990004,40,1,0,0,0,0|2005,5,1,0,0,0,0|63129,1,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" MinYuanBao="150" />
+    <Award Ranking="6" GoodsOne="5313,90,1,0,0,0,0|9990004,20,1,0,0,0,0|2005,4,1,0,0,0,0|63129,1,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" MinYuanBao="30" />
+    <Award Ranking="7" GoodsOne="5313,90,1,0,0,0,0|9990004,20,1,0,0,0,0|2005,4,1,0,0,0,0|63129,1,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" MinYuanBao="30" />
+    <Award Ranking="8" GoodsOne="5313,90,1,0,0,0,0|9990004,20,1,0,0,0,0|2005,4,1,0,0,0,0|63129,1,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" MinYuanBao="30" />
+    <Award Ranking="9" GoodsOne="5313,90,1,0,0,0,0|9990004,20,1,0,0,0,0|2005,4,1,0,0,0,0|63129,1,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" MinYuanBao="30" />
+    <Award Ranking="10" GoodsOne="5313,90,1,0,0,0,0|9990004,20,1,0,0,0,0|2005,4,1,0,0,0,0|63129,1,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" MinYuanBao="30" />
+  </GiftList>
+</Config>

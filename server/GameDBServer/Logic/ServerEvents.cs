@@ -5,15 +5,15 @@ using GameDBServer.Core;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x020001D8 RID: 472
+	
 	public class ServerEvents
 	{
-		// Token: 0x170000D9 RID: 217
+		
 		
 		
 		public EventLevels EventLevel { get; set; }
 
-		// Token: 0x170000DA RID: 218
+		
 		
 		
 		public string EventRootPath
@@ -28,7 +28,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x170000DB RID: 219
+		
 		
 		
 		public string EventPreFileName
@@ -43,7 +43,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060009EC RID: 2540 RVA: 0x0005F15C File Offset: 0x0005D35C
+		
 		public void AddEvent(string msg, EventLevels eventLevel)
 		{
 			if (eventLevel >= this.EventLevel)
@@ -55,7 +55,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x170000DC RID: 220
+		
 		
 		public string EventPath
 		{
@@ -122,7 +122,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060009EE RID: 2542 RVA: 0x0005F434 File Offset: 0x0005D634
+		
 		public bool WriteEvent()
 		{
 			string msg = null;
@@ -169,34 +169,34 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x04000C0B RID: 3083
+		
 		private Queue<string> EventsQueue = new Queue<string>();
 
-		// Token: 0x04000C0C RID: 3084
+		
 		private string _EventRootPath = "events";
 
-		// Token: 0x04000C0D RID: 3085
+		
 		private string _EventPreFileName = "Event";
 
-		// Token: 0x04000C0E RID: 3086
+		
 		private string _EventPath = string.Empty;
 
-		// Token: 0x04000C0F RID: 3087
+		
 		private string _YearID = string.Empty;
 
-		// Token: 0x04000C10 RID: 3088
+		
 		private string _MonthID = string.Empty;
 
-		// Token: 0x04000C11 RID: 3089
+		
 		private string _DayID = string.Empty;
 
-		// Token: 0x04000C12 RID: 3090
+		
 		private object _PathLock = new object();
 
-		// Token: 0x04000C13 RID: 3091
+		
 		private int _HourID = -1;
 
-		// Token: 0x04000C14 RID: 3092
+		
 		private StreamWriter _StreamWriter = null;
 	}
 }

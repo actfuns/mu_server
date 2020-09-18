@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x020001A3 RID: 419
+	
 	public class JieRiFuLiActivity : Activity
 	{
-		// Token: 0x060004E8 RID: 1256 RVA: 0x00042F08 File Offset: 0x00041108
+		
 		public bool Init()
 		{
 			try
@@ -88,7 +88,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x060004E9 RID: 1257 RVA: 0x00043244 File Offset: 0x00041444
+		
 		public bool IsOpened(EJieRiFuLiType type, out object arg)
 		{
 			arg = null;
@@ -126,7 +126,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060004EA RID: 1258 RVA: 0x000432E0 File Offset: 0x000414E0
+		
 		public bool IsOpened(EJieRiFuLiType type)
 		{
 			bool result;
@@ -151,10 +151,10 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x0400094F RID: 2383
+		
 		private readonly string FuLiCfgFile = "Config/JieRiGifts/JieRiFuLi.xml";
 
-		// Token: 0x04000950 RID: 2384
+		
 		private Dictionary<EJieRiFuLiType, JieRiFuLiItem> fuliDict = new Dictionary<EJieRiFuLiType, JieRiFuLiItem>();
 	}
 }

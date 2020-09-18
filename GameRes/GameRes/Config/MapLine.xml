@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <MapLine ID="1" Name="卡伦特" Line="1,50|2,50|3,50|4,50|5,50" MaxNum="500" Type="0" />
+  <MapLine ID="2" Name="幻术园" Line="1,60|2,60|3,60|4,60|5,60" MaxNum="500" Type="0" />
+  <MapLine ID="3" Name="阿卡伦西" Line="1,70|2,70|3,70|4,70|5,70" MaxNum="500" Type="0" />
+  <MapLine ID="4" Name="阿卡伦东" Line="1,80|2,80|3,80|4,80|5,80" MaxNum="500" Type="0" />
+  <MapLine ID="5" Name="邪恶寺庙" Line="1,90|2,90|3,90|4,90|5,90" MaxNum="500" Type="0" />
+  <MapLine ID="6" Name="魅音迷窟" Line="1,100|2,100|3,100|4,100|5,100" MaxNum="500" Type="0" />
+  <MapLine ID="7" Name="迷踪遗迹" Line="1,110|2,110|3,110|4,110|5,110" MaxNum="500" Type="0" />
+  <MapLine ID="100" Name="新大陆" Line="1,96000|2,96000|3,96000|4,96000|5,96000" MaxNum="250" Type="0" />
+</Config>

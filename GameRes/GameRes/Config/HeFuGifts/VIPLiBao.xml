@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="22" />
+  <GiftList Title="VIP大回馈" Description="活动期间内，只需您是VIP玩家，即可免费领取以下大奖，如此超值的诱惑，赶快行动吧！">
+  <Award GoodsIDs="110020,1,0,0,1,0|35004,1,0,0,1,0|31025,1,0,0,1,0|31020,1,0,0,1,0|30061,1,0,0,1,0" />
+  </GiftList>
+</Config>

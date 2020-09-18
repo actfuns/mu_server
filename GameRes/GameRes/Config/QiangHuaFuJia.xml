@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <QiangHuaFuJia ID="106" Num="8" QiangHuaLevel="7" MaxLifePercent="0.03" AddAttackInjurePercent="0.03" Decorations="" />
+  <QiangHuaFuJia ID="105" Num="8" QiangHuaLevel="9" MaxLifePercent="0.06" AddAttackInjurePercent="0.06" Decorations="" />
+  <QiangHuaFuJia ID="104" Num="8" QiangHuaLevel="11" MaxLifePercent="0.09" AddAttackInjurePercent="0.09" Decorations="" />
+  <QiangHuaFuJia ID="103" Num="8" QiangHuaLevel="13" MaxLifePercent="0.12" AddAttackInjurePercent="0.12" Decorations="" />
+  <QiangHuaFuJia ID="102" Num="8" QiangHuaLevel="15" MaxLifePercent="0.15" AddAttackInjurePercent="0.15" Decorations="" />
+  <QiangHuaFuJia ID="101" Num="8" QiangHuaLevel="18" MaxLifePercent="0.21" AddAttackInjurePercent="0.18" Decorations="" />
+  <QiangHuaFuJia ID="100" Num="8" QiangHuaLevel="20" MaxLifePercent="0.28" AddAttackInjurePercent="0.21" Decorations="14000|15155" />
+</config>

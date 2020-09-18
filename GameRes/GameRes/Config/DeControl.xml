@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <DeControl ID="1" ExtPropID="56" MaxFlood="5" DeControlPercent="0.3,0.6,0.8,1,1" DeControlTime="0.6,0.3,0.1,0,0" DurationTime="10,7,5,5,5" />
+  <DeControl ID="2" ExtPropID="57" MaxFlood="5" DeControlPercent="0.3,0.6,0.8,1,1" DeControlTime="0.6,0.3,0.1,0,0" DurationTime="10,7,5,5,5" />
+  <DeControl ID="3" ExtPropID="58" MaxFlood="5" DeControlPercent="0.3,0.6,0.8,1,1" DeControlTime="0.6,0.3,0.1,0,0" DurationTime="10,7,5,5,5" />
+  <DeControl ID="4" ExtPropID="59" MaxFlood="5" DeControlPercent="0.3,0.6,0.8,1,1" DeControlTime="0.6,0.3,0.1,0,0" DurationTime="10,7,5,5,5" />
+</Config>

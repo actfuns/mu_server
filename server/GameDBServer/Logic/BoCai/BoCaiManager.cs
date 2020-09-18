@@ -7,34 +7,34 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.BoCai
 {
-	// Token: 0x02000122 RID: 290
+	
 	internal class BoCaiManager : IManager, ICmdProcessor
 	{
-		// Token: 0x060004BD RID: 1213 RVA: 0x00026D30 File Offset: 0x00024F30
+		
 		public static BoCaiManager getInstance()
 		{
 			return BoCaiManager.instance;
 		}
 
-		// Token: 0x060004BE RID: 1214 RVA: 0x00026D48 File Offset: 0x00024F48
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x060004BF RID: 1215 RVA: 0x00026D5C File Offset: 0x00024F5C
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060004C0 RID: 1216 RVA: 0x00026D70 File Offset: 0x00024F70
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x060004C1 RID: 1217 RVA: 0x00026D84 File Offset: 0x00024F84
+		
 		public bool startup()
 		{
 			bool result;
@@ -50,7 +50,7 @@ namespace GameDBServer.Logic.BoCai
 			return result;
 		}
 
-		// Token: 0x060004C2 RID: 1218 RVA: 0x00026E34 File Offset: 0x00025034
+		
 		public void LoadDataFromDB(DBManager DBMgr)
 		{
 			try
@@ -71,7 +71,7 @@ namespace GameDBServer.Logic.BoCai
 			}
 		}
 
-		// Token: 0x060004C3 RID: 1219 RVA: 0x00026F00 File Offset: 0x00025100
+		
 		private long GetNowPeriods(DateTime time, int type)
 		{
 			long result;
@@ -90,7 +90,7 @@ namespace GameDBServer.Logic.BoCai
 			return result;
 		}
 
-		// Token: 0x060004C4 RID: 1220 RVA: 0x00026F78 File Offset: 0x00025178
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -145,7 +145,7 @@ namespace GameDBServer.Logic.BoCai
 			}
 		}
 
-		// Token: 0x060004C5 RID: 1221 RVA: 0x00027144 File Offset: 0x00025344
+		
 		private void updateBuy(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			string msgStr = "false";
@@ -161,7 +161,7 @@ namespace GameDBServer.Logic.BoCai
 			client.sendCmd(nID, msgStr);
 		}
 
-		// Token: 0x060004C6 RID: 1222 RVA: 0x000271B0 File Offset: 0x000253B0
+		
 		private void updateOpen(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			string msgStr = "false";
@@ -177,7 +177,7 @@ namespace GameDBServer.Logic.BoCai
 			client.sendCmd(nID, msgStr);
 		}
 
-		// Token: 0x060004C7 RID: 1223 RVA: 0x00027214 File Offset: 0x00025414
+		
 		private void getBoCaiBuyList(GameServerClient client, int nID, string cmdData, bool isNoSend)
 		{
 			GetBuyBoCaiList msgData = new GetBuyBoCaiList();
@@ -203,7 +203,7 @@ namespace GameDBServer.Logic.BoCai
 			client.sendCmd<GetBuyBoCaiList>(nID, msgData);
 		}
 
-		// Token: 0x060004C8 RID: 1224 RVA: 0x000272C0 File Offset: 0x000254C0
+		
 		private void getBoCaiOpenList(GameServerClient client, int nID, string cmdData)
 		{
 			GetOpenList msgData = new GetOpenList();
@@ -230,7 +230,7 @@ namespace GameDBServer.Logic.BoCai
 			client.sendCmd<GetOpenList>(nID, msgData);
 		}
 
-		// Token: 0x060004C9 RID: 1225 RVA: 0x00027384 File Offset: 0x00025584
+		
 		private void getShopList(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			BoCaiShopDBData msgData = new BoCaiShopDBData();
@@ -248,7 +248,7 @@ namespace GameDBServer.Logic.BoCai
 			client.sendCmd<BoCaiShopDBData>(nID, msgData);
 		}
 
-		// Token: 0x060004CA RID: 1226 RVA: 0x00027400 File Offset: 0x00025600
+		
 		private void setShopData(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			string msgStr = "false";
@@ -264,10 +264,10 @@ namespace GameDBServer.Logic.BoCai
 			client.sendCmd(nID, msgStr);
 		}
 
-		// Token: 0x040007A9 RID: 1961
+		
 		private static BoCaiManager instance = new BoCaiManager();
 
-		// Token: 0x040007AA RID: 1962
+		
 		private object mutex = new object();
 	}
 }

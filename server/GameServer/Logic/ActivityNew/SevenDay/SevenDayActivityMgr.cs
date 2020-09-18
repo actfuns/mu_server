@@ -11,22 +11,22 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic.ActivityNew.SevenDay
 {
-	// Token: 0x020001B2 RID: 434
+	
 	public class SevenDayActivityMgr : SingletonTemplate<SevenDayActivityMgr>, IManager, ICmdProcessorEx, ICmdProcessor, IEventListener
 	{
-		// Token: 0x06000539 RID: 1337 RVA: 0x000499BF File Offset: 0x00047BBF
+		
 		private SevenDayActivityMgr()
 		{
 		}
 
-		// Token: 0x0600053A RID: 1338 RVA: 0x000499F8 File Offset: 0x00047BF8
+		
 		public bool initialize()
 		{
 			this.LoadConfig();
 			return true;
 		}
 
-		// Token: 0x0600053B RID: 1339 RVA: 0x00049A14 File Offset: 0x00047C14
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1310, 2, 2, SingletonTemplate<SevenDayActivityMgr>.Instance(), TCPCmdFlags.IsStringArrayParams);
@@ -36,20 +36,20 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return true;
 		}
 
-		// Token: 0x0600053C RID: 1340 RVA: 0x00049A84 File Offset: 0x00047C84
+		
 		public bool showdown()
 		{
 			GlobalEventSource.getInstance().removeListener(32, SingletonTemplate<SevenDayActivityMgr>.Instance());
 			return true;
 		}
 
-		// Token: 0x0600053D RID: 1341 RVA: 0x00049AAC File Offset: 0x00047CAC
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600053E RID: 1342 RVA: 0x00049AC0 File Offset: 0x00047CC0
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -71,13 +71,13 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return result;
 		}
 
-		// Token: 0x0600053F RID: 1343 RVA: 0x00049B1C File Offset: 0x00047D1C
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return true;
 		}
 
-		// Token: 0x06000540 RID: 1344 RVA: 0x00049B30 File Offset: 0x00047D30
+		
 		public void processEvent(EventObject eventObject)
 		{
 			if (eventObject.getEventType() == 32)
@@ -105,7 +105,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000541 RID: 1345 RVA: 0x00049BF8 File Offset: 0x00047DF8
+		
 		public void LoadConfig()
 		{
 			this.LoginAct.LoadConfig();
@@ -114,7 +114,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			this.GoalAct.LoadConfig();
 		}
 
-		// Token: 0x06000542 RID: 1346 RVA: 0x00049C2C File Offset: 0x00047E2C
+		
 		public void OnLogin(GameClient client)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot8))
@@ -146,7 +146,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000543 RID: 1347 RVA: 0x00049D74 File Offset: 0x00047F74
+		
 		public void OnNewDay(GameClient client)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot8))
@@ -160,7 +160,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000544 RID: 1348 RVA: 0x00049DC4 File Offset: 0x00047FC4
+		
 		public void OnCharge(GameClient client)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot8))
@@ -173,7 +173,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000545 RID: 1349 RVA: 0x00049E08 File Offset: 0x00048008
+		
 		private void CheckSendIconState(GameClient client)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot8))
@@ -211,7 +211,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000546 RID: 1350 RVA: 0x00049FA4 File Offset: 0x000481A4
+		
 		private bool HandleClientQuery(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -261,7 +261,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return result;
 		}
 
-		// Token: 0x06000547 RID: 1351 RVA: 0x0004A134 File Offset: 0x00048334
+		
 		private bool HandleGetAward(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -300,7 +300,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return result;
 		}
 
-		// Token: 0x06000548 RID: 1352 RVA: 0x0004A214 File Offset: 0x00048414
+		
 		private bool HandleClientBuy(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -331,14 +331,14 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return result;
 		}
 
-		// Token: 0x06000549 RID: 1353 RVA: 0x0004A2AC File Offset: 0x000484AC
+		
 		public bool IsInActivityTime(GameClient client)
 		{
 			int currDay;
 			return !GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot8) && this.IsInActivityTime(client, out currDay);
 		}
 
-		// Token: 0x0600054A RID: 1354 RVA: 0x0004A2D8 File Offset: 0x000484D8
+		
 		public bool IsInActivityTime(GameClient client, out int currDay)
 		{
 			currDay = 0;
@@ -363,7 +363,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return result;
 		}
 
-		// Token: 0x0600054B RID: 1355 RVA: 0x0004A36C File Offset: 0x0004856C
+		
 		public Dictionary<int, SevenDayItemData> GetActivityData(GameClient client, ESevenDayActType actType)
 		{
 			Dictionary<int, SevenDayItemData> result;
@@ -391,7 +391,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return result;
 		}
 
-		// Token: 0x0600054C RID: 1356 RVA: 0x0004A414 File Offset: 0x00048614
+		
 		public bool UpdateDb(int roleid, ESevenDayActType actType, int id, SevenDayItemData itemData, int serverId)
 		{
 			bool result;
@@ -413,7 +413,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return result;
 		}
 
-		// Token: 0x0600054D RID: 1357 RVA: 0x0004A488 File Offset: 0x00048688
+		
 		public bool GiveAward(GameClient client, AwardItem item, ESevenDayActType type)
 		{
 			bool result;
@@ -439,7 +439,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return result;
 		}
 
-		// Token: 0x0600054E RID: 1358 RVA: 0x0004A608 File Offset: 0x00048808
+		
 		public string GetActivityChineseName(ESevenDayActType type)
 		{
 			string name = type.ToString();
@@ -462,7 +462,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return name;
 		}
 
-		// Token: 0x0600054F RID: 1359 RVA: 0x0004A674 File Offset: 0x00048874
+		
 		public bool GiveEffectiveTimeAward(GameClient client, AwardItem item, ESevenDayActType type)
 		{
 			bool result;
@@ -488,7 +488,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return result;
 		}
 
-		// Token: 0x06000550 RID: 1360 RVA: 0x0004A810 File Offset: 0x00048A10
+		
 		public void On_GM(GameClient client, string[] cmdFields)
 		{
 			if (cmdFields != null && cmdFields.Length >= 2)
@@ -524,16 +524,16 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x040009B8 RID: 2488
+		
 		private SevenDayLoginAct LoginAct = new SevenDayLoginAct();
 
-		// Token: 0x040009B9 RID: 2489
+		
 		private SevenDayChargeAct ChargeAct = new SevenDayChargeAct();
 
-		// Token: 0x040009BA RID: 2490
+		
 		private SevenDayBuyAct BuyAct = new SevenDayBuyAct();
 
-		// Token: 0x040009BB RID: 2491
+		
 		private SevenDayGoalAct GoalAct = new SevenDayGoalAct();
 	}
 }

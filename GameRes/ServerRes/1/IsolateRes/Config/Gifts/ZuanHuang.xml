@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Level ID="1" MinYuanBao="100" WeekBindYuanBao="500" WeekGoods="35000,2,0,0,1,0|31010,1,0,0,1,0|20050,1,0,0,1,0|31022,1,0,0,1,0" />
+  <Level ID="2" MinYuanBao="10000" WeekBindYuanBao="800" WeekGoods="35001,2,0,0,1,0|31010,1,0,0,1,0|20050,1,0,0,1,0|20035,1,0,0,1,0" />
+  <Level ID="3" MinYuanBao="50000" WeekBindYuanBao="1000" WeekGoods="35002,2,0,0,1,0|31023,1,0,0,1,0|20050,1,0,0,1,0|20040,1,0,0,1,0" />
+  <Level ID="4" MinYuanBao="100000" WeekBindYuanBao="1500" WeekGoods="35003,2,0,0,1,0|31023,1,0,0,1,0|20050,1,0,0,1,0|20040,2,0,0,1,0" />
+  <Level ID="5" MinYuanBao="300000" WeekBindYuanBao="2000" WeekGoods="35004,2,0,0,1,0|31024,1,0,0,1,0|20050,1,0,0,1,0|20042,1,0,0,1,0" />
+  <Level ID="6" MinYuanBao="500000" WeekBindYuanBao="3000" WeekGoods="35005,2,0,0,1,0|31024,1,0,0,1,0|20050,1,0,0,1,0|20042,2,0,0,1,0" />
+  <Level ID="7" MinYuanBao="1000000" WeekBindYuanBao="5000" WeekGoods="35006,2,0,0,1,0|31025,1,0,0,1,0|20050,1,0,0,1,0|20043,1,0,0,1,0" />
+</Config>

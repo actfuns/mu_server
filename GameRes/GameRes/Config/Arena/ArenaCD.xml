@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Goods MinRank="6" MaxRank="100" ArenaCD="300" />
+  <Goods MinRank="101" MaxRank="200" ArenaCD="180" />
+  <Goods MinRank="201" MaxRank="300" ArenaCD="120" />
+  <Goods MinRank="301" MaxRank="400" ArenaCD="60" />
+  <Goods MinRank="401" MaxRank="500" ArenaCD="30" />
+  <Goods MinRank="501" MaxRank="600" ArenaCD="20" />
+  <Goods MinRank="601" MaxRank="700" ArenaCD="15" />
+  <Goods MinRank="701" MaxRank="800" ArenaCD="10" />
+  <Goods MinRank="801" MaxRank="900" ArenaCD="5" />
+  <Goods MinRank="901" MaxRank="1000" ArenaCD="0" />
+  <Goods MinRank="1001" MaxRank="" ArenaCD="0" />
+</Config>

@@ -6,10 +6,10 @@ using System.Runtime.InteropServices;
 
 namespace DotNetDetour.DetourWays
 {
-	// Token: 0x0200000C RID: 12
+	
 	public class NativeDetourFor32Bit : IDetour
 	{
-		// Token: 0x06000034 RID: 52 RVA: 0x00003238 File Offset: 0x00001438
+		
 		public unsafe virtual void Patch(MethodInfo src, MethodInfo dest, MethodInfo ori)
 		{
 			RuntimeTypeHandle[] typeHandles = (from t in src.DeclaringType.GetGenericArguments()
@@ -28,7 +28,7 @@ namespace DotNetDetour.DetourWays
 			this.Patch();
 		}
 
-		// Token: 0x06000035 RID: 53 RVA: 0x00003314 File Offset: 0x00001514
+		
 		protected unsafe virtual void Patch()
 		{
 			uint oldProtect;
@@ -39,7 +39,7 @@ namespace DotNetDetour.DetourWays
 			}
 		}
 
-		// Token: 0x06000036 RID: 54 RVA: 0x00003364 File Offset: 0x00001564
+		
 		protected unsafe virtual void CreateOriginalMethod(MethodInfo method)
 		{
 			uint needSize = LDasm.SizeofMin5Byte((void*)this.srcPtr);
@@ -64,7 +64,7 @@ namespace DotNetDetour.DetourWays
 			*(int*)((byte*)method.MethodHandle.Value.ToPointer() + 8) = (int)ptr;
 		}
 
-		// Token: 0x04000013 RID: 19
+		
 		protected byte[] newInstrs = new byte[]
 		{
 			233,
@@ -74,7 +74,7 @@ namespace DotNetDetour.DetourWays
 			144
 		};
 
-		// Token: 0x04000014 RID: 20
+		
 		protected unsafe byte* srcPtr;
 	}
 }

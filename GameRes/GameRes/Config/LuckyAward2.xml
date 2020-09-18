@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Award ID="1" MinLucky="50" GoodsIDs="110024,1,0,0,1,0" />
+  <Award ID="2" MinLucky="100" GoodsIDs="110025,1,0,0,1,0" />
+  <Award ID="3" MinLucky="300" GoodsIDs="110026,1,0,0,1,0" />
+  <Award ID="4" MinLucky="600" GoodsIDs="35040,6,0,0,1,0" />
+  <Award ID="5" MinLucky="1000" GoodsIDs="35041,3,0,0,1,0" />
+</Config>

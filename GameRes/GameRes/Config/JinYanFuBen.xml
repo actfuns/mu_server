@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <JinYanFuBen>
+    <FuBen ID="5000" MapCode="5000" Name="经验副本" MonsterID="500000,500001|500002,500003|500004,500005" MonsterNumber="10,10|10,10|10,10" MonsterPos="2545,2951,500" MonsterSum="60" SuccessConditions="100|100|100" />
+    <FuBen ID="5001" MapCode="5001" Name="经验副本" MonsterID="500100,500101|500102,500103|500104,500105" MonsterNumber="10,10|10,10|10,10" MonsterPos="2545,2951,500" MonsterSum="60" SuccessConditions="100|100|100" />
+    <FuBen ID="5002" MapCode="5002" Name="经验副本" MonsterID="500200,500201|500202,500203|500204,500205" MonsterNumber="10,10|10,10|10,10" MonsterPos="2545,2951,500" MonsterSum="60" SuccessConditions="100|100|100" />
+    <FuBen ID="5003" MapCode="5003" Name="经验副本" MonsterID="500300,500301|500302,500303|500304,500305" MonsterNumber="10,10|10,10|10,10" MonsterPos="2545,2951,500" MonsterSum="60" SuccessConditions="100|100|100" />
+    <FuBen ID="5004" MapCode="5004" Name="经验副本" MonsterID="500400,500401|500402,500403|500404,500405" MonsterNumber="10,10|10,10|10,10" MonsterPos="2545,2951,500" MonsterSum="60" SuccessConditions="100|100|100" />
+    <FuBen ID="5005" MapCode="5005" Name="经验副本" MonsterID="500500,500501|500502,500503|500504,500505" MonsterNumber="10,10|10,10|10,10" MonsterPos="2545,2951,500" MonsterSum="60" SuccessConditions="100|100|100" />
+    <FuBen ID="5006" MapCode="5006" Name="经验副本" MonsterID="500600,500601|500602,500603|500604,500605" MonsterNumber="10,10|10,10|10,10" MonsterPos="2545,2951,500" MonsterSum="60" SuccessConditions="100|100|100" />
+    <FuBen ID="5007" MapCode="5007" Name="经验副本" MonsterID="500700,500701|500702,500703|500704,500705" MonsterNumber="10,10|10,10|10,10" MonsterPos="2545,2951,500" MonsterSum="60" SuccessConditions="100|100|100" />
+    <FuBen ID="5008" MapCode="5008" Name="经验副本" MonsterID="500800,500801|500802,500803|500804,500805" MonsterNumber="10,10|10,10|10,10" MonsterPos="2545,2951,500" MonsterSum="60" SuccessConditions="100|100|100" />
+    <FuBen ID="5009" MapCode="5009" Name="经验副本" MonsterID="500900,500901|500902,500903|500904,500905" MonsterNumber="10,10|10,10|10,10" MonsterPos="2545,2951,500" MonsterSum="60" SuccessConditions="100|100|100" />
+    <FuBen ID="5010" MapCode="5010" Name="经验副本" MonsterID="501000,501001|501002,501003|501004,501005" MonsterNumber="10,10|10,10|10,10" MonsterPos="2545,2951,500" MonsterSum="60" SuccessConditions="100|100|100" />
+    <FuBen ID="5011" MapCode="5011" Name="经验副本" MonsterID="501100,501101|501102,501103|501104,501105" MonsterNumber="10,10|10,10|10,10" MonsterPos="2545,2951,500" MonsterSum="60" SuccessConditions="100|100|100" />
+    <FuBen ID="5012" MapCode="5012" Name="经验副本" MonsterID="501200,501201|501202,501203|501204,501205" MonsterNumber="10,10|10,10|10,10" MonsterPos="2545,2951,500" MonsterSum="60" SuccessConditions="100|100|100" />
+    <FuBen ID="5013" MapCode="5013" Name="经验副本" MonsterID="501300,501301|501302,501303|501304,501305" MonsterNumber="10,10|10,10|10,10" MonsterPos="2545,2951,500" MonsterSum="60" SuccessConditions="100|100|100" />
+    <FuBen ID="5014" MapCode="5014" Name="经验副本" MonsterID="501400,501401|501402,501403|501404,501405" MonsterNumber="10,10|10,10|10,10" MonsterPos="2545,2951,500" MonsterSum="60" SuccessConditions="100|100|100" />
+    <FuBen ID="5015" MapCode="5015" Name="经验副本" MonsterID="501500,501501|501502,501503|501504,501505" MonsterNumber="10,10|10,10|10,10" MonsterPos="2545,2951,500" MonsterSum="60" SuccessConditions="100|100|100" />
+    <FuBen ID="5016" MapCode="5016" Name="经验副本" MonsterID="501600,501601|501602,501603|501604,501605" MonsterNumber="10,10|10,10|10,10" MonsterPos="2545,2951,500" MonsterSum="60" SuccessConditions="100|100|100" />
+  </JinYanFuBen>
+</Config>

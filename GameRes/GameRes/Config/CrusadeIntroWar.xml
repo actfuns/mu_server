@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}战场规则" Bold="1" />
+  <HelpIntro ID="2" Intro="1、每周每个角色可获得{17e43e}30次{-}参与次数，进入战场、复活会消耗参与次数，参与次数不足则无法进入战场" Bold="0" />
+  <HelpIntro ID="3" Intro="2、每周每个服务器获得固定资源，战斗结束未被掠夺则积累到下周，资源积累有上限" Bold="0" />
+  <HelpIntro ID="4" Intro="3、资源会已水晶的形式刷新在地图上，分大、小两种，根据资源总量大、小水晶{17e43e}个数固定" Bold="0" />
+  <HelpIntro ID="5" Intro="4、战场中同服战盟共享旗帜，且{ff0000}无法相互攻击" Bold="0" />
+  <HelpIntro ID="6" Intro="5、资源被全部掠夺或活动时间结束，则战斗结束" Bold="0" />
+  <HelpIntro ID="7" Intro="{fac60d}战斗奖励" Bold="1" />
+  <HelpIntro ID="8" Intro="1、在战场中{17e43e}击杀{-}、{17e43e}掠夺资源{-}均可获得战场积分，{17e43e}连杀{-}、{17e43e}终结连杀{-}可获得更多战场积分" Bold="0" />
+  <HelpIntro ID="9" Intro="2、入侵方根据本战盟的{17e43e}掠夺资源总量{-}和{17e43e}个人战场积分{-}，战斗结束后可获得奖励" Bold="0" />
+  <HelpIntro ID="10" Intro="3、防守方根据本服防守下的{17e43e}剩余资源总量{-}和{17e43e}个人战场积分{-}，战斗结束后可获得奖励" Bold="0" />
+</Config>

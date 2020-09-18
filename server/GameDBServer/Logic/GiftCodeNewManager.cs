@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000131 RID: 305
+	
 	internal class GiftCodeNewManager
 	{
-		// Token: 0x06000525 RID: 1317 RVA: 0x0002A874 File Offset: 0x00028A74
+		
 		public static void ScanLastGroup(DBManager dbMgr)
 		{
 			long nowTicks = DateTime.Now.Ticks / 10000L;
@@ -71,7 +71,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x040007D8 RID: 2008
+		
 		private static long LastScanTicks = DateTime.Now.Ticks / 10000L;
 	}
 }

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Equip Categoriy="10000" Title="武器">
+    <Item SuitID="2" NeedMoJing="1000" />
+    <Item SuitID="3" NeedMoJing="4000" />
+    <Item SuitID="4" NeedMoJing="8000" />
+    <Item SuitID="5" NeedMoJing="13000" />
+    <Item SuitID="6" NeedMoJing="19000" />
+    <Item SuitID="7" NeedMoJing="26000" />
+    <Item SuitID="8" NeedMoJing="34000" />
+    <Item SuitID="9" NeedMoJing="43000" />
+    <Item SuitID="10" NeedMoJing="53000" />
+  </Equip>
+  <Equip Categoriy="0" Title="头盔">
+    <Item SuitID="2" NeedMoJing="1000" />
+    <Item SuitID="3" NeedMoJing="4000" />
+    <Item SuitID="4" NeedMoJing="8000" />
+    <Item SuitID="5" NeedMoJing="13000" />
+    <Item SuitID="6" NeedMoJing="19000" />
+    <Item SuitID="7" NeedMoJing="26000" />
+    <Item SuitID="8" NeedMoJing="34000" />
+    <Item SuitID="9" NeedMoJing="43000" />
+    <Item SuitID="10" NeedMoJing="53000" />
+  </Equip>
+  <Equip Categoriy="1" Title="铠甲">
+    <Item SuitID="2" NeedMoJing="1000" />
+    <Item SuitID="3" NeedMoJing="4000" />
+    <Item SuitID="4" NeedMoJing="8000" />
+    <Item SuitID="5" NeedMoJing="13000" />
+    <Item SuitID="6" NeedMoJing="19000" />
+    <Item SuitID="7" NeedMoJing="26000" />
+    <Item SuitID="8" NeedMoJing="34000" />
+    <Item SuitID="9" NeedMoJing="43000" />
+    <Item SuitID="10" NeedMoJing="53000" />
+  </Equip>
+  <Equip Categoriy="2" Title="护手">
+    <Item SuitID="2" NeedMoJing="1000" />
+    <Item SuitID="3" NeedMoJing="4000" />
+    <Item SuitID="4" NeedMoJing="8000" />
+    <Item SuitID="5" NeedMoJing="13000" />
+    <Item SuitID="6" NeedMoJing="19000" />
+    <Item SuitID="7" NeedMoJing="26000" />
+    <Item SuitID="8" NeedMoJing="34000" />
+    <Item SuitID="9" NeedMoJing="43000" />
+    <Item SuitID="10" NeedMoJing="53000" />
+  </Equip>
+  <Equip Categoriy="3" Title="护腿">
+    <Item SuitID="2" NeedMoJing="1000" />
+    <Item SuitID="3" NeedMoJing="4000" />
+    <Item SuitID="4" NeedMoJing="8000" />
+    <Item SuitID="5" NeedMoJing="13000" />
+    <Item SuitID="6" NeedMoJing="19000" />
+    <Item SuitID="7" NeedMoJing="26000" />
+    <Item SuitID="8" NeedMoJing="34000" />
+    <Item SuitID="9" NeedMoJing="43000" />
+    <Item SuitID="10" NeedMoJing="53000" />
+  </Equip>
+  <Equip Categoriy="4" Title="靴子">
+    <Item SuitID="2" NeedMoJing="1000" />
+    <Item SuitID="3" NeedMoJing="4000" />
+    <Item SuitID="4" NeedMoJing="8000" />
+    <Item SuitID="5" NeedMoJing="13000" />
+    <Item SuitID="6" NeedMoJing="19000" />
+    <Item SuitID="7" NeedMoJing="26000" />
+    <Item SuitID="8" NeedMoJing="34000" />
+    <Item SuitID="9" NeedMoJing="43000" />
+    <Item SuitID="10" NeedMoJing="53000" />
+  </Equip>
+  <Equip Categoriy="5" Title="项链">
+    <Item SuitID="2" NeedMoJing="1000" />
+    <Item SuitID="3" NeedMoJing="4000" />
+    <Item SuitID="4" NeedMoJing="8000" />
+    <Item SuitID="5" NeedMoJing="13000" />
+    <Item SuitID="6" NeedMoJing="19000" />
+    <Item SuitID="7" NeedMoJing="26000" />
+    <Item SuitID="8" NeedMoJing="34000" />
+    <Item SuitID="9" NeedMoJing="43000" />
+    <Item SuitID="10" NeedMoJing="53000" />
+  </Equip>
+  <Equip Categoriy="6" Title="戒指">
+    <Item SuitID="2" NeedMoJing="1000" />
+    <Item SuitID="3" NeedMoJing="4000" />
+    <Item SuitID="4" NeedMoJing="8000" />
+    <Item SuitID="5" NeedMoJing="13000" />
+    <Item SuitID="6" NeedMoJing="19000" />
+    <Item SuitID="7" NeedMoJing="26000" />
+    <Item SuitID="8" NeedMoJing="34000" />
+    <Item SuitID="9" NeedMoJing="43000" />
+    <Item SuitID="10" NeedMoJing="53000" />
+  </Equip>
+    <Equip Categoriy="40" Title="坐骑马鞭">
+    <Item SuitID="2" NeedMoJing="1000" />
+    <Item SuitID="3" NeedMoJing="4000" />
+    <Item SuitID="4" NeedMoJing="8000" />
+    <Item SuitID="5" NeedMoJing="13000" />
+    <Item SuitID="6" NeedMoJing="19000" />
+    <Item SuitID="7" NeedMoJing="26000" />
+    <Item SuitID="8" NeedMoJing="34000" />
+    <Item SuitID="9" NeedMoJing="43000" />
+    <Item SuitID="10" NeedMoJing="53000" />
+  </Equip>
+    <Equip Categoriy="41" Title="坐骑护具">
+    <Item SuitID="2" NeedMoJing="1000" />
+    <Item SuitID="3" NeedMoJing="4000" />
+    <Item SuitID="4" NeedMoJing="8000" />
+    <Item SuitID="5" NeedMoJing="13000" />
+    <Item SuitID="6" NeedMoJing="19000" />
+    <Item SuitID="7" NeedMoJing="26000" />
+    <Item SuitID="8" NeedMoJing="34000" />
+    <Item SuitID="9" NeedMoJing="43000" />
+    <Item SuitID="10" NeedMoJing="53000" />
+  </Equip>
+    <Equip Categoriy="42" Title="坐骑缰绳">
+    <Item SuitID="2" NeedMoJing="1000" />
+    <Item SuitID="3" NeedMoJing="4000" />
+    <Item SuitID="4" NeedMoJing="8000" />
+    <Item SuitID="5" NeedMoJing="13000" />
+    <Item SuitID="6" NeedMoJing="19000" />
+    <Item SuitID="7" NeedMoJing="26000" />
+    <Item SuitID="8" NeedMoJing="34000" />
+    <Item SuitID="9" NeedMoJing="43000" />
+    <Item SuitID="10" NeedMoJing="53000" />
+  </Equip>
+    <Equip Categoriy="43" Title="坐骑马鞍">
+    <Item SuitID="2" NeedMoJing="1000" />
+    <Item SuitID="3" NeedMoJing="4000" />
+    <Item SuitID="4" NeedMoJing="8000" />
+    <Item SuitID="5" NeedMoJing="13000" />
+    <Item SuitID="6" NeedMoJing="19000" />
+    <Item SuitID="7" NeedMoJing="26000" />
+    <Item SuitID="8" NeedMoJing="34000" />
+    <Item SuitID="9" NeedMoJing="43000" />
+    <Item SuitID="10" NeedMoJing="53000" />
+  </Equip>
+    <Equip Categoriy="44" Title="坐骑马刺">
+    <Item SuitID="2" NeedMoJing="1000" />
+    <Item SuitID="3" NeedMoJing="4000" />
+    <Item SuitID="4" NeedMoJing="8000" />
+    <Item SuitID="5" NeedMoJing="13000" />
+    <Item SuitID="6" NeedMoJing="19000" />
+    <Item SuitID="7" NeedMoJing="26000" />
+    <Item SuitID="8" NeedMoJing="34000" />
+    <Item SuitID="9" NeedMoJing="43000" />
+    <Item SuitID="10" NeedMoJing="53000" />
+  </Equip>
+    <Equip Categoriy="45" Title="坐骑马掌">
+    <Item SuitID="2" NeedMoJing="1000" />
+    <Item SuitID="3" NeedMoJing="4000" />
+    <Item SuitID="4" NeedMoJing="8000" />
+    <Item SuitID="5" NeedMoJing="13000" />
+    <Item SuitID="6" NeedMoJing="19000" />
+    <Item SuitID="7" NeedMoJing="26000" />
+    <Item SuitID="8" NeedMoJing="34000" />
+    <Item SuitID="9" NeedMoJing="43000" />
+    <Item SuitID="10" NeedMoJing="53000" />
+  </Equip>
+</Config>

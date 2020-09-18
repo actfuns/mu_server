@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ManorIntro ID="1" Name="1" Intro="{17e43e}你{dac7ae}被{ff0000}{0}{dac7ae}征服了。" />
+  <ManorIntro ID="2" Name="2" Intro="{ff0000}{0}{dac7ae}想要征服{17e43e}你{dac7ae}，不过被击退了！" />
+  <ManorIntro ID="3" Name="3" Intro="{17e43e}你{dac7ae}被主人派去扫厕所，捡到{17e43e}{0}{dac7ae}！" />
+  <ManorIntro ID="4" Name="4" Intro="{17e43e}你{dac7ae}被主人派去暖被窝，发现{17e43e}{0}{dac7ae}！" />
+  <ManorIntro ID="5" Name="5" Intro="{17e43e}你{dac7ae}被主人派去捡肥皂，捡到{17e43e}{0}{dac7ae}！" />
+  <ManorIntro ID="6" Name="6" Intro="{17e43e}你{dac7ae}被主人派去扫厕所，厕所好臭啊！" />
+  <ManorIntro ID="7" Name="7" Intro="{17e43e}你{dac7ae}被主人派去暖被窝，被窝里有只臭袜子！" />
+  <ManorIntro ID="8" Name="8" Intro="{17e43e}你{dac7ae}被主人派去捡肥皂，脚底一滑摔了一跤！" />
+  <ManorIntro ID="9" Name="9" Intro="{17e43e}{0}{dac7ae}想要解救{17e43e}你{dac7ae}，可惜失败了。" />
+  <ManorIntro ID="10" Name="10" Intro="{17e43e}{0}{dac7ae}仗义出手，解救了{17e43e}你{dac7ae}。" />
+  <ManorIntro ID="11" Name="11" Intro="{17e43e}你{dac7ae}成功反抗了{17e43e}你{dac7ae}的主人！" />
+  <ManorIntro ID="12" Name="12" Intro="{17e43e}你{dac7ae}的主人镇压了{17e43e}你{dac7ae}的反抗。" />
+  <ManorIntro ID="13" Name="13" Intro="{17e43e}你{dac7ae}未能征服{ff0000}{0}{dac7ae}。" />
+  <ManorIntro ID="14" Name="14" Intro="{17e43e}你{dac7ae}成功征服了{ff0000}{0}{dac7ae}！" />
+  <ManorIntro ID="15" Name="15" Intro="{17e43e}你{dac7ae}派遣{17e43e}{0}{dac7ae}扫厕所，他将捡到的{17e43e}{1}{dac7ae}上交！" />
+  <ManorIntro ID="16" Name="16" Intro="{17e43e}你{dac7ae}派遣{17e43e}{0}{dac7ae}暖被窝，他将发现的{17e43e}{1}{dac7ae}上交！" />
+  <ManorIntro ID="17" Name="17" Intro="{17e43e}你{dac7ae}派遣{17e43e}{0}{dac7ae}捡肥皂，他将捡到的{17e43e}{1}{dac7ae}上交！" />
+  <ManorIntro ID="18" Name="18" Intro="{17e43e}你{dac7ae}成功镇压了{ff0000}{0}{dac7ae}的反抗！" />
+  <ManorIntro ID="19" Name="19" Intro="{ff0000}{0}{dac7ae}反抗了{17e43e}你{dac7ae}的统治！" />
+  <ManorIntro ID="20" Name="20" Intro="{ff0000}{0}{dac7ae}想要抢走{17e43e}你{dac7ae}的俘虏{ff0000}{1}{dac7ae}，被{17e43e}你{dac7ae}击退了！" />
+  <ManorIntro ID="21" Name="21" Intro="{ff0000}{0}{dac7ae}抢走了{17e43e}你{dac7ae}的俘虏{ff0000}{1}{dac7ae}！" />
+  <ManorIntro ID="22" Name="22" Intro="{17e43e}你{dac7ae}想要解救{17e43e}{0}{dac7ae}，可惜失败了。" />
+  <ManorIntro ID="23" Name="23" Intro="{17e43e}你{dac7ae}仗义出手，解救了{17e43e}{0}{dac7ae}！" />
+  <ManorIntro ID="24" Name="24" Intro="{ff0000}{0}{dac7ae}成功解救了{17e43e}你{dac7ae}的俘虏{ff0000}{1}{dac7ae}！" />
+  <ManorIntro ID="25" Name="25" Intro="{ff0000}{0}{dac7ae}想要解救{17e43e}你{dac7ae}的俘虏{ff0000}{1}{dac7ae}，不过被{17e43e}你{dac7ae}击退了！" />
+</Config>

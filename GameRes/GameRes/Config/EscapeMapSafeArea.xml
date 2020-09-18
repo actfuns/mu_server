@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <EscapeMapSafeArea ID="1" RefreshStage="2" TimeStage="60" StartSafePoint="6200|5500" SafeRadius="4000" GodFireHitTime="1" GodFireHitPercent="0.1" GodFireHitHp="0" GodEffictId="15620" />
+  <EscapeMapSafeArea ID="2" RefreshStage="2" TimeStage="60" StartSafePoint="-1" SafeRadius="3500" GodFireHitTime="1" GodFireHitPercent="0.1" GodFireHitHp="0" GodEffictId="15619" />
+  <EscapeMapSafeArea ID="3" RefreshStage="2" TimeStage="60" StartSafePoint="-1" SafeRadius="3000" GodFireHitTime="1" GodFireHitPercent="0.1" GodFireHitHp="0" GodEffictId="15618" />
+  <EscapeMapSafeArea ID="4" RefreshStage="2" TimeStage="60" StartSafePoint="-1" SafeRadius="2500" GodFireHitTime="1" GodFireHitPercent="0.1" GodFireHitHp="0" GodEffictId="15617" />
+  <EscapeMapSafeArea ID="5" RefreshStage="2" TimeStage="30" StartSafePoint="-1" SafeRadius="2000" GodFireHitTime="1" GodFireHitPercent="0.1" GodFireHitHp="0" GodEffictId="15616" />
+  <EscapeMapSafeArea ID="6" RefreshStage="2" TimeStage="30" StartSafePoint="-1" SafeRadius="1500" GodFireHitTime="1" GodFireHitPercent="0.1" GodFireHitHp="0" GodEffictId="15615" />
+  <EscapeMapSafeArea ID="7" RefreshStage="2" TimeStage="30" StartSafePoint="-1" SafeRadius="1000" GodFireHitTime="1" GodFireHitPercent="0.1" GodFireHitHp="0" GodEffictId="15614" />
+  <EscapeMapSafeArea ID="8" RefreshStage="2" TimeStage="30" StartSafePoint="-1" SafeRadius="500" GodFireHitTime="1" GodFireHitPercent="0.1" GodFireHitHp="0" GodEffictId="15613" />
+</Config>

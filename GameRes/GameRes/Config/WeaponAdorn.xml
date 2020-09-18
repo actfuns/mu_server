@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WeaponAdorn>
+  <Weapons>
+  <Weapon ID="1" Occupation="0" Type="0,1" CoexistType="1,1|2,1" />
+  <Weapon ID="2" Occupation="0" Type="1,1" CoexistType="0,1|2,1" />
+  <Weapon ID="3" Occupation="0" Type="2,1" CoexistType="0,1|1,1|2,1" />
+  <Weapon ID="4" Occupation="0" Type="0,2" CoexistType="" />
+  <Weapon ID="5" Occupation="0" Type="1,2" CoexistType="" />
+  <Weapon ID="6" Occupation="0" Type="0,5" CoexistType="" />
+  <Weapon ID="7" Occupation="0" Type="1,5" CoexistType="" />
+  <Weapon ID="8" Occupation="1" Type="0,1" CoexistType="1,1" />
+  <Weapon ID="9" Occupation="1" Type="1,1" CoexistType="0,1" />
+  <Weapon ID="10" Occupation="1" Type="0,2" CoexistType="" />
+  <Weapon ID="11" Occupation="1" Type="1,2" CoexistType="" />
+  <Weapon ID="12" Occupation="2" Type="0,3" CoexistType="1,1" />
+  <Weapon ID="13" Occupation="2" Type="1,4" CoexistType="0,1" />
+  <Weapon ID="14" Occupation="2" Type="1,1" CoexistType="0,3" />
+  <Weapon ID="15" Occupation="2" Type="0,1" CoexistType="1,4" />
+  <Weapon ID="16" Occupation="3" Type="0,1" CoexistType="1,1|2,1" />
+  <Weapon ID="17" Occupation="3" Type="1,1" CoexistType="0,1|2,1|1,1" />
+  <Weapon ID="18" Occupation="3" Type="2,1" CoexistType="0,1|1,1|2,1" />
+  <Weapon ID="19" Occupation="3" Type="0,2" CoexistType="" />
+  <Weapon ID="20" Occupation="3" Type="1,2" CoexistType="" />
+  <Weapon ID="21" Occupation="3" Type="0,5" CoexistType="" />
+  <Weapon ID="22" Occupation="3" Type="1,5" CoexistType="" />
+  <Weapon ID="23" Occupation="3" Type="1,7" CoexistType="" />
+  <Weapon ID="24" Occupation="5" Type="0,1" CoexistType="1,1" />
+  <Weapon ID="25" Occupation="5" Type="1,1" CoexistType="0,1" />
+  <Weapon ID="26" Occupation="5" Type="0,2" CoexistType="" />
+  <Weapon ID="27" Occupation="5" Type="1,2" CoexistType="" />
+  </Weapons>
+</WeaponAdorn>

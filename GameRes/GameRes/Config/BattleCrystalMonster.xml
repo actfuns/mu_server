@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CrystalAward ID="1" MonsterID="8300000" Name="勇气矿石（小）" GatherTime="3" FuHuoTime="30" BattleJiFen="45" X="8050" Y="8750" />
+  <CrystalAward ID="2" MonsterID="8300000" Name="勇气矿石（小）" GatherTime="3" FuHuoTime="30" BattleJiFen="45" X="8250" Y="8950" />
+  <CrystalAward ID="3" MonsterID="8300000" Name="勇气矿石（小）" GatherTime="3" FuHuoTime="30" BattleJiFen="45" X="7950" Y="8950" />
+  <CrystalAward ID="4" MonsterID="8300000" Name="勇气矿石（小）" GatherTime="3" FuHuoTime="30" BattleJiFen="45" X="7750" Y="9000" />
+  <CrystalAward ID="5" MonsterID="8300000" Name="勇气矿石（小）" GatherTime="3" FuHuoTime="30" BattleJiFen="45" X="7650" Y="8800" />
+  <CrystalAward ID="6" MonsterID="8300000" Name="勇气矿石（小）" GatherTime="3" FuHuoTime="30" BattleJiFen="45" X="7500" Y="8900" />
+  <CrystalAward ID="7" MonsterID="8300000" Name="勇气矿石（小）" GatherTime="3" FuHuoTime="30" BattleJiFen="45" X="7250" Y="9000" />
+  <CrystalAward ID="8" MonsterID="8300000" Name="勇气矿石（小）" GatherTime="3" FuHuoTime="30" BattleJiFen="45" X="7250" Y="9350" />
+  <CrystalAward ID="9" MonsterID="8300000" Name="勇气矿石（小）" GatherTime="3" FuHuoTime="30" BattleJiFen="45" X="7350" Y="9550" />
+  <CrystalAward ID="10" MonsterID="8300000" Name="勇气矿石（小）" GatherTime="3" FuHuoTime="30" BattleJiFen="45" X="6650" Y="1550" />
+  <CrystalAward ID="11" MonsterID="8300000" Name="勇气矿石（小）" GatherTime="3" FuHuoTime="30" BattleJiFen="45" X="6600" Y="1800" />
+  <CrystalAward ID="12" MonsterID="8300000" Name="勇气矿石（小）" GatherTime="3" FuHuoTime="30" BattleJiFen="45" X="6450" Y="1900" />
+  <CrystalAward ID="13" MonsterID="8300000" Name="勇气矿石（小）" GatherTime="3" FuHuoTime="30" BattleJiFen="45" X="6500" Y="2150" />
+  <CrystalAward ID="14" MonsterID="8300000" Name="勇气矿石（小）" GatherTime="3" FuHuoTime="30" BattleJiFen="45" X="6300" Y="2100" />
+  <CrystalAward ID="15" MonsterID="8300000" Name="勇气矿石（小）" GatherTime="3" FuHuoTime="30" BattleJiFen="45" X="6400" Y="2200" />
+  <CrystalAward ID="16" MonsterID="8300000" Name="勇气矿石（小）" GatherTime="3" FuHuoTime="30" BattleJiFen="45" X="5750" Y="2300" />
+  <CrystalAward ID="17" MonsterID="8300000" Name="勇气矿石（小）" GatherTime="3" FuHuoTime="30" BattleJiFen="45" X="5600" Y="2150" />
+  <CrystalAward ID="18" MonsterID="8300000" Name="勇气矿石（小）" GatherTime="3" FuHuoTime="30" BattleJiFen="45" X="5500" Y="2100" />
+  <CrystalAward ID="19" MonsterID="8300001" Name="勇气矿石（大）" GatherTime="6" FuHuoTime="60" BattleJiFen="90" X="5400" Y="2300" />
+  <CrystalAward ID="20" MonsterID="8300001" Name="勇气矿石（大）" GatherTime="6" FuHuoTime="60" BattleJiFen="90" X="8000" Y="9450" />
+  <CrystalAward ID="21" MonsterID="8300001" Name="勇气矿石（大）" GatherTime="6" FuHuoTime="60" BattleJiFen="90" X="7650" Y="9450" />
+  <CrystalAward ID="22" MonsterID="8300001" Name="勇气矿石（大）" GatherTime="6" FuHuoTime="60" BattleJiFen="90" X="7500" Y="9250" />
+  <CrystalAward ID="23" MonsterID="8300001" Name="勇气矿石（大）" GatherTime="6" FuHuoTime="60" BattleJiFen="90" X="7800" Y="9250" />
+  <CrystalAward ID="24" MonsterID="8300001" Name="勇气矿石（大）" GatherTime="6" FuHuoTime="60" BattleJiFen="90" X="7950" Y="9150" />
+  <CrystalAward ID="25" MonsterID="8300001" Name="勇气矿石（大）" GatherTime="6" FuHuoTime="60" BattleJiFen="90" X="9350" Y="9550" />
+  <CrystalAward ID="26" MonsterID="8300001" Name="勇气矿石（大）" GatherTime="6" FuHuoTime="60" BattleJiFen="90" X="6000" Y="1750" />
+  <CrystalAward ID="27" MonsterID="8300001" Name="勇气矿石（大）" GatherTime="6" FuHuoTime="60" BattleJiFen="90" X="6000" Y="1550" />
+  <CrystalAward ID="28" MonsterID="8300001" Name="勇气矿石（大）" GatherTime="6" FuHuoTime="60" BattleJiFen="90" X="5850" Y="1750" />
+  <CrystalAward ID="29" MonsterID="8300001" Name="勇气矿石（大）" GatherTime="6" FuHuoTime="60" BattleJiFen="90" X="5700" Y="1950" />
+  <CrystalAward ID="30" MonsterID="8300001" Name="勇气矿石（大）" GatherTime="6" FuHuoTime="60" BattleJiFen="90" X="5600" Y="2150" />
+</Config>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1.炫彩宝石只能通过{17e43e}3合1{dac7ae}的形式进行加工{17e43e}升级{dac7ae}，加工时需要放入{17e43e}同等级的炫彩宝石" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2.加工合成{17e43e}无失败率{dac7ae}，加工后{17e43e}获得{dac7ae}的宝石为放在{17e43e}主加工框中的宝石+1等级" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3.重生宝石可以通过材料进行合成加工" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4.分解炫彩宝石、重生宝石可获得材料" Bold="0" />
+</Config>

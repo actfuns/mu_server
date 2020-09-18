@@ -6,23 +6,23 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000168 RID: 360
+	
 	public class RingPaiHangManager : IManager
 	{
-		// Token: 0x06000637 RID: 1591 RVA: 0x00038BC0 File Offset: 0x00036DC0
+		
 		public static RingPaiHangManager getInstance()
 		{
 			return RingPaiHangManager.instance;
 		}
 
-		// Token: 0x06000638 RID: 1592 RVA: 0x00038BD8 File Offset: 0x00036DD8
+		
 		public bool initialize()
 		{
 			this.initData();
 			return true;
 		}
 
-		// Token: 0x06000639 RID: 1593 RVA: 0x00038BF4 File Offset: 0x00036DF4
+		
 		private void initData()
 		{
 			List<RingRankingInfo> playerRingDataList = RingPaiHangDBController.getInstance().getPlayerRingDataList();
@@ -36,25 +36,25 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600063A RID: 1594 RVA: 0x00038C80 File Offset: 0x00036E80
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x0600063B RID: 1595 RVA: 0x00038C94 File Offset: 0x00036E94
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x0600063C RID: 1596 RVA: 0x00038CA8 File Offset: 0x00036EA8
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600063D RID: 1597 RVA: 0x00038CBC File Offset: 0x00036EBC
+		
 		public List<PaiHangItemData> getRankingList(int pageIndex, int pageShowNum = -1)
 		{
 			int maxIndex = Math.Max(pageShowNum, RingPaiHangManager.RankingList_PageShowNum);
@@ -70,7 +70,7 @@ namespace GameDBServer.Logic
 			return _rankingDatas;
 		}
 
-		// Token: 0x0600063E RID: 1598 RVA: 0x00038D64 File Offset: 0x00036F64
+		
 		public void ModifyRingPaihangData(RingRankingInfo data)
 		{
 			if (null != data)
@@ -106,7 +106,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x0600063F RID: 1599 RVA: 0x00038F08 File Offset: 0x00037108
+		
 		public int createRingData(int nRoleID, RingRankingInfo data = null)
 		{
 			lock (this.playerRingDatas)
@@ -127,7 +127,7 @@ namespace GameDBServer.Logic
 			return 1;
 		}
 
-		// Token: 0x06000640 RID: 1600 RVA: 0x00038FA4 File Offset: 0x000371A4
+		
 		public RingRankingInfo getRingData(int nRoleID)
 		{
 			RingRankingInfo data = null;
@@ -141,7 +141,7 @@ namespace GameDBServer.Logic
 			return RingPaiHangDBController.getInstance().getRingDataById(nRoleID);
 		}
 
-		// Token: 0x06000641 RID: 1601 RVA: 0x0003901C File Offset: 0x0003721C
+		
 		private int CompareTo(PlayerRingRankingData A, PlayerRingRankingData B)
 		{
 			int result;
@@ -164,7 +164,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000642 RID: 1602 RVA: 0x000390AC File Offset: 0x000372AC
+		
 		internal void OnChangeName(int roleid, string oldName, string newName)
 		{
 			RingRankingInfo data = null;
@@ -178,19 +178,19 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x04000880 RID: 2176
+		
 		private static RingPaiHangManager instance = new RingPaiHangManager();
 
-		// Token: 0x04000881 RID: 2177
+		
 		public static readonly int RankingList_Max_Num = 100;
 
-		// Token: 0x04000882 RID: 2178
+		
 		public static readonly int RankingList_PageShowNum = 30;
 
-		// Token: 0x04000883 RID: 2179
+		
 		private List<PlayerRingRankingData> rankingDatas = new List<PlayerRingRankingData>();
 
-		// Token: 0x04000884 RID: 2180
+		
 		private Dictionary<int, RingRankingInfo> playerRingDatas = new Dictionary<int, RingRankingInfo>();
 	}
 }

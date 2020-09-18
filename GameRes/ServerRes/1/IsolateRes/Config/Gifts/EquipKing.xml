@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="6" Title="装备王" FromDate="2012-07-25 00:00:00" ToDate="2012-08-01 07:10:00" AwardStartDate="2012-08-01 07:10:00" 
+  AwardEndDate="2012-08-31 23:59:59" IsNeedCode="1"/>
+  <GiftList Description="活动期间内，装备实力排行榜排名前10的玩家，可领取丰厚的装备实力王奖励，免费领取高价值商城道具，助您雄霸隋唐。">
+  <Award Ranking="1" YuanBao="-1" GoodsIDs="460884,3,0,0,1,0|301371,1,0,0,1,0" MinEquip="6000" />
+  <Award Ranking="2" YuanBao="-1" GoodsIDs="460884,2,0,0,1,0|301371,1,0,0,1,0" MinEquip="5000" />
+  <Award Ranking="3" YuanBao="-1" GoodsIDs="460884,1,0,0,1,0|301371,1,0,0,1,0" MinEquip="4000" />
+  <Award Ranking="4" YuanBao="-1" GoodsIDs="460883,2,0,0,1,0|301361,2,0,0,1,0" MinEquip="3000" />
+  <Award Ranking="5" YuanBao="-1" GoodsIDs="460883,2,0,0,1,0|301361,2,0,0,1,0" MinEquip="3000" />
+  <Award Ranking="6" YuanBao="-1" GoodsIDs="460883,2,0,0,1,0|301361,2,0,0,1,0" MinEquip="3000" />
+  <Award Ranking="7" YuanBao="-1" GoodsIDs="460883,1,0,0,1,0|301361,1,0,0,1,0" MinEquip="2500" />
+  <Award Ranking="8" YuanBao="-1" GoodsIDs="460883,1,0,0,1,0|301361,1,0,0,1,0" MinEquip="2500" />
+  <Award Ranking="9" YuanBao="-1" GoodsIDs="460883,1,0,0,1,0|301361,1,0,0,1,0" MinEquip="2500" />
+  <Award Ranking="10" YuanBao="-1" GoodsIDs="460883,1,0,0,1,0|301351,1,0,0,1,0" MinEquip="2000" />
+  </GiftList>
+</Config>

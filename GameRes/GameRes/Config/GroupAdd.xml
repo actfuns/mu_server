@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<Add ID="1" Address="api1.android.qmqj.xy.com,api1.ios.qmqj.xy.com,api1.qmqj.xy.com,login-muorigin.webzen.com,alpha-kr-mapi.webzen.com,login.mu.kimi.com.tw,119.29.10.118,115.159.1.140,115.159.72.41,115.159.75.99,192.167.0.100,120.132.74.163" />
+	<Add ID="2" Address=".webzen.com,.xy.com,.3dcq.com,.tmsk.cn,.tianmashikong.com,.tmskapp.com,.kimi.com.tw" />
+</config>

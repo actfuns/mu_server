@@ -4,10 +4,10 @@ using GameDBServer.DB;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x020001A7 RID: 423
+	
 	public class BanManager
 	{
-		// Token: 0x060008F7 RID: 2295 RVA: 0x00053AD8 File Offset: 0x00051CD8
+		
 		public static void BanRoleName(string roleName, int state)
 		{
 			lock (BanManager._RoleNameDict)
@@ -27,7 +27,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060008F8 RID: 2296 RVA: 0x00053BA0 File Offset: 0x00051DA0
+		
 		public static int IsBanRoleName(string roleName)
 		{
 			int state = 0;
@@ -60,7 +60,7 @@ namespace GameDBServer.Logic
 			return state;
 		}
 
-		// Token: 0x060008F9 RID: 2297 RVA: 0x00053CA0 File Offset: 0x00051EA0
+		
 		public static int GmBanCheckAdd(DBManager dbMgr, int roleID, string banIDs)
 		{
 			int ret = -1;
@@ -73,7 +73,7 @@ namespace GameDBServer.Logic
 			return ret;
 		}
 
-		// Token: 0x060008FA RID: 2298 RVA: 0x00053D08 File Offset: 0x00051F08
+		
 		public static int GmBanCheckClear(DBManager dbMgr)
 		{
 			int ret = -1;
@@ -86,7 +86,7 @@ namespace GameDBServer.Logic
 			return ret;
 		}
 
-		// Token: 0x060008FB RID: 2299 RVA: 0x00053D68 File Offset: 0x00051F68
+		
 		public static int GmBanLogAdd(DBManager dbMgr, int zoneID, string userID, int roleID, int banType, string banID, int banCount, string deviceID)
 		{
 			int ret = -1;
@@ -109,10 +109,10 @@ namespace GameDBServer.Logic
 			return ret;
 		}
 
-		// Token: 0x040009AA RID: 2474
+		
 		private static Dictionary<string, int> _RoleNameDict = new Dictionary<string, int>();
 
-		// Token: 0x040009AB RID: 2475
+		
 		private static Dictionary<string, long> _RoleNameTicksDict = new Dictionary<string, long>();
 	}
 }

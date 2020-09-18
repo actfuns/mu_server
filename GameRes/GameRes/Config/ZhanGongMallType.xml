@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <DuiHuan>
+    <Type ID="10000" SaleType="1" Name="道具兑换" Description="积分兑换海量珍惜道具" Image="201" OccupCondition="-1" PubStartTime="" PubEndTime="" />
+  </DuiHuan>
+</config>

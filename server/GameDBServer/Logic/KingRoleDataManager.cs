@@ -8,21 +8,21 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000148 RID: 328
+	
 	public class KingRoleDataManager : SingletonTemplate<KingRoleDataManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x0600058C RID: 1420 RVA: 0x0002F130 File Offset: 0x0002D330
+		
 		private KingRoleDataManager()
 		{
 		}
 
-		// Token: 0x0600058D RID: 1421 RVA: 0x0002F13C File Offset: 0x0002D33C
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x0600058E RID: 1422 RVA: 0x0002F150 File Offset: 0x0002D350
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(13230, SingletonTemplate<KingRoleDataManager>.Instance());
@@ -31,19 +31,19 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600058F RID: 1423 RVA: 0x0002F1A4 File Offset: 0x0002D3A4
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000590 RID: 1424 RVA: 0x0002F1B8 File Offset: 0x0002D3B8
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000591 RID: 1425 RVA: 0x0002F1CC File Offset: 0x0002D3CC
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			if (nID == 13230)
@@ -60,7 +60,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000592 RID: 1426 RVA: 0x0002F238 File Offset: 0x0002D438
+		
 		private void HandleClr(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			string cmdDatas = new UTF8Encoding().GetString(cmdParams, 0, count);
@@ -77,7 +77,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000593 RID: 1427 RVA: 0x0002F2D4 File Offset: 0x0002D4D4
+		
 		private void HandleGet(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			KingRoleGetData data = DataHelper.BytesToObject<KingRoleGetData>(cmdParams, 0, count);
@@ -99,7 +99,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000594 RID: 1428 RVA: 0x0002F3A0 File Offset: 0x0002D5A0
+		
 		private void HandlePut(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			KingRolePutData data = DataHelper.BytesToObject<KingRolePutData>(cmdParams, 0, count);

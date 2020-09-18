@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <DuiHuanShangCheng ID="1" Name="融火之翼" WuPinID="1035003,1,1,0,0,0,0" DaiBiJiaGe="20000" MeiRiShangXianDan="-1" Tips="活动专属翅膀，光与热都会是你的化身！&#xA;使用后可在衣橱中穿戴，放入衣橱后无法再取出。初始属性如下：&#xA;生命上限加成+6%&#xA;伤害加成+1%&#xA;抵抗卓越一击+1%&#xA;元素伤害加成+1%" />
+  <DuiHuanShangCheng ID="2" Name="善恶之翼" WuPinID="1035004,1,1,0,0,0,0" DaiBiJiaGe="20000" MeiRiShangXianDan="-1" Tips="活动专属翅膀，善与恶只在你一念之间！&#xA;使用后可在衣橱中穿戴，放入衣橱后无法再取出。初始属性如下：&#xA;生命上限加成+6%&#xA;伤害加成+1%&#xA;卓越一击几率+1%&#xA;抵抗卓越一击+1%" />
+  <DuiHuanShangCheng ID="3" Name="火焰喷射器" WuPinID="1035005,1,1,0,0,0,0" DaiBiJiaGe="20000" MeiRiShangXianDan="-1" Tips="活动专属翅膀，让你一飞冲天！&#xA;使用后可在衣橱中穿戴，放入衣橱后无法再取出。初始属性如下：&#xA;生命上限加成+6%&#xA;伤害加成+1%&#xA;无视防御几率+1%&#xA;抵抗卓越一击+1%" />
+  <DuiHuanShangCheng ID="4" Name="终极幻想" WuPinID="1035006,1,1,0,0,0,0" DaiBiJiaGe="20000" MeiRiShangXianDan="-1" Tips="活动专属翅膀，带着你寻找最终的幻想！&#xA;使用后可在衣橱中穿戴，放入衣橱后无法再取出。初始属性如下：&#xA;生命上限加成+6%&#xA;伤害加成+1%&#xA;抵抗卓越一击+1%&#xA;元素伤害加成+1%" />
+  <DuiHuanShangCheng ID="5" Name="爱心之翼" WuPinID="1035007,1,1,0,0,0,0" DaiBiJiaGe="20000" MeiRiShangXianDan="-1" Tips="活动专属翅膀，让我们的爱永恒不变！&#xA;使用后可在衣橱中穿戴，放入衣橱后无法再取出。初始属性如下：&#xA;生命上限加成+6%&#xA;伤害加成+1%&#xA;抵抗卓越一击+1%&#xA;元素伤害减免+1%" />
+  <DuiHuanShangCheng ID="6" Name="烈焰法轮" WuPinID="1035008,1,1,0,0,0,0" DaiBiJiaGe="20000" MeiRiShangXianDan="-1" Tips="活动专属翅膀，烈焰齿轮为你转动！&#xA;使用后可在衣橱中穿戴，放入衣橱后无法再取出。初始属性如下：&#xA;生命上限加成+6%&#xA;伤害加成+1%&#xA;致命一击几率+1%&#xA;元素伤害减免+1%" />
+  <DuiHuanShangCheng ID="7" Name="寒冰法轮" WuPinID="1035009,1,1,0,0,0,0" DaiBiJiaGe="20000" MeiRiShangXianDan="-1" Tips="活动专属翅膀，寒冰齿轮为你转动！&#xA;使用后可在衣橱中穿戴，放入衣橱后无法再取出。初始属性如下：&#xA;生命上限加成+6%&#xA;伤害加成+1%&#xA;致命一击几率+1%&#xA;元素伤害加成+1%" />
+  <DuiHuanShangCheng ID="8" Name="雷鸣法轮" WuPinID="1035010,1,1,0,0,0,0" DaiBiJiaGe="20000" MeiRiShangXianDan="-1" Tips="活动专属翅膀，雷鸣齿轮为你转动！&#xA;使用后可在衣橱中穿戴，放入衣橱后无法再取出。初始属性如下：&#xA;生命上限加成+6%&#xA;伤害加成+1%&#xA;抵抗致命一击+1%&#xA;元素伤害加成+1%" />
+  <DuiHuanShangCheng ID="9" Name="浓情之翼" WuPinID="1035014,1,1,0,0,0,0" DaiBiJiaGe="20000" MeiRiShangXianDan="-1" Tips="活动专属翅膀，爱到深处浓情似火！&#xA;使用后可在衣橱中穿戴，放入衣橱后无法再取出。初始属性如下：&#xA;生命上限加成+6%&#xA;伤害加成+1%&#xA;抵抗致命一击+1%&#xA;元素伤害加成+1%" />
+  <DuiHuanShangCheng ID="10" Name="梦魇之翼" WuPinID="1035019,1,1,0,0,0,0" DaiBiJiaGe="20000" MeiRiShangXianDan="-1" Tips="活动专属翅膀，敌人的噩梦才刚刚开始！&#xA;使用后可在衣橱中穿戴，放入衣橱后无法再取出。初始属性如下：&#xA;生命上限加成+6%&#xA;伤害加成+1%&#xA;抵抗卓越一击+1%&#xA;抵抗致命一击+1%&#xA;元素伤害加成+1%" />
+</Config>

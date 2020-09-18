@@ -8,22 +8,22 @@ using Server.Tools;
 
 namespace GameServer.Logic.Building
 {
-	// Token: 0x02000232 RID: 562
+	
 	public class BuildingManager : IManager, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x06000790 RID: 1936 RVA: 0x00072468 File Offset: 0x00070668
+		
 		public static BuildingManager getInstance()
 		{
 			return BuildingManager.instance;
 		}
 
-		// Token: 0x06000791 RID: 1937 RVA: 0x00072480 File Offset: 0x00070680
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x06000792 RID: 1938 RVA: 0x000724A4 File Offset: 0x000706A4
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1550, 1, 1, BuildingManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -39,25 +39,25 @@ namespace GameServer.Logic.Building
 			return true;
 		}
 
-		// Token: 0x06000793 RID: 1939 RVA: 0x000725A8 File Offset: 0x000707A8
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000794 RID: 1940 RVA: 0x000725BC File Offset: 0x000707BC
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000795 RID: 1941 RVA: 0x000725D0 File Offset: 0x000707D0
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06000796 RID: 1942 RVA: 0x000725E4 File Offset: 0x000707E4
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -108,7 +108,7 @@ namespace GameServer.Logic.Building
 			return result;
 		}
 
-		// Token: 0x06000797 RID: 1943 RVA: 0x00072714 File Offset: 0x00070914
+		
 		public BuildingData GetBuildingData(GameClient client, int BuildID)
 		{
 			BuildingData BuildData = null;
@@ -123,7 +123,7 @@ namespace GameServer.Logic.Building
 			return BuildData;
 		}
 
-		// Token: 0x06000798 RID: 1944 RVA: 0x00072780 File Offset: 0x00070980
+		
 		public void OnRoleLogin(GameClient client)
 		{
 			try
@@ -157,7 +157,7 @@ namespace GameServer.Logic.Building
 			}
 		}
 
-		// Token: 0x06000799 RID: 1945 RVA: 0x00072890 File Offset: 0x00070A90
+		
 		public void RandomBuildTaskData(GameClient client, int BuildID, BuildingData myBuildData, bool ConstRefresh = false)
 		{
 			if (!GameFuncControlManager.IsGameFuncDisabled(GameFuncType.System1Dot8))
@@ -166,7 +166,7 @@ namespace GameServer.Logic.Building
 			}
 		}
 
-		// Token: 0x0600079A RID: 1946 RVA: 0x000728C0 File Offset: 0x00070AC0
+		
 		public void BuildTaskData(GameClient client, int BuildID, BuildingData myBuildData, bool ConstRefresh = false)
 		{
 			BuildingConfigData myBCData = null;
@@ -185,7 +185,7 @@ namespace GameServer.Logic.Building
 			}
 		}
 
-		// Token: 0x0600079B RID: 1947 RVA: 0x00072984 File Offset: 0x00070B84
+		
 		public void ResetRandSkipVavle()
 		{
 			foreach (KeyValuePair<int, BuildingTaskConfigData> kvp in this.BuildTaskDict)
@@ -197,7 +197,7 @@ namespace GameServer.Logic.Building
 			}
 		}
 
-		// Token: 0x0600079C RID: 1948 RVA: 0x000729FC File Offset: 0x00070BFC
+		
 		public int RandomBuildTask(int BuildID, BuildingQuality quality)
 		{
 			List<BuildingTaskConfigData> listBuildTask = new List<BuildingTaskConfigData>();
@@ -222,7 +222,7 @@ namespace GameServer.Logic.Building
 			return result;
 		}
 
-		// Token: 0x0600079D RID: 1949 RVA: 0x00072AE0 File Offset: 0x00070CE0
+		
 		public int BuildTask(int BuildID, BuildingQuality quality)
 		{
 			List<BuildingTaskConfigData> listBuildTask = new List<BuildingTaskConfigData>();
@@ -236,7 +236,7 @@ namespace GameServer.Logic.Building
 			return 0;
 		}
 
-		// Token: 0x0600079E RID: 1950 RVA: 0x00072B80 File Offset: 0x00070D80
+		
 		public BuildingQuality RandomQualityByList(List<BuildingRandomData> RandomList)
 		{
 			double rateEnd = 0.0;
@@ -252,7 +252,7 @@ namespace GameServer.Logic.Building
 			return BuildingQuality.Null;
 		}
 
-		// Token: 0x0600079F RID: 1951 RVA: 0x00072BF4 File Offset: 0x00070DF4
+		
 		public void UpdateBuildingLogDB(GameClient client, BuildingLogType BuildLogType)
 		{
 			EventLogManager.AddRoleEvent(client, OpTypes.Trace, OpTags.Building, LogRecordType.IntValue, new object[]
@@ -261,7 +261,7 @@ namespace GameServer.Logic.Building
 			});
 		}
 
-		// Token: 0x060007A0 RID: 1952 RVA: 0x00072C24 File Offset: 0x00070E24
+		
 		public void UpdateBuildingDataDB(GameClient client, BuildingData myBuildData)
 		{
 			if (null != myBuildData)
@@ -287,7 +287,7 @@ namespace GameServer.Logic.Building
 			}
 		}
 
-		// Token: 0x060007A1 RID: 1953 RVA: 0x00072D54 File Offset: 0x00070F54
+		
 		public void BuildingDataChecking(GameClient client)
 		{
 			try
@@ -360,7 +360,7 @@ namespace GameServer.Logic.Building
 			}
 		}
 
-		// Token: 0x060007A2 RID: 1954 RVA: 0x0007312C File Offset: 0x0007132C
+		
 		public void GeneralBuildingData(GameClient client)
 		{
 			foreach (KeyValuePair<int, BuildingConfigData> kvp in this.BuildDict)
@@ -378,7 +378,7 @@ namespace GameServer.Logic.Building
 			}
 		}
 
-		// Token: 0x060007A3 RID: 1955 RVA: 0x000731DC File Offset: 0x000713DC
+		
 		public List<BuildTeam> GetBuildingQueueData(GameClient client)
 		{
 			List<BuildTeam> BuildQueue = new List<BuildTeam>();
@@ -414,7 +414,7 @@ namespace GameServer.Logic.Building
 			return BuildQueue;
 		}
 
-		// Token: 0x060007A4 RID: 1956 RVA: 0x000732C8 File Offset: 0x000714C8
+		
 		public BuildingState GetBuildState(GameClient client, int BuildID, int TaskID)
 		{
 			BuildingTaskConfigData TaskConfigData;
@@ -452,7 +452,7 @@ namespace GameServer.Logic.Building
 			return BuildingState.EBS_Null;
 		}
 
-		// Token: 0x060007A5 RID: 1957 RVA: 0x000733EC File Offset: 0x000715EC
+		
 		public void GetTaskNumInEachTeam(GameClient client, out int free, out int pay)
 		{
 			free = 0;
@@ -471,7 +471,7 @@ namespace GameServer.Logic.Building
 			}
 		}
 
-		// Token: 0x060007A6 RID: 1958 RVA: 0x00073460 File Offset: 0x00071660
+		
 		public int GetOpenPayTeamNum(GameClient client)
 		{
 			string strKey = "BuildQueueData";
@@ -499,7 +499,7 @@ namespace GameServer.Logic.Building
 			return result;
 		}
 
-		// Token: 0x060007A7 RID: 1959 RVA: 0x000734C4 File Offset: 0x000716C4
+		
 		public void SaveBuildingQueueData(GameClient client, List<BuildTeam> BuildQueue)
 		{
 			string BuildingQueueData = "";
@@ -520,7 +520,7 @@ namespace GameServer.Logic.Building
 			Global.SaveRoleParamsStringToDB(client, strKey, BuildingQueueData, true);
 		}
 
-		// Token: 0x060007A8 RID: 1960 RVA: 0x000735A4 File Offset: 0x000717A4
+		
 		public void ModifyOpenPayNum(GameClient client, int chg)
 		{
 			string strKey = "BuildQueueData";
@@ -550,7 +550,7 @@ namespace GameServer.Logic.Building
 			}
 		}
 
-		// Token: 0x060007A9 RID: 1961 RVA: 0x00073660 File Offset: 0x00071860
+		
 		public bool RemoveBuildingQueueData(GameClient client, int BuildID, int TaskID)
 		{
 			List<BuildTeam> BuildQueue = this.GetBuildingQueueData(client);
@@ -581,7 +581,7 @@ namespace GameServer.Logic.Building
 			return result;
 		}
 
-		// Token: 0x060007AA RID: 1962 RVA: 0x00073710 File Offset: 0x00071910
+		
 		public BuildTeamType GetBuildTaskQueueType(GameClient client, int BuildID, int TaskID)
 		{
 			BuildTeamType TeamType = BuildTeamType.NullTeam;
@@ -597,13 +597,13 @@ namespace GameServer.Logic.Building
 			return TeamType;
 		}
 
-		// Token: 0x060007AB RID: 1963 RVA: 0x00073784 File Offset: 0x00071984
+		
 		public bool AddBuildingQueueData(GameClient client, int BuildID, int TaskID)
 		{
 			return this.AddBuildingTaskData(client, BuildID, TaskID);
 		}
 
-		// Token: 0x060007AC RID: 1964 RVA: 0x000737CC File Offset: 0x000719CC
+		
 		public bool AddBuildingTaskData(GameClient client, int BuildID, int TaskID)
 		{
 			List<BuildTeam> BuildQueue = this.GetBuildingQueueData(client);
@@ -627,7 +627,7 @@ namespace GameServer.Logic.Building
 			return result;
 		}
 
-		// Token: 0x060007AD RID: 1965 RVA: 0x00073848 File Offset: 0x00071A48
+		
 		public bool CheckAnyTaskFinish(GameClient client)
 		{
 			bool Finished = false;
@@ -667,7 +667,7 @@ namespace GameServer.Logic.Building
 			return Finished;
 		}
 
-		// Token: 0x060007AE RID: 1966 RVA: 0x00073984 File Offset: 0x00071B84
+		
 		public bool CheckCanGetAnyAllLevelAward(GameClient client)
 		{
 			bool CanGetAny = false;
@@ -704,7 +704,7 @@ namespace GameServer.Logic.Building
 			return CanGetAny;
 		}
 
-		// Token: 0x060007AF RID: 1967 RVA: 0x00073AC4 File Offset: 0x00071CC4
+		
 		public void BuildTaskFinish(GameClient client, BuildingData BuildData, BuildingConfigData BConfigData, BuildingTaskConfigData TaskConfigData)
 		{
 			BuildData.BuildTime = BuildingManager.ConstBuildTime;
@@ -762,7 +762,7 @@ namespace GameServer.Logic.Building
 			}
 		}
 
-		// Token: 0x060007B0 RID: 1968 RVA: 0x00073DA4 File Offset: 0x00071FA4
+		
 		public void BuildingLevelUp_GM(GameClient client, int buildID)
 		{
 			BuildingData BuildData = null;
@@ -791,7 +791,7 @@ namespace GameServer.Logic.Building
 			}
 		}
 
-		// Token: 0x060007B1 RID: 1969 RVA: 0x00073E8C File Offset: 0x0007208C
+		
 		public bool ProcessBuildGetListCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -817,7 +817,7 @@ namespace GameServer.Logic.Building
 			return false;
 		}
 
-		// Token: 0x060007B2 RID: 1970 RVA: 0x00073F68 File Offset: 0x00072168
+		
 		public bool ProcessBuildExcuteCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -970,7 +970,7 @@ namespace GameServer.Logic.Building
 			return false;
 		}
 
-		// Token: 0x060007B3 RID: 1971 RVA: 0x00074448 File Offset: 0x00072648
+		
 		public bool ProcessBuildFinishCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -988,7 +988,7 @@ namespace GameServer.Logic.Building
 			return false;
 		}
 
-		// Token: 0x060007B4 RID: 1972 RVA: 0x000744A4 File Offset: 0x000726A4
+		
 		public bool ProcessBuildRefreshCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1006,7 +1006,7 @@ namespace GameServer.Logic.Building
 			return false;
 		}
 
-		// Token: 0x060007B5 RID: 1973 RVA: 0x00074500 File Offset: 0x00072700
+		
 		public bool ProcessBuildGetAllLevelAwardCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1096,7 +1096,7 @@ namespace GameServer.Logic.Building
 			return false;
 		}
 
-		// Token: 0x060007B6 RID: 1974 RVA: 0x0007488C File Offset: 0x00072A8C
+		
 		public bool ProcessBuildGetAwardCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1261,7 +1261,7 @@ namespace GameServer.Logic.Building
 			return false;
 		}
 
-		// Token: 0x060007B7 RID: 1975 RVA: 0x00074DD0 File Offset: 0x00072FD0
+		
 		public bool ProcessBuildOpenQueueCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1279,7 +1279,7 @@ namespace GameServer.Logic.Building
 			return false;
 		}
 
-		// Token: 0x060007B8 RID: 1976 RVA: 0x00074E2C File Offset: 0x0007302C
+		
 		public bool ProcessBuildGetQueueCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1318,7 +1318,7 @@ namespace GameServer.Logic.Building
 			return false;
 		}
 
-		// Token: 0x060007B9 RID: 1977 RVA: 0x00074F80 File Offset: 0x00073180
+		
 		public bool ProcessBuildGetAllLevelAwardStateCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1368,7 +1368,7 @@ namespace GameServer.Logic.Building
 			return false;
 		}
 
-		// Token: 0x060007BA RID: 1978 RVA: 0x000750A4 File Offset: 0x000732A4
+		
 		public bool ProcessBuildGetStateCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -1395,7 +1395,7 @@ namespace GameServer.Logic.Building
 			return false;
 		}
 
-		// Token: 0x060007BB RID: 1979 RVA: 0x000751D8 File Offset: 0x000733D8
+		
 		public bool InitConfig()
 		{
 			string QueueNumMax = GameManager.systemParamsList.GetParamValueByName("ManorQueueNum");
@@ -1426,7 +1426,7 @@ namespace GameServer.Logic.Building
 			return this.LoadBuildFile() && this.LoadBuildTaskFile() && this.LoadBuildLevelFile() && this.LoadBuildLevelAwardFile();
 		}
 
-		// Token: 0x060007BC RID: 1980 RVA: 0x00075304 File Offset: 0x00073504
+		
 		public bool LoadBuildFile()
 		{
 			try
@@ -1522,7 +1522,7 @@ namespace GameServer.Logic.Building
 			return true;
 		}
 
-		// Token: 0x060007BD RID: 1981 RVA: 0x00075640 File Offset: 0x00073840
+		
 		public bool LoadBuildTaskFile()
 		{
 			try
@@ -1564,7 +1564,7 @@ namespace GameServer.Logic.Building
 			return true;
 		}
 
-		// Token: 0x060007BE RID: 1982 RVA: 0x000757F4 File Offset: 0x000739F4
+		
 		public bool LoadBuildLevelFile()
 		{
 			try
@@ -1604,7 +1604,7 @@ namespace GameServer.Logic.Building
 			return true;
 		}
 
-		// Token: 0x060007BF RID: 1983 RVA: 0x000759DC File Offset: 0x00073BDC
+		
 		public bool LoadBuildLevelAwardFile()
 		{
 			try
@@ -1640,7 +1640,7 @@ namespace GameServer.Logic.Building
 			return true;
 		}
 
-		// Token: 0x060007C0 RID: 1984 RVA: 0x00075B34 File Offset: 0x00073D34
+		
 		public void ModifyNengLiangPointsValue(GameClient client, int addType, int addValue, string strFrom, bool writeToDB = false, bool notifyClient = true)
 		{
 			if (addValue != 0 && addType >= 1 && addType <= 4)
@@ -1695,58 +1695,58 @@ namespace GameServer.Logic.Building
 			}
 		}
 
-		// Token: 0x04000D30 RID: 3376
+		
 		private const string Build_fileName = "Config/Manor/Build.xml";
 
-		// Token: 0x04000D31 RID: 3377
+		
 		private const string BuildTask_fileName = "Config/Manor/BuildTask.xml";
 
-		// Token: 0x04000D32 RID: 3378
+		
 		private const string BuildLevel_fileName = "Config/Manor/BuildLevel.xml";
 
-		// Token: 0x04000D33 RID: 3379
+		
 		private const string BuildLevelAward_fileName = "Config/Manor/BuildLevelAward.xml";
 
-		// Token: 0x04000D34 RID: 3380
+		
 		private const int NewBuildTaskIDBind = 1000;
 
-		// Token: 0x04000D35 RID: 3381
+		
 		public static readonly string ConstBuildTime = "0000-00-00 00:00:00";
 
-		// Token: 0x04000D36 RID: 3382
+		
 		public object RandomTaskMutex = new object();
 
-		// Token: 0x04000D37 RID: 3383
+		
 		private static BuildingManager instance = new BuildingManager();
 
-		// Token: 0x04000D38 RID: 3384
+		
 		protected Dictionary<int, BuildingConfigData> BuildDict = new Dictionary<int, BuildingConfigData>();
 
-		// Token: 0x04000D39 RID: 3385
+		
 		protected Dictionary<int, BuildingTaskConfigData> BuildTaskDict = new Dictionary<int, BuildingTaskConfigData>();
 
-		// Token: 0x04000D3A RID: 3386
+		
 		protected Dictionary<KeyValuePair<int, int>, BuildingLevelConfigData> BuildLevelDict = new Dictionary<KeyValuePair<int, int>, BuildingLevelConfigData>();
 
-		// Token: 0x04000D3B RID: 3387
+		
 		protected Dictionary<int, BuildingLevelAwardConfigData> BuildLevelAwardDict = new Dictionary<int, BuildingLevelAwardConfigData>();
 
-		// Token: 0x04000D3C RID: 3388
+		
 		protected Dictionary<int, BuildingTaskConfigData> NewBuildTaskDict = new Dictionary<int, BuildingTaskConfigData>();
 
-		// Token: 0x04000D3D RID: 3389
+		
 		public int ManorFreeQueueNumMax = 0;
 
-		// Token: 0x04000D3E RID: 3390
+		
 		public int ManorQueueNumMax = 0;
 
-		// Token: 0x04000D3F RID: 3391
+		
 		public int ManorQuickFinishNum = 0;
 
-		// Token: 0x04000D40 RID: 3392
+		
 		public int ManorRandomTaskPrice = 0;
 
-		// Token: 0x04000D41 RID: 3393
+		
 		public int ManorQueuePrice = 0;
 	}
 }

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Battle>
+<!--MapCode, 地图编号, TimePoints 开始、结束时间点, WaitingEnterSecs 广播等待时间，MinLevel, PrepareSecs 每场活动等待开启时间，FightingSecs 活动时间，ClearRolesSecs 清场时间，最低要求的转生等级, MinRequestNum最低人数, MaxEnterNum最多人数,Award奖励物品,Image 活动图片-->
+<Item ID="20003" Group="12" MapCode="60011" ApplyTime="1500,300" TimePoints="0,14:30-15:00|0,18:30-19:00" WaitingEnterSecs="5" PrepareSecs="60" FightingSecs="1720" ClearRolesSecs="15" MinZhuanSheng="5" MinLevel="81" MaxZhuanSheng="100" MaxLevel="100" MinRequestNum="1" MaxEnterNum="100" Award="9990001" />
+</Battle>

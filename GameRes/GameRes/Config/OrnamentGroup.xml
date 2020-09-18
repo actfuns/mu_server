@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <OrnamentGroup ID="1" Name="奇迹|优秀青年" OrnamentGoods="1034000|1034001" GroupProperty="DeDoubleAttack,0.03|DeFatalAttack,0.02" />
+  <OrnamentGroup ID="2" Name="魔神项链|荣耀指环" OrnamentGoods="1034002|1034003" GroupProperty="DeLucky,0.05|DeFatalAttack,0.03" />
+  <OrnamentGroup ID="3" Name="精灵坠饰|众神徽记" OrnamentGoods="1034004|1034005" GroupProperty="DeDoubleAttack,0.05|IgnoreMagyAttackPercent,0.01" />
+  <OrnamentGroup ID="4" Name="勇者至尊|幻影杀手" OrnamentGoods="1034008|1034009" GroupProperty="IgnorePhyAttackPercent,0.01|DeFatalAttack,0.04" />
+  <OrnamentGroup ID="5" Name="竞技勇者|奥运金牌" OrnamentGoods="1034010|1034011" GroupProperty="DeLucky,0.03|DeDoubleAttack,0.02" />
+  <OrnamentGroup ID="6" Name="生命之光|神鹰指环" OrnamentGoods="1034014|1034015" GroupProperty="Holywater,0.5|MaxLifePercent,0.03" />
+  <OrnamentGroup ID="7" Name="再造印记|进化勋章" OrnamentGoods="1034016|1034017" GroupProperty="Potion,0.5|MaxLifePercent,0.03" />
+  <OrnamentGroup ID="8" Name="奇迹|勇者至尊" OrnamentGoods="1034000|1034008" GroupProperty="DeDoubleAttack,0.03|DeFatalAttack,0.03" />
+  <OrnamentGroup ID="9" Name="优秀青年|幻影杀手" OrnamentGoods="1034001|1034009" GroupProperty="DeFatalAttack,0.06" />
+  <OrnamentGroup ID="10" Name="魔神项链|竞技勇者" OrnamentGoods="1034002|1034010" GroupProperty="IgnorePhyAttackPercent,0.01|DeLucky,0.05" />
+  <OrnamentGroup ID="11" Name="荣耀指环|奥运金牌" OrnamentGoods="1034003|1034011" GroupProperty="DeFatalAttack,0.04|DeDoubleAttack,0.03" />
+  <OrnamentGroup ID="12" Name="精灵坠饰|生命之光" OrnamentGoods="1034004|1034014" GroupProperty="DeDoubleAttack,0.05|DodgePercent,0.01" />
+  <OrnamentGroup ID="13" Name="众神徽记|神鹰指环" OrnamentGoods="1034005|1034015" GroupProperty="HitPercent,0.02|Holywater,0.5" />
+  <OrnamentGroup ID="14" Name="奇迹大师|战场至尊" OrnamentGoods="1034006|1034007" GroupProperty="IgnoreMagyAttackPercent,0.01|LifeStealPercent,0.1" />
+  <OrnamentGroup ID="15" Name="战场至尊|进化勋章" OrnamentGoods="1034007|1034017" GroupProperty="LifeStealPercent,0.1|Potion,0.3" />
+  <OrnamentGroup ID="16" Name="生命之光|奇迹" OrnamentGoods="1034014|1034000" GroupProperty="MaxLifePercent,0.05|DeDoubleAttack,0.03" />
+  <OrnamentGroup ID="17" Name="神鹰指环|再造印记" OrnamentGoods="1034015|1034016" GroupProperty="Holywater,0.3|RecoverLifeV,0.3" />
+  <OrnamentGroup ID="18" Name="再造印记|优秀青年" OrnamentGoods="1034016|1034001" GroupProperty="RecoverLifeV,0.3|DeFatalAttack,0.03" />
+  <OrnamentGroup ID="19" Name="进化勋章|魔神项链" OrnamentGoods="1034017|1034002" GroupProperty="Potion,0.5" />
+  <OrnamentGroup ID="20" Name="奇迹归来|奇迹霸主" OrnamentGoods="1034018|1034019" GroupProperty="MaxLifePercent,0.06|IgnoreMagyAttackPercent,0.01" />
+  <OrnamentGroup ID="21" Name="勇者至尊|奇迹归来" OrnamentGoods="1034008|1034018" GroupProperty="DeFatalAttack,0.05|MaxLifePercent,0.05" />
+  <OrnamentGroup ID="22" Name="幻影杀手|奇迹霸主" OrnamentGoods="1034009|1034019" GroupProperty="FatalAttack,0.03|ElementInjurePercent,0.08" />
+  <OrnamentGroup ID="23" Name="奇迹归来|荣耀指环" OrnamentGoods="1034018|1034003" GroupProperty="MaxLifePercent,0.05|FatalAttack,0.03" />
+  <OrnamentGroup ID="24" Name="奇迹霸主|精灵坠饰" OrnamentGoods="1034019|1034004" GroupProperty="ElementInjurePercent,0.08|DeDoubleAttack,0.05" />
+  <OrnamentGroup ID="25" Name="胜利印记|新星坠饰" OrnamentGoods="1034023|1034021" GroupProperty="MaxLifePercent,0.08|AttackInjurePercent,0.05" />
+  <OrnamentGroup ID="26" Name="冠军奖杯|MVP奖章" OrnamentGoods="1034020|1034022" GroupProperty="SPAttackInjurePercent,0.1|ElementAttackInjurePercent,0.06" />
+  <OrnamentGroup ID="27" Name="冠军奖杯|MVP奖章|胜利印记" OrnamentGoods="1034020|1034022|1034023" GroupProperty="AddAttackInjurePercent,0.05|ElementAttackInjurePercent,0.12|ElementInjurePercent,0.12" />
+  <OrnamentGroup ID="28" Name="九章|天问" OrnamentGoods="1034048|1034049" GroupProperty="DoubleAttack,0.03|DeDoubleAttack,0.03" />
+  <OrnamentGroup ID="29" Name="状元笔|金榜" OrnamentGoods="1034065|1034066" GroupProperty="ElementInjurePercent,0.05|ElementAttackInjurePercent,0.05" />
+  <OrnamentGroup ID="30" Name="原力水晶|红心金莲" OrnamentGoods="1034071|1034072" GroupProperty="MaxLifePercent,0.08|DoubleAttack,0.03" />
+</Config>

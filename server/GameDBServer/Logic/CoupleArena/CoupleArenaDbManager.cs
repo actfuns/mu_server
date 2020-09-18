@@ -10,16 +10,16 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.CoupleArena
 {
-	// Token: 0x02000128 RID: 296
+	
 	internal class CoupleArenaDbManager : SingletonTemplate<CoupleArenaDbManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x060004E1 RID: 1249 RVA: 0x000281B8 File Offset: 0x000263B8
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x060004E2 RID: 1250 RVA: 0x000281CC File Offset: 0x000263CC
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(1382, SingletonTemplate<CoupleArenaDbManager>.Instance());
@@ -28,19 +28,19 @@ namespace GameDBServer.Logic.CoupleArena
 			return true;
 		}
 
-		// Token: 0x060004E3 RID: 1251 RVA: 0x00028220 File Offset: 0x00026420
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x060004E4 RID: 1252 RVA: 0x00028234 File Offset: 0x00026434
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060004E5 RID: 1253 RVA: 0x00028248 File Offset: 0x00026448
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			if (nID == 1382)
@@ -57,7 +57,7 @@ namespace GameDBServer.Logic.CoupleArena
 			}
 		}
 
-		// Token: 0x060004E6 RID: 1254 RVA: 0x000282B4 File Offset: 0x000264B4
+		
 		private long GetUnionCouple(int a1, int a2)
 		{
 			int min = Math.Min(a1, a2);
@@ -67,7 +67,7 @@ namespace GameDBServer.Logic.CoupleArena
 			return v | (long)((ulong)max);
 		}
 
-		// Token: 0x060004E7 RID: 1255 RVA: 0x000282E4 File Offset: 0x000264E4
+		
 		private Queue<CoupleArenaZhanBaoItemData> GetZhanBao(long unionCouple)
 		{
 			Queue<CoupleArenaZhanBaoItemData> result2;
@@ -122,7 +122,7 @@ namespace GameDBServer.Logic.CoupleArena
 			return result2;
 		}
 
-		// Token: 0x060004E8 RID: 1256 RVA: 0x0002857C File Offset: 0x0002677C
+		
 		private void HandleGetZhanBao(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -154,7 +154,7 @@ namespace GameDBServer.Logic.CoupleArena
 			}
 		}
 
-		// Token: 0x060004E9 RID: 1257 RVA: 0x00028678 File Offset: 0x00026878
+		
 		private void HandleClrZhanBao(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			MySQLConnection conn = null;
@@ -202,7 +202,7 @@ namespace GameDBServer.Logic.CoupleArena
 			}
 		}
 
-		// Token: 0x060004EA RID: 1258 RVA: 0x0002884C File Offset: 0x00026A4C
+		
 		private void HandleSaveZhanBao(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			bool bResult = false;
@@ -258,13 +258,13 @@ namespace GameDBServer.Logic.CoupleArena
 			client.sendCmd<bool>(nID, bResult);
 		}
 
-		// Token: 0x040007B5 RID: 1973
+		
 		private object Mutex = new object();
 
-		// Token: 0x040007B6 RID: 1974
+		
 		private readonly int MaxZhanBaoNum = 50;
 
-		// Token: 0x040007B7 RID: 1975
+		
 		private Dictionary<long, Queue<CoupleArenaZhanBaoItemData>> CoupleZhanBaoDict = new Dictionary<long, Queue<CoupleArenaZhanBaoItemData>>();
 	}
 }

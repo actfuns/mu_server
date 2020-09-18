@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.MerlinMagicBook
 {
-	// Token: 0x02000150 RID: 336
+	
 	public class MerlinDBOperate
 	{
-		// Token: 0x060005B1 RID: 1457 RVA: 0x000316C4 File Offset: 0x0002F8C4
+		
 		public static bool InsertMerlinData(DBManager dbMgr, MerlinGrowthSaveDBData merlinData, string addTime)
 		{
 			bool result;
@@ -50,7 +50,7 @@ namespace GameDBServer.Logic.MerlinMagicBook
 			return result;
 		}
 
-		// Token: 0x060005B2 RID: 1458 RVA: 0x000318E0 File Offset: 0x0002FAE0
+		
 		public static bool UpdateMerlinData(DBManager dbMgr, int nRoleID, string[] fields, int nStartIndex)
 		{
 			bool result;
@@ -104,7 +104,7 @@ namespace GameDBServer.Logic.MerlinMagicBook
 			return result;
 		}
 
-		// Token: 0x060005B3 RID: 1459 RVA: 0x00031A7C File Offset: 0x0002FC7C
+		
 		public static MerlinGrowthSaveDBData QueryMerlinData(DBManager dbMgr, int nRoleID)
 		{
 			MySQLConnection conn = null;
@@ -157,7 +157,7 @@ namespace GameDBServer.Logic.MerlinMagicBook
 			return MerlinData;
 		}
 
-		// Token: 0x060005B5 RID: 1461 RVA: 0x00031DC4 File Offset: 0x0002FFC4
+		
 		// Note: this type is marked as 'beforefieldinit'.
 		static MerlinDBOperate()
 		{
@@ -166,7 +166,7 @@ namespace GameDBServer.Logic.MerlinMagicBook
 			MerlinDBOperate.t_fieldTypes = array;
 		}
 
-		// Token: 0x04000843 RID: 2115
+		
 		private static readonly string[] t_fieldNames = new string[]
 		{
 			"level",
@@ -185,7 +185,7 @@ namespace GameDBServer.Logic.MerlinMagicBook
 			"unActiveBlow"
 		};
 
-		// Token: 0x04000844 RID: 2116
+		
 		private static readonly byte[] t_fieldTypes;
 	}
 }

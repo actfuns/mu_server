@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x020001BE RID: 446
+	
 	public class RoleParamNameInfo
 	{
-		// Token: 0x06000928 RID: 2344 RVA: 0x00055AF4 File Offset: 0x00053CF4
+		
 		static RoleParamNameInfo()
 		{
 			try
@@ -48,7 +48,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000929 RID: 2345 RVA: 0x0005880C File Offset: 0x00056A0C
+		
 		public static RoleParamType GetPrefixParamNameType(string paramName)
 		{
 			string name = paramName.ToLower();
@@ -67,7 +67,7 @@ namespace GameDBServer.Logic
 			return nextPtr[0] as RoleParamType;
 		}
 
-		// Token: 0x0600092A RID: 2346 RVA: 0x0005888C File Offset: 0x00056A8C
+		
 		public static RoleParamType GetRoleParamType(string paramName, string value = null)
 		{
 			RoleParamType roleParamType;
@@ -124,7 +124,7 @@ namespace GameDBServer.Logic
 			return roleParamType;
 		}
 
-		// Token: 0x0600092B RID: 2347 RVA: 0x00058AB0 File Offset: 0x00056CB0
+		
 		public static RoleParamType GetRoleParamType(int idx, int column)
 		{
 			RoleParamType roleParamType = null;
@@ -152,31 +152,31 @@ namespace GameDBServer.Logic
 			return roleParamType;
 		}
 
-		// Token: 0x04000B26 RID: 2854
+		
 		public const int StringParamKey = 0;
 
-		// Token: 0x04000B27 RID: 2855
+		
 		public const int LongParamKey = 10000;
 
-		// Token: 0x04000B28 RID: 2856
+		
 		public const int SeldomStringParamKey = 20000;
 
-		// Token: 0x04000B29 RID: 2857
+		
 		private const string LongParamTableName = "t_roleparams_long";
 
-		// Token: 0x04000B2A RID: 2858
+		
 		private const string StringParamTableName = "t_roleparams_char";
 
-		// Token: 0x04000B2B RID: 2859
+		
 		private const string SeldomStringParamTableName = "t_roleparams_2";
 
-		// Token: 0x04000B2C RID: 2860
+		
 		private const string OldParamTableName = "t_roleparams";
 
-		// Token: 0x04000B2D RID: 2861
+		
 		private static ReaderWriterLockSlim readerWriterLock = new ReaderWriterLockSlim();
 
-		// Token: 0x04000B2E RID: 2862
+		
 		private static Dictionary<string, RoleParamType> RoleParamNameTypeExtDict = new Dictionary<string, RoleParamType>
 		{
 			{
@@ -281,10 +281,10 @@ namespace GameDBServer.Logic
 			}
 		};
 
-		// Token: 0x04000B2F RID: 2863
+		
 		private static Dictionary<string, RoleParamType> OldRoleParamNameTypeDict = new Dictionary<string, RoleParamType>();
 
-		// Token: 0x04000B30 RID: 2864
+		
 		private static Dictionary<string, RoleParamType> RoleParamNameTypeDict = new Dictionary<string, RoleParamType>
 		{
 			{
@@ -1045,10 +1045,10 @@ namespace GameDBServer.Logic
 			}
 		};
 
-		// Token: 0x04000B31 RID: 2865
+		
 		private static Dictionary<int, RoleParamType> RoleParamNameIndexDict = new Dictionary<int, RoleParamType>();
 
-		// Token: 0x04000B32 RID: 2866
+		
 		private static object[] PrefixNameTree = new object[128];
 	}
 }

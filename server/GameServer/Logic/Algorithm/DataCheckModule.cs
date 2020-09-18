@@ -2,13 +2,13 @@
 
 namespace GameServer.Logic.Algorithm
 {
-	// Token: 0x020001D8 RID: 472
+	
 	public class DataCheckModule
 	{
-		// Token: 0x020001D9 RID: 473
+		
 		public class CheckLinerValue
 		{
-			// Token: 0x060005FD RID: 1533 RVA: 0x000549F6 File Offset: 0x00052BF6
+			
 			public CheckLinerValue(int _maxSize)
 			{
 				this.maxSize = _maxSize;
@@ -16,13 +16,13 @@ namespace GameServer.Logic.Algorithm
 				this.valueArray = new int[this.maxSize];
 			}
 
-			// Token: 0x060005FE RID: 1534 RVA: 0x00054A32 File Offset: 0x00052C32
+			
 			public void Clear()
 			{
 				Array.Clear(this.valueArray, 0, this.valueArray.Length);
 			}
 
-			// Token: 0x060005FF RID: 1535 RVA: 0x00054A4C File Offset: 0x00052C4C
+			
 			public bool Push(int v, int num, int limit)
 			{
 				bool result;
@@ -61,22 +61,22 @@ namespace GameServer.Logic.Algorithm
 				return result;
 			}
 
-			// Token: 0x04000A70 RID: 2672
+			
 			public int[] valueArray;
 
-			// Token: 0x04000A71 RID: 2673
+			
 			private int maxSize;
 
-			// Token: 0x04000A72 RID: 2674
+			
 			private int maxPos;
 
-			// Token: 0x04000A73 RID: 2675
+			
 			private int dataPos;
 
-			// Token: 0x04000A74 RID: 2676
+			
 			private int dataCount;
 
-			// Token: 0x04000A75 RID: 2677
+			
 			private object mutex = new object();
 		}
 	}

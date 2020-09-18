@@ -9,10 +9,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000140 RID: 320
+	
 	internal class GroupMailManager
 	{
-		// Token: 0x06000552 RID: 1362 RVA: 0x0002CE9C File Offset: 0x0002B09C
+		
 		public static void ResetData()
 		{
 			lock (GroupMailManager.GroupMailDataDict_Mutex)
@@ -22,7 +22,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000553 RID: 1363 RVA: 0x0002CEF4 File Offset: 0x0002B0F4
+		
 		public static void ScanLastGroupMails(DBManager dbMgr)
 		{
 			long nowTicks = DateTime.Now.Ticks / 10000L;
@@ -46,7 +46,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000554 RID: 1364 RVA: 0x0002CFEC File Offset: 0x0002B1EC
+		
 		private static void AddGroupMailData(GroupMailData gmailData)
 		{
 			lock (GroupMailManager.GroupMailDataDict_Mutex)
@@ -55,7 +55,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000555 RID: 1365 RVA: 0x0002D044 File Offset: 0x0002B244
+		
 		private static List<GroupMailData> GetGroupMailList(int beginID)
 		{
 			List<GroupMailData> GroupMailList = null;
@@ -73,7 +73,7 @@ namespace GameDBServer.Logic
 			return GroupMailList;
 		}
 
-		// Token: 0x06000556 RID: 1366 RVA: 0x0002D0DC File Offset: 0x0002B2DC
+		
 		public static TCPProcessCmdResults RequestNewGroupMailList(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -112,7 +112,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000557 RID: 1367 RVA: 0x0002D200 File Offset: 0x0002B400
+		
 		public static TCPProcessCmdResults ModifyGMailRecord(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -175,16 +175,16 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x0400080C RID: 2060
+		
 		private static long LastScanGroupMailTicks = DateTime.Now.Ticks / 10000L;
 
-		// Token: 0x0400080D RID: 2061
+		
 		private static int LastMaxGroupMailID = 0;
 
-		// Token: 0x0400080E RID: 2062
+		
 		private static object GroupMailDataDict_Mutex = new object();
 
-		// Token: 0x0400080F RID: 2063
+		
 		private static Dictionary<int, GroupMailData> GroupMailDataDict = new Dictionary<int, GroupMailData>();
 	}
 }

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}战队竞技说明" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、参与组队竞技必须要创建或者加入一支{17e43e}战队{dac7ae}。" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、每天{17e43e}18:00-24:00{dac7ae}开启组队竞技活动，活动时间内，战队满{17e43e}5人{dac7ae}且都{17e43e}在线{dac7ae}的情况下，才可以进行{17e43e}战斗申请{dac7ae}。" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、进入战斗后，{17e43e}两支{dac7ae}战队进行{17e43e}5V5{dac7ae}战斗，只有{17e43e}一方队员{dac7ae}存活时，战斗结束，队员存活的一方获得{17e43e}胜利{dac7ae}，战斗时间结束，{17e43e}双方{dac7ae}都存活队员则双方都算{17e43e}失败{dac7ae}。" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4、战斗{17e43e}胜利{dac7ae}根据{17e43e}自身{dac7ae}战队段位{17e43e}获得{dac7ae}段位积分，战斗{17e43e}失败{dac7ae}根据自身战队段位{17e43e}扣除{dac7ae}段位积分，累积积分会不断提高战队的段位{17e43e}等级{dac7ae}。" Bold="0" />
+  <HelpIntro ID="6" Intro="{dac7ae}5、{17e43e}青铜1-5段{dac7ae}的战队{17e43e}失败不扣除{dac7ae}段位积分。" Bold="0" />
+  <HelpIntro ID="7" Intro="{dac7ae}6、每天前{17e43e}5{dac7ae}场组队竞技可获得{17e43e}战队荣耀点数{dac7ae}，胜利失败{17e43e}都{dac7ae}可以获得，荣耀点数可以在战队荣耀商店中兑换{17e43e}珍贵道具{dac7ae}。" Bold="0" />
+  <HelpIntro ID="8" Intro="{dac7ae}7、根据战队{17e43e}段位和积分{dac7ae}会对战队进行排行，排行越{17e43e}高{dac7ae}排行奖励越{17e43e}好{dac7ae}。" Bold="0" />
+  <HelpIntro ID="9" Intro="{dac7ae}8、每月{17e43e}1号凌晨3点{dac7ae}清空排行榜，同时根据排行发放相应{17e43e}奖励{dac7ae}。获得奖励资格需要在战队中参与组队竞技{17e43e}4{dac7ae}场，退出战队时，参与场次会被{17e43e}清空{dac7ae}。" Bold="0" />
+</Config>

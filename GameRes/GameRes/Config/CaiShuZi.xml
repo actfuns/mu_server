@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CaiShuZi ID="1" KaiQiShiJian="2018-10-23 00:00:00" JieShuShiJian="2020-12-19 23:59:59" KaiJiangShiJian="23:30:00" XiaoHaoDaiBi="50" ZhongJiangFanLi="1,0.5|2,0.3|3,0.2" ChuFaBiZhong="200000" BuChongTiaoJian="100000" XiTongChouCheng="0.1" ShangChengKaiGuan="-1" />
+</Config>

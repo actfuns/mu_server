@@ -5,21 +5,21 @@ using Server.Tools;
 
 namespace GameServer.Logic.BocaiSys
 {
-	// Token: 0x02000074 RID: 116
+	
 	public class BoCaiBuy2DBList
 	{
-		// Token: 0x06000182 RID: 386 RVA: 0x00018B45 File Offset: 0x00016D45
+		
 		private BoCaiBuy2DBList()
 		{
 		}
 
-		// Token: 0x06000183 RID: 387 RVA: 0x00018B74 File Offset: 0x00016D74
+		
 		public static BoCaiBuy2DBList getInstance()
 		{
 			return BoCaiBuy2DBList.instance;
 		}
 
-		// Token: 0x06000184 RID: 388 RVA: 0x00018C64 File Offset: 0x00016E64
+		
 		public void AddData(BuyBoCai2SDB DbData, int num, bool isAdd = true)
 		{
 			lock (this.mutex)
@@ -36,7 +36,7 @@ namespace GameServer.Logic.BocaiSys
 			}
 		}
 
-		// Token: 0x06000185 RID: 389 RVA: 0x00018D3C File Offset: 0x00016F3C
+		
 		public void SoptServer()
 		{
 			try
@@ -72,7 +72,7 @@ namespace GameServer.Logic.BocaiSys
 			}
 		}
 
-		// Token: 0x06000186 RID: 390 RVA: 0x00018F44 File Offset: 0x00017144
+		
 		public void BigTimeUpData()
 		{
 			try
@@ -119,19 +119,19 @@ namespace GameServer.Logic.BocaiSys
 			}
 		}
 
-		// Token: 0x040002A2 RID: 674
+		
 		private static BoCaiBuy2DBList instance = new BoCaiBuy2DBList();
 
-		// Token: 0x040002A3 RID: 675
+		
 		private DateTime upFailDataTime;
 
-		// Token: 0x040002A4 RID: 676
+		
 		private object mutex = new object();
 
-		// Token: 0x040002A5 RID: 677
+		
 		private List<BoCaiBuy2DBData> dataList = new List<BoCaiBuy2DBData>();
 
-		// Token: 0x040002A6 RID: 678
+		
 		private List<BoCaiBuy2DBData> FailDataList = new List<BoCaiBuy2DBData>();
 	}
 }

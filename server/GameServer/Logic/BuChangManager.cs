@@ -5,17 +5,17 @@ using Server.Data;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020005DD RID: 1501
+	
 	public class BuChangManager
 	{
-		// Token: 0x06001BEA RID: 7146 RVA: 0x001A330E File Offset: 0x001A150E
+		
 		public static void ResetBuChangItemDict()
 		{
 			GameManager.SystemBuChang.ReloadLoadFromXMlFile();
 			BuChangManager.InitBuChangDict();
 		}
 
-		// Token: 0x06001BEB RID: 7147 RVA: 0x001A3324 File Offset: 0x001A1524
+		
 		private static void InitBuChangDict()
 		{
 			lock (BuChangManager._BuChangItemDict)
@@ -43,7 +43,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001BEC RID: 7148 RVA: 0x001A3504 File Offset: 0x001A1704
+		
 		public static BuChangItem GetBuChangItem(int unionLevel)
 		{
 			BuChangItem buChangItem = null;
@@ -65,7 +65,7 @@ namespace GameServer.Logic
 			return buChangItem;
 		}
 
-		// Token: 0x06001BED RID: 7149 RVA: 0x001A35D0 File Offset: 0x001A17D0
+		
 		public static long GetBuChangExp(GameClient client)
 		{
 			BuChangItem buChangItem = BuChangManager.GetBuChangItem(Global.GetUnionLevel(client, false));
@@ -81,7 +81,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001BEE RID: 7150 RVA: 0x001A3608 File Offset: 0x001A1808
+		
 		public static int GetBuChangBindYuanBao(GameClient client)
 		{
 			BuChangItem buChangItem = BuChangManager.GetBuChangItem(Global.GetUnionLevel(client, false));
@@ -97,7 +97,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001BEF RID: 7151 RVA: 0x001A3640 File Offset: 0x001A1840
+		
 		public static List<GoodsData> GetBuChangGoodsDataList(GameClient client)
 		{
 			BuChangItem buChangItem = BuChangManager.GetBuChangItem(Global.GetUnionLevel(client, false));
@@ -113,7 +113,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001BF0 RID: 7152 RVA: 0x001A3678 File Offset: 0x001A1878
+		
 		private static List<GoodsData> ParseGoodsDataList(string goodsIDs)
 		{
 			List<GoodsData> goodsDataList = new List<GoodsData>();
@@ -146,7 +146,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001BF1 RID: 7153 RVA: 0x001A3738 File Offset: 0x001A1938
+		
 		public static bool CanGiveBuChang()
 		{
 			try
@@ -166,14 +166,14 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06001BF2 RID: 7154 RVA: 0x001A37B8 File Offset: 0x001A19B8
+		
 		public static bool HasEnoughBagSpaceForAwardGoods(GameClient client, BuChangItem buChangItem)
 		{
 			int needSpace = buChangItem.GoodsDataList.Count;
 			return needSpace <= 0 || Global.CanAddGoodsDataList(client, buChangItem.GoodsDataList);
 		}
 
-		// Token: 0x06001BF3 RID: 7155 RVA: 0x001A37F4 File Offset: 0x001A19F4
+		
 		public static bool CheckGiveBuChang(GameClient client)
 		{
 			bool result;
@@ -198,7 +198,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001BF4 RID: 7156 RVA: 0x001A3860 File Offset: 0x001A1A60
+		
 		public static void GiveBuChang(GameClient client)
 		{
 			if (!BuChangManager.CanGiveBuChang())
@@ -246,7 +246,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04002A2C RID: 10796
+		
 		private static Dictionary<RangeKey, BuChangItem> _BuChangItemDict = new Dictionary<RangeKey, BuChangItem>(new RangeKey(0, 0, null));
 	}
 }

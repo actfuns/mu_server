@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <JunXian Level="1" Name="列兵" NeedShengWang="9000" NeedGoods="" XiaoHaoShengWang="0" />
+  <JunXian Level="2" Name="下士" NeedShengWang="46000" NeedGoods="" XiaoHaoShengWang="0" />
+  <JunXian Level="3" Name="中士" NeedShengWang="144000" NeedGoods="" XiaoHaoShengWang="0" />
+  <JunXian Level="4" Name="军士" NeedShengWang="351000" NeedGoods="" XiaoHaoShengWang="0" />
+  <JunXian Level="5" Name="骑士" NeedShengWang="726000" NeedGoods="" XiaoHaoShengWang="0" />
+  <JunXian Level="6" Name="中尉" NeedShengWang="1345000" NeedGoods="" XiaoHaoShengWang="0" />
+  <JunXian Level="7" Name="少校" NeedShengWang="2295000" NeedGoods="" XiaoHaoShengWang="0" />
+  <JunXian Level="8" Name="中将" NeedShengWang="3675000" NeedGoods="" XiaoHaoShengWang="0" />
+  <JunXian Level="9" Name="司令" NeedShengWang="5601000" NeedGoods="" XiaoHaoShengWang="0" />
+  <JunXian Level="10" Name="统帅" NeedShengWang="8201000" NeedGoods="" XiaoHaoShengWang="0" />
+  <JunXian Level="11" Name="督军" NeedShengWang="11615000" NeedGoods="" XiaoHaoShengWang="0" />
+  <JunXian Level="12" Name="元帅" NeedShengWang="15997000" NeedGoods="" XiaoHaoShengWang="0" />
+  <JunXian Level="13" Name="上将" NeedShengWang="15997000" NeedGoods="2036,50" XiaoHaoShengWang="0" />
+  <JunXian Level="14" Name="公爵" NeedShengWang="15997000" NeedGoods="2036,60" XiaoHaoShengWang="0" />
+  <JunXian Level="15" Name="大公" NeedShengWang="15997000" NeedGoods="2036,80" XiaoHaoShengWang="0" />
+  <JunXian Level="16" Name="亲王" NeedShengWang="15997000" NeedGoods="2036,100" XiaoHaoShengWang="0" />
+</Config>

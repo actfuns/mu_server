@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <JingLing ID="1" Name="1阶" ArmorClass="1" ModerID="900" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.5" Damageabsorption="0.32" HuDunHuiFuTips="每秒回复" Armorrecovery="0.06" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="2" Name="2阶" ArmorClass="2" ModerID="900" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.45" Damageabsorption="0.34" HuDunHuiFuTips="每秒回复" Armorrecovery="0.06" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="3" Name="3阶" ArmorClass="3" ModerID="900" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.4" Damageabsorption="0.36" HuDunHuiFuTips="每秒回复" Armorrecovery="0.06" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="4" Name="4阶" ArmorClass="4" ModerID="900" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.35" Damageabsorption="0.38" HuDunHuiFuTips="每秒回复" Armorrecovery="0.06" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="5" Name="5阶" ArmorClass="5" ModerID="900" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.3" Damageabsorption="0.4" HuDunHuiFuTips="每秒回复" Armorrecovery="0.07" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="6" Name="6阶" ArmorClass="6" ModerID="901" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.25" Damageabsorption="0.42" HuDunHuiFuTips="每秒回复" Armorrecovery="0.07" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="7" Name="7阶" ArmorClass="7" ModerID="901" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.2" Damageabsorption="0.44" HuDunHuiFuTips="每秒回复" Armorrecovery="0.07" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="8" Name="8阶" ArmorClass="8" ModerID="901" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.15" Damageabsorption="0.46" HuDunHuiFuTips="每秒回复" Armorrecovery="0.07" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="9" Name="9阶" ArmorClass="9" ModerID="901" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.1" Damageabsorption="0.48" HuDunHuiFuTips="每秒回复" Armorrecovery="0.08" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="10" Name="10阶" ArmorClass="10" ModerID="901" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.1" Damageabsorption="0.5" HuDunHuiFuTips="每秒回复" Armorrecovery="0.08" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="11" Name="11阶" ArmorClass="11" ModerID="902" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.1" Damageabsorption="0.51" HuDunHuiFuTips="每秒回复" Armorrecovery="0.08" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="12" Name="12阶" ArmorClass="12" ModerID="902" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.1" Damageabsorption="0.52" HuDunHuiFuTips="每秒回复" Armorrecovery="0.08" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="13" Name="13阶" ArmorClass="13" ModerID="902" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.1" Damageabsorption="0.53" HuDunHuiFuTips="每秒回复" Armorrecovery="0.09" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="14" Name="14阶" ArmorClass="14" ModerID="902" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.1" Damageabsorption="0.54" HuDunHuiFuTips="每秒回复" Armorrecovery="0.09" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="15" Name="15阶" ArmorClass="15" ModerID="902" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.1" Damageabsorption="0.55" HuDunHuiFuTips="每秒回复" Armorrecovery="0.09" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="16" Name="16阶" ArmorClass="16" ModerID="903" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.1" Damageabsorption="0.56" HuDunHuiFuTips="每秒回复" Armorrecovery="0.09" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="17" Name="17阶" ArmorClass="17" ModerID="903" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.1" Damageabsorption="0.57" HuDunHuiFuTips="每秒回复" Armorrecovery="0.1" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="18" Name="18阶" ArmorClass="18" ModerID="903" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.1" Damageabsorption="0.58" HuDunHuiFuTips="每秒回复" Armorrecovery="0.1" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="19" Name="19阶" ArmorClass="19" ModerID="903" LuckyOne="109975" LuckyTwo="109976" LuckyTwoRate="0.1" Damageabsorption="0.59" HuDunHuiFuTips="每秒回复" Armorrecovery="0.1" NeedGoods="2141,10" NeedDiamond="1000" />
+  <JingLing ID="20" Name="20阶" ArmorClass="20" ModerID="903" LuckyOne="-1" LuckyTwo="-1" LuckyTwoRate="-1" Damageabsorption="0.6" HuDunHuiFuTips="每秒回复" Armorrecovery="0.1" NeedGoods="2141,-1" NeedDiamond="-1" />
+</Config>

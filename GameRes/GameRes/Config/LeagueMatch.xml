@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <LeagueMatch ID="1" Name="超级黄金联赛" Random="1" Round="7" MapCode="85000|85001" TimePoints="6,20:30-21:00|0,20:30-21:00" ApplyStartTime="300" ApplyOverTime="1800" PrepareSecs="180" FightingSecs="1620" ClearRolesSecs="15" MaxEnterNum="100" Exp="15000000" BandJInBi="1500000" WinGoods="5220,30,1,0,0,0,0|5173,50,1,0,0,0,0" LoseGoods="5220,9,1,0,0,0,0|5173,15,1,0,0,0,0" />
+  <LeagueMatch ID="2" Name="潜力新星塞" Random="2" Round="8" MapCode="85000|85001" TimePoints="1,20:30-21:00|2,20:30-21:00" ApplyStartTime="300" ApplyOverTime="1800" PrepareSecs="180" FightingSecs="1620" ClearRolesSecs="15" MaxEnterNum="100" Exp="12000000" BandJInBi="1200000" WinGoods="5220,18,1,0,0,0,0|5173,36,1,0,0,0,0" LoseGoods="5220,6,1,0,0,0,0|5173,11,1,0,0,0,0" />
+</Config>

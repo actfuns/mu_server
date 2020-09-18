@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Xiangou>
+  <Goods Group="1" Random="0" ID="200000" GoodsID="63020" OrigPrice="888" Price="388" SinglePurchase="1" FullPurchase="100" DaysTime="2" />
+  <Goods Group="1" Random="0" ID="200010" GoodsID="63021" OrigPrice="1288" Price="888" SinglePurchase="1" FullPurchase="100" DaysTime="2" />
+  <Goods Group="1" Random="0" ID="200020" GoodsID="63024" OrigPrice="1288" Price="888" SinglePurchase="1" FullPurchase="100" DaysTime="2" />
+  <Goods Group="1" Random="0" ID="200030" GoodsID="63022" OrigPrice="1288" Price="888" SinglePurchase="1" FullPurchase="100" DaysTime="2" />
+  <Goods Group="2" Random="0" ID="200040" GoodsID="2001" OrigPrice="58" Price="38" SinglePurchase="10" FullPurchase="500" DaysTime="2" />
+  <Goods Group="2" Random="0" ID="200050" GoodsID="2002" OrigPrice="100" Price="88" SinglePurchase="10" FullPurchase="500" DaysTime="2" />
+  <Goods Group="2" Random="0" ID="200060" GoodsID="2005" OrigPrice="888" Price="688" SinglePurchase="1" FullPurchase="50" DaysTime="2" />
+  <Goods Group="2" Random="0" ID="200070" GoodsID="63024" OrigPrice="888" Price="888" SinglePurchase="1" FullPurchase="100" DaysTime="2" />
+  <Goods Group="3" Random="0" ID="200080" GoodsID="4031" OrigPrice="88" Price="48" SinglePurchase="5" FullPurchase="100" DaysTime="2" />
+  <Goods Group="3" Random="0" ID="200090" GoodsID="4015" OrigPrice="88" Price="48" SinglePurchase="10" FullPurchase="500" DaysTime="2" />
+  <Goods Group="3" Random="0" ID="200100" GoodsID="4016" OrigPrice="88" Price="48" SinglePurchase="10" FullPurchase="500" DaysTime="2" />
+  <Goods Group="3" Random="0" ID="200110" GoodsID="2001" OrigPrice="58" Price="38" SinglePurchase="10" FullPurchase="500" DaysTime="2" />
+  <Goods Group="4" Random="0" ID="200120" GoodsID="2030" OrigPrice="20" Price="10" SinglePurchase="10" FullPurchase="999" DaysTime="2" />
+  <Goods Group="4" Random="0" ID="200130" GoodsID="2005" OrigPrice="888" Price="688" SinglePurchase="1" FullPurchase="100" DaysTime="2" />
+  <Goods Group="4" Random="0" ID="200140" GoodsID="63024" OrigPrice="1288" Price="888" SinglePurchase="1" FullPurchase="500" DaysTime="2" />
+  <Goods Group="4" Random="0" ID="200150" GoodsID="63022" OrigPrice="1288" Price="888" SinglePurchase="1" FullPurchase="500" DaysTime="2" />
+  <Goods Group="5" Random="0" ID="200160" GoodsID="63021" OrigPrice="1288" Price="888" SinglePurchase="1" FullPurchase="100" DaysTime="1" />
+  <Goods Group="5" Random="0" ID="200170" GoodsID="2030" OrigPrice="20" Price="10" SinglePurchase="10" FullPurchase="999" DaysTime="1" />
+  <Goods Group="5" Random="0" ID="200180" GoodsID="2002" OrigPrice="100" Price="88" SinglePurchase="10" FullPurchase="500" DaysTime="1" />
+  <Goods Group="5" Random="0" ID="200190" GoodsID="2005" OrigPrice="888" Price="688" SinglePurchase="1" FullPurchase="500" DaysTime="1" />
+</Xiangou>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="21" />
+  <GiftList Title="充值大回馈" Description="活动期间内只需您累计充值达到18888元宝即可免费在此处领取价值18888元宝的豪华充值回馈大礼包，心动不如行动，要抓紧哦！">
+  <Award GoodsIDs="31031,1,0,0,1,0|36002,1,0,0,1,0|50005,1,0,0,1,0|31017,1,0,0,1,0|30063,1,0,0,0,0" MinYuanBao="18888"/>
+  </GiftList>
+</Config>

@@ -8,15 +8,15 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.GuardStatue
 {
-	// Token: 0x0200013F RID: 319
+	
 	public class GuardStatueHandler : SingletonTemplate<GuardStatueHandler>
 	{
-		// Token: 0x0600054D RID: 1357 RVA: 0x0002C7B4 File Offset: 0x0002A9B4
+		
 		private GuardStatueHandler()
 		{
 		}
 
-		// Token: 0x0600054E RID: 1358 RVA: 0x0002C7C0 File Offset: 0x0002A9C0
+		
 		public TCPProcessCmdResults ProcUpdateRoleGuardStatue(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -90,7 +90,7 @@ namespace GameDBServer.Logic.GuardStatue
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x0600054F RID: 1359 RVA: 0x0002CA8C File Offset: 0x0002AC8C
+		
 		private bool _UpdateRoleGuardStatue(DBManager dbMgr, int roleID, int slotCnt, int level, int suit, int totalGuardPoint, int lastdayRecoverPoint, int lastdayRecoverOffset)
 		{
 			bool bSuccess = false;
@@ -114,7 +114,7 @@ namespace GameDBServer.Logic.GuardStatue
 			return bSuccess;
 		}
 
-		// Token: 0x06000550 RID: 1360 RVA: 0x0002CB70 File Offset: 0x0002AD70
+		
 		public TCPProcessCmdResults ProcUpdateRoleGuardSoul(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -184,7 +184,7 @@ namespace GameDBServer.Logic.GuardStatue
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000551 RID: 1361 RVA: 0x0002CE20 File Offset: 0x0002B020
+		
 		private bool _UpdateRoleGuardSoul(DBManager dbMgr, int roleID, int soulType, int equipSlot)
 		{
 			bool bSuccess = false;
@@ -199,10 +199,10 @@ namespace GameDBServer.Logic.GuardStatue
 			return bSuccess;
 		}
 
-		// Token: 0x0400080A RID: 2058
+		
 		public const string TableGuardStatue = "t_guard_statue";
 
-		// Token: 0x0400080B RID: 2059
+		
 		public const string TableGuardSoul = "t_guard_soul";
 	}
 }

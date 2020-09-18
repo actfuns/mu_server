@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Pets>
+    <Pet ID="1" Code="1" Name="兔子（雄）" />
+    <Pet ID="2" Code="2" Name="兔子（雌）" />
+    <Pet ID="3" Code="3" Name="熊猫（雄）" />
+    <Pet ID="4" Code="4" Name="熊猫（雌）" />
+    <Pet ID="5" Code="5" Name="白虎" />
+    <Pet ID="6" Code="6" Name="坛妖宝宝" />
+    <Pet ID="7" Code="7" Name="蓝豹" />
+  </Pets>
+</Config>

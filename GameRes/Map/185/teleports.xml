@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+      <Teleports>
+	<Teleport Code="197" FrameNum="13" Tip="勇者大陆" Key="10" To="1" ToX="8250" ToY="10950" ToDirection="7" X="6350" Y="1550" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="197" />
+      </Teleports>
+</Map>

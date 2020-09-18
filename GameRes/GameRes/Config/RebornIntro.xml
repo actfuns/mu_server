@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}重生系统说明{-}" Bold="1" />
+  <HelpIntro ID="2" Intro="{fac60d}重生等级" Bold="1" />
+  <HelpIntro ID="3" Intro="{dac7ae}1、角色达成重生条件并进阶后，获得{17e43e}重生等级{-}" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}2、在重生地图中杀怪、回收重生装备可获得{17e43e}重生经验{-}，累计{17e43e}重生经验{-}可提升重生等级，每天可获得的重生经验有上限" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}3、重生等级有上限，达到上限后需要进阶，进阶后重生等级上限将提高，1阶60级、2阶140级、3阶240级" Bold="0" />
+  <HelpIntro ID="6" Intro="{dac7ae}4、在重生地图中显示重生等级，在原地图显示原转生等级" Bold="0" />
+  <HelpIntro ID="7" Intro="{fac60d}重生属性" Bold="1" />
+  <HelpIntro ID="8" Intro="{dac7ae}1、重生属性共分5系：{ffcc19}神圣{-}、{b266ff}暗影{-}、{17e43e}自然{-}、{ff0000}混沌{-}、{3681f3}梦魇{-}" Bold="0" />
+  <HelpIntro ID="9" Intro="{dac7ae}2、角色重生后，开启全新的重生属性，重生地图中重生属性{17e43e}效果翻倍{-}，但是在原地图则恢复正常" Bold="0" />
+  <HelpIntro ID="10" Intro="{dac7ae}3、重生地图中所有角色、怪物，均获得一定的伤害减免效果" Bold="0" />
+  <HelpIntro ID="11" Intro="{dac7ae}4、重生地图中每种怪物均有{17e43e}弱点{-}，若重生属性上的偏重与怪物弱点相吻合，则能造成{ff0000}非常爆炸的伤害{-}" Bold="0" />
+  <HelpIntro ID="12" Intro="{fac60d}重生地图" Bold="1" />
+  <HelpIntro ID="13" Intro="{dac7ae}1、重生地图为{17e43e}跨平台地图{-}" Bold="0" />
+  <HelpIntro ID="14" Intro="{dac7ae}2、PK模式：1线、2线为{17e43e}和平模式{-}；第3、4、5线可在{ff0000}战盟模式{-}和{17e43e}和平模式{-}之间切换{-}" Bold="0" />
+  <HelpIntro ID="15" Intro="{fac60d}连斩系统" Bold="1" />
+  <HelpIntro ID="16" Intro="{dac7ae}1、重生地图中连续击杀怪物可获得重生连斩计数" Bold="0" />
+  <HelpIntro ID="17" Intro="{dac7ae}2、一段时间不击杀怪物则连斩计数会中断，持续击杀则会持续累计连斩数" Bold="0" />
+  <HelpIntro ID="18" Intro="{dac7ae}3、连斩数达到一定数量可获得重生地图{17e43e}经验加成效果{-}" Bold="0" />
+</Config>

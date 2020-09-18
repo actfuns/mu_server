@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Auction ID="1" Name="天使神殿金团" List="2" Time="10" OriginPrice="500" UnitPrice="50" MaxPrice="10000000" SuccessTitle="拍卖成功" SuccessIntro="您参与的天使神殿金团奖励{0}，在金团拍卖中为您分得{1}钻石" FailTitle="拍卖失败" FailIntro="你参与的天使神殿{0}竞拍失败，因您为伤害最好玩家所以奖励现在属于您一个人。" />
+</Config>

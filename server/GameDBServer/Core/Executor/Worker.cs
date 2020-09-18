@@ -4,16 +4,16 @@ using Server.Tools;
 
 namespace GameDBServer.Core.Executor
 {
-	// Token: 0x0200001B RID: 27
+	
 	internal class Worker
 	{
-		// Token: 0x06000067 RID: 103 RVA: 0x000044C5 File Offset: 0x000026C5
+		
 		public Worker(ScheduleExecutor executor)
 		{
 			this.executor = executor;
 		}
 
-		// Token: 0x17000009 RID: 9
+		
 		
 		public Thread CurrentThread
 		{
@@ -23,7 +23,7 @@ namespace GameDBServer.Core.Executor
 			}
 		}
 
-		// Token: 0x06000069 RID: 105 RVA: 0x000044F0 File Offset: 0x000026F0
+		
 		private TaskWrapper getCanExecuteTask()
 		{
 			int getNum = 0;
@@ -47,7 +47,7 @@ namespace GameDBServer.Core.Executor
 			return null;
 		}
 
-		// Token: 0x0600006A RID: 106 RVA: 0x0000456C File Offset: 0x0000276C
+		
 		public void work()
 		{
 			TaskWrapper TaskWrapper = null;
@@ -97,10 +97,10 @@ namespace GameDBServer.Core.Executor
 			}
 		}
 
-		// Token: 0x04000054 RID: 84
+		
 		private ScheduleExecutor executor = null;
 
-		// Token: 0x04000055 RID: 85
+		
 		private Thread currentThread = null;
 	}
 }

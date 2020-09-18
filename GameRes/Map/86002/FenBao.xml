@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <Monsters>
+    <Monster ID="1" Code="9810000" />
+	<Monster ID="2" Code="9810001" />
+	<Monster ID="3" Code="9810002" />
+	<Monster ID="4" Code="9810003" />
+	<Monster ID="5" Code="9810004" />
+	<Monster ID="6" Code="9810005" />
+	<Monster ID="7" Code="9810006" />
+	<Monster ID="8" Code="9810007" />
+	<Monster ID="9" Code="9810008" />
+	<Monster ID="10" Code="9810009" />
+	<Monster ID="11" Code="9810010" />
+	<Monster ID="12" Code="9810011" />
+	<Monster ID="13" Code="9810012" />
+	<Monster ID="14" Code="9810013" />
+	<Monster ID="15" Code="9810014" />
+	<Monster ID="16" Code="9810015" />
+	<Monster ID="17" Code="9810016" />
+	<Monster ID="18" Code="9810017" />
+	<Monster ID="19" Code="9810018" />
+	<Monster ID="20" Code="9810019" />
+	<Monster ID="21" Code="9810020" />
+	<Monster ID="22" Code="9810021" />
+	<Monster ID="23" Code="9810022" />
+	<Monster ID="24" Code="9810023" />
+	<Monster ID="25" Code="9810024" />
+	<Monster ID="26" Code="9810025" />
+	<Monster ID="27" Code="9810026" />
+	<Monster ID="28" Code="9810027" />
+	<Monster ID="29" Code="9810028" />
+	<Monster ID="30" Code="9810029" />
+	<Monster ID="31" Code="9810030" />
+	<Monster ID="32" Code="9810031" />
+	<Monster ID="33" Code="9810032" />
+	<Monster ID="34" Code="9810033" />
+	<Monster ID="35" Code="9810034" />
+	<Monster ID="36" Code="9810035" />
+	<Monster ID="37" Code="9810036" />
+	<Monster ID="38" Code="9810037" />
+	<Monster ID="39" Code="9810038" />
+	<Monster ID="40" Code="9810039" />
+	<Monster ID="41" Code="9810040" />
+	<Monster ID="42" Code="9810041" />
+	<Monster ID="43" Code="9810042" />
+	<Monster ID="44" Code="9810043" />
+	<Monster ID="45" Code="9810044" />
+  </Monsters>
+</Map>

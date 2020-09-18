@@ -9,16 +9,16 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000159 RID: 345
+	
 	public class OlympicsManager : SingletonTemplate<OlympicsManager>, IManager, ICmdProcessor
 	{
-		// Token: 0x060005E5 RID: 1509 RVA: 0x0003482C File Offset: 0x00032A2C
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x060005E6 RID: 1510 RVA: 0x00034840 File Offset: 0x00032A40
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(13124, SingletonTemplate<OlympicsManager>.Instance());
@@ -29,19 +29,19 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x060005E7 RID: 1511 RVA: 0x000348BC File Offset: 0x00032ABC
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x060005E8 RID: 1512 RVA: 0x000348D0 File Offset: 0x00032AD0
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x060005E9 RID: 1513 RVA: 0x000348E4 File Offset: 0x00032AE4
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			switch (nID)
@@ -64,7 +64,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060005EA RID: 1514 RVA: 0x0003495C File Offset: 0x00032B5C
+		
 		private void OlympicsGuess(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			string[] fields = null;
@@ -98,7 +98,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x060005EB RID: 1515 RVA: 0x00034AE4 File Offset: 0x00032CE4
+		
 		private void OlympicsGuessList(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			int roleID = DataHelper.BytesToObject<int>(cmdParams, 0, count);
@@ -125,7 +125,7 @@ namespace GameDBServer.Logic
 			client.sendCmd<List<OlympicsGuessDataDB>>(nID, list);
 		}
 
-		// Token: 0x060005EC RID: 1516 RVA: 0x00034C74 File Offset: 0x00032E74
+		
 		private void OlympicsGuessUpdate(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			OlympicsGuessDataDB data = DataHelper.BytesToObject<OlympicsGuessDataDB>(cmdParams, 0, count);
@@ -147,7 +147,7 @@ namespace GameDBServer.Logic
 			client.sendCmd<bool>(nID, true);
 		}
 
-		// Token: 0x060005ED RID: 1517 RVA: 0x00034D60 File Offset: 0x00032F60
+		
 		private void OlympicsShopList(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			int dayID = DataHelper.BytesToObject<int>(cmdParams, 0, count);
@@ -169,7 +169,7 @@ namespace GameDBServer.Logic
 			client.sendCmd<Dictionary<int, int>>(nID, dic);
 		}
 
-		// Token: 0x060005EE RID: 1518 RVA: 0x00034E30 File Offset: 0x00033030
+		
 		private void OlympicsShopUpdate(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			string[] fields = null;

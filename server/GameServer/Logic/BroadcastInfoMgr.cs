@@ -6,10 +6,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020005DB RID: 1499
+	
 	public class BroadcastInfoMgr
 	{
-		// Token: 0x06001BE1 RID: 7137 RVA: 0x001A286C File Offset: 0x001A0A6C
+		
 		public static void LoadBroadcastInfoItemList()
 		{
 			XElement xml = null;
@@ -39,7 +39,7 @@ namespace GameServer.Logic
 			BroadcastInfoMgr.BroadcastInfoItemList = broadcastInfoItemList;
 		}
 
-		// Token: 0x06001BE2 RID: 7138 RVA: 0x001A2960 File Offset: 0x001A0B60
+		
 		private static void ParseXmlItem(SystemXmlItem systemXmlItem, List<BroadcastInfoItem> broadcastInfoItemList)
 		{
 			int id = systemXmlItem.GetIntValue("ID", -1);
@@ -92,7 +92,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001BE3 RID: 7139 RVA: 0x001A2B38 File Offset: 0x001A0D38
+		
 		private static BroadcastTimeItem[] ParseBroadcastTimeItems(string times)
 		{
 			BroadcastTimeItem[] result;
@@ -140,7 +140,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001BE4 RID: 7140 RVA: 0x001A2C34 File Offset: 0x001A0E34
+		
 		private static bool CanBroadcast(BroadcastInfoItem broadcastInfoItem, BroadcastTimeItem lastBroadcastTimeItem, int weekDayID, int hour, int minute)
 		{
 			bool result;
@@ -201,7 +201,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001BE5 RID: 7141 RVA: 0x001A2DDC File Offset: 0x001A0FDC
+		
 		public static void ProcessBroadcastInfos()
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -247,7 +247,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001BE6 RID: 7142 RVA: 0x001A3004 File Offset: 0x001A1204
+		
 		public static void LoginBroadcastInfos(GameClient client)
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -309,13 +309,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x04002A22 RID: 10786
+		
 		private static List<BroadcastInfoItem> BroadcastInfoItemList = null;
 
-		// Token: 0x04002A23 RID: 10787
+		
 		private static int LastBroadcastDay = TimeUtil.NowDateTime().DayOfYear;
 
-		// Token: 0x04002A24 RID: 10788
+		
 		private static BroadcastTimeItem LastBroadcastTimeItem = new BroadcastTimeItem
 		{
 			Hour = TimeUtil.NowDateTime().Hour,

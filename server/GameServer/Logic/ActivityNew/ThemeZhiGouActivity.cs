@@ -9,16 +9,16 @@ using Server.Tools;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x02000448 RID: 1096
+	
 	public class ThemeZhiGouActivity : Activity, IEventListener
 	{
-		// Token: 0x06001406 RID: 5126 RVA: 0x0013AE8C File Offset: 0x0013908C
+		
 		public void Dispose()
 		{
 			GlobalEventSource.getInstance().removeListener(36, this);
 		}
 
-		// Token: 0x06001407 RID: 5127 RVA: 0x0013AEA0 File Offset: 0x001390A0
+		
 		public bool Init()
 		{
 			try
@@ -66,7 +66,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x06001408 RID: 5128 RVA: 0x0013B0E0 File Offset: 0x001392E0
+		
 		public void processEvent(EventObject eventObject)
 		{
 			if (eventObject.getEventType() == 36)
@@ -84,7 +84,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x06001409 RID: 5129 RVA: 0x0013B174 File Offset: 0x00139374
+		
 		public Dictionary<int, int> BuildThemeZhiGouInfoForClient(GameClient client)
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -99,7 +99,7 @@ namespace GameServer.Logic.ActivityNew
 			return ZhiGouInfoDict;
 		}
 
-		// Token: 0x0600140A RID: 5130 RVA: 0x0013B228 File Offset: 0x00139428
+		
 		public bool CheckValidChargeItem(int zhigouID)
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -116,7 +116,7 @@ namespace GameServer.Logic.ActivityNew
 			return false;
 		}
 
-		// Token: 0x0600140B RID: 5131 RVA: 0x0013B2DC File Offset: 0x001394DC
+		
 		public bool CheckClientCanBuy(GameClient client)
 		{
 			DateTime now = TimeUtil.NowDateTime();
@@ -134,10 +134,10 @@ namespace GameServer.Logic.ActivityNew
 			return false;
 		}
 
-		// Token: 0x04001D8B RID: 7563
+		
 		protected const string ThemeActivityZhiGouData_fileName = "Config/ThemeActivityZhiGou.xml";
 
-		// Token: 0x04001D8C RID: 7564
+		
 		protected Dictionary<int, ThemeZhiGouConfig> ThemeZhiGouConfigData = new Dictionary<int, ThemeZhiGouConfig>();
 	}
 }

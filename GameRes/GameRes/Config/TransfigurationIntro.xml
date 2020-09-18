@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}神魂附体说明" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、功能开启后，通过左侧虚拟摇杆上方的{17e43e}神魂附体{dac7ae}按钮，可进行附体操作。" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、神魂附体后将会变成{17e43e}神魂{dac7ae}的样子，{17e43e}技能{dac7ae}会替换为强力的{17e43e}神魂技能{dac7ae}。" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、附体状态有{17e43e}持续时间{dac7ae}，持续时间结束角色恢复到{17e43e}正常状态{dac7ae}，并且{17e43e}神魂附体{dac7ae}开始技能冷却，冷却结束才可进行下次附体" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4、每日有{17e43e}免费{dac7ae}的神魂附体次数，免费次数用完后每次神魂附体需要消耗一个{17e43e}特定道具{dac7ae}。" Bold="0" />
+  <HelpIntro ID="6" Intro="{dac7ae}5、神魂附体可以通过{17e43e}升级{dac7ae}进行养成，等级越高{17e43e}神魂属性{dac7ae}越高，{17e43e}神魂技能{dac7ae}的等级越高，开启更多的{17e43e}神魂技能{dac7ae}。" Bold="0" />
+  <HelpIntro ID="7" Intro="{dac7ae}6、不管是否处于{17e43e}附体{dac7ae}状态，神魂属性{17e43e}一直{dac7ae}生效。" Bold="0" />
+  <HelpIntro ID="8" Intro="{dac7ae}7、当穿戴有{17e43e}神魂时装{dac7ae}时，附体后将变为{17e43e}神魂时装{dac7ae}的样子，每个神魂时装都有一套强力的{17e43e}神魂技能{dac7ae}。" Bold="0" />
+  <HelpIntro ID="9" Intro="{dac7ae}8、神魂时装也可以{17e43e}升级{dac7ae}，提升{17e43e}时装属性{dac7ae}和{17e43e}时装效果{dac7ae}，开启更多时装对应的{17e43e}神魂技能{dac7ae}。" Bold="0" />
+</Config>

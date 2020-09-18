@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ForceCraftReward ID="1" Rank="1" RankRate="-1" Grade="200000" Contribution="100000" GoodsOne="63195,5,1,0,0,0,0|50033,50,1,0,0,0,0" GoodsTwo="" />
+  <ForceCraftReward ID="2" Rank="2" RankRate="-1" Grade="160000" Contribution="80000" GoodsOne="63195,4,1,0,0,0,0|50033,45,1,0,0,0,0" GoodsTwo="" />
+  <ForceCraftReward ID="3" Rank="3" RankRate="-1" Grade="140000" Contribution="70000" GoodsOne="63195,3,1,0,0,0,0|50033,40,1,0,0,0,0" GoodsTwo="" />
+  <ForceCraftReward ID="4" Rank="4" RankRate="-1" Grade="120000" Contribution="60000" GoodsOne="63195,3,1,0,0,0,0|50033,35,1,0,0,0,0" GoodsTwo="" />
+  <ForceCraftReward ID="5" Rank="5" RankRate="-1" Grade="100000" Contribution="50000" GoodsOne="63195,2,1,0,0,0,0|50033,30,1,0,0,0,0" GoodsTwo="" />
+  <ForceCraftReward ID="6" Rank="-1" RankRate="0.1" Grade="85000" Contribution="42500" GoodsOne="63195,2,1,0,0,0,0|50033,28,1,0,0,0,0" GoodsTwo="" />
+  <ForceCraftReward ID="7" Rank="-1" RankRate="0.2" Grade="80000" Contribution="40000" GoodsOne="63195,2,1,0,0,0,0|50033,25,1,0,0,0,0" GoodsTwo="" />
+  <ForceCraftReward ID="8" Rank="-1" RankRate="0.3" Grade="75000" Contribution="37500" GoodsOne="63195,1,1,0,0,0,0|50033,20,1,0,0,0,0" GoodsTwo="" />
+  <ForceCraftReward ID="9" Rank="-1" RankRate="0.4" Grade="70000" Contribution="35000" GoodsOne="63195,1,1,0,0,0,0|50033,18,1,0,0,0,0" GoodsTwo="" />
+  <ForceCraftReward ID="10" Rank="-1" RankRate="0.5" Grade="65000" Contribution="32500" GoodsOne="63195,1,1,0,0,0,0|50033,15,1,0,0,0,0" GoodsTwo="" />
+  <ForceCraftReward ID="11" Rank="-1" RankRate="0.6" Grade="60000" Contribution="30000" GoodsOne="50160,6,1,0,0,0,0|50033,14,1,0,0,0,0" GoodsTwo="" />
+  <ForceCraftReward ID="12" Rank="-1" RankRate="0.7" Grade="55000" Contribution="27500" GoodsOne="50160,5,1,0,0,0,0|50033,13,1,0,0,0,0" GoodsTwo="" />
+  <ForceCraftReward ID="13" Rank="-1" RankRate="0.8" Grade="50000" Contribution="25000" GoodsOne="50160,4,1,0,0,0,0|50033,12,1,0,0,0,0" GoodsTwo="" />
+  <ForceCraftReward ID="14" Rank="-1" RankRate="0.9" Grade="45000" Contribution="22500" GoodsOne="50160,3,1,0,0,0,0|50033,11,1,0,0,0,0" GoodsTwo="" />
+  <ForceCraftReward ID="15" Rank="-1" RankRate="1" Grade="40000" Contribution="20000" GoodsOne="50160,2,1,0,0,0,0|50033,10,1,0,0,0,0" GoodsTwo="" />
+</Config>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ZhuanShengs>
+    <JingJi MapID="9000" MinZhuanSheng="0" MinLevel="80" FreeNumber="5" WiteTime="5" />
+  </ZhuanShengs>
+</Config>

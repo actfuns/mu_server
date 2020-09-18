@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Ring ID="1" GoodsID="1032301" Name="一生情" NeedZuanShi="137" NeedRing="-1" RingIntro="RingIntro_1032301" />
+  <Ring ID="2" GoodsID="1032302" Name="爱相随" NeedZuanShi="234" NeedRing="1032301" RingIntro="RingIntro_1032302" />
+  <Ring ID="3" GoodsID="1032303" Name="我爱你" NeedZuanShi="520" NeedRing="1032302" RingIntro="RingIntro_1032303" />
+  <Ring ID="4" GoodsID="1032304" Name="就依你" NeedZuanShi="910" NeedRing="1032303" RingIntro="RingIntro_1032304" />
+  <Ring ID="5" GoodsID="1032305" Name="一生一世" NeedZuanShi="1314" NeedRing="1032304" RingIntro="RingIntro_1032305" />
+  <Ring ID="6" GoodsID="1032306" Name="依旧爱你" NeedZuanShi="1920" NeedRing="1032305" RingIntro="RingIntro_1032306" />
+  <Ring ID="7" GoodsID="1032307" Name="爱来爱去" NeedZuanShi="2627" NeedRing="1032306" RingIntro="RingIntro_1032307" />
+  <Ring ID="8" GoodsID="1032308" Name="长长久久" NeedZuanShi="3399" NeedRing="1032307" RingIntro="RingIntro_1032308" />
+  <Ring ID="9" GoodsID="1032309" Name="只有为你" NeedZuanShi="4980" NeedRing="1032308" RingIntro="RingIntro_1032309" />
+  <Ring ID="10" GoodsID="1032310" Name="心心相印" NeedZuanShi="7731" NeedRing="1032309" RingIntro="RingIntro_1032310" />
+</Config>

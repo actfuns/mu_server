@@ -6,15 +6,15 @@ using Server.Tools;
 
 namespace GameServer.Core.Executor
 {
-	// Token: 0x020000CB RID: 203
+	
 	public class ScheduleExecutor2
 	{
-		// Token: 0x06000386 RID: 902 RVA: 0x0003CA84 File Offset: 0x0003AC84
+		
 		public void start()
 		{
 		}
 
-		// Token: 0x06000387 RID: 903 RVA: 0x0003CA88 File Offset: 0x0003AC88
+		
 		public void stop()
 		{
 			lock (this)
@@ -27,7 +27,7 @@ namespace GameServer.Core.Executor
 			}
 		}
 
-		// Token: 0x06000388 RID: 904 RVA: 0x0003CB28 File Offset: 0x0003AD28
+		
 		public void scheduleCancle(ScheduleTask task)
 		{
 			lock (this)
@@ -41,7 +41,7 @@ namespace GameServer.Core.Executor
 			}
 		}
 
-		// Token: 0x06000389 RID: 905 RVA: 0x0003CB94 File Offset: 0x0003AD94
+		
 		public void scheduleExecute(ScheduleTask task, int group, int periodic)
 		{
 			if (periodic < 15 || periodic > 86400000)
@@ -80,7 +80,7 @@ namespace GameServer.Core.Executor
 			}
 		}
 
-		// Token: 0x0600038A RID: 906 RVA: 0x0003CCBC File Offset: 0x0003AEBC
+		
 		private static void OnTimedEvent(object source)
 		{
 			ScheduleTask task = source as ScheduleTask;
@@ -131,13 +131,13 @@ namespace GameServer.Core.Executor
 			}
 		}
 
-		// Token: 0x040004DC RID: 1244
+		
 		public static ScheduleExecutor2 Instance = new ScheduleExecutor2();
 
-		// Token: 0x040004DD RID: 1245
+		
 		private Dictionary<ScheduleTask, Timer> TimerDict = new Dictionary<ScheduleTask, Timer>();
 
-		// Token: 0x040004DE RID: 1246
+		
 		private Dictionary<int, ExecContext> ThreadDict = new Dictionary<int, ExecContext>();
 	}
 }

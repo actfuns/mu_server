@@ -11,22 +11,22 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x02000061 RID: 97
+	
 	public class AlchemyManager : IManager, ICmdProcessorEx, ICmdProcessor
 	{
-		// Token: 0x0600014C RID: 332 RVA: 0x00016350 File Offset: 0x00014550
+		
 		public static AlchemyManager getInstance()
 		{
 			return AlchemyManager.instance;
 		}
 
-		// Token: 0x0600014D RID: 333 RVA: 0x00016368 File Offset: 0x00014568
+		
 		public bool initialize()
 		{
 			return this.InitConfig();
 		}
 
-		// Token: 0x0600014E RID: 334 RVA: 0x0001638C File Offset: 0x0001458C
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessorEx(1085, 1, 1, AlchemyManager.getInstance(), TCPCmdFlags.IsStringArrayParams);
@@ -35,25 +35,25 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x0600014F RID: 335 RVA: 0x000163E8 File Offset: 0x000145E8
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000150 RID: 336 RVA: 0x000163FC File Offset: 0x000145FC
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000151 RID: 337 RVA: 0x00016410 File Offset: 0x00014610
+		
 		public bool processCmd(GameClient client, string[] cmdParams)
 		{
 			return false;
 		}
 
-		// Token: 0x06000152 RID: 338 RVA: 0x00016424 File Offset: 0x00014624
+		
 		public bool processCmdEx(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			bool result;
@@ -83,20 +83,20 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000153 RID: 339 RVA: 0x000164CB File Offset: 0x000146CB
+		
 		public void OnLogin(GameClient client)
 		{
 			this.AlchemyRollBack(client, client.ClientData.AlchemyInfo.rollbackType);
 			this.RefreshAlchemyProps(client);
 		}
 
-		// Token: 0x06000154 RID: 340 RVA: 0x000164F0 File Offset: 0x000146F0
+		
 		public bool AlchemyRollBackOffline(int rid, string rollbackType)
 		{
 			return Global.sendToDB<bool, string>(13098, string.Format("{0}:{1}", rid, rollbackType), 0);
 		}
 
-		// Token: 0x06000155 RID: 341 RVA: 0x00016520 File Offset: 0x00014720
+		
 		public bool AlchemyRollBackCheck(int costType, int useNum)
 		{
 			bool result;
@@ -117,7 +117,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000156 RID: 342 RVA: 0x000165BC File Offset: 0x000147BC
+		
 		public void AlchemyRollBack(GameClient client, string rollbackType)
 		{
 			if (GlobalNew.IsGongNengOpened(client, GongNengIDs.Alchemy, false))
@@ -172,7 +172,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06000157 RID: 343 RVA: 0x00016844 File Offset: 0x00014A44
+		
 		private bool CheckCostEnough(GameClient client, int costType, int useNum, bool bindOnly)
 		{
 			bool result;
@@ -241,7 +241,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000158 RID: 344 RVA: 0x00016A5C File Offset: 0x00014C5C
+		
 		private bool ModifyAddElementCost(GameClient client, int costType, int useNum, bool bindOnly)
 		{
 			bool result;
@@ -398,7 +398,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000159 RID: 345 RVA: 0x00016F78 File Offset: 0x00015178
+		
 		private int GetTodayAddElementCost(GameClient client, int costType)
 		{
 			int todayCost = 0;
@@ -410,7 +410,7 @@ namespace GameServer.Logic
 			return todayCost;
 		}
 
-		// Token: 0x0600015A RID: 346 RVA: 0x00016FD4 File Offset: 0x000151D4
+		
 		private void UpdateTodayAddElementCost(GameClient client, int costType, int useNum)
 		{
 			int curDayID = Global.GetOffsetDay(TimeUtil.NowDateTime());
@@ -423,7 +423,7 @@ namespace GameServer.Logic
 			client.ClientData.AlchemyInfo.BaseData.ToDayCost[costType] = todayCost + useNum;
 		}
 
-		// Token: 0x0600015B RID: 347 RVA: 0x00017060 File Offset: 0x00015260
+		
 		private void UpdateHistAddElementCost(GameClient client, int costType, int useNum)
 		{
 			int histCost = 0;
@@ -431,13 +431,13 @@ namespace GameServer.Logic
 			client.ClientData.AlchemyInfo.HistCost[costType] = (int)Math.Min((long)histCost + (long)useNum, 2147483647L);
 		}
 
-		// Token: 0x0600015C RID: 348 RVA: 0x000170B4 File Offset: 0x000152B4
+		
 		public bool UpdateAlchemyDataDB(GameClient client)
 		{
 			return Global.sendToDB<bool, AlchemyDataDB>(13097, client.ClientData.AlchemyInfo, client.ServerId);
 		}
 
-		// Token: 0x0600015D RID: 349 RVA: 0x000170E4 File Offset: 0x000152E4
+		
 		private int RandomAlchemyProp(GameClient client)
 		{
 			int prop = 0;
@@ -467,7 +467,7 @@ namespace GameServer.Logic
 			return prop;
 		}
 
-		// Token: 0x0600015E RID: 350 RVA: 0x000171F0 File Offset: 0x000153F0
+		
 		private void RefreshAlchemyProps(GameClient client)
 		{
 			List<double> tempAlchemyPropList = null;
@@ -527,7 +527,7 @@ namespace GameServer.Logic
 			});
 		}
 
-		// Token: 0x0600015F RID: 351 RVA: 0x000175E0 File Offset: 0x000157E0
+		
 		public bool ProcessAlchemyDataCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -550,7 +550,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000160 RID: 352 RVA: 0x000176B0 File Offset: 0x000158B0
+		
 		public bool ProcessAlchemyAddElementCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -653,7 +653,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000161 RID: 353 RVA: 0x00017A4C File Offset: 0x00015C4C
+		
 		public bool ProcessAlchemyExcuteCmd(GameClient client, int nID, byte[] bytes, string[] cmdParams)
 		{
 			try
@@ -733,7 +733,7 @@ namespace GameServer.Logic
 			return false;
 		}
 
-		// Token: 0x06000162 RID: 354 RVA: 0x00017DB8 File Offset: 0x00015FB8
+		
 		public bool InitConfig()
 		{
 			string AlchemyLevelUp = GameManager.systemParamsList.GetParamValueByName("AlchemyLevelUp");
@@ -766,7 +766,7 @@ namespace GameServer.Logic
 			return this.LoadAlchemyConfigFile();
 		}
 
-		// Token: 0x06000163 RID: 355 RVA: 0x00017EE4 File Offset: 0x000160E4
+		
 		public bool LoadAlchemyConfigFile()
 		{
 			try
@@ -802,37 +802,37 @@ namespace GameServer.Logic
 			return true;
 		}
 
-		// Token: 0x04000221 RID: 545
+		
 		private const string Alchemy_FileName = "Config/CurrencyConversion.xml";
 
-		// Token: 0x04000222 RID: 546
+		
 		private const string Alchemy_SystemParamKey_Level = "AlchemyLevelUp";
 
-		// Token: 0x04000223 RID: 547
+		
 		private const string Alchemy_SystemParamKey_Prop = "AlchemyProperty";
 
-		// Token: 0x04000224 RID: 548
+		
 		private const string Alchemy_SystemParamKey_Limit = "AlchemyRandomLimit";
 
-		// Token: 0x04000225 RID: 549
+		
 		private object ConfigMutex = new object();
 
-		// Token: 0x04000226 RID: 550
+		
 		private int LevelUpElement = 0;
 
-		// Token: 0x04000227 RID: 551
+		
 		private List<double> AlchemyPropList = null;
 
-		// Token: 0x04000228 RID: 552
+		
 		private int RandomLimit = 0;
 
-		// Token: 0x04000229 RID: 553
+		
 		private int MinGoodsID = 100;
 
-		// Token: 0x0400022A RID: 554
+		
 		private Dictionary<int, AlchemyConfigData> AlchemyConfig = new Dictionary<int, AlchemyConfigData>();
 
-		// Token: 0x0400022B RID: 555
+		
 		private static AlchemyManager instance = new AlchemyManager();
 	}
 }

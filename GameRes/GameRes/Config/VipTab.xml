@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VipHuoDongList>
+  <VipHuoDong ID="1" Name="BOSS之家" Preview="30001" RewardExplain="4,5|5,3" KaiQiVipLevel="3" GLXml="BossZhiJia.xml" />
+  <VipHuoDong ID="2" Name="火龙突袭" Preview="35001" RewardExplain="5,5|2,5" KaiQiVipLevel="6" GLXml="HuangJinShengDian.xml" />
+</VipHuoDongList>

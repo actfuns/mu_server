@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="30" Title="充值返利"  FromDate="" ToDate="" AwardStartDate="" 
+  AwardEndDate="" IsNeedCode="1"/>
+  <GiftList  Description="新服前5天内，每日充值排名前5的玩家可分别领取不同比例的元宝返还，排名越高，返还比例越高！">
+  <Award Level="1" FanLi="0.2" />
+  <Award Level="2" FanLi="0.1" />
+  <Award Level="3" FanLi="0.08" />
+  <Award Level="4" FanLi="0.05" />
+  <Award Level="5" FanLi="0.03" />
+  </GiftList>
+</Config>

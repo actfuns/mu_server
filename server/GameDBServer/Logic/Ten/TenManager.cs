@@ -6,10 +6,10 @@ using Server.Data;
 
 namespace GameDBServer.Logic.Ten
 {
-	// Token: 0x0200017D RID: 381
+	
 	internal class TenManager
 	{
-		// Token: 0x060006B0 RID: 1712 RVA: 0x0003D3E0 File Offset: 0x0003B5E0
+		
 		public static void initTen(string[] fields)
 		{
 			TenManager._tenAwards = new Dictionary<int, TenAwardData>();
@@ -62,7 +62,7 @@ namespace GameDBServer.Logic.Ten
 			}
 		}
 
-		// Token: 0x060006B1 RID: 1713 RVA: 0x0003D5D4 File Offset: 0x0003B7D4
+		
 		private static TenAwardData getTenAward(int awardID)
 		{
 			TenAwardData result;
@@ -77,7 +77,7 @@ namespace GameDBServer.Logic.Ten
 			return result;
 		}
 
-		// Token: 0x060006B2 RID: 1714 RVA: 0x0003D608 File Offset: 0x0003B808
+		
 		public static void ScanLastGroup(DBManager dbMgr)
 		{
 			long nowTicks = DateTime.Now.Ticks / 10000L;
@@ -100,7 +100,7 @@ namespace GameDBServer.Logic.Ten
 			}
 		}
 
-		// Token: 0x060006B3 RID: 1715 RVA: 0x0003D710 File Offset: 0x0003B910
+		
 		public static int SendAward(DBManager dbMgr, string userID, int roleID, int awardID)
 		{
 			TenAwardData awardData = TenManager.getTenAward(awardID);
@@ -208,39 +208,39 @@ namespace GameDBServer.Logic.Ten
 			return result;
 		}
 
-		// Token: 0x040008BE RID: 2238
+		
 		private static Dictionary<int, TenAwardData> _tenAwards = new Dictionary<int, TenAwardData>();
 
-		// Token: 0x040008BF RID: 2239
+		
 		private static bool _isInitTen = false;
 
-		// Token: 0x040008C0 RID: 2240
+		
 		private static long LastScanTicks = DateTime.Now.Ticks / 10000L;
 
-		// Token: 0x0200017E RID: 382
+		
 		public enum TenResultType
 		{
-			// Token: 0x040008C2 RID: 2242
+			
 			Default,
-			// Token: 0x040008C3 RID: 2243
+			
 			Success,
-			// Token: 0x040008C4 RID: 2244
+			
 			EnoPara = -1,
-			// Token: 0x040008C5 RID: 2245
+			
 			EnoRole = -3,
-			// Token: 0x040008C6 RID: 2246
+			
 			EIp = -4,
-			// Token: 0x040008C7 RID: 2247
+			
 			ECountMax = -5,
-			// Token: 0x040008C8 RID: 2248
+			
 			EAware = -6,
-			// Token: 0x040008C9 RID: 2249
+			
 			EBag = -7,
-			// Token: 0x040008CA RID: 2250
+			
 			Fail = -8,
-			// Token: 0x040008CB RID: 2251
+			
 			ETimeOut = -9,
-			// Token: 0x040008CC RID: 2252
+			
 			ELevelLimit = -10
 		}
 	}

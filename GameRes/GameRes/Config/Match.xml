@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config MuLeiTaiDay="10">
+  <Match Day="1" Name="100进64" MapCode="15000" MinLevelRank="100" BeginTime="15:30" EndTime="16:30" WaitTime="15" FightTime="180" ClearTime="10" IntervalTime="15" MatchingType="1" MatchingPrice="-1" NeedWinNum="3" RankNum="64" />
+  <Match Day="2" Name="64进32" MapCode="15000" MinLevelRank="-1" BeginTime="15:30" EndTime="16:30" WaitTime="15" FightTime="180" ClearTime="10" IntervalTime="15" MatchingType="1" MatchingPrice="-1" NeedWinNum="3" RankNum="32" />
+  <Match Day="3" Name="32进16" MapCode="15000" MinLevelRank="-1" BeginTime="15:30" EndTime="16:30" WaitTime="15" FightTime="180" ClearTime="10" IntervalTime="15" MatchingType="1" MatchingPrice="-1" NeedWinNum="3" RankNum="16" />
+  <Match Day="4" Name="16进8" MapCode="15000" MinLevelRank="-1" BeginTime="15:30" EndTime="16:30" WaitTime="15" FightTime="180" ClearTime="10" IntervalTime="15" MatchingType="2" MatchingPrice="1,2|3,4|5,6|7,8|9,10|11,12|13,14|15,16" NeedWinNum="3" RankNum="8" />
+  <Match Day="5" Name="8进4" MapCode="15000" MinLevelRank="-1" BeginTime="15:30" EndTime="16:30" WaitTime="15" FightTime="180" ClearTime="10" IntervalTime="15" MatchingType="2" MatchingPrice="1,2,3,4|5,6,7,8|9,10,11,12|13,14,15,16" NeedWinNum="3" RankNum="4" />
+  <Match Day="6" Name="4进2" MapCode="15000" MinLevelRank="-1" BeginTime="15:30" EndTime="16:30" WaitTime="15" FightTime="180" ClearTime="10" IntervalTime="15" MatchingType="2" MatchingPrice="1,2,3,4,5,6,7,8|9,10,11,12,13,14,15,16" NeedWinNum="3" RankNum="2" />
+  <Match Day="7" Name="冠军争夺战" MapCode="15000" MinLevelRank="-1" BeginTime="15:30" EndTime="16:30" WaitTime="15" FightTime="180" ClearTime="10" IntervalTime="15" MatchingType="2" MatchingPrice="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16" NeedWinNum="3" RankNum="1" />
+</config>

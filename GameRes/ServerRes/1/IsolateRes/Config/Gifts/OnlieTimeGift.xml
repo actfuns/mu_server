@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Item ID="1" TimeOl="70" BindYuanBao="3000" />
+  <Item ID="2" TimeOl="140" BindYuanBao="5000" />
+  <Item ID="3" TimeOl="210" BindYuanBao="10000" />
+</Config>

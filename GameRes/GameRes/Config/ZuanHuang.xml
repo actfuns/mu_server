@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Level ID="1" MinYuanBao="100" />
+  <Level ID="2" MinYuanBao="10000" />
+  <Level ID="3" MinYuanBao="50000" />
+  <Level ID="4" MinYuanBao="100000" />
+  <Level ID="5" MinYuanBao="300000" />
+  <Level ID="6" MinYuanBao="500000" />
+  <Level ID="7" MinYuanBao="1000000" />
+  <Level ID="8" MinYuanBao="3000000" />
+  <Level ID="9" MinYuanBao="5000000" />
+  <Level ID="10" MinYuanBao="10000000" />
+</Config>

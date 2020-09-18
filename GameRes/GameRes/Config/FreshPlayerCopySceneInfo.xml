@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <FreshPlayerCopySceneInfos>
+    <FreshPlayerCopySceneInfo MapCode="6090" NeedKillMonster1Level="200" NeedKillMonster1Num="10" GateID="609006" GatePos="8246,6266" WuShiID="609005" KillWuShiNum="3" WuShiNum="8" WuShiPos="9761,6286" WuShiRadius="500" PursuitRadius="300" CrystalID="609007" CrystalPos="9800,6262" DiaoXiangID="609008" DiaoXiangPos="9761,6282" />
+  </FreshPlayerCopySceneInfos>
+</Config>

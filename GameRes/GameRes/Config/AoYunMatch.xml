@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <AoYunMatch ID="1" FreeNum="1" NeedZhuanShi="50,70" WinNum="35" GameNum="5" WinJiFen="30" LoseJiFen="20" />
+  <AoYunMatch ID="2" FreeNum="2" NeedZhuanShi="50,70,90,120,150" WinNum="3" GameNum="5" WinJiFen="20" LoseJiFen="10" />
+</Config>

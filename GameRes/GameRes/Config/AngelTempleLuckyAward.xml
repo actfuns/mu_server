@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Award ID="1" Name="幸运1等奖" Number="1" Goods="9990001,10000,1,0,0,0,0" />
+  <Award ID="2" Name="幸运2等奖" Number="1" Goods="9990001,8000,1,0,0,0,0" />
+  <Award ID="3" Name="幸运3等奖" Number="1" Goods="9990001,6000,1,0,0,0,0" />
+  <Award ID="4" Name="幸运4等奖" Number="7" Goods="9990001,4000,1,0,0,0,0" />
+</Config>

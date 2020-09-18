@@ -10,10 +10,10 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic.ActivityNew.SevenDay
 {
-	// Token: 0x020001AC RID: 428
+	
 	internal class SevenDayGoalAct
 	{
-		// Token: 0x060004F7 RID: 1271 RVA: 0x0004434C File Offset: 0x0004254C
+		
 		public SevenDayGoalAct()
 		{
 			this.evHandlerDict = new Dictionary<ESevenDayGoalFuncType, Action<SevenDayGoalEventObject, List<int>, Dictionary<int, SevenDayGoalAct._GoalItemConfig>>>();
@@ -62,7 +62,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			this.evHandlerDict[ESevenDayGoalFuncType.EquipSuitUpTimes] = new Action<SevenDayGoalEventObject, List<int>, Dictionary<int, SevenDayGoalAct._GoalItemConfig>>(this._Handle_EquipSuitUpTimes);
 		}
 
-		// Token: 0x060004F8 RID: 1272 RVA: 0x000447E4 File Offset: 0x000429E4
+		
 		public void LoadConfig()
 		{
 			Dictionary<ESevenDayGoalFuncType, List<int>> tmpFunc2GoalId = new Dictionary<ESevenDayGoalFuncType, List<int>>();
@@ -107,7 +107,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x060004F9 RID: 1273 RVA: 0x00044A38 File Offset: 0x00042C38
+		
 		private int GetColor__(int ExcellencePropNum)
 		{
 			int color;
@@ -134,7 +134,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return color;
 		}
 
-		// Token: 0x060004FA RID: 1274 RVA: 0x00044A9C File Offset: 0x00042C9C
+		
 		public bool HasAnyAwardCanGet(GameClient client, out bool[] bGoalDay)
 		{
 			bGoalDay = new bool[7];
@@ -209,7 +209,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return result;
 		}
 
-		// Token: 0x060004FB RID: 1275 RVA: 0x00044CB0 File Offset: 0x00042EB0
+		
 		public ESevenDayActErrorCode HandleGetAward(GameClient client, int id)
 		{
 			int dayIdx;
@@ -287,7 +287,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return result;
 		}
 
-		// Token: 0x060004FC RID: 1276 RVA: 0x00044EA4 File Offset: 0x000430A4
+		
 		private bool CheckCanGetAward(GameClient client, SevenDayItemData data, SevenDayGoalAct._GoalItemConfig itemConfig)
 		{
 			bool result;
@@ -360,7 +360,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return result;
 		}
 
-		// Token: 0x060004FD RID: 1277 RVA: 0x00045088 File Offset: 0x00043288
+		
 		public void Update(GameClient client)
 		{
 			if (SingletonTemplate<SevenDayActivityMgr>.Instance().IsInActivityTime(client))
@@ -386,7 +386,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x060004FE RID: 1278 RVA: 0x00045204 File Offset: 0x00043404
+		
 		public void HandleEvent(SevenDayGoalEventObject evObj)
 		{
 			if (evObj != null)
@@ -412,7 +412,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x060004FF RID: 1279 RVA: 0x000452DC File Offset: 0x000434DC
+		
 		private void _Handle_RoleLevelUp(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -436,7 +436,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000500 RID: 1280 RVA: 0x000453E8 File Offset: 0x000435E8
+		
 		private void _Handle_SkillLevelUp(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -498,7 +498,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000501 RID: 1281 RVA: 0x00045678 File Offset: 0x00043878
+		
 		private void _Handle_MoJingCntInBag(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -534,7 +534,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000502 RID: 1282 RVA: 0x000457E4 File Offset: 0x000439E4
+		
 		private void _Handle_RecoverMoJing(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -565,7 +565,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000503 RID: 1283 RVA: 0x00045938 File Offset: 0x00043B38
+		
 		private void _Handle_ExchangeJinHuaJingShiByMoJing(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -603,7 +603,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000504 RID: 1284 RVA: 0x00045AC8 File Offset: 0x00043CC8
+		
 		private void _Handle_JoinJingJiChangTimes(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -634,7 +634,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000505 RID: 1285 RVA: 0x00045C14 File Offset: 0x00043E14
+		
 		private void _Handle_WinJingJiChangTimes(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -665,7 +665,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000506 RID: 1286 RVA: 0x00045D60 File Offset: 0x00043F60
+		
 		private void _Handle_JingJiChangRank(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -703,7 +703,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000507 RID: 1287 RVA: 0x00045F08 File Offset: 0x00044108
+		
 		private void _Handle_PeiDaiBlueUp(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -733,7 +733,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000508 RID: 1288 RVA: 0x0004605C File Offset: 0x0004425C
+		
 		private void _Handle_PeiDaiPurpleUp(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -763,7 +763,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000509 RID: 1289 RVA: 0x00046190 File Offset: 0x00044390
+		
 		private void _Handle_RecoverEquipBlueUp(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -810,7 +810,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x0600050A RID: 1290 RVA: 0x0004635C File Offset: 0x0004455C
+		
 		private void _Handle_MallInSaleCount(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -856,7 +856,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x0600050B RID: 1291 RVA: 0x0004655C File Offset: 0x0004475C
+		
 		private void _Handle_GetEquipCountByQiFu(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -895,7 +895,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x0600050C RID: 1292 RVA: 0x000466F4 File Offset: 0x000448F4
+		
 		private void _Handle_PickUpEquipCount(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -934,7 +934,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x0600050D RID: 1293 RVA: 0x0004688C File Offset: 0x00044A8C
+		
 		private void _Handle_EquipChuanChengTimes(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -965,7 +965,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x0600050E RID: 1294 RVA: 0x000469D8 File Offset: 0x00044BD8
+		
 		private void _Handle_EnterFuBenTimes(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1006,7 +1006,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x0600050F RID: 1295 RVA: 0x00046B88 File Offset: 0x00044D88
+		
 		private void _Handle_KillMonsterInMap(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1044,7 +1044,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000510 RID: 1296 RVA: 0x00046D2C File Offset: 0x00044F2C
+		
 		private void _Handle_JoinActivityTimes(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1082,7 +1082,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000511 RID: 1297 RVA: 0x00046EBC File Offset: 0x000450BC
+		
 		private void _Handle_HeChengTimes(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1120,7 +1120,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000512 RID: 1298 RVA: 0x0004704C File Offset: 0x0004524C
+		
 		private void _Handle_UseGoodsCount(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1161,7 +1161,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000513 RID: 1299 RVA: 0x000471FC File Offset: 0x000453FC
+		
 		private void _Handle_JinBiZhuanHuanTimes(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1192,7 +1192,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000514 RID: 1300 RVA: 0x00047348 File Offset: 0x00045548
+		
 		private void _Handle_BangZuanZhuanHuanTimes(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1223,7 +1223,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000515 RID: 1301 RVA: 0x00047494 File Offset: 0x00045694
+		
 		private void _Handle_ZuanShiZhuanHuanTimes(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1254,7 +1254,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000516 RID: 1302 RVA: 0x000475E0 File Offset: 0x000457E0
+		
 		private void _Handle_ExchangeJinHuaJingShiByQiFuScore(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1292,7 +1292,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000517 RID: 1303 RVA: 0x00047770 File Offset: 0x00045970
+		
 		private void _Handle_CombatChange(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1315,7 +1315,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000518 RID: 1304 RVA: 0x00047890 File Offset: 0x00045A90
+		
 		private void _Handle_PeiDaiForgeEquip(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1344,7 +1344,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000519 RID: 1305 RVA: 0x000479D0 File Offset: 0x00045BD0
+		
 		private void _Handle_ForgeEquipLevel(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1379,7 +1379,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x0600051A RID: 1306 RVA: 0x00047B34 File Offset: 0x00045D34
+		
 		private void _Handle_ForgeEquipTimes(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1410,7 +1410,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x0600051B RID: 1307 RVA: 0x00047C80 File Offset: 0x00045E80
+		
 		private void _Handle_CompleteChengJiu(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1441,7 +1441,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x0600051C RID: 1308 RVA: 0x00047D9C File Offset: 0x00045F9C
+		
 		private void _Handle_ChengJiuLevel(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1464,7 +1464,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x0600051D RID: 1309 RVA: 0x00047E8C File Offset: 0x0004608C
+		
 		private void _Handle_JunXianLevel(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1487,7 +1487,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x0600051E RID: 1310 RVA: 0x00047FAC File Offset: 0x000461AC
+		
 		private void _Handle_PeiDaiAppendEquip(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1516,7 +1516,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x0600051F RID: 1311 RVA: 0x000480EC File Offset: 0x000462EC
+		
 		private void _Handle_AppendEquipLevel(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1554,7 +1554,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000520 RID: 1312 RVA: 0x00048264 File Offset: 0x00046464
+		
 		private void _Handle_AppendEquipTimes(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1585,7 +1585,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000521 RID: 1313 RVA: 0x000483B0 File Offset: 0x000465B0
+		
 		private void _Handle_ActiveXingZuo(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1620,7 +1620,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000522 RID: 1314 RVA: 0x00048548 File Offset: 0x00046748
+		
 		private void _Handle_GetSpriteCountBuleUp(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1658,7 +1658,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000523 RID: 1315 RVA: 0x000486EC File Offset: 0x000468EC
+		
 		private void _Handle_GetSpriteCountPurpleUp(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1696,7 +1696,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000524 RID: 1316 RVA: 0x0004884C File Offset: 0x00046A4C
+		
 		private void _Handle_WingLevel(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1723,7 +1723,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000525 RID: 1317 RVA: 0x00048980 File Offset: 0x00046B80
+		
 		private void _Handle_WingSuitStarTimes(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1757,7 +1757,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000526 RID: 1318 RVA: 0x00048AF0 File Offset: 0x00046CF0
+		
 		private void _Handle_CompleteTuJian(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1792,7 +1792,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000527 RID: 1319 RVA: 0x00048C68 File Offset: 0x00046E68
+		
 		private void _Handle_PeiDaiSuitEquipCount(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1821,7 +1821,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000528 RID: 1320 RVA: 0x00048DA8 File Offset: 0x00046FA8
+		
 		private void _Handle_PeiDaiSuitEquipLevel(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1850,7 +1850,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x06000529 RID: 1321 RVA: 0x00048ED0 File Offset: 0x000470D0
+		
 		private void _Handle_EquipSuitUpTimes(SevenDayGoalEventObject evObj, List<int> goalIdList, Dictionary<int, SevenDayGoalAct._GoalItemConfig> goalConfigDict)
 		{
 			if (evObj != null && evObj.Client != null)
@@ -1882,40 +1882,40 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x040009A4 RID: 2468
+		
 		private Dictionary<ESevenDayGoalFuncType, Action<SevenDayGoalEventObject, List<int>, Dictionary<int, SevenDayGoalAct._GoalItemConfig>>> evHandlerDict = null;
 
-		// Token: 0x040009A5 RID: 2469
+		
 		private object ConfigMutex = new object();
 
-		// Token: 0x040009A6 RID: 2470
+		
 		private Dictionary<ESevenDayGoalFuncType, List<int>> Func2GoalId = null;
 
-		// Token: 0x040009A7 RID: 2471
+		
 		private Dictionary<int, SevenDayGoalAct._GoalItemConfig> ItemConfigDict = null;
 
-		// Token: 0x020001AD RID: 429
+		
 		private class _GoalItemConfig
 		{
-			// Token: 0x040009A8 RID: 2472
+			
 			public int Id;
 
-			// Token: 0x040009A9 RID: 2473
+			
 			public int Day;
 
-			// Token: 0x040009AA RID: 2474
+			
 			public int FuncType;
 
-			// Token: 0x040009AB RID: 2475
+			
 			public List<GoodsData> GoodsList;
 
-			// Token: 0x040009AC RID: 2476
+			
 			public int ExtCond1;
 
-			// Token: 0x040009AD RID: 2477
+			
 			public int ExtCond2;
 
-			// Token: 0x040009AE RID: 2478
+			
 			public int ExtCond3;
 		}
 	}

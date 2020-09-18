@@ -7,10 +7,10 @@ using Server.Tools;
 
 namespace GameServer.Logic.ActivityNew
 {
-	// Token: 0x020001C4 RID: 452
+	
 	public class JieRiRecvKingActivity : Activity
 	{
-		// Token: 0x1700001B RID: 27
+		
 		
 		private int RANK_LVL_CNT
 		{
@@ -20,7 +20,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060005A1 RID: 1441 RVA: 0x0004F250 File Offset: 0x0004D450
+		
 		public void OnRecv(int receiver, int goods, int cnt, int serverId)
 		{
 			if (this.InActivityTime())
@@ -58,7 +58,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060005A2 RID: 1442 RVA: 0x0004F3F8 File Offset: 0x0004D5F8
+		
 		public bool Init()
 		{
 			try
@@ -159,7 +159,7 @@ namespace GameServer.Logic.ActivityNew
 			return true;
 		}
 
-		// Token: 0x060005A3 RID: 1443 RVA: 0x0004F7A4 File Offset: 0x0004D9A4
+		
 		public bool CanGetAnyAward(GameClient client)
 		{
 			bool result;
@@ -188,7 +188,7 @@ namespace GameServer.Logic.ActivityNew
 			return result;
 		}
 
-		// Token: 0x060005A4 RID: 1444 RVA: 0x0004F88C File Offset: 0x0004DA8C
+		
 		public void LoadRankFromDB()
 		{
 			if (this.InActivityTime() || this.InAwardTime())
@@ -212,7 +212,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060005A5 RID: 1445 RVA: 0x0004FA2C File Offset: 0x0004DC2C
+		
 		private void buildRankingList(List<JieriRecvKingItemData> rankingList)
 		{
 			rankingList.Sort(delegate(JieriRecvKingItemData left, JieriRecvKingItemData right)
@@ -259,7 +259,7 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x060005A6 RID: 1446 RVA: 0x0004FB18 File Offset: 0x0004DD18
+		
 		public byte[] QueryActivityInfo(GameClient client)
 		{
 			if (this.InActivityTime() || this.InAwardTime())
@@ -276,7 +276,7 @@ namespace GameServer.Logic.ActivityNew
 			return null;
 		}
 
-		// Token: 0x060005A7 RID: 1447 RVA: 0x0004FBC0 File Offset: 0x0004DDC0
+		
 		public string ProcRoleGetAward(GameClient client, int awardid)
 		{
 			JieriGiveErrorCode ec = JieriGiveErrorCode.Success;
@@ -335,14 +335,14 @@ namespace GameServer.Logic.ActivityNew
 			return string.Format("{0}:{1}", (int)ec, awardid);
 		}
 
-		// Token: 0x060005A8 RID: 1448 RVA: 0x0004FE24 File Offset: 0x0004E024
+		
 		private JieriRecvKingItemData GetRoleRecvKingInfo(int roleid, int serverId)
 		{
 			bool _bLoadFromDb;
 			return this.GetRoleRecvKingInfo(roleid, out _bLoadFromDb, serverId);
 		}
 
-		// Token: 0x060005A9 RID: 1449 RVA: 0x0004FE40 File Offset: 0x0004E040
+		
 		private JieriRecvKingItemData GetRoleRecvKingInfo(int roleid, out bool bLoadFromDb, int serverId)
 		{
 			bLoadFromDb = false;
@@ -360,7 +360,7 @@ namespace GameServer.Logic.ActivityNew
 			return item;
 		}
 
-		// Token: 0x060005AA RID: 1450 RVA: 0x0004FEF0 File Offset: 0x0004E0F0
+		
 		public override bool HasEnoughBagSpaceForAwardGoods(GameClient client, int id)
 		{
 			AwardItem allItem = null;
@@ -385,7 +385,7 @@ namespace GameServer.Logic.ActivityNew
 			return Global.CanAddGoodsNum(client, awardCnt);
 		}
 
-		// Token: 0x060005AB RID: 1451 RVA: 0x0004FFD0 File Offset: 0x0004E1D0
+		
 		public void OnChangeName(int roleId, string oldName, string newName)
 		{
 			if (!string.IsNullOrEmpty(oldName) && !string.IsNullOrEmpty(newName))
@@ -402,28 +402,28 @@ namespace GameServer.Logic.ActivityNew
 			}
 		}
 
-		// Token: 0x04000A00 RID: 2560
+		
 		private const string CfgFile = "Config/JieRiGifts/JieRiShouQuKing.xml";
 
-		// Token: 0x04000A01 RID: 2561
+		
 		private object _allMemberMutex = new object();
 
-		// Token: 0x04000A02 RID: 2562
+		
 		private Dictionary<int, JieriRecvKingItemData> recvDict = new Dictionary<int, JieriRecvKingItemData>();
 
-		// Token: 0x04000A03 RID: 2563
+		
 		private List<JieriRecvKingItemData> orderedRecvList = new List<JieriRecvKingItemData>();
 
-		// Token: 0x04000A04 RID: 2564
+		
 		public Dictionary<int, AwardItem> allAwardDict = new Dictionary<int, AwardItem>();
 
-		// Token: 0x04000A05 RID: 2565
+		
 		public Dictionary<int, AwardItem> occAwardDict = new Dictionary<int, AwardItem>();
 
-		// Token: 0x04000A06 RID: 2566
+		
 		private Dictionary<int, AwardEffectTimeItem> timeAwardDict = new Dictionary<int, AwardEffectTimeItem>();
 
-		// Token: 0x04000A07 RID: 2567
+		
 		private int RoleCountInList;
 	}
 }

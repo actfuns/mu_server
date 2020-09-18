@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="51"  FromDate="2019-05-18 00:00:00" ToDate="2019-05-19 23:59:59" AwardStartDate="2019-05-18 00:00:00"  AwardEndDate="2019-05-19 23:59:59" />
+  <GiftList Description="活动期间，赠送前10名的玩家可领取丰厚大礼！">
+  <Award Ranking="1" GoodsOne="5313,40,1,0,0,0,0|9990004,1000,1,0,0,0,0|9990002,1000,1,0,0,0,0|1031017,10,1,0,0,0,0|63248,10,1,0,0,0,0" GoodsTwo=""  GoodsThr="" EffectiveTime="" MinYuanBao="300" />
+  <Award Ranking="2" GoodsOne="5313,24,1,0,0,0,0|9990004,600,1,0,0,0,0|9990002,600,1,0,0,0,0|1031017,8,1,0,0,0,0|63248,6,1,0,0,0,0" GoodsTwo=""  GoodsThr="" EffectiveTime="" MinYuanBao="240" />
+  <Award Ranking="3" GoodsOne="5313,18,1,0,0,0,0|9990004,400,1,0,0,0,0|9990002,400,1,0,0,0,0|1031017,6,1,0,0,0,0|63248,4,1,0,0,0,0" GoodsTwo=""  GoodsThr="" EffectiveTime="" MinYuanBao="180" />
+  <Award Ranking="4" GoodsOne="5313,12,1,0,0,0,0|9990004,200,1,0,0,0,0|9990002,200,1,0,0,0,0|4041,5,1,0,0,0,0|63248,2,1,0,0,0,0" GoodsTwo=""  GoodsThr="" EffectiveTime="" MinYuanBao="150" />
+  <Award Ranking="5" GoodsOne="5313,12,1,0,0,0,0|9990004,200,1,0,0,0,0|9990002,200,1,0,0,0,0|4041,5,1,0,0,0,0|63248,2,1,0,0,0,0" GoodsTwo=""  GoodsThr="" EffectiveTime="" MinYuanBao="150" />
+  <Award Ranking="6" GoodsOne="5313,9,1,0,0,0,0|9990004,200,1,0,0,0,0|9990002,20,1,0,0,0,0|4041,4,1,0,0,0,0|63248,2,1,0,0,0,0" GoodsTwo=""  GoodsThr="" EffectiveTime="" MinYuanBao="30" />
+  <Award Ranking="7" GoodsOne="5313,9,1,0,0,0,0|9990004,200,1,0,0,0,0|9990002,20,1,0,0,0,0|4041,4,1,0,0,0,0|63248,2,1,0,0,0,0" GoodsTwo=""  GoodsThr="" EffectiveTime="" MinYuanBao="30" />
+  <Award Ranking="8" GoodsOne="5313,9,1,0,0,0,0|9990004,200,1,0,0,0,0|9990002,20,1,0,0,0,0|4041,4,1,0,0,0,0|63248,2,1,0,0,0,0" GoodsTwo=""  GoodsThr="" EffectiveTime="" MinYuanBao="30" />
+  <Award Ranking="9" GoodsOne="5313,9,1,0,0,0,0|9990004,200,1,0,0,0,0|9990002,20,1,0,0,0,0|4041,4,1,0,0,0,0|63248,2,1,0,0,0,0" GoodsTwo=""  GoodsThr="" EffectiveTime="" MinYuanBao="30" />
+  <Award Ranking="10" GoodsOne="5313,9,1,0,0,0,0|9990004,200,1,0,0,0,0|9990002,20,1,0,0,0,0|4041,4,1,0,0,0,0|63248,2,1,0,0,0,0" GoodsTwo=""  GoodsThr="" EffectiveTime="" MinYuanBao="30" />
+  </GiftList>
+</Config>

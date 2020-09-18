@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <BirthPoint ID="1" PosX="7750" PosY="14250" BirthRadius="10" />
+  <BirthPoint ID="2" PosX="13750" PosY="8250" BirthRadius="10" />
+  <BirthPoint ID="3" PosX="1750" PosY="8250" BirthRadius="10" />
+  <BirthPoint ID="4" PosX="7750" PosY="2250" BirthRadius="10" />
+</Config>

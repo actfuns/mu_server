@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Mobai ID="1" Name="圣城城主雕像" Number="1" NeedJinBi="500000" JinBiExpAward="1382400" JinBiZhanGongAward="500" JinBiLingJing="0" JinBishenlijinghua="0" NeedZuanShi="100" ZuanShiExpAward="2764800" ZuanShiZhanGongAward="2000" ZuanShiLingJing="0" ZuanShishenlijinghua="0" ExtraNumber="1" MinLevel="0,50" />
+  <Mobai ID="2" Name="真爱情侣" Number="1" NeedJinBi="500000" JinBiExpAward="1382400" JinBiZhanGongAward="0" JinBiLingJing="75" JinBishenlijinghua="0" NeedZuanShi="100" ZuanShiExpAward="2764800" ZuanShiZhanGongAward="0" ZuanShiLingJing="300" ZuanShishenlijinghua="0" ExtraNumber="1" MinLevel="0,50" />
+  <Mobai ID="3" Name="众神之王雕像" Number="1" NeedJinBi="500000" JinBiExpAward="1382400" JinBiZhanGongAward="500" JinBiLingJing="0" JinBishenlijinghua="0" NeedZuanShi="100" ZuanShiExpAward="2764800" ZuanShiZhanGongAward="2000" ZuanShiLingJing="0" ZuanShishenlijinghua="0" ExtraNumber="1" MinLevel="0,50" />
+  <Mobai ID="4" Name="领主雕像" Number="1" NeedJinBi="500000" JinBiExpAward="1382400" JinBiZhanGongAward="500" JinBiLingJing="0" JinBishenlijinghua="0" NeedZuanShi="100" ZuanShiExpAward="2764800" ZuanShiZhanGongAward="2000" ZuanShiLingJing="0" ZuanShishenlijinghua="0" ExtraNumber="1" MinLevel="0,50" />
+  <Mobai ID="5" Name="王者雕像" Number="1" NeedJinBi="500000" JinBiExpAward="1382400" JinBiZhanGongAward="500" JinBiLingJing="0" JinBishenlijinghua="0" NeedZuanShi="100" ZuanShiExpAward="2764800" ZuanShiZhanGongAward="2000" ZuanShiLingJing="0" ZuanShishenlijinghua="0" ExtraNumber="1" MinLevel="0,50" />
+  <Mobai ID="6" Name="黄金霸主雕像" Number="1" NeedJinBi="500000" JinBiExpAward="1500000" JinBiZhanGongAward="0" JinBiLingJing="0" JinBishenlijinghua="100" NeedZuanShi="100" ZuanShiExpAward="3000000" ZuanShiZhanGongAward="0" ZuanShiLingJing="0" ZuanShishenlijinghua="400" ExtraNumber="1" MinLevel="0,50" />
+  <Mobai ID="7" Name="势力大领主" Number="1" NeedJinBi="500000" JinBiExpAward="1500000" JinBiZhanGongAward="500" JinBiLingJing="0" JinBishenlijinghua="0" NeedZuanShi="100" ZuanShiExpAward="3000000" ZuanShiZhanGongAward="2000" ZuanShiLingJing="0" ZuanShishenlijinghua="0" ExtraNumber="1" MinLevel="0,50" />
+</Config>

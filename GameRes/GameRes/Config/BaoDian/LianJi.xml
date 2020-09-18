@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+	<Items>
+		<Item Description="1.｛color=#ffffff00 uline=false tag= text=【主线任务】｝是｛color=#ff00ff00 uline=false tag= text=最快的升级方式｝之一，同时您也能够通过主线任务了解隋唐整个世界的背景，并获得丰富的各类奖励。"/>	
+		<Item Description="2.｛color=#ffffff00 uline=false tag= text=【试炼塔】｝是另一条快速升级的途径，需要您注意的是，进入试炼塔需要消耗｛color=#ff00ff00 uline=false tag= text=试炼令牌｝，试炼令牌可以在｛color=#ff00ff00 uline=false tag= text=商城-阵旗兑换｝使用阵旗兑换或直接使用元宝在｛color=#ff00ff00 uline=false tag= text=商城-热卖类｝中购买。"/>	
+		<Item Description="3.｛color=#ffffff00 uline=false tag= text=【经脉冲穴】｝在获得大量经验的同时，还能通过通经活络提升角色人物属性，经脉冲穴需要拥有足够的｛color=#ff00ff00 uline=false tag= text=灵力｝和｛color=#ff00ff00 uline=false tag= text=经脉图谱｝才能进行，灵力可以通过｛color=#ff00ff00 uline=false tag= text=打坐｝、｛color=#ff00ff00 uline=false tag= text=VIP特权领取｝、｛color=#ff00ff00 uline=false tag= text=聚灵珠｝、｛color=#ff00ff00 uline=false tag= text=灵力储备｝等方式获得；所有等级的经脉图谱都可以通过｛color=#ff00ff00 uline=false tag= text=挂机野外地图怪物｝获得（在｛color=#ff00ff00 uline=false tag= text=商城-经脉类｝查看相应图谱介绍会有该图谱的详细出处），或是商城直接购买。"/>	
+		<Item Description="4.｛color=#ffffff00 uline=false tag= text=【日常任务】｝在扬州相应NPC处，可以领取当天的日常任务跑环（此任务常规出现在任务列表中），完成日常任务可以获得｛color=#ff00ff00 uline=false tag= text=海量经验｝、｛color=#ff00ff00 uline=false tag= text=银两｝以及｛color=#ff00ff00 uline=false tag= text=幻境阵旗｝（换取商城道具）、｛color=#ff00ff00 uline=false tag= text=炼骨寒铁｝（强化坐骑）、｛color=#ff00ff00 uline=false tag= text=圣天令｝（升级势力军旗）等物品。"/>	
+		<Item Description="5.｛color=#ffffff00 uline=false tag= text=【野外挂机】｝在相应等级地图挂机，可以获得经验的同时，也能打到平时需求的各种道具，更有可能打到各种天生等级的紫色装备，当然挂上｛color=#ff00ff00 uline=false tag= text=双倍经验卡｝或｛color=#ff00ff00 uline=false tag= text=三倍经验卡｝效率更高哦！"/>	
+	</Items>
+</Config>

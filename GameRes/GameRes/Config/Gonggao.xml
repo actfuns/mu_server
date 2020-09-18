@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <!--     字体大小   字体颜色         缩进           本行与下一行间距    居左left/中center/右right 文本内容 -->
+	<content size="20" color="f9f702" incIndent="0" lineInterval="20" align="left" text="《全民奇迹》将5月28日20:00点进行30分钟的临时维护，修复一些目前已确认的BUG。为了避免给大家带来不必要的损失，请大家提前退出游戏，等待维护完成后再次尝试登陆，继续游戏。"/>
+  
+	<content size="20" color="c39550" incIndent="0" lineInterval="10" align="left" text="维护内如：" />
+  
+  <content size="18" color="c39550" incIndent="50" lineInterval="5" align="left" text="1、优化了游戏进程卡断的问题" />
+
+  <content size="18" color="c39550" incIndent="50" lineInterval="5" align="left" text="2、调整了扫荡功能不会获取BOSS掉落物品的BUG，同事获取的物品会直接发放到玩家的邮箱中" />
+  
+  <content size="18" color="c39550" incIndent="50" lineInterval="5" align="left" text="3、优化了商店出手药品的价格4、延长了剧情副本的停留时间" />
+  
+  <content size="18" color="c39550" incIndent="50" lineInterval="5" align="left" text="4、延长了剧情副本的停留时间" />
+
+  <content size="18" color="c39550" incIndent="50" lineInterval="5" align="left" text="1、优化了游戏进程卡断的问题" />
+
+  <content size="18" color="c39550" incIndent="50" lineInterval="5" align="left" text="2、调整了扫荡功能不会获取BOSS掉落物品的BUG，同事获取的物品会直接发放到玩家的邮箱中" />
+
+  <content size="18" color="c39550" incIndent="50" lineInterval="5" align="left" text="3、优化了商店出手药品的价格4、延长了剧情副本的停留时间" />
+
+  <content size="18" color="c39550" incIndent="50" lineInterval="5" align="left" text="4、延长了剧情副本的停留时间" />
+
+  <content size="18" color="c39550" incIndent="50" lineInterval="5" align="left" text="1、优化了游戏进程卡断的问题" />
+
+  <content size="18" color="c39550" incIndent="50" lineInterval="5" align="left" text="2、调整了扫荡功能不会获取BOSS掉落物品的BUG，同事获取的物品会直接发放到玩家的邮箱中" />
+
+  <content size="18" color="c39550" incIndent="50" lineInterval="5" align="left" text="3、优化了商店出手药品的价格4、延长了剧情副本的停留时间" />
+
+  <content size="18" color="c39550" incIndent="50" lineInterval="5" align="left" text="4、延长了剧情副本的停留时间" />
+
+</contents>

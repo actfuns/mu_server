@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ElementsType ElementsType="1" Name="火系"  />
+  <ElementsType ElementsType="2" Name="水系"  />
+  <ElementsType ElementsType="3" Name="雷系"  />
+  <ElementsType ElementsType="4" Name="土系"  />
+  <ElementsType ElementsType="5" Name="冰系"  />
+  <ElementsType ElementsType="6" Name="风系"  />
+</Config>

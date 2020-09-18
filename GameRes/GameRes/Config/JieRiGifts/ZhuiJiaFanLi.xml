@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="54"  FromDate="2018-02-12 00:00:00" ToDate="2018-02-26 23:59:59" AwardStartDate="2018-02-12 00:00:00"  AwardEndDate="2018-02-26 23:59:59" />
+  <GiftList Description="活动期间，佩戴装备的追加等级总和达到指定要求可领取丰厚大礼！">
+  <Award ID="1" ZhuiJiaLevel="200" GoodsOne="2003,20,1,0,0,0,0|2001,10,1,0,0,0,0|2002,5,1,0,0,0,0|51104,3,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Award ID="2" ZhuiJiaLevel="260" GoodsOne="2003,20,1,0,0,0,0|2001,10,1,0,0,0,0|2002,5,1,0,0,0,0|63094,2,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Award ID="3" ZhuiJiaLevel="320" GoodsOne="2003,30,1,0,0,0,0|2001,10,1,0,0,0,0|2002,5,1,0,0,0,0|63094,2,1,0,0,0,0|5250,5,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Award ID="4" ZhuiJiaLevel="400" GoodsOne="2003,30,1,0,0,0,0|2001,10,1,0,0,0,0|2002,5,1,0,0,0,0|63094,3,1,0,0,0,0|5250,10,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Award ID="5" ZhuiJiaLevel="500" GoodsOne="2003,40,1,0,0,0,0|2001,10,1,0,0,0,0|2002,5,1,0,0,0,0|63094,4,1,0,0,0,0|5250,15,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Award ID="6" ZhuiJiaLevel="600" GoodsOne="2003,40,1,0,0,0,0|2001,10,1,0,0,0,0|2002,5,1,0,0,0,0|63124,1,1,0,0,0,0|5250,20,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Award ID="7" ZhuiJiaLevel="700" GoodsOne="2003,40,1,0,0,0,0|2001,10,1,0,0,0,0|2002,5,1,0,0,0,0|63094,4,1,0,0,0,0|1034117,1,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  </GiftList>
+</Config>

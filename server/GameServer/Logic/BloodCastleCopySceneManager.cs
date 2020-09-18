@@ -8,28 +8,28 @@ using Tmsk.Contract;
 
 namespace GameServer.Logic
 {
-	// Token: 0x020005CB RID: 1483
+	
 	public class BloodCastleCopySceneManager
 	{
-		// Token: 0x06001B80 RID: 7040 RVA: 0x0019E3ED File Offset: 0x0019C5ED
+		
 		public void InitBloodCastleCopyScene()
 		{
 			Global.QueryDayActivityTotalPointInfoToDB(SpecialActivityTypes.BloodCastle);
 		}
 
-		// Token: 0x06001B81 RID: 7041 RVA: 0x0019E3F7 File Offset: 0x0019C5F7
+		
 		public void LoadBloodCastleListScenes()
 		{
 		}
 
-		// Token: 0x06001B82 RID: 7042 RVA: 0x0019E3FA File Offset: 0x0019C5FA
+		
 		public void SetBloodCastleCopySceneTotalPoint(string sName, int nPoint)
 		{
 			this.m_sTotalPointName = sName;
 			this.m_nTotalPointValue = nPoint;
 		}
 
-		// Token: 0x06001B83 RID: 7043 RVA: 0x0019E40C File Offset: 0x0019C60C
+		
 		public bool CanEnterExistCopyScene(GameClient client)
 		{
 			CopyMap copyMap = null;
@@ -67,7 +67,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001B84 RID: 7044 RVA: 0x0019E518 File Offset: 0x0019C718
+		
 		public void AddBloodCastleCopyScenes(int nSequenceID, int nFubenID, int nMapCodeID, CopyMap mapInfo)
 		{
 			lock (this.m_BloodCastleCopyScenesList)
@@ -98,7 +98,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B85 RID: 7045 RVA: 0x0019E634 File Offset: 0x0019C834
+		
 		public void RemoveBloodCastleListCopyScenes(CopyMap cmInfo, int nSqeID, int nCopyID)
 		{
 			lock (this.m_BloodCastleCopyScenesList)
@@ -127,7 +127,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B86 RID: 7046 RVA: 0x0019E748 File Offset: 0x0019C948
+		
 		public int CheckBloodCastleListScenes(int nFuBenMapID)
 		{
 			lock (this.m_BloodCastleCopyScenesInfo)
@@ -166,20 +166,20 @@ namespace GameServer.Logic
 			return -1;
 		}
 
-		// Token: 0x06001B87 RID: 7047 RVA: 0x0019E8B8 File Offset: 0x0019CAB8
+		
 		public bool IsBloodCastleCopyScene(int nFuBenMapID)
 		{
 			return Data.BloodCastleDataInfoList.ContainsKey(nFuBenMapID);
 		}
 
-		// Token: 0x06001B88 RID: 7048 RVA: 0x0019E8E4 File Offset: 0x0019CAE4
+		
 		public bool IsBloodCastleCopyScene2(int nMpaCodeID)
 		{
 			SceneUIClasses sceneType = Global.GetMapSceneType(nMpaCodeID);
 			return sceneType == SceneUIClasses.BloodCastle;
 		}
 
-		// Token: 0x06001B89 RID: 7049 RVA: 0x0019E910 File Offset: 0x0019CB10
+		
 		public CopyMap GetBloodCastleCopySceneInfo(int nSequenceID)
 		{
 			CopyMap result;
@@ -202,7 +202,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001B8A RID: 7050 RVA: 0x0019E94C File Offset: 0x0019CB4C
+		
 		public BloodCastleScene GetBloodCastleCopySceneDataInfo(CopyMap cmInfo, int nSequenceID, int nFuBenID)
 		{
 			BloodCastleScene result;
@@ -233,7 +233,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001B8B RID: 7051 RVA: 0x0019E9BC File Offset: 0x0019CBBC
+		
 		public int EnterBloodCastSceneCopySceneCount(GameClient client, int nFubenID, out int nBloodNum)
 		{
 			nBloodNum = -1;
@@ -275,7 +275,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001B8C RID: 7052 RVA: 0x0019EB04 File Offset: 0x0019CD04
+		
 		public void SendMegToClient(GameClient client, int nFubenID, int nSquID, int nCmdID)
 		{
 			CopyMap cmInfo = null;
@@ -336,7 +336,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B8D RID: 7053 RVA: 0x0019EDFC File Offset: 0x0019CFFC
+		
 		public int EnterBloodCastSceneCopyScene(GameClient client, int nFubenID, int nBloodNum, out int nSeqID, int mapCode)
 		{
 			nSeqID = -1;
@@ -484,7 +484,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001B8E RID: 7054 RVA: 0x0019F474 File Offset: 0x0019D674
+		
 		public void HeartBeatBloodCastScene()
 		{
 			long nowTicks = TimeUtil.NOW();
@@ -649,7 +649,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B8F RID: 7055 RVA: 0x0019FCC4 File Offset: 0x0019DEC4
+		
 		public void CreateMonsterBBloodCastScene(int mapid, BloodCastleDataInfo bcDataTmp, BloodCastleScene bcTmp, int nCopyMapID)
 		{
 			int monsterID = bcDataTmp.NeedKillMonster2ID;
@@ -676,7 +676,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B90 RID: 7056 RVA: 0x0019FDB8 File Offset: 0x0019DFB8
+		
 		public void OnStartPlayGame(GameClient client)
 		{
 			if (client.ClientData.FuBenSeqID >= 0 && client.ClientData.CopyMapID >= 0 && this.IsBloodCastleCopyScene(client.ClientData.FuBenID))
@@ -733,7 +733,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B91 RID: 7057 RVA: 0x001A00CC File Offset: 0x0019E2CC
+		
 		public void KillMonsterABloodCastCopyScene(GameClient client, Monster monster)
 		{
 			if (client.ClientData.FuBenSeqID >= 0 && client.ClientData.CopyMapID >= 0 && this.IsBloodCastleCopyScene(client.ClientData.FuBenID))
@@ -846,7 +846,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B92 RID: 7058 RVA: 0x001A077C File Offset: 0x0019E97C
+		
 		public void GiveAwardBloodCastCopyScene(GameClient client, int nMultiple)
 		{
 			int FuBenSeqID = Global.GetRoleParamsInt32FromDB(client, "BloodCastleFuBenSeqID");
@@ -948,7 +948,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B93 RID: 7059 RVA: 0x001A0BF4 File Offset: 0x0019EDF4
+		
 		public void LeaveBloodCastCopyScene(GameClient client, bool clearScore = false)
 		{
 			int nFuBenId = Global.GetRoleParamsInt32FromDB(client, "BloodCastleSceneid");
@@ -985,13 +985,13 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B94 RID: 7060 RVA: 0x001A0DC8 File Offset: 0x0019EFC8
+		
 		public void LogOutWhenInBloodCastleCopyScene(GameClient client)
 		{
 			this.LeaveBloodCastCopyScene(client, false);
 		}
 
-		// Token: 0x06001B95 RID: 7061 RVA: 0x001A0DD4 File Offset: 0x0019EFD4
+		
 		public void CompleteBloodCastScene(GameClient client, BloodCastleScene bsInfo, BloodCastleDataInfo bsData)
 		{
 			int nFlag = Global.GetRoleParamsInt32FromDB(client, "BloodCastleSceneFinishFlag");
@@ -1001,7 +1001,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B96 RID: 7062 RVA: 0x001A0E08 File Offset: 0x0019F008
+		
 		public void CompleteBloodcastleAndGiveAwards(GameClient client, BloodCastleScene bcTmp, BloodCastleDataInfo bcDataTmp)
 		{
 			CopyMap cmInfo = GameManager.BloodCastleCopySceneMgr.GetBloodCastleCopySceneInfo(client.ClientData.FuBenSeqID);
@@ -1070,12 +1070,12 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001B97 RID: 7063 RVA: 0x001A1082 File Offset: 0x0019F282
+		
 		public void CleanBloodCastScene(int mapid)
 		{
 		}
 
-		// Token: 0x06001B98 RID: 7064 RVA: 0x001A1088 File Offset: 0x0019F288
+		
 		public void OnChangeName(int roleId, string oldName, string newName)
 		{
 			if (!string.IsNullOrEmpty(oldName) && !string.IsNullOrEmpty(newName))
@@ -1087,22 +1087,22 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x040029E4 RID: 10724
+		
 		public Dictionary<int, CopyMap> m_BloodCastleCopyScenesList = new Dictionary<int, CopyMap>();
 
-		// Token: 0x040029E5 RID: 10725
+		
 		public Dictionary<int, Dictionary<int, BloodCastleScene>> m_BloodCastleCopyScenesInfo = new Dictionary<int, Dictionary<int, BloodCastleScene>>();
 
-		// Token: 0x040029E6 RID: 10726
+		
 		public static object m_Mutex = new object();
 
-		// Token: 0x040029E7 RID: 10727
+		
 		public int m_nTotalPointValue = -1;
 
-		// Token: 0x040029E8 RID: 10728
+		
 		public string m_sTotalPointName = "";
 
-		// Token: 0x040029E9 RID: 10729
+		
 		private static long LastHeartBeatTicks = 0L;
 	}
 }

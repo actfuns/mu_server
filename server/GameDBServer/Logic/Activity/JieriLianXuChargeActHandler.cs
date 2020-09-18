@@ -9,15 +9,15 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.Activity
 {
-	// Token: 0x02000105 RID: 261
+	
 	internal class JieriLianXuChargeActHandler : SingletonTemplate<JieriLianXuChargeActHandler>
 	{
-		// Token: 0x0600045F RID: 1119 RVA: 0x00022A5C File Offset: 0x00020C5C
+		
 		private JieriLianXuChargeActHandler()
 		{
 		}
 
-		// Token: 0x06000460 RID: 1120 RVA: 0x00022A68 File Offset: 0x00020C68
+		
 		public TCPProcessCmdResults ProcQueryActInfo(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -102,7 +102,7 @@ namespace GameDBServer.Logic.Activity
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000461 RID: 1121 RVA: 0x00022E40 File Offset: 0x00021040
+		
 		public TCPProcessCmdResults ProcUpdateAward(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -157,13 +157,13 @@ namespace GameDBServer.Logic.Activity
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000462 RID: 1122 RVA: 0x00023060 File Offset: 0x00021260
+		
 		private string _GetActAwardKey_NoZoneID(string fromDate, string toDate, int zoneId, int awardId)
 		{
 			return Global.GetHuoDongKeyString(fromDate, toDate) + "_" + awardId.ToString();
 		}
 
-		// Token: 0x06000463 RID: 1123 RVA: 0x0002308C File Offset: 0x0002128C
+		
 		private string _GetActAwardKey_Ex(string fromDate, string toDate, int zoneId, int awardId)
 		{
 			return string.Concat(new string[]
@@ -176,7 +176,7 @@ namespace GameDBServer.Logic.Activity
 			});
 		}
 
-		// Token: 0x06000464 RID: 1124 RVA: 0x000230DC File Offset: 0x000212DC
+		
 		private bool _GetAwardIdByExtKey(string extKey, out int awardId)
 		{
 			awardId = 0;
@@ -196,7 +196,7 @@ namespace GameDBServer.Logic.Activity
 			return result;
 		}
 
-		// Token: 0x06000465 RID: 1125 RVA: 0x0002313C File Offset: 0x0002133C
+		
 		private Dictionary<int, int> _QueryEachAwardIdFlag(DBManager dbMgr, string fromDate, string toDate, string userid, int zoneId, string[] AwardIdArray)
 		{
 			Dictionary<int, int> result;
@@ -255,7 +255,7 @@ namespace GameDBServer.Logic.Activity
 			return result;
 		}
 
-		// Token: 0x06000466 RID: 1126 RVA: 0x000232D0 File Offset: 0x000214D0
+		
 		private Dictionary<string, int> _QueryEachDayChargeYB(DBManager dbMgr, string fromDate, string toDate, string userid, int zoneid)
 		{
 			Dictionary<string, int> result;
@@ -312,7 +312,7 @@ namespace GameDBServer.Logic.Activity
 			return result;
 		}
 
-		// Token: 0x06000467 RID: 1127 RVA: 0x00023444 File Offset: 0x00021644
+		
 		private int _UpdateAwardFlag(DBManager dbMgr, string userid, string fromDate, string toDate, int zoneId, int awardId, int awardFlag)
 		{
 			string lastgettime_just_placeholder = string.Empty;

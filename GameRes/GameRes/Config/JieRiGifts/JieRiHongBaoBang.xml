@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="74" FromDate="2017-01-26 00:00:00" ToDate="2017-01-30 23:59:59" AwardStartDate="2017-01-31 00:00:00" AwardEndDate="2017-02-01 23:59:59" />
+  <GiftList Description="活动期间，抢全民红包、充值红包前十名可获得高额奖励！">
+  <RedPacketList ID="1" Ranking="1" Threshold="20" GoodsOne="4035,3,1,0,0,0,0|5110,60,1,0,0,0,0|51226,60,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <RedPacketList ID="2" Ranking="2" Threshold="18" GoodsOne="4035,3,1,0,0,0,0|5110,48,1,0,0,0,0|51226,48,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <RedPacketList ID="3" Ranking="3" Threshold="16" GoodsOne="4035,2,1,0,0,0,0|5110,40,1,0,0,0,0|51226,40,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <RedPacketList ID="4" Ranking="4" Threshold="14" GoodsOne="4035,2,1,0,0,0,0|5110,36,1,0,0,0,0|51226,36,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <RedPacketList ID="5" Ranking="5" Threshold="12" GoodsOne="4035,2,1,0,0,0,0|5110,32,1,0,0,0,0|51226,32,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <RedPacketList ID="6" Ranking="6" Threshold="10" GoodsOne="4035,1,1,0,0,0,0|5110,28,1,0,0,0,0|51226,28,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <RedPacketList ID="7" Ranking="7" Threshold="8" GoodsOne="4035,1,1,0,0,0,0|5110,24,1,0,0,0,0|51226,24,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <RedPacketList ID="8" Ranking="8" Threshold="6" GoodsOne="4035,1,1,0,0,0,0|5110,20,1,0,0,0,0|51226,20,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <RedPacketList ID="9" Ranking="9" Threshold="4" GoodsOne="4035,1,1,0,0,0,0|5110,16,1,0,0,0,0|51226,16,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <RedPacketList ID="10" Ranking="10" Threshold="2" GoodsOne="4035,1,1,0,0,0,0|5110,12,1,0,0,0,0|51226,12,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  </GiftList>
+</Config>

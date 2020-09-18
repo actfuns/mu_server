@@ -9,21 +9,21 @@ using Server.Tools;
 
 namespace GameDBServer.DB
 {
-	// Token: 0x020000EA RID: 234
+	
 	public class DBManager
 	{
-		// Token: 0x0600021B RID: 539 RVA: 0x0000B9B0 File Offset: 0x00009BB0
+		
 		private DBManager()
 		{
 		}
 
-		// Token: 0x0600021C RID: 540 RVA: 0x0000B9DC File Offset: 0x00009BDC
+		
 		public static DBManager getInstance()
 		{
 			return DBManager.instance;
 		}
 
-		// Token: 0x1700002C RID: 44
+		
 		
 		public DBConnections DBConns
 		{
@@ -33,7 +33,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x1700002D RID: 45
+		
 		
 		public DBUserMgr dbUserMgr
 		{
@@ -43,7 +43,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x1700002E RID: 46
+		
 		
 		public DBRoleMgr DBRoleMgr
 		{
@@ -53,18 +53,18 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x06000220 RID: 544 RVA: 0x0000BA3C File Offset: 0x00009C3C
+		
 		public int GetMaxConnsCount()
 		{
 			return this._DBConns.GetDBConnsCount();
 		}
 
-		// Token: 0x06000221 RID: 545 RVA: 0x0000BA59 File Offset: 0x00009C59
+		
 		private void CreateMemTables()
 		{
 		}
 
-		// Token: 0x06000222 RID: 546 RVA: 0x0000BA5C File Offset: 0x00009C5C
+		
 		public void LoadDatabase(MySQLConnectionString connstr, int MaxConns, int codePage)
 		{
 			TianMaCharSet.ConvertToCodePage = codePage;
@@ -98,7 +98,7 @@ namespace GameDBServer.DB
 			this.CreateMemTables();
 		}
 
-		// Token: 0x06000223 RID: 547 RVA: 0x0000BB6C File Offset: 0x00009D6C
+		
 		public bool IsRolenameExist(string strRoleName)
 		{
 			MySQLConnection conn = this._DBConns.PopDBConnection();
@@ -122,7 +122,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x06000224 RID: 548 RVA: 0x0000BBD4 File Offset: 0x00009DD4
+		
 		public bool IsBangHuiNameExist(string strBhName)
 		{
 			MySQLConnection conn = this._DBConns.PopDBConnection();
@@ -152,7 +152,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x06000225 RID: 549 RVA: 0x0000BC5C File Offset: 0x00009E5C
+		
 		public DBUserInfo GetDBUserInfo(string userID)
 		{
 			DBUserInfo dbUserInfo = this._DBUserMgr.FindDBUserInfo(userID);
@@ -180,7 +180,7 @@ namespace GameDBServer.DB
 			return dbUserInfo;
 		}
 
-		// Token: 0x06000226 RID: 550 RVA: 0x0000BD04 File Offset: 0x00009F04
+		
 		public DBRoleInfo GetDBRoleInfo(string rolename)
 		{
 			DBRoleInfo result;
@@ -205,7 +205,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x06000227 RID: 551 RVA: 0x0000BD6C File Offset: 0x00009F6C
+		
 		public DBRoleInfo FindDBRoleInfo(ref int roleID)
 		{
 			if (roleID < 200000)
@@ -225,7 +225,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x06000228 RID: 552 RVA: 0x0000BDBC File Offset: 0x00009FBC
+		
 		public DBRoleInfo GetDBRoleInfo(ref int roleID)
 		{
 			int tempRoleID = 0;
@@ -269,7 +269,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x06000229 RID: 553 RVA: 0x0000BEAC File Offset: 0x0000A0AC
+		
 		public DBRoleInfo GetDBAllRoleInfo(int roleID)
 		{
 			DBRoleInfo dbRoleInfo = this._DBRoleMgr.FindDBRoleInfo(ref roleID);
@@ -294,16 +294,16 @@ namespace GameDBServer.DB
 			return dbRoleInfo;
 		}
 
-		// Token: 0x0400062E RID: 1582
+		
 		private static DBManager instance = new DBManager();
 
-		// Token: 0x0400062F RID: 1583
+		
 		private DBConnections _DBConns = new DBConnections();
 
-		// Token: 0x04000630 RID: 1584
+		
 		private DBUserMgr _DBUserMgr = new DBUserMgr();
 
-		// Token: 0x04000631 RID: 1585
+		
 		private DBRoleMgr _DBRoleMgr = new DBRoleMgr();
 	}
 }

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Item ID="1" TimeSecs="1" GoodsIDs="31010,1,0,0,1,0" BindYuanBao="150" BindMoney="30000" Description="" />
+  <Item ID="2" TimeSecs="2" GoodsIDs="20043,1,0,0,1,0" BindYuanBao="150" BindMoney="30000" Description="" />
+  <Item ID="3" TimeSecs="3" GoodsIDs="31001,1,0,0,1,0" BindYuanBao="200" BindMoney="40000" Description="" />
+  <Item ID="4" TimeSecs="5" GoodsIDs="32030,1,0,0,1,0" BindYuanBao="300" BindMoney="50000" Description="" />
+  <Item ID="5" TimeSecs="10" GoodsIDs="30050,1,0,0,1,0" BindYuanBao="300" BindMoney="50000" Description="" />
+</Config>

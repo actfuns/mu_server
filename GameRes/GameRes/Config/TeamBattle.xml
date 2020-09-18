@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <TeamBattle ID="1" Name="组队竞技" MapCode="97000" TimePoints="18:00:00-23:59:59" EnterCD="10" PrepareSecs="180" FightingSecs="1560" ClearRolesSecs="60" Reward="2030,10,1,0,0,0,0|51076,3,1,0,0,0,0" />
+</Config>

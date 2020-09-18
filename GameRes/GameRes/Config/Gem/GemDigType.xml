@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Type ID="1" Type="100" Name="初级矿坑" CostYingGuangFenMo="60" CostZuanShi="0" />
+  <Type ID="2" Type="200" Name="中级矿坑" CostYingGuangFenMo="" CostZuanShi="600" />
+  <Type ID="3" Type="300" Name="高级矿坑" CostYingGuangFenMo="" CostZuanShi="6000" />
+</Config>

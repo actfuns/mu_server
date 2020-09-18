@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <JingLing ID="1" ZhuangBeiDengJie="1" ZhuangBeiPinZhi="5" DaKongShuLiang="1" XiaoHaoDaoJu="5430,1" GaiLv="5,0.08|4,0.32|3,0.6" />
+  <JingLing ID="2" ZhuangBeiDengJie="1" ZhuangBeiPinZhi="4" DaKongShuLiang="1" XiaoHaoDaoJu="5430,1" GaiLv="5,0|4,0.45|3,0.55" />
+  <JingLing ID="3" ZhuangBeiDengJie="1" ZhuangBeiPinZhi="3" DaKongShuLiang="1" XiaoHaoDaoJu="5430,1" GaiLv="5,0|4,0|3,1" />
+  <JingLing ID="4" ZhuangBeiDengJie="2" ZhuangBeiPinZhi="5" DaKongShuLiang="2" XiaoHaoDaoJu="5430,1" GaiLv="5,0.08|4,0.32|3,0.6" />
+  <JingLing ID="5" ZhuangBeiDengJie="2" ZhuangBeiPinZhi="4" DaKongShuLiang="2" XiaoHaoDaoJu="5430,1" GaiLv="5,0|4,0.45|3,0.55" />
+  <JingLing ID="6" ZhuangBeiDengJie="2" ZhuangBeiPinZhi="3" DaKongShuLiang="2" XiaoHaoDaoJu="5430,1" GaiLv="5,0|4,0|3,1" />
+  <JingLing ID="7" ZhuangBeiDengJie="3" ZhuangBeiPinZhi="5" DaKongShuLiang="3" XiaoHaoDaoJu="5430,1" GaiLv="5,0.08|4,0.32|3,0.6" />
+  <JingLing ID="8" ZhuangBeiDengJie="3" ZhuangBeiPinZhi="4" DaKongShuLiang="3" XiaoHaoDaoJu="5430,1" GaiLv="5,0|4,0.45|3,0.55" />
+  <JingLing ID="9" ZhuangBeiDengJie="3" ZhuangBeiPinZhi="3" DaKongShuLiang="3" XiaoHaoDaoJu="5430,1" GaiLv="5,0|4,0|3,1" />
+</Config>

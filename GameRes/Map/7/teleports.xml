@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+      <Teleports>
+	<Teleport Code="197" FrameNum="13" Tip="亚特兰蒂斯" Key="10"  To="6" ToX="13245" ToY="13868" ToDirection="7" X="9456" Y="2088" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+	<Teleport Code="197" FrameNum="13" Tip="坎特鲁废墟" Key="11"  To="10" ToX="10350" ToY="13750" ToDirection="7" X="14150" Y="9550" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+      </Teleports>
+</Map>

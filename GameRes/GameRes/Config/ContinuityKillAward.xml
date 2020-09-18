@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Kill ID="1" Num="2" Score="10" Text="大杀特杀！" />
+  <Kill ID="2" Num="4" Score="20" Text="无人可挡！" />
+  <Kill ID="3" Num="6" Score="30" Text="主宰了比赛！" />
+  <Kill ID="4" Num="8" Score="40" Text="已超越了神！" />
+</Config>

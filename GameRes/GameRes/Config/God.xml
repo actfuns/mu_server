@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <God ID="1" Name="神之使者" GodIcon="God_001" OpenCondition="1|2|3" ActivationProperty="AddAttackInjurePercent,0.1|Holywater,1|AddDefensePercent,0.05" />
+  <God ID="2" Name="战斗之神" GodIcon="God_002" OpenCondition="4|5|6" ActivationProperty="IgnoreDefensePercent,0.03|IgnorePhyAttackPercent,0.02|IgnoreMagyAttackPercent,0.02" />
+  <God ID="3" Name="太阳之神" GodIcon="God_003" OpenCondition="7|8|9" ActivationProperty="DamageThornPercent,0.05|AddAttackPercent,0.05|InjurePenetrationPercent,0.02" />
+  <God ID="4" Name="智慧女神" GodIcon="God_004" OpenCondition="10|11|12" ActivationProperty="MaxLifePercent,0.1|Potion,2|ElementInjurePercent,0.2" />
+</Config>

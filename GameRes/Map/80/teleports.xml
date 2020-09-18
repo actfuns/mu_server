@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+<Teleports>
+	<Teleport Code="197" FrameNum="13" Tip="安宁池" Key="10"  To="40" ToX="13550" ToY="13050" ToDirection="6" X="1650" Y="10650" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+	<Teleport Code="197" FrameNum="13" Tip="邪恶寺庙" Key="11"  To="90" ToX="9050" ToY="8350" ToDirection="6" X="12750" Y="2450" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+</Teleports>
+</Map>

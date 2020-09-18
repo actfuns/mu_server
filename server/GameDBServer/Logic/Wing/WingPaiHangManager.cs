@@ -7,16 +7,16 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.Wing
 {
-	// Token: 0x0200018E RID: 398
+	
 	public class WingPaiHangManager : IManager
 	{
-		// Token: 0x06000707 RID: 1799 RVA: 0x000415C8 File Offset: 0x0003F7C8
+		
 		public static WingPaiHangManager getInstance()
 		{
 			return WingPaiHangManager.instance;
 		}
 
-		// Token: 0x06000708 RID: 1800 RVA: 0x000415E0 File Offset: 0x0003F7E0
+		
 		public bool initialize()
 		{
 			this.initCmdProcessor();
@@ -25,12 +25,12 @@ namespace GameDBServer.Logic.Wing
 			return true;
 		}
 
-		// Token: 0x06000709 RID: 1801 RVA: 0x00041608 File Offset: 0x0003F808
+		
 		private void initCmdProcessor()
 		{
 		}
 
-		// Token: 0x0600070A RID: 1802 RVA: 0x0004160C File Offset: 0x0003F80C
+		
 		private void initData()
 		{
 			List<WingRankingInfo> playerWingDataList = WingPaiHangDBController.getInstance().getPlayerWingDataList();
@@ -44,38 +44,38 @@ namespace GameDBServer.Logic.Wing
 			}
 		}
 
-		// Token: 0x0600070B RID: 1803 RVA: 0x00041698 File Offset: 0x0003F898
+		
 		private void initListener()
 		{
 			GlobalEventSource.getInstance().registerListener(0, WingPlayerLoginEventListener.getInstnace());
 			GlobalEventSource.getInstance().registerListener(1, WingPlayerLogoutEventListener.getInstnace());
 		}
 
-		// Token: 0x0600070C RID: 1804 RVA: 0x000416BD File Offset: 0x0003F8BD
+		
 		private void removeListener()
 		{
 			GlobalEventSource.getInstance().removeListener(0, WingPlayerLoginEventListener.getInstnace());
 			GlobalEventSource.getInstance().removeListener(1, WingPlayerLogoutEventListener.getInstnace());
 		}
 
-		// Token: 0x0600070D RID: 1805 RVA: 0x000416E2 File Offset: 0x0003F8E2
+		
 		private void removeData()
 		{
 		}
 
-		// Token: 0x0600070E RID: 1806 RVA: 0x000416E8 File Offset: 0x0003F8E8
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x0600070F RID: 1807 RVA: 0x000416FC File Offset: 0x0003F8FC
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000710 RID: 1808 RVA: 0x00041710 File Offset: 0x0003F910
+		
 		public bool destroy()
 		{
 			this.removeListener();
@@ -83,7 +83,7 @@ namespace GameDBServer.Logic.Wing
 			return true;
 		}
 
-		// Token: 0x06000711 RID: 1809 RVA: 0x00041734 File Offset: 0x0003F934
+		
 		public List<PaiHangItemData> getRankingList(int pageIndex, int pageShowNum = -1)
 		{
 			int maxIndex = Math.Max(pageShowNum, WingPaiHangManager.RankingList_PageShowNum);
@@ -99,7 +99,7 @@ namespace GameDBServer.Logic.Wing
 			return _rankingDatas;
 		}
 
-		// Token: 0x06000712 RID: 1810 RVA: 0x000417DC File Offset: 0x0003F9DC
+		
 		public void ModifyWingPaihangData(WingRankingInfo data, bool bIsLogin)
 		{
 			if (null != data)
@@ -135,7 +135,7 @@ namespace GameDBServer.Logic.Wing
 			}
 		}
 
-		// Token: 0x06000713 RID: 1811 RVA: 0x000419B8 File Offset: 0x0003FBB8
+		
 		public int createWingData(int nRoleID)
 		{
 			WingRankingInfo data = null;
@@ -158,7 +158,7 @@ namespace GameDBServer.Logic.Wing
 			return 1;
 		}
 
-		// Token: 0x06000714 RID: 1812 RVA: 0x00041A5C File Offset: 0x0003FC5C
+		
 		public WingRankingInfo getWingData(int nRoleID)
 		{
 			WingRankingInfo data = null;
@@ -172,7 +172,7 @@ namespace GameDBServer.Logic.Wing
 			return WingPaiHangDBController.getInstance().getWingDataById(nRoleID);
 		}
 
-		// Token: 0x06000715 RID: 1813 RVA: 0x00041AD4 File Offset: 0x0003FCD4
+		
 		public void onPlayerLogin(int roleId, string strRoleName)
 		{
 			WingRankingInfo data = null;
@@ -197,7 +197,7 @@ namespace GameDBServer.Logic.Wing
 			}
 		}
 
-		// Token: 0x06000716 RID: 1814 RVA: 0x00041BB4 File Offset: 0x0003FDB4
+		
 		public void onPlayerLogout(int roleId)
 		{
 			WingRankingInfo data = null;
@@ -211,7 +211,7 @@ namespace GameDBServer.Logic.Wing
 			}
 		}
 
-		// Token: 0x06000717 RID: 1815 RVA: 0x00041C24 File Offset: 0x0003FE24
+		
 		internal void OnChangeName(int roleid, string oldName, string newName)
 		{
 			WingRankingInfo info = this.getWingData(roleid);
@@ -222,19 +222,19 @@ namespace GameDBServer.Logic.Wing
 			WingPaiHangDBController.getInstance().OnChangeName(roleid, oldName, newName);
 		}
 
-		// Token: 0x04000926 RID: 2342
+		
 		private static WingPaiHangManager instance = new WingPaiHangManager();
 
-		// Token: 0x04000927 RID: 2343
+		
 		public static readonly int RankingList_Max_Num = 100;
 
-		// Token: 0x04000928 RID: 2344
+		
 		public static readonly int RankingList_PageShowNum = 30;
 
-		// Token: 0x04000929 RID: 2345
+		
 		private List<PlayerWingRankingData> rankingDatas = new List<PlayerWingRankingData>();
 
-		// Token: 0x0400092A RID: 2346
+		
 		private Dictionary<int, WingRankingInfo> playerWingDatas = new Dictionary<int, WingRankingInfo>();
 	}
 }

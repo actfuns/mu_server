@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <GemType GemType="1" Name="荧石"  />
+  <GemType GemType="2" Name="光石"  />
+  <GemType GemType="3" Name="灵石"  />
+</Config>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}魔神秘宝系统说明" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、{00ff33}魔神之角{dac7ae}、{00ff33}魔神之羽{dac7ae}、{00ff33}魔神之眼{dac7ae}升星消耗的材料不同" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、{00ff33}魔神之角{dac7ae}、{00ff33}魔神之羽{dac7ae}、{00ff33}魔神之眼{dac7ae}升阶消耗同种材料" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、{00ff33}魔神之角{dac7ae}、{00ff33}魔神之羽{dac7ae}、{00ff33}魔神之眼{dac7ae}升星会提升重生属性" Bold="0" />
+</Config>

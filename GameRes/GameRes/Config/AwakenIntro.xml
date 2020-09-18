@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}觉醒系统说明" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、消耗一定数量的{17e43e}觉醒石碎片{dac7ae}，可以在{17e43e}觉醒石激活{dac7ae}界面激活相应的觉醒石" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、根据镶嵌装备不同，觉醒石分为{17e43e}攻击觉醒石{dac7ae}和{17e43e}防御觉醒石" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、攻击觉醒石对应装备：{17e43e}武器、项链、左戒指、右戒指" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4、防御觉醒石对应装备：{17e43e}头盔、铠甲、护手、护腿、靴子" Bold="0" />
+  <HelpIntro ID="6" Intro="{dac7ae}5、一套觉醒石中激活的觉醒石达到一定数量， 即可激活相应的觉醒石{17e43e}套装属性" Bold="0" />
+  <HelpIntro ID="7" Intro="{dac7ae}6、觉醒石镶嵌界面可以选择最少激活{17e43e}1档{dac7ae}套装属性的觉醒石进行镶嵌，镶嵌时{17e43e}整套{dac7ae}选择镶嵌" Bold="0" />
+  <HelpIntro ID="8" Intro="{dac7ae}7、不管{17e43e}镶嵌与否{dac7ae}，觉醒石{17e43e}基础属性{dac7ae}都会生效，但只有{17e43e}镶嵌的{dac7ae}觉醒石套，{17e43e}套装属性{dac7ae}才会生效" Bold="0" />
+  <HelpIntro ID="9" Intro="{dac7ae}8、觉醒石对应的装备阶数必须达到{17e43e}7阶{dac7ae}并且卓越属性{17e43e}5条{dac7ae}以上，否则对应的所有觉醒石{ff0000}不生效{dac7ae}，{ff0000}没有{dac7ae}基础属性，也{ff0000}不激活{dac7ae}套装" Bold="0" />
+</Config>

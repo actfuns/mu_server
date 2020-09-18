@@ -8,10 +8,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic.Activity
 {
-	// Token: 0x02000106 RID: 262
+	
 	internal class JieriPlatChargeKingActHandler : SingletonTemplate<JieriPlatChargeKingActHandler>
 	{
-		// Token: 0x06000468 RID: 1128 RVA: 0x000234F4 File Offset: 0x000216F4
+		
 		public TCPProcessCmdResults ProcGetJieriPlatChargeKingList(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;

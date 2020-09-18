@@ -5,10 +5,10 @@ using Server.Tools;
 
 namespace GameServer.Logic
 {
-	// Token: 0x0200053C RID: 1340
+	
 	public class ChangeLifeManager
 	{
-		// Token: 0x06001986 RID: 6534 RVA: 0x0018D74C File Offset: 0x0018B94C
+		
 		public void LoadRoleZhuanShengInfo()
 		{
 			for (int i = 0; i < 6; i++)
@@ -170,7 +170,7 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001987 RID: 6535 RVA: 0x0018DE08 File Offset: 0x0018C008
+		
 		public ChangeLifeDataInfo GetChangeLifeDataInfo(GameClient Client, int nChangeLife = 0)
 		{
 			if (nChangeLife == 0)
@@ -198,7 +198,7 @@ namespace GameServer.Logic
 			return result;
 		}
 
-		// Token: 0x06001988 RID: 6536 RVA: 0x0018DE78 File Offset: 0x0018C078
+		
 		public void InitPlayerChangeLifePorperty(GameClient client)
 		{
 			if (client.ClientData.ChangeLifeCount > 0)
@@ -220,14 +220,14 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x06001989 RID: 6537 RVA: 0x0018DF22 File Offset: 0x0018C122
+		
 		public void ProcessRoleChangeLifeProp(GameClient client)
 		{
 			this.InitPlayerChangeLifePorperty(client);
 			GameManager.ClientMgr.NotifyUpdateEquipProps(Global._TCPManager.MySocketListener, Global._TCPManager.TcpOutPacketPool, client);
 		}
 
-		// Token: 0x0600198A RID: 6538 RVA: 0x0018DF50 File Offset: 0x0018C150
+		
 		public void ActivationChangeLifeProp(GameClient client, ChangeLifePropertyInfo tmpProp)
 		{
 			client.ClientData.RoleChangeLifeProp.ResetChangeLifeProps();
@@ -277,10 +277,10 @@ namespace GameServer.Logic
 			}
 		}
 
-		// Token: 0x040023B8 RID: 9144
+		
 		public Dictionary<int, Dictionary<int, ChangeLifeDataInfo>> m_ChangeLifeInfoList = new Dictionary<int, Dictionary<int, ChangeLifeDataInfo>>();
 
-		// Token: 0x040023B9 RID: 9145
+		
 		public int m_MaxChangeLifeCount = 0;
 	}
 }

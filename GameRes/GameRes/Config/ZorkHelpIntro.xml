@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}魔域夺宝说明" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、由战队队长报名，队长需重生等级达到{17e43e}3{-}级，并且战队中至少{17e43e}2{-}名成员重生等级达到{17e43e}3级{-}，才可报名参与活动{dac7ae}。" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、每周三、周五{17e43e}13:30-14:30{-}开启活动{dac7ae}。" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、战场进入到最后阶段时首领出现，对首领伤害越高获得的积分越高{dac7ae}。" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4、一段时间不对BOSS造成伤害，则伤害记录会被{ff0000}清空" Bold="0" />
+  <HelpIntro ID="6" Intro="{dac7ae}5、获胜战队增加战队积分，失败战队减少战队积分{dac7ae}。" Bold="0" />
+  <HelpIntro ID="7" Intro="{dac7ae}6、魔域夺宝战队段位：{dac7ae}" Bold="0" />
+  <HelpIntro ID="8" Intro="{dac7ae}         王者段 战队积分到达{17e43e}800{dac7ae}" Bold="0" />
+  <HelpIntro ID="9" Intro="{dac7ae}         钻石段 战队积分到达{17e43e}600{dac7ae}" Bold="0" />
+  <HelpIntro ID="10" Intro="{dac7ae}         黄金段 战队积分到达{17e43e}400{dac7ae}" Bold="0" />
+  <HelpIntro ID="11" Intro="{dac7ae}         白银段 战队积分到达{17e43e}200{dac7ae}" Bold="0" />
+  <HelpIntro ID="12" Intro="{dac7ae}7、魔域夺宝战队段位越高赛季获得的奖励越高，赛季奖励将以邮件方式发送，赛季结束后请进行查收{dac7ae}。" Bold="0" />
+  <HelpIntro ID="13" Intro="{dac7ae}8、赛季战队积分排名第{17e43e}1{dac7ae}名可获得最强战队称号，赛季个人杀戮排名第{17e43e}1{-}名的玩家可获得魔域王者个人称号{dac7ae}。" Bold="0" />
+</Config>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Type ID="9" Name="情人大礼包" PeiZhi="JieRiLiBao.xml"/>
+  <Type ID="10" Name="七日登录豪礼" PeiZhi="JieRiDengLu.xml"/>
+  <Type ID="11" Name="VIP大回馈" PeiZhi="JieRiVip.xml"/>
+  <Type ID="12" Name="充值大回馈" PeiZhi="JieRiChongZhiSong.xml"/>
+  <Type ID="13" Name="累计充值豪礼" PeiZhi="JieRiLeiJi.xml"/>
+  <Type ID="14" Name="字卡换礼盒" PeiZhi="JieRiBaoXiang.xml"/>
+  <Type ID="15" Name="情人消费王" PeiZhi="JieRiXiaoFeiKing.xml"/>
+  <Type ID="16" Name="情人充值王" PeiZhi="JieRiChongZhiKing.xml"/>
+  <Type ID="17" Name="BOSS攻城" PeiZhi="JieRiBOSS.xml"/>
+</Config>

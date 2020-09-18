@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace GameDBServer.DB
 {
-	// Token: 0x020001E8 RID: 488
+	
 	public static class CacheManager
 	{
-		// Token: 0x06000A31 RID: 2609 RVA: 0x00061600 File Offset: 0x0005F800
+		
 		public static RoleMiniInfo GetRoleMiniInfo(long rid)
 		{
 			RoleMiniInfo roleMiniInfo;
@@ -28,7 +28,7 @@ namespace GameDBServer.DB
 			return roleMiniInfo;
 		}
 
-		// Token: 0x06000A32 RID: 2610 RVA: 0x000616C0 File Offset: 0x0005F8C0
+		
 		public static void AddRoleMiniInfo(long rid, int zoneId, string userId)
 		{
 			lock (CacheManager.roleMiniInfoDict)
@@ -46,7 +46,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x04000C49 RID: 3145
+		
 		private static Dictionary<long, RoleMiniInfo> roleMiniInfoDict = new Dictionary<long, RoleMiniInfo>();
 	}
 }

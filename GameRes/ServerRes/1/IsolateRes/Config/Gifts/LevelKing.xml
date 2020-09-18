@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="5" Title="冲级王" FromDate="2013-03-14 00:00:00" ToDate="2013-03-21 07:10:00" AwardStartDate="2013-03-21 07:10:00" 
+  AwardEndDate="2013-03-24 23:59:59" IsNeedCode="1"/>
+  <GiftList Description="活动期间内，等级排名排名前10的玩家，可领取丰厚的冲击王奖励，免费领元宝，真的不是在做梦哦~">
+  <Award Ranking="1" YuanBao="10000" GoodsIDs="" MinLevel="50" />
+  <Award Ranking="2" YuanBao="8000" GoodsIDs="" MinLevel="45" />
+  <Award Ranking="3" YuanBao="6000" GoodsIDs="" MinLevel="45" />
+  <Award Ranking="4" YuanBao="3000" GoodsIDs="" MinLevel="40" />
+  <Award Ranking="5" YuanBao="3000" GoodsIDs="" MinLevel="40" />
+  <Award Ranking="6" YuanBao="3000" GoodsIDs="" MinLevel="40" />
+  <Award Ranking="7" YuanBao="2000" GoodsIDs="" MinLevel="40" />
+  <Award Ranking="8" YuanBao="2000" GoodsIDs="" MinLevel="40" />
+  <Award Ranking="9" YuanBao="2000" GoodsIDs="" MinLevel="40" />
+  <Award Ranking="10" YuanBao="1000" GoodsIDs="" MinLevel="40" />
+  </GiftList>
+</Config>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+<Item ID="1" Show="1" Path="Scene/Non-Barrier/ZuDang_binghoudadian1" Pos="3350,5027,4350" ZuDang="3119_4369,3722_4369,3119_4234,3722_4234" Description=""/>
+<Item ID="2" Show="1" Path="Scene/Non-Barrier/ZuDang_binghoudadian2" Pos="3350,5027,4350" ZuDang="2999_2999,3833_2999,2999_2862,3833_2862" Description=""/>
+</Config>

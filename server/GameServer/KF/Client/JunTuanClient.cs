@@ -13,23 +13,23 @@ using Tmsk.Contract.KuaFuData;
 
 namespace KF.Client
 {
-	// Token: 0x02000313 RID: 787
+	
 	[CallbackBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, IgnoreExtensionDataObject = true, UseSynchronizationContext = false)]
 	public class JunTuanClient : MarshalByRefObject, IKuaFuClient, IManager2
 	{
-		// Token: 0x06000C6D RID: 3181 RVA: 0x000C2030 File Offset: 0x000C0230
+		
 		public static JunTuanClient getInstance()
 		{
 			return JunTuanClient.instance;
 		}
 
-		// Token: 0x06000C6E RID: 3182 RVA: 0x000C2048 File Offset: 0x000C0248
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x06000C6F RID: 3183 RVA: 0x000C205C File Offset: 0x000C025C
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			this.CoreInterface = coreInterface;
@@ -40,25 +40,25 @@ namespace KF.Client
 			return true;
 		}
 
-		// Token: 0x06000C70 RID: 3184 RVA: 0x000C20BC File Offset: 0x000C02BC
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x06000C71 RID: 3185 RVA: 0x000C20D0 File Offset: 0x000C02D0
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06000C72 RID: 3186 RVA: 0x000C20E4 File Offset: 0x000C02E4
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06000C73 RID: 3187 RVA: 0x000C20F8 File Offset: 0x000C02F8
+		
 		public void ExecuteEventCallBackAsync(object state)
 		{
 			AsyncDataItem[] items = state as AsyncDataItem[];
@@ -71,7 +71,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06000C74 RID: 3188 RVA: 0x000C214C File Offset: 0x000C034C
+		
 		public void TimerProc(object sender, EventArgs e)
 		{
 			try
@@ -107,7 +107,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06000C75 RID: 3189 RVA: 0x000C2254 File Offset: 0x000C0454
+		
 		private void CloseConnection()
 		{
 			this.ClientInfo.ClientId = 0;
@@ -118,19 +118,19 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06000C76 RID: 3190 RVA: 0x000C22C4 File Offset: 0x000C04C4
+		
 		private void OnConnectionClose(object sender, EventArgs e)
 		{
 			this.CloseConnection();
 		}
 
-		// Token: 0x06000C77 RID: 3191 RVA: 0x000C22CE File Offset: 0x000C04CE
+		
 		private void ResetKuaFuService()
 		{
 			this.CloseConnection();
 		}
 
-		// Token: 0x06000C78 RID: 3192 RVA: 0x000C22D8 File Offset: 0x000C04D8
+		
 		private IJunTuanService GetKuaFuService(bool noWait = false)
 		{
 			try
@@ -199,7 +199,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000C79 RID: 3193 RVA: 0x000C2554 File Offset: 0x000C0754
+		
 		public int GetNewFuBenSeqId()
 		{
 			int result;
@@ -214,7 +214,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06000C7A RID: 3194 RVA: 0x000C2584 File Offset: 0x000C0784
+		
 		public void EventCallBackHandler(AsyncDataItem item)
 		{
 			try
@@ -319,7 +319,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06000C7B RID: 3195 RVA: 0x000C282C File Offset: 0x000C0A2C
+		
 		public int CreateJunTuan(JunTuanRequestData data)
 		{
 			int result = 0;
@@ -347,7 +347,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06000C7C RID: 3196 RVA: 0x000C28B8 File Offset: 0x000C0AB8
+		
 		public int ChangeJunTuanBulltin(int bhid, int junTuanId, string bulltin)
 		{
 			int result = 0;
@@ -375,7 +375,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06000C7D RID: 3197 RVA: 0x000C2940 File Offset: 0x000C0B40
+		
 		public int ChangeJunTuanGVoicePrioritys(int bhid, string prioritys)
 		{
 			int result = 0;
@@ -403,7 +403,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06000C7E RID: 3198 RVA: 0x000C29C8 File Offset: 0x000C0BC8
+		
 		public void BroadcastGMCmdData(GMCmdData data, int serverFlag)
 		{
 			try
@@ -427,7 +427,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06000C7F RID: 3199 RVA: 0x000C2A3C File Offset: 0x000C0C3C
+		
 		public string GetJunTuanGVoicePrioritys(int bhid)
 		{
 			string result = null;
@@ -453,7 +453,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06000C80 RID: 3200 RVA: 0x000C2AB0 File Offset: 0x000C0CB0
+		
 		public int UpdateJunTuanLingDi(int junTuanId, int lingdi)
 		{
 			int result = 0;
@@ -481,7 +481,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06000C81 RID: 3201 RVA: 0x000C2B38 File Offset: 0x000C0D38
+		
 		public int QuitJunTuan(int bhid, int junTuanId, int otherBhId)
 		{
 			int result = 0;
@@ -509,7 +509,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06000C82 RID: 3202 RVA: 0x000C2BC0 File Offset: 0x000C0DC0
+		
 		public int DestroyJunTuan(int bhid, int junTuanId)
 		{
 			int result = 0;
@@ -537,7 +537,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06000C83 RID: 3203 RVA: 0x000C2C48 File Offset: 0x000C0E48
+		
 		public void JunTuanChat(List<KFChat> chatList)
 		{
 			try
@@ -562,7 +562,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06000C84 RID: 3204 RVA: 0x000C2CC8 File Offset: 0x000C0EC8
+		
 		public int JoinJunTuan(JunTuanRequestData data)
 		{
 			try
@@ -588,7 +588,7 @@ namespace KF.Client
 			return -11000;
 		}
 
-		// Token: 0x06000C85 RID: 3205 RVA: 0x000C2D4C File Offset: 0x000C0F4C
+		
 		public List<JunTuanMiniData> GetJunTuanList(int bhid)
 		{
 			try
@@ -637,7 +637,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000C86 RID: 3206 RVA: 0x000C2F08 File Offset: 0x000C1108
+		
 		public JunTuanData GetJunTuanData(int bhid, int junTuanId = 0, bool wait = true)
 		{
 			try
@@ -695,7 +695,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000C87 RID: 3207 RVA: 0x000C30D0 File Offset: 0x000C12D0
+		
 		public int GameFuBenRoleChangeState(int serverId, int rid, int gameId, int side, int state)
 		{
 			int result = -11;
@@ -714,7 +714,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06000C88 RID: 3208 RVA: 0x000C312C File Offset: 0x000C132C
+		
 		public void UpdateKuaFuMapClientCount(int gameId, List<int> mapClientCountList)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -731,7 +731,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06000C89 RID: 3209 RVA: 0x000C3184 File Offset: 0x000C1384
+		
 		private void ClearOverTimePrisonData(DateTime now)
 		{
 			lock (this.Mutex)
@@ -787,7 +787,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06000C8A RID: 3210 RVA: 0x000C354C File Offset: 0x000C174C
+		
 		private void ClearOverTimeFuBen(DateTime now)
 		{
 			lock (this.Mutex)
@@ -807,7 +807,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06000C8B RID: 3211 RVA: 0x000C3660 File Offset: 0x000C1860
+		
 		public KarenFuBenRoleData GetKarenFuBenRoleData(int gameid, int roleId)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -825,7 +825,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000C8C RID: 3212 RVA: 0x000C36B0 File Offset: 0x000C18B0
+		
 		public KarenFuBenData GetKarenKuaFuFuBenData(int mapCode)
 		{
 			try
@@ -887,7 +887,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000C8D RID: 3213 RVA: 0x000C388C File Offset: 0x000C1A8C
+		
 		public List<JunTuanBaseData> GetJunTuanBaseDataList(bool wait = true)
 		{
 			try
@@ -933,7 +933,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000C8E RID: 3214 RVA: 0x000C3A24 File Offset: 0x000C1C24
+		
 		public int GetJunTuanTaskAllData(int bhid, int junTuanId, out JunTuanTaskAllData taskAllData)
 		{
 			taskAllData = null;
@@ -996,7 +996,7 @@ namespace KF.Client
 			return -11003;
 		}
 
-		// Token: 0x06000C8F RID: 3215 RVA: 0x000C3C40 File Offset: 0x000C1E40
+		
 		public bool IsTaskComplete(int bhid, int junTuanId, int taskId)
 		{
 			try
@@ -1019,7 +1019,7 @@ namespace KF.Client
 			return false;
 		}
 
-		// Token: 0x06000C90 RID: 3216 RVA: 0x000C3CF8 File Offset: 0x000C1EF8
+		
 		public int JoinJunTuanResponse(int bhid, int junTuanId, int otherBhid, bool accept)
 		{
 			int result = -11;
@@ -1039,7 +1039,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06000C91 RID: 3217 RVA: 0x000C3D64 File Offset: 0x000C1F64
+		
 		public int RemoveBangHui(int bhid)
 		{
 			int result = -11;
@@ -1059,7 +1059,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06000C92 RID: 3218 RVA: 0x000C3DC8 File Offset: 0x000C1FC8
+		
 		public int ChangeBangHuiName(int bhid, string bhName)
 		{
 			int result = -11;
@@ -1078,7 +1078,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06000C93 RID: 3219 RVA: 0x000C3E1C File Offset: 0x000C201C
+		
 		public void PushGameResultData(object data)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1094,7 +1094,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06000C94 RID: 3220 RVA: 0x000C3E60 File Offset: 0x000C2060
+		
 		public int ExecuteCommand(string cmd)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1111,7 +1111,7 @@ namespace KF.Client
 			return -11003;
 		}
 
-		// Token: 0x06000C95 RID: 3221 RVA: 0x000C3EAC File Offset: 0x000C20AC
+		
 		public List<JunTuanRequestData> GetJunTuanRequestList(int bhid)
 		{
 			try
@@ -1174,7 +1174,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000C96 RID: 3222 RVA: 0x000C40AC File Offset: 0x000C22AC
+		
 		private JunTuanDetailData GetJunTuanDetailData(int bhid, int junTuanId)
 		{
 			JunTuanDetailData data = null;
@@ -1193,7 +1193,7 @@ namespace KF.Client
 			return data;
 		}
 
-		// Token: 0x06000C97 RID: 3223 RVA: 0x000C416C File Offset: 0x000C236C
+		
 		private JunTuanDetailData AddJunTuanDetailData(int bhid, int junTuanId)
 		{
 			JunTuanDetailData data = null;
@@ -1214,7 +1214,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06000C98 RID: 3224 RVA: 0x000C41FC File Offset: 0x000C23FC
+		
 		public List<JunTuanBangHuiData> GetJunTuanBangHuiList(int bhid, int junTuanId)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1266,7 +1266,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000C99 RID: 3225 RVA: 0x000C43B4 File Offset: 0x000C25B4
+		
 		public List<JunTuanBangHuiData> GetJunTuanBangHuiList(int junTuanId)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1292,7 +1292,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000C9A RID: 3226 RVA: 0x000C4450 File Offset: 0x000C2650
+		
 		public int JunTuanChangeBangHuiZhiWu(int bhid, int junTuanId, int otherBhid, int zhiWu)
 		{
 			int result = -11000;
@@ -1311,7 +1311,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06000C9B RID: 3227 RVA: 0x000C44AC File Offset: 0x000C26AC
+		
 		public List<JunTuanRoleData> GetJunTuanRoleList(int bhid, int junTuanId)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1363,7 +1363,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000C9C RID: 3228 RVA: 0x000C4660 File Offset: 0x000C2860
+		
 		public int UpdateRoleDataList(int bhid, List<JunTuanRoleData> list)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1384,7 +1384,7 @@ namespace KF.Client
 			return -11000;
 		}
 
-		// Token: 0x06000C9D RID: 3229 RVA: 0x000C46C8 File Offset: 0x000C28C8
+		
 		public int JunTuanChangeTaskValue(int bhid, int junTuanId, int taskId, int addValue, long ticks)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1402,7 +1402,7 @@ namespace KF.Client
 			return -11000;
 		}
 
-		// Token: 0x06000C9E RID: 3230 RVA: 0x000C4720 File Offset: 0x000C2920
+		
 		public List<JunTuanRankData> GetJunTuanRankingData()
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1445,7 +1445,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000C9F RID: 3231 RVA: 0x000C486C File Offset: 0x000C2A6C
+		
 		public List<JunTuanEventLog> GetJunTuanLogList(int bhid)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1487,7 +1487,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000CA0 RID: 3232 RVA: 0x000C49C4 File Offset: 0x000C2BC4
+		
 		public int GetJunTuanPoint(int bhid, int junTuanId)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1505,7 +1505,7 @@ namespace KF.Client
 			return -11000;
 		}
 
-		// Token: 0x06000CA1 RID: 3233 RVA: 0x000C4A18 File Offset: 0x000C2C18
+		
 		public int SetDoubleOpenTime(int roleId, int linDiType, DateTime openTime, int openSeconds)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1523,7 +1523,7 @@ namespace KF.Client
 			return -1;
 		}
 
-		// Token: 0x06000CA2 RID: 3234 RVA: 0x000C4A6C File Offset: 0x000C2C6C
+		
 		public int SetShouWeiTime(int roleId, int bhid, int linDiType, DateTime openTime, int index, int junTuanPointCost)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1541,7 +1541,7 @@ namespace KF.Client
 			return -1;
 		}
 
-		// Token: 0x06000CA3 RID: 3235 RVA: 0x000C4AC4 File Offset: 0x000C2CC4
+		
 		public int CanEnterKuaFuMap(int roleId, int lingDiType)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1564,7 +1564,7 @@ namespace KF.Client
 			return -1;
 		}
 
-		// Token: 0x06000CA4 RID: 3236 RVA: 0x000C4B28 File Offset: 0x000C2D28
+		
 		public int UpdateMapRoleNum(int lingDiType, int roleNum, int serverId)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1582,7 +1582,7 @@ namespace KF.Client
 			return -1;
 		}
 
-		// Token: 0x06000CA5 RID: 3237 RVA: 0x000C4B7C File Offset: 0x000C2D7C
+		
 		public List<LingDiData> GetLingDiData()
 		{
 			List<LingDiData> ret = new List<LingDiData>();
@@ -1602,7 +1602,7 @@ namespace KF.Client
 			return ret;
 		}
 
-		// Token: 0x06000CA6 RID: 3238 RVA: 0x000C4BD4 File Offset: 0x000C2DD4
+		
 		public int SetLingZhu(int roleId, int lingDiType, int junTuanId, string junTuanName, int zhiWu, byte[] roledata)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1622,7 +1622,7 @@ namespace KF.Client
 			return ret;
 		}
 
-		// Token: 0x06000CA7 RID: 3239 RVA: 0x000C4C30 File Offset: 0x000C2E30
+		
 		public int SetShouWei(int lingDiType, List<LingDiShouWei> shouWeiList)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1642,7 +1642,7 @@ namespace KF.Client
 			return ret;
 		}
 
-		// Token: 0x06000CA8 RID: 3240 RVA: 0x000C4C88 File Offset: 0x000C2E88
+		
 		public int GetLingDiRoleNum(int lingDiType)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1662,7 +1662,7 @@ namespace KF.Client
 			return ret;
 		}
 
-		// Token: 0x06000CA9 RID: 3241 RVA: 0x000C4CDC File Offset: 0x000C2EDC
+		
 		public bool GetClientCacheItems(int serverId)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1682,7 +1682,7 @@ namespace KF.Client
 			return ret;
 		}
 
-		// Token: 0x06000CAA RID: 3242 RVA: 0x000C4D30 File Offset: 0x000C2F30
+		
 		public AsyncDataItem GetHongBaoDataList(long dataAge)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1700,7 +1700,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000CAB RID: 3243 RVA: 0x000C4D80 File Offset: 0x000C2F80
+		
 		public int OpenHongBao(int hongBaoId, int rid, int zoneid, string userid, string rname)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1718,7 +1718,7 @@ namespace KF.Client
 			return -11000;
 		}
 
-		// Token: 0x06000CAC RID: 3244 RVA: 0x000C4DD8 File Offset: 0x000C2FD8
+		
 		public bool AddChargeValue(string keyStr, long addCharge)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -1737,7 +1737,7 @@ namespace KF.Client
 			return false;
 		}
 
-		// Token: 0x06000CAD RID: 3245 RVA: 0x000C4E2C File Offset: 0x000C302C
+		
 		public void ClearYaoSaiPrisonData(int roleID)
 		{
 			lock (this.Mutex)
@@ -1745,7 +1745,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06000CAE RID: 3246 RVA: 0x000C4E74 File Offset: 0x000C3074
+		
 		public List<KFPrisonLogData> GetYaoSaiPrisonLogData(int roleID)
 		{
 			try
@@ -1798,7 +1798,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000CAF RID: 3247 RVA: 0x000C5060 File Offset: 0x000C3260
+		
 		public List<KFPrisonRoleData> GetYaoSaiPrisonFuLuData(int roleID)
 		{
 			try
@@ -1851,7 +1851,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000CB0 RID: 3248 RVA: 0x000C524C File Offset: 0x000C344C
+		
 		public KFPrisonRoleData GetYaoSaiPrisonRoleData(int roleID)
 		{
 			try
@@ -1904,7 +1904,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000CB1 RID: 3249 RVA: 0x000C5438 File Offset: 0x000C3638
+		
 		public KFPrisonJingJiData GetYaoSaiPrisonJingJiData(int roleID)
 		{
 			try
@@ -1957,7 +1957,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000CB2 RID: 3250 RVA: 0x000C5624 File Offset: 0x000C3824
+		
 		public KFPrisonRoleData SearchYaoSaiFuLu(int rid, int unionlev, int faction, HashSet<int> frindSet)
 		{
 			try
@@ -2004,7 +2004,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000CB3 RID: 3251 RVA: 0x000C57AC File Offset: 0x000C39AC
+		
 		public int YaoSaiPrisonOpt(int srcrid, int otherrid, int type, bool success)
 		{
 			int result = -11;
@@ -2023,7 +2023,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06000CB4 RID: 3252 RVA: 0x000C5804 File Offset: 0x000C3A04
+		
 		public int YaoSaiPrisonHuDong(int ownerid, int fuluid, int type, int param0, int param1, int param2)
 		{
 			int result = -11;
@@ -2042,7 +2042,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06000CB5 RID: 3253 RVA: 0x000C5860 File Offset: 0x000C3A60
+		
 		public int UpdateYaoSaiPrisonRoleData(KFUpdatePrisonRole data)
 		{
 			int result = -11;
@@ -2061,7 +2061,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06000CB6 RID: 3254 RVA: 0x000C58B4 File Offset: 0x000C3AB4
+		
 		public int UpdateYaoSaiPrisonLogData(int rid, long id, int state)
 		{
 			int result = -11;
@@ -2080,7 +2080,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06000CB7 RID: 3255 RVA: 0x000C590C File Offset: 0x000C3B0C
+		
 		public bool EraDonate(int juntuanid, int taskid, int var1, int var2, int var3)
 		{
 			IJunTuanService kuaFuService = this.GetKuaFuService(false);
@@ -2098,7 +2098,7 @@ namespace KF.Client
 			return false;
 		}
 
-		// Token: 0x06000CB8 RID: 3256 RVA: 0x000C5960 File Offset: 0x000C3B60
+		
 		public int GetCurrentEraID()
 		{
 			int junTuanEraID;
@@ -2143,7 +2143,7 @@ namespace KF.Client
 			return junTuanEraID;
 		}
 
-		// Token: 0x06000CB9 RID: 3257 RVA: 0x000C5AA0 File Offset: 0x000C3CA0
+		
 		public KFEraData GetJunTuanEraData(int JunTuanID, bool noWait = false)
 		{
 			try
@@ -2203,7 +2203,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06000CBA RID: 3258 RVA: 0x000C5C94 File Offset: 0x000C3E94
+		
 		public List<KFEraRankData> GetJunTuanEraRankData(bool noWait = false)
 		{
 			try
@@ -2252,97 +2252,97 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x04001428 RID: 5160
+		
 		private static JunTuanClient instance = new JunTuanClient();
 
-		// Token: 0x04001429 RID: 5161
+		
 		public static SafeLock LockRoot = new SafeLock(null, 0, false);
 
-		// Token: 0x0400142A RID: 5162
+		
 		private SafeLock Mutex = new SafeLock(JunTuanClient.LockRoot, 2, false);
 
-		// Token: 0x0400142B RID: 5163
+		
 		private SafeLock RemotingMutex = new SafeLock(JunTuanClient.LockRoot, 1, false);
 
-		// Token: 0x0400142C RID: 5164
+		
 		private ICoreInterface CoreInterface = null;
 
-		// Token: 0x0400142D RID: 5165
+		
 		private IJunTuanService KuaFuService = null;
 
-		// Token: 0x0400142E RID: 5166
+		
 		private bool ClientInitialized = false;
 
-		// Token: 0x0400142F RID: 5167
+		
 		private KuaFuClientContext ClientInfo = new KuaFuClientContext();
 
-		// Token: 0x04001430 RID: 5168
+		
 		private int CurrentRequestCount = 0;
 
-		// Token: 0x04001431 RID: 5169
+		
 		private int MaxRequestCount = 50;
 
-		// Token: 0x04001432 RID: 5170
+		
 		private Dictionary<int, JunTuanDetailData> JunTuanDetailDataDict = new Dictionary<int, JunTuanDetailData>();
 
-		// Token: 0x04001433 RID: 5171
+		
 		private Dictionary<int, JunTuanBaseData> JunTuanBaseDataDict = new Dictionary<int, JunTuanBaseData>();
 
-		// Token: 0x04001434 RID: 5172
+		
 		private KuaFuData<List<JunTuanBaseData>> JunTuanBaseDataList = new KuaFuData<List<JunTuanBaseData>>();
 
-		// Token: 0x04001435 RID: 5173
+		
 		private KuaFuData<List<JunTuanRankData>> JunTuanRankDataList = new KuaFuData<List<JunTuanRankData>>();
 
-		// Token: 0x04001436 RID: 5174
+		
 		private KuaFuData<List<JunTuanEventLog>> JunTuanEventLogList = new KuaFuData<List<JunTuanEventLog>>();
 
-		// Token: 0x04001437 RID: 5175
+		
 		private Dictionary<int, int> BangHuiJunTuanIdDict = new Dictionary<int, int>();
 
-		// Token: 0x04001438 RID: 5176
+		
 		private Dictionary<int, KuaFuData<KarenFuBenData>> KarenFuBenDataDict = new Dictionary<int, KuaFuData<KarenFuBenData>>();
 
-		// Token: 0x04001439 RID: 5177
+		
 		private Dictionary<int, KFPrisonRoleAllData> YaoSaiPrisonRoleDataDict = new Dictionary<int, KFPrisonRoleAllData>();
 
-		// Token: 0x0400143A RID: 5178
+		
 		private Dictionary<int, KFPrisonFuLuAllData> YaoSaiOwnerVsFuLuDict = new Dictionary<int, KFPrisonFuLuAllData>();
 
-		// Token: 0x0400143B RID: 5179
+		
 		private Dictionary<int, KFPrisonJingJiAllData> YaoSaiPrisonJingJiDataDict = new Dictionary<int, KFPrisonJingJiAllData>();
 
-		// Token: 0x0400143C RID: 5180
+		
 		private Dictionary<int, KFPrisonLogAllData> YaoSaiPrisonLogDataDict = new Dictionary<int, KFPrisonLogAllData>();
 
-		// Token: 0x0400143D RID: 5181
+		
 		private KuaFuData<List<KFEraRankData>> EraRankList = new KuaFuData<List<KFEraRankData>>();
 
-		// Token: 0x0400143E RID: 5182
+		
 		private Dictionary<int, KuaFuData<KFEraData>> EraDataDict = new Dictionary<int, KuaFuData<KFEraData>>();
 
-		// Token: 0x0400143F RID: 5183
+		
 		private volatile int JunTuanEraID = -1;
 
-		// Token: 0x04001440 RID: 5184
+		
 		private DateTime NextClearFuBenTime;
 
-		// Token: 0x04001441 RID: 5185
+		
 		private string RemoteServiceUri = null;
 
-		// Token: 0x04001442 RID: 5186
+		
 		private long AsyncDataItemAge;
 
-		// Token: 0x04001443 RID: 5187
+		
 		private DuplexChannelFactory<IJunTuanService> channelFactory;
 
-		// Token: 0x04001444 RID: 5188
+		
 		private KuaFuData<List<JunTuanMiniData>> JunTuanList = new KuaFuData<List<JunTuanMiniData>>();
 
-		// Token: 0x04001445 RID: 5189
+		
 		private Dictionary<int, KuaFuData<JunTuanTaskAllData>> JunTuanTaskAllDataDict = new Dictionary<int, KuaFuData<JunTuanTaskAllData>>();
 
-		// Token: 0x04001446 RID: 5190
+		
 		private Dictionary<int, KuaFuData<List<JunTuanRequestData>>> JunTuanRequestListDict = new Dictionary<int, KuaFuData<List<JunTuanRequestData>>>();
 	}
 }

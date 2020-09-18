@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>   
+	<!--ID，流水号；HuoDongLevel，活动档位；BeginTime，活动开启时间；FinishTime，活动结束时间；RegisterBegin，注册起始时间；RegisterFinish，注册结束时间-->
+    <HuiGuiHuoDong ID="1" HuoDongLevel="1" BeginTime="2018-02-12 00:00:00" FinishTime="2018-02-19 23:59:59" RegisterBegin="" RegisterFinish="2015-09-30 23:59:59" />
+	<HuiGuiHuoDong ID="2" HuoDongLevel="2" BeginTime="2018-02-12 00:00:00" FinishTime="2018-02-19 23:59:59" RegisterBegin="2015-10-01 00:00:00" RegisterFinish="2016-08-31 23:59:59" />
+	<HuiGuiHuoDong ID="3" HuoDongLevel="3" BeginTime="2018-02-12 00:00:00" FinishTime="2018-02-19 23:59:59" RegisterBegin="2016-09-01 00:00:00" RegisterFinish="" />
+</Config>

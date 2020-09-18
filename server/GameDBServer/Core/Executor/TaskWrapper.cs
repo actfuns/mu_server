@@ -2,10 +2,10 @@
 
 namespace GameDBServer.Core.Executor
 {
-	// Token: 0x02000018 RID: 24
+	
 	internal class TaskWrapper
 	{
-		// Token: 0x06000056 RID: 86 RVA: 0x00004314 File Offset: 0x00002514
+		
 		public TaskWrapper(ScheduleTask task, long delay, long periodic)
 		{
 			this.currentTask = task;
@@ -13,7 +13,7 @@ namespace GameDBServer.Core.Executor
 			this.periodic = periodic;
 		}
 
-		// Token: 0x17000005 RID: 5
+		
 		
 		public ScheduleTask CurrentTask
 		{
@@ -23,7 +23,7 @@ namespace GameDBServer.Core.Executor
 			}
 		}
 
-		// Token: 0x17000006 RID: 6
+		
 		
 		public long StartTime
 		{
@@ -33,13 +33,13 @@ namespace GameDBServer.Core.Executor
 			}
 		}
 
-		// Token: 0x06000059 RID: 89 RVA: 0x00004394 File Offset: 0x00002594
+		
 		public void resetStartTime()
 		{
 			this.startTime += this.periodic;
 		}
 
-		// Token: 0x17000007 RID: 7
+		
 		
 		public long Periodic
 		{
@@ -49,19 +49,19 @@ namespace GameDBServer.Core.Executor
 			}
 		}
 
-		// Token: 0x0600005B RID: 91 RVA: 0x000043C4 File Offset: 0x000025C4
+		
 		public void release()
 		{
 			this.currentTask = null;
 		}
 
-		// Token: 0x0600005C RID: 92 RVA: 0x000043CE File Offset: 0x000025CE
+		
 		public void addExecuteCount()
 		{
 			this.executeCount++;
 		}
 
-		// Token: 0x17000008 RID: 8
+		
 		
 		public int ExecuteCount
 		{
@@ -71,19 +71,19 @@ namespace GameDBServer.Core.Executor
 			}
 		}
 
-		// Token: 0x0400004C RID: 76
+		
 		private ScheduleTask currentTask;
 
-		// Token: 0x0400004D RID: 77
+		
 		private long startTime = -1L;
 
-		// Token: 0x0400004E RID: 78
+		
 		private long periodic = -1L;
 
-		// Token: 0x0400004F RID: 79
+		
 		private int executeCount = 0;
 
-		// Token: 0x04000050 RID: 80
+		
 		public bool canExecute = true;
 	}
 }

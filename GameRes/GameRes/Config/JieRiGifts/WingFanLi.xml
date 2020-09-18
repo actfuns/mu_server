@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="53" FromDate="2018-02-12 00:00:00" ToDate="2018-02-26 23:59:59" AwardStartDate="2018-02-12 00:00:00" AwardEndDate="2018-02-26 23:59:59" />
+  <GiftList Description="活动期间，提高翅膀等阶可领取丰厚大礼！">
+    <Award ID="1" WingLevel="5,0" GoodsOne="63094,2,1,0,0,0,0|5260,10,1,0,0,0,0|50017,5,1,0,0,0,0|2017,30,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+    <Award ID="2" WingLevel="6,0" GoodsOne="63094,2,1,0,0,0,0|5260,10,1,0,0,0,0|50017,5,1,0,0,0,0" GoodsTwo="" GoodsThr="40026,80,1,0,0,0,0" EffectiveTime="2,2018-02-12 00:00:00,2018-02-26 23:59:59" />
+    <Award ID="3" WingLevel="7,0" GoodsOne="63094,2,1,0,0,0,0|5260,10,1,0,0,0,0|50017,8,1,0,0,0,0" GoodsTwo="" GoodsThr="40026,120,1,0,0,0,0" EffectiveTime="2,2018-02-12 00:00:00,2018-02-26 23:59:59" />
+    <Award ID="4" WingLevel="8,0" GoodsOne="63094,2,1,0,0,0,0|5260,10,1,0,0,0,0|50017,8,1,0,0,0,0" GoodsTwo="" GoodsThr="40027,180,1,0,0,0,0" EffectiveTime="2,2018-02-12 00:00:00,2018-02-26 23:59:59" />
+    <Award ID="5" WingLevel="9,0" GoodsOne="63094,2,1,0,0,0,0|5260,10,1,0,0,0,0|50017,12,1,0,0,0,0" GoodsTwo="" GoodsThr="40027,240,1,0,0,0,0" EffectiveTime="2,2018-02-12 00:00:00,2018-02-26 23:59:59" />
+    <Award ID="6" WingLevel="10,0" GoodsOne="63094,2,1,0,0,0,0|5260,10,1,0,0,0,0|50017,12,1,0,0,0,0" GoodsTwo="" GoodsThr="40028,360,1,0,0,0,0" EffectiveTime="2,2018-02-12 00:00:00,2018-02-26 23:59:59" />
+    <Award ID="7" WingLevel="11,0" GoodsOne="63094,2,1,0,0,0,0|5260,10,1,0,0,0,0|50017,12,1,0,0,0,0" GoodsTwo="" GoodsThr="40028,480,1,0,0,0,0" EffectiveTime="2,2018-02-12 00:00:00,2018-02-26 23:59:59" />
+    <Award ID="8" WingLevel="12,0" GoodsOne="63124,1,1,0,0,0,0|5260,10,1,0,0,0,0|50017,12,1,0,0,0,0|1034115,1,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  </GiftList>
+</Config>

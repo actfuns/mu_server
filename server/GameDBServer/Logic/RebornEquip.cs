@@ -9,28 +9,28 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000165 RID: 357
+	
 	public class RebornEquip : SingletonTemplate<RebornEquip>, IManager, ICmdProcessor
 	{
-		// Token: 0x0600061C RID: 1564 RVA: 0x00036BF4 File Offset: 0x00034DF4
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x0600061D RID: 1565 RVA: 0x00036C08 File Offset: 0x00034E08
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x0600061E RID: 1566 RVA: 0x00036C1C File Offset: 0x00034E1C
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x0600061F RID: 1567 RVA: 0x00036C30 File Offset: 0x00034E30
+		
 		public bool startup()
 		{
 			TCPCmdDispatcher.getInstance().registerProcessor(14123, SingletonTemplate<RebornEquip>.Instance());
@@ -40,7 +40,7 @@ namespace GameDBServer.Logic
 			return true;
 		}
 
-		// Token: 0x06000620 RID: 1568 RVA: 0x00036C98 File Offset: 0x00034E98
+		
 		public static TCPProcessCmdResults ProcessUpdateRoleRebornBagNumCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -102,7 +102,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000621 RID: 1569 RVA: 0x00036EF4 File Offset: 0x000350F4
+		
 		public static TCPProcessCmdResults ProcessUpdateRebornStorageInfoCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -164,7 +164,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000622 RID: 1570 RVA: 0x00037154 File Offset: 0x00035354
+		
 		public static TCPProcessCmdResults ProcessUpdateRoleRebornShowEquipCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -226,7 +226,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000623 RID: 1571 RVA: 0x000373B0 File Offset: 0x000355B0
+		
 		public static TCPProcessCmdResults ProcessUpdateRoleRebornShowModelCmd(DBManager dbMgr, TCPOutPacketPool pool, int nID, byte[] data, int count, out TCPOutPacket tcpOutPacket)
 		{
 			tcpOutPacket = null;
@@ -288,7 +288,7 @@ namespace GameDBServer.Logic
 			return TCPProcessCmdResults.RESULT_DATA;
 		}
 
-		// Token: 0x06000624 RID: 1572 RVA: 0x0003760C File Offset: 0x0003580C
+		
 		public void processCmd(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			switch (nID)
@@ -308,7 +308,7 @@ namespace GameDBServer.Logic
 			}
 		}
 
-		// Token: 0x06000625 RID: 1573 RVA: 0x00037674 File Offset: 0x00035874
+		
 		public static Dictionary<int, RebornEquipData> GetRebornEquipHoleData(DBRoleInfo dbRoleInfo)
 		{
 			Dictionary<int, RebornEquipData> data = null;
@@ -316,7 +316,7 @@ namespace GameDBServer.Logic
 			return data;
 		}
 
-		// Token: 0x06000626 RID: 1574 RVA: 0x0003769C File Offset: 0x0003589C
+		
 		public void InsertHoleInfo(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -339,7 +339,7 @@ namespace GameDBServer.Logic
 			client.sendCmd<int>(nID, 1);
 		}
 
-		// Token: 0x06000627 RID: 1575 RVA: 0x0003774C File Offset: 0x0003594C
+		
 		public void UpdateHoleInfo(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -362,7 +362,7 @@ namespace GameDBServer.Logic
 			client.sendCmd<int>(nID, 1);
 		}
 
-		// Token: 0x06000628 RID: 1576 RVA: 0x000377FC File Offset: 0x000359FC
+		
 		public static Dictionary<int, MazingerStoreData> GetMazingerStoreData(DBRoleInfo dbRoleInfo)
 		{
 			Dictionary<int, MazingerStoreData> data = null;
@@ -370,7 +370,7 @@ namespace GameDBServer.Logic
 			return data;
 		}
 
-		// Token: 0x06000629 RID: 1577 RVA: 0x00037824 File Offset: 0x00035A24
+		
 		public void InsertMazingerStoreInfo(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try
@@ -393,7 +393,7 @@ namespace GameDBServer.Logic
 			client.sendCmd<int>(nID, 1);
 		}
 
-		// Token: 0x0600062A RID: 1578 RVA: 0x000378D8 File Offset: 0x00035AD8
+		
 		public void UpdateMazingerStoreInfo(GameServerClient client, int nID, byte[] cmdParams, int count)
 		{
 			try

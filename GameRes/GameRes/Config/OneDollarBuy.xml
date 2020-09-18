@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <OneDollarBuy ID="1" BeginTime="2016-03-14 0:00:00" FinishTime="2016-03-28 23:59:59" ZhiGouID="4" ChongZhiID="23" YuanJia="298" XianJia="1" GoodsID1="5088,10,1,0,0,0,0|2001,20,1,0,0,0,0|5031,20,1,0,0,0,0" GoodsID2="" SinglePurchase="1" />
+</Config>

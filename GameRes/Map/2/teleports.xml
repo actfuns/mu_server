@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+      <Teleports>
+        <Teleport Code="197" FrameNum="13" Tip="勇者大陆" Key="10"  To="1" ToX="18250" ToY="4150" ToDirection="0" X="1250" Y="7450" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+        <Teleport Code="197" FrameNum="13" Tip="亚特兰蒂斯" Key="11"  To="6" ToX="1343" ToY="7967" ToDirection="0" X="13050" Y="5250" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+	<Teleport Code="197" FrameNum="13" Tip="幽暗森林" Key="12"  To="9" ToX="1850" ToY="12350" ToDirection="0" X="13350" Y="3150" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+      </Teleports>
+</Map>

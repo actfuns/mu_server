@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CompResources ID="1" MapID="93000" MonstersID="9650010" Site="6550|11450" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="2" MapID="93000" MonstersID="9650010" Site="6550|11150" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="3" MapID="93000" MonstersID="9650010" Site="7150|11150" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="4" MapID="93000" MonstersID="9650010" Site="7450|11350" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="5" MapID="93000" MonstersID="9650010" Site="7550|11150" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="6" MapID="93000" MonstersID="9650010" Site="5950|10750" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="7" MapID="93000" MonstersID="9650010" Site="7850|10750" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="8" MapID="93000" MonstersID="9650010" Site="7850|10450" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="9" MapID="93000" MonstersID="9650010" Site="5950|9850" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="10" MapID="93000" MonstersID="9650010" Site="7950|10050" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="11" MapID="93000" MonstersID="9650010" Site="7250|9550" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="12" MapID="93000" MonstersID="9650010" Site="7750|9650" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="13" MapID="93000" MonstersID="9650010" Site="7450|9350" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="14" MapID="93000" MonstersID="9650010" Site="7450|9050" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="15" MapID="93001" MonstersID="9651010" Site="6550|11450" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="16" MapID="93001" MonstersID="9651010" Site="6550|11150" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="17" MapID="93001" MonstersID="9651010" Site="7150|11150" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="18" MapID="93001" MonstersID="9651010" Site="7450|11350" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="19" MapID="93001" MonstersID="9651010" Site="7550|11150" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="20" MapID="93001" MonstersID="9651010" Site="5950|10750" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="21" MapID="93001" MonstersID="9651010" Site="7850|10750" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="22" MapID="93001" MonstersID="9651010" Site="7850|10450" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="23" MapID="93001" MonstersID="9651010" Site="5950|9850" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="24" MapID="93001" MonstersID="9651010" Site="7950|10050" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="25" MapID="93001" MonstersID="9651010" Site="7250|9550" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="26" MapID="93001" MonstersID="9651010" Site="7750|9650" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="27" MapID="93001" MonstersID="9651010" Site="7450|9350" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="28" MapID="93001" MonstersID="9651010" Site="7450|9050" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="29" MapID="93002" MonstersID="9652010" Site="6550|11450" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="30" MapID="93002" MonstersID="9652010" Site="6550|11150" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="31" MapID="93002" MonstersID="9652010" Site="7150|11150" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="32" MapID="93002" MonstersID="9652010" Site="7450|11350" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="33" MapID="93002" MonstersID="9652010" Site="7550|11150" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="34" MapID="93002" MonstersID="9652010" Site="5950|10750" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="35" MapID="93002" MonstersID="9652010" Site="7850|10750" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="36" MapID="93002" MonstersID="9652010" Site="7850|10450" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="37" MapID="93002" MonstersID="9652010" Site="5950|9850" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="38" MapID="93002" MonstersID="9652010" Site="7950|10050" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="39" MapID="93002" MonstersID="9652010" Site="7250|9550" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="40" MapID="93002" MonstersID="9652010" Site="7750|9650" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="41" MapID="93002" MonstersID="9652010" Site="7450|9350" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+  <CompResources ID="42" MapID="93002" MonstersID="9652010" Site="7450|9050" GrowTime="1800" CollectTime="5" AutoCollectTime="3600" RefreshTime="12:00:00-18:00:00" CompNum="25" CompHonor="0" CompFeast="0" />
+</Config>

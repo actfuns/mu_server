@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Copy TabID="1" Name="全部" Show="0" />
+  <Copy TabID="2" Name="武器" Show="1" />
+  <Copy TabID="3" Name="头盔" Show="1" />
+  <Copy TabID="4" Name="铠甲" Show="1" />
+  <Copy TabID="5" Name="护手" Show="1" />
+  <Copy TabID="6" Name="护腿" Show="1" />
+  <Copy TabID="7" Name="鞋子" Show="1" />
+  <Copy TabID="8" Name="项链" Show="1" />
+  <Copy TabID="9" Name="戒指" Show="1" />
+  <Copy TabID="10" Name="材料" Show="1" />
+  <Copy TabID="11" Name="金币" Show="0" /> 
+  <Copy TabID="12" Name="药品" Show="1" />
+  <Copy TabID="13" Name="宠物" Show="0" />
+  <Copy TabID="14" Name="坐骑" Show="1" />
+  <Copy TabID="15" Name="精魄" Show="0" /> 
+  <Copy TabID="16" Name="重生装备" Show="1" />
+  <Copy TabID="17" Name="重生宝石" Show="1" />
+  <Copy TabID="18" Name="其他" Show="0" />	
+</Config>

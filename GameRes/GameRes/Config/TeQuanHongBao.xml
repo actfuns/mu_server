@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <TeQuanHongBao ID="1" TeQuanID="6" BangZuanShuLiang="1000" HongBaoQuYu="10,50" />
+  <TeQuanHongBao ID="2" TeQuanID="13" BangZuanShuLiang="1000" HongBaoQuYu="10,51" />
+  <TeQuanHongBao ID="3" TeQuanID="20" BangZuanShuLiang="1000" HongBaoQuYu="10,52" />
+  <TeQuanHongBao ID="4" TeQuanID="27" BangZuanShuLiang="1000" HongBaoQuYu="10,53" />
+  <TeQuanHongBao ID="5" TeQuanID="34" BangZuanShuLiang="1000" HongBaoQuYu="10,54" />
+  <TeQuanHongBao ID="6" TeQuanID="41" BangZuanShuLiang="1000" HongBaoQuYu="10,55" />
+  <TeQuanHongBao ID="7" TeQuanID="48" BangZuanShuLiang="1000" HongBaoQuYu="10,56" />
+  <TeQuanHongBao ID="8" TeQuanID="55" BangZuanShuLiang="1000" HongBaoQuYu="10,57" />
+  <TeQuanHongBao ID="9" TeQuanID="62" BangZuanShuLiang="1000" HongBaoQuYu="10,58" />
+  <TeQuanHongBao ID="10" TeQuanID="69" BangZuanShuLiang="1000" HongBaoQuYu="10,59" />
+</Config>

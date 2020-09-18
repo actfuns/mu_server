@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="10"  FromDate="2014-12-30 00:00:00" ToDate="2015-01-02 23:59:59" AwardStartDate="2014-12-30 00:00:00"  AwardEndDate="2015-01-02 23:59:59" />
+  <GiftList Description="100%概率掉落五阶装备宝箱与高级成就、声望印记，几率掉落大量进化晶石与珍贵道具。">
+  <Award MonsterID="6000000" ZhanLi="2000" GoodsIDs="7041,1,0,0,0,0,0|7040,1,0,0,0,0,0|5041,1,0,0,0,0,0|5031,1,0,0,0,0,0|2030,1,0,0,0,0,0|2002,1,0,0,0,0,0" BossTime="2|2|12:00"/>
+  </GiftList>
+</Config>

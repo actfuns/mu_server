@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <PelSkillLevelAward ID="1" Level="20" ShuXing="AddAttackInjure,1200|MaxLifeV,2400" />
+  <PelSkillLevelAward ID="2" Level="40" ShuXing="AddAttackInjure,1560|MaxLifeV,3120" />
+  <PelSkillLevelAward ID="3" Level="60" ShuXing="AddAttackInjure,2040|MaxLifeV,4080" />
+  <PelSkillLevelAward ID="4" Level="80" ShuXing="AddAttackInjure,2640|MaxLifeV,5280" />
+  <PelSkillLevelAward ID="5" Level="100" ShuXing="AddAttackInjure,3360|MaxLifeV,6720|DecreaseInjureValue,240|MaxLifePercent,0.03" />
+  <PelSkillLevelAward ID="6" Level="120" ShuXing="AddAttackInjure,4200|MaxLifeV,8400|DecreaseInjureValue,480|MaxLifePercent,0.04" />
+  <PelSkillLevelAward ID="7" Level="140" ShuXing="AddAttackInjure,5160|MaxLifeV,10320|DecreaseInjureValue,720|MaxLifePercent,0.05" />
+  <PelSkillLevelAward ID="8" Level="160" ShuXing="AddAttackInjure,6240|MaxLifeV,12480|DecreaseInjureValue,960|MaxLifePercent,0.06" />
+  <PelSkillLevelAward ID="9" Level="180" ShuXing="AddAttackInjure,7440|MaxLifeV,14880|DecreaseInjureValue,1200|MaxLifePercent,0.07" />
+  <PelSkillLevelAward ID="10" Level="200" ShuXing="AddAttackInjure,8760|MaxLifeV,17520|DecreaseInjureValue,1560|MaxLifePercent,0.08" />
+  <PelSkillLevelAward ID="11" Level="220" ShuXing="AddAttackInjure,10200|MaxLifeV,20400|DecreaseInjureValue,2040|MaxLifePercent,0.09" />
+  <PelSkillLevelAward ID="12" Level="240" ShuXing="AddAttackInjure,11760|MaxLifeV,23520|DecreaseInjureValue,2640|MaxLifePercent,0.1" />
+  <PelSkillLevelAward ID="13" Level="260" ShuXing="AddAttackInjure,13440|MaxLifeV,26880|DecreaseInjureValue,3360|MaxLifePercent,0.12" />
+  <PelSkillLevelAward ID="14" Level="280" ShuXing="AddAttackInjure,15240|MaxLifeV,30480|DecreaseInjureValue,4200|MaxLifePercent,0.14" />
+  <PelSkillLevelAward ID="15" Level="300" ShuXing="AddAttackInjure,17160|MaxLifeV,34320|DecreaseInjureValue,5160|MaxLifePercent,0.16" />
+  <PelSkillLevelAward ID="16" Level="320" ShuXing="AddAttackInjure,19260|MaxLifeV,38520|DecreaseInjureValue,6240|MaxLifePercent,0.18" />
+  <PelSkillLevelAward ID="17" Level="340" ShuXing="AddAttackInjure,21540|MaxLifeV,43080|DecreaseInjureValue,7440|MaxLifePercent,0.2" />
+  <PelSkillLevelAward ID="18" Level="360" ShuXing="AddAttackInjure,24000|MaxLifeV,48000|DecreaseInjureValue,8760|MaxLifePercent,0.24" />
+  <PelSkillLevelAward ID="19" Level="380" ShuXing="AddAttackInjure,26640|MaxLifeV,53280|DecreaseInjureValue,10200|MaxLifePercent,0.28" />
+  <PelSkillLevelAward ID="20" Level="400" ShuXing="AddAttackInjure,29460|MaxLifeV,58920|DecreaseInjureValue,11760|MaxLifePercent,0.32" />
+  <PelSkillLevelAward ID="21" Level="420" ShuXing="AddAttackInjure,32460|MaxLifeV,64920|DecreaseInjureValue,13440|MaxLifePercent,0.36" />
+  <PelSkillLevelAward ID="22" Level="440" ShuXing="AddAttackInjure,35640|MaxLifeV,71280|DecreaseInjureValue,15240|MaxLifePercent,0.4" />
+  <PelSkillLevelAward ID="23" Level="460" ShuXing="AddAttackInjure,39000|MaxLifeV,78000|DecreaseInjureValue,17160|MaxLifePercent,0.44" />
+  <PelSkillLevelAward ID="24" Level="480" ShuXing="AddAttackInjure,42000|MaxLifeV,84000|DecreaseInjureValue,18000|MaxLifePercent,0.5" />
+</Config>

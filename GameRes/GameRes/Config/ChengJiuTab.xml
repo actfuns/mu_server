@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <ChengJiu>
+    <Tab ID="1" Name="闪耀登场" />
+    <Tab ID="2" Name="强者之路" />
+    <Tab ID="3" Name="登录成就" />
+    <Tab ID="4" Name="财富积累" />
+    <Tab ID="5" Name="浴血奋战" />
+    <Tab ID="6" Name="炼炉锻造" />
+    <Tab ID="7" Name="王者霸权" />
+    <Tab ID="8" Name="主线任务" />
+  </ChengJiu>
+</config>

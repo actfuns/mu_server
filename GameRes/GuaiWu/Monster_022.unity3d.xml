@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <SpeedConfig UnitSpeed="100" Tick="740,444,0,333,333,0,1148,0,0,0,0,100,259" />
+  <FrameConfig EachActionFrameRange="3,3,0,3,3,0,3,0,0,0,0,1,3" EachActionEffectiveFrame="-1,-1,-1,1,1,0,1,-1,-1,-1,-1,-1,-1" />
+</Config>

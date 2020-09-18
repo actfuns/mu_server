@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <NPCs>
+    <NPC Code="401" X="13350" Y="2250" Dir="5" />
+    <NPC Code="402" X="4450" Y="650" Dir="7" />
+    <NPC Code="403" X="8550" Y="2450" Dir="4" />
+    <NPC Code="404" X="14350" Y="9650" Dir="6" />
+    <NPC Code="405" X="3950" Y="11250" Dir="5" />
+    <NPC Code="406" X="5150" Y="4050" Dir="5" />
+    <NPC Code="407" X="10500" Y="13000" Dir="4" />
+    <NPC Code="408" X="7100" Y="10700" Dir="6" />
+    <NPC Code="409" X="2250" Y="4550" Dir="4" />
+    <NPC Code="410" X="9600" Y="4400" Dir="4" />
+    <NPC Code="411" X="8950" Y="10050" Dir="6" />
+    <NPC Code="412" X="4400" Y="6000" Dir="5" />
+  </NPCs>
+</Map>

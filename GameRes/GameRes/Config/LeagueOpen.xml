@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <LeagueOpen ID="1" PingTai="APP" OpenDate="2017-03-20" EndDate="-1" />
+  <LeagueOpen ID="2" PingTai="YueYu" OpenDate="2017-03-20" EndDate="-1" />
+  <LeagueOpen ID="3" PingTai="Android" OpenDate="2017-03-20" EndDate="-1" />
+  <LeagueOpen ID="4" PingTai="YYB" OpenDate="2017-03-20" EndDate="-1" />
+</Config>

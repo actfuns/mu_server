@@ -5,10 +5,10 @@ using Server.Tools;
 
 namespace GameDBServer.Logic
 {
-	// Token: 0x02000149 RID: 329
+	
 	public class LiPinMaParse
 	{
-		// Token: 0x06000595 RID: 1429 RVA: 0x0002F460 File Offset: 0x0002D660
+		
 		private static string GenerateUniqueId()
 		{
 			long i = 1L;
@@ -19,7 +19,7 @@ namespace GameDBServer.Logic
 			return string.Format("{0:X2}", i - DateTime.Now.Ticks);
 		}
 
-		// Token: 0x06000596 RID: 1430 RVA: 0x0002F4CC File Offset: 0x0002D6CC
+		
 		public static string GenerateLiPinMa(int ptid, int ptrepeat, int zoneID)
 		{
 			string randStr = LiPinMaParse.GenerateUniqueId().Substring(0, 12);
@@ -38,7 +38,7 @@ namespace GameDBServer.Logic
 			return lipinma_data + str;
 		}
 
-		// Token: 0x06000597 RID: 1431 RVA: 0x0002F56C File Offset: 0x0002D76C
+		
 		public static bool ParseLiPinMa(string lipinma, out int ptid, out int ptrepeat, out int zoneID, out int nMaxUseNum)
 		{
 			ptid = -1;
@@ -90,7 +90,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000598 RID: 1432 RVA: 0x0002F6BC File Offset: 0x0002D8BC
+		
 		public static bool ParseLiPinMaNX(string lipinma, out int ptid, out int ptrepeat, out int zoneID, out int nMaxUseNum)
 		{
 			ptid = -1;
@@ -142,7 +142,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x06000599 RID: 1433 RVA: 0x0002F80C File Offset: 0x0002DA0C
+		
 		public static bool ParseLiPinMa2(string lipinma, out int ptid, out int ptrepeat, out int zoneID, out int nMaxUseNum)
 		{
 			bool result;
@@ -211,7 +211,7 @@ namespace GameDBServer.Logic
 			return result;
 		}
 
-		// Token: 0x0600059A RID: 1434 RVA: 0x0002FA0C File Offset: 0x0002DC0C
+		
 		public static bool ParseLiPinMaNX2(string lipinma, out int ptid, out int ptrepeat, out int zoneID, out int nMaxUseNum)
 		{
 			bool result;

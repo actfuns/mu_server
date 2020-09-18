@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <CrystalAward MonsterID="4000000" Name="魔力水晶·小" GatherTime="5"  GoodIDs=""   ZuanShi="2500" 	JiFen="2500" 	  ExpAward="" XingHunAward="" BindZuanShiAward="5000" BindJinBiAward="" MoJingAward="1000000" />
+  <CrystalAward MonsterID="4000001" Name="魔力水晶·中" GatherTime="10" GoodIDs=""   ZuanShi="5000" 	JiFen="5000" 	  ExpAward="" XingHunAward="" BindZuanShiAward="10000" BindJinBiAward="" MoJingAward="2000000" />
+  <CrystalAward MonsterID="4000002" Name="魔力水晶·大" GatherTime="15" GoodIDs=""   ZuanShi="10000" 	JiFen="10000" 	  ExpAward="" XingHunAward="" BindZuanShiAward="20000" BindJinBiAward="" MoJingAward="3000000" />
+  <CrystalAward MonsterID="4000003" Name="梦幻水晶·小" GatherTime="5"  GoodIDs=""   ZuanShi="2500" 	JiFen="2500" 	  ExpAward="" XingHunAward="" BindZuanShiAward="5000" BindJinBiAward="" MoJingAward="1000000" />
+  <CrystalAward MonsterID="4000004" Name="梦幻水晶·中" GatherTime="10" GoodIDs=""   ZuanShi="5000" 	JiFen="5000" 	  ExpAward="" XingHunAward="" BindZuanShiAward="10000" BindJinBiAward="" MoJingAward="2000000" />
+  <CrystalAward MonsterID="4000005" Name="梦幻水晶·大" GatherTime="15" GoodIDs=""   ZuanShi="10000" 	JiFen="10000" 	  ExpAward="" XingHunAward="" BindZuanShiAward="20000" BindJinBiAward="" MoJingAward="3000000" />
+  <CrystalAward MonsterID="4000006" Name="灵魂水晶·小" GatherTime="5"  GoodIDs=""   ZuanShi="2500" 	JiFen="2500" 	  ExpAward="" XingHunAward="" BindZuanShiAward="5000" BindJinBiAward="" MoJingAward="1000000" />
+  <CrystalAward MonsterID="4000007" Name="灵魂水晶·中" GatherTime="10" GoodIDs=""   ZuanShi="5000" 	JiFen="5000" 	  ExpAward="" XingHunAward="" BindZuanShiAward="10000" BindJinBiAward="" MoJingAward="2000000" />
+  <CrystalAward MonsterID="4000008" Name="灵魂水晶·大" GatherTime="15" GoodIDs=""   ZuanShi="10000" 	JiFen="10000" 	  ExpAward="" XingHunAward="" BindZuanShiAward="20000" BindJinBiAward="" MoJingAward="3000000" />
+  <CrystalAward MonsterID="4000009" Name="至尊水晶"    GatherTime="30" GoodIDs=""   ZuanShi="25000" 	JiFen="25000"    ExpAward="" XingHunAward="" BindZuanShiAward="40000" BindJinBiAward="" MoJingAward="4000000" />
+</Config>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}战队争霸说明{-}" Bold="1" />
+  <HelpIntro ID="2" Intro="{dac7ae}1、战队竞技排行榜中前{17e43e}64{-}的战队挑选出来参加当月的战队争霸活动{-}。" Bold="0" />
+  <HelpIntro ID="3" Intro="{dac7ae}2、每月{17e43e}9{-}号下午{fac60d}2-5{-}点进行战队争霸活动。" Bold="0" />
+  <HelpIntro ID="4" Intro="{dac7ae}3、2点32强、2点20分16强、2点40分8强、3点4强、3点20分半决赛、3点40分决赛{-}。" Bold="0" />
+  <HelpIntro ID="5" Intro="{dac7ae}4、活动中不允许更换成员，其他时间可更换{-}。" Bold="0" />
+  <HelpIntro ID="6" Intro="{dac7ae}5、战队争霸战斗一局定输赢，最后双方只有一方存活队员，存活方获胜{-}。" Bold="0" />
+  <HelpIntro ID="7" Intro="{dac7ae}6、双方都进入竞技场景进行战斗，获胜一方晋级下一轮，未进入竞技场视为放弃比赛，进入方晋级下一轮{-}。" Bold="0" />
+  <HelpIntro ID="8" Intro="{dac7ae}7、战队争霸竞猜，每次活动周期，每月1号凌晨3点到9号下午2点前可以对争霸结果进行下注竞猜，竞猜可获得竞技点，在战队商城中兑换商城道具{-}。" Bold="0" />
+  <HelpIntro ID="9" Intro="{dac7ae}8、战队争霸奖励，决出冠军后，会根据战队最终获得的名次发放奖励，战队争霸冠军奖励一个称号，战队的队员都会获得特殊称号{-}。" Bold="0" />
+</Config>

@@ -5,10 +5,10 @@ using Server.Tools;
 
 namespace GameDBServer.DB
 {
-	// Token: 0x020001A0 RID: 416
+	
 	public class DBUserMgr
 	{
-		// Token: 0x060007C2 RID: 1986 RVA: 0x000479C4 File Offset: 0x00045BC4
+		
 		public int GetUserInfoCount()
 		{
 			int count;
@@ -19,7 +19,7 @@ namespace GameDBServer.DB
 			return count;
 		}
 
-		// Token: 0x060007C3 RID: 1987 RVA: 0x00047A18 File Offset: 0x00045C18
+		
 		public DBUserInfo FindDBUserInfo(string userID)
 		{
 			DBUserInfo dbUserInfo = null;
@@ -47,7 +47,7 @@ namespace GameDBServer.DB
 			return dbUserInfo;
 		}
 
-		// Token: 0x060007C4 RID: 1988 RVA: 0x00047B18 File Offset: 0x00045D18
+		
 		public DBUserInfo AddDBUserInfo(DBUserInfo dbUserInfo)
 		{
 			MyWeakReference weakRef = null;
@@ -70,7 +70,7 @@ namespace GameDBServer.DB
 			return dbUserInfo;
 		}
 
-		// Token: 0x060007C5 RID: 1989 RVA: 0x00047BC8 File Offset: 0x00045DC8
+		
 		public void RemoveDBUserInfo(string userID)
 		{
 			MyWeakReference weakRef = null;
@@ -83,7 +83,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x060007C6 RID: 1990 RVA: 0x00047C30 File Offset: 0x00045E30
+		
 		public void ReleaseIdleDBUserInfos(int ticksSlot)
 		{
 			long nowTicks = DateTime.Now.Ticks / 10000L;
@@ -112,7 +112,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x04000989 RID: 2441
+		
 		private Dictionary<string, MyWeakReference> DictUserInfos = new Dictionary<string, MyWeakReference>(10000);
 	}
 }

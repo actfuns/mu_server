@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="60"  FromDate="2018-02-28 00:00:00" ToDate="2018-03-05 23:59:59" AwardStartDate="2018-02-28 00:00:00"  AwardEndDate="2018-03-05 23:59:59" />
+  <GiftList Description="活动期间，佩戴的大天使武器达到指定阶数可领取丰厚大礼！">
+  <Award ID="1" DaTianShiLevel="5" GoodsOne="2005,5,1,0,0,0,0|5220,10,1,0,0,0,0|51182,3,1,0,0,0,0|51104,5,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Award ID="2" DaTianShiLevel="6" GoodsOne="2005,5,1,0,0,0,0|5220,12,1,0,0,0,0|51182,3,1,0,0,0,0|50017,8,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Award ID="3" DaTianShiLevel="7" GoodsOne="2005,5,1,0,0,0,0|5220,18,1,0,0,0,0|51182,3,1,0,0,0,0|50017,12,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Award ID="4" DaTianShiLevel="8" GoodsOne="2005,5,1,0,0,0,0|5220,24,1,0,0,0,0|51182,3,1,0,0,0,0|50017,16,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  <Award ID="5" DaTianShiLevel="9" GoodsOne="2005,5,1,0,0,0,0|5220,36,1,0,0,0,0|51182,3,1,0,0,0,0|50017,20,1,0,0,0,0" GoodsTwo="" GoodsThr="" EffectiveTime="" />
+  </GiftList>
+</Config>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <EscapeDanList ID="5" RankLevelName="王者" RankValue="1000" WinRankValue="5,30|4,25|3,22|2,20|1,20" LoseRankValue="1,20|2,10" WinRankReward="2016,4,1,0,0,0,0|2017,1,1,0,0,0,0" LoseRankReward="2016,2,1,0,0,0,0" FirstWinRankReward="2016,12,1,0,0,0,0|2017,4,1,0,0,0,0|63257,1,1,0,0,0,0" />
+  <EscapeDanList ID="4" RankLevelName="钻石" RankValue="750" WinRankValue="5,30|4,25|3,22|2,20|1,20" LoseRankValue="1,20|2,10" WinRankReward="2016,4,1,0,0,0,0|2017,1,1,0,0,0,0" LoseRankReward="2016,2,1,0,0,0,0" FirstWinRankReward="2016,12,1,0,0,0,0|2017,4,1,0,0,0,0|63257,1,1,0,0,0,0" />
+  <EscapeDanList ID="3" RankLevelName="黄金" RankValue="500" WinRankValue="5,30|4,25|3,22|2,20|1,20" LoseRankValue="1,20|2,10" WinRankReward="2016,4,1,0,0,0,0|2017,1,1,0,0,0,0" LoseRankReward="2016,2,1,0,0,0,0" FirstWinRankReward="2016,12,1,0,0,0,0|2017,4,1,0,0,0,0|63257,1,1,0,0,0,0" />
+  <EscapeDanList ID="2" RankLevelName="白银" RankValue="250" WinRankValue="5,30|4,25|3,22|2,20|1,20" LoseRankValue="1,20|2,10" WinRankReward="2016,4,1,0,0,0,0|2017,1,1,0,0,0,0" LoseRankReward="2016,2,1,0,0,0,0" FirstWinRankReward="2016,12,1,0,0,0,0|2017,4,1,0,0,0,0|63257,1,1,0,0,0,0" />
+  <EscapeDanList ID="1" RankLevelName="青铜" RankValue="-1" WinRankValue="5,30|4,25|3,22|2,20|1,20" LoseRankValue="1,20|2,10" WinRankReward="2016,4,1,0,0,0,0|2017,1,1,0,0,0,0" LoseRankReward="2016,2,1,0,0,0,0" FirstWinRankReward="2016,12,1,0,0,0,0|2017,4,1,0,0,0,0|63257,1,1,0,0,0,0" />
+</Config>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HuoDongList>
+  <HuoDong ID="200000" Name="战队竞技" Preview="200000" RewardExplain="1,4|4,5" GLXml="TeamBattle.xml" />
+  <HuoDong ID="200001" Name="战队争霸" Preview="200001" RewardExplain="1,4|4,5" GLXml="TeamMatch.xml" />
+  <HuoDong ID="200002" Name="魔域夺宝" Preview="200002" RewardExplain="1,4|4,5" GLXml="ZorkActivityRules.xml" />
+  <HuoDong ID="200003" Name="魔界大逃杀" Preview="200003" RewardExplain="1,4|4,5" GLXml="EscapeActivityRules.xml" />
+</HuoDongList>

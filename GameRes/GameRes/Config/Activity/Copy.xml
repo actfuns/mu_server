@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Copys>
+  <Copy Type="1" ID="3" Name="猎杀日常" Level="30" MaxLevel="" Information="10" PublishID="207" Description1="若英雄你能完成万人斩的考验，便可获得丰厚的经验及猎杀值奖励，可用于换取徽章，直接提升你的实力。" Description2="【高额经验】&#xA;【猎杀值】&#xA;猎杀值可用于兑换徽章" />
+  <Copy Type="1" ID="4" Name="武学日常" Level="40" MaxLevel="" Information="10" PublishID="204" Description1="龙城猛将武神乃精通武学之人，若能完成他交给你的任务并得到他的青睐，修炼武学之道便可顺畅许多。" Description2="【高额经验】&#xA;【悟性值】&#xA;悟性值可用于提升武学境界" />
+  <Copy Type="1" ID="5" Name="军功日常" Level="35" MaxLevel="" Information="10" PublishID="225" Description1="沙场杀敌建功，近来国内四处乱贼四起，似有造反之意，各路豪杰若能助在下平定乱贼，便可获得丰厚的经验及军功值奖励。" Description2="【高额经验】&#xA;【军功值】&#xA;军功值可用于兑换低级装备" />
+  <Copy Type="1" ID="6" Name="魔族势力" Level="40" MaxLevel="" Information="1" PublishID="205" Description1="魔族异军突起，欲掌控人界，各路豪杰若能前往除去魔族势力，便可获得丰厚的绑定元宝奖励！" Description2="【绑定元宝】&#xA;【绑定铜钱】" />
+  <Copy Type="1" ID="7" Name="帮会日常" Level="50" MaxLevel="" Information="10" PublishID="236" Description1="50级以上且身处帮会中的玩家，可接取帮会日常任务，每日10环，完成帮会日常可获得荣耀值和经验值奖励！" Description2="【荣耀值】&#xA;【高额经验】" />
+  <Copy Type="2" ID="20" Name="血林天牢" Level="40" MaxLevel="" Information="3" PublishID="211" Description1="血林天牢之中，存在血林禁地金百万真身，若你已达到实力，超过35级即可找到龙城副本传送员前往此地除此一害。" Description2="【高额经验】*906666&#xA;【高级技能书】&#xA;【1-4品强化石】&#xA;【疾风|玄雷|青云】套装&#xA;【苍穹|无相|初尘】套装" />
+  <Copy Type="2" ID="21" Name="莫邪剑冢" Level="45" MaxLevel="" Information="3" PublishID="211" Description1="神剑山庄庄主一剑万生的二徒弟，勾结魔界，恶事做尽，若你已达到实力，超过40级即可找到龙城副本传送员前往莫邪剑冢除此一害。" Description2="【高额经验】*1834531&#xA;【高级技能书】&#xA;【1-5品强化石】&#xA;【苍穹|无相|初尘】套装&#xA;【苍穹战神|无相法皇|初尘道尊】套装" />
+  <Copy Type="2" ID="22" Name="浊世魔窟" Level="50" MaxLevel="" Information="3" PublishID="211" Description1="浊世之主，名号葬天，葬天魔君实力超群，当你拥有足够实力，超过45级之时即可找到龙城副本传送员前往浊世魔窟与其一战。" Description2="【高额经验】*2738628&#xA;【1-6品强化石】&#xA;【苍穹战神|无相法皇|初尘道尊】套装&#xA;【破天|通天|弑天】套装" />
+  <Copy Type="2" ID="23" Name="仙踪大殿" Level="55" MaxLevel="" Information="3" PublishID="211" Description1="自从仙踪被异度魔界吞噬之后，产生数位大魔王，魔狱领主便是其中之一，你需要超过50级方有资格在仙踪大殿之中与其一战。" Description2="【高额经验】*4676027&#xA;【1-7品强化石】&#xA;【苍穹战神|无相法皇|初尘道尊】套装&#xA;【破天|通天|弑天】套装&#xA;【血饮战神|法皇|道尊】套装" />
+  <Copy Type="2" ID="24" Name="中天幻境" Level="60" MaxLevel="" Information="2" PublishID="211" Description1="中天幻境是中天神殿的镜像世界，仍然由天蚩大帝坐镇其中，挑战天蚩大帝将是你实力的象征。需要角色等级超过55级方有资格挑战。" Description2="【高额经验】*6175048&#xA;【1-7品强化石】&#xA;【苍穹战神|无相法皇|初尘道尊】套装&#xA;【破天|通天|弑天】套装&#xA;【血饮战神|法皇|道尊】套装" />
+  <Copy Type="2" ID="25" Name="创世雪原" Level="70" MaxLevel="" Information="1" PublishID="211" Description1="神帝创世镇守冰窟，击败神帝一定几率获得创世高级装备。" Description2="【高额经验】*8671127&#xA;【强化石】&#xA;【血饮战神|血饮法皇|血饮道尊】套装&#xA;【创世战神|创世法皇|创世道尊】套装" />
+  <Copy Type="2" ID="26" Name="天绝魔狱" Level="80" MaxLevel="" Information="1" PublishID="211" Description1="末日天绝囚禁在天绝魔狱，击败末日天绝一定几率获得天绝高级装备。" Description2="【高额经验】*10672048&#xA;【强化石】&#xA;【血饮战神|血饮法皇|血饮道尊】套装&#xA;【创世战神|创世法皇|创世道尊】套装&#xA;【天绝战神|天绝法皇|天绝道尊】套装" />
+  <Copy Type="2" ID="40" Name="龙境" Level="50" MaxLevel="" Information="" PublishID="211" Description1="龙境在尘境之中一直是个谜一样的存在，龙境之主八荒夔龙却一直威名显赫，超过50级，组队前往，风险将与收益并存！" Description2="【1-7】品强化石&#xA;【天伐】【经脉装备】&#xA;【血饮系列装备】&#xA;【精良|完美|传说血饮装备】" />
+  <Copy Type="2" ID="41" Name="鬼狱" Level="50" MaxLevel="" Information="" PublishID="211" Description1="鬼狱乃四大魔界之一，鬼狱之主鬼狱冥皇千年之内，遇对手无数无一败绩，超过50级，组队前往，你获得的一定不会让你失望。" Description2="【1-7】品强化石&#xA;【天伐】【经脉装备】&#xA;【血饮|天蚩系列装备】&#xA;【精良|完美|传说血饮及天蚩装备】" />
+  <Copy Type="3" ID="100" Name="双倍经验" Level="1" MaxLevel="" Information="15:00-16:00" PublishID="-1" Description1="活动期间击杀怪物可获得双倍经验奖励&#xA;可与经验卡类道具叠加，收益更高" Description2="【翻倍杀怪经验】" />
+  <Copy Type="3" ID="110" Name="双倍烤火" Level="40" MaxLevel="" Information="11:30-12:30|18:00-19:00" PublishID="230" Description1="活动期间烤火可获得双倍经验收益" Description2="【翻倍烤火经验】" />
+  <Copy Type="3" ID="120" Name="烈焰魔窟" Level="35" MaxLevel="" Information="00:15|4:15|8:15|12:15|16:15|22:15" PublishID="229" Description1="[烈焰魔窟]入口打开，30分钟后将关闭入口" Description2="" />
+  <Copy Type="3" ID="130" Name="大战血饮" Level="40" MaxLevel="" Information="18:30" PublishID="222" Description1="挑战至高无上的[血饮天尊]获得[血饮积分],兑换[血饮神装],成就您霸业宏图之路！" Description2="【血饮积分】&#xA;【强化石】&#xA;【低级装备】" />
+  <Copy Type="3" ID="140" Name="血染龙城" Level="40" MaxLevel="" Information="9:30|13:30|15:30|22:30" PublishID="-1" Description1="昔日的攻城死士死灰复燃，对龙城进行反攻,各路豪杰为守卫龙城,攻城死士一路弑杀，血染龙城!" Description2="【高额经验】&#xA;【丰厚铜钱】&#xA;【强化石】" />
+  <Copy Type="3" ID="150" Name="天神入侵" Level="40" MaxLevel="" Information="14:00|17:00|23:00" PublishID="-1" Description1="新服开启一天后，每天&#xA;[14:00]天蚩大帝带领大军攻占传奇之野&#xA;[17:00]神帝创世带领大军攻占传奇之野&#xA;[23:00]末日天绝带领大军攻占传奇之野" Description2="【高品强化石】&#xA;【高级装备】" />
+  <Copy Type="3" ID="160" Name="财神到" Level="40" MaxLevel="" Information="10:30|14:30|17:30" PublishID="-1" Description1="财神到疯狂献礼，身携巨额财富，等你来拿！" Description2="【海量铜钱】" />
+  <Copy Type="3" ID="170" Name="血战地府" Level="40" MaxLevel="" Information="13:00-14:00" PublishID="218" Description1="血性厮杀,地府谁能最终存活,才是最终的PK王者,获取[PK王]至尊荣耀" Description2="【PK王至尊称号】&#xA;【PK王BUFF护体】&#xA;【经验加成】" />
+  <Copy Type="3" ID="180" Name="金矿洞" Level="40" MaxLevel="" Information="15:30-16:30" PublishID="-1" Description1="金矿大门打开，采集矿石必得金矿，赶快行动吧！" Description2="采集矿石100%得【金矿石】" />
+  <Copy Type="3" ID="190" Name="热血帮旗战" Level="40" MaxLevel="" Information="每周三、六16:30-17:30" PublishID="234" Description1="用火焰般的赤热灵魂，打造帮会荣誉，勇士，您此刻是否已热血沸腾，渴望为了行会荣耀挥洒一腔热血，力斩敌军，取其上将首级，岂不快哉！" Description2="【高额经验】&#xA;【大量荣耀】" />
+  <Copy Type="3" ID="200" Name="仙魔战场" Level="40" MaxLevel="" Information="19:00-19:30" PublishID="219" Description1="为了成为新的统治者，仙魔大战，一场血的厮杀不可避免，谁能成为主宰三界的新势力，一切皆由您掌控！" Description2="【高额经验】&#xA;【绑定元宝】&#xA;【成就点】" />
+  <Copy Type="3" ID="210" Name="战魂神殿" Level="40" MaxLevel="" Information="10:00|14:30|19:40|23:30" PublishID="237" Description1="战魂魔君死灰复燃，现身战魂神殿，将其击杀可获得海量战魂珠奖励！" Description2="【全服所有装备】&#xA;【海量战魂珠】" />
+  <Copy Type="3" ID="220" Name="王城争霸" Level="40" MaxLevel="" Information="" PublishID="206" Description1="血与泪的厮杀，团结作战，只为那王族至上荣耀，成为新的龙城主宰者！" Description2="【王族标识】" />
+  <Copy Type="3" ID="230" Name="王城浩劫" Level="40" MaxLevel="" Information="21:45" PublishID="206" Description1="异域魔王率领大军，强行占领王城，王城血战一触即发，各路勇士为守卫住王城，纷纷前往，一决死战！" Description2="【强化石】&#xA;【高级装备】" />
+</Copys>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+<Teleports>
+	<Teleport Code="197" FrameNum="13" Tip="阿卡伦西" Key="10"  To="70" ToX="4950" ToY="13850" ToDirection="6" X="9950" Y="10450" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="" />
+</Teleports>
+</Map>

@@ -13,22 +13,22 @@ using Tmsk.Contract.KuaFuData;
 
 namespace KF.Client
 {
-	// Token: 0x0200081F RID: 2079
+	
 	public class KuaFuWorldClient : IManager2
 	{
-		// Token: 0x06003ABF RID: 15039 RVA: 0x0031E710 File Offset: 0x0031C910
+		
 		public static KuaFuWorldClient getInstance()
 		{
 			return KuaFuWorldClient.instance;
 		}
 
-		// Token: 0x06003AC0 RID: 15040 RVA: 0x0031E728 File Offset: 0x0031C928
+		
 		public bool initialize()
 		{
 			return true;
 		}
 
-		// Token: 0x06003AC1 RID: 15041 RVA: 0x0031E73C File Offset: 0x0031C93C
+		
 		public bool initialize(ICoreInterface coreInterface)
 		{
 			this.CoreInterface = coreInterface;
@@ -39,25 +39,25 @@ namespace KF.Client
 			return true;
 		}
 
-		// Token: 0x06003AC2 RID: 15042 RVA: 0x0031E79C File Offset: 0x0031C99C
+		
 		public bool startup()
 		{
 			return true;
 		}
 
-		// Token: 0x06003AC3 RID: 15043 RVA: 0x0031E7B0 File Offset: 0x0031C9B0
+		
 		public bool showdown()
 		{
 			return true;
 		}
 
-		// Token: 0x06003AC4 RID: 15044 RVA: 0x0031E7C4 File Offset: 0x0031C9C4
+		
 		public bool destroy()
 		{
 			return true;
 		}
 
-		// Token: 0x06003AC5 RID: 15045 RVA: 0x0031E7D8 File Offset: 0x0031C9D8
+		
 		public void ExecuteEventCallBackAsync(object state)
 		{
 			AsyncDataItem[] items = state as AsyncDataItem[];
@@ -70,7 +70,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06003AC6 RID: 15046 RVA: 0x0031E82C File Offset: 0x0031CA2C
+		
 		public void UpdateKuaFuMapClientCount(Dictionary<int, int> dict)
 		{
 			lock (this.Mutex)
@@ -91,7 +91,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06003AC7 RID: 15047 RVA: 0x0031E8C4 File Offset: 0x0031CAC4
+		
 		public void TimerProc(object sender, EventArgs e)
 		{
 			try
@@ -126,7 +126,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06003AC8 RID: 15048 RVA: 0x0031E9BC File Offset: 0x0031CBBC
+		
 		private void CloseConnection()
 		{
 			this.ClientInfo.ClientId = 0;
@@ -137,19 +137,19 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06003AC9 RID: 15049 RVA: 0x0031EA2C File Offset: 0x0031CC2C
+		
 		private void OnConnectionClose(object sender, EventArgs e)
 		{
 			this.CloseConnection();
 		}
 
-		// Token: 0x06003ACA RID: 15050 RVA: 0x0031EA36 File Offset: 0x0031CC36
+		
 		private void ResetKuaFuService()
 		{
 			this.CloseConnection();
 		}
 
-		// Token: 0x06003ACB RID: 15051 RVA: 0x0031EA40 File Offset: 0x0031CC40
+		
 		private IKuaFuWorld GetKuaFuService(bool noWait = false)
 		{
 			try
@@ -214,7 +214,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06003ACC RID: 15052 RVA: 0x0031ECA8 File Offset: 0x0031CEA8
+		
 		public void EventCallBackHandler(AsyncDataItem item)
 		{
 			try
@@ -255,7 +255,7 @@ namespace KF.Client
 			}
 		}
 
-		// Token: 0x06003ACD RID: 15053 RVA: 0x0031EDAC File Offset: 0x0031CFAC
+		
 		public int ExecuteCommand(string cmd)
 		{
 			IKuaFuWorld kuaFuService = this.GetKuaFuService(false);
@@ -273,7 +273,7 @@ namespace KF.Client
 			return -11003;
 		}
 
-		// Token: 0x06003ACE RID: 15054 RVA: 0x0031EE00 File Offset: 0x0031D000
+		
 		public object GetKuaFuLineDataList(int mapCode)
 		{
 			IKuaFuWorld kuaFuService = this.GetKuaFuService(false);
@@ -295,7 +295,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06003ACF RID: 15055 RVA: 0x0031EE80 File Offset: 0x0031D080
+		
 		public int RegPTKuaFuRoleData(ref KuaFuWorldRoleData data)
 		{
 			IKuaFuWorld kuaFuService = this.GetKuaFuService(false);
@@ -313,7 +313,7 @@ namespace KF.Client
 			return -11000;
 		}
 
-		// Token: 0x06003AD0 RID: 15056 RVA: 0x0031EED4 File Offset: 0x0031D0D4
+		
 		public int EnterPTKuaFuMap(int roleSourceServerId, int roleId, int ptid, int mapCode, int kuaFuLine, KuaFuServerLoginData kuaFuServerLoginData, out string signToken, out string signKey)
 		{
 			signToken = null;
@@ -358,7 +358,7 @@ namespace KF.Client
 			return tempRoleID;
 		}
 
-		// Token: 0x06003AD1 RID: 15057 RVA: 0x0031F00C File Offset: 0x0031D20C
+		
 		public int CheckEnterWorldKuaFuSign(string worldRoleID, string token, out string signKey, out string[] ips, out int[] ports)
 		{
 			signKey = null;
@@ -379,7 +379,7 @@ namespace KF.Client
 			return -11000;
 		}
 
-		// Token: 0x06003AD2 RID: 15058 RVA: 0x0031F070 File Offset: 0x0031D270
+		
 		public int Reborn_SetRoleData4Selector(int ptId, int roleId, byte[] bytes)
 		{
 			int result = 0;
@@ -398,7 +398,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06003AD3 RID: 15059 RVA: 0x0031F0C4 File Offset: 0x0031D2C4
+		
 		public int Reborn_RoleReborn(int ptId, int roleId, string roleName, int level)
 		{
 			int result = -11;
@@ -417,7 +417,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06003AD4 RID: 15060 RVA: 0x0031F11C File Offset: 0x0031D31C
+		
 		public RebornSyncData Reborn_SyncData(long ageRank, long ageBoss)
 		{
 			IKuaFuWorld kuaFuService = this.GetKuaFuService(false);
@@ -435,7 +435,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06003AD5 RID: 15061 RVA: 0x0031F16C File Offset: 0x0031D36C
+		
 		public int Reborn_RebornOpt(int ptid, int rid, int optType, int param1, int param2, string param3)
 		{
 			int result = 0;
@@ -454,7 +454,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06003AD6 RID: 15062 RVA: 0x0031F1C8 File Offset: 0x0031D3C8
+		
 		public KFRebornRoleData Reborn_GetRebornRoleData(int ptId, int roleId)
 		{
 			try
@@ -507,7 +507,7 @@ namespace KF.Client
 			return null;
 		}
 
-		// Token: 0x06003AD7 RID: 15063 RVA: 0x0031F384 File Offset: 0x0031D584
+		
 		public int Reborn_ChangeName(int ptId, int roleId, string roleName)
 		{
 			int result = 0;
@@ -526,7 +526,7 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x06003AD8 RID: 15064 RVA: 0x0031F3D8 File Offset: 0x0031D5D8
+		
 		public int Reborn_PlatFormChat(List<KFPlatFormChat> chatList)
 		{
 			int result = 0;
@@ -546,34 +546,34 @@ namespace KF.Client
 			return result;
 		}
 
-		// Token: 0x040044E3 RID: 17635
+		
 		private static KuaFuWorldClient instance = new KuaFuWorldClient();
 
-		// Token: 0x040044E4 RID: 17636
+		
 		private object Mutex = new object();
 
-		// Token: 0x040044E5 RID: 17637
+		
 		private object RemotingMutex = new object();
 
-		// Token: 0x040044E6 RID: 17638
+		
 		private ICoreInterface CoreInterface = null;
 
-		// Token: 0x040044E7 RID: 17639
+		
 		private IKuaFuWorld KuaFuService = null;
 
-		// Token: 0x040044E8 RID: 17640
+		
 		private bool ClientInitialized = false;
 
-		// Token: 0x040044E9 RID: 17641
+		
 		private KuaFuClientContext ClientInfo = new KuaFuClientContext();
 
-		// Token: 0x040044EA RID: 17642
+		
 		private string RemoteServiceUri = null;
 
-		// Token: 0x040044EB RID: 17643
+		
 		public Dictionary<KeyValuePair<int, int>, KuaFuData<KFRebornRoleData>> RebornRoleDataDict = new Dictionary<KeyValuePair<int, int>, KuaFuData<KFRebornRoleData>>();
 
-		// Token: 0x040044EC RID: 17644
+		
 		private DuplexChannelFactory<IKuaFuWorld> channelFactory;
 	}
 }

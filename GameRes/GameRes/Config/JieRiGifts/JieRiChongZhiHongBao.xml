@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Activities ActivityType="73" FromDate="2017-01-26 00:00:00" ToDate="2017-02-01 23:59:59" AwardStartDate="2017-01-26 00:00:00" AwardEndDate="2017-02-01 23:59:59" />
+  <GiftList Description="活动期间，全平台玩家充值累积达到一定数额，全平台会发放绑钻红包！">
+  <RedPacketRecharge ID="1" PlatformID="app" RechargeDifference="200000" RedPacketSize="80000" Interval="10,30" DurationTime="28800" />
+  <RedPacketRecharge ID="2" PlatformID="app" RechargeDifference="200000" RedPacketSize="80000" Interval="10,30" DurationTime="28800" />
+  <RedPacketRecharge ID="3" PlatformID="app" RechargeDifference="200000" RedPacketSize="80000" Interval="10,30" DurationTime="28800" />
+  <RedPacketRecharge ID="4" PlatformID="yueyu" RechargeDifference="70000" RedPacketSize="28000" Interval="10,30" DurationTime="28800" />
+  <RedPacketRecharge ID="5" PlatformID="yueyu" RechargeDifference="70000" RedPacketSize="28000" Interval="10,30" DurationTime="28800" />
+  <RedPacketRecharge ID="6" PlatformID="yueyu" RechargeDifference="70000" RedPacketSize="28000" Interval="10,30" DurationTime="28800" />
+  <RedPacketRecharge ID="7" PlatformID="android" RechargeDifference="200000" RedPacketSize="80000" Interval="10,30" DurationTime="28800" />
+  <RedPacketRecharge ID="8" PlatformID="android" RechargeDifference="200000" RedPacketSize="80000" Interval="10,30" DurationTime="28800" />
+  <RedPacketRecharge ID="9" PlatformID="android" RechargeDifference="200000" RedPacketSize="80000" Interval="10,30" DurationTime="28800" />
+  <RedPacketRecharge ID="10" PlatformID="yyb" RechargeDifference="70000" RedPacketSize="28000" Interval="10,30" DurationTime="28800" />
+  <RedPacketRecharge ID="11" PlatformID="yyb" RechargeDifference="70000" RedPacketSize="28000" Interval="10,30" DurationTime="28800" />
+  <RedPacketRecharge ID="12" PlatformID="yyb" RechargeDifference="70000" RedPacketSize="28000" Interval="10,30" DurationTime="28800" />
+  </GiftList>
+</Config>

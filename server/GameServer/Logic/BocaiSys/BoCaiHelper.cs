@@ -5,10 +5,10 @@ using Tmsk.Contract.KuaFuData;
 
 namespace GameServer.Logic.BocaiSys
 {
-	// Token: 0x02000079 RID: 121
+	
 	public class BoCaiHelper
 	{
-		// Token: 0x060001C1 RID: 449 RVA: 0x0001E2E4 File Offset: 0x0001C4E4
+		
 		public static bool CopyHistoryData(List<KFBoCaoHistoryData> sData, out List<KFBoCaoHistoryData> rData)
 		{
 			rData = new List<KFBoCaoHistoryData>();
@@ -31,7 +31,7 @@ namespace GameServer.Logic.BocaiSys
 			return false;
 		}
 
-		// Token: 0x060001C2 RID: 450 RVA: 0x0001E398 File Offset: 0x0001C598
+		
 		public static string ListInt2String(List<int> iList)
 		{
 			string str = "";
@@ -56,7 +56,7 @@ namespace GameServer.Logic.BocaiSys
 			return str;
 		}
 
-		// Token: 0x060001C3 RID: 451 RVA: 0x0001E460 File Offset: 0x0001C660
+		
 		public static void String2ListInt(string str, out List<int> iList)
 		{
 			iList = new List<int>();
@@ -77,7 +77,7 @@ namespace GameServer.Logic.BocaiSys
 			}
 		}
 
-		// Token: 0x060001C4 RID: 452 RVA: 0x0001E4F4 File Offset: 0x0001C6F4
+		
 		public static int String2Int(string str)
 		{
 			int num = 0;
@@ -100,7 +100,7 @@ namespace GameServer.Logic.BocaiSys
 			return -1;
 		}
 
-		// Token: 0x060001C5 RID: 453 RVA: 0x0001E588 File Offset: 0x0001C788
+		
 		public static bool IsSameData(List<int> d1, List<int> d2)
 		{
 			try

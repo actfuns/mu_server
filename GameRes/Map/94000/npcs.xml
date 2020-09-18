@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <NPCs>
+    <NPC Code="88000" X="2950" Y="3050" Dir="5" />
+    <NPC Code="88001" X="10250" Y="3250" Dir="5" />
+    <NPC Code="88002" X="1850" Y="6350" Dir="5" />
+    <NPC Code="88003" X="11050" Y="6350" Dir="5" />
+    <NPC Code="88004" X="4950" Y="6450" Dir="5" />
+    <NPC Code="88005" X="8350" Y="6450" Dir="5" />
+    <NPC Code="88006" X="6750" Y="4850" Dir="5" />
+    <NPC Code="88007" X="6650" Y="8050" Dir="5" />
+    <NPC Code="88008" X="3150" Y="9550" Dir="5" />
+    <NPC Code="88009" X="10550" Y="9650" Dir="5" />
+    <NPC Code="88010" X="6650" Y="10850" Dir="5" />
+  </NPCs>
+</Map>

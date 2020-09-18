@@ -4,10 +4,10 @@ using Server.Data;
 
 namespace GameDBServer.Logic.FluorescentGem
 {
-	// Token: 0x0200012C RID: 300
+	
 	public class FluorescentGemDBOperate
 	{
-		// Token: 0x060004F1 RID: 1265 RVA: 0x00028DA0 File Offset: 0x00026FA0
+		
 		public static bool EquipFluorescentGem(DBManager dbMgr, FluorescentGemSaveDBData data)
 		{
 			bool result;
@@ -37,7 +37,7 @@ namespace GameDBServer.Logic.FluorescentGem
 			return result;
 		}
 
-		// Token: 0x060004F2 RID: 1266 RVA: 0x00028E7C File Offset: 0x0002707C
+		
 		public static bool UnEquipFluorescentGem(DBManager dbMgr, FluorescentGemSaveDBData data)
 		{
 			bool result;
@@ -58,7 +58,7 @@ namespace GameDBServer.Logic.FluorescentGem
 			return result;
 		}
 
-		// Token: 0x060004F3 RID: 1267 RVA: 0x00028F08 File Offset: 0x00027108
+		
 		public static void ForceUnEquipFluorescentGem(DBManager dbMgr, ulong id)
 		{
 			using (MyDbConnection3 conn = new MyDbConnection3(false))
@@ -68,7 +68,7 @@ namespace GameDBServer.Logic.FluorescentGem
 			}
 		}
 
-		// Token: 0x060004F4 RID: 1268 RVA: 0x00028F5C File Offset: 0x0002715C
+		
 		public static bool UpdateFluorescentPoint(DBManager dbMgr, int nRoleID, int nPoint)
 		{
 			bool ret = false;

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <ThroughService ID="1" Open="1" StartServer="1" EndServer="10000" HuanYingSiYuanUri="tcp://10.254.149.13:4000/KuaFuService/HuanYingSiYuanService.soap" />
+</Config>

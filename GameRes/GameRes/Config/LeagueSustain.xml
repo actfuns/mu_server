@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <LeagueSustain ID="1" Round="1" Name="第一轮" Cost="10000" WinAward="250" FaillAward="50" MinLevel="4|1" />
+  <LeagueSustain ID="2" Round="2" Name="第二轮" Cost="10000" WinAward="300" FaillAward="60" MinLevel="4|1" />
+  <LeagueSustain ID="3" Round="3" Name="第三轮" Cost="10000" WinAward="350" FaillAward="70" MinLevel="4|1" />
+  <LeagueSustain ID="4" Round="4" Name="第四轮" Cost="10000" WinAward="400" FaillAward="80" MinLevel="4|1" />
+  <LeagueSustain ID="5" Round="5" Name="第五轮" Cost="10000" WinAward="450" FaillAward="90" MinLevel="4|1" />
+  <LeagueSustain ID="6" Round="6" Name="第六轮" Cost="10000" WinAward="500" FaillAward="100" MinLevel="4|1" />
+  <LeagueSustain ID="7" Round="7" Name="第七轮" Cost="10000" WinAward="750" FaillAward="150" MinLevel="4|1" />
+</Config>

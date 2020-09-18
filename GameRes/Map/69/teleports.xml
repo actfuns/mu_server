@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+      <Teleports>
+	<Teleport Code="197" FrameNum="13" Tip="亚特兰斯蒂" Key="10"  To="6" ToX="12717" ToY="3473" ToDirection="7" X="1536" Y="4744" BodyWidth="512" BodyHeight="512" CenterX="260" CenterY="260" Radius="300" Decorations="197" />
+      </Teleports>
+</Map>

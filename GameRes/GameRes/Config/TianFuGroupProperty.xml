@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <TianFuSpecialAttribute ID="100" TianFuType="1" NeedExp="1" TripleAttack="0.01" SlowAttack="0" VampiricAttack="0" TripleDefense="0.01" SlowDefensee="0.01" VampiricDefense="0" />
+  <TianFuSpecialAttribute ID="200" TianFuType="2" NeedExp="1" TripleAttack="0" SlowAttack="0.01" VampiricAttack="0" TripleDefense="0" SlowDefensee="0.01" VampiricDefense="0.01" />
+  <TianFuSpecialAttribute ID="300" TianFuType="3" NeedExp="1" TripleAttack="0" SlowAttack="0" VampiricAttack="0.01" TripleDefense="0.01" SlowDefensee="0" VampiricDefense="0.01" />
+</Config>

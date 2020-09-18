@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <TuiGuangYuanVip VipLevel="3" />
+  <GiftList>
+  <Award GoodsOne="50153,5,1,0,0,0,0|5110,5,1,0,0,0,0|5050,5,1,0,0,0,0|2016,10,1,0,0,0,0|2017,5,1,0,0,0,0" GoodsTwo="" />
+  </GiftList>
+</Config>

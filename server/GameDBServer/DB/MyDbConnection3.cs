@@ -9,10 +9,10 @@ using Server.Tools;
 
 namespace GameDBServer.DB
 {
-	// Token: 0x020000F2 RID: 242
+	
 	public class MyDbConnection3 : IDisposable
 	{
-		// Token: 0x06000427 RID: 1063 RVA: 0x000201D8 File Offset: 0x0001E3D8
+		
 		public MyDbConnection3(bool logSelectSqlText = false)
 		{
 			this._MySQLDataReader = null;
@@ -20,14 +20,14 @@ namespace GameDBServer.DB
 			this.DbConn = DBManager.getInstance().DBConns.PopDBConnection();
 		}
 
-		// Token: 0x06000428 RID: 1064 RVA: 0x00020226 File Offset: 0x0001E426
+		
 		void IDisposable.Dispose()
 		{
 			this.Dispose(true);
 			GC.SuppressFinalize(this);
 		}
 
-		// Token: 0x06000429 RID: 1065 RVA: 0x00020238 File Offset: 0x0001E438
+		
 		protected virtual void Dispose(bool isDisposing)
 		{
 			if (!this.m_disposed)
@@ -45,13 +45,13 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600042A RID: 1066 RVA: 0x000202A9 File Offset: 0x0001E4A9
+		
 		public void Close()
 		{
 			((IDisposable)this).Dispose();
 		}
 
-		// Token: 0x0600042B RID: 1067 RVA: 0x000202B4 File Offset: 0x0001E4B4
+		
 		private void LogSql(string sqlText)
 		{
 			if (MyDbConnection3.LogSQLString)
@@ -63,13 +63,13 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600042C RID: 1068 RVA: 0x00020308 File Offset: 0x0001E508
+		
 		public bool ExecuteNonQueryBool(string sql, int commandTimeout = 0)
 		{
 			return this.ExecuteNonQuery(sql, commandTimeout) >= 0;
 		}
 
-		// Token: 0x0600042D RID: 1069 RVA: 0x00020328 File Offset: 0x0001E528
+		
 		public int ExecuteNonQuery(string sql, int commandTimeout = 0)
 		{
 			int result = -1;
@@ -94,7 +94,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x0600042E RID: 1070 RVA: 0x000203E0 File Offset: 0x0001E5E0
+		
 		public int ExecuteWithContent(string sql, string content)
 		{
 			int result = 0;
@@ -117,7 +117,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x0600042F RID: 1071 RVA: 0x0002049C File Offset: 0x0001E69C
+		
 		public int GetSingleInt(string sql, int commandTimeout = 0, params MySQLParameter[] cmdParms)
 		{
 			object obj = this.GetSingle(sql, commandTimeout, cmdParms);
@@ -133,7 +133,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x06000430 RID: 1072 RVA: 0x000204D4 File Offset: 0x0001E6D4
+		
 		public long GetSingleLong(string sql, int commandTimeout = 0, params MySQLParameter[] cmdParms)
 		{
 			object obj = this.GetSingle(sql, commandTimeout, cmdParms);
@@ -149,7 +149,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x06000431 RID: 1073 RVA: 0x0002050C File Offset: 0x0001E70C
+		
 		public object GetSingle(string sql, int commandTimeout = 0, params MySQLParameter[] cmdParms)
 		{
 			try
@@ -185,7 +185,7 @@ namespace GameDBServer.DB
 			return null;
 		}
 
-		// Token: 0x06000432 RID: 1074 RVA: 0x00020620 File Offset: 0x0001E820
+		
 		public object ExecuteSqlGet(string sql, string content)
 		{
 			try
@@ -211,7 +211,7 @@ namespace GameDBServer.DB
 			return null;
 		}
 
-		// Token: 0x06000433 RID: 1075 RVA: 0x000206FC File Offset: 0x0001E8FC
+		
 		public MySQLDataReader ExecuteReader(string sql, params MySQLParameter[] cmdParms)
 		{
 			try
@@ -245,7 +245,7 @@ namespace GameDBServer.DB
 			return null;
 		}
 
-		// Token: 0x06000434 RID: 1076 RVA: 0x0002080C File Offset: 0x0001EA0C
+		
 		public DataSet Query(string sql, int Times = 0)
 		{
 			DataSet ds = new DataSet();
@@ -275,7 +275,7 @@ namespace GameDBServer.DB
 			return ds;
 		}
 
-		// Token: 0x06000435 RID: 1077 RVA: 0x000208D8 File Offset: 0x0001EAD8
+		
 		public DataSet Query(string sql, params MySQLParameter[] cmdParms)
 		{
 			DataSet ds = new DataSet();
@@ -306,7 +306,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x06000436 RID: 1078 RVA: 0x000209A0 File Offset: 0x0001EBA0
+		
 		public int ExecuteSqlTran(List<string> SQLStringList)
 		{
 			MySQLConnection connection = this.DbConn;
@@ -341,7 +341,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x06000437 RID: 1079 RVA: 0x00020A80 File Offset: 0x0001EC80
+		
 		public int ExecuteSqlInsertImg(string sql, byte[] content)
 		{
 			int result = 0;
@@ -364,7 +364,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x06000438 RID: 1080 RVA: 0x00020B3C File Offset: 0x0001ED3C
+		
 		public int ExecuteSqlTran(List<CommandInfo> list, List<CommandInfo> oracleCmdSqlList)
 		{
 			MySQLConnection connection = this.DbConn;
@@ -444,7 +444,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x06000439 RID: 1081 RVA: 0x00020E4C File Offset: 0x0001F04C
+		
 		public int ExecuteSql(string sql, params MySQLParameter[] cmdParms)
 		{
 			int result = 0;
@@ -467,7 +467,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x0600043A RID: 1082 RVA: 0x00020F08 File Offset: 0x0001F108
+		
 		public void ExecuteSqlTran(Hashtable SQLStringList)
 		{
 			using (DbTransaction trans = this.DbConn.BeginTransaction())
@@ -497,7 +497,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600043B RID: 1083 RVA: 0x00021030 File Offset: 0x0001F230
+		
 		public void ExecuteSqlTranWithIndentity(Hashtable SQLStringList)
 		{
 			using (DbTransaction trans = this.DbConn.BeginTransaction())
@@ -542,7 +542,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600043C RID: 1084 RVA: 0x00021228 File Offset: 0x0001F428
+		
 		public int ExecuteSqlTran(List<CommandInfo> cmdList)
 		{
 			int result;
@@ -607,7 +607,7 @@ namespace GameDBServer.DB
 			return result;
 		}
 
-		// Token: 0x0600043D RID: 1085 RVA: 0x00021474 File Offset: 0x0001F674
+		
 		public void ExecuteSqlTranWithIndentity(List<CommandInfo> SQLStringList)
 		{
 			using (DbTransaction trans = this.DbConn.BeginTransaction())
@@ -651,7 +651,7 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x0600043E RID: 1086 RVA: 0x00021650 File Offset: 0x0001F850
+		
 		private static void PrepareCommand(MySQLCommand cmd, MySQLConnection conn, DbTransaction trans, string cmdText, MySQLParameter[] cmdParms)
 		{
 			if (conn.State != ConnectionState.Open)
@@ -678,19 +678,19 @@ namespace GameDBServer.DB
 			}
 		}
 
-		// Token: 0x040006DE RID: 1758
+		
 		public MySQLConnection DbConn = null;
 
-		// Token: 0x040006DF RID: 1759
+		
 		private MySQLDataReader _MySQLDataReader;
 
-		// Token: 0x040006E0 RID: 1760
+		
 		public static bool LogSQLString = true;
 
-		// Token: 0x040006E1 RID: 1761
+		
 		private bool m_disposed = false;
 
-		// Token: 0x040006E2 RID: 1762
+		
 		private bool m_logSelectSqlText = false;
 	}
 }

@@ -7,10 +7,10 @@ using Tmsk.Contract.KuaFuData;
 
 namespace GameServer.Logic.BocaiSys
 {
-	// Token: 0x02000077 RID: 119
+	
 	public class BoCaiConfigMgr
 	{
-		// Token: 0x060001B7 RID: 439 RVA: 0x0001D734 File Offset: 0x0001B934
+		
 		public static int LoadConfig(bool isReload = true)
 		{
 			try
@@ -53,7 +53,7 @@ namespace GameServer.Logic.BocaiSys
 			return 0;
 		}
 
-		// Token: 0x060001B8 RID: 440 RVA: 0x0001D938 File Offset: 0x0001BB38
+		
 		public static DuiHuanShangChengConfig GetBoCaiShopConfig(int ID, string WuPinID)
 		{
 			DuiHuanShangChengConfig cfg = null;
@@ -68,7 +68,7 @@ namespace GameServer.Logic.BocaiSys
 			return cfg;
 		}
 
-		// Token: 0x060001B9 RID: 441 RVA: 0x0001D9EC File Offset: 0x0001BBEC
+		
 		public static bool CanReplaceMoney(DaiBiSySType type)
 		{
 			try
@@ -86,7 +86,7 @@ namespace GameServer.Logic.BocaiSys
 			return false;
 		}
 
-		// Token: 0x060001BA RID: 442 RVA: 0x0001DA78 File Offset: 0x0001BC78
+		
 		private static bool LoadCaiShuZi(out List<CaiShuZiConfig> _CaiShuZiCfgList)
 		{
 			_CaiShuZiCfgList = new List<CaiShuZiConfig>();
@@ -160,7 +160,7 @@ namespace GameServer.Logic.BocaiSys
 			return true;
 		}
 
-		// Token: 0x060001BB RID: 443 RVA: 0x0001DDBC File Offset: 0x0001BFBC
+		
 		private static bool Load_DuiHuanShangCheng(out List<DuiHuanShangChengConfig> _DuiHuanShangChengCgfList)
 		{
 			_DuiHuanShangChengCgfList = new List<DuiHuanShangChengConfig>();
@@ -202,7 +202,7 @@ namespace GameServer.Logic.BocaiSys
 			return true;
 		}
 
-		// Token: 0x060001BC RID: 444 RVA: 0x0001DF78 File Offset: 0x0001C178
+		
 		private static bool LoadCaiDaXiao(out List<CaiDaXiaoConfig> _CaiDaXiaoCfgList)
 		{
 			_CaiDaXiaoCfgList = new List<CaiDaXiaoConfig>();
@@ -243,7 +243,7 @@ namespace GameServer.Logic.BocaiSys
 			return true;
 		}
 
-		// Token: 0x060001BD RID: 445 RVA: 0x0001E150 File Offset: 0x0001C350
+		
 		private static bool LoadDaiBiShiYong(out List<BoCaiConfigMgr.DaiBiShiYongData> _DaiBiShiYongCfgList)
 		{
 			_DaiBiShiYongCfgList = new List<BoCaiConfigMgr.DaiBiShiYongData>();
@@ -277,46 +277,46 @@ namespace GameServer.Logic.BocaiSys
 			return true;
 		}
 
-		// Token: 0x040002C1 RID: 705
+		
 		private const string CaiShuZi = "Config/CaiShuZi.xml";
 
-		// Token: 0x040002C2 RID: 706
+		
 		private const string CaiDaXiao = "Config/CaiDaXiao.xml";
 
-		// Token: 0x040002C3 RID: 707
+		
 		private const string DaiBiShiYong = "Config/DaiBiShiYong.xml";
 
-		// Token: 0x040002C4 RID: 708
+		
 		private const string DuiHuanShangCheng = "Config/DuiHuanShangCheng.xml";
 
-		// Token: 0x040002C5 RID: 709
+		
 		public const string StrHuanLeDuiHuanOpen = "HuanLeDuiHuan";
 
-		// Token: 0x040002C6 RID: 710
+		
 		private static List<CaiShuZiConfig> CaiShuZiCfgList = new List<CaiShuZiConfig>();
 
-		// Token: 0x040002C7 RID: 711
+		
 		private static List<CaiDaXiaoConfig> CaiDaXiaoCfgList = new List<CaiDaXiaoConfig>();
 
-		// Token: 0x040002C8 RID: 712
+		
 		private static List<BoCaiConfigMgr.DaiBiShiYongData> DaiBiShiYongCfgList = new List<BoCaiConfigMgr.DaiBiShiYongData>();
 
-		// Token: 0x040002C9 RID: 713
+		
 		private static List<DuiHuanShangChengConfig> DuiHuanShangChengCgfList = new List<DuiHuanShangChengConfig>();
 
-		// Token: 0x02000078 RID: 120
+		
 		public class DaiBiShiYongData
 		{
-			// Token: 0x040002CA RID: 714
+			
 			public int ID;
 
-			// Token: 0x040002CB RID: 715
+			
 			public bool IsOpen;
 
-			// Token: 0x040002CC RID: 716
+			
 			public string XiTongMingCheng;
 
-			// Token: 0x040002CD RID: 717
+			
 			public string ZhongWenMingCheng;
 		}
 	}

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+ <Type TypeID="dl_android" Title="大陆安卓">
+  <ChongZhi ID="10000" Show="1" Icon="10000" RMB="45" ZuanShi="450" FirstBindZuanShi="0" productIdMOMO="com.wemomo.game.mu.9" productIdHaiMa="9" />
+  <ChongZhi ID="1" Show="1" Icon="1" RMB="10" ZuanShi="100" FirstBindZuanShi="100" productIdMOMO="com.wemomo.game.mu.1" productIdHaiMa="1" />
+  <ChongZhi ID="2" Show="1" Icon="2" RMB="30" ZuanShi="300" FirstBindZuanShi="300" productIdMOMO="com.wemomo.game.mu.2" productIdHaiMa="2" />
+  <ChongZhi ID="3" Show="1" Icon="3" RMB="50" ZuanShi="500" FirstBindZuanShi="500" productIdMOMO="com.wemomo.game.mu.3" productIdHaiMa="3" />
+  <ChongZhi ID="4" Show="1" Icon="4" RMB="100" ZuanShi="1000" FirstBindZuanShi="1000" productIdMOMO="com.wemomo.game.mu.4" productIdHaiMa="4" />
+  <ChongZhi ID="5" Show="1" Icon="5" RMB="300" ZuanShi="3000" FirstBindZuanShi="3000" productIdMOMO="com.wemomo.game.mu.5" productIdHaiMa="5" />
+  <ChongZhi ID="6" Show="1" Icon="6" RMB="500" ZuanShi="5000" FirstBindZuanShi="5000" productIdMOMO="com.wemomo.game.mu.6" productIdHaiMa="6" />
+  <ChongZhi ID="7" Show="1" Icon="7" RMB="1000" ZuanShi="10000" FirstBindZuanShi="10000" productIdMOMO="com.wemomo.game.mu.7" productIdHaiMa="7" />
+  <ChongZhi ID="8" Show="1" Icon="8" RMB="3000" ZuanShi="30000" FirstBindZuanShi="30000" productIdMOMO="com.wemomo.game.mu.8" productIdHaiMa="8" />
+  <ChongZhi ID="11" Show="0" Icon="-1" RMB="6" ZuanShi="60" FirstBindZuanShi="0" productIdMOMO="" productIdHaiMa="" />
+  <ChongZhi ID="12" Show="0" Icon="-1" RMB="18" ZuanShi="180" FirstBindZuanShi="0" productIdMOMO="" productIdHaiMa="" />
+  <ChongZhi ID="14" Show="0" Icon="-1" RMB="68" ZuanShi="680" FirstBindZuanShi="0" productIdMOMO="" productIdHaiMa="" />
+  <ChongZhi ID="15" Show="0" Icon="-1" RMB="98" ZuanShi="980" FirstBindZuanShi="0" productIdMOMO="" productIdHaiMa="" />
+  <ChongZhi ID="16" Show="0" Icon="-1" RMB="128" ZuanShi="1280" FirstBindZuanShi="0" productIdMOMO="" productIdHaiMa="" />
+  <ChongZhi ID="17" Show="0" Icon="-1" RMB="188" ZuanShi="1880" FirstBindZuanShi="0" productIdMOMO="" productIdHaiMa="" />
+  <ChongZhi ID="18" Show="0" Icon="-1" RMB="258" ZuanShi="2580" FirstBindZuanShi="0" productIdMOMO="" productIdHaiMa="" />
+  <ChongZhi ID="19" Show="0" Icon="-1" RMB="328" ZuanShi="3280" FirstBindZuanShi="0" productIdMOMO="" productIdHaiMa="" />
+  <ChongZhi ID="20" Show="0" Icon="-1" RMB="648" ZuanShi="6480" FirstBindZuanShi="0" productIdMOMO="" productIdHaiMa="" />
+ </Type>
+ <Type TypeID="dl_app" Title="大陆苹果">
+  <ChongZhi ID="10000" Show="1" Icon="3" RMB="45" ZuanShi="450" FirstBindZuanShi="450" productId="com.tianma.qmqj.diamond450d" /> 
+  <ChongZhi ID="11" Show="1" Icon="1" RMB="6" ZuanShi="60" FirstBindZuanShi="60" productId="com.tianma.qmqj.diamond60" />
+  <ChongZhi ID="12" Show="1" Icon="2" RMB="18" ZuanShi="180" FirstBindZuanShi="180" productId="com.tianma.qmqj.diamond180" />
+  <ChongZhi ID="2" Show="1" Icon="3" RMB="30" ZuanShi="300" FirstBindZuanShi="300" productId="com.tianma.qmqj.diamond300" />
+  <ChongZhi ID="14" Show="1" Icon="4" RMB="68" ZuanShi="680" FirstBindZuanShi="680" productId="com.tianma.qmqj.diamond680" />
+  <ChongZhi ID="15" Show="1" Icon="5" RMB="98" ZuanShi="980" FirstBindZuanShi="980" productId="com.tianma.qmqj.diamond980" />
+  <ChongZhi ID="16" Show="1" Icon="6" RMB="128" ZuanShi="1280" FirstBindZuanShi="1280" productId="com.tianma.qmqj.diamond1280" />
+  <ChongZhi ID="17" Show="1" Icon="7" RMB="188" ZuanShi="1880" FirstBindZuanShi="1880" productId="com.tianma.qmqj.diamond1880" />
+  <ChongZhi ID="18" Show="1" Icon="8" RMB="258" ZuanShi="2580" FirstBindZuanShi="2580" productId="com.tianma.qmqj.diamond2580" />
+  <ChongZhi ID="19" Show="1" Icon="9" RMB="328" ZuanShi="3280" FirstBindZuanShi="3280" productId="com.tianma.qmqj.diamond3280" />
+  <ChongZhi ID="20" Show="1" Icon="9" RMB="648" ZuanShi="6480" FirstBindZuanShi="6480" productId="com.tianma.qmqj.diamond6480a" />
+  <ChongZhi ID="23" Show="-1" Icon="-1" RMB="1" ZuanShi="10" FirstBindZuanShi="0" productId="com.tianma.qmqj.diamond10" />
+ </Type>
+ <Type TypeID="dl_yueyu" Title="大陆越狱">
+  <ChongZhi ID="10000" Show="1" Icon="10000" RMB="45" ZuanShi="450" FirstBindZuanShi="0" productIdMOMO="com.wemomo.game.mu.9" productIdHaiMa="9" />
+  <ChongZhi ID="11" Show="1" Icon="1" RMB="6" ZuanShi="60" FirstBindZuanShi="60" productIdMOMO="com.wemomo.game.mu.1" productIdHaiMa="1" />
+  <ChongZhi ID="12" Show="0" Icon="-1" RMB="18" ZuanShi="180" FirstBindZuanShi="0" productIdMOMO="" productIdHaiMa="12" />
+  <ChongZhi ID="2" Show="1" Icon="2" RMB="30" ZuanShi="300" FirstBindZuanShi="300" productIdMOMO="com.wemomo.game.mu.2" productIdHaiMa="2" />
+  <ChongZhi ID="14" Show="1" Icon="3" RMB="68" ZuanShi="680" FirstBindZuanShi="680" productIdMOMO="com.wemomo.game.mu.3" productIdHaiMa="3" />
+  <ChongZhi ID="15" Show="0" Icon="-1" RMB="98" ZuanShi="980" FirstBindZuanShi="0" productIdMOMO="" productIdHaiMa="15" />
+  <ChongZhi ID="16" Show="1" Icon="4" RMB="128" ZuanShi="1280" FirstBindZuanShi="1280" productIdMOMO="com.wemomo.game.mu.4" productIdHaiMa="4" />
+  <ChongZhi ID="17" Show="0" Icon="-1" RMB="188" ZuanShi="1880" FirstBindZuanShi="0" productIdMOMO="" productIdHaiMa="17" />
+  <ChongZhi ID="18" Show="0" Icon="-1" RMB="258" ZuanShi="2580" FirstBindZuanShi="0" productIdMOMO="" productIdHaiMa="18" />
+  <ChongZhi ID="19" Show="1" Icon="5" RMB="328" ZuanShi="3280" FirstBindZuanShi="3280" productIdMOMO="com.wemomo.game.mu.5" productIdHaiMa="5" />
+  <ChongZhi ID="20" Show="1" Icon="6" RMB="648" ZuanShi="6480" FirstBindZuanShi="6480" productIdMOMO="com.wemomo.game.mu.6" productIdHaiMa="6" />
+  <ChongZhi ID="21" Show="1" Icon="7" RMB="1248" ZuanShi="12480" FirstBindZuanShi="12480" productIdMOMO="com.wemomo.game.mu.7" productIdHaiMa="7" />
+  <ChongZhi ID="22" Show="1" Icon="8" RMB="2998" ZuanShi="29980" FirstBindZuanShi="29980" productIdMOMO="com.wemomo.game.mu.8" productIdHaiMa="8" />
+ </Type>
+  <Type TypeID="dl_app_qjfuli" Title="大陆苹果-奇迹福利版">
+  <ChongZhi ID="10000" Show="1" Icon="3" RMB="45" ZuanShi="450" FirstBindZuanShi="450" productId="com.king.qj.diamond450" /> 
+  <ChongZhi ID="11" Show="1" Icon="1" RMB="6" ZuanShi="60" FirstBindZuanShi="60" productId="com.king.qj.diamond60" />
+  <ChongZhi ID="12" Show="1" Icon="2" RMB="18" ZuanShi="180" FirstBindZuanShi="180" productId="com.king.qj.diamond180" />
+  <ChongZhi ID="2" Show="1" Icon="3" RMB="30" ZuanShi="300" FirstBindZuanShi="300" productId="com.king.qj.diamond300" />
+  <ChongZhi ID="14" Show="1" Icon="4" RMB="68" ZuanShi="680" FirstBindZuanShi="680" productId="com.king.qj.diamond680" />
+  <ChongZhi ID="15" Show="1" Icon="5" RMB="98" ZuanShi="980" FirstBindZuanShi="980" productId="com.king.qj.diamond980" />
+  <ChongZhi ID="16" Show="1" Icon="6" RMB="128" ZuanShi="1280" FirstBindZuanShi="1280" productId="com.king.qj.diamond1280" />
+  <ChongZhi ID="17" Show="1" Icon="7" RMB="188" ZuanShi="1880" FirstBindZuanShi="1880" productId="com.king.qj.diamond1880" />
+  <ChongZhi ID="18" Show="1" Icon="8" RMB="258" ZuanShi="2580" FirstBindZuanShi="2580" productId="com.king.qj.diamond2580" />
+  <ChongZhi ID="19" Show="1" Icon="9" RMB="328" ZuanShi="3280" FirstBindZuanShi="3280" productId="com.king.qj.diamond3280" />
+  <ChongZhi ID="20" Show="1" Icon="9" RMB="648" ZuanShi="6480" FirstBindZuanShi="6480" productId="com.king.qj.diamond6480" />
+  <ChongZhi ID="23" Show="-1" Icon="-1" RMB="1" ZuanShi="10" FirstBindZuanShi="0" productId="com.king.qj.diamond10" />
+ </Type>
+  <Type TypeID="dl_app_qmqjfuli" Title="大陆苹果-全民奇迹福利版">
+  <ChongZhi ID="10000" Show="1" Icon="3" RMB="45" ZuanShi="450" FirstBindZuanShi="450" productId="com.tmsk.qmqj.diamond450" /> 
+  <ChongZhi ID="11" Show="1" Icon="1" RMB="6" ZuanShi="60" FirstBindZuanShi="60" productId="com.tmsk.qmqj.diamond60" />
+  <ChongZhi ID="12" Show="1" Icon="2" RMB="18" ZuanShi="180" FirstBindZuanShi="180" productId="com.tmsk.qmqj.diamond180" />
+  <ChongZhi ID="2" Show="1" Icon="3" RMB="30" ZuanShi="300" FirstBindZuanShi="300" productId="com.tmsk.qmqj.diamond300" />
+  <ChongZhi ID="14" Show="1" Icon="4" RMB="68" ZuanShi="680" FirstBindZuanShi="680" productId="com.tmsk.qmqj.diamond680" />
+  <ChongZhi ID="15" Show="1" Icon="5" RMB="98" ZuanShi="980" FirstBindZuanShi="980" productId="com.tmsk.qmqj.diamond980" />
+  <ChongZhi ID="16" Show="1" Icon="6" RMB="128" ZuanShi="1280" FirstBindZuanShi="1280" productId="com.tmsk.qmqj.diamond1280" />
+  <ChongZhi ID="17" Show="1" Icon="7" RMB="188" ZuanShi="1880" FirstBindZuanShi="1880" productId="com.tmsk.qmqj.diamond1880" />
+  <ChongZhi ID="18" Show="1" Icon="8" RMB="258" ZuanShi="2580" FirstBindZuanShi="2580" productId="com.tmsk.qmqj.diamond2580" />
+  <ChongZhi ID="19" Show="1" Icon="9" RMB="328" ZuanShi="3280" FirstBindZuanShi="3280" productId="com.tmsk.qmqj.diamond3280" />
+  <ChongZhi ID="20" Show="1" Icon="9" RMB="648" ZuanShi="6480" FirstBindZuanShi="6480" productId="com.tmsk.qmqj.diamond6480" />
+  <ChongZhi ID="23" Show="-1" Icon="-1" RMB="1" ZuanShi="10" FirstBindZuanShi="0" productId="com.tmsk.qmqj.diamond10" />
+ </Type>
+</config>

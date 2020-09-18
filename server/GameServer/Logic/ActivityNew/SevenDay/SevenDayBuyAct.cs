@@ -7,10 +7,10 @@ using Server.Tools.Pattern;
 
 namespace GameServer.Logic.ActivityNew.SevenDay
 {
-	// Token: 0x020001A4 RID: 420
+	
 	public class SevenDayBuyAct
 	{
-		// Token: 0x060004ED RID: 1261 RVA: 0x000433B0 File Offset: 0x000415B0
+		
 		public void LoadConfig()
 		{
 			Dictionary<int, SevenDayBuyAct._BuyGoodsData> tmpDict = new Dictionary<int, SevenDayBuyAct._BuyGoodsData>();
@@ -42,7 +42,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			}
 		}
 
-		// Token: 0x060004EE RID: 1262 RVA: 0x00043558 File Offset: 0x00041758
+		
 		public ESevenDayActErrorCode HandleClientBuy(GameClient client, int id, int cnt)
 		{
 			int currDay;
@@ -117,7 +117,7 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return result;
 		}
 
-		// Token: 0x060004EF RID: 1263 RVA: 0x0004386C File Offset: 0x00041A6C
+		
 		public bool HasAnyCanBuy(GameClient client)
 		{
 			int currDay;
@@ -162,31 +162,31 @@ namespace GameServer.Logic.ActivityNew.SevenDay
 			return result;
 		}
 
-		// Token: 0x04000951 RID: 2385
+		
 		private Dictionary<int, SevenDayBuyAct._BuyGoodsData> _BuyGoodsDict = null;
 
-		// Token: 0x04000952 RID: 2386
+		
 		private object ConfigMutex = new object();
 
-		// Token: 0x020001A5 RID: 421
+		
 		private class _BuyGoodsData
 		{
-			// Token: 0x04000953 RID: 2387
+			
 			public int Id;
 
-			// Token: 0x04000954 RID: 2388
+			
 			public int Day;
 
-			// Token: 0x04000955 RID: 2389
+			
 			public int OriginPrice;
 
-			// Token: 0x04000956 RID: 2390
+			
 			public int CurrPrice;
 
-			// Token: 0x04000957 RID: 2391
+			
 			public int MaxBuyCount;
 
-			// Token: 0x04000958 RID: 2392
+			
 			public GoodsData Goods;
 		}
 	}

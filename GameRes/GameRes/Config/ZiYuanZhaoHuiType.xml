@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ZiYuanZhaoHui>
+  <ZhaoHui ID="1" Name="日常任务" Image="kezuoitem_1"/>
+  <ZhaoHui ID="2" Name="剧情副本" Image="kezuoitem_1"/>
+  <ZhaoHui ID="3" Name="经验副本" Image="kezuoitem_1"/>
+  <ZhaoHui ID="4" Name="金币副本" Image="kezuoitem_1"/> 
+  <ZhaoHui ID="5" Name="恶魔广场" Image="kezuoitem_1"/>
+  <ZhaoHui ID="6" Name="血色城堡" Image="kezuoitem_1"/>
+  <ZhaoHui ID="7" Name="天使神殿" Image="kezuoitem_1"/>
+  <ZhaoHui ID="8" Name="万魔塔" Image="kezuoitem_1"/>
+  <ZhaoHui ID="9" Name="古战场" Image="kezuoitem_1"/> 
+  <ZhaoHui ID="10" Name="阵营战" Image="kezuoitem_1"/> 
+  <ZhaoHui ID="11" Name="PK之王" Image="kezuoitem_1"/> 
+  <ZhaoHui ID="12" Name="卡利玛神庙" Image="kezuoitem_1"/>
+  <ZhaoHui ID="13" Name="竞技场" Image="kezuoitem_1"/>
+  <ZhaoHui ID="14" Name="雕像膜拜" Image="kezuoitem_1"/>
+  <ZhaoHui ID="16" Name="水晶幻境" Image="kezuoitem_1"/> 
+  <ZhaoHui ID="19" Name="幻影寺院" Image="kezuoitem_1"/>
+</ZiYuanZhaoHui> 

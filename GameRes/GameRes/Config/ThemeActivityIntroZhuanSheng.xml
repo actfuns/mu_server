@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HelpIntro ID="1" Intro="{fac60d}竞价规则" Bold="1" />
+  <HelpIntro ID="2" Intro="1、每周日{17e43e}19:00开始竞价{17e43e}，战区内所有服务器被分成{17e43e}4组{17e43e}，依次开始竞价，每组竞价时间{17e43e}15分钟" Bold="0" />
+  <HelpIntro ID="3" Intro="2、以战盟为单位竞价，只有战盟首领能代表战盟竞价，竞价{17e43e}消耗战盟资金" Bold="0" />
+  <HelpIntro ID="4" Intro="3、{ff0000}不展示{-}其他战盟竞价金额，竞价后会{17e43e}立刻告知{-}竞价是否成功，竞价失败不消耗战盟资金" Bold="0" />
+  <HelpIntro ID="5" Intro="4、竞价有CD，{ff0000}无论成功失败{-}竞价后均无法立刻再次竞价" Bold="0" />
+  <HelpIntro ID="6" Intro="5、竞价成功后{ff0000}被超过{-}会邮件提示，并退还战盟资金" Bold="0" />
+  <HelpIntro ID="7" Intro="6、每轮每个战盟最多竞价{ff0000}1个{-}服务器" Bold="0" />
+  <HelpIntro ID="8" Intro="{fac60d}活动规则" Bold="1" />
+  <HelpIntro ID="9" Intro="1、每周日{17e43e}21:30-22:30{-}，每赛季{17e43e}13周{-}" Bold="0" />
+  <HelpIntro ID="10" Intro="2、竞价成功的战盟获得{17e43e}入侵资格{-}，未获得资格可参与本服的防守" Bold="0" />
+  <HelpIntro ID="11" Intro="{fac60d}征服规则" Bold="1" />
+  <HelpIntro ID="12" Intro="1、征服以服务器为单位，若防守方资源{ff0000}被全部掠夺{-}，且来自{17e43e}同一服务器{-}的战盟掠夺的资源占总掠夺资源的{17e43e}80%{-}，则达成服务器征服" Bold="0" />
+  <HelpIntro ID="13" Intro="2、反复征服同一服务器在排行中{ff0000}不重复计算{-}，排行榜信息每赛季清空" Bold="0" />
+</Config>

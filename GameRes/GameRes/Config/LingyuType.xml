@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Type TypeID="1" Name="火焰翎羽" Picture1="huoyanlingyu_1.png" Mode="0,1,huoyanlingyu_1.unity3d,2,3,huoyanlingyu_2.unity3d,4,5,huoyanlingyu_3.unity3d,6,7,huoyanlingyu_4.unity3d,8,9,huoyanlingyu_5.unity3d" LifeScale="0.8" AttackScale="1" DefenseScale="0.6" MAttackScale="0.6" MDefenseScale="1" HitScale="0.8" />
+  <Type TypeID="2" Name="岩石翎羽" Picture1="yanshilingyu_1.png" Mode="0,1,yanshilingyu_1.unity3d,2,3,yanshilingyu_2.unity3d,4,5,yanshilingyu_3.unity3d,6,7,yanshilingyu_4.unity3d,8,9,yanshilingyu_5.unity3d" LifeScale="0.6" AttackScale="0.8" DefenseScale="0.6" MAttackScale="1" MDefenseScale="1" HitScale="0.8" />
+  <Type TypeID="3" Name="冰晶翎羽" Picture1="bingjinglingyu_1.png" Mode="0,1,bingjinglingyu_1.unity3d,2,3,bingjinglingyu_2.unity3d,4,5,bingjinglingyu_3.unity3d,6,7,bingjinglingyu_4.unity3d,8,9,bingjinglingyu_5.unity3d" LifeScale="1" AttackScale="1" DefenseScale="0.8" MAttackScale="0.6" MDefenseScale="0.6" HitScale="0.8" />
+  <Type TypeID="4" Name="古木翎羽" Picture1="gumulingyu_1.png" Mode="0,1,gumulingyu_1.unity3d,2,3,gumulingyu_2.unity3d,4,5,gumulingyu_3.unity3d,6,7,gumulingyu_4.unity3d,8,9,gumulingyu_5.unity3d" LifeScale="1" AttackScale="0.6" DefenseScale="0.6" MAttackScale="1" MDefenseScale="0.8" HitScale="0.8" />
+  <Type TypeID="5" Name="雷鸣翎羽" Picture1="leiminglingyu_1.png" Mode="0,1,leiminglingyu_1.unity3d,2,3,leiminglingyu_2.unity3d,4,5,leiminglingyu_3.unity3d,6,7,leiminglingyu_4.unity3d,8,9,leiminglingyu_5.unity3d" LifeScale="0.6" AttackScale="1" DefenseScale="1" MAttackScale="0.8" MDefenseScale="0.6" HitScale="0.8" />
+  <Type TypeID="6" Name="疾风翎羽" Picture1="jifenglingyu_1.png" Mode="0,1,jifenglingyu_1.unity3d,2,3,jifenglingyu_2.unity3d,4,5,jifenglingyu_3.unity3d,6,7,jifenglingyu_4.unity3d,8,9,jifenglingyu_5.unity3d" LifeScale="0.8" AttackScale="0.6" DefenseScale="1" MAttackScale="1" MDefenseScale="0.6" HitScale="0.8" />
+</Config>
